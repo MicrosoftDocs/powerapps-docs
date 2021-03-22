@@ -1,6 +1,6 @@
 ---
-title: Learn about how to use the sample Help Desk template to create an app. | Microsoft Docs
-description: Use the sample Help Desk template to create a canvas app, and preview the app features before you customize for business requirements.
+title: Learn about how to use the Help Desk sample app to create an app. | Microsoft Docs
+description: Use the Help Desk sample app to create a canvas app, and preview the app features before you customize for business requirements.
 author: norliu
 ms.service: powerapps
 ms.topic: sample
@@ -17,7 +17,7 @@ contributors:
   - norliu
 ---
 
-# Set up and learn about the Help Desk sample template in Power Apps
+# Set up and learn about the Help Desk sample app in Power Apps
 
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
@@ -27,9 +27,9 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 You can run this sample app in your browser, on a tablet, or other device that has a similar form factor.
 
-## How do I open the template and run the app?
+## How do I use the sample app and run?
 
-Help Desk sample template is available in [Power Apps](https://make.powerapps.com). Follow these steps to open the template and run the app.
+Help Desk sample app is available in [Power Apps](https://make.powerapps.com). Follow these steps to open the sample app and run the app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -37,9 +37,9 @@ Help Desk sample template is available in [Power Apps](https://make.powerapps.co
 
 1. On the right-side of the screen, scroll down to **Start from template** section.
 
-1. Select **Help Desk** from the available templates.
+1. Select **Help Desk** from the available sample app templates.
 
-    ![Open Help Desk sample template](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample template")
+    ![Open Help Desk sample app](./media/help-desk-install/use-help-desk-sample-template.png "Open Help Desk sample app")
 
 1. Enter a name.
 
@@ -50,11 +50,11 @@ Help Desk sample template is available in [Power Apps](https://make.powerapps.co
 1. Press **F5** on the keyboard, or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
 
 > [!NOTE]
-> Sample template includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
+> This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 ## How do I build the app myself?
 
-Help Desk sample template includes the functionality commonly used in Power Apps. You can extend the app functionality by using connectors and connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample template.
+Help Desk sample app includes the functionality commonly used in Power Apps. You can extend the app functionality by using connectors and connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample app.
 
 [Save](save-publish-app.md#save-changes-to-an-app) the app, and update the app to use data source such as [SharePoint](connections/connection-sharepoint-online.md), or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
