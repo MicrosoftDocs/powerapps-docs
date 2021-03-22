@@ -44,13 +44,13 @@ A solution can contain table and other customized components. Importing a manage
 
 You can create new tables and fill them with data using Power Query. More information: [Add data to a table in Dataverse by using Power Query](../../maker/data-platform/add-data-power-query.md)
 
-### Use metadata services
+### Use web services to work with table definitions
 
 The web services exposed in Dataverse include capabilities to create, read, write, and delete tables. These services are most frequently used to read because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
 
-## Metadata
+## Table definitions
 
-The data model is defined as metadata that is stored within Dataverse. This data about the schema is known as *Metadata*. 
+The data model is stored within Dataverse. This data about the schema is known as *Metadata*. 
 
 - The [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) defines this with the Organization service. 
 - The [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata) defines this for the Web API. 
