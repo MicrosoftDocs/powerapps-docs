@@ -22,7 +22,7 @@ search.app:
 Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
 > [!NOTE]
-> This feature is being deployed and may not currently be available in your region.
+> This feature is just now being deployed and may not be available yet in your region.
 
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
