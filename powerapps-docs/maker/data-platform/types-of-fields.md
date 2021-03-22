@@ -58,7 +58,7 @@ For more descriptions for each type you can add or edit, see the article for the
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
  - [Create and edit columns for Dataverse using Power Apps solution explorer: Column Data types](create-edit-field-solution-explorer.md#column-data-types)
 
-For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/data-platform/entity-attribute-metadata)
+For more information about how column data types are defined in the API, see [Attribute metadata](../../developer/data-platform/entity-attribute-metadata.md)
 
 ## Column Types used by the system
 
@@ -237,7 +237,7 @@ Once a table form has an image column, app users can change the image for a give
 
 More information for developers working with image data:
 - [table metadata > table images](/powerapps/developer/data-platform/table-metadata#table-images)
-- [Image attributes](/powerapps/developer/data-platform/image-attributes)
+- [Image attributes](../../developer/data-platform/image-attributes.md)
 
 
 ## File columns
@@ -255,7 +255,7 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 > [!div class="mx-imgBorder"] 
 > ![File data type](media/file-data-type.png)
 
-More information for developers working with file data: [File attributes](/powerapps/developer/data-platform/file-attributes)
+More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

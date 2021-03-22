@@ -51,7 +51,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
  ```  
 
 > [!NOTE]
->  Opening entity forms in a dialog window by using [showModalDialog](https://msdn.microsoft.com/library/ie/ms536759.aspx) or [showModelessDialog](https://msdn.microsoft.com/library/ie/ms536761.aspx) is not supported.  
+>  Opening entity forms in a dialog window by using [showModalDialog](/previous-versions/ms536759(v=vs.85)) or [showModelessDialog](https://msdn.microsoft.com/library/ie/ms536761.aspx) is not supported.  
 >   
 >  Displaying an entity form within an IFrame embedded in another entity form is not supported.  
 
@@ -216,12 +216,12 @@ function getReportURL(action,fileName,id) {
 ### See also   
 
  [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)<br/>
- [Xrm.Navigation.openUrl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openurl)<br/>
+ [Xrm.Navigation.openUrl](./clientapi/reference/xrm-navigation/openurl.md)<br/>
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>
  [Web Resources](web-resources.md)<br/> 
- [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
+ [Change Application Navigation using the SiteMap](../../maker/model-driven-apps/create-site-map-app.md)
  
 
 

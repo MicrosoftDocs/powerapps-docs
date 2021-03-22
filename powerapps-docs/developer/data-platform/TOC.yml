@@ -28,17 +28,23 @@
   - name: Create your own messages
     href: custom-actions.md
     items:
-    - name: Use Workflow Custom Actions with code
+    - name: Use Custom Process Actions with code
       href: workflow-custom-actions.md
-    - name: Create and use Custom APIs (Preview)
-      href: custom-api.md 
+    - name: Create and use Custom APIs
+      href: custom-api.md
       items:
-      - name: Create a Custom API in the maker portal (Preview)
+      - name: Create a Custom API in the maker portal
         href: create-custom-api-maker-portal.md
-      - name: Create a Custom API with code (Preview)
+      - name: Create a Custom API with code
         href: create-custom-api-with-code.md
-      - name: Create a Custom API with solution files (Preview)
+      - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
+      - name: CustomAPI Table Columns
+        href: customapi-table-columns.md
+      - name: CustomAPIRequestParameter Table Columns
+        href: customapirequestparameter-table-columns.md
+      - name: CustomAPIResponseProperty Table Columns
+        href: customapiresponseproperty-table-columns.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -211,8 +217,6 @@
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
     - name: Register a web hook
       href: register-web-hook.md
     - name: Test webhook registration

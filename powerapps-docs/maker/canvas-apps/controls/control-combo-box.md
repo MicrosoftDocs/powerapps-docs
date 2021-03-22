@@ -27,7 +27,7 @@ When searching for items to select, for each item you can choose to show a singl
 When viewing on small screens, the items list flyout will become a full screen control for better usability.
 
 > [!NOTE]
-> If you want to search for items with *numbers*, convert numbers to text with [Text()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-text) function. For example, *Text(12345)*.
+> If you want to search for items with *numbers*, convert numbers to text with [Text()](../functions/function-text.md) function. For example, *Text(12345)*.
 
 ## People picker
 To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.

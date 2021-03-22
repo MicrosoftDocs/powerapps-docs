@@ -22,7 +22,7 @@ Provides the ability to create hierarchy.
 
 > [!IMPORTANT]
 > This is a preview feature. Preview features are stable but might go through minor changes.
-> For more information, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+> For more information, read [Understand experimental and preview features in Power Apps](../working-with-experimental-preview.md).
 
 ## Description
  The container can hold a set of controls and has its own properties.

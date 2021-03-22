@@ -50,7 +50,7 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Prerequisites
 
--   A Power Apps account. Don't have one? [Sign up for 30 days free](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps).
+-   A Power Apps account. Don't have one? [Sign up for 30 days free](../signup-for-powerapps.md).
 
 -   Administrative permissions on a gateway. These permissions are provided by
     default for gateways you install. Administrators can grant other people
@@ -61,7 +61,7 @@ With a gateway, you can connect to on-premises data through these connections:
     [Find the right Power Apps plan page](https://powerapps.microsoft.com/pricing/).
 
 -   Gateways and on-premises connections can only be created and used in the
-    user's default environment. More information: [Working with environments and Microsoft Power Apps](../canvas-apps/working-with-environments.md).
+    user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
 
 ## Install a gateway
 1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways**.
