@@ -297,7 +297,7 @@ Or you can use the values:
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child records to maintain data integity depending on logic defined for the relationships in the environment. More information: [Entity relationship behavior](../../../maker/data-platform/entity-relationship-behavior.md)
+> Delete operations can initiate cascading operations that may delete child records to maintain data integity depending on logic defined for the relationships in the environment. More information: [Entity relationship behavior](/powerapps/developer/data-platform/org-service/create-edit-entity-relationships#entity-relationship-behavior)
 
 ## Use the DeleteRequest class
 
