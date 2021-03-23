@@ -41,7 +41,7 @@ In Dataverse for Teams, choices can only be created as a column within a table. 
 
 ## Calculated and rollup columns
 
-The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated columns to automate manual calculations](../maker/data-platform/define-calculated-fields.md) and [Define rollup columns that aggregate values](../maker/data-platform/define-rollup-fields.md)
+Calculated columns and rollup columns are not currently supported in Dataverse for Teams.
 
 ### See also
 

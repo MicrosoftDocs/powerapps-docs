@@ -56,14 +56,12 @@ landingContent:
   - title: Related content
     linkLists:
        - linkListType: overview
-         links:          
-          - text: Create canvas apps
-            url: ../maker/canvas-apps/getting-started.md
-          - text: Create model-driven apps
-            url: ../maker/model-driven-apps/model-driven-app-overview.md
-          - text: Power Platform Center of Excellence (CoE) kit
-            url: /power-platform/guidance/coe/starter-kit
-          - text: Power Platform ALM guide
+         links:
+          - text: Microsoft Power Platform guidance
+            url: /power-platform/guidance/
+          - text: Power Automate guidance
+            url: /power-automate/guidance/         
+          - text: Microsoft Power Platform ALM guide
             url: /power-platform/alm/          
 
         

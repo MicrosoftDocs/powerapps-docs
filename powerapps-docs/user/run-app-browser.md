@@ -20,19 +20,19 @@ search.app:
 
 # Run an app in a web browser
 
-When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile) or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
+When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md) or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
-For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#supported-devices).
+For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](../mobile/run-powerapps-on-mobile.md#supported-devices).
 
 > [!NOTE]
-> Using the web browser on your phone to run your model-driven apps isn't supported; you must use the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile).
+> Using the web browser on your phone to run your model-driven apps isn't supported; you must use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
 To follow this quickstart, you need:
-- A Power Apps license. This is available with a Power Apps plan, such as the Power Apps per user plan, or [Power Apps trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include Power Apps.
+- A Power Apps license. This is available with a Power Apps plan, such as the Power Apps per user plan, or [Power Apps trial](../maker/signup-for-powerapps.md), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include Power Apps.
 - Access to an app that you built or that someone else built and shared with you.
 - Access to a supported web browser and operating system.
    - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
-   - For model-driven apps, see: [Requirements/supported configurations](https://docs.microsoft.com/power-platform/admin/online-requirements)
+   - For model-driven apps, see: [Requirements/supported configurations](/power-platform/admin/online-requirements)
 
 
 ## Sign in to Microsoft 365 apps page
@@ -64,7 +64,7 @@ To sign out of the Microsoft 365 apps page, select your profile image and then s
 
 ## Next steps
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
-- run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile)
+- run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
 - use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
 
 

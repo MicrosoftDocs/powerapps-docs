@@ -22,7 +22,7 @@ search.app:
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run model-driven apps and canvas apps on Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
-> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/user-guide-mobile-app).
+> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 
 ## Home screen 
 
@@ -60,7 +60,7 @@ Legend
 5. **Pinned rows**: View and open your favorite (pinned) rows. 
 6. **Table navigator**: This area lists the table available in the app.
 7. **Help**: Access help content for more information about how to use Power Apps mobile.
-8. **Offline status**: Work with your data in offline mode, even when you don't have internet access. More information: [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode)
+8. **Offline status**: Work with your data in offline mode, even when you don't have internet access. More information: [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode)
 9. **Settings**: Access settings.
 
 ## Pin favorite rows

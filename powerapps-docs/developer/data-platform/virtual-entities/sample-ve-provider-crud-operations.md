@@ -23,7 +23,7 @@ search.app:
 
 This sample shows how to implement a custom data provider to create a virtual table that supports create, retrieve, update, and delete operations. For each of these operations, you implement a generic plug-in, register them using the Plugin Registration Tool, and enable virtual table data sources to create the virtual table.
 
-To learn more about data providers and plug-in development, see [Custom data providers](https://docs.microsoft.com/powerapps/developer/data-platform/virtual-entities/custom-ve-data-providers)
+To learn more about data providers and plug-in development, see [Custom data providers](./custom-ve-data-providers.md)
 
 ## Data source details
 
@@ -436,7 +436,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
 ## Step 4: Create, update, view, and delete records using a virtual table
 
-Create a model-driven app and add the virtual table to the site map. Then select the virtual table main form and the Advanced field view. Publish the app. More information: [Build your first model-driven app from scratch](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app?branch=matp-2190993)
+Create a model-driven app and add the virtual table to the site map. Then select the virtual table main form and the Advanced field view. Publish the app. More information: [Build your first model-driven app from scratch](../../../maker/model-driven-apps/build-first-model-driven-app.md?branch=matp-2190993)
 
 > [!div class="mx-imgBorder"]
 > ![Create model-driven app](../media/custom-ve-create-new-model-driven-app.png "Create model-driven app")
@@ -445,7 +445,7 @@ Application users can perform read, create, update, delete operations using the 
 
 ### See also
 
-[Getting started with virtual tables](https://docs.microsoft.com/powerapps/developer/data-platform/virtual-entities/get-started-ve)<br/>
-[API considerations for virtual tables](https://docs.microsoft.com/powerapps/developer/data-platform/virtual-entities/api-considerations-ve)<br/>
-[Custom virtual entity data providers](https://docs.microsoft.com/powerapps/developer/data-platform/virtual-entities/custom-ve-data-providers)<br/>
-[Virtual table walkthrough using OData v4 Data Provider](https://docs.microsoft.com/powerapps/maker/data-platform/virtual-entity-walkthrough-using-odata-provider)
+[Getting started with virtual tables](./get-started-ve.md)<br/>
+[API considerations for virtual tables](./api-considerations-ve.md)<br/>
+[Custom virtual entity data providers](./custom-ve-data-providers.md)<br/>
+[Virtual table walkthrough using OData v4 Data Provider](../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md)

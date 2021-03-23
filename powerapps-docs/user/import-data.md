@@ -71,13 +71,13 @@ Use the template that you downloaded in the previous step (modified with your da
    > [!TIP]
    > You can only import one file at a time. To bring in more files, run the wizard again.
    
-3. Select whether to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
+3. Select whether to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 4. For CSV and XML files (skip this step if you're importing an Excel file): 
 
    - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that's used the CSV file.
    
-   - For CSV or XML file: If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+   - For CSV or XML file: If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](../maker/data-platform/define-alternate-keys-reference-records.md).
 
      > [!div class="mx-imgBorder"]
      > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key") 
@@ -151,7 +151,7 @@ To save the mapping settings for next time, enter a name in the **Name your data
 
 
 ### See also
-[Download a template for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import)
+[Download a template for data import](/power-platform/admin/download-template-data-import)
 
 
 
