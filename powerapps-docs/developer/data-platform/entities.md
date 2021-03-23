@@ -43,7 +43,7 @@ There are several ways to edit entity metadata using designers.
 |---------|---------|
 |powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://make.powerapps.com/) site to edit Dataverse associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default Solution. |
 |Common Data Service Default Solution explorer|There is another designer available from the [powerapps.com](https://make.powerapps.com/) site when editing Dataverse. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default Solution. |
-|Solution explorer for your solution |If you will distribute a solution you should create any new tables, attributes, or relationships in the context of the unmanaged solution that you will use to develop your solution. <br /> More information: [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher)|
+|Solution explorer for your solution |If you will distribute a solution you should create any new tables, columns, or relationships in the context of the unmanaged solution that you will use to develop your solution. <br /> More information: [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher)|
 |From the form editor|When editing a model-driven app form for an entity, you can click the **New Field** button in the **Field Explorer**. If you create a lookup field, you will create a new relationship to support it.|
 
 ### Import a solution
