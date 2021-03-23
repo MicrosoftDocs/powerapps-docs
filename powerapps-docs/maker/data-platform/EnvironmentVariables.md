@@ -122,11 +122,14 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Common Data Service, and SQL server.
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.  
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
+- [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) are not yet available for managing data source environment variables. However, this does not block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
 <!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
-- Specialized tasks for environment variables of type **data source** are not yet available within the [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks). However, you may add your own custom tasks to achieve the same result. -->
+ -->
 
 ## Frequently asked questions
+
+
 
 **How can I view where environment variables are being used?**
 
@@ -161,12 +164,15 @@ With cloud flows, the flows must currently be de-activated and re-activated in o
 No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Common Data Service connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
 **Is there a limit to the number of environment variables I can have?**
+
 No. However, the max size of a solution is 29 MB.
 
 **Can environment variable display names and descriptions be localized?**
+
 Yes.
 
 **Should I use environment variables instead of storing configuration data in custom tables?**
+
 Yes if your configuration data is not relational. Environment variables should be used for key : value pairs and when the value likely needs to different in other environments. Other tools such as the Configuration migration utility are better suited for migration of relational configuration data stored within custom tables. Unlike other configuration data, environment variables are migrated within solutions and therefore much simpler to manage and more performant to import. 
 
 
