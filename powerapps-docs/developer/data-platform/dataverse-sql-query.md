@@ -30,7 +30,7 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 
 ### Power BI
 
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
+You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](../../maker/data-platform/view-entity-data-power-bi.md)
 
 > [!NOTE]
 > To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
@@ -91,7 +91,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
+There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
