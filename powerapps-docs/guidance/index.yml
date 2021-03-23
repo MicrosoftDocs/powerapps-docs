@@ -56,7 +56,7 @@ landingContent:
   - title: Related content
     linkLists:
        - linkListType: overview
-         links:          
+         links:
           - text: Microsoft Power Platform guidance
             url: /power-platform/guidance/
           - text: Power Automate guidance
@@ -65,7 +65,3 @@ landingContent:
             url: /power-platform/alm/          
 
         
-          
-
-
-
