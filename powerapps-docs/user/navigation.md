@@ -65,7 +65,7 @@ Legend
 1. **Click to change app**: Select the current app name to change to a different app. 
 2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
-4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add records here. Select the remove-pin icon next to a row listed here to remove it from this list.
+4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
 
 ### Area switcher 
