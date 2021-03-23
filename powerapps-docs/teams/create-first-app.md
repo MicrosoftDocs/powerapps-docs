@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/18/2020
+ms.date: 03/22/2021
 ms.author: jshum
 ms.reviewer: 
 ---
@@ -45,15 +45,6 @@ After installing the Power Apps app from the Teams store:
 
 > [!NOTE]
 > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
-
-## Creating an app in a team with a Microsoft 365 Group
-
-When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
-
-`The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
-
-To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
 
 ### Enabling security for teams with same names
 
@@ -387,6 +378,15 @@ publish it, and then add it to your team's channel.
 Now that you've created your first app from a blank table, let's go through the
 Power Apps interface, Studio, controls and how to create additional apps in
 detail.
+
+## Creating an app in a team with a Microsoft 365 Group
+
+When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
+
+`The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
+
+To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
 
 ## Next steps
 
