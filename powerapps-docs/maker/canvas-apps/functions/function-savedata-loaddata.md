@@ -75,7 +75,8 @@ The device may also encrypt the data; or you can use a mobile device management 
 | **SaveData( LocalCache, "MyCache" )** | Save the **LocalCache** collection to the user's device under the name "MyCache", suitable for **LoadData** to retrieve later. | Data is saved to the app host under the name "MyCache". |
 | **LoadData( LocalCache, "MyCache" )** | Loads the **LocalCache** collection from the user's device under the name "MyCache", previously stored with a call to **SaveData**.  | Data is loaded from the app host under the name "MyCache". |
 | **ClearData( "MyCache" )** | Clears the storage under the name "MyCache".  Any data stored under this name will no longer be available through **LoadData**. | Data is removed from the app host under the name "MyCache". |
-| **ClearData()** | Clear all storage associated with this app.  Data stored by other apps is not affected. | All data is removed from the app host.
+| **ClearData()** | Clear all storage associated with this app.  Data stored by other apps is not affected. | All data is removed from the app host.|
+||||
 
 ### Simple offline example
 
