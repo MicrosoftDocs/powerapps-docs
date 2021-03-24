@@ -486,7 +486,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Enter the expected due date and time.|
+|Description|Enter the expected start date and time.|
 |DisplayName|Start Date|
 |Format|DateAndTime|
 |IsValidForForm|True|
