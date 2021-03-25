@@ -1684,6 +1684,12 @@
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md          
+        - name: Use Power Apps CLI
+          items:
+          - name: Overview of portals support for Power Apps CLI
+            href: ./portals/power-apps-cli.md
+          - name: "Tutorial: Use Power Apps CLI with portals"
+            href: ./portals/power-apps-cli-tutorial.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
