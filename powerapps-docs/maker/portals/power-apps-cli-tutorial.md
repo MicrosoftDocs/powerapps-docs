@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 03/29/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -14,10 +14,11 @@ ms.reviewer: tapanm
 
 [This article is pre-release documentation and is subject to change.]
 
-In this example walkthrough, you’ll see how to get started with Power Apps CLI
+In this tutorial example, you’ll see how to get started with Power Apps CLI
 to update sample portals configuration.
 
-**NOTE:** This walkthrough focuses on the required Power Apps CLI commands for
+> [!NOTE]
+> This tutorial focuses on the required Power Apps CLI commands for
 Power Apps portals use. For more information about commands used in Power Apps
 CLI, read [common
 commands](../../developer/data-platform/powerapps-cli.md#common-commands).
@@ -26,8 +27,7 @@ commands](../../developer/data-platform/powerapps-cli.md#common-commands).
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Visual Studio Code
-------------------
+## Download and instal Visual Studio Code
 
 To connect to Power Apps portals, and to use Power Apps CLI commands, use
 [Visual Studio Code](https://code.visualstudio.com/docs) and the [integrated
@@ -36,92 +36,90 @@ integrated terminal makes it easy to connect to the Dataverse environment and to
 download/change/upload the portals configuration. You can also use Windows
 PowerShell instead.
 
-Step 1: Authenticate
---------------------
+## Step 1: Authenticate
 
 Before you connect, list, download or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
-information about authentication using Power Apps CLI, read [Power Apps CLI –
+information about authentication using Power Apps CLI, go to [Power Apps CLI –
 Auth](../../developer/data-platform/powerapps-cli.md#auth).
 
 To authenticate, open Windows PowerShell, and run the following command using
 your Dataverse environment URL.
 
-*pac auth create -u [Dataverse URL]*
+`pac auth create -u [Dataverse URL]`
 
-Example:
+**Example**
 
-*pac auth create -u* <https://contoso-org.crm.dynamics.com>
+`pac auth create -u https://contoso-org.crm.dynamics.com`
 
 Follow the prompts of authentication to sign into the environment.
 
-![](media/power-apps-cli/cdec47c7899bff8395807cc34813668b.png)
+![Example of how to authenticate to a Dataverse environment using Power Apps CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Power Apps CLI")
 
-Step 2: List available portals
-------------------------------
+## Step 2: List available portals
 
 Use the **list** command to list the available Power Apps portals in the
 Dataverse environment you connected to using the previous step.
 
-*pac paportal list*
+`pac paportal list`
 
-![](media/power-apps-cli/ad4f2864afc933b378a7d93f272973bd.png)
+![Example list of portals](media/power-apps-cli/paportal-list.png "Example list of portals")
 
-Step 3: Download portals content
---------------------------------
+## Step 3: Download portals content
 
 Download portal website content from the connected Dataverse environment.
 
-*pac paportal download --path [PATH] -id [WebSiteId-GUID]*
+`pac paportal download --path [PATH] -id [WebSiteId-GUID]`
 
-Example:
+**Example**
 
-*pac paportal download --path c:\\pac-portals\\downloads -id
-d44574f9-acc3-4ccc-8d8d-85cf5b7ad141*
+`pac paportal download --path c:\pac-portals\downloads -id
+d44574f9-acc3-4ccc-8d8d-85cf5b7ad141`
 
 For the **id** parameter, use the **WebSiteId** returned from the output of the
 previous step.
 
-![](media/power-apps-cli/728a95c7a58cb14cf7817e877df32d8d.png)
+![Example of downloading portals content](media/power-apps-cli/paportal-download.png "Example of downloading portals content")
 
-Step 4: Change portals content
-------------------------------
+## Step 4: Change portals content
 
 Change the configuration using Visual Studio Code and save your changes.
 
-**NOTE:** Ensure you update only the supported entities for use with Power Apps
+> [!NOTE]
+> Ensure you update only the supported entities for use with Power Apps
 CLI. More information: [Supported entities](#prerequisites)
 
 For example, the default portal page shows the text such as this:
 
-![](media/power-apps-cli/17aa326b8aefb8d05c0a0e10f3920de5.png)
+![Sample portals page text](media/power-apps-cli/sample-page.png "Sample portals page text")
 
 This text is visible from the web page html:
 
-![](media/power-apps-cli/a72eae67d404bc5ac8050e9287bcee4f.png)
+![Visual Studio Code with text highlighted for change](media/power-apps-cli/vs-code-page.png "Visual Studio Code with text highlighted for change")
 
 You can change this text, and save the changes:
 
-![](media/power-apps-cli/761aeb9756805efca916018ba6fb7b0f.png)
+![Updated text using Visual Studio Code](media/power-apps-cli/page-updated.png "Updated text using Visual Studio Code")
 
-**TIP:** You can change the location of the folder path in PowerShell/integrated
+> [!TIP]
+> You can change the location of the folder path in PowerShell/integrated
 terminal to the downloaded location, and enter “*code .”* to open the folder
 directly in Visual Studio Code.
 
-Step 5: Upload the changes
---------------------------
+## Step 5: Upload the changes
 
 After making the required changes, upload them using the following command.
 
-*pac paportal --path [Folder-location]*
+`pac paportal --path [Folder-location]`
 
-Example*:*
+**Example**
 
-*pac paportal upload --path C:\\pac-portals\\downloads\\custom-portal\\*
+`pac paportal upload --path C:\pac-portals\downloads\custom-portal\`
 
-![](media/power-apps-cli/9aa93277e790c0a6f7e0dd57b919ada5.png)
+![Starting upload](media/power-apps-cli/upload.png "Starting upload")
 
-**NOTE:** Ensure the path for the portals content you entered is correct. By
+> [!NOTE]
+> Ensure the path for the portals content you entered is correct. By
 default, a folder named by the portal (friendly name) is created with downloaded
 portals content. For example, if the portal’s friendly name is *custom-portal,*
 the path for the above command (--path) should be
@@ -131,10 +129,9 @@ The upload only happens for content that has changed. In this example, since the
 change is made to a web page, content is uploaded only for the adx_webpage
 entity.
 
-![](media/power-apps-cli/1498e083e14b686c46981d573a6682b9.png)
+![Upload completed only for changed content](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
 
-Step 6: Confirm the changes
----------------------------
+## Step 6: Confirm the changes
 
 To confirm the changes made to the portal webpage:
 
@@ -146,37 +143,15 @@ To confirm the changes made to the portal webpage:
 
 2.  Browse to the portal webpage to see the change.
 
-    ![](media/power-apps-cli/ecadb987ff3510a4adfc6b0daafb20d2.png)
+    ![View updated page content](media/power-apps-cli/changed-page.png "View updated page content")
 
-This concludes the walkthrough. You can repeat the above steps and change the
+This concludes the tutorial. You can repeat the above steps and change the
 portals content for other [supported entities](#prerequisites).
 
-Preview disclaimer
-==================
+## Next steps
 
-Preview features are features that aren’t complete but are made available on a
-“preview” basis so customers can get early access and provide feedback. Preview
-features are not supported by Microsoft Support, may have limited or restricted
-functionality, aren’t meant for production use, and may be available only in
-selected geographic areas.
+[Overview of portals support for Power Apps CLI](power-apps-cli-tutorial.md)
 
-Copyright
-=========
+### See also
 
-This document is provided "as-is". Information and views expressed in this
-document, including URL and other Internet web site references, may change
-without notice.
-
-Some examples depicted herein are provided for illustration only and are
-fictitious. No real association or connection is intended or should be inferred.
-
-This document does not provide you with any legal rights to any intellectual
-property in any Microsoft product. You may copy and use this document for your
-internal, reference purposes. This document is confidential and proprietary to
-Microsoft. It is disclosed and can be used only pursuant to a non-disclosure
-agreement.
-
-© 2021 Microsoft. All rights reserved.
-
-Microsoft is trademark of the Microsoft group of companies. All other trademarks
-are property of their respective owners.
+[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)

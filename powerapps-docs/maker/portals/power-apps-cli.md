@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 03/29/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -24,7 +24,7 @@ create, build, debug, and publish their extensions and customizations quickly
 and efficiently. More information: [What is Microsoft Power Apps
 CLI?](../../developer/data-platform/powerapps-cli.md)
 
-With this feature (currently in Private Preview), Microsoft Power Apps portals
+With this feature, Microsoft Power Apps portals
 supports Power Apps CLI to enable CI/CD (Continuous Integration/Continuous
 Deployment) of portal configuration. You can now check-in the portal
 configuration to source control and move portal configuration to any environment
@@ -34,7 +34,7 @@ using Power Apps CLI.
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-## Benefits of portal development using Power Apps CLI
+### Why use Power Apps CLI for portals development?
 
 With portals support for Power Apps CLI, you can now use offline-like capability
 for portals customization by making changes to the portals content. And once all
@@ -46,19 +46,19 @@ experience.
 Here's a list of features and capabilities that portals benefits from with the
 support for Power Apps CLI:
 
-### Ease of use
+#### Ease of use
 
 -   Support for download/upload of portal data to/from local file system.
 
 -   Build on existing Power Apps CLI tool.
 
-### Lifecycle Management (ALM)
+#### Lifecycle Management (ALM)
 
 -   Track changes to portal configuration within an org.
 
 -   Move configuration files across organizations, or tenants.
 
-### Pro-dev and enterprise support
+#### Pro-dev and enterprise support
 
 -   Helps integrate seamlessly with any source control tools, such as “git”.
 
@@ -260,69 +260,35 @@ Portals support for Power Apps CLI is limited to the entities listed below.
 blog, community, or ideas portal) are not supported for customization using
 Power Apps CLI.
 
-## Install Power Apps CLI for portals
+## Install and verify Power Apps CLI for portals
 
-During this private preview period, you’ll have to download and install the
-Power Apps CLI package separately instead of the publicly (and generally)
-available package. The private preview CLI package includes portals-specific
-command-line support.
+To learn about installing Power Apps CLI, go to [Install Power Apps CLI](../../developer/data-platform/powerapps-cli.md).
 
-To prepare your local machine for the private preview package that includes
-Power Apps CLI for portals:
-
-1.  Download the Power Apps CLI package for Power Apps portals for this private
-    preview.
-
-2.  Rename the package with the file extension of **.zip**.
-
-3.  Use third-party compression software such as 7-zip to unzip this compressed
-    file to a location of your choice. For example, *c:\\pac-portals*.
-
-4.  Update the **PATH** system environment variable, and add a new path for the
-    **tools** folder inside the folder that you unzipped the package to. For
-    example, *c:\\pac-portals\\tools*.
-
-5.  If you have Power Apps CLI already installed, ensure to move the existing
-    Power Apps CLI path below the new path you just added in the previous step.
-
-    ![](media/power-apps-cli/a5ebd82fb72d0b103720ba3513c669ea.png)
-
-    > [!TIP]
-    > Remember to change the order of the environment variable for the publicly available Power Apps CLI after you complete this walkthrough to use
-    the CLI for other areas.
-
-6.  Open Windows PowerShell.
-
-7.  Change the directory to the **tools** folder from the unzipped package.
-
-8.  Run *pac* and verify that the output contains “paportal” - the command for
+After installing Power Apps CLI, open a command-prompt and run *pac* to verify that the output contains “paportal” - the command for
     Power Apps portals.
 
-    ![](media/power-apps-cli/a40381ed0c9702016590fcae7be8facd.png)
+![Confirm paportal command in Power Apps CLI](media/power-apps-cli/confirm-paportal.png "Confirm paportal command in Power Apps CLI")
 
-Power Apps CLI commands for portals
-===================================
+## Power Apps CLI commands for portals
 
 Power Apps CLI command for portals is “*paportal”*.
 
 The following sections provides additional details about different properties of
 “*paportal”* command.
 
-Command: list
--------------
+### Command: list
 
 Lists all portal websites from the current Microsoft Dataverse environment.
 
-### Example
+#### Example
 
 *pac paportal list*
 
-Command: download
------------------
+### Command: download
 
 Download portal website content from the current Dataverse environment.
 
-### Parameters
+#### Parameters
 
 | **Name**     | **Description**                                                                                                             |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -330,23 +296,29 @@ Download portal website content from the current Dataverse environment.
 | \--webSiteId | Portal website id to download (alias: -id).                                                                                 |
 | \--overwrite | (Optional) *true* - to overwrite existing content, *false* - to fail if the folder already has website content (alias: -o). |
 
-### Example
+#### Example
 
 *pac paportal download --path "C:\\portals" --webSiteId
 f88b70cc-580b-4f1a-87c3-41debefeb902*
 
-Command: upload
----------------
+### Command: upload
 
 Upload portal website content to the current Dataverse environment.
 
-### Parameters
+#### Parameters
 
 | **Name** | **Description**                                       |
 |----------|-------------------------------------------------------|
 | \--path  | Path where the website content is stored (alias: -p). |
 
-### Example
+#### Example
 
 *pac paportal upload --path "C:\\portals\\starter-portal"*
 
+## Next steps
+
+[Tutorial: Use Power Apps CLI with portals](power-apps-cli-tutorial.md)
+
+### See also
+
+[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
