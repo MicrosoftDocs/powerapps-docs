@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/4/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# View 3D content or images in the real word (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# View 3D content or images in the real word
 
 You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
 
@@ -36,7 +34,12 @@ To use the component, you need to [enable the mixed reality (MR) features for ea
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+>
+> LIDAR-enabled devices will also result in better tracking.
+
+>![TIP]
+>The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 
 ## Use the component
 
@@ -63,6 +66,7 @@ Some properties are only available under **More options** in the **Advanced** ta
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button. | String | Properties (also in **Advanced**)
+Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
 Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)

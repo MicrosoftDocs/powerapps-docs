@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/4/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Create and view predefined 3D shapes in mixed reality (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and view predefined 3D shapes in mixed reality
 
 You can use the **View shape in MR** component in your app to let users see if a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model of your object, you might like to use [the **View in MR** component](mixed-reality-component-view-mr.md) instead.
 
@@ -30,7 +28,14 @@ To use the component, you need to [enable the mixed reality (MR) features for ea
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+>
+> LIDAR-enabled devices will also result in better tracking.
+
+
+>![TIP]
+>The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+
 
 ## Use the component
 
@@ -57,6 +62,7 @@ Note that some properties are only available in the **Advanced** tab on the **Vi
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button. | String | Properties (also in **Advanced**)
+Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
 Shape width | Width of the cube. | Integer | **Properties** (also in **Advanced**)
 Shape height | Height of the cube. | Integer | **Properties** (also in **Advanced**)

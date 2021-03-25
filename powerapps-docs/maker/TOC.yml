@@ -346,7 +346,11 @@
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
             - name: View and manipulate 3D models
-              href: ./canvas-apps/mixed-reality-component-view-3d.md
+              items:
+              - name: View 3D models in Power Apps
+                href: ./canvas-apps/mixed-reality-component-view-3d.md
+              - name: Load and connect to external 3D models
+                href: ./canvas-apps/mixed-reality-component-view-3d-store.md
             - name: View predefined shapes in mixed reality
               href: ./canvas-apps/mixed-reality-component-view-shape.md
             - name: View 3D models and 2D images in mixed reality

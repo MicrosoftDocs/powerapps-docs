@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 9/1/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -17,9 +17,7 @@ search.app:
 
 
 
-# Take and upload mixed-reality photos in Power Apps (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Take and upload mixed-reality photos in Power Apps
 
 
 You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following components:
@@ -46,8 +44,9 @@ This topic will guide you through creating a test app that you can use to take a
 
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
-
+> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+>
+> LIDAR-enabled devices will also result in better tracking.
 
 ## Insert and connect a 3D object to the View in MR component and test your app
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 9/24/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,8 @@ search.app:
   - PowerApps
 ---
 
-# Add pins to 3D models in Power Apps (Preview)
+# Add pins to 3D models in Power Apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can add pins (shown as circular markers) to specific points on 3D models that you display with the [View in 3D](mixed-reality-component-view-3d.md) component. 
 
@@ -28,14 +27,6 @@ This topic will guide you through creating a test app with a 3D model that you c
 - Use a predefined list of pins from an Excel workbook to put pins on a 3D model.
 - Display information about each of the pins in your app.
 - Create a collection to allow users of the app to create their own pins.
-
-
-## Prerequisites
-
-- Create a blank canvas app ready for editing.
-  - Go to [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-- [Enable the mixed-reality features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
-- Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
 
 
 ## Insert and connect pins to a 3D model
