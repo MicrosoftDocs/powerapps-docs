@@ -38,7 +38,7 @@ Make sure to also [review the prerequisites for using MR components](mixed-reali
 >
 > LIDAR-enabled devices will also result in better tracking.
 
-> ![TIP]
+> [!TIP]
 > The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 
 ## Use the component

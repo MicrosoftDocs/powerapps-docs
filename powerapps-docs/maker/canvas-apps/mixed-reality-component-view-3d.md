@@ -28,8 +28,8 @@ You can display a single 3D model, or you can let the user select from a gallery
 > Your 3D content must be in the .glb file format.  
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
->![TIP]
->The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> [!TIP]
+> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
 
 
 ## Use the component

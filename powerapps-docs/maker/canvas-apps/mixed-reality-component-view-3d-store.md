@@ -27,7 +27,7 @@ To help reduce load times, make sure your 3D models are [optimized for use with 
 
 Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** component.
 
-> ![TIP]
+> [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
 
 **To use a SharePoint list**
@@ -83,7 +83,7 @@ You can use the following services to host and obtain a CORS-compliant URL.
 
 The **Source** property can be a base64-encoded 3D model data URI that is in the format *data:base64,\<base64-encoded content\>*.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Loading base64-encoded models can be time-consuming, and may cause your app to take a long time to load.
 
 The following are two common ways you can create a base64-encoded URI of your model.
