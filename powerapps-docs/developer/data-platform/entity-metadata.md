@@ -1,18 +1,10 @@
 ---
-title: Table definitions | Microsoft Docs
+title: Table definitions in Microsoft Dataverse | Microsoft Docs
 description: Learn about the table definitions use in Microsoft Dataverse.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: "mayadumesh" # GitHub ID
 manager: kvivek
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/24/2021
 ms.author: jdaly
 ms.reviewer: phecke
@@ -23,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Table definitions
+# Table definitions in Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
