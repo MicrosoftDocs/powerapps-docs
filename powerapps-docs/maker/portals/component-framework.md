@@ -22,7 +22,7 @@ Power Apps component framework empowers professional developers and app makers
 to create code components for model-driven and canvas apps (public preview) to
 provide enhanced user experience for the users to work with data on forms,
 views, and dashboards. More information: [Power Apps component framework
-overview](../../developer/component-framework/overview)
+overview](../../developer/component-framework/overview.md)
 
 Power Apps portals now supports controls for model-driven apps created using
 Power Apps component framework. To use code components in portals webpages,
@@ -33,13 +33,13 @@ follow these steps:
 After following these steps, your users can now interact with the code component using the portal page that has the respective entity form.  
 
 > [!NOTE]
-> Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field) in a model-driven app currently.
+> Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md) in a model-driven app currently.
 
 ## Prerequisites
 
 -   User must have a valid Power Apps license. More information: [Power Apps
     component framework
-    licensing](../../developer/component-framework/overview#licensing)
+    licensing](../../developer/component-framework/overview#licensing.md)
 
 -   System Administrator privileges are required to enable the Power Apps
     component feature in the environment.
@@ -48,7 +48,7 @@ After following these steps, your users can now interact with the code component
 
 To learn about creating and packaging code components created using Power Apps
 component framework, go to [Create your first
-component](../../developer/component-framework/implementing-controls-using-typescript).
+component](../../developer/component-framework/implementing-controls-using-typescript.md).
 
 ### Supported field types and formats
 
@@ -113,44 +113,44 @@ The following table lists all supported field data types, and formats.
    :::column-end:::
 :::row-end:::
 
-More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property#remarks)
+More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property#remarks.md)
 
 ### Unsupported code components in portals
 
 -   [Data-set
-    components](../../developer/component-framework/sample-controls/data-set-grid-control)
+    components](../../developer/component-framework/sample-controls/data-set-grid-control.md)
     aren’t supported.
 
 -   The following code component APIs aren’t supported:
 
-    -   [Device.captureAudio](../../developer/component-framework/reference/device/captureaudio)
+    -   [Device.captureAudio](../../developer/component-framework/reference/device/captureaudio.md)
 
-    -   [Device.captureImage](../../developer/component-framework/reference/device/captureimage)
+    -   [Device.captureImage](../../developer/component-framework/reference/device/captureimage.md)
 
-    -   [Device.captureVideo](../../developer/component-framework/reference/device/capturevideo)
+    -   [Device.captureVideo](../../developer/component-framework/reference/device/capturevideo.md)
 
-    -   [Device.getBarcodeValue](../../developer/component-framework/reference/device/getbarcodevalue)
+    -   [Device.getBarcodeValue](../../developer/component-framework/reference/device/getbarcodevalue.md)
 
-    -   [Device.getCurrentPosition](../../developer/component-framework/reference/device/getcurrentposition)
+    -   [Device.getCurrentPosition](../../developer/component-framework/reference/device/getcurrentposition.md)
 
-    -   [Device.pickFile](../../developer/component-framework/reference/device/pickfile)
+    -   [Device.pickFile](../../developer/component-framework/reference/device/pickfile.md)
 
-    -   [Utility](../../developer/component-framework/reference/utility)
+    -   [Utility](../../developer/component-framework/reference/utility.md)
 
-    -   [WebAPI](../../developer/component-framework/reference/webapi)
+    -   [WebAPI](../../developer/component-framework/reference/webapi.md)
 
--   [uses-feature](../../developer/component-framework/manifest-schema-reference/uses-feature)
+-   [uses-feature](../../developer/component-framework/manifest-schema-reference/uses-feature.md)
     element must not be set to **true**.
 
 -   [Value elements not
-    supported](../../developer/component-framework/manifest-schema-reference/property#value-elements-that-are-not-supported)
+    supported](../../developer/component-framework/manifest-schema-reference/property#value-elements-that-are-not-supported.md)
     by Power Apps component framework.
 
 ## Add a code component to a field in model-driven app
 
 To learn about how to add code component to a field in model-driven app, go to
 [Add a code component to a
-field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field).
+field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md).
 
 > [!IMPORTANT]
 > Code components for portals be available for web browsers using the
@@ -172,7 +172,7 @@ entity form.
 To add code component to entity form:
 
 1.  Open [Portal
-    Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal)
+    Management](configure/configure-portal.md)
     app.
 
 2.  Select **Entity Forms** from the left pane.
@@ -238,10 +238,10 @@ entity form.
 
 ## Next steps
 
-[Tutorial: How to use code components in portals](component-framework-tutorial.md)
+[Tutorial: Use code components in portals](component-framework-tutorial.md)
 
 ### See also
 
-[Power Apps component framework overview](../../developer/component-framework/overview) <br>
-[Create your first component](../../developer/component-framework/implementing-controls-using-typescript)
-[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity)
+[Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
+[Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md)
+[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)

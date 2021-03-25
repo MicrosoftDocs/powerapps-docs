@@ -14,7 +14,7 @@ contributors:
   - HemantGaur
 ---
 
-# Tutorial: How to use code components in portals
+# Tutorial: Use code components in portals
 
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
@@ -41,7 +41,7 @@ use your component and form when following the steps in this tutorial.
 
 To create a sample component, follow the steps in the tutorial [Create your
 first
-component](../../developer/component-framework/implementing-controls-using-typescript).
+component](../../developer/component-framework/implementing-controls-using-typescript.md).
 At the end of this tutorial, you’ll have the component named
 TSLinearInputComponent packaged and uploaded to your Dataverse environment.
 
@@ -50,15 +50,15 @@ TSLinearInputComponent packaged and uploaded to your Dataverse environment.
 Now that you have the TSLinearInputComponent component uploaded to the Dataverse
 environment, follow the steps in the tutorial [Add a code component to a field
 in model-driven
-apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity)
+apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
 to add the component to the **Opportunity** entity on the **Main** form.
 
 ## Step 3. Verify the model-driven app with the new component
 
 You can [update an existing model-driven
-app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/design-custom-business-apps-using-app-designer),
+app](../model-driven-apps/design-custom-business-apps-using-app-designer.md),
 or [create a new
-app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+app](../model-driven-apps/build-first-model-driven-app.md)
 with the form that you added the component to. For example, this is how the
 **Opportunity** entity **Main** form looks like when using the code component in
 this tutorial.
@@ -211,6 +211,6 @@ the same form.
 
 ### See also
 
-[Power Apps component framework overview](../../developer/component-framework/overview) <br>
-[Create your first component](../../developer/component-framework/implementing-controls-using-typescript)
-[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity)
+[Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
+[Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md)
+[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
