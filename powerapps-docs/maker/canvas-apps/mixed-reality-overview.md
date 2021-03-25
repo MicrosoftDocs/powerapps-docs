@@ -40,7 +40,7 @@ The following prebuilt components can be used for MR scenarios:
 
 You can insert them into your apps from the **Insert** pane, under **Media** and **Mixed Reality**:
 
-    :::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality components under Media and Mixed Reality.":::
+:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality components under Media and Mixed Reality.":::
 
 >![TIP]
 >The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
