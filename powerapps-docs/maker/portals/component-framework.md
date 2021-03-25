@@ -67,30 +67,28 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       DateAndTime.DateOnly
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       Decimal
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Enum
    :::column-end:::
    :::column span="":::
       Floating Point Number
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       Multiple Line
    :::column-end:::
    :::column span="":::
       OptionSet
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       SingleLine.Email
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       SingleLine.Phone
    :::column-end:::
@@ -100,7 +98,6 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       SingleLine.TextArea
    :::column-end:::
-:::row-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
@@ -112,8 +109,6 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       TwoOptions
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       Whole
    :::column-end:::
