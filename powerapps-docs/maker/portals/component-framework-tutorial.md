@@ -30,7 +30,8 @@ web page and interact with the component.
 
 ## Prerequisites
 
-You need a provisioned Power Apps portal to follow this tutorial.
+You need a Power Apps portal with version [9.3.3.x](version-9.3.3.x.md) or higher to follow this tutorial.
+
 Though this tutorial uses Employee Self-Service portal template, you can also use
 Dataverse starter portal instead. When using a starter portal, ensure to replace
 references to the portal web site.
