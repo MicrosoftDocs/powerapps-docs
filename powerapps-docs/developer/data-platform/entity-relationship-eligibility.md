@@ -31,9 +31,9 @@ Before you create a relationship you should confirm whether the table is eligibl
 |GetValidReferencingEntities</br>Returns the set of tables that are valid as the related table (many) to the specified table in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function" />|<xref:Microsoft.Xrm.Sdk.Messages.GetValidReferencingEntitiesRequest>|  
   
 ### See also  
- [Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
- [Extend the metadata model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
+ [Customize table relationship definitions](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
+ [Extend the definitions model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
+ [Table relationship definitions](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Table relationship messages](entity-relationship-metadata-messages.md)   
  [Table relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)   
  [Create a 1:N relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_Create1NEntityRelationship)   

@@ -1,6 +1,6 @@
 ---
-title: Table relationship metadata | Microsoft Docs
-description: Learn about the relationship metadata used in Microsoft Dataverse.
+title: Table relationship definitions | Microsoft Docs
+description: Learn about the relationship definitions used in Microsoft Dataverse.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Table relationship metadata
+# Table relationship definitions
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

@@ -380,14 +380,14 @@
 - name: Create client applications
   href: connect-dataverse.md
   items:
-  - name: Authenticate
+  - name: Authenticate apps and services with Microsoft Dataverse
     href: authentication.md
     items:
     - name: .NET Framework applications
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    - name: Microsoft 365 authentication with WS-Trust
+    - name: Use Microsoft 365 (WS-Trust)
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md

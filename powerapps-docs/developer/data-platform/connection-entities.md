@@ -36,7 +36,7 @@ The *connections* provide a flexible way to connect and describe the relationshi
 - Support for workflows and auditing for automating and improving business processes.  
   
 ## Enabling and creating connections  
- You can enable any custom or customizable table for connection by updating the metadata. Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsConnectionsEnabled> property to `true`.  
+ You can enable any custom or customizable table for connection by updating the definitions. Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsConnectionsEnabled> property to `true`.  
   
  To create a connection between two records, use the `Connection` table. You must specify a record from which you create a connection (source) and a record to which you connect (target). Use the `Connection.Record1Id` column to specify the source record and the `Connection.Record2Id` column to specify the target record. Optionally, you can specify the duration of the connection and the description. To describe the relationship between the participants in the connection, use the connection roles. To specify the connection roles, use the `Connection.Record1RoleId` column and the `Connection.Record2RoleId` column.  
   

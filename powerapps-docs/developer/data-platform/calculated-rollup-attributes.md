@@ -72,7 +72,7 @@ search.app:
  Calculated column values are available in the retrieve plug-in pipeline. Post image of table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Table Images](understand-the-data-context.md#entity-images)
   
 ### Limitations  
- You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column metadata. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
+ You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
@@ -82,7 +82,7 @@ search.app:
   
  Calculated columns don’t have values when a user with Dynamics 365 for Outlook is offline.  
   
- `MaxValue` and `MinValue` metadata properties can’t be set on calculated columns  
+ `MaxValue` and `MinValue` definitions properties can’t be set on calculated columns  
   
 <a name="BKMK_Rollup"></a>   
 
