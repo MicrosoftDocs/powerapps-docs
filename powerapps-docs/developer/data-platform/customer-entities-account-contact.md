@@ -1,6 +1,6 @@
 ---
-title: "Customer entities(account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The account and contact entities in Dynamics 365 are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address entity is used to store address and shipping information for a customer." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: "pehecke"
@@ -20,11 +20,11 @@ search.app:
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 
-The *account* and *contact* entities in Microsoft Dataverse are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A *customer address* table is used to store address and shipping information for a customer.  
+The *account* and *contact* tables in Microsoft Dataverse are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A *customer address* table is used to store address and shipping information for a customer.  
   
 ## Account table
  
-The account table is one of the tables in Dataverse to which most other entities are attached or parented. In Dataverse, an account represents a company with which the business unit has a relationship. Information that is included in an account is all relevant contact information, company information, category, relationship type, and address information. Other information that applies includes the following items:  
+The account table is one of the tables in Dataverse to which most other tables are attached or parented. In Dataverse, an account represents a company with which the business unit has a relationship. Information that is included in an account is all relevant contact information, company information, category, relationship type, and address information. Other information that applies includes the following items:  
   
 - An account can be a parent to almost any other table. This includes another account.  
   
@@ -54,28 +54,14 @@ The contact table stores all information about a person such as an email address
   
 The basic operations that you can perform on a contact include Create, Read, Update, and Delete.  
   
-Linking entities such as activities and notes to the contact table lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
+Linking tables such as activities and notes to the contact table lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
 
 ## CustomerAddress table
 
 This table contains address and shipping information. It is used to store additional addresses for an account or contact.
 
 >[!NOTE]
->The Customer Address table is updated at the platform level when a change is made to the Account or Contact entities. 
->Because of this, no separate SDK call will be made to update or create the Customer Address table. Any code that is triggering 
->on address updates or creates should be pointing to the Contact or Account entities.
+>The Customer Address table is updated at the platform level when a change is made to the Account or Contact tables. Because of this, no separate SDK call will be made to update or create the Customer Address table. Any code that is triggering on address updates or creates should be pointing to the Contact or Account tables.
   
-## In This Section  
- [Account table](reference/entities/account.md)  
-  
- [Contact table](reference/entities/contact.md)  
-  
- [CustomerAddress table](reference/entities/customeraddress.md)  
-  
-## Related Sections  
- [Model Your Business Data With Dynamics 365](/dynamics365/customer-engagement/developer/model-business-data)  
-  
- [Business Management Entities](/dynamics365/customer-engagement/developer/business-management-entities)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
