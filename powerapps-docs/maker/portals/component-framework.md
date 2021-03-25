@@ -14,9 +14,9 @@ contributors:
   - HemantGaur
 ---
 
-# Use code components in portals
+# Use code components in portals (Preview)
 
-## Overview
+[This article is pre-release documentation and is subject to change.]
 
 Power Apps component framework empowers professional developers and app makers
 to create code components for model-driven and canvas apps (public preview) to
@@ -32,8 +32,10 @@ follow these steps:
 
 After following these steps, your users can now interact with the code component using the portal page that has the respective entity form.  
 
-> [!NOTE]
-> Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md) in a model-driven app currently.
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md) in a model-driven app currently.
 
 ## Prerequisites
 

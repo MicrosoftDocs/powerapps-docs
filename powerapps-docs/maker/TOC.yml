@@ -1685,7 +1685,11 @@
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
         - name: Code components
-          href: ./portals/component-framework.md          
+          items:
+          - name: Overview of code components in portals
+            href: ./portals/component-framework.md          
+          - name: "Tutorial: Use code components in portals"
+            href: ./portals/component-framework-tutorial.md          
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
