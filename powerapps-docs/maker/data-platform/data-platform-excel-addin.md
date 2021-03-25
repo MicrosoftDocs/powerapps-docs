@@ -104,7 +104,7 @@ This setting prevents the Power Apps Excel Add-in from downloading. When this oc
 
 For more information about enabling Office Store Add-in downloading, contact your Office app administrator. 
 
-For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook&preserve-view=true).
+For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-addins-in-the-admin-center?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook&preserve-view=true).
 
 ## Other ways to export and view table row data
 For more information about ways to export and view table row data, see these articles.
