@@ -83,7 +83,7 @@ For each app you create, you need to enable the MR features. This should be enab
 
 5. Open the **Insert** pane to see the MR components under **Media** and **Mixed Reality**.
 
-    ![See the mixed reality components under Media and Mixed Reality](./media/augmented-overview/augmented-overview-insert-all.png "See the mixed reality components under Media and Mixed Reality")
+    :::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality components under Media and Mixed Reality.":::
 
 ## Next steps
 

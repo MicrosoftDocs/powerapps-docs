@@ -42,7 +42,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Mixed reality**.
 3. Select the component **View shape in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-   ![Select View shape in MR](./media/augmented-view-shape/augmented-view-shape.png "Select View shape in MR")
+   <fix>![Select View shape in MR](./media/augmented-view-shape/augmented-view-shape.png "Select View shape in MR")
 
 You can modify the component with a number of properties.
 
@@ -50,7 +50,7 @@ You can modify the component with a number of properties.
 
 The following properties are on the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
 
-![Properties on the component's View shape in MR pane](./media/augmented-view-shape/augmented-view-shape-properties.png "Properties on the component's View shape in MR pane")
+<fix>![Properties on the component's View shape in MR pane](./media/augmented-view-shape/augmented-view-shape-properties.png "Properties on the component's View shape in MR pane")
 
 Note that some properties are only available in the **Advanced** tab on the **View in MR** pane.
 

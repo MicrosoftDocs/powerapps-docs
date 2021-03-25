@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 ---
 
+
+
 # Take and upload mixed-reality photos in Power Apps (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -38,8 +40,6 @@ This topic will guide you through creating a test app that you can use to take a
 
 - Create a blank canvas app ready for editing.
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-       
-       ![Create a blank phone layout app](./media/augmented-upload-photo/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
 - [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
 - Have a OneDrive folder called **MRPhotos** that you can store your photos in when testing the upload feature.
 - Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
@@ -62,7 +62,8 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
 
-   ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
+
+    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
 
 1. In the **Properties** panel for the **View in MR** component, select the **Source** field and enter `ViewIn3D1.Src` to set the source object as the 3D object you inserted with the **View in 3D** component.  
 

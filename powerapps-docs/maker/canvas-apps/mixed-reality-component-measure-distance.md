@@ -46,8 +46,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Mixed reality**.
 3. Select the component **Measure in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Measure in MR](./media/augmented-measure/augmented-measure.png "Select Measure in MR")
+   <fix>![Select Measure in MR](./media/augmented-measure/augmented-measure.png "Select Measure in MR")
 
 You can modify the component with a number of properties.
 
@@ -59,8 +58,7 @@ You can modify the component with a number of properties.
 
 The following properties are on the component's **Measure in MR** pane on the **Properties** and **Advanced** tabs.
 
-> [!div class="mx-imgBorder"]
-> ![The Measure in MR pane](./media/augmented-measure/augmented-measure-properties.png "The Measure in MR pane")
+<fix>![The Measure in MR pane](./media/augmented-measure/augmented-measure-properties.png "The Measure in MR pane")
 
 Note that some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
 

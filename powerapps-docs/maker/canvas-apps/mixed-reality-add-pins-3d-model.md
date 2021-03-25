@@ -34,9 +34,6 @@ This topic will guide you through creating a test app with a 3D model that you c
 
 - Create a blank canvas app ready for editing.
   - Go to [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-       
-       ![Create a blank phone layout app](./media/augmented/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
-       
 - [Enable the mixed-reality features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
 - Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
 
@@ -50,6 +47,8 @@ First, insert a 3D model:
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
+
+    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
 
     A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, go to [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 

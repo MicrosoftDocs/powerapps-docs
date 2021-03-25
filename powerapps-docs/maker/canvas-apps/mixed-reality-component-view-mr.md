@@ -48,7 +48,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-   ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
+   <fix>![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
 
 You can modify the component with a number of properties.
 
