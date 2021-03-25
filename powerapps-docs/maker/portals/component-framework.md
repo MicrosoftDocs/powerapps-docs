@@ -80,7 +80,7 @@ The following table lists all supported field data types, and formats.
       Floating Point Number
    :::column-end:::
    :::column span="":::
-      Multiple Line
+      Multiple
    :::column-end:::
    :::column span="":::
       OptionSet
