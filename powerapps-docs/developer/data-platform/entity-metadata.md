@@ -1,6 +1,6 @@
 ---
 title: Table definitions in Microsoft Dataverse | Microsoft Docs
-description: Learn about the table definitions use in Microsoft Dataverse.
+description: Learn how to programmatically work with table definitions in Microsoft Dataverse.
 author: "mayadumesh" # GitHub ID
 manager: kvivek
 ms.service: powerapps
