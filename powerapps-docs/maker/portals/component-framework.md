@@ -35,13 +35,13 @@ After following these steps, your users can now interact with the code component
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md) in a model-driven app currently.
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field) in a model-driven app currently.
 
 ## Prerequisites
 
 -   User must have a valid Power Apps license. More information: [Power Apps
     component framework
-    licensing](../../developer/component-framework/overview#licensing.md)
+    licensing](../../developer/component-framework/overview.md#licensing)
 
 -   System Administrator privileges are required to enable the Power Apps
     component feature in the environment.
@@ -78,7 +78,8 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       Floating Point Number
    :::column-end:::
-:::row-end::::::row:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Multiple Line
    :::column-end:::
@@ -88,7 +89,8 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       SingleLine.Email
    :::column-end:::
-:::row-end::::::row:::
+:::row-end:::
+:::row:::
    :::column span="":::
       SingleLine.Phone
    :::column-end:::
@@ -99,7 +101,8 @@ The following table lists all supported field data types, and formats.
       SingleLine.TextArea
    :::column-end:::
 :::row-end:::
-:::row-end::::::row:::
+:::row-end:::
+:::row:::
    :::column span="":::
       SingleLine.Ticker
    :::column-end:::
@@ -109,13 +112,14 @@ The following table lists all supported field data types, and formats.
    :::column span="":::
       TwoOptions
    :::column-end:::
-:::row-end::::::row:::
+:::row-end:::
+:::row:::
    :::column span="":::
       Whole
    :::column-end:::
 :::row-end:::
 
-More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property#remarks.md)
+More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property.md#remarks)
 
 ### Unsupported code components in portals
 
@@ -145,14 +149,14 @@ More information: [Attributes list and descriptions](../../developer/component-f
     element must not be set to **true**.
 
 -   [Value elements not
-    supported](../../developer/component-framework/manifest-schema-reference/property#value-elements-that-are-not-supported.md)
+    supported](../../developer/component-framework/manifest-schema-reference/property.md#value-elements-that-are-not-supported)
     by Power Apps component framework.
 
 ## Add a code component to a field in model-driven app
 
 To learn about how to add code component to a field in model-driven app, go to
 [Add a code component to a
-field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity#add-a-code-component-to-a-field.md).
+field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field).
 
 > [!IMPORTANT]
 > Code components for portals be available for web browsers using the
