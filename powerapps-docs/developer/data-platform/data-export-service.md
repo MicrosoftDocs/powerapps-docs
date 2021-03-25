@@ -65,6 +65,7 @@ For online solutions and services, Azure provides a [Key Vault](https://azure.mi
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
 ## Programming for the Data Export Service  
+
  The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Dataverse organizational structure, relationships, and connection information; and a set of `Profiles` operations for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](https://swagger.io/) URLs:  
   
 |Swagger endpoint|Description|  
@@ -95,8 +96,8 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
 |--------------|-------------|-----------------|  
 |profiles|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfilesByOrganizationId), [POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_CreateProfile)|Get all profiles for specified organization, create a new export profile.|  
 |profiles/{id}|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfileById), [PUT](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_UpdateProfile), [DELETE](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_DeleteProfileById)|Get, update or delete a specific profile.|  
-|profiles/{id}/activate|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_Activate)|Activate a profile, which starts replication of both the associated metadata and data.|  
-|profiles/{id}/activatemetadata|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_ActivateMetadata)|Activate profile for metadata replication only.|  
+|profiles/{id}/activate|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_Activate)|Activate a profile, which starts replication of both the associated definitions and data.|  
+|profiles/{id}/activatemetadata|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_ActivateMetadata)|Activate profile for definitions replication only.|  
 |profiles/{id}/activatedata|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_ActivateData)|Activate profile for data replication only.|  
 |profiles/{id}/deactivate|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_Deactivate)|Deactivate a profile.|  
 |profiles/{id}/test|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetTestResultById)|Perform test operations on an existing profile.|  

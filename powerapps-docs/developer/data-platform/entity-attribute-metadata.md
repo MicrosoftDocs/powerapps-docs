@@ -1,6 +1,6 @@
 ---
-title: Column definition | Microsoft Docs
-description: Learn about column definition use in Microsoft Dataverse.
+title: Column definitions | Microsoft Docs
+description: Learn about column definitions use in Microsoft Dataverse.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Column definition
+# Column definitions
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -220,7 +220,7 @@ With the organization service you can use the following messages to retrieve inf
 |[RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest) |Retrieves data about a *global* choice.|
 
 More information: 
-- [Sample: Dump column choices metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
+- [Sample: Dump column choices definitions to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
 - [Dataverse Developer Guide : Customize global choice](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
 
 #### Use the Web API to retrieve choice values
@@ -231,7 +231,7 @@ The Web API provides a RESTful style for querying choice values. You can retriev
 
 With the Web API you can also use the [RetrieveMetadataChanges Function](/dynamics365/customer-engagement/web-api/retrievemetadatachanges).
 
-More information: [Query metadata using the Web API > Querying EntityMetadata column](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+More information: [Query definitions using the Web API > Querying EntityMetadata column](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
 
 
 ## Column mapping

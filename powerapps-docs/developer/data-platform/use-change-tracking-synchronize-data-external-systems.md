@@ -23,7 +23,7 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
 
 ## Enable change tracking for a table  
 
- Before retrieving the changes for a table, make sure that the change tracking feature is enabled for that table. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled> property to `True`. Annotation `Org.OData.Capabilities.V1.ChangeTracking` gets added to table sets that have change tracking enabled. To see annotations in table metadata, do 
+ Before retrieving the changes for a table, make sure that the change tracking feature is enabled for that table. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled> property to `True`. Annotation `Org.OData.Capabilities.V1.ChangeTracking` gets added to table sets that have change tracking enabled. To see annotations in table definitions, do 
 
  ```http 
  GET [Organization URI]/api/data/v9.0/$metadata?annotations=true

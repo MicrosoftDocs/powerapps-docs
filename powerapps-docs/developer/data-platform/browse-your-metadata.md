@@ -1,5 +1,5 @@
 ---
-title: "Browse the metadata for your organization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Browse definitions for your organization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the Metadata Browser to view tables and their properties in Microsoft Dataverse. The Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/16/2021
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Browse the metadata for your environment
+# Browse definitions for your environment
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -27,16 +27,18 @@ You can use the Metadata Browser to view tables and their properties in Microsof
 After you download the solution, you must import it to be able to use it.
 
 ## Open as an app
-Dataverse is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual tables.
+
+Dataverse is configured as an app. After you install the **Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual tables.
 
 ## Use the app
+
 After you import the solution successfully, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**.
 
-After you install the **Entity Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Metadata Browser and buttons to launch two different views.
+After you install the **Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Metadata Browser and buttons to launch two different views.
 - **Metadata Browser** is equivalent to the **Entities** view in the app.
 - **Entity Metadata Browser** is equivalent to the **Entity Metadata** view in the app.
 
-## Entities view
+## Tables view
 
 On opening the app, **Entities** is the default view.
 
@@ -50,7 +52,7 @@ You can perform the following actions:
 - **Filter Entities**: Set simple criteria to view a sub-set of tables. All criteria are evaluated using AND logic.
 - **Filter Properties**: Filter the properties displayed for any selected table. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
 
-## Entity Metadata view
+## Table definitions view
 
 You can perform the following actions for a single table:
 
@@ -94,7 +96,7 @@ You can perform the following actions for a single table:
 ### See also
 
  [Developer Tools for Dataverse](developer-tools.md)<br />
- [Customize Entity Metadata](customize-entity-metadata.md)<br />
+ [Customize table definitions](customize-entity-metadata.md)<br />
   
 
 

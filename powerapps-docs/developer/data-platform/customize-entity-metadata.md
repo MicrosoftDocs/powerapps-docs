@@ -1,6 +1,6 @@
 ---
-title: "Customize  metadata (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Tables are defined by metadata. By defining or changing the metadata, you can control the capabilities of a table." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Customize table definitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Tables are defined by definitions. By defining or changing the definitions, you can control the capabilities of a table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Customize metadata
+# Customize table definitions
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Tables are defined by metadata. By defining or changing the  metadata, you can control the capabilities of a able. To view the metadata for your organization, use the metadata browser. [Download the metadata browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
+Tables are defined by definitions. By defining or changing the  definitions, you can control the capabilities of a able. To view the definitions for your organization, use the definitions browser. [Download the metadata browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
 
-More information: [Browse the Metadata for Your Organization](browse-your-metadata.md)  
+More information: [Browse definitions for Your Organization](browse-your-metadata.md)  
   
  This topic is about how to work with tables programmatically. See [Create or edit tables (record types)](/dynamics365/customer-engagement/customize/create-edit-entities)  for information about working with tables in the application.  
 
@@ -30,15 +30,15 @@ Tables can be created using either the Organization service or the Web API. The 
 - With the Organization service you will use the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class. More information: [Create a custom table](/dynamics365/customer-engagement/developer/org-service/create-custom-entity) and [Retrieve, update, and delete tables](/dynamics365/customer-engagement/developer/org-service/retrieve-update-delete-entities)
 - With the Web API you will use the <xref:Microsoft.Dynamics.CRM.EntityMetadata> EntityType. More information : [Create and update table definitions using the Web API](/dynamics365/customer-engagement/developer/webapi/create-update-entity-definitions-using-web-api).
  
-## Metadata operations
+## Definitions operations
 
-How you work with table metadata depends on which service you use.
+How you work with table definitions depends on which service you use.
 
-Since the Web API is a RESTful endpoint, it uses a different way to create, retrieve, update, and delete metadata. Use `POST`, `GET`, `PUT`, and `DELETE` HTTP verbs to work with metadata entitytypes. More information : [Create and update table definitions using the Web API](/dynamics365/customer-engagement/developer/webapi/create-update-entity-definitions-using-web-api).
+Since the Web API is a RESTful endpoint, it uses a different way to create, retrieve, update, and delete definitions. Use `POST`, `GET`, `PUT`, and `DELETE` HTTP verbs to work with definitions entitytypes. More information : [Create and update table definitions using the Web API](/dynamics365/customer-engagement/developer/webapi/create-update-entity-definitions-using-web-api).
 
-One exception to this is the <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" /> provides a way to compose a metadata query and track changes over time. 
+One exception to this is the <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" /> provides a way to compose a definitions query and track changes over time. 
 
-If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class. This class contains the data that is needed to retrieve a collection of metadata records that satisfy the specified criteria. The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> returns a timestamp value that can be used with this request at a later time to return information about how metadata has changed since the last request.
+If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class. This class contains the data that is needed to retrieve a collection of definitions records that satisfy the specified criteria. The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> returns a timestamp value that can be used with this request at a later time to return information about how definitions has changed since the last request.
    
 
 |                                                                                                                                                                          Message                                                                                                                                                                           |                                               Web API                                                |                           SDK Assembly                           |
@@ -48,7 +48,7 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 |                                                                                                                                                                    RetrieveAllEntities                                                                                                                                                                     |                               Use GET request to retrieve table data.                               |   <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>   |
 |                                                                                                                                                                       RetrieveEntity                                                                                                                                                                       |          <xref href="Microsoft.Dynamics.CRM.RetrieveEntity?text=RetrieveEntity Function" />          |     <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>      |
 |                                                                                                                                                                        UpdateEntity                                                                                                                                                                        |                                Use a PUT request to update a table.                                |      <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>       |
-| RetrieveMetadataChanges</br>Used together with objects in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace to create a query to efficiently retrieve and detect changes to specific metadata. More information: [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata). | <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" /> | <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> |
+| RetrieveMetadataChanges</br>Used together with objects in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace to create a query to efficiently retrieve and detect changes to specific definitions. More information: [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata). | <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" /> | <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> |
 
 
 ## Options available when you create a custom table  
@@ -96,10 +96,10 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 |              **Dynamics 365 for tablets**               |                             Use `IsVisibleInMobileClient` to enable or disable the ability of Dynamics 365 for tablets users to see data for this table.<br /><br /> If the table is available for Dynamics 365 for tablets you can use `IsReadOnlyInMobileClient` to specify that the data for the record is read-only.                              |
 |                                  **Enable Auditing**                                   |                                                                                                              Use `IsAuditEnabled` to enable or disable auditing for the table. For more information, see [Configure table and columns for Auditing](configure-entities-attributes-auditing.md).                                                                                                              |
 |                        **Change areas that display the entity**                        |                                                                                                                                                  You can control where table grids appear in the application Navigation Pane. This is controlled by the SiteMap.                                                                                                                                                   |
-|                              **Add or Remove Attributes**                              |                                                                                     As long as the managed property `CanCreateAttributes.Value` allows for creating columns, you can add columns to the table. For more information, see [Customize Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata).                                                                                      |
+|                              **Add or Remove Columns**                              |                                                                                     As long as the managed property `CanCreateAttributes.Value` allows for creating columns, you can add columns to the table. For more information, see [Customize definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata).                                                                                      |
 |                                **Add or Remove Views**                                 |                                                                                                                                As long as the managed property `CanCreateViews.Value` allows for creating views, you can use the `SavedQuery` table to create views for an table.                                                                                                                                 |
 |                                **Add or Remove Charts**                                |              As long as the managed property `CanCreateCharts.Value` allows for creating charts and the `IsEnabledForCharts` table property is true, you can use the [SavedQueryVisualization table](/reference/entities/savedqueryvisualization.md) to create charts for an table. For more information, see [View Data with Visualizations (Charts)](/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts).              |
-|                         **Add or Remove Entity Relationships**                         |                                                                                        There are several managed properties that control the types of relationships that you can create for an table. For more information, see [Customize Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata).                                                                                        |
+|                         **Add or Remove Entity Relationships**                         |                                                                                        There are several managed properties that control the types of relationships that you can create for an table. For more information, see [Customize Relationship definitions](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata).                                                                                        |
 |                                    **Change Icons**                                    |                                                                                                                                             You can change the icons used for custom tables. For more information, see [Modify Icons](/dynamics365/customer-engagement/developer/modify-icons-entity).                                                                                                                                             |
 |                        **Can Change Hierarchical Relationship**                        |                                                                                        `CanChangeHierarchicalRelationship.Value` controls whether the hierarchical state of relationships included in your managed solutions can be changed. More information:                                                                                         |
   
@@ -111,9 +111,9 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
   
 ### See also
   
-[Use the Web API with metadata](webapi/use-web-api-metadata.md)
+[Use the Web API with definitions](webapi/use-web-api-metadata.md)
 
-[Work with metadata using the Organization service](org-service/work-with-metadata.md)
+[Work with definitions using the Organization service](org-service/work-with-metadata.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

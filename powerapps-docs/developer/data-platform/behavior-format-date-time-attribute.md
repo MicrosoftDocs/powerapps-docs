@@ -272,7 +272,7 @@ To resolve this, a user can either:
 
  [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
  [Behavior and format of the Date and Time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
- [Customize column metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
+ [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 
  [Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)

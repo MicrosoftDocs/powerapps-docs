@@ -32,9 +32,9 @@ When you create customizations in Microsoft Dataverse, you can support multiple 
 
  Labels are localized strings displayed to users in the client applications. They are implemented by using `Label` (<xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> or <xref:Microsoft.Xrm.Sdk.Label> class), which supports language packs. Strings that are displayed to users, such as display names or choices, can be stored in multiple languages. Users can select which language they want displayed in forms and views in Dataverse.  
 
- The following table lists all of the metadata that uses the `Label`.  
+ The following table lists all of the definitions that uses the `Label`.  
 
-|Metadata property|Description|  
+|Definitions property|Description|  
 |-----------------------|-----------------|  
 |AttributeMetadata.Description|Description for a column.|  
 |AttributeMetadata.DisplayName|Display name for a column.|  
@@ -106,7 +106,7 @@ When you create customizations in Microsoft Dataverse, you can support multiple 
 |RetrieveProvisionedLanguagePackVersion</br>Retrieves the version of the language packs installed on the server.|<xref href="Microsoft.Dynamics.CRM.RetrieveProvisionedLanguagePackVersion?text=RetrieveProvisionedLanguagePackVersion Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveProvisionedLanguagePackVersionRequest>|  
 
 ### See also  
- [Extend the metadata model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
+ [Extend the definitions model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Customize Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)   
  [Modify messages for a table](/dynamics365/customer-engagement/developer/modify-messages-entity)     
  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>   

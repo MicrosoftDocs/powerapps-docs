@@ -93,7 +93,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 ### See also
 
-[Table relationship metadata](entity-relationship-metadata.md)  
+[Table relationship definitions](entity-relationship-metadata.md)  
 
 
 
