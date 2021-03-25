@@ -33,7 +33,7 @@ Tables that support the concept of state have a pair of columns that capture thi
 |`statecode`|**Status**|Represents the state of the record. For custom tables this is **Active** or **Inactive**. The Incident (case) table uses **Active**, **Resolved**, and **Canceled**. You can’t add more state choices but you can change the choice labels.|  
 |`statuscode`|**Status Reason**|Represents a status that is linked to a specific state. Each state must have at least one possible status. You can add additional status choices and change the labels of existing choices.|  
   
- The definitions for the columns defines what status values are valid for a given state. For example, for the `Incident` (**Case**) table, the default state and status options are shown in the following table.  
+ The table definitions for the columns defines what status values are valid for a given state. For example, for the `Incident` (**Case**) table, the default state and status options are shown in the following table.  
   
 |State|Status|  
 |-----------|------------|  
@@ -48,7 +48,7 @@ Tables that support the concept of state have a pair of columns that capture thi
   
  This data is stored in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> class, which represents the options in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> class.  
   
-To view definitions for your organization, install the Metadata Browser solution described in [Browse definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table Reference](/reference/about-entity-reference.md).
+To view table definitions for your organization, install the Metadata Browser solution described in [Browse table definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table Reference](/reference/about-entity-reference.md).
   
 <a name="BKMK_DetectValidStatusTransitions"></a>   
 
@@ -83,7 +83,7 @@ To view definitions for your organization, install the Metadata Browser solution
 ### See also  
  [Sample: Retrieve valid status transitions](org-service/samples/retrieve-valid-status-transitions.md)   
  [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
- [Retrieve and detect changes to definitions](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
+ [Retrieve and detect changes to table definitions](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
  [Define status reason transitions](https://go.microsoft.com/fwlink/p/?LinkId=393657)
 
 

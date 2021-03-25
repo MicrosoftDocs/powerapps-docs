@@ -31,9 +31,9 @@ To define alternate keys programmatically, you first have to create an object of
 
 You should be aware of the following constraints when creating alternate keys:  
 
-- **Valid columns in key definitions**  
+- **Valid columns in key table definitions**  
 
-   Only columns of the following types can be included in alternate key definitions:  
+   Only columns of the following types can be included in alternate key table definitions:  
 
 
   |      Column Type      |    Display Name     |
@@ -50,9 +50,9 @@ You should be aware of the following constraints when creating alternate keys:
 
    When a key is created, the system validates that the key can be supported by the platform, including that the total key size does not violate SQL-based index constraints like 900 bytes per key and 16 columns per key. If the key size doesn't meet the constraints, an error message will be displayed.  
 
-- **Maximum number of alternate key definitions for a table**  
+- **Maximum number of alternate key table definitions for a table**  
 
-   There can be a maximum of 5 alternate key definitions for a table in a Dataverse instance.  
+   There can be a maximum of 5 alternate key table definitions for a table in a Dataverse instance.  
 
 - **Unicode characters in key value**
 

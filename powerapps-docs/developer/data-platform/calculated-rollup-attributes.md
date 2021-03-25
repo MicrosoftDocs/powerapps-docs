@@ -82,7 +82,7 @@ search.app:
   
  Calculated columns don’t have values when a user with Dynamics 365 for Outlook is offline.  
   
- `MaxValue` and `MinValue` definitions properties can’t be set on calculated columns  
+ `MaxValue` and `MinValue` column definitions properties can’t be set on calculated columns  
   
 <a name="BKMK_Rollup"></a>   
 
