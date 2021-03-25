@@ -87,7 +87,7 @@ Change the configuration using Visual Studio Code and save your changes.
 
 > [!NOTE]
 > Ensure you update only the supported entities for use with Power Apps
-CLI. More information: [Supported entities](#prerequisites)
+CLI. More information: [Supported entities](power-apps-cli.md#supported-entities)
 
 For example, the default portal page shows the text such as this:
 
@@ -146,7 +146,7 @@ To confirm the changes made to the portal webpage:
     ![View updated page content](media/power-apps-cli/changed-page.png "View updated page content")
 
 This concludes the tutorial. You can repeat the above steps and change the
-portals content for other [supported entities](#prerequisites).
+portals content for other [supported entities](power-apps-cli.md#supported-entities).
 
 ## Next steps
 
