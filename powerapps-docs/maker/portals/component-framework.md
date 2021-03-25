@@ -23,7 +23,7 @@ Power Apps portals now supports controls for model-driven apps created using
 Power Apps component framework. To use code components in portals webpages,
 follow these steps:
 
-![](media/portals-component-framework/68eb75e27aa4ee329e463d12f8fb3587.png)
+![](media/component-framework/68eb75e27aa4ee329e463d12f8fb3587.png)
 
 After following these steps, your users can now interact with the code component
 using the portal page that has the respective entity form.  
@@ -253,7 +253,7 @@ with the form that you added the component to. For example, this is how the
 **Opportunity** entity **Main** form looks like when using the code component in
 this tutorial.
 
-![](media/portals-component-framework/392c07a5f40fe20ee9dfa2d80a60e585.png)
+![](media/component-framework/392c07a5f40fe20ee9dfa2d80a60e585.png)
 
 Step 4. Add code component to an entity form in portals
 -------------------------------------------------------
@@ -284,7 +284,7 @@ instead.
 
 8.  Select your portal **Website**.
 
-    ![](media/portals-component-framework/279962fb61d9a7a75387d704670d48d6.png)
+    ![](media/component-framework/279962fb61d9a7a75387d704670d48d6.png)
 
 9.  Select **Save & Close**.
 
@@ -308,13 +308,13 @@ instead.
 
 8.  Select **Attribute Logical Unit Name** as *Budget Amount (budgetamount)*.
 
-    ![](media/portals-component-framework/c7e81f42ee098dff0fac6c34e95a493f.png)
+    ![](media/component-framework/c7e81f42ee098dff0fac6c34e95a493f.png)
 
 9.  Enter **Label**. For example, *Budget Amount*.
 
 10. For **Control Style**, select **Code Component**.
 
-    ![](media/portals-component-framework/733a464eaf2aea4b25742b7d82a3e36b.png)
+    ![](media/component-framework/733a464eaf2aea4b25742b7d82a3e36b.png)
 
 11. Select **Save & Close**.
 
@@ -342,7 +342,7 @@ Step 5. Allow Read access to Web Resource entity
 
 9.  Select **Save.**
 
-    ![Graphical user interface, application Description automatically generated](media/portals-component-framework/b1818f7ca8eb2daf86b54bfd965dd87d.png)
+    ![Graphical user interface, application Description automatically generated](media/component-framework/b1818f7ca8eb2daf86b54bfd965dd87d.png)
 
 10. Under **Web Roles**, select **Add Existing Web Role**.
 
@@ -350,7 +350,7 @@ Step 5. Allow Read access to Web Resource entity
     web role of a portal web site record to allow access to all authenticated
     users.
 
-    ![](media/portals-component-framework/391eb044a2990bce688919e6bc80b6c9.png)
+    ![](media/component-framework/391eb044a2990bce688919e6bc80b6c9.png)
 
 12. Select **Save & Close**.
 
@@ -396,7 +396,7 @@ The portals web page now shows the entity form for **Opportunities** entity with
 the code component as the slider, like how it appears using model-driven app for
 the same form.
 
-![](media/portals-component-framework/967e79540b300550bd9dc048f8a2356d.png)
+![](media/component-framework/967e79540b300550bd9dc048f8a2356d.png)
 
 Preview disclaimer
 ==================

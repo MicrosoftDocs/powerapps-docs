@@ -1683,7 +1683,9 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
-            href: ./portals/web-api-http-requests-handle-errors.md          
+            href: ./portals/web-api-http-requests-handle-errors.md
+        - name: Code components
+          href: ./portals/component-framework.md          
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
