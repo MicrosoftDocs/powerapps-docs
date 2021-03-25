@@ -34,7 +34,7 @@ In Microsoft Dataverse, you can create custom activities to support the communic
   
 |Property name|Value|Notes|  
 |-------------------|-----------|-----------|  
-|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivity>|`true`|Specify the custom table as an activity entity.|  
+|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivity>|`true`|Specify the custom table as an activity table.|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAvailableOffline>|`true`|A custom activity table must have offline availability.|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled>|`false`|A custom activity table cannot have mail merge enabled.|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OwnershipType>|<xref:Microsoft.Xrm.Sdk.Metadata.OwnershipTypes>. TeamOwned<br />or<br /><xref:Microsoft.Xrm.Sdk.Metadata.OwnershipTypes>. UserOwned|A custom activity table can be either team-owned or user-owned.|  
