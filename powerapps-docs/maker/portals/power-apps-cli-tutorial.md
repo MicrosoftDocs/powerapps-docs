@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Tutorial: Use Power Apps CLI with portals
 
+[This article is pre-release documentation and is subject to change.]
+
 In this example walkthrough, you’ll see how to get started with Power Apps CLI
 to update sample portals configuration.
 
@@ -19,6 +21,10 @@ to update sample portals configuration.
 Power Apps portals use. For more information about commands used in Power Apps
 CLI, read [common
 commands](../../developer/data-platform/powerapps-cli.md#common-commands).
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 Visual Studio Code
 ------------------

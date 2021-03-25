@@ -10,7 +10,9 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals support for Power Apps CLI
+# Portals support for Power Apps CLI (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 Microsoft Power Apps CLI (Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
@@ -27,6 +29,10 @@ supports Power Apps CLI to enable CI/CD (Continuous Integration/Continuous
 Deployment) of portal configuration. You can now check-in the portal
 configuration to source control and move portal configuration to any environment
 using Power Apps CLI.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Benefits of portal development using Power Apps CLI
 
