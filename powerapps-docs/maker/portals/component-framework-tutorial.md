@@ -200,7 +200,8 @@ instead.
 13. Under **Name**, select the entity form that you created earlier in this
     tutorial.
 
-    **TIP:** If you don’t see the form available, try **Sync Configuration** to
+    > [!TIP]
+    > If you don’t see the form available, try **Sync Configuration** to
     synchronize changes from Dataverse.
 
 14. From the top-right corner, select **Browse website**.
