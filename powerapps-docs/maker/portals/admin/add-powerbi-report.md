@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/17/2021
+ms.date: 03/25/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -60,6 +60,9 @@ For example:
 You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. For more information about powerbi-client JavaScript library, see [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
 
 Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
+
+> [!IMPORTANT]
+> Disabling filter pane using powerbi-client JavaScript library doesn't restrict access to data or configure security. Disabled filter pane can be re-enabled using JavaScript library code. To restrict access to data, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls).
 
 ```javascript
 $(window).load(function(){
