@@ -349,18 +349,20 @@
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load and connect to external 3D models
+              - name: Load models with the View in 3D component
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
-            - name: View predefined shapes in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-shape.md
-            - name: View 3D models and 2D images in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-mr.md
-            - name: Measure in mixed reality
-              href: ./canvas-apps/mixed-reality-component-measure-distance.md
-            - name: Add pins to 3D models
-              href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
-            - name: Upload photos from mixed reality
-              href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              - name: Add pins to 3D models
+                href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
+            - name: Use mixed reality experiences in Power Apps
+              items:
+              - name: View predefined shapes in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-shape.md
+              - name: View 3D models and 2D images in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-mr.md
+              - name: Measure in mixed reality
+                href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Upload photos from mixed reality
+                href: ./canvas-apps/mixed-reality-take-upload-photos.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components

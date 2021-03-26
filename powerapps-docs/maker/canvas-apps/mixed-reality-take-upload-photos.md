@@ -38,9 +38,8 @@ This topic will guide you through creating a test app that you can use to take a
 
 - Create a blank canvas app ready for editing.
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-- [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
 - Have a OneDrive folder called **MRPhotos** that you can store your photos in when testing the upload feature.
-- Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
+
 
 
 > [!TIP]
@@ -113,6 +112,9 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 8. Tap the screenshot icon at the bottom of the screen, then tap the back arrow at the top of the screen.
 9. You should see the screenshot now showing underneath the **View in MR** button. Tap the screenshot's thumbnail, and a large version of the screenshot will appear. Tap anywhere on the image to hide it.
 
+
+
+
 ## Upload photos to OneDrive with a Power Automate flow
 
 
@@ -166,7 +168,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 
 8. Open the **Insert** tab and select **Button**.
-9. Change the **Test** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
+9. Change the **Text** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
 10. In the expression editor at the top of the Power Apps window, select the **OnSelect** property, and then select the **Action** tab. Select **Power Automate**, and then select the flow you created.
 
     ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
@@ -188,6 +190,11 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
 
+## Use SaveData and LoadData functions
+
+You can use the **SaveData** and **LoadData** functions In Power Apps with the MR components.
+
+See the [SaveData, LoadData, and ClearData functions in Power Apps](./functions/function-savedata-loaddata.md) topic for how to use these functions.
 
 ## Other mixed-reality controls
 

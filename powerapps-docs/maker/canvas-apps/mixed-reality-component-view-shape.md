@@ -69,6 +69,8 @@ Shape height | Height of the cube. | Integer | **Properties** (also in **Advance
 Shape depth | The three-dimensional depth of the cube. | Integer | **Properties** (also in **Advanced**)
 Unit of measurement | The measurement unit used for the width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
+OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
+OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
 
 ### Additional properties
 

@@ -19,7 +19,7 @@ search.app:
 
 Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
 
-You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
+You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](mixed-reality-component-view-3d-store.md).
 
 :::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="Photo showing a 3D object being viewed in a mobile device.":::
 
@@ -45,6 +45,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
     :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
 
+See the [Load models with the View in 3D component](mixed-reality-component-view-3d-store.md) topic for details on how to connect existing and external models with URLs, as media attachments, or as encoded URIs.
 
 You can modify the component with a number of properties.
 
@@ -64,6 +65,9 @@ Background fill | Set the background color for the component. | Color picker | *
 Pins(Items) | [Add pins to specific coordinates on the 3D model](mixed-reality-add-pins-3d-model.md). | Data table | **Properties** (also in **Advanced** and the formula bar as **Items**)
 Show pins | Show the pins defined in **Pins(Items)**. | Toggle | **Properties** (also in **Advanced** as **ShowPins**)
 Show reset button | Enables or disables the reset button, which resets the camera view onto the model. | Toggle | **Properties** (also in **Advanced** as **ShowReset**)
+OnModelLoad | Behavior that is triggered when a model is loaded into the component. | Defined action | **Advanced**
+OnChange | Behavior that is triggered when any property of the component is changed. | Defined action | **Advanced**
+OnSelect | Behavior that is triggered when a pin is selected or the user focuses on the component | Defined action | **Advanced**
 
 ### Additional properties
 

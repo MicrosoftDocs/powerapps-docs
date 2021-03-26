@@ -74,6 +74,8 @@ Object height | Height of the displayed image or 3D content. | Integer | **Prope
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)
 Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
+OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
+OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
 
 ### Additional properties
 
