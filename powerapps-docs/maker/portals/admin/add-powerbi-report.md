@@ -62,7 +62,7 @@ You can use [powerbi-client JavaScript library](https://github.com/microsoft/Pow
 Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
 
 > [!IMPORTANT]
-> Hiding filter functionality using powerbi-client JavaScript library is not secure, as it can be enable back using JavaScript library code. Use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls.md) to restrict data access.
+> Hiding filter functionality using powerbi-client JavaScript library is not secure, as it can be enable back using JavaScript library code. Use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls) to restrict data access.
 
 ```javascript
 $(window).load(function(){
