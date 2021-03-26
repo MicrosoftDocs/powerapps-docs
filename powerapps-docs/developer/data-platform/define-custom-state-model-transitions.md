@@ -83,7 +83,7 @@ To view table definitions for your organization, install the Metadata Browser so
 ### See also  
  [Sample: Retrieve valid status transitions](org-service/samples/retrieve-valid-status-transitions.md)   
  [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
- [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes)   
+ [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md)   
  [Define status reason transitions](/powerapps/maker/data-platform/define-status-reason-transitions)
 
 

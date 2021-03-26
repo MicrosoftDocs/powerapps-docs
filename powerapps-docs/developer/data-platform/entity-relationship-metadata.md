@@ -36,7 +36,7 @@ When you look at the solution explorer or the three relationship collections in 
 The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata) types. One-to-Many relationships exist between tables and refer to each table as either a *Primary Table* or *Related Table*. The related table, sometimes called the *child table*, has a lookup column that allows storing a reference to a record from the primary table, sometimes called the *parent table*. A Many-to-One relationship is just a One-to-Many relationship viewed from the related table.
 
 > [!NOTE]
-> Although related tables are sometimes called *child tables*, don't confuse these with [Child tables](entity-metadata.md#child-entities), which refers to how security is applied to related tables.
+> Although related tables are sometimes called *child tables*, don't confuse these with [Child tables](entity-metadata.md#child-tables), which refers to how security is applied to related tables.
 
 More information: [Create relationships between tables](../../maker/data-platform/data-platform-entity-lookup.md).
 

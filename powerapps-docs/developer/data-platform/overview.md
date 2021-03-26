@@ -46,7 +46,7 @@ Dataverse is not available for on-premise deployments at this time. Content in t
 
 ### See also
 
-[Power Apps for developers](../../index.yml?panel=developer#pivot=home)<br/>
+[Power Apps for developers](../../index.yml?panel=developer)<br/>
 [Model-driven apps Developer Guide](../model-driven-apps/overview.md)
 
 

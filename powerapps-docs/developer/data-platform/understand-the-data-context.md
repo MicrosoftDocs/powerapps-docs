@@ -209,8 +209,8 @@ var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 
 More information:
 
-- [Define table images](register-plug-in.md#define-entity-images)
-- [Table images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
+- [Define table images](register-plug-in.md#define-table-images)
+- [Table images for workflow extensions](workflow/workflow-extensions.md#table-images-for-workflow-extensions)
 
 
 
