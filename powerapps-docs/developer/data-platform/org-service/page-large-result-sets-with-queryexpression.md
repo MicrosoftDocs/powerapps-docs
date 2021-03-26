@@ -18,7 +18,7 @@ search.app:
 
 # Page large result sets with QueryExpression
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 In Microsoft Dataverse, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries. When you use the paging cookie feature when querying a set of records, the result contains a value for the paging cookie. To improve system performance, you can then pass that value when you retrieve the next set of records.  
   

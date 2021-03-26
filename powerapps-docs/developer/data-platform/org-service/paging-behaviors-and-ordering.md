@@ -18,7 +18,7 @@ search.app:
 
 # Paging behaviors and ordering
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 When querying data using FetchXML, paging query results can make viewing large
 volumes of information easier. It is important when using paging to include
