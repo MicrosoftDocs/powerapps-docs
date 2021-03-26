@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/10/2021
+ms.date: 03/26/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -20,7 +20,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 
 ## Notes configuration for entity forms
 
-1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
+1. Open the [Portal Management](./configure/configure-portal.md) app.
 
 1. Select **Entity Forms** under **Content** from left pane:
 
@@ -195,7 +195,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [rich-text editor in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, the note shows rich-text format in the model-driven app.
 

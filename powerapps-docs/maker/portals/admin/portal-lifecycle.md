@@ -30,7 +30,7 @@ Let's understand each portal lifecycle stage.
 
 Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps Portals admin center if you have the required licenses. More information: [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production)
 
-To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
+To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
 ## Suspended portal
 
@@ -50,7 +50,7 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ### See also
 
-[Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
+[Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
 [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) <br>
 [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model)
 

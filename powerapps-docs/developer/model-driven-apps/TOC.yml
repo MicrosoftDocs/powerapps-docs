@@ -27,7 +27,7 @@
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Build code components using Power Apps component framework
-    href: /powerapps/developer/component-framework/overview
+    href: ../component-framework/overview.md
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:

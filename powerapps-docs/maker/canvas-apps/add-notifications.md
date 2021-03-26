@@ -102,7 +102,7 @@ PowerAppsNotification.SendPushNotification(
 ### See also
 
 - [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification.md)
-- [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/)
+- [Power Apps Notification reference](/connectors/powerappsnotification/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
