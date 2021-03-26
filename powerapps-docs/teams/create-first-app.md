@@ -12,9 +12,7 @@ ms.reviewer:
 
 # Create your first app in Microsoft Teams
 
-You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams.
-
-If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams. If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
 Creating an app in Microsoft Teams is a quick and easy 3-step process.
 
