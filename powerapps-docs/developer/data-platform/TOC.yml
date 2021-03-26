@@ -441,7 +441,7 @@
     href: /dotnet/api/?view=dynamics-general-ce-9
   - name: XRM Tooling
     href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Entity
+  - name: Virtual Table
     href: /dotnet/api/?view=dynamics-virtualentity-ce-9
   - name: Workflow
     href: /dotnet/api/?view=dynamics-workflow-ce-9 

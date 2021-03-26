@@ -958,4 +958,3 @@ See bot Table [bot_conversationtranscript](bot.md#BKMK_bot_conversationtranscrip
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.conversationtranscript?text=conversationtranscript EntityType" />
