@@ -22,18 +22,28 @@ Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](referen
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
 
-Use the Catalog table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the Catagory.
+Use the Catalog table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the catagory.
 
-The first level catalog must represent your solution. Use multiple second-level catalogs to group different categories of functionality within your solution.
+The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
 For each second-level catalog that represents the categories within your solution, you will use the CatalogAssignment table to specify any Tables, Custom API, or Custom Process actions you want to be exposed.
 
+> [!IMPORTANT]
+> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these read these records. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
+> You must grant **Read** access to the security roles assigned to any users who will need to use these records. These tables are found within the **Custom Entities** tab when you edit a security role.
+> 
+> More information: 
+> - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
+> - [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+
 ## Example: Contoso Customer Management
+
+To introduce the idea of a catalog, let's start with an example.
 
 Contoso Customer management solution contains many components. The only components of interest here are: 
 - Tables
 - Custom API
-- Custom Process Action
+- Custom Process Action (workflow)
 
 ### Tables
 
@@ -47,6 +57,7 @@ Contoso Customer management is a solution which includes the following tables:
 |`contoso_Membership`|Membership|A custom table|
 
 ### Custom API
+
 They have also created a number of Custom API which are called by their point-of-sale system, their Web site, and ERP systems to notify Dataverse of events that do not originate within Dataverse:
 
 |UniqueName  |DisplayName  |
@@ -141,6 +152,10 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog assignment.  |
 |Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />Targets:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a row in the Entity table, you will need the Id of the entity. See Get the Id of a table for more information.|
 
+> [!NOTE]
+> Unless you want to allow people installing your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
+
+
 ### Get the Id of a table
 
 You will need to get the id of the entity when you associate it with a CatalogAssignment.
@@ -150,11 +165,11 @@ You will need to get the id of the entity when you associate it with a CatalogAs
 The Entity table contains multiple rows for each table. One for each layer in the solution. You can get the Id for a specific table, such as the Account table, using either of these queries using the Web API:
 
 ```http
-GET /EntityDefinitions(LogicalName='account')?$select=MetadataId
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')?$select=MetadataId
 ```
 
 ```http
-/entities?$select=entityid&$filter=name eq 'Account'&$top=1
+GET [Organization URI]/api/data/v9.2/entities?$select=entityid&$filter=name eq 'Account'&$top=1
 ```
 
 #### Using the Organization Service
@@ -173,13 +188,134 @@ var accountEntityId = getAccountEntityResp.EntityMetadata.MetadataId;
 
 ## Create a Catalog in the maker portal
 
-At the time of this writing, there is a known issue blocking this.
+At the time of this writing, you can create **Catalog** records from the maker portal, but you cannot create **Catalog Assignment** records. Without catalog assignments, the catalog will not be functional. Catalog assignments can only be created using code at this time. See [Create Catalogs and CatalogAssignments with code](#create-catalogs-and-catalogassignments-with-code)
+
+You should always create a catalog as part of a solution. Use the following instructions to create catalog records:
+
+1. From the maker portal [https://make.powerapps.com](https://make.powerapps.com), select Solutions.
+1. Create or select a solution that you want to use, then click **New**.
+1. Select Catalog from the menu and a new window will open.
+1. Complete the form using information from [Catalog Table Columns](#catalog-table-columns).
+1. Save and close the form.
+
+> [!IMPORTANT]
+> There is a known issue where the catalog will not be added to the solution. 
+> Until this is fixed, you must manually add the catalog to your solution.
+
+### Add a catalog to your solution
+
+1. While viewing your solution, click **Add existing**.
+1. Select the catalog you want to add, and click **Add**.
+
 
 ## Create Catalogs and CatalogAssignments with code
 
 You can create catalogs and catalog assignment records using either the Web API or the Organization Service.
 
 ### Using the Web API
+
+> [!NOTE]
+> At this time it is not possible to create catalog and catalog assignment records using 'deep-insert'. Each record must be created individually and associated with the records.
+
+The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: ContosoCustomerManagement. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
+
+See the [Create a record using the Web API](webapi/create-entity-web-api.md) sections: [Basic Create](webapi/create-entity-web-api.md#basic-create) and [Associate entity records on create](webapi/create-entity-web-api.md#associate-entity-records-on-create) for more information.
+
+#### Create the root catalog
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
+MSCRM.SolutionUniqueName: ContosoCustomerManagement
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+{
+"name": "Contoso Customer Management",
+"uniquename": "contoso_CustomerManagement",
+"displayname": "Contoso Customer Management",
+"description": "The root catalog for the Contoso Customer Management solution",
+"iscustomizable": {
+"Value": false
+}
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(00000000-0000-0000-0000-000000000001)
+
+```
+
+#### Create the Table Events Sub-catalog
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
+MSCRM.SolutionUniqueName: ContosoCustomerManagement
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+{
+"name": "Contoso Customer Management Table Events",
+"uniquename": "contoso_TableEvents",
+"displayname": "Tables",
+"description": "Groups Table events for the Contoso Customer Management Solution",
+"iscustomizable": {
+"Value": false
+},
+"ParentCatalogId@odata.bind":"catalogs(00000000-0000-0000-0000-000000000001)"
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000002)
+
+```
+
+#### Create the Account Catalog Assignment on the Tables catalog
+
+See [Get the Id of a table](#get-the-id-of-a-table) for information about the id of a table.
+
+**Request**
+
+```http
+POST {{webapiurl}}catalogassignments HTTP/1.1
+MSCRM.SolutionUniqueName: ContosoCustomerManagement
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+{
+"name": "Account",
+"EntityId@odata.bind": "entities(70816501-edb9-4740-a16c-6a5efbc05d84)",
+"iscustomizable": {
+"Value": false
+},
+"CatalogId@odata.bind":"catalogs(00000000-0000-0000-0000-000000000002)"
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-0000-0000-0000-000000000003)
+
+```
+
 
 ### Using the Organization Service
 
