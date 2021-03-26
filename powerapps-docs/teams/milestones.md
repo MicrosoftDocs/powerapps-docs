@@ -215,6 +215,7 @@ To delete an existing project:
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 
