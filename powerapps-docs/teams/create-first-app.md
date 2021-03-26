@@ -16,6 +16,16 @@ You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-star
 
 If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
+Creating an app in Microsoft Teams is a quick and easy 3-step process.
+
+1. [Create your app](#create-your-app)
+1. [Create your first table](#create-your-first-table)
+1. [Customize and publish your app](#customize-and-publish-your-app)
+
+![Create your first app in 3 steps](media/create-your-first-app.png "Create your first app in 3 steps")
+
+Now let's go through each step in detail.
+
 ## Create your app
 
 After installing the Power Apps app from the Teams store:
