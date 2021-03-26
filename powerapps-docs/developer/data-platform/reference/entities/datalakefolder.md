@@ -1139,4 +1139,3 @@ See businessunit Table [business_unit_datalakefolder](businessunit.md#BKMK_busin
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.datalakefolder?text=datalakefolder EntityType" />

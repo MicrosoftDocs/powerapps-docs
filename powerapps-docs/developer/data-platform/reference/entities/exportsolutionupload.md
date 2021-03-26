@@ -919,7 +919,7 @@ See businessunit Table [business_unit_exportsolutionupload](businessunit.md#BKMK
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_ExportSolutionUpload_SolutionFile](fileattachment.md#BKMK_FileAttachment_ExportSolutionUpload_SolutionFile) One-To-Many relationship.
+See fileattachment Table [FileAttachment_ExportSolutionUpload_SolutionFile](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

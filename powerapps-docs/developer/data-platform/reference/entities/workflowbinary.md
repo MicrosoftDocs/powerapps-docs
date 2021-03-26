@@ -967,7 +967,7 @@ See businessunit Table [business_unit_workflowbinary](businessunit.md#BKMK_busin
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_workflowbinary_Data](fileattachment.md#BKMK_FileAttachment_workflowbinary_Data) One-To-Many relationship.
+See fileattachment Table [FileAttachment_workflowbinary_Data](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 

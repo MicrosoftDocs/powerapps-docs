@@ -1058,7 +1058,7 @@ See businessunit Table [business_unit_msdyn_aibfile](businessunit.md#BKMK_busine
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_msdyn_AIBFile_msdyn_File](fileattachment.md#BKMK_FileAttachment_msdyn_AIBFile_msdyn_File) One-To-Many relationship.
+See fileattachment Table [FileAttachment_msdyn_AIBFile_msdyn_File](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont"></a> msdyn_AIBFile_msdyn_AIBDatasetsCont
 

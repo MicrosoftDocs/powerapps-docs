@@ -1244,4 +1244,3 @@ See plugintype Table [plugintype_customapi](plugintype.md#BKMK_plugintype_custom
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.customapi?text=customapi EntityType" />
