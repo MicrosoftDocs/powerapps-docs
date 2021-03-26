@@ -67,8 +67,6 @@ They have also created a number of Custom API which are called by their point-of
 |`contoso_CustomerPurchasedProduct`|Purchased Product|
 |`contoso_CustomerReturnedProduct`|Returned Product|
 
-None of these CustomAPI are bound to an entity.
-
 ### Catalog structure
 
 The Contoso Customer management solution catalog looks like this:
@@ -89,6 +87,8 @@ The Contoso Customer management solution catalog looks like this:
 
 ### Events available
 
+When you make a CatalogAssignement to a table, any system bound operations for that table become available as events.
+
 With this catalog, the following events will be available:
 
 |Table  |Event  |Why available  |
@@ -105,8 +105,6 @@ With this catalog, the following events will be available:
 |N/A|`contoso_CustomerVisitWebSite`|Explicit Catalog Assignment|
 |N/A|`contoso_CustomerPurchasedProduct`|Explicit Catalog Assignment|
 |N/A|`contoso_CustomerReturnedProduct`|Explicit Catalog Assignment|
-
-When you make a CatalogAssignement to a table, any system bound operations for that table become available as events.
 
 - Most Tables will support Create, Update, and Delete events. There are some exceptions.
 - User-owned Tables can be shared, and sharing can be changed or revoked. The events for those operations will be included with the tables.
@@ -133,7 +131,7 @@ The following table includes selected columns/attributes of a Catalog table/enti
 |Unique Name<br/>`UniqueName`<br/>`uniquename`|String|Unique name for the catalog.<br/>**Required**<br/>Must begin with a customization prefix.|
 
 > [!NOTE]
-> Unless you want to allow people installing your managed solution to modify your catalog, you should set the **Is Customizable** managed property to false.
+> Unless you want to allow people who install your managed solution to modify your catalog, you should set the **Is Customizable** managed property to false.
 >
 > When you associate a Catalog Assignment to a Catalog, you will not be able to delete the catalog until you remove the catalog assignment.
 
@@ -150,10 +148,10 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 |catalog<br/>`CatalogId`<br/>`catalogid`|Lookup|Unique identifier for the catalog associated with the catalog assignment.<br/>**Required**|
 |Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the CatalogAssignment can be customized or deleted.<br/>**Required**|
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog assignment.  |
-|Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />Targets:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a row in the Entity table, you will need the Id of the entity. See Get the Id of a table for more information.|
+|Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />This polymorphic lookup can be linked to the following tables:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a row in the Entity table, you will need the Id of the entity. See [Get the Id of a table](#get-the-id-of-a-table) for more information.|
 
 > [!NOTE]
-> Unless you want to allow people installing your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
+> Unless you want to allow people who install your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
 
 
 ### Get the Id of a table
@@ -186,6 +184,10 @@ var getAccountEntityResp = (RetrieveEntityResponse)service.Execute(getAccountEnt
 var accountEntityId = getAccountEntityResp.EntityMetadata.MetadataId;
 ```
 
+More information:
+- [Retrieve and update a table](/developer/data-platform/org-service/metadata-retrieve-update-delete-entities#retrieve-and-update-an-entity)
+- [RetrieveEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentityrequest)
+
 ## Create a Catalog in the maker portal
 
 At the time of this writing, you can create **Catalog** records from the maker portal, but you cannot create **Catalog Assignment** records. Without catalog assignments, the catalog will not be functional. Catalog assignments can only be created using code at this time. See [Create Catalogs and CatalogAssignments with code](#create-catalogs-and-catalogassignments-with-code)
@@ -217,7 +219,7 @@ You can create catalogs and catalog assignment records using either the Web API 
 > [!NOTE]
 > At this time it is not possible to create catalog and catalog assignment records using 'deep-insert'. Each record must be created individually and associated with the records.
 
-The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: ContosoCustomerManagement. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
+The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: `ContosoCustomerManagement`. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
 
 See the [Create a record using the Web API](webapi/create-entity-web-api.md) sections: [Basic Create](webapi/create-entity-web-api.md#basic-create) and [Associate entity records on create](webapi/create-entity-web-api.md#associate-entity-records-on-create) for more information.
 
@@ -233,13 +235,13 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 {
-"name": "Contoso Customer Management",
-"uniquename": "contoso_CustomerManagement",
-"displayname": "Contoso Customer Management",
-"description": "The root catalog for the Contoso Customer Management solution",
-"iscustomizable": {
-"Value": false
-}
+    "name": "Contoso Customer Management",
+    "uniquename": "contoso_CustomerManagement",
+    "displayname": "Contoso Customer Management",
+    "description": "The root catalog for the Contoso Customer Management solution",
+    "iscustomizable": {
+        "Value": false
+    }
 }
 
 ```
@@ -264,14 +266,14 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 {
-"name": "Contoso Customer Management Table Events",
-"uniquename": "contoso_TableEvents",
-"displayname": "Tables",
-"description": "Groups Table events for the Contoso Customer Management Solution",
-"iscustomizable": {
-"Value": false
-},
-"ParentCatalogId@odata.bind":"catalogs(00000000-0000-0000-0000-000000000001)"
+    "name": "Contoso Customer Management Table Events",
+    "uniquename": "contoso_TableEvents",
+    "displayname": "Tables",
+    "description": "Groups Table events for the Contoso Customer Management Solution",
+    "iscustomizable": {
+        "Value": false
+    },
+    "ParentCatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000001)"
 }
 
 ```
@@ -298,12 +300,12 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
 {
-"name": "Account",
-"EntityId@odata.bind": "entities(70816501-edb9-4740-a16c-6a5efbc05d84)",
-"iscustomizable": {
-"Value": false
-},
-"CatalogId@odata.bind":"catalogs(00000000-0000-0000-0000-000000000002)"
+    "name": "Account",
+    "EntityId@odata.bind": "entities(70816501-edb9-4740-a16c-6a5efbc05d84)",
+    "iscustomizable": {
+        "Value": false
+    },
+    "CatalogId@odata.bind": "catalogs(00000000-0000-0000-0000-000000000002)"
 }
 
 ```
@@ -335,6 +337,7 @@ RequireNewInstance = True";
 var service = new CrmServiceClient(conn);
 
 var solutionUniqueName = " ContosoCustomerManagement ";
+
 //Create the root catalog
 Catalog rootCatalog = new Catalog
 {
@@ -371,7 +374,6 @@ tableEventsReq["SolutionUniqueName"] = solutionUniqueName;
 
 Guid tableEventsId = ((CreateResponse)service.Execute(tableEventsReq)).id;
 
-
 //Create the Account Catalog Assignment on the Tables catalog
 CatalogAssignment accountAssignment = new CatalogAssignment
 {
@@ -394,6 +396,67 @@ Guid accountAssignmentId = ((CreateResponse)service.Execute(accountAssignmentReq
 
 ## Create Catalog and Catalog Assignments by editing solution files
 
+Within a solution file, you can edit the files to create catalogs and catalog assignments. 
+
+Use the [SolutionPackager tool](/power-platform/alm/solution-packager-tool) to extract a solution into files that can be managed in source control. You can then edit the files. You can then use SolutionPackager to pack the extracted files back into a solution. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
+
+> [!NOTE]
+> Make sure you are using the latest version of the [Microsoft.CrmSdk.CoreTools NuGet Package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)
+
 ### Create a Catalog with solution files
 
+Within a solution, all the catalogs will be within a `catalogs` folder.
+
+Each catalog will be included in a folder matching the uniquename of the catalog, such as `contoso_CustomerManagement`.
+
+Within the folder is an XML file containing the definition of the catalog.
+
+For example:
+
+```xml
+<catalog uniquename="contoso_CustomerManagement">
+    <description default="The root catalog for the Contoso Customer Management solution">
+        <label description="The root catalog for the Contoso Customer Management solution" languagecode="1033" />
+    </description>
+    <displayname default="Contoso Customer Management">
+        <label description="Contoso Customer Management" languagecode="1033" />
+    </displayname>
+    <iscustomizable>0</iscustomizable>
+    <name>Contoso Customer Management</name>
+</catalog>
+```
+
+If the Catalog represents a category, the relationship to the parent catalog is included. 
+
+For example:
+
+```xml
+<catalog uniquename="contoso_TableEvents">
+    <description default="Groups Table events for the Contoso Customer Management Solution">
+        <label description="Groups Table events for the Contoso Customer Management Solution" languagecode="1033" />
+    </description>
+    <displayname default="Tables">
+        <label description="Tables" languagecode="1033" />
+    </displayname>
+    <iscustomizable>0</iscustomizable>
+    <name>Contoso Customer Management Table Events</name>
+    <parentcatalogid>
+        <uniquename>contoso_CustomerManagement</uniquename>
+    </parentcatalogid>
+</catalog>
+```
+
 ### Create a CatalogAssignment with solution files
+
+Within a solution, in the `Assets` folder, you will find a `catalogassignements.xml` file. All catalog assignments are included in the file.
+
+For example:
+
+```xml
+<catalogassignments>
+    <catalogassignment objectidtype="entity" object.logicalname="account" catalogid.uniquename="contoso_TableEvents">
+        <iscustomizable>0</iscustomizable>
+        <name>Account</name>
+    </catalogassignment>
+</catalogassignments>
+```
