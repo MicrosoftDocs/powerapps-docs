@@ -948,11 +948,11 @@ See systemuser Table [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_w
 
 ### <a name="BKMK_FileAttachment_WorkflowLog_Inputs"></a> FileAttachment_WorkflowLog_Inputs
 
-See fileattachment Table [FileAttachment_WorkflowLog_Inputs](fileattachment.md#BKMK_FileAttachment_WorkflowLog_Inputs) One-To-Many relationship.
+See fileattachment Table [FileAttachment_WorkflowLog_Inputs](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_FileAttachment_WorkflowLog_Outputs"></a> FileAttachment_WorkflowLog_Outputs
 
-See fileattachment Table [FileAttachment_WorkflowLog_Outputs](fileattachment.md#BKMK_FileAttachment_WorkflowLog_Outputs) One-To-Many relationship.
+See fileattachment Table [FileAttachment_WorkflowLog_Outputs](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

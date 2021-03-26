@@ -1844,4 +1844,3 @@ Same as msdyn_solutionhealthruleargument table [owner_msdyn_solutionhealthrulear
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.owner?text=owner EntityType" />

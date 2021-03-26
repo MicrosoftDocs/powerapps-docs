@@ -1065,13 +1065,13 @@ See businessunit Table [business_unit_flowsession](businessunit.md#BKMK_business
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_FlowSession_AdditionalContext](fileattachment.md#BKMK_FileAttachment_FlowSession_AdditionalContext) One-To-Many relationship.
+See fileattachment Table [FileAttachment_FlowSession_AdditionalContext](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_FileAttachment_FlowSession_Outputs"></a> FileAttachment_FlowSession_Outputs
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_FlowSession_Outputs](fileattachment.md#BKMK_FileAttachment_FlowSession_Outputs) One-To-Many relationship.
+See fileattachment Table [FileAttachment_FlowSession_Outputs](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 

@@ -1025,4 +1025,3 @@ See datalakeworkspace Table [datalakeworkspace_workspacepermission](datalakework
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.datalakeworkspacepermission?text=datalakeworkspacepermission EntityType" />

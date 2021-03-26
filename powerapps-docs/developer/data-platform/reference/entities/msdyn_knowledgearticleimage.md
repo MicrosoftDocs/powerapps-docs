@@ -884,7 +884,7 @@ See businessunit Table [business_unit_msdyn_knowledgearticleimage](businessunit.
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_msdyn_knowledgearticleimage_msdyn_BlobFile](fileattachment.md#BKMK_FileAttachment_msdyn_knowledgearticleimage_msdyn_BlobFile) One-To-Many relationship.
+See fileattachment Table [FileAttachment_msdyn_knowledgearticleimage_msdyn_BlobFile](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

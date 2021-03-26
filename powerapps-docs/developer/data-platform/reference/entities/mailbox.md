@@ -2428,7 +2428,7 @@ See queue Table [mailbox_regarding_queue](queue.md#BKMK_mailbox_regarding_queue)
 
 ### <a name="BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef"></a> FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef
 
-See fileattachment Table [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](fileattachment.md#BKMK_FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef) One-To-Many relationship.
+See fileattachment Table [FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

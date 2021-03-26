@@ -1455,7 +1455,7 @@ See businessunit Table [business_unit_msdyn_aiconfiguration](businessunit.md#BKM
 
 **Added by**: System Solution Solution
 
-See fileattachment Table [FileAttachment_msdyn_AIConfiguration_msdyn_Model](fileattachment.md#BKMK_FileAttachment_msdyn_AIConfiguration_msdyn_Model) One-To-Many relationship.
+See fileattachment Table [FileAttachment_msdyn_AIConfiguration_msdyn_Model](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aiconfiguration_msdyn_aiconfiguration"></a> msdyn_aiconfiguration_msdyn_aiconfiguration
 

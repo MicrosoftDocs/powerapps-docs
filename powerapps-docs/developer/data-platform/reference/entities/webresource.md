@@ -835,11 +835,11 @@ See organization Table [webresource_organization](organization.md#BKMK_webresour
 
 ### <a name="BKMK_FileAttachment_WebResource_ContentFileRef"></a> FileAttachment_WebResource_ContentFileRef
 
-See fileattachment Table [FileAttachment_WebResource_ContentFileRef](fileattachment.md#BKMK_FileAttachment_WebResource_ContentFileRef) One-To-Many relationship.
+See fileattachment Table [FileAttachment_WebResource_ContentFileRef](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_FileAttachment_WebResource_ContentJsonFileRef"></a> FileAttachment_WebResource_ContentJsonFileRef
 
-See fileattachment Table [FileAttachment_WebResource_ContentJsonFileRef](fileattachment.md#BKMK_FileAttachment_WebResource_ContentJsonFileRef) One-To-Many relationship.
+See fileattachment Table [FileAttachment_WebResource_ContentJsonFileRef](fileattachment.md) One-To-Many relationship.
 
 ### See also
 

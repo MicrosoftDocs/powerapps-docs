@@ -2059,7 +2059,7 @@ See systemuserauthorizationchangetracker Table [systemuserauthorizationchangetra
 
 ### <a name="BKMK_FileAttachment_AsyncOperation_DataBlobId"></a> FileAttachment_AsyncOperation_DataBlobId
 
-See fileattachment Table [FileAttachment_AsyncOperation_DataBlobId](fileattachment.md#BKMK_FileAttachment_AsyncOperation_DataBlobId) One-To-Many relationship.
+See fileattachment Table [FileAttachment_AsyncOperation_DataBlobId](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_serviceplan_AsyncOperations"></a> serviceplan_AsyncOperations
 
