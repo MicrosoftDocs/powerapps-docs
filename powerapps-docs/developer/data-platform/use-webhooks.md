@@ -2,7 +2,7 @@
 title: "Use webhooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/29/2020
+ms.date: 03/20/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Use webhooks to create external handlers for server events
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
@@ -365,9 +363,9 @@ If your web hook is registered to run asynchronously, you can examine the system
 [Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
-[ServiceEndpoint Entity](reference/entities/serviceendpoint.md)<br />
-[SdkMessageProcessingStep Entity](reference/entities/sdkmessageprocessingstep.md)<br />
-[AsynchronousOperations Entity](reference/entities/asyncoperation.md)<br />
+[ServiceEndpoint Table/Entity](reference/entities/serviceendpoint.md)<br />
+[SdkMessageProcessingStep Table/Entity](reference/entities/sdkmessageprocessingstep.md)<br />
+[AsynchronousOperations Table/Entity](reference/entities/asyncoperation.md)<br />
 <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext><br />
 <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService><br />
 

@@ -35,11 +35,11 @@ The most common extensions created using code involve automating the processes u
 
 Data management capabilities in Dataverse not only lets you work with data within Dataverse, but also effectively interact with external data critical to your business. More information: 
 
-- [Import data](/powerapps/developer/data-platform/import-data)
-- [Synchronize data](/powerapps/developer/data-platform/data-synchronization)
-- [Virtual entities](/powerapps/developer/data-platform/virtual-entities/get-started-ve)
-- [Azure Integration](/powerapps/developer/data-platform/azure-integration)
-- [Webhooks](/powerapps/developer/data-platform/use-webhooks
+- [Import data](./import-data.md)
+- [Synchronize data](./data-synchronization.md)
+- [Virtual entities](./virtual-entities/get-started-ve.md)
+- [Azure Integration](./azure-integration.md)
+- [Webhooks](./use-webhooks.md
 )
 
 ## Dataverse entities
@@ -59,17 +59,17 @@ Developing a good working understanding of the metadata in the system can help y
 If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
 
  - [Introduction to solutions](introduction-solutions.md)
- - [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
+ - [SolutionPackager tool](/power-platform/alm/solution-packager-tool)
  - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
  - [Publish your app on AppSource](publish-app-appsource.md)
 
 ## Create client applications and authentication
 
-When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](/powerapps/developer/data-platform/connect-dataverse). A simple console client application is a good way to familiarize yourself with the Dataverse APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](./connect-dataverse.md). A simple console client application is a good way to familiarize yourself with the Dataverse APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
 
 - [Authentication](authentication.md)
-- [Build web applications using Server-to-Server (S2S) authentication](/powerapps/developer/data-platform/build-web-applications-server-server-s2s-authentication)
-- [Build Windows client applications using XRM tools](/powerapps/developer/data-platform/xrm-tooling/build-windows-client-applications-xrm-tools)
+- [Build web applications using Server-to-Server (S2S) authentication](./build-web-applications-server-server-s2s-authentication.md)
+- [Build Windows client applications using XRM tools](./xrm-tooling/build-windows-client-applications-xrm-tools.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

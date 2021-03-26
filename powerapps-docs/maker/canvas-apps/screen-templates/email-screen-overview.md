@@ -132,7 +132,7 @@ This allows users to send a single image with their email as an attachment.
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple:
+This screen uses the [Office365Users.SearchUser](/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple:
 
 1. In the **PeopleBrowseGallery** control, select a label to modify (or add one and keep it selected).
 

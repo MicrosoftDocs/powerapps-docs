@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/10/2020
+ms.date: 03/16/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -498,8 +498,8 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!Note]
-> The OData feed that is published is anonymous and does not have any authorization checks; therefore, it is important not to enable oData feeds for data that is unsuitable for anonymous portal access.
+> [!CAUTION]
+> Use caution when enabling OData feeds without entity permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Entity Permissions** is disabled.
 
 ## Enhanced view filter for entity lists
 
@@ -520,7 +520,7 @@ The following image shows an arbitrary contact assigned to a filter condition, t
 
 ### See also
 
-- [Microsoft Learn: Display multiple Dataverse records using entity lists](https://docs.microsoft.com/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Microsoft Learn: Display multiple Dataverse records using entity lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
 

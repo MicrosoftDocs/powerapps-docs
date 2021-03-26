@@ -22,9 +22,9 @@
   href: work-with-data.md
   items:
   - name: Use Web API
-    href: webapi/index.md
+    href: ./webapi/overview.md
   - name: Use Organization Service
-    href: org-service/index.md
+    href: ./org-service/overview.md
   - name: Create your own messages
     href: custom-actions.md
     items:
@@ -217,8 +217,6 @@
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
     - name: Register a web hook
       href: register-web-hook.md
     - name: Test webhook registration
