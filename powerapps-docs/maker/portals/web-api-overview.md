@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/16/2020
+ms.date: 03/25/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -241,10 +241,6 @@ Portals Web API can't be used for the following configuration entities.
 :::column:::
 	adx_webtemplate
 :::row-end:::
-
-## Known issues
-
-With the current release, Web API operations aren't blocked on configuration entities. However, this issue will be fixed in upcoming releases.
 
 ## Next step
 
