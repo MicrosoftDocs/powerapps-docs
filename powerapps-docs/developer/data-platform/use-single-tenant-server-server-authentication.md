@@ -179,6 +179,6 @@ Shown below is example console output obtained from an organization that only ha
 
 [Use Multi-Tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
 [Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)  
-[How to: Sign in any Azure Active Directory user using the multi-tenant application pattern](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
+[How to: Sign in any Azure Active Directory user using the multi-tenant application pattern](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

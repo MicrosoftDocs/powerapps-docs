@@ -5,7 +5,7 @@ author: alaug
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 07/20/2020
+ms.date: 03/23/2020
 ms.author: alaug
 ms.reviewer: kvivek
 ---
@@ -27,14 +27,14 @@ If you have a Power Apps license or a license through Office 365, you already ha
 
 ## Identify your current license
 
-To find out which license or licenses you already have, try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
+To find out which license or licenses you already have:
 
-- If you can't sign in, you don't have any Power Apps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to Power Apps.
+1. Try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com, or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
 
-- If you can sign in, select the gear icon near the upper-right corner, and then select **Plans**.
+2. Select the gear icon near the upper-right corner, and then select **Plan(s)**.
 
     ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
 

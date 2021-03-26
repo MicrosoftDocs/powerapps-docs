@@ -20,7 +20,7 @@ search.app:
 
 # Send email to multiple recipients
 
-You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is disabled. An administrator must enable the direct email feature by selecting **Yes** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled tables** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is disabled. An administrator must enable the direct email feature by selecting **Yes** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled tables** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](/power-platform/admin/system-settings-dialog-box-email-tab)
 
 **To send email to multiple recipients**
   
@@ -82,7 +82,7 @@ You can check the status of bulk email action on the **System Jobs** page. You c
 
 ### See also
 
-[System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+[System Settings Email tab](/power-platform/admin/system-settings-dialog-box-email-tab)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

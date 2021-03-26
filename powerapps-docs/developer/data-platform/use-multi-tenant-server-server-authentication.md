@@ -135,7 +135,7 @@ Azure AD requires the following values to register your application:
 
 ### Create a security role for the application user  
 
- In the next step you will create a Dataverse application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](https://technet.microsoft.com/library/dn531130.aspx)  
+ In the next step you will create a Dataverse application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn531130(v=crm.8))  
   
 > [!NOTE]
 >  The application user cannot be associated with one of the default Dataverse security roles. You must create a custom security role to associate with the application user.  

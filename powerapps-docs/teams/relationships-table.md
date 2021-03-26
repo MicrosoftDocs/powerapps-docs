@@ -48,7 +48,7 @@ More information: [Create a relationship between entities](../maker/data-platfor
 
 ## Edit a table relationship
 
-Editing relationships in Dataverse for Teams works the same as Dataverse except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/data-platform/create-edit-entity-relationships#actions)
+Editing relationships in Dataverse for Teams works the same as Dataverse except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](../maker/data-platform/create-edit-entity-relationships.md#actions)
 
 ## Delete a table relationship
 

@@ -37,7 +37,7 @@ When you complete this tutorial, you will have a Blazor WebAssembly app that dis
 
 To complete this tutorial, you must have:
 
-- Access to a [Dataverse environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
+- Access to a [Dataverse environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 - A Dataverse user with a security role that provides read access to the Account and Contact tables
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required

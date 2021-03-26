@@ -30,7 +30,7 @@ To get Power Apps CLI, do the following:
 1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
-   - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
+   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
    - Option 2: Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/current) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
 
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
@@ -51,12 +51,12 @@ This table lists some of the common commands used in the CLI:
 |Command|Description|
 |-------|-----------|
 |[admin](#admin)|Commands for environment lifecycle features.|
-|[auth](#auth)|Commands to [authenticate to Dataverse](/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment).|
+|[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
 |[org](#org)|Commands for working with Dataverse environment.|
-|[package](#package)|Commands for working with [Solution Packages](https://docs.microsoft.com/power-platform/alm/package-deployer-tool).|
-|[pcf](#pcf)|Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview).|
-|[plugin](#plugin)|Command to create a [plug-in](/powerapps/developer/data-platform/plug-ins) project.|
-|[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](/powerapps/maker/data-platform/solutions-overview).|
+|[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
+|[pcf](#pcf)|Commands to work with [Power Apps component framework](../component-framework/overview.md).|
+|[plugin](#plugin)|Command to create a [plug-in](./plug-ins.md) project.|
+|[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
 |[telemetry](#telemetry)|Manages the telemetry settings.|
 
 
@@ -85,14 +85,15 @@ Command to work with solution packages. It has the following parameters:
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-|init|Initializes a new package project. It has the following parameter: <br/> - *outputdirectory*: Output directly where the package is created.| `pac package init --outputdirectory c:/samplepackage`|
+|init|Initializes a new package project. It has the following parameter: <br/> - *outputdirectory*: Output directly where the package is created.| `pac package init --outputdirectory c:\samplepackage`|
 |add-reference|Sets the reference path to the solution project folder by passing the `path` parameter.|`pac package add-reference --path c:\Users\Downloads\SampleSolution`|
-
+|show| Shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: The path location to the package dll (library) or the zip file.| `pac package show c:\samplepackage.dll`|
+|deploy| Deployes the package dll or the zip file with a package. <br/> It has the following parameters: <br/> - *logFile*:  Path to a log file location where the logs are redirected.  <br/> - *logConsole*: This option is used if you want to direct the logs to the console. <br/> - *package*: The path location to the package dll (library) or a zip file with a package.  <br/> **Note**: You can use both `logFile` and `logConsole` parameters together or use one parameter or the other. | `pac package deploy --logFile c:\samplelogdata --package c:\samplepackage`
 
 
 ### PCF
 
-Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview). It has the following parameters:
+Commands to work with [Power Apps component framework](../component-framework/overview.md). It has the following parameters:
 
 #### Parameters
 
@@ -105,7 +106,7 @@ Commands to work with [Power Apps component framework](/powerapps/developer/comp
 
 ### Solution
 
-Commands for working with [Dataverse solution projects](/powerapps/maker/data-platform/solutions-overview). It has the following parameters:
+Commands for working with [Dataverse solution projects](../../maker/data-platform/solutions-overview.md). It has the following parameters:
 
 #### Parameters
 
@@ -121,7 +122,7 @@ Commands for working with [Dataverse solution projects](/powerapps/maker/data-pl
 
 ### Auth
 
-Commands to [authenticate to Dataverse](/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment). It has the following parameters:
+Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment). It has the following parameters:
 
 #### Parameters
 
@@ -158,7 +159,7 @@ Command to work with Dataverse organizations.
 
 ### Plugin
 
-Manages to create a [plug-in](/powerapps/developer/data-platform/plug-ins) project.
+Manages to create a [plug-in](./plug-ins.md) project.
 
 #### Parameters
 

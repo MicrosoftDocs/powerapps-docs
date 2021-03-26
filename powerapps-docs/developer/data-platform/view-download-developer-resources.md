@@ -50,12 +50,12 @@ This section provides links for developers to find resources. The following reso
 
 |Link |Description|
 |---------|---------|
-|[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
+|[Developer Center](../../index.yml)|The main entry point for documentation for developers.|
 |[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
 |[SDK NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|SDK Download|We no longer ship the SDK package as a download on Microsoft Download Center. Instead, the SDK assemblies and tools are available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](https://docs.microsoft.com/powerapps/developer/data-platform/download-tools-nuget)|
+|SDK Download|We no longer ship the SDK package as a download on Microsoft Download Center. Instead, the SDK assemblies and tools are available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](./download-tools-nuget.md)|
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
-|[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
+|[Developer Overview](./overview.md)|Link to a topic providing an overview for developers.|
 
 ## Connect your apps to this instance of Microsoft Dataverse
 
@@ -76,7 +76,7 @@ You can download the WSDL for this service here, but usually you will use the Cr
 
 This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
 This information is needed when you use Azure extensions with your instance.
-More information: [Azure integration](/powerapps/developer/data-platform/azure-integration)
+More information: [Azure integration](./azure-integration.md)
 
 ## Connect your apps to the Dataverse Discovery Service
 

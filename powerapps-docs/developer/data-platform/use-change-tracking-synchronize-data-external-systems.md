@@ -30,7 +30,7 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
  ```
  Read more about metadata annotations on [Metadata annotations](webapi/web-api-types-operations.md#bkmk_metannot).
  
- For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](https://technet.microsoft.com/library/3fa9c316-9dc9-4b28-9abf-43a3fce5b01d.aspx).  
+ For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946903(v=crm.8)).  
   
 
 ## Retrieve changes for a table using the Web API  

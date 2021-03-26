@@ -53,7 +53,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 ## Install the sample app
 
 > [!TIP]
-> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
+> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
 
 1. Select **Apps** at the bottom of the left pane in Teams.
 
@@ -89,7 +89,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
     ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](https://docs.microsoft.com/power-platform/admin/about-teams-environment)
+    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment)
     > - Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.

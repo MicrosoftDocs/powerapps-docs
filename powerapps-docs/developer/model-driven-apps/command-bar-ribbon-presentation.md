@@ -105,7 +105,7 @@ There are three different ways that command data can be displayed.
 ### See also  
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons available](https://docs.microsoft.com/powerapps/developer/model-driven-apps/ribbons-available)   
+ [Ribbons available](./ribbons-available.md)   
  [Export Ribbon definitions](export-ribbon-definitions.md)   
  [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
 

@@ -62,9 +62,7 @@ CreateAttributeRequest widgetSerialNumberAttributeRequest = new CreateAttributeR
 
 ## Use Web API
 
-You can create and update table definitions using the Web API.
-
-More information: [Create and update table definitions using the Web API > Create columns](https://msdn.microsoft.com/library/mt593078.aspx#Anchor_3).
+You can create and update table definitions using the Web API. More information: [Create and update table definitions using the Web API](/powerapps/developer/data-platform/webapi/create-update-entity-definitions-using-web-api).
 
 #### Request
 ```http
@@ -141,7 +139,7 @@ These examples show how you can configure the **AutoNumberFormat** property to g
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMMddhh}-{RANDSTRING:6}`|`CAS-002002-2017091309-HTZOUR`|
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMM}-{RANDSTRING:6}-{DATETIMEUTC:hhmmss}`|`CAS-002000-201709-Z8M2Z6-110901`|
 
-The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
+The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard Date and Time Format Strings](/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ### String length
 
@@ -241,7 +239,7 @@ _serviceProxy.Execute(req);
 ```
 Using the Web API **SetAutoNumberSeed** Action.
 
-More information: [Use Web API actions > Unbound actions](https://msdn.microsoft.com/library/mt607600.aspx#bkmk_unboundActions)
+More information: [Use Web API actions > Unbound actions](/previous-versions/dynamicscrm-2016/developers-guide/mt607600(v=crm.8)#bkmk_unboundActions)
 
 #### Request
 

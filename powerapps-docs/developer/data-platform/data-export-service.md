@@ -21,7 +21,7 @@ search.app:
 
 Data Export is an add-on service made available as a Microsoft Dataverse solution that adds the ability to replicate Dataverse data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Dataverse schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Dataverse.  
   
-The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](https://docs.microsoft.com/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
+The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
   
 ## Prerequisites for using the Data Export Service  
 
@@ -40,11 +40,11 @@ Because this service requires access to an external Microsoft Azure SQL Database
   
 - The subscription must support the volume of data being replicated from your Dataverse instance.  
   
-- Firewall settings must allow access from the IP address of your  Data Export service. For more information, see [Configure an Azure SQL Database server-level firewall rule using the Azure Portal](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/).  
+- Firewall settings must allow access from the IP address of your  Data Export service. For more information, see [Configure an Azure SQL Database server-level firewall rule using the Azure Portal](/azure/azure-sql/database/firewall-configure).  
   
 - It is recommended that option “Allow access to azure services” be enabled.  
   
-- The database user, specified in the  data export connection string, must have the proper create and alter permissions on the target database.  At minimum these include: `CRTB`, `CRTY`, `CRVW`, `CRPR`, and `ALUS`. More information: [Permissions (Database Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
+- The database user, specified in the  data export connection string, must have the proper create and alter permissions on the target database.  At minimum these include: `CRTB`, `CRTY`, `CRVW`, `CRPR`, and `ALUS`. For more information, see [Permissions (Database Engine)](/sql/relational-databases/security/permissions-database-engine).  
   
 - At least one user have extensive permissions on the schema. The following script creates such a new user.  
   
@@ -60,7 +60,7 @@ GRANT ALTER, REFERENCES, INSERT, DELETE, UPDATE, SELECT, EXECUTE ON SCHEMA::dbo 
   
 ```  
   
-For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](https://technet.microsoft.com/library/mt744592.aspx). Alternately, this service can be managed through its REST API; see [Key Vault management](https://msdn.microsoft.com/library/azure/mt620024.aspx).  
+For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt744592(v=crm.8)). Alternately, this service can be managed through its REST API; see [Key Vault management](/rest/api/keyvault/vaults).  
   
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
@@ -105,8 +105,7 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
 |profiles/{id}/failures|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfileFailuresInfoById)|Get the connection string to a blob that contains failure details for a given profile.|  
   
 ### Gain Access  
-
-Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](https://azure.microsoft.com/documentation/articles/active-directory-token-and-claims/). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
+Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](/azure/active-directory/develop/security-tokens). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
   
 ```csharp  
   
@@ -125,7 +124,7 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
   
 ```  
   
-For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/). For more information about Azure user security, see [Authentication Scenarios for Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/).  
+For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/v2-oauth2-auth-code-flow). For more information about Azure user security, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/authentication-vs-authorization).  
   
 ### Error handling and failure processing  
  Once a profile is correctly configured, the synchronization process is typically highly reliable. However, if a record fails to synchronize, the following failure processing is applied:  

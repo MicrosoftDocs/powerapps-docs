@@ -151,7 +151,7 @@ The main components of the Hospital Emergency Response solution are:
 
 
 
-Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/overview) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
+Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](../../sample-apps/emergency-response/overview.md) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
 
 ### Additional stories
 

@@ -73,6 +73,6 @@ When calling the Dataverse Web API, you must include the token value in an Autho
   
 ### See also
 
-[Use OAuth to connect to Dataverse web services](connect-web-services-using-oauth.md)   
+[Use OAuth to connect to Dataverse web services](authenticate-oauth.md)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

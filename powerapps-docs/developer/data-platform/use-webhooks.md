@@ -17,9 +17,7 @@ search.app:
 ---
 # Use WebHooks to create external handlers for server events
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
-With Microsoft Dataverse, you can send data about events that occur on the server to a web application using WebHooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
+With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
 Webhooks enable developers and ISV’s to integrate Dataverse data with their own custom code hosted on external services. By using the WebHook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
@@ -364,9 +362,9 @@ If your web hook is registered to run asynchronously, you can examine the System
 [Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
-[ServiceEndpoint Table](reference/entities/serviceendpoint.md)<br />
-[SdkMessageProcessingStep Table](reference/entities/sdkmessageprocessingstep.md)<br />
-[AsynchronousOperations Table](reference/entities/asyncoperation.md)<br />
+[ServiceEndpoint table](reference/entities/serviceendpoint.md)<br />
+[SdkMessageProcessingStep table](reference/entities/sdkmessageprocessingstep.md)<br />
+[AsynchronousOperations table](reference/entities/asyncoperation.md)<br />
 <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext><br />
 <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService><br />
 
