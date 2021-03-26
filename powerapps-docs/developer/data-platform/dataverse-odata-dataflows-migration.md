@@ -174,7 +174,7 @@ Select **Refresh manually** since this is a one-time migration and then select *
 The initial dataflow load initiates when you select **Create**. 
 
 > [!div class="mx-imgBorder"]
-> ![Refresh manually](./media/initiate-dataflow-process.png "Refresh manually")
+> ![Initial dataflow load](./media/initiate-dataflow-process.png "Initial dataflow load")
 
 You can manually initiate a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows have completed.
 

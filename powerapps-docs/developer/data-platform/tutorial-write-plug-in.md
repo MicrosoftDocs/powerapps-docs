@@ -272,7 +272,7 @@ To register a plug-in, you will need the Plug-in Registration tool
     |Event Pipeline Stage of Execution|PostOperation|
     |Execution Mode|Asynchronous|
 
-    ![Register a new step](media/tutorial-write-plug-in-register-new-step-dialog.png)
+    ![Entering relevant step data](media/tutorial-write-plug-in-register-new-step-dialog.png)
 
 1. Click **Register New Step** to complete the registration and close the **Register New Step** dialog.
 1. You can now see the registered step.
