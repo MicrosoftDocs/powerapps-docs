@@ -313,8 +313,6 @@ Now that you've created your first app with data, you can save your changes and 
 
 Select **Publish to Teams** to publish the app so others in your team can use the app, and add the app to Teams channel. More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 
-![Publish to Teams](media/publish-teams.png "Publish to Teams") 
-
 Now that you've created your first app from a blank table, let's go through the
 Power Apps interface, Studio, controls and how to create additional apps in
 detail.
@@ -358,7 +356,7 @@ to get the *GroupID* value.
     `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
 
 1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
-[Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
+[Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 to enable security for the team's Microsoft 365 Group.
 
 ## Next steps
