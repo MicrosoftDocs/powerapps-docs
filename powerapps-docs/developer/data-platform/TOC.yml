@@ -290,7 +290,7 @@
 - name: Work with table definitions using code
   href: metadata-services.md
   items:
-  - name: Browse your environment metadata
+  - name: Browse table definitions in your environment
     href: browse-your-metadata.md
   - name: Table definitions
     href: entity-metadata.md
