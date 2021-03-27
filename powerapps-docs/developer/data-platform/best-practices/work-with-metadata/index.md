@@ -26,7 +26,7 @@ search.app:
 
 This list below contains all of the guidance and best practices regarding interacting and working with table definitions in Dataverse.
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 
 |Best Practice  |Description  |
