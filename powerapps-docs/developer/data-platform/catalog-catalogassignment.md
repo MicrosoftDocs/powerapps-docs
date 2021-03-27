@@ -1,6 +1,6 @@
 ---
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to use the Catalog and CatalogAssignment entities to expose events in your solution"
+description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
 ms.date: 03/31/2021
 ms.reviewer: "pehecke"
@@ -18,11 +18,11 @@ search.app:
 
 # Catalog and CatalogAssignment tables (Preview)
 
-Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. <!-- Link to release plan topic? -->
+Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. 
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
 
-Use the Catalog table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the catagory.
+Use the Catalog table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the category.
 
 The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
@@ -113,7 +113,7 @@ With this catalog, the following events will be available:
 
 Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
 
-## Catalog Table Columns
+## Catalog table columns
 
 All the available columns and relationships are available in [Catalog table/entity reference](reference/entities/catalog.md).
 
@@ -195,21 +195,21 @@ GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$fi
 > Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
 
 
-## Create a Catalog in the maker portal
+## Create a Catalog in Power Apps
 
-At the time of this writing, you can create **Catalog** records from the maker portal, but you cannot create **Catalog Assignment** records. Without catalog assignments, the catalog will not be functional. Catalog assignments can only be created using code at this time. See [Create Catalogs and CatalogAssignments with code](#create-catalogs-and-catalogassignments-with-code)
+At the time of this writing, you can create **Catalog** records in Power Apps (<https://make.powerapps.com>), but you cannot create **Catalog Assignment** records. Without catalog assignments, the catalog will not be functional. Catalog assignments can only be created using code at this time. See [Create Catalogs and CatalogAssignments with code](#create-catalogs-and-catalogassignments-with-code)
 
 You should always create a catalog as part of a solution. Use the following instructions to create catalog records:
 
-1. From the maker portal [https://make.powerapps.com](https://make.powerapps.com), select **Solutions**.
+1. Sign in to [Power Apps](https://make.powerapps.com), 
+1. In the left navigation pane, select **Solutions**.
 1. Create or select a solution that you want to use, then click **New**.
 1. Select **Catalog** from the menu and a new window will open.
-1. Complete the form using information from [Catalog Table Columns](#catalog-table-columns).
+1. Complete the form using information from [Catalog table columns](#catalog-table-columns).
 1. Save and close the form.
 
 > [!IMPORTANT]
-> There is a known issue where the catalog will not be added to the solution. 
-> Until this is fixed, you must manually add the catalog to your solution.
+> There is a known issue where the catalog will not be added to the solution. Until this is fixed, you must manually add the catalog to your solution.
 
 ### Add a catalog to your solution
 
