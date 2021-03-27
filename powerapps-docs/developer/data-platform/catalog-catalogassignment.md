@@ -201,7 +201,7 @@ At the time of this writing, you can create **Catalog** records from the maker p
 
 You should always create a catalog as part of a solution. Use the following instructions to create catalog records:
 
-1. From the maker portal [https://make.powerapps.com](https://make.powerapps.com), select Solutions.
+1. From the maker portal [https://make.powerapps.com](https://make.powerapps.com), select **Solutions**.
 1. Create or select a solution that you want to use, then click **New**.
 1. Select **Catalog** from the menu and a new window will open.
 1. Complete the form using information from [Catalog Table Columns](#catalog-table-columns).
