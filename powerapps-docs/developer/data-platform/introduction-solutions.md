@@ -1,6 +1,6 @@
 ---
 title: Introduction to solutions | Microsoft Docs
-description: Learn how solutions are used to create model apps.
+description: Learn about using solutions to package your Microsoft Dataverse customizations.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: "pehecke"
 ms.workload: na
-ms.date: 06/22/2020
+ms.date: 03/17/2021
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -23,8 +23,6 @@ search.app:
 ---
 
 # Introduction to solutions
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend Microsoft Dataverse. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Dataverse to install and uninstall the business functionality defined by the solution.
 

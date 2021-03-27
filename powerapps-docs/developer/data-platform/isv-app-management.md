@@ -82,7 +82,7 @@ If you want additional users to get access to ISV Studio, they can be added as a
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
-### Feedback
+### How to provide feedback
 
 Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 
