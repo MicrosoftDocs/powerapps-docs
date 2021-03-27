@@ -1,6 +1,6 @@
 ---
 title: "Sample: Enable field security for a table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to enable field secuirty for an entity" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to enable field secuirty for a table" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 3/27/2021
 ms.reviewer: "pehecke"
