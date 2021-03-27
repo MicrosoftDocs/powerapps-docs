@@ -148,7 +148,7 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 |catalog<br/>`CatalogId`<br/>`catalogid`|Lookup|Unique identifier for the catalog associated with the catalog assignment.<br/>**Required**|
 |Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the CatalogAssignment can be customized or deleted.<br/>**Required**|
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog assignment.  |
-|Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />This polymorphic lookup can be linked to the following tables:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a row in the Entity table, you will need the Id of the entity. See [Get the Id of a table](#get-the-id-of-a-table) for more information.|
+|Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />This polymorphic lookup can be linked to the following tables:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a table, custom api, or custom process action you will need to get the respectiveid value. See [Get the Id for CatalogAssignment items](#get-the-id-for-catalogassignment-items) for more information.|
 
 > [!NOTE]
 > Unless you want to allow people who install your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
@@ -188,9 +188,9 @@ GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$fi
 ```
 
 > [!NOTE]
-> The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the custom action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be 'ExampleCustomProcessAction'.
+> The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the custom action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be `ExampleCustomProcessAction`.
 >
-> Make sure you to access the row where [Type]{/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type} is `2`. This is the activated workflow.
+> Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `2`. This is the activated workflow.
 >
 > Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
 
@@ -473,3 +473,14 @@ For example:
     </catalogassignment>
 </catalogassignments>
 ```
+
+### See also  
+
+[Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
+[Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
+[Create entities using the Organization Service](org-service/entity-operations-create.md)<br />
+[Retrieve an entity using the Organization Service](org-service/entity-operations-retrieve.md)
+ 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
