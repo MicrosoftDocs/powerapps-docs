@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Enable field security for a table
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample shows how to enable field security for a table.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
 
