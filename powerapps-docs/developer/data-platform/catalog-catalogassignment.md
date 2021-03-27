@@ -26,10 +26,10 @@ Use the Catalog table to create a two level hierarchy. This will create a **Cata
 
 The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
-For each second-level catalog that represents the categories within your solution, you will use the CatalogAssignment table to specify any Tables, Custom API, or Custom Process actions you want to be exposed.
+For each second-level catalog that represents the categories within your solution, you will use the CatalogAssignment table to specify any Tables, Custom API, or Custom Process actions you want to be available as events. Only Custom API that are configured as Actions can be used.
 
 > [!IMPORTANT]
-> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these read these records. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
+> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these records. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
 > You must grant **Read** access to the security roles assigned to any users who will need to use these records. These tables are found within the **Custom Entities** tab when you edit a security role.
 > 
 > More information: 
@@ -58,7 +58,7 @@ Contoso Customer management is a solution which includes the following tables:
 
 ### Custom API
 
-They have also created a number of Custom API which are called by their point-of-sale system, their Web site, and ERP systems to notify Dataverse of events that do not originate within Dataverse:
+They have also created a number of Custom API actions which are called by their point-of-sale system, their Web site, and ERP systems to notify Dataverse of events that do not originate within Dataverse:
 
 |UniqueName  |DisplayName  |
 |---------|---------|
@@ -196,7 +196,7 @@ You should always create a catalog as part of a solution. Use the following inst
 
 1. From the maker portal [https://make.powerapps.com](https://make.powerapps.com), select Solutions.
 1. Create or select a solution that you want to use, then click **New**.
-1. Select Catalog from the menu and a new window will open.
+1. Select **Catalog** from the menu and a new window will open.
 1. Complete the form using information from [Catalog Table Columns](#catalog-table-columns).
 1. Save and close the form.
 
@@ -321,7 +321,11 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-000
 
 ### Using the Organization Service
 
-The following code shows creating a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: ContosoCustomerManagement.
+The following code shows creating a catalog hierarchy and a catalog assignment in a solution with the UniqueName: `ContosoCustomerManagement`.
+
+> [!NOTE]
+> Use the `SolutionUniqueName` optional parameter with the  [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) to create the records in the context of that solution.
+> More information: [Passing optional parameters with a request](/powerapps/developer/data-platform/org-service/use-messages#passing-optional-parameters-with-a-request)
 
 ```csharp
 string conn = $@"
@@ -400,7 +404,9 @@ Within a solution file, you can edit the files to create catalogs and catalog as
 
 Use the [SolutionPackager tool](/power-platform/alm/solution-packager-tool) to extract a solution into files that can be managed in source control. You can then edit the files. You can then use SolutionPackager to pack the extracted files back into a solution. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
 
-> [!NOTE]
+> [!TIP]
+> Create some catalogs and catalog assignments with code in a solution, then export and extract the solution to see some examples.
+>
 > Make sure you are using the latest version of the [Microsoft.CrmSdk.CoreTools NuGet Package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)
 
 ### Create a Catalog with solution files
