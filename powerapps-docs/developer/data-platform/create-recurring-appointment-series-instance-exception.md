@@ -36,7 +36,7 @@ When you create a recurring appointment master (series), Microsoft Dataverse cre
    > [!NOTE]
    >  Recurring appointment instances are created based on the expansion model and the parameters that define it. More information: [Recurring Appointment Partial Expansion Model](recurring-appointment-partial-expansion-model.md).  
   
-   For sample code that demonstrates how to create a recurring appointment series, see [Sample: Create, retrieve, update, and delete a recurring appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment).  
+   For sample code that demonstrates how to create a recurring appointment series, see [Sample: Create, retrieve, update, and delete a recurring appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment.md).  
   
 <a name="bkmk_createinstance"></a>   
 
