@@ -68,7 +68,7 @@ See the following topics for detailed information about the columns/attributes y
 
 - [CustomAPI Table Columns](customapi-table-columns.md)
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
-- [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+- [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 
 ## Invoking Custom APIs
