@@ -266,6 +266,8 @@
     href: transaction-currency-currency-entity.md
   - name: Category entity
     href: use-category-entity.md
+  - name: Catalog & CatalogAssignment (preview)
+    href: catalog-catalogassignment.md
   - name: Feedback entity
     href: use-feedback-entity-manage-feedback-ratings-records.md
   - name: User and team entities
