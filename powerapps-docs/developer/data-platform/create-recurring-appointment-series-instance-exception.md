@@ -2,7 +2,7 @@
 title: "Create a recurring appointment series, instance, or exception (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically create a recurring appointment master (series),  individual recurring appointment instances, exceptions to those instances, or convert an appointment to a recurring appointment." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Create a recurring appointment series, instance, or exception
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 When you create a recurring appointment master (series), Microsoft Dataverse creates individual appointment instances based on the specified recurrence information. You can also create individual recurring appointment instances and exceptions to those instances, and you can convert an appointment to a recurring appointment.  
   
@@ -33,12 +31,12 @@ When you create a recurring appointment master (series), Microsoft Dataverse cre
   
 2. Individual recurring appointment instances are created based on the recurrence information and stored as `Appointment` rows. These appointment objects are associated with the parent recurring appointment series using the `Appointment.SeriesId` property and have the same value as the parent recurring appointment series ID (`ActivityPointer.SeriesId`).  
   
-    The value of the `Appointment.InstanceTypeCode` property is set to **Recurring Instance** (picklist value 2) for these appointment objects.  
+    The value of the `Appointment.InstanceTypeCode` property is set to **Recurring Instance** (choice value 2) for these appointment objects.  
   
    > [!NOTE]
    >  Recurring appointment instances are created based on the expansion model and the parameters that define it. More information: [Recurring Appointment Partial Expansion Model](recurring-appointment-partial-expansion-model.md).  
   
-   For sample code that demonstrates how to create a recurring appointment series, see [Sample: Create a Recurring Appointment](/dynamics365/customer-engagement/developer/sample-create-retrieve-update-delete-recurring-appointment).  
+   For sample code that demonstrates how to create a recurring appointment series, see [Sample: Create, retrieve, update, and delete a recurring appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment).  
   
 <a name="bkmk_createinstance"></a>   
 
@@ -50,15 +48,15 @@ When you create a recurring appointment master (series), Microsoft Dataverse cre
 <a name="bkmk_createexception"></a>   
 
 ## Create a recurring appointment exception  
- An exception is created when you either update or delete an instance of the recurring appointment. Recurring appointment instances are stored as an appointment row along like other appointments, and you can identify a recurring appointment instance using the `Appointment.InstanceTypeCode` column of an appointment row, which will have a value of **Recurring Instance** (picklist value 2).  
+ An exception is created when you either update or delete an instance of the recurring appointment. Recurring appointment instances are stored as an appointment row along like other appointments, and you can identify a recurring appointment instance using the `Appointment.InstanceTypeCode` column of an appointment row, which will have a value of **Recurring Instance** (choice value 2).  
   
  You can create exceptions in the following ways:  
   
--   Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class on the `Appointment` entity to update a recurring appointment instance, and set the value of the `Appointment.InstanceTypeCode` column to **Recurring Exception** (picklist value 3).  
+-   Use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class on the `Appointment` table to update a recurring appointment instance, and set the value of the `Appointment.InstanceTypeCode` column to **Recurring Exception** (choice value 3).  
   
--   Use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> class on the `Appointment` entity to delete a recurring appointment instance. Deleting an appointment instance marks it an exception by creating an entry for the instance in the `RecurringAppointmentMaster.DeletedExceptionsList` column for the parent appointment series object.  
+-   Use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> class on the `Appointment` table to delete a recurring appointment instance. Deleting an appointment instance marks it an exception by creating an entry for the instance in the `RecurringAppointmentMaster.DeletedExceptionsList` column for the parent appointment series object.  
   
--   Use the <xref:Microsoft.Crm.Sdk.Messages.CreateExceptionRequest> class on the `Appointment` entity.  
+-   Use the <xref:Microsoft.Crm.Sdk.Messages.CreateExceptionRequest> class on the `Appointment` table.  
   
 <a name="bkmk_convert"></a>   
 
