@@ -158,7 +158,7 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 
 You will need to get the id of entities, custom apis, and custom process actions when you associate them with a CatalogAssignment.
 
-#### Get the Id of an entity
+#### Get the Id of a table
 
 The Entity table contains multiple rows for each table. One for each layer in the solution. You can get the Id for a specific table, such as the Account table, using either of these queries using the Web API:
 
