@@ -1,6 +1,6 @@
 ---
-title: Patch function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Patch function in Power Apps
+title: Print function | Microsoft Docs
+description: Reference information, including syntax and examples, for the print function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -17,13 +17,16 @@ search.app:
 
 # Print function in Power Apps 
 
-Opens the current screen in the default browser print dialog. 
+Opens the current screen in the default browser print dialog.
 
 ## Description 
 
-The print function allows you to take any screen and fit it to a page in order to print to a printer or save as PDF.  
+The print function allows you to select any screen and fit it to a page in order to send it to a printer for printing or allows you to save it as PDF file.  
 
 The different configurations of the screen enable different printing outcomes. For fixed screens, they fit to the size of the page, for use of the screen templates/special sized screens, we will fit the content to the size of the print.  
+
+> [!NOTE]
+> You can only print the screen you have added a button and defined **Print** function on `OnSelect` property of the button. For example, if you have added button on `screen 2` and when you select the button, only the content in the `screen 2` gets printed. 
 
 ## Syntax
 
@@ -38,26 +41,50 @@ The different configurations of the screen enable different printing outcomes. F
 1. From property list on top left, select **OnSelect**.
 1. Enter the formula `Print()`. 
 1. Save and publish the app.
-1. Play the app.
-1. Select the button that you added.  
+1. Play the app. 
+1. Select the button that you added. When you select the button, a default print browser pops up and allows you to choose from the available options to print or save it as PDF file.
 
-The default browser will be opened in a new tab with the contents of the print.  
+   ![Default print browser to print or save](media/function-print/functions-print-screen.png "Default print browser to print or save")
 
 ### Hide controls while printing 
 
-To enable more customizable content, you are able to reference when the screen is printing in order to change properties of your app. For example, hiding buttons, or changing a form to view mode.  
+To enable more customizable content, you can access the screen when the screen is printing in order to the change properties of the canvas app. For example, hiding buttons, or changing a form to view mode.  
+
+From the above example, where you insert a button on the screen and when you print the screen, you notice that the button is also gets printed. To remove the button from the screen while printing, on the button’s **Visible** property add the formula `Not Screen1.Printing`. Preview the app and select the button. Observe that the button does not show in the content in the browser preview print dialog.  
 
 ### Use a screen template 
 
-An easy way to get started is to  
+An easy way to get started, is to use a screen template to size your print to the letter size.  
 
-Screen sizes for common prints
+- Open or create a new canvas app.
+- Select **New Screen** and select **Portrait print** option.
 
-To build out a print for a specific size,  
+  ![New portrait print screen](media/function-print/new-screen-portrait-print.png "New portrait print screen")
+
+- Observe that the screen is sized differently from other screens with the print button on the top-right corner.  
+
+   ![Screen size portrait print](media/function-print/screen-size-portrait-print.png "Screen size portrait print")
+
+- Add content to this screen.
+- Observe that the content is sized to the print. This enables more custom control over the experience.  
+
+### Screen sizes for common prints 
+
+To build out a print for a specific size, you can build a [responsive app](https://docs.microsoft.com/powerapps/maker/canvas-apps/build-responsive-apps), or create a special screen to manage your print.
+
+|Print size|Screen height|Screen width|
+|----------|----------------|---------|
+|A4 portrait|1123|794|
+|A4 landscape|794|1123|
+|Letter portrait|1056|816|
+|Letter landscape|816|1056|
+||||
 
 ## Known limitations
 
-The **Print** function currently doesn't work on mobile devices. The default browser printers are the ones that will be available to print to.  
+- The **Print** function currently doesn't work on mobile devices.  
+- In Internet Explorer and classic Edge browsers, there may be undesirable behavior with how the screen scales.  
+- The default browser printers are the ones that will be available to print to.  
 
 ### See also
 
