@@ -29,7 +29,7 @@ An organization in Microsoft Dataverse, such as a holding company or a corporati
 
 ### See also
 
-[BusinessUnit table reference](reference/entities/businessunit.md)
+[BusinessUnit table reference](reference/entities/businessunit.md)<br/>
 [Security and data access](security-model.md)
 
 
