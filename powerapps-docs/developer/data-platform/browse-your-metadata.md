@@ -17,8 +17,9 @@ search.app:
 ---
 # Browse table definitions in your environment
 
-You can use the Table definition browser to view information for all the tables your Dataverse environment. The ETable definition browser is a managed solution you can download here: [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) 
+You can use the Table definition browser to view information for all the tables your Dataverse environment. The Table definition browser is a managed solution you can download here: [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip)
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Import the solution
 
