@@ -23,7 +23,7 @@ An organization in Microsoft Dataverse, such as a holding company or a corporati
   
 - A *child business unit* is a business unit that is immediately under another business unit in the business hierarchy of an organization.  
   
- A business unit can own records as defined in the ownership type in the metadata definition for an entity. 
+ A business unit can own records as defined in the ownership type in the definition of a table. 
   
  Security roles are associated with a business unit. You can call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message to find out the business unit for the currently logged on or impersonated user.
 
