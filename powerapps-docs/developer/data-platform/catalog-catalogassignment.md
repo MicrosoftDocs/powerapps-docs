@@ -154,11 +154,11 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 > Unless you want to allow people who install your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
 
 
-### Get the Id of a table
+### Get the Id for CatalogAssignment items
 
-You will need to get the id of the entity when you associate it with a CatalogAssignment.
+You will need to get the id of entities, custom apis, and custom process actions when you associate them with a CatalogAssignment.
 
-#### Using the Web API
+#### Get the Id of an entity
 
 The Entity table contains multiple rows for each table. One for each layer in the solution. You can get the Id for a specific table, such as the Account table, using either of these queries using the Web API:
 
@@ -170,23 +170,30 @@ GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')?$s
 GET [Organization URI]/api/data/v9.2/entities?$select=entityid&$filter=name eq 'Account'&$top=1
 ```
 
-#### Using the Organization Service
 
-The easiest method is to retrieve the entity metadata and read the MetadataId:
+#### Get the Id of a Custom API
 
-```csharp
-var getAccountEntityReq = new RetrieveEntityRequest
-{
-    EntityFilters = EntityFilters.Entity,
-    LogicalName = "account"
-};
-var getAccountEntityResp = (RetrieveEntityResponse)service.Execute(getAccountEntityReq);
-var accountEntityId = getAccountEntityResp.EntityMetadata.MetadataId;
+This is most easily done using the Web API. The following example will return the `customapiid` of a custom api with the `uniquename` of `your_CustomAPIName`.
+
+```http
+GET [Organization URI]/api/data/v9.2/customapis?$select=customapiid&$filter=uniquename eq 'your_CustomAPIName'
 ```
 
-More information:
-- [Retrieve and update a table](/developer/data-platform/org-service/metadata-retrieve-update-delete-entities#retrieve-and-update-an-entity)
-- [RetrieveEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentityrequest)
+#### Get the Id of a Custom Process Action
+
+This is most easily done using the Web API. The following example will return the `workflowid` of a custom process action with the `uniquename` of `ExampleCustomProcessAction`.
+
+```http
+GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$filter=category eq 3 and type eq 2 and endswith(uniquename,'ExampleCustomProcessAction')
+```
+
+> [!NOTE]
+> The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the custom action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be 'ExampleCustomProcessAction'.
+>
+> Make sure you to access the row where [Type]{/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type} is `2`. This is the activated workflow.
+>
+> Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
+
 
 ## Create a Catalog in the maker portal
 
