@@ -4,7 +4,7 @@ description: Learn about programmatically working with tables in Microsoft Datav
 author: "mayadumesh" # GitHub ID
 manager: kvivek
 ms.service: powerapps
-ms.date: 10/26/2020
+ms.date: 03/28/2021
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -46,7 +46,7 @@ You can create new tables and fill them with data using Power Query. More inform
 
 ### Use web services to work with table definitions
 
-The web services exposed in Dataverse include capabilities to create, read, write, and delete tables. These services are most frequently used to read because that data can inform your code at runtime about how the environment has been customized. More information: [Work tables definitions using code](metadata-services.md)
+The web services exposed in Dataverse include capabilities to create, read, write, and delete tables. These services are most frequently used to read because that data can inform your code at runtime about how the environment has been customized. More information: [Work with table definitions using code](metadata-services.md)
 
 ## Table definitions
 
