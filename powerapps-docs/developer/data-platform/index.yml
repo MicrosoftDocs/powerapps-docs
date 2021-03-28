@@ -136,7 +136,7 @@ landingContent:
             url: ./community-tools.md
   
   # Card
-  - title: Entity and API reference
+  - title: Table and API reference
     linkLists:
       - linkListType: reference
         links:
