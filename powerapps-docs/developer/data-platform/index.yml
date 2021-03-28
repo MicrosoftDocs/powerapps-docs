@@ -140,7 +140,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Entity reference
+          - text: Table reference
             url: reference/about-entity-reference.md
           - text: SDK API class libraries
             url: /dotnet/api/?view=dynamics-general-ce-9
