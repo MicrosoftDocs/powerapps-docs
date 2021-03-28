@@ -1,5 +1,5 @@
 ---
-title: "AAbout table/entity reference for Microsoft Dataverse| Microsoft Docs"
+title: "About table/entity reference for Microsoft Dataverse| Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
 author: JimDaly
 ms.service: powerapps
