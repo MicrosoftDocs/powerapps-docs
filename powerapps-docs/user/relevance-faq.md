@@ -33,7 +33,7 @@ This happens when the table is not part of the model-driven app. Use the Power A
 
 ## Can I configure quick actions to show or hide certain commands?
 Yes, you can with version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. They can be configured using ribbon rules
-For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization).
+For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ## Why are results that appear in suggestions sometimes not seen on the results page?
 
