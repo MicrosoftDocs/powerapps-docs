@@ -2,7 +2,7 @@
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
 description: "A list of controls available for use with Dynamics 365 for web, phones, and tablets"
 ms.custom: ""
-ms.date: 05/18/2020
+ms.date: 03/29/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -102,7 +102,7 @@ To use these controls in the form editor:
  The flip switch is like an on/off switch, providing a choice between two values.  
  
 > [!NOTE]
->  This control will be deprecated in April 2021. Instead, you can start using the toggle control.
+>  This control will be deprecated in April 2021. Instead, you can start using the toggle control. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
  
 |Property|Description|  
 |--------------|-----------------|  
