@@ -276,7 +276,7 @@ Quick actions are small set of commands specific to a table. You can see quick a
 | Email     |     Cancel, Set Regarding, Email a link  |
 | Any custom table     |     Assign, Share, Email a link  |
 
-For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization).
+For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ### Quick actions and suggested results
 
