@@ -167,15 +167,52 @@ Uses the `<ValueRule>` element. Use this rule to check the value of a specific f
 ### Show On Quick Action Rule
 
 Uses the `<EnableRule>` element. Use this rule to make the command appear only as quick action.
- 
+
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnQuickAction" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
+
 ### Show On Grid and Quick Action rule
 
 Uses the `<EnableRule>` element. Use this rule to make the command appear on the homepage grid and quick action.
 
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnGridAndQuickAction" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
 ### Show On Grid Rule
 
 Uses the `<EnableRule>` element. Use this rule to make the quick action command appear on the homepage grid only. In other words, you can use this command to hide an existing quick action.
 
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnGrid" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
