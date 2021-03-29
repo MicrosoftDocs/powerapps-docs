@@ -32,7 +32,6 @@ This happens when the table is not part of the model-driven app. Use the Power A
 
 
 ## Can I configure quick actions to show or hide certain commands?
-
 Yes, you can with version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. They can be configured using ribbon rules
 For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization).
 
@@ -50,9 +49,6 @@ Currently, relevance search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
-## Can I configure quick actions to show or hide certain commands?
-
-[Quick actions](relevance-search.md#quick-actions-preview) are currently a subset of a table's grid-level command set. They can't be configured. However, we're working to enable this functionality in a future release.
 
 ### See also
 
