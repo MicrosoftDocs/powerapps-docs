@@ -1,5 +1,5 @@
 ---
-title: Print function | Microsoft Docs
+title: Print function in Power Apps| Microsoft Docs
 description: Reference information, including syntax and examples, for the print function in Power Apps
 author: gregli-msft
 manager: kvivek
@@ -85,6 +85,7 @@ To build out a print for a specific size, you can build a [responsive app](https
 - The **Print** function currently doesn't work on mobile devices.  
 - In Internet Explorer and classic Edge browsers, there may be undesirable behavior with how the screen scales.  
 - The default browser printers are the ones that will be available to print to.  
+- In some browser print dialogs, a setting called **Background graphics** should be enabled to see all the images and colors in the print.  
 
 ### See also
 
