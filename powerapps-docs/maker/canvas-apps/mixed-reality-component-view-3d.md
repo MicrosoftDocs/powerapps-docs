@@ -29,7 +29,7 @@ You can display a single 3D model, or you can let the user select from a gallery
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. For troubleshooting and help, submit a ticket in the Admin Center for Mixed Reality, or [post a question on the Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General) (be sure to tag it with "mixed reality".)
 
 
 ## Use the component
@@ -53,7 +53,9 @@ You can modify the component with a number of properties.
 
 The following properties are on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
 
-<fix>![Properties on the component's View in 3D pane](./media/augmented-3d/augmented-3d-viewer-controls.png "Properties on the component's View in 3D pane")
+
+
+:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="Properties on the component's View in 3D pane.":::
 
 Some properties are only available in the **Advanced** tab on the **View in 3D** pane.
 
