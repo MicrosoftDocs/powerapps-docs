@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Portals Web API
 
-## Overview
-
 The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!IMPORTANT]
