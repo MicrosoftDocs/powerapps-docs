@@ -58,7 +58,7 @@ The following table lists activity tables that are available in a default Datave
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
-|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment table/entity reference](../../developer/data-platform/reference/entities/appointment.md) |
+|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](../../developer/data-platform/reference/entities/appointment.md) |
 |**Email**|Activity that is delivered using email protocols.|Yes|[Email](../../developer/data-platform/reference/entities/email.md)|
 |**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](../../developer/data-platform/reference/entities/fax.md)|
 |**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](../../developer/data-platform/reference/entities/letter.md)|
