@@ -1520,6 +1520,8 @@
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
+        - name: View capacity consumption reports
+          href: ./portals/admin/portal-consumption-reports.md
     - name: Configure security in portals
       items:
         - name: Portal authentication
