@@ -19,7 +19,7 @@ search.app:
 
 
 
-Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide).
+Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](/microsoft-edge/f12-devtools-guide).
 
 For Google Chrome, press F12 to open developer tools. Firebug is a popular browser extension for web development using Mozilla Firefox. For Apple Safari, you must first select the **Show Develop** menu in menu bar in **Advanced Preferences**. Then you can select **Show Web Inspector** from the **Develop** menu.
 

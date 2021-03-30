@@ -115,11 +115,11 @@ If you want to link an app to a solution, both must be in the same environment, 
 
 ## Known limitations
 
-For information about known limitations, see [Solutions overview](/powerapps/maker/data-platform/solutions-overview#known-limitations). 
+For information about known limitations, see [Solutions overview](../data-platform/solutions-overview.md#known-limitations). 
 
 ## Next steps
 
-- Create or link more apps and [other components](../data-platform/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
+- Create or link more apps and [other components](/powerapps/maker/canvas-apps/solutions-overview), such as entities, flows, and dashboards, to your solution.
 - [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
 
 

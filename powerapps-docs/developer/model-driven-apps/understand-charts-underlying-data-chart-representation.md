@@ -92,7 +92,7 @@ For more sample data description XML strings, see [Sample Charts](sample-charts.
   
 ## Use the presentation description XML string to specify data representation 
 
-The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
+The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](/dotnet/api/system.web.ui.datavisualization.charting.chart) class in Microsoft Chart Controls. More information: [Chart Controls](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))  
 
 You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.
 
@@ -328,7 +328,7 @@ Unified Interface supports the following color formats in chart presentation xml
 [FetchXML schema](../data-platform/fetchxml-schema.md)
 [Visualization Data Description Schema](visualization-data-description-schema.md)   
 [Sample Charts](sample-charts.md)   
-[Chart Class (Microsoft Chart Controls)](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx)
+[Chart Class (Microsoft Chart Controls)](/dotnet/api/system.web.ui.datavisualization.charting.chart)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

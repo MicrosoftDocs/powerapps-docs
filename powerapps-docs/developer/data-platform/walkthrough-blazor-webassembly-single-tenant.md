@@ -1,8 +1,8 @@
 ---
-title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Microsoft Dataverse | Microsoft Docs"
-description: ""
+title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse | Microsoft Docs"
+description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
 keywords: ""
-ms.date: 08/17/2020
+ms.date: 03/23/2021
 ms.service: powerapps
 ms.topic: article
 author: JimDaly # GitHub ID
@@ -16,9 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Microsoft Dataverse
+# Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Dataverse. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Dataverse instance and retrieve data.
 
@@ -28,7 +28,7 @@ This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor 
 
 ## Goal
 
-When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Dataverse Account entity that the authenticated user has access to.
+When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Dataverse Account table that the authenticated user has access to.
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this tutorial.":::
 
@@ -37,14 +37,13 @@ When you complete this tutorial, you will have a Blazor WebAssembly app that dis
 
 To complete this tutorial, you must have:
 
-- Access to a [Dataverse environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
-- A Dataverse user with a security role that provides read access to the Account and Contact entities
+- Access to a [Dataverse environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
+- A Dataverse user with a security role that provides read access to the Account and Contact tables
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
 
-
-## Step 1: Verify Prerequisites and information about the database
+## Step 1: Verify prerequisites and information about the database
 
 Let’s make sure that your environment is configured properly, and you understand where to perform the actions in Step 2.
 
@@ -500,7 +499,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 ### See also
 
-[Use the Global Discovery Service from a Blazor web assembly](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)  
+[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
