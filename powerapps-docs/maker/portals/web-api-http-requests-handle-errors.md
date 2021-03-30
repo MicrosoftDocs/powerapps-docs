@@ -5,20 +5,17 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/16/2020
+ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Compose HTTP requests and handle errors for the portals Web API (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Compose HTTP requests and handle errors for the portals Web API
 
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or later for this feature to work.**
-> - This feature is in preview. More information: [Understand experimental, preview, and deprecated features in Power Apps](../canvas-apps/working-with-experimental-preview.md)
+> - **Your portal version must be 9.3.3.x or later for this feature to work.**
 
 ## Web API URL and versioning
 
@@ -35,7 +32,7 @@ For example, use this format when referring a case:
 
 `https://contoso.powerappsportals.com/_api/case`
 
-All Web API resources will follow the respective [portal entity permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
+All Web API resources will follow the respective [portal entity permissions](/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
 
 ## HTTP methods
 
@@ -203,3 +200,6 @@ Response for unhandled errors with HTTP status code 500 will return the error "A
 
 [Web API overview](web-api-overview.md)  
 [Perform Web API operations](web-api-perform-operations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

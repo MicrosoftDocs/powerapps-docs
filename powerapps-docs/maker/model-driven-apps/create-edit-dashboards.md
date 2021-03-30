@@ -81,3 +81,6 @@ Additional system dashboards tasks you can perform include:
 
 ## Next steps  
 [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

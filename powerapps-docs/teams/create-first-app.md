@@ -12,7 +12,7 @@ ms.reviewer:
 
 # Create your first app in Microsoft Teams
 
-You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams.
+You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams.
 
 If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
@@ -53,7 +53,7 @@ When you select **Create** to create an app in the selected team, Power Apps aut
 `The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
 
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-groups)
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
 
 ### Enabling security for teams with same names
 
@@ -85,7 +85,7 @@ to get the *GroupID* value.
     `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
 
 1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
-[Share an app with Microsoft 365 Groups](/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups)
+[Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
 to enable security for the team's Microsoft 365 Group.
 
 ## Continue creating your first app
@@ -394,3 +394,6 @@ detail.
 [Understand Power Apps Studio](understand-power-apps-studio.md)<br/>
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)<br/>
 [Create additional apps](create-additional-apps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

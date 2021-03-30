@@ -62,3 +62,6 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 [Use messages with the Organization service](use-messages.md)<br />
 [Write a plug-in](../write-plug-in.md)<br />
 [Entity Operations using the Organization service](entity-operations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

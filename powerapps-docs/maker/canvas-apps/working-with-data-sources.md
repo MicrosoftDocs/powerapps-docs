@@ -136,3 +136,6 @@ For more information on working with a collection as a data source, see [create 
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

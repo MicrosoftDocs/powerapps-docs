@@ -35,7 +35,7 @@ Dataverse for Teams currently isn't available in [Power Apps Government Communit
 
 ## Hidden membership groups
 
-Dataverse for Teams doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
+Dataverse for Teams doesn't support [hidden membership groups](/graph/api/resources/group?preserve-view=true&view=graph-rest-1.0#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
 `Existing limits on this team` <br>
 `You're unable to continue due to an administrative setting on this team. You can try again with another team.`
@@ -54,7 +54,7 @@ There is no enforcement of user-created required table fields. Rows that have em
 
 ### Classic controls
 
-Enabling classic controls requires a refresh of Power Apps Studio.  
+Enabling [classic controls](understand-power-apps-studio.md#classic-controls) requires a refresh of Power Apps Studio.  
 
 ### Canvas components
 
@@ -64,7 +64,7 @@ You may see red errors while using the modern controls in canvas components. The
 
 ### New connections
 
-Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
+Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](/microsoftteams/get-clients#web-client) to add these connectors.
 
 ### Studio and visual editor synchronization
 
@@ -94,3 +94,6 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 -	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 
 -	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agents apps.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

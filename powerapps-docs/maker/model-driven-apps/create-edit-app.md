@@ -32,8 +32,8 @@ In this topic you learn the basics of how to create and edit a model-driven app 
 
 ## Prerequisites
 Verify the following prerequisites before you start creating an app:
-- A Power Apps environment. More information: [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment)
-- System administrator or system customizer security role. More information: [About predefined security roles](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#about-predefined-security-roles)
+- A Power Apps environment. More information: [Create an environment](/power-platform/admin/create-environment)
+- System administrator or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
  
 <a name="createApp"></a>   
 ## Create an app  
@@ -88,3 +88,6 @@ Verify the following prerequisites before you start creating an app:
  [Add or edit app components](add-edit-app-components.md)   
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

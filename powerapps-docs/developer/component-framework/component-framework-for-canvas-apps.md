@@ -65,7 +65,7 @@ To add code components to a canvas app:
 2. Create a new canvas app or edit an existing app to which you want to add the code component.
 
    > [!IMPORTANT]
-   > Make sure the solution zip file is already [imported](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) into Microsoft Dataverse before you proceed to the next step.
+   > Make sure the solution zip file is already [imported](../../maker/data-platform/import-update-export-solutions.md) into Microsoft Dataverse before you proceed to the next step.
 
 3. Go to **Insert** > **Custom** > **Import component**. 
  
@@ -103,4 +103,7 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

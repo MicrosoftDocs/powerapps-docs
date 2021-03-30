@@ -1,22 +1,24 @@
 ---
-title: "EmailServerProfile entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EmailServerProfile table."
-ms.date: 11/14/2020
+title: "EmailServerProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
+ms.date: 03/04/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# EmailServerProfile entity reference
+
+# EmailServerProfile table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Holds the Email Server Profiles of an organization
 
@@ -25,20 +27,21 @@ Holds the Email Server Profiles of an organization
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/emailserverprofiles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/emailserverprofiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/emailserverprofiles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/emailserverprofiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -56,9 +59,9 @@ Holds the Email Server Profiles of an organization
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DefaultServerLocation](#BKMK_DefaultServerLocation)
 - [Description](#BKMK_Description)
@@ -221,7 +224,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ExchangeVersion Options
+#### ExchangeVersion Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -246,7 +249,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### IncomingAuthenticationProtocol Options
+#### IncomingAuthenticationProtocol Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -270,7 +273,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### IncomingCredentialRetrieval Options
+#### IncomingCredentialRetrieval Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -343,7 +346,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IncomingUseImpersonation Options
+#### IncomingUseImpersonation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -382,7 +385,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IncomingUseSSL Options
+#### IncomingUseSSL Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -405,7 +408,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### LastAuthorizationStatus Options
+#### LastAuthorizationStatus Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -442,7 +445,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### LastTestExecutionStatus Options
+#### LastTestExecutionStatus Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -526,7 +529,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### LastTestValidationStatus Options
+#### LastTestValidationStatus Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -579,7 +582,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### MoveUndeliveredEmails Options
+#### MoveUndeliveredEmails Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -650,7 +653,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### OutgoingAuthenticationProtocol Options
+#### OutgoingAuthenticationProtocol Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -674,7 +677,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### OutgoingAutoGrantDelegateAccess Options
+#### OutgoingAutoGrantDelegateAccess Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -697,7 +700,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### OutgoingCredentialRetrieval Options
+#### OutgoingCredentialRetrieval Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -770,7 +773,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### OutgoingUseImpersonation Options
+#### OutgoingUseImpersonation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -809,7 +812,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### OutgoingUseSSL Options
+#### OutgoingUseSSL Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -890,7 +893,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### SendEmailAlert Options
+#### SendEmailAlert Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -913,7 +916,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
 
-#### ServerType Options
+#### ServerType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -938,7 +941,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -959,7 +962,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -980,7 +983,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### TimeoutMailboxConnection Options
+#### TimeoutMailboxConnection Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1035,7 +1038,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### UseAutoDiscover Options
+#### UseAutoDiscover Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1058,7 +1061,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### UseDefaultTenantId Options
+#### UseDefaultTenantId Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1081,7 +1084,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### UseSameSettingsForOutgoingConnections Options
+#### UseSameSettingsForOutgoingConnections Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1109,9 +1112,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -1358,7 +1361,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsIncomingPasswordSet Options
+#### IsIncomingPasswordSet Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1381,7 +1384,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsOauthClientSecretSet Options
+#### IsOauthClientSecretSet Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1404,7 +1407,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsOutgoingPasswordSet Options
+#### IsOutgoingPasswordSet Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1705,7 +1708,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_emailserverprofile_mailbox"></a> emailserverprofile_mailbox
 
-Same as mailbox entity [emailserverprofile_mailbox](mailbox.md#BKMK_emailserverprofile_mailbox) Many-To-One relationship.
+Same as mailbox table [emailserverprofile_mailbox](mailbox.md#BKMK_emailserverprofile_mailbox) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1720,7 +1723,7 @@ Same as mailbox entity [emailserverprofile_mailbox](mailbox.md#BKMK_emailserverp
 
 ### <a name="BKMK_EmailServerProfile_SyncErrors"></a> EmailServerProfile_SyncErrors
 
-Same as syncerror entity [EmailServerProfile_SyncErrors](syncerror.md#BKMK_EmailServerProfile_SyncErrors) Many-To-One relationship.
+Same as syncerror table [EmailServerProfile_SyncErrors](syncerror.md#BKMK_EmailServerProfile_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1735,7 +1738,7 @@ Same as syncerror entity [EmailServerProfile_SyncErrors](syncerror.md#BKMK_Email
 
 ### <a name="BKMK_tracelog_EmailServerProfile"></a> tracelog_EmailServerProfile
 
-Same as tracelog entity [tracelog_EmailServerProfile](tracelog.md#BKMK_tracelog_EmailServerProfile) Many-To-One relationship.
+Same as tracelog table [tracelog_EmailServerProfile](tracelog.md#BKMK_tracelog_EmailServerProfile) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1750,7 +1753,7 @@ Same as tracelog entity [tracelog_EmailServerProfile](tracelog.md#BKMK_tracelog_
 
 ### <a name="BKMK_emailserverprofile_bulkdeletefailures"></a> emailserverprofile_bulkdeletefailures
 
-Same as bulkdeletefailure entity [emailserverprofile_bulkdeletefailures](bulkdeletefailure.md#BKMK_emailserverprofile_bulkdeletefailures) Many-To-One relationship.
+Same as bulkdeletefailure table [emailserverprofile_bulkdeletefailures](bulkdeletefailure.md#BKMK_emailserverprofile_bulkdeletefailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1765,7 +1768,7 @@ Same as bulkdeletefailure entity [emailserverprofile_bulkdeletefailures](bulkdel
 
 ### <a name="BKMK_emailserverprofile_asyncoperations"></a> emailserverprofile_asyncoperations
 
-Same as asyncoperation entity [emailserverprofile_asyncoperations](asyncoperation.md#BKMK_emailserverprofile_asyncoperations) Many-To-One relationship.
+Same as asyncoperation table [emailserverprofile_asyncoperations](asyncoperation.md#BKMK_emailserverprofile_asyncoperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1780,7 +1783,7 @@ Same as asyncoperation entity [emailserverprofile_asyncoperations](asyncoperatio
 
 ### <a name="BKMK_EmailServerProfile_Annotation"></a> EmailServerProfile_Annotation
 
-Same as annotation entity [EmailServerProfile_Annotation](annotation.md#BKMK_EmailServerProfile_Annotation) Many-To-One relationship.
+Same as annotation table [EmailServerProfile_Annotation](annotation.md#BKMK_EmailServerProfile_Annotation) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1795,7 +1798,7 @@ Same as annotation entity [EmailServerProfile_Annotation](annotation.md#BKMK_Ema
 
 ### <a name="BKMK_emailserverprofile_duplicatebaserecord"></a> emailserverprofile_duplicatebaserecord
 
-Same as duplicaterecord entity [emailserverprofile_duplicatebaserecord](duplicaterecord.md#BKMK_emailserverprofile_duplicatebaserecord) Many-To-One relationship.
+Same as duplicaterecord table [emailserverprofile_duplicatebaserecord](duplicaterecord.md#BKMK_emailserverprofile_duplicatebaserecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1810,7 +1813,7 @@ Same as duplicaterecord entity [emailserverprofile_duplicatebaserecord](duplicat
 
 ### <a name="BKMK_emailserverprofile_duplicatematchingrecord"></a> emailserverprofile_duplicatematchingrecord
 
-Same as duplicaterecord entity [emailserverprofile_duplicatematchingrecord](duplicaterecord.md#BKMK_emailserverprofile_duplicatematchingrecord) Many-To-One relationship.
+Same as duplicaterecord table [emailserverprofile_duplicatematchingrecord](duplicaterecord.md#BKMK_emailserverprofile_duplicatematchingrecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1825,7 +1828,7 @@ Same as duplicaterecord entity [emailserverprofile_duplicatematchingrecord](dupl
 
 ### <a name="BKMK_EmailServerProfile_Organization"></a> EmailServerProfile_Organization
 
-Same as organization entity [EmailServerProfile_Organization](organization.md#BKMK_EmailServerProfile_Organization) Many-To-One relationship.
+Same as organization table [EmailServerProfile_Organization](organization.md#BKMK_EmailServerProfile_Organization) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1841,10 +1844,11 @@ Same as organization entity [EmailServerProfile_Organization](organization.md#BK
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_emailserverprofile_createdonbehalfby](#BKMK_lk_emailserverprofile_createdonbehalfby)
 - [lk_emailserverprofile_modifiedonbehalfby](#BKMK_lk_emailserverprofile_modifiedonbehalfby)
+- [owner_emailserverprofile](#BKMK_owner_emailserverprofile)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [team_emailserverprofile](#BKMK_team_emailserverprofile)
 - [lk_emailserverprofile_modifiedby](#BKMK_lk_emailserverprofile_modifiedby)
@@ -1854,34 +1858,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_emailserverprofile_createdonbehalfby"></a> lk_emailserverprofile_createdonbehalfby
 
-See systemuser Entity [lk_emailserverprofile_createdonbehalfby](systemuser.md#BKMK_lk_emailserverprofile_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_emailserverprofile_createdonbehalfby](systemuser.md#BKMK_lk_emailserverprofile_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_emailserverprofile_modifiedonbehalfby"></a> lk_emailserverprofile_modifiedonbehalfby
 
-See systemuser Entity [lk_emailserverprofile_modifiedonbehalfby](systemuser.md#BKMK_lk_emailserverprofile_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_emailserverprofile_modifiedonbehalfby](systemuser.md#BKMK_lk_emailserverprofile_modifiedonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_owner_emailserverprofile"></a> owner_emailserverprofile
+
+See owner Table [owner_emailserverprofile](owner.md#BKMK_owner_emailserverprofile) One-To-Many relationship.
 
 ### <a name="BKMK_organization_emailserverprofile"></a> organization_emailserverprofile
 
-See organization Entity [organization_emailserverprofile](organization.md#BKMK_organization_emailserverprofile) One-To-Many relationship.
+See organization Table [organization_emailserverprofile](organization.md#BKMK_organization_emailserverprofile) One-To-Many relationship.
 
 ### <a name="BKMK_team_emailserverprofile"></a> team_emailserverprofile
 
-See team Entity [team_emailserverprofile](team.md#BKMK_team_emailserverprofile) One-To-Many relationship.
+See team Table [team_emailserverprofile](team.md#BKMK_team_emailserverprofile) One-To-Many relationship.
 
 ### <a name="BKMK_lk_emailserverprofile_modifiedby"></a> lk_emailserverprofile_modifiedby
 
-See systemuser Entity [lk_emailserverprofile_modifiedby](systemuser.md#BKMK_lk_emailserverprofile_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_emailserverprofile_modifiedby](systemuser.md#BKMK_lk_emailserverprofile_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_emailserverprofile_createdby"></a> lk_emailserverprofile_createdby
 
-See systemuser Entity [lk_emailserverprofile_createdby](systemuser.md#BKMK_lk_emailserverprofile_createdby) One-To-Many relationship.
+See systemuser Table [lk_emailserverprofile_createdby](systemuser.md#BKMK_lk_emailserverprofile_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_emailserverprofile"></a> business_unit_emailserverprofile
 
-See businessunit Entity [business_unit_emailserverprofile](businessunit.md#BKMK_business_unit_emailserverprofile) One-To-Many relationship.
+See businessunit Table [business_unit_emailserverprofile](businessunit.md#BKMK_business_unit_emailserverprofile) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.emailserverprofile?text=emailserverprofile EntityType" />

@@ -95,3 +95,6 @@ The following field is added in the portal contact record to store the date and 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

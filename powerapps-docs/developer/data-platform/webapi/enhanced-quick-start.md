@@ -421,18 +421,16 @@ In your Visual Studio project perform the following steps:
 
 ## Troubleshooting
 
-If you have any troubles running these samples, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
+If you have any trouble running this sample, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
 
-This sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) located in the `PowerApps-Samples-master\PowerApps-Samples-master\cds\webapi\C#\SimpleWebApi` folder.
-
-You should be able to open the `SimpleWebApi.sln` file in Visual Studio and run the sample. It should work for you as long as you have valid credentials.
+This enhanced quick start sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) sample located in the repo under the cds\webapi\C#\SimpleWebApi folder.
 
 > [!IMPORTANT]
-> All the samples on the GitHub repo are configured to use a common App.config that is located at `PowerApps-Samples-master\cds\App.config`. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
+> All the samples on the GitHub repo are configured to use a common App.config that is located at PowerApps-Samples:cds\App.config. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
 
 ## Create a Template project
 
-Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
+Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
   
 ## Next steps
 
@@ -443,3 +441,6 @@ Use the following resources to learn more:
 > [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br />
 > [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

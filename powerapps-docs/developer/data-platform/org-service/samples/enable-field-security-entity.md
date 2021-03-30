@@ -1,8 +1,8 @@
 ---
-title: "Sample: Enable field security for an entity(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to enable field secuirty for an entity" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Enable field security for a table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to enable field secuirty for a table" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 3/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
@@ -15,13 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Enable field security for an entity
+# Sample: Enable field security for a table
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-enable-field-security-entity -->
-
-This sample shows how to enable field security for an entity.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
+This sample shows how to enable field security for a table.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
 
@@ -55,3 +53,6 @@ In order to simulate the scenario described above, the sample will do the follow
 ### Clean up
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

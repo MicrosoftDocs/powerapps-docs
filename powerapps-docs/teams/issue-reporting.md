@@ -355,3 +355,6 @@ To review and edit existing issues in Planner:
 - [Inspection sample apps](inspection.md)  
 - [Milestones (Preview) sample app](milestones.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

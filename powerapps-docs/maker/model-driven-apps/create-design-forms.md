@@ -108,3 +108,6 @@ Notice that, when an app user changes the form selection in the form selector dr
 [Assign form order](assign-form-order.md) <br />
 [Control access to forms](control-access-forms.md) <br />
 [How main forms appear in different clients](main-form-presentations.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -34,7 +34,7 @@ sections:
 
       - question: How to use rich data types in code components such as Collections?
         answer: |
-          Currently, this feature is not supported. However, there is a [JSON function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-json) in canvas-apps that allows app makers to stringify their data.
+          Currently, this feature is not supported. However, there is a [JSON function](../../maker/canvas-apps/functions/function-json.md) in canvas-apps that allows app makers to stringify their data.
           
           1. Pass the collection into the JSON function.
           2. Pass the string representation of the collection data that is returned from the JSON function into one of the component's string properties.
@@ -60,9 +60,12 @@ sections:
         answer: |
           Currently, code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
 
+      - question: How to add commandbar, search to subgrids
+        answer: |
+          To add commandbar, search to a subgrid for model-driven apps, you need to specify the [cds-data-set-options](manifest-schema-reference/data-set.md).
      
 additionalContent: |
   ## See also
 
   [Power Apps component framework API reference](reference/index.md)<br/>
-  [Power Apps component framework overview](overview.md) 
+  [Power Apps component framework overview](overview.md)

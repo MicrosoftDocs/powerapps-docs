@@ -35,7 +35,7 @@ search.app:
  - (replace with your environment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
  - (replace with your environment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
  
-To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
+To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
 ## Error message: Unable to find many-to-one relationship,table: phonecall, referenced Table: undefined, column: regardingobjectid.
 
@@ -51,3 +51,6 @@ If you attempt to save the new phone call activity row, you will get this error,
 
 **Resolution**: Microsoft Dataverse does not support the option to create a phone call activity from within another phone call activity row.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

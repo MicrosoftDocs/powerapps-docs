@@ -1,22 +1,24 @@
 ---
-title: "DuplicateRule entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the DuplicateRule table."
-ms.date: 11/14/2020
+title: "DuplicateRule table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the DuplicateRule table/entity."
+ms.date: 03/04/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# DuplicateRule entity reference
+
+# DuplicateRule table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Rule used to identify potential duplicates.
 
@@ -25,23 +27,24 @@ Rule used to identify potential duplicates.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |CompoundUpdateDuplicateDetectionRule|<xref href="Microsoft.Dynamics.CRM.CompoundUpdateDuplicateDetectionRule?text=CompoundUpdateDuplicateDetectionRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.CompoundUpdateDuplicateDetectionRuleRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/duplicaterules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/duplicaterules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |PublishDuplicateRule|<xref href="Microsoft.Dynamics.CRM.PublishDuplicateRule?text=PublishDuplicateRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>|
 |PublishXml|<xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" />|<xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/duplicaterules<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/duplicaterules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |UnpublishDuplicateRule|<xref href="Microsoft.Dynamics.CRM.UnpublishDuplicateRule?text=UnpublishDuplicateRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.UnpublishDuplicateRuleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +62,9 @@ Rule used to identify potential duplicates.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [BaseEntityName](#BKMK_BaseEntityName)
 - [Description](#BKMK_Description)
@@ -136,7 +139,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### ExcludeInactiveRecords Options
+#### ExcludeInactiveRecords Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -159,7 +162,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsCaseSensitive Options
+#### IsCaseSensitive Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -243,7 +246,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -286,9 +289,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [BaseEntityMatchCodeTable](#BKMK_BaseEntityMatchCodeTable)
 - [BaseEntityTypeCode](#BKMK_BaseEntityTypeCode)
@@ -344,7 +347,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### BaseEntityTypeCode Options
+#### BaseEntityTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -375,6 +378,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |52|User Search Facet|
 |54|Global Search Configuration|
 |55|FileAttachment|
+|60|SystemUserAuthorizationChangeTracker|
 |78|Virtual Entity Data Provider|
 |85|Virtual Entity Data Source|
 |92|Team template|
@@ -682,67 +686,72 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |10011|Solution Component Summary|
 |10012|Solution Component Data Source|
 |10013|ProvisionLanguageForUser|
-|10014|CascadeGrantRevokeAccessRecordsTracker|
-|10015|CascadeGrantRevokeAccessVersionTracker|
-|10017|ApplicationUser|
-|10020|Model-Driven App Element|
-|10021|Model-Driven App Component Node's Edge|
-|10022|Model-Driven App Component Node|
-|10023|Model-Driven App Setting|
-|10024|Setting Definition|
-|10025|CanvasApp Extended Metadata|
-|10026|OData v4 Data Source|
-|10027|ProcessStageParameter|
-|10028|Workflow Binary|
-|10029|Connection Reference|
-|10030|Help Page|
-|10031|BotContent|
-|10032|ConversationTranscript|
-|10033|Chatbot|
-|10034|Chatbot subcomponent|
-|10038|PDF Setting|
-|10039|Service Configuration|
-|10040|SLA KPI|
-|10041|Knowledge Federated Article|
-|10042|Knowledge FederatedArticle Incident|
-|10043|Search provider|
-|10044|Knowledge Article Image|
-|10045|Knowledge Interaction Insight|
-|10046|Knowledge Search Insight|
-|10047|Knowledge Article Template|
-|10048|Catalog|
-|10049|Catalog Assignment|
-|10050|Internal Catalog Assignment|
-|10051|Custom API|
-|10052|Custom API Request Parameter|
-|10053|Custom API Response Property|
-|10054|Data Lake Folder|
-|10055|Data Lake Folder Permission|
-|10056|Data Lake Workspace|
-|10057|Data Lake Workspace Permission|
-|10058|Rich Text Attachment|
-|10059|NonRelational Data Source|
-|10060|Search Telemetry|
-|10061|AI Builder Dataset|
-|10062|AI Builder Dataset File|
-|10063|AI Builder Dataset Record|
-|10064|AI Builder Datasets Container|
-|10065|AI Builder File|
-|10066|AI Builder File Attached Data|
-|10067|AI Form Processing Document|
-|10068|AI Object Detection Image|
-|10069|AI Object Detection Label|
-|10070|AI Object Detection Bounding Box|
-|10071|AI Object Detection Image Mapping|
-|10073|Analysis Component|
-|10074|Analysis Job|
-|10075|Analysis Result|
-|10076|Analysis Result Detail|
-|10077|Solution Health Rule|
-|10078|Solution Health Rule Argument|
-|10079|Solution Health Rule Set|
-|10080|TeamMobileOfflineProfileMembership|
-|10081|UserMobileOfflineProfileMembership|
+|10014|Data Lake Folder|
+|10015|Data Lake Folder Permission|
+|10016|Data Lake Workspace|
+|10017|Data Lake Workspace Permission|
+|10018|CascadeGrantRevokeAccessRecordsTracker|
+|10019|CascadeGrantRevokeAccessVersionTracker|
+|10021|ApplicationUser|
+|10024|Model-Driven App Element|
+|10025|Model-Driven App Component Node's Edge|
+|10026|Model-Driven App Component Node|
+|10027|Model-Driven App Setting|
+|10028|Model-Driven App User Setting|
+|10029|Organization Setting|
+|10030|Setting Definition|
+|10031|CanvasApp Extended Metadata|
+|10032|OData v4 Data Source|
+|10033|ProcessStageParameter|
+|10034|Workflow Binary|
+|10035|Connection Reference|
+|10036|Help Page|
+|10037|BotContent|
+|10038|ConversationTranscript|
+|10039|Chatbot|
+|10040|Chatbot subcomponent|
+|10044|PDF Setting|
+|10045|Service Configuration|
+|10046|SLA KPI|
+|10047|Knowledge Federated Article|
+|10048|Knowledge FederatedArticle Incident|
+|10049|Search provider|
+|10050|Knowledge Article Image|
+|10051|Knowledge Interaction Insight|
+|10052|Knowledge Search Insight|
+|10053|Knowledge Article Template|
+|10054|Catalog|
+|10055|Catalog Assignment|
+|10056|Internal Catalog Assignment|
+|10057|Custom API|
+|10058|Custom API Request Parameter|
+|10059|Custom API Response Property|
+|10060|TeamMobileOfflineProfileMembership|
+|10061|UserMobileOfflineProfileMembership|
+|10062|OrganizationDataSyncSubscription|
+|10063|OrganizationDataSyncSubscriptionEntity|
+|10064|Rich Text Attachment|
+|10065|NonRelational Data Source|
+|10066|Search Telemetry|
+|10067|AI Builder Dataset|
+|10068|AI Builder Dataset File|
+|10069|AI Builder Dataset Record|
+|10070|AI Builder Datasets Container|
+|10071|AI Builder File|
+|10072|AI Builder File Attached Data|
+|10073|AI Form Processing Document|
+|10074|AI Object Detection Image|
+|10075|AI Object Detection Label|
+|10076|AI Object Detection Bounding Box|
+|10077|AI Object Detection Image Mapping|
+|10079|Analysis Component|
+|10080|Analysis Job|
+|10081|Analysis Result|
+|10082|Analysis Result Detail|
+|10083|Solution Health Rule|
+|10084|Solution Health Rule Argument|
+|10085|Solution Health Rule Set|
+|90001|RevokeInheritedAccessRecordsTracker|
 
 
 
@@ -881,7 +890,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### MatchingEntityTypeCode Options
+#### MatchingEntityTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -912,6 +921,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |52|User Search Facet|
 |54|Global Search Configuration|
 |55|FileAttachment|
+|60|SystemUserAuthorizationChangeTracker|
 |78|Virtual Entity Data Provider|
 |85|Virtual Entity Data Source|
 |92|Team template|
@@ -1219,67 +1229,72 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |10011|Solution Component Summary|
 |10012|Solution Component Data Source|
 |10013|ProvisionLanguageForUser|
-|10014|CascadeGrantRevokeAccessRecordsTracker|
-|10015|CascadeGrantRevokeAccessVersionTracker|
-|10017|ApplicationUser|
-|10020|Model-Driven App Element|
-|10021|Model-Driven App Component Node's Edge|
-|10022|Model-Driven App Component Node|
-|10023|Model-Driven App Setting|
-|10024|Setting Definition|
-|10025|CanvasApp Extended Metadata|
-|10026|OData v4 Data Source|
-|10027|ProcessStageParameter|
-|10028|Workflow Binary|
-|10029|Connection Reference|
-|10030|Help Page|
-|10031|BotContent|
-|10032|ConversationTranscript|
-|10033|Chatbot|
-|10034|Chatbot subcomponent|
-|10038|PDF Setting|
-|10039|Service Configuration|
-|10040|SLA KPI|
-|10041|Knowledge Federated Article|
-|10042|Knowledge FederatedArticle Incident|
-|10043|Search provider|
-|10044|Knowledge Article Image|
-|10045|Knowledge Interaction Insight|
-|10046|Knowledge Search Insight|
-|10047|Knowledge Article Template|
-|10048|Catalog|
-|10049|Catalog Assignment|
-|10050|Internal Catalog Assignment|
-|10051|Custom API|
-|10052|Custom API Request Parameter|
-|10053|Custom API Response Property|
-|10054|Data Lake Folder|
-|10055|Data Lake Folder Permission|
-|10056|Data Lake Workspace|
-|10057|Data Lake Workspace Permission|
-|10058|Rich Text Attachment|
-|10059|NonRelational Data Source|
-|10060|Search Telemetry|
-|10061|AI Builder Dataset|
-|10062|AI Builder Dataset File|
-|10063|AI Builder Dataset Record|
-|10064|AI Builder Datasets Container|
-|10065|AI Builder File|
-|10066|AI Builder File Attached Data|
-|10067|AI Form Processing Document|
-|10068|AI Object Detection Image|
-|10069|AI Object Detection Label|
-|10070|AI Object Detection Bounding Box|
-|10071|AI Object Detection Image Mapping|
-|10073|Analysis Component|
-|10074|Analysis Job|
-|10075|Analysis Result|
-|10076|Analysis Result Detail|
-|10077|Solution Health Rule|
-|10078|Solution Health Rule Argument|
-|10079|Solution Health Rule Set|
-|10080|TeamMobileOfflineProfileMembership|
-|10081|UserMobileOfflineProfileMembership|
+|10014|Data Lake Folder|
+|10015|Data Lake Folder Permission|
+|10016|Data Lake Workspace|
+|10017|Data Lake Workspace Permission|
+|10018|CascadeGrantRevokeAccessRecordsTracker|
+|10019|CascadeGrantRevokeAccessVersionTracker|
+|10021|ApplicationUser|
+|10024|Model-Driven App Element|
+|10025|Model-Driven App Component Node's Edge|
+|10026|Model-Driven App Component Node|
+|10027|Model-Driven App Setting|
+|10028|Model-Driven App User Setting|
+|10029|Organization Setting|
+|10030|Setting Definition|
+|10031|CanvasApp Extended Metadata|
+|10032|OData v4 Data Source|
+|10033|ProcessStageParameter|
+|10034|Workflow Binary|
+|10035|Connection Reference|
+|10036|Help Page|
+|10037|BotContent|
+|10038|ConversationTranscript|
+|10039|Chatbot|
+|10040|Chatbot subcomponent|
+|10044|PDF Setting|
+|10045|Service Configuration|
+|10046|SLA KPI|
+|10047|Knowledge Federated Article|
+|10048|Knowledge FederatedArticle Incident|
+|10049|Search provider|
+|10050|Knowledge Article Image|
+|10051|Knowledge Interaction Insight|
+|10052|Knowledge Search Insight|
+|10053|Knowledge Article Template|
+|10054|Catalog|
+|10055|Catalog Assignment|
+|10056|Internal Catalog Assignment|
+|10057|Custom API|
+|10058|Custom API Request Parameter|
+|10059|Custom API Response Property|
+|10060|TeamMobileOfflineProfileMembership|
+|10061|UserMobileOfflineProfileMembership|
+|10062|OrganizationDataSyncSubscription|
+|10063|OrganizationDataSyncSubscriptionEntity|
+|10064|Rich Text Attachment|
+|10065|NonRelational Data Source|
+|10066|Search Telemetry|
+|10067|AI Builder Dataset|
+|10068|AI Builder Dataset File|
+|10069|AI Builder Dataset Record|
+|10070|AI Builder Datasets Container|
+|10071|AI Builder File|
+|10072|AI Builder File Attached Data|
+|10073|AI Form Processing Document|
+|10074|AI Object Detection Image|
+|10075|AI Object Detection Label|
+|10076|AI Object Detection Bounding Box|
+|10077|AI Object Detection Image Mapping|
+|10079|Analysis Component|
+|10080|Analysis Job|
+|10081|Analysis Result|
+|10082|Analysis Result Detail|
+|10083|Solution Health Rule|
+|10084|Solution Health Rule Argument|
+|10085|Solution Health Rule Set|
+|90001|RevokeInheritedAccessRecordsTracker|
 
 
 
@@ -1476,7 +1491,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -1498,7 +1513,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_DuplicateRule_Annotation"></a> DuplicateRule_Annotation
 
-Same as annotation entity [DuplicateRule_Annotation](annotation.md#BKMK_DuplicateRule_Annotation) Many-To-One relationship.
+Same as annotation table [DuplicateRule_Annotation](annotation.md#BKMK_DuplicateRule_Annotation) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1513,7 +1528,7 @@ Same as annotation entity [DuplicateRule_Annotation](annotation.md#BKMK_Duplicat
 
 ### <a name="BKMK_DuplicateRule_SyncErrors"></a> DuplicateRule_SyncErrors
 
-Same as syncerror entity [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateRule_SyncErrors) Many-To-One relationship.
+Same as syncerror table [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateRule_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1528,7 +1543,7 @@ Same as syncerror entity [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateR
 
 ### <a name="BKMK_DuplicateRule_DuplicateRuleConditions"></a> DuplicateRule_DuplicateRuleConditions
 
-Same as duplicaterulecondition entity [DuplicateRule_DuplicateRuleConditions](duplicaterulecondition.md#BKMK_DuplicateRule_DuplicateRuleConditions) Many-To-One relationship.
+Same as duplicaterulecondition table [DuplicateRule_DuplicateRuleConditions](duplicaterulecondition.md#BKMK_DuplicateRule_DuplicateRuleConditions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1543,7 +1558,7 @@ Same as duplicaterulecondition entity [DuplicateRule_DuplicateRuleConditions](du
 
 ### <a name="BKMK_DuplicateRule_DuplicateBaseRecord"></a> DuplicateRule_DuplicateBaseRecord
 
-Same as duplicaterecord entity [DuplicateRule_DuplicateBaseRecord](duplicaterecord.md#BKMK_DuplicateRule_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [DuplicateRule_DuplicateBaseRecord](duplicaterecord.md#BKMK_DuplicateRule_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1559,9 +1574,10 @@ Same as duplicaterecord entity [DuplicateRule_DuplicateBaseRecord](duplicatereco
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_duplicaterulebase_createdby](#BKMK_lk_duplicaterulebase_createdby)
+- [owner_duplicaterules](#BKMK_owner_duplicaterules)
 - [lk_duplicaterule_createdonbehalfby](#BKMK_lk_duplicaterule_createdonbehalfby)
 - [SystemUser_DuplicateRules](#BKMK_SystemUser_DuplicateRules)
 - [team_DuplicateRules](#BKMK_team_DuplicateRules)
@@ -1572,34 +1588,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_duplicaterulebase_createdby"></a> lk_duplicaterulebase_createdby
 
-See systemuser Entity [lk_duplicaterulebase_createdby](systemuser.md#BKMK_lk_duplicaterulebase_createdby) One-To-Many relationship.
+See systemuser Table [lk_duplicaterulebase_createdby](systemuser.md#BKMK_lk_duplicaterulebase_createdby) One-To-Many relationship.
+
+### <a name="BKMK_owner_duplicaterules"></a> owner_duplicaterules
+
+See owner Table [owner_duplicaterules](owner.md#BKMK_owner_duplicaterules) One-To-Many relationship.
 
 ### <a name="BKMK_lk_duplicaterule_createdonbehalfby"></a> lk_duplicaterule_createdonbehalfby
 
-See systemuser Entity [lk_duplicaterule_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterule_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_duplicaterule_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterule_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_SystemUser_DuplicateRules"></a> SystemUser_DuplicateRules
 
-See systemuser Entity [SystemUser_DuplicateRules](systemuser.md#BKMK_SystemUser_DuplicateRules) One-To-Many relationship.
+See systemuser Table [SystemUser_DuplicateRules](systemuser.md#BKMK_SystemUser_DuplicateRules) One-To-Many relationship.
 
 ### <a name="BKMK_team_DuplicateRules"></a> team_DuplicateRules
 
-See team Entity [team_DuplicateRules](team.md#BKMK_team_DuplicateRules) One-To-Many relationship.
+See team Table [team_DuplicateRules](team.md#BKMK_team_DuplicateRules) One-To-Many relationship.
 
 ### <a name="BKMK_lk_duplicaterule_modifiedonbehalfby"></a> lk_duplicaterule_modifiedonbehalfby
 
-See systemuser Entity [lk_duplicaterule_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterule_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_duplicaterule_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterule_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_duplicaterulebase_modifiedby"></a> lk_duplicaterulebase_modifiedby
 
-See systemuser Entity [lk_duplicaterulebase_modifiedby](systemuser.md#BKMK_lk_duplicaterulebase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_duplicaterulebase_modifiedby](systemuser.md#BKMK_lk_duplicaterulebase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_BusinessUnit_DuplicateRules"></a> BusinessUnit_DuplicateRules
 
-See businessunit Entity [BusinessUnit_DuplicateRules](businessunit.md#BKMK_BusinessUnit_DuplicateRules) One-To-Many relationship.
+See businessunit Table [BusinessUnit_DuplicateRules](businessunit.md#BKMK_BusinessUnit_DuplicateRules) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.duplicaterule?text=duplicaterule EntityType" />

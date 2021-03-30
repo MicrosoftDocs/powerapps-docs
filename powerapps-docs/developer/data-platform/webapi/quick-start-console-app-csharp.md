@@ -2,7 +2,7 @@
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
-ms.date: 02/02/2019
+ms.date: 03/03/2021
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -152,12 +152,13 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     // e.g. y0urp455w0rd
     string password = "<your password>";
     ```
-    To get the `url` value:
+    To get the `url` value for your environment, follow these steps:
 
-    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Then select **Developer resources**.
-    1. In the **Developer Resources** page, look for the **Instance Web API** value and copy it. 
+    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
+    1. On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
+    1. On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
 
-        It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.1/`. But for this sample, you must trim off the final part (`/api/data/v9.1/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
+        It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`. But for this sample, you must trim off the final part (`/api/data/v9.2/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
 
     For the `userName` and `password` variables, use the same credentials you used to log into the [https://make.powerapps.com](https://make.powerapps.com) site.
 
@@ -186,3 +187,6 @@ Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

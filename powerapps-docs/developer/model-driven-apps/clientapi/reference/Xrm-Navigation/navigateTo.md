@@ -56,8 +56,8 @@ search.app:
 <li><b>entityName</b>: String. Logical name of the entity to display the form for.</li>
 <li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for. If you don't specify this value, the form will be opened in create mode.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
-<li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
-">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
+<li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
+">Set field values using parameters passed to a form</a> and <a href="/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different entity using cross-entity business process flow.</li>
 <li><b>isOfflineSyncError</b>: (Optional) Boolean. Indicates whether there are any offline sync errors.</li>
@@ -251,3 +251,6 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

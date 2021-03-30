@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](/powerapps/user/app-source). 
+Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](../../user/app-source.md). 
 
 ## Prepare for submitting your app on AppSource
 
@@ -43,5 +43,8 @@ Once your app is ready for submission, you use the [Partner Center](https://part
 - [App certification](appendix-app-certification-checklist.md): Provides information about the checks done during the app certification process after you submit your app for publishing on AppSource. 
   
 ### See also  
-[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/hpq_Y9LuIB8)
+[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/sKtLK3gqd4c)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -51,7 +51,7 @@ Model-driven apps
 <td>Object</td>
 <td>Yes</td>
 <td><p>A JSON object containing <code>key: value</code> pairs, where <code>key</code> is the property of the entity and <code>value</code> is the value of the property you want to update.</p>
-<p>See examples later in this topic to see how you can define the <code>data</code> object for various update scenarios.</td>
+</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -87,3 +87,6 @@ Description: On success, returns a promise object containing the attributes spec
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

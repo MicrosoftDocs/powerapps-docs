@@ -35,3 +35,6 @@ Each item represents one of the available navigation options available in the na
 |[setLabel](formContext-ui-navigation/setLabel.md)|[!INCLUDE[formContext-ui-navigation/includes/setLabel-description.md](formContext-ui-navigation/includes/setLabel-description.md)]|
 |[setVisible](formContext-ui-navigation/setVisible.md)|[!INCLUDE[formContext-ui-navigation/includes/setVisible-description.md](formContext-ui-navigation/includes/setVisible-description.md)]|
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

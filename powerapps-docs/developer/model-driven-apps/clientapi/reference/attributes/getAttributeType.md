@@ -42,3 +42,6 @@ This method will return one of the following **string** values:
 - multiselectoptionset
 - optionset
 - string
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

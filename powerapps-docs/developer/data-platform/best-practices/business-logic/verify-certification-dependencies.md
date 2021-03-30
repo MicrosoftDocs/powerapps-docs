@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/08/2020
+ms.date: 03/04/2021
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -53,7 +53,7 @@ You may encounter this when connecting to a new endpoint for the first time or w
 
 When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the Dataverse Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain is not presented SSL/TLS communication cannot be established. 
 
-
+For more information about requirements, see [Server cipher suites and TLS requirements](/power-platform/admin/server-cipher-tls-requirements).
 
 
 <a name='seealso'></a>
@@ -63,3 +63,5 @@ When the code in your plug-in running in the sandbox attempts to connect to an e
 [Write a plug-in](../../write-plug-in.md) <br /> 
 [Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)<br /> 
 [Set Timeout when making external calls in a plug-in](set-timeout-for-external-calls-from-plug-ins.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

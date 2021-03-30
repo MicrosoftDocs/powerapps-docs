@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Microsoft Dataverse, without replication of data and often without custom coding. Virtual entities support create, updates and delete of data in the external system. 
+Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Microsoft Dataverse, without replication of data and often without custom coding.
 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.
 
@@ -36,14 +36,17 @@ A virtual entity is a definition of an entity in the Dataverse platform metadata
 A data provider is a particular type of Dataverse plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
 
 The following data providers ship with Dataverse:
-- An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
+
+- An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default. This provider supports create, read (retrieve, retrieve multiple), update and delete operations.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
-If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
+
+If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md). Full CRUD operation is now supported for custom virtual entity data provider. Developers can implement plugins and register them using the Plugin Registration Tool for each of the CRUD operation supporting the virtual entity.
+
 
 ## Virtual entity creation and mapping
 
-Initially, defining a virtual entity is the same as defining a custom entity: you specify the entity, attributes, and relationships for the new virtual entity type. However, additionally, you then connect the virtual entity to a data provider to manage data retrieval. The custom entity type and its fields must be mapped to the corresponding data in the external data source.  For example, a virtual entity might be represented as a row in an external relational database, and each of its fields might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual entity names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this entity instance. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
+Initially, defining a virtual entity is the same as defining a custom entity: you specify the entity, attributes, and relationships for the new virtual entity type. However, additionally, you then connect the virtual entity to a data provider to manage data operations. The custom entity type and its fields must be mapped to the corresponding data in the external data source.  For example, a virtual entity might be represented as a row in an external relational database, and each of its fields might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual entity names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this entity instance. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
 
 In this example, a corresponding virtual entity data source would also be provided to supply user and connection information for the external database.
 
@@ -59,6 +62,7 @@ Following are the limitations in virtual entities that must be considered.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
 - Auditing and change tracking is not supported.
+- Charts and dashboards are not supported for virtual entities.
 - Virtual entities cannot be enabled for queues.
 - Offline caching of values is not supported for virtual entities.
 - A virtual entity cannot represent an activity and do not support business process flows.
@@ -71,3 +75,6 @@ For more information about how these limitations are reflected in the Dataverse 
 [API considerations of virtual entities](api-considerations-ve.md)<br />
 [Custom virtual entity data providers](custom-ve-data-providers.md)<br />
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

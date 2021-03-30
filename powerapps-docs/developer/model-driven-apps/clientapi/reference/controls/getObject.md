@@ -35,3 +35,6 @@ iframe, webresource
 
 **Description**: Object depends on the type of control:
 - An IFRAME and HTML web resource returns the [IFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element from the Document Object Model (DOM).
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

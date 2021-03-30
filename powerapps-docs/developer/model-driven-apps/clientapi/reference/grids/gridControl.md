@@ -59,3 +59,6 @@ Along with the methods mentioned above, subgrid also have the following methods:
 [Grids and subgrids in model-driven apps](../grids.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

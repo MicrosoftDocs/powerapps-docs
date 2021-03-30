@@ -1,5 +1,6 @@
 ---
 title: "Work with any data | MicrosoftDocs"
+description: "Learn the different types of data you can work with in Dataverse."
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
@@ -61,7 +62,7 @@ Each of these columns can be associated with one of many data types supported by
 
 ![Create a column](media/entity-field.png "Create a column")
 
-More information: [Types of columns](/powerapps/maker/data-platform/types-of-fields)
+More information: [Types of columns](./types-of-fields.md)
 
 ## Relationships
 
@@ -73,11 +74,11 @@ Dataverse provides easy-to-use visual designers to define the different types of
 
 The relationship types are:
 
-- **Many-to-one**: In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
+- **Many-to-one**: In this type of relationship, many table A records can be associated with a single table B record. For example, a class of students have a single classroom.
 
-- **One-to-many**: In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
+- **One-to-many**: In this type of relationship, a single table B record can be associated with many table A records. For example, one single teacher teaches many classes.
 
-- **Many-to-many**: In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+- **Many-to-many**: In this type of relationship, each record in table A can match more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Because many-to-one relationships are the most common, Dataverse provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
@@ -86,7 +87,7 @@ For more information about creating table relationships, see [Create a relations
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Dataverse data for security and analytical purposes.
 
 Dataverse provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
-changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/data-platform/configure-entities-attributes-auditing).
+changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](../../developer/data-platform/configure-entities-attributes-auditing.md).
 
 Dataverse supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
@@ -103,7 +104,7 @@ Dataverse provides three ways to query rows:
 > [!NOTE]
 > Multi-table quick find is also called *categorized search*.
 
-For more information, see [Compare searches](/powerapps/user/search).
+For more information, see [Compare searches](../../user/search.md).
 
 ### Relevance search
 
@@ -121,7 +122,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for rows](/powerapps/user/relevance-search).
+For more information about relevance search, see [Using relevance search to search for rows](../../user/relevance-search.md).
 
 ### Quick find
 
@@ -147,3 +148,6 @@ Data is stored in the Common Data Model format, which provides semantic consiste
 ### See also
 
 [Importing and exporting data](import-export-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

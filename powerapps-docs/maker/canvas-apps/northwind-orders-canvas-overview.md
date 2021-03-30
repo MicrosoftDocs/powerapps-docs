@@ -93,3 +93,6 @@ If you want to skip ahead, the solution contains a starting-point app for each p
 
 > [!div class="nextstepaction"]
 > [Continue by creating the order gallery](northwind-orders-canvas-part1.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

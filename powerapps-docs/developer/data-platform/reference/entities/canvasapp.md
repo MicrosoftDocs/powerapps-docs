@@ -1,22 +1,24 @@
 ---
-title: "CanvasApp entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CanvasApp table."
-ms.date: 11/14/2020
+title: "CanvasApp table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the CanvasApp table/entity."
+ms.date: 03/04/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# CanvasApp entity reference
+
+# CanvasApp table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 An application built through a canvas-based editing experience.
 
@@ -25,18 +27,19 @@ An application built through a canvas-based editing experience.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/canvasapps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/canvasapps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/canvasapps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/canvasapps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,9 +57,9 @@ An application built through a canvas-based editing experience.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AADCreatedById](#BKMK_AADCreatedById)
 - [AADLastModifiedById](#BKMK_AADLastModifiedById)
@@ -159,7 +162,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AdminControlBypassConsent Options
+#### AdminControlBypassConsent Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -278,7 +281,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### BypassConsent Options
+#### BypassConsent Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -301,7 +304,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanConsumeAppPass Options
+#### CanConsumeAppPass Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -337,7 +340,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### CanvasAppType Options
+#### CanvasAppType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -536,7 +539,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsCdsUpgraded Options
+#### IsCdsUpgraded Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -574,7 +577,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsFeaturedApp Options
+#### IsFeaturedApp Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -597,7 +600,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsHeroApp Options
+#### IsHeroApp Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -620,7 +623,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsHidden Options
+#### IsHidden Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -770,9 +773,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [Assets_Name](#BKMK_Assets_Name)
 - [BackgroundImage_Name](#BKMK_BackgroundImage_Name)
@@ -857,7 +860,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -898,7 +901,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1128,26 +1131,92 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|String|
 
+<a name="onetomany"></a>
+
+## One-To-Many Relationships
+
+Listed by **SchemaName**.
+
+
+### <a name="BKMK_canvasapp_FileAttachments"></a> canvasapp_FileAttachments
+
+Same as fileattachment table [canvasapp_FileAttachments](fileattachment.md#BKMK_canvasapp_FileAttachments) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fileattachment|
+|ReferencingAttribute|objectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|canvasapp_FileAttachments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [businessunit_canvasapp](#BKMK_businessunit_canvasapp)
+- [owner_canvasapp](#BKMK_owner_canvasapp)
 - [FK_CanvasApp_Solution](#BKMK_FK_CanvasApp_Solution)
+- [FileAttachment_CanvasApp_BackgroundImage](#BKMK_FileAttachment_CanvasApp_BackgroundImage)
+- [FileAttachment_CanvasApp_SmallIcon](#BKMK_FileAttachment_CanvasApp_SmallIcon)
+- [FileAttachment_CanvasApp_MediumIcon](#BKMK_FileAttachment_CanvasApp_MediumIcon)
+- [FileAttachment_CanvasApp_LargeIcon](#BKMK_FileAttachment_CanvasApp_LargeIcon)
+- [FileAttachment_CanvasApp_WideIcon](#BKMK_FileAttachment_CanvasApp_WideIcon)
+- [FileAttachment_CanvasApp_TeamsIcon](#BKMK_FileAttachment_CanvasApp_TeamsIcon)
+- [FileAttachment_CanvasApp_Document](#BKMK_FileAttachment_CanvasApp_Document)
+- [FileAttachment_CanvasApp_Assets](#BKMK_FileAttachment_CanvasApp_Assets)
 
 
 ### <a name="BKMK_businessunit_canvasapp"></a> businessunit_canvasapp
 
-See businessunit Entity [businessunit_canvasapp](businessunit.md#BKMK_businessunit_canvasapp) One-To-Many relationship.
+See businessunit Table [businessunit_canvasapp](businessunit.md#BKMK_businessunit_canvasapp) One-To-Many relationship.
+
+### <a name="BKMK_owner_canvasapp"></a> owner_canvasapp
+
+See owner Table [owner_canvasapp](owner.md#BKMK_owner_canvasapp) One-To-Many relationship.
 
 ### <a name="BKMK_FK_CanvasApp_Solution"></a> FK_CanvasApp_Solution
 
-See solution Entity [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Solution) One-To-Many relationship.
+See solution Table [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Solution) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_BackgroundImage"></a> FileAttachment_CanvasApp_BackgroundImage
+
+See fileattachment Table [FileAttachment_CanvasApp_BackgroundImage](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_SmallIcon"></a> FileAttachment_CanvasApp_SmallIcon
+
+See fileattachment Table [FileAttachment_CanvasApp_SmallIcon](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_MediumIcon"></a> FileAttachment_CanvasApp_MediumIcon
+
+See fileattachment Table [FileAttachment_CanvasApp_MediumIcon](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_LargeIcon"></a> FileAttachment_CanvasApp_LargeIcon
+
+See fileattachment Table [FileAttachment_CanvasApp_LargeIcon](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_WideIcon"></a> FileAttachment_CanvasApp_WideIcon
+
+See fileattachment Table [FileAttachment_CanvasApp_WideIcon](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_TeamsIcon"></a> FileAttachment_CanvasApp_TeamsIcon
+
+See fileattachment Table [FileAttachment_CanvasApp_TeamsIcon](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_Document"></a> FileAttachment_CanvasApp_Document
+
+See fileattachment Table [FileAttachment_CanvasApp_Document](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_CanvasApp_Assets"></a> FileAttachment_CanvasApp_Assets
+
+See fileattachment Table [FileAttachment_CanvasApp_Assets](fileattachment.md) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.canvasapp?text=canvasapp EntityType" />

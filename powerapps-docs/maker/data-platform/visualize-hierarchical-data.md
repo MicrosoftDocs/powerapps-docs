@@ -42,7 +42,7 @@ The  tables that have visualizations available by default include [Account](/pow
   
 - Only one (1:N) self-referential relationship per table can be set as hierarchical. In a self-referential relationship the primary table and the related table must be of the same type.  
 - A hierarchy or visualization is based on one table only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization. 
-- The maximum number of columns that can be displayed in a tile is three with the Unified Interface and four with the legacy web client. If you add more columns to the Quick Form that is used for the tile view, only the first three columns will be displayed. 
+- The maximum number of columns that can be displayed in a tile is three with Unified Interface and four with the legacy web client. If you add more columns to the Quick Form that is used for the tile view, only the first three columns will be displayed. 
 
 ## Hierarchy settings
 
@@ -109,3 +109,6 @@ Based on your needs, you can choose between using a tree view, which shows the e
 
 [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)<br />
 [Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

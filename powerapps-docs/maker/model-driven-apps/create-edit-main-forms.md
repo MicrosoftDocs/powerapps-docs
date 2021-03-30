@@ -66,3 +66,6 @@ Make sure that you have the System Administrator or System Customizer security r
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

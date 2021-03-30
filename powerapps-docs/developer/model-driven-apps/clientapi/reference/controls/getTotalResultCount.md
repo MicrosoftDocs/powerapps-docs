@@ -36,3 +36,5 @@ var searchCount = kbSearchControl.getTotalResultCount();
 **Type**: Number
 
 **Description**: The count of the search result.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

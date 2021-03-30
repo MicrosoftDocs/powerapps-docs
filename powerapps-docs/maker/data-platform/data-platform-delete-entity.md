@@ -54,3 +54,6 @@ For more information, see these articles:
 - [Edit or remove artifacts](../model-driven-apps/add-edit-app-components.md#edit-or-remove-artifacts)
 - [Edit a business process flow](/power-automate/create-business-process-flow#edit-a-business-process-flow)
 - [Delete relationships](create-edit-1n-relationships-portal.md#delete-relationships)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

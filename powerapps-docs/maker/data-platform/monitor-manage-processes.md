@@ -4,7 +4,7 @@ description: "Learn how to manage real-time workflow processes with Power Apps"
 ms.custom: ""
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -94,3 +94,6 @@ The synchronous bulk delete will only delete AsyncOperation rows in the complete
 ## Next steps   
 [Best practices for real-time workflow processes](best-practices-workflow-processes.md) <br />
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

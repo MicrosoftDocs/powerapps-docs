@@ -2,7 +2,7 @@
 title: "Update and delete entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on entities using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/16/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,10 +25,8 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Operations to modify data are a core part of the Web API. In addition to a simple update and delete, you can perform operations on single attributes and compose *upsert* requests that will either update or insert an entity depending on whether it exists.  
-  
-> [!NOTE]
->  The metadata that defines entities is updated in a different way. More information:[Create and update model entities using the Web API](create-update-entity-definitions-using-web-api.md)  
+Operations to modify data are a core part of the Web API. In addition to a simple update and delete, you can perform operations on single attributes and compose *upsert* requests that will either update or insert data depending on whether it exists.  
+
   
 <a name="bkmk_update"></a>
 
@@ -36,13 +34,15 @@ Operations to modify data are a core part of the Web API. In addition to a simpl
 
 Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the properties you want to update to the URI that represents the entity. A response with a status of 204 will be returned if the update is successful.  
   
- This example updates an existing account record with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
+The `If-Match: *` header helps ensure you don't create a new record by accidentally performing an upsert operation. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert).
   
 > [!IMPORTANT]
 >  When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven’t actually changed.
 
 > [!NOTE] 
-> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
+> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
+
+This example updates an existing account record with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
  **Request**
 
@@ -50,7 +50,8 @@ Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the p
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+If-Match: *  
   
 {  
     "name": "Updated Sample Account ",  
@@ -91,7 +92,8 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
-Prefer: return=representation  
+Prefer: return=representation
+If-Match: * 
   
 {"name":"Updated Sample Account"}  
 ```  
@@ -181,7 +183,7 @@ OData-Version: 4.0
 
 An *upsert* operation is exactly like an update. It uses a `PATCH` request and uses a URI to reference a specific entity. The difference is that if the entity doesn’t exist it will be created. If it already exists, it will be updated. Normally when creating a new entity you will let the system assign a unique identifier. This is a best practice. But if you need to create a record with a specific `id` value, an `upsert` operation provides a way to do this. This can be valuable in situation where you are synchronizing data in different systems.  
   
-Sometimes there are situations where you want to perform an `upsert`, but you want to prevent one of the potential default actions: either create or update.      You can accomplish this through the addition of `If-Match` or `If-None-Match` headers. For more information, see [Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations).  
+Sometimes there are situations where you want to perform an `upsert`, but you want to prevent one of the potential default actions: either create or update. You can accomplish this through the addition of `If-Match` or `If-None-Match` headers. For more information, see [Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations).  
   
 <a name="bkmk_delete"></a>
   
@@ -211,9 +213,6 @@ OData-Version: 4.0
 
 ## Check for Duplicate records
 
-<!-- TODO:
-By default, duplicate detection is suppressed when you are updating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your PATCH request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. For more information, see [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md). -->
-
 See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during Update operation.
 
 ### See also
@@ -231,3 +230,6 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

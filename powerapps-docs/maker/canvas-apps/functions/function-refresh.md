@@ -40,3 +40,6 @@ After that formula executes, galleries that are bound to the **IceCream** data s
 
 ![](media/function-refresh/icecream-after.png)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -98,3 +98,6 @@ The table below explains the attributes of the **Invitation** page:
 
 [Configure a contact for use on a portal](configure-contacts.md)  
 [Set authentication identity for a portal](set-authentication-identity.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -332,3 +332,6 @@ Once the app is ready to use, [share the app](../share-app.md).
 - [Understand forms, layouts, and cards](../working-with-forms.md)
 - [Formula reference](../formula-reference.md)
 - [Control reference](../reference-properties.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

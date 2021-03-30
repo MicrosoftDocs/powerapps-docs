@@ -49,7 +49,7 @@ This table may help you decide when you should jump in:
 ## Documentation
 
 Where can you find information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
-- [Power Apps documentation](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
+- [Power Apps documentation](./getting-started.md). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
 - [Power Apps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
 - [Power Apps blog](https://powerapps.microsoft.com/blog/).  Often, but not always, a blog post accompanies a new feature.
 
@@ -82,3 +82,6 @@ Feature deprecation also goes through stages.  Features are unique and not every
 | **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
 | **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. |  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

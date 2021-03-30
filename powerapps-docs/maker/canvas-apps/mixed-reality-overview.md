@@ -29,7 +29,7 @@ Components are groups of controls that can answer the need for a specific scenar
 
 :::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo showing the Power Apps editor portal with the view in 3D component next to the app on a mobile device.":::
 
-You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
+You can read more about components and how to build your own in [Power Apps component framework docs](../../developer/component-framework/custom-controls-overview.md).
 
 
 The following prebuilt components can be used for MR scenarios:
@@ -93,3 +93,6 @@ Start installing the components in your apps:
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

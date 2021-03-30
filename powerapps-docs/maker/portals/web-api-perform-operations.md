@@ -5,20 +5,17 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/28/2020
+ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals operations using the Web API (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Portals operations using the Web API
 
 You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or later for this feature to work.**
-> - This feature is in preview. More information: [Understand experimental, preview, and deprecated features in Power Apps](../canvas-apps/working-with-experimental-preview.md)
+> - **Your portal version must be 9.3.3.x or later for this feature to work.**
 
 ## Create an entity record
 
@@ -869,3 +866,6 @@ Now that you've created a webpage with a sample in this example to view, edit, c
 ### See also
 
 [Web API overview](web-api-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -118,7 +118,7 @@ As you model your business data by creating custom tables or when using existing
     > [!div class="mx-imgBorder"] 
     > ![Custom behavior](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
 
-For more information on defaults and custom behaviors: [Configure table relationship behavior](entity-relationship-behavior.md).
+For more information on defaults and custom behaviors: [Configure table relationship behavior](./create-edit-entity-relationships.md#table-relationship-behavior).
 
 
 
@@ -132,3 +132,6 @@ Use the **Relate** function to link two rows through a one-to-many or many-to-ma
 * [Generate an app by using a Dataverse database](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
