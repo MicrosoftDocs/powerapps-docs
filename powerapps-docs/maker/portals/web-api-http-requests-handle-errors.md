@@ -10,7 +10,7 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Compose HTTP requests and handle errors for the portals Web API (Preview)
+# Compose HTTP requests and handle errors for the portals Web API
 
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
