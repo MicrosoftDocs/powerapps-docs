@@ -2,7 +2,7 @@
 title: "Data operations and access rights (Microsoft Dataverse) | Microsoft Docs" 
 description: "Describes the access rights needed for specific data operations." 
 ms.custom: ""
-ms.date: 12/10/2020
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,7 +17,7 @@ search.app:
 ---
 # Data operations and access rights
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Let's talk about the data operations that you can performs and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
 
@@ -29,7 +29,7 @@ Let's talk about the data operations that you can performs and the access rights
 | **Delete** | DELETE |
 | **Associate** | APPEND |
 | **Associate**  | APPENDTO |
-| **Update** of the `ownerid` attribute, or the legacy **Assign** message | ASSIGN |
+| **Update** of the `ownerid` column, or the legacy **Assign** message | ASSIGN |
 | **GrantAccess**, **ModifyAccess**, **RevokeAccess**  | SHARE |
 
 ## Dependencies between access rights
@@ -37,7 +37,7 @@ Let's talk about the data operations that you can performs and the access rights
 Sometimes, security dependencies exist because it is necessary to have more than
 one access right to perform a given action. For example, if you have the
 **create** access right for accounts, you can create a record of the account
-entity type. However, unless you also have **read** access for accounts, you
+table type. However, unless you also have **read** access for accounts, you
 cannot create an account record and be the owner of that new record.
 
 The following table lists the access right dependencies for the actions

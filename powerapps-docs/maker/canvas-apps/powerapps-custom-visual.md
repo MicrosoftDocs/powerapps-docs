@@ -77,7 +77,7 @@ The following limitations apply to the Power Apps visual:
 - Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
-    - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+    - You must use a source that supports [DirectQuery](/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 - The Power BI mobile app doesn't support microphone control in Power Apps visuals.
 
@@ -113,7 +113,7 @@ For more information, go to [Power BI Accessibility Documentation]( https://docs
 
 ## Next steps
 
-* Go through a simple [step-by-step tutorial](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp).
+* Go through a simple [step-by-step tutorial](/power-bi/visuals/power-bi-visualization-powerapp).
 * Check out our [video](https://aka.ms/powerappscustomvisualvideo).
 
 

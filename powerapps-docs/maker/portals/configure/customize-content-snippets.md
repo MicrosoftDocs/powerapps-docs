@@ -55,7 +55,7 @@ To do add snippet on a portal page:
 
 ## Example
 
-The following example uses a Microsoft Dataverse database with [sample data](https://docs.microsoft.com/power-platform/admin/add-remove-sample-data).
+The following example uses a Microsoft Dataverse database with [sample data](/power-platform/admin/add-remove-sample-data).
 
 1. Open the [Portal Management app](configure-portal.md).
 

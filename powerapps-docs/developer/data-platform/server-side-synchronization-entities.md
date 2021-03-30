@@ -1,8 +1,8 @@
 ---
-title: "Server-side synchronization entities (Microsoft Dataverse) | Microsoft Docs"
+title: "Server-side synchronization tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Server-side synchronization provides an interface between Microsoft Dataverse and one or more Exchange servers or POP3 servers for incoming email, and one or more SMTP or Exchange servers for outgoing email."
 ms.custom: ""
-ms.date: 02/21/2019
+ms.date: 03/24/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,15 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Server-side synchronization entities
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+# Server-side synchronization tables
 
 In Power Apps, server-side synchronization provides an interface between Microsoft Dataverse and one or more Exchange servers or POP3 servers for incoming email, and one or more SMTP or Exchange servers for outgoing email. It retrieves and evaluates emails for relevance to Dataverse and accordingly creates corresponding email activities in Dataverse. It also picks emails from Dataverse and sends them through the configured email server for users and queues. It also allows synchronization of appointments, contacts, and tasks with  Exchange Server 2010 and Exchange Server 2013.  
   
- With the centralized email configuration, the Dataverse entity model allows having common user interface (UI) settings (like user name, password, email address, and synchronization methods) for users, queues, and forward mailboxes. Each user or a queue can have mailboxes, which can be monitored through either server-side synchronization or Microsoft Dynamics 365 for Outlook. The [EmailServerProfile](/powerapps/developer/data-platform/reference/entities/emailserverprofile) entity represents the email server profile for an organization. The [Mailbox](/powerapps/developer/data-platform/reference/entities/mailbox) entity represents the appointments, contacts, and tasks delivery method of the mailbox. Currently, the user entity is restricted to have only one mailbox record per user and the queues entity to have only one mailbox record per queue, as shown in the following illustration.  
+ With the centralized email configuration, the Dataverse table model allows having common user interface (UI) settings (like user name, password, email address, and synchronization methods) for users, queues, and forward mailboxes. Each user or a queue can have mailboxes, which can be monitored through either server-side synchronization or Microsoft Dynamics 365 for Outlook. The [EmailServerProfile](/powerapps/developer/data-platform/reference/entities/emailserverprofile) table represents the email server profile for an organization. The [Mailbox](/powerapps/developer/data-platform/reference/entities/mailbox) table represents the appointments, contacts, and tasks delivery method of the mailbox. Currently, the user table is restricted to have only one mailbox record per user and the queues table to have only one mailbox record per queue, as shown in the following illustration.  
   
- ![Email connector entity model](media/email-connector-entity-model.png "Email connector entity model")  
+ ![Email connector table model](media/email-connector-entity-model.png "Email connector table model")  
   
  Server-side synchronization offers the following capabilities:  
   

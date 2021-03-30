@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 > [!NOTE]
 > Effective November 2020:
 > - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
-> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](../data-platform/data-platform-intro.md)
 >
 > Power Apps portals articles will be updated soon to reflect the latest terminology.
 
@@ -36,7 +36,7 @@ ms.reviewer: tapanm
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
     | Web Page | Copy (adx_copy) |
 
-- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Microsoft Dataverse model-driven app.
+- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Microsoft Dataverse model-driven app.
 
 - The **Modified Date** for the app might be incorrect because these apps are pre-provisioned apps and could have been provisioned earlier.
 
@@ -106,7 +106,7 @@ ms.reviewer: tapanm
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

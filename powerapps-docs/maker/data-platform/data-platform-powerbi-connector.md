@@ -87,7 +87,7 @@ Lookup columns use a many-to-one (N:1) table relationship between the table youâ
 
 ## Navigating relationships
 
-Relationships in Dataverse require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create rows where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Dataverse require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create rows where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](/power-bi/desktop-create-and-manage-relationships).
 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 
