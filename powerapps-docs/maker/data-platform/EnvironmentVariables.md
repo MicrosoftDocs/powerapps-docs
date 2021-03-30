@@ -89,17 +89,16 @@ This option provides simplicity and ensures environment variables will always be
 >[!NOTE]
 >Pre-existing canvas apps will not automatically use data source environment variables. Remove the data source(s) from the app and add them back using the above steps to upgrade these apps to use environment variables. 
 
-## Use environment variables in Power Automate cloud flows
+## Use environment variables in Power Automate solution cloud flows
 
-Environment variables can't be automatically created when authoring flows. However, environment variables are not limited to those of type = **data source**. All types of environment variables can be used in triggers and actions.
-1. Follow the steps above for **Create an environment variable in a solution**
-2. Edit or create a cloud flow from a solution. 
-3. When you provide a value for the parameter, scroll down and select **Enter a custom value**. Directly entering a value will not use environment variables. 
-4. Environment variables that you have access to are listed in the **Dynamic content** section of the card.
-5. Select the appropriate environment variable.
-
->[!NOTE]
->The environment variables are currently listed under **Parameters** and the list is not currently filtered based on matching data types.
+Environment variables can be used in solution cloud flows since they are availabe in the dynamic content selector. All types of environment variables can be used in triggers and actions.
+To use an environment variable in a solution cloud flow:
+1. Edit or create a cloud flow in a solution.
+2. In an action or a trigger, determine the parameter you want to use the environment variable
+    a. If the parameter takes a simple value, such as a string or number, click into the parameter.
+    b. If the parameter is a lookup, scroll to the bottom of the lookup, and click on **Enter a custom value**.
+3. Environment variables that you have access to are listed in the dynamic content selector with other dynamic content. 
+4. Click on the desired environment variable 
 
 ## Enter new values while importing solutions
 
@@ -126,10 +125,11 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
 <!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
  -->
-
+- When editing a cloud flow, the environment variables are shown in the dynamic content selector under a heading of **Parameters** but will be under a heading of **Environment Variables** in the near future. 
+- When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
+- When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
+ 
 ## Frequently asked questions
-
-
 
 **How can I view where environment variables are being used?**
 
