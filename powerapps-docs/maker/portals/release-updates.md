@@ -18,9 +18,9 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
-- [2021 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2021wave1/power-apps-portals/)
-- [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
-- [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
+- [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps-portals/)
+- [2020 release wave 2 plan](/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
+- [2020 release wave 1 plan](/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
 
 ## Previous portal updates
 
@@ -137,10 +137,10 @@ The December 2016 update has brought many new features to Dynamics 365 Portals. 
 - **East Asian language support:** Multiple-byte languages such as Japanese, Chinese, and Korean are now supported.
 - **Faceted search:** New filters improve how quickly customers can find the content they are looking for while granting more control over visibility of content. More information: [Faceted search](configure/improve-portal-search-faceted-search.md)
 - **Product filtering:** Portal users can trim access to knowledge articles related to their product ownership to avoid information overload.
-- **Content access levels:** A new level of ownership associated with a portal contact, account, or web role can be used to control access to knowledge articles, to help target the right article at the right audience and prevent irrelevant articles from surfacing. More information: [Content access levels](https://docs.microsoft.com/dynamics365/portals/manage-knowledge-articles-content-levels)
+- **Content access levels:** A new level of ownership associated with a portal contact, account, or web role can be used to control access to knowledge articles, to help target the right article at the right audience and prevent irrelevant articles from surfacing. More information: [Content access levels](/dynamics365/portals/manage-knowledge-articles-content-levels)
 - **Knowledge article reporting enhancement:** The portal tracks where a knowledge article was used in the portal.
-- **Project Service Automation integration:** Provide access and visibility for active and closed projects across all stages of a project lifecycle to partners and customers. Team members, reviewers, and customers can view project status, quotes, order forums, and bookable resources on the portal with this solution. More information: [Integrate Project Service Automation](https://docs.microsoft.com/dynamics365/portals/integrate-project-service-automation)
-- **Field Service integration:** Expose information about active agreements, assets, work orders, invoices, and support cases to partners and customers on the portal with this solution. More information: [Integrate Field Service](https://docs.microsoft.com/dynamics365/portals/integrate-field-service)
+- **Project Service Automation integration:** Provide access and visibility for active and closed projects across all stages of a project lifecycle to partners and customers. Team members, reviewers, and customers can view project status, quotes, order forums, and bookable resources on the portal with this solution. More information: [Integrate Project Service Automation](/dynamics365/portals/integrate-project-service-automation)
+- **Field Service integration:** Expose information about active agreements, assets, work orders, invoices, and support cases to partners and customers on the portal with this solution. More information: [Integrate Field Service](/dynamics365/portals/integrate-field-service)
 - **Partner onboarding:** Recruit new partners for better customer sales and service experiences. Potential partners can apply for partner status through the portal.
 
 ### Privacy notice

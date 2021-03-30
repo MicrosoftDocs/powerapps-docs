@@ -29,7 +29,7 @@ XRM tooling is a set of APIs built on top of the Microsoft Dataverse assembly AP
   
 - Supports all the authentication modes to sign in to Dataverse instance.  
 - Provides PowerShell support for authentication and connection to Dataverse instance.  
-- Provides thread safety for actions performed in Dataverse in a multithreaded environment. More information [Multithreading in Components](https://msdn.microsoft.com/library/vstudio/3es4b6yy.aspx), [Thread-Safe Components](https://msdn.microsoft.com/library/vstudio/a8544e2s.aspx)  
+- Provides thread safety for actions performed in Dataverse in a multithreaded environment. More information [Multithreading in Components](/previous-versions/3es4b6yy(v=vs.140)), [Thread-Safe Components](/previous-versions/a8544e2s(v=vs.140))  
 - Provides a common Windows Presentation Foundation login control for Dataverse for consistent sign-in experience to Dataverse from your Windows client applications.  
 - Supports secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in to Dataverse after initial sign in.  
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Dataverse, which you can configure based on your organization’s requirements.  

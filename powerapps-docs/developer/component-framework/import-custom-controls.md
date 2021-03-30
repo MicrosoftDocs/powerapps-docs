@@ -47,7 +47,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+5. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Connecting to your environment
 
@@ -115,7 +115,7 @@ To create a solution project based on an existing solution in Dataverse, run the
    > [!NOTE]
    > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
-More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
+More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
 ## Create a plug-in project and add a reference to it in your solution 
 

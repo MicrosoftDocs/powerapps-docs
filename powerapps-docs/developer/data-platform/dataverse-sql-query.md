@@ -1,8 +1,8 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Microsoft Dataverse entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/02/2021
+ms.date: 03/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,11 +18,9 @@ search.app:
 
 # Use SQL to query data (Preview)
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment thereby allowing you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided.
 
 ## Applications support
 
@@ -30,7 +28,7 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 
 ### Power BI
 
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
+You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 
 > [!NOTE]
 > To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
@@ -43,7 +41,7 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 ## Security and authentication
 
-The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all entities to which a user has access to in Dataverse.
+The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
@@ -52,7 +50,7 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
 
-## Example entity data queries
+## Example table data queries
 
 Below are a couple of example queries composed in SSMS. The first image shows a simple query using aliases and result ordering.
 
@@ -91,7 +89,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
+There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 

@@ -101,7 +101,7 @@ The table below summerizes the different options. Pick the one that works best f
 
 ### See also
 
-[Troubleshoot export to excel](ts-export-to-excel.md)  
+[Troubleshoot export to excel](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work)  
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
