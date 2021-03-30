@@ -745,6 +745,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: Power
             href: ./canvas-apps/functions/function-numericals.md
+          - name: Print
+            href: ./canvas-apps/functions/function-print.md
           - name: Proper
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: Radians
