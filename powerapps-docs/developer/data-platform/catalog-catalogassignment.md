@@ -18,6 +18,8 @@ search.app:
 
 # Catalog and CatalogAssignment tables (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. 
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
