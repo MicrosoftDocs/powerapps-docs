@@ -1,6 +1,6 @@
 ---
-title: Create and build a code component| Microsoft Docs
-description: Start creating a component using the Power Apps component framework tooling
+title: Create and build a code component in Microsoft Dataverse| Microsoft Docs
+description: Start creating a component using the Power Apps component framework tooling.
 keywords: Power Apps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
@@ -51,7 +51,7 @@ Finally when you're done implementing the component logic in TypeScript, you nee
 
 [Debug code components](debugging-custom-controls.md)<br/>
 [Package a code component](import-custom-controls.md)<br/>
-[Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a column or table](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing code components](updating-existing-controls.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
