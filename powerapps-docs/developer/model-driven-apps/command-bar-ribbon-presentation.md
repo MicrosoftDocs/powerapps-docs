@@ -35,7 +35,7 @@ There are three different ways that command data can be displayed.
   
  ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
   
- In this experience, only the first seven commands are displayed and any remaining commands are available in a flyout menu.  
+ In this experience, only few commands are displayed and any remaining commands are available in a flyout menu.  
   
  Enable rules will hide commands that should not be used.  
   
