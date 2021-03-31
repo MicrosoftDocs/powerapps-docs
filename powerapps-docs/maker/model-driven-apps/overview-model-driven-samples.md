@@ -21,11 +21,10 @@ search.app:
 
 In [powerapps.com](https://powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario. 
 
-Be sure to check out documentation specific to each sample app for more details. 
+<!-- Be sure to check out documentation specific to each sample app for more details. -->
 
 > [!div class="mx-imgBorder"] 
 > ![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
-
 
 ## Get sample apps
 
