@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 03/10/2021
+ms.date: 03/30/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,25 +24,94 @@ search.app:
 
 # Work with Azure Active Directory group teams
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 An Azure Active Directory (AAD) group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about AAD group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
 
 The following sections describe how to work with AAD group teams using the Web API.
 
-## Creating an AAD group team
+## Create an AAD group team
 
 Citizen developers wanting to programatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/teams
+POST [Organization URI]/api/data/v9.1/teams
 Accept: application/json
 
 {
   "azureactivedirectoryobjectid":"<group object ID>",
   "membershiptype":0
+}
+```
+
+Where:
+
+- Membership type is defined in the [team property](/dynamics365/customer-engagement/web-api/team#properties) `membershiptype`
+- Name of the team is the name of the AAD group
+- Team type is based on the AAD group type - for example "Security" or "Microsoft 365"
+
+## Assign a security role to an AAD group team
+
+An administrator can assign a security role to an AAD group team after the AAD group team is created.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/teams(azureactivedirectoryobjectid=<group team ID>,membershiptype=0)/teamroles_association/$ref
+Accept: application/json
+
+{ 
+  "@odata.id":"[Organization URI]/api/data/v9.1/roles(<role ID>)"
+}
+```
+
+## Assign a security role to a user
+
+An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn’t exist in Dataverse and the role is assigned directly to the user.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/teams(azureactivedirectoryobjectid=<user object ID>,membershiptype=0)/teamroles_association/$ref
+Accept: application/json
+
+{ 
+  "@odata.id":"[Organization URI]/api/data/v9.1/roles(<role ID>)"
+}
+```
+
+## Assign and share a record to an AAD group member
+
+An administrator can assign a record to an AAD group member.  The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
+
+The example below shows the syntax for assigning an account record.
+
+```http
+PATCH [Organization URI]/api/data/v9.1/accounts(<account ID>)
+Accept: application/json
+
+{ 
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+}
+```
+
+The example below shows the syntax for sharing an account record.
+
+```http
+POST [Organization URI]/api/data/v9.1/GrantAccess
+Accept: application/json
+
+{
+  "Target":{
+    "accountid":"<account ID>",
+    "@odata.type":"Microsoft.Dynamics.CRM.account"
+  },
+  "PrincipalAccess":{
+    "Principal":{
+      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+    },
+    "AccessMask":"ReadAccess"
+  }
 }
 ```
 
@@ -53,14 +122,14 @@ Members of an AAD group can query all the security roles that are directly and i
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/RetrieveAadUserRoles(DirectoryObjectId=<group object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<group object ID)?$select=_parentrootroleid_value,name
 ```
 
 **Response**
 
 ```json
 {
-  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.2/$metadata#roles",
+  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.1/$metadata#roles",
   "value": [
     {
       "@odata.etag": "W/\"1649865\"",
@@ -81,14 +150,14 @@ Members of an AAD group can check their security privileges without being a user
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/RetrieveAadUserPrivileges(DirectoryObjectId=<group object ID>)
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<group object ID>)
 ```
 
 **Response**
 
 ```json
 {
-  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
+  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
   "RolePrivileges": [
     {
       "Depth": "Global",
@@ -98,34 +167,6 @@ GET [Organization URI]/api/data/v9.2/RetrieveAadUserPrivileges(DirectoryObjectId
     },
     …
    ]
-}
-```
-
-## Assigning and sharing
-
-An administrator can assign (share) a record for an AAD group member without the user being in Dataverse using the following command.
-
-**Request**
-
-```http
-PATCH [Organization URI]/api/data/v9.2/accounts(<account ID>)
-Accept: application/json
-
-{ 
-  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<member object ID>)"
-}
-```
-
-An administrator can assign a security role to an AAD user or group without the user or group being in Dataverse.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.2/teams(azureactivedirectoryobjectid=<user or group object ID>,membershiptype=0)/teamroles_association/$ref
-Accept: application/json
-
-{ 
-  "@odata.id":"[Organization URI]/api/data/v9.2/roles(<role ID>)"
 }
 ```
 
