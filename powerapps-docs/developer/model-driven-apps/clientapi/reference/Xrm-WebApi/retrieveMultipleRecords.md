@@ -1,6 +1,7 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 04/13/2019
+description: Learn how to use different parameters available to perform web API operations using client API.
+ms.date: 03/31/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
