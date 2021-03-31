@@ -29,9 +29,6 @@ You can also take photos and [upload them to OneDrive](mixed-reality-take-upload
 > Your 3D content must be in the .glb file format.  
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
-To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
-
-Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 > [!TIP]
 > The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
@@ -68,7 +65,7 @@ Property | Description | Type | Location
 Text | Label for the button. | String | Properties (also in **Advanced**)
 Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)

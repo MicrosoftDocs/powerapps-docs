@@ -55,7 +55,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.

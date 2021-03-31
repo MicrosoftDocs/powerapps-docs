@@ -19,7 +19,7 @@ search.app:
 
 You can set the source for 3D content as attachments or media content, as a direct URL to a .glb file, or as a base64-encoded URI.
 
-For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property. This process is described in the [Loading models from common connectors](#loading-models-as-attachments-or-media-content) section.
+For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property. This process is described in the [Loading models from common connectors](#loading-models-from-common-connectors) section.
 
 To help reduce load times, make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models).
 

@@ -41,7 +41,7 @@ First, insert a 3D model:
 
     :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, go to [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see how to [define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
 > [!NOTE]
 > This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  

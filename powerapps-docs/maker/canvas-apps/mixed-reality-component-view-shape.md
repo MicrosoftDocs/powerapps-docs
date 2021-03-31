@@ -23,9 +23,6 @@ The component creates a button in your app. When app users click the button, it 
 
 :::image type="content" source="./media/augmented-overview/view-shape-in-mixed-reality.png" alt-text="Photo showing a 3D shape being overlaid onto the real world through a mobile device.":::
 
-To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
-
-Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 > [!TIP]
 > The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  

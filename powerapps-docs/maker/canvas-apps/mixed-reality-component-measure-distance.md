@@ -27,9 +27,6 @@ When the user exits the component, the measurements that were taken are captured
 
 Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
 
-To use the component, you need to [enable the mixed-reality features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
-
-Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
 
 > [!TIP]
 > The mixed-reality components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.  
