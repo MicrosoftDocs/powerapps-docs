@@ -1,8 +1,8 @@
 ---
 title: "Solution component file reference (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This topic describes the folder structure and file naming scheme used by the SolutionPackager tool. The tool is used to decompose (unpack) Dynamics 365 solution files into XML files that can be managed by a source code control system." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The folder structure and file naming scheme used by the SolutionPackager tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,25 +17,25 @@ search.app:
 ---
 # Solution component file reference (SolutionPackager)
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 This topic describes the folder structure and file naming scheme used by the SolutionPackager tool. The tool is used to decompose (unpack) Microsoft Dataverse solution files into XML files that can be managed by a source code control system. The tool can also compile (pack) these individual XML files into a solution file that can be imported into Dataverse. For more information about the SolutionPackager tool, see [SolutionPackager tool](/power-platform/alm/solution-packager-tool).  
   
  The following sections describe the files that will be created for each solution component type, and which of these files are less suited to inclusion in source control. The folders indicated in the sections are all relative to the folder specified in the `/folder` parameter of the **SolutionPackager** command.  
   
 <a name="entity_bm"></a>   
-## Entity  
+## Table (Entity) 
  Differs in managed solutions: Yes  
   
 ### Notes  
   
-1.  Each entity has a distinct folder.  
+1.  Each table has a distinct folder.  
   
 2.  Each Form, View & Visualization gets their own file in the respective sub-folder.  
   
 3.  The Form file names will vary by Managed or Unmanaged Solution types.  
   
-4.  Direct editing of RibbonDiff.xml to customize entity specific ribbons is supported.  
+4.  Direct editing of RibbonDiff.xml to customize table specific ribbons is supported.  
   
 5.  Manual editing of the XML files under the FormXml and SavedQueries folders is supported but optional.  
   
@@ -70,7 +70,7 @@ RibbonDiff.xml
 {guid n}.xml  
   
 <a name="optionset_bm"></a>   
-## Option set  
+## Choice (Option set)  
  Differs in managed solutions: No  
   
 ### Notes  
@@ -83,16 +83,16 @@ RibbonDiff.xml
 \<schema name n>.xml  
   
 <a name="relationship_bm"></a>   
-## Entity relationship  
+## Table (Entity) relationship  
  Differs in managed solutions: Yes  
   
 ### Notes  
   
-1.  Each entity has a distinct file that contains all relationships where for:  
+1.  Each table has a distinct file that contains all relationships where for:  
   
-    1.  N:N it is the first listed entity  
+    1.  N:N it is the first listed table  
   
-    2.  1:N it is the referenced entity  
+    2.  1:N it is the referenced table  
   
 ### Files  
  \Other\Relationships\  
@@ -106,7 +106,7 @@ RibbonDiff.xml
   
 ### Notes  
   
-1.  All entity specific ribbon XML can be found in the respective folder for that entity. All other ribbon XML will be in this file.  
+1.  All table specific ribbon XML can be found in the respective folder for that table. All other ribbon XML will be in this file.  
   
 2.  Direct editing of RibbonCustomizations.xml to customize the global ribbon is supported.  
   

@@ -26,7 +26,7 @@ Create a managed solution to include all the components for your app. You might 
 
 ## Display name and description of your solution
 
-While creating a solution to package your app components, make sure you provide appropriate values in the **Display Name** and **Description** fields for your new solution that you want to be displayed to your customers.
+While creating a solution to package your app components, make sure you provide appropriate values in the **Display Name** and **Description** columns for your new solution that you want to be displayed to your customers.
 
 ![Create a solution](media/appsource-new-solution.png)
 

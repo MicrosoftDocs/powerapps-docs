@@ -5,21 +5,17 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/16/2020
+ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals Web API (Preview)
-
-[This article is pre-release documentation and is subject to change.]
-
-## Overview
+# Portals Web API
 
 The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or later for this feature to work**.
+> - **Your portal version must be 9.3.3.x or later for this feature to work**.
 > - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
 > - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
@@ -241,10 +237,6 @@ Portals Web API can't be used for the following configuration entities.
 :::column:::
 	adx_webtemplate
 :::row-end:::
-
-## Known issues
-
-With the current release, Web API operations aren't blocked on configuration entities. However, this issue will be fixed in upcoming releases.
 
 ## Next step
 
