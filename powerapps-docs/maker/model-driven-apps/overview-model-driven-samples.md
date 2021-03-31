@@ -40,25 +40,28 @@ The availability of sample apps depends on how an environment was provisioned.
 
 1. Sign in to [powerapps.com](https://powerapps.com)  
 
-2. From the **Create** page, select the sample app and click **Create**.
+2. From the **Create** page, select the sample app, and then select **Create**.
 
 > [!div class="mx-imgBorder"]
 > <img src="media/overview-model-driven-samples/model-driven-create-page-sample.png" alt="Create a model-driven sample app" height="427" width="674">
 
 3. The App designer will open providing multiple options for customizing the app.
 
-4. For additional customization options, click **Advanced** from the left navigation in the portal.
+4. For additional customization options, select **Advanced** from the left navigation pane.
 
-## Remove sample apps and data 
+## Remove sample apps and data
+
 - Deleting a sample app requires deleting the corresponding  [managed solution](/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
 - Deleting the solution also deletes any sample data specific to the custom tables for the app.
 - If customizations were made to the sample app, there may be [dependencies](/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
 ### Delete a solution
+
 To delete a solution, follow the steps in this topic: [Delete a model-driven app](delete-model-driven-app.md#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
 
 
 ## Install or uninstall Sample Data
+
 To remove sample data, follow the steps in this topic: [Add or remove sample data](/power-platform/admin/add-remove-sample-data)
 
 
