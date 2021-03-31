@@ -28,13 +28,12 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 
 ## Get sample apps
 
-The availability of sample apps depends on how an environment is provisioned. 
+The availability of sample apps depends on how an environment was provisioned. 
 
 > [!IMPORTANT]
 > In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database. First, create a trial environment and database and be sure to select **Deploy sample apps and data**.
 > [!div class="mx-imgBorder"] 
 > ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database")
->
 > This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases. 
 
 ## Customize a sample app
