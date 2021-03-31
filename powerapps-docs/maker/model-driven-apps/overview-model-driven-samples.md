@@ -34,7 +34,7 @@ The availability of sample apps depends on how an environment was provisioned.
 > [!IMPORTANT]
 > In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database. First, create a trial environment and database and be sure to select **Deploy sample apps and data**.
 >
-> ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database") <br />
+> <img src = "media/overview-model-driven-samples/create-database1.png" alt = "Deploy sample apps and data setting when creating a Dataverse database" width = "400" height = "680"> <br />
 > This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases.
 
 ## Customize a sample app
