@@ -2,14 +2,15 @@
 title: Model-driven sample apps
 description: Understand how to get, customize, and remove model-driven sample apps.
 documentationcenter: na
-author: mr-dang-msft
+author: mspilde
+reviewer: Mattp123
 manager: kvivek
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
 ms.date: 08/04/2020
-ms.author: brdang
+ms.author: mspilde
 search.audienceType: 
   - maker
 search.app: 
@@ -32,9 +33,8 @@ The availability of sample apps depends on how an environment was provisioned.
 
 > [!IMPORTANT]
 > In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database. First, create a trial environment and database and be sure to select **Deploy sample apps and data**.
-> [!div class="mx-imgBorder"] 
-> ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database")
-> This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases. 
+> ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database") <br />
+> This option installs all available sample apps in your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases.
 
 ## Customize a sample app
 
