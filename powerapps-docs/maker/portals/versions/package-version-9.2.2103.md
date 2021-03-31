@@ -23,9 +23,29 @@ For a full list of all portal updates released to date and their corresponding K
 
 ## Updates included with portals package version 9.2.2103
 
-This portals package version update includes the following changes.
+This portals package version update includes the following changes to Dataverse starter portal, and blank portal.
 
+### Enhancements
 
+- [Power Apps component framework](../../../developer/component-framework/overview.md) update with control style of **Code Components**.
+- [Terminology changes](../terminology-changes.md) for portals.
+- New entity **adx_BotConsumer** added for [Power Apps Virtual Agents](power-virtual-agents) support with forms, views & relationships.
+- Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
+- Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
+- Handle XSS vector gracefully on page load.
+
+### Fixes
+
+- Saving Entity Form Metadata without mandatory field.
+- Action button configuration gets cleared within additional setting.
+- Enable IsVisibleInMobileClient field for Contact in Microsoft Identity.
+- Web form lookup field create new metadata is not working.
+- Deactivating a root page needs to deactivate it's content pages too.
+- Hide Post back URL Field on the web form step.
+- Web form lookup field create new metadata is not working.
+
+> [!NOTE]
+> In addition, this package also release contains accessibility fixes.
 
 ### See also
 
