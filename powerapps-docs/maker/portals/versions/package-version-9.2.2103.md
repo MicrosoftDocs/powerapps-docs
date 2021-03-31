@@ -29,7 +29,7 @@ This portals package version update includes the following changes to Dataverse 
 
 - [Power Apps component framework](../../../developer/component-framework/overview.md) update with control style of **Code Components**.
 - [Terminology changes](../terminology-changes.md) for portals.
-- New entity **adx_BotConsumer** added for [Power Apps Virtual Agents](power-virtual-agents) support with forms, views & relationships.
+- New entity **adx_BotConsumer** added for [Power Apps Virtual Agents](/power-virtual-agents) support with forms, views & relationships.
 - Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
 - Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
 - Handle XSS vector gracefully on page load.
