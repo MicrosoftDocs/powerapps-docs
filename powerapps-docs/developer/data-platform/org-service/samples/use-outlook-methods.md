@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Sample: Use Dynamics 365 for Outlook methods
+# Sample: Use Dynamics 365 for Outlook class methods
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
