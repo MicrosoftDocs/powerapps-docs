@@ -2109,6 +2109,10 @@
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)
           href: ../teams/milestones.md
+        - name: Understand sample app architecture
+          items:
+            - name: Bulletins
+              href: ../teams/bulletins-architecture.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
