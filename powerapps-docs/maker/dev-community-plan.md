@@ -83,6 +83,12 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 > [!NOTE]
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
 
+## Do individual environment(s) have any effect on tenant service limits?    
+Individual environments do not affect shared caps or throttle limits of production environments in a tenant. However, if you have any issues or experience problems, please reach out through [Get Help + Support](https://docs.microsoft.com/power-platform/admin/get-help-support) for an investigation.
+    
+## Is there any limit to the number of individual environments in my company or tenant?
+Individual environments are solely for individual use (free development environment for individual use). Anyone with a work or school account can sign up for the Power Apps Community Plan.
+
 ## Publishing to Microsoft AppSource
 Do you have an app you would like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/data-platform/publish-app-appsource.md).
 
