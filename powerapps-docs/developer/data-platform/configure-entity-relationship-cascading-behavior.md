@@ -50,8 +50,9 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |UserOwned|Cascade User Owned|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
 
 >[!NOTE]
-> Cascading actions on Active records will only include records that have a Status Code of Active. Any other solution provided or custom status 
-> codes that indicate a record as live and in use will not be processed as an Active record for cascading purposes.
+> Cascading actions on Active records will only include records that have a State Code of Active and a Status Code of Open. 
+> If custom STatus and State Code labels ate being used, this is the same as statecode value=0 and statuscode value=1 in most cases. 
+> Any other solution provided or custom status codes with values other than the above  will not be processed as an Active record for cascading purposes.
 
 
  The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
