@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2021
+ms.date: 04/01/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -23,13 +23,15 @@ For a full list of all portal updates released to date and their corresponding K
 
 ## Updates included with portals package version 9.2.2103
 
-This portals package version update includes the following changes to Dataverse starter portal, and blank portal.
+This portals package version update includes the changes to the following packages:
+
+- [Dataverse Starter Portal](../create-portal.md)
+- [Starter Portal](../create-dynamics-portal.md) (Portal from blank) for environments with customer engagement apps.
 
 ### Enhancements
 
 - [Power Apps component framework](../../../developer/component-framework/overview.md) update with control style of **Code Components**.
 - [Terminology changes](../terminology-changes.md) for portals.
-- New entity **adx_BotConsumer** added for [Power Apps Virtual Agents](/power-virtual-agents) support with forms, views & relationships.
 - Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
 - Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
 - Handle XSS vector gracefully on page load.
