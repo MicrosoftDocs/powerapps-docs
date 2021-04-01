@@ -18,18 +18,19 @@ If you select an environment that contains customer engagement apps (Dynamics 36
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
-To create a portal in an environment containing customer engagement apps:
+To create a portal in an environment containing customer engagement apps, sign in to [Power Apps](https://make.powerapps.com) and follow these steps.
 
-1.	Sign in to [Power Apps](https://make.powerapps.com).
+1. On the left pane, select **Create**. 
 
-2.	Select **Create** on the left pane and enter **portal** in the **Search templates** field to display all Dynamics 365 portal templates.
+1. Scroll down to **Start from template** section.
 
-    > [!div class=mx-imgBorder]
+1. In the search box on the right-side of the screen, enter "Portal". <br>Alternatively, view the templates of the type **Portal**.
+
     > ![Dynamics 365 portal templates](media/dynamics-portals.png "Dynamics 365 portal templates")  
 
-3.	Select the required portal template.
+1. Select the required portal template.
 
-4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Dataverse starter portal](create-portal.md) section.
+1. In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Dataverse starter portal](create-portal.md) section.
 
 > [!NOTE]
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
