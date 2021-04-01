@@ -23,7 +23,7 @@ There are two features available with the integration of Power Apps with Teams. 
 
 ## Get the Teams theme
 
-Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar. More information: [UI components: Colors](/microsoftteams/platform/concepts/design/components/color)
+Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar.
 
 To retrieve a theme name, use the following formula.
 
