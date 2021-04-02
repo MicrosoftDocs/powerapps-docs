@@ -37,6 +37,7 @@ After you download the solution, you must import it to be able to use it.
   
 
 ## Use the app
+
 After you import the solution successfully, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**.
 
 ![Metadata Tools app](media/metadata-tools.png)
@@ -50,24 +51,24 @@ On opening the app, **Entities** is the default view that lets you view all the 
 You can perform the following actions:
 
 - **View Entity Details**: Select a table to view using the [**Entity Metadata** view](#entity-metadata-view).
-- **Edit Entity**: Open the selected table form in the default organization, if the table supports this.
-- **Text Search**: Perform a text search to filter displayed entities using the following table properties: <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
-- **Filter Entities**: Set simple criteria to view a sub-set of entities. All criteria are evaluated using AND logic.
-- **Filter Properties**: Filter the properties displayed for any selected entity. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
+- **Edit Entity**: Open the selected form in the default organization, if the table supports this.
+- **Text Search**: Perform a text search to filter displayed tables using the following table properties: <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
+- **Filter Entities**: Set simple criteria to view a sub-set of tables. All criteria are evaluated using AND logic.
+- **Filter Properties**: Filter the properties displayed for any selected table. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
 
 ## Entity Metadata view
 
-Select **Entity Metadata** to inspect individual entities. 
+Select **Entity Metadata** to inspect individual tables. 
 
-![Entity Metadata view](media/metadata-tools-entity-metadata.png)
+![Metadata view](media/metadata-tools-entity-metadata.png "Metadata view")
 
-You can perform the following actions for a single entity:
+You can perform the following actions for a single table:
 
 - **Entity**: Select the table from the drop-down list that you want to view.
 - **Properties**: View all the properties for the table and filter the properties displayed.
 
     - **Edit Entity**: Open the selected table edit form in the default organization, if the table supports this.
-    - **Filter Properties**: Filter the properties displayed for any selected entity. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
+    - **Filter Properties**: Filter the properties displayed for any selected table. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
 
 - **Attributes**: View the table columns in a master/detail view. With this view you can:
 
@@ -102,8 +103,8 @@ You can perform the following actions for a single entity:
 
 ### See also
 
- [Developer Tools for Dataverse](developer-tools.md)<br />
- [Customize table definition](customize-entity-metadata.md)<br />
+ [Developer tools for Dataverse](developer-tools.md)<br />
+ [Customize table definitions](customize-entity-metadata.md)<br />
   
 
 
