@@ -103,9 +103,9 @@ To resolve this issue, choose the correct option:
    :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name":::
 
    1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas **App Name** to the embedded canvas app control using the value from the previous step. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
-   1. Export the solution from the development environment and then import the solution to your target environment.
+   1. Export the solution from the development environment and then import the solution into your target environment.
 
-- Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name**. 
+- Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name** property.
 
 ### See also
 
