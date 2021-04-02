@@ -90,9 +90,7 @@ To create a custom **Portal Management** app:
 
     ![Select new app](media/select-pma.png)
 
-1. Verify the settings in the new **Portal Management** custom app:
-
-    ![Verify settings](media/custom-pma.png)
+Now you can use the custom Portal Management app and configure portal settings.
 
 ## Next steps
 

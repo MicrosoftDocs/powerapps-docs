@@ -117,7 +117,7 @@ In order for your list to respect these permissions:
 
 - Permissions must also be enabled on the [basic form](entity-forms.md) record.
 
-    ![Enabled permissions on the basic form record](media\assign-entity-permissions\lead-entity-form.png "Enabled permissions on the basic form record")
+    ![Enabled permissions on the basic form record](media\assign-entity-permissions\enable-entity-permissions.png "Enabled permissions on the basic form record")
  
 - The form must be surfacing a page that has a subgrid on it for the table that you want to enable with child permissions, in this case Tasks.
 

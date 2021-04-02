@@ -1604,7 +1604,7 @@
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
-            - name: Assign entity permissions
+            - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
@@ -1678,7 +1678,7 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
-                - name: Render the entity list for a page
+                - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
                   href: ./portals/liquid/render-rss-custom-page-template.md
