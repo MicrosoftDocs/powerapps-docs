@@ -19,7 +19,7 @@ search.app:
 > [!NOTE]
 > - Effective November 2020:
 >     - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
->     - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+>     - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](../data-platform/data-platform-intro.md)
 >
 >     This article will be updated soon to reflect the latest terminology.
 > - Power Apps mobile app on Windows platform supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
@@ -122,7 +122,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
     > - If you have connections to other environments (other than current), select the *Table* category and then the *More* (...) option to change the environment. You can then select an table from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
     > - You need to meet one of the following requirements to be able to see an environment that you want to add the connection to:
     >   - You're the **Owner** of the app, or the app is [shared](share-app.md) with you as a **Co-owner**.
-    >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+    >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
 
 4.	Save your application.
 
@@ -170,7 +170,7 @@ You'll need to edit this formula. Option set text identifer is no longer used fo
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
-'Category(Accounts)' is the name of enum used in the Category field of the Accounts table. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-global-option-sets)
+'Category(Accounts)' is the name of enum used in the Category field of the Accounts table. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](../data-platform/create-edit-global-option-sets.md)
 
 #### Editing Option Set Patch statements to use new syntax
 
@@ -270,7 +270,7 @@ Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure t
  
 #### Access and set the Company Name field (a Customer data type) of the Contacts table
 
-Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But an table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But an table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-fields-of-a-customer) for more details.
  
 #### Access and set the Regarding field of activity tables such as Faxes, Phone Calls, Email Messages
 
@@ -287,15 +287,15 @@ If( IsBlank( ThisItem.Regarding ), "",
 
 ![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
-Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-lookup-fields) and [Regarding relationships](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-relationships) for more details.
+Read [Regarding lookup fields](./working-with-references.md#understand-regarding-lookup-fields) and [Regarding relationships](./working-with-references.md#understand-regarding-relationships) for more details.
 
 #### Access the list of all Activities for a record
 
-In Dataverse, tables such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/data-platform/activity-entities). You can also create your own [custom activity tables](https://docs.microsoft.com/powerapps/developer/data-platform/custom-activities).
+In Dataverse, tables such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity tables](../../developer/data-platform/custom-activities.md).
 
 You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an table such as account. Add the Activities table and other individual tables whose data you plan to display in the canvas app.
 
-Each time you add a record to (for example the Tasks table), a record in the Activity table with the fields common across all activity tables is created. Read [activity table](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
+Each time you add a record to (for example the Tasks table), a record in the Activity table with the fields common across all activity tables is created. Read [activity table](./working-with-references.md#activity-table) for more details.
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
@@ -339,12 +339,12 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ## Next steps
 
-- [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
-- [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
+- [Formula reference](./formula-reference.md)
+- [Controls reference](./reference-properties.md)
 
 ### See also
 
-[What is Dataverse?](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)
+[What is Dataverse?](../data-platform/data-platform-intro.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

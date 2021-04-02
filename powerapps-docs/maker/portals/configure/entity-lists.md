@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/05/2020
+ms.date: 03/16/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -483,9 +483,10 @@ The FetchXML filter uses only one attribute:
 ## Entity list Map view
 
 With entity lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
->[!Note] 
->This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
 
+> [!NOTE] 
+> - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
+> - Only Bing maps are supported as the **Map type**.
 
 ## Entity List Calendar view
 
@@ -497,8 +498,8 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!Note]
-> The OData feed that is published is anonymous and does not have any authorization checks; therefore, it is important not to enable oData feeds for data that is unsuitable for anonymous portal access.
+> [!CAUTION]
+> Use caution when enabling OData feeds without entity permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Entity Permissions** is disabled.
 
 ## Enhanced view filter for entity lists
 
@@ -519,7 +520,7 @@ The following image shows an arbitrary contact assigned to a filter condition, t
 
 ### See also
 
-- [Microsoft Learn: Display multiple Dataverse records using entity lists](https://docs.microsoft.com/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Microsoft Learn: Display multiple Dataverse records using entity lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
 

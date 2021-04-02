@@ -97,7 +97,7 @@ When using data from sources such as Dataverse or SQL Server, you can use a **Vi
 
 If client-heavy operations like **JOIN** or **Group By** happened at the client side with a dataset that has 2,000 records or more, the objects in the heap will increase, resulting in exceeding memory limits.
 
-Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
+Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
 ![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
@@ -118,7 +118,7 @@ To avoid the problem, use **view objects** in the SQL back end or change the use
 
 ### Table scan instead of index seek
 
-An app might slow down if the functions used by the app run queries in the database that result in table scans instead of index seek. More information: [Hints, Table SCAN, and Index SEEK](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-table)
+An app might slow down if the functions used by the app run queries in the database that result in table scans instead of index seek. More information: [Hints, Table SCAN, and Index SEEK](/sql/t-sql/queries/hints-transact-sql-table)
 
 To resolve such problems, use [**StartsWith**](functions/function-startswith.md) instead of [**IN**](functions/operators.md#in-and-exactin-operators) in the formula. With a SQL data source, the **StartsWith** operator results in an index seek, but the **IN** operator results in an index or table scan.
 
@@ -136,16 +136,16 @@ Check the execution plan of slow queries to see whether any table or index scan 
 
 More information:
 
-- [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)
-- [Monitoring performance by using the Query Store](https://docs.microsoft.com/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-- [Extended Events overview](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
+- [Monitor and tune for performance](/sql/relational-databases/performance/monitor-and-tune-for-performance)
+- [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+- [Extended Events overview](/sql/relational-databases/extended-events/extended-events)
 
 ### Database resource contention
 
 Ensure that the data source&mdash;SQL database&mdash;has no resource contentions such as processor bottlenecks, I/O contention, memory pressure, or *tempDB* contention. Also check for locks, waits, deadlocks, and query timeouts.
 
 > [!TIP]
-> Use [automatic tuning](https://docs.microsoft.com/sql/relational-databases/automatic-tuning/automatic-tuning) for insights into potential query performance problems, recommended solutions, and to automatically fix the identified problems.
+> Use [automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning) for insights into potential query performance problems, recommended solutions, and to automatically fix the identified problems.
 
 ### Thick client or excessive requests
 
@@ -188,13 +188,13 @@ If you expect to access a large volume of data from the on-premises data gateway
 
 A single node of the on-premises data gateway might be sufficient to deal with 200 or fewer concurrent connections. However, if all these concurrent connections are executing queries actively, other requests end up waiting for an available connection.
 
-For information about ensuring that your on-premises data gateway scales in accordance with the volume of data and requests, go to [Monitor and optimize on-premises data gateway performance](https://docs.microsoft.com/data-integration/gateway/service-gateway-performance).
+For information about ensuring that your on-premises data gateway scales in accordance with the volume of data and requests, go to [Monitor and optimize on-premises data gateway performance](/data-integration/gateway/service-gateway-performance).
 
 ### Considerations specific to Azure SQL Database
 
 Canvas apps can connect to Azure SQL Database by using the SQL Server connector. A common cause of performance problems when using Azure SQL Database is selecting the wrong tier for your business requirements.
 
-Azure SQL Database is available in different service tiers, with varied capabilities for matching different business requirements. For more information about tiers, go to [Azure SQL Database documentation](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview).
+Azure SQL Database is available in different service tiers, with varied capabilities for matching different business requirements. For more information about tiers, go to [Azure SQL Database documentation](/azure/azure-sql/database/sql-database-paas-overview).
 
 With heavy data requests, the resources on the tier you select might get throttled as soon as the threshold value is reached. Such throttling compromises the performance of the next set of queries.
 
@@ -233,7 +233,7 @@ In the real world, though, apps are designed to meet certain business requiremen
 When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Dataverse environment, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow with the Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-the-common-data-service-connector-for-dataverse-environments)
 
 > [!TIP]
-> When custom tables are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+> When custom tables are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN** client-side instead of server-side.
 

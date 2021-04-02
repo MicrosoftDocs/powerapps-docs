@@ -43,7 +43,7 @@ At this time, you can use lookup columns only with SharePoint and Microsoft Data
 
 #### Choices for a lookup
 
-1. [Create a database](../../../administrator/create-database.md) in Dataverse, and select the **Include sample apps and data** box.
+1. [Create a database](/power-platform/admin/create-database) in Dataverse, and select the **Include sample apps and data** box.
 
     Many tables, such as **Accounts**, are created.
 

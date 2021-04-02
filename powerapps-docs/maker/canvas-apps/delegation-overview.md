@@ -30,11 +30,11 @@ Where this becomes complicated, and the reason this article exists, is because n
 > Delegation warnings were previously flagged in Power Apps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, Power Apps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
 
 ## Delegable data sources
-Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](https://docs.microsoft.com/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
+Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-- [Common Data Service](https://docs.microsoft.com/connectors/commondataservice/) 
-- [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
-- [SQL Server](https://docs.microsoft.com/connectors/sql/) 
+- [Common Data Service](/connectors/commondataservice/) 
+- [SharePoint](/connectors/sharepointonline/) 
+- [SQL Server](/connectors/sql/) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.
 
@@ -76,7 +76,7 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sourcesdelegable-data-sources) for details.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 

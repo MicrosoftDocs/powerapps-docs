@@ -32,7 +32,7 @@ We will draw your attention to important facts during the walkthrough, and provi
 
 The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue. 
 
-Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](https://docs.microsoft.com/scripting/javascript/).
+Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](/scripting/javascript/).
 
 You can review the complete sample code used in the walkthrough later in this article.
 
@@ -172,21 +172,21 @@ This makes the web resource available to be selected under the **Event Handlers*
     - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** field. The function name is [Namespace].[Function] from your JavaScript code.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
-      ![Form OnLoad](../media/clientapi_walkThrough-img6.png)
+      ![Form OnLoad 1](../media/clientapi_walkThrough-img6.png)
 
 1. Select **OK** to return to the **Form Properties** dialog box.
 1. Under the **Event Handlers** section, select **OnSave** as the **Event** this time, and select **Add** to add an event handler for the Form OnSave event.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img7.png)
+    ![Form OnSave ](../media/clientapi_walkThrough-img7.png)
 
 1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** field. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img8.png)
+    ![Form OnSave 1](../media/clientapi_walkThrough-img8.png)
 
 1. Select **OK** to return to the **Form Properties** dialog box.
 1. Under the **Event Handlers** section, select **Account Name** as the control and **OnChange** as the event; select **Add** to add an event handler for the OnChange event.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img9.png)
+    ![Form OnSave 2](../media/clientapi_walkThrough-img9.png)
 
 1. In the **Handler Properties** dialog box:   
 
@@ -213,6 +213,10 @@ That's it! You have completed the steps to configure the account form to use cus
 1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
 
     ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
+
+1. Select either `OnSave` or `OnLoad` event handlers and associate the function you want to achieve.
+
+   ![Configure Form event handlers](../media/configure-events-on-from-handlers.png "Configure Form event handlers")
 
 1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
 

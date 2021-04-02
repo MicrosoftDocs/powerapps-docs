@@ -24,7 +24,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 ## Prerequisites
 
 - A Power Apps license that supports Dataverse. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
-- An environment with a Dataverse database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
+- An environment with a Dataverse database. You can [create such an environment](/power-platform/admin/create-environment) if you have appropriate permissions.
 
 ## Download the solution
 
