@@ -78,7 +78,7 @@ To access columns of a related table makers can use either of the expressions li
       - *ItemId* is empty at authoring time but will have a value at runtime.
     - *LookUp(Accounts, Account = ModelDrivenFormIntegration.Item.Account).'Primary Contact'.'Full Name'* (This expression is easier to read, but the previous expression will perform slightly better.)
 
-## Embedded canvas app doesn’t render correctly
+### Embedded canvas app doesn’t render correctly
 
 An embedded canvas app may not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
 This issue can occur when one or both of the following are true.
@@ -86,7 +86,7 @@ This issue can occur when one or both of the following are true.
 - The **Scale to fit** option isn’t enabled with the canvas app. 
 - The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another Dataverse environment.
 
-### Enable scale to fit
+#### Enable scale to fit
 
 By default, canvas apps have the scale to fit option enabled.
 1. Open the canvas app that you’re embedding on a model-driven app form for editing.
@@ -94,7 +94,7 @@ By default, canvas apps have the scale to fit option enabled.
 1. Under **Advanced Settings**, set **Scale to fit** to **On**.
    :::image type="content" source="media/scale-to-fit-canvas-app.png" alt-text="Scale to fit canvas app setting":::
 
-### The App Name property value is missing or is incorrectly defined
+#### The App Name property value is missing or is incorrectly defined
 
 To resolve this issue, choose the correct option:
 - Managed solutions: If the solution was imported into an environment as a managed solution, follow these steps: 
