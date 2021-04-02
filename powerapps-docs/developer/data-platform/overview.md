@@ -1,11 +1,11 @@
 ---
 title: Microsoft Dataverse Developer Guide | Microsoft Docs
-description: Learn how developers can add value using Microsoft Dataverse.
+description: Introducing the Developer Guide for Microsoft Dataverse.
 author: JimDaly
 manager: annbe
 ms.service: powerapps
 ms.topic: article
-ms.date: 03/27/2019
+ms.date: 03/11/2021
 ms.author: jdaly
 ms.reviewer: "pehecke"
 search.audienceType: 
@@ -16,8 +16,6 @@ search.app:
 ---
 
 # Microsoft Dataverse Developer Guide
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Power Apps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. Microsoft Dataverse is the underlying data platform for Power Apps that contains the core functionality such as server-side logic (plug-ins and workflows), business process flows, a highly sophisticated security model, and an extensible platform for developers to build apps. 
 
@@ -48,7 +46,7 @@ Dataverse is not available for on-premise deployments at this time. Content in t
 
 ### See also
 
-[Power Apps for developers](../../index.yml?panel=developer#pivot=home)<br/>
+[Power Apps for developers](../../index.yml?panel=developer)<br/>
 [Model-driven apps Developer Guide](../model-driven-apps/overview.md)
 
 

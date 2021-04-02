@@ -1,8 +1,8 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Microsoft Dataverse entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/02/2021
+ms.date: 03/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,34 +16,25 @@ search.app:
   - D365CE
 ---
 
-# Use SQL to query data (Preview)
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+# Use SQL to query data
 
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment thereby allowing you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided.
 
 ## Applications support
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
 
-### Power BI
-
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](../../maker/data-platform/view-entity-data-power-bi.md)
-
-> [!NOTE]
-> To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
-
-### SQL Server Management Studio
+### SQL Server Management Studio (Preview)
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table](media/ssms-table-expanded.PNG)
 
-## Security and authentication
+#### Security and authentication
 
-The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all entities to which a user has access to in Dataverse.
+The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
@@ -52,7 +43,7 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
 
-## Example entity data queries
+#### Example table data queries
 
 Below are a couple of example queries composed in SSMS. The first image shows a simple query using aliases and result ordering.
 
@@ -69,6 +60,13 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 ```
 
 ![Another query using a JOIN](media/ssms-join-query.PNG)
+
+### Power BI
+
+You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
+
+> [!NOTE]
+> To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
 
 ## Supported operations and data types
 

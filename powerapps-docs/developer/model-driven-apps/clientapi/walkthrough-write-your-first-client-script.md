@@ -214,6 +214,10 @@ That's it! You have completed the steps to configure the account form to use cus
 
     ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
 
+1. Select either `OnSave` or `OnLoad` event handlers and associate the function you want to achieve.
+
+   ![Configure Form event handlers](../media/configure-events-on-from-handlers.png "Configure Form event handlers")
+
 1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")

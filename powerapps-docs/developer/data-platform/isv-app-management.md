@@ -47,9 +47,7 @@ To access the public preview of ISV Studio, navigate your browser to [https://ak
 
 ## Pre-requisites
 
-1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
-
-2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Partner Center for the particular ISV.
+The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
 
 ### Admin access to ISV Studio
 
@@ -84,7 +82,7 @@ If you want additional users to get access to ISV Studio, they can be added as a
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
-### Feedback
+### How to provide feedback
 
 Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 
