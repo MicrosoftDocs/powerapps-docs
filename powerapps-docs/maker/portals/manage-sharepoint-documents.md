@@ -172,7 +172,7 @@ The below example demonstrates configuration using the Case table which needs th
 
     - Power Apps portals configuration
 
-        a. Go to **Portals** > **Basic Forms**.
+        a. Open [Portal Management app](configure/configure-portal.md) -> **Basic Forms**.
     
         b. Find and open **Customer Service - Edit Case** basic form.
     
@@ -185,10 +185,7 @@ The below example demonstrates configuration using the Case table which needs th
          - **Mode**: Edit
     
          - **Table Permission**: Enabled
-    
-         > [!div class=mx-imgBorder]
-         > ![Customer Service - Edit Case form](media/customer-service-edit-case-form.png "Customer Service - Edit Case form")
-    
+         
         d. If you’ve made any changes to the form, select **Save**.
 
 5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role
@@ -215,9 +212,6 @@ The below example demonstrates configuration using the Case table which needs th
         
     - **Privileges**: Read, Create, Append, Write, Delete
 
-      > [!div class=mx-imgBorder]
-      > ![Customer Service table permission](media/customer-service-entity-permission.png "Customer Service table permission")
-  
    4. Sign in to portal to ensure document management is enabled for the Case table.
 
       a. Go to the **Support** page.

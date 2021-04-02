@@ -85,8 +85,6 @@ Building on the previous example of the administrator of Contoso, Inc. creating 
 
    3. Set **Web Page for Create** to **Suggestions**, and add a create button or empty list text as needed.
 
-      ![Create an list](media/create-entity-list.png "Create an list")
-
 3. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions List**. Set **Page Template** to **Full Page**, set **List** to **Suggestions List**, and add an introduction to the exposed view.
 
 4. If you want, in the portal, edit the **Primary Navigation** and then select the **Add** button (+) to add a new web link to the list. Name the web link **Suggestions List** and assign it to the **Suggestions List** page. You can drag the previously created **Suggestions** form link underneath the new list link to become a child.
@@ -121,8 +119,6 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
 
 5. Switch to the **Insert** tab of the **Information** form, select **Section**, and choose **Two Columns**. Move the default Name and Owner fields to this section and delete the old one.  Open the properties of the Name field and clear the **Visible by default** option on the **Display** tab.
 
-    ![Create a survey form to facilitate the survey questions and responses.](media/create-custom-survey-form.png "Create a survey form to facilitate the survey questions and responses.")
-
 6. Save the form, then select **Save As** in the ribbon to create a copy of the form named **Survey Step 2**. Select **Save As** again to create another copy named **Survey Step 1**.
 7. Open the **Survey Step 1** form, switch to the **Insert** tab, and then select **Section** > **Two Columns**.  
 
@@ -133,8 +129,6 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
 10. Repeat the step of adding a new two-column section, but this time change the label to “How did you first hear about Contoso Ltd.?” and drag the **Retail Store**, **Search Engine**, **Web Advertisement**, and **Word of Mouth** fields to this section. 
 
 11. Open the properties of each field. On the **Formatting** tab, set the **Control Formatting** to **Check box**. Save and close the form.
-
-    ![Step 1 of the survey form with two questions for a user to answer.](media/create-survey-step-1-form.png "Step 1 of the survey form with two questions for a user to answer.")
 
 12. [Open](../../model-driven-apps/create-edit-main-forms.md) the **Survey Step 2** form, switch to the **Insert** tab, and select **Section** > **One Column**.  
 
@@ -152,8 +146,6 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
 
     Finally, drag the **Regarding Contact** field to the first section of the **General** tab to track which user filled out the survey. Save and close the form, and then select **Publish All Customizations**.
 
-    ![The main Information form with all survey fields added to it.](media/create-survey-main-form.png "The main Information form with all survey fields added to it.")
-
 17. Open [Portal Management app](configure-portal.md) > **Advanced Forms** and create a new advanced form named **Contoso Ltd. Survey**.  Set the **Authentication Required** field to **Yes** and the **Multiple Records Per User Permitted** field to **No**. Save the form, but keep it open.
 
 18. On the “Contoso Ltd. Survey” Advanced Form record:
@@ -164,8 +156,6 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
     5. Select the **Associate Current Portal User** check box.
     6. Set the **Portal User Lookup Column** to **Regarding Contact (new_regardingcontact)**.
     7. Save the form, but keep it open.
-
-        ![The first step of the survey form created.](media/survey-step-1-form.png "The first step of the survey form created.")
 
 19. On the “Survey Step 1” Advanced Form Step record:
     1. Open the **Next Step** lookup field, and select **New** to create a new Advanced Form Step.
@@ -182,8 +172,6 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
     1. Select the rightmost chevron in the main navigation and select **Metadata** to open the Advanced Form Metadata Associated View underneath the “Survey Step 2” record.
     2. Select **Add New Advanced Form Metadata** and set the **Attribute Logical Name** on this new record to **Contoso Ltd. Rating (new_contosoltdrating)** and the **Style** to **Option Set as Horizontal Radio Button List**.
     3. Save and close all the open forms.
-
-        ![The second step of the survey form created.](media/survey-step-2-form.png "The second step of the survey form created.")
 
 21. In the [Portal Management app](configure-portal.md), go to **Web Pages** and create a new Web Page named **Contoso Ltd. Survey**.  Set the **Website** to **Contoso Ltd.”**, the **Parent Page** to **Home**, the **Partial URL** to **contoso-ltd-survey**, the **PageTemplate** to **Full Page**, the **Publishing State** to **Published**, and the Advanced Form to the “Contoso Ltd. Survey” that was created earlier.  Save the record.
 
