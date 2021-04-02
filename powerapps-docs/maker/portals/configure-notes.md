@@ -174,13 +174,13 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     ![Create new table permissions](media/configure-notes/new-entity-permission.png "Create new table permissions")
 
-1. [Associate the table permission](configure/assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
+1. [Associate the table permission](configure/assign-entity-permissions.md#add-table-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
     For example, add the table permission created in the previous step to the web role used in this instance for managing leads.
 
     ![Add web roles to an table permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an table permission")
 
-1. Create a table permission on the **Annotation** table with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with the required privileges as explained in the table below. The **Parent Table Permission** for the Parent Scope on this table permission mut be set to the table permission created in step 2.
+1. Create a table permission on the **Annotation** table with the [Parental access type](configure/assign-entity-permissions.md#parental-access-type with the required privileges as explained in the table below. The **Parent Table Permission** for the Parent Scope on this table permission mut be set to the table permission created in step 2.
 
     | Note action | Required permissions |
     | - | - |
@@ -214,7 +214,7 @@ However, when editing the note from portal web page, you'll see the note in HTML
 
 ## Notes configuration for advanced forms
 
-Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
+Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
 
 ## Enable file attachment on form
 
