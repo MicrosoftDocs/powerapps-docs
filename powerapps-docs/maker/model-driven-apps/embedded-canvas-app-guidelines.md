@@ -102,7 +102,7 @@ To resolve this issue, choose the correct option:
    1. Open the unmanaged solution that includes the canvas app, and then find the canvas app in the list of solution components. Copy the canvas app **Name** exactly as it appears in the components list. For example, *contoso_flooringestimatesapp_624d7*.
    :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name":::
 
-   1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas App Name to the embedded canvas app control using the value from the previous step. More information: Add an embedded canvas app on a model-driven form
+   1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas **App Name** to the embedded canvas app control using the value from the previous step. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
    1. Export the solution from the development environment and then import the solution to your target environment.
 
 - Unmanaged solutions: If the solution was imported into an environment as an unmanaged solution, edit the model-driven app, that has the embedded canvas app control, and then follow similar steps as described for a managed solution to set the canvas **App Name**. 
