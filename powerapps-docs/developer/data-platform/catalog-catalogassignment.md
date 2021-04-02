@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 03/31/2021
+ms.date: 04/01/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -31,8 +31,8 @@ The first level catalog must represent your solution. Use multiple second-level 
 For each second-level catalog that represents the categories within your solution, you will use the CatalogAssignment table to specify any Tables, Custom API, or Custom Process actions you want to be available as events. Only Custom API that are configured as Actions can be used.
 
 > [!IMPORTANT]
-> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these records. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
-> You must grant **Read** access to the security roles assigned to any users who will need to use these records. These tables are found within the **Custom Entities** tab when you edit a security role.
+> In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these tables. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
+> You must grant **Read** access to the security roles assigned to any users who will need to use these tables. These tables are found within the **Custom Entities** tab when you edit a security role.
 > 
 > More information: 
 > - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
@@ -96,6 +96,28 @@ With this catalog, the following events will be available:
 |Table  |Event  |Why available  |
 |---------|---------|---------|
 |Account|Create<br />Update<br />Delete| Standard Data Operation |
+|Contact|Create<br />Update<br />Delete| Standard Data Operation |
+|Membership|Create<br />Update<br />Delete| Standard Data Operation |
+|N/A|`contoso_CustomerEnteredStore`|Explicit Catalog Assignment|
+|N/A|`contoso_CustomerVisitWebSite`|Explicit Catalog Assignment|
+|N/A|`contoso_CustomerPurchasedProduct`|Explicit Catalog Assignment|
+|N/A|`contoso_CustomerReturnedProduct`|Explicit Catalog Assignment|
+
+Most Tables will support Create, Update, and Delete events. There are some exceptions.
+
+> [!NOTE]
+> More specialized events bound to tables are planned. As those events are enabled, your catalog assignments will include those events.
+>
+> For example:
+> - User-owned tables will include **GrantAccess**, **ModifyAccess**, **RevokeAccess** events
+> - Those tables that support the **Merge** action will include that event.
+
+
+
+<!--  Describes events to be enabled in future
+|Table  |Event  |Why available  |
+|---------|---------|---------|
+|Account|Create<br />Update<br />Delete| Standard Data Operation |
 |Account|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
 |Account|Merge|Account table supports merge operations|
 |Contact|Create<br />Update<br />Delete| Standard Data Operation |
@@ -112,6 +134,8 @@ With this catalog, the following events will be available:
 - User-owned Tables can be shared, and sharing can be changed or revoked. The events for those operations will be included with the tables.
 - Certain system tables support special operations, such as Merge.
 - Any custom table will not have any additional events, unless they are user-owned.
+
+-->
 
 Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
 
