@@ -103,7 +103,7 @@ With this catalog, the following events will be available:
 |N/A|`contoso_CustomerPurchasedProduct`|Explicit Catalog Assignment|
 |N/A|`contoso_CustomerReturnedProduct`|Explicit Catalog Assignment|
 
-Most Tables will support Create, Update, and Delete events. There are some exceptions.
+Most tables will support **Create**, **Update**, and **Delete** events. There are some exceptions.
 
 > [!NOTE]
 > More specialized events bound to tables are planned. As those events are enabled, your catalog assignments will include those events.
