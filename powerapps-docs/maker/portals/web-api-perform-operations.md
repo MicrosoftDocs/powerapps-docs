@@ -510,7 +510,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
 
 1. From **Web Page Associated View**, select **webapi**.
 
-    ![Web Page Associated View](media/web-api/webpages-related.png "Web Page Associated View")
+    ![Web Page Associated View](media/web-api/webpage-associated-view.png "Web Page Associated View")
 
 1. Scroll down to the **Content** section, and then go to **Copy (HTML)** (HTML designer).
 

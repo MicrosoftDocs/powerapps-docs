@@ -103,6 +103,17 @@ The following table includes terminology changes inside portals Studio.
 | Search setting checkbox label for Entity Lists | Enable search on entity list | Enable search on list |
 | Checkbox label to enable entity permissions | Enable entity permissions | Enable table permissions |
 
+## Legacy terminology in use
+
+Some of the Power Apps portals features, and areas continue to use the legacy terminology including the following.
+
+- Web API
+- Liquid templates
+- Schema names
+- Legacy user interface
+
+Features, and areas mentioned above continue to use legacy terminology to ensure existing customizations and integrations continue to work with portals.
+
 ## Next steps
 
 [Creating a starter portal](create-portal.md)
