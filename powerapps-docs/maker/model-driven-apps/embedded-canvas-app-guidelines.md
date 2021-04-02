@@ -98,8 +98,8 @@ By default, canvas apps have the scale to fit option enabled.
 
 To resolve this issue, choose the correct option:
 - Managed solutions: If the solution was imported into an environment as a managed solution, follow these steps: 
-1. Sign into Power Apps and go to the development environment where you originally created your embedded canvas app. This is also the environment where the solution was exported.
-1. Open the unmanaged solution that includes the canvas app, and then find the canvas app in the list of solution components. Copy the canvas app **Name** exactly as it appears in the components list. For example, *contoso_flooringestimatesapp_624d7*.
+   1. Sign into Power Apps and go to the development environment where you originally created your embedded canvas app. This is also the environment where the solution was exported.
+   1. Open the unmanaged solution that includes the canvas app, and then find the canvas app in the list of solution components. Copy the canvas app **Name** exactly as it appears in the components list. For example, *contoso_flooringestimatesapp_624d7*.
    :::image type="content" source="media/copy-canvas-app-name.png" alt-text="Copy the canvas app unique name":::
 
    1. In the same solution, edit the model-driven app that has the embedded canvas app control, and then set the canvas App Name to the embedded canvas app control using the value from the previous step. More information: Add an embedded canvas app on a model-driven form
