@@ -1183,7 +1183,7 @@
           href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
         - name: "Share an embedded canvas app"
           href: ./model-driven-apps/share-embedded-canvas-app.md
-        - name: "Embedded canvas app guidelines"
+        - name: "Embedded canvas app guidelines and known issues"
           href: ./model-driven-apps/embedded-canvas-app-guidelines.md
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
