@@ -411,7 +411,7 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 **Regarding** differs from **Owner** and **Customer** because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
 
-Let's back up and look at the table definitions. In Dataverse, tables such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/data-platform/activity-tables.md). You can also create your own [custom activity tables](../../developer/data-platform/custom-activities.md). When you view or create an activity table, its settings appear under **More settings**.
+Let's back up and look at the table definitions. In Dataverse, tables such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity tables](../../developer/data-platform/custom-activities.md). When you view or create an activity table, its settings appear under **More settings**.
 
 ![Activity table setting when creating an table](media/working-with-references/activity-entitytype.png)
 
