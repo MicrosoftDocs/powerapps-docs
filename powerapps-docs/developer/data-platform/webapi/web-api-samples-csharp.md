@@ -44,7 +44,7 @@ The following is required to build and run the Dataverse Web API C# samples :
 - In order to run samples against Dataverse, you must register your application with Azure Active Directory to obtain a client ID and redirect URL. For more information, see [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 > [!NOTE]
-> These samples require version 2.x of assembly [Microsoft.IdentityModel.Client.ActiveDirectory](https://docs.microsoft.com/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet) for OAuth based authentication.
+> These samples require version 2.x of assembly [Microsoft.IdentityModel.Client.ActiveDirectory](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet) for OAuth based authentication.
   
 <a name="bkmk_webApiSamplesListing"></a>
 
@@ -75,7 +75,7 @@ This C# implementation depends upon the following:
   
 #### Json.NET Library
 
-Because C# and most other managed languages do not natively support the JSON data format, the best current approach is to use a library for this functionality. For more information, see [An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](https://msdn.microsoft.com/library/bb299886.aspx). Json.NET is a popular choice for .NET projects. It provides a robust, performant, open-source ([MIT licensed](https://opensource.org/licenses/MIT)) framework for serializing, converting, parsing, querying, and formatting JSON data. For more information, see the [Json.NET documentation](https://www.newtonsoft.com/json/help/html/Introduction.htm).  
+Because C# and most other managed languages do not natively support the JSON data format, the best current approach is to use a library for this functionality. For more information, see [An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](/previous-versions/dotnet/articles/bb299886(v=msdn.10)). Json.NET is a popular choice for .NET projects. It provides a robust, performant, open-source ([MIT licensed](https://opensource.org/licenses/MIT)) framework for serializing, converting, parsing, querying, and formatting JSON data. For more information, see the [Json.NET documentation](https://www.newtonsoft.com/json/help/html/Introduction.htm).  
   
 In the C# samples, this library is primarily used to serialize data between .NET objects and HTTP message bodies. Although the library provides several methods to accomplish this task, the approach used by the samples is to create individual [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) instances to represent Dataverse entity instances (records).  For example, the following code creates the variable `contact1` that represents a Dataverse <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" /> instance, then supplies values for a select set of properties for this type.  
   
@@ -162,7 +162,7 @@ throw new Exception(string.Format(" Operation Failed", response.Content));
   
 ```  
 
- [HttpStatusCode](https://msdn.microsoft.com/library/hh435235.aspx).NoContent is equivalent to an HTTP status code 204, “No content”. Here, this status code indicates that the POST request succeeded. For more information, see [Compose HTTP requests and handle errors](https://msdn.microsoft.com/library/gg334391.aspx).  
+ [HttpStatusCode](/previous-versions/windows/embedded/hh435235(v=msdn.10)).NoContent is equivalent to an HTTP status code 204, “No content”. Here, this status code indicates that the POST request succeeded. For more information, see [Compose HTTP requests and handle errors](/previous-versions/dynamicscrm-2016/developers-guide/gg334391(v=crm.8)).  
   
 ### Characteristics and methods
   

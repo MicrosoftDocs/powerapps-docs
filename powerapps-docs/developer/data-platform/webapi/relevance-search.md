@@ -29,7 +29,7 @@ search.app:
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
 enabled in your target environment by an administrator before you can use the
-feature. More information: [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search)
+feature. More information: [Using relevance search to search for records](../../../user/relevance-search.md)
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -516,8 +516,8 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Microsoft Dataverse](/powerapps/user/search)  
+[Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
+[Compare search options in Microsoft Dataverse](../../../user/search.md)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
 [Query Data using the Web API](query-data-web-api.md)  
 [Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)

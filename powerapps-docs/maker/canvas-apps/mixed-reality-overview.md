@@ -7,16 +7,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/22/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Add mixed reality components to your canvas app (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Add mixed reality components to your canvas app
 
 You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and MR scenarios.
 
@@ -29,7 +27,7 @@ Components are groups of controls that can answer the need for a specific scenar
 
 :::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo showing the Power Apps editor portal with the view in 3D component next to the app on a mobile device.":::
 
-You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
+You can read more about components and how to build your own in [Power Apps component framework docs](../../developer/component-framework/custom-controls-overview.md).
 
 
 The following prebuilt components can be used for MR scenarios:
@@ -40,10 +38,20 @@ The following prebuilt components can be used for MR scenarios:
 - [Measure in mixed reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
 
-## Prerequisites
+You can insert them into your apps from the **Insert** pane, under **Media** and **Mixed Reality**:
 
-1. [You'll need an MR-capable device](#mixed-reality-capable-devices).
-2. [Enable the MR features for each app](#enable-the-mixed-reality-features-for-each-app).
+:::image type="content" source="./media/augmented-overview/augmented-overview-insert-all.png" alt-text="See the mixed reality components under Media and Mixed Reality.":::
+  
+
+> [!TIP]
+> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+>  
+> If you encounter problems with content that works in Babylon but not in Power Apps, submit a question to the [Power Apps community forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General).
+>  
+> [Read more about our integration with Babylon.](https://babylonjs.medium.com/babylon-react-native-bringing-3d-and-xr-to-react-native-applications-7928b55acc85).
+
+
+## Prerequisites
 
 ### Mixed-reality capable devices
 
@@ -61,31 +69,9 @@ For devices in China, the experience is a little different as you'll need to [do
 
 For iOS devices, MR is supported on specific hardware with ARKit. See the [list of iOS devices supported for MR at the bottom of the Apple augmented reality website](https://www.apple.com/augmented-reality/).
 
-### Enable the mixed reality features for each app
-
-For each app you create, you need to enable the MR features. This should be enabled by default, but if it isn't or you've turned it off, you can enable the features as follows:
 
 
-1. Open the app for editing in Power Apps Studio at [https://create.powerapps.com](https://preview.create.powerapps.com).
-
-
-2. Select **File** from the top menu.
-
-    ![Select File](./media/augmented-overview/augmented-overview-file.png "Select File")
-
-3. Go to the **Settings** tab, select **Advanced settings**, and scroll down to find the **Mixed reality features** option. Set the option to **On**.
-
-    ![Set the Mixed reality features option to On](./media/augmented-overview/augmented-enable-mixed-reality.png "Set the Mixed reality features option to On")
-
-4. Return to editing your app by selecting the back arrow icon.
-
-    ![Select the back arrow icon](./media/augmented-overview/augmented-overview-back.png "Select the back arrow icon")
-
-5. Open the **Insert** pane to see the MR components under **Media** and **Mixed Reality**.
-
-    ![See the mixed reality components under Media and Mixed Reality](./media/augmented-overview/augmented-overview-insert-all.png "See the mixed reality components under Media and Mixed Reality")
-
-## Next steps
+## Mixed reality components
 
 Start installing the components in your apps:
 

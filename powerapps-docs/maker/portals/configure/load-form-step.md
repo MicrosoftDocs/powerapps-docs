@@ -69,7 +69,7 @@ These options are used to keep track of which portal contact creates a record th
 |--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Associate Current Portal User              | Checked indicates the currently logged in user's record should be associated with the target entity record.                                                                             |
 | Target Entity Portal User Lookup Attribute | The logical name of the attribute on the target entity that stores the portal user.                                                                                                     |
-| Is Activity Party                          | Boolean value indicating whether the Target Entity Portal User Lookup Attribute is an Activity Party type. See [ActivityParty entity](https://msdn.microsoft.com/library/gg328549.aspx) |  
+| Is Activity Party                          | Boolean value indicating whether the Target Entity Portal User Lookup Attribute is an Activity Party type. See [ActivityParty entity](/previous-versions/dynamicscrm-2016/developers-guide/gg328549(v=crm.8)) |  
 ||
 
 ## Entity reference

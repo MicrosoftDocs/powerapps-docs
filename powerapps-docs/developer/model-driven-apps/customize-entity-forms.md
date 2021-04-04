@@ -78,11 +78,11 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
 ## Open main form in a dialog using client API
 
-To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
+To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md) method. The [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md) API method allows you to open the dialog with several options, including the size and position.
 
 
 > [!NOTE]
-> [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open a main form as a dialog.
+> [Xrm.Navigation.openForm](./clientapi/reference/xrm-navigation/openform.md) method is not supported to open a main form as a dialog.
 
 ## Examples
 
@@ -179,7 +179,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm Entity](../data-platform/reference/entities/systemform.md)  
  [Form XML Schema](form-xml-schema.md)<br/>
- [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto)
+ [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

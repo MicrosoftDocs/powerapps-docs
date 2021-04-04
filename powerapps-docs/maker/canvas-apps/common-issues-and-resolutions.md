@@ -84,7 +84,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
@@ -96,7 +96,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Scanning a barcode**
 
-    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
+    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](./controls/control-new-barcode-scanner.md).
 
 1. **Changing a Title field in an entity**
 
@@ -166,7 +166,7 @@ This article lists some common issues that you might encounter while using Power
 
  1. **Running an app on Windows 8.1**
 
-    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
+    If you install [this update for Windows 8.1](/security-updates/SecurityBulletins/2016/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
     
    
  1. **Camera control on a Windows Phone**
@@ -178,7 +178,7 @@ This article lists some common issues that you might encounter while using Power
 
 1.  **Power Apps per app plans does not support Power Apps for Windows app**
  
-       Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
+       Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp). 
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
 <br> A pop-up dialog will show the following message in this situation: <br>
@@ -203,7 +203,7 @@ This article lists some common issues that you might encounter while using Power
 
 ## Next steps
 
-If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](https://docs.microsoft.com/power-platform/admin/get-help-support)
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](/power-platform/admin/get-help-support)
 
 
 

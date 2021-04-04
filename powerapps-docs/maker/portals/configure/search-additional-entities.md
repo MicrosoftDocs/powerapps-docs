@@ -197,7 +197,7 @@ The following walkthrough explains each step in detail with a sample database an
 
    ![_services_about page](media/search-additional-entities/services-about.png "_services_about page")
 
-1. Select [Clear cache](https://docs.microsoft.com/powerapps/maker/portals/admin/clear-server-side-cache).
+1. Select [Clear cache](../admin/clear-server-side-cache.md).
 
 1. After clearing the cache, select [Rebuild search index](search.md#rebuild-full-search-index).
 

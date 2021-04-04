@@ -25,12 +25,6 @@ Unified Interface for model-driven apps provides a consistent and accessible use
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
-> [!NOTE]
-> The legacy web client will be deprecated and customers must transition to Unified Interface before December 4, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
-
-
-
-
 ## Reflow 
 
 Unified Interface is designed for a modern reflow experience. 
@@ -74,13 +68,13 @@ The business process flow has been improved by the docking mechanism. You can do
 The improved accessibility experience lets you use screen readers to translate on-screen information into audible sound and print to a Braille reader so that more people can use the app. For more information, see [Use a screen reader](screen-reader.md).
 
 ## Create a Unified Interface app
-If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](../maker/model-driven-apps/model-driven-app-overview.md).
 
 ![Create new Unified Interface app](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 
 ## Unified Interface Community
 
-Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to get help with planning and executing a smooth transition to Unified Interface and engage with experts and peers on blogs, webinars, videos, events, and more.
+Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to engage with experts and peers on blogs, webinars, videos, events, and more.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
