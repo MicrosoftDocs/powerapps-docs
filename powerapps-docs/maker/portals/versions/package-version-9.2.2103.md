@@ -26,6 +26,8 @@ For more information about creating a portal with Starter Portal package, go to 
 
 ### Enhancements
 
+The package update includes the following enhancements extending the capabilities of portals.
+
 - [Power Apps component framework](../../../developer/component-framework/overview.md) update with control style of **Code Components**.
 - [Terminology changes](../terminology-changes.md) for portals.
 - Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
@@ -33,6 +35,8 @@ For more information about creating a portal with Starter Portal package, go to 
 - Handle XSS vector gracefully on page load.
 
 ### Fixes
+
+The package update includes the fixes for the following problems.
 
 - Saving Entity Form Metadata without mandatory field.
 - Action button configuration gets cleared within additional setting.
