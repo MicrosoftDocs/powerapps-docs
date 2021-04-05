@@ -1,6 +1,6 @@
 ---
 title: getEntityMetadata | Microsoft Docs
-description: 
+description: Returns the table definitions for the specified table.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

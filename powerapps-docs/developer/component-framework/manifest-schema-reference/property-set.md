@@ -1,6 +1,6 @@
 ---
 title: Property Set Element | Microsoft Docs
-description: 
+description: Defines an inner configuration within a data-set manifest node to allow you to explicitly configure a column of your data-set against a column of a given type from the table against which the data-set is configured.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

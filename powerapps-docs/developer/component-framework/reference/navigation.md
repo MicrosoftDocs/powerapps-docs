@@ -1,6 +1,6 @@
 ---
 title: Navigation | Microsoft Docs
-description: 
+description: Provides navigation-related methods.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

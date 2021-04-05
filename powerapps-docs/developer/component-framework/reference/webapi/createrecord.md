@@ -1,6 +1,6 @@
 ---
 title: createRecord | Microsoft Docs
-description: 
+description: Creates a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

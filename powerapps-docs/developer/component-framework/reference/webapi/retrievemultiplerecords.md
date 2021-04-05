@@ -1,6 +1,6 @@
 ---
 title: retrieveMultipleRecords | Microsoft Docs
-description: 
+description: Retrieves a collection of table records.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

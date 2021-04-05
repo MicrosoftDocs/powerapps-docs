@@ -1,6 +1,6 @@
 ---
 title: RetrieveRecord | Microsoft Docs
-description: 
+description: Retrieves a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

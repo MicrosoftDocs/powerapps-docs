@@ -1,6 +1,6 @@
 ---
 title: updateRecord | Microsoft Docs
-description: 
+description: Updates a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

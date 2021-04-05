@@ -1,6 +1,6 @@
 ---
 title: openForm | Microsoft Docs
-description: 
+description: Opens a form or a quick create form.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

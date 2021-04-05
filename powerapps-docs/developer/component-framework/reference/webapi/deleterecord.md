@@ -1,6 +1,6 @@
 ---
 title: deleteRecord | Microsoft Docs
-description: 
+description: Deletes a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

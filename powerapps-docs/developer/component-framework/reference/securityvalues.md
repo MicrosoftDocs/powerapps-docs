@@ -1,6 +1,6 @@
 ---
 title: SecurityValues | Microsoft Docs
-description: Provides all the information about  table definitions security values.
+description: Provides all the information about table definitions security values.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

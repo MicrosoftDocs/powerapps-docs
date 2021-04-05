@@ -1,6 +1,6 @@
 ---
 title: " Image Upload component| Microsoft Docs" 
-description: "Implementing image upload component using typescript" 
+description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,7 +13,9 @@ author: nkrb
 # Implementing an image upload component
 
 This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time. When you click on the `Upload`, a file explorer pops up to pick an image.
- 
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+
 The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ImageUploadControl).
 
 > [!div class="mx-imgBorder"]
