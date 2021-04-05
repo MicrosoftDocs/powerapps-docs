@@ -33,10 +33,9 @@ web page and interact with the component.
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
 - Your portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
-    > [!NOTE]
+> [!NOTE]
 > This tutorial is based on the existing Power Apps component framework
-tutorial that walks you through to create [TSLinearInputComponent component](../../developer/component-framework/implementing-controls-using-typescript.md) for
-**Opportunity** entity on the **Main** form. You can also use any existing or
+tutorial that walks you through to create [TSLinearInputComponent component](../../developer/component-framework/implementing-controls-using-typescript.md) for **Opportunity** entity on the **Main** form. You can also use any existing or
 new component, and any other entity for this tutorial. In this case, ensure to
 use your component and form when following the steps in this tutorial.
 
