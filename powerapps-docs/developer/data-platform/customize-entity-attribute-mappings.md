@@ -17,9 +17,9 @@ search.app:
 ---
 # Customize table and column mappings
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can map columns between tables that have a relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map tables; see [Map columns](../../maker/data-platform/map-entity-fields.md).
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Behavior in the application
 

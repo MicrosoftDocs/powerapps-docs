@@ -17,9 +17,9 @@ search.app:
 
 # Table definitions in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Each table provides the capability to store structured data. For developers, tables correspond to the classes you will use when working with data in Microsoft Dataverse.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Table names
 
@@ -41,7 +41,7 @@ Each table also has three properties that can display localized values:
 |Name  |Description  |
 |---------|---------|
 |`DisplayName`|Typically, the same as the schema name, but can include spaces. i.e. Account|
-|`DisplayCollectionName`|A plural form of the Display name. i.e. Accounts|
+|`DisplayCollectionName`|A plural form of the display name. i.e. Accounts|
 |`Description`|A short sentence describing the table i.e. *Business that represents a customer or potential customer. The company that is billed in business transactions.*|
 
 These are the localizable values that are used to refer to the tables in an app. These values can be changed at any time. To add or edit localized values see  [Dataverse Customization Guide: Translate customized table and column text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
@@ -76,7 +76,7 @@ Each table that supports table images will have three supporting columns.
 |--|--|--|
 |`EntityImage_Timestamp` |`BigIntType`|The value represents when the image was last updated and is used to help make sure that the latest version of the image is downloaded and cached on the client.|
 |`EntityImage_URL`|`StringType`|An absolute URL to display the table image in a client.|
-|`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
+|`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image.|
 
 More information: [Image columns](image-attributes.md), [Sample: Set and retrieve table images](org-service/samples/set-retrieve-entity-images.md)
 
@@ -174,7 +174,7 @@ The set of valid state codes for a table is not customizable, but the status cod
 
 For custom tables, you can define additional criteria for valid transitions between statuses. 
 More information: 
-- [Customize table column definition](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
+- [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
 - [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
 
 ### See also

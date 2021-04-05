@@ -17,12 +17,11 @@ search.app:
 ---
 # Behavior and format of the date and time column
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref href="Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> class) is used to define and manage columns of type `DateTime` in Microsoft Dataverse. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior>) to define whether to store date and time values with or without time zone information, and use the `DateTimeAttributeMetadata.Format` property to specify the display format of these columns.  
 
-  
- You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the Date and Time column](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
+You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the date and time column](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
@@ -42,7 +41,7 @@ If you have users and offices around the world, it is important to properly repr
  The following sample code demonstrates how to set a `UserLocal` behavior for a new date time column:  
   
  ```csharp
-// Create a date time attribute for the Account entity
+// Create a date time attribute for the Account
 // with the UserLocal behavior
 dtAttribute = new DateTimeAttributeMetadata
 {                             
@@ -61,7 +60,7 @@ CreateAttributeRequest createAttributeRequest = new CreateAttributeRequest
     Attribute = dtAttribute
 };
 _serviceProxy.Execute(createAttributeRequest);
-Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Account entity.\n", 
+Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Account.\n", 
                             dtAttribute.SchemaName);
 ```
   
@@ -173,13 +172,13 @@ _serviceProxy.Execute(updateRequest);
 Console.WriteLine("Updated the behavior and format of '{0}' to DateOnly.",
     retrievedAttributeMetadata.SchemaName);
 
-// Publish customizations to the account entity
+// Publish customizations to the account 
 PublishXmlRequest pxReq = new PublishXmlRequest
 {
     ParameterXml = String.Format("<importexportxml><entities><entity>account</entity></entities></importexportxml>")
 };
 _serviceProxy.Execute(pxReq);
-Console.WriteLine("Published customizations to the Account entity.\n");
+Console.WriteLine("Published customizations to the Account .\n");
  
 ``` 
   
@@ -271,7 +270,7 @@ To resolve this, a user can either:
 ### See also  
 
  [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
- [Behavior and format of the Date and Time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
+ [Behavior and format of the date and time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
  [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 

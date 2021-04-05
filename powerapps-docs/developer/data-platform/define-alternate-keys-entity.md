@@ -17,9 +17,9 @@ search.app:
 ---
 # Work with alternate keys
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 All Microsoft Dataverse records have unique identifiers defined as GUIDs. These are the primary key for each table. When you need to integrate with an external data store, you might be able to add a column to the external database tables to contain a reference to the unique identifier in Dataverse. This allows you to have a local reference to link to the Dataverse record. However, sometimes you can't modify the external database. With alternate keys you can now define a column in a Dataverse table to correspond to a unique identifier (or unique combination of columns) used by the external data store. This alternate key can be used to uniquely identify a record in Dataverse in place of the primary key. You must be able to define which columns represent a unique identity for your records. Once you identify the columns that are unique to the table, you can declare them as alternate keys through the customization user interface (UI) or in the code. This topic provides information about defining alternate keys in the data model.  
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 <a name="BKMK_Declare"></a>
 
