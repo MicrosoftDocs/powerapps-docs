@@ -145,7 +145,7 @@ The December 2016 update has brought many new features to Dynamics 365 Portals. 
 
 ## Previous portals package updates
 
-The following articles provide details about portals packages with versions earlier than 9.2.2103.
+The following articles provide details about portals packages with versions earlier than 9.2.2103.x.
 
 - [Portals package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
 - [Portals package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
