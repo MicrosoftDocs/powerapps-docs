@@ -73,7 +73,47 @@ To the right of the account information section is the contact subgrid.  This gi
 
 Next to the contact subgrid is the reference panel.  This control can give even further access to related records that go beyond just the contacts.  This helps drive data density and efficiencies when working across all related records of the main form.  In this example the reference panel includes contacts, opportunities, leads and products.  One limitation of the reference panel is it only uses read-only views of records.  It does not support a main form of a related record like a main form dialog or a form component.  This is best used when you want to quickly view information of a related record.
 
+:::image type="content" source="media/reference-panel.png" alt-text="Reference panel on main form":::
 
+Currently, you add a reference panel control using the classic form designer.  Select the chevron under the sections option and select reference panel.
+
+:::image type="content" source="media/add-reference-panel.png" alt-text="Add a reference panel to a form":::
+
+Below the contact subgrid is the activities timeline wall. The timeline control allows a user to quickly view recent information about activities that have an activity record associated to the account including emails, phone calls, notes, etc.  Users can also send new emails, log new phone calls, add new notes quickly and easily from the control. More information: [Set up the timeline control](set-up-timeline-control.md)
+
+:::image type="content" source="media/timeline-control.png" alt-text="Timeline control in a contact subgrid":::
+
+## Working with data on a main form best practices
+
+- If you need additional requirements added to data on the form that is not configured on the table, it is important to make sure the data that is required is always visible and editable. For example, a required field for your user based on a business rule. If you require a field and make it read-only it will block users from completing tasks and can create dissatisfaction and frustration for your users. Although, hidden and read-only components are supported by the Power Apps platform, it is important to know that if a user saves data on form with a required field that is not editable, the save will process.  This ensures a user is never blocked from completing a task based on a bad design pattern.
+
+- Hidden fields can be used like read-only fields and are very handy when building data dense forms, however, the same applies when working with required fields, you should never hide a required field if it can be null when editing a record.  You can use business rules or events to hide or show fields on a form, however, the form will behave the same as a read-only field when saving.  Model-driven forms will always allow for the save if a field is required but hidden on the form.  
+
+- If data needs to always be available, regardless of the tab a user is on, it is vital to add that data to the header.  It is important to know that the high-density headers in the Unified interface will only display up to four read-only fields.  However, you can use the high-density headers with a flyout to add additional fields that also allow users to edit fields.  This streamlines the experience to quickly access and edit information that you always want available without multiple clicks or additional navigation.
+
+## Building multi-entity forms
+
+The previous section provided good examples of how to work with data that is directly related to a record. However, what can drive even further efficiencies is working with related data directly from the main form, without navigating away.  This keeps the user in context and reduces friction and improves satisfaction by streamlining experiences using a main form dialog or a form component control.
+
+The following sections walk through several scenarios that show how to build highly performant multi-entity forms. The goal is to streamline user experiences that reduce clicks and unnecessary navigation, and speeds up daily tasks that often require a user to interact with related records on a main form.  This include using a main form dialog, a main form component control, a quick create form, and a quick view form.
+
+### Using a main form dialog 
+
+Using a main form dialog is very powerful when you need to have users access, and more importantly, interact with all of the information of a related record.  This would include when users need to work with a [business process flow](/power-automate/business-process-flows-overview), access to all the tabs, or all of the related records on the form.  This is important when there are business processes that drive requirements on a related record that need to be followed to ensure data integrity. Users need access to timeline activities or need access to related records of the child record without additional navigation.  Note that a main form dialog can be configured directly from the lookup control and can be used on the command bars or with JavaScript using the `navigateTo` client API.  The dialog can be positioned on the left, middle or right side of the page as a model dialog overlay. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+
+In this example a user needs to access the primary contact record, update the phone number, add a note in the activities timeline and create a new appointment from the contact form.  To streamline this experience that reduces clicks and unnecessary navigation, the lookup control is configured to open the contact main form as a dialog. This example shows how the main form dialog can use quick create forms from the related record, incorporate duplicate records, and allow the user to fully interact with data on the related record.
+
+:::image type="content" source="media/main-form-dialog.gif" alt-text="Main form dialog for quick create":::
+
+### Using the form component control
+
+Often you only need to edit information on a related record that doesn’t require the user to interact with the entire form and doesn't need additional business process like a business process flow, but you do not want the ability to navigate to the related form. To accomplish this scenario and streamline managing data inline on the main form, you can use a form component control. The form component control provides the user with access to the related record including all the sections, controls, and fields on the related record form. Form components can also be used for specific actions with forms designed for only that task. An example of this is the Microsoft Dynamics Field Service Mobile experience. Form components are used to manage work orders and tasks related to those work orders in a streamlined and more efficient process.
+
+Note that a form component control will use any form that you have created for that record and it will honor any events including loading a form, saving data, on change information.  It will also honor any business rules and actions on the form including opening a main form dialog from a lookup (if you have configured the form to work in that manner).  It will also include any duplicate detection rules and parent child relationships when working with data in the related record form component.  The form control component promotes unsaved changes to the main form and notifies users when a field is required and if there are data entry errors on the related form component.
+
+In this example a user is editing the primary contact information directly on the account main form and scrolls down the form to create a new appointment for the primary contact without leaving the account form.
+
+:::image type="content" source="media/form-control-component.gif" alt-text="Form control component used to create an appointment without leaving the main form":::
 
 ### See also
 [Optimize model-driven app form performance](optimize-form-performance.md)
