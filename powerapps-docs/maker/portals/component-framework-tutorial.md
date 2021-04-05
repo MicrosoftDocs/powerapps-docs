@@ -50,21 +50,14 @@ TSLinearInputComponent packaged and uploaded to your Dataverse environment.
 
 ## Step 2. Add a code component to a field in model-driven app
 
-Now that you have the TSLinearInputComponent component uploaded to the Dataverse
-environment, follow the steps in the tutorial [Add a code component to a field
-in model-driven
-apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
+Now that you have the TSLinearInputComponent component uploaded to the Dataverse environment, follow the steps in the tutorial [Add a code component to a field in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
 to add the component to the **Opportunity** entity on the **Main** form.
 
 ## Step 3. Verify the model-driven app with the new component
 
-You can [update an existing model-driven
-app](../model-driven-apps/design-custom-business-apps-using-app-designer.md),
-or [create a new
-app](../model-driven-apps/build-first-model-driven-app.md)
-with the form that you added the component to. For example, this is how the
-**Opportunity** entity **Main** form looks like when using the code component in
-this tutorial.
+You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md), or [create a new
+app](../model-driven-apps/build-first-model-driven-app.md) with the form that you added the component to. For example, the following image shows how the
+**Opportunity** entity **Main** form looks like when using the code component in this tutorial.
 
 ![Slider control added to the Budget Amount field in model-driven app form](media/component-framework/model-driven-app.png "Slider control added to the Budget Amount field in model-driven app form")
 
@@ -203,9 +196,7 @@ instead.
 
 14. From the top-right corner, select **Browse website**.
 
-The portals web page now shows the entity form for **Opportunities** entity with
-the code component as the slider, like how it appears using model-driven app for
-the same form.
+The portals web page now shows the entity form for **Opportunities** entity with the code component as the slider, like how it appears using model-driven app for the same form.
 
 ![Example preview of the Budget Amount slider control on portals page](media/component-framework/example-preview.png "Example preview of the Budget Amount slider control on portals page")
 
