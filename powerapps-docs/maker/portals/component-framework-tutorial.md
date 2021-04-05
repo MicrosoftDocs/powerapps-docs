@@ -206,5 +206,6 @@ The web page now shows the entity form for **Opportunities** entity with the cod
 ### See also
 
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
-[Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md)
+[Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
 [Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
+
