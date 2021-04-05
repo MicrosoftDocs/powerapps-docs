@@ -17,10 +17,10 @@ search.app:
 ---
 # Define custom state model transitions
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can specify custom state transitions for the `Incident` (**Case**) table or custom tables. The <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsStateModelAware> property is `true` for tables that support state model transitions.  
-  
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
  Custom state transitions are an optional level of filtering to define which state transitions are valid for a record in a given state. Particularly when you have a large number of combinations for valid states and status values, defining a limited list of options can make it easier for people to choose the correct status for a record.  
 
 <a name="BKMK_StateModel"></a>
@@ -48,7 +48,7 @@ Tables that support the concept of state have a pair of columns that capture thi
   
  This data is stored in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> class, which represents the options in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> class.  
   
-To view table definitions for your organization, install the Metadata Browser solution described in [Browse table definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table Reference](/reference/about-entity-reference.md).
+To view table definitions for your organization, install the Metadata Browser solution described in [Browse table definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table/entity reference](/reference/about-entity-reference.md).
   
 <a name="BKMK_DetectValidStatusTransitions"></a>   
 

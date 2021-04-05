@@ -17,9 +17,9 @@ search.app:
 ---
 # Choices columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 With the Web API, this column is defined using the <xref href="Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType" />.
 
@@ -331,8 +331,8 @@ But if you need to automate creation of this kind of column you can use C# code 
 [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-entity-attributes)<br />
 [Create a table using the Web API](webapi/create-entity-web-api.md)<br />
 [Query Data using the Web API](webapi/query-data-web-api.md)<br />
-[Work with column definition](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
-[Sample: Work with column definition](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
+[Work with column definitions](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
+[Sample: Work with column definitions](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
 [Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
 
 
