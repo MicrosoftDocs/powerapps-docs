@@ -1694,7 +1694,7 @@
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
-        - name: Code components
+        - name: Code components (Preview)
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
