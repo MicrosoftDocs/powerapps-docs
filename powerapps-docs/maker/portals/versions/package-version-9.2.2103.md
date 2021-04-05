@@ -24,7 +24,7 @@ For a full list of all portal updates released to date and their corresponding K
 
 For more information about creating a portal with Starter Portal package, go to [Create a Dataverse starter portal](../create-portal.md) or [Create a starter portal in an environment containing customer engagement apps](../create-dynamics-portal.md).
 
-### Enhancements
+## Enhancements
 
 The package update includes the following enhancements extending the capabilities of portals.
 
@@ -34,7 +34,7 @@ The package update includes the following enhancements extending the capabilitie
 - Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
 - Handle XSS vector gracefully on page load.
 
-### Fixes
+## Fixes
 
 The package update includes the fixes for the following problems.
 
