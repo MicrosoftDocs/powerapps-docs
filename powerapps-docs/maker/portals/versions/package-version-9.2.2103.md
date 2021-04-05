@@ -1,32 +1,28 @@
 ---
-title: "Information about Power Apps portals package version 9.2.2103 | MicrosoftDocs"
-description: "Learn about the Power Apps portals package version 9.2.2103 and the changes."
+title: "Information about the Starter Portal package version 9.2.2103 | MicrosoftDocs"
+description: "Learn about the Starter Portal package version 9.2.2103 and the changes."
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/01/2021
+ms.date: 04/05/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Power Apps portals package version 9.2.2103
+# Starter Portal package version 9.2.2103.x
 
-Power Apps portal package version 9.2.2103 is generally available. To learn about how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
+Starter Portal package version 9.2.2103.x is generally available. To learn about how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
 
-In this article, you'll learn about:
+In this article, you'll learn about the fixes and enhancements included in this update.
 
-- Features and enhancements included in this update.
-- Scope of the release.
+> [!NOTE]
+> - Starter Portal shows as Common Data Service Starter Portal in Power Platform admin center.
+> - Package updates are released in stages across regions. During the rollout phase, your environment may take time to show the new package update depending on your region.
 
 For a full list of all portal updates released to date and their corresponding KB articles, go to [Portal Capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/topic/portal-capabilities-for-microsoft-dynamics-365-releases-81f5fcc9-ef72-8b2e-5b4b-29e9840fb5c4).
 
-## Updates included with portals package version 9.2.2103
-
-This portals package version update includes the changes to the following packages:
-
-- [Dataverse Starter Portal](../create-portal.md)
-- [Starter Portal](../create-dynamics-portal.md) (Portal from blank) for environments with customer engagement apps.
+For more information about creating a portal with Starter Portal package, go to [Create a Dataverse starter portal](../create-portal.md) or [Create a starter portal in an environment containing customer engagement apps](../create-dynamics-portal.md).
 
 ### Enhancements
 
@@ -41,10 +37,10 @@ This portals package version update includes the changes to the following packag
 - Saving Entity Form Metadata without mandatory field.
 - Action button configuration gets cleared within additional setting.
 - Enable IsVisibleInMobileClient field for Contact in Microsoft Identity.
-- Web form lookup field create new metadata is not working.
-- Deactivating a root page needs to deactivate it's content pages too.
+- Web form lookup field create new metadata isn't working.
+- Deactivating a root page needs to deactivate its content pages too.
 - Hide Post back URL Field on the web form step.
-- Web form lookup field create new metadata is not working.
+- Web form lookup field create new metadata isn't working.
 
 > [!NOTE]
 > In addition, this package also release contains accessibility fixes.
