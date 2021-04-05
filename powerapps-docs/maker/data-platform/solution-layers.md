@@ -71,7 +71,7 @@ There are additional tabs available for specific component solution layers.
 |AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for a choice .   | Added, Updated, Removed, Unchanged        |
 |AttributePicklistValues (optionset attribute)   |  When selected for a choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
-## Remove an unmanaged layer
+### Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
 > [!WARNING]
