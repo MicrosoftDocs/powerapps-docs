@@ -24,9 +24,9 @@ search.app:
 
 # Table relationship definitions
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of relationships. Actually, there are only two, as shown in the following table.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 |Relationship Type|Description|
 |--|--|
