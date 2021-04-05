@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/29/2021
+ms.date: 04/05/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -30,13 +30,10 @@ web page and interact with the component.
 
 ## Prerequisites
 
-You need a Power Apps portal with version [9.3.3.x](version-9.3.3.x.md) or higher to follow this tutorial.
+- Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
+- Your portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
-Though this tutorial uses Employee Self-Service portal template, you can also use
-Dataverse starter portal instead. When using a starter portal, ensure to replace
-references to the portal web site.
-
-> [!NOTE]
+    > [!NOTE]
 > This tutorial is based on the existing Power Apps component framework
 tutorial that walks you through to create [TSLinearInputComponent component](../../developer/component-framework/implementing-controls-using-typescript.md) for
 **Opportunity** entity on the **Main** form. You can also use any existing or
@@ -146,7 +143,7 @@ instead.
 4.  Enter **Name**. For example, *Permissions for code component on the Web
     Resource entity*.
 
-5.  Select **Entity** as **Opportunity***.*
+5.  Select **Entity** as **Web Resource (webresource)**.
 
 6.  Select your **Website**.
 

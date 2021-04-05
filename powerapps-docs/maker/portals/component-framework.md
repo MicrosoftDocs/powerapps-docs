@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/29/2021
+ms.date: 04/05/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -45,7 +45,8 @@ After following these steps, your users can now interact with the code component
 
 -   System Administrator privileges are required to enable the Power Apps
     component feature in the environment.
-- Your portal version must be [9.3.3.x](version-9.3.3.x.md) or higher.
+- Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
+- Your portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 ## Create and package code component
 
