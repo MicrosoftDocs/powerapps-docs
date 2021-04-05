@@ -156,7 +156,7 @@ To learn about how to add code component to a field in model-driven app, go to
 field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field).
 
 > [!IMPORTANT]
-> Code components for portals be available for web browsers using the
+> Code components for portals are available for web browsers using the
 client option of **Web**.
 
 ## Configure portal for code component
