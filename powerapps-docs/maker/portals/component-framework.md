@@ -28,7 +28,7 @@ Power Apps portals now supports controls for model-driven apps created using
 Power Apps component framework. To use code components in portals webpages,
 follow these steps:
 
-![Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside entity form for portals and allow Read permission to the Web Resource entity.](media/component-framework/steps.png "Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside entity form for portals and allow Read permission to the Web Resource entity.")
+![Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the entity form for portals and allow Read permission to the Web Resource entity.](media/component-framework/steps.png "Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the entity form for portals and allow Read permission to the Web Resource entity.")
 
 After following these steps, your users can now interact with the code component using the portal page that has the respective entity form.  
 
@@ -46,7 +46,7 @@ After following these steps, your users can now interact with the code component
 -   System Administrator privileges are required to enable the Power Apps
     component feature in the environment.
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
-- Your portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
+- Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 ## Create and package code component
 
@@ -163,22 +163,17 @@ client option of **Web**.
 
 After the code component is added to a field in model-driven app, you can now
 configure portals to use the code component in the entity form. Once you
-configure the code component on entity form, ensure you configure entity
+configure the code component on an entity form, ensure you configure entity
 permission to allow **Read** access to **Web Resource** entity for the portal
 users before they can see the component on the portal page.
 
-> [!NOTE]
-> Private preview participants must import this attached managed
-solution before proceeding to next step for adding the code component to an
-entity form.
-
-To add code component to entity form:
+To add code component to an entity form:
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  Select **Entity Forms** from the left pane.
+2.  On the left-pane, select **Entity Forms**.
 
 3.  Select the entity form you want to add the code component to.
 
@@ -201,7 +196,7 @@ To add code component to entity form:
 ## Allow Read access to Web Resource entity
 
 Portals requires **Read** permission to be set on **Web Resource** entity before
-users can see the code component on the web page with entity form.
+users can see the code component on the web page with the entity form.
 
 To configure Read access on Web Resource entity:
 
@@ -209,7 +204,7 @@ To configure Read access on Web Resource entity:
     Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal)
     app.
 
-2.  Select **Entity Permission** from the left pane.
+2.  On the left-pane, select **Entity Permission**.
 
 3.  Select **New**.
 

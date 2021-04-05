@@ -31,11 +31,11 @@ web page and interact with the component.
 ## Prerequisites
 
 - Your portal version must be [9.3.3.x](versions/version-9.3.3.x.md) or higher.
-- Your portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
+- Your starter portal package must be [9.2.2103.x](versions/package-version-9.2.2103.md) or higher.
 
 > [!NOTE]
 > This tutorial is based on the existing Power Apps component framework
-tutorial that walks you through to create [TSLinearInputComponent component](../../developer/component-framework/implementing-controls-using-typescript.md) for **Opportunity** entity on the **Main** form. You can also use any existing or
+tutorial that walks you through to create [TSLinearInputComponent](../../developer/component-framework/implementing-controls-using-typescript.md) for **Opportunity** entity on the **Main** form. You can also use any existing or
 new component, and any other entity for this tutorial. In this case, ensure to
 use your component and form when following the steps in this tutorial.
 
@@ -72,7 +72,7 @@ instead.
     Management](configure/configure-portal.md)
     app.
 
-2.  From the left-pane, under **Content**, select **Entity Forms.**
+2.  On the left-pane, under **Content**, select **Entity Forms.**
 
 3.  Select **New**.
 
@@ -92,13 +92,13 @@ instead.
 
 9.  Select **Save & Close**.
 
-### Step 4.2. Add code component to entity form
+### Step 4.2. Add code component to the entity form
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  From the left-pane, under **Content**, select **Entity Forms.**
+2.  On the left-pane, under **Content**, select **Entity Forms.**
 
 3.  Select the entity form that you created in the earlier in this tutorial.
 
@@ -128,7 +128,7 @@ instead.
     Management](configure/configure-portal.md)
     app.
 
-2.  From the left-pane, under **Security**, select **Entity Permissions.**
+2.  On the left-pane, under **Security**, select **Entity Permissions.**
 
 3.  Select **New**.
 
@@ -162,7 +162,7 @@ instead.
 1.  Open your portal in [Power Apps portals
     Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy).
 
-2.  From the top-left corner, select **New page** drop-down menu.
+2.  On the top-left corner, select **New page** drop-down menu.
 
 3.  Select **Blank**.
 
@@ -180,7 +180,7 @@ instead.
 9.  Inside the page editor, below the Header section, select the **Column**
     section.
 
-10. From the left-pane, select **Components**.
+10. On the left-pane, select **Components**.
 
 11. Under **Portal components**, select **Form**.
 
@@ -193,9 +193,9 @@ instead.
     > If you don’t see the form available, try **Sync Configuration** to
     synchronize changes from Dataverse.
 
-14. From the top-right corner, select **Browse website**.
+14. On the top-right corner, select **Browse website**.
 
-The portals web page now shows the entity form for **Opportunities** entity with the code component as the slider, like how it appears using model-driven app for the same form.
+The web page now shows the entity form for **Opportunities** entity with the code component as the slider, similar to how it appears using model-driven app for the same form.
 
 ![Example preview of the Budget Amount slider control on portals page](media/component-framework/example-preview.png "Example preview of the Budget Amount slider control on portals page")
 
