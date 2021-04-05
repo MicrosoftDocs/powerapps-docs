@@ -72,10 +72,18 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
-Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
+Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. 
+
+### Lookup column type behaviors
+Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a result set.
+
+### Choice column type behaviors
+Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
+>[!TIP]
+> After making changes to labels for a choice column, the table needs to have customizations published. 
 
 The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
-`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
+`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
