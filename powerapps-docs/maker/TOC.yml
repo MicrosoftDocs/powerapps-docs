@@ -1773,7 +1773,11 @@
          - name: Version updates
            items:
               - name: Version 9.3.3.x
-                href: ./portals/version-9.3.3.x.md
+                href: ./portals/versions/version-9.3.3.x.md
+         - name: Starter Portal package updates
+           items:
+              - name: Package 9.2.2103
+                href: ./portals/versions/package-version-9.2.2103.md
 - name: Dataverse
   items:
   - name: Dataverse
