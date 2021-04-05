@@ -17,7 +17,7 @@ Starter Portal package version 9.2.2103.x is generally available. To learn about
 In this article, you'll learn about the fixes and enhancements included in this update.
 
 > [!NOTE]
-> - Starter Portal shows as Common Data Service Starter Portal in Power Platform admin center.
+> - The update package for Starter Portal shows as Common Data Service Starter Portal in Power Platform admin center.
 > - Package updates are released in stages across regions. During the rollout phase, your environment may take time to show the new package update depending on your region.
 
 For a full list of all portal updates released to date and their corresponding KB articles, go to [Portal Capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/topic/portal-capabilities-for-microsoft-dynamics-365-releases-81f5fcc9-ef72-8b2e-5b4b-29e9840fb5c4).
@@ -41,13 +41,12 @@ The package update includes the fixes for the following problems.
 - Saving Entity Form Metadata without mandatory field.
 - Action button configuration gets cleared within additional setting.
 - Enable IsVisibleInMobileClient field for Contact in Microsoft Identity.
-- Web form lookup field create new metadata isn't working.
-- Deactivating a root page needs to deactivate its content pages too.
+- Web form lookup field to create new entity form isn't working.
+- Deactivating a root page needs to deactivate its content pages.
 - Hide Post back URL Field on the web form step.
-- Web form lookup field create new metadata isn't working.
 
 > [!NOTE]
-> In addition, this package also release contains accessibility fixes.
+> In addition, this package release contains accessibility fixes.
 
 ### See also
 
