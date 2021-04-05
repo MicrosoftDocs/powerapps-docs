@@ -17,9 +17,10 @@ search.app:
 ---
 # Appendix: App certification checklist
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The following checklist provides the list of validations performed by Microsoft during the certification process after you [submit](next-steps-submit-app-cloud-partner-portal.md) your app. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 <table>
 <tbody>

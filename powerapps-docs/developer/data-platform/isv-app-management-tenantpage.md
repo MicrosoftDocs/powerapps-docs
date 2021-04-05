@@ -23,8 +23,6 @@ search.app:
 
 # The Tenant page
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 To view the install history of a tenant, the ISV can switch to **Top tenants** view on the home page and select a tenant.
 
 ![Install history of a tenant](media/isv-portal-homepage-tenantpivot.png)
@@ -32,6 +30,8 @@ To view the install history of a tenant, the ISV can switch to **Top tenants** v
 The Tenant page contains the following graphs and metrics:
 
 ![Tenant page](media/isv-portal-tenantpage.png)
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Installs by date
 

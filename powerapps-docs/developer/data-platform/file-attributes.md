@@ -17,9 +17,9 @@ search.app:
 ---
 # File columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file column is `EntityFile`.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
