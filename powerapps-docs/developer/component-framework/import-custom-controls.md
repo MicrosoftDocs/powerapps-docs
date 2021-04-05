@@ -15,6 +15,8 @@ author: Nkrb
 
 This article describes how to import code components into Microsoft Dataverse. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 To create and import a solution file:
 
 1. Create a new folder inside the sample component folder and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.

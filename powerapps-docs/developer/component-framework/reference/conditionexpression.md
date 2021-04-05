@@ -78,7 +78,7 @@ The `conditionOperator` value is an enum with the following possible values
 
 ### entityAliasName
 
-Entity alias name so filtering can be used on linked tables.
+Table alias name so filtering can be used on linked tables.
 
 **Type**: `string`
 

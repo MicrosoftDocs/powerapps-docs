@@ -16,6 +16,7 @@ ms.topic: "article"
 
 Code components let you transform columns that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
    > [!div class="mx-imgBorder"] 
    > ![Custom slider control](../../maker/model-driven-apps/media/slider-control.PNG "Custom slider control ")

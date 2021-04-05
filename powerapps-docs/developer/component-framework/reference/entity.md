@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Entity
 
-Defines a tab;e sent or received from the SDK through the Web API.
+Defines a table sent or received from the SDK through the Web API.
 
 ## Available for
 

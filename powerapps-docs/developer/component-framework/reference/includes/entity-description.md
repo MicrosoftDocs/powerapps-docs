@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 704ecc96-34b1-47cc-a27b-0b6ff97f9321
 ---
 
-Provides properties and methods to work with data on an entity.
+Provides properties and methods to work with data on a table.

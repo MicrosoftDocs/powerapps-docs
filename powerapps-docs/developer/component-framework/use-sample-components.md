@@ -16,6 +16,8 @@ ms.topic: "article"
 
 All the sample components listed under this section are available to download from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) so that you can try them out in your model-driven or canvas apps.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
 
 ## Before you can try the sample components

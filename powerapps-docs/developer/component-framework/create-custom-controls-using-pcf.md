@@ -17,6 +17,8 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 This article demonstrates how to create and deploy code components using Power Apps CLI. Ensure that you have installed [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 ## Create a new component
 
 To begin, open **Developer Command Prompt for VS 2017 or higher** after installing Power Apps CLI.

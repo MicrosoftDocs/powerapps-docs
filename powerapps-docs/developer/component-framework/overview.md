@@ -21,6 +21,7 @@ Power Apps component framework empowers professional developers and app makers t
 - Replace a column that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]
 
