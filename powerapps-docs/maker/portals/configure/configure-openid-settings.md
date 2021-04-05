@@ -59,7 +59,7 @@ In this article, you'll learn about configuring an OpenID Connect provider for p
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** section on the **Configure identity provider** screen (step 6 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
 
         ![Register application](media/authentication/register-application.png "Register application")
 
