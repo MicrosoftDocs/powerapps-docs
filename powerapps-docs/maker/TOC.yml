@@ -2121,7 +2121,7 @@
           href: ../teams/milestones.md
         - name: Understand sample app architecture
           items:
-            - name: Bulletins
+            - name: Bulletins (Preview)
               href: ../teams/bulletins-architecture.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md

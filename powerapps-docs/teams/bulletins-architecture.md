@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Understand Bulletins sample app architecture
 
+[This article is pre-release documentation and is subject to change.]
+
 In this document, you'll learn about the collections and global variables used by the [Manage Bulletins](bulletins.md#manage-bulletins-app) and [Bulletins](bulletins.md#bulletins-app) apps, understand and how to use them effectively. If you want to learn more about how to install, and use the Bulletins sample app instead, go to [Bulletins sample app](bulletins.md).
 
 ## Prerequisites
@@ -23,6 +25,12 @@ To understand and use information in this article, you'll need to know about dif
 - [Understand canvas-app variables in Power Apps](../maker/canvas-apps/working-with-variables.md)
 - [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
+
+You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](bulletins.md) Bulletins sample app.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Data model
 
