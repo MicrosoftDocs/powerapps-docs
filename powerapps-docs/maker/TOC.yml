@@ -1082,6 +1082,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Design forms for efficiency
+          href: design-productive-forms.md
+          items: 
+          - name: Design considerations for main forms
+            href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
           href: ./model-driven-apps/form-designer-overview.md
           items:
@@ -1116,7 +1121,7 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
-        - name: Form editor overview
+        - name: Classic form editor
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
           - name: Form properties overview
@@ -1125,10 +1130,8 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
-        - name: Design considerations for main forms
-          href: ./model-driven-apps/design-considerations-main-forms.md
-        - name: How main forms appear
-          href: ./model-driven-apps/main-form-presentations.md
+          - name: How main forms appear
+            href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Add a column to a form
