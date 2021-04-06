@@ -43,7 +43,7 @@ The layout of a Unified Interface application:
 
 - The application header is not part of the form and is part of the overall page structure of a model-driven app.  The app header contains information about the application including the name, and app level actions that include search, help, assistance, quick create forms, settings (personal and app level for admins), etc.
 - The application sitemap is also not part of the main form. It contains navigation across the application to pages that are included in your application and a quick way to access other areas of your application with the area switcher at the bottom of the sitemap.
-- The form command bar is also not part of the main form.  It can be configured and set-up using [Ribbon Workbench](https://www.xrmtoolbox.com/plugins/RibbonWorkbench2016/).  You can customize navigation and interaction on the form.  Several out-of-box options include saving, creating a new record, sharing, merging, editing multiple records, etc.
+- The form command bar is also not part of the main form.  It can be configured and set-up using the [Ribbon Workbench](https://www.xrmtoolbox.com/plugins/RibbonWorkbench2016/) plugin for [XrmToolBox](https://www.xrmtoolbox.com/).  You can customize navigation and interaction on the form.  Several out-of-box options include saving, creating a new record, sharing, merging, editing multiple records, etc.
 - The form header is part of a form.  It includes the table and record name, the ability to switch to additional forms for the table, four read-only fields of the record are displayed and the tabs included on the form.  Forms will only show in the form select if they are enabled and added to the application. More information: [Create and design model-driven app forms](create-design-forms.md) 
 - Form headers also have a mode where you can add more than four fields and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access form the form header.  Additional tabs should be used to access information that is not primary to the task at hand or to focus the user on data or information that is specific to a given task but is not primary to the job.  Information that is necessary and is primary to working with data should be on the first tab and should never be hidden.
 - The form body is the area on the form that should be used to interact with data of the primary record and any related records that are essential to completing a task.  The best practice is to limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs.  You should also consider [building forms based on specific business needs and roles](design-considerations-main-forms.md) when designing your application.  Also, if there is data that is rarely used you should consider building another form that can be accessed when a user needs to reference the data or information. This will ensure a highly performant form and will help the user stay focused on important tasks that need to be completed.
@@ -114,6 +114,44 @@ Note that a form component control will use any form that you have created for t
 In this example a user is editing the primary contact information directly on the account main form and scrolls down the form to create a new appointment for the primary contact without leaving the account form.
 
 :::image type="content" source="media/form-control-component.gif" alt-text="Form control component used to create an appointment without leaving the main form":::
+
+### Using quick create forms
+
+There will be times when you want to create an experience where users can quickly create records without additional navigation or clicks.  A quick create form is a really good solution. It can be used in multiple scenarios that include creating appointments from an activity timeline wall, creating a contact from a lookup if a main form dialog isn't needed, or quickly creating a record from a view page, like an account or contact that doesn’t require additional relationships for data integrity (app menu “+” option). More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](create-edit-quick-create-forms.md)
+
+In the the example here, a user needs to quickly create a lead using the “+” menu option in the app header.
+
+:::image type="content" source="media/create-lead.gif" alt-text="Create lead record from view":::
+
+In this example the quick create form is used to create an appointment for a contact from the timeline wall.
+
+:::image type="content" source="media/create-appt-from-timeline.gif" alt-text="Create an appointment from the timeline control":::
+
+In this example a user can quickly create an opportunity from a quote record form using a lookup control.
+
+> [!NOTE]
+> Opportunity and quote tables require a Dynamics 365 customer engagement app, such as Dynamics 365 Sales.
+
+:::image type="content" source="media/create-opportunity-from-quote.gif" alt-text="Create an opportunity record from a quote record":::
+
+### Using quick view forms for read-only access to related tables
+
+In many scenarios a user just needs to quickly see information from a related table without having to interact with it or doesn’t have write access and can only view the information on that record.  To facilitate these scenarios, you can use quick-view forms.  The forms can be built to only show the most important information needed to complete tasks that do not require a user to edit the information.  An example of where a quick-view forms is used is in the reference panel of a main record.  This demonstrates the power of accessing multiple related records without having to navigate away.  You can also add quick-view forms directly onto a main form when you want related information to be accessed but not edited by a user. More information: [Create a model-driven app quick view form to view information about a related table](create-edit-quick-view-forms.md)
+
+:::image type="content" source="media/quick-view-form.gif" alt-text="Quick view form example":::
+
+### Using form display options to reduce clutter and build focused forms
+
+There are many times when you need to build an experience that focuses the user on the task at hand without additional distraction that could cause inefficiency.  This is especially important when you are working with tables and records that have global components, which are created and automatically added to forms regardless of the task you are trying to build.  While this provides a very shareable and easy-to-build infrastructure that drives consistency across an app, it does at times provide unnecessary distraction.
+
+Form display options should be used when you want to lessen the number of actions, focus a user to complete a task, and reduce clutter by removing unnecessary components that can include the command bar, the header body, the form tabs and the form footer.  All of these types of options are only available via the client API and manual formxml updates. Manual formxml manipulation can cause issues importing solutions if done incorrectly, so do so carefully when designing your form.
+
+Also consider that when you hide certain components like the command bar or the tab list, you will remove navigation that may be necessary to complete a task. Be sure to account for those requirements in your form design with additional controls created using the Power Apps component framework.
+
+In this example, the command bar has been removed to reduce any unnecessary actions when working with an account.  This form has been specifically designed to not need the command bar so the maker has removed it to keep the user on task.
+
+:::image type="content" source="media/form-no-command-bar.png" alt-text="Form in app with no command bar":::
+
 
 ### See also
 [Optimize model-driven app form performance](optimize-form-performance.md)
