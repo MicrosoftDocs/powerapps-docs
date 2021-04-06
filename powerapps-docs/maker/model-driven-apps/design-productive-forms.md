@@ -148,10 +148,27 @@ Form display options should be used when you want to lessen the number of action
 
 Also consider that when you hide certain components like the command bar or the tab list, you will remove navigation that may be necessary to complete a task. Be sure to account for those requirements in your form design with additional controls created using the Power Apps component framework.
 
-In this example, the command bar has been removed to reduce any unnecessary actions when working with an account.  This form has been specifically designed to not need the command bar so the maker has removed it to keep the user on task.
+In this example, the command bar has been removed to reduce any unnecessary actions when working with an account.  This form has been specifically designed to not need the command bar so the maker has removed it to keep the user on task. More information: [setCommandBarVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setCommandBarVisible.md)
 
 :::image type="content" source="media/form-no-command-bar.png" alt-text="Form in app with no command bar":::
 
+In this example the header has been removed to promote a dense form that focuses the user on  record details.  This should only be used if the header does not provide additional value or is not needed to display information that does not always need to be available to a user. More information: [setBodyVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setBodyVisible.md)
+
+:::image type="content" source="media/form-no-header.png" alt-text="Form in app without a header":::
+
+In this example the tabs have been removed.  This can be helpful when you build a form that only has a single tab or you want to focus the user on the first tab of a form without the distractions of additional tabs that can lead to loss in productivity for a specific task. More information: [setTabNavigatorVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setTabNavigatorVisible.md)
+
+:::image type="content" source="media/form-no-tabs.png" alt-text="Form in app without tabs":::
+
+In some scenarios where you want more data density and do not use or need the form footer you can easily remove it to provide more data and information on the form.  This can also help drive consistency as user move from dashboards and view pages where footers are not included on the page.  In this example the form footer has been removed to reduce clutter and drive data density. More information: [setVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md)
+
+:::image type="content" source="media/form-no-footer.png" alt-text="Form in app without a footer":::
+
+### Form display option to use the entire space of a tab
+
+In many scenarios you may have a form with a tab and a single control and you want that control to take up the entire available space within the body of the form on that tab.  You can do that using the form display option that allows the first control on a page in a tab to expand the full height and width of the form.  All existing reflow rendering across view port sizes from very large to small is honored and will behave like a regular form but the control will use the entire space.  In this example, the Dynamics 365 Marketing application supports a full tab layout for the customer journey experience.  The command bar is removed to further reduce clutter and ensure the user is focused on the task of managing customer journey’s in the application. More information: [setContentType (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-tabs/includes/setContentType-description.md)
+
+:::image type="content" source="media/tab-using-entire-space.png" alt-text="Form with full tab layout":::
 
 ### See also
 [Optimize model-driven app form performance](optimize-form-performance.md)
