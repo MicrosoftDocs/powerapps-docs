@@ -30,6 +30,8 @@
       href: add-custom-controls-to-a-field-or-entity.md
     - name: Add components to canvas apps
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
+    - name: Add components to portals (Preview)
+      href: ../../maker/portals/component-framework-tutorial.md
     - name: Update existing code components
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
