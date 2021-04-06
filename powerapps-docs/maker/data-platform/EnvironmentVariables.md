@@ -131,6 +131,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - When editing a cloud flow, the environment variables are shown in the dynamic content selector under a heading of **Parameters** but will be under a heading of **Environment Variables** in the near future. 
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
+- When editing a cloud flow, an environment variable with a label of **$authentication** might show up that was not defined in the environment. 
  
 ## Frequently asked questions
 
