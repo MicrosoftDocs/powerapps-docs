@@ -1,6 +1,6 @@
 ---
 title: " Navigation API component| Microsoft Docs" 
-description: "Implementing navigation api component" 
+description: "This sample component explores the various methods available as part of the Power Apps component framework navigation API." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing Navigation API component
 
 This sample component explores the various methods available as part of the Power Apps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_NavigationAPI).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
