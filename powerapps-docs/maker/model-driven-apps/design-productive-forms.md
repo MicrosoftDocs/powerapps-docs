@@ -49,7 +49,7 @@ The layout of a Unified Interface application:
 - The form header is part of a form.  It includes the table and record name, the ability to switch to additional forms for the table, four read-only fields of the record are displayed and the tabs included on the form.  Forms will only show in the form select if they are enabled and added to the application. More information: [Create and design model-driven app forms](create-design-forms.md) 
 - Form headers also have a mode where you can add more than four fields and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access form the form header.  Additional tabs should be used to access information that is not primary to the task at hand or to focus the user on data or information that is specific to a given task but is not primary to the job.  Information that is necessary and is primary to working with data should be on the first tab and should never be hidden.
 - The form body is the area on the form that should be used to interact with data of the primary record and any related records that are essential to completing a task.  The best practice is to limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs.  You should also consider [building forms based on specific business needs and roles](design-considerations-main-forms.md) when designing your application.  Also, if there is data that is rarely used you should consider building another form that can be accessed when a user needs to reference the data or information. This will ensure a highly performant form and will help the user stay focused on important tasks that need to be completed.
-- The form footer displays the form status and command for saving and popout (displays the form in a new window). Only the form footer width can be customized.  
+- The form footer displays the form status and commands for saving and popout (displays the form in a new window). Only the form footer width can be customized.  
 
 ## Example scenario of productive form design
 
@@ -81,13 +81,15 @@ Currently, you add a reference panel control using the classic form designer.  S
 
 :::image type="content" source="media/add-reference-panel.png" alt-text="Add a reference panel to a form":::
 
-Below the contact subgrid is the activities timeline wall. The timeline control allows a user to quickly view recent information about activities that have an activity record associated to the account including emails, phone calls, notes, etc.  Users can also send new emails, log new phone calls, add new notes quickly and easily from the control. More information: [Set up the timeline control](set-up-timeline-control.md)
+### Account activities with the timeline control
+
+Below the contacts subgrid is the activities timeline wall. The timeline control allows a user to quickly view recent information about activities that have an activity record associated to the account including emails, phone calls, notes, etc.  Users can also send new emails, log new phone calls, add new notes quickly and easily from the control. More information: [Set up the timeline control](set-up-timeline-control.md)
 
 :::image type="content" source="media/timeline-control.png" alt-text="Timeline control in a contact subgrid":::
 
 ## Working with data on a main form best practices
 
-- If you need additional requirements added to data on the form that is not configured on the table, it is important to make sure the data that is required is always visible and editable. For example, a required field for your user based on a business rule. If you require a field and make it read-only, it will block users from completing tasks and can create dissatisfaction and frustration for your users. Although, hidden and read-only components are supported by the Power Apps platform, it is important to know that if a user saves data on form with a required field that is not editable, the save will process.  This ensures a user is never blocked from completing a task based on a bad design pattern.
+- If you need additional requirements added to data on the form that is not configured on the table, it is important to make sure the data that is required is always visible and editable. For example, a required field for your user based on a business rule. If you require a field and make it read-only, it will block users from completing tasks and can create dissatisfaction and frustration. Although, hidden and read-only components are supported by the Power Apps platform, it is important to know that if a user saves data on form with a required field that is not editable, the save will process.  This ensures a user is never blocked from completing a task based on a bad design pattern.
 
 - Hidden fields can be used like read-only fields and are handy when building data dense forms, however, the same applies when working with required fields, you should never hide a required field if it can be null when editing a record.  You can use business rules or events to hide or show fields on a form, however, the form will behave the same as a read-only field when saving.  Model-driven forms will always allow for the save if a field is required but hidden on the form.  
 
