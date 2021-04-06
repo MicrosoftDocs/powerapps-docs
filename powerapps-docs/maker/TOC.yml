@@ -2123,6 +2123,8 @@
           items:
             - name: Bulletins (Preview)
               href: ../teams/bulletins-architecture.md
+            - name: Empoyee ideas
+              href: ../teams/employee-ideas-architecture.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps

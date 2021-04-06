@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 [This article is pre-release documentation and is subject to change.]
 
-In this document, you'll learn about the collections and global variables used by the [Manage Bulletins](bulletins.md#manage-bulletins-app) and [Bulletins](bulletins.md#bulletins-app) apps, understand and how to use them effectively. If you want to learn more about how to install, and use the Bulletins sample app instead, go to [Bulletins sample app](bulletins.md).
+In this article, you'll learn about the collections and global variables used by the [Manage Bulletins](bulletins.md#manage-bulletins-app) and [Bulletins](bulletins.md#bulletins-app) apps, and understand how to use them effectively. If you want to learn more about how to install, and use the Bulletins sample app instead, go to [Bulletins sample app](bulletins.md).
 
 ## Prerequisites
 
@@ -88,7 +88,7 @@ This section explains collections, global variables used by the  [Bulletins](bul
 
 This section explains app OnStart collections, variables, and execution details.
 
-#### OnStart Collections
+#### OnStart collections
 
 Collections used during app OnStart:
 

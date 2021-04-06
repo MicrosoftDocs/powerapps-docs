@@ -1,132 +1,75 @@
-Document Objective
+---
+title: Understand Employee ideas app architecture | Microsoft Docs
+description: Learn about the architecture of the Employee ideas sample app.
+author: navjotm
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 04/06/2021
+ms.author: namarwah
+ms.reviewer: tapanm
+---
 
->   In this Document, we learn about the Collections and Global variables used
->   in the **Employee Ideas** app, and how to use them effectively.
+# Understand Employee ideas app architecture
 
-Introduction
+In this article, you'll learn about the collections and global variables used by the [Employee ideas](employee-ideas.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Employee ideas sample app instead, go to [Employee ideas](employee-ideas.md).
 
-Employee ideas app is used by the Teams users to perform the following
-activities:
+## Prerequisites
 
-1.  Set up and configure an idea campaign (a category for grouping ideas around
-    common themes).
+To understand and use information in this article, you'll need to know about different controls, features, and capabilities of canvas apps.
 
-2.  Configure a standard submission form that employees need to submit for each
-    idea.
+- [Create and update a collection in a canvas app](../maker/canvas-apps/create-update-collection.md)
+- [Collect, Clear, and ClearCollect functions in Power Apps](../maker/canvas-apps/functions/function-clear-collect-clearcollect.md)
+- [Understand canvas-app variables in Power Apps](../maker/canvas-apps/working-with-variables.md)
+- [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
+- [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
-3.  Review idea campaigns and manage the list of campaigns and ideas.
+You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](employee-ideas.md) Employee ideas sample app.
 
-4.  Edit and delete campaigns.
+## Data model
 
-5.  Review leaderboards of ideas.
+The following diagram explains the data model used by the Employee ideas sample app.
 
-6.  Vote for and share prioritized ideas.
+![Employee ideas sample app data model](media/employee-ideas-architecture/data-model.png "Employee ideas sample app data model")
 
-7.  Submit ideas for a campaign.
+| Table name | Description |
+| - | - |
+| Employee Idea Campaign | A campaign is any series of actions or events that are meant to achieve a particular goal. Details such as title, description, start and end dates of the campaign, team and channel ID’s are stored in the Employee Idea Campaign table. An idea campaign can have multiple ideas and idea questions.
+| Employee Idea | Ideas are thoughts or suggestions provided by employees to achieve a particular goal which is mentioned as part of a campaign. Details such as title, description, related campaign, outcome and the vote count are stored in the Employee Idea table. There can be multiple files and idea questions associated to an idea. |
+| Employee Idea Questions | Idea questions help us to get more inputs from employees regarding an idea. Details such as instructions, associated campaign, the response type and values for the question are stored in the Employee Idea Questions table. Each idea question may have multiple responses. |
+| Employee Idea Responses | Idea responses are used to get answers from the employees to the idea questions. Details such as instructions, associated idea, idea question, sequence, the response type and values for the question are stored in the Employee Ideas Responses table. A Response can only be associated to one idea question. |
+| Employee Idea Image | Images are used to better understand an idea. Users can add a cover image for their Idea. Details such as the name, associated idea and the selected image are stored in the Employee Idea Images table. An idea can have only one cover image selected at a given point of time. |
+| Employee Idea File | Employees can attach multiple supporting files which explains their Idea in a better way. Details such as the file name, the attachment and the associated idea are stored in the Employee Idea file table. |
+| Employee Idea User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
+| Employee Idea Settings | Settings are used to store user preferences pertaining the Team Id, and Channel Id used for notifications. |
 
-8.  View other team members' ideas.
+## App OnStart
 
-9.  Vote on the most-liked ideas.
+This section explains app OnStart collections, variables, and execution details.
 
-10. Review how their own idea is performing compared to others within a campaign
+### OnStart collections
 
-Data Model  
-  
+Collections used during app OnStart:
 
+| Collection name | Description |
+| - | - |
+| colLocalization | Collection of localized text based on user’s language. |
+| colStockImages | Collection of stock cover images. |
+| colUserSettings | Collection of the user settings from the Employee Ideas User Settings table. |
+| colFileIcons | Used to collect the icons of different file types. |
+| colVoteCounter | Collection to count the number of votes received for an idea. |
+| colIdeaStats_Raw | To collect raw ideas, for stats with owner details. |
+| colVotes | Used to collect votes for an idea. |
 
-![](media/employee-ideas-architecture/6417fb14fff080cf29c4337b93464de1.png)
+### OnStart variables
 
-Entities
+Variables used during app OnStart:
 
-1.  **Employee Idea Campaign**
+| Variable name | Description |
+| - | - |
+| gblAppLoaded | Global variable to check if the app has loaded completely. |
+| gblAppContext | Global variable to check the context of where the app is running. |
 
-A campaign is any series of actions or events that are meant to achieve a
-particular goal. Details such as Title, Description, Start and End dates of the
-campaign, Team and Channel ID’s are stored in the Employee Idea Campaign table.
-
-An Idea Campaign can have multiple Ideas and Idea Questions.
-
-1.  **Employee Idea**
-
-Ideas are thoughts or suggestions provided by Employees to achieve a particular
-goal which is mentioned as part of a campaign. Details such as Title,
-Description, Related campaign, Outcome and the Vote count are stored in the
-Employee Idea table.
-
-There can be multiple files and Idea Questions associated to an Idea.
-
-1.  **Employee Idea Questions**
-
-Idea Questions help us to get more inputs from Employees regarding an Idea.
-Details such as Instructions, associated campaign, the Response Type and values
-for the Question are stored in the Employee Idea Questions table.
-
-Each Idea Question may have multiple responses.
-
-1.  **Employee Idea Responses**
-
-Idea Responses are used to get answers from the Employees to the idea questions.
-Details such as Instructions, associated Idea, Idea Question, sequence, the
-Response Type and values for the Question are stored in the Employee Ideas
-Responses table.
-
-A Response can only be associated to one Idea Question.
-
-1.  **Employee Idea Image**
-
-Images are used to better understand an Idea, Users can add a cover image for
-their Idea. Details such as the Name, associated Idea and the selected image are
-stored in the Employee Idea Images table.
-
-An Idea can have only one cover image selected at a given point of time.
-
-1.  **Employee Idea File**
-
-Employees can attach multiple supporting files which explains their Idea in a
-better way. Details such as the file name, the attachment and the associated
-idea are stored in the Employee Idea file table.
-
-1.  **Employee Idea User Setting**
-
-User settings are used to store user preferences pertaining to seeing the Power
-Apps splash screen every time they login to the app. There is one record for
-each user.
-
-1.  **Employee Idea Settings**
-
-Settings are used to store user preferences pertaining the Team Id, and Channel
-Id used for notifications.
-
-Story
-
-OnStart
-
-Collections involved
-
-1.  **colLocalization –** collection of localized text based on user’s
-    language**.**
-
-2.  **colStockImages –** collection of stock cover images.
-
-3.  **colUserSettings** – collection of the User Settings from the Employee
-    Ideas User Settings table.
-
-4.  **colFileIcons –** Used to collect the icons of different file types.
-
-5.  **colVoteCounter** – collection to count the number of votes received for an
-    idea.
-
-6.  **colIdeaStats_Raw** - to collect Raw Ideas, for Stats with Owner Details
-
-7.  **colVotes –** Used to collect votes for an Idea
-
-Variables involved
-
-1.  **gblAppLoaded–** global variable to check if the app has loaded
-    completely**.**
-
-2.  **gblAppContext –** global variable to check the context of where the app is
-    running.
 
 3.  **gblUserLanguage–** global variable to store the user’s language.
 
