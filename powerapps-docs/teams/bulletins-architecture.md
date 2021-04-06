@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2021
+ms.date: 04/06/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -32,7 +32,7 @@ The following diagram explains the data model used by the Bulletins sample app.
 
 ## Manage Bulletins app
 
-This section explains collections, and global variables used by the Manage Bulletins app.
+This section explains collections, and global variables used by the [Manage Bulletins](bulletins.md#manage-bulletins-app) app.
 
 ### Collections
 
@@ -49,7 +49,7 @@ Manage Bulletins app uses following collections.
 | colCdsBulletins                   | Collection to collect the list of published bulletins from the **Publication Group: Published** view.       | App OnStart                                                      |
 | colStockImages                    | Collection to collect the stock images used in the app.                                                 | App OnStart                                                      |
 | colLocalization                   | Used to build a localization collection based on the user language.                                     | App OnStart                                                      |
-| colUserImages                     | Collection used to store the **UserImage** and **Username**.                                                    | OnHidden property of Bulletins Screen, FAQs Screen and Links and Contacts screen. |
+| colUserImages                     | Collection used to store the **UserImage** and **Username**.                                                    | OnHidden property of Bulletins Screen, FAQs Screen, and Links and Contacts screen. |
 
 ### Global Variables
 
@@ -57,12 +57,12 @@ Manage Bulletins app uses following global variables.
 
 | Variable Name                   | Type    | Description                                                                 |
 |---------------------------------|---------|-----------------------------------------------------------------------------|
-| gblAppLoaded                    | Boolean | To check whether the app is completely loaded.                               |
+| gblAppLoaded                    | Boolean | To check whether the app is loaded completely.                               |
 | gblUserLanguage                 | Text    | To check the logged in user’s language.                                      |
 | gblPadding                      | Record  | Used to set padding values in the app.                                       |
 | gblUser                         | Record  | Variable to get user record for the context.                                     |
 | gblUserFirstName                | Text    | Variable to get the first name of the user.                                  |
-| gblAppMenu                      | Record  | Variable to store the label, width and the screen name for the menu records. |
+| gblAppMenu                      | Record  | Variable to store the label, width, and the screen name for the menu records. |
 | gblAppSetting_inputMobileOnWeb  | Boolean | Variables to scale fonts for mobile-oriented apps, running in desktop devices.       |
 | gblAppSetting_inputMobile       | Boolean | Variables to scale fonts for mobile-oriented apps.                           |
 | gblAppSetting_inputScaleFontsby | Number  | Use this variable for scaling all fonts by a fixed amount.                   |
@@ -72,11 +72,15 @@ Manage Bulletins app uses following global variables.
 | gblAppSizes                     | Record  | Variable to set the color value in the app.                                  |
 | gblAppStyles                    | Record  | Variable to set the styling values in the app.                               |
 
-## App OnStart
+## Bulletins app
 
-This section explains app OnStart collections, variables and execution details.
+This section explains collections, global variables used by the  [Bulletins](bulletins.md#bulletins-app) app, and the execution details for each screen.
 
-### OnStart Collections
+### App OnStart
+
+This section explains app OnStart collections, variables, and execution details.
+
+#### OnStart Collections
 
 Collections used during app OnStart:
 
@@ -87,25 +91,25 @@ Collections used during app OnStart:
 | colCdsBulletins | Collection to hold bulletins data from Dataverse. |
 | colCdsBulletinCategories | Collection to hold bulletin categories data from Dataverse. |
 | colCdsBulletinReadReceipts | Collection to hold bulletin read receipts data from Dataverse. |
-| colCdsBulletinBookmarks | Cllection to hold bulletin bookmarks data from Dataverse.
+| colCdsBulletinBookmarks | Collection to hold bulletin bookmarks data from Dataverse.
 | colCdsBulletinUserSettings | Collection to hold bulletin user settings data from Dataverse. |
 | colCdsBulletinCategoryPreferences | Collection to hold bulletin category preferences data from Dataverse. |
 | colAppNewUserCategories | Collection to store user preferences. |
 
-### OnStart variables
+#### OnStart variables
 
 Variables used during app OnStart:
 
 | Variable name | Description |
 | - | - |
 | gblAppLoaded | Global variable used to check if the app is loaded or not. |
-| gblUserLanguage | Global variable which holds the user’s local language. |
-| gblPadding | Global variable which holds the padding details of the app. |
+| gblUserLanguage | Global variable that holds the user’s local language. |
+| gblPadding | Global variable that holds the padding details of the app. |
 | gblUser | Global variable to hold the user record for context. |
 | gblUserFirstName | Global variable to hold the first name of the user. |
 | gblAppMenu | Global variable to hold the menu details. |
 
-### OnStart execution flow
+#### OnStart execution flow
 
 1. When a User loads the app, the **gblAppLoaded** variable is set to false. The user’s language code is stored in the **gblUserLanguage** variable, with "English - US" as the default.
 
@@ -120,18 +124,18 @@ Variables used during app OnStart:
     - colCdsBulletinUserSettings
     - colCdsBulletinCategoryPreferences
 
-1. The stock images are collected to the **colStockImages** collection which helps the user to pick any images for the bulletin’s cover.
+1. The stock images are collected to the **colStockImages** collection that helps the user to pick any images for the bulletin’s cover.
 
 1. The menu details on various screens of the app are collected to
-    the **gblAppMenu** variable which helps to create the menu as per the screen.
+    the **gblAppMenu** variable that helps to create the menu as per the screen.
 
-1. The user preferences are collected to the **colAppNewUserCategories** collection which  helps the user to have a personalized experience of the app as it shows the bulletins based on the user bulletin category preferences.
+1. The user preferences are collected to the **colAppNewUserCategories** collection that  helps the user to have a personalized experience of the app as it shows the bulletins based on the user bulletin category preferences.
 
-## Home screen
+### Home screen
 
-This section explains app home screen collections, variables and execution details.
+This section explains app home screen collections, variables, and execution details.
 
-### Home screen collections
+#### Home screen collections
 
 Collections used by the home screen:
 
@@ -141,7 +145,7 @@ Collections used by the home screen:
 | colCdsBulletinBookmarks | Collection to hold bulletin bookmarks data from Dataverse. |
 | colCdsBulletinCategoryPreferences | Collection to hold bulletin category preferences data from Dataverse. |
 
-### Home screen variables
+#### Home screen variables
 
 Variables used by the home screen:
 
@@ -154,7 +158,7 @@ Variables used by the home screen:
 | locBulletinRecord | Local variable used to store the selected bulletin record. |
 | locBulletinBody | Local variable used to store the selected bulletin’s  body. |
 
-### Home screen execution details
+#### Home screen execution details
 
 1. Using the collections **colCdsBulletins** and
     **colCdsBulletinCategoryPreferences**, the screen is loaded with the
@@ -165,67 +169,67 @@ Variables used by the home screen:
 
 1. Galleries are filtered depending on the search terms.
 
-1. Once the user selects a bulletin, a dialog pop-up appears using the
+1. Once the user selects a bulletin, a dialog pop-up shows using the
     variables **locVisibleDialog** and **locVisibleDialogBulletinReader.**
 
-1. The dialog shows the information of selected bulletin which includes
+1. The dialog shows the information of selected bulletin that includes
     image, video, and body from the bulletin record using the variables
     **locBulletinRecord** and **locBulletinBody**. More information: [View a post](bulletins.md#view-a-post)
 
 1. To close the dialog, user can select the close button, or the empty space around the dialog. This action sets the
     **locVisibleDialog** and **locVisibleDialogBulletinReader** variables to *false* hiding the dialog pop-up.
 
-## FAQ screen 
+### FAQs screen
 
-### FAQ screen collections
+This section explains app FAQs screen collections, variables, and execution details.
 
-**None**
+#### FAQs screen collections
 
-### FAQ screen variables
+FAQs screen doesn't use any collections.
 
-1. **locVisibleDialog –** local variable used to show and hide the dialog
-    pop-up
+#### FAQs screen variables
 
-### FAQ screen execution details
+Variables used by the home screen:
 
-1. This screen will mainly show the information of FAQ’s retrieved from Dataverse
-    entities **Bulletin FAQs** and **Bulletin FAQ Categories**
+| Variable name | Description |
+| - | - |
+| locVisibleDialog | Local variable used to show and hide the dialog pop-up. |
 
-1. User can search the needed FAQ’s using the search box by it’s name and the
-    galleries showing these entities will get filtered as per the search.
+#### FAQs screen execution details
 
-1. User can use the open icon to open the FAQ in a dialog with the help of
-    **locVisibleDialog.** On selecting the close button on the pop-up dialog
-    using the variable the dialog will be hidden.
+1. This screen will mainly show the information of FAQs retrieved from Dataverse&mdash;**Bulletin FAQs** and **Bulletin FAQ Categories**.
 
-#### Screens<br>
+1. User can search the needed FAQs using the search box by its name and the galleries showing these entities will get filtered as per the search.
 
-![](media/bulletins-architecture/8abd811949156fadaeb378cb147333c4.png)
+1. User can use the open icon to open the FAQ in a dialog with the help of **locVisibleDialog** variable. Upon selecting the close button on the pop-up dialog using the variable, the dialog will become hidden.
 
-![](media/bulletins-architecture/ed1bfa385d5b091f9449705c2f3f7019.png)
+More information: [View frequently asked questions (FAQs)](bulletins.md#view-frequently-asked-questions-faqs)
 
-## Links and contacts screen
+### Links and contacts screen
 
-### Links and contacts screen collections
+This section explains the Links and contacts screen collections, variables, and execution details.
 
-**None**
+#### Links and contacts collections
 
-### Links and contacts screen variables
+Links and contacts screen doesn't use any collections.
 
-**None**  
+#### Links and contacts screen variables
 
+Links and contacts screen doesn't use any variables.
 
-### Links and contacts screen execution details
+#### Links and contacts screen execution details
 
-1. This screen will mainly show the information of FAQ’s retrieved from Dataverse
-    entities **Bulletin Link Categories** , **Bulletin Contacts** and **Bulletin
-    Link Categories.**
+1. Links and contacts screen shows the information of FAQs retrieved from Dataverse&mdash;**Bulletin Link Categories**, **Bulletin Contacts**, and **Bulletin Link Categories**.
 
-1. User can search the needed **Bulletin Link Categories** , **Bulletin
-    Contacts** and **Bulletin Link Categories** by using search box and the
-    results will be filtered in the respective galleries
+1. User can search the needed **Bulletin Link Categories, **Bulletin Contacts**, and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
 
-1. Using **launch** function, the links will be opened in a separate browser
-    tab.
+1. Using **launch** function, the links will be opened in a separate browser tab.
 
-![](media/bulletins-architecture/eb8761027800310b693551a8b027bdfa.png)
+More information: [View links and contacts](bulletins.md#view-links-and-contacts)
+
+### See also
+
+[Bulletins sample app (Preview)](bulletins.md) <br>
+[Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
+[Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
+[Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)
