@@ -18,11 +18,11 @@ In this document, you'll learn about the collections and global variables used b
 
 To understand and use information in this article, you'll need to know about different controls, features, and capabilities of canvas apps.
 
-- [Create and update a collection in a canvas app](canvas-apps/create-update-collection.md)
-- [Collect, Clear, and ClearCollect functions in Power Apps](canvas-apps/functions/function-clear-collect-clearcollect.md)
-- [Understand canvas-app variables in Power Apps](canvas-apps/working-with-variables.md)
-- [Add and configure a canvas-app control in Power Apps](canvas-apps/add-configure-controls.md)
-- [Add a screen to a canvas app and navigate between screens](canvas-apps/add-screen-context-variables.md)
+- [Create and update a collection in a canvas app](../maker/canvas-apps/create-update-collection.md)
+- [Collect, Clear, and ClearCollect functions in Power Apps](../maker/canvas-apps/functions/function-clear-collect-clearcollect.md)
+- [Understand canvas-app variables in Power Apps](../canvas-apps/maker/working-with-variables.md)
+- [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
+- [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
 ## Data model
 
