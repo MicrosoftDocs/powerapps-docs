@@ -1,6 +1,6 @@
 ---
 title: "Table column definitions messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "About the messages used to edit table column definition, also known as properties or columns." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "About the messages used to edit table column definitions, also known as properties or columns." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
@@ -15,12 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Table column definition messages
+# Table column definitions messages
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+A column is a container for a piece of data in a table. The term *attribute* and *property* (class property) are often used interchangeably with the term *table column*. Model-driven apps use the term *column* when they refer to table columns.  
 
-
-A column is a container for a piece of data in a table. The term *attribute* and *property* (class property) are often used interchangeably with the term *table column*. Model-driven applications use the term *column* when they refer to table columns.  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!NOTE]
 > It is possible to create and update table columns using the Web API. See [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-attributes) for more details.

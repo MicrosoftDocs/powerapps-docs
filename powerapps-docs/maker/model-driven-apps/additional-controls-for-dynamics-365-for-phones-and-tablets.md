@@ -2,7 +2,7 @@
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
 description: "A list of controls available for use with Dynamics 365 for web, phones, and tablets"
 ms.custom: ""
-ms.date: 05/18/2020
+ms.date: 03/29/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -47,10 +47,11 @@ To use these controls in the form editor:
   
 7.  Select **OK** when you’re done configuring the control.  
   
- Following are descriptions for each control you can use on forms.  
+Following are descriptions for each control you can use on forms.  
   
-## Timeline control  
- Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
+## Timeline control
+
+Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -81,8 +82,12 @@ To use these controls in the form editor:
 |CC_Timeline_Footer|Web resource to display as the footer of the timeline.|  
 |CC_Timeline_Footer_Desc|Description for Footer column.|  
   
-## Linear slider  
- The linear slider control lets your users input numerical values by dragging a slider and also provides an option for typing in the quantity. The slider provides whole number input and display only. Use this control for any numerical or money column.  
+## Linear slider
+
+The linear slider control lets your users input numerical values by dragging a slider and also provides an option for typing in the quantity. The slider provides whole number input and display only. Use this control for any numerical or money column.  
+
+> [!IMPORTANT]
+>  This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -91,32 +96,36 @@ To use these controls in the form editor:
 |Value|The value to display on the slider.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
-## Choices  
+## Choices
+
  The option set control presents a set of choices for your users to choose from when entering data. Use this control for choices with two or three choices only.  
   
 |Property|Description|  
 |--------------|-----------------|  
 |Column|Shows the column that the control is mapped to.|  
   
-## Flip switch  
- The flip switch is like an on/off switch, providing a choice between two values.  
- 
-> [!NOTE]
->  This control will be deprecated in April 2021. Instead, you can start using the toggle control.
+## Flip switch
+
+The flip switch is like an on/off switch, providing a choice between two values.  
+
+> [!IMPORTANT]
+>  This control will be deprecated in April 2021. Instead, you can start using the [Toggle](#toggle) control. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
  
 |Property|Description|  
 |--------------|-----------------|  
 |Field|Shows the field that the control is mapped to.|  
 
 ## Toggle
+
  The toggle control allows users to switch between on/off values, by toggling the button.
  
 |Property|Description|  
 |--------------|-----------------|  
 |Column|Shows the column that the control is mapped to.|  
   
-## Star rating  
- Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
+## Star rating
+
+Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
   
 > [!NOTE]
 >  Be sure to select the **Hide on web** option for this control.  
@@ -125,11 +134,13 @@ To use these controls in the form editor:
 |--------------|-----------------|  
 |Max|Select the maximum number of stars for the control from the dropdown list.|  
   
-## Radial knob  
- The radial knob provides a way for users to enter data by sliding the knob, and shows up on the screen as a circle. The radial knob control provides whole number input and display only. Use this control for any numerical or money columns. You can use touch to change the value, or you can use the keypad to focus on the number and edit it.  
+## Radial knob
+
+The radial knob provides a way for users to enter data by sliding the knob, and shows up on the screen as a circle. The radial knob control provides whole number input and display only. Use this control for any numerical or money columns. You can use touch to change the value, or you can use the keypad to focus on the number and edit it.  
   
-> [!NOTE]
->  This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
+> [!IMPORTANT]
+>  - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+>  - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -138,11 +149,13 @@ To use these controls in the form editor:
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
-## Website preview  
+## Website preview
+
  Use the website preview control to map a URL column and show a preview of the website.  
   
 > [!IMPORTANT]
->  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into a Power Apps app or Dynamics 365 apps such as Dynamics 365 Sales or Dynamics 365 Customer Service are subject to our privacy statement at [Microsoft Privacy and Cookies](https://go.microsoft.com/fwlink/p/?LinkId=521839).  
+>  - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+>  - By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into a Power Apps app or Dynamics 365 apps such as Dynamics 365 Sales or Dynamics 365 Customer Service are subject to our privacy statement at [Microsoft Privacy and Cookies](https://go.microsoft.com/fwlink/p/?LinkId=521839).  
 >   
 >  [Privacy notices](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   
@@ -150,7 +163,8 @@ To use these controls in the form editor:
 |--------------|-----------------|  
 |Column|Shows the column the control is mapped to.|  
   
-## Pen control  
+## Pen control
+
  Use the pen control to capture written input such as signatures. The pen control can be configured for multiline text columns for use with web, tablet, and phone clients.
 
 :::image type="content" source="media/pen-control-runtime.png" alt-text="Pen control in a model-driven app":::
@@ -164,7 +178,8 @@ To use these controls in the form editor:
 |--------------|-----------------|  
 |PenMode|Specify **PenMode!Draw**, **PenMode!Erase**, or **PenMode!Select** to determine what happens when a user drags a pointing device in a pen control.|  
   
-## Auto-complete  
+## Auto-complete
+
  The auto-complete control filters an item list as you type and lets you select a value from the drop-down list. For example, you can use this control to let users choose from a dropdown list of states or countries/regions. This control maps to a **Single Line of Text** type column.  
   
 |Property|Description|  
@@ -219,9 +234,13 @@ To use these controls in the form editor:
 |Mask|Enter the mask to use for validating data as users enter it. You can use a combination of the following characters for the mask:<br /><br /> 0 – Digit<br /><br /> 9 – Digit or space<br /><br /> # – Digit, sign, or space<br /><br /> L – Letter<br /><br /> I – Letter or space<br /><br /> A – Alphanumeric<br /><br /> A – Alphanumeric or space<br /><br /> < – Converts characters that follow to lower case<br /><br /> > – Converts characters that follow to upper case<br /><br /> &#124; – Disables case conversion<br /><br /> \ – Escapes any character, turning it into a literal<br /><br /> All others – Literals|  
 |Column|Shows the column the control is mapped to.|  
   
-## Linear gauge  
- The linear gauge lets your users input numerical values by dragging a slider instead of typing in the exact quantity. The slider provides whole number input and display only. Use this control for any numerical and money columns.  
+## Linear gauge
+
+The linear gauge lets your users input numerical values by dragging a slider instead of typing in the exact quantity. The slider provides whole number input and display only. Use this control for any numerical and money columns.  
   
+> [!IMPORTANT]
+> This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+
 |Property|Description|  
 |--------------|-----------------|  
 |Max|Set the maximum value to display on the gauge.|  
@@ -232,8 +251,9 @@ To use these controls in the form editor:
 ## Arc knob  
  The arc knob provides a way for users to enter data by sliding the knob, and shows up on the screen as an arc. The arc knob control provides whole number input and display only. Use this control for any numerical and money columns. You can use touch to change the value, you can also focus on the number and edit it using the keypad.  
   
-> [!NOTE]
-> This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
+> [!IMPORTANT]
+> - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+> - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -241,6 +261,26 @@ To use these controls in the form editor:
 |Min|Set the minimum value to display on the gauge.|  
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
+
+## Calendar control V2
+
+The Calendar Control V2 control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. More information: [Add the calendar control to tables](add-calendar-control.md)
+
+## Rich text editor
+
+The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
+
+## Form component
+
+The form component control lets users edit information of a related table record directly from another table’s form. For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
+
+## Quick view
+
+The quick view control displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
+
+## News control
+
+Gain valuable insights from the latest news about your customers, competitors, and contacts. The news control delivers relevant news from Bing News. More information: [Set up and use the news control](stay-current-with-news-control.md)
 
 ## Next steps
 [Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
