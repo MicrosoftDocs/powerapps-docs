@@ -107,87 +107,73 @@ Variables used during app OnStart:
 
 ### OnStart execution flow
 
-1. When a User loads the app, **gblAppLoaded** is set to false. The user’s
-    language code is stored in **gblUserLanguage**, with English - US being the
-    default one.
+1. When a User loads the app, the **gblAppLoaded** variable is set to false. The user’s language code is stored in the **gblUserLanguage** variable, with "English - US" as the default.
 
-1. The user’s language is then used to collect localized text used throughout
-    the app (e.g. label and button text) in **colLocalization**.
+1. The user’s language is then used to collect localized text used throughout the app (such as label and button text) in the **colLocalization** collection.
 
-1. As the app loads it collects the data from theDataverse and stores in to the
-    collections to use the data across the app. The collections that holds the
-   Dataverse data are **colCdsBulletins , colCdsBulletinCategories ,
-    colCdsBulletinReadReceipts , colCdsBulletinBookmarks,
-    colCdsBulletinUserSettings** and **colCdsBulletinCategoryPreferences.**
+1. While continuing to load, the app collects the data from Dataverse, and stores it into the following collections.
 
-1. The stock images are collected to **colStockImages** collection which helps
-    the user to pick any images for the bulletin’s cover from the app itself.
+    - colCdsBulletins
+    - colCdsBulletinCategories
+    - colCdsBulletinReadReceipts
+    - colCdsBulletinBookmarks
+    - colCdsBulletinUserSettings
+    - colCdsBulletinCategoryPreferences
+
+1. The stock images are collected to the **colStockImages** collection which helps the user to pick any images for the bulletin’s cover.
 
 1. The menu details on various screens of the app are collected to
-    **gblAppMenu** which helps to create menu’s as per the screen.
+    the **gblAppMenu** variable which helps to create the menu as per the screen.
 
-1. The user preferences are collected to **colAppNewUserCategories,** which
-    helps the user to have a personalized experience of the app as it shows the
-    bulletins based on the user bulletin category preferences.
+1. The user preferences are collected to the **colAppNewUserCategories** collection which  helps the user to have a personalized experience of the app as it shows the bulletins based on the user bulletin category preferences.
 
 ## Home screen
 
+This section explains app home screen collections, variables and execution details.
+
 ### Home screen collections
 
-1. **colCdsBulletins –** collection to hold bulletins data from Dataverse.
+Collections used by the home screen:
 
-1. **colCdsBulletinBookmarks –** collection to hold bulletin bookmarks data
-    from Dataverse.
-
-1. **colCdsBulletinCategoryPreferences –** collection to hold bulletin category
-    preferences data from Dataverse.
+| Collection name | Description |
+| - | - |
+| colCdsBulletins | Collection to hold bulletins data from Dataverse. |
+| colCdsBulletinBookmarks | Collection to hold bulletin bookmarks data from Dataverse. |
+| colCdsBulletinCategoryPreferences | Collection to hold bulletin category preferences data from Dataverse. |
 
 ### Home screen variables
 
-1. **gblUser –** global variable to hold the User record for context.
+Variables used by the home screen:
 
-1. **gblUserFirstName –** global variable to hold the First Name of the User.
-
-1. **locVisibleDialog –** local variable used to show and hide the dialog
-    pop-up
-
-1. **locVisibleDialogBulletinReader –** local variable used to show and hide a
-    bulletin
-
-1. **locBulletinRecord –** local variable used to store the selected bulletin
-    record
-
-1. **locBulletinBody –** local variable used to store the selected bulletin’s
-    body
+| Variable name | Description |
+| - | - |
+| gblUser | Global variable to hold the User record for context. |
+| gblUserFirstName | Global variable to hold the first name of the user. |
+| locVisibleDialog | Local variable used to show and hide the dialog pop-up. |
+| locVisibleDialogBulletinReader | Local variable used to show and hide a bulletin. |
+| locBulletinRecord | Local variable used to store the selected bulletin record. |
+| locBulletinBody | Local variable used to store the selected bulletin’s  body. |
 
 ### Home screen execution details
 
 1. Using the collections **colCdsBulletins** and
-    **colCdsBulletinCategoryPreferences** the screen is loaded with the
-    published bulletins.
+    **colCdsBulletinCategoryPreferences**, the screen is loaded with the
+    published bulletins. More information: [Understand the Bulletins app user interface](bulletins.md#understand-the-bulletins-app-user-interface)
 
 1. User can search any bulletin by the name or category of the bulletin using
     the search box available on this screen.
 
-1. Based on the search the galleries will be filtered.
+1. Galleries are filtered depending on the search terms.
 
 1. Once the user selects a bulletin, a dialog pop-up appears using the
     variables **locVisibleDialog** and **locVisibleDialogBulletinReader.**
 
-1. The dialog will show the information of selected bulletin which include
-    image, video, body etc.. from the bulletin record using the variables
-    **locBulletinRecord** and **locBulletinBody**
+1. The dialog shows the information of selected bulletin which includes
+    image, video, and body from the bulletin record using the variables
+    **locBulletinRecord** and **locBulletinBody**. More information: [View a post](bulletins.md#view-a-post)
 
-1. If the user wants to close the dialog, the user will click on close button
-    or the empty space around the dialog in order to set the
-    **locVisibleDialog** and **locVisibleDialogBulletinReader** variables to
-    false and there by hiding the dialog pop-up.
-
-#### Screens<br>
-
-![](media/bulletins-architecture/bcc2687977225e1b8f882564efa681b5.png)
-
-![](media/bulletins-architecture/512d9dc4f1d134a06202ad09fcce66d9.png)
+1. To close the dialog, user can select the close button, or the empty space around the dialog. This action sets the
+    **locVisibleDialog** and **locVisibleDialogBulletinReader** variables to *false* hiding the dialog pop-up.
 
 ## FAQ screen 
 
