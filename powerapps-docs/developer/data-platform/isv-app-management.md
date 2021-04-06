@@ -24,11 +24,11 @@ search.app:
 
 # Microsoft Power Platform ISV Studio
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!IMPORTANT]
 >
@@ -82,7 +82,7 @@ If you want additional users to get access to ISV Studio, they can be added as a
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
-### Feedback
+### How to provide feedback
 
 Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 
