@@ -400,7 +400,7 @@ When opening a Quick Create Form (QCF) from a lookup or from a grid, a different
 > [!div class="mx-imgBorder"]
 > <img width="668" alt="form-type" src="https://user-images.githubusercontent.com/82106269/113896182-68c27e80-9765-11eb-8668-17c203169d4a.png">
 
-Please see the explanation, as well as instructions on how to get the QCF to appear for the same action. Contact the responsible party or make the according changes yourself in the customizations.
+Please see the explanation, as well as instructions on how to get the QCF to appear for the same action. Contact the responsible party or make the relevant changes yourself in the system customizations.
 
 ## Why is an entity not shown in the Quick Create Menu flyout?
 
