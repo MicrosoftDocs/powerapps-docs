@@ -394,7 +394,7 @@ The following variables are used when duplicating an idea campaign:
 
 1. Selecting **Cancel** button takes the user back to the Campaign Summary screen.
 
-## Deleting and idea campaign
+## Deleting an idea campaign
 
 This section explains collections, and variables used, and execution details while [deleting an idea campaign](employee-ideas.md#delete-an-idea-campaign).
 
@@ -428,41 +428,36 @@ The following variables are used when deleting an idea campaign:
 
 1. The **gblSelectedRecordCampaign** variable is set to the first campaign in the **galCampaignDetailNav** gallery, and the ideas for the relevant campaign are fetched from the **colIdeas** collection displaying the details of the first campaign.
 
-Adding an Idea Question
+## Add an idea question
 
-Collections involved
+This section explains collections, and variables used, and execution details while [add an idea question](employee-ideas.md#add-an-idea-campaign).
 
-1.  **colQuestions –** Used to collect Idea Questions
+### Collections used when adding an idea question
 
-Variables involved  
+The following collections are used when adding an idea question:
 
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect idea questions. |
 
-1.  **locVisibleCampaignEdit –** local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true) .
+## Variables used when adding an idea question
 
-2.  **gblSelectedRecordCampaign -** global variable to store the campaign record
-    which is in context.
+The following variables are used when adding an idea question:
 
-*Detailed steps*
+| Collections name | Description |
+| - | - |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
+| gblSelectedRecordCampaign | Global variable to store the campaign record in the current context. |
 
-1.  New Idea questions can be added while a Campaign is being edited.
+### Execution details while adding an idea question
 
-2.  Clicking on the “+ Add question” button will add a new entry in the
-    **colQuestions** collection, The Instructions field value is set to “\*NEW
-    QUESTION\*”. The default response type is set to Rating (Employee Ideas
-    Response type) with the values being “High” and “Low”.
+1. New idea questions can be added while a campaign is being edited.
 
-3.  The newly added question is displayed at the end of the list.
+1. Selecting the **+ Add question** button adds a new entry in the **colQuestions** collection. The Instructions field value is set to "\*NEW QUESTION\*". The default response type is set to Rating (Employee Ideas Response type) with the values of “High”, and “Low”.
 
-4.  Clicking on Save button would update the newly added Question to the
-    Employee Idea Questions table.
+1. The newly added question is displayed at the end of the list.
 
-Screens  
-  
-
-
-![](media/employee-ideas-architecture/2d8724f3e063af6546f21384876b5e63.png)
+1. Selecting **Save** button updates the newly added question to the Employee Idea Questions table.
 
 Deleting an Idea Question
 
