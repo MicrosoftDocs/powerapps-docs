@@ -642,50 +642,40 @@ The following variables are used when deleting an idea:
 
 1. The value of the **locVisibleCampaignView** variable is set to true displaying the campaign details.
 
+## Settings screen
 
-Settings Screen
+This section explains collections, and variables used, and execution details of the [settings screen](employee-ideas.md#edit-the-app-configuration) when you edit the app configuration.
 
-Collections involved
+### Settings screen collections
 
-1.  **colIdeaStats_Raw –** to collect Raw Ideas, for Stats with Owner Details
+Settings screen uses the following collections:
 
-Variables involved
+| Collections name | Description |
+| - | - |
+| colIdeaStats_Raw | Used to collect raw ideas for stats with owner details. |
 
-1.  **locBlockUserInput –** local variable used to block the User Input by
-    displaying a dialog while something is being saved.
+### Settings screen variables
 
-2.  **gblRecordSettings –** global variable used to set the Team and Channel Id
-    to the Employee Ideas settings table.
+Settings screen uses the following variables:
 
-3.  **gblSettingNotificationChannelId –** global variable to store the channel
-    ID where notifications will be posted.
+| Variable name | Description |
+| - | - |
+| locBlockUserInput | Local variable used to block the user input by displaying a dialog while something is being saved. |
+| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas settings table. |
+| gblSettingNotificationChannelId | Global variable to store the Channel Id where notifications will be posted.
+| gblDropdownChannel | Global variable to store the list of channels for a group.  
 
-4.  **gblDropdownChannel –** global variable to store the list of channels for a
-    group.  
-    
+### Settings screen execution details
 
-Detailed Steps
+1. Users have the feasibility to update whether only team owners will be able to add campaigns, and select the channel where messages will be posted.
 
-1.  The Users have the feasibility to update whether only Team owners will be
-    able to Add Campaigns and select the channel where messages will be posted.
+1. The list of channels in the drop-down are from the **gblDropdownChannel** variable.
 
-2.  The list of channels in the dropdown are from the **gblDropdownChannel**
-    variable.
+1. **Save** button is enabled when the drop-down value selected or the team owner restricted value is different from the value stored in the variable **gblRecordSettings** (which is set on start of the app).
 
-3.  The Save button is enabled when the dropdown value selected or the Team
-    Owner restricted value is different is different from the value stored in
-    the variable **gblRecordSettings** (which is set on start of the app).
+1. **Save** updates the details in the Employee Idea Settings table, and takes the user to the Campaign Summary screen. The value of the **locBlockUserInput** variable is set to true making sure that the user doesn't make any further updates while saving is in progress.
 
-4.  On click of the Save button, the details are updated in the Employee Idea
-    Settings table and will navigate to the Campaign Summary Screen and the
-    value of the **locBlockUserInput** is set to true which makes sure that the
-    User does not make any further updates while Saving is in progress.
-
-5.  Clicking on the cancel button takes the user back to the previous screen.
-
-Screens
-
-![](media/employee-ideas-architecture/3319dfe1e98f19659247667399c73e9c.png)
+1. **Cancel** takes the user back to the previous screen.
 
 About screen
 
