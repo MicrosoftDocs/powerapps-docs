@@ -307,74 +307,43 @@ This section explains [editing an idea campaign screen](employee-ideas.md#edit-a
 
 ### Edit an idea campaign screen collections
 
-Collections involved
+Collections used by the edit an idea campaign screen:
 
-1.  **colQuestions –** Used to collect the Idea Questions
+| Collection name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
+| colStockImages | Collection of stock cover images. |
+| colQuestionsToDelete | Used to collect the questions deleted while adding, or editing a campaign. |
+| colIdeas | Used to collect ideas for a particular campaign. |
 
-2.  **colStockImages -** collection of stock cover images.
+### Edit an idea campaign screen variables
 
-3.  **colQuestionsToDelete -** Used to collect the questions which are deleted
-    while adding / editing a campaign
+| Collection name | Description |
+| - | - |
+| locBlockUserInput | Local variable used to block the user input by displaying a dialog while something is being saved. |
+| gblSelectedRecordCampaign | Global variable to store the campaign record in current context. |
+| gblSelectedRecordCampaign_FormValues | Global variable to store the field values of the campaign being added, or edited. |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
+| locFormRecordCampaign | Local variable to store the campaign record being edited. |
 
-4.  **colIdeas** - Used to collect Ideas for a particular campaign.
+### Edit an idea campaign screen execution details
 
-Variables involved
+1. The list of existing campaigns are shown in the **galCampaignSummary** gallery. Selecting any of the campaign sets the **gblSelectedRecordCampaign** variable to the selected campaign, and the user is taken to the campaign details page.
 
-1.  **locBlockUserInput –** local variable used to block the User Input by
-    displaying a dialog while something is being saved.
+1. Selecting the **Edit** button gets the campaign details (such as title, and description) using the **gblSelectedRecordCampaign** variable, and the idea questions from the **colQuestions** collection.
 
-2.  **gblSelectedRecordCampaign –** global variable to store the campaign record
-    which is in context.
+1. The value of the **locVisibleCampaignEdit** variable is set to true making the **conCampaignUpsert** container visible.
 
-3.  **gblSelectedRecordCampaign_FormValues –** global variable to store the
-    field values of the campaign which is being added or edited.
+1. Required details can be updated and saved. The **Save** button is enabled only if all the fields are filled in including the start/end dates of the campaign. The **colQuestionsToDelete** and **colQuestions** collections are checked if any new questions are added or deleted.
 
-4.  **locVisibleCampaignEdit –** local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true).
+1. On selecting the **Save** button, all the updated fields are saved to the Employee Idea Campaigns table (**gblSelectedRecordCampaign** variable holds the edited campaign record).
 
-5.  **locFormRecordCampaign –** local variable to store the campaign record
-    which is being edited.
+1. **colQuestions** collection, and the Employee Idea Questions table are updated for added/edited questions.
 
-Detailed steps
+1. Deleted questions are removed from the **colQuestionsToDelete** collection and the Employee Idea Questions table.
 
-1.  The list of existing campaigns are shown in the **galCampaignSummary**
-    gallery, Clicking on any of the campaign would set the
-    **gblSelectedRecordCampaign** variable to the selected campaign and the user
-    is navigated to the Campaign details page.
+1. The value of the **locVisibleCampaignView** variable is set to true displaying the **conCampaignUpsert** container.
 
-2.  Clicking the Edit button will get the campaign details (title, description
-    etc.) using the **gblSelectedRecordCampaign** variable and the idea
-    questions from the **colQuestions** collection.
-
-3.  The value of the **locVisibleCampaignEdit** variable is set to true thus
-    making the **conCampaignUpsert** container visible.
-
-4.  Required details can be updated and saved. The Save button is enabled only
-    if all the fields are filled in including the start and end dates of the
-    campaign and the **colQuestionsToDelete** and **colQuestions** collections
-    are checked if any new questions are added or deleted.
-
-5.  On clicking of the save button, all the updated fields are saved to the
-    Employee Idea Campaigns table (**gblSelectedRecordCampaign** variable holds
-    the edited campaign record).
-
-6.  In case there are newly added / edited questions, they would be updated in
-    the **colQuestions** collection and the Employee Idea Questions table.
-
-7.  In case any questions are deleted, they would be removed from the
-    **colQuestionsToDelete** collection and the Employee Idea Questions table.
-
-    1.  The value of the **locVisibleCampaignView** variable is set to true thus
-        displaying the **conCampaignUpsert** container.
-
-Screens
-
-![](media/employee-ideas-architecture/5608e2fd66a08a33699a33365421531f.png)
-
-![](media/employee-ideas-architecture/da827bb7a865dea02193837f090dc119.png)
-
-![](media/employee-ideas-architecture/83f0f2634c196f4e736ea3aad78a4406.png)
 
 Duplicating a Campaign
 
