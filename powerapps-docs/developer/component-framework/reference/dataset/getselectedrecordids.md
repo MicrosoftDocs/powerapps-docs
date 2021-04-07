@@ -1,6 +1,6 @@
 ---
 title: getSelectedRecordIds | Microsoft Docs
-description: 
+description: Retrieves all the selected record ids.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

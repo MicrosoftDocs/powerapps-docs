@@ -16,6 +16,8 @@ contributors:
 
 # Tutorial: Use code components in portals (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
 then add the component to model-driven app. Then, you’ll configure Power Apps
@@ -26,7 +28,7 @@ web page and interact with the component.
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field) in a model-driven app currently.
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app currently.
 
 ## Prerequisites
 

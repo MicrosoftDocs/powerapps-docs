@@ -1,6 +1,6 @@
 ---
 title: FileObject | Microsoft Docs
-description: 
+description: Provides access to all the properties of a file.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

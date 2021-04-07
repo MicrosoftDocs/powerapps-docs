@@ -1,6 +1,6 @@
 ---
 title: getString| Microsoft Docs
-description: 
+description: Returns the localized string for a given key associated with the specified resource (resx) defined in the manifest file.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

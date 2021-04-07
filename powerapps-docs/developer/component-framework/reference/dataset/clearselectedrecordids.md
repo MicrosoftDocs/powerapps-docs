@@ -1,6 +1,6 @@
 ---
 title: clearSelectedRecordIds | Microsoft Docs
-description: 
+description: Clears the selected record ids list.
 keywords:
 manager: kvivek
 ms.date: 10/01/2019
