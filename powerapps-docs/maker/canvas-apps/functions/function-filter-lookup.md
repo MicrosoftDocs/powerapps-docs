@@ -60,7 +60,7 @@ The **Search** function finds records in a table that contain a string in one of
 
 The following examples use the **IceCream** [data source](../working-with-data-sources.md):
 
-![Icream data source](media/function-filter-lookup/icecream.png "Ice cream data source")
+![Ice cream data source](media/function-filter-lookup/icecream.png "Ice cream data source")
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -75,11 +75,13 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** |Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. |*blank* |
 | **LookUp( IceCream, Flavor = "Vanilla" )** |Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. |{ Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
 
+### Filtering with choice columns
+
 The following example uses the **Account** data source. This example shows how to **Filter** based on choice columns:
 
 ![Accounts data source](media/function-filter-lookup/accounts-filter.png "Accounts data source")
 
-**Search(Filter('AMP Line Items', Category = cbx1.Selected.Value || IsBlank(cbx1.Selected), Activity = cbx2.Selected.Value || IsBlank(cbx2.Selected),Stage = cbx3.Selected.Value || IsBlank(cbx3.Selected)),TextInput1.Text,"new_name")**
+**Search(Filter('AMP Line Items', Industry = cbx1.Selected.Value || IsBlank(cbx1.Selected), S500 = cbx2.Selected.Value || IsBlank(cbx2.Selected),Stage = cbx3.Selected.Value || IsBlank(cbx3.Selected)),TextInput1.Text,"new_name")**
 
 ### Search user experience
 
