@@ -1,50 +1,36 @@
-Document Objective
-==================
+---
+title: Understand the Inspection app architecture | Microsoft Docs
+description: Learn about the architecture of the Inspection sample app.
+author: navjotm
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 04/06/2021
+ms.author: namarwah
+ms.reviewer: tapanm
+---
 
->   In this Document, we learn about the Collections and Global variables used
->   in the **Inspection** (User) and **Inspection** (Manager) apps, and how to
->   use them effectively.
+# Understand Inspection app architecture
 
-Introduction
-============
+In this article, you'll learn about the collections and global variables used by the [Inspection](inspection.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Inspection sample apps](inspection.md).
 
-The Inspection solution for Teams is a general inspection app that can be used
-to inspect anything from a location, such as a retail store or manufacturing
-plant to assets and equipment such as vehicles and machines. There are two apps
-in this solution, each intended for different kinds of users.
+## Prerequisites
 
-1.  Inspection app
+To understand and use information in this article, you'll need to know about different controls, features, and capabilities of canvas apps.
 
-    This app is used by employees to perform the following actions:
+- [Create and update a collection in a canvas app](../maker/canvas-apps/create-update-collection.md)
+- [Collect, Clear, and ClearCollect functions in Power Apps](../maker/canvas-apps/functions/function-clear-collect-clearcollect.md)
+- [Understand canvas-app variables in Power Apps](../maker/canvas-apps/working-with-variables.md)
+- [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
+- [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
--   Inspect something, such as an asset or an area within a building or other
-    location in the course of completing their job. The app provides inspection
-    checklists so that multiple locations can be inspected. For example, a store
-    employee can use this app to inspect a section of a retail store to verify
-    that the store is ready to open for the day.
+You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](inspection.md) the Inspection sample app.
 
--   When an issue is found during the inspection, the employee can log the issue
-    and assign it to the right person so that it can be resolved quickly.
+## Data model
 
-1.  Manage Inspections app
+The following diagram explains the data model used by the Inspection sample app.
 
-    This app is used by a manager to perform the following actions
-
--   App Configuration
-
--   Configure Inspection forms and define outcome
-
--   Gain visibility to inspection results and issue status.
-
--   Ensure that all identified issues have been addressed by the staff.
-
--   Identify repeat issues from prior Inspections and analyze root cause and
-    prevent them from happening in future.
-
-Data Model
-==========
-
-![](media/inspection-architecture/98342cafe3f75018226fe6482ce4d65a.png)
+![Inspection sample app data model](media/inspection-architecture/data-model.png "Inspection sample app data model")
 
 Entities:
 =========
