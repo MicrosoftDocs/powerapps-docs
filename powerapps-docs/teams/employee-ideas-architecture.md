@@ -69,280 +69,172 @@ Variables used during app OnStart:
 | - | - |
 | gblAppLoaded | Global variable to check if the app has loaded completely. |
 | gblAppContext | Global variable to check the context of where the app is running. |
+| gblUserLanguage | Global variable to store the user’s language. |
+| gblParamTeamId | Global variable to set the Group ID from Planner. |
+| gblParamChannelId | Global variable to set the Channel ID from Planner. |
+| gblThemeDark | Global variable to define whether Teams is running with a dark theme. |
+| blThemeHiCo | Global variable to define whether Teams is running with a high contrast theme. |
+| gblMobileMode | Global variable to store if the app is being accessed from a mobile device. |
+| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas Settings table. |
+| gblRandomizeData | Global variable to check whether we have to randomize data (whether this is the first run of the app). |
+| gblRecordUserSettings | Global variable to store the latest Employee Ideas User Settings records for the current user. |
+| gblUserFirstName | Global variable to store the user’s first name. |
+| gblDropdownChannel | Global variable to store the list of channels for a group. |
+| gblSettingNotificationChannelId | Global variable to store the channel ID where notifications will be posted. |
+| gblSettingTeamId | Global variable to store the Team Id. |
+| gblPadding | Global variable to set the padding values. |
+| gblMobileWidth | Global variable to define the width of the app for mobile. |
+| gblToday | Global variable to store the present day’s date. |
+| gblUserRecord | Global variable to store the current user record. |
 
+### OnStart execution details
 
-3.  **gblUserLanguage–** global variable to store the user’s language.
+1. When a user loads the app, **gblAppLoaded** variable is set to false. The user’s language code is stored in the **gblUserLanguage** variable, with "English - US" as the default.
 
-4.  **gblParamTeamId-** global variable to set the Group ID from Planner
+1. The user’s language is then used to collect localized text used throughout the app (for example, label and button text) in **colLocalization**.
 
-5.  **gblParamChannelId -** global variable to set the Channel ID from Planner
+1. The user’s Teams theme is checked to see if the theme is default, dark or high contrast. The **gblThemeDark** and **gblThemeHiCo** variables are set accordingly.
 
-6.  **gblThemeDark–** global variable to define whether Teams is running with a
-    dark theme.
+1. Variables **gblParamTeamId** and **gblParamChannelId** are used to get the group ID and channel ID from the parameters.
 
-7.  **gblThemeHiCo–** global variable to define whether Teams is running with a
-    Hi-Contrast theme.
+1. The Team ID and the Channel ID are fetched from the Employee Idea settings table and stored in the **gblRecordSettings** variable.
 
-8.  **gblMobileMode –** global variable to store if the app is being accessed
-    from a mobile device.
+1. The **gblRandomizeData** variable checks whether the app is being run for the first time to randomize data.
 
-9.  **gblRecordSettings –** global variable used to set the Team and Channel Id
-    to the Employee Ideas settings table.
+1. User details from the Employee Ideas Settings table is collected using **colUserSettings** collection. If no records exist, a new user settings record is created under the Employee Ideas User Settings table.
 
-10. **gblRandomizeData –** global variable to check whether we have to randomize
-    data (whether this is the first run of the app).
+1. If in case multiple user settings record exists, the oldest settings record is selected and stored in the **gblRecordUserSettings** variable.
 
-11. **gblRecordUserSettings –** global variable to store the latest Employee
-    Ideas User Settings records for the current user.
+1. The global padding values for the app and the mobile width are set using the **gblPadding** and **gblMobileWidth** variables respectively.
 
-12. **gblUserFirstName –** global variable to store the User’s first name.
+1. The stock images and cover colors are collected in **colStockImages** and **colProjectCoverColors** collections respectively. The **colProjectCoverColors** collection has two sets of 14 colors. For each base, there are two colors. One for the default theme, and the other for the dark theme. For example, \#F4B9B9 is the default mode equivalent of \#791818.
 
-13. **gblDropdownChannel –** global variable to store the list of channels for a
-    group.
+1. Once all the required information is set and collected, The value of **gblAppLoaded** variable changes to true.
 
-14. **gblSettingNotificationChannelId –** global variable to store the channel
-    ID where notifications will be posted.
+## First run experience
 
-15. **gblSettingTeamId –** global variable to store the team id
+This section explains the app's [first time run](employee-ideas.md#configure-the-app) experience, relevant collections, variables, and execution details.
 
-16. **gblPadding –** global variable to set the padding values
+### First run experience collections
 
-17. **gblMobileWidth** – global variable to define the width of the app for
-    mobile.
+App first run experience doesn't use any collections.
 
-18. **gblToday –** global variable to store the present day’s date.
+### First run experience variables
 
-19. **gblUserRecord –** global variable to store the current user record.
+Variables used when the app runs the first time:
 
-Detailed Steps
+| Variable name | Description |
+| - | - |
+| locShowModal | Local variable used to control the visibility of the dialog setup container. |
+| locShowSetup | Local variable used to control the visibility of the setup dialog. |
+| locShowPowerAppsPrompt | Local variable to indicate either to show or hide the splash screen. |
 
-1.  When a User loads the app, **gblAppLoaded** is set to false. The user’s
-    language code is stored in **gblUserLanguage**, with English - US being the
-    default one.
+### First run experience execution details
 
-2.  The user’s language is then used to collect localized text used throughout
-    the app (e.g. label and button text) in **colLocalization**.
+1. On visible of project screen a dialog pop-up appears if **locShowModal** variable value is true. If false, the app proceeds with loading the Campaign Summary screen.
 
-3.  The user’s Teams theme/mode is checked to see if the theme is default, dark
-    or high contrast. The **gblThemeDark** and **gblThemeHiCo** variables are
-    set accordingly.
+1. The **locShowModal** variable is set (true/false) depending upon project settings records that gets created when the app runs for the first time. When the app runs for the first time, it creates a Employee Ideas User Setting record when the user completes the first run experience.
 
-4.  Variables **gblParamTeamId** and **gblParamChannelId** are used to get the
-    group ID and channel ID from the parameters.
+1. During the first run, the app shows the splash screen based upon the boolean variable **locShowPowerAppsPrompt**.
 
-5.  The Team ID and the Channel ID are fetched from the Employee Idea settings
-    table and stored in the **gblRecordSettings** variable.
+1. The **locShowPowerAppsPrompt** variable is set (true/false) based on the project setting that gets created during the first run.
 
-6.  The **gblRandomizeData** checks whether the app is being run for the first
-    time to randomize data.
+1. If the user checks "Do not show again" checkbox, "Display Splash (Power Apps)’ is set to "No" at the project settings record. This action sets the **locShowPowerAppsPrompt** variable to false in the next run, and hides the splash screen.
 
-7.  User details from the Employee Ideas Settings table is collected using
-    colUserSettings, if incase no records exist, A new User setting record is
-    created under the Employee Ideas User settings table.
+## Summary screen
 
-8.  If in case multiple User settings record exists, the oldest settings record
-    is selected and stored in the **gblRecordUserSettings** variable.
+This section explains app [summary screen](employee-ideas.md#review-existing-idea-campaigns) collections, variables, and execution details.
 
-9.  The global padding values for the app and the mobile width are set using the
-    **gblPadding** and **gblMobileWidth** variables respectively.
+### Summary screen collections
 
-10. The stock images and cover colors are collected in **colStockImages** and
-    **colProjectCoverColors** respectively. colProjectCoverColors has two sets
-    of 14 colors. For each base, there are two colors. One is for default theme
-    and the other is for dark theme. For example, \#F4B9B9 is the default mode
-    equivalent of \#791818.
+Collections used by summary screen:
 
-11. Once all the required information is set and collected, The value of
-    **gblAppLoaded** variable changes to true.
+| Collection name | Description |
+| - | - |
+| **colIdeaStats_Raw** | Collection to collect raw ideas, for stats with owner details.
 
-Screens
+### Summary screen variables
 
-Campaign Summary screen
+Variables used by summary screen:
 
-Displaying the first run experience
+| Variable name | Description |
+| - | - |
+| gblAppManager | Global variable check whether the user has the privilege to manage the app. |
 
-Collections involved
+#### Summary screen execution details
 
-1.  **Collection** – None
+1. The campaign summary leader board is displayed on the campaign summary screen. The screen also shows the list of weekly top contributors, and weekly top ideas.
 
-Variables involved
+1. The weekly top contributors are listed in the   **galCampaignStatsTopContributors** gallery, the total number of ideas, and the ideas by owner columns are taken from the **colIdeaStats_Raw** collection. The top 3 contributors with the number of ideas are also displayed in the descending order.
 
-1.  **locShowModal**– local variable used to control the visibility of the
-    Dialog setup container.
+1. The weekly top ideas are listed in the **galCampaignStatsTopIdeas** gallery. The ideas for which the vote count is not blank are taken from the **colIdeaStats_Raw** collection, and the top 3 ideas with the number of votes received are displayed in the descending order.
 
-2.  **locShowSetup** – local variable used to control the visibility of the
-    Setup dialog
+1. If the logged in User has the team role, the **galCampaignSummary** gallery displays the list of Active, Expired, Not Started and all the Campaigns in the descending order (campaign start date) that can be controlled using a drop-down field.
 
-3.  **locShowPowerAppsPrompt -** local variable to indicate either to show or
-    hide the splash screen.
+1. Campaigns can be searched using the search bar by name, and description of the campaign.
 
-Detailed steps
+1. The visibility of **Add Campaign** button is controlled by the **gblAppManager** global variable. A new campaign can be created using the **Add Campaign** button.
 
-1.  On visible of project screen a dialog pop-up appears if **locShowModal**
-    value is true, if not the app proceeds with loading the Campaign Summary
-    screen
+## Campaign details screen
 
-2.  **locShowModal** is set to true / false depending upon project settings
-    records that gets created when the app runs for the first time. So if the
-    app runs for the first time it creates a Employee Ideas User setting record
-    when the user completes the first run experience.
+This section explains [campaign details screen](employee-ideas.md#edit-an-idea-campaign) collections, variables, and execution details.
 
-3.  Also if it’s a first run, the app also shows the splash screen based upon
-    the Boolean variable **locShowPowerAppsPrompt**
+### Campaign details screen collections
 
-4.  **locShowPowerAppsPrompt** is set to true or false based upon the project
-    setting that gets created during the first run.
+Collections used by campaign details screen:
 
-5.  If the user checks ‘Do not show again’ the ‘Display Splash (PowerApps)’ is
-    set to ‘No’ at project settings record which there by sets
-    **locShowPowerAppsPrompt** to false in the next run and hides the splash
-    screen.
+| Collection name | Description |
+| - | - |
+| colIdeas | Collection to collect ideas for the selected campaign. |
+| colVoteCounter | Collection to count the number of votes received for an idea. |
+| colVotes | Collection to collect the votes for an idea.
 
-Screens
+### Campaign details screen variables
 
-![](media/employee-ideas-architecture/9f6ec861d71ff60ff1dbfa1e4958a9dd.png)
+Variables used by campaign details screen:
 
-![](media/employee-ideas-architecture/0771f5bd9ebd9056688a9d21cbdca95e.png)
+| Variable name | Description |
+| - | - |
+| gblAppManager | Global variable check whether the user has the app manager privilege. |
+| gblRecordCampaignIdea | Global variable to get the ideas for a selected campaign. |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
+| locVisibleCampaignView | Local variable to control the visible property of the **conCampaignDetailCard** data card (indicates the campaign can only be viewed in case the value is true). |
+| locVisibleCampaignCreate | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that a new campaign can be created if the value is true). |
+| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be only be viewed but not edited)
+| locVisibleIdeaCommands | Local variable used to control the visibility of the **Idea Delete** button (galIdeaCommands). |
+| locSortGalCampaignDetailNav | Local variable used to sort the **galCampaignDetailNav** gallery.
 
-Displaying the summary screen
+#### Campaign details screen execution details
 
-Collections involved
+1. The **galCampaignDetailNav** gallery displays the list of campaigns sorted in the alphabetical order, and can also be searched based on the campaign name.
 
-1.  **colIdeaStats_Raw** – collection to collect Raw Ideas, for Stats with Owner
-    Details
+1. The campaigns can also be sorted based on the campaign name. Selecting the sort image updates the **locSortGalCampaignDetailNav** variable that sorts the campaigns in ascending/descending order.
 
-Variables involved
+1. Add campaign button enables the user to add a new campaign.
 
-1.  **gblAppManager–** global variable check whether the user has App manager
-    privilege.
+1. Selecting any of the campaign sets the **gblSelectedRecordCampaign** variable to the selected campaign.
 
-Detailed Steps
+1. The ideas for the selected campaign(**gblSelectedRecordCampaign** variable) are filtered from the Employee Ideas table, and collected in the **colIdeas** collection.
 
-1.  The campaign summary leader board is visible on the Campaign summary screen.
-    We can see the list of Weekly top contributors and Weekly top ideas.
+1. Temporary vote offset is removed from the **colVoteCounter** collection for the actual value.
 
-2.  The Weekly top contributors are listed in the
-    **galCampaignStatsTopContributors** gallery, the total number of Ideas and
-    the ideas by owner columns are taken from the **colIdeaStats_Raw**
-    collection and the top 3 contributors along with the number of Ideas are
-    displayed in descending order.
+1. The **conCampaignDetailCard** container displays the name, description, the campaign duration dates, the cover image and the number of days for campaign start, end, or expiry.
 
-3.  The Weekly top ideas are listed in the **galCampaignStatsTopIdeas** gallery,
-    the ideas for which the vote count is not blank are taken from the
-    colIdeaStats_Raw collection and the top 3 ideas with the number of votes
-    received are displayed in descending order.
+1. The **galCampaignDetailsIdeas** gallery lists the ideas available (**colIdeas** collection) for the selected campaign. The ideas can be sorted based on a dropdown selection. The available options are "Newest", "Oldest", and "Top voted".
 
-4.  If the logged in User has the team role, the **galCampaignSummary** gallery
-    displays the list of Active, Expired, Not Started and all the Campaigns in
-    descending order (campaign start date) which can be controlled using a
-    dropdown field.
+1. Users can vote for an idea for by selecting the **Like** button.
 
-5.  The Campaigns can be searched using the Search bar using the name and
-    description of the campaign.
+1. Selecting the **Like** button for the first time adds the idea to the **colVotes** collection, and increments the value in the **colVoteCounter** collection by 1.
 
-6.  The visibility of Add Campaign button is controlled by the **gblAppManager**
-    global variable. A new campaign can be created using the Add Campaign
-    button.
+1. Disliking the idea removes the idea to the **colVotes** collection, and decrements the value in the **colVoteCounter** collection by 1.
 
-Screens
+1. Selecting the **Submit an Idea** button allows the user to create a new idea for the selected campaign.
 
-![](media/employee-ideas-architecture/4a2eeb934c286a5ec2567b150a3ad72d.png)
+1. Selecting the **Edit** button allows the user to edit the selected campaign.
 
-  
+1. Selecting **Back** button takes the user back to the Campaign summary screen.
 
-
-Campaign Details screen
-
-Collections involved
-
-1.  **colIdeas** – collection to Collect Ideas for a Selected Campaign.
-
-2.  **colVoteCounter** - collection to count the number of votes received for an
-    idea.
-
-3.  **colVotes** – collection to collect the votes for an Idea.
-
-Variables involved
-
-1.  **gblAppManager–** global variable check whether the user has App manager
-    privilege.
-
-2.  **gblRecordCampaignIdea** – global variable to get the ideas for a selected
-    campaign
-
-3.  **locVisibleCampaignEdit –** local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true)
-
-4.  **locVisibleCampaignView –** local variable to control the visible property
-    of the conCampaignDetailCard data card (indicates the campaign can only be
-    viewed in case the value is true)
-
-5.  **locVisibleCampaignCreate –** local variable to control the visible
-    property of the conCampaignUpsert container (indicates that a new campaign
-    can be created if the value is true)
-
-6.  **locVisibleCampaignIdea –** local variable to control the visible property
-    of the conCampaignDetailsIdeas container (indicates that an idea can be only
-    be viewed but not edited)
-
-7.  **locVisibleIdeaCommands –**
-
-8.  **locSortGalCampaignDetailNav –** local variable used to sort the
-    galCampaignDetailNav gallery.
-
-Detailed Steps
-
-1.  The **galCampaignDetailNav** gallery displays the list of campaigns sorted
-    in the Alphabetical order and can also be searched based on the campaign
-    name.
-
-2.  The campaigns can also be sorted based on the campaign name, clicking on the
-    sort image updates the **locSortGalCampaignDetailNav** variable which sorts
-    the campaigns in ascending / descending order.
-
-3.  Add campaign button would enable the user to add a new campaign.
-
-4.  Clicking on any of the campaign would set the gblSelectedRecordCampaign
-    variable to the selected campaign.
-
-5.  The ideas for the selected campaign (**gblSelectedRecordCampaign**) are
-    filtered from the Employee Ideas table and collected in the **colIdeas**
-    collection.
-
-6.  The temporary vote offset is removed from the **colVoteCounter** collection
-    as we have the actual value.
-
-7.  The **conCampaignDetailCard** container displays the Name, Description, the
-    campaign duration dates, cover image and the number of days left for the
-    campaign to end / number of days left for the campaign to start / whether
-    the campaign is expired.
-
-8.  The **galCampaignDetailsIdeas** gallery lists the ideas available
-    (**colIdeas**) for the selected campaign. They can be sorted based on a
-    dropdown selection. The available options are Newest, Oldest and Top voted.
-
-9.  Users can also vote for an idea for by clicking on the Like button.
-
-10. Hitting the like button for the first time will add the idea to the
-    **colVotes** collection and increment the value in the **colVoteCounter**
-    collection by 1.
-
-11. Disliking the idea will remove the idea to the **colVotes** collection and
-    decrement the value in the **colVoteCounter** collection by 1.
-
-12. Clicking the Submit an Idea button will allow the user to create a new idea
-    for the selected campaign.
-
-13. Clicking the edit button will allow the user to edit the selected campaign.
-
-14. Clicking on the back button takes the user back to the Campaign summary
-    screen.
-
-Screens  
-
-
-![](media/employee-ideas-architecture/1b3efe6a150992562b1c8d8d42d4d24f.png)
+===================
 
 Adding a new Campaign
 

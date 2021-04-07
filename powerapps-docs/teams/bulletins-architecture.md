@@ -117,7 +117,7 @@ Variables used during app OnStart:
 | gblUserFirstName | Global variable to hold the first name of the user. |
 | gblAppMenu | Global variable to hold the menu details. |
 
-#### OnStart execution flow
+#### OnStart execution details
 
 1. When a User loads the app, the **gblAppLoaded** variable is set to false. The user’s language code is stored in the **gblUserLanguage** variable, with "English - US" as the default.
 
