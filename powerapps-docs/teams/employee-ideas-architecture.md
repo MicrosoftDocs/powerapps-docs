@@ -541,35 +541,34 @@ Changing the response type of idea questions doesn't use any variables.
 
 1. For Text response type, a toggle with the options Long and Short is displayed.
 
+## Submit a new idea
 
-Submit a new Idea
+This section explains collections, and variables used, and execution details you [submit a new idea](employee-ideas.md#submit-a-new-idea).
 
-Collections involved
+### Collections used when submitting a new idea
 
-1.  **colQuestions –** Used to collect the Idea Questions.
+The following collections are used when submitting a new idea:
 
-2.  **colResponses –** Used to collect Responses for the Idea Questions.
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
+| colResponses | Used to collect responses for the idea questions. |
+| colFiles | Used to collect the files associated with an idea. |
 
-3.  **colFiles –** Used to collect the files associated with an idea.
+### Variables used when submitting a new idea
 
-Variables involved
+The following variables are used when submitting a new idea:
 
-1.  **gblSelectedRecordCampaign -** global variable to store the campaign record
-    which is in context.
+| Variable name | Description |
+| - | - |
+| gblSelectedRecordCampaign | Global variable to store the campaign record in the current context. |
+| locVisibleCampaignIdea | Local variable used to control the visibility of the idea details screen. |
+| locCreateNewIdea | Local variable used to control the visibility of the idea details screen. |
+| locFormRecordIdea | Local variable used to store the idea record which is being created. |
+| gblParamTeamId | Variable to store the Planner group ID. |
+| gblParamChannelId | Variable to store the Planner Channel ID. |
 
-2.  **locVisibleCampaignIdea –** local variable used to control the visibility
-    of the Idea details screen.
-
-3.  **locCreateNewIdea –**
-
-4.  **locFormRecordIdea –** local variable to store the idea record which is
-    being created.
-
-5.  **gblParamTeamId –** variable to store the Planner group ID.
-
-6.  **gblParamChannelId –** variable to store the Planner Channel ID.
-
-Detailed steps
+### Execution details when submitting a new idea
 
 1.  A new idea can be submitted from the Campaign Details screen.
 
