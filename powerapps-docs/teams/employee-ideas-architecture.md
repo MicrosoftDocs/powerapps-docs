@@ -543,7 +543,7 @@ Changing the response type of idea questions doesn't use any variables.
 
 ## Submit a new idea
 
-This section explains collections, and variables used, and execution details you [submit a new idea](employee-ideas.md#submit-a-new-idea).
+This section explains collections, and variables used, and execution details when you [submit a new idea](employee-ideas.md#submit-a-new-idea).
 
 ### Collections used when submitting a new idea
 
@@ -600,72 +600,48 @@ The following variables are used when submitting a new idea:
 
 1. **Return to Idea List** sets the **locVisibleCampaignView** variable to true displaying the campaign details.
 
-Deleting an Idea
+## Delete an idea
 
-Collections Involved
+This section explains collections, and variables used, and execution details when you [delete an idea](employee-ideas.md#delete-an-idea).
 
-1.  **colResponses** – Used to collect Idea Responses.
+### Collections used when deleting an idea
 
-2.  **colFiles** – Used to collect files associated to an Employee Idea.
+The following collections are used when deleting an idea:
 
-Variables involved
+| Collections name | Description |
+| - | - |
+| colResponses | Used to collect idea responses. |
+| colFiles | Used to collect files associated to an idea. |
 
-1.  **locVisibleIdeaCommands** – local variable used to control the visibility
-    of the Idea Delete button (galIdeaCommands).
+### Variables used when deleting an idea
 
-2.  **gblRecordCampaignIdea** - global variable to store the campaign idea
-    record which is in context.
+The following variables are used when deleting an idea:
 
-3.  **locVisibleCampaignIdea** - local variable used to control the visibility
-    of the Idea details.
+| Variable name | Description |
+| - | - |
+| locVisibleIdeaCommands | Local variable used to control the visibility of the idea delete button (galIdeaCommands). |
+| gblRecordCampaignIdea | Global variable to store the campaign idea record which is in context. |
+| locVisibleCampaignIdea | Local variable used to control the visibility of the idea details. |
+| locVisibleDialog | Local variable to control the visibility of the dialog background. |
+| locVisibleDialogDelete | Local variable to control the visibility of the delete dialog. |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
 
-4.  **locVisibleDialog** – local variable to control the visibility of the
-    dialog background.
+### Execution details when deleting an idea
 
-5.  **locVisibleDialogDelete** - local variable to control the visibility of the
-    delete dialog.
+1. Selecting any of the idea from the **galCampaignDetailsIdeas** gallery sets the **gblRecordCampaignIdea** variable to the selected idea, and the corresponding details stored in the **colResponses** and **colFiles** are displayed.
 
-6.  **locVisibleCampaignEdit** - local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true).
+1. The value of the **locVisibleCampaignIdea** variable set to true displays the idea details.
 
-Detailed Steps
+1. User can delete the selected idea record by using the **More** icon next to the vote button. This action shows delete button based on the value of  **locVisibleIdeaCommands** variable.
 
-1.  Clicking on any of the Idea from the **galCampaignDetailsIdeas** gallery
-    would set the **gblRecordCampaignIdea** variable to the selected idea and
-    the corresponding details stored in the colResponses and colFiles are
-    displayed.
+1. **Delete** sets the values of **locVisibleDialog**, and **locVisibleDialogDelete** to true displaying the **conConfirmDelete** container (Deletion confirmation dialog).
 
-2.  The value of the **locVisibleCampaignIdea** to true thus displaying the idea
-    details.
+1. User must check the **I Understand** checkbox to proceed with deleting the campaign.
 
-3.  The User can delete the selected Idea record by clicking on the More icon
-    next to the vote button. Clicking on the more button would display the
-    delete button based on the value of **locVisibleIdeaCommands** variable.
+1. When **Delete** is selected, the selected campaign is removed from the Employee Ideas Campaigns table, the related ideas are removed from the Employee Ideas table and the **colIdeas** collection is updated.
 
-4.  Clicking on the delete button would set the values of **locVisibleDialog**
-    and **locVisibleDialogDelete** to true thus displaying the conConfirmDelete
-    container (Deletion confirmation dialog).
+1. The value of the **locVisibleCampaignView** variable is set to true displaying the campaign details.
 
-5.  The User must check the “I Understand” checkbox to proceed with deleting the
-    campaign.
-
-6.  On click of the Delete button, the selected campaign is removed from the
-    Employee Ideas Campaigns table and the related ideas are removed from the
-    Employee Ideas table and the colIdeas collection is updated.
-
-7.  The value of the locVisibleCampaignView variable is set to true thus
-    displaying the campaign details.
-
-Screens
-
-![](media/employee-ideas-architecture/5608e2fd66a08a33699a33365421531f.png)
-
-![](media/employee-ideas-architecture/c9557a144deba3ab020f609994f2fd01.png)
-
-![](media/employee-ideas-architecture/9d8bf4aaf78ff65aa5647ec768754e63.png)
-
-![](media/employee-ideas-architecture/8681042f652d08e9d32cfccade7490c1.png)
 
 Settings Screen
 
