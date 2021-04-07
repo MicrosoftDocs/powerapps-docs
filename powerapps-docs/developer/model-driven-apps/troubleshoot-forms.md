@@ -391,7 +391,7 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 
 ## Why is a different type of form opening instead of a Quick Create Form?
 
-When opening a QCF from a lookup or from a grid, a different type of form can open (Edit Form or Main Form Dialog). There are a few reasons for why this could happen.
+When opening a Quick Create Form (QCF) from a lookup or from a grid, a different type of form can open (Edit Form or Main Form Dialog). There are a few reasons for why this could happen.
 
 **Resolution**:
 
