@@ -394,54 +394,39 @@ The following variables are used when duplicating an idea campaign:
 
 1. Selecting **Cancel** button takes the user back to the Campaign Summary screen.
 
-Deleting a Campaign
+## Deleting and idea campaign
 
->   Collections involved
+This section explains collections, and variables used, and execution details while [deleting an idea campaign](employee-ideas.md#delete-an-idea-campaign).
 
-1.  **colIdeas –** Used to collect Ideas for a particular campaign.
+### Collections used when deleting an idea campaign
 
-*Variables involved*
+The following collections are used when deleting an idea campaign:
 
-1.  **gblSelectedRecordCampaign –** global variable to store the campaign record
-    which is in context.
+| Collections name | Description |
+| - | - |
+| colIdeas | Used to collect ideas for a particular campaign. |
 
-2.  **locVisibleDialog** – local variable to control the visibility of the
-    dialog background.
+### Variables used when deleting an idea campaign
 
-3.  **locVisibleDialogDelete** - local variable to control the visibility of the
-    delete dialog.
+The following variables are used when deleting an idea campaign:
 
-4.  **Detailed steps**
+| Collections name | Description |
+| - | - |
+| gblSelectedRecordCampaign | Global variable to store the campaign record which is in context. |
+| locVisibleDialog | Local variable to control the visibility of the dialog background. |
+| locVisibleDialogDelete | Local variable to control the visibility of the delete dialog. |
 
-    1.  A Campaign can be deleted by clicking on the “Delete” button on the
-        campaign details screen.
+### Execution details while deleting an idea campaign
 
-    2.  Clicking on the Delete button updates the values of the
-        **locVisibleDialog** and **locVisibleDialogDelete** variables to true
-        thus displaying the conConfirmDelete container (Deletion confirmation
-        dialog)
+1. A Campaign can be deleted by using the **Delete** button on the campaign details screen.
 
-    3.  The User must check the “I Understand” checkbox to proceed with deleting
-        the campaign.
+1. Selecting the **Delete** button updates the values of the **locVisibleDialog**, and **locVisibleDialogDelete** variables to true displaying the **conConfirmDelete** container (deletion confirmation dialog box).
 
-    4.  On click of the Delete button, the selected campaign is removed from the
-        Employee Ideas Campaigns table and the related ideas are removed from
-        the Employee Ideas table.
+1. The user must check the **I Understand** checkbox to proceed with deleting the campaign.
 
-    5.  The **gblSelectedRecordCampaign** variable is set to the first campaign
-        in the galCampaignDetailNav gallery and the Ideas for the same is
-        campaign is fetched from the **colIdeas** collection thus displaying the
-        details of the first campaign.
+1. When selecting the **Delete** button, the selected campaign is removed from the Employee Ideas Campaigns table, and the related ideas are removed from the Employee Ideas table.
 
-Screens
-
-![](media/employee-ideas-architecture/5608e2fd66a08a33699a33365421531f.png)
-
-![](media/employee-ideas-architecture/da827bb7a865dea02193837f090dc119.png)
-
-![](media/employee-ideas-architecture/421b8e66904713bcfa1d27fb01d4e7a4.png)
-
-![](media/employee-ideas-architecture/a16f1b9cd5e254a041d1a7e8cbf3d995.png)
+1. The **gblSelectedRecordCampaign** variable is set to the first campaign in the **galCampaignDetailNav** gallery, and the ideas for the relevant campaign are fetched from the **colIdeas** collection displaying the details of the first campaign.
 
 Adding an Idea Question
 
