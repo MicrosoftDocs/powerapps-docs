@@ -16,6 +16,8 @@ contributors:
 
 # Tutorial: Use code components in portals (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
 then add the component to model-driven app. Then, you’ll configure Power Apps
