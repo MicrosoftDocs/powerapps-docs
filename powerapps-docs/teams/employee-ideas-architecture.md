@@ -234,130 +234,74 @@ Variables used by campaign details screen:
 
 1. Selecting **Back** button takes the user back to the Campaign summary screen.
 
-===================
+## Add an idea campaign screen
 
-Adding a new Campaign
+This section explains [add an idea campaign](employee-ideas.md#add-an-idea-campaign) collections, variables, and execution details.
 
-Collections involved
+### Add an idea campaign screen collections
 
-1.  **colQuestions –** Used to collect the Idea Questions
+Collections used by the add an idea campaign screen:
 
-2.  **colStockImages –** Used collection of stock cover images.
+| Collection name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
+| colStockImages | Used for the collection of stock cover images. |
+| colQuestionsToDelete | Used to collect the questions which are deleted while adding/editing a campaign. |
+| colIdeas | Used to collect ideas for a particular campaign. | 
 
-3.  **colQuestionsToDelete -** Used to collect the questions which are deleted
-    while adding / editing a campaign
+### Add an idea campaign screen variables
 
-4.  **colIdeas –** Used to collect Ideas for a particular campaign.  
-    
+Variables used by the add an idea campaign screen:
 
-*Variables involved*
+| Variable name | Description |
+| - | - |
+| locBlockUserInput | Local variable used to block the user input by displaying a dialog during save attempt. |
+| locVisibleCampaignCreate | Local variable to control the visible property of the **conCampaignUpsert** container (indicates whether a new campaign can be created if the value is true). |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates whether an existing campaign can be edited if the value is true). |
+| locVisibleCampaignView | Local variable to control the visible property of the **conCampaignDetailCard** data card (indicates whether the campaign can only be viewed in case the value is true). |
+| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be only be viewed but not edited). |
+| locCreateNewCampaign | Used to control the visibility of the **conCampaignUpsert** container. |
+| gblSelectedRecordCampaign | Global variable to store the campaign record currently in context. |
+| gblSelectedRecordCampaign_FormValues | Global variable to store the field values of the campaign which is being added or edited. |
+| locSelectedStockImage | Local variable to check whether a stock image has been selected or not. |
+| locFormRecordCampaignPatch | Local variable to store the campaign record which is being updated. |
+| locShowCampaignFormErrors | Local variable which controls the visibility of the error message to be shown in case there are any missing fields. |
+| gblParamTeamId | Global variable to set the Group ID from Planner. |
+| gblParamChannelId | Global variable to set the Channel ID from Planner. |
 
-1.  **locBlockUserInput –** local variable used to block User Input by
-    displaying a dialog while something is being saved.
+### Add an idea campaign screen execution details
 
-2.  **locVisibleCampaignCreate –** local variable to control the visible
-    property of the conCampaignUpsert container (indicates that a new campaign
-    can be created if the value is true)
+1. A new campaign can be added by selecting the **Add Campaign** button on the Campaign Summary screen.
 
-3.  **locVisibleCampaignEdit –** local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true)
+1. Selecting the **Add Campaign** button sets the **locVisibleCampaignCreate**, **locVisibleCampaignEdit**, and **locVisibleCampaignIdea** variables to false. **locVisibleCampaignView**, **locCreateNewCampaign**, and **locBlockUserInput** variables to true. And moves to the Campaign Details screen.
 
-4.  **locVisibleCampaignView –** local variable to control the visible property
-    of the conCampaignDetailCard data card (indicates the campaign can only be
-    viewed in case the value is true)
+1. The **galCampaignDetailNav** gallery is disabled based on the values of the **locVisibleCampaignView**, **locVisibleCampaignIdea** and **locCreateNewIdea** variables.
 
-5.  **locVisibleCampaignIdea –** local variable to control the visible property
-    of the conCampaignDetailsIdeas container (indicates that an idea can be only
-    be viewed but not edited)
+1. Campaign name, description, and start/end dates of the campaign are part of the **conCampaignForm** container where the details can be filled in.
 
-6.  **locCreateNewCampaign –** Used to control the visibility of the
-    conCampaignUpsert container
+1. The **galCampaignEditQuestions** gallery displays the list of idea questions stored in the **colQuestions** collection.
 
-7.  **gblSelectedRecordCampaign –** global variable to store the campaign record
-    which is in context.
+1. The **galQuestionResponseRating** gallery displays the rating values for available for a question.
 
-8.  **gblSelectedRecordCampaign_FormValues –** global variable to store the
-    field values of the campaign which is being added or edited.
+1. The **galCampaignQuestionResponseType** gallery displays the response types available for questions.
 
-9.  **locSelectedStockImage –** local variable to check whether a stock image
-    has been selected or not.
+1. The **Add** button is only enabled if all the fields are filled in; including the start/end dates of the campaign. The **colQuestionsToDelete**, and **colQuestions** collections are checked if any new questions are added, or deleted.
 
-10. **locFormRecordCampaignPatch –** local variable to store the campaign record
-    which is being updated.
+1. Selecting the **Add** button creates a new campaign record, and updates all the entered fields to the Employee Idea Campaigns table.
 
-11. **locShowCampaignFormErrors –** local variable which controls the visibility
-    of the error message to be shown in case there are any missing fields.
+1. If new questions are added, they're updated in the **colQuestions** collection, and the Employee Idea Questions table.
 
-12. **gblParamTeamId-** global variable to set the Group ID from Planner.
+1. If questions are deleted, they're removed from the **colQuestionsToDelete** collection, and the Employee Idea Questions table.
 
-13. **gblParamChannelId –** global variable to set the Channel ID from Planner.
+1. If **Post to Channel** option is selected, a message is posted on the channel based on the information stored in **gblParamChannelId**, and **gblParamTeamId** variables.
 
-*Detailed Steps*
+1. The ideas for the created campaign are collected in the **colIdeas** collection.
 
-1.  A new campaign can be added by clicking on the “Add Campaign” button on the
-    Campaign Summary screen.
+1. The values of the variables **locVisibleCampaignEdit**, **locVisibleCampaignView**, **locVisibleCampaignCreate**, **locCreateNewCampaign**, **locShowCampaignFormErrors**, and **locVisibleCampaignIdeaSubmitted** are set to false.
 
-2.  Clicking on the Add Campaign button will set the
-    **locVisibleCampaignCreate**, **locVisibleCampaignEdit,
-    locVisibleCampaignIdea** variables to false, **locVisibleCampaignView,
-    locCreateNewCampaign** and **locBlockUserInput** variables to true and
-    navigates to the Campaign Details screen.
+1. The campaign submission screen is visible, and a confirmation message is displayed to the user.
 
-3.  The **galCampaignDetailNav** gallery is disabled based on the values of the
-    variables **locVisibleCampaignView**, **locVisibleCampaignIdea** and
-    **locCreateNewIdea**.
-
-4.  Campaign name, Description, Start and End dates of the campaign are part of
-    the **conCampaignForm** container where the details can be filled in.
-
-5.  The **galCampaignEditQuestions** gallery displays the list of idea questions
-    stored in the **colQuestions** collection.
-
-6.  The **galQuestionResponseRating** gallery displays the rating values for
-    available for a question.
-
-7.  The **galCampaignQuestionResponseType** gallery displays the response types
-    available for questions.
-
-8.  The Add button would be enabled only if all the fields are filled in
-    including the start and end dates of the campaign and the
-    **colQuestionsToDelete** and **colQuestions** collections are checked if any
-    new questions are added or deleted.
-
-9.  Clicking on the Add button will create a new campaign record and updates all
-    the entered fields to the Employee Idea Campaigns table.
-
-10. In case there are newly added questions, they would be updated in the
-    **colQuestions** collection and the Employee Idea Questions table.
-
-11. In case any questions are deleted, they would be removed from the
-    **colQuestionsToDelete** collection and the Employee Idea Questions table.
-
-12. If in case Post to Channel option is selected, A message is posted on the
-    channel based on the information stored in **gblParamChannelId** and
-    **gblParamTeamId** variables.
-
-13. The ideas for the created campaign will be collected in **colIdeas**
-    collection.
-
-14. The values of the variables **locVisibleCampaignEdit**,
-    **locVisibleCampaignView**, **locVisibleCampaignCreate**,
-    **locCreateNewCampaign**, **locShowCampaignFormErrors**,
-    **locVisibleCampaignIdeaSubmitted** are set to false.
-
-15. The campaign submission screen is visible, and a confirmation message is
-    displayed to the User.
-
-Screens
-
-![](media/employee-ideas-architecture/0400f6299a18dbf2bc0286ce83bb55df.png)
-
-![](media/employee-ideas-architecture/88da1ed0a83077c1a11875b3cb5450a9.png)
-
-![](media/employee-ideas-architecture/2a20a6be8d776fc91100fd64ab58aa05.png)
-
-Editing a Campaign
+# Editing a Campaign ------------
 
 Collections involved
 
