@@ -301,7 +301,11 @@ Variables used by the add an idea campaign screen:
 
 1. The campaign submission screen is visible, and a confirmation message is displayed to the user.
 
-# Editing a Campaign ------------
+## Edit an idea campaign screen
+
+This section explains [editing an idea campaign screen](employee-ideas.md#edit-an-idea-campaign) collections, variables, and execution details.
+
+### Edit an idea campaign screen collections
 
 Collections involved
 
