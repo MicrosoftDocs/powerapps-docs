@@ -234,24 +234,24 @@ Variables used by campaign details screen:
 
 1. Selecting **Back** button takes the user back to the Campaign summary screen.
 
-## Add an idea campaign screen
+## Add an idea campaign
 
-This section explains [add an idea campaign](employee-ideas.md#add-an-idea-campaign) collections, variables, and execution details.
+This section explains collections, and variables used, and execution details while [adding an idea campaign](employee-ideas.md#add-an-idea-campaign).
 
-### Add an idea campaign screen collections
+### Collections used when adding an idea campaign
 
-Collections used by the add an idea campaign screen:
+The following collections are used when you add an idea campaign:
 
 | Collection name | Description |
 | - | - |
 | colQuestions | Used to collect the idea questions. |
 | colStockImages | Used for the collection of stock cover images. |
 | colQuestionsToDelete | Used to collect the questions which are deleted while adding/editing a campaign. |
-| colIdeas | Used to collect ideas for a particular campaign. | 
+| colIdeas | Used to collect ideas for a particular campaign. |
 
-### Add an idea campaign screen variables
+### Variables used when adding an idea campaign
 
-Variables used by the add an idea campaign screen:
+The following variables are used when you add an idea campaign:
 
 | Variable name | Description |
 | - | - |
@@ -269,7 +269,7 @@ Variables used by the add an idea campaign screen:
 | gblParamTeamId | Global variable to set the Group ID from Planner. |
 | gblParamChannelId | Global variable to set the Channel ID from Planner. |
 
-### Add an idea campaign screen execution details
+### Execution details while adding an idea campaign
 
 1. A new campaign can be added by selecting the **Add Campaign** button on the Campaign Summary screen.
 
@@ -301,13 +301,13 @@ Variables used by the add an idea campaign screen:
 
 1. The campaign submission screen is visible, and a confirmation message is displayed to the user.
 
-## Edit an idea campaign screen
+## Edit an idea campaign
 
-This section explains [editing an idea campaign screen](employee-ideas.md#edit-an-idea-campaign) collections, variables, and execution details.
+This section explains collections, and variables used, and execution details while [editing an idea campaign](employee-ideas.md#edit-an-idea-campaign).
 
-### Edit an idea campaign screen collections
+### Collections used when editing an idea campaign
 
-Collections used by the edit an idea campaign screen:
+The following collections are used when you edit an idea campaign:
 
 | Collection name | Description |
 | - | - |
@@ -316,9 +316,11 @@ Collections used by the edit an idea campaign screen:
 | colQuestionsToDelete | Used to collect the questions deleted while adding, or editing a campaign. |
 | colIdeas | Used to collect ideas for a particular campaign. |
 
-### Edit an idea campaign screen variables
+### Variables used when editing an idea campaign
 
-| Collection name | Description |
+The following variables are used when you edit an idea campaign:
+
+| Variables name | Description |
 | - | - |
 | locBlockUserInput | Local variable used to block the user input by displaying a dialog while something is being saved. |
 | gblSelectedRecordCampaign | Global variable to store the campaign record in current context. |
@@ -326,7 +328,7 @@ Collections used by the edit an idea campaign screen:
 | locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
 | locFormRecordCampaign | Local variable to store the campaign record being edited. |
 
-### Edit an idea campaign screen execution details
+### Execution details while editing an idea campaign
 
 1. The list of existing campaigns are shown in the **galCampaignSummary** gallery. Selecting any of the campaign sets the **gblSelectedRecordCampaign** variable to the selected campaign, and the user is taken to the campaign details page.
 
@@ -344,83 +346,53 @@ Collections used by the edit an idea campaign screen:
 
 1. The value of the **locVisibleCampaignView** variable is set to true displaying the **conCampaignUpsert** container.
 
+## Duplicating an idea campaign
 
-Duplicating a Campaign
+This section explains collections, and variables used, and execution details while [duplicating an idea campaign](employee-ideas.md#duplicate-an-idea-campaign)
 
-Collections involved
+### Collections used when duplicating an idea campaign
 
-1.  **colQuestions –** Used to collect the Idea Questions
+The following collections are used when duplicating an idea campaign:
 
-2.  **colQuestionsToDelete -** Used to collect the questions which are deleted
-    while adding / editing a campaign.
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
+| colQuestionsToDelete | Used to collect the deleted questions during the editing process. |
+| colIdeas | Used to collect ideas for a particular campaign. |
+| colStockImages | Collection of stock cover images. |
 
-3.  **colIdeas –** Used to collect Ideas for a particular campaign.
+### Variables used when duplicating an idea campaign
 
-4.  **colStockImages –** collection of stock cover images.
+The following variables are used when duplicating an idea campaign:
 
-Variables involved
+| Variable name | Description |
+| - | - |
+| gblSelectedRecordCampaign | Global variable to store the campaign record is in current context. |
+| gblSelectedRecordCampaign_FormValues | Global variable to store the field values of the campaign being added, or edited. |
+| locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
+| locVisibleCampaignView | Local variable to control the visible property of the **conCampaignDetailCard** data card (indicates the campaign can only be viewed in case the value is true). |
+| locVisibleCampaignCreate | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that a new campaign can be created if the value is true). |
+| locBlockUserInput | Local variable used to block the user input by displaying a dialog while something is being saved. |
 
-1.  **gblSelectedRecordCampaign –** global variable to store the campaign record
-    which is in context.
+### Execution details while duplicating an idea campaign
 
-2.  **gblSelectedRecordCampaign_FormValues –** global variable to store the
-    field values of the campaign which is being added or edited.
+1. A campaign can be duplicated using the **Duplicate** button on the campaign details screen.
 
-3.  **locVisibleCampaignEdit –** local variable to control the visible property
-    of the conCampaignUpsert container (indicates that an existing campaign can
-    be edited if the value is true)
+1. Selecting the **Duplicate** button sets the **gblSelectedRecordCampaign_FormValues** variable with the details of the campaign which is being duplicated (such as title, description, stat/end dates). The cover image is set to blank. The title of the newly created campaign is appended by (1).
 
-4.  **locVisibleCampaignView –** local variable to control the visible property
-    of the conCampaignDetailCard data card (indicates the campaign can only be
-    viewed in case the value is true).
+1. The value of the **locVisibleCampaignCreate** variable is updated to true which displays the **conCampaignUpsert** container.
 
-5.  **locVisibleCampaignCreate –** local variable to control the visible
-    property of the conCampaignUpsert container (indicates that a new campaign
-    can be created if the value is true)
+1. The User can make additional changes to the newly created campaign, and select the **Add Campaign** button.
 
-6.  **locBlockUserInput –** local variable used to block the User Input by
-    displaying a dialog while something is being saved.
+1. When selecting **Add Campaign** button, the updated fields are saved to the Employee Idea Campaigns table (**gblSelectedRecordCampaign** variable holds the edited campaign record).
 
-*Detailed steps*
+1. Newly added/edited questions are updated in the **colQuestions** collection, and the Employee Idea Questions table.
 
-1.  A Campaign can be duplicated by clicking on the “Duplicate” button on the
-    campaign details screen.
+1. Deleted questions are removed from the **colQuestionsToDelete** collection, and the Employee Idea Questions table.
 
-2.  Clicking on the duplicate button would set the
-    **gblSelectedRecordCampaign_FormValues** variable with the details of the
-    campaign which is being duplicated (Title, Description, Start and End
-    dates). The cover image would be set to blank. The title of the newly
-    created campaign would be appended by (1).
+1. The campaign submission screen is visible, and a confirmation message is displayed.
 
-3.  The value of the **locVisibleCampaignCreate** is updated to true which
-    displays the **conCampaignUpsert** container.
-
-4.  The User can make additional changes to the newly created campaign and click
-    on the Add Campaign button
-
-5.  On clicking of the Add Campaign button, the updated fields are saved to the
-    Employee Idea Campaigns table (**gblSelectedRecordCampaign** variable holds
-    the edited campaign record).
-
-6.  In case there are newly added / edited questions, they would be updated in
-    the **colQuestions** collection and the Employee Idea Questions table.
-
-7.  In case any questions are deleted, they would be removed from the
-    **colQuestionsToDelete** collection and the Employee Idea Questions table.
-
-8.  The campaign submission screen is visible, and a confirmation message is
-    displayed to the User.
-
-9.  Clicking on the cancel button would navigate the user back to the Campaign
-    Summary screen.
-
-Screens
-
-![](media/employee-ideas-architecture/5608e2fd66a08a33699a33365421531f.png)
-
-![](media/employee-ideas-architecture/da827bb7a865dea02193837f090dc119.png)
-
-![](media/employee-ideas-architecture/d9c55323bd59f9711f0de03d3c870e25.png)
+1. Selecting **Cancel** button takes the user back to the Campaign Summary screen.
 
 Deleting a Campaign
 
