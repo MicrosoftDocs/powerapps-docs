@@ -389,4 +389,33 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 > ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
 
 
+## Why is a different type of form opening instead of a Quick Create Form?
+
+When opening a QCF from a lookup or from a grid, a different type of form can open (Edit Form or Main Form Dialog). There are a few reasons for why this could happen.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all reasons why a QCF was not opened.
+
+> [!div class="mx-imgBorder"]
+> <img width="668" alt="form-type" src="https://user-images.githubusercontent.com/82106269/113896182-68c27e80-9765-11eb-8668-17c203169d4a.png">
+
+Please see the explanation, as well as instructions on how to get the QCF to appear for the same action. Contact the responsible party or make the according changes yourself in the customizations.
+
+## Why is an entity not shown in the Quick Create Menu flyout?
+
+When opening the global Quick Create Menu flyout, not all entities are present. There are multiple reasons for why the entities are filtered in this list, in some cases even multiple reasons for the same entity.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all entities and reasons why they are filtered from the Quick Create Menu flyout.
+
+See the examples below of the reasons for filtering. Based on the explanations, ontact the responsible party or make the according changes yourself in the customizations and the entity will appear in the flyout.
+
+> [!div class="mx-imgBorder"]
+![image](https://user-images.githubusercontent.com/82106269/113897013-2fd6d980-9766-11eb-9f89-e2fae3b1f372.png)
+![image](https://user-images.githubusercontent.com/82106269/113897095-441ad680-9766-11eb-8ce1-a35bb5771f81.png)
+![image](https://user-images.githubusercontent.com/82106269/113897247-657bc280-9766-11eb-91ec-213633243431.png)
+
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
