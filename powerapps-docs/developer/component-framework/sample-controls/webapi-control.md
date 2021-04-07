@@ -1,6 +1,6 @@
 ---
 title: " Web API component| Microsoft Docs" 
-description: "Implementing web API component" 
+description: "The web API component is designed to perform create, retrieve, update and delete actions." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -12,6 +12,8 @@ author: nkrb
 # Implementing Web API component
 
 The web API component is designed to perform create, retrieve, update and delete actions. The component renders four buttons, which can be clicked to invoke different web API actions. The result of the web API call is injected into a HTML div element at the bottom of the code component. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_WebAPI).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Web API component](../media/web-api-control.png "Web API component")

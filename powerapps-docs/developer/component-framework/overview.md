@@ -1,10 +1,10 @@
 ---
-title: "Power Apps component framework overview | Microsoft Docs"
+title: "Power Apps component framework overview in Microsoft Dataverse| Microsoft Docs"
 description: "Use the Power Apps component framework to create code components to provide enhanced experiences for people to view and work with data in forms, views, and dashboards."
 keywords: "Component Framework, code components, Power Apps controls"
 author: nkrb 
 manager: kvivek
-ms.date: 09/05/2019
+ms.date: 04/01/2021
 ms.service: "powerapps"
 ms.custom:
   - "dyn365-a11y"
@@ -18,9 +18,10 @@ ms.author: nabuthuk
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
-- Replace a field that displays a numeric text value with a `dial` or `slider` code component.
+- Replace a column that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]
 
@@ -38,7 +39,7 @@ Unlike HTML web resources, code components are rendered as a part of the same co
 
 Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](/dynamics365/customer-engagement/customize/solutions-overview) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
-Code components can be reused many times across different entities and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
+Code components can be reused many times across different tables and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
 
 ## Advantages 
 

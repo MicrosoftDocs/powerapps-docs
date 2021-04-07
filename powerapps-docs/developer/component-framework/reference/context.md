@@ -1,6 +1,6 @@
 ---
 title: Context | Microsoft Docs
-description: 
+description: Provides all the properties and methods available in the Power Apps component framework
 keywords:
 ms.author: nabuthuk
 author: Nkrb
