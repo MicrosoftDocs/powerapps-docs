@@ -43,6 +43,64 @@ The following diagram explains the data model used by the Employee ideas sample 
 | Employee Idea User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
 | Employee Idea Settings | Settings are used to store user preferences pertaining the Team Id, and Channel Id used for notifications. |
 
+### Collections
+
+The following table lists the collections used by the Employee Ideas app.
+
+| Collection Name           | Description                                                                 | Where used                                                                        |
+|---------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| colFileIcons              | Collection to store the app file type, and the icon.                              | App OnStart                                                        |
+| colStockImages            | Collection to store the stock images used in the app.                        | App OnStart                                                        |
+| colUserSettings           | Collection to collect user settings (if exists).                 | App OnStart                                                        |
+| colocalization            | collection of localized text based on user’s language.                      | App OnStart                                                        |
+| colIdeaStats_Raw          | Collections to collect raw ideas, for stats with owner details.              | App OnStart                                                        |
+| colVotes                  | Collection to store the number of votes given to an Idea                    | App OnStart                                                        |
+| colIdeas                  | Collection used to store employee ideas.                                     | Campaign Detail Screen                                                             |
+| colResponses              | Collection used to store idea responses                                     | Campaign Detail Screen                                                             |
+| colFiles                  | Collection used to collect files associated to an idea.                      | Items property of a gallery on the idea creation screen                            |
+| colQuestions              | Collection to collect the idea questions.                                    | Items property of a gallery on the campaign details screen                         |
+| colQuestionsToDelete      | Used to collect the questions to be deleted.                                 | OnClick property of the delete button on the campaign details screen               |
+| colVoteCounter            | Used to count the number of votes received by an idea.                       | App OnStart                                                        |
+| colCdsSampleDataIdeaUsers | Build collection with random owner for ideas, 20% current user, else random. | OnSelect property of a Randomize Sample data button (hidden) on the loading screen |
+| colSampleDataIdeas        | Collection used to collect active sample employee ideas                     | OnSelect property of a Randomize Sample data button (hidden) on the loading screen |
+| colSampleDataUsers        | Collection used to collect sample users.                                     | OnSelect property of a Randomize Sample data button (hidden) on the loading screen |
+
+### Global variables
+
+The following table lists the variables used by the Employee Ideas app.
+
+| Variable Name                        | Type    | Description                                                                        |
+|--------------------------------------|---------|------------------------------------------------------------------------------------|
+| gblAppLoaded                         | Boolean | To check whether the app is completely loaded.                                      |
+| gblAppContext                        | Boolean | To check the context of where the app is running.                                   |
+| gblUserLanguage                      | Text    | To check the logged in User’s Language                                             |
+| gblParamTeamId                       | Text    | To set the Group ID from Planner.                                                   |
+| gblParamChannelId                    | Text    | To set the Channel ID from Planner.                                                 |
+| gblThemeDark                         | Boolean | To check whether the Teams theme is set to Dark.                                    |
+| gblThemeHiCo                         | Boolean | To check whether the Teams theme is set to High Contrast.                           |
+| gblMobileMode                        | Boolean | To check whether the host client type is Android or iOS.                            |
+| gblRecordSettings                    | Record  | To check Teams settings for current team and channel ID.                            |
+| gblRandomizeData                     | Boolean | Variable to check whether the data must be randomized (implies first run in Team). |
+| gblRecordUserSettings                | Record  | Variable to use the oldest record in case multiple records exist.                   |
+| gblUserFirstName                     | Text    | Variable to set the full name of the user.                                          |
+| gblDropdownChannel                   | Table   | To get the channels for a particular group in Microsoft Teams.                      |
+| gblPadding                           | Record  | Used to set padding values in the app.                                              |
+| gblMobileWidth                       | Number  | Used to set the global Mobile Width.                                                |
+| gblToday                             | Date    | Variable to set the current date as a date/time value.                              |
+| gblUserRecord                        | Record  | Variable to get the user record of the logged in user.                              |
+| gblSettingNotificationChannelId      | Text    | Variable to set the Notification channel ID.                                        |
+| gblSettingTeamId                     | Text    | Variable to set the Notification Team ID.                                           |
+| gblSelectedRecordCampaign            | Record  | Variable to get the Selected campaign record.                                       |
+| gblRecordCampaignIdea                | Record  | Variable to get the Selected campaign Idea.                                         |
+| gblSelectedRecordCampaign_FormValues | Record  | Variable to store the field values of the campaign which is being added or edited. |
+| gblAppSetting_inputMobileOnWeb       | Boolean | Variables to scale fonts for mobile-oriented apps, running in desktop.              |
+| gblAppSetting_inputMobile            | Boolean | Variables to scale fonts for mobile-oriented apps.                                  |
+| gblAppSetting_inputScaleFontsby      | Number  | Use this variable for scaling all fonts by a fixed amount.                          |
+| gblAppColors                         | Record  | Variable to set the color value in the app.                                         |
+| gblAppSizes                          | Record  | Variable to set the color value in the app.                                         |
+| gblAppStyles                         | Record  | Variable to set the styling values in the app.                                      |
+| gblAppManager                        | Boolean | To check the user team role.                                                        |
+
 ## App OnStart
 
 This section explains app OnStart collections, variables, and execution details.
@@ -677,117 +735,43 @@ Settings screen uses the following variables:
 
 1. **Cancel** takes the user back to the previous screen.
 
-About screen
+## About screen
 
-Collections involved
+This section explains collections, and variables used, and execution details of the settings screen.
 
->   **None**
+### About screen collections
 
-Variables involved
+The about screen doesn't use any collections.
 
->   **None**
+### About screen variables
 
-Detailed steps
+The about screen doesn't use any variables.
 
-1.  Clicking the “Customize using Power Apps button” on the **conHeader_About**
-    container opens Power Apps tool link in Microsoft teams.
+### About screen execution details
 
-2.  There are help links available in the galAbout_HelpLinks gallery.
+1. **Customize using Power Apps** button on the **conHeader_About** container opens Power Apps in Microsoft Teams.
 
-3.  Clicking on the “Learn how to customize this app” button navigates to an
-    external link which explains on how to make customizations on the app.
+1. **galAbout_HelpLinks** gallery stores the help links.
 
-4.  Clicking on the “Send us your ideas” button navigates to an external link
-    where ideas can be posted for the Milestones app.
+1. **Learn how to customize this app** button takes you to an external link that explains on how to make customizations on the app.
 
-5.  Clicking on the “Engage with community” button navigates to the Power Apps
-    Community.
+1. **Send us your ideas** button takes you to an external link where ideas can be posted for the app.
 
-6.  The **conAbout_AppVideo** container contains the video link which provides
-    an overview of the Milestones app.
+1. **Engage with community** button takes you to the Power Apps Community page.
 
-7.  The gallery **galAbout_OtherApps** contains the links to other Microsoft
-    apps.
+1. **conAbout_AppVideo** container contains the video link that provides an overview of the app.
 
-8.  Clicking on the “View app” button navigates to the app page in the Microsoft
-    Teams app store.
+1. **galAbout_OtherApps** gallery contains the links to other Power Apps in Teams store.
 
-9.  Clicking on the “App Overview” button navigates to the App overview video on
-    YouTube.
+1. **View app** button takes you to the app page in the Microsoft Teams app store.
 
-10. The **conAbout_Version** gives information about the app versioning.
+1. **App Overview** button takes you to the app overview video.
 
-11. The **conAbout_Version** gives information about the app versioning.
+1. **conAbout_Version** gives information about the app versioning.
 
-Screens
+### See also
 
-![](media/employee-ideas-architecture/1762b4f38cdff5954ee9b1c84cab9f20.png)
-
-Collections
-
-Use a collection to store data that users can manage in your app. A collection
-is a group of items that are similar, such as products in a product list.
-
-Important Functions
-
-1.  **Collect**: The Collect function adds records to a data source.
-
-2.  **Clear**: The Clear function deletes all the records of a collection. The
-    columns of the collection will remain.
-
-3.  **ClearCollect**: The ClearCollect function deletes all the records from a
-    collection. And then adds a different set of records to the same collection.
-    With a single function, ClearCollect offers the combination of Clear and
-    then Collect.
-
-| Collection Name           | Description                                                                 | Screen Used                                                                        |
-|---------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| colFileIcons              | Collection to store the App File type and Icon                              | OnStart property of the App                                                        |
-| colStockImages            | Collection to store the stock images used in the app                        | OnStart property of the App                                                        |
-| colUserSettings           | Collection to collect User Settings CDS Record if it exists                 | OnStart property of the App                                                        |
-| colocalization            | collection of localized text based on user’s language.                      | OnStart property of the App                                                        |
-| colIdeaStats_Raw          | Collections to collect Raw Ideas, for Stats with Owner Details              | OnStart property of the App                                                        |
-| colVotes                  | Collection to store the number of votes given to an Idea                    | OnStart property of the App                                                        |
-| colIdeas                  | Collection used to store Employee Ideas                                     | Campaign Detail Screen                                                             |
-| colResponses              | Collection used to store Idea responses                                     | Campaign Detail Screen                                                             |
-| colFiles                  | Collection used to collect files associated to an idea                      | Items property of a gallery on the idea creation screen                            |
-| colQuestions              | Collection to collect the Idea questions                                    | Items property of a gallery on the campaign details screen                         |
-| colQuestionsToDelete      | Used to collect the questions to be deleted                                 | OnClick property of the delete button on the campaign details screen               |
-| colVoteCounter            | Used to count the number of votes received by an idea                       | OnStart property of the App                                                        |
-| colCdsSampleDataIdeaUsers | Build Collection with random owner for Ideas, 20% current user, else random | OnSelect property of a Randomize Sample data button (hidden) on the Loading screen |
-| colSampleDataIdeas        | Collection used to collect Active sample Employee ideas                     | OnSelect property of a Randomize Sample data button (hidden) on the Loading screen |
-| colSampleDataUsers        | Collection used to collect Sample Users                                     | OnSelect property of a Randomize Sample data button (hidden) on the Loading screen |
-
-Global Variables
-
-| Variable Name                        | Type    | Description                                                                        |
-|--------------------------------------|---------|------------------------------------------------------------------------------------|
-| gblAppLoaded                         | Boolean | To check whether the App is completely loaded                                      |
-| gblAppContext                        | Boolean | To check the context of where the app is running                                   |
-| gblUserLanguage                      | Text    | To check the logged in User’s Language                                             |
-| gblParamTeamId                       | Text    | To set the Group ID from Planner                                                   |
-| gblParamChannelId                    | Text    | To set the Channel ID from Planner                                                 |
-| gblThemeDark                         | Boolean | To check whether the Teams theme is set to Dark                                    |
-| gblThemeHiCo                         | Boolean | To check whether the Teams theme is set to High Contrast                           |
-| gblMobileMode                        | Boolean | To check whether the host client type is Android or iOS                            |
-| gblRecordSettings                    | Record  | To check Teams settings for current team and channel ID                            |
-| gblRandomizeData                     | Boolean | Variable to check whether the data must be randomized (implies first run in Team). |
-| gblRecordUserSettings                | Record  | Variable to use the Oldest Record in case multiple records exist                   |
-| gblUserFirstName                     | Text    | Variable to set the full name of the User                                          |
-| gblDropdownChannel                   | Table   | To get the channels for a particular group in Microsoft Teams                      |
-| gblPadding                           | Record  | Used to set padding values in the app                                              |
-| gblMobileWidth                       | Number  | Used to set the global Mobile Width                                                |
-| gblToday                             | Date    | Variable to set the current date as a date/time value                              |
-| gblUserRecord                        | Record  | Variable to get the User record of the logged in User                              |
-| gblSettingNotificationChannelId      | Text    | Variable to set the Notification channel ID                                        |
-| gblSettingTeamId                     | Text    | Variable to set the Notification Team ID                                           |
-| gblSelectedRecordCampaign            | Record  | Variable to get the Selected campaign record                                       |
-| gblRecordCampaignIdea                | Record  | Variable to get the Selected campaign Idea                                         |
-| gblSelectedRecordCampaign_FormValues | Record  | variable to store the field values of the campaign which is being added or edited. |
-| gblAppSetting_inputMobileOnWeb       | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop              |
-| gblAppSetting_inputMobile            | Boolean | Variables to Scale fonts for mobile-oriented apps                                  |
-| gblAppSetting_inputScaleFontsby      | Number  | Use this variable for scaling all fonts by a fixed amount                          |
-| gblAppColors                         | Record  | Variable to set the Color value in the app                                         |
-| gblAppSizes                          | Record  | Variable to set the Color value in the app                                         |
-| gblAppStyles                         | Record  | Variable to set the Styling values in the app                                      |
-| gblAppManager                        | Boolean | To check the User team role                                                        |
+[Employee ideas sample app](employee-ideas.md) <br>
+[Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
+[Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
+[Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)
