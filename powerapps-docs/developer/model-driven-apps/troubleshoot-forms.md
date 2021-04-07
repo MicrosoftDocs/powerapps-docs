@@ -2,7 +2,7 @@
 title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/12/2020
+ms.date: 04/07/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -389,47 +389,49 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 > ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
 
 
-## Why is a different type of form opening instead of a Quick Create Form?
+## Opening another form instead of quick create form?
 
-When opening a Quick Create Form (QCF) from a lookup or from a grid, a different type of form can open (Edit Form or Main Form Dialog). There are a few reasons for why this could happen.
+When opening a quick create form from a lookup or from a grid, another type of form can open (edit or main form). There are few reasons why this can happen.
 
 **Resolution**:
 
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all reasons why a QCF was not opened.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
 
 > [!div class="mx-imgBorder"]
 > <img width="668" alt="form-type" src="https://user-images.githubusercontent.com/82106269/113896182-68c27e80-9765-11eb-8668-17c203169d4a.png">
 
-The possible reasons are the following:
- - The Main Form Dialog force flag is being set
- - The QCF is not available - can be a lot of reasons, please see the below checker for the list of reasons.
+The possible reasons are:
+ - The main form dialog force flag is being set.
+ - Wuick create form is not available. This can happen for many resons, see the [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) tool for detailed information.
 
 Please see the explanation, as well as instructions on how to get the QCF to appear for the same action. Contact the responsible party or make the relevant changes yourself in the system customizations.
 
-## Why is an entity not shown in the Quick Create Menu flyout?
+## Why an entity not shown in the quick create menu flyout?
 
-When opening the global Quick Create Menu flyout, not all entities are present. There are multiple reasons for why the entities are filtered in this list, in some cases even multiple reasons for the same entity.
+When opening the global quick create menu flyout, not all entities are available. There are few reasons why the entities are filtered in this list, in some cases even multiple reasons for the same entity.
+
+The possible reasons why a quick create form is not available are:
+ - There is no quick create form available for the entity.
+ - Entity is not enabled for quick create form.
+ - Entity is not enabled for the new Unified Interface.
+ - Entity is read-only in Unified Interface.
+ - Entity's mobile client visibility cannot be modified.
+ - Entity is not part of the app module.
+ - User does not have a create privilege on the entity.
+ - The create privilege is not supported for the entity.
 
 **Resolution**:
 
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all entities and reasons why they are filtered from the Quick Create Menu flyout.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the entities and reasons why they are filtered from the quick create menu flyout.
 
-See the examples below of the reasons for filtering. Based on the explanations, ontact the responsible party or make the according changes yourself in the customizations and the entity will appear in the flyout.
+See the examples below of the reasons for filtering. Based on the explanations, contact the responsible party or make the according changes yourself in the customizations and the entity will appear in the flyout.
 
 > [!div class="mx-imgBorder"]
 ![image](https://user-images.githubusercontent.com/82106269/113897013-2fd6d980-9766-11eb-9f89-e2fae3b1f372.png)
 ![image](https://user-images.githubusercontent.com/82106269/113897095-441ad680-9766-11eb-8ce1-a35bb5771f81.png)
 ![image](https://user-images.githubusercontent.com/82106269/113897247-657bc280-9766-11eb-91ec-213633243431.png)
 
-The possible reasons for why a QCF is not available are the following:
- - There is no quick create form available for the entity
- - The entity is not enabled for quick create
- - The entity is not enabled for Unified Client
- - The entity is read-only in Unified Client
- - The entity's mobile client visibility cannot be modified
- - The entity is not part of the app module
- - The user does not have a create privilege on the entity
- - The create privilege is not supported for the entity
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
