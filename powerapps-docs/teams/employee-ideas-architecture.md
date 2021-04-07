@@ -570,66 +570,35 @@ The following variables are used when submitting a new idea:
 
 ### Execution details when submitting a new idea
 
-1.  A new idea can be submitted from the Campaign Details screen.
+1. A new idea can be submitted from the campaign details screen.
 
-2.  On click of “Submit an Idea” button, The Idea Questions for the selected
-    campaign (**gblSelectedRecordCampaign**) are collected in the colQuestions
-    collection.
+1. Using the **Submit an Idea** button, the idea questions for the selected campaign (**gblSelectedRecordCampaign**) are collected in the **colQuestions** collection.
 
-3.  The **colResponses** collection is used to collect the Idea Responses and
-    for all the idea questions present in the colQuestions collection responses
-    would be collected in the **colResponses** collection.
+1. The **colResponses** collection is used to collect the idea responses, and for all the idea questions present in the **colQuestions** collection responses are collected in the **colResponses** collection.
 
-4.  The **colFiles** collection is cleared and the locCreateNewIdea and
-    locVisibleCampaignIdea variables are set to true.
+1. The **colFiles** collection is cleared, and the **locCreateNewIdea** and **locVisibleCampaignIdea** variables are set to true.
 
-5.  The value of the **locVisibleCampaignIdea** and **locCreateNewIdea**
-    variables are set to true thus displaying the **conCampaignIdeaPane** and
-    **conIdeaImage** containers.
+1. The value of the **locVisibleCampaignIdea** and **locCreateNewIdea** variables are set to true, displaying the **conCampaignIdeaPane** and **conIdeaImage** containers.
 
-6.  The **galIdeaResponses** displays the fields which the Users must fill in
-    order to save the Idea.
+1. The **galIdeaResponses** displays the fields which the Users must fill in order to save the idea.
 
-7.  Clicking on the “New File” image allows the users to add related files.
+1. Using the **New File** image allows the users to add related files.
 
-8.  The files added for an idea are displayed as part of the **galIdeaFiles**
-    gallery whose items property is set to the colFiles collection. The
-    corresponding file icon is displayed (stored in the colFileIcons
-    collection).
+1. The files added for an idea are displayed as part of the **galIdeaFiles** gallery whose items property is set to the **colFiles** collection. The corresponding file icon is displayed (stored in the **colFileIcons** collection).
 
-9.  Clicking on the Delete button would remove the attached file from the
-    **colFiles** collection.
+1. **Delete** removes the attached file from the **colFiles** collection.
 
-10. Setting the “Share in channel” toggle to on will post a message on the
-    channel regarding the Idea creation.
+1. Setting the **Share in channel** toggle to "On" posts a message on the channel regarding the idea creation.
 
-11. Clicking on the Back button will take the User back to the Campaign summary
-    screen. Clicking on the Cancel button would display the campaign details.
+1. **Back** takes the user back to the campaign summary screen. **Cancel** displays the campaign details.
 
-12. The Save button will be enabled when **colResponses** is not blank. On
-    clicking of the Submit Idea button the data in **colResponses** and
-    **colFiles** collection is updated to the Employee Idea Responses table and
-    if the “Share in Channel” option is set to Yes, Based on the values of the
-    **gblParamTeamId** and **gblParamChannelId** variables collected on Start of
-    the app a post is made on the channel.
+1. **Save** is enabled when **colResponses** is not blank. Selecting **Submit Idea** results in the data in **colResponses** and **colFiles** collection to update to the Employee Idea Responses table, and if the **Share in Channel** option is set to "Yes", based on the values of the **gblParamTeamId** and **gblParamChannelId** variables collected on start of the app, a post is made on the channel.
 
-13. The data from colFiles, colIdeas, colResponses are updated to the Employee
-    Idea Files, Employee Ideas and Employee Idea Responses tables respectively.
+1. The data from **colFiles**, **colIdeas**, and **colResponses** are updated to the Employee Idea Files, Employee Ideas and Employee Idea Responses tables respectively.
 
-14. The value of the locVisibleCampaignIdeaSubmitted variable is set to true
-    thus displaying the conIdeaSubmtted container (Idea Submitted message).
+1. The value of the **locVisibleCampaignIdeaSubmitted** variable is set to true displaying the **conIdeaSubmtted** container (Idea Submitted message).
 
-15. Clicking on the “Return to Idea List” button will set the
-    locVisibleCampaignView variable to true thus displaying the Campaign
-    details.
-
-Screens
-
-![](media/employee-ideas-architecture/5608e2fd66a08a33699a33365421531f.png)
-
-![](media/employee-ideas-architecture/d6848678ff9dd01c19694c034f12f0f7.png)
-
-![](media/employee-ideas-architecture/d2b03a9e15afe8de426d713753667ee2.png)
+1. **Return to Idea List** sets the **locVisibleCampaignView** variable to true displaying the campaign details.
 
 Deleting an Idea
 
