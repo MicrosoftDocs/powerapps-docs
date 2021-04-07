@@ -515,36 +515,32 @@ The following variables are used when adding an idea question:
 
 1. The questions in the **colQuestions** collection are rearranged by comparing the values of **locSequenceCurrent** and **locSequenceNew** variables.
 
-Updating the Question Response Types
+## Change the question response type
 
-Collections involved
+This section explains collections, and variables used, and execution details while changing the response type of idea questions when you [add/edit an idea campaign](employee-ideas.md#add-an-idea-campaign).
 
-1.  **colQuestions –** Used to collect the Idea Questions
+### Collections used when changing the response type of idea questions
 
-Variables involved
+The following collections are used when changing the response type of idea questions:
 
->   **None**
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
 
-Detailed steps
+### Variables used when changing the response type of idea questions
 
-1.  The Question response types are displayed as part of the
-    **galCampaignQuestionResponseType** gallery.
+Changing the response type of idea questions doesn't use any variables.
 
-2.  The visible property of the **galQuestionResponseRating** gallery is
-    controlled by the Response Type selected in the
-    **galCampaignQuestionResponseType** gallery by comparing the values of
-    **locSequenceCurrent** and **locSequenceNew** variables.
+### Execution details when changing the response type of idea questions
 
-3.  In case the Response type is selected as Rating, A list of numbers is shown,
-    Lowest being 1 and highest being 5.
+1. The question response types are displayed as part of the **galCampaignQuestionResponseType** gallery.
 
-4.  In case the response type is selected as Text, A toggle with the options
-    Long and Short is displayed.
+1. The visible property of the **galQuestionResponseRating** gallery is controlled by the response type selected in the **galCampaignQuestionResponseType** gallery by comparing the values of **locSequenceCurrent** and **locSequenceNew** variables.
 
-  
-Screens
+1. For Rating response type, a list of numbers is shown&mdash;lowest being 1, and highest being 5.
 
-![](media/employee-ideas-architecture/2e041e9418137e5e201f35af18d897d0.png)
+1. For Text response type, a toggle with the options Long and Short is displayed.
+
 
 Submit a new Idea
 
