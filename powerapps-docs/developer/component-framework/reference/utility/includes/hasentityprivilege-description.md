@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: eb6019c4-c021-428e-9a3b-a33630d2f088
 ---
 
-Returns if the user has privilege for specific entity.
+Returns if the user has privilege for specific table.

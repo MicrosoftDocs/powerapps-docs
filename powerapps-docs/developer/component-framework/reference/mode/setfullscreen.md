@@ -1,6 +1,6 @@
 ---
 title: setFullScreen | Microsoft Docs
-description: 
+description: Make the component full screen.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
