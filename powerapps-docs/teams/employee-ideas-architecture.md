@@ -486,35 +486,34 @@ Deleting an idea question doesn't use any variables.
 
 1. Selecting **Save** removes the deleted question from the Employee Idea Questions table.
 
-Rearranging Idea Questions
+## Change idea questions order
 
-Collections involved
+This section explains collections, and variables used, and execution details while changing the order of idea questions when you [add/edit an idea campaign](employee-ideas.md#add-an-idea-campaign).
 
-1.  **colQuestions –** Used to collect the Idea Questions
+### Collections used when changing the order of idea questions
 
-Variables involved
+The following collections are used when changing the order of idea questions:
 
-1.  **locSequenceCurrent –** Local variable to set the current sequence number
-    of the question.
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions. |
 
-2.  **locSequenceNew -** Local variable to set the new sequence number of the
-    question.
+## Variables used when changing the order of idea questions
 
-Detailed steps
+The following variables are used when adding an idea question:
 
-1.  The Sequence of the Idea questions can be updated by clicking on the Up and
-    Down arrows present next to the Question.
+| Variable name | Description |
+| - | - |
+| locSequenceCurrent | Local variable to set the current sequence number of the question. |
+| locSequenceNew | Local variable to set the new sequence number of the question. |
 
-2.  The Up-arrow button is disabled for the first question and the down arrow
-    button is disabled for the last question in the gallery (The display mode is
-    controlled by the value of msft_sequence field).
+### Execution details when changing the order of idea questions
 
-3.  The questions in the **colQuestions** collection are rearranged by comparing
-    the values of **locSequenceCurrent** and **locSequenceNew** variables.
+1. The sequence of the idea questions can be updated by using the up and down arrows available next to the questions.
 
-Screens
+1. The up arrow is disabled for the first question, and the down arrow is disabled for the last question in the gallery (the display mode is controlled by the value of msft_sequence field).
 
-![](media/employee-ideas-architecture/c4d1982fe677b54f00deddab26fcdd96.png)
+1. The questions in the **colQuestions** collection are rearranged by comparing the values of **locSequenceCurrent** and **locSequenceNew** variables.
 
 Updating the Question Response Types
 
