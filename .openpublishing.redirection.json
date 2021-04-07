@@ -3187,8 +3187,13 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/solution-component-file-reference-solutionpackager.md",
-      "redirect_url": "../data-platform/solution-component-file-reference-solutionpackager",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/solution-component-file-reference-solutionpackager.md",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
+      "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/special-update-operation-behavior.md",

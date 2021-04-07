@@ -13,4 +13,4 @@ ms.topic: "article"
 ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 ---
 
-Returns all the linked entities information.
+Returns all the linked tables information.

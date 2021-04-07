@@ -1,6 +1,6 @@
 ---
 title: Formatting | Microsoft Docs
-description: 
+description: Provides properties and methods to work with formatting.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: openErrorDialog | Microsoft Docs
-description: 
+description: Displays an error dialog.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
