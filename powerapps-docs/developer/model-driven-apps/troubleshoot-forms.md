@@ -400,6 +400,10 @@ When opening a Quick Create Form (QCF) from a lookup or from a grid, a different
 > [!div class="mx-imgBorder"]
 > <img width="668" alt="form-type" src="https://user-images.githubusercontent.com/82106269/113896182-68c27e80-9765-11eb-8668-17c203169d4a.png">
 
+The possible reasons are the following:
+ - The Main Form Dialog force flag is being set
+ - The QCF is not available - can be a lot of reasons, please see the below checker for the list of reasons.
+
 Please see the explanation, as well as instructions on how to get the QCF to appear for the same action. Contact the responsible party or make the relevant changes yourself in the system customizations.
 
 ## Why is an entity not shown in the Quick Create Menu flyout?
@@ -416,6 +420,16 @@ See the examples below of the reasons for filtering. Based on the explanations, 
 ![image](https://user-images.githubusercontent.com/82106269/113897013-2fd6d980-9766-11eb-9f89-e2fae3b1f372.png)
 ![image](https://user-images.githubusercontent.com/82106269/113897095-441ad680-9766-11eb-8ce1-a35bb5771f81.png)
 ![image](https://user-images.githubusercontent.com/82106269/113897247-657bc280-9766-11eb-91ec-213633243431.png)
+
+The possible reasons for why a QCF is not available are the following:
+ - There is no quick create form available for the entity
+ - The entity is not enabled for quick create
+ - The entity is not enabled for Unified Client
+ - The entity is read-only in Unified Client
+ - The entity's mobile client visibility cannot be modified
+ - The entity is not part of the app module
+ - The user does not have a create privilege on the entity
+ - The create privilege is not supported for the entity
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
