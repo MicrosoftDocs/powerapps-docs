@@ -444,7 +444,7 @@ The following collections are used when adding an idea question:
 
 The following variables are used when adding an idea question:
 
-| Collections name | Description |
+| Variable name | Description |
 | - | - |
 | locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
 | gblSelectedRecordCampaign | Global variable to store the campaign record in the current context. |
@@ -459,34 +459,32 @@ The following variables are used when adding an idea question:
 
 1. Selecting **Save** button updates the newly added question to the Employee Idea Questions table.
 
-Deleting an Idea Question
+## Delete an idea question
 
-Collections involved
+This section explains collections, and variables used, and execution details while [delete an idea question](employee-ideas.md#add-an-idea-campaign).
 
-1.  **colQuestions –** Used to collect the Idea Questions
+### Collections used when deleting an idea question
 
-2.  **colQuestionsToDelete -** Used to collect the questions which are deleted
-    while adding / editing a campaign.
+The following collections are used when deleting an idea question:
 
-Variables involved
+| Collections name | Description |
+| - | - |
+| colQuestions | Used to collect the idea questions.
+| colQuestionsToDelete | Used to collect the questions which are deleted while adding/deleting a campaign.
 
-*Detailed steps*
+## Variables used when deleting an idea question
 
-1.  Existing Idea questions can be deleted while a Campaign is being edited.
+Deleting an idea question doesn't use any variables.
 
-2.  Clicking on the “Delete” button present next to the question would remove it
-    from the **colQuestions** collection and add the deleted question the
-    **colQuestionsToDelete** collection.
+### Execution details while deleting an idea question
 
-3.  The deleted question is also removed from the **galCampaignEditQuestions**
-    gallery.
+1. Existing ddea questions can be deleted while a campaign is being edited.
 
-4.  Clicking on Save button would remove the deleted Question to the Employee
-    Idea Questions table.
+1. Selecting **Delete** removes question from the **colQuestions** collection, and adds the deleted question the **colQuestionsToDelete** collection.
 
-Screens
+1. The deleted question is also removed from the **galCampaignEditQuestions** gallery.
 
-![](media/employee-ideas-architecture/d88eff410241219128fa8b402b433081.png)
+1. Selecting **Save** removes the deleted question from the Employee Idea Questions table.
 
 Rearranging Idea Questions
 
