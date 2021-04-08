@@ -32,69 +32,18 @@ The following diagram explains the data model used by the Inspection sample app.
 
 ![Inspection sample app data model](media/inspection-architecture/data-model.png "Inspection sample app data model")
 
-Entities:
-=========
-
--   **Area Inspection(Inspection)**
-
-    An inspection is, most generally, an organized examination or formal
-    evaluation exercise. This entity holds the inspection checklist results via
-    Area inspection step when an inspection is performed using a checklist/form.
-
--   **Area Inspection Step (Inspection step)**
-
-    An inspection step is one of the checklist item result of an inspection and
-    holds the outcome and notes of that particular inspection step.
-
--   **Area Inspection Location (Inspection Location)**
-
-    An inspection location is place or item or audit that the user needs to
-    inspect. All the inspection steps are performed on this location / Item. One
-    inspection can have multiple inspection steps which depends on number of
-    Checklist steps that are made available for the inspection.
-
--   **Area Inspection Checklist (Checklist)**
-
-    A checklist is a list of all the things that you need to do while
-    inspecting. It holds multiple Checklist steps and is connected to Type of
-    inspection. So when a user is trying to perform a particular item / area
-    then all the associated Checklists will be made available to the user to
-    choose to perform the inspection.
-
--   **Area Inspection Checklist Step (Checklist Step)**
-
-    Checklist steps are the steps that are performed in a sequential order while
-    inspecting an item /area using a checklist. Each Checklist step is
-    associated to only one Checklist. A series of Checklist steps will form a
-    Checklist.
-
--   **Area Inspection Image (Image)**
-
-    All the images that are taken or uploaded during the inspection are stored
-    in this entity and these images are associated to Area inspection step which
-    in turn are part of Area inspection.
-
--   **Area Inspection Location (Area / Asset / Item)**
-
-    This entity holds the information of the area /asset / items that needs to
-    be inspected.
-
--   **Area Inspection Location Type (Area Type / Asset Type / Item Type)**
-
-    This Entity holds the Type or category that the Area / Asset / Item will
-    fall into. Based on the type of Area / Asset / Item, the associated
-    checklists will be made available for the user to start the inspection.
-
--   **User Setting**
-
-    User settings are used to store user preferences pertaining to seeing the
-    Power Apps splash screen every time they login to the app. There is one
-    record for each user.
-
--   **User Setting**
-
-    Team settings are used to store Team, Channel and Planner preferences while
-    using the application.
+| Table name | Description |
+| - | - |
+| Area Inspection | An inspection is, most generally, an organized examination or formal evaluation exercise. This table holds the inspection checklist results using the area inspection step when an inspection is performed using a checklist/form. |
+| Area Inspection Step | An inspection step is one of the checklist item result of an inspection, and holds the outcome and notes of that particular inspection step. |
+| Area Inspection Location | An inspection location is place or item or audit that the user needs to inspect. All the inspection steps are performed on this location or item. One inspection can have multiple inspection steps which depends on number of checklist steps that are made available for the inspection. |
+| Area Inspection Checklist | A checklist is a list of all the things that you need to do while inspecting. It holds multiple Checklist steps, and is connected to the type of the inspection. During the inspection, all the associated checklists are available to the user to choose and perform the inspection. |
+| Area Inspection Checklist Step | Checklist steps are the steps that are performed in a sequential order while inspecting an item/area using a checklist. Each checklist step is associated to only one checklist. A series of checklist steps make one checklist. |
+| Area Inspection Image | All the images that are taken or uploaded during the inspection are stored in this table, and these images are associated to area inspection steps. |
+| Area Inspection Location | This table holds the information of the area, asset, or items that needs to be inspected. |
+| Area Inspection Location Type | This table holds the type or category that the area, asset, or item is aligned to. Based on the type of area, asset, or item, the associated checklists is made available for the user to start the inspection. |
+| User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
+| User Setting | Team settings are used to store Team, Channel and Planner preferences while using the application.
 
 Manage Inspection
 =================
