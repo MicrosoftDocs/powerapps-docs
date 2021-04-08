@@ -179,6 +179,8 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Find it with unified search
+    href: search.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -344,17 +346,23 @@
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
             - name: View and manipulate 3D models
-              href: ./canvas-apps/mixed-reality-component-view-3d.md
-            - name: View predefined shapes in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-shape.md
-            - name: View 3D models and 2D images in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-mr.md
-            - name: Measure in mixed reality
-              href: ./canvas-apps/mixed-reality-component-measure-distance.md
-            - name: Add pins to 3D models
-              href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
-            - name: Upload photos from mixed reality
-              href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              items:
+              - name: View 3D models in Power Apps
+                href: ./canvas-apps/mixed-reality-component-view-3d.md
+              - name: Load models with the View in 3D component
+                href: ./canvas-apps/mixed-reality-component-view-3d-store.md
+              - name: Add pins to 3D models
+                href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
+            - name: Use mixed reality experiences in Power Apps
+              items:
+              - name: View predefined shapes in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-shape.md
+              - name: View 3D models and 2D images in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-mr.md
+              - name: Measure in mixed reality
+                href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Upload photos from mixed reality
+                href: ./canvas-apps/mixed-reality-take-upload-photos.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -743,6 +751,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: Power
             href: ./canvas-apps/functions/function-numericals.md
+          - name: Print
+            href: ./canvas-apps/functions/function-print.md
           - name: Proper
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: Radians
@@ -1173,7 +1183,7 @@
           href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
         - name: "Share an embedded canvas app"
           href: ./model-driven-apps/share-embedded-canvas-app.md
-        - name: "Embedded canvas app guidelines"
+        - name: "Embedded canvas app guidelines and known issues"
           href: ./model-driven-apps/embedded-canvas-app-guidelines.md
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
@@ -1289,20 +1299,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: Transition to Unified Interface
-    items:
-    - name: Transition quick start
-      href: ./model-driven-apps/transition-web-app.md
-    - name: Use an existing environment to transition quick start
-      href: ./model-driven-apps/transition-web-app-existing.md
-    - name: Unified Interface Playbook
-      href: ./model-driven-apps/unified-interface-playbook.md
-    - name: Approaching a Unified Interface transition
-      href: ./model-driven-apps/approaching-unified-interface.md
-    - name: "Checklist: Unified Interface transition"
-      href: ./model-driven-apps/checklist-transition-unified-interface.md
-    - name: "FAQs: Unified Interface transition"
-      href: ./model-driven-apps/faqs-transition-unified-interface.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
@@ -1452,7 +1448,7 @@
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
-        - name: Configure CORS support
+        - name: Setup HTTP headers
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
@@ -1532,6 +1528,8 @@
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
+        - name: View capacity consumption reports
+          href: ./portals/admin/portal-consumption-reports.md
     - name: Configure security in portals
       items:
         - name: Portal authentication
@@ -1695,7 +1693,13 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
-            href: ./portals/web-api-http-requests-handle-errors.md          
+            href: ./portals/web-api-http-requests-handle-errors.md
+        - name: Code components (Preview)
+          items:
+          - name: Overview of code components in portals
+            href: ./portals/component-framework.md          
+          - name: "Tutorial: Use code components in portals"
+            href: ./portals/component-framework-tutorial.md          
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
@@ -1768,8 +1772,18 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQs
       href: ./portals/legacy-portal-faq.md
-    - name: Release updates
-      href: ./portals/release-updates.md
+    - name: Version releases and updates
+      items:
+         - name: Release updates
+           href: ./portals/release-updates.md
+         - name: Version updates
+           items:
+              - name: Version 9.3.3.x
+                href: ./portals/versions/version-9.3.3.x.md
+         - name: Starter Portal package updates
+           items:
+              - name: Package 9.2.2103.x
+                href: ./portals/versions/package-version-9.2.2103.md
 - name: Dataverse
   items:
   - name: Dataverse

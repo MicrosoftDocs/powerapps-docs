@@ -35,13 +35,13 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](/dynamics365/customer-engagement/admin/enable-languages) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
 
 > [!TIP]
-> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).
+> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).
 
 ## Export the localizable text
 
@@ -135,7 +135,7 @@ After the translated text is imported, you should publish all customizations to 
 
 
 ## Next steps
-[Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
+[Regional and language options for your organization](/dynamics365/customer-engagement/admin/enable-languages)<br />
 [Edit system table messages](../data-platform/edit-system-entity-messages.md)
 
 

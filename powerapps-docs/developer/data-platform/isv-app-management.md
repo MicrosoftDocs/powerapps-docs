@@ -24,11 +24,11 @@ search.app:
 
 # Microsoft Power Platform ISV Studio
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!IMPORTANT]
 >
@@ -47,9 +47,7 @@ To access the public preview of ISV Studio, navigate your browser to [https://ak
 
 ## Pre-requisites
 
-1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
-
-2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Partner Center for the particular ISV.
+The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
 
 ### Admin access to ISV Studio
 
@@ -80,11 +78,11 @@ You can follow the same steps to remove read-only access from a user to ISV Stud
 
 <!--If you do not have permissions to give additional users access to ISV Studio. Please visit our documentation to learn more about user access.  
 If you want additional users to get access to ISV Studio, they can be added as app contributors in Partner Center.  Instructions can be found at
-[Managing users on cloud partner portal](https://docs.microsoft.com/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
+[Managing users on cloud partner portal](/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
-### Feedback
+### How to provide feedback
 
 Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 

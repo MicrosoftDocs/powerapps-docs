@@ -31,7 +31,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
     ![New canvas app](./media/get-started-test-drive/new-canvas-app.png)
 
-    This opens [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) in a new tab.
+    This opens [Power Apps Studio](../../powerapps-overview.md#power-apps-for-app-makerscreators) in a new tab.
 
 1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
 

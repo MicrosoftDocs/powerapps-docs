@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/12/2021
+ms.date: 3/17/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -62,8 +62,13 @@ A few things to note:
 
    > [!div class="mx-imgBorder"] 
    > ![Enable content](media/enable-content.png "Enable content") 
+
+ > [!NOTE]
+ > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
+ 
+7. To add a pivot table, on the **Insert** tab, select **PivotTable**.
   
-7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
+8. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
   
 
 

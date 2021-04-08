@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/11/2021
+ms.date: 04/07/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -57,10 +57,13 @@ To share an app:
 1. Select a security group you would like to assign to the **Colleagues with
 access** role.
 
+    > [!IMPORTANT]
+    > The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
+
 1. Choose which apps the **Colleagues with access** role should have access to.
 
 Once you’re done sharing your apps, they’ll appear in the [Built for your
-colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
+colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
 
 ![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
 
@@ -82,7 +85,7 @@ By default, the **Colleagues with access** role has no access to the data inside
 - **Private** ­– Allows end users to only view and edit their own data.
 
 > [!NOTE]
-> you can also use this experience to alter the default access rights for
+> You can also use this experience to alter the default access rights for
 members and guests within your team. By default, Team members are given **Full
 access** and guests are given **Private** access to new custom tables.
 
@@ -145,11 +148,11 @@ To share an app:
 1. Select **Save**.
 
 The apps you selected will now appear in the [Built for your
-colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps) section within the Teams app store.
+colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store.
 
 #### Optional: Pin the app to the app bar as a tenant administrator
 
-If you're a tenant administrator, you can go one step forward and pin the apps for end users in Teams. To pin apps in Teams, follow the steps to [add an app to the app catalog](embed-teams-app.md), and then, [edit or create a new Teams app setup policy](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies) with your app.
+If you're a tenant administrator, you can go one step forward and pin the apps for end users in Teams. To pin apps in Teams, follow the steps to [add an app to the app catalog](embed-teams-app.md), and then, [edit or create a new Teams app setup policy](/microsoftteams/teams-app-setup-policies) with your app.
 
 | Teams desktop client | Teams mobile client |
 | - | - |

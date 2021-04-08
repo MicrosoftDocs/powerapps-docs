@@ -133,7 +133,7 @@ UoMSchedule
  [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md)
  [Download: Chart Controls for .NET Framework Language Pack](https://www.microsoft.com/downloads/details.aspx?FamilyId=581FF4E3-749F-4454-A5E3-DE4C463143BD&displaylang=en)   
  [Download: Chart Controls Add-on for Visual Studio](https://www.microsoft.com/downloads/details.aspx?FamilyId=1D69CE13-E1E5-4315-825C-F14D33A303E9&displaylang=en)   
- [Download: Chart Controls for .NET Framework Documentation](https://go.microsoft.com/fwlink/p/?LinkId=128301)   
+ [Download: Chart Controls for .NET Framework Documentation](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))   
  [Samples Environment for Microsoft Chart Controls](https://code.msdn.microsoft.com/mschart)   
  [Chart Controls Forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)
 

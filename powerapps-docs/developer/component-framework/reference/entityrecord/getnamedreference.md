@@ -1,6 +1,6 @@
 ---
 title: getNamedReference | Microsoft Docs
-description: 
+description: Gets the object that encapsulates an EntityReference as a plain object.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

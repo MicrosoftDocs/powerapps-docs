@@ -17,7 +17,7 @@ search.app:
 ---
 # Pass data from a page as a parameter to Ribbon Actions
 
-When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This topic describes options for using the [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx) element to retrieve these values.
+When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This topic describes options for using the [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)) element to retrieve these values.
 
 ## Form and grid context in ribbon actions
 
@@ -105,7 +105,7 @@ function mySampleFunction(primaryControl) {
  
   
 ## Other context information  
- In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
+ In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
  
  For a `<Url>` action, you can also use the `PassParams` attribute to include contextual information.  
   

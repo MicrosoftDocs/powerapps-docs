@@ -47,7 +47,7 @@ To create a portal in an environment containing customer engagement apps:
 
 [Common problems and resolutions while creating a portal](create-common-problems.md) <br>
 [Control portal creation in a tenant](control-portal-creation.md) <br>
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

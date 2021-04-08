@@ -50,7 +50,7 @@ Actions also have something that real-time workflow processes don’t—input an
 ## Create an action  
   
 > [!IMPORTANT]
-> If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
+> If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
   
 Like real-time workflow processes, actions have the following properties in the **Create Process** dialog box:  
   
@@ -143,7 +143,7 @@ The following table describes the action process argument types.
 |String|A text value.|  
   
 > [!NOTE]
-> **entityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-own-actions) 
+> **entityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions) 
   
 <a name="BKMK_AddStagesConditionsAndActions"></a>   
 ### Add stages and steps  
