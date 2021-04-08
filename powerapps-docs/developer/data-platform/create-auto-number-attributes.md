@@ -18,9 +18,9 @@ search.app:
 ---
 # Create autonumber columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 With Microsoft Dataverse, you can add an autonumber column for any table. Currently, you can add the column programmatically. The topic explains how you can programmatically create an autonumber column and set a seed value for sequential elements. In addition, the topic shows how to set the sequence number for the next record if you need to reset the seed at any time later.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!NOTE]
 >The setting of the seed is optional. There is no need to call the seed if you don’t need to reseed.
@@ -42,22 +42,22 @@ The following examples show how to create a new autonumber column named **new\_S
 Using the Organization service with SDK assemblies **CreateAttributeRequest** and **StringAttributeMetadata** classes:
 
 ```csharp
-CreateAttributeRequest widgetSerialNumberAttributeRequest = new CreateAttributeRequest
-            {
-                EntityName = "newWidget",
-                Attribute = new StringAttributeMetadata
-                {
-                    //Define the format of the column
-                    AutoNumberFormat = "WID-{SEQNUM:5}-{RANDSTRING:6}-{DATETIMEUTC:yyyyMMddhhmmss}",
-                    LogicalName = "new_serialnumber",
-                    SchemaName = "new_SerialNumber",
-                    RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-                    MaxLength = 100, // The MaxLength defined for the string column must be greater than the length of the AutoNumberFormat value, that is, it should be able to fit in the generated value.
-                    DisplayName = new Label("Serial Number", 1033),
-                    Description = new Label("Serial Number of the widget.", 1033)
-                }
-            };
-            _serviceProxy.Execute(widgetSerialNumberAttributeRequest);
+var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
+  {
+    EntityName = "newWidget",
+    Attribute = new StringAttributeMetadata
+      {
+        //Define the format of the column
+        AutoNumberFormat = "WID-{SEQNUM:5}-{RANDSTRING:6}-{DATETIMEUTC:yyyyMMddhhmmss}",
+        LogicalName = "new_serialnumber",
+        SchemaName = "new_SerialNumber",
+        RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
+        MaxLength = 100, // The MaxLength defined for the string column must be greater than the length of the AutoNumberFormat value, that is, it should be able to fit in the generated value.
+        DisplayName = new Label("Serial Number", 1033),
+        escription = new Label("Serial Number of the widget.", 1033)
+      }
+  };
+    _serviceProxy.Execute(widgetSerialNumberAttributeRequest);
 ```
 
 ## Use Web API
@@ -139,7 +139,7 @@ These examples show how you can configure the **AutoNumberFormat** property to g
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMMddhh}-{RANDSTRING:6}`|`CAS-002002-2017091309-HTZOUR`|
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMM}-{RANDSTRING:6}-{DATETIMEUTC:hhmmss}`|`CAS-002000-201709-Z8M2Z6-110901`|
 
-The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard Date and Time Format Strings](/dotnet/standard/base-types/standard-date-and-time-format-strings).
+The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ### String length
 
@@ -179,14 +179,14 @@ To modify an existing autonumber column, you must retrieve the column using the 
 
 ```csharp
 // Create the retrieve request
-RetrieveAttributeRequest attributeRequest = new RetrieveAttributeRequest
-            {
-                EntityLogicalName = entityName.ToLower(),
-                LogicalName = "new_serialnumber",
-                RetrieveAsIfPublished = true
-            };
+var attributeRequest = new RetrieveAttributeRequest
+  {
+    EntityLogicalName = entityName.ToLower(),
+    LogicalName = "new_serialnumber",
+    RetrieveAsIfPublished = true
+  };
 // Retrieve attribute response
-RetrieveAttributeResponse attributeResponse = (RetrieveAttributeResponse)_serviceProxy.Execute(attributeRequest);
+var attributeResponse = (RetrieveAttributeResponse)_serviceProxy.Execute(attributeRequest);
 ```
 
 After retrieving the autonumber column, you need to modify and update the column.
@@ -197,11 +197,11 @@ AttributeMetadata retrievedAttributeMetadata = attributeResponse.AttributeMetada
 retrievedAttributeMetadata.AutoNumberFormat = "CAR-{RANDSTRING:5}{SEQNUM:6}"; //Modify the existing column by writing the format as per your requirement 
 
 // Update the autonumber column            
-UpdateAttributeRequest updateRequest = new UpdateAttributeRequest
-                        {
-                            Attribute = retrievedAttributeMetadata,
-                            EntityName = "newWidget",
-                        };
+var updateRequest = new UpdateAttributeRequest
+  {
+    Attribute = retrievedAttributeMetadata,
+    EntityName = "newWidget",
+  };
 // Execute the request
 _serviceProxy.Execute(updateRequest);
 ```

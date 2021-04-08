@@ -32,7 +32,7 @@ When a primary contact phone number is updated, update the same on the account p
 
 ## Syntax
 
-`formContext.data.entity.addOnPostSave()`
+`formContext.data.entity.addOnPostSave(myFunction)`
 
 ## Parameter
 

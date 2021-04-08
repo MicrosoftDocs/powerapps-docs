@@ -1,5 +1,5 @@
 ---
-title: How to use the sample components? (Power Apps Component Framework) | Microsoft Docs
+title: How to use the sample components that are built using Power Apps component framework in Microsoft Dataverse | Microsoft Docs
 description: Provides information on how you can use the sample components created using Power Apps Component Framework in your model-driven and canvas apps
 keywords:
 author: Nkrb
@@ -15,6 +15,8 @@ ms.topic: "article"
 # How to use the sample components?
 
 All the sample components listed under this section are available to download from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) so that you can try them out in your model-driven or canvas apps.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
 
