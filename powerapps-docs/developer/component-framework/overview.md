@@ -28,7 +28,7 @@ Power Apps component framework empowers professional developers and app makers t
 > - Power Apps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Power Apps component framework works only on Unified Interface and not on the web client. 
+> - Power Apps component framework works only on Unified Interface and not on the legacy web client. 
 > - Power Apps component framework doesn't work for on-premises instances. 
 
 ## How is it different from web resources
