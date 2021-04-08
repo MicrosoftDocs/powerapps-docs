@@ -24,9 +24,9 @@ search.app:
 
 # Configure table relationship cascading behavior  
 
- [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Using Web API to configure cascading behavior
 

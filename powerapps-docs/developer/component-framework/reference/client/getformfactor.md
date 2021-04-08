@@ -1,6 +1,6 @@
 ---
 title: getFormFactor | Microsoft Docs
-description: 
+description: Returns information about the kind of device the user is using.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

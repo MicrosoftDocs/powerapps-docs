@@ -17,7 +17,7 @@ ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
 
 [!INCLUDE [library-description](includes/library-description.md)]
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|
