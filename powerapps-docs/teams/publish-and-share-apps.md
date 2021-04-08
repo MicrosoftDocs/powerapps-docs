@@ -58,7 +58,7 @@ To share an app:
 access** role.
 
     > [!IMPORTANT]
-    > The membership type of the security group must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
+    > The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
 
 1. Choose which apps the **Colleagues with access** role should have access to.
 
