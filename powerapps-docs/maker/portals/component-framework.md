@@ -1,11 +1,11 @@
 ---
-title: Use code components created using Power Apps Component Framework inside Power Apps portals | Microsoft Docs
+title: Use code components in Power Apps portals | Microsoft Docs
 description: Learn about using code components created using Power Apps Component Framework inside Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 04/07/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:

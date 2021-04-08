@@ -1,11 +1,11 @@
 ---
-title: A walkthrough with example steps about using sample code component added to a model-driven app form inside portals. | Microsoft Docs
-description: Learn about using sample code component added to a model-driven app form inside portals.
+title: Use code components in portals | Microsoft Docs
+description: A walkthrough with example steps about using sample code component added to a model-driven app form inside portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 04/07/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
