@@ -388,5 +388,48 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 > [!div class="mx-imgBorder"]
 > ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
 
+## Opening another form instead of a quick create form?
+
+When opening a quick create form from a lookup or a grid, another form may open (edit or main form) instead of quick create form. There are few reasons why this can happen:
+
+- The main form dialog force flag is being set.
+- Quick create form is not available.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
+
+> [!div class="mx-imgBorder"]
+> ![Entity not enabled for quick create](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Entity not enabled for quick create")
+
+
+## Entity doesn't appear in the quick create menu flyout?
+
+When opening the global quick create menu flyout, not all entities are available. There are few reasons why the entities are filtered in this list:
+
+- There is no quick create form available for the entity.
+- Entity is not enabled for quick create form.
+- Entity is not enabled for the new Unified Interface.
+- Entity is read-only in Unified Interface.
+- Entity's mobile client visibility cannot be modified.
+- Entity is not part of the app module.
+- User does not have a create privilege on the entity.
+- The create privilege is not supported for the entity.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the entities and reasons why they are filtered from the quick create menu flyout.
+
+See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
+
+> [!div class="mx-imgBorder"]
+> ![Entity not enabled for Unified Client](media/troubleshoot-forms-entity-unified-client.png "Entity not enabled for Unified Client")
+
+> [!div class="mx-imgBorder"]
+> ![Entity not available for quick create](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Entity not available for quick create")
+
+> [!div class="mx-imgBorder"]
+> ![Entity not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Entity not part of app module")
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
