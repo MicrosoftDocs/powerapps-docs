@@ -36,7 +36,7 @@ This function is used when a ribbon action `JavaScriptFunction` (RibbonDiffXml) 
 
 ## Guidance
 
-For optimal performance of your form loads, you should not use this function in `EnableRule` (RibbonDiffXml) or `onLoad` (FormXml). The form load itself triggers rules violation of all the ribbon actions and you should use promises and asynchronous pattern in `EnableRule` to control the visibility of a ribbon action.
+For optimal performance of your form loads, you should not use this function in `EnableRule` (RibbonDiffXml) or `onLoad` (FormXml). The form load itself triggers rules evaluation of all the ribbon actions. In case, if you want to control the visibility of a ribbon action, use promises and asynchronous pattern in `EnableRule`.
 
 
 ### Related topics
