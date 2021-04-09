@@ -612,127 +612,72 @@ The following variables are used when displaying the list of checklist steps bas
 
 1. The title, action buttons, instructions and the reference image for each checklist step is displayed.
 
-#### Creating an Inspection Form
+#### Creating an inspection form
 
-##### Collections involved
+Inspection forms can be created using the create inspection form option.
 
-1.  **colChecklistStepsOutput1** –
+##### Collections used when creating an inspection form
 
-2.  **colChecklistSteps – used to collect the checklist steps of an Inspection
-    form.**
+The following collections are used when creating an inspection form.
 
-3.  **colChecklistStepsImage – used to collect the cover image of a checklist
-    step.**
+| Collection name | Description |
+| - | - |
+| colChecklistStepsOutput1 | Used to store the checklist information. |
+| colChecklistSteps | Used to collect the checklist steps of an inspection form. |
+| colChecklistStepsImage | Used to collect the cover image of a checklist step. |
+| colPatchSteps1 | Used to collect the checklist steps of an inspection form. |
 
-4.  **colPatchSteps1 –**
+##### Variables used when creating an inspection form
 
-##### Variables involved
+The following variables are used when creating an inspection form.
 
-1.  **gblAddForm** –
+| Collection name | Description |
+| - | - |
+| gblAddForm | Variable to enable the **Add Checklist Step** button when a new inspection form is created. |
+| gblStepChanged | Global variable to indicate that the checklist step has been updated. |
+| gblImageChanged | Global variable to indicate that the cover image has been updated. |
+| gblTempAdd | Variable to add checklist step fields when the user tries to add a new step. |
 
-2.  **gblStepChanged** – global variable to indicate that the checklist step has
-    been updated
+##### Execution details when creating an inspection form
 
-3.  **gblImageChanged –** global variable to indicate that the cover image has
-    been updated
+1. A new inspection form can be created by selecting the **+ New Inspection Form** button above the **galForms** gallery.
 
-4.  **gblTempAdd –**
+1. After selecting the **+ New Inspection Form** button, the value of the **gblAddForm** variable is set to true and the **colChecklistSteps**, **colChecklistStepsOutput1** and **colChecklistStepsImage** collections are cleared.
 
-##### Detailed steps
+1. As the value of the **gblAddForm** is true, a new inspection form is displayed to the user.
 
-1.  A new Inspection form can be created by clicking on the “+ New Inspection
-    Form” button present above the **galForms** gallery.
+1. A new checklist step can be added by selecting the **+ Add Step** button.
 
-2.  On clicking the “+ New Inspection Form” button, the value of the
-    **gblAddForm** variable is set to true and the **colChecklistSteps**,
-    **colChecklistStepsOutput1** and **colChecklistStepsImage** collections are
-    cleared.
+1. A new checklist step is added with the title, location types, checklist steps and the reference image being blank.
 
-3.  As the value of the **gblAddForm** is true, a new Inspection form is
-    displayed to the User**.**
+1. The action button values are by default set to Pass, Fail and N/A. These values can be modified as required.
 
-4.  A new checklist step can be added by clicking on the “+ Add Step” button
-    clicking on
+1. The N/A option can be hidden if desired by using the **Step Unhide** button (**imgNAStepUnhide**). This button updates the
+    **colChecklistStepsOutput1** collection for this step and updates the **gblStepChanged** value to true.
 
-5.  which a new checklist step is added with the Title, Location Types,
-    Checklist steps and the reference image being blank.
+1. Adding a new checklist step updates the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections with the details.
 
-6.  The Action button values are by default set to Pass, Fail and N/A and can be
-    modified by the User as required.
+1. The checklist step can be duplicated by selecting on the duplicate icon present on the respective step. This action updates the sequence of the step in the collections **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage**.
 
-7.  The N/A option can be hidden if desired by clicking on the Step Unhide
-    button (imgNAStepUnhide) clicking on which will update the
-    **colChecklistStepsOutput1** collection for this step and update the
-    **gblStepChanged** value to true.
+1. The details (title, instructions, action button values and reference image) from the parent step is copied to the newly created checklist step and the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections are updated.
 
-8.  Adding a new checklist step will update the **colChecklistSteps,
-    colChecklistStepsOutput1** and **colChecklistStepsImage** collections with
-    the details.
+1. The sequence of the checklist steps can be updated by selecting the Up and Down arrows present next Step.
 
-9.  The checklist step can be duplicated by clicking on the Duplicate icon
-    present on the respective step. Clicking on which the sequence of the step
-    is updated in the collections **colChecklistSteps, colChecklistStepsOutput1,
-    colChecklistStepsImage.**
+1. The Up-arrow button is disabled for the first checklist step and the down arrow button is disabled for the last step in the gallery. The display mode is controlled by the value of **msft_sequence** field.
 
-10. The details (Title, Instructions, Action button values and reference image)
-    from the parent step is copied to the newly created checklist step and the
-    **colChecklistSteps, colChecklistStepsOutput1, colChecklistStepsImage** are
-    updated.
+1. The **colChecklistStepsOutput1, colChecklistStepsImage** and **colChecklistSteps** collections are updated based on the value of the **msft_sequence** field and the value of **gblStepChanged** is updated to true.
 
-11. The Sequence of the Checklist steps can be updated by clicking on the Up and
-    Down arrows present next Step.
+1. A new checklist step can be added by selecting the **+ Add Step** button. This action updates the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections.
 
-12. The Up-arrow button is disabled for the first checklist step and the down
-    arrow button is disabled for the last step in the gallery (The display mode
-    is controlled by the value of **msft_sequence** field).
+1. A new checklist step is created with the title, location types, checklist steps and the reference image being blank.
 
-13. The **colChecklistStepsOutput1, colChecklistStepsImage** and
-    **colChecklistSteps** collections are updated based on the value of the
-    **msft_sequence** field and the value of **gblStepChanged** is updated to
-    true.
+1. The values of the variables **gblImageChanged, gblTempAdd**, and **gblStepChanged** are set to true.
 
-14. A new checklist step can be added by clicking on the “+ Add Step” button
-    clicking on which will update the **colChecklistSteps,
-    colChecklistStepsOutput1** and **colChecklistStepsImage** collections.
+1. Selecting **Delete** icon present in each step removes the checklist step and updates the **msft_sequence** field in **colChecklistStepsOutput1**, **colChecklistStepsImage**, and **colChecklistSteps** collections.
 
-15. A new checklist step is created with the Title, Location Types, Checklist
-    steps and the reference image being blank.
+1. After all the required details are entered, selecting **Save** (enabled only when the title, location type and at least 1 checklist step is present) renames the columns in the **colChecklistStepsOutput1**, and store the details in **colPatchSteps1** collection. The newly created checklist steps are updated in the Area Inspection Checklist Steps table and the newly created inspection form is updated to the Area Inspections Checklists table.
 
-16. The values of the variables **gblImageChanged, gblTempAdd** and
-    **gblStepChanged** are set to true.
-
-17. Clicking on the Delete icon present in each step will remove the checklist
-    step and update the **msft_sequence** field in **colChecklistStepsOutput1,
-    colChecklistStepsImage** and **colChecklistSteps** collections**.**
-
-18. Once all the required details are entered, clicking on the Save button
-    (enabled only when the title, location type and at least 1 checklist step is
-    present) will rename the columns in the **colChecklistStepsOutput1** and
-    store the details in **colPatchSteps1** collection and the newly created
-    checklist steps are updated in the Area Inspection Checklist Steps table and
-    the newly created Inspection form is updated to the Area Inspections
-    Checklists table.
-
-19. Clicking on the cancel button will **gblStepChanged, gblImageChanged,
-    gblAddForm** and **gblEditForm** variables to false and navigate back to the
-    Inspection form view with the first record in the **galForms** gallery being
-    selected.
-
-Screens
-
-![](media/inspection-architecture/52697ffca26972ba8decdb5cc2d36235.png)
-
-![](media/inspection-architecture/cb827129e120f6a74f95d726b79de2f7.png)
-
-![](media/inspection-architecture/9fc653f6b10726734768d942876a4d48.png)
-
-![](media/inspection-architecture/d7887866169f7c64833eb5ea8e20a78d.png)
-
-![](media/inspection-architecture/9d12e80bbb2bae834f749ffed1dc136e.png)
-
-![](media/inspection-architecture/6b749c8d0135d649a553ad186a3ddee4.png)
-
-![](media/inspection-architecture/24101f898f1afcdc0d0e47b9840d1104.png)
+1. Selecting **Cancel** sets the **gblStepChanged**, **gblImageChanged**, **gblAddForm**, and **gblEditForm** variables to false and navigate back to the inspection form view with the first record in the **galForms** gallery being selected.
 
 #### Editing an Inspection Form 
 
