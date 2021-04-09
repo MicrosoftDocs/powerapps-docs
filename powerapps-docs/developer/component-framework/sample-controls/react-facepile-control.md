@@ -1,6 +1,6 @@
 ---
 title: "React Facepile component| Microsoft Docs" 
-description: "Implementing a Facepile component using React" 
+description: "This sample shows how to use React to create components using Power Apps component framework." 
 ms.custom: ""
 author: ghurlman
 manager: kvivek
@@ -14,6 +14,8 @@ ms.reviewer: nkrb
 # Implementing the FacePile component
 
 This sample shows how to use React to create components using Power Apps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ReactStandardControl).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![React Facepile](../media/react-facepile.png "React Facepile")

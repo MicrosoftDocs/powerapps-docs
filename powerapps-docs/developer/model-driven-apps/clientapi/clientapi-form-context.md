@@ -64,12 +64,15 @@ Use the **data** and **ui** objects under the **formContext** object to programm
 
 ### data object
 
-Provides access to the entity data and methods to manage the data in the form as well as in the business process flow control. Contains the following objects:
+
+Provides properties and methods to work with the data on a form, including entity data and data in the business process flow control. Contains the following objects:
+
 
 | **Object**  | **Description**|
-|-----------------|----------------|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included on the form|
-|process|Provides methods to retrieve properties of a business process flow.|
+|--|--|
+|attributes|Collection of non-entity data on the form. Items in this collection are of the same type as the attributes collection, but they are not attributes of the form entity. <br/>More information: [Collections](collections.md)|
+|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included on the form. Attribute data is limited to attributes represented by fields on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
+|process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](formContext-data-process.md)|
 
 It also provides an **attributes** collection for accessing non-entity bound control. See the **Collections in the formContext object model** section later in this topic.
 

@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 03/30/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 ---
@@ -142,6 +142,15 @@ The December 2016 update has brought many new features to Dynamics 365 Portals. 
 - **Project Service Automation integration:** Provide access and visibility for active and closed projects across all stages of a project lifecycle to partners and customers. Team members, reviewers, and customers can view project status, quotes, order forums, and bookable resources on the portal with this solution. More information: [Integrate Project Service Automation](/dynamics365/portals/integrate-project-service-automation)
 - **Field Service integration:** Expose information about active agreements, assets, work orders, invoices, and support cases to partners and customers on the portal with this solution. More information: [Integrate Field Service](/dynamics365/portals/integrate-field-service)
 - **Partner onboarding:** Recruit new partners for better customer sales and service experiences. Potential partners can apply for partner status through the portal.
+
+## Previous portals package updates
+
+The following articles provide details about portals packages with versions earlier than 9.2.2103.x.
+
+- [Portals package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
+- [Portals package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
+- [Portals package version 9.2.2003.2](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2003-2-7f556cae-1f68-2b5f-3a11-b2b4977e49d8)
+- [Portals package version 9.1.9.0](https://support.microsoft.com/topic/portal-solution-release-version-9-1-9-0-for-microsoft-dynamics-365-5fdcd754-2064-be3c-0fa8-463391fa1769) 
 
 ### Privacy notice
 

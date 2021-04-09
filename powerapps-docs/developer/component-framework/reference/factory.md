@@ -1,6 +1,6 @@
 ---
 title: Factory | Microsoft Docs
-description: 
+description: Provides properties and methods to work with Popup services.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -17,9 +17,9 @@ search.app:
 ---
 # Table relationship eligibility
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Before you create a relationship you should confirm whether the table is eligible to participate in the relationship. The following lists the messages that you can use to determine whether tables can participate in relationships.  
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
 |Message|Web API Operation|SDK Assembly|  
 |-------------|-----------------|----------------|  
