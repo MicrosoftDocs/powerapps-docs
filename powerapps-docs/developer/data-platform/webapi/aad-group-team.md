@@ -122,7 +122,7 @@ Members of an AAD group can query all the security roles that are directly and i
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<group object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
 **Response**
@@ -150,7 +150,7 @@ Members of an AAD group can check their security privileges without being a user
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<group object ID>)
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
 **Response**
