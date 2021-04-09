@@ -353,11 +353,11 @@ Variables used when displaying the list of inspections based on the selected loc
 
 1. Checkbox next to the inspection name is used to select the inspection for deletion. Selecting the checkbox next to the inspection header selects all inspection records.
 
-## Deleting inspections
+### Deleting inspections
 
 This section explains collections, variables, and execution details when deleting inspections. Inspections can be deleted from the [locations tab](inspection.md#add-locations) by selecting one or more inspections.
 
-### Collections used when deleting inspections
+#### Collections used when deleting inspections
 
 The following collections are used when deleting inspections.
 
@@ -366,7 +366,7 @@ The following collections are used when deleting inspections.
 | colInspections | Used to collect inspection records. |
 | colRemoveInspections | Used to collect deleted inspection records. |
 
-### Variables used when deleting inspections
+#### Variables used when deleting inspections
 
 The following variables are used when deleting inspections.
 
@@ -375,7 +375,7 @@ The following variables are used when deleting inspections.
 | gblDisplayWarning | Global variable to control visibility of warning messages. |
 | gblWarningType | Global variable which controls which warning message to be displayed. |
 
-### Execution details when deleting inspections
+#### Execution details when deleting inspections
 
 1. Inspection records can be deleted from the locations screen. Select checkbox next to an inspection to delete one record, or the checkbox from the header to delete all records.
 
@@ -389,11 +389,11 @@ The following variables are used when deleting inspections.
 
 1. Deleted inspection record is added to the **colRemoveInspections** collection, and removed from the Area Inspections table. The **colInspections** collection is cleared and collected to have the updated records.
 
-## Editing location types
+### Editing location types
 
 This section explains collections, variables, and execution details when [editing location types](inspection.md#add-location-types). Location types can be edited from the **Locations** tab upon selecting **Location type**.
 
-### Collections used when editing location types
+#### Collections used when editing location types
 
 The following collections are used when deleting inspections.
 
@@ -401,7 +401,7 @@ The following collections are used when deleting inspections.
 | - | - |
 | colInspections | Used to collect inspection records. |
 
-### Variables used when editing location types
+#### Variables used when editing location types
 
 The following variables are used when deleting inspections.
 
@@ -414,7 +414,7 @@ The following variables are used when deleting inspections.
 | gblCurrentLocation | Variable to store the location which is being edited. |
 | gblAddLocationImage | Global variable to store the image added as part of a location.
 
-### Execution details when editing location types
+#### Execution details when editing location types
 
 1. The location type can be edited by selecting *Edit** Locations screen.
 
@@ -434,11 +434,11 @@ The following variables are used when deleting inspections.
 
 1. The location type of the edited location is stored in the **gblLocType** variable.
 
-## Review submitted inspections
+### Review submitted inspections
 
 This section explains collections, variables, and execution details when [reviewing submitted inspections](inspection.md#review-submitted-inspections).
 
-### Collections used when reviewing submitted inspections
+#### Collections used when reviewing submitted inspections
 
 The following collections are used when deleting inspections.
 
@@ -446,7 +446,7 @@ The following collections are used when deleting inspections.
 | - | - |
 | colInspections | Used to collect inspection records. |
 
-### Variables used when reviewing submitted inspections
+#### Variables used when reviewing submitted inspections
 
 The following variables are used when deleting inspections.
 
@@ -461,7 +461,7 @@ The following variables are used when deleting inspections.
 | gblCurrentLocation | Global variable to store the current location being reviewed. |
 | gblLocation | Global variable that denotes the location in the current context. |
 
-### Execution details when reviewing submitted inspections
+#### Execution details when reviewing submitted inspections
 
 1. The performed inspections can be reviewed by selecting the required record in the **galInspections** gallery.
 
@@ -481,178 +481,117 @@ The following variables are used when deleting inspections.
 
 1. Selecting **Back** updates the **gblCurrentLocation** and **gblLocation** variables to the location in context taking the user back to the location details view.
 
-### Insights Screen<br>
+### Review inspection insights
 
-#### Collections involved
+This section explains collections, variables, and execution details when [reviewing inspection insights](inspection.md#review-inspection-insights).
 
-1.  **colInspections** – Used to collect Inspection records
+#### Collections used when reviewing inspection insights
 
-2.  **colTeamDurations** – used to collect the date difference between the
-    Inspection start and end dates in minutes.
+The following collections are used when reviewing inspection insights.
 
-3.  **colBarChartTemp** – used to collect the Active area inspections grouped by
-    owner in the last 7 days
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
+| colTeamDurations | Used to collect the date difference between the inspection start and end dates in minutes. |
+| colBarChartTemp | Used to collect the active area inspections grouped by owner in the last 7 days. |
+| colBarChart | Used to collect the count of inspections grouped by owner. |
+| colLineChartForms | Used to collect the average inspection time grouped by forms. |
+| colLineChart | Used to collect the average inspection time grouped by forms. |
+| colLocTypesTemp | Used to collect the location types. |
+| colInspectionsByLocTypeID | Used to collect inspection records by location types. |
 
-4.  **colBarChart – Used to collect the**
+#### Variables used when reviewing inspection insights
 
-5.  **colLineChartForms –**
+The following variables are used when reviewing inspection insights.
 
-6.  **colLineChart –**
+| Variable name | Description |
+| - | - |
+| gblInspectionsCount | Variable to count the number of inspections. |
+| gblView | Variable to denote the view being displayed. |
+| gblTeamAvgTime | Global variable to store the average completion time of the inspections. |
+| gblAreaChanged | Global variable to indicate that the location has been updated. |
+| gblChartView | Global variable to set the default value of the chart view to 7 days. |
+| gblBarChartView | Global variable to set the default value of the bar chart view to 7 days. |
+| gblFormBarChartView | Global variable to set the default value of the form bar chart view to 7 days. |
+| gblLineChartView | Global variable to set the default value of the line chart view to 7 days. |
 
-7.  **colLocTypesTemp –**
+#### Execution details when reviewing inspection insights
 
-8.  **colInspectionsByLocTypeID –**
+1. When the insights screen is loaded, the **gblInspectionsCount** variable is used to count the total number of inspections to decide if charts should be visible or should zero state images be shown. The **gblView** variable is set to insights indicating that the insights screen is being shown.
 
-#### Variables involved
+1. The date difference between the inspection start and end dates in minutes is collected in the **colTeamDurations** collection.
 
-1.  **gblInspectionsCount** – variable to count the number of inspections
+1. The average inspection time (duration of all completed inspections divided by the total number of inspections) is calculated using the **colTeamDurations** collection value and is stored in the **gblTeamAvgTime** variable.
 
-2.  **gblView** – variable to denote the view which is being displayed.
+1. The top contributors bar chart (count of inspections grouped by owner) for the last 7 days is collected using the **colBarChartTemp** and **colBarChart** collections.
 
-3.  **gblTeamAvgTime** – global variable to store the average completion time of
-    Inspections.
+1. The average inspection time for line chart (inspections time for inspections in the last 7 days grouped by form) are collected using the **colLineChartForms** and **colLineChart** collections.
 
-4.  **gblAreaChanged –** global variable to indicate that the location has been
-    updated
+1. The **conInspectionStats** container displays the number of inspections that are pending review, pending action, closed inspections and the average completion time.
 
-5.  **gblChartView-** global variable to set the default value of the chart view
-    to 7 days.
+1. The Area Inspections table is filtered based on the Review Status code to get the count of inspections that are completed, pending review and pending action.
 
-6.  **gblBarChartView –** global variable to set the default value of the Bar
-    chart view to 7 days.
+1. The **galAvgInspectionTime** gallery displays the average inspection time data in the **colLineChart** collection in descending order.
 
-7.  **gblFormBarChartView –** global variable to set the default value of the
-    Form Bar chart view to 7 days.
+1. The **colPieChart** displays a pie chart depicting the open inspections based on the location type. The legend next to the pie chart displays the list of location types which have at least 1 or more inspections.
 
-8.  **gblLineChartView- –** global variable to set the default value of the Line
-    chart view to 7 days.
+1. The **galTopContributors** gallery displays the top contributors’ details (having at least one or more inspections) from the **colBarChart** collection.
 
-#### Detailed steps
+1. Each chart can show data based on the past 7, 30 and 60 days. Users can select required range by selecting the duration.
 
-1.  When the Insights screen is loaded, the **gblInspectionsCount** is used to
-    count the total number of inspections to decide if charts should be visible
-    or should zero state images be shown. The **gblView** variable is set to
-    Insights indicating that the Insights screen is being shown.
+    - Selecting the number of days on the open inspections pie chart sets the **gblChartView** variable to either 30 or 60 days based on the selection. The open inspection count by location type ID, type and name for the last 30 or 60 days is collected in the **colInspectionsByLocTypeID**, **colInspectionsByLocType**, and **colInspectionsByLocTypeName** collections. The pie chart data stored in the **colPieChart** collection is refreshed and displayed accordingly.
 
-2.  The date difference between the Inspection start and end dates in minutes is
-    collected in the **colTeamDurations** collection.
+    - Selecting the number of days on the average inspection time sets the **gblLineChartView** variable to 30 or 60 days based on the selection. The average inspections time for inspections in the last 30 or 60 days grouped by form are collected in the **colLineChartForms** and **colLineChart** collections. The stored data is refreshed and displayed.
 
-3.  The average inspection time (duration of all completed inspections divided
-    by the total number of Inspections) is calculated using the
-    **colTeamDurations** value and is stored in the **gblTeamAvgTime** variable.
+    - Selecting the number of top inspection report contributors bar chart sets the **gblBarChartView** variable to 30 or 60 based on the selection. The count of inspections grouped by owner for the last 30 o 60 days grouped is collected using the **colBarChartTemp** and **colBarChart** collections. The stored data is refreshed and displayed.
 
-4.  The top contributors bar chart (count of inspections grouped by owner) for
-    the last 7 days is collected using the **colBarChartTemp** and
-    **colBarChart** collections.
+### Inspection forms screen
 
-5.  The average inspection time for line chart (inspections time for inspections
-    in the last 7 days grouped by form) are collected using the
-    **colLineChartForms** and **colLineChart** collections.
+This section explains collections, variables, and execution details on the [inspection forms screen](inspection.md#add-inspection-forms).
 
-6.  The **conInspectionStats** container displays the number of Inspections
-    which are Pending review, Pending Action, closed Inspections and the average
-    completion time.
+#### Displaying the list of inspection forms
 
-7.  The Area Inspections table is filtered based on the Review Status code to
-    get the count of Inspections which are Completed, pending review and Pending
-    Action.
+The inspection forms list shows up on the inspection forms screen on the left side.
 
-8.  The **galAvgInspectionTime** gallery displays the average inspection time
-    data in the **colLineChart** collection in descending order.
+##### Collections used when displaying the list of inspection forms
 
-9.  The **colPieChart** displays a Pie chart depicting Open Inspections based on
-    the Location type. The legend next to the Pie Chart displays the list of
-    Location types which have at least 1 or more Inspections.
+The following collections are used when displaying the list of inspection forms.
 
-10. The **galTopContributors** gallery displays the top contributors’ details
-    (who have at least one or more Inspections) from the **colBarChart**
-    collection.
+| Collection name | Description |
+| - | - |
+| colChecklistStepsTemp | Used to collect the area inspection checklist steps based on the ID. |
+| colChecklistSteps | Used to collect area inspection checklist steps for the selected inspection form.
+| colChecklistStepsOutput1 | Used to store details of the inspection form. |
+| colChecklistStepsImage | Used to collect the cover image of the checklist steps for the selected inspection form. |
 
-11. Each of the charts available can show data based on the past 7, 30 and 60
-    days. Users can select required range by clicking on the same.
+##### Variables used when displaying the list of inspection forms
 
-    -   Selecting the number of days on the Open Inspections Pie Chart will set
-        the **gblChartView** variable to either 30 or 60 based on the selection
-        made. The open inspection count by location type ID, type and Name for
-        the last 30 / 60 days is collected in the **colInspectionsByLocTypeID,
-        colInspectionsByLocType** and **colInspectionsByLocTypeName** and the
-        Pie Chart data stored in the **colPieChart** collection is refreshed and
-        displayed accordingly.
+The following collections are used when displaying the list of inspection forms.
 
-    -   Selecting the number of days on the Avg Inspections time mins Line Chart
-        will set the **gblLineChartView** variable to 30 / 60 based on the
-        selection made. The average inspections time for inspections in the last
-        30 / 60 days grouped by form are collected in the **colLineChartForms**
-        and **colLineChart** collections and the data is stored is refreshed and
-        displayed accordingly.
+| Variable name | Description |
+| - | - |
+| gblFormClick | Local variable used to control the sorting order of locations. |
+| gblForm | Local variable to denote on what field are inspection records sorted by. |
 
-    -   Selecting the number of Top Inspection report contributors Bar Chart
-        will set the **gblBarChartView** variable to 30 / 60 based on the
-        selection made. The count of inspections grouped by owner for the last
-        30 / 60 days grouped is collected using the **colBarChartTemp** and
-        **colBarChart** collections and the data is stored is refreshed and
-        displayed accordingly.
+##### Execution details when displaying the list of inspection forms
 
-#### Screens
+1. The list of inspection forms in the Area Inspection Checklists table are displayed in the **galForms** gallery along with the number of checklist steps in the ascending order of their names.
 
-![](media/inspection-architecture/82ee5bdaa5ac39a2546c8fab7c12b51a.png)
+1. Selecting location in the **galForms** gallery updates the **gblFormClick** variable to true. The **gblForm** variable is set to the selected inspection form.
 
-### Inspection Forms Screen<br>
+1. The collections **colChecklistStepsTemp**, **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** are updated to show the details of the selected inspection form.
 
-#### Displaying the list of Inspection Forms 
+1. Based on the collected information, the checklist steps for the selected inspection form are displayed in the **galFormChecklistSteps** gallery.
 
-##### Collections involved
-
-1.  **colChecklistStepsTemp –** Used to collect Area Inspection Checklist steps
-    based on the ID.
-
-2.  **colChecklistSteps –** Used to collect Area Inspection Checklist steps for
-    the selected Inspection form.
-
-3.  **colChecklistStepsOutput1 –**
-
-4.  **colChecklistStepsImage –** used to collect the cover image of the
-    checklist steps for the selected Inspection form.
-
-##### Variables involved
-
-1.  **gblFormClick** – Local variable used to control the sorting order of
-    Locations.
-
-2.  **gblForm** – local variable to denote on what field are inspection records
-    sorted by
-
-##### Detailed steps<br>
-
-1.  The list of Inspection forms in the Area Inspection Checklists table are
-    displayed in the **galForms** gallery along with the Number of checklist
-    steps in the ascending order of their names.
-
-2.  Clicking on any of the location in the **galForms** gallery will update the
-    **gblFormClick** variable to true. The **gblForm** variable is set to the
-    selected inspection form
-
-3.  The collections **colChecklistStepsTemp**, **colChecklistSteps** ,
-    **colChecklistStepsOutput1**  
-    and **colChecklistStepsImage** are updated to show the details of the
-    selected Inspection form.
-
-4.  Based on the collected information, the checklist steps for the selected
-    Inspection form are displayed in the **galFormChecklistSteps** gallery.
-
-Screens
-
-![](media/inspection-architecture/fad44d987322f9fd20b3254acab0c802.png)
-
-#### Displaying the list of Checklist Steps based on the selected Inspection Form 
+#### Displaying the list of Checklist Steps based on the selected inspectionForm 
 
 ##### Collections involved
 
 1.  **colChecklistSteps -** Used to collect Area Inspection Checklist steps for
-    the selected Inspection form.
+    the selected inspection form.
 
 2.  **colChecklistStepsImage –** used to collect the cover image of the
-    checklist steps for the selected Inspection form.
+    checklist steps for the selected inspection form.
 
 ##### Variables involved
 
@@ -663,7 +602,7 @@ Screens
 1.  The title and the location type details are displayed based on the
     **gblForm** variable.
 
-2.  The checklist steps for the selected Inspection form are displayed in the
+2.  The checklist steps for the selected inspection form are displayed in the
     **galFormChecklistSteps** gallery based on the values stored in the
     **colChecklistSteps** collection
 
@@ -1255,7 +1194,7 @@ is a group of items that are similar, such as products in a product list.
 | colGalIconLocationTypes     |                                                                                                                                 | OnSelect property of the Edit icon on the Locations screen                        |
 | colGroupCounter             | Used to collect and set the Group counter to 1                                                                                  | OnSelect property of the Edit icon on the Locations screen                        |
 | colGalGroups                | Used to collect the Title, Area Type, Record, Unique ID and Sort Order of an Area inspection Group                              | OnSelect property of the Edit icon on the Locations screen                        |
-| colRemoveInspections        | Used to collect the selected Inspection record to be removed from the locations                                                 | Onclick property of the Delete button on the Warning screen of the Locations Page |
+| colRemoveInspections        | Used to collect the selected inspectionrecord to be removed from the locations                                                 | Onclick property of the Delete button on the Warning screen of the Locations Page |
 | colNewLocation              | Used to collect the Name, Location Type and the Primary Image of a newly added Location                                         | OnClick property of the Save button on the Locations Screen                       |
 | colTempGalGroup             |                                                                                                                                 | Helper screen , we only have clear                                                |
 | colGroupCount               |                                                                                                                                 | Not Available                                                                     |
@@ -1319,7 +1258,7 @@ is a group of items that are similar, such as products in a product list.
 | gblSettingTeamId                | Text    | Variable to get the Team ID from the record settings                                                                   |
 | gblSettingSharePointLocation    | Text    | Variable to get the SharePoint location from the record settings                                                       |
 | gblEditImage                    | Boolean | Variable to edit an image while adding / editing a location                                                            |
-| gblForm                         | Record  | Variable to get the checklist steps of the selected Inspection form                                                    |
+| gblForm                         | Record  | Variable to get the checklist steps of the selected inspection form                                                    |
 | gblDontChangeAreaType           | Boolean | Variable to handle whether the Area type should be allowed to change or not                                            |
 | gblResetAreaTypeDropdown        | Boolean | Variable used to reset the Area Type dropdown values                                                                   |
 | gblSelectedGroup                | Record  | Variable to store the group which is selected                                                                          |
