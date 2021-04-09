@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Implementing General Data Protection Regulations in your Power Apps portals
 
-The General Data Protection Regulation (GDPR) is a legal act of the European Union (EU), which protects data for all individuals within the EU. With GDPR, people can control the use of their personal data in Common Data Service.
+The General Data Protection Regulation (GDPR) is a legal act of the European Union (EU), which protects data for all individuals within the EU. With GDPR, people can control the use of their personal data in Microsoft Dataverse.
 
 As an administrator, you can configure your portal to meet GDPR standards. For example, minors must have parental consent to use the portal. You can also establish terms and conditions for people who use your portal. Users must agree to the terms and conditions to use the portal.
 
@@ -83,7 +83,7 @@ The following site settings control the terms publication date and whether the t
 
 | Name  | Description |
 |------------|---------------|
-| Authentication/Registration/TermsPublicationDate  | A date/time value in GMT format to represent the effective date of the current published terms and conditions. If the terms agreement is enabled, portal users that have not accepted the terms after this date will be asked to accept them the next time they sign in. If the date is not provided, and the terms agreement is enabled, the terms will be presented every time portal users sign in. <br> **Note**: If you want a portal user to agree to the terms and conditions every time they sign in, do not provide a value for this site setting.|
+| Authentication/Registration/TermsPublicationDate  | A date/time value (GMT) to represent the effective date of the current published terms and conditions. If the terms agreement is enabled, portal users that have not accepted the terms after this date will be asked to accept them the next time they sign in. If the date is not provided, and the terms agreement is enabled, the terms will be presented every time portal users sign in. <br> **Note**: If you want a portal user to agree to the terms and conditions every time they sign in, do not provide a value for this site setting.|
 | Authentication/Registration/TermsAgreementEnabled | A true or false value. If set to true, the portal will display the terms and conditions of the site. Users must agree to the terms and conditions before they are considered authenticated and can use the site. By default, it is set to false.        |
 |||
 
@@ -95,3 +95,6 @@ The following field is added in the portal contact record to store the date and 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

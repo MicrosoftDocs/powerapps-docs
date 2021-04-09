@@ -37,7 +37,7 @@ Dashboards are one of the different types of forms in model-driven apps. You can
  An organization-owned dashboard can contain only organization-owned charts. However, a user-owned dashboard can contain user-owned and organization-owned charts. More information [Charts (Visualizations) for model-driven apps](view-data-with-visualizations-charts.md)  
 
 ### Grids  
- Grids fetch data from queries (views) in model-driven apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Entity](../common-data-service/reference/entities/savedquery.md) 
+ Grids fetch data from queries (views) in model-driven apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Entity](../data-platform/reference/entities/savedquery.md) 
 
 ### IFRAMEs  
  When you add an IFRAME to an organization-owned dashboard, you can specify whether to restrict or allow cross-frame scripting. 
@@ -50,10 +50,11 @@ Dashboards are one of the different types of forms in model-driven apps. You can
 ## Dashboard components and FormXML elements  
  The dashboard components are displayed in model-driven apps based on the values specified in the FormXML. The following image shows an example of a dashboard. Each dashboard can include multiple tabs. Tabs are a vertical stack separating the body of the dashboard, and can be expanded or collapsed. A tab can contain multiple sections. Sections enable for grouping and layout of dashboard components. 
 
- <!-- TODO: image not found ![Dashboard components layout](../media/crm-v5s-dashboards-components.png "Dashboard components layout")   -->
+ ![Dashboard components layout](media/crm-v5s-dashboards-components.png "Dashboard components layout") 
 
 <a name="SupportedFormXMLElements"></a>   
 ## FormXML elements supported for dashboards  
+
  Although dashboards are a type of forms, not all FormXML elements and attributes are supported by dashboards. The following table provides information about the FormXML elements, child elements, and attributes supported by dashboards.
 
  For sample FormXML for different types of dashboards, see [Sample Dashboards](sample-dashboards.md).  
@@ -110,3 +111,6 @@ Dashboards are one of the different types of forms in model-driven apps. You can
  [Dashboards](analyze-data-with-dashboards.md)   
  [Actions on Dashboards](actions-dashboards.md)   
  [Create a Dashboard](create-dashboard.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

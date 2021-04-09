@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 03/30/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 ---
@@ -18,7 +18,9 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
-- [2019 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-powerapps/planned-features#portal-capabilities-for-power-apps)
+- [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps-portals/)
+- [2020 release wave 2 plan](/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
+- [2020 release wave 1 plan](/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
 
 ## Previous portal updates
 
@@ -27,9 +29,9 @@ Here's a list of features added for Dynamics 365 Portals. For more information u
 > [!NOTE]
 > Power Apps portals were earlier known as Dynamics 365 Portals.
 
-### Dynamics 365 Portals version 9.1.4 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 9.1.4 for the customer engagement apps
 
-Dynamics 365 Portals version 9.1.4 for the model-driven apps in Dynamics 365 brings these new updates and features:
+Dynamics 365 Portals version 9.1.4 for the customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation) brings these new updates and features:
 
 - **Maintenance mode for portal**: As a portal administrator, you can now configure your portal to display a proper message to the customers whenever a maintenance activity is going on—for example, solution packages are being upgraded. More information: [Maintenance mode for a portal](admin/enable-maintenance-mode.md)
 
@@ -39,17 +41,17 @@ Dynamics 365 Portals version 9.1.4 for the model-driven apps in Dynamics 365 bri
 
 - **OAuth 2.0 implicit grant flow**: As a portal developer, you can now make client-side API calls to external APIs and get them secured by using OAuth 2.0 implicit grant flow. More information: [OAuth 2.0 implicit grant flow](oauth-implicit-grant-flow.md)
 
-- **Common Data Service starter portal (preview)**: As a portal administrator, you can now configure your portal to connect to the Common Data Service environment and allow your users to interact with it. This feature brings in the ability to connect a portal to a Common Data Service environment that does not have any model-driven apps in Dynamics 365 (Dynamics 365 Sales,Dynamics 365 Service, or Dynamics 365 Marketing) preinstalled.
+- **Dataverse starter portal (preview)**: As a portal administrator, you can now configure your portal to connect to the Dataverse environment and allow your users to interact with it. This feature brings in the ability to connect a portal to a Dataverse environment that does not have any customer engagement apps (Dynamics 365 Sales,Dynamics 365 Service, or Dynamics 365 Marketing) preinstalled.
 
-### Dynamics 365 Portals version 9.1.1 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 9.1.1 for the customer engagement apps
 
-Dynamics 365 Portals version 9.1.1 for the model-driven apps in Dynamics 365 brings these new updates and features:
+Dynamics 365 Portals version 9.1.1 for the customer engagement apps brings these new updates and features:
 
 - **Portal checker**: You can now use portal checker to identify issues with your portal by looking at various configuration parameters and provide suggestions on how to fix them. More information: [Portal checker](admin/portal-checker.md)
 
-### Dynamics 365 Portals version 9.0.10 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 9.0.10 for the customer engagement apps
 
-Dynamics 365 Portals version 9.0.10 for the model-driven apps in Dynamics 365 brings these new updates and features:
+Dynamics 365 Portals version 9.0.10 for the customer engagement apps brings these new updates and features:
 
 - **Migrate Dynamics 365 Portals configuration**: You can now migrate your Dynamics 365 Portals configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Dynamics 365 instance, and then importing it into the target Dynamics 365 instance. To migrate configuration data, you need to use the Configuration Migration tool and a portal-specific configuration schema file. More information: [Migrate Dynamics 365 Portals configuration](admin/migrate-portal-configuration.md)
 
@@ -63,9 +65,9 @@ Dynamics 365 Portals version 9.0.10 for the model-driven apps in Dynamics 365 br
 
 - **Enable voting for status reasons**: By default, an idea is enabled for voting only when the Status Reason is set to New. You can now enable the voting on an idea for different status reasons. To enable voting for different status reasons, you must create the Ideas/EnableVotingForStatusReasons site setting and set its value to the required status reason values. 
 
-### Dynamics 365 Portals version 9.0.6 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 9.0.6 for the customer engagement apps
 
-Dynamics 365 Portals version 9.0.6 for the model-driven apps in Dynamics 365 has brought the following latest updates and features:
+Dynamics 365 Portals version 9.0.6 for the customer engagement apps has brought the following latest updates and features:
 
 - **Dynamics 365 Portals app**: The Dynamics 365 Portals app provides a new experience to configure and manage your online platform to communicate and collaborate with customers. When you install Dynamics 365 Portals version 9.0 and higher, the Dynamics 365 Portals app, built on the Unified Interface framework, is created out-of-the-box.
 
@@ -74,25 +76,25 @@ Dynamics 365 Portals version 9.0.6 for the model-driven apps in Dynamics 365 has
 - **Change the base URL of a portal**: You can now change the base URL of a portal after it is provisioned. For example, if you choose contosocommunity.microsoftcrmportals.com as the base URL while provision the portal, you can later change it to contosocommunityportal.microsoftcrmportals.com as per your requirement. More information: [Change base URL](admin/change-base-url.md)
 
 
-### Dynamics 365 Portals version 8.4.1 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 8.4.1 for the customer engagement apps
 
-Dynamics 365 Portals version 8.4.1 for the model-driven apps in Dynamics 365 brings in a bunch of bug fixes, as well as performance improvements, along with the following features:
+Dynamics 365 Portals version 8.4.1 for the customer engagement apps brings in a bunch of bug fixes, as well as performance improvements, along with the following features:
 
 - **Search within attachment content of knowledge articles and web files**: Attachment content of knowledge articles and web files are now searchable to increase the likelihood of relevant search results. More information: [Search within file attachment content](configure/search-file-attachment.md)
 - **Accessibility**: The out-of-the-box portals (Community portal, Partner portal, Customer portal, Employee self-service portal) are now accessible. However, customizer should ensure that the portal remains accessible after any customization or changes.
 
 
-### Dynamics 365 Portals version 8.4 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 8.4 for the customer engagement apps
 
-Dynamics 365 Portals version 8.4 for the model-driven apps in Dynamics 365 brings in a bunch of bug fixes, as well as performance improvements, along with the following features:
+Dynamics 365 Portals version 8.4 for the customer engagement apps brings in a bunch of bug fixes, as well as performance improvements, along with the following features:
 
 - **Access portal error logs**: As a portal developer, you can now access detailed error logs for any issues on your portal. This helps you to debug the issues while developing the portal. Once your portal is live, you can configure the portal to send all application errors to an Azure Blob storage account owned by you. This will help you to debug the issues reported by your customers. More information: [Access portal error logs](admin/view-portal-error-log.md)
-- **Renew portal authentication key**: A portal connects to Common Data Service environment using Azure active directory application. To do this, it requires an authentication key connected to Azure Active Directory application. This key is added when you provision your portal and it must be renewed every two years. This version of portal brings in the capability for administrators to be notified about key expiration and renew this key from Power Apps Portals admin center. More information: [Renew portal authentication key](admin/manage-auth-key.md)
+- **Renew portal authentication key**: A portal connects to Dataverse environment using Azure active directory application. To do this, it requires an authentication key connected to Azure Active Directory application. This key is added when you provision your portal and it must be renewed every two years. This version of portal brings in the capability for administrators to be notified about key expiration and renew this key from Power Apps portals admin center. More information: [Renew portal authentication key](admin/manage-auth-key.md)
 - **Implement General Data Protection Regulation in portals**: As a portal administrator, you can now configure your portal to meet the GDPR standards. You can also provide certain terms and conditions that must be agreed by the portal users to use a portal. You can also setup checks such as, if a portal is accessed by a minor user, the user must have parental consent to access the portal. Implementing GDPR allows obtaining consent from portal users regarding use of their personal data, identifying minor users, and obtaining parental consent for minor users. More information: [Implement GDPR in portals](configure/implement-gdpr.md)
 
-### Dynamics 365 Portals version 8.3 for the model-driven apps in Dynamics 365
+### Dynamics 365 Portals version 8.3 for the customer engagement apps
 
-Dynamics 365 Portals version 8.3 for the model-driven apps in Dynamics 365 has many new updates and features:
+Dynamics 365 Portals version 8.3 for the customer engagement apps has many new updates and features:
 
 - **Ability to include attachments with knowledge articles**: You can display note attachments along with knowledge articles. To enable this feature, you create the site setting KnowledgeManagement/DisplayNotes and set the value to **true**. Portal users can also search for these attachments. More information: Display attachments with knowledge articles
 
@@ -118,7 +120,7 @@ Dynamics 365 Portals version 8.3 for the model-driven apps in Dynamics 365 has m
 - **Support time zone&ndash;independent date formats in portals forms**: This feature adds support for **Date Only** and **Timezone Independent** behaviors for date/time fields. More information: [Behavior and format of the date and time field](configure/behavior-format-date-time-field.md)
 
 - **Allowing non-global administrators to provision a portal**: You can now provision a portal if you are assigned to the System Administrator role of the CRM organization selected for the portal. You can now also manage an existing portal, if you have any of the following roles:
-  - Dynamics 365 Service Administrator
+  - Dynamics 365 admin
   - System Administrator of the CRM organization selected for the portal
 
 - **Store the custom domain name for a portal**: This feature stores the primary domain name of a portal on the website record. If the domain name is changed in the future, the latest primary domain name will be stored.
@@ -135,14 +137,26 @@ The December 2016 update has brought many new features to Dynamics 365 Portals. 
 - **East Asian language support:** Multiple-byte languages such as Japanese, Chinese, and Korean are now supported.
 - **Faceted search:** New filters improve how quickly customers can find the content they are looking for while granting more control over visibility of content. More information: [Faceted search](configure/improve-portal-search-faceted-search.md)
 - **Product filtering:** Portal users can trim access to knowledge articles related to their product ownership to avoid information overload.
-- **Content access levels:** A new level of ownership associated with a portal contact, account, or web role can be used to control access to knowledge articles, to help target the right article at the right audience and prevent irrelevant articles from surfacing. More information: [Content access levels](https://docs.microsoft.com/dynamics365/portals/manage-knowledge-articles-content-levels)
+- **Content access levels:** A new level of ownership associated with a portal contact, account, or web role can be used to control access to knowledge articles, to help target the right article at the right audience and prevent irrelevant articles from surfacing. More information: [Content access levels](/dynamics365/portals/manage-knowledge-articles-content-levels)
 - **Knowledge article reporting enhancement:** The portal tracks where a knowledge article was used in the portal.
-- **Project Service Automation integration:** Provide access and visibility for active and closed projects across all stages of a project lifecycle to partners and customers. Team members, reviewers, and customers can view project status, quotes, order forums, and bookable resources on the portal with this solution. More information: [Integrate Project Service Automation](https://docs.microsoft.com/dynamics365/portals/integrate-project-service-automation)
-- **Field Service integration:** Expose information about active agreements, assets, work orders, invoices, and support cases to partners and customers on the portal with this solution. More information: [Integrate Field Service](https://docs.microsoft.com/dynamics365/portals/integrate-field-service)
+- **Project Service Automation integration:** Provide access and visibility for active and closed projects across all stages of a project lifecycle to partners and customers. Team members, reviewers, and customers can view project status, quotes, order forums, and bookable resources on the portal with this solution. More information: [Integrate Project Service Automation](/dynamics365/portals/integrate-project-service-automation)
+- **Field Service integration:** Expose information about active agreements, assets, work orders, invoices, and support cases to partners and customers on the portal with this solution. More information: [Integrate Field Service](/dynamics365/portals/integrate-field-service)
 - **Partner onboarding:** Recruit new partners for better customer sales and service experiences. Potential partners can apply for partner status through the portal.
+
+## Previous portals package updates
+
+The following articles provide details about portals packages with versions earlier than 9.2.2103.x.
+
+- [Portals package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
+- [Portals package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
+- [Portals package version 9.2.2003.2](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2003-2-7f556cae-1f68-2b5f-3a11-b2b4977e49d8)
+- [Portals package version 9.1.9.0](https://support.microsoft.com/topic/portal-solution-release-version-9-1-9-0-for-microsoft-dynamics-365-5fdcd754-2064-be3c-0fa8-463391fa1769) 
 
 ### Privacy notice
 
 [!INCLUDE[cc-privacy-crm-portals-data-exposed](../../includes/cc-privacy-crm-portals-data-exposed.md)]
 
 For more information about additional [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] service offerings, see the [[!INCLUDE[cc_privacy_note_azure_trust_center](../../includes/cc_privacy_note_azure_trust_center.md)]](https://azure.microsoft.com/support/trust-center/).  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

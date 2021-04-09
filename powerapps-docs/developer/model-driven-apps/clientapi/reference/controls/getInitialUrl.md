@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 2c6d6ab4-98a8-4444-b24a-65c140e8f192
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -37,3 +37,6 @@ iframe
 ### Related topics
 
 [Controls](../controls.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

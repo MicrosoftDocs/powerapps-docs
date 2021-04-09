@@ -1,5 +1,5 @@
 ---
-title: "Specify properties for model-driven unified interface apps in Power Apps | MicrosoftDocs"
+title: "Specify properties for model-driven Unified Interface apps in Power Apps | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/03/2019
@@ -26,7 +26,9 @@ search.app:
   - D365CE
 ---
 
-# Specify properties for model-driven unified interface apps
+# Specify properties for model-driven Unified Interface apps
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The Unified Interface framework uses responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. With model-driven apps that use the Unified Interface framework, the grid (view) control is responsive. As the size of the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list. 
 
@@ -41,7 +43,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 - Specify the rendering mode as grid-only or list-only.  
 
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
-2. In navigation pane expand **Entities**, select the appropriate entity (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
+2. In navigation pane expand **Entities**, select the appropriate table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
 
     ![Open add control](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Open Add Control")
 
@@ -72,7 +74,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
     
     a. Choose the pencil icon next to **Reflow behavior**.
 
-    ![Edit Reflow behaviour](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behaviour")
+    ![Edit Reflow behavior](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behavior")
 
     b. Select the grid flow type from **Bind to static options** drop down. 
 
@@ -82,7 +84,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
     |**Grid Only**|Restricts the grid to reflow into list even when there is no enough display space.|
     |**List Only**|Displays only as a list even when there is enough space to display as grid.|
     
-     ![Reflow behaviour properties](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Reflow behaviour properties")
+     ![Reflow behavior properties](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Reflow behavior properties")
 
     c. Choose **OK**.
 
@@ -91,7 +93,10 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 
 
 ## Conditional image
-You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../common-data-service/display-custom-icons-instead.md).
+You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../data-platform/display-custom-icons-instead.md).
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

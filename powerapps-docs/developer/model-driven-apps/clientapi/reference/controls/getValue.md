@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -32,3 +32,6 @@ The getValue method is different from the attribute [getValue](../attributes/get
 
 **Description**:  The latest data value for a control.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

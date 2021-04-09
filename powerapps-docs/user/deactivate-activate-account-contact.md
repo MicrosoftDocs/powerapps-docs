@@ -1,13 +1,13 @@
 ---
 title: "Deactivate or activate an account or contact in a Model-driven app| MicrosoftDocs"
-ms.custom: ""
+description: How to deactivate and activate an account or contact
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -20,9 +20,9 @@ search.app:
 
 # Deactivate or activate an account or contact
 
-In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that record.  
+In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that row.  
   
-A deactivated account or contact becomes inactive, which means it cannot be edited or used in establishing new relationships with other records. However, all relationships created with the deactivated item are still available.  
+A deactivated account or contact becomes inactive, which means it cannot be edited or used in establishing new relationships with other rows. However, all relationships created with the deactivated item are still available.  
   
 If later you need to reactivate a deactivated account, it's easy to do so.   
   
@@ -53,3 +53,6 @@ If later you need to reactivate a deactivated account, it's easy to do so.
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

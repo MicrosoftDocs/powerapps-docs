@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -28,12 +28,12 @@ All
 
 ## Return Value
 
-**Type**: Depends on the type of attaribute. 
+**Type**: Depends on the type of attribute. 
 
 | Attribute Type | Return Type| 
 |----|-----|
 | boolean | [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the Power Apps user’s locale preferences, use the [format](https://msdn.microsoft.com/library/bb384009.aspx) and [localeFormat](https://msdn.microsoft.com/library/bb383816.aspx) methods. Other methods will format dates using the operating system locale rather than the user’s Power Apps locale preferences. | 
+| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the Power Apps user’s locale preferences, use the [format](/previous-versions/bb384009(v=vs.140)) and [localeFormat](/previous-versions/bb383816(v=vs.140)) methods. Other methods will format dates using the operating system locale rather than the user’s Power Apps locale preferences. | 
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | Double | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | integer | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
@@ -47,3 +47,6 @@ All
 
 ### Related topic
 [setValue (Client API reference)](setValue.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

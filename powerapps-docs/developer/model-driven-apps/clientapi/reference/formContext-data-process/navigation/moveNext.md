@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 97640c6a-816b-4d18-9b0b-e79411787c1a
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-You can also move to a next stage in a different entity. 
+Moving to next stage is not supported for different entity.
 
 ## Syntax
 
@@ -65,6 +65,10 @@ You can also move to a next stage in a different entity.
 <td>dirtyForm</td>
 <td>This value will be returned if the data in the page is not saved.</td>
 </tr>
+<tr>
+<td>stageGate</td>
+<td>One or more required field on the current stage is empty.</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -85,3 +89,6 @@ This methods will cause the [OnStageChange](../../events/onstagechange.md) event
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

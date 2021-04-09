@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -290,7 +290,7 @@ search.app:
 <p><b>Attribute metadata for the <i>base</i> type</b><br/>
 An object returned with the following properties:</p>
 <ul>
-<li><b>AttributeType</b>: Number. Type of an attribute. For a list of attribute type values, see <a href="https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.attributetypecode">AttributeTypeCode</a></li>
+<li><b>AttributeType</b>: Number. Type of an attribute. For a list of attribute type values, see <a href="/dotnet/api/microsoft.xrm.sdk.metadata.attributetypecode">AttributeTypeCode</a></li>
 <li><b>DisplayName</b>: String. Display name for the attribute.</li>
 <li><b>EntityLogicalName</b>: String. Logical name of the entity that contains the attribute.</li>
 <li><b>LogicalName</b>: String. Logical name for the attribute.</li></ul>
@@ -318,8 +318,8 @@ An object returned with the following properties in addition to the <i>base</i> 
 <li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
 <p>The object also contains the following methods:</p>
 <ul>
-<li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for an entity. For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
-<li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li></ul>
+<li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for an entity. For default state and status values for an entity, see entity metadata information of the entity in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li>
+<li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for an entity, see entity metadata information of the entity in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li></ul>
 
 <p><b>Attribute metadata for the <i>status</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
@@ -327,7 +327,7 @@ An object returned with the following properties in addition to the <i>base</i> 
 <li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
 <p>The object also contains the following method:</p>
 <ul>
-<li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
+<li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for an entity, see entity metadata information of the entity in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li>
 </ul>
 </td>
 </tr>
@@ -337,3 +337,6 @@ An object returned with the following properties in addition to the <i>base</i> 
 
 [Xrm.Utility](../xrm-utility.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

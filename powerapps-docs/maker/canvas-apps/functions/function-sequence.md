@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
@@ -65,3 +65,6 @@ See the [**Char**](function-char.md#display-a-character-map) function reference 
 ### Chessboard
 
 See the [**As**](operators.md#as-operator) operator reference for two **Sequence** functions working together to create a chessboard in a text string and in two nested galleries.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

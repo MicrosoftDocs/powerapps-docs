@@ -1,5 +1,6 @@
 ---
 title: "Share an embedded canvas app | MicrosoftDocs"
+description: Learn how to share an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -28,7 +29,7 @@ This topic explains how to share an embedded canvas app that you have already cr
 
 After you have created and added an embedded canvas app to a model-driven form you will need to take steps to ensure that all users that have access to the model-driven form also have access to the canvas app and the data that it uses. Please refer to the following guidelines:
 -	Share your embedded canvas app with Everyone in your organization or a security group or specific users. More information: [Share an app](../canvas-apps/share-app.md#share-an-app)
--	Ensure that users have appropriate permissions for any Common Data Service entities that your embedded canvas app uses. Specifically add read pmermissions for the "Canvas App" entity under the customization section.  More information: [Manage entity permissions](../canvas-apps/share-app.md#manage-entity-permissions)
+-	Ensure that users have appropriate permissions for any Microsoft Dataverse tables that your embedded canvas app uses. Specifically add read pmermissions for the "Canvas App" table under the customization section.  More information: [Manage table permissions](../canvas-apps/share-app.md#manage-entity-permissions)
 -	Ensure that users have appropriate permission for data on any cloud services that your embedded canvas app uses, such as SharePoint or OneDrive. The steps to share are specific to each cloud service and beyond the scope of Power Apps.
 
 > [!NOTE]
@@ -45,3 +46,6 @@ Embedded canvas apps are also solution aware. By default embedded canvas apps ar
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

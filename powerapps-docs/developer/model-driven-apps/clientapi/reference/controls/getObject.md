@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -35,3 +35,6 @@ iframe, webresource
 
 **Description**: Object depends on the type of control:
 - An IFRAME and HTML web resource returns the [IFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element from the Document Object Model (DOM).
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

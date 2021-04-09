@@ -1,25 +1,28 @@
 ---
 title: 'Container control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Container control
-author: emcoope-msft
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 05/01/2020
-ms.author: emcoope
+ms.date: 02/12/2021
+ms.author: chmoncay
 ms.reviewer: tapanm-msft
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - chmoncay
+  - tahoon-ms
+  - tapanm-msft
 ---
-# Container control in Power Apps (experimental)
+# Container control in Power Apps (preview)
 Provides the ability to create hierarchy.
 
 > [!IMPORTANT]
-> This is an experimental feature. Experimental features can radically change or completely disappear at any time.
-> For more information, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+> This is a preview feature. Preview features are stable but might go through minor changes.
+> For more information, read [Understand experimental and preview features in Power Apps](../working-with-experimental-preview.md).
 
 ## Description
  The container can hold a set of controls and has its own properties.
@@ -57,3 +60,6 @@ Containers don't work within forms.
 The authoring group is a lightweight concept used for moving around controls and bulk editing similar properties of controls within the group. The authoring group doesn't affect the layout of the app.
 
 The container control previously shipped in experimental as a replacement for the authoring group renamed as the enhanced group. It was renamed to the container control as there's value in both a lightweight authoring group and a structured container control with additional properties.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

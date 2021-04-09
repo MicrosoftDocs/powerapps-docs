@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 05/07/2020
 ms.author: gregli
 search.audienceType: 
@@ -121,3 +121,6 @@ When the **Back** function runs, the inverse transition is used by default. For 
 ### See also
 
 [Using context variables](../working-with-variables.md#use-a-context-variable)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

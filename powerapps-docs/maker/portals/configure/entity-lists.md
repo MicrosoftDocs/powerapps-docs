@@ -5,12 +5,14 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/05/2020
+ms.date: 03/16/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # About entity lists
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 An entity list is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. By using entity lists, you can expose records for display on portals.
 
@@ -39,15 +41,15 @@ When creating or editing a webpage, you can specify an entity list in the lookup
 |              View              |                                                                          The Saved Query view(s) of the target entity that is to be rendered. This field is required. If more than one view has been specified, the webpage will contain a drop-down list to allow the user to switch between the various views.                                                                           |
 |           Page Size            |                                                                                                                                            An integer value that specifies the number of records per page. This field is required. Default: 10                                                                                                                                             |
 |   Web Page for Details View    |                                                                                                        An optional webpage that can be linked to for each record. The ID Query String Parameter Name and record ID will be appended to the query string of the URL to this webpage.                                                                                                        |
-|      Details Button Label      |                     The text displayed for the details view button if **Web Page for Details View** has been specified. Default: View details <br>**Note**: For each language pack installed and enabled for the Common Data Service environment, a field will be available to enter the message in the associated language.                      |
+|      Details Button Label      |                     The text displayed for the details view button if **Web Page for Details View** has been specified. Default: View details <br>**Note**: For each language pack installed and enabled for the Microsoft Dataverse environment, a field will be available to enter the message in the associated language.                      |
 |      Web Page for Create       |                                                                                                                                                             An optional webpage that will be the target of the create button.                                                                                                                                                              |
-|      Create Button Label       |                              The text displayed for the create button if **Web Page for Create** has been specified. Default: Create <br>**Note**: For each language pack installed and enabled for the Common Data Service environment, a field will be available to enter the message in the associated language._                              |
+|      Create Button Label       |                              The text displayed for the create button if **Web Page for Create** has been specified. Default: Create <br>**Note**: For each language pack installed and enabled for the Dataverse environment, a field will be available to enter the message in the associated language._                              |
 | ID Query String Parameter Name |                                                                                                                                           A parameter name provided in the query string of the URL to the Web Page for Details View. Default: id                                                                                                                                           |
-|        Empty List Text         |  **Deprecated**.  The message displayed when there are no records.<br>**Note**: For each language pack installed and enabled for the Common Data Service environment, a field will be available to enter the message in the associated language.                                                           |
+|        Empty List Text         |  **Deprecated**.  The message displayed when there are no records.<br>**Note**: For each language pack installed and enabled for the Dataverse environment, a field will be available to enter the message in the associated language.                                                           |
 |     Portal User Attribute      |                                                                                      An optional lookup attribute on the primary entity that represents the portal user record, either contact or system user, to which the current user's ID can be applied to filter the data rendered in the list.                                                                                      |
 |       Account Attribute        |                                                                                       An optional lookup attribute on the primary entity that represents an account record to which the current user contact's parent Customer account value can be applied to filter the data rendered in the list.                                                                                       |
 |       Website Attribute        |                                                                                                          An optional lookup attribute on the primary entity that represents the website to which the current website's ID can be applied to filter the data rendered in the list.                                                                                                          |
-|         Search Enabled         | An optional Boolean value indicating whether search should be enabled. A text box will be rendered to allow users to do a quick search for records. Use the asterisk (\*) wildcard character to search on partial text. The search appends Or condition filters for each column in the view to the view's existing predefined filter conditions to query and return the resulting records. |
+|         Search Enabled         | An optional Boolean value indicating whether search should be enabled. A text box will be rendered to allow users to do a quick search for records. Use the asterisk (\*) wildcard character to search on partial text. The search appends Or condition filters for each column of the primary entity in the view to the view's existing predefined filter conditions to query and return the resulting records. <br> **Note**: This option doesn't search within related entity columns. |
 |    Search Placeholder Text     |                                                                                                                                                      An optional string used as the label displayed in the text box on initial load.                                                                                                                                                       |
 |      Search Tooltip Text       |                                                                                                                                             An optional string used as the tooltip displayed when the user points to the **Search** text box.                                                                                                                                              |
 |                                |                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -481,9 +483,10 @@ The FetchXML filter uses only one attribute:
 ## Entity list Map view
 
 With entity lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
->[!Note] 
->This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
 
+> [!NOTE] 
+> - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
+> - Only Bing maps are supported as the **Map type**.
 
 ## Entity List Calendar view
 
@@ -495,8 +498,8 @@ To display records by using a calendar, those records need to include at a minim
 
 If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
-> [!Note]
-> The OData feed that is published is anonymous and does not have any authorization checks; therefore, it is important not to enable oData feeds for data that is unsuitable for anonymous portal access.
+> [!CAUTION]
+> Use caution when enabling OData feeds without entity permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Entity Permissions** is disabled.
 
 ## Enhanced view filter for entity lists
 
@@ -506,15 +509,20 @@ You can use Entity Permissions if you want to secure records, but if you want to
 - The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.
 - The control will find all condition elements where uitype="adx_website" and set the value to the actual value of the current website ID.
 
-Example View Filter Criteria
+### Example View Filter Criteria
 
 The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user is not logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
+
+![Example view filter criteria](media/entity-list-view-filter-criteria.png "Example view filter criteria")
 
 > [!NOTE]
 > If you are filtering by current portal user's contact or parent account then it is recommended that you associate a [Web Page Access Control Rule](webpage-access-control.md) to the Web Page to force the user to sign in. You would create a [Web Role](create-web-roles.md) with "Authenticated Users Role" checked. Create a Web Page Access Control Rule with "Restrict Read" right and associate the Web Role. This will force users to be signed in to view the page and therefore allow the data to be filled accordingly.
 
 ### See also
 
-- [Microsoft Learn: Display multiple Common Data Service records using entity lists](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/2-entity-lists)
+- [Microsoft Learn: Display multiple Dataverse records using entity lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

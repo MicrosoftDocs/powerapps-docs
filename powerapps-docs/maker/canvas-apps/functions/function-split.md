@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm tapanm
+ms.reviewer: nabuthuk tapanm
 ms.date: 09/14/2019
 ms.author: gregli
 search.audienceType: 
@@ -62,3 +62,6 @@ The examples show how **Split** can be used with the **[First](function-first-la
 | `First( Split( Last( Split( "Bob Jones <bob.jones@contoso.com>", "<" ) ).Result, ">" ) ).Result` | Splits the string apart based on an opening delimiter (<) and extracts the string to the right of the delimiter with **Last**.  The formula then splits that result based on the closing delimiter (>) and extracts the string the left of the delimiter with **Right**. | "bob.jones@contoso.com" |
 | `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>.+)>" ).email` | Performs the same delimiter based extraction as the last example but uses the **Match** function and a regular expression instead. | "bob.jones@contoso.com" |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

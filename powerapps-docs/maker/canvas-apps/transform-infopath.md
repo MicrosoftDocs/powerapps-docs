@@ -65,7 +65,7 @@ Use this technique if, instead of just updating the list-form experience, you wa
 To get started, follow these steps:
 
 1. Open the SharePoint list from which you would like to build an app.
-1. On the menu bar, select **PowerApps**, and then select **Create an app**.
+1. On the menu bar, select **Power Apps**, and then select **Create an app**.
 1. Provide a name, and then select **Create**.
 
 Power Apps will build you an app that you can customize.
@@ -169,3 +169,6 @@ With Power Apps and the information in this topic, you're now ready to go out in
 [**Formula reference**](formula-reference.md) - Always a great way to become inspired, just browsing some of the default functions.
 
 [**Power Apps community**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) - See examples, engage with others, ask and answer questions, and help the Power Apps community grow.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

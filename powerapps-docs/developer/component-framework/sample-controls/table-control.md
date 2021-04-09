@@ -1,6 +1,6 @@
 ---
 title: " Table component| Microsoft Docs" 
-description: "Implementing a table component" 
+description: "This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing table component
 
 This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API. You can open this component on the different type of devices or modify your language or user settings to see the values adjust correctly in the table. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableControl).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Table component](../media/table-control.png "Table component")
@@ -35,6 +37,9 @@ Model-driven apps
 			<code path="index.ts" order="1" />
 			<css path="css/TS_TableControl.css" order="2" />
 		</resources>
+  <feature-usage>  
+    <uses-feature name="Utility" required="true" />  
+  </feature-usage>
 	</control>
 </manifest>
 ```
@@ -445,3 +450,5 @@ The callback method injects this information as HTML into a div rendered on the 
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

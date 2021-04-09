@@ -1,6 +1,6 @@
 ---
 title: getTimeZoneOffsetMinutes | Microsoft Docs
-description: 
+description: Gets the offset in minutes from UTC for the given date.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -42,3 +42,5 @@ Description: Time zone offset in minutes.
 [User Settings](../usersettings.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

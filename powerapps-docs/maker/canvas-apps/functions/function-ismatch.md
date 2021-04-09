@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
@@ -97,6 +97,7 @@ Predefined patterns provide a simple way to match either one of a set of charact
 | **Period** |Matches a period or dot ("."). |`\.` |
 | **RightParen** |Matches a right parenthesis ")". |`\)` |
 | **Space** |Matches a character that adds whitespace. |`\s` |
+|**Tab**|Matches a tab character.|`\t`|
 
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 
@@ -105,7 +106,7 @@ The pattern that these functions use is a [regular expression](https://en.wikipe
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks. This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects, and Power Apps uses a variant of the JavaScript dialect. See [regular-expression syntax](https://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
+Regular expressions come in different dialects, and Power Apps uses a variant of the JavaScript dialect. See [regular-expression syntax](/previous-versions/1400241x(v=vs.100)) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**
@@ -227,3 +228,6 @@ To see the results of **MatchAll** in a gallery:
     The gallery is filled with each word in our example text.  Resize the gallery's template and the label control in order to see all the words on one screen.
 
 	![](media/function-ismatch/pangram-gallery2.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

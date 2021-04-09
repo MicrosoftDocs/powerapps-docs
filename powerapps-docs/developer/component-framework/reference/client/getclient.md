@@ -1,6 +1,6 @@
 ---
 title: getClient | Microsoft Docs
-description: 
+description: Returns a value to indicate which client the script is executing in.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -35,7 +35,7 @@ Type: `String`
 
 Returns a value to indicate in which client the script is executing.
 
-|||
+|Client type|Description|
 |-----|-----|
 |Web| Web application, or Unified Interface|
 |Outlook| Outlook|
@@ -48,3 +48,5 @@ Returns a value to indicate in which client the script is executing.
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

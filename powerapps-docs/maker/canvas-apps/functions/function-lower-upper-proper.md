@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -65,3 +65,6 @@ Each formula returns a single-column table that contains the converted strings.
 2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
 3. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

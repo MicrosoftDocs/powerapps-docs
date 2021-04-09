@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
@@ -118,3 +118,6 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
     > [!div class="mx-imgBorder"]
     > ![Form-specific confirmation dialog box](media/object-app/confirm-native-custom.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

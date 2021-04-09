@@ -1,6 +1,6 @@
 ---
 title: "Web resource dependencies (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about defining dependencies between web resources in Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about defining dependencies between web resources in Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 05/07/2020
 ms.reviewer: ""
@@ -32,7 +32,7 @@ Within a solution you can define dependencies within solution components. Up unt
 
 The most common scenario is to associate string (RESX) web resources with a JavaScript web resource that depends on it. There will be a String (RESX) web resource for each language that is associated with the JavaScript web resource that uses it. When that JavaScript web resource is loaded, the localized values will also automatically be loaded for the user’s preferred language and the organization base language so that they are available for use. Since you should be creating solution dependencies between these resources anyway, you will have the additional benefit of knowing that the dependent RESX resources will be automatically loaded when you need them.
 
-However, web resource dependencies are not limited to just RESX web resources. You can associate a JavaScript web resource to any other type of web resource to create dependencies that will cause the associated web resource to be loaded together with the JavaScript web resource. This will save time because you will not need to explicitly load multiple dependent web resources when you register a script for a [form event](/powerapps/developer/model-driven-apps/clientapi/reference/events#form-events), [ribbon command](/powerapps/developer/model-driven-apps/define-ribbon-commands), or ribbon [enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), just register the primary script and let the dependency configuration load the rest. You can even create a chain of dependencies because any JavaScript web resources that are loaded because of the primary JavaScript web resource will include any web resources that are associated to them.
+However, web resource dependencies are not limited to just RESX web resources. You can associate a JavaScript web resource to any other type of web resource to create dependencies that will cause the associated web resource to be loaded together with the JavaScript web resource. This will save time because you will not need to explicitly load multiple dependent web resources when you register a script for a [form event](./clientapi/reference/events.md#form-events), [ribbon command](./define-ribbon-commands.md), or ribbon [enable rules](./define-ribbon-enable-rules.md), just register the primary script and let the dependency configuration load the rest. You can even create a chain of dependencies because any JavaScript web resources that are loaded because of the primary JavaScript web resource will include any web resources that are associated to them.
 
 > [!IMPORTANT]
 > Web resource dependencies does not provide any control over the order in which the web resources are loaded. All the web resources are loaded asynchronously and in parallel. If you have a JavaScript web resource which depends on another JavaScript web resource to be loaded and initialized before it can be initialized, you will need to manage that dependency in another way.
@@ -56,6 +56,9 @@ Before this feature you would need to manually add the attribute to the form and
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
 [RESX web resources](resx-web-resources.md)<br />
-[WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
+[WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

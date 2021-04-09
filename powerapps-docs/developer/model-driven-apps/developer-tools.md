@@ -17,12 +17,13 @@ search.app:
 ---
 # Developer tools
 
-The Common Data Service community creates tools! Many of the most popular ones are distributed via the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
+The Microsoft Dataverse community creates tools! Many of the most popular ones are distributed via the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Dataverse, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
 The following is a selected list of community tools distributed via the XrmToolBox you can use when working with model-driven apps.
 
 |Tool  |Description  |
 |---------|---------|
+|[FetchXML Builder](https://fetchxmlbuilder.com/)|Build queries for Microsoft Dataverse, Dynamics 365 and the Power Platform. Investigate data. Get code.|
 |[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/)|Exports and Imports translations with contextual information|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)|Manage custom entities icons in a single screen|
@@ -35,3 +36,6 @@ Another tool that is not distributed via the XrmToolBox is Jason Lattimer's [RES
 
 > [!IMPORTANT]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

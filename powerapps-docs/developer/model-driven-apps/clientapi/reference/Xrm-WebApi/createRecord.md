@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -74,7 +74,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
+These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
 
 ### Basic create 
 
@@ -206,6 +206,9 @@ Xrm.WebApi.offline.createRecord("account", data).then(
  
 ### Related topics
 
-[Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
+[Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) 
 
 [Xrm.WebApi](../xrm-webapi.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

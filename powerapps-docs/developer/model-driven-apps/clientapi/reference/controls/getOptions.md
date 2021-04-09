@@ -5,8 +5,8 @@ ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 83347491-68d2-4844-bda4-0cd0abde2edf
 author: "nkrb"
-ms.author: "kvivek"
-manager: "annbe"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -33,3 +33,6 @@ OptionSet, MultiSelectOptionSet
 - **text**: String. Label of the option.
 - **value**: Number. Enumeration value of the option.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

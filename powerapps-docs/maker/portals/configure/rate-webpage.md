@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
+ms.date: 10/09/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 Ratings provide users with the ability to rate or vote on a webpage. Ratings can also be enabled for comments on pages. By default, this feature is disabled, but it can be enabled on a page-by-page basis.
 
-Ratings are custom activities and thus can be used in the same way as any other activity such as emails, phone calls, and so on. Because ratings are activities, by using customization you can have ratings appear for any entity you choose that appears and is rendered on the portal, including custom entities.
+Ratings are custom activities, and can be used in the same way as any other activity such as emails, phone calls, and so on. Because ratings are activities, by using customization you can have ratings appear for any entity you choose that appears and is rendered on the portal, including custom entities.
 
 ## Enable ratings for pages
 
@@ -30,15 +30,9 @@ Ratings are custom activities and thus can be used in the same way as any other 
 
 ## Use ratings
 
-For webpages that have page ratings enabled and the developer has applied the control to the template, users can rate the page either by using the rating scale or voting, depending on the type chosen when the control was added to the page template.
-
-### Rating Type
+For webpages that have page ratings enabled, users can rate the page by using the rating scale.
 
 ![Rating type](../media/rating-type.png "Rating type")  
-
-### Vote Type
-
-![Vote type](../media/vote-type.png "Vote type")  
 
 ## Manage ratings
 
@@ -46,6 +40,9 @@ The ratings for webpages can be viewed, modified, or deleted within Power Apps p
 
 1. Open the [Portal Management app](configure-portal.md).
 
-2. Navigate to the **Web page** that you are interested in seeing the ratings for.
+2. Navigate to the **Web page** that you're interested in seeing the ratings for.
 
 3. On the **Related** tab, select **Activities**. The associated view lists the ratings for the selected webpage. Within this view, users can modify or delete existing ratings.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

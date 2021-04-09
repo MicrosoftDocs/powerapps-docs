@@ -2,12 +2,12 @@
 title: Tab properties for for model-driven app forms in Power Apps | MicrosoftDocs
 description: Understand the tab properties for main forms
 Keywords: Tab properties; Dynamics 365; Main forms
-author: matp
+author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.author: Mattp123
+ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
 ms.service: powerapps
@@ -28,7 +28,7 @@ search.app:
 You can access **Tab properties** from the Power Apps site. 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3.  In the list of forms, open the form of type **Main**. Then select one of the tabs on the form to view the tab properties.
 
@@ -66,3 +66,6 @@ These are the properties available to configure when using a tab on a form using
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

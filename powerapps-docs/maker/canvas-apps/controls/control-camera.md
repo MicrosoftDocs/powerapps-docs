@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2020
+ms.date: 01/07/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -212,3 +212,10 @@ There must be adequate color contrast between [FocusedBorderColor](properties-co
 - [TabIndex](properties-accessibility.md) must be zero or greater so that keyboard users can navigate to it.
 
 - Focus indicators must be clearly visible. Use [FocusedBorderColor](properties-color-border.md) and [FocusedBorderThickness](properties-color-border.md) to update the visibility of focus indicators.
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

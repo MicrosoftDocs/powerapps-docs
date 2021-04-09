@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -72,3 +72,6 @@ This method is supported only for the action steps. Action steps are buttons on 
  
 [formContext.data.process](../../formContext-data-process.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

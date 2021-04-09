@@ -2,7 +2,7 @@
 title: "Define custom actions to modify the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining custom actions to modify the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 10/13/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 72544b02-4eed-4d70-666e-a0d880f526af
@@ -19,9 +19,7 @@ search.app:
 
 # Define custom actions to modify the ribbon
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-custom-actions-modify-ribbon -->
-
-The default, an application command bar or ribbon is defined by Common Data Service metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
+The default, an application command bar or ribbon is defined by Microsoft Dataverse metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
   
 ## Types of custom actions
 
@@ -49,18 +47,39 @@ The default, an application command bar or ribbon is defined by Common Data Serv
 ### Hide custom actions  
 
  A `<HideCustomAction>` is a statement that you use when you want to remove an existing ribbon element so that it is not rendered. This does not hide the ribbon element, it actually removes the ribbon element at runtime so that it doesn’t exist in the ribbon.  
+
+The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
   
 > [!NOTE]
 > Because the `HideCustomAction` element removes a specified node from the ribbon, removing ribbon elements in this manner may not be the best option for every situation.  
 > 
 > - If you want to remove a button that is associated with a specific privilege, you should adjust the privileges for the entity in the security roles in your implementation. This will allow the default ribbon display and enables rules to hide or disable ribbon elements from users who do not have the necessary privileges to perform those actions.  
 >   -   If you want to replace an existing ribbon element with a custom ribbon element, you can overwrite that element by specifying a `CustomAction.Location` value identical to the existing element.  
+> - To remove the `HideCustomAction` element you need to create a new updated version of the same solution that installed the `HideCustomAction` element. A new patch of the solution cannot remove the `HideCustomAction` element.
+
+The `HideCustomAction` element cannot be removed, once added, except by creating a new updated solution. Instead, ribbon buttons should be hidden using a `DisplayRule` element that always evaluate to false. Having both `Mscrm.HideOnModern` and `Mscrm.ShowOnlyOnModern` would always evaluate to false. For example, to hide a deactivate button:
+
+```xml
+<CommandDefinition Id="Mscrm.HomepageGrid.Deactivate">
+    <EnableRules>
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="Mscrm.HideOnModern" />
+        <DisplayRule Id="Mscrm.ShowOnlyOnModern" />
+      </DisplayRules>
+      <Actions>
+        </Actions>
+    </CommandDefinition>
+```
   
- The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
+
   
 ### See also  
 
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass data from a page as a parameter to Ribbon actions](/dynamics365/customerengagement/on-premises/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Pass data from a page as a parameter to Ribbon actions](/dynamics365/customerengagement/on-premises/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions
 )<br/> 
- [Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)
+[Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

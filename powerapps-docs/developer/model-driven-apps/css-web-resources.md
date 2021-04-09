@@ -53,4 +53,7 @@ Use cascading style sheet (CSS) web resources to create style sheets for use in 
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)   
- [WebResource Entity](../common-data-service/reference/entities/webresource.md)
+ [WebResource Entity](../data-platform/reference/entities/webresource.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

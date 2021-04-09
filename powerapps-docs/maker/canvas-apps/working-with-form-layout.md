@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2020
+ms.date: 10/11/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -26,7 +26,7 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this article. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this article.
 
-This article is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields.
+This article is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps per user, per app, or trial license and system administrator or system customizer permissions, you can [create an entity](../data-platform/data-platform-create-entity.md) in Microsoft Dataverse and add similar fields.
 
 ## Add a gallery
 
@@ -267,3 +267,6 @@ Let's make the error message a little longer, and again the control and the card
 
 ![With a longer error message, the control and card grow even more, and note that the cards on the same row all grow together](./media/working-with-form-layout/autoheight-3.png)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

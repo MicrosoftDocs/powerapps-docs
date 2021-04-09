@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1f9169ce-cba3-4bb6-af20-f86140139cfe
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -43,3 +43,5 @@ var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 **Type**: Boolean
 
 **Description**:  Status of opening the specified search result. Returns 1 if successful; 0 if unsuccessful. The method will return -1 if the specified resultNumber value is not present, or if the specified mode value is invalid.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

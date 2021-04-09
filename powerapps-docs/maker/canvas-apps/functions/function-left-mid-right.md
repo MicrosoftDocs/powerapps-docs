@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
@@ -71,3 +71,6 @@ Each example in this section extracts strings from the **Address** [column](../w
    
     The label shows the last three characters of each product name.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

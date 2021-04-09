@@ -2,7 +2,7 @@
 title: "Display a full-sized image on a canvas app form | MicrosoftDocs"
 description: "Understand how to display a full-sized image on a canvas app form"
 keywords: ""
-ms.date: 10/14/2019
+ms.date: 11/09/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -40,4 +40,7 @@ By default,	when an app user adds an image to display to a form in a canvas app,
 
 ### See also
 [Show, edit, or add a record in a canvas app](add-form.md) <br />
-[Image fields](../common-data-service/types-of-fields.md#image-fields)
+[Image fields](../data-platform/types-of-fields.md#image-columns)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 12/02/2018
 ms.author: gregli
 search.audienceType: 
@@ -70,3 +70,6 @@ If you pass a single string, the return value is the modified string. If you pas
  
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

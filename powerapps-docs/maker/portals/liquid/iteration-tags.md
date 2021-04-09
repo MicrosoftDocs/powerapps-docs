@@ -395,4 +395,7 @@ Defines a range of numbers to loop through.
 [Control flow tags](control-flow-tags.md)
 [Variable tags](variable-tags.md)
 [Template tags](template-tags.md)
-[Power Apps common data service entity tags](portals-entity-tags.md)
+[Dataverse entity tags](portals-entity-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

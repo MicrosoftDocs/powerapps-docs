@@ -12,7 +12,9 @@ ms.reviewer: tapanm
 
 # About entity forms
 
-A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, entity forms are created in Common Data service and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, entity forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
 
 ![Contact us form](../media/contact-us-form.png "Contact us form")  
 
@@ -28,7 +30,7 @@ When creating a new entity form, the first step is to decide the **Entity** and 
 > - An **Entity Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection entity subgrids aren't supported in entity forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
 > - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in entity forms.
-> - [Image attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+> - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [entity images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create an entity form in the Insert mode, you can't change a button's alignment or place an action button above the entity form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
@@ -69,7 +71,7 @@ To secure your forms, you must create entity permissions that determine access a
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on an entity form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
 |Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an entity form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target entity.|
-|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Common Data Service may make to field types.|
+|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
 |Make All Fields Required|     Makes all fields required regardless of the field requirement level.|
 |Validation Summary CSS Class|    CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|
@@ -131,7 +133,7 @@ This provides a way to associate the current record being created or updated by 
 |Entity Logical Name|The logical name of the reference entity.|
 |Target Lookup Attribute Logical Name|Logical name of the lookup attribute on the target entity being created or updated.|
 |Populate Lookup Field|    If the lookup regarding the reference entity is on the form, checking this value will populate the field on the form with the value retrieved using the setting below.|
-|Reference Entity Source Type|    One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Result From Previous Step</li></ul> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.  Selecting Current Portal User will retrieve the contact record for the current authenticated user. Selecting Result From Previous Step will retrieve the record created as a result of the step prior to the current step or from a specific step based on the step associated with the Entity Source Step.|
+|Reference Entity Source Type|    One of the following values:<ul><li>Query String <br> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.</li><li>Current Portal User <br> Selecting Current Portal User will retrieve the contact record for the current authenticated user.</li></ul>|
 |Reference Entity Step|    The Web Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
 |Query String Name|    Parameter name provided in the Query String of the URL to the Web Page containing the Web Form.|
 |Query String Is Primary Key|    Yes indicates the Query String value is the Primary Key value. No indicates the Query String value is an attribute type other than the Primary Key.|
@@ -169,7 +171,7 @@ Clicking on one of these options displays a configuration area for that action. 
 - Set Opportunity on Hold (opportunity)
 
 > [!NOTE]
-> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
+> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
 
 
 ## Geolocation configuration for entity forms
@@ -186,7 +188,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 ## Request validation
 
-[Request validation](https://docs.microsoft.com/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
+[Request validation](/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
 
 By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside entity form fields:
 
@@ -194,7 +196,7 @@ By default, request validation is enabled on portal resulting in following gener
 
 To disable request validation, follow these steps:
 
-1. Go to [portal settings](https://docs.microsoft.com/powerapps/maker/portals/manage-existing-portals#settings) and select **Site Settings**.
+1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site Settings**.
 
 1. Select **New**.
 
@@ -219,4 +221,7 @@ To disable request validation, follow these steps:
 - [Web Forms metadata for portals](configure-web-form-metadata.md)  
 - [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
-- [Microsoft Learn: Interact with Common Data Service data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)
+- [Microsoft Learn: Interact with Dataverse data using entity forms](/learn/modules/portals-access-data-platform/3-entity-forms)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

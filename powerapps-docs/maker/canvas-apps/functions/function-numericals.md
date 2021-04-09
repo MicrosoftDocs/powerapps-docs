@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 09/13/2016
 ms.author: gregli
 search.audienceType: 
@@ -76,3 +76,6 @@ The examples in this section use a [data source](../working-with-data-sources.md
    **Sqrt( Value( Source.Text ) )**
 3. Type a number into **Source**, and confirm that the **Label** control shows the square root of the number that you typed.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

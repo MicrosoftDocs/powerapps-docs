@@ -4,9 +4,9 @@ ms.date: 02/06/2020
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +18,7 @@ search.app:
 Returns the content window that represents an IFRAME or web resource.
 
 > [!NOTE]
-> This method is supported only on [Unified Interface](/powerapps/user/unified-interface).
+> This method is supported only on [Unified Interface](../../../../../user/unified-interface.md).
 
 ## Control types supported
 
@@ -77,3 +77,6 @@ function form_onload(executionContext) {
     }
 }
 ```
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

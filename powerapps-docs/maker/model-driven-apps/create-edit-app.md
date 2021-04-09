@@ -32,8 +32,8 @@ In this topic you learn the basics of how to create and edit a model-driven app 
 
 ## Prerequisites
 Verify the following prerequisites before you start creating an app:
-- A Power Apps environment. More information: [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment)
-- System administrator or system customizer security role. More information: [About predefined security roles](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#about-predefined-security-roles)
+- A Power Apps environment. More information: [Create an environment](/power-platform/admin/create-environment)
+- System administrator or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
  
 <a name="createApp"></a>   
 ## Create an app  
@@ -49,7 +49,7 @@ Verify the following prerequisites before you start creating an app:
     - **Unique Name**: The unique name is automatically populated based on the app name that you specify. It is prefixed with a publisher prefix. You can change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
   
         > [!NOTE]
-        >  The publisher prefix is the text that's added to any entity or field created for a solution that has this publisher.   
+        >  The publisher prefix is the text that's added to any table or column created for a solution that has this publisher.   
   
     - **Description**: Type a short description of what the app is or does.  
   
@@ -72,7 +72,7 @@ Verify the following prerequisites before you start creating an app:
   
 4. Select **Done** or&mdash;if you selected **Use an existing solution to create the App**&mdash;select **Next** to select from the available solutions that were imported in the organization.  
   
-    A new app is created and is shown in Draft status. You'll see the app designer canvas for the new app. From there you can add components, such as entities, views, and dashboards to make your app useful. More information: [Add or edit app components](add-edit-app-components.md)  
+    A new app is created and is shown in Draft status. You'll see the app designer canvas for the new app. From there you can add components, such as tables, views, and dashboards to make your app useful. More information: [Add or edit app components](add-edit-app-components.md)  
    
 <a name="editApp"></a>   
 ## Edit an app  
@@ -88,3 +88,6 @@ Verify the following prerequisites before you start creating an app:
  [Add or edit app components](add-edit-app-components.md)   
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

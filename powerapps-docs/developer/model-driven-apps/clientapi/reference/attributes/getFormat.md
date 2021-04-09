@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e5f97552-4a48-4bf9-b460-6105442e2e6b
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -64,3 +64,6 @@ The following table lists the format string values to expect for each type of at
 | Single Line of Text        | Phone             | string             | phone            |
 | Whole Number               | Time Zone         | optionset          | timezone         |
 | Single Line of Text        | Url               | string             | url 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -6,9 +6,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -55,7 +55,7 @@ A process contains the data for a business process flow. Use the methods to acce
 
 ## ProcessInstance methods
 
-Use these methods to retrieve information about all the process instances for an entity record and to set a process instance as the active instance.
+Use these methods to retrieve information about all the process instances for a record and to set a process instance as the active instance.
 
 |Name | Description |
 |--|--|
@@ -139,3 +139,6 @@ Use these methods to find information about the stages in the active path, enabl
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

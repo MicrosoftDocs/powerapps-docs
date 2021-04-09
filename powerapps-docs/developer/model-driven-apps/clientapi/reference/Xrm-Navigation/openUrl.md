@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 29cb3685-21aa-42fc-8e84-0074dcc69197
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -39,3 +39,6 @@ This method is especially helpful for mobile clients to open a URL in a browser 
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

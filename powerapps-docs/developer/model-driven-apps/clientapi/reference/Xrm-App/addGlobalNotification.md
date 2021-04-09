@@ -3,9 +3,9 @@ title: "addGlobalNotification (Client API reference) in model-driven apps| Micro
 ms.date: 03/09/2020
 ms.service: powerapps
 ms.topic: "reference"
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -166,3 +166,6 @@ This is how the information notification will appear in the app:
 ### See also
 
 [clearGlobalNotification](clearGlobalnotification.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

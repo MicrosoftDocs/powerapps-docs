@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 21368fac-d4bc-4f75-8a9c-cce098fa0b45
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: Returns "expanded" or "collapsed" on the web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
+**Description**: Returns "expanded" or "collapsed" on the legacy web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
 
 ### Related topics
 
@@ -38,3 +38,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

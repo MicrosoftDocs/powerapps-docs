@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c6cbe4c5-c5a1-4330-a3ba-c0716e0c92ad
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -33,3 +33,6 @@ Read-only and editable grids
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

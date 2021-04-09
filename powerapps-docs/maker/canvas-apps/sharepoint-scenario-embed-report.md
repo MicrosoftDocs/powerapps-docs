@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/30/2018
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ search.app:
 
 We'll now embed our Power BI report in the same SharePoint Online site that hosts our two lists. Power BI supports a variety of approaches to embedding, including directly integrating into SharePoint pages for web and mobile views.
 
-With this type of embedding, Power BI embeds the report as a web part, provides appropriate access for users, and lets you click through from the embedded report to the report at powerbi.com. First, we'll generate an embed link in Power BI, then use that link in a page that we create. For more information on embedding, see [Embed with report web part in SharePoint Online](https://docs.microsoft.com/power-bi/service-embed-report-spo).
+With this type of embedding, Power BI embeds the report as a web part, provides appropriate access for users, and lets you click through from the embedded report to the report at powerbi.com. First, we'll generate an embed link in Power BI, then use that link in a page that we create. For more information on embedding, see [Embed with report web part in SharePoint Online](/power-bi/service-embed-report-spo).
 
 ## Step 1: Generate an embed link
 1. Sign in to Power BI, then in the left navigation pane, click or tap the report name.
@@ -55,10 +55,16 @@ With this type of embedding, Power BI embeds the report as a web part, provides 
     ![Report embedding complete](./media/sharepoint-scenario-embed-report/08-01-09-report-complete.png)
 
 ## Step 3: Grant access to the report.
-If you are using Office 365 Groups as we recommend, make sure users who need access are members of the group workspace within the Power BI service. This ensures that users can view the contents of that group. For more information, see [Collaborate in your Power BI app workspace](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
+If you are using Office 365 Groups as we recommend, make sure users who need access are members of the group workspace within the Power BI service. This ensures that users can view the contents of that group. For more information, see [Collaborate in your Power BI app workspace](/power-bi/service-collaborate-power-bi-workspace).
 
 That wraps up our work in Power BI for this scenario. You started by pulling data from our SharePoint lists into Power BI, and have now come full circle to embedding your Power BI report back into SharePoint.
 
 ## Next steps
 The next step in this tutorial series is to [run through the workflow we created end-to-end](sharepoint-scenario-summary.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

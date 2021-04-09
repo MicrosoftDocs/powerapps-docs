@@ -2,13 +2,13 @@
 title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 05/07/2020
+ms.date: 03/29/2021
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
-author: HaoZhou 
-ms.author: hazhouMSFT 
-manager: annbe 
+author: Nkrb 
+ms.author: nabuthuk
+manager: kvivek 
 ms.reviewer: kvivek 
 search.audienceType: 
   - developer
@@ -19,17 +19,19 @@ search.app:
 
 # Define ribbon enable rules
 
-When configuring Ribbon elements you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
+When configuring Ribbon elements, you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
 
 -   Use the `/RuleDefinitions/EnableRules/EnableRule` element to define rules controlling when the ribbon element should be enabled.  
 
 -   Use the `/CommandDefinitions/CommandDefinition/EnableRules/EnableRule` element to associate specific enable rules to a command definition.  
 
 ## What does enabled mean?  
+
  With the command bar, commands that are disabled are hidden. With the ribbon, commands that are disabled are visible but do not respond to events.  
 
 ## Control when ribbon elements are enabled  
- Enable rules are intended to be re-used. By defining them with rule definitions, you can use the same enable rule for many command definitions. When more than one enable rule is defined for a command definition, all of the enable rules must evaluate as true for the ribbon element to be enabled.  
+
+ Enable rules are intended to be reused. By defining them with rule definitions, you can use the same enable rule for many command definitions. When more than one enable rule is defined for a command definition, all of the enable rules must evaluate as true for the ribbon element to be enabled.  
 
  All Enable rules provide an optional attribute to specify whether the default value of the rule is true or false and an optional `InvertResult` attribute to allow for returning a negative result when the item being tested returns true.  
 
@@ -65,7 +67,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 -   `CrmForOutlookOfflineAccess`  
 
 ### Custom Rule
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](/powerapps/developer/model-driven-apps/script-jscript-web-resources) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
 ```JavaScript
 function EnableRule()
@@ -162,7 +164,60 @@ function EnableRule() {
 ### Value Rule
 Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
+### Show On Quick Action Rule
+
+Uses the `<EnableRule>` element. Use this rule to make the command appear only as quick action.
+
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnQuickAction" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
+
+### Show On Grid and Quick Action rule
+
+Uses the `<EnableRule>` element. Use this rule to make the command appear on the homepage grid and quick action.
+
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnGridAndQuickAction" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
+### Show On Grid Rule
+
+Uses the `<EnableRule>` element. Use this rule to make the quick action command appear on the homepage grid only. In other words, you can use this command to hide an existing quick action.
+
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnGrid" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
+
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Define Ribbon commands](define-ribbon-commands.md)   
  [Define Ribbon display rules](define-ribbon-display-rules.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

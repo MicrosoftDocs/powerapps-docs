@@ -25,7 +25,7 @@ search.app:
 ---
 # Translate localizable text for model-driven apps
 
-If you have customized entity or field text, such as field labels or drop-down list values, you can provide the users in your environment who are not working with the base language version of your environment with this customized text in their preferred languages. 
+If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your environment who are not working with the base language version of your environment with this customized text in their preferred languages. 
 
 The process has the following steps:
 1. Enable other languages for your environment
@@ -35,13 +35,13 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](/dynamics365/customer-engagement/admin/enable-languages) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
 
 > [!TIP]
-> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).
+> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).
 
 ## Export the localizable text
 
@@ -85,21 +85,21 @@ When you view the data in Excel, look at the **Localized Labels** tab.
 
 ![Exported text for localization](media/localized-labels-tab-exported-languages.png "Exported text for localization")
 
-Any custom entities or fields will have empty cells for the localizable text. Add the localized values for those items.
+Any custom tables or columns will have empty cells for the localizable text. Add the localized values for those items.
 
 > [!NOTE]
-> If you have changed the display name or description for any standard entity or entity field, the localized strings will still reflect the translations for the original value. Those should be localized to reflect the new value.
+> If you have changed the display name or description for any standard table or table column, the localized strings will still reflect the translations for the original value. Those should be localized to reflect the new value.
 
 The **Display Strings** tab contains text that is displayed for other UI elements such as Ribbon commands, error messages, and form labels.
 
 ### Updating localizable text in the base language
 
-If you change the display name for any standard entity or entity field which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
+If you change the display name for any standard table or table column which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
 
 > [!TIP]
-> Although the UI exposed to edit system entity messages includes many references to entity names, it doesn't include all of them. Using this technique may find more. More information: [Edit system entity messages](../common-data-service/edit-system-entity-messages.md)
+> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../data-platform/edit-system-entity-messages.md)
 
-For example, if you change the display name for the Account entity to *Company*, search through the base language column in the  **Display Strings** for the following matches: `account`, `accounts`, `Account`, and `Accounts` then make appropriate replacements to `company`, `companies`, `Company`, and `Companies` respectively.
+For example, if you change the display name for the Account table to *Company*, search through the base language column in the  **Display Strings** for the following matches: `account`, `accounts`, `Account`, and `Accounts` then make appropriate replacements to `company`, `companies`, `Company`, and `Companies` respectively.
 
 > [!IMPORTANT]
 > Do not do a general find/replace in the file for this. You should take care that the matching text actually refers to the names you have changed.
@@ -135,5 +135,8 @@ After the translated text is imported, you should publish all customizations to 
 
 
 ## Next steps
-[Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
-[Edit system entity messages](../common-data-service/edit-system-entity-messages.md)
+[Regional and language options for your organization](/dynamics365/customer-engagement/admin/enable-languages)<br />
+[Edit system table messages](../data-platform/edit-system-entity-messages.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

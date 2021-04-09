@@ -1,6 +1,6 @@
 ---
 title: Code components for canvas apps  | Microsoft Docs
-description: Create code components for canvas apps
+description: Learn how to create code components using Power Apps component framework for canvas apps.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -16,6 +16,8 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 # Code components for canvas apps
 
 Power Apps component framework enables app makers to create code components to use in an app or across the apps. More information: [Power Apps component framework overview](overview.md) 
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 In this public preview, Power Apps component framework enables app makers to create code components, debug, import, and add them to canvas apps using the Power Apps CLI tooling. Only specific APIs are supported in this public preview. We recommend you to check each API to determine whether it supports canvas apps. 
 
@@ -65,7 +67,7 @@ To add code components to a canvas app:
 2. Create a new canvas app or edit an existing app to which you want to add the code component.
 
    > [!IMPORTANT]
-   > Make sure the solution zip file is already [imported](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) into Common Data Service before you proceed to the next step.
+   > Make sure the solution zip file is already [imported](../../maker/data-platform/import-update-export-solutions.md) into Microsoft Dataverse before you proceed to the next step.
 
 3. Go to **Insert** > **Custom** > **Import component**. 
  
@@ -81,11 +83,20 @@ To add code components to a canvas app:
 
 ## Delete a code component 
 
-To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements get deleted from the app and the app package.
+To delete a code component from a canvas app:
+
+1. Open the app where you have added the code component. 
+1. Select the **Tree view** icon from the left pane and select the screen where you have added the code component. 
+1. Select **ellipse (...)** next to the code component and select **Delete**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Delete code component](media/delete-code-component.png "Delete code component")
+
+1. Save the app to see the changes. 
 
 ## Update existing code components
 
-Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` attribute in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
+Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` property in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
 
 > [!NOTE]
 > Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting the code components or adding the code component back into the app doesn't update the components.
@@ -94,4 +105,7 @@ Whenever you update the code components and want to see the changes in runtime, 
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

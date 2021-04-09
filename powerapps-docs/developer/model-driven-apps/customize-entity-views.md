@@ -21,14 +21,14 @@ search.app:
 
 Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
+ An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../data-platform/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
 <a name="BKMK_TypesOfViews"></a>  
  
 ## Types of views  
- The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
+ The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../data-platform/outlook-client/offline-outlook-filters-templates.md). 
   
  When views are defined for a specific entity, the `SavedQuery.ReturnedTypeCode` attribute returns the entity logical name.  
   
@@ -48,9 +48,9 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 - `SavedQuery.ReturnedTypeCode`: Matches the logical name of the entity. 
   
-- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../common-data-service/use-fetchxml-construct-query.md).  
+- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../data-platform/use-fetchxml-construct-query.md).  
   
-- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)  for the valid elements.
+- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)  for the valid elements.
   
 - `SavedQuery.QueryType`: Must always be zero (0).  
   
@@ -221,7 +221,7 @@ service.Execute(ssreq);
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ## Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/common-data-service/use-fetchxml-construct-query).  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](../data-platform/use-fetchxml-construct-query.md).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -229,14 +229,14 @@ service.Execute(ssreq);
 <a name="BKMK_EditColumns"></a>   
 ## Edit columns  
  The columns that you want to display in views can be taken from the entity or related entities. 
- For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md).  
+ For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md).  
   
 <a name="BKMK_CustomIcons"></a>   
 ## Add custom icons with tooltip for a column  
  You can add custom icon with tooltip text to display in a column depending on the column value; you can also specify localized tooltip text. This can be done by adding the custom icons as image web resources in your instance and then using a JavaScript web resource to add JavaScript code for a column to display the icons depending on the column value.  
   
 > [!NOTE]
->  Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](/powerapps/developer/model-driven-apps/use-editable-grids).  
+>  Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](./use-editable-grids.md).  
   
  Two new attributes, `imageproviderwebresource` and `imageproviderfunctionname`,  are added to the `cell` element of the layoutxml of 
  savedquery that lets you specify the name of a web resource 
@@ -265,7 +265,7 @@ System.String layoutXml =
 </grid>";  
 ```  
   
- The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade Language Packs](https://technet.microsoft.com/library/hh699674.aspx). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).  
+ The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade Language Packs](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699674(v=crm.8)). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
   
  Assuming you will most likely be adding custom icons for an option set type of attribute as it has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid breaking the code due to changes in the localized label string. Also, in your JavaScript function, specify just the name of an image web resource that you want to use as an icon for a value in the attribute. The image should be of 16x16 pixels size; larger images will be automatically scaled down to 16x16 pixels size.  
   
@@ -329,3 +329,6 @@ function displayIconTooltip(rowData, userLCID) {
 ## Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

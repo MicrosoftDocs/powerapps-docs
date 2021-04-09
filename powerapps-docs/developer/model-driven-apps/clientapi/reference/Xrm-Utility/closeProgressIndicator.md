@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9897040d-ebe9-4e3f-8507-786d8b708add
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -35,3 +35,6 @@ If no progress dialog is displayed currently, this method will do nothing. You c
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

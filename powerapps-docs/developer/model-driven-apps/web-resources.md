@@ -1,8 +1,8 @@
 ---
 title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Web resources are virtual files that are stored in the Common Data Service database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/03/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -20,15 +20,20 @@ search.app:
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-resources -->
 
 
-Web resources are *virtual files* that are stored in the Common Data Service database and that you can retrieve by using a unique URL address.  
-  
+Web resources are *virtual files* that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address.  
+
+> [!NOTE]
+> IFRAMEing content that is behind an authentication boundary is not supported through web resources or Power Apps component framework. Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this is not supported in mobile or tablet applications.
+The specific scenario of embedding an entity form within an IFRAME, embedded in another entity form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+
+
 <a name="BKMK_CapabilitiesOfWebResources"></a>   
 ## Capabilities of web resources  
- Web resources represent files that can be used to extend the Common Data Service web application such as html files, JavaScript, and CSS, and several image formats. You can use web resources in form customizations, the `SiteMap`, or the application ribbon because they can be referenced by using URL syntax.  
+ Web resources represent files that can be used to extend the Dataverse web application such as html files, JavaScript, and CSS, and several image formats. You can use web resources in form customizations, the `SiteMap`, or the application ribbon because they can be referenced by using URL syntax.  
   
- The URL syntax for web resources allows for relative path references. With your development tools, you can create a group of interdependent files on a development server by using file types compatible with web resources. Then, if you use a consistent naming convention and relative path references, the website will function after you upload all the files into Common Data Service.
+ The URL syntax for web resources allows for relative path references. With your development tools, you can create a group of interdependent files on a development server by using file types compatible with web resources. Then, if you use a consistent naming convention and relative path references, the website will function after you upload all the files into Dataverse.
   
- Because web resources are stored in Common Data Service and are solution components, they can be easily exported and installed to other Common Data Service orgs. Web resources are also available to users of Common Data Service for Microsoft Office Outlook with Offline Access when offline because they are synchronized with the user's data.  
+ Because web resources are stored in Dataverse and are solution components, they can be easily exported and installed to other Dataverse orgs. Web resources are also available to users of Dataverse for Microsoft Office Outlook with Offline Access when offline because they are synchronized with the user's data.  
   
  You can use the form editor to add and configure form-enabled web resources into your entity forms.  
   
@@ -36,9 +41,9 @@ Web resources are *virtual files* that are stored in the Common Data Service dat
   
 <a name="BKMK_LimitationsOfWebResources"></a>   
 ### Limitations of web resources  
- There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with Common Data Service data.
+ There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with Dataverse data.
   
- Web resources are only available by using the Common Data Service web application security context. Only licensed Common Data Service users who have the necessary privileges can access them.  
+ Web resources are only available by using the Dataverse web application security context. Only licensed Dataverse users who have the necessary privileges can access them.  
   
 #### Size limitations  
 The maximum size of files that can be uploaded is determined by the Organization.MaxUploadFileSize property. This property is set in the Email tab of the System Settings in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.
@@ -79,7 +84,7 @@ $webresource:<name of Web Resource>
 ```  
   
 > [!NOTE]
->  When using the `$webresource` directive, Common Data Service will create or update solution dependencies.  
+>  When using the `$webresource` directive, Dataverse will create or update solution dependencies.  
   
 ### Xrm.Navigation.openWebResource  
  The Xrm.Navigation.[openWebResource](clientapi/reference/Xrm-Navigation/openWebResource.md) function will open an HTML web resource in a new window with parameters to pass the name of the web resource, any query string data to be passed in the data parameter, and information about height and width of the window.  
@@ -110,18 +115,18 @@ $webresource:<name of Web Resource>
  The following sample shows the style of URL you can use to view web resources.  
   
 ```  
-<Common Data Service Environment URL>/WebResources/<name of web resource>  
+<Dataverse Environment URL>/WebResources/<name of web resource>  
 ```  
   
  The application will process this URL and return the file that contains the latest version of the web resource. This URL will look like this:  
   
 ```  
-<Common Data Service Environment URL>/%7B<version value>%7D/WebResources/<name of web resource>  
+<Dataverse Environment URL>/%7B<version value>%7D/WebResources/<name of web resource>  
 ```  
   
  The version value is updated when you publish customizations and ensures that the browser uses the latest cached version of the web resource. Because of this, use a relative path to a web resource, the Xrm.Navigation.[openWebResource](clientapi/reference/Xrm-Navigation/openWebResource.md) function, or the [$webresource Directive](web-resources.md#BKMK_WebResourceDirective) (when possible) because the version value will automatically be included. For large web resources there can be significant performance implications if you don’t use the cached version of the file.  
   
- The following sample shows a URL for Common Data Service, where `MyOrganization` is the name of your Common Data Service Environment, and `new_/test/test.htm` is the name of the web resource:  
+ The following sample shows a URL for Dataverse, where `MyOrganization` is the name of your Dataverse Environment, and `new_/test/test.htm` is the name of the web resource:  
   
 ```  
 https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm  
@@ -129,19 +134,19 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
   
 > [!NOTE]
 >  Including the ‘/’ character and a file name extension in the name of the web resource is an optional best practice.  
- When you write code to reference a web resource that works for Common Data Service, you should use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) function.
+ When you write code to reference a web resource that works for Dataverse, you should use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) function.
 
 <a name="BKMK_rendering_differences"></a>
 ## Layout differences between the legacy web client and Unified Interface
 
-A web resource control configured to use a certain number of rows will have different heights in a Unified Client application compared to a web client application. This is because there is a difference in the height of a row between the Unified Interface and web client. If a form is needed in both the web client and Unified Interface, you can use different forms in the Unified Interface app and the web client app with the control configured to use the appropriate number of rows in each form.
+A web resource control configured to use a certain number of rows will have different heights in a Unified Client application compared to a web client application. This is because there is a difference in the height of a row between Unified Interface and web client. If a form is needed in both the web client and Unified Interface, you can use different forms in the Unified Interface app and the web client app with the control configured to use the appropriate number of rows in each form.
 
 ## Community tools
 
-**WebResources Manager** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
+**WebResources Manager** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Common Data Service and does not extend support to the community tools. 
+> The community tools are not a product of Dataverse and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
   
 ### See also  
@@ -153,7 +158,10 @@ A web resource control configured to use a certain number of rows will have diff
  [Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)<br />
  [Data (XML) Web Resources](data-xml-web-resources.md)<br />
  [Style Sheet (CSS) Web Resources](css-web-resources.md)<br />
- [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
+ [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
  [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
  [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -29,7 +29,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
   
 3. Modify the filter criteria.  
   
-   The criteria are grouped by record types that you can use in the filter, such as **Accounts** or **Contacts**.  
+   The criteria are grouped by row types that you can use in the filter, such as **Accounts** or **Contacts**.  
   
    ### To edit an existing row
    1. Select the query relational operator and select an operator, or Select the underlined value and enter a new value.  
@@ -38,14 +38,14 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
   
    To add a criteria row:  
 
-   1.  Select **Select**, and specify the field to filter on.  
+   1.  Select **Select**, and specify the column to filter on.  
 
    2.  Select the query relational operator, and select an operator.  
 
-   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this field** button ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
+   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this column** button ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
 
    ### To group criteria
-   You must select two or more rows for the same record type. However, rows with field values from different record types, such as **Account** and **Contact** record types, cannot be grouped.  
+   You must select two or more rows for the same row type. However, rows with column values from different row types, such as **Account** and **Contact** row types, cannot be grouped.  
 
    1.  For each row you want to group, in detailed mode, select the **Options menu** button for that row, and then choose **Select Row**.  
 
@@ -55,7 +55,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
    4.  To select a group, select the **Options menu** button for that group, and then select **Select Group**.  
 
-   5.  To add a criteria clause to a group, select the **Options menu** button for that group, select **Add Clause**, and then select the field, query relational operator, and value.  
+   5.  To add a criteria clause to a group, select the **Options menu** button for that group, select **Add Clause**, and then select the column, query relational operator, and value.  
 
    6.  To unselect a group that has been previously selected, select the **Options menu** button for that group, and then select **Deselect Group**.  
 
@@ -80,3 +80,6 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
 [Troubleshoot problems with data not displaying in a report](troubleshoot-reports.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

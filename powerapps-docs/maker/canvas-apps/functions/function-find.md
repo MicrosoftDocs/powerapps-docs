@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -29,3 +29,6 @@ The **Find** function looks for a string within another string and is case sensi
 * *WithinString* - Required.  The string to search within.
 * *StartingPosition* - Optional.  The starting position to start searching.  Position 1 is the first character.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

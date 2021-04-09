@@ -1,6 +1,6 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Microsoft Dataverse displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/27/2020
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 
 # Customize commands and the ribbon
 
-Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
+Microsoft Dataverse displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
 
 Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   
@@ -52,3 +52,6 @@ The SDK describes the process of editing the ribbon by editing the customization
  [Ribbon WSS Schema](ribbon-wss-schema.md)<br/> 
  [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md)<br/> 
  [Apply business logic using client scripting in model-driven apps](client-scripting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

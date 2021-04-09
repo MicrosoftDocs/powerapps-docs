@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a3231438-3821-4dce-b118-d63e6ce85e01
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -40,3 +40,6 @@ All
 ### Related topic
 [setSubmitMode (Client API reference)](setSubmitMode.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

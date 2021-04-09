@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 09/13/2016
 ms.author: gregli
 search.audienceType: 
@@ -122,3 +122,6 @@ The examples in this section use a [data source](../working-with-data-sources.md
 | **Degrees(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of degrees for each number in the table, assumed to be angles in radians. | ![](media/function-trig/values-degrees.png) |
 | **Radians(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of radians for each number in the table, assumed to be angles in degrees. | ![](media/function-trig/values-radians.png) |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

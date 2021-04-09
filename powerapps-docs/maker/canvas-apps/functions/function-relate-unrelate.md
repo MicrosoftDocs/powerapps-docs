@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 01/22/2019
 ms.author: gregli
 search.audienceType: 
@@ -20,7 +20,7 @@ Relate and unrelate records of two entities through a one-to-many or many-to-man
 
 ## Description
 
-The **Relate** function links two records through a one-to-many or many-to-many relationship in Common Data Service. The **Unrelate** function reverses the process and removes the link.
+The **Relate** function links two records through a one-to-many or many-to-many relationship in Microsoft Dataverse. The **Unrelate** function reverses the process and removes the link.
 
 For one-to-many relationships, the Many entity has a foreign-key field that points to a record of the One entity. **Relate** sets this field to point to a specific record of the One entity, while **Unrelate** sets this field to *blank*. If the field is already set when **Relate** is called, the existing link is lost in favor of the new link. You can also set this field by using the [**Patch**](function-patch.md) function or an **[Edit form](../controls/control-form-detail.md)** control; you need not use the **Relate** function.
 
@@ -49,7 +49,7 @@ You can use these functions only in [behavior formulas](../working-with-formulas
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
+Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../data-platform/create-edit-entities-portal.md):
 
 | Relationship display name | Related entity | Relationship type |
 | --- | --- |
@@ -333,3 +333,6 @@ Many-to-many relationships are symmetric. You can extend the example to add prod
 With this new screen, users can add a contact to a product and then flip to a view of contacts and see the associated product. The relationships are symmetric and shared between the two screens.
 
 ![Demonstrate many-to-many relationship from either side](media/function-relate-unrelate/contacts-reverse.gif)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

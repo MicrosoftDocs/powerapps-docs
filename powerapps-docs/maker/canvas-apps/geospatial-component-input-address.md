@@ -1,24 +1,21 @@
 ---
-title: 
-description: 
+title: Enter and resolve address in maps
+description: Use the address input component in your apps to let users search for and find addresses.
 author: iaanw
-manager: shellha
+manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 7/7/2020
+ms.date: 1/19/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06122020
 ---
 
-# Address input component (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Address input component 
 
 Entering addresses can be frustrating and error-prone, particularly in mobile scenarios. 
 
@@ -26,7 +23,7 @@ The address input component lets you see dynamic address suggestions as you type
 
 The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) in addition to [enabling geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
 
@@ -42,11 +39,8 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to bias results by the user's current location.
 
-    ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
-
-You can modify the component by using a number of [properties](#properties).
+You can modify the component by using many [properties](#input-properties).
 
 ### Set a default search radius
 
@@ -64,15 +58,15 @@ You can save addresses that a user inputs into the address component as a data c
 
 1. App the map component and the input address component to your app.
 2. On the **Insert** menu, select **Button** and move it into your app.
-3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following:
+3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following code:
 
     ```json
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 
-    This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
+    This code causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
 
-    ![](./media/geospatial/input-code.png)
+    ![Screenshot of the button on the app](./media/geospatial/input-code.png)
 
 4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
 
@@ -84,7 +78,7 @@ You can save addresses that a user inputs into the address component as a data c
 
 Each time a user selects the button, the result from the address input component will be added to the map as a new pin.
 
-### Properties
+### Input properties
 
 The following properties are on the component's **Address Input** pane on the **Properties** and **Advanced** tabs.
 
@@ -94,7 +88,6 @@ Some properties are only available on the **Advanced** tab, in the **More option
 
 | Property | Description | Type | Location |
 | - | - | - | - |
-| Enable autofill | Whether the component gives address suggestions. | Boolean | Properties |
 | Search result limit | The number of suggested addresses the component displays. | Integer | Properties |
 | Search within radius | Whether the component should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude**. | Boolean | Properties |
 | Latitude | The latitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. | Decimal from &ndash;180 through 180 | Properties |
@@ -103,7 +96,36 @@ Some properties are only available on the **Advanced** tab, in the **More option
 | Language | The language the address suggestions are returned in | String | Properties |
 | Country set | Comma-separated list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. For example, **US, FR, KW** | String | Properties |
 
-### Additional properties
+### Output properties
+
+The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience. 
+
+The following table lists the output properties available.
+
+| Property | Description |
+| -- | -- |
+| UserInput | Text the user has typed in the input box. |
+| SelectedLatitude | Latitude of the user-selected address in the input field. |
+| SelectedLongitude | Longitude of the user-selected address in the input field. |
+| SearchResultJson | The search result (based on the UserInput property), displayed as a string in JSON format. |
+| FreeformAddress | Selected address from the list of suggested addresses. |
+| LocalName | An address component which represents the name of a geographic area or locality that groups multiple addressable objects for addressing purposes, without being an administrative unit. |
+| PostalCode | Postal code. |
+| ExtendedPostalCode | Extended Postal Code. |
+| CountryCode | Country code. |
+| Country | Country. |
+| CountryCodeISO3 | Country code in ISO alpha-3 format. |
+| CountrySubdivisionName | Country subdivision name. |
+| StreetName | Street name. |
+| StreetNumber | Street number. |
+| Municipality | Municipality. |
+| MunicipalitySubdivision | Municipality subdivision. |
+| CountryTertiarySubdivision | Country tertiary subdivision. |
+| CountrySecondarySubdivision | Country secondary subdivision. |
+| CountrySubdivision | Country subdivision. |
+
+
+### Additional (common) properties
 
 **[Default](./controls/properties-core.md)** – The initial value of a control before it's changed by the user.
 
@@ -139,7 +161,7 @@ Some properties are only available on the **Advanced** tab, in the **More option
 
 **[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**HintText** – Light-gray text that appears in an input-text control if it's empty.
+**Hint text** – Light-gray text that appears in an input-text control if it's empty.
 
 **[HoverBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
@@ -188,3 +210,6 @@ Some properties are only available on the **Advanced** tab, in the **More option
 ## Other geospatial components
 
 To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

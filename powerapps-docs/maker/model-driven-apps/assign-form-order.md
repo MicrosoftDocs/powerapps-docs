@@ -26,7 +26,7 @@ search.app:
 ---
 # Assign model-driven app form order
 
- When you have multiple main, quick create, quick view, or card forms for an entity, you can assign a form order. The form order determines which of the available forms will be shown by default. The available main forms can be further controlled by assigning security roles to the form. See [Control access to forms](control-access-forms.md) for more information.  
+ When you have multiple main, quick create, quick view, or card forms for a table, you can assign a form order. The form order determines which of the available forms will be shown by default. The available main forms can be further controlled by assigning security roles to the form. See [Control access to forms](control-access-forms.md) for more information.  
   
  You can't assign security roles to quick create, quick view, or card forms, so the only form that will be used by everyone is the one at the top of the form order.  
   
@@ -34,7 +34,7 @@ search.app:
 > [!NOTE]
 > To set form order using the new experience, see [Set the form order](control-access-forms.md#set-the-form-order).
   
-1.  Open the [solutions explorer](advanced-navigation.md#solution-explorer), expand the entity that you want, and then select **Forms**.  
+1.  Open the [solutions explorer](advanced-navigation.md#solution-explorer), expand the table that you want, and then select **Forms**.  
   
 2.  In the form list toolbar select **Form Order**.  
 
@@ -50,3 +50,6 @@ search.app:
 ## Next steps
 
 [Change navigation within a form](use-the-form-editor-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

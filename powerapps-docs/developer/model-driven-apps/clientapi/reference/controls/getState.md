@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 199d1344-351a-44ee-8c43-f6b00b85a793
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -50,3 +50,6 @@ Timer
 ### Related topics
 
 [Controls](../controls.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

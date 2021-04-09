@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9749143d-c159-4833-aff9-d8bc2c3395f3
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -52,5 +52,9 @@ This displays an error dialog with the default message:
 
 ### Related topics
 
-[Xrm.Navigation](../xrm-navigation.md)
+[Xrm.Navigation](../xrm-navigation.md)<br/>
+[List of error codes](../../../../data-platform/org-service/web-service-error-codes.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

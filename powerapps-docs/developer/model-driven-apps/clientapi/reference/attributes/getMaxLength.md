@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 67a96fc4-4d65-4858-90da-f41eeba0365a
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,3 +36,5 @@ string, memo
 
 > [!NOTE]
 > The email form description attribute is a memo attribute, but it does not have a `getMaxLength` method.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

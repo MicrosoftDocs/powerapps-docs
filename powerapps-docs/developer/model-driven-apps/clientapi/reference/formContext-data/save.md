@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -33,6 +33,9 @@ You can also set an object to control how appointment, recurring appointment, or
 |successCallback|Function|No|A function to call when the operation succeeds.|
 |errorCallback|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br/><br/>- **errorCode**: Number. The error code.<br/><br/>- **message**: String. A localized error message.|
 
+> [!NOTE]
+> When working with forms, and you call the `formContext.data.save` method, make sure that you also call the [preventDefault](../save-event-arguments/preventDefault.md) to ensure that any default save operation is not triggered when a user saves the form.
+
 
 ### Related topics
 
@@ -40,3 +43,6 @@ You can also set an object to control how appointment, recurring appointment, or
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,28 +1,28 @@
 ---
 title: "Manage SharePoint documents on a portal | MicrosoftDocs"
 description: "Instructions to manage SharePoint document on a portal."
-author: gitanjalisingh33msft
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: gisingh
+ms.date: 01/27/2021
+ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # Manage SharePoint documents
 
-Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
 > - Document management is supported with server-based integration.
 
-To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service, you must:
+To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse, you must:
 
-1.	[Enable document management functionality in model-driven apps in Dynamics 365](#step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365)
+1.	[Enable document management functionality for your environment](#step-1-enable-document-management-functionality-in-model-driven-apps)
 
-2.	[Set up SharePoint integration from Power Apps Portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
+2.	[Set up SharePoint integration from Power Apps portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
 
 3.	[Enable document management for entities](#step-3-enable-document-management-for-entities)
 
@@ -30,18 +30,18 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 5.	[Create appropriate entity permission and assign it to the appropriate web role](#step-5-create-appropriate-entity-permission-and-assign-it-to-the-appropriate-web-role)
 
-## Step 1: Enable document management functionality in model-driven apps in Dynamics 365
+## Step 1: Enable document management functionality in model-driven apps
 
-You must enable the document management functionality in model-driven apps in Dynamics 365 by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps in Dynamics 365 and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps in Dynamics 365, see [Set up model-driven apps in Dynamics 365 to use SharePoint Online](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
+You must enable the document management functionality in model-driven apps by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps, see [Set up model-driven apps to use SharePoint Online](/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
 
-## Step 2: Set up SharePoint integration from Power Apps Portals admin center
+## Step 2: Set up SharePoint integration from Power Apps portals admin center
 
-To use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)], you must enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration from the Power Apps Portals admin center.
+To use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)], you must enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration from the Power Apps portals admin center.
 
 > [!NOTE]
 > You must be a global administrator to perform this action.
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 
 2.	Go to **Set up [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration** > **Enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration**.
 
@@ -57,20 +57,20 @@ When [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] inte
     > [!div class=mx-imgBorder]
     > ![Disable SharePoint integration](media/disable-sharepoint-integration.png "Disable SharePoint integration")
 
-Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You will also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
+Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You'll also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
 
 > [!div class=mx-imgBorder]
-> ![Disable SharePoint integration](media/sharepoint-integration-consent.png "Disable SharePoint integration")
+> ![Disable SharePoint integration consent screen](media/sharepoint-integration-consent.png "Disable SharePoint integration consent screen")
 
-If you do not provide your consent:
+If you don't provide your consent:
 
-- Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will not be complete and an error message will display.
+- Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration won't be complete and an error message will display.
 
-- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal will not work. 
+- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal won't work.
 
 
 ## Step 3: Enable document management for entities
-You must enable document management for entities to store documents related to entity records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for entities, see [Enable SharePoint document management for specific entities](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
+You must enable document management for entities to store documents related to entity records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for entities, see [Enable SharePoint document management for specific entities](/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
 
 ## Step 4: Configure the appropriate form to display documents
 
@@ -106,7 +106,7 @@ Two entity permission records are required to establish the necessary access to 
 
 - Permissions on the entity of the entity or web form: 
     - Create an **Entity Permission** record specifying the **Entity Name** as the entity of the entity form or web form configured previously. 
-    - Select a **Scope** and scope relationship that is appropriate to the desired behavior of the form. 
+    - Select a **Scope** and scope relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Entity Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent scope** referring to the previous permission record: 
     - Create an **Entity Permission** record specifying the **Entity Name** as **Document Location** entity with **Scope** set to **Parent**. 
@@ -123,11 +123,15 @@ Two entity permission records are required to establish the necessary access to 
 
 By default, the file size is set to 10 MB. However, you can configure the file size to a maximum of 50 MB by using the site setting `SharePoint/MaxUploadSize`.
 
+## Maximum file download size
+
+We recommend limiting the size of the individual files available for download to 250 MB or less. If you use portals to download larger files from SharePoint, the operation may timeout after a couple of minutes.
+
 ## Sample configuration to enable document management on the Case entity form
 
-The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
+The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Dataverse entity that supports managing documents in SharePoint. 
 
-1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365) to ensure that server-based configuration is complete for model-driven apps in Dynamics 365 and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
+1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps) to ensure that server-based configuration is complete for your environment and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
 2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 
@@ -135,7 +139,7 @@ The below example demonstrates configuration using the Case entity which needs t
 
 4.	Follow the instructions in [Step 4](#step-4-configure-the-appropriate-form-to-display-documents) with the following configurations:
 
-    - Model-driven apps in Dynamics 365 customization
+    - Model-driven apps customization
 
         a. Go to **Settings** > **Customization** > **Customize the System**. 
 
@@ -221,11 +225,14 @@ The below example demonstrates configuration using the Case entity which needs t
       > [!div class=mx-imgBorder]
       > ![Portal support page](media/portal-support-page.png "Portal support page")
 
-      b. Click on an existing Case record from the list. Go to the **Case Documents** section on the page and see the document list added.
+      b. Select an existing Case record from the list. Go to the **Case Documents** section on the page and see the document list added.
 
       > [!div class=mx-imgBorder]
       > ![Case document](media/case-document.png "Case document")
 
 ### See also
 
-[Microsoft Learn: Document management with SharePoint](https://docs.microsoft.com/learn/modules/portals-integration/2-sharepoint)
+[Microsoft Learn: Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

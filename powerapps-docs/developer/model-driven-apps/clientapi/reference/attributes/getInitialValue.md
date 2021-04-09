@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 56fb62e6-d357-4096-bf4c-f4c1b543d633
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -35,3 +35,6 @@ Boolean, OptionSet, MultiSelectOptionSet
 **Description**: The initial value for the attribute.
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

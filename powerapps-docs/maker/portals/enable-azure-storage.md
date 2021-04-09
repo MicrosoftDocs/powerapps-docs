@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 07/31/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -14,11 +14,11 @@ ms.reviewer: tapanm
 
 Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, entity forms, and web forms.
 
-You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](https://docs.microsoft.com/azure/storage/storage-create-storage-account#create-a-storage-account).
+You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](/azure/storage/storage-create-storage-account#create-a-storage-account).
 
 After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
 
-Azure storage integration only works with **Notes** configured in Entity Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Common Data Service.
+Azure storage integration only works with **Notes** configured in Entity Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Microsoft Dataverse.
  
 > [!NOTE]
 > The maximum file upload size is 125 MB.
@@ -61,7 +61,7 @@ CORS rule example:
 
 ![CORS rule example](media/portals-cors-azure.png "CORS rule example")
 
-[!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
+[!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
 
 ## Add site settings
 
@@ -73,10 +73,13 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 |WebFiles/StorageLocation|AzureBlobStorage|
 |||
 
-You can now create a child file in portal and mention fully qualified name (along with container) in Azure Blob address URL. With these settings, your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [entity forms](configure-notes.md#notes-configuration-for-entity-forms) or [web forms](configure-notes.md#notes-configuration-for-web-forms) to use it.
+With additional settings on portals [entity form](configure-notes.md#enable-file-attachment-on-form), your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [entity forms](configure-notes.md#notes-configuration-for-entity-forms) or [web forms](configure-notes.md#notes-configuration-for-web-forms) to use it.
 
 ### See also
 
 [Add web resource](add-web-resource.md)
 
 [Configure notes](configure-notes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

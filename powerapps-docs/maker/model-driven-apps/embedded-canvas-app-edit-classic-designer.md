@@ -1,5 +1,6 @@
 ---
 title: "Edit a canvas app embedded on a model-driven form | MicrosoftDocs"
+description: Learn how to edit an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -24,6 +25,9 @@ search.app:
 ---
 
 # Edit a canvas app embedded on a model-driven form
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic explains how to edit a canvas app embedded on a model-driven form.
 
 ## Edit the canvas app directly
@@ -32,15 +36,15 @@ You can edit a canvas app embedded on a model-driven form just like any other ca
 ## Edit the canvas app via the host model-driven form
 An alternate option is to edit the embedded canvas app via the host model-driven form.
 
-Imagine that you want to edit a canvas app embedded on a form named Account Main Form for the Accounts entity. To do this, follow these steps: 
+Imagine that you want to edit a canvas app embedded on a form named Account Main Form for the Accounts table. To do this, follow these steps: 
 
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.  [Edit the form](create-and-edit-forms.md) named Account Main Form for the Accounts entity. 
+2.  [Edit the form](create-and-edit-forms.md) named Account Main Form for the Accounts table. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
-4.	In the classic form designer, select the field that is customized to display the embedded canvas app.
-5.	With the field selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
-6.	On the **Field Properties** dialog box, select the **Controls** tab.
-7.	In the **Field Properties** dialog box, in the list of controls select **Canvas app**.
+4.	In the classic form designer, select the column that is customized to display the embedded canvas app.
+5.	With the column selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
+6.	On the **Column Properties** dialog box, select the **Controls** tab.
+7.	In the **Column Properties** dialog box, in the list of controls select **Canvas app**.
 8.	In the section below the controls list, select **Customize** to edit the canvas app. This opens the canvas app for editing, in Power Apps Studio, in a new tab.
 	   > [!NOTE]
        > If opening Power Apps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
@@ -56,3 +60,6 @@ Imagine that you want to edit a canvas app embedded on a form named Account Main
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

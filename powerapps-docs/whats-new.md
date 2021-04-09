@@ -33,8 +33,11 @@ To know more about how to browse information in the weekly release notes, read t
 
 ## Release plan
 
-For information about new features releasing over the next few months that you can use for planning, see [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features)
+For information about new features releasing over the next few months that you can use for planning, see [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features)
 
 ## Known limitations
 
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

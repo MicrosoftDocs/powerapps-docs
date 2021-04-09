@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 12/01/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -81,7 +81,7 @@ The following site settings are related to global search:
 | Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
-| Search/IndexNotesAttachments   | True    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
+| Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the entities are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameofentity1,logicalnameofentity2; DisplayNameinRecordTypeFacet2:logicalnameofentity3,logicalnameofentity4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the entities defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 |||
@@ -199,7 +199,7 @@ Rebuild of full search index is required whenever:
 
 - You make a metadata change to search properties like changing certain query-specific site settings or changing the search view of an entity, and so on.
 - Bulk data migration or updates are performed.
-- A website record, associated to your portal, is changed in a Common Data Service environment.
+- A website record, associated to your portal, is changed in a Microsoft Dataverse environment.
 
 You can also rebuild a full search index from a portal.
 1.    Sign in to the portal as an administrator.
@@ -207,7 +207,8 @@ You can also rebuild a full search index from a portal.
 3.    Select **Rebuild search index**.
 
 > [!IMPORTANT]
-> A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
+> - A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
+> - Time taken to rebuild index is proportional to the size of the data eligible for indexing as per your search query configuration, and can range from a few minutes to an hour.
 
 ## Remove an entity from global search
 
@@ -219,15 +220,17 @@ In the following example, we will remove the Case entity from portal global sear
 
 To block the Case entity from getting indexed, you must rename the view of the Case entity that defines the record set to be indexed by the portal (defined by the Search/IndexQueryName site setting). By default, the name of that view is Portal Search.
 
-1.    Go to https://make.powerapps.com and select Solutions. 
+1. Go to [Power Apps](https://make.powerapps.com).
 
-    ![Solutions](../media/solutions-page.png)
+1. Select Solutions.
+
+    ![Solutions](../media/solutions-page.png "Solutions")
 
 1. Search for **Default Solution** and select Edit to open.
 
-    ![Edit solution](../media/edit-solution.png)
+    ![Edit solution](../media/edit-solution.png "Edit solution")
 
-1. Search and edit **Case** entity to see its components. 
+1. Search and edit **Case** entity to see its components.
 
 1. Select **Views** tab and then select **Portal Search** to open it in a view editor.
 
@@ -266,3 +269,6 @@ Once this site setting is changed, the Case entity will be removed from filters 
 
 - [Use faceted search](improve-portal-search-faceted-search.md)
 - [File attachment search](search-file-attachment.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

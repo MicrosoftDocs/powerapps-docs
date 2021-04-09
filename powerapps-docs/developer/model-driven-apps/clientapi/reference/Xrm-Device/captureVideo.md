@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9580d05a-a91f-4126-b94b-4d1068da35fa
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,3 +42,6 @@ This method is supported only for the mobile clients.
 ### Related topics
 [Xrm.Device](../xrm-device.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

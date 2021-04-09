@@ -1,14 +1,13 @@
 ---
 title: Develop offline-capable canvas apps | Microsoft Docs
 description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
-author: gregli-msft
-manager: kvivek
+author: mustlaz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 02/29/2020
-ms.author: gregli
+ms.reviewer: tapanm
+ms.date: 01/28/2021
+ms.author: mustlaz
 search.audienceType: 
   - maker
 search.app: 
@@ -22,6 +21,9 @@ Mobile users often need to be productive even when they have limited or no conne
 - Open Power Apps Mobile and run apps when offline.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+
+> [!NOTE]
+> Offline capability for canvas apps is only available while running the apps using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/). Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
@@ -37,13 +39,13 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 ## Overview
 
-When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
+When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
 ![Power Apps app with connectors](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
-In Power Apps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Common Data Service. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
+In Power Apps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Dataverse. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
 ## Build an offline app
 
@@ -203,7 +205,7 @@ This formula determines whether the device is online. If it is, the app tweets a
 
 ## Test the app
 
-1. Open the app on a mobile device that's connected to the Internet.
+1. Open the app using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) on a mobile device that's connected to the Internet.
 
     Existing tweets appear in the gallery, and the status shows **Connected**.
 
@@ -211,7 +213,7 @@ This formula determines whether the device is online. If it is, the app tweets a
 
     The status label shows that the app is **Offline**.
 
-1. While the device is offline, write a tweet that includes **PowerApps**, and then select the **Tweet** button.
+1. While the device is offline, write a tweet that includes **Power Apps**, and then select the **Tweet** button.
 
     The tweet is stored locally in the **LocalTweetsToPost** collection.
 
@@ -220,3 +222,6 @@ This formula determines whether the device is online. If it is, the app tweets a
     Within five minutes, the app posts the tweet, which appears in the gallery.
 
 We hope this article gives you an idea of the capabilities that Power Apps has for building offline apps. As always, please provide feedback in our [forum](https://powerusers.microsoft.com/t5/PowerApps-Forum/bd-p/PowerAppsForum1) and share your examples of offline apps in the [Power Apps community blog](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/bg-p/PowerAppsBlog).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

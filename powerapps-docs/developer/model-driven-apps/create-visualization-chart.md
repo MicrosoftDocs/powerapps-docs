@@ -19,7 +19,7 @@ search.app:
 
 # Create a visualization (chart)
 
-To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md) entity to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
+To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md) entity to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
   
 <a name="Before"></a>   
 
@@ -32,7 +32,7 @@ To create a visualization programmatically, you must create a record for the [Sa
     > [!NOTE]
     >  Organization-owned visualizations can only be created by those users who have the System Administrator or System Customizer role.  
   
-- **Associated Entity**: Visualizations are attached to entities. More information: [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported entity by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) attribute.  
+- **Associated Entity**: Visualizations are attached to entities. More information: [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported entity by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) attribute.  
   
 <a name="CreateChart"></a>   
 
@@ -66,7 +66,7 @@ SavedQueryVisualization newWebResourceVisualization = new SavedQueryVisualizatio
 _orgOwnedVisualizationId = service.Create(newWebResourceVisualization);  
 ```  
   
-If you want to create a web resource visualization by using the Common Data Service, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
+If you want to create a web resource visualization by using the Microsoft Dataverse, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
   
 ```xml  
 <visualization>  
@@ -98,3 +98,6 @@ For example, to create a *Sample Visualization* that displays an existing Web re
  [Sample Charts](sample-charts.md)   
  [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
  [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

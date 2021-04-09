@@ -39,7 +39,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
  You can also use one of the community-developed site map editors, such as the [XrmToolBox Site Map Editor](https://www.xrmtoolbox.com/plugins/MsCrmTools.SiteMapEditor/).   
   
- For more information, see [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)  
+ For more information, see [Change Application Navigation using the SiteMap](../../maker/model-driven-apps/create-site-map-app.md)  
   
  **Editing FormXml**  
  FormXml is used to define entity forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Entity Forms](customize-entity-forms.md) and [Create a Dashboard](create-dashboard.md).  
@@ -48,7 +48,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views](customize-entity-views.md).  
   
  **Editing the ISV.config**  
-  For Common Data Service, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
+  For Microsoft Dataverse, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
   
 ## Unsupported tasks  
  Defining any other solution components by editing the exported customizations.xml file is not supported. This includes the following:  
@@ -92,9 +92,12 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
 
 ### See also  
  [Customization XML reference](customization-xml-reference.md)   
- [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)   
+ [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)   
  [Ribbon core schema](ribbon-core-schema.md)
  [Ribbon types schema](ribbon-types-schema.md)
  [Ribbon WSS schema](ribbon-wss-schema.md)   
  [Form XML schema](form-xml-schema.md)   
  [Schema Support for the Customization File](edit-customizations-xml-file-schema-validation.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

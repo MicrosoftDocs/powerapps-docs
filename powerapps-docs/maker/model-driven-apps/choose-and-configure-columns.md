@@ -28,6 +28,8 @@ search.app:
 
 # Choose and configure columns in model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
  Along with the filter criteria, the columns visible in a Power Apps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
@@ -54,39 +56,39 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Views](media/available-views.png)
+    > ![Account view definitions](media/account-view-definitions.png)
 
 3. Select an existing view to open it or on the toolbar select **Add view**. 
 
 <a name="BKMK_AddColumns"></a>   
 ### Add columns  
- You can include columns from the current entity or any of the related entities that have a 1:N entity relationship with the current entity.  
+ You can include columns from the current table or any of the related tables that have a 1:N table relationship with the current table.  
   
- For example, perhaps you want to display the owner of a user-owned entity in a column. You can choose the **Owner** field of the current entity to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner.  
+ For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** column of the current table to display the name of the owner. This will appear as a link to open the **User** row for the person who is the owner.  
   
- If you want to display the phone number for the owner of the record, you must select **Owning User (User)** from the **Record type** drop-down and then select the **Main Phone** field.  
+ If you want to display the phone number for the owner of the row, you must select **Owning User (User)** from the **Row type** drop-down and then select the **Main Phone** column.  
   
 #### Add columns to views  
   
-1.  While creating and editing views, ensure that the **Fields** panel is open. If it is not, select **Add fields** on the toolbar. 
+1.  While creating and editing views, ensure that the **Table columns** panel is open. If it is not, select **View column** on the toolbar. 
 
     > [!div class="mx-imgBorder"] 
     > ![View editor add columns](media/fields-drawer-view-designer.png)
 
-2.  Select the fields you want to add to the view designer. This adds the field as a column on the right-hand of the view.
+2.  Select the columns you want to add to the view designer. This adds the column as a column on the right-hand of the view.
 
-3.  Select the **Related** tab to see related entities and their corresponding fields.
+3.  Select the **Related** tab to see related tables and their corresponding columns.
   
  As you add columns, you will increase the width of the view. If the width of the view exceeds the space available to show it in the page, horizontal scrollbars will allow people to scroll and see the hidden columns.  
   
 > [!TIP]
->  If your view filters on data for a certain field so that only records with a certain value are shown, don’t include that column in the view. For example, if you are only showing active records, don’t include the status column in the view. Instead, name the view to indicate that all the records shown in the view are active.  
+>  If your view filters on data for a certain column so that only rows with a certain value are shown, don’t include that column in the view. For example, if you are only showing active rows, don’t include the status column in the view. Instead, name the view to indicate that all the rows shown in the view are active.  
   
 > [!NOTE]
->  When you add columns to Lookup views for updated entities, only the first three columns will be displayed.  
+>  When you add columns to Lookup views for updated tables, only the first three columns will be displayed.  
   
 <a name="BKMK_RemoveColumns"></a>   
 ### Remove columns  
@@ -116,3 +118,6 @@ Click and drag the column header to the correct position.
   
 ## Next steps
 [Create or edit views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

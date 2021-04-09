@@ -31,13 +31,14 @@ There might be situations where you don't want the entity record to open (which 
 > - You can also use Ribbon Workbench, a community tool, to visually edit ribbons by using the UI. Note that tools created by the community aren't supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 To specify a custom action when an entity record is selected, you'll do the following:
+
 1. Create a web resource to perform the action.
 2. Create a custom button on the entity form by editing the customization.xml file
 3. Import the customization.xml file
 
 ## Step 1: Create a web resource
 
-Create a web resource to change the default behavior. In the following example<!--Edit okay?-->, if you want to open a URL instead of displaying the record, you create a JavaScript web resource to perform that action.
+Create a web resource to change the default behavior. In the following example, if you want to open a URL instead of displaying the record, you create a JavaScript web resource to perform that action.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select **Solutions** from the left pane. 
   
@@ -76,49 +77,44 @@ Create a web resource to change the default behavior. In the following example<!
 
 Create a custom button on the entity form where you want to change the default behavior. For example, if you have a subgrid on the accounts form that displays contact records in the subgrid, you need to create a button and add it to the contact form. You can create a button by editing the customization.xml file.
 
-1. Open the solution that you created in step 1, and add the entity where you want to create the button. 
+1. Open the solution that you created in step 1, and add the entity where you want to create the button. It is not required to include all entity components and metadata.
 
-2. Select **Add existing** > **Other** > **Site map** to add the site map. 
+1. Select **Add existing** > **Other** > **Site map** to add the site map. 
 
     > [!div class="mx-imgBorder"]
     > ![Add the site map](media/add-existing-site-map-to-solution.png "Add the site map")
 
-3. From the list, select **Site Map**.
+1. From the list, select **Site Map**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select the site map](media/add-existing-site-map-from-list.png "Select the site map")
+1. Save and publish the solution. 
 
-4. Add the web resource that you created in step 1 of this article.
-
-5. Save and publish the solution. 
-
-6. Select **Export** to make edits to the customization.xml file. 
+1. Select **Export** to make edits to the customization.xml file. 
 
     > [!div class="mx-imgBorder"]
     > ![Export solution](media/export-solution-from-command-bar.png "Export solution")
 
-7. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
+1. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
 
     > [!div class="mx-imgBorder"]
     > ![Publish the solution](media/publish-check-issues-before-exporting-solution.png "Publish the solution")
 
-8. With the **Unmanaged** option selected, select **Export**.
+1. With the **Unmanaged** option selected, select **Export**.
 
    > [!div class="mx-imgBorder"]
    > ![Unmanaged solution](media/export-as-unmanaged-solution.png "Unmanaged solution")
 
-9. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**.
+1. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**.
 
-10. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**.
+1. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**.
 
-11. Select a location to extract the files to, and then select **Extract**.
+1. Select a location to extract the files to, and then select **Extract**.
 
     The customizations.xml file is the file that you'll edit.
 
     > [!NOTE]
     > You can enable or disable the button; doing either will still override the open default behavior.
 
-13. Open the customization.xml file, copy the code below, and then paste it into the file:
+1. Open the customization.xml file, copy the code below, replace the code inside the `RibbonDiffXml`:
 
      ```XML
     <RibbonDiffXml>
@@ -137,12 +133,15 @@ Create a custom button on the entity form where you want to change the default b
       <EnableRules />
       <DisplayRules />
       <Actions>
-        <JavaScriptFunction FunctionName="sampleoperations" Library="$webresource:cr5c1_samplescript" />
+        <JavaScriptFunction FunctionName="ChangeBehavior" Library="$webresource:cr5c1_samplescript" />
       </Actions>
       </CommandDefinition>
      </CommandDefinitions>
       </RibbonDiffXml>
      ```
+
+     > [!NOTE]
+     > You need to replace the function name and also the name of the web resource in the above XML file. Edit the above example XML file to replace it with your own default publisher.
 
 ## Step 3: Import the XML file
 
@@ -177,3 +176,6 @@ When you download the log file, you'll find an XML file that you can open with E
 
 [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)<br/>
 [Customize the ribbon](customize-commands-ribbon.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

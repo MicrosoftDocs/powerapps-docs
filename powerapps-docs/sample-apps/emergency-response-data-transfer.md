@@ -21,7 +21,7 @@ Microsoft provides you the following solutions for emergency response:
 
 Hospital Emergency Response solution customers can transfer their hospital data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
 
-The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to programmatically interact with data in Common Data Service, which is the underlying data store for these solutions.
+The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](../maker/data-platform/data-platform-import-export.md) and [using web services](../developer/data-platform/work-with-data.md) to programmatically interact with data in Microsoft Dataverse, which is the underlying data store for these solutions.
 
 This article provides information about how to use SFTP to do the data transfer.
 
@@ -38,7 +38,7 @@ This is how the data transfer happens:
 These are the prerequisites for the data transfer to work successfully.
 
 - **SFTP server**: The regional health organization must have an SFTP server configured with a folder for each hospital on the SFTP server where the hospital can publish their data. The hospital must get the credentials from regional health organization to connect to the folder on the SFTP server.<br/>
-For information about creating an SFTP server, see [SFTP on Azure](https://docs.microsoft.com/samples/azure-samples/sftp-creation-template/sftp-on-azure/)
+For information about creating an SFTP server, see [SFTP on Azure](/samples/azure-samples/sftp-creation-template/sftp-on-azure/)
 
 - **CDC Short Name**: Each **Supply** and **Staffing Type** record must have the **CDC Short Name** value. You can create and manage these records in the **Admin app** of hospital and regional solutions.
 
@@ -55,7 +55,7 @@ IT admins need to perform some steps to configure the data transfer from Hospita
 
 ### Step 1: Create connections
 
-Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Common Data Service and SFTP to be used by flows for data transfer.
+Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Dataverse and SFTP to be used by flows for data transfer.
 
 This step is required for both hospital and regional solutions.
 
@@ -79,7 +79,7 @@ This step is required for both hospital and regional solutions.
 
 1. Select **New Connection**, and then type **Common Data Service** in the search box.
 
-1. From the search results, select **+** next to **Common Data Service (current environment)** connector to add a connection.
+1. From the search results, select **+** next to **Dataverse (current environment)** connector to add a connection.
 
 1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
@@ -94,7 +94,7 @@ This step is required for both hospital and regional solutions.
 
 1. Select **Create**. Power Apps validates the connection details, and on successful authentication, creates an SFTP connection.
 
-At the end of this step, you should have three connections: two for Common Data Service and one for SFTP.
+At the end of this step, you should have three connections: two for Dataverse and one for SFTP.
 
 ### Step 2: Enable flows for publishing data to SFTP (Hospital)
 
@@ -129,7 +129,7 @@ To enable these flows:
 
 1.  Repeat steps 4-6 for other flows listed earlier.
 
-If you face any issues working with flows, try [Troubleshooting a flow](https://docs.microsoft.com/power-automate/fix-flow-failures).
+If you face any issues working with flows, try [Troubleshooting a flow](/power-automate/fix-flow-failures).
 
 ### Step 3: Specify the data publish schedule (Hospital)
 
@@ -257,3 +257,6 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 
 - For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

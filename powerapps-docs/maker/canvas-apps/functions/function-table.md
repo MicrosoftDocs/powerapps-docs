@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm tapanm
+ms.reviewer: nabuthuk tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -41,3 +41,6 @@ You can also create a single-column table with the **[ value1, value2, ... ]** s
   
     The gallery shows two records, both of which contain the name and location of an item. Only one record contains the name of the owner.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

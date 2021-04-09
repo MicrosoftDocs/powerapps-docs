@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType: 
@@ -40,3 +40,6 @@ After that formula executes, galleries that are bound to the **IceCream** data s
 
 ![](media/function-refresh/icecream-after.png)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

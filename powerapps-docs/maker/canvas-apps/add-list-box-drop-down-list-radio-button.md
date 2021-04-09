@@ -95,3 +95,6 @@ In these steps, you used an expression to create a list of items. You can apply 
 [12]: ./media/add-list-box-drop-down-list-radio-button/itemsradio.png
 [14]: ./media/add-list-box-drop-down-list-radio-button/radiocircle.png
 [15]: ./media/add-list-box-drop-down-list-radio-button/dropdown.png
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -42,7 +42,7 @@ There are 5 types of image web resources:
 Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom entity instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
 
 > [!NOTE]
-> Vector Format (SVG) web resources are treated like the [Script (JScript)](/powerapps/developer/model-driven-apps/script-jscript-web-resources) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
+> Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
   
 <a name="BKMK_Limitations"></a>   
 ## Limitations of image web resources  
@@ -112,3 +112,6 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
  [Using Script (JScript) web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)     
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

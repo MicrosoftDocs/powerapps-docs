@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
@@ -188,3 +188,6 @@ Using **IsError** will prevent any further processing of the error.
 ### See also
 
 [Formula reference for Power Apps](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

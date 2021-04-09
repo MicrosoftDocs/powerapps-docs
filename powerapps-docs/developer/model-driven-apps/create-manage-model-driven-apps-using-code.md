@@ -28,9 +28,9 @@ In addition to creating a model-driven app using the Power Apps app designer, yo
   
 Creating a model-driven app involves the following steps:
 
-1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
+1. Create an [AppModule Entity](../data-platform/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
-3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
+3. Check your app for any required components that are missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
 5. Associate appropriate security roles to your model-driven app to provide access to users.
 
@@ -45,7 +45,7 @@ You must specify the following properties at a minimum to create an app:
 - **uniquename**: This can be different than the name of your app, and can only have English characters and numbers. On creating this app, the name is automatically prefixed with your solution publisher prefix (for example 'new_'). 
 - **webresourceid**: ID of the web resource that you want to be set as the image icon for your app. The system provides you with a default web resource (ID: 953b9fac-1e5e-e611-80d6-00155ded156f) that you can use as an icon for your app.
 
-The following Web API request creates an Unified Interface type of an app:
+The following Web API request creates a Unified Interface type of app:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules HTTP/1.1
@@ -76,7 +76,7 @@ You can add or remove components in an app such as sitemap, entity, dashboard, b
 Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your model-driven app. The action requires you to specify the following:
 
 - **AppId**: ID of the app where you want to add components
-- **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in Common Data Service Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
+- **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in Microsoft Dataverse Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
 The following Web API request adds a view (savedquery) and a form (systemform) to your app:
 
@@ -207,9 +207,9 @@ Accept: application/json
 
 ## Manage access to model-driven app using security roles
 
-To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in Common Data Service. 
+To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in Dataverse. 
 
-Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
+Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../data-platform/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)appmoduleroles_association/$ref HTTP/1.1
@@ -271,3 +271,6 @@ You can use the following client APIs to work with model-driven apps:
 ### See also  
 [Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

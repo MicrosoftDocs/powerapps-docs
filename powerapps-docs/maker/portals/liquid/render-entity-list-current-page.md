@@ -12,7 +12,9 @@ ms.reviewer: tapanm
 
 # Render the entity list associated with the current page
 
-Render the Entity List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Power Apps Common Data Service entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+Render the Entity List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Dataverse entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
@@ -240,3 +242,6 @@ Render the Entity List associated with the current page as a paginated sortable 
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

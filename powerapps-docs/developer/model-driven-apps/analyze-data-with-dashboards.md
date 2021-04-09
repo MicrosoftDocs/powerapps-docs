@@ -1,6 +1,6 @@
 ---
 title: "Analyze data with dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The dashboard entities in Dynamics 365 Common Data Service enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "The dashboard entities in Dynamics 365 Microsoft Dataverse enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/analyze-data-with-dashboards -->
 
-The dashboard entities in Common Data Service enable you to present data 
+The dashboard entities in Microsoft Dataverse enable you to present data 
 from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots.  
   
 ## Types of dashboards  
@@ -54,3 +54,6 @@ A user-owned dashboard is represented by the `UserForm` entity, can be assigned 
  [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)  
  [Visualization data description schema](visualization-data-description-schema.md)     
  [Customize visualizations and dashboards](customize-visualizations-dashboards.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

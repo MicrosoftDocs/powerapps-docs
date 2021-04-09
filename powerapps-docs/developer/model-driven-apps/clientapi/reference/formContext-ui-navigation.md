@@ -6,9 +6,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 661d084d-744b-44b0-be82-abde6f6e7e90
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +22,7 @@ search.app:
 Each item represents one of the available navigation options available in the navigation bar for entities that have been updated to the new user experience or on the left side of the form for entities that have not been updated.
 
 > [!NOTE]
-> These methods do not work with Microsoft Dynamics 365 for tablets.
+> These methods do not work with Microsoft Dynamics 365 for tablets in versions earlier than 9.0.
 
 ## Navigation item methods
 
@@ -35,3 +35,6 @@ Each item represents one of the available navigation options available in the na
 |[setLabel](formContext-ui-navigation/setLabel.md)|[!INCLUDE[formContext-ui-navigation/includes/setLabel-description.md](formContext-ui-navigation/includes/setLabel-description.md)]|
 |[setVisible](formContext-ui-navigation/setVisible.md)|[!INCLUDE[formContext-ui-navigation/includes/setVisible-description.md](formContext-ui-navigation/includes/setVisible-description.md)]|
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

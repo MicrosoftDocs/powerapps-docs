@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/04/2020
+ms.date: 01/25/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -17,7 +17,9 @@ A custom domain can help your customers find your support resources more easily 
 > [!IMPORTANT]
 > You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Add a Custom Domain Name**. A wizard opens to choose the SSL certificate.
 
@@ -28,11 +30,12 @@ A custom domain can help your customers find your support resources more easily 
      > [!NOTE]
      > The SSL certificate must meet all the following requirements:
      > - Signed by a trusted certificate authority.
-     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) as a password-protected PFX file.
+     > - [Exported](/powershell/module/pkiclient/export-pfxcertificate?preserve-view=true&view=win10-ps) as a password-protected PFX file.
      > - Contains private key at least 2048 bits long.
      > - Contains all intermediate certificates in the certificate chain.
      > - Must be SHA2 enabled; SHA1 support is being removed from popular browsers.
-     > - PFX file must be encrypted with TripleDES encryption. Power Apps portals doesn't support AES-256 encryption. 
+     > - PFX file must be encrypted with TripleDES encryption. Power Apps portals doesn't support AES-256 encryption.
+     > - Contains an [Extended Key Usage](https://en.wikipedia.org/w/index.php?title=X.509&section=4#Extensions_informing_a_specific_usage_of_a_certificate) for server authentication (OID = 1.3.6.1.5.5.7.3.1).
      > 
      > The steps to export SSL certificate as a password-protected PFX file may vary depending on your certificate provider. Check with your certificate provider for recommendation. For example, certain providers may suggest to use OpenSSL 3rd party tool from [OpenSSL](https://www.openssl.org/) or [OpenSSL Binaries](https://wiki.openssl.org/index.php/Binaries) sites. 
 
@@ -55,4 +58,7 @@ A custom domain can help your customers find your support resources more easily 
     
 ### See also
 
-[Microsoft Learn: Configure SSL certificates and custom domain names](https://docs.microsoft.com/learn/modules/portals-administration/2-custom-domain)
+[Microsoft Learn: Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

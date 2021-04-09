@@ -1,5 +1,6 @@
 ---
 title: "Perform actions on the host model-driven form from within an embedded canvas app | MicrosoftDocs"
+description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -24,47 +25,50 @@ search.app:
   - D365CE
 ---
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
 The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
-Navigates the host model-driven form to a main form and displays the specified record.  
-* **entityName** - A required string parameter that specifies the parent entity of the main form.  
+Navigates the host model-driven form to a main form and displays the specified row.  
+* **entityName** - A required string parameter that specifies the parent table of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
-* **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
+* **recordId** - A required string parameter, that specifies the ID of the row to display in the main form.  
  
 Calling the NavigateToMainForm method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**Form not found: *[FormName]*** | Please check the value of the *mainFormName* parameter and ensure it is a valid main form name and that the user has access to it. |
-|**There was a problem loading the record.** | Please check the value of the *recordId* parameter and ensure it is a valid record ID and that the user has access to it. |
+|**There was a problem loading the row.** | Please check the value of the *recordId* parameter and ensure it is a valid row ID and that the user has access to it. |
   
   
 ### NavigateToView(entityName, viewName)
 Navigates the host model-driven form to a view.  
-* **entityName** - A required string parameter that specifies the parent entity of the view.  
+* **entityName** - A required string parameter that specifies the parent table of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
  
 Calling the NavigateToView method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**View not found: *[ViewName]*** | Please check the value of the *viewName* parameter and ensure it is a valid view name and that the user has access to it. |
   
   
 ### OpenQuickCreateForm(entityName)  
-Opens the default quick create form for an entity.  
-* **entityName** - A required string parameter that specifies the parent entity of the quick create form.  
+Opens the default quick create form for an table.  
+* **entityName** - A required string parameter that specifies the parent table of the quick create form.  
  
 Calling the OpenQuickCreateForm method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
   
   
 ### RefreshForm(showPrompt)  
@@ -94,3 +98,6 @@ Saves the data on the host model-driven form.
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

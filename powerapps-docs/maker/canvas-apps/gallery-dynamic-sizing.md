@@ -99,3 +99,6 @@ Apply the same concept if you want to add more controls: set each control's **Y*
 
 ## Next steps
 Learn more about how to work with a [gallery](working-with-forms.md) control and [formulas](working-with-formulas.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

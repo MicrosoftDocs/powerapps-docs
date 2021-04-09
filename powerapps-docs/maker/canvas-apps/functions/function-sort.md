@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -102,3 +102,6 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 3. Select **Collections** on the **File** menu to display all three collections, and then press Esc to return to the default workspace.
 4. Repeat the last three steps, but change the name of the collection that you want to create, and replace the **SortByColumns** formula with a different formula from the table of examples earlier in this section that uses **SortByColumns**.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

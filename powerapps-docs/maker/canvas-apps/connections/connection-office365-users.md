@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/07/2016
+ms.date: 08/07/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -15,17 +15,19 @@ search.app:
   - PowerApps
 ---
 # Connect to Office 365 Users connection from Power Apps
+
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)
 
 Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports.
 
 You can display this information in a label on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
 
-This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
+This article shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Add a connection
+
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
 
     ![Connect to Office 365](./media/connection-office365-users/add-office.png)
@@ -55,7 +57,6 @@ The Office 365 Users connection has been created and added to your app. Now, it'
    `Office365Users.MyProfile().TelephoneNumber`  
    `Office365Users.MyProfile().UserPrincipalName`  
    `Office365Users.MyProfile().AccountEnabled`  
-   `Office365Users.MyProfile().BusinessPhones`
 
 The label shows the information that you entered about the current user.
 
@@ -111,7 +112,7 @@ The label shows the information that you entered about the current user.
 The label shows the information that you entered about the user you specified or that user's manager.
 
 > [!NOTE]
-> If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
+> If you're developing an app based on an entity in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
 
 For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
@@ -137,7 +138,7 @@ If you create a contact and select that contact in the browse screen of the app,
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
 2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
 
-    `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
+    `Office365Users.SearchUserV2({searchTerm: SearchTerm.Text})`
 
     The gallery shows users whose name contains the search text you entered.
 
@@ -311,7 +312,9 @@ Search for users: Retrieves search results of user profiles.
 | AccountEnabled |boolean |Account enabled flag. |
 | BusinessPhones | string |Phone numbers of user's company.|
 
-## Helpful links
+### See also
 * See all the [available connections](../connections-list.md).
 * Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

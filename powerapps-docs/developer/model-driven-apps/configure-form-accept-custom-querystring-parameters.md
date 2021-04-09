@@ -47,7 +47,7 @@ The ability to pass values to a Web page by using query strings represents a con
   
  The following describes the `querystringparameter` element attributes, `name` and `type`:  
   
-- **name**. Each name attribute must contain at least one underscore ('\_') character, but the name of the query string parameter cannot begin with an underscore. The name also can’t start with “crm\_”. We strongly recommend that you use the customization prefix of the solution publisher as the naming convention. A valid `querystringparameter` name attribute value is “myISV_contact_specialvalue”.  
+- **name**. Each name attribute must contain at least one underscore ('\_') character, but the name of the query string parameter cannot begin with an underscore. The name also can’t start with “crm\_”. We strongly recommend that you use the customization prefix of the solution publisher as the naming convention. It's also recommended not to have the name attribute (querystringparameter name) be the same as the name of a field on the entity. A valid `querystringparameter` name attribute value is “myISV_contact_specialvalue”.  
   
     > [!IMPORTANT]
     >  If a `querystringparameter` element name is not unique, it may be overwritten by another parameter definition using a different data type.  
@@ -81,3 +81,6 @@ The ability to pass values to a Web page by using query strings represents a con
 
  [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
  [Open Forms And Views with a URL](open-forms-views-dialogs-reports-url.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

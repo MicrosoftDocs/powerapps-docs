@@ -1,6 +1,6 @@
 ---
 title: "React Facepile component| Microsoft Docs" 
-description: "Implementing a Facepile component using React" 
+description: "This sample shows how to use React to create components using Power Apps component framework." 
 ms.custom: ""
 author: ghurlman
 manager: kvivek
@@ -14,6 +14,8 @@ ms.reviewer: nkrb
 # Implementing the FacePile component
 
 This sample shows how to use React to create components using Power Apps component framework.  The facepile sample component is implemented based on React and the Office UI Fabric React components. The code may not reveal the best practices for the mentioned third-party libraries. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ReactStandardControl).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![React Facepile](../media/react-facepile.png "React Facepile")
@@ -32,7 +34,7 @@ Model-driven apps and canvas apps (public preview)
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="SampleControls" constructor="ReactStandardControl" version="0.0.1" display-name-key="ReactStandardControl_Display_Key" description-key="ReactStandardControl_Desc_Key" control-type="standard">
-    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <!-- property node identifies a specific, configurable piece of data that the control expects from Dataverse -->
     <property name="numberOfFaces" display-name-key="numberOfFaces" description-key="numberOfFaces" of-type="Whole.None" usage="bound" required="false" />
     <resources>
       <css path="css/ReactStandardControl.css" order="1" />
@@ -420,3 +422,6 @@ export const TestImages = {
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
 [Power Apps component framework API reference](../reference/index.md)<br />
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

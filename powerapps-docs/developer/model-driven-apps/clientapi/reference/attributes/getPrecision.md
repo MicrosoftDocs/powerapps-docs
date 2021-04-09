@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 610b9b53-9c29-4228-8ef3-0c05aae14a2b
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -38,3 +38,6 @@ Money, decimal, double, and integer
 
 [setPrecision](setPrecision.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

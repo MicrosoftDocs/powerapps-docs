@@ -19,7 +19,7 @@ Use the polls capability of portals to ask your audience about topics of interes
 Polls can be placed on the portal by using the PollPlacement control. This control works similarly to the AdPlacement control. If there are any polls associated with the Poll Placement entity that is being rendered by the PollPlacement control, those polls will be rendered. If there is more than one poll for a given placement, the placement will randomly present one of the specified polls.
 
 > [!Note]
-> Users can vote anonymously. Duplicate votes are not permitted. Basic information about submissions can be tracked, and users who sign in to the website will have their submissions linked to the Contact entity that tracks that user in Common Data Service.
+> Users can vote anonymously. Duplicate votes are not permitted. Basic information about submissions can be tracked, and users who sign in to the website will have their submissions linked to the Contact entity that tracks that user in Microsoft Dataverse.
 
 ## Add a poll to the page
 
@@ -107,7 +107,7 @@ Users can vote only one time; after this, if the poll is displayed, they will se
 > [!div class=mx-imgBorder]
 > ![Poll votes](../media/poll-votes.png "Poll votes")  
 
-The details of the poll voting results are stored in Common Data Service as Poll Submission records. The Poll Submission entity contains the following information:
+The details of the poll voting results are stored in Dataverse as Poll Submission records. The Poll Submission entity contains the following information:
 
 | Name        | Description                                                                                   |
 |-------------|-----------------------------------------------------------------------------------------------|
@@ -125,3 +125,6 @@ The details of the poll voting results are stored in Common Data Service as Poll
 [Rate or vote on a webpage on a portal](rate-webpage.md)  
 [Redirect to a new URL on a portal](add-redirect-url.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

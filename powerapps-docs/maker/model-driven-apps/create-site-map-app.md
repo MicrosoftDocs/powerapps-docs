@@ -1,6 +1,6 @@
 ---
 title: "Create a model-driven app site map in Power Apps | MicrosoftDocs"
-description: "Learn how to create a site map for you app"
+description: "Learn how to create a site map for your app"
 keywords: ""
 ms.date: 05/29/2018
 ms.service: powerapps
@@ -28,6 +28,8 @@ search.app:
 
 # Create a model-driven app site map using the site map designer
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In this tutorial you perform several site map tasks such as creating a new site map, and adding an area, group, and subarea.
 
 Site maps define the navigation for your app. Create a site map for your app with ease by using the tile-based site map designer. Use the designer to drag components onto the design canvas, preview your work, and instantly publish the site map. System customizers or any user with the required privileges can quickly create site maps for apps.  
@@ -38,23 +40,23 @@ A default site map is available. You can edit this site map or configure site ma
 
 ## Prerequisites
 Make sure that you have the System Administrator or System Customizer security role or equivalent permissions.  Specifically, any user with the following privileges can also create apps:  
--   Create, Read, and Write privileges for the App entity  
--   Read and Write privileges for the Customizations entity  
--   Read privileges for the Solution entity
+-   Create, Read, and Write privileges for the App table  
+-   Read and Write privileges for the Customizations table  
+-   Read privileges for the Solution table
 
 You can view or set these privileges on the **Customization** tab of a security role.
   
 ## Create a site map for an app  
   
-1. On the app designer canvas, in the **Site Map** area, select **Open the Site Map Designer** ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button").  
+1. On the app designer canvas, in the **Site Map** area, select the pencil icon![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button")next to **Site Map** to **Open the Site Map Designer** .  
+
+   ![Open the site map designer](media/app-designer-sitemap-location.png "Open the site map designer")
   
-     The site map designer opens a canvas that is prepopulated with one area, one group, and one subarea. Select the area, group, or subarea tile to change its properties.  
-  
+    The site map designer opens a canvas that is prepopulated with one area, one group, and one subarea. Select the area, group, or subarea tile to change its properties.
+ 
     > [!NOTE]
     >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
 
-   ![Select site map](media/app-designer-sitemap-location.png "Select a site map") 
-  
 2.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
   
 3.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
@@ -143,7 +145,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Title**: Enter the title for the group in the base language of the organization.  
   
-    - **ID**: A unique ID is automatically generated. Enter a different one if required. We recommend using the automatic ID because if the ID you enter is not unique, you might get an error when you import a solution containing this site map.  
+    - **ID**: A unique ID is automatically generated. Enter a different one if necessary. We recommend using the automatic ID because if the ID you enter is not unique, you might get an error when you import a solution containing this site map.  
   
      Under **Advanced**, do the following:  
   
@@ -152,7 +154,7 @@ You can view or set these privileges on the **Customization** tab of a security 
     - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the group.  
-  
+
     - **Set as Profile**: Select this check box to indicate whether this group represents a user-selectable profile for the workplace. The group set as a user-selectable profile is made available as options in your personal options. This only applies for groups within the **Workplace** area.  
   
 <a name="bkmk_AddSubarea"></a>   
@@ -170,25 +172,28 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **General**, do the following:  
   
-    - **Type**: Select whether the subarea you are adding is a dashboard, entity, web resource, or URL.  
+    - **Type**: Select whether the subarea you are adding is a dashboard, table, web resource, or URL.  
   
-    - **Entity**: Select the entity that the subarea is for. This field is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
+    - **Entity**: Select the table that the subarea is for. This column is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
   
-    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This field is disabled if you've selected **Entity** in the **Type** drop-down list.  
-  
-    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This field is disabled if you haven't selected **Dashboard** in the **Type** drop-down list.  
+    - **URL**: Specify a URL to a web page. The URL text displays from this subarea and, when selected, a new browser window opens that displays the page. This column is disabled if you've selected **Entity** in the **Type** drop-down list.  
+ 
+      > [!IMPORTANT]
+      > Site map subarea URLs that link to an .aspx page aren’t supported.
+ 
+    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This column is disabled if you haven't selected **Dashboard** in the **Type** drop-down list.  
   
     - **Title**: Enter the title for the subarea in the base language of the organization.  
   
     - **Icon**: A default application icon is selected. Select a different icon for the subarea from the list of web resources available in the solution.  
   
-    - **ID**. A unique ID is automatically generated. Enter a different unique ID if required.  
+    - **ID**. A unique ID is automatically generated. Enter a different unique ID if necessary.  
   
     - **Parameter Passing**. Select this check box to pass information about the organization and language context to the URL. This check box is checked only when the subarea type is a web resource or a URL-based subarea.  
   
      Under **Advanced**, do the following:  
  
-    - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the entity to check privileges for, and then select the check boxes to assign privileges. 
+    - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the table to check privileges for, and then select the check boxes to assign privileges. 
   
     - **More Titles**: If your organization uses multiple languages, select a language for the title, enter the title for the subarea, and then select **Add**. You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
   
@@ -230,9 +235,12 @@ You can view or set these privileges on the **Customization** tab of a security 
 |---------------|-----------------------|  
 |New apps| Unified Interface |  
 |Site map for the Dynamics 365 - custom app | Legacy web app and Dynamics 365 for Outlook |  
-|MOdel-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
+|Model-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
  
   
 ### Next steps  
  [Create or edit an app](create-edit-app.md)   
  [Add or edit app components](add-edit-app-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

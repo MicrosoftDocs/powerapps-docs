@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 12/19/2018
 ms.author: aheneay
 search.audienceType: 
@@ -38,3 +38,6 @@ Assertion messages, for both passed and failed assertions, are also contained in
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

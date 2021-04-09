@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -34,3 +34,6 @@ These functions have no return value. You can use them only in [behavior formula
 
 * *Signal* - Required.  The signal to turn on or off.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

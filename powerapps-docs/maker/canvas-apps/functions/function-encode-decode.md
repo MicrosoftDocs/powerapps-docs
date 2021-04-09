@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -48,3 +48,5 @@ If you set the **[Text](../controls/properties-core.md)** property of the label 
 ```
     We have done an unusually "deep" globalization and localization.
 ```
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: Manifest Element | Microsoft Docs
-description: 
+description: Manifest is the metadata file that defines a component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -25,7 +25,7 @@ Model-driven apps and canvas apps (public preview)
 
 |Element|Description|Occurrences|Available for|
 |--|--|--|-------|
-|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1 or more|Model-driven apps and canvas apps (public preview) |
+|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1|Model-driven apps and canvas apps (public preview) |
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|Model-driven apps and canvas apps (public preview) |
 |[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (public preview) |
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|Model-driven apps|
@@ -52,3 +52,6 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

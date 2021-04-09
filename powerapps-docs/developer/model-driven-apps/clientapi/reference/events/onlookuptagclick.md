@@ -4,9 +4,9 @@ ms.date: 02/11/2020
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: e291973b-9634-4442-995c-37fd49a10571
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -31,3 +31,6 @@ The **getTagValue** method returns an object with the following properties:
 - [addOnLookupTagClick](../controls/addOnLookupTagClick.md) method to add event handlers for this event.
 - [removeOnLookupTagClick](../controls/removeOnLookupTagClick.md) method to remove event handlers for this event. 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

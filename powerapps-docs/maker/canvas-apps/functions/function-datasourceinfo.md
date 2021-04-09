@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 11/11/2015
+ms.reviewer: nabuthuk
+ms.date: 03/12/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -51,6 +51,9 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 | **DataSourceInfo.EditPermission** |Boolean |Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**. |
 | **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
 
+> [!NOTE]
+> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.
+
 ## Syntax
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
@@ -64,7 +67,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![](media/function-datasourceinfo/icecream.png)
+![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
 
 The data source has also provided this information:
 
@@ -88,3 +91,6 @@ The data source has also provided this information:
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Can the current user create records in the **IceCream** data source? |**false** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** |Can the current user delete records in the **IceCream** data source? |**false** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/17/2020
+ms.date: 09/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -24,10 +24,11 @@ In this section, you'll learn about common scenarios when working with an app th
 
 Articles in this section explain individual and short scenarios when working with SharePoint integration with canvas app.
 
-- [How to filter a search list in an app?](scenarios-filter-search-list.md)
-- [How to use drop down list with choices from lookup column in a SharePoint list?](scenarios-choice-to-lookup.md)
-- [How to customize an app screen based on column status inside SharePoint list?](scenarios-customize-view-based-on-column-status.md)
-- [How to work with permissions in a lookup list from SharePoint site?](scenarios-lookup-list-permissions.md)
+- [Filter a search list in an app](scenarios-filter-search-list.md)
+- [Use drop-down lists with choices from lookup columns in a SharePoint list](scenarios-choice-to-lookup.md)
+- [Customize an app screen based on column status inside a SharePoint list](scenarios-customize-view-based-on-column-status.md)
+- [Work with permissions in a lookup list from a SharePoint site](scenarios-lookup-list-permissions.md)
+- [Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items](scenarios-sharepoint-form-from-scratch.md)
 
 ## SharePoint integration documentation
 
@@ -35,7 +36,7 @@ In addition to the SharePoint integration scenarios, refer to the following arti
 
 | Documentation | Description |
 |--|--|
-| [SharePoint Connectors documentation](https://docs.microsoft.com/connectors/sharepointonline/) | SharePoint connector documentation with list of available regions and products. |
+| [SharePoint Connectors documentation](/connectors/sharepointonline/) | SharePoint connector documentation with list of available regions and products. |
 | [Power Apps SharePoint connector documentation](../connections/connection-sharepoint-online.md) | An introduction to the use of SharePoint connector in Power Apps with basic example. |
 | [Create an app from SharePoint](../app-from-sharepoint.md) | Create a canvas app from SharePoint quickly. |
 | [SharePoint list form integration](../customize-list-form.md) | Understand SharePoint list integration and [customization](../sharepoint-form-integration.md). |
@@ -53,3 +54,6 @@ Some additional samples and step-by-step guides available for different SharePoi
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

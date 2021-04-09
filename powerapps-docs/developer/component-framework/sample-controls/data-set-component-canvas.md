@@ -1,6 +1,6 @@
 ---
 title: DataSet Grid component for canvas apps | Microsoft Docs
-description: 
+description: This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -16,6 +16,8 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 # Implementing data-set component for canvas apps
 
 This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation. 
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_PropertySetTableControl).
 
@@ -275,7 +277,7 @@ private createTableBody(columnsOnView: DataSetInterfaces.Column[], widthDistribu
 				innerDiv.classList.add("SimpleTable_TableCellInnerDiv_Style");
 				innerDiv.style.width = widthDistribution[index];
 				// Currently there is a bug in canvas preventing retrieving value using alias for property set columns.
-				// In this sample, we use the column's actual attribute name to retrieve the formatted value to work around the issue
+				// In this sample, we use the column's actual column name to retrieve the formatted value to work around the issue
 				// columnItem.alias should be used after bug is addressed
 				innerDiv.innerText = gridParam.records[currentRecordId].getFormattedValue(columnItem.name);
 				tableRecordCell.appendChild(innerDiv);
@@ -575,7 +577,7 @@ In this preview for canvas apps, only a limited set of [filtering](../reference/
 
 **View**
 
-In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It’s up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Common Data Service as a source. Selecting a view applies the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
+In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It’s up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Microsoft Dataverse as a source. Selecting a view applies the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
 
 ### Related topics
 
@@ -583,3 +585,6 @@ In model-driven apps, views are required for dataset components to get the colum
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

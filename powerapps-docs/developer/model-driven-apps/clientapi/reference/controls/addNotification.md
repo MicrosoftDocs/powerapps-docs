@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -65,7 +65,7 @@ All
 
 In web client the **addNotification** method displays a notification with the messages you specified and two standard buttons: **Apply** and **Dismiss**. Clicking **Apply** executes the action you define; clicking **Dismiss** closes the notification message.
 
-In the Unified Interface:
+In Unified Interface:
 
 - There is no **Dismiss** button.
 - The **Apply** button only appears when the notification level is set to **RECOMMENDATION**, not **ERROR**.
@@ -104,6 +104,11 @@ function addTickerSymbolRecommendation(executionContext) {
 }
 ```
 
+This how the notification appears in model-driven apps:
+
+> [!div class="mx-imgBorder"]
+> ![Example add notification](../../../media/clientapi_addnotification.png "Example add notification")
+
 ### Related topics
 
 [clearNotification](clearNotification.md)
@@ -112,3 +117,6 @@ function addTickerSymbolRecommendation(executionContext) {
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

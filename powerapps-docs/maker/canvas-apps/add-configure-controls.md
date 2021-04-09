@@ -143,3 +143,6 @@ For example, you can select a label and then configure it in these ways:
 
 - Find step-by-step procedures for configuring common controls such as [screens](add-screen-context-variables.md), [lists](add-list-box-drop-down-list-radio-button.md), [galleries](add-gallery.md), [forms](add-form.md), and [charts](use-line-pie-bar-chart.md).
 - Find reference information about each type of control in the [control reference](reference-properties.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

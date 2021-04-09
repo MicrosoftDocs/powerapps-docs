@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 06/09/2018
 ms.author: gregli
 search.audienceType: 
@@ -99,3 +99,6 @@ For the examples in this section, the current time is **3:59 AM** on **February 
     **Set(CurrentTime, Now())**
 
     The label appears as soon as the app starts (before the timer runs for a full second).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

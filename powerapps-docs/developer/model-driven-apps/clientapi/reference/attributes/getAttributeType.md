@@ -4,9 +4,9 @@ ms.date: 02/13/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 9ef1c886-a0b8-4ba9-bb9f-e6ecfa9d6dff
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,3 +42,6 @@ This method will return one of the following **string** values:
 - multiselectoptionset
 - optionset
 - string
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

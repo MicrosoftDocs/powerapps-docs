@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 10/16/2016
 ms.author: gregli
 search.audienceType: 
@@ -95,3 +95,6 @@ This approach comes with some drawbacks when compared to the previous example wh
 * The translation will take time to complete, requiring a call to a service across the network.  This will result in a lag to see the translated text in your app. 
 * The translation will be mechanical and may not be what you anticipate or be the best choice for the situation within your app.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

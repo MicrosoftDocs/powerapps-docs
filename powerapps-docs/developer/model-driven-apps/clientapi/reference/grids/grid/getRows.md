@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -40,3 +40,6 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 See [Collections (Client API reference)](../../collections.md) for information on the methods available to access data in a collection.
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

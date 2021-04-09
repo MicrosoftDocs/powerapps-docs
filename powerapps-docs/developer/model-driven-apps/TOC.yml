@@ -1,5 +1,5 @@
-- name: Model-driven apps
-  href: ../../maker/model-driven-apps/model-driven-app-overview.md
+- name: Model-driven apps developer guide
+  href: index.yml
 - name: Developer overview
   href: overview.md
 - name: Get started
@@ -27,7 +27,7 @@
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Build code components using Power Apps component framework
-    href: /powerapps/developer/component-framework/overview
+    href: ../component-framework/overview.md
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
@@ -73,6 +73,8 @@
     href: clientapi/walkthrough-write-your-first-client-script.md
   - name: Debug your JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
+  - name: Troubleshoot form issues in Unified Interface
+    href: troubleshoot-forms.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
@@ -111,6 +113,8 @@
         href: clientapi/reference/events/onstagechange.md
       - name: OnStageSelected event
         href: clientapi/reference/events/onstageselected.md
+      - name: PostSave event
+        href: clientapi/reference/events/postsave.md
       - name: PostSearch event
         href: clientapi/reference/events/postsearch.md
       - name: PreSearch event
@@ -148,8 +152,14 @@
     - name: Save event arguments
       href: clientapi/reference/save-event-arguments.md
       items:
+      - name: getEntityReference
+        href: clientapi/reference/save-event-arguments/getEntityReference.md
+      - name: getIsSaveSuccess
+        href: clientapi/reference/save-event-arguments/getIsSaveSuccess.md
       - name: getSaveMode
         href: clientapi/reference/save-event-arguments/getSaveMode.md
+      - name: getSaveErrorInfo
+        href: clientapi/reference/save-event-arguments/getSaveErrorInfo.md
       - name: isDefaultPrevented
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
@@ -488,6 +498,13 @@
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification
         href: clientapi/reference/formcontext-ui/setFormNotification.md
+    - name: formContext.ui.footerSection
+      href: clientapi/reference/formcontext-ui-footerSection.md
+      items: 
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-footerSection/getVisible.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
       href: clientapi/reference/formcontext-ui-formselector.md
       items:
@@ -501,6 +518,21 @@
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-formselector/setVisible.md
+    - name: formContext.ui.headerSection
+      href: clientapi/reference/formContext-ui-headerSection.md
+      items:
+      - name: getBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getBodyVisible.md
+      - name: getCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getCommandBarVisible.md
+      - name: getTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getTabNavigatorVisible.md
+      - name: setBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setBodyVisible.md
+      - name: setCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setCommandBarVisible.md
+      - name: setTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setTabNavigatorVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:
@@ -563,6 +595,8 @@
       items:
       - name: addtabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getContentType
+        href: clientapi/reference/formContext-ui-tabs/getContentType.md
       - name: getDisplayState
         href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel
@@ -575,6 +609,8 @@
         href: clientapi/reference/formcontext-ui-tabs/getVisible.md
       - name: removeTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setContentType
+        href: clientapi/reference/formContext-ui-tabs/setContentType.md
       - name: setDisplayState
         href: clientapi/reference/formcontext-ui-tabs/setDisplayState.md
       - name: setFocus
@@ -739,6 +775,8 @@
         href: clientapi/reference/xrm-utility/getAllowedStatusTransitions.md
       - name: getEntityMetadata
         href: clientapi/reference/xrm-utility/getEntityMetadata.md
+      - name: getEntityMainFormDescriptor
+        href: clientapi/reference/xrm-utility/getEntityMainFormDescriptor.md
       - name: getGlobalContext
         href: clientapi/reference/xrm-utility/getGlobalContext.md
         items:

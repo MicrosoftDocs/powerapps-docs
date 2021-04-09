@@ -85,4 +85,7 @@ Hello, stranger.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[Power Apps common data service entity tags](portals-entity-tags.md)
+[Dataverse entity tags](portals-entity-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

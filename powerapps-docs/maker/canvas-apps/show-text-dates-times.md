@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 10/16/2016
+ms.date: 12/18/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -86,7 +86,7 @@ Convert dates and times from strings of text to values, which you can format in 
 3. Change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/date-value-fr.png)
+    ![Change ShowDate](./media/show-text-dates-times/date-value-fr.png "Change ShowDate")
    
     **ShowDate** shows the day before the month, as a French user would expect.
    
@@ -99,7 +99,7 @@ Convert dates and times from strings of text to values, which you can format in 
 4. To use one of several built-in formats, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/long-date-time.png)
+    ![Use built-in formulas](./media/show-text-dates-times/long-date-time.png "Use built-in formulas")
    
     **ShowDate** shows the day of the week, the date, and the time.
    
@@ -110,7 +110,7 @@ Convert dates and times from strings of text to values, which you can format in 
 5. To use a custom format, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/format-milliseconds.png)
+    ![Use custom format](./media/show-text-dates-times/format-milliseconds.png "Use custom format")
    
     **ShowDate** shows the date/time value in the format that you specified, including milliseconds.
    
@@ -213,7 +213,7 @@ Convert dates and times from strings of text to values, which you can format in 
    <br>**Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})**
 
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to this formula:
-   <br>**Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)**
+   <br>**Text(Date(Value(Year.SelectedText.Value), Value(Month.SelectedText.Value), Value(Day.SelectedText.Value)), DateTimeFormat.LongDate)**
    
     **Wednesday, January 1, 2014** is listed by default. Select different values in the **[Drop down](controls/control-drop-down.md)** controls to change the date in the **[Label](controls/control-text-box.md)** control.
 
@@ -246,3 +246,6 @@ You may need to convert data that you didn't expect. If you add **[Text input](c
    
     You can add entries to **Hour** and **Minute** so that users can select from a bigger range of hours and a more precise number of minutes. You can also add a third **[Drop down](controls/control-drop-down.md)** control so that users can specify seconds. If you add a third list, set the **[Text](controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to the following expression:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

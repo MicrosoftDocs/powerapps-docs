@@ -20,7 +20,7 @@ The following is a basic, high-level comparison. For much more detail about thes
     :::column:::
         ![Model-driven apps](media/model-apps.png "Model-driven apps")
 
-        Model-driven apps require a Common Data Service database. They're built on top of
+        Model-driven apps require a Microsoft Dataverse database. They're built on top of
 the data modeled in that database environment. Views and detail screens for model-driven
 apps are based on the data structure. Because of this, they offer
 users a more consistent look and feel from one screen to the next without requiring much
@@ -37,7 +37,7 @@ effort from the app creator.
     :::column:::
         ![Canvas apps](media/canvas-apps.png "Canvas apps")
         
-        Canvas apps, on the other hand, can be built with or without a Common Data Service
+        Canvas apps, on the other hand, can be built with or without a Dataverse
 database. They use connectors to access data and services. Canvas apps start
 with a blank screen, like an artist's canvas, and the creator manually lays out
 each screen. This gives the creator complete control over the placement of
@@ -100,9 +100,12 @@ for related information such as vendor details.
 
 In this example scenario, you can see a combination of both canvas app and
 model-driven app. Although they're two different types of apps, all the data
-can be centralized in one place (Common Data Service).
+can be centralized in one place (Dataverse).
 
-![Two apps with data in Common Data Service](media/end-to-end-apps.png "Two apps with data in Common Data Service")
+![Two apps with data in Dataverse](media/end-to-end-apps.png "Two apps with data in Dataverse")
 
 > [!div class="nextstepaction"]
 > [Next step: Determine where to place logic](logic.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

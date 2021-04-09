@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 487d0923-9675-4308-b88e-fdbf91853a98
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -34,3 +34,6 @@ Lookup
 
 **Description**: True if the lookup attribute is a partylist, otherwise false.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

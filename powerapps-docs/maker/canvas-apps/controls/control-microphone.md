@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/12/2020
+ms.date: 01/07/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -198,3 +198,10 @@ Consider adding an alternative form of input for users with speech disabilities 
 ### Screen reader support
 
 - [AccessibleLabel](properties-accessibility.md) must be present.
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

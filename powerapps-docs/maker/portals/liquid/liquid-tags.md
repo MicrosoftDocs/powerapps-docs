@@ -27,11 +27,11 @@ You can tell the engine to strip all leading or trailing white space by adding a
 **Code**
 
 ```
-{% for i in (1..5) --%}
+{% for i in (1..5) -%}
 
 {{ i }}
 
-{%-- endfor %}
+{%- endfor %}
 ```
 
 **Output**
@@ -44,3 +44,6 @@ You can tell the engine to strip all leading or trailing white space by adding a
 [Liquid types](liquid-types.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Filters](liquid-filters.md) 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

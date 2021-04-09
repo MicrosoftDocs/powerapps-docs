@@ -1,5 +1,6 @@
 ---
-title: "Pass the current record as data context with an embedded canvas app | MicrosoftDocs"
+title: "Pass the current row as data context with an embedded canvas app | MicrosoftDocs"
+description: Learn how to pass the current row as data context in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
@@ -23,27 +24,27 @@ search.app:
   - D365CE
 ---
 
-# Pass the current record as data context to an embedded canvas app
+# Pass the current row as data context to an embedded canvas app
 > [!IMPORTANT]
 > Canvas apps embedded on model-driven forms are now out of preview and generally available. The steps listed below are outdated and applicable only to the public preview release of canvas apps embedded on model-driven forms.
 >  For the updated list of steps for the latest release, please see: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
 
-This topic explains how to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
+This topic explains how to add an embedded canvas app and pass the current (main form) row as a data context to the embedded canvas app.
 
-Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
+Imagine that you want to add an embedded canvas app on an account main form and pass the current account row to the embedded canvas app. To do this, follow these steps: 
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity. 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of a table, such as the account table. 
 2.	Select the section on the form where you want the embedded canvas app to appear.
-3.	Using the field explorer pane, add a required field, such as **Account Name**.
+3.	Using the column explorer pane, add a required column, such as **Account Name**.
       > [!IMPORTANT]
-      > Always use a required field that is guaranteed to have a value. If your field does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
-4.	With the field selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
-5.	On the **Field Properties** dialog box, select the **Controls** tab.
+      > Always use a required column that is guaranteed to have a value. If your column does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
+4.	With the column selected, on the **Home** tab in the **Edit** group, select **Change Properties**.
+5.	On the **Column Properties** dialog box, select the **Controls** tab.
 6.	On the **Controls** tab, select **Add Control...**.
 7.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
-8.	In the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
+8.	In the **Column Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 9.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
-     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that contains the field you added in an earlier step.
+     - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that contains the column you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
          - Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
@@ -53,9 +54,9 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 11.	In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
       > [!NOTE]
-      > ModelDrivenFormIntegration.Data is a list of records. In this example it has only one record. To directly reference the record you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
-13.	In the property pane on the right, next to **Fields**, select **Edit**.
-14.	In the data pane, change the field mapped to the **Title1** control to **Name** or another field that has data.
+      > ModelDrivenFormIntegration.Data is a list of rows. In this example it has only one row. To directly reference the row you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
+13.	In the property pane on the right, next to **Columns**, select **Edit**.
+14.	In the data pane, change the column mapped to the **Title1** control to **Name** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. Close the data pane.
 16.	Select the **File** tab, and then select **App settings**.
 17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
@@ -67,16 +68,16 @@ Imagine that you want to add an embedded canvas app on an account main form and 
     - 	The form editor has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
     - 	The form editor "listens" for the **App ID** to be sent to it.
     - 	The **App ID** is sent to the form editor when the app is saved.
-21.	On the **Field Properties** dialog box, select the **Display** tab.
+21.	On the **Column Properties** dialog box, select the **Display** tab.
 22.	Clear **Display label** on the form and then select **OK**.
     - 	If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
-When users open a model-driven app (Unified Interface only) that includes the form you have modified, they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form, and the embedded app refreshes to show the relevant data.
+When users open a model-driven app (Unified Interface only) that includes the form you have modified, they see the embedded canvas app on the form. Changing the row displayed on the main form changes the data context that is passed to the form, and the embedded app refreshes to show the relevant data.
 
-This topic showed you how to get started with embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
+This topic showed you how to get started with embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific rows in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
@@ -88,3 +89,6 @@ This topic showed you how to get started with embedding a canvas app in a model-
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

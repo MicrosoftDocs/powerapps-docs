@@ -4,9 +4,9 @@ ms.date: 01/25/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 6a2497fe-08ad-4953-b3ff-44c72bc25082
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -31,3 +31,6 @@ search.app:
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

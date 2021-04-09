@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -131,3 +131,6 @@ The above example displays the following in your console; you might see other va
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

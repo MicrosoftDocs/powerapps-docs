@@ -17,11 +17,11 @@ search.app:
 ---
 # Sample: Export ribbon definitions
 
-This sample shows how to export ribbon definitions. It uses the [RetrieveApplicationRibbonRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.retrieveapplicationribbonrequest?view=dynamics-general-ce-9) and [RetrieveEntityRibbonRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.retrieveentityribbonrequest?view=dynamics-general-ce-9) messages. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions).
+This sample shows how to export ribbon definitions. It uses the [RetrieveApplicationRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveapplicationribbonrequest?view=dynamics-general-ce-9) and [RetrieveEntityRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveentityribbonrequest?view=dynamics-general-ce-9) messages. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions).
 
 ## How to run this sample
 
-[!include[cc-how-to-run-samples](../common-data-service/includes/cc-how-to-run-samples.md)]
+[!include[cc-how-to-run-samples](../data-platform/includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
 
@@ -53,3 +53,6 @@ No clean up is required for this sample
  [Ribbon WSS schema](ribbon-wss-schema.md)
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest>   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
