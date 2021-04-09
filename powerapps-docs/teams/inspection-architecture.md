@@ -149,6 +149,8 @@ This section explains collections, global variables used by the [Manage inspecti
 
 This section explains app OnStart collections, variables, and execution details.
 
+#### OnStart collections
+
 Collections used during app OnStart:
 
 | Collection name | Description |
@@ -160,173 +162,90 @@ Collections used during app OnStart:
 | colLocConfig | Collection used to set the name and type of the main and the sub sections. |
 | colLocTypeSettings –** Used to collect the different setting types
     available in the app.
+| colInspections | Collection to store area inspections. |
+|colPlannerBuckets | Collection of Planner buckets. |
+| colPlannerTasks | Collection of Planner buckets. |
+| colCharsWidth | Collection of widths for each character used for auto width labels. |
 
-7.  **colInspections-** collection to store Area Inspections
+#### OnStart variables
 
-8.  **colPlannerBuckets –** collection of Planner Buckets
+Variables used during app OnStart:
 
-9.  **colPlannerTasks –** collection of Planner Buckets
+| Variable name | Description |
+| - | - |
+| gblAppLoaded | Global variable to check if the app has loaded completely. |
+| gblAppContext | Global variable to check the context of where the app is running. |
+| gblUserLanguage | Global variable to store the user’s language. |
+| gblFirstRun | Global variable to check whether the app is being run for the first time. |
+| gblWorkType | Global variable to store type of work. |
+| gblSelectedWorkType | Global variable to check the selected type of work. |
+| gblParamTeamId | Global variable to set the Planner Group ID from parameters. |
+| gblParamChannelId | Global variable to set the Planner Channel ID from parameters. |
+| gblThemeDark | Global variable to store if Teams is running in dark mode. |
+| gblThemeContrast | Global variable to store if Teams is running in contrast mode. |
+| gblAppManager | Global variable check whether the user has the app manager privilege. |
+| gblRecordUserSettings | Global variable to store the latest area inspection user settings records for the current user. |
+| gblFontSizes | Global variable to store the font sizes used in the app. |
+| gblPadding | Global variable to set the padding values. |
+| gblScreenHeightMin | Global variable to set the minimum screen height. |
+| gblScreenWidthMin | Global variable to set the minimum screen width. |
+| gblEditLocation | Global variable to check whether a location is being edited. |
+| gblView | Global variable to store the view to be displayed. |
+| gblViewInspection | Global variable which indicates an inspection is being viewed.
+| gblManageLocationTypes | Global variable to check if location type exists. |
+| gblTempAddLocType | Global variable to check for adding location type. |
+| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblDisplayWarning | Global variable to control visibility of warning messages. |
+| gblAddLocation | Global variable to show or hide location button. |
+| gblShowLocationTypeIcons | Global variable to control visibility of location type icons. |
+| gblFirstTimeNavigation | Global variable to check whether the user viewing for the first time. |
+| gblParamTenantId | Global variable to set the tenant ID from parameters. |
+| gblParamLocaleId | Global variable to set the locale ID from parameters. |
+| gblCheckLabelSettings | Global variable to store the active area inspection label. |
+| gblRecordSettings | Global variable used to set the Team and Channel Id to the Area Inspection Settings table. |
+| gblSettingPlannerPlanId | Global variable to get the planner ID from the record settings. |
+| gblSettingTeamId | Global variable to get the Team ID from the record settings. |
+| gblLocation | Global variable to set the first area inspections location. |
+| gblNavToSettings | Global variable to denote navigation to settings from other screens.
 
-10. **colCharsWidth –** collection of widths for each character used for auto
-    width labels.
+#### OnStart execution details
 
-#### Variables involved
+1. When a user accesses the app, the **gblAppLoaded** variable is set to false. The user’s language code is stored in **gblUserLanguage** variable, with "English - US" as the default. The **gblAppContext** checks where the app is running.
 
-1.  **gblAppLoaded** – global variable to check if the app has loaded
-    completely.
+1. The user’s language is then used to collect localized text used throughout the app (such as label and button text) in **colLocalization** collection.
 
-    1.  **gblAppContext –** global variable to check the context of where the
-        app is running.
+1. The value and icons of the labels are stored in the **colLabelSettings** collection. The work type is set using the **gblWorkType** and **gblSelectedWorkType** variables. It's set to inspections if other values do not exist.
 
-2.  **gblUserLanguage –** global variable to store the user’s language
+1. The channel, group, tenant and locale IDs from the parameter values are stored in the **gblParamTeamId**, **gblParamChannelId**, **gblParamTenantId**, and **gblParamLocaleId** variables.
 
-3.  **gblFirstRun –** global variable to check whether the app is being run for
-    the first time.
+1. User's Teams theme is checked: Default, Dark, or High Contrast. The **gblThemeDark** and **gblThemeHiCo** variables are set accordingly.
 
-4.  **gblWorkType –**
+1. The **gblAppManager** variable checks the parameters if the user has a user team role.
 
-5.  **gblSelectedWorkType –**
+1. User details from the Area Inspection User Settings table are collected in **colUserSettings** collection. If no records exist, a new project user setting record is created. If there are multiple area inspection user settings records exist, the oldest record is selected and stored in the **gblRecordUserSettings** variable.
 
-6.  **gblParamTeamId –** global variable to set the Planner Group ID from
-    parameters
+1. Predefined font sizes, padding values, minimum screen height and width values are stored in the **gblFontSizes**, **gblPadding**,
+    **gblScreenHeightMin**, and **gblScreenWidthMin** variables.
 
-7.  **gblParamChannelId –** global variable to set the Planner Channel ID from
-    parameters
+1. The **gblView** variable which controls the view to be displayed is set to “Locations”.
 
-8.  **gblThemeDark –** global variable to store if Teams is running in dark
-    mode.
+1. The order, name and the icon values used in the app are collected in the **colLocationTypeIcons** collection. The number of active area inspection labels are stored in the **gblCheckLabelSettings** variable.
 
-9.  **gblThemeContrast-** global variable to store if Teams is running in
-    contrast mode.
+1. The main and sub section values are collected in the **colLocConfig** collection. If they are blank, the values are set to area and area type.
 
-10. **gblAppManager – global** variable check whether the user has App manager
-    privilege.
+1. The team and channel IDs from the area inspection settings are stored in the **gblRecordSettings** variable.
 
-11. **gblRecordUserSettings –** global variable to store the latest Area
-    Inspection User Settings records for the current user.
+1. The location type settings are collected in the **colLocTypeSettings** collection.
 
-12. **gblFontSizes –** global variable to store the font sizes used in the app
+1. If there are no area inspection user settings records (**gblRecordSettings**), the **gblFirstRun** variable is set to true which in turn controls the visibility of the splash dialog.
 
-13. **gblPadding –** global variable to set the padding values
+1. The final values for the Planner and Team ID are stored in the **gblSettingPlannerPlanId** and **gblSettingTeamId** variables.
 
-14. **gblScreenHeightMin –** global variable to set the minimum screen height
+1. The inspections from the Area Inspections table are stored in the **colInspections** collection.
 
-15. **gblScreenWidthMin –** global variable to set the minimum screen width
+1. The first area inspection location is set to the **gblLocation** variable**. The Planner buckets and tasks are collected in the **colPlannerBuckets**, and **colPlannerTasks** collections.
 
-16. **gblEditLocation –** global variable to check whether a location is being
-    edited
-
-17. **gblView –** global variable to store the view to be displayed
-
-18. **gblViewInspection –** global variable which indicates an Inspection is
-    being viewed
-
-19. **gblManageLocationTypes-**
-
-20. **gblTempAddLocType –**
-
-21. **gblWarningType –** global variable which controls which warning message to
-    be displayed.
-
-22. **gblDisplayWarning –** global variable to control visibility of Warning
-    messages
-
-23. **gblAddLocation-**
-
-24. **gblShowLocationTypeIcons – global variable to control visibility of
-    Location Type Icons**
-
-25. **gblFirstTimeNavigation – global variable to check whether the User is
-    being**
-
-26. **gblParamTenantId –** global variable to set the Tenant ID from parameters
-
-27. **gblParamLocaleId-** global variable to set the Locale ID from parameters
-
-28. **gblCheckLabelSettings – global variable to store the Active Area
-    Inspection label.**
-
-    1.  **gblRecordSettings –** global variable used to set the Team and Channel
-        Id to the Area Inspection settings table.
-
-29. **gblSettingPlannerPlanId –** global variable to get the planner ID from the
-    record settings.
-
-30. **gblSettingTeamId –** global variable to get the Team ID from the record
-    settings.
-
-31. **gblLocation –** global variable to set the first Area Inspections location
-
-32. **gblNavToSettings –** global variable to denote navigation to settings from
-    other screens
-
-#### Detailed Steps
-
-1.  When a user accesses the app, **gblAppLoaded** is set to false. The user’s
-    language code is stored in **gblUserLanguage**, with English - US being the
-    default one. The **gblAppContext** checks where the app is running.
-
-2.  The user’s language is then used to collect localized text used throughout
-    the app (e.g., label and button text) in **colLocalization**.
-
-3.  The value and icons of the labels are stored in the **colLabelSettings**
-    collection. The work type is set using the **gblWorkType** and
-    **gblSelectedWorkType variables.** It is set to Inspections if other values
-    do not exist.
-
-4.  The channel, group, Tenant and Locale ID’s from parameter values are stored
-    in the **gblParamTeamId** and **gblParamChannelId, gblParamTenantId and
-    gblParamLocaleId** variables.
-
-5.  The user’s Teams theme/mode is checked to see if the theme is default, dark
-    or high contrast. The **gblThemeDark** and **gblThemeHiCo** variables are
-    set accordingly.
-
-6.  The **gblAppManager** variable checks the parameters if the User has a User
-    team role.
-
-7.  User details from Area Inspection User Settings table is collected in
-    **colUserSettings**. If no records exist, a new project user setting record
-    is created. If there are multiple Area Inspection user settings record
-    exist, the oldest record is selected and stored in the
-    **gblRecordUserSettings** variable.
-
-8.  Predefined Font Sizes, padding values, minimum Screen height and width
-    values are stored in the **gblFontSizes**, **gblPadding**,
-    **gblScreenHeightMin**, **gblScreenWidthMin** variables.
-
-9.  The **gblView** variable which controls the view to be displayed is set to
-    “Locations”.
-
-10. The order, Name and the icon values used in the app are collected in the
-    **colLocationTypeIcons** collection. The number of Active Area Inspection
-    labels are stored in the **gblCheckLabelSettings** variable**.**
-
-11. The main and sub section values are collected in the **colLocConfig**
-    collection**.** If they are blank the values are set to Area and Area Type.
-
-12. The team and channel ID’s from Area Inspection Settings are stored in the
-    **gblRecordSettings** variable.
-
-13. The location type settings are collected in the **colLocTypeSettings**
-    collection.
-
-14. If there are no Area Inspection user settings record
-    (**gblRecordSettings**). The **gblFirstRun** variable is set to true. This
-    in turn controls the visibility of the splash dialog.
-
-15. The final values for the Planner and Team ID are stored in the
-    **gblSettingPlannerPlanId** and **gblSettingTeamId** variables.
-
-16. The Inspections from the Area Inspections table is stored in the
-    **colInspections** collection.
-
-17. The first Area Inspections location is set to the **gblLocation**
-    variable**. The planner** Buckets and Tasks are collected in the
-    **colPlannerBuckets** and **colPlannerTasks** collections.
-
-18. The size and font of each character used for auto width of header buttons
-    are collected in the **colCharsWidth** collection.
+1. The size and font of each character used for auto width of header buttons are collected in the **colCharsWidth** collection.
 
 ### Locations Screen<br>
 
