@@ -247,82 +247,75 @@ Variables used during app OnStart:
 
 1. The size and font of each character used for auto width of header buttons are collected in the **colCharsWidth** collection.
 
-### Locations Screen<br>
+## Locations screen
 
-#### Displaying the first run experience
+This section explains app [locations screen](inspection.md#add-locations) collections, variables, and execution details. Locations screen includes the first run experience, the list of locations on the left-pane, and the list of inspections based on the location.
 
-##### Collections involved
+### Displaying the first run experience
 
-1.  **Collection** – None
+This section explains the first run experience for locations.
 
-##### Variables involved
+#### First run experience collections
 
-1.  locShowCustomize –
+First run experience for locations doesn't use any variables.
 
-2.  locShowRestricted –
+#### First run experience variables
 
-3.  locShowSetupChannelPlanner –
+Variables used during the first run experience for locations:
 
-4.  locShowSetup –
+| Variable name | Description |
+| - | - |
+| locShowCustomize | Local variable to check whether to show customize option. |
+| locShowRestricted | Local variable to show locations with restrictions. |
+| locShowSetupChannelPlanner | Local variable to show Planner setup channel. |
+| locShowSetup | Local variable to show setup option. |
+| locShowFirstRun | Local variable to indicate if the current run of the app is the first run for the user. |
+| locShowPowerAppsPrompt | Local variable to indicate either to show or hide the splash screen. |
 
-5.  **locShowFirstRun** – local variable to indicate if the current run of the
-    app is the first run for the user.
+#### First run execution details
 
-6.  **locShowPowerAppsPrompt -** local variable to indicate either to show or
-    hide the splash screen.
+1. On visible of project screen a dialog pop-up appears if either of the variables&mdash;**locShowFirstRun** or **locShowPowerAppsPrompt**, are true. If not, the app proceeds with loading the project data.
 
-##### Detailed steps
+1. **locShowFirstRun** is set to true/false depending on the project settings records.
 
-1.  On visible of project screen a dialog pop-up appears if either
-    **locShowFirstRun** or **locShowPowerAppsPrompt** is true, if not the app
-    proceeds with loading the Project’s data
+### Displaying the list of locations
 
-2.  l**ocShowFirstRun** is set to true / false depending upon project settings
-    records that gets created
+This section explains the process of displaying the list of locations.
 
-#### Displaying the list of Locations 
+#### Collections used when displaying the list of locations
 
-##### Collections involved
+Collections used when displaying the list of locations:
 
-1.  **colInspections –** Used to collect Inspection records.
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
 
-##### Variables involved
+#### Variables used when displaying the list of locations
 
-1.  **locAreaSortOrder** – Local variable used to control the sorting order of
-    Locations.
+Variables used when displaying the list of locations:
 
-2.  **locInspectionSortBy** – local variable to denote on what field are
-    inspection records sorted by
+| Variable name | Description |
+| - | - |
+| locAreaSortOrder | Local variable used to control the sorting order of locations. |
+| locInspectionSortBy | Local variable to denote on what field are inspection records sorted by. |
 
-##### Detailed steps<br>
+#### Execution details when displaying the list of locations
 
-1.  The list of locations in the Area Inspection Locations table are displayed
-    in the **galAreas** gallery along with the Location Types.
+1. The list of locations in the Area Inspection Locations table are displayed in the **galAreas** gallery along with the location types.
 
-2.  The locations can be searched based on their Names, clicking on the sort
-    button would toggle the value of **locAreaSortOrder** variable which sorts
-    the Locations in Ascending and Descending orders based on the name.
+1. The locations can be searched based on their names. Using the sort button toggles the value of **locAreaSortOrder** variable which sorts the locations in ascending or descending order based on the name.
 
-3.  Clicking on any of the location in the **galAreas** gallery will **update
-    the locInspectionSortBy** variable to date. The value of the **gblLocation**
-    is set to the selected location.
+1. Selecting any location in the **galAreas** gallery updates the **locInspectionSortBy** variable to date. The value of the **gblLocation** variable is set to the selected location.
 
-4.  The list of Area Inspections for the selected location is collected in the
-    **colInspections** collection.
+1. The list of area inspections for the selected location is collected in the **colInspections** collection.
 
-5.  The **galInspections** gallery displays the list of Inspections for the
-    selected Location in the descending order of the created-on date.
+1. The **galInspections** gallery displays the list of inspections for the selected location in the descending order of the created-on date.
 
-6.  The count of Inspection whose Review status code is either Pending review or
-    Pending Action is displayed next to the locations. This is achieved by
-    filtering the items of the **galAreaInspections** gallery based on the
-    Review Status code.
+1. The count of inspection whose review status code is either "Pending Review" or "Pending Action" is displayed next to the locations. This behavior is achieved by filtering the items of the **galAreaInspections** gallery based on the review status code.
 
-Screens
+#### Displaying the list of inspections based on the selected location
 
-![](media/inspection-architecture/efdc43beffd3e0d0c7d96362cdda306f.png)
-
-#### Displaying the list of Inspections based on the selected Location 
+This section explains the process of displaying the list of locations.
 
 ##### Collections involved
 
