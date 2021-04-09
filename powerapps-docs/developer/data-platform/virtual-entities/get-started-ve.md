@@ -1,6 +1,6 @@
 ---
-title: "Get started with virtual entities (Microsoft Dataverse) | Microsoft Docs"
-description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
+title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Microsoft Docs"
+description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
 ms.date: 04/08/2021
 ms.service: powerapps
 ms.topic: "get-started-article"
@@ -17,13 +17,13 @@ search.app:
   - D365CE
 ---
 
-# Get started with virtual entities
+# Get started with virtual tables (entities)
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-*Virtual entities* enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+*Virtual tables* (also known as *virtual entities*) enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 
-Virtual entities (also known as virtual tables) replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual tables greatly simplifies administration and configuration.
+Virtual tables replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual tables greatly simplifies administration and configuration.
 
 > [!NOTE]
 > This section discusses the implications of virtual tables for developers. For more information about managing virtual tables from the user interface, see [Create and edit virtual tables that contain data from an external data source](../../../maker/data-platform/create-edit-virtual-entities.md).
