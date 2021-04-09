@@ -583,35 +583,34 @@ The following collections are used when displaying the list of inspection forms.
 
 1. Based on the collected information, the checklist steps for the selected inspection form are displayed in the **galFormChecklistSteps** gallery.
 
-#### Displaying the list of Checklist Steps based on the selected inspectionForm 
+#### Displaying the list of checklist steps based on the selected inspection form
 
-##### Collections involved
+The list of checklist steps shows upon selecting an inspection form from the Inspection forms screen.
 
-1.  **colChecklistSteps -** Used to collect Area Inspection Checklist steps for
-    the selected inspection form.
+##### Collections used when displaying the list of checklist steps based on the selected inspection form
 
-2.  **colChecklistStepsImage –** used to collect the cover image of the
-    checklist steps for the selected inspection form.
+The following collections are used when displaying the list of checklist steps based on the selected inspection form.
 
-##### Variables involved
+| Collection name | Description |
+| - | - |
+| colChecklistSteps | Used to collect area inspection checklist steps for the selected inspection form. |
+| colChecklistStepsImage | Used to collect the cover image of the checklist steps for the selected inspection form. |
 
-1.  **gblForm –** used to store the Inspection form which is being edited
+##### Variables used when displaying the list of checklist steps based on the selected inspection form
 
-##### Detailed steps
+The following variables are used when displaying the list of checklist steps based on the selected inspection form.
 
-1.  The title and the location type details are displayed based on the
-    **gblForm** variable.
+| Variables name | Description |
+| - | - |
+| gblForm | Used to store the inspection form being edited. |
 
-2.  The checklist steps for the selected inspection form are displayed in the
-    **galFormChecklistSteps** gallery based on the values stored in the
-    **colChecklistSteps** collection
+##### Execution details when displaying the list of checklist steps based on the selected inspection form
 
-3.  The title, Action buttons, Instructions and the reference image for each
-    checklist step is displayed
+1. The title and the location type details are displayed based on the **gblForm** variable.
 
-Screens
+1. The checklist steps for the selected inspection form are displayed in the **galFormChecklistSteps** gallery based on the values stored in the **colChecklistSteps** collection.
 
-![](media/inspection-architecture/471d40091bfd19c5a3cd30a962696c0a.png)
+1. The title, action buttons, instructions and the reference image for each checklist step is displayed.
 
 #### Creating an Inspection Form
 
