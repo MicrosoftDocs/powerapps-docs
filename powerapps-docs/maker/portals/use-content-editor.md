@@ -1,5 +1,5 @@
 ---
-title: Use portal content editor to edit pages and page content | Microsoft Docs
+title: Use the content editor to edit page content | Microsoft Docs
 description: Learn how to use portal content editor to edit pages and page content.
 author: sandhangitmsft
 ms.service: powerapps
@@ -10,6 +10,9 @@ ms.author: sandhan
 ms.reviewer: tapanm
 searchScope:
   - "Power Apps"
+contributors:
+    - sandhangitmsft
+    - tapanm-msft
 ---
 
 # Use the content editor to edit page content

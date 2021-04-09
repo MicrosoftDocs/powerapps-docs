@@ -1,5 +1,5 @@
 ---
-title: Perform portals Web API operations | Microsoft Docs
+title: Perform operations using the Web API | Microsoft Docs
 description: Learn how to perform different Web API operations on Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portals operations using the Web API

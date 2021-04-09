@@ -10,6 +10,9 @@ ms.author: sandhan
 ms.reviewer: tapanm
 searchScope:
   - "Power Apps"
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Get started with the portal content editor

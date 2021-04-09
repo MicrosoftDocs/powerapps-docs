@@ -1,5 +1,5 @@
 ---
-title: "Frequently asked questions for legacy Adxstudio Portals v7 | MicrosoftDocs"
+title: "Legacy Adxstudio Portals v7 FAQ | MicrosoftDocs"
 description: "Frequently asked questions for legacy Adxstudio Portals v7"
 author: sandhangitmsft
 ms.service: powerapps
@@ -8,6 +8,12 @@ ms.custom:
 ms.date: 11/22/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
+    - GitanjaliSingh33msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Legacy Adxstudio Portals v7 FAQ

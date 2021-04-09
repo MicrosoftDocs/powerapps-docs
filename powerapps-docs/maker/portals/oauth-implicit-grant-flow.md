@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 01/24/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Use OAuth 2.0 implicit grant flow within your portal 

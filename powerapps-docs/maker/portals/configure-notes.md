@@ -1,5 +1,5 @@
 ---
-title: "Configure notes as attachments on basic forms and advanced forms for a portal | MicrosoftDocs"
+title: "Configure notes as attachments for basic and advanced forms | MicrosoftDocs"
 description: "Instructions to add and configure notes as attachments on basic forms and advanced forms in a portal."
 author: gitanjalisingh33msft
 ms.service: powerapps
@@ -8,9 +8,12 @@ ms.custom:
 ms.date: 03/26/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
-# Configure notes as attachments for basic forms and advanced forms on portals
+# Configure notes as attachments for basic and advanced forms
 
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 

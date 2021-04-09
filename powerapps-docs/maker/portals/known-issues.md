@@ -1,5 +1,5 @@
 ---
-title: Known issues in Power Apps portals | Microsoft Docs
+title: Known issues | Microsoft Docs
 description: Learn about the known issues in Power Apps portals 
 author: sandhangitmsft
 ms.service: powerapps
@@ -8,6 +8,12 @@ ms.custom:
 ms.date: 02/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
+    - GitanjaliSingh33msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Known issues

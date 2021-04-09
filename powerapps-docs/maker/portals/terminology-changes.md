@@ -10,6 +10,9 @@ ms.author: gisingh
 ms.reviewer: tapanm
 searchScope:
   - "Power Apps"
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Terminology changes in Power Apps portals

@@ -1,5 +1,5 @@
 ---
-title: "Release updates in Power Apps portals | MicrosoftDocs"
+title: "Release updates | MicrosoftDocs"
 description: "Learn about release updates of Power Apps portals."
 author: dileepsinghmicrosoft
 ms.service: powerapps
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/30/2021
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - dileepsinghmicrosoft
 ---
 
 # Release updates

@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/07/2019
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Supported web browsers for Power Apps portals Studio

@@ -1,6 +1,6 @@
 ---
-title: Overview of themes in Power Apps portals | Microsoft Docs
-description: Introduction to themes in Power Apps portals.
+title: Themes overview | Microsoft Docs
+description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,9 +8,12 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Overview of themes in Power Apps portals
+# Themes overview
 
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 

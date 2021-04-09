@@ -1,5 +1,5 @@
 ---
-title: Use the Web API for portals | Microsoft Docs
+title: Portals Web API | Microsoft Docs
 description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse tables.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portals Web API

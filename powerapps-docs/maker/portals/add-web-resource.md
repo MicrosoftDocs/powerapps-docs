@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - gitanjalisingh33msft
+    - tapanm-msft
 ---
 
 # Add the Azure Storage web resource to a form

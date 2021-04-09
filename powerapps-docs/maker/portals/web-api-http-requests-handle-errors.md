@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/30/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Compose HTTP requests and handle errors for the portals Web API

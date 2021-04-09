@@ -1,6 +1,6 @@
 ---
-title: Create a portal in Power Apps | Microsoft Docs
-description: Instructions to create a portal in Power Apps.
+title: Create Dataverse starter portal | Microsoft Docs
+description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create a Dataverse starter portal

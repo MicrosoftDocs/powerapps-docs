@@ -1,6 +1,6 @@
 ---
-title: Frequently asked questions | Microsoft Docs
-description: Frequently asked questions in Power Apps portals.
+title: Power Apps portals FAQs | Microsoft Docs
+description: Frequently asked questions (FAQs) about Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,12 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
+    - GitanjaliSingh33msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Power Apps portals FAQs
