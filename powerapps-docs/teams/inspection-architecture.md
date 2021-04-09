@@ -354,178 +354,133 @@ Variables used when displaying the list of inspections based on the selected loc
 
 1. Checkbox next to the inspection name is used to select the inspection for deletion. Selecting the checkbox next to the inspection header selects all inspection records.
 
-#### Deleting Inspections
+## Deleting inspections
 
-##### Collections involved
+This section explains collections, variables, and execution details when deleting inspections. Inspections can be deleted from the [locations tab](inspection.md#add-locations) by selecting one or more inspections.
 
-1.  **colInspections** – Used to collect Inspection records
+### Collections used when deleting inspections
 
-2.  **colRemoveInspections** – used to collect the inspection records which are
-    deleted.
+The following collections are used when deleting inspections.
 
-##### Variables involved
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
+| colRemoveInspections | Used to collect deleted inspection records. |
 
-1.  **gblDisplayWarning** – global variable to control visibility of Warning
-    messages
+### Variables used when deleting inspections
 
-    1.  **gblWarningType –** global variable which controls which warning
-        message to be displayed.
+The following variables are used when deleting inspections.
 
-##### Detailed steps
+| Variable name | Description |
+| - | - |
+| gblDisplayWarning | Global variable to control visibility of warning messages. |
+| gblWarningType | Global variable which controls which warning message to be displayed. |
 
-1.  The Inspection records can be deleted from the locations screen. Clicking on
-    the checkbox next to the Inspection name is used to select it for deletion.
-    Clicking on the checkbox next on the Inspections header will select all the
-    child inspection records for deletion.
+### Execution details when deleting inspections
 
-2.  The Delete button is enabled only when one or more inspection records are
-    checked.
+1. Inspection records can be deleted from the locations screen. Select checkbox next to an inspection to delete one record, or the checkbox from the header to delete all records.
 
-3.  Clicking on the delete button will set the value of the
-    **gblDisplayWarning** to true thus displaying the **conWarning** container
-    which displays the delete confirmation dialog.
+1. **Delete** button is only enabled after one or more inspection records are selected.
 
-4.  The value of **gblWarningType** is set to **inspectiondelete** indicating an
-    inspection is being deleted.
+1. Selecting **Delete** sets the value of the **gblDisplayWarning** variable to true. This change ends up displaying the **conWarning** container which in turn displays the delete confirmation dialog.
 
-5.  Checking the “I Understand button” will enable the Delete button clicking on
-    which set the **gblDisplayWarning** value to false thus hiding the delete
-    dialog.
+1. The value of **gblWarningType** variable is set to **inspectiondelete** indicating an inspection is being deleted.
 
-6.  The deleted inspection record is added to the **colRemoveInspections** and
-    the same is removed from the Area Inspections table. The **colInspections**
-    collection is cleared and collected to have the updated records.
+1. Selecting **I understand** enables the delete button. And selecting **Delete** sets the **gblDisplayWarning** variable value to false to hide the delete dialog.
 
-Screens
+1. Deleted inspection record is added to the **colRemoveInspections** collection, and removed from the Area Inspections table. The **colInspections** collection is cleared and collected to have the updated records.
 
-![](media/inspection-architecture/057f6bc6bc320d0643e1a047ddb61a7a.png)
+## Editing location types
 
-![](media/inspection-architecture/0c2644c1a22afe81bcea7e0f870baf1f.png)
+This section explains collections, variables, and execution details when [editing location types](inspection.md#add-location-types). Location types can be edited from the **Locations** tab upon selecting **Location type**.
 
-#### Editing a Location type 
+### Collections used when editing location types
 
-##### Collections involved
+The following collections are used when deleting inspections.
 
-1.  **colInspections** – Used to collect Inspection records
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
 
-##### Variables involved
+### Variables used when editing location types
 
-1.  **gblEditLocation**– global variable to denote if a location is being
-    edited.
+The following variables are used when deleting inspections.
 
-2.  **gblAreaChanged** – global variable to indicate that the location has been
-    updated
+| Variable name | Description |
+| - | - |
+| gblEditLocation | Global variable to denote if a location is being edited. |
+| gblAreaChanged | Global variable to indicate that the location has been updated. |
+| gblLocation | Global variable to store the location in the current context. |
+| gblLocType | Global variable to store the location type. |
+| gblCurrentLocation | Variable to store the location which is being edited. |
+| gblAddLocationImage | Global variable to store the image added as part of a location.
 
-3.  **gblLocation** – global variable to store the location which is in context.
+### Execution details when editing location types
 
-4.  **gblLocType** – global variable to store the location type
+1. The location type can be edited by selecting *Edit** Locations screen.
 
-5.  **gblCurrentLocation** –variable to store the location which is being
-    edited.
+1. Selecting **Edit** updates the value of the **gblEditLocation** variable to true which in turn disables the **galAreas** gallery and hide the **galInspections** gallery.
 
-6.  **gblAddLocationImage** – global variable to store the image added as part
-    of a location.
+1. The Title and the Location Type dropdown fields are enabled and can be updated.
 
-##### Detailed steps
+1. Selecting to edit picture allows user to upload a new image.
 
-1.  The location type can be edited by clicking on the Edit button on the
-    Locations screen.
+1. Selecting to manage location type button takes the user to location type section on the Settings screen.
 
-2.  Clicking on the Edit button will update the value of the **gblEditLocation**
-    variable to true which will in turn disable the galAreas gallery and hide
-    the **galInspections** gallery.
+1. **Save** is only enabled if fields are updated. Selecting **Save** updates the details to the Area Inspection Locations table.
 
-3.  The title and the Location Type dropdown fields are enabled and can be
-    updated.
+1. The details are updated to the Area Inspection Locations table. The **gblCurrentLocation** variable is set to the location being edited.
 
-4.  Clicking on the Edit picture button will allow the user to upload a new
-    image.
+1. The value of **gblAreaChanged** variable is updated to true and the Area Inspection Locations table is refreshed.
 
-5.  Clicking on the Manage vehicle type button will navigate the user to
-    Location type section on the Settings screen.
+1. The location type of the edited location is stored in the **gblLocType** variable.
 
-6.  The Save button will be enabled only if fields are updated, clicking on
-    which will update the details to the Area Inspection Locations table.
+## Review submitted inspections
 
-7.  The details are updated to the Area Inspection Locations table. The
-    gblCurrentLocation variable is set to the location which is being edited.
+This section explains collections, variables, and execution details when [reviewing submitted inspections](inspection.md#review-submitted-inspections).
 
-8.  The value of **gblAreaChanged** is updated to true and the Area Inspection
-    Locations table is refreshed.
+### Collections used when reviewing submitted inspections
 
-9.  The location type of the edited location is stored in the **gblLocType**
-    variable**.**
+The following collections are used when deleting inspections.
 
-##### Screens
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
 
-![](media/inspection-architecture/87f74c2c338201dfc89139ddb4ea4935.png)
+### Variables used when reviewing submitted inspections
 
-![](media/inspection-architecture/766a6d7dc169f3bd6bcd0cefb0d6198f.png)
+The following variables are used when deleting inspections.
 
-#### <br>Reviewing an Inspection 
+| Variable name | Description |
+| - | - |
+| gblViewInspection | Global variable to denote if a location is being edited. |
+| gblInspection | Global variable for the inspection record in the current context. |
+| gblParamTenantId | Global variable to set the tenant ID from parameters. |
+| gblParamLocaleId | Global variable to set the locale ID from parameters. |
+| gblParamTeamId | Global variable to set the Planner Group ID from parameters. |
+| gblSettingPlannerPlanId | Global variable to get the Planner ID from the record settings. |
+| gblCurrentLocation | Global variable to store the current location being reviewed. |
+| gblLocation | Global variable that denotes the location in the current context. |
 
-##### Collections involved
+### Execution details when reviewing submitted inspections
 
-1.  **colInspections** – Used to collect Inspection records
+1. The performed inspections can be reviewed by selecting the required record in the **galInspections** gallery.
 
-##### Variables involved
+1. Selecting an inspection record sets the value of the **gblViewInspection** variable to true which controls the visibility of the **galIssues** and **galNoIssues** galleries.
 
-1.  **gblViewInspection**– global variable to denote if a location is being
-    edited.
+1. The items property of both the galleries are filtered based on the **gblInspection** value.
 
-2.  **gblInspection** – global variable which denotes the Inspection record
-    which is in context.
+    1. **galIssues** gallery for inspections where the outcome is an issue.
 
-3.  **gblParamTenantId –** global variable to set the Tenant ID from parameters
+    1. **galNoIssues** gallery for inspections where the Outcome is OK or N/A.
 
-4.  **gblParamLocaleId-** global variable to set the Locale ID from parameters
+1. The users can see the notes, attachments and tasks created while performing the inspection.
 
-5.  **gblParamTeamId** – global variable to set the Planner Group ID from
-    parameters
+1. Selecting the task launches Planner with the selected task open based on the values of the Tenant, Locale, Team and Plan ID collected during the start of the app.
 
-6.  **gblSettingPlannerPlanId** – global variable to get the planner ID from the
-    record settings.
+1. The "Review status" field has Pending Review, Pending Action, Closed and Incomplete as choices. Changing the value will update the Area Inscriptions table and the **colInspections** collection with the selected status and saves the record.
 
-7.  **gblCurrentLocation –** global variable to store the current location being
-    reviewed
-
-8.  **gblLocation –** global variable that denotes the location in context
-
-##### Detailed steps
-
-1.  The performed Inspections can be reviewed by selecting the required record
-    in the **galInspections** gallery.
-
-2.  Clicking on an Inspection record will set the value of **gblViewInspection**
-    to true which controls the visibility of the **galIssues** and
-    **galNoIssues** galleries.
-
-3.  The items property of both the galleries are filtered based on the
-    **gblInspection** value
-
-    1.  For **galIssues** - Inspections where the Outcome is Issue
-
-    2.  For **galNoIssues -** Inspections where the Outcome is OK or N/A
-
-4.  The users can see the notes, Attachments and tasks created while performing
-    the Inspection.
-
-5.  Clicking on the Task will launch planner with the selected task open based
-    on the values of the Tenant, Locale, Team and Plan ID collected during the
-    start of the app.
-
-6.  The Review status field has Pending Review, Pending Action, Closed and
-    Incomplete as choices. Changing the value will update the Area Inscriptions
-    table and the **colInspections** collection with the selected status and
-    saves the record.
-
-7.  Clicking on the back button will update the **gblCurrentLocation** and
-    **gblLocation** variables to the location in context thus taking the user
-    back to the Location details view.
-
-##### Screens
-
-![](media/inspection-architecture/bf81c994ed1b2e4fbfb6e51c3534a302.png)
+1. Selecting **Back** updates the **gblCurrentLocation** and **gblLocation** variables to the location in context taking the user back to the location details view.
 
 ### Insights Screen<br>
 
