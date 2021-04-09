@@ -317,53 +317,42 @@ Variables used when displaying the list of locations:
 
 This section explains the process of displaying the list of locations.
 
-##### Collections involved
+#### Collections used when displaying the list of inspections based on the selected location
 
-1.  **colInspections** – Used to collect Inspection records
+Collections used when displaying the list of inspections based on the selected location:
 
-##### Variables involved
+| Collection name | Description |
+| - | - |
+| colInspections | Used to collect inspection records. |
 
-1.  **locInspectionSortBy** – local variable to denote on what field should the
-    inspection records be sorted
+#### Variables used when displaying the list of inspections based on the selected location
 
-2.  **locInspectionSortOrder** – local variable used to control the sorting
-    order of the Inspection records.
+Variables used when displaying the list of inspections based on the selected location:
 
-3.  gblLocation – global variable to store the selected location
+| Variable name | Description |
+| - | - |
+| locInspectionSortBy | Local variable to denote on what field should the inspection records be sorted. |
+| locInspectionSortOrder | Local variable used to control the sorting order of the inspection records. |
+| gblLocation | Global variable to store the selected location. |
+| gblInspection | Global variable to store the inspection record. |
 
-4.  gblInspection – global variable
+#### Execution details when displaying the list of inspections based on the selected location
 
-##### Detailed steps
+1. The title and the primary image of the location is displayed using the **gblLocation** variable.
 
-1.  The title and the primary image of the location is displayed using the
-    **gblLocation** variable.
+1. Location is displayed under the grouped location header using the **gblLocation** variable, if location is part of the group.
 
-2.  In case the location is part of a group, the same is displayed under the
-    grouped location header using the **gblLocation** variable.
+1. The **galInspections** gallery displays the list of inspections collected in the **colInspections** collection based on the selected location.
 
-3.  Based the selected location, the **galInspections** gallery displays the
-    list of Inspections collected in the **colInspections** collection.
+1. The Inspection Form name, Submitted By, Number of ays since the inspection was submitted, Status and the number of issues columns are shown.
 
-4.  The Inspection Form name, submitted by, number of Days since the inspection
-    was submitted, status and the number of Issues are the columns displayed as
-    part of the gallery.
+1. **locInspectionSortBy** variable is used to control the sorting of the columns.
 
-5.  The **locInspectionSortBy** variable is used to control the sorting of the
-    columns.
+1. The **gblInspection** variable is filtered for the number of inspections where the issue outcome is as issue.
 
-6.  The **gblInspection** variable is filtered for the number of inspections
-    where the issue outcome is as issue.
+1. Selecting any of the column headings toggles the value of the **locInspectionSortOrder** variable which ends up sorting the values.
 
-7.  Clicking on any of the column headings toggle the value of the
-    **locInspectionSortOrder** variable which in turn sorts the values**.**
-
-8.  Clicking on the checkbox next to the Inspection name is used to select it
-    for deletion. Clicking on the checkbox next on the Inspections header will
-    select all the child inspection records.
-
-Screens
-
-![](media/inspection-architecture/e9156a2906ffb25c65fb9d1430f93d30.png)
+1. Checkbox next to the inspection name is used to select the inspection for deletion. Selecting the checkbox next to the inspection header selects all inspection records.
 
 #### Deleting Inspections
 
