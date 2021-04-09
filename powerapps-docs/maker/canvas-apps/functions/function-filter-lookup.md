@@ -88,15 +88,19 @@ The following example uses the **Account** table in Microsoft Dataverse as data 
 1. (Optional) In the **Layout** list, select different options.
 1. On the **Insert** tab, select **Input** and then select **Combo box**. Repeat the step to add two more combo box controls.
 1. For each combo box control, on the **Properties** tab of the right-hand pane, open **Data Source** and then select **Accounts**. Select **Edit** next to **Fields** option and then select the **Primary text** and **SearchField** values. The **Primary text** should be the choices column you want to add to the combo box. Repeat the step for other two combo box controls.
+
+    ![Setting combo box values](media/function-filter-lookup/setting-combobox-values.png "Setting combo box values")
+
 1. Now select **Gallery** control and set the **Items** property to the following formula:
 
    ```
    Filter(Accounts, 
-    'Industry' = ComboBox3.Selected.Industry||IsBlank(ComboBox3.Selected.Industry), 'Relationship Type' = ComboBox2.Selected.'Relationship Type'||IsBlank(ComboBox2.Selected.'Relationship Type'), 
+    'Industry' = ComboBox3.Selected.Industry||IsBlank(ComboBox3.Selected.Industry), 
+    'Relationship Type' = ComboBox2.Selected.'Relationship Type'||IsBlank(ComboBox2.Selected.'Relationship Type'), 
     'Preferred Method of Contact' = ComboBox1.Selected.'Preferred Method of Contact'||IsBlank(ComboBox1.Selected.'Preferred Method of Contact'))
    ```
 
-    ![Accounts data source](media/function-filter-lookup/accounts-filter.png "Accounts data source")
+    ![Accounts data source](media/function-filter-lookup/accounts-filter.gif "Accounts data source")
 
 ### Search user experience
 
