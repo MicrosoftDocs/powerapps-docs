@@ -1,6 +1,6 @@
 ---
 title: Utility | Microsoft Docs
-description: 
+description: Provides a container for useful methods.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
