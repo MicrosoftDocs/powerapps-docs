@@ -160,10 +160,9 @@ Collections used during app OnStart:
 | colUserSettings | Collection of the user settings from Area Inspection User Settings table |
 | colLocationTypeIcons | Collection of location type icons used in the app. |
 | colLocConfig | Collection used to set the name and type of the main and the sub sections. |
-| colLocTypeSettings –** Used to collect the different setting types
-    available in the app.
+| colLocTypeSettings | Used to collect the different setting types available in the app.
 | colInspections | Collection to store area inspections. |
-|colPlannerBuckets | Collection of Planner buckets. |
+| colPlannerBuckets | Collection of Planner buckets. |
 | colPlannerTasks | Collection of Planner buckets. |
 | colCharsWidth | Collection of widths for each character used for auto width labels. |
 
