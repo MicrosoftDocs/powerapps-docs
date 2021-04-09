@@ -48,9 +48,12 @@ A customer can request that data not be shared with the provider, in which case 
 
 To access the public preview of ISV Studio, navigate your browser to [https://aka.ms/ISVStudio](https://aka.ms/ISVStudio/).
 
-## Pre-requisites
+## Pre-requisites for Microsoft Dataverse
 
-- The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
+The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
+
+## Pre-requisites for Dynamics 365 Finance and Operations
+
 - For Dynamics 365 Finance and Operations, update the `SolutionID` in the descriptors with the `ProductId` of their offer in Partner Center as shown below. The `ProductId` of their offer can be found in the URL in Partner Center.
 - Ask customers to install the latest solution with the above. They need to be on version `10.0.16` or above to see the telemetry feature in ISV Studio.
 
