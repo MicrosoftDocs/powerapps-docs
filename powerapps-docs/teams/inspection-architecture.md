@@ -698,7 +698,7 @@ The following collections are used when editing an inspection form.
 
 The following variables are used when editing an inspection form.
 
-| Collection name | Description |
+| Variable name | Description |
 | - | - |
 | gblEditForm | Variable to indicate that the inspection form is being edited. |
 | gblAreaChanged | Global variable to check whether location has been edited. |
@@ -718,40 +718,37 @@ The following variables are used when editing an inspection form.
 
 1. The removed inspection steps are stored in the **colChecklistStepsRemoveTemp** collection, and the **gblCountSteps** variable is used to store the number of checklist steps in the selected inspection form. The changed images are updated in the **colChecklistStepsImage** collection.
 
-#### Duplicating an Inspection Form 
+#### Duplicating an inspection form
 
-##### Collections involved
+An inspection form can be duplicated using the **Duplicate** button.
 
-1.  **colPatchSteps1**–
+##### Collections used when duplicating an inspection form
 
-2.  colChecklistStepsOutput1 –
+The following collections are used when duplicating an inspection form.
 
-3.  colChecklistSteps – used to collect the checklist steps of an Inspection
-    form.
+| Collection name | Description |
+| - | - |
+| colPatchSteps1 | Used to store the saved inspection form step details. |
+| colChecklistStepsOutput1 | Used to update the details of inspection steps. |
+| colChecklistSteps | Used to collect the checklist steps of an inspection form. |
 
-##### Variables involved
+##### Variables used when duplicating an inspection form
 
-1.  **gblNewForm** – global variable to indicate that a Inspection form is being
-    created.
+The following variables are used when duplicating an inspection form.
 
-2.  **gblStepChanged –** global variable to indicate that the checklist step has
-    been updated
-
-3.  **gblImageChanged -** global variable to indicate that the cover image has
-    been updated
+| Variable name | Description |
+| - | - |
+| gblNewForm | Global variable to indicate that an inspection form is being created. |
+| gblStepChanged | Global variable to indicate that the checklist step has been updated. |
+| gblImageChanged | Global variable to indicate that the cover image has been updated. |
 
 ##### Detailed steps
 
-1.  An existing Inspection form can be duplicated by clicking on the Duplicate
-    button while it is being edited.
+1. An existing inspection form can be duplicated by selecting **Duplicate** button while it is being edited.
 
-2.  The duplicate button will be disabled if either the value of
-    **gblStepChanged** or **gblStepChanged** is true indicating that the
-    inspection record cannot be duplicated if any of the steps or image is
-    updated and not saved.
+1. The duplicate button is disabled if either the value of **gblStepChanged** or **gblStepChanged** variables is true indicating that the inspection record cannot be duplicated if any of the steps, or the image is updated and not saved.
 
-3.  Clicking in which will rename the columns in the
-    **colChecklistStepsOutput1** and store the details in **colPatchSteps1**
+1. When duplicating, columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1**
     collection.
 
 4.  The title of the newly created inspection form would be appended with (COPY)
