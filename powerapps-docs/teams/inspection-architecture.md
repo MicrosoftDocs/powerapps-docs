@@ -785,52 +785,39 @@ The following variables are used when deleting an inspection form.
 
 1. Checking **I understand** enables the **Delete** button, which when selected, sets the **gblDisplayWarning** value to false hiding the delete dialog. And removes the deleted inspection form from the Area Inspection Checklists table. The collection **colChecklistSteps** is also cleared.
 
-### About Screen 
+### About screen
 
-#### Collections involved
+This section explains collections, and variables used, and execution details of the settings screen.
 
-None
+#### About screen collections
 
-#### Variables involved
+The about screen doesn't use any collections.
 
-**None**  
+#### About screen variables
 
+The about screen doesn't use any variables.
 
-#### Detailed steps
+#### About screen execution details
 
-1.  Clicking the “Customize using Power Apps button” on the **conHeader_About**
-    container opens Power Apps tool link in Microsoft teams.
+1. **Customize using Power Apps** button on the **conHeader_About** container opens Power Apps in Microsoft Teams.
 
-2.  There are help links available in the **galAbout_HelpLinks** gallery.
+1. **galAbout_HelpLinks** gallery stores the help links.
 
--   Clicking on the “Learn how to customize this app” button navigates to an
-    external link which explains on how to make customizations on the app.
+1. **Learn how to customize this app** button takes you to an external link that explains on how to make customizations on the app.
 
--   Clicking on the “Send us your ideas” button navigates to an external link
-    where ideas can be posted for the Milestones app.
+1. **Send us your ideas** button takes you to an external link where ideas can be posted for the app.
 
--   Clicking on the “Engage with community” button navigates to the Power Apps
-    Community.
+1. **Engage with community** button takes you to the Power Apps Community page.
 
-1.  The **conAbout_AppVideo** container contains the video link which provides
-    an overview of the Milestones app.
+1. **conAbout_AppVideo** container contains the video link that provides an overview of the app.
 
-2.  The gallery **galAbout_OtherApps** contains the links to other Microsoft
-    apps.
+1. **galAbout_OtherApps** gallery contains the links to other Power Apps in Teams store.
 
--   Clicking on the “View app” button navigates to the app page in the Microsoft
-    Teams app store.
+1. **View app** button takes you to the app page in the Microsoft Teams app store.
 
--   Clicking on the “App Overview” button navigates to the App overview video on
-    YouTube.
+1. **App Overview** button takes you to the app overview video.
 
-1.  The **conAbout_Version** gives information about the app versioning
-
-*Screen*  
-  
-
-
-![](media/inspection-architecture/3e676e7891834bf5de0bad2a3187e4a4.png)
+1. **conAbout_Version** gives information about the app versioning.
 
 ### Settings Screen 
 
