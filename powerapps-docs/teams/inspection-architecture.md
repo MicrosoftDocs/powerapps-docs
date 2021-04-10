@@ -246,19 +246,19 @@ Variables used during app OnStart:
 
 1. The size and font of each character used for auto width of header buttons are collected in the **colCharsWidth** collection.
 
-## Locations screen
+### Locations screen
 
 This section explains app [locations screen](inspection.md#add-locations) collections, variables, and execution details. Locations screen includes the first run experience, the list of locations on the left-pane, and the list of inspections based on the location.
 
-### Displaying the first run experience
+#### Displaying the first run experience
 
 This section explains the first run experience for locations.
 
-#### First run experience collections
+##### First run experience collections
 
 First run experience for locations doesn't use any variables.
 
-#### First run experience variables
+##### First run experience variables
 
 Variables used during the first run experience for locations:
 
@@ -271,17 +271,17 @@ Variables used during the first run experience for locations:
 | locShowFirstRun | Local variable to indicate if the current run of the app is the first run for the user. |
 | locShowPowerAppsPrompt | Local variable to indicate either to show or hide the splash screen. |
 
-#### First run execution details
+##### First run execution details
 
 1. On visible of project screen a dialog pop-up appears if either of the variables&mdash;**locShowFirstRun** or **locShowPowerAppsPrompt**, are true. If not, the app proceeds with loading the project data.
 
 1. **locShowFirstRun** is set to true/false depending on the project settings records.
 
-### Displaying the list of locations
+#### Displaying the list of locations
 
 This section explains the process of displaying the list of locations.
 
-#### Collections used when displaying the list of locations
+##### Collections used when displaying the list of locations
 
 Collections used when displaying the list of locations:
 
@@ -289,7 +289,7 @@ Collections used when displaying the list of locations:
 | - | - |
 | colInspections | Used to collect inspection records. |
 
-#### Variables used when displaying the list of locations
+##### Variables used when displaying the list of locations
 
 Variables used when displaying the list of locations:
 
@@ -298,7 +298,7 @@ Variables used when displaying the list of locations:
 | locAreaSortOrder | Local variable used to control the sorting order of locations. |
 | locInspectionSortBy | Local variable to denote on what field are inspection records sorted by. |
 
-#### Execution details when displaying the list of locations
+##### Execution details when displaying the list of locations
 
 1. The list of locations in the Area Inspection Locations table are displayed in the **galAreas** gallery along with the location types.
 
@@ -316,7 +316,7 @@ Variables used when displaying the list of locations:
 
 This section explains the process of displaying the list of locations.
 
-#### Collections used when displaying the list of inspections based on the selected location
+##### Collections used when displaying the list of inspections based on the selected location
 
 Collections used when displaying the list of inspections based on the selected location:
 
@@ -324,7 +324,7 @@ Collections used when displaying the list of inspections based on the selected l
 | - | - |
 | colInspections | Used to collect inspection records. |
 
-#### Variables used when displaying the list of inspections based on the selected location
+##### Variables used when displaying the list of inspections based on the selected location
 
 Variables used when displaying the list of inspections based on the selected location:
 
@@ -335,7 +335,7 @@ Variables used when displaying the list of inspections based on the selected loc
 | gblLocation | Global variable to store the selected location. |
 | gblInspection | Global variable to store the inspection record. |
 
-#### Execution details when displaying the list of inspections based on the selected location
+##### Execution details when displaying the list of inspections based on the selected location
 
 1. The title and the primary image of the location is displayed using the **gblLocation** variable.
 
@@ -679,59 +679,44 @@ The following variables are used when creating an inspection form.
 
 1. Selecting **Cancel** sets the **gblStepChanged**, **gblImageChanged**, **gblAddForm**, and **gblEditForm** variables to false and navigate back to the inspection form view with the first record in the **galForms** gallery being selected.
 
-#### Editing an Inspection Form 
+#### Editing an inspection form
 
-##### Collections involved
+Inspection forms can be edited by selecting the edit option on the inspection form screen.
 
-1.  colChecklistStepsRemoveTemp –
+##### Collections used when editing an inspection form
 
-2.  **colChecklistStepsOutput1 –**
+The following collections are used when editing an inspection form.
 
-3.  **colPatchSteps1 –**
+| Collection name | Description |
+| - | - |
+| colChecklistStepsRemoveTemp | Used to store removed inspection steps. |
+| colChecklistStepsOutput1 | Used to update the details of inspection steps. |
+| colPatchSteps1 | Used to store the saved inspection form step details. |
+| colChecklistStepsImage | Used to collect the cover image of a checklist step. 
 
-4.  **colChecklistStepsImage – used to collect the cover image of a checklist
-    step**
+##### Variables used when editing an inspection form
 
-##### Variables involved
+The following variables are used when editing an inspection form.
 
-1.  **gblEditForm** – variable to indicate that the Inspection form can is being
-    edited
+| Collection name | Description |
+| - | - |
+| gblEditForm | Variable to indicate that the inspection form is being edited. |
+| gblAreaChanged | Global variable to check whether location has been edited. |
+| gblCountSteps | Global variable to count the number of checklist steps. |
 
-2.  **gblAreaChanged –** global variable to check whether a Location (Area) is
-    edited
+##### Execution details while editing an inspection form
 
-3.  **gblCountSteps-** global variable to count the number of checklist steps
+1. An existing inspection form can be edited by selecting **Edit** on the inspection forms screen.
 
-##### Detailed steps
+1. Selecting **Edit** updates the value of the **gblEditForm** variable to true which in turn disables the **galForms** gallery.
 
-1.  An existing Inspection form can be edited by clicking on the Edit button on
-    the Inspection forms screen.
+1. The value of the **gblEditForm** variable set to true indicates that the inspection form is editable, and the user can update all the fields.
 
-2.  Clicking on the Edit button will update the value of the **gblEditForm**
-    variable to true which will in turn disable the **galForms** gallery.
+1. The users can update the title, location type, duplicate, delete and rearrange the checklist steps.
 
-3.  The value of the **gblEditForm** as true indicates that the Inspection form
-    is editable and the User can update all the fields.
+1. Once the required changes are made, selecting **Save** renames the columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1** collection. The modified checklist steps are updated in the Area Inspection Checklist Steps table. Inspection form is updated to the Area Inspections Checklists table.
 
-4.  The users can update the title, location type Duplicate, Delete and
-    rearrange the Checklist steps.
-
-5.  Once the required changes are made clicking on the save button will rename
-    the columns in the **colChecklistStepsOutput1** and store the details in
-    **colPatchSteps1** collection and the modified checklist steps are updated
-    in the Area Inspection Checklist Steps table Inspection form is updated to
-    the Area Inspections Checklists table.
-
-6.  The removed inspection steps are stored in the **colChecklistStepsRemoveTemp
-    collection** and the **gblCountSteps** is used to store the number of
-    checklist steps in the selected inspection form and the changed images are
-    updated in the **colChecklistStepsImage** collection.
-
-Screens
-
-![](media/inspection-architecture/8432472d2ede0af3b7731a7520e2e032.png)
-
-![](media/inspection-architecture/9b189226021b55f08331c2d5e5422727.png)
+1. The removed inspection steps are stored in the **colChecklistStepsRemoveTemp** collection, and the **gblCountSteps** variable is used to store the number of checklist steps in the selected inspection form. The changed images are updated in the **colChecklistStepsImage** collection.
 
 #### Duplicating an Inspection Form 
 
