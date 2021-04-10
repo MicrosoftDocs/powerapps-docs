@@ -751,21 +751,11 @@ The following variables are used when duplicating an inspection form.
 1. When duplicating, columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1**
     collection.
 
-4.  The title of the newly created inspection form would be appended with (COPY)
-    which is handled by the **gblNewForm** variable and the location type values
-    are blank.
+1. The title of the newly created inspection form is appended with *(COPY)* which is handled by the **gblNewForm** variable and the location type values are blank.
 
-5.  The details in the **colChecklistSteps, colChecklistStepsOutput1 and
-    colChecklistStepsImage** collections are copied to the duplicated Inspection
-    form.
+1. The details in the **colChecklistSteps**, **colChecklistStepsOutput1**, and ""colChecklistStepsImage** collections are copied to the duplicated inspection form.
 
-6.  Users can make required changes and save the inspection form.
-
-Screens
-
-![](media/inspection-architecture/8432472d2ede0af3b7731a7520e2e032.png)
-
-![](media/inspection-architecture/7c8599a7ac5b975b727d35361b5132c7.png)
+1. Users can make required changes and save the inspection form.
 
 #### Deleting an Inspection Form 
 
