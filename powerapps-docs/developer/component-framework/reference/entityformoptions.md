@@ -1,6 +1,6 @@
 ---
-title: EntityFormOptions | Microsoft Docs
-description: 
+title: EntityFormOptions in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for EntityFormOptions in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -14,7 +14,7 @@ ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
 ---
 # EntityFormOptions
 
-Provides access to all the information about the entity forms.
+Provides access to all the information about the table forms.
 
 ## Available for 
 
@@ -24,19 +24,19 @@ Model-driven apps
 
 ### createFromEntity
 
-Designates a record that will provide default values based on mapped attribute value. The lookup object has following properties: entity type, id and name.
+Designates a record that will provide default values based on mapped column value. The lookup object has following properties: table type, id and name.
 
 **Type**: [Entityreference](entityreference.md)
 
 ### entityId
 
-Unique Id of the entity record to display the form for. 
+Unique Id of the table record to display the form for. 
 
 **Type**: `string`
 
 ### entityName
 
-Logical name of the entity to display the form for. 
+Logical name of the table to display the form for. 
 
 **Type**: `string`
 

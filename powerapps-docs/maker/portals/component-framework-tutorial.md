@@ -1,11 +1,11 @@
 ---
-title: A walkthrough with example steps about using sample code component added to a model-driven app form inside portals. | Microsoft Docs
-description: Learn about using sample code component added to a model-driven app form inside portals.
+title: Use code components in portals | Microsoft Docs
+description: A walkthrough with example steps about using sample code component added to a model-driven app form inside portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 04/07/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -15,6 +15,8 @@ contributors:
 ---
 
 # Tutorial: Use code components in portals (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
@@ -26,7 +28,7 @@ web page and interact with the component.
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field) in a model-driven app currently.
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app currently.
 
 ## Prerequisites
 

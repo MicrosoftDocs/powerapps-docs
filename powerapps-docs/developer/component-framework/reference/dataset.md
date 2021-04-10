@@ -1,6 +1,6 @@
 ---
-title: DataSet | Microsoft Docs
-description: 
+title: DataSet in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -34,7 +34,7 @@ This method accept two parameters.
 |Name|Type|Required|Description|
 |------|-----|------|-----|
 |name|`string`|Yes|Column name to be added to the dataset.|
-|entityAlias|`string`|No| Entity alias for which the column name needs to be added.|
+|entityAlias|`string`|No| Table alias for which the column name needs to be added.|
 
 ### columns
 
@@ -62,7 +62,7 @@ The column filtering for the current query.
 
 ### linking
 
-Defines the linked entity information.
+Defines the linked table information.
 
 **Type**: [Linking](linking.md)
 

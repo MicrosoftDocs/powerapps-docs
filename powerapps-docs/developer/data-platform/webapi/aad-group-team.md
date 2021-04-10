@@ -91,7 +91,7 @@ PATCH [Organization URI]/api/data/v9.1/accounts(<account ID>)
 Accept: application/json
 
 { 
-  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<user object ID>)"
 }
 ```
 
@@ -108,7 +108,7 @@ Accept: application/json
   },
   "PrincipalAccess":{
     "Principal":{
-      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<user object ID>)"
     },
     "AccessMask":"ReadAccess"
   }
@@ -122,7 +122,7 @@ Members of an AAD group can query all the security roles that are directly and i
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<group object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
 **Response**
@@ -150,7 +150,7 @@ Members of an AAD group can check their security privileges without being a user
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<group object ID>)
+GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
 **Response**

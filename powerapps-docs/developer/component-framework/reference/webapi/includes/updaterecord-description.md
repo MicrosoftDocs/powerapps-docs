@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 32343c47-29a2-4ca7-9aee-c00cd85f4421
 ---
 
-Updates an entity record.
+Updates a table record.

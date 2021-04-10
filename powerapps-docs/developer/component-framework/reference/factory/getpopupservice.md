@@ -1,6 +1,6 @@
 ---
 title: getPopupService | Microsoft Docs
-description: 
+description: Gets the popup service which helps to create popups and manage popups easily.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
