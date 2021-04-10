@@ -742,14 +742,13 @@ The following variables are used when duplicating an inspection form.
 | gblStepChanged | Global variable to indicate that the checklist step has been updated. |
 | gblImageChanged | Global variable to indicate that the cover image has been updated. |
 
-##### Detailed steps
+##### Execution details while duplicating an inspection form
 
 1. An existing inspection form can be duplicated by selecting **Duplicate** button while it is being edited.
 
 1. The duplicate button is disabled if either the value of **gblStepChanged** or **gblStepChanged** variables is true indicating that the inspection record cannot be duplicated if any of the steps, or the image is updated and not saved.
 
-1. When duplicating, columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1**
-    collection.
+1. When duplicating, columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1** collection.
 
 1. The title of the newly created inspection form is appended with *(COPY)* which is handled by the **gblNewForm** variable and the location type values are blank.
 
@@ -757,40 +756,34 @@ The following variables are used when duplicating an inspection form.
 
 1. Users can make required changes and save the inspection form.
 
-#### Deleting an Inspection Form 
+#### Deleting an inspection form
 
-##### Collections involved
+An inspection form can be duplicated using the **Delete** button.
 
-1.  **colChecklistSteps** - used to collect the checklist steps of an Inspection
-    form.
+##### Collections used when deleting an inspection form
 
-##### Variables involved
+The following collections are used when deleting an inspection form.
 
-1.  **gblWarningType** – global variable which controls which warning message to
-    be displayed.
+| Collection name | Description |
+| - | - |
+| colChecklistSteps | Used to collect the checklist steps of an inspection form. |
 
-2.  **gblDisplayWarning –** global variable to control visibility of Warning
-    messages
+##### Variables used when deleting an inspection form
 
-##### Detailed steps
+The following variables are used when deleting an inspection form.
 
-1.  An existing Inspection form can be deleted by clicking on the Delete button
-    while it is being edited.
+| Variable name | Description |
+| - | - |
+| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblDisplayWarning | Global variable to control visibility of warning messages. |
 
-2.  Clicking in which will set the **gblWarningType** variable to **formdelete**
-    and the value of **gblDisplayWarning** variable to true thus displaying the
-    **conWarning** container which displays the delete confirmation dialog.
+##### Execution details while deleting an inspection form
 
-3.  Checking the “I Understand button” will enable the Delete button clicking on
-    which set the **gblDisplayWarning** value to false hiding the delete dialog
-    and remove the deleted Inspection form from the Area Inspection Checklists
-    table and the **colChecklistSteps** is also cleared.
+1. An existing inspection form can be deleted by selecting **Delete**.
 
-Screens
+1. Delete action sets the **gblWarningType** variable to "formdelete" and the value of **gblDisplayWarning** variable to true displaying the **conWarning** container which displays the delete confirmation dialog.
 
-![](media/inspection-architecture/ee94cb895a812523b8ea15bac4e120f6.png)
-
-![](media/inspection-architecture/bc31d3f37effd0f5c6b003bf000eda9b.png)
+1. Checking **I understand** enables the **Delete** button, which when selected, sets the **gblDisplayWarning** value to false hiding the delete dialog. And removes the deleted inspection form from the Area Inspection Checklists table. The collection **colChecklistSteps** is also cleared.
 
 ### About Screen 
 
