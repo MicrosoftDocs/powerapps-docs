@@ -787,7 +787,7 @@ The following variables are used when deleting an inspection form.
 
 ### About screen
 
-This section explains collections, and variables used, and execution details of the settings screen.
+This section explains collections, and variables used, and execution details of the about screen.
 
 #### About screen collections
 
@@ -819,54 +819,44 @@ The about screen doesn't use any variables.
 
 1. **conAbout_Version** gives information about the app versioning.
 
-### Settings Screen 
+### Settings screen
 
-#### General Section
+This section explains collections, and variables used, and execution details of the [settings](inspection.md#edit-the-app-configuration) screen.
 
-##### Collections Used
+#### General section
 
->   None
+This section explains details about the general settings section.
 
-##### Variables Uses 
+##### General section collections
 
-1.  **gblParamTeamId** – global variable to set the Planner Group ID from
-    parameters
+The general section in settings screen doesn't use any collections.
 
-2.  **gblLocTypeSetting** –
+##### General section variables
 
-3.  **gblManageLocationTypes**- global variable to denote whether the Location
-    Types are being edited.
+The following variables are used by the general section in settings screen.
 
-4.  **gblSettingTeamId**- global variable to get the Team ID from the record
-    settings.
+| Variable name | Description |
+| - | - |
+| gblParamTeamId | Global variable to set the Planner Group ID from parameters. |
+| gblLocTypeSetting | Global variable to set the location type. |
+| gblManageLocationTypes | Global variable to denote whether the location types are being edited. |
+| gblSettingTeamId | Global variable to get the Team ID from the record settings. |
+| gblRecordSettings | Global variable used to set the Team and Channel Id to the Area Inspection settings table. |
+| gblSettingPlannerPlanId | Global variable to get the Planner ID from the record settings. |
 
-5.  **gblRecordSettings –** global variable used to set the Team and Channel Id
-    to the Area Inspection settings table.
+##### Execution details of general section
 
-6.  **gblSettingPlannerPlanId –** global variable to get the planner ID from the
-    record settings.
+1. The users have the feasibility to update whether only Team owners will be able to add campaigns and select the channel where messages will be posted.
 
-##### Detailed Steps
+1. The list of channels in the dropdown are from the **gblParamTeamId** variable.
 
-1.  The Users have the feasibility to update whether only Team owners will be
-    able to Add Campaigns and select the channel where messages will be posted.
+1. The list of Planner instances in the dropdown are from the **gblSettingTeamId** variable.
 
-2.  The list of channels in the dropdown are from the **gblParamTeamId**
-    variable.
+1. **Save** button is enabled when the dropdown value selected or the Team Owner restricted value is different from the value stored in the variable gblRecordSettings (which is set at app OnStart).
 
-3.  The list of Planner Instances in the dropdown are from the
-    **gblSettingTeamId** variable.
+1. When **Save** is selected, the details are updated in the Area Inspection Settings table. The notification channel and the planner instance details are updated using the **gblSettingPlannerPlanId** variable and takes the user to the locations screen.
 
-4.  The Save button is enabled when the dropdown value selected or the Team
-    Owner restricted value is different from the value stored in the variable
-    gblRecordSettings (which is set on start of the app).
-
-5.  On click of the Save button, the details are updated in the Area Inspection
-    Settings table. The Notification channel and the planner instance details
-    are updated using the **gblSettingPlannerPlanId** variable and will navigate
-    to the Locations Screen.
-
-6.  Clicking on the cancel button takes the user back to the previous screen.
+1. Selecting **Cancel** takes the user back to the previous screen.
 
 ##### Screens
 
