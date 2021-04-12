@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 03/30/2021
+ms.date: 04/12/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -30,7 +30,7 @@ The following sections describe how to work with AAD group teams using the Web A
 
 ## Create an AAD group team
 
-Citizen developers wanting to programatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
+Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
 **Request**
 
@@ -80,11 +80,13 @@ Accept: application/json
 }
 ```
 
-## Assign and share a record to an AAD group member
+## Assign a record to an AAD group member
 
 An administrator can assign a record to an AAD group member.  The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
 
 The example below shows the syntax for assigning an account record.
+
+**Request**
 
 ```http
 PATCH [Organization URI]/api/data/v9.1/accounts(<account ID>)
@@ -95,7 +97,13 @@ Accept: application/json
 }
 ```
 
+## Share a record to an AAD group member
+
+“An administrator or a record owner can share a record to an AAD group member. The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
+
 The example below shows the syntax for sharing an account record.
+
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.1/GrantAccess
