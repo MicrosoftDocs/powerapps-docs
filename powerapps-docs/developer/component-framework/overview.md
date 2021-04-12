@@ -21,8 +21,6 @@ Power Apps component framework empowers professional developers and app makers t
 - Replace a column that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
-
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]
 
 
@@ -30,14 +28,14 @@ Power Apps component framework empowers professional developers and app makers t
 > - Power Apps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Power Apps component framework works only on Unified Interface and not on the web client. 
+> - Power Apps component framework works only on Unified Interface and not on the legacy web client. 
 > - Power Apps component framework doesn't work for on-premises instances. 
 
 ## How is it different from web resources
 
 Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. 
 
-Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](/dynamics365/customer-engagement/customize/solutions-overview) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
+Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
 Code components can be reused many times across different tables and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
 
@@ -67,7 +65,8 @@ With the general availability of the framework, code component developers will b
 [What are code components](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
 
 
 

@@ -91,7 +91,7 @@ PATCH [Organization URI]/api/data/v9.1/accounts(<account ID>)
 Accept: application/json
 
 { 
-  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<user object ID>)"
 }
 ```
 
@@ -108,7 +108,7 @@ Accept: application/json
   },
   "PrincipalAccess":{
     "Principal":{
-      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<AAD group member ID>)"
+      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<user object ID>)"
     },
     "AccessMask":"ReadAccess"
   }
