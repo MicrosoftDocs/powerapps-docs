@@ -5,9 +5,12 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/02/2021
+ms.date: 04/12/2021
 ms.author: jshum
-ms.reviewer: 
+ms.reviewer: tapanm-msft
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 
 # Create your first app in Microsoft Teams
@@ -39,7 +42,7 @@ After installing the Power Apps app from the Teams store:
     
     ![Power Apps](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with collauges within your company that are not part of the Team. More information: [Share broad distribution apps with colleagues](publish-and-share-apps.md#share-broad-distribution-apps-with-colleagues)
+1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Share broad distribution apps with colleagues](publish-and-share-apps.md#share-broad-distribution-apps-with-colleagues)
 
     ![Select a team to create the app](media/select-a-team-for-this-app.png "Select a team to create the app")
 
