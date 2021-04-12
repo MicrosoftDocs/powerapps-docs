@@ -113,7 +113,7 @@ The flip switch is like an on/off switch, providing a choice between two values.
 
 ## Toggle
 
- The toggle control allows users to switch between on/off values, by toggling the button.
+ The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button.
 
 :::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app":::
   
@@ -262,7 +262,7 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 
 ## Timer control
 
-A timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
+The timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
 
 ## Editable grid
 
