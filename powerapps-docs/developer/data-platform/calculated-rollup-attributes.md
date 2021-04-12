@@ -17,16 +17,16 @@ search.app:
 ---
 # Calculated and rollup columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+*Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
 
-*Calculated* and *rollup* column free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
- [Video: Rollup and Calculated columns in Microsoft Dynamics CRM 2015](https://youtu.be/RoahCH1p3T8)  
+ [Video: Rollup and Calculated columns in Microsoft Dataverse](https://youtu.be/RoahCH1p3T8)  
   
 <a name="BKMK_CommonElements"></a>   
 
 ## Common elements and characteristics  
- Calculated and rollup column share some common elements and characteristics, for example:  
+ Calculated and rollup columns share some common elements and characteristics, for example:  
   
 - They’re read-only.  
   
@@ -69,7 +69,7 @@ search.app:
  
  Calculated columns are calculated in real-time when they are retrieved. Calculated columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields).  
   
- Calculated column values are available in the retrieve plug-in pipeline. Post image of table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Table Images](understand-the-data-context.md#table-images)
+ Calculated column values are available in the retrieve plug-in pipeline. Post image of table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Table images](understand-the-data-context.md#table-images)
   
 ### Limitations  
  You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
@@ -186,7 +186,7 @@ search.app:
 ```  
   
 ### See also  
- [Video: Rollup and Calculated columns in Microsoft Dynamics CRM 2015](https://youtu.be/RoahCH1p3T8)   
+ [Video: Rollup and calculated columns in Dataverse](https://youtu.be/RoahCH1p3T8)   
  [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields)   
  [Define rollup columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-rollup-fields)

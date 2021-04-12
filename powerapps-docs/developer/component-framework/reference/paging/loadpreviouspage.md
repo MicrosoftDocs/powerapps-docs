@@ -1,6 +1,6 @@
 ---
 title: loadPreviousPage | Microsoft Docs
-description: 
+description: Request the previous page of results to be loaded.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

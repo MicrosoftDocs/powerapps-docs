@@ -23,11 +23,13 @@ search.app:
 ---
 
 # App usage analytics
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As an ISV, you need data&mdash;like active users or the number of times the solution has been installed&mdash;to measure the success of your application. You can use app usage analytics to get visibility into monthly, daily, and weekly usage data. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!NOTE]
 > A tenant or customer needs to update their apps for you to start seeing usage data.

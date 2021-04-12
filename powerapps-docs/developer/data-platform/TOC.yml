@@ -451,7 +451,5 @@
     href: /dotnet/api/?view=dynamics-deployer-ce-9
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
-  - name: Solution component file reference (SolutionPackager) 
-    href: solution-component-file-reference-solutionpackager.md
   - name: FetchXML schema
     href: fetchxml-schema.md

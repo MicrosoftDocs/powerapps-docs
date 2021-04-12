@@ -1,6 +1,6 @@
 ---
 title: " Localization API component| Microsoft Docs" 
-description: "Implementing localization api component" 
+description: "This sample showcases how localization is done for code components." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing localization API component
 
 This sample showcases how localization is done for code components. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](/dynamics365/customer-engagement/developer/resx-web-resources). You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LocalizationAPI).
 

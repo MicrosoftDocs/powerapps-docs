@@ -1,6 +1,6 @@
 ---
 title: TrackContainerResize | Microsoft Docs
-description: 
+description: Determines the container sizing if the component needs to react.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

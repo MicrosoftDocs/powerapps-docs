@@ -16,4 +16,4 @@ ms.assetid: 6b2e8a67-f90b-42a7-af2b-4b8cbda9d149
 
 ---
 
-Adds a new linked entity relationship with the existing query primary entity.
+Adds a new linked table relationship with the existing query primary table.

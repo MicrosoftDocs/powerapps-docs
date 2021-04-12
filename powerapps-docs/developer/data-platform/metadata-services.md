@@ -18,9 +18,9 @@ search.app:
 
 # Work with table definitions using code
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the table. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read table definitions.
 
-Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the table schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read table definitions.
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Why work with table definitions?
 
@@ -37,7 +37,7 @@ Developing a good working understanding of the table definitions in the system c
 ## Programmatically work with table definitions
 
 For more information about programmatically working with table definitions using:
-- **Web API**: [Use Web API with Dataverse definitions](webapi/use-web-api-metadata.md)
+- **Web API**: [Use Web API with Dataverse table definitions](webapi/use-web-api-metadata.md)
 - **Organization service**: [Use Organization service with Dataverse table definitions](org-service/work-with-metadata.md)
 
 
