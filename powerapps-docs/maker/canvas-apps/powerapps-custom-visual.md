@@ -7,12 +7,15 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/30/2021
-ms.author: pemikkel
+ms.date: 04/12/2021
+ms.author: hahuber
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mikkelsen2000
+  - tapanm-msft
 ---
 
 # Power Apps visual for Power BI
