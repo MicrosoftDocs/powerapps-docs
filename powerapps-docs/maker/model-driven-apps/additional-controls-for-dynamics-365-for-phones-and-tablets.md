@@ -30,26 +30,26 @@ You can use a rich set of additional controls to create a more touch-friendly ex
 
 To use these controls in the form designer:  
   
-1. Select the column or list you want to add the control to.  
+1. Select the column or grid you want to add the control to.  
   
-1. On the Properties tab in the left pane, select **Components**.  
+1. On the **Properties** tab in the left pane, select **Components**.  
   
 1. Select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
-    >  Different controls are available depending on the column or list type. For example, slider controls might only be available for numerical or money columns.  
+    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
   
 1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
 1. Configure the values for each property.  
   
-1.  Select **Done** when you’re done configuring the control.  
+1. Select **Done** when you’re done configuring the control.  
   
 Following are descriptions for each control you can use on forms.  
   
 ## Timeline control
 
-Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
+Provide a timeline of recent, relevant news articles and Twitter tweets for an account. More information: [Set up the timeline control](set-up-timeline-control.md) 
 
 :::image type="content" source="media/timeline-control-example.png" alt-text="Example of the timeline control in a model-driven app":::
   
@@ -263,6 +263,10 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 ## Timer control
 
 A timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
+
+## Editable grid
+
+With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
 
 ## Calendar control V2
 
