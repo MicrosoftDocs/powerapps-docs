@@ -103,6 +103,41 @@ To use an environment variable in a solution cloud flow:
        :::image type="content" source="media/select-environment-variable.png" alt-text="Select an environment variable to add to a cloud flow trigger or action":::
 1. Select the desired environment variable.
 
+## Use environment variables in JavaScript
+
+Environment variables can be used in JavaScript using the [Xrm Client API](/powerapps/developer/model-driven-apps/client-scripting). Below are two samples.
+
+### Using **retrieveRecord**
+If the GUID of the environment variable value is known, use the [retrieveRecord](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrieverecord) method.
+```JavaScript
+Xrm.WebApi.retrieveRecord("environmentvariablevalue", <GUID>, "?$select=value").then(
+    function success(result) {
+        console.log("Environment variable value: " + result.value);
+    },
+    function (error) {
+        console.log(error.message);
+    };
+```
+### Using **retrieveMultipleRecords**
+To retrieve the value by the name of the environment variable, use the [retrieveMultipleRecords](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords) to retrieve all values by the [environmentvariabledefinition](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) schemaname.
+
+```JavaScript
+//generic sample function that retrieves the 1st value by name
+async RetrieveEnvironmentVariableValue function (name) {
+  let results = await Xrm.WebApi.retrieveMultipleRecords("environmentvariabledefinition", `?$filter=schemaname eq '${name}'&$select=environmentvariabledefinitionid&$expand=environmentvariabledefinition_environmentvariablevalue($select=value)`);
+  
+  if (!results.entities || results.entities.length < 1)
+    return null;
+      
+  let variable = results.entities[0];
+    
+  if (!variable.environmentvariabledefinition_environmentvariablevalue || variable.environmentvariabledefinition_environmentvariablevalue.length < 1)
+    return null;
+    
+  return variable.environmentvariabledefinition_environmentvariablevalue[0].value;
+}
+```
+
 ## Enter new values while importing solutions
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
