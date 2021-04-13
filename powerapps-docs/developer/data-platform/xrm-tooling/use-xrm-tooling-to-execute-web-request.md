@@ -26,7 +26,7 @@ search.app:
 
 The <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object is used to perform actions on your Dynamics 365 data such as create, update, retrieve or delete data.
 
-You can now use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest> method to execute a web request against XRM web API.
+You can now use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest(HttpMethod,String,String,Dictionary,String)> method to execute a web request against XRM web API.
 
 The following code sample demonstrates how you can execute a web request using <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest> method. 
 
@@ -67,6 +67,5 @@ using (CrmServiceClient svc = new CrmServiceClient(conn))
            }
 }
 ```
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
