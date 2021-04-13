@@ -8,7 +8,7 @@ metadata:
   ms.date: 02/10/2021
   ms.author: sabinn
   ms.reviewer: matp
-title: Power Apps component framework FAQs
+title: Export to data lake FAQ
 summary: This article provides information on frequently asked questions about exporting Dataverse table data to the Azure data lake.
 sections:
 - name: General
