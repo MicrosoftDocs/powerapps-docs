@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently asked questions about exporting Dataverse table data to Azure Data Lake
+  title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Data Lake
   description: Get answers to frequently asked questions about Power Apps export to Azure Data Lake.
   author: sabinn-msft
   ms.service: powerapps
@@ -9,7 +9,7 @@ metadata:
   ms.author: sabinn
   ms.reviewer: matp
 title: Export to Azure Data Lake FAQ
-summary: This article provides information on frequently asked questions about exporting Dataverse table data to the Azure Data Lake.
+summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to the Azure Data Lake.
 sections:
 - name: General
   questions:
