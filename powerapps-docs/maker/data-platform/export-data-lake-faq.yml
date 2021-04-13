@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently asked questions about exporting Dataverse table data to Azure Data Lake
+  title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Data Lake
   description: Get answers to frequently asked questions about Power Apps export to Azure Data Lake.
   author: sabinn-msft
   ms.service: powerapps
@@ -9,7 +9,7 @@ metadata:
   ms.author: sabinn
   ms.reviewer: matp
 title: Export to Azure Data Lake FAQ
-summary: This article provides information on frequently asked questions about exporting Dataverse table data to the Azure Data Lake.
+summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to the Azure Data Lake.
 sections:
 - name: General
   questions:
@@ -28,8 +28,8 @@ sections:
    - question: What happens when I delete a row?
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
-        - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure data lake. In other words, data is hard deleted from the destination. 
-        - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure data lake.
+        - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
+        - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
    - question: What happens when I add a new table to sync to the data lake?
      answer: |
         It is important to note that export to data lake simultaneously processes a fixed set of tables for initial sync at any given time. When a new table is added to the export to data lake profile, the incremental or delta sync for the existing tables are paused. While the delta messages for existing tables continue to queue, export to data lake won't process any messages from the delta queue until the initial sync for the newly added table is complete. This is true whether you create a new linked lake, a new export to data lake profile, or add a table to an existing profile. For new or existing profiles, we recommend that you add no more than 5 tables to sync to the data lake at a time. Adding more tables won't expedite the sync process. While initial sync for the newly added tables in ongoing, it will queue any delta changes on those tables into a single queue. Export to data lake won't process these deltas change until the initial sync for all previously added tables is complete.
