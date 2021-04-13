@@ -48,8 +48,8 @@ Moving an app to another Teams channel in the same team requires publishing the 
 
 ### See also
 
-[Use sample apps from Teams store](use-sample-apps-from-teams-store.md)  
-[Manage your apps](manage-your-apps.md)
+[Set permission and share apps with colleagues](set-perms-and-share.md)
 
+[Manage your apps in Teams](manage-your-apps.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
