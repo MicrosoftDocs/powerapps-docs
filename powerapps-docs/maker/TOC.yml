@@ -2097,7 +2097,9 @@
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
-    - name: Publish and share your app
+    - name: Set permission and share your app
+      href: ../teams/set-perms-and-share.md
+    - name: Publish your app
       href: ../teams/publish-and-share-apps.md
     - name: Remove your apps
       href: ../teams/remove-your-apps.md
