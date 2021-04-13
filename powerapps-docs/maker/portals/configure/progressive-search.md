@@ -15,7 +15,7 @@ contributors:
 
 # Progressive search
 
-Finding accurate search results when a portal has several [additional tables](search-additional-entities.md) enabled for search can become difficult. Especially with a complex permissions structure for individual tables and records. Searching for content on such portals may end up with a high number of results while the results count may not match the records count on the results page.
+Finding accurate search results when a portal has several [additional tables](search-additional-entities.md) enabled for search can become difficult. A complex permissions structure for individual tables and records adds to this difficulty. Searching for content on such portals may end up with a high number of results while the results count may not match the records count on the results page.
 
 ## Overview
 
