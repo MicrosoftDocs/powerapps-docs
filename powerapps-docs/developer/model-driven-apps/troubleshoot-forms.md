@@ -82,7 +82,7 @@ When you're troubleshooting issues caused by form handlers, disable the form han
 
 - **&flags=DisableFormHandlers=\<event name\>_\<event index\>**: Disables the form handlers by specifying the event name and the event index value. For example, **DisableFormHandlers=true_0** disables the form handler at index 0. **DisableFormHandlers=onload_2** flag disables the form handler at index 2 of the [OnLoad](./clientapi/reference/events/form-onload.md) event.
 
-- **&flags=DisableFormHandlers=\<event name\>\<starting index\>\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](./clientapi/reference/events/form-onload.md) handlers at indexes from 2 through 5.
+- **&flags=DisableFormHandlers=\<event name\>_\<starting index\>_\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](./clientapi/reference/events/form-onload.md) handlers at indexes from 2 through 5.
 
 ## Disabling form libraries
 
