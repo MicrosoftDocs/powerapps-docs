@@ -23,8 +23,6 @@ search.app:
 ---
 # Configure tracing for XRM tooling
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 You can enable tracing to record data related to process milestones across all components of XRM tooling, such as operation calls, warnings, exceptions, and other significant events. This information can be used for troubleshooting operational and performance issues in your Windows client applications. Tracing in XRM tooling is built on top of [System.Diagnostics.Tracing](/dotnet/api/system.diagnostics.tracing). To enable tracing for an assembly or component, for example Microsoft.Xrm.Tooling.Connector, you must define the following three things for each component in your code or in the application configuration file (*\<AppName>*.exe.config):  
   
 - A trace source  
