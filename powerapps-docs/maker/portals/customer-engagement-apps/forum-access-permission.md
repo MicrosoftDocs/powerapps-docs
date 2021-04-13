@@ -1,6 +1,6 @@
 ---
 title: Manage forum access permissions
-description: Learn about control flow tags available in portal.
+description: Learn about managing forum access permissions in portals.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual

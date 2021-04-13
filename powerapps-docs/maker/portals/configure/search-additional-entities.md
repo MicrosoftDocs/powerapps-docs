@@ -1,5 +1,5 @@
 ---
-title: "Walk-through: Configuring additional tables for global search" 
+title: Configuring additional tables for global search
 description: Learn how global search works for additional tables in a portal.
 author: sandhangitmsft
 ms.service: powerapps
