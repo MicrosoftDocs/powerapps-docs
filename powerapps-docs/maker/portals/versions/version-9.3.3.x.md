@@ -1,6 +1,6 @@
 ---
-title: "Information about Power Apps portals version 9.3.3.x | MicrosoftDocs"
-description: "Learn about the Power Apps portals version 9.3.3.x and the changes."
+title: Power Apps portals version 9.3.3.x
+description: Learn about the Power Apps portals version 9.3.3.x and the changes.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/18/2021
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - dileepsinghmicrosoft
 ---
 
 # Power Apps portals version 9.3.3.x

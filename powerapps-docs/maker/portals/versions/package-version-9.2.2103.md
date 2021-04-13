@@ -1,6 +1,6 @@
 ---
-title: "Information about the Starter Portal package version 9.2.2103 | MicrosoftDocs"
-description: "Learn about the Starter Portal package version 9.2.2103 and the changes."
+title: Starter Portal package version 9.2.2103.x
+description: Learn about the Starter Portal package version 9.2.2103 and the changes.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 04/05/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Starter Portal package version 9.2.2103.x

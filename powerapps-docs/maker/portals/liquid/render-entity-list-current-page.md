@@ -1,6 +1,6 @@
 ---
-title: "Render the list associated with the current page in a portal | MicrosoftDocs"
-description: "Sample code to render the list associated with the current page in a portal."
+title: Render the list associated with the current page
+description: Sample code to render the list associated with the current page in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 06/04/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Render the list associated with the current page

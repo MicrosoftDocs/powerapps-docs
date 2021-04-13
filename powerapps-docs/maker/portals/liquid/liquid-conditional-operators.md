@@ -1,6 +1,6 @@
 ---
-title: "Use Liquid conditional operators for a portal | MicrosoftDocs"
-description: "Learn about the available liquid conditional operators in a portal."
+title: Available Liquid conditional operators
+description: Learn about the available liquid conditional operators in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/07/2019
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid conditional operators

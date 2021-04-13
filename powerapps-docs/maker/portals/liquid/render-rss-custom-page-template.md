@@ -1,6 +1,6 @@
 ---
-title: "Render an RSS feed using custom page template for a portal | MicrosoftDocs"
-description: "Instructions to create a custom page template and use it to render an RSS feed."
+title: Create a custom page template to render an RSS feed
+description: Learn how to create a custom page template and use it to render an RSS feed.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,9 +8,13 @@ ms.custom:
 ms.date: 10/07/2019
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Create a custom page template to render an RSS feed
+
 In this example, we'll create a custom page template to render an [RSS feed](https://en.wikipedia.org/wiki/RSS) of news articles, using Liquid and a Web Template Page Template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
 
 ## Step 1: Create a new Power Apps view

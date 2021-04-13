@@ -1,6 +1,6 @@
 ---
-title: "Use control flow tags for a portal | MicrosoftDocs"
-description: "Learn about control flow tags available in portal."
+title: Control flow tags
+description: Learn about control flow tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/07/2019
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Control flow tags

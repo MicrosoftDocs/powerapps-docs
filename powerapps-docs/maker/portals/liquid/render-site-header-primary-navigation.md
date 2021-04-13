@@ -1,6 +1,6 @@
 ---
-title: "Render a website header and primary navigation bar in a portal | MicrosoftDocs"
-description: "Instructions and sample code to render a website header and primary navigation bar on a portal."
+title: Render a website header and primary navigation bar
+description: Learn about and sample code to render a website header and primary navigation bar on a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/07/2019
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Render a website header and primary navigation bar

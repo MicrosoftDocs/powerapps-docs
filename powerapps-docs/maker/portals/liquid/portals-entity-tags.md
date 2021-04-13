@@ -1,6 +1,6 @@
 ---
-title: "Use Power Apps entity tags for a portal | MicrosoftDocs"
-description: "Learn about Power Apps entity tags available in portal."
+title: Dataverse entity tags
+description: Learn about Power Apps entity tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 04/07/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Dataverse entity tags
