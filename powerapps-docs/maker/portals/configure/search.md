@@ -34,7 +34,7 @@ In global search, the better the match, the higher it appears in the results. A 
 
 The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
 
-## Entities searchable in portal global search
+## Tables searchable in portal global search
 
 By default, the following tables can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each table in the list has its default set of attributes indexed as listed here:
 - Knowledge Article
