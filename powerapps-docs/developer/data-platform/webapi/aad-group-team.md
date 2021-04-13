@@ -35,7 +35,7 @@ Citizen developers wanting to programatically create a Microsoft Dataverse AAD g
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/teams
+POST [Organization URI]/api/data/v9.0/teams
 Accept: application/json
 
 {
@@ -57,11 +57,11 @@ An administrator can assign a security role to an AAD group team after the AAD g
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/teams(azureactivedirectoryobjectid=<group team ID>,membershiptype=0)/teamroles_association/$ref
+POST [Organization URI]/api/data/v9.0/teams(azureactivedirectoryobjectid=<group team ID>,membershiptype=0)/teamroles_association/$ref
 Accept: application/json
 
 { 
-  "@odata.id":"[Organization URI]/api/data/v9.1/roles(<role ID>)"
+  "@odata.id":"[Organization URI]/api/data/v9.0/roles(<role ID>)"
 }
 ```
 
@@ -72,11 +72,11 @@ An administrator can assign a security role to an AAD group user.  The user is a
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/teams(azureactivedirectoryobjectid=<user object ID>,membershiptype=0)/teamroles_association/$ref
+POST [Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)/systemuserroles_association/$ref
 Accept: application/json
 
 { 
-  "@odata.id":"[Organization URI]/api/data/v9.1/roles(<role ID>)"
+  "@odata.id":"[Organization URI]/api/data/v9.0/roles(<role ID>)"
 }
 ```
 
@@ -87,18 +87,18 @@ An administrator can assign a record to an AAD group member.  The AAD group memb
 The example below shows the syntax for assigning an account record.
 
 ```http
-PATCH [Organization URI]/api/data/v9.1/accounts(<account ID>)
+PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
 Accept: application/json
 
 { 
-  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<user object ID>)"
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)"
 }
 ```
 
 The example below shows the syntax for sharing an account record.
 
 ```http
-POST [Organization URI]/api/data/v9.1/GrantAccess
+POST [Organization URI]/api/data/v9.0/GrantAccess
 Accept: application/json
 
 {
@@ -108,7 +108,7 @@ Accept: application/json
   },
   "PrincipalAccess":{
     "Principal":{
-      "@odata.id":"[Organization URI]/api/data/v9.1/systemusers(azureactivedirectoryobjectid=<user object ID>)"
+      "@odata.id":"[Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)"
     },
     "AccessMask":"ReadAccess"
   }
@@ -122,14 +122,14 @@ Members of an AAD group can query all the security roles that are directly and i
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
 **Response**
 
 ```json
 {
-  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.1/$metadata#roles",
+  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.0/$metadata#roles",
   "value": [
     {
       "@odata.etag": "W/\"1649865\"",
@@ -150,14 +150,14 @@ Members of an AAD group can check their security privileges without being a user
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
+GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
 **Response**
 
 ```json
 {
-  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
+  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
   "RolePrivileges": [
     {
       "Depth": "Global",
