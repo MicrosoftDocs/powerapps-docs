@@ -19,11 +19,11 @@ Finding accurate search results when a portal has several [additional tables](se
 
 ## Overview
 
-By default, portals search processes only 1 page for permissions and keywords match. When results span across more than 1 page causing some results being discarded because of permissions or keywords, the pagination gets distorted.
+By default, portals search processes only one page for permissions and keywords match. When results span across more than one page causing some results being discarded because of permissions or keywords, the pagination gets distorted.
 
 Progressive search eliminates the possibility of having a mismatch between the results count, and the number of records returned in search results.
 
-A portal configured with progressive search processes 5 pages for permissions and keywords check, with 50 records for a single search attempt. With this behavior, the search count is shown as **50+** on the first page, instead of the mismatch count between facet and the results.
+A portal configured with progressive search processes five pages for permissions and keywords check, with 50 records for a single search attempt. The search count now shows **50+** on the first page instead of the mismatch count between facet and the results.
 
 ## Configure progressive search
 
@@ -45,7 +45,7 @@ To disable progressive search, set the value of **Search/EnableProgressiveSearch
 
 ## Progressive search with sample data
 
-For example, consider the scenario in an environment with [Northwind Traders sample data](../../canvas-apps/northwind-install.md) and search enabled for [Order Products](search-additional-entities.md).
+For example, consider a portal in an environment with [Northwind Traders sample data](../../canvas-apps/northwind-install.md), having search enabled for [Order Products](search-additional-entities.md).
 
 In this sample portal, consider a total of 68 products in the *Order Products* table. However, a user has permissions to access only 10 products.
 
@@ -55,7 +55,7 @@ When the user searches for products, only 10 results show up, even though the se
 
 This behavior is more prevalent when search results span across multiple pages.
 
-After you enable progressive search on this portal, the search results for the same user, permissions and keyword shows total number of results as 10 instead.
+After you enable progressive search on this portal, the search results for the same user, permissions, and keyword shows total number of results as 10 instead.
 
 ![Search result with matching results count and actual results](media/progressive-search/correct-results-count.png "Search result with matching results count and actual results")
 
@@ -63,9 +63,9 @@ Furthermore, if a user searches for keyword that results in more than 50 results
 
 ![Search result with 50+ results](media/progressive-search/results-count-50plus.png "Search result with 50+ results")
 
-Selecting subsequent pages, such as page 2, shows the count updated to the total number of search results.
+Selecting next pages, such as page 2, shows the count updated to the total number of search results.
 
-![Search result with 50+ results and subsequent page](media/progressive-search/results-count-50plus-subsequent-page.png "Search result with 50+ results and subsequent page")
+![Search result with 50+ results and next page](media/progressive-search/results-count-50plus-subsequent-page.png "Search result with 50+ results and next page")
 
 With progressive search, you can get more accurate search results.
 
