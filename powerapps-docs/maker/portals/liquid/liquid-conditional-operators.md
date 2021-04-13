@@ -46,7 +46,7 @@ You can also test the size of [Liquid types](liquid-types.md), [Liquid types](li
 
 ## Summary
 
-|                           | True | False |
+|   Operator                        | True | False |
 |---------------------------|------|-------|
 | True                      | ×    |       |
 | False                     |      | ×     |
