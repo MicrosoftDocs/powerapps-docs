@@ -181,7 +181,7 @@ The Lucene query syntax supports the following functionality:
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
 > [!NOTE]
-> Wildcards can be used for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
+> Wildcards are used only for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
 
 In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
