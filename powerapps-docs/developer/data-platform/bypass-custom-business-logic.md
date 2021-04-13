@@ -2,7 +2,7 @@
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic" 
 ms.custom: ""
-ms.date: 04/07/2021
+ms.date: 04/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -21,7 +21,7 @@ There are times when you want to be able to perform data operations without havi
 
 One option is to locate and disable the custom plug-ins that contain the business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
 
-The option described here allows you to disable custom plug-ins for specific requests sent by an application configured to use this option.
+The option described here allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
 
 For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
 
@@ -33,7 +33,7 @@ For these kinds of situations, you have the option to disable custom business lo
 
 ## What does this do?
 
-This solution targets the custom business logic that has been applied for your organization. When you send requests that bypass custom business logic, all plug-ins and workflows are disabled except:
+This solution targets the custom synchronous business logic that has been applied for your organization. When you send requests that bypass custom business logic, all synchronous plug-ins and real-time workflows are disabled except:
 
 - Plug-ins which are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
 - Workflows included in a solution where Microsoft is the publisher.
@@ -43,7 +43,7 @@ System plug-ins define the core behaviors for specific entities. Without these p
 Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365 Customer Service, or Dynamics 365 Sales also include critical business logic that cannot be bypassed with this option.
 
 > [!IMPORTANT]
-> You may have purchased and installed solutions from other Independant Software Vendors (ISVs) which include their own business logic. The logic applied by these solutions will be bypassed. You should check with these ISVs before you use this option to understand what impact there may be if you use this option with data that their solutions use.
+> You may have purchased and installed solutions from other Independent Software Vendors (ISVs) which include their own business logic. The synchronous logic applied by these solutions will be bypassed. You should check with these ISVs before you use this option to understand what impact there may be if you use this option with data that their solutions use.
 
 ## How do I use the BypassCustomPluginExecution option?
 
@@ -179,11 +179,15 @@ More information: [Associate and disassociate entities using the Organization Se
 
 ### Does this bypass plug-ins for data operations by Microsoft plug-ins?
 
-No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations are not bypassed. Only those plugins or workflows that apply to the specific operation will be bypassed.
+No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations are not bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation will be bypassed.
 
 ### Can I use this option for data operations I perform within a plug-in?
 
 Yes, But only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest). You cannot use the CrmServiceClient in a plug-in.
+
+### What about asychronous plug-in steps, asynchronous workflows and flows?
+
+Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it is not by passed by this parameter.
 
 ## See also
 
