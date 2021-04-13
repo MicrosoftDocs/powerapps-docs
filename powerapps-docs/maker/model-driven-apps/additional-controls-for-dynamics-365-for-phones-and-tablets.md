@@ -1,6 +1,6 @@
 ---
-title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
-description: "A list of controls available for use with Dynamics 365 for web, phones, and tablets"
+title: "List of controls available for model-driven apps | MicrosoftDocs"
+description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
 ms.date: 03/29/2021
 ms.reviewer: "matp"
@@ -22,36 +22,36 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Custom controls available 
+# List of controls available for model-driven apps
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can use a rich set of additional controls to create a more touch-friendly experience on model-driven apps. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
-To use these controls in the form editor:  
+To use these controls in the form designer:  
   
-1.  Double-click the column or list you want to add the control to.  
+1. Select the column or grid you want to add the control to.  
   
-2.  Select the **Controls** tab.  
+1. On the **Properties** tab in the left pane, select **Components**.  
   
-3.  Select **Add control**.  
-  
-4.  Select the control you want and then select **Add**.  
+1. Select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
-    >  Different controls are available depending on the column or list type. For example, slider controls might only be available for numerical or money columns.  
+    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
   
-5.  Select the devices (web, tablet, and phone) you want the control to appear on. Controls aren’t available for phone header columns.  
+1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
-6.  Configure the values for each property.  
+1. Configure the values for each property.  
   
-7.  Select **OK** when you’re done configuring the control.  
+1. Select **Done** when you’re done configuring the control.  
   
 Following are descriptions for each control you can use on forms.  
   
 ## Timeline control
 
-Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
+Provide a timeline of recent, relevant news articles and Twitter tweets for an account. More information: [Set up the timeline control](set-up-timeline-control.md) 
+
+:::image type="content" source="media/timeline-control-example.png" alt-text="Example of the timeline control in a model-driven app":::
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -98,12 +98,8 @@ The linear slider control lets your users input numerical values by dragging a s
   
 ## Choices
 
- The option set control presents a set of choices for your users to choose from when entering data. Use this control for choices with two or three choices only.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Column|Shows the column that the control is mapped to.|  
-  
+ The choice control presents a set of options for your users to choose from when entering data. More information: [Choices](../data-platform/types-of-fields.md#choices) 
+   
 ## Flip switch
 
 The flip switch is like an on/off switch, providing a choice between two values.  
@@ -117,15 +113,15 @@ The flip switch is like an on/off switch, providing a choice between two values.
 
 ## Toggle
 
- The toggle control allows users to switch between on/off values, by toggling the button.
- 
-|Property|Description|  
-|--------------|-----------------|  
-|Column|Shows the column that the control is mapped to.|  
+ The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button.
+
+:::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app":::
   
 ## Star rating
 
 Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
+
+:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app":::
   
 > [!NOTE]
 >  Be sure to select the **Hide on web** option for this control.  
@@ -191,7 +187,7 @@ The radial knob provides a way for users to enter data by sliding the knob, and 
 |Column|Select the column of the view’s primary table to use as the data source.|  
   
 ## Multimedia  
- You can embed videos to provide a richer customer experience for sales and column people on the go. Use this control to map to a URL column that contains the audio or video link to play in the control.  
+You can embed videos to provide a richer customer experience for sales and column people on the go. Use this control to map to a URL column that contains the audio or video link to play in the control.  
   
 > [!NOTE]
 >  This control is supported on Android versions 4.4 and later.  
@@ -216,6 +212,8 @@ The radial knob provides a way for users to enter data by sliding the knob, and 
   
 ## Number input  
  Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
+
+:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app":::
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -262,13 +260,31 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
 
+## Timer control
+
+The timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
+
+## Editable grid
+
+With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+
 ## Calendar control V2
 
 The Calendar Control V2 control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. More information: [Add the calendar control to tables](add-calendar-control.md)
 
+:::image type="content" source="media/calendar-v2-control-example.png" alt-text="Example of the version 2 calendar control in a model-driven app":::
+
+## Embedded canvas app control
+
+An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app. Display the data you want from a variety of sources right next to data from Microsoft Dataverse. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+
 ## Rich text editor
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
+
+## AI Builder business card reader
+
+Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
 
 ## Form component
 
