@@ -1,5 +1,5 @@
 ---
-title: Add Power BI | Microsoft Docs
+title: Add Power BI
 description: Learn about how to add Power BI component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: "Update the Dynamics 365 instance for your portal | MicrosoftDocs"
-description: "Information about how to update the Dynamics 365 instance for your portal."
+title: Update the Dynamics 365 instance for your portal
+description: Learn how to update the Dynamics 365 instance for your portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Update the Dynamics 365 instance for your portal

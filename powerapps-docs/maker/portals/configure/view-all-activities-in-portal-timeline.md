@@ -1,6 +1,6 @@
 ---
-title: "View activities in a portal timeline | MicrosoftDocs"
-description: "Instructions to view all activities in a portal Timeline."
+title: View activities in a portal timeline
+description: Learn how to view all activities in a portal Timeline.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 06/25/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # View activities in a portal timeline

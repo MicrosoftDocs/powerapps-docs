@@ -1,6 +1,6 @@
 ---
-title: "Migrate portal configuration | MicrosoftDocs"
-description: "Learn how to migrate portal configuration."
+title: Migrate portal configuration
+description: Learn how to migrate portal configuration.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 08/10/2020
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Migrate portal configuration

@@ -1,5 +1,5 @@
 ---
-title: Add form | Microsoft Docs
+title: Add form
 description: Learn about how to add form component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

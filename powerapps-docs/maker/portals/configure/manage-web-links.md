@@ -1,6 +1,6 @@
 ---
-title: "Manage web links | MicrosoftDocs"
-description: "Instructions to manage web links."
+title: Manage web links
+description: Learn how to manage web links.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Manage web links

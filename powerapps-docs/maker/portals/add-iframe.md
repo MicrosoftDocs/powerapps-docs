@@ -1,5 +1,5 @@
 ---
-title: Add IFrame | Microsoft Docs
+title: Add IFrame
 description: Learn about how to add IFrame component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

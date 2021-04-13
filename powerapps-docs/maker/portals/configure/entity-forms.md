@@ -1,6 +1,6 @@
 ---
-title: "Define basic forms | MicrosoftDocs"
-description: "Instructions to create basic forms in a portal."
+title: About basic forms
+description: Learn how to create basic forms in a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 05/07/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # About basic forms

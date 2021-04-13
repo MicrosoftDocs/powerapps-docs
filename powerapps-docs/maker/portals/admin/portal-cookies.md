@@ -1,6 +1,6 @@
 ---
-title: "Cookies in Power Apps portals | MicrosoftDocs"
-description: "Know the cookies Power Apps portals uses."
+title: Cookies in Power Apps portals
+description: Learn about cookies used by Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/23/2020
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Cookies in Power Apps portals

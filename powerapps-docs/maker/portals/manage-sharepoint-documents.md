@@ -1,6 +1,6 @@
 ---
-title: "Manage SharePoint documents | MicrosoftDocs"
-description: "Learn how to manage SharePoint documents in a portal."
+title: Manage SharePoint documents
+description: Learn how to manage SharePoint documents in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual

@@ -1,13 +1,16 @@
 ---
-title: "Manage knowledge articles using content access levels for portals | MicrosoftDocs"
-description: "Instructions to manage knowledge articles by using content access levels in a portal."
+title: Manage knowledge articles by using content access levels
+description: Learn how to manage knowledge articles by using content access levels in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage knowledge articles by using content access levels

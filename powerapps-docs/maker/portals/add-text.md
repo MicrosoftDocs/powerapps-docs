@@ -1,5 +1,5 @@
 ---
-title: Add text box | Microsoft Docs
+title: Add text box
 description: Learn about how to add text box component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: "Overview of Portal Management app | MicrosoftDocs"
-description: "Information about Portal Management app."
+title: Portal Management app overview
+description: Learn about Portal Management app.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 03/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Portal Management app overview

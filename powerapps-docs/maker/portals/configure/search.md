@@ -1,5 +1,5 @@
 ---
-title: "Global search in Power Apps portals | MicrosoftDocs"
+title: Search
 description: "Learn how global search works in a portal."
 author: sandhangitmsft
 ms.service: powerapps
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 12/01/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Search

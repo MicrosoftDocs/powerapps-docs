@@ -1,6 +1,6 @@
 ---
-title: "Manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment. | MicrosoftDocs"
-description: "Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt."
+title: Manage portal authentication key
+description: Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Manage portal authentication key

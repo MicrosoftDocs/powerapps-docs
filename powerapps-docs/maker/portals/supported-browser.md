@@ -1,5 +1,5 @@
 ---
-title:  Supported web browsers for Power Apps portals Studio | Microsoft Docs
+title: Supported web browsers for Power Apps portals Studio
 description: Learn about supported web browsers for Power Apps portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

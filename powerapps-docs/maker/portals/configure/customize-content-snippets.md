@@ -1,6 +1,6 @@
 ---
-title: "Customize content by using content snippets on a portal | MicrosoftDocs"
-description: "Learn how to customize content by using content snippets."
+title: Customize content by using content snippets
+description: Learn how to customize content by using content snippets.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 05/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Customize content by using content snippets

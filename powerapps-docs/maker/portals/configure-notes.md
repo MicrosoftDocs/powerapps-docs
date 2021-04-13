@@ -1,6 +1,6 @@
 ---
-title: "Configure notes as attachments for basic and advanced forms | MicrosoftDocs"
-description: "Instructions to add and configure notes as attachments on basic forms and advanced forms in a portal."
+title: Configure notes as attachments for basic and advanced forms
+description: Instructions to add and configure notes as attachments on basic forms and advanced forms in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual

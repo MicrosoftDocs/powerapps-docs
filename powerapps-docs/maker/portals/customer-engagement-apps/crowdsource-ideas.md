@@ -1,13 +1,16 @@
 ---
-title: "Crowdsource ideas on a portal | MicrosoftDocs"
-description: "Learn how to manage Forum Ideas, Idea Comments, and Idea Votes on a portal."
+title: Crowdsource ideas
+description: Learn how to manage Forum Ideas, Idea Comments, and Idea Votes on a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Crowdsource ideas

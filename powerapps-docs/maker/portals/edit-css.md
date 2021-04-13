@@ -1,5 +1,5 @@
 ---
-title: Edit CSS for themes | Microsoft Docs
+title: Edit CSS for themes
 description: Learn how to edit CSS for customizing themes in portals.
 author: neerajnandwana-msft
 ms.service: powerapps

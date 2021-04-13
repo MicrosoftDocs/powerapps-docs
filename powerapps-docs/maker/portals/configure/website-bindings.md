@@ -1,6 +1,6 @@
 ---
-title: "Create and manage website bindings in portals | MicrosoftDocs"
-description: "Learn how to create and manage website bindings in portals."
+title: Create and manage website bindings
+description: Learn how to create and manage website bindings in portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/12/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and manage website bindings

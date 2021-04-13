@@ -1,5 +1,5 @@
 ---
-title: Known issues | Microsoft Docs
+title: Known issues
 description: Learn about the known issues in Power Apps portals 
 author: sandhangitmsft
 ms.service: powerapps

@@ -1,14 +1,16 @@
 ---
-title: "Create custom Portal Management app for Power Apps portal | MicrosoftDocs"
-description: "Learn how to create a custom Portal Management app for Power Apps portal."
-author: tapanm-msft
-manager: kvivek
+title: Create custom Portal Management app
+description: Learn how to create a custom Portal Management app for Power Apps portal.
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/08/2021
-ms.author: tapanm
-ms.reviewer: sandhan
+ms.author: sandhan
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create custom Portal Management app

@@ -1,5 +1,5 @@
 ---
-title: Create additional portals in an environment | Microsoft Docs
+title: Create additional portals in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
 ms.service: powerapps

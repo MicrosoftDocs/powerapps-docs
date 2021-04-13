@@ -1,6 +1,6 @@
 ---
-title: "Configure a redirect step type for a portal | MicrosoftDocs"
-description: "Instructions to add and configure a redirect step for a portal."
+title: Add a redirect step type
+description: Learn how add and configure a redirect step for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual

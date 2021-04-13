@@ -1,6 +1,6 @@
 ---
-title: "Update from Dynamics 365 domain to Power Apps portals domain | MicrosoftDocs"
-description: "Instructions to update from Dynamics 365 domain to Power Apps portals domain."
+title: Update to Power Apps portals domain
+description: Learn how to update from Dynamics 365 domain to Power Apps portals domain.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/18/2019
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Update to Power Apps portals domain

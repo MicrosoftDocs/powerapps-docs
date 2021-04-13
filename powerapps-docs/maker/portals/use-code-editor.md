@@ -1,5 +1,5 @@
 ---
-title: Use code editor | Microsoft Docs
+title: Use code editor
 description: Learn about how to use code editor in Power Apps portals Studio to customize your portal page.
 author: neerajnandwana-msft
 ms.service: powerapps

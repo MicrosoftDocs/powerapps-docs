@@ -1,6 +1,6 @@
 ---
-title: "Manage page permissions for a portal | MicrosoftDocs"
-description: "Learn about how to manage page permissions for a portal."
+title: Manage page permissions
+description: Learn about how to manage page permissions for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 12/14/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Manage page permissions

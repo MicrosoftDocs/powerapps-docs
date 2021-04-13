@@ -1,6 +1,6 @@
 ---
-title: "Understand how to use local authentication, registration, and other settings for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about different site settings for portals, local authentication, and registration process in Power Apps portals."
+title: Local authentication, registration, and other settings
+description: Learn about different site settings for portals, local authentication, and registration process in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,10 @@ ms.custom:
 ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Local authentication, registration, and other settings

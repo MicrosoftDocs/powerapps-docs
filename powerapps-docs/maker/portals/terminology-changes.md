@@ -1,5 +1,5 @@
 ---
-title: Terminology changes in Power Apps portals | Microsoft Docs
+title: Terminology changes in Power Apps portals
 description: Learn about the changes to terms used in Power Apps portals, and changes from Microsoft Dataverse.
 author: GitanjaliSingh33msft
 ms.service: powerapps

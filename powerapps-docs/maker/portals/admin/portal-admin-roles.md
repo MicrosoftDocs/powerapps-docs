@@ -1,6 +1,6 @@
 ---
-title: "Details about different security roles required to administer Power Apps portals with specific actions. | MicrosoftDocs"
-description: "Learn about the available security roles, admin roles, and other permissions that are required to administer Power Apps portals."
+title: Roles required for portal administration
+description: Learn about the available security roles, admin roles, and other permissions that are required to administer Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Roles required for portal administration

@@ -1,6 +1,6 @@
 ---
-title: "Create web roles for a portal | MicrosoftDocs"
-description: "Instructions to create web roles for a portal."
+title: Create web roles for portals
+description: Learn how to create web roles for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/04/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create web roles for portals

@@ -1,6 +1,6 @@
 ---
-title: "Power Apps portals connectivity to a Microsoft Dataverse environment | MicrosoftDocs"
-description: "Learn how Power Apps portals connects to Microsoft Dataverse environment, connectivity architecture, and the authentication key used for connectivity."
+title: Power Apps portals connectivity to a Microsoft Dataverse environment
+description: Learn how Power Apps portals connects to Microsoft Dataverse environment, connectivity architecture, and the authentication key used for connectivity.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portals connectivity to a Microsoft Dataverse environment

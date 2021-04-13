@@ -1,6 +1,6 @@
 ---
-title: "Release updates | MicrosoftDocs"
-description: "Learn about release updates of Power Apps portals."
+title: Release updates
+description: Learn about release updates of Power Apps portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual

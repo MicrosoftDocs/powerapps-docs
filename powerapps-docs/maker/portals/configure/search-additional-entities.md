@@ -1,6 +1,6 @@
 ---
-title: "Global search for additional tables in Power Apps portal | MicrosoftDocs"
-description: "Learn how global search works for additional tables in a portal."
+title: "Walk-through: Configuring additional tables for global search" 
+description: Learn how global search works for additional tables in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,9 +8,12 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
-# Walkthrough: Configuring additional tables for global search  
+# Walk-through: Configuring additional tables for global search  
 
 ## Overview
 

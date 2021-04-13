@@ -1,5 +1,5 @@
 ---
-title: Create a portal in an environment containing customer engagement apps | Microsoft Docs
+title: Create a portal in an environment containing customer engagement apps
 description: Instructions to create a portal in an environment containing customer engagement apps.
 author: neerajnandwana-msft
 ms.service: powerapps

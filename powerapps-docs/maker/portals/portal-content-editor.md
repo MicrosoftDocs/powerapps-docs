@@ -1,5 +1,5 @@
 ---
-title:  Get started with the portal content editor | Microsoft Docs
+title:  Get started with the portal content editor
 description: Learn how to use the inline editor on a portal.
 author: sandhangitmsft
 ms.service: powerapps

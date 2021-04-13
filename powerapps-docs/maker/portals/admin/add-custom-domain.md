@@ -1,6 +1,6 @@
 ---
-title: "Add a custom domain name | MicrosoftDocs"
-description: "Instructions to add a custom domain name."
+title: Add a custom domain name
+description: Learn how to to add a custom domain name to your portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 01/25/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add a custom domain name

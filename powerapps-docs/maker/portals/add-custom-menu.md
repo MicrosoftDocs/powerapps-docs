@@ -1,5 +1,5 @@
 ---
-title: Add custom menu | Microsoft Docs
+title: Add custom menu
 description: Learn about how to add custom menu component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

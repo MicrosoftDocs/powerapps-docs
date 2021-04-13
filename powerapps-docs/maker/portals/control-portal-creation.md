@@ -1,5 +1,5 @@
 ---
-title: Control portal creation in a tenant | Microsoft Docs
+title: Control portal creation in a tenant
 description: Instructions to control portal creation in a tenant.
 author: neerajnandwana-msft
 ms.service: powerapps

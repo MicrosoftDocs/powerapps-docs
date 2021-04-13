@@ -1,13 +1,16 @@
 ---
-title: "Set up and moderate forums for a portal  | MicrosoftDocs"
-description: "Instructions to create and manage forums on a portal."
+title: Set up and manage forums
+description: Learn how to create and manage forums on a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Set up and manage forums

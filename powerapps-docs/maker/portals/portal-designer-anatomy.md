@@ -1,5 +1,5 @@
 ---
-title: Power Apps portals Studio | Microsoft Docs
+title: Power Apps portals Studio
 description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

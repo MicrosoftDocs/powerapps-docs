@@ -1,6 +1,6 @@
 ---
-title: "Create website access permissions in Power Apps portals | MicrosoftDocs"
-description: "Learn how to create and associate website access permissions to elements in a portal."
+title: Create website access permissions
+description: Learn how to create and associate website access permissions to elements in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/04/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create website access permissions

@@ -1,13 +1,16 @@
 ---
-title: "Configure web roles for a partner portal  | MicrosoftDocs"
-description: "Instructions to add web roles for a partner portal."
+title: Configure web roles for a partner relationship management (PRM) portal
+description: Learn how to add web roles for a partner portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Configure web roles for a partner relationship management (PRM) portal

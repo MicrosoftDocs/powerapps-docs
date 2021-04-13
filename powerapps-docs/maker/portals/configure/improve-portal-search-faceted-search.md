@@ -1,6 +1,6 @@
 ---
-title: "Use faceted search to improve portal search | MicrosoftDocs"
-description: "Instructions to enable or disable faceted search."
+title: Use faceted search to improve portal search
+description: Learn how to enable or disable faceted search.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/04/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Use faceted search to improve portal search

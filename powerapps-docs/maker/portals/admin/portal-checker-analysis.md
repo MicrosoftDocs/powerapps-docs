@@ -1,5 +1,5 @@
 ---
-title: Analyze Portal Checker results, and resolutions to common issues | MicrosoftDocs
+title: Analyze and resolve Portal Checker diagnostics results
 description: Learn about Portal Checker results, how to analyze them, and resolve issues or problems found by Portal Checker.
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Analyze and resolve Portal Checker diagnostics results

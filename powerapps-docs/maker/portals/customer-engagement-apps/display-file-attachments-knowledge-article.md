@@ -1,13 +1,16 @@
 ---
-title: "Display file attachments with knowledge articles on a portal | MicrosoftDocs"
-description: "Instructions to display file attachments with knowledge articles on a portal."
+title: Display file attachments with knowledge articles
+description: Learn how to display file attachments with knowledge articles on a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Display file attachments with knowledge articles

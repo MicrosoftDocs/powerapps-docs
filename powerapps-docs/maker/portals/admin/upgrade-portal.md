@@ -1,6 +1,6 @@
 ---
-title: "Upgrade a portal | MicrosoftDocs"
-description: "Learn how to upgrade a portal."
+title: Upgrade a portal
+description: Learn how to upgrade a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Upgrade a portal

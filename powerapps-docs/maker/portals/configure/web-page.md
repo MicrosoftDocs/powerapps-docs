@@ -1,6 +1,6 @@
 ---
-title: "Manage web pages in Power Apps portals | MicrosoftDocs"
-description: "Learn how to manage web pages in a portal."
+title: Manage web pages
+description: Learn how to manage web pages in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Manage web pages

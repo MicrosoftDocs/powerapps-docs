@@ -1,6 +1,6 @@
 ---
-title: "Add record-based security by using Table Permissions for a portal | MicrosoftDocs"
-description: "Instructions to add an table permission and assign web roles to it."
+title: Add record-based security by using table permissions for portals
+description: Learn how to add an table permission and assign web roles to it.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 01/06/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Add record-based security by using table permissions for portals

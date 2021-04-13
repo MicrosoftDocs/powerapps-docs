@@ -1,5 +1,5 @@
 ---
-title: Add breadcrumb | Microsoft Docs
+title: Add breadcrumb
 description: Learn about how to add breadcrumb component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps

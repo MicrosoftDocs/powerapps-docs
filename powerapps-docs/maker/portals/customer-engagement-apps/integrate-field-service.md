@@ -1,16 +1,19 @@
 ---
-title: "Integrate Dynamics 365 Field Service with a portal | MicrosoftDocs"
-description: "Instructions to integrate Field Service with a portal."
+title: Integrate Field Service
+description: Learn how to integrate Field Service with a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2021
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
-# Integrate Field Service 
+# Integrate Field Service
 
 The Partner [!include[](../../../includes/pn-field-service.md)] solution can now be installed on a Partner Portal ([!include[](../../../includes/pn-field-service.md)] and Partner Portal solutions must be installed first). With this solution installed, customers and partners can view various parts of the [!include[](../../../includes/pn-field-service.md)] section on the partner portal. Some of the available tables that can be viewed are assets, work orders, and invoices.
 

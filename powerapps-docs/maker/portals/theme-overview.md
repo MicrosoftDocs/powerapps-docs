@@ -1,5 +1,5 @@
 ---
-title: Themes overview | Microsoft Docs
+title: Themes overview
 description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps

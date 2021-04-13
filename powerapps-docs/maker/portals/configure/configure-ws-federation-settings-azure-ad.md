@@ -1,6 +1,6 @@
 ---
-title: "Configure WS-Federation for portals with Azure Active Directory.  | MicrosoftDocs"
-description: "Learn how to configure WS-Federation for portals with Azure Active Directory."
+title: Configure a WS-Federation provider for portals with Azure AD
+description: Learn how to configure WS-Federation for portals with Azure Active Directory.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,10 @@ ms.custom:
 ms.date: 10/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a WS-Federation provider for portals with Azure AD

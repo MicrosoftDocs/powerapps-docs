@@ -1,5 +1,5 @@
 ---
-title: Power Apps portals FAQs | Microsoft Docs
+title: Power Apps portals FAQs
 description: Frequently asked questions (FAQs) about Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps

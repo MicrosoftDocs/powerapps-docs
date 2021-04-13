@@ -1,6 +1,6 @@
 ---
-title: "Configure advanced form properties for a portal | MicrosoftDocs"
-description: "Instructions to configure advanced form properties for a portal."
+title: Define advanced form properties for portals
+description: Learn how to configure advanced form properties for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 3/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Define advanced form properties for portals

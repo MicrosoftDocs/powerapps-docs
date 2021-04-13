@@ -1,6 +1,6 @@
 ---
-title: "Create and run advertisements on a portal | MicrosoftDocs"
-description: "Instructions to create text or image-based advertisements and have them run in multiple placements throughout your site."
+title: Create and run advertisements on a portal
+description: Learn how to create text or image-based advertisements and have them run in multiple placements throughout your site.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/22/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and run advertisements on a portal

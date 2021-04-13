@@ -1,6 +1,6 @@
 ---
-title: "Create and show portal content using Portal Management app | MicrosoftDocs"
-description: "Learn how to create and show portal content using Portal Management app."
+title: Create and show portal content using Portal Management app
+description: Learn how to create and show portal content using Portal Management app.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and show portal content using Portal Management app

@@ -1,6 +1,6 @@
 ---
-title: "Rate or vote on a webpage on a portal | MicrosoftDocs"
-description: "Instructions to enable and manage ratings on a web page on a portal."
+title: Rate or vote on a webpage on a portal
+description: Learn how to enable and manage ratings on a web page on a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 10/09/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Rate or vote on a webpage on a portal

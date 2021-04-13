@@ -1,6 +1,6 @@
 ---
-title: "Legacy Adxstudio Portals v7 FAQ | MicrosoftDocs"
-description: "Frequently asked questions for legacy Adxstudio Portals v7"
+title: Legacy Adxstudio Portals v7 FAQ
+description: Frequently asked questions for legacy Adxstudio Portals v7
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual

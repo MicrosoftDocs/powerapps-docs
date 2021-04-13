@@ -1,6 +1,6 @@
 ---
-title: "Configure a advanced form steps for a portal | MicrosoftDocs"
-description: "Instructions to create a advanced form step for a advanced form on a portal."
+title: Define advanced form steps for portals
+description: Learn how to create a advanced form step for a advanced form on a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 11/04/2019
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Define advanced form steps for portals
