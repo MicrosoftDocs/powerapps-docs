@@ -36,4 +36,8 @@ To perform the steps described in this guide, you require the following licenses
 
 The complete code for the Web API and the app is available in GitHub at <https://github.com/microsoft/fusion-dev-ebook>
 
-Clone this repository locally on your computer and read the README.md file carefully. Before continuing with this chapter, make sure you have created the Azure SQL Database Server and databases required by the app using the instructions in the README.md file. 
+Clone this repository locally on your computer and read the README.md file carefully. Before continuing with this chapter, make sure you have created the Azure SQL Database Server and databases required by the app using the instructions in the README.md file.
+
+> [!div class="step-by-step"]
+> [Previous](foreword.md)
+> [Next](what-is-fusion-dev-approach.md) 

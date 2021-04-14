@@ -1,6 +1,9 @@
 - name: "Ebook: Fusion development approach"
   href: index.md
-- name: Foreword
-  href: foreword.md
-- name: Prerequisites and setup
-  href: prereqs-setup.md
+  items:
+  - name: Foreword
+    href: foreword.md
+  - name: Prerequisites and setup
+    href: prereqs-setup.md
+  - name: "Chapter 1: What is fusion dev approach?"
+    href: what-is-fusion-dev-approach.md
