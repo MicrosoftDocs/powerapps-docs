@@ -34,7 +34,7 @@ To create a visualization programmatically, you must create a record for the [Sa
     > [!NOTE]
     >  Organization-owned visualizations can only be created by those users who have the System Administrator or System Customizer role.  
   
-- **Associated Table**: Visualizations are attached to tables. More information: [Tables supported for visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported table by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) parameter.  
+- **Associated Table**: Visualizations are attached to tables. More information: [Tables supported for visualizations](view-data-with-visualizations-charts.md). You can attach a chart to a supported table by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) parameter.  
   
 <a name="CreateChart"></a>   
 
