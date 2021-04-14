@@ -86,7 +86,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
  Many views in model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
 
 > [!NOTE]
->  Do not use this URL to include the view in application navigation using the site map. For more information, see [Display a view in the application navigation using the Site Map](open-forms-views-dialogs-reports-url.md#BKMK_DisplayViewInApplicationUsingSiteMap).  
+>  Do not use this URL to include the view in application navigation using the site map. For more information, see [Display a view in the application navigation using the Site Map](open-forms-views-dialogs-reports-url.md).  
 
  The page displayed by the URL includes the full view. This includes the ribbon, but does not include the application navigation.  
 

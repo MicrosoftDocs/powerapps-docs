@@ -26,6 +26,8 @@ search.app:
 
 This list below contains all of the Best practices and guidance of client side scripting for model-driven apps.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 |Best Practice  |Description  |
 |---------|---------|
 |[Avoid using window.top](avoid-window-top.md)     |Describes how to avoid script errors and incorrect application behavior associated with using window.top in JavaScript customizations.         |

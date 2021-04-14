@@ -23,7 +23,7 @@ However there are some other behaviors which developers using JavaScript web res
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-The following image shows the dependencies tab within the web resource form. Dependencies between web resources are set in the top list. Column dependencies are set using the lower list. Attribute dependencies are only available for JavaScript web resources. More information [Column dependencies](#attribute-dependencies)
+The following image shows the dependencies tab within the web resource form. Dependencies between web resources are set in the top list. Column dependencies are set using the lower list. Column dependencies are only available for JavaScript web resources. More information [Column dependencies](#column-dependencies)
 
 ![web resource dependencies tab](media/web-resource-dependencies.PNG)
 

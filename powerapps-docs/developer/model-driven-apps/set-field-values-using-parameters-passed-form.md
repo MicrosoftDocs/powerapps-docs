@@ -56,7 +56,7 @@ The unencoded value for the `extraqs` parameter is “name=New Account”.
 ```  
 
 ## Set values for lookup columns  
- The following table describes five types of lookup columns. For examples using lookup columns, see [Example: Set the value for lookup columns](set-field-values-using-parameters-passed-form.md#BKMK_setValueLookupfields) and [Example: Use Xrm.Navigation.openForm to open a new window](set-field-values-using-parameters-passed-form.md#BKMK_ExampleXrmNavigationOpentForm).  
+ The following table describes five types of lookup columns. For examples using lookup columns, see [Example: Set the value for lookup columns](set-field-values-using-parameters-passed-form.md) and [Example: Use Xrm.Navigation.openForm to open a new window](set-field-values-using-parameters-passed-form.md#BKMK_ExampleXrmNavigationOpentForm).  
   
 |Lookup Type|Description|  
 |-----------------|-----------------|  
