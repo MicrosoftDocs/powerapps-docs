@@ -35,12 +35,12 @@ The **Search** function finds records in a table that contain a string in one of
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 
 ## Syntax
-**Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )
+**Filter**(Table*, *Formula1* [, *Formula2*, ... ] )
 
 * *Table* - Required. Table to search.
 * *Formula(s)* - Required. The formula by which each record of the table is evaluated. The function returns all records that result in **true**. You can reference columns within the table. If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
 
-**Search**( *Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
+**Search**(Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
 
 * *Table* - Required. Table to search.
 * *SearchString* - Required. The string to search for. If *blank* or an empty string, all records are returned.
@@ -49,7 +49,7 @@ The **Search** function finds records in a table that contain a string in one of
 > [!NOTE]
 > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
-**LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
+**LookUp**(Table*, *Formula* [, *ReductionFormula* ] )
 
 * *Table* - Required. Table to search. In the UI, the syntax is shown as *source*  above the function box.
 * *Formula* - Required.
@@ -64,16 +64,16 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Filter( IceCream, OnOrder > 0 )** |Returns records where **OnOrder** is greater than zero. | ![Filter On order](media/function-filter-lookup/icecream-onorder.png  "Filter on order") |
-| **Filter( IceCream, Quantity + OnOrder > 225 )** |Returns records where the sum of **Quantity** and **OnOrder** columns is greater than 225. |![Filter quantity and order](media/function-filter-lookup/icecream-overstock.png "Filter quantity and order") |
-| **Filter( IceCream, "chocolate" in Lower( Flavor ) )** |Returns records where the word "chocolate" appears in the **Flavor** name, independent of uppercase or lowercase letters. |![Filter in lower](media/function-filter-lookup/icecream-chocolate.png "Filter in lower") |
-| **Filter( IceCream, Quantity < 10  && OnOrder < 20 )** |Returns records where the **Quantity** is less than 10 and **OnOrder** is less than 20.  No records match these criteria, so an empty table is returned. |![Filter on quantity](media/function-filter-lookup/icecream-empty.png "Filter on quantity") |
-| **Search( IceCream, "choc", "Flavor" )** |Returns records where the string "choc" appears in the **Flavor** name, independent of uppercase or lowercase letters. |![Search items](media/function-filter-lookup/icecream-chocolate.png "Search items") |
-| **Search( IceCream, "", "Flavor" )** |Because the search term is empty, all records are returned. |![Search all items](media/function-filter-lookup/icecream.png "Search all items") |
-| **LookUp( IceCream, Flavor = "Chocolate", Quantity )** |Searches for a record with **Flavor** equal to "Chocolate", of which there is one.  For the first record that's found, returns the **Quantity** of that record. |100 |
-| **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** |Searches for a record with **Quantity** greater than 150, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. |250 |
-| **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** |Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. |*blank* |
-| **LookUp( IceCream, Flavor = "Vanilla" )** |Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. |{ Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
+| **Filter(IceCream, OnOrder > 0)** |Returns records where **OnOrder** is greater than zero. | ![Filter On order](media/function-filter-lookup/icecream-onorder.png  "Filter on order") |
+| **Filter(IceCream, Quantity + OnOrder > 225)** |Returns records where the sum of **Quantity** and **OnOrder** columns is greater than 225. |![Filter quantity and order](media/function-filter-lookup/icecream-overstock.png "Filter quantity and order") |
+| **Filter(IceCream, "chocolate" in Lower(Flavor ))** |Returns records where the word "chocolate" appears in the **Flavor** name, independent of uppercase or lowercase letters. |![Filter in lower](media/function-filter-lookup/icecream-chocolate.png "Filter in lower") |
+| **Filter(IceCream, Quantity < 10  && OnOrder < 20)** |Returns records where the **Quantity** is less than 10 and **OnOrder** is less than 20.  No records match these criteria, so an empty table is returned. |![Filter on quantity](media/function-filter-lookup/icecream-empty.png "Filter on quantity") |
+| **Search(IceCream, "choc", "Flavor")** |Returns records where the string "choc" appears in the **Flavor** name, independent of uppercase or lowercase letters. |![Search items](media/function-filter-lookup/icecream-chocolate.png "Search items") |
+| **Search(IceCream, "", "Flavor")** |Because the search term is empty, all records are returned. |![Search all items](media/function-filter-lookup/icecream.png "Search all items") |
+| **LookUp(IceCream, Flavor = "Chocolate", Quantity)** |Searches for a record with **Flavor** equal to "Chocolate", of which there is one.  For the first record that's found, returns the **Quantity** of that record. |100 |
+| **LookUp(IceCream, Quantity > 150, Quantity + OnOrder)** |Searches for a record with **Quantity** greater than 150, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. |250 |
+| **LookUp(IceCream, Flavor = "Pistachio", OnOrder)** |Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none is found, **Lookup** returns *blank*. |*blank* |
+| **LookUp(IceCream, Flavor = "Vanilla")** |Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. |{ Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
 
 ### Filtering with choice columns
 
@@ -110,13 +110,13 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.
 
-The examples in the rest of this topic show the results of searching a list, named **Customers**, that contains this data:
+The examples in the rest of this topic show the results of searching a list, named **Customers, that contain this data:
 
 ![Search on customers](media/function-filter-lookup/customers.png "Search on customers")
 
 To create this data source as a collection, create a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to this formula:
 
-**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+**ClearCollect(Customers, Table({ Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" }) )**
 
 As in this example, you can show a list of records in a [**Gallery control**](../controls/control-gallery.md) at the bottom of a screen. Near the top of the screen, you can add a [**Text input**](../controls/control-text-input.md) control, named **SearchInput**, so that users can specify which records interest them.
 
@@ -130,17 +130,17 @@ To filter based on the **Name** column, set the **Items** property of the galler
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Filter( Customers, StartsWith( Name, SearchInput.Text ) )** |Filters the **Customers** data source for records in which the search string appears at the start of the **Name** column. The test is case insensitive. If the user types **co** in the search box, the gallery shows **Colleen Jones** and **Cole Miller**. The gallery doesn't show **Mike Collins** because the **Name** column for that record doesn't start with the search string. | ![Filter with start with](media/function-filter-lookup/customers-name-co-startswith.png "Filter with start with") |
-| **Filter( Customers, SearchInput.Text in Name )** |Filters the **Customers** data source for records in which the search string appears anywhere in the **Name** column. The test is case insensitive. If the user types **co** in the search box, the gallery shows **Colleen Jones,** **Cole Miller,** and **Mike Collins** because the search string appears somewhere in the **Name** column of all of those records. | ![Filter with search input](media/function-filter-lookup/customers-name-co-contains.png "Filter with search input") |
-| **Search( Customers, SearchInput.Text, "Name" )** |Similar to using the **in** operator, the **Search** function searches for a match anywhere within the **Name** column of each record. Note that you must enclose the column name in double quotation marks. | ![Search customers](media/function-filter-lookup/customers-name-co-contains.png "Search customers") |
+| **Filter(Customers, StartsWith(Name, SearchInput.Text) )** |Filters the **Customers** data source for records in which the search string appears at the start of the **Name** column. The test is case insensitive. If the user types **co** in the search box, the gallery shows **Colleen Jones** and **Cole Miller**. The gallery doesn't show **Mike Collins** because the **Name** column for that record doesn't start with the search string. | ![Filter with start with](media/function-filter-lookup/customers-name-co-startswith.png "Filter with start with") |
+| **Filter(Customers, SearchInput.Text in Name)** |Filters the **Customers** data source for records in which the search string appears anywhere in the **Name** column. The test is case insensitive. If the user types **co** in the search box, the gallery shows **Colleen Jones,** **Cole Miller,** and **Mike Collins** because the search string appears somewhere in the **Name** column of all of those records. | ![Filter with search input](media/function-filter-lookup/customers-name-co-contains.png "Filter with search input") |
+| **Search(Customers, SearchInput.Text, "Name")** |Similar to using the **in** operator, the **Search** function searches for a match anywhere within the **Name** column of each record. You must enclose the column name in double quotation marks. | ![Search customers](media/function-filter-lookup/customers-name-co-contains.png "Search customers") |
 
-You can expand your search to include the **Company** column as well as the **Name** column:
+You can expand your search to include the **Company** column and the **Name** column:
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Filters the **Customers** data source for records in which either the **Name** column or the  **Company** column starts with the search string (for example, **co**).  The [**&#124;&#124;** operator](operators.md) is *true* if either **StartsWith** function is *true*. | ![Filter customers start with](media/function-filter-lookup/customers-all-co-startswith.png "Filter customers start with") |
-| **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** |Filters the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. | ![Filter customers search input](media/function-filter-lookup/customers-all-co-contains.png "Filter customers search input") |
-| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Similar to using the **in** operator, the **Search** function searches the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. The **Search** function is easier to read and write than **Filter** if you want to specify multiple columns and multiple **in** operators. Note that you must enclose the names of the columns in double quotation marks. | ![ Search customers with search input](media/function-filter-lookup/customers-all-co-contains.png "Search customers with search input") |
+| **Filter(Customers, StartsWith(Name, SearchInput.Text) &#124;&#124; StartsWith(Company, SearchInput.Text) )** |Filters the **Customers** data source for records in which either the **Name** column or the  **Company** column starts with the search string (for example, **co**).  The [**&#124;&#124;** operator](operators.md) is *true* if either **StartsWith** function is *true*. | ![Filter customers start with](media/function-filter-lookup/customers-all-co-startswith.png "Filter customers start with") |
+| **Filter(Customers, SearchInput.Text in Name &#124;&#124; SearchInput. Text in Company)** |Filters the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. | ![Filter customers search input](media/function-filter-lookup/customers-all-co-contains.png "Filter customers search input") |
+| **Search(Customers, SearchInput.Text, "Name", "Company")** |Similar to using the **in** operator, the **Search** function searches the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. The **Search** function is easier to read and write than **Filter** if you want to specify multiple columns and multiple **in** operators. You must enclose the names of the columns in double quotation marks. | ![ Search customers with search input](media/function-filter-lookup/customers-all-co-contains.png "Search customers with search input") |
 
 
 
