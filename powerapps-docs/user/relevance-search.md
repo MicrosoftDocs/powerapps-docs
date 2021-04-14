@@ -325,6 +325,17 @@ If your organization has turned on both search options (old relevance search and
 
     > [!div class="mx-imgBorder"]
     > ![Relevance search box](media/relevance-search-box.png "Relevance search box")
+    > 
+
+## Use keyboard shortcuts
+
+The following keyboard shortcuts apply to grids. For more information, see:
+
+- [Navigation](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#navigation) 
+- [Editing](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#editing)
+- [Selection](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#selection)
+
+
 
 ### See also
 
