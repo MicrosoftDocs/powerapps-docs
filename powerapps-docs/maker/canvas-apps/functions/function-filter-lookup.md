@@ -96,11 +96,13 @@ The following example uses the **Account** table in Microsoft Dataverse as data 
    ```
    Filter(Accounts, 
     'Industry' = ComboBox3.Selected.Industry||IsBlank(ComboBox3.Selected.Industry), 
-    'Relationship Type' = ComboBox2.Selected.'Relationship Type'||IsBlank(ComboBox2.Selected.'Relationship Type'), 
-    'Preferred Method of Contact' = ComboBox1.Selected.'Preferred Method of Contact'||IsBlank(ComboBox1.Selected.'Preferred Method of Contact'))
+    'Relationship Type' = ComboBox2.Selected.'Relationship Type'||
+    IsBlank(ComboBox2.Selected.'Relationship Type'), 
+    'Preferred Method of Contact' = ComboBox1.Selected.'Preferred Method of Contact'||
+    IsBlank(ComboBox1.Selected.'Preferred Method of Contact'))
    ```
 
-    ![Accounts data source](media/function-filter-lookup/filtering-choices-columns.gif "Accounts data source")
+    ![Accounts data source](media/function-filter-lookup/filtering-choices.gif "Accounts data source")
 
 ### Search user experience
 
