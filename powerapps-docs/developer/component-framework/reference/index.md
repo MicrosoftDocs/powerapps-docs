@@ -4,8 +4,7 @@ description: "The topic provides Power Apps component framework API reference."
 ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "index-page"
-ms.assetid: 7da1b8e9-97af-4acb-a393-2e09caf86fc2
-ms.assetid: 
+ms.assetid: 7da1b8e9-97af-4acb-a393-2e09caf86fc2 
 author: "nkrb"
 ms.author: "nabuthuk"
 manager: "kvivek"

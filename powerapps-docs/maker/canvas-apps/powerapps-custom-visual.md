@@ -7,12 +7,15 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/22/2020
-ms.author: pemikkel
+ms.date: 04/12/2021
+ms.author: hahuber
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mikkelsen2000
+  - tapanm-msft
 ---
 
 # Power Apps visual for Power BI
@@ -68,6 +71,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
+- The maximum number of records that can be passed from Power BI to Power Apps visual using "PowerBIIntegration" object is limited to 1000.
 - Power Apps visual isn't supported for [guest users](share-app-guests.md).
 - Power Apps visual doesn't support multi-level embedding of Power Apps in Sovereign clouds. For example, embedding a Power BI report with Power Apps visual to a SharePoint page, or further embedding that SharePoint page to a Teams channel isn't supported on sovereign clouds.
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
@@ -77,7 +81,7 @@ The following limitations apply to the Power Apps visual:
 - Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
-    - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
+    - You must use a source that supports [DirectQuery](/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
 - The Power BI mobile app doesn't support microphone control in Power Apps visuals.
 
@@ -113,7 +117,7 @@ For more information, go to [Power BI Accessibility Documentation]( https://docs
 
 ## Next steps
 
-* Go through a simple [step-by-step tutorial](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp).
+* Go through a simple [step-by-step tutorial](/power-bi/visuals/power-bi-visualization-powerapp).
 * Check out our [video](https://aka.ms/powerappscustomvisualvideo).
 
 

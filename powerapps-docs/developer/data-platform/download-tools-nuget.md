@@ -1,8 +1,8 @@
 ---
 title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
-description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
+description: "Download the Plug-in Registration, Package Deployment, and other developer tools from NuGet.org."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -21,26 +21,26 @@ search.app:
   - D365CE
 ---
 
-# Download tools from NuGet 
+# Download tools from NuGet
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can download tools used in development from NuGet using the  powershell script found below. These tools include:
+You can download tools used in code development from NuGet using the  PowerShell script found below. These tools include:
 
 |Tool|NuGet Package|
 |-|-|
-|Code generation tool `CrmSvcUtil.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
+|Code Generation tool `CrmSvcUtil.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
 |Configuration Migration tool `DataMigrationUtility.exe`|[Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf)|
 |Package Deployer `PackageDeployer.exe`|[Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf)|
-|Plug-in Registration Tool `PluginRegistration.exe` |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|
+|Plug-in Registration tool `PluginRegistration.exe` |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|
 |SolutionPackager tool `SolutionPackager.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
 
 ## Download tools using PowerShell
 
-You can download all SDK tools using the PowerShell script provided below. Note that this script works with the version of Windows PowerShell that ships in Microsoft Windows 10. The script does not presently work with cross-platform versions of PowerShell based on .NET 5 (formerly .NET Core).
+You can download all SDK tools using the PowerShell script provided below. Note that this script works with the version of Windows PowerShell that ships in Microsoft Windows 10. The script does not presently work with cross-platform versions of PowerShell based on .NET 5 or later (formerly .NET Core).
 
 1. In your Windows Start menu, type `Windows Powershell` and open it.
-1. Navigate to the folder you want to install the tools to. For example if you want to install them in a `devtools` folder on your D drive, type `cd D:\devtools`.
+1. Navigate to the folder you want to install the tools to. For example if you want to install them in a `devtools` folder on your D: drive, type `cd D:\devtools`.
 1. Copy and paste the following PowerShell script into the PowerShell window and press Enter.
 
     ```powershell
@@ -52,7 +52,7 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     Set-Alias nuget $targetNugetExe -Scope Global -Verbose
         
     ##
-    ##Download Plugin Registration Tool
+    ##Download Plug-in Registration tool
     ##
     ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
     md .\Tools\PluginRegistration
@@ -106,11 +106,10 @@ To get the latest version of these tools, repeat these steps.
 
 [Developer tools](developer-tools.md)<br />
 [Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
-[Create early bound entity classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
-[Create extensions for the code generation tool](org-service/extend-code-generation-tool.md)<br />
+[Create early bound table classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
+[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
 [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
 [Register a plug-in](register-plug-in.md)<br />
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

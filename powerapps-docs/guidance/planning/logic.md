@@ -91,7 +91,7 @@ if:
 
 - You want to reduce dependency on device-side processing power.
 
-More information: [Power Automate documentation](https://docs.microsoft.com/power-automate/)
+More information: [Power Automate documentation](/power-automate/)
 
 ## Dataverse
 

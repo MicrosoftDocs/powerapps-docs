@@ -16,7 +16,7 @@ search.app:
 ---
 # Using multimedia files in Power Apps
 
-You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Stream](https://docs.microsoft.com/stream/), [Azure Media Services](https://docs.microsoft.com/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
+You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Stream](/stream/), [Azure Media Services](/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
 
 This article walks you through working with multimedia, streaming, and input control scenarios. The data source used in this article is an Excel file in OneDrive for Business.
 

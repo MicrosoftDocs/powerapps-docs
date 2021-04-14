@@ -1,6 +1,6 @@
 ---
-title: ILinkEntityExposedExpression | Microsoft Docs
-description: 
+title: ILinkEntityExposedExpression in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for ILinkEntityExposedExpression in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -25,25 +25,25 @@ Model-driven apps
 
 ### name
 
-The `name` of the entity to link to.
+The `name` of the table to link to.
 
 **Type**:  `string`
 
 ### from
 
-The `from` attribute in the link-entity relationship.
+The `from` column in the link-entity relationship.
 
 **Type**:  `string`
 
 ### to
 
-The `to` attribute in the link-entity relationship.
+The `to` column in the link-entity relationship.
 
 **Type**:  `string`
 
 ### linkType
 
-The `type` of the link, referred by the link-entity attribute. '
+The `type` of the link, referred by the link-entity column. '
 
 **Type**:  `string`
 

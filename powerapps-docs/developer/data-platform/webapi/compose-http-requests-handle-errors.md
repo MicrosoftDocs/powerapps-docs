@@ -84,7 +84,7 @@ The current OData version is 4.0, but future versions may allow for new capabili
  
 Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
  
-All HTTP headers should include at least the following headers.  
+All HTTP requests should include at least the following headers.  
   
 ```
 Accept: application/json  

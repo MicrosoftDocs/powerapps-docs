@@ -1,5 +1,6 @@
 ---
 title: "init | MicrosoftDocs"
+description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"

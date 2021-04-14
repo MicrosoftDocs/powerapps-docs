@@ -48,7 +48,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. Specify by name or alias the users or security groups in Azure AD with whom you want to share the app.
 
-    - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel.
+    - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to "Org apps".
 
         ![Share with everyone](./media/share-app/everyone.png "Share with everyone")
 
@@ -110,25 +110,25 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 ### Share an app with Microsoft 365 groups
 
-You can share an app with [Microsoft 365 groups](https://docs.microsoft.com/microsoft-365/admin/create-groups/compare-groups). However, the group must have security enabled. Enabling security ensures that the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
+You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups). However, the group must have security enabled. Enabling security ensures that the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
 
 **To check whether a Microsoft 365 group has security enabled**
 
-1. Ensure that you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+1. Ensure that you have access to the [Azure AD cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
 1. Go to [Azure portal](https://portal.azure.com/) \> **Azure Active Directory** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
 
-1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
+1. [Connect to Azure AD](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
 
     ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
 
-1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
+1. Get the [group details](/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
 
     ![Check the SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
 
 **To enable security for a group**
 
-If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup) to set the **SecurityEnabled** property to **True**: 
+If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-AzureADGroup](/powershell/module/AzureAD/Set-AzureADGroup) to set the **SecurityEnabled** property to **True**: 
 
 ```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
 

@@ -18,7 +18,7 @@ When a request to the portal is generated from any user, their IP address is eva
 
 To add or remove IP addresses, you must be assigned any one of the following roles:
 - Office 365 Global Administrator 
-- Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/library/mt793847.aspx)  
+- Service Administrator. More information: [Use the service admin role to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)  
 - System Administrator of the Microsoft Dataverse environment selected for the portal
 
 ## Add an IP address

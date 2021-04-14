@@ -34,7 +34,7 @@ Input controls are also reset when their **Default** property changes.
 * *Control* – Required. The control to reset.
 
 ## Example
-1. Insert a **Text input** control on a screen.  By default, it's name will be **TextInput1** and its **Default** property will be set to **"Text input"**.
+1. Insert a **Text input** control on a screen.  By default, its name will be **TextInput1** and its **Default** property will be set to **"Text input"**.
 2. Type a new value in the text box.  
 3. Insert a **Button** control on the screen.
 4. Set the button's **OnSelect** property to **Reset( TextInput1 )**.

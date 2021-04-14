@@ -232,7 +232,7 @@ To create a record:
     | Effective Start Data         | Type start date and time for this facility.    |
     | Total Inpatient Bed Capacity    | Type the total inpatient bed capacity.    |
     | Neonatal Bed Capacity    | Type the total neonatal bed capacity.    |
-    | Total Mortuary Capacity    | Type the total mortuary capacity. <br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form in the [portal](/powerapps/sample-apps/regional-emergency-response/portals-user#bed-capacity).    |
+    | Total Mortuary Capacity    | Type the total mortuary capacity. <br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form in the [portal](./portals-user.md#bed-capacity).    |
     | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR (Airborne Infection Isolation Room).       |
     | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.      |
     | Total Pediatric Acute Care Beds (AIIR) Capacity    | Type the total pediatric acute care beds in AIIR.    |
@@ -299,7 +299,7 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 
 Depending on the roles(s) you granted to the user, she/he will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
 
-An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#getting-started-with-the-portal)
+An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](./portals-admin-reporting.md#getting-started-with-the-portal)
 
 ## Manage portal user requests
 
@@ -349,7 +349,7 @@ To view the Power BI dashboard:
 
 3. The Power BI dashboard that is available to you in your Power BI tenant is the same as the one available to users of the portal. The **primary difference** is that as a business admin of a regional organization, you can view data for all the parent organizations that report data to the regional organization, whereas users viewing the dashboard embedded in portal can only view data for their parent organization and associated hospital systems.
 
-For detailed information presented in the Power BI dashboard, see [Get insights](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#get-insights) in the portal topic.
+For detailed information presented in the Power BI dashboard, see [Get insights](./portals-admin-reporting.md#get-insights) in the portal topic.
 
 ## Issues and feedback
 
