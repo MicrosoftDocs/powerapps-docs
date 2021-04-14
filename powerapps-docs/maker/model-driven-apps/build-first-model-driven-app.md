@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In this article, you create a simple model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
+In this article, you build a simple model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 
   > [!div class="mx-imgBorder"] 
   > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
