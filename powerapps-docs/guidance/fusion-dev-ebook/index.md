@@ -1,6 +1,6 @@
 ---
 title: "Ebook: Fusion development approach to building apps using Power Apps | Microsoft Docs"
-description: "Use Power Apps to bring your Business and pro Devs together to build apps fast"
+description: "An ebook for business and pro developers to use Power Apps to build apps fast."
 author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Fusion development approach to building apps using Power Apps
 
-![cover image](./media/cover.png)
+![cover image](./media/cover/power-apps-ebook-monitor.png)
 
 **EDITION v1.0**
 
