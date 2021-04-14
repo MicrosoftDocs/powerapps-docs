@@ -26,7 +26,7 @@ search.app:
 
 This list below contains all of the Best practices and guidance of client side scripting for model-driven apps.
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 |Best Practice  |Description  |
 |---------|---------|

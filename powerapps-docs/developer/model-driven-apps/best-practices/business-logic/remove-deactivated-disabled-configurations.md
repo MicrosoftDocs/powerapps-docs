@@ -35,7 +35,7 @@ Deactivated or disabled customizations should be removed from a solution to impr
 
 <a name='guidance'></a>
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Guidance
 

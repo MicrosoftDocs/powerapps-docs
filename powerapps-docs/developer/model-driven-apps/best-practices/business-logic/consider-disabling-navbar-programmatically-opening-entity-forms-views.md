@@ -39,7 +39,7 @@ Opening up forms or views with a URL, could lead to slower client performance on
 
 Determine if your users need to have the full navigation bar when creating customizations that open forms or views through a URL. In most cases, users selects on a link to open a form, do some quick work, and then close the record.  Disabling the navigation bar will lower the amount of resources to be loaded which lowers the number of network requests being made.  
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 When constructing URLs to open up forms or views, implement `navbar=off` within your query string parameters for the `main.aspx` page. The following example opens an Account form with the navigation bar disabled.
 
