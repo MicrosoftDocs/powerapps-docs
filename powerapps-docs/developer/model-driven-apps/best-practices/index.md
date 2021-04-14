@@ -27,7 +27,7 @@ search.app:
 Model-driven apps is a component-focused approach to app development which can be extended by a developer to achieve a much more
 tailored experience. While customizing model-driven apps, a developer should be aware of the established guidance and best practices. 
 
-[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 Within this section you will learn about the issues we have identified, their impact, and understand the guidance to resolve them. We will explain the background about why things should be done in a certain way and avoid potential problems in the future. This can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
 
