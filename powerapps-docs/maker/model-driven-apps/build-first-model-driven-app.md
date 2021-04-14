@@ -66,7 +66,7 @@ In this article, you create a simple model-driven app that you can use to create
 
 7. Select **Save And Close** to close the sitemap designer.
 
-   By default, all standard forms, views, charts, and dashboards are enabled for the app. From the app designer canvas, you can select a component, and clear or create a new component, such as a form from the **Components** tab in the right pane. For this app, leave all components enabled.
+   By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, you can clear a component so it isn't available in the app at runtime. You can also create new components, such as a custom form. For this app, leave all components enabled.
 
 8. On the app designer toolbar, select **Save**.
 
