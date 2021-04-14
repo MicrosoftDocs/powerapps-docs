@@ -21,5 +21,5 @@ The purpose of this guide is to summarize the way in which citizen and professio
 
 > [!div class="step-by-step"]
 > [Previous](index.md)
-> [Next](the-world-is-distributed.md)
+> [Next](prereqs-setup.md)
 
