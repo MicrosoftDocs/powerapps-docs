@@ -38,7 +38,7 @@ In this article, you create a simple model-driven app that you can use to create
 
 3. On the **Create a New App** page, enter the following details, and then select **Done**: 
   - **Name**: Enter a name for the app, such as *Account tracking*. 
-  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Accounttracking*.
+  - **Unique Name**: By default, the unique name uses the name you specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Accounttracking*.
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 
     > [!div class="mx-imgBorder"] 
@@ -51,7 +51,7 @@ In this article, you create a simple model-driven app that you can use to create
 
     Notice that when you create a new app, you must first create the site map for it.
 
-5. On the sitemap designer select **New Subarea**. 
+5. On the sitemap designer, select **New Subarea**. 
 
    :::image type="content" source="media/build-first-model-driven-app/new-subarea.png" alt-text="Select new subarea"::: 
 
@@ -62,17 +62,15 @@ In this article, you create a simple model-driven app that you can use to create
     > [!div class="mx-imgBorder"] 
     > ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png "Properties tab for new subarea")
 
-    When you leave the **Title** property blank, the app uses the table name in the app's left pane navigation. For this app, **Accounts** is displayed in the app at runtime.
+    When you leave the **Title** property blank, the app uses the table name in the app's left navigation pane. For this app, **Accounts** will be displayed in the app at runtime.
 
 7. Select **Save And Close** to close the sitemap designer.
 
-   By default, all standard forms, views, charts, and dashboards are enabled for the table. From the app designer canvas, you can select a component, and clear or create a new component, such as a form from the right **Components** tab.
-
-   For this app, leave all components enabled.
+   By default, all standard forms, views, charts, and dashboards are enabled for the app. From the app designer canvas, you can select a component, and clear or create a new component, such as a form from the **Components** tab in the right pane. For this app, leave all components enabled.
 
 8. On the app designer toolbar, select **Save**.
 
-9. After your app is saved, on the app designer toolbar select **Publish** to make it available to run and share.
+9. After your app is saved, on the app designer toolbar, select **Publish** to make it available to run and share.
  
 ## Play your app
 On the app designer toolbar, select **Play**.
@@ -80,7 +78,14 @@ On the app designer toolbar, select **Play**.
   > [!div class="mx-imgBorder"] 
   > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
-Don't see any data in your app? This is probably because your environment doesn't have sample apps and data provisioned. More information: 
+- To create a record, select **+ New**. 
+- To view a chart, on the app command bar select **Show Chart**. 
+- To change the view, such as **All Active Accounts**, select the **My Active Accounts** view, and then select the view you want. 
+
+To learn more about how to use your app, see [Basic navigation in a model-driven app](../../user/navigation.md).
+
+> [!NOTE]
+> Don't see any data in your app? This is probably because your environment database doesn't have **Deploy sample apps and data** provisioned. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 
 ## Next steps
 
