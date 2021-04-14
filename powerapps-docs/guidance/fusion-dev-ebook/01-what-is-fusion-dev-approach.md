@@ -1,5 +1,5 @@
 ---
-title: "Ebook: What is the fusion development approach? | Microsoft Docs"
+title: "Chapter 1: What is the fusion development approach? | Microsoft Docs"
 description: "Learn more about the fusion development approach to app building in Power Apps."
 author: spboyer
 ms.service: powerapps
