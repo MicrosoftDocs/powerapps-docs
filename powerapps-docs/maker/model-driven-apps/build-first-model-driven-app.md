@@ -75,12 +75,12 @@ In this article, you create a simple model-driven app that you can use to create
 ## Play your app
 On the app designer toolbar, select **Play**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
-
 - To create a record, select **+ New**. 
 - To view a chart, on the app command bar select **Show Chart**. 
-- To change the view, such as **All Active Accounts**, select the **My Active Accounts** view, and then select the view you want. 
+- To change the view, select the **My Active Accounts** view, and then select the view you want.
+- 
+  > [!div class="mx-imgBorder"] 
+  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 To learn more about how to use your app, see [Basic navigation in a model-driven app](../../user/navigation.md).
 
