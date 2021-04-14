@@ -77,7 +77,7 @@ With progressive search, you can get more accurate search results.
 - Selecting a particular facet in filters only shows results for the selected facet, such as tables.
 - Since the records are progressively evaluated, the jump to last page button (![Jump to last page button](media/progressive-search/last-page-button.png "Jump to last page button")) is not available unless the remaining number of pages in the search result are five or less.
 
-    ![Jump to last page button](media/progressive-search/jump-last-page.png "Jump to last page button")
+    ![Jump to last page option available when number of pages are five or less](media/progressive-search/jump-last-page.png "Jump to last page option available when number of pages are five or less")
 
 ### See also
 
