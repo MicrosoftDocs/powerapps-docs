@@ -85,7 +85,7 @@ On the app designer toolbar, select **Play**.
 To learn more about how to use your app, see [Basic navigation in a model-driven app](../../user/navigation.md).
 
 > [!NOTE]
-> Don't see any data in your app? This is probably because your environment database doesn't have **Deploy sample apps and data** provisioned. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
+> Don't see any of the data in your app like in the above screenshot? This is probably because your environment database doesn't have **Deploy sample apps and data** provisioned. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 
 ## Next steps
 
