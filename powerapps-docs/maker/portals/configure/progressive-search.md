@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/14/2021
+ms.date: 04/15/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -75,6 +75,9 @@ With progressive search, you can get more accurate search results.
 - Progressive search processes a maximum of 50 records at a time, with more than 50 results shown as **50+** on the first result page.
 - To optimize search experience while searching, use specific keywords that narrow the search results to a smaller number.
 - Selecting a particular facet in filters only shows results for the selected facet, such as tables.
+- Since the records are progressively evaluated, the jump to last page button (![Jump to last page button](media/progressive-search/last-page-button.png "Jump to last page button")) is not available unless the remaining number of pages in the search result are five or less.
+
+    ![Jump to last page button](media/progressive-search/jump-last-page.png "Jump to last page button")
 
 ### See also
 
