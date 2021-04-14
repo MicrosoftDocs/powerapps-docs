@@ -50,7 +50,7 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-an-artifact-table-dashboard-or-business-process-flow).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
