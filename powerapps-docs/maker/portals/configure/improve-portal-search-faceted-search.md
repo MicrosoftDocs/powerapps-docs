@@ -42,5 +42,8 @@ Faceted search enables portals to have search filters on the leftmost side allow
 
 ![Use filters to improve search results](../media/faceted-search-filter.png "Use filters to improve search results")
 
+### See also
+
+[Progressive search](progressive-search.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
