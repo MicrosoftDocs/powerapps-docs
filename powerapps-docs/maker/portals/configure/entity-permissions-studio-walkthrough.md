@@ -190,8 +190,6 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. Select **Car listings** table.
 
-1. Select **Account access** as the access type.
-
 1. Select relationship between the dealerships, and the Car listings table.
 
 1. Select **Read** privilege.
