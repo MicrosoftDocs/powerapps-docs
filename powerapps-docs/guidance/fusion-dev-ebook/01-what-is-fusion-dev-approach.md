@@ -44,5 +44,5 @@ Fusion development with Power Apps is about combining the worlds of the citizen 
 For a detailed introduction to the fusion development process, and how it can accelerate development times, see [Citizen developers use Microsoft Power Apps to build an intelligent launch assistant](https://aka.ms/AAbvfzj).
 
 > [!div class="step-by-step"]
-> [Previous](foreward.md)
+> [Previous](prereqs-setup.md)
 > [Next](02-intro-sample-scenario.md)
