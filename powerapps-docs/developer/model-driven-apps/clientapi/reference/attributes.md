@@ -23,8 +23,6 @@ To access a column within the collection, you pass either the name (string) or t
 
 Columns are categorized by type. You can determine the type of the column by using the [getAttributeType](attributes/getAttributeType.md) method. Certain column methods are only available for specific types of columns.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
-
 This topic provides information about the methods available per column type. 
 
 ## All column types

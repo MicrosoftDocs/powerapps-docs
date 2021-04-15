@@ -19,8 +19,6 @@ search.app:
 
 Returns a Boolean value indicating whether the lookup represents a partylist lookup. Partylist lookups allow for multiple records to be set, such as the **To:** column for an email table record.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
-
 ## Column types supported
 
 Lookup

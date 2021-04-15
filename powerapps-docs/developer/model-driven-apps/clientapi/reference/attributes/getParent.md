@@ -19,8 +19,6 @@ search.app:
 
 Returns the `formContext.data.entity` object that is the parent to all the columns. 
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
-
 ## Column types supported
 
 All
