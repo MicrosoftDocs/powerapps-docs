@@ -15,3 +15,5 @@
     href: 04-using-dataverse-as-data-source.md
   - name: "Chapter 5: Creating and publishing a Web API in Azure"
     href: 05-creating-publishing-web-api-in-azure.md
+  - name: "Chapter 6: Using the Web API in the app"
+    href: 06-using-web-api-in-app.md"
