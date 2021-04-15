@@ -16,6 +16,8 @@ ms.topic: "article"
 
 Here are some common issues that you might come across while using the Power Apps component framework and Power Apps CLI.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 ## Msbuild error MSB4036
 
 - The name of the task in the project file is same as the name of the task class.

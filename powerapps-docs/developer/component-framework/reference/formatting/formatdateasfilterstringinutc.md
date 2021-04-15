@@ -1,6 +1,6 @@
 ---
 title: formatDateAsFilterStringUTC | Microsoft Docs
-description: 
+description: Returns a formatted string that represents a date in YYYY-MM-DD standard UTC format. Results pattern is based on standard UTC format.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

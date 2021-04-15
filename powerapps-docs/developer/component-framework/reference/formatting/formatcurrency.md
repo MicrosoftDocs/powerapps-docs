@@ -1,6 +1,6 @@
 ---
 title: FormatCurrency | Microsoft Docs
-description: 
+description: Returns a formatted string that represents the currency value after being formatted.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: Control Element | Microsoft Docs
-description: 
+description: Defines the component's namespace, version and display information.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -24,7 +24,7 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 
 Model-driven apps and canvas apps (public preview)
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|--------|

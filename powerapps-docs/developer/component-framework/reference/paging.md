@@ -1,6 +1,6 @@
 ---
 title: Paging | Microsoft Docs
-description: 
+description: Provides properties and methods to work with paging.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

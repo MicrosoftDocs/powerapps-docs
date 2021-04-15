@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/portals/version-9.3.3.x.md",
+      "redirect_url": "versions/version-9.3.3.x",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/transition-web-app.md",
       "redirect_url": "../../user/unified-interface",
       "redirect_document_id": "false"
@@ -3182,8 +3187,13 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/solution-component-file-reference-solutionpackager.md",
-      "redirect_url": "../data-platform/solution-component-file-reference-solutionpackager",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/solution-component-file-reference-solutionpackager.md",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
+      "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/special-update-operation-behavior.md",
