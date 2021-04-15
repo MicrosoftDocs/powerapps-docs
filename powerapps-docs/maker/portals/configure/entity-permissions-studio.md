@@ -5,9 +5,11 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/22/2021
+ms.date: 04/23/2021
 ms.author: ckwan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
 ---
 
 # Table permissions using portals Studio
@@ -42,7 +44,7 @@ To create a table permission using portals Studio:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -83,7 +85,7 @@ To view table permissions using portals Studio:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions** to view table permissions.
 
@@ -105,7 +107,7 @@ To edit a table permission using portals Studio:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -127,7 +129,7 @@ To deactivate/activate or delete a table permission using portals Studio:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -149,7 +151,7 @@ To add a child permission to an existing table permission using portals Studio:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 

@@ -5,9 +5,11 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/22/2021
+ms.date: 04/23/2021
 ms.author: ckwan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
 ---
 
 # Tutorial: Configure table permissions using portals Studio
@@ -60,7 +62,7 @@ To configure table permissions for global access to all authenticated users:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -98,7 +100,7 @@ To configure table permissions for contact access to owning sales staff:
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -138,7 +140,7 @@ To configure table permissions for account access to sales staff for dealerships
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
@@ -178,7 +180,7 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. Select **Edit** to open portals Studio.
 
-1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
 
 1. Select **Table permissions**.
 
