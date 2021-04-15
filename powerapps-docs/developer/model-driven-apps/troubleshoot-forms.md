@@ -2,7 +2,7 @@
 title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/12/2020
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -153,7 +153,9 @@ The most common cause of intermittent or random form errors is using unsupported
 
 - They might occur once on a computer, and the same error might occur again after you clear the browser cache.
 
-- [formContext.getControl](./clientapi/reference/controls/getcontrol.md) or [formContext.getControl(arg).getAttribute()](./clientapi/reference/controls/getattribute.md) randomly returns null for a valid control or attribute.
+- [formContext.getControl](./clientapi/reference/controls/getcontrol.md) or [formContext.getControl(arg).getAttribute()](./clientapi/reference/controls/getattribute.md) randomly returns null for a valid control or column.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 There are many ways to write unsupported Client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script is executed before the form is fully ready to be accessed via the Client API. This can depend on many factors:
 
@@ -285,14 +287,14 @@ There are many reasons why a related menu item doesn't appear on the **Related**
 
 **Resolution**:
 
-In the following example, a related entity `role` (security role) doesn't appear in the `team` form because the `role` entity isn't available in Unified Interface.
+In the following example, a related table `role` (security role) doesn't appear in the `team` form because the `role` table isn't available in Unified Interface.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
 
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `RelatedMenu` operation provides all the details that are causing the issue.
 
-There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example includes details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related entity.
+There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example includes details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related table.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu details](media/related-menu-error-details.png "Related menu details")
@@ -316,16 +318,16 @@ There are many possible reasons why a control might be disabled or hidden when t
 A control can be disabled by using the following list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled, you must change the input to the rule used for the result or to a rule earlier in the list.
 
 - If the flags `DisableWebResourceControls=true` or `DisableFormControl=<control name>` are passed and the control is affected by these flags, the control will be disabled.
-- If the owning entity is read-only in Unified Interface in entity metadata, the control is disabled.
-- If the entity isn't available in offline mode, the control is disabled.
+- If the owning table is read-only in Unified Interface in table definitions, the control is disabled.
+- If the table isn't available in offline mode, the control is disabled.
 - If the current user doesn't have write permissions on the record, the control is disabled.
-- If the attribute metadata has `IsValidforCreate` set to false, the control is disabled.
-- If the attribute metadata has `IsValidforUpdate` set to false, the control is disabled.
-- If the current user doesn't have `Assign to` privilege, the owner attribute is disabled.
-- If the user doesn't have write permissions on the attribute defined by field-level security, the control is disabled.
+- If the column definitions has `IsValidforCreate` set to false, the control is disabled.
+- If the column definitions has `IsValidforUpdate` set to false, the control is disabled.
+- If the current user doesn't have `Assign to` privilege, the owner column is disabled.
+- If the user doesn't have write permissions on the column defined by field-level security, the control is disabled.
 - If the control is disabled or enabled by the Client API script, the control disabled state will honor that setting.
 - If the control is disabled in the form designer, the control is disabled.
-- If the user doesn't have `Assign To` privilege for the lookup control's entity, or `Assign` privilege on the current record's entity, the lookup control is disabled
+- If the user doesn't have `Assign To` privilege for the lookup control's table, or `Assign` privilege on the current record's table, the lookup control is disabled
 
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
@@ -400,36 +402,36 @@ When opening a quick create form from a lookup or a grid, another form may open 
 - You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
 
 > [!div class="mx-imgBorder"]
-> ![Entity not enabled for quick create](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Entity not enabled for quick create")
+> ![Table not enabled for quick create](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
 
 
-## Entity doesn't appear in the quick create menu flyout?
+## Table doesn't appear in the quick create menu flyout?
 
-When opening the global quick create menu flyout, not all entities are available. There are few reasons why the entities are filtered in this list:
+When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
 
-- There is no quick create form available for the entity.
-- Entity is not enabled for quick create form.
-- Entity is not enabled for the new Unified Interface.
-- Entity is read-only in Unified Interface.
-- Entity's mobile client visibility cannot be modified.
-- Entity is not part of the app module.
-- User does not have a create privilege on the entity.
-- The create privilege is not supported for the entity.
+- There is no quick create form available for the table.
+- Table is not enabled for quick create form.
+- Table is not enabled for the new Unified Interface.
+- Table is read-only in Unified Interface.
+- Table's mobile client visibility cannot be modified.
+- Table is not part of the app module.
+- User does not have a create privilege on the table.
+- The create privilege is not supported for the table.
 
 **Resolution**:
 
-- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the entities and reasons why they are filtered from the quick create menu flyout.
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the tables and reasons why they are filtered from the quick create menu flyout.
 
 See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
 
 > [!div class="mx-imgBorder"]
-> ![Entity not enabled for Unified Client](media/troubleshoot-forms-entity-unified-client.png "Entity not enabled for Unified Client")
+> ![Table not enabled for Unified Client](media/troubleshoot-forms-entity-unified-client.png "Table not enabled for Unified Client")
 
 > [!div class="mx-imgBorder"]
-> ![Entity not available for quick create](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Entity not available for quick create")
+> ![Table not available for quick create](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Table not available for quick create")
 
 > [!div class="mx-imgBorder"]
-> ![Entity not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Entity not part of app module")
+> ![Table not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
