@@ -180,6 +180,9 @@ The Lucene query syntax supports the following functionality:
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
+> [!NOTE]
+> Wildcards are used only for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
+
 In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
 ### Example: basic search
