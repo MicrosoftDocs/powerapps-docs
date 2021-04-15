@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: configure record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
-description: "This article walks through a scenario with step-by-step example about how to configure record-based security by using table permissions for a portal using Power Apps portals Studio."
+title: Tutorial - configure table permissions using portals Studio
+description: This article walks through a scenario with step-by-step example about how to configure security by using table permissions for a portal using Power Apps portals Studio.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ contributors:
 
 # Tutorial: Configure table permissions using portals Studio
 
-In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step tutorial.
+In the previous article, you learned about how to configure security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step tutorial.
 
 The goal of using this scenario is to show how to use portals Studio to configure table permissions with real-world case study. The scenario showcases using each [access type available in portals Studio](entity-permissions-studio.md#available-access-types-in-studio) to match the real-world scenario with a business requirement with the relevant Microsoft Dataverse tables, and table relationships.
 
@@ -122,7 +122,7 @@ To configure table permissions for contact access to owning sales staff:
 
 1. Select **Contact access** as the access type.
 
-1. Select relationship between the contact, and the Car listings table.
+1. Select relationship between the Contact, and the Car listings table.
 
 1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
@@ -162,7 +162,7 @@ To configure table permissions for account access to sales staff for dealerships
 
 1. Select **Account access** as the access type.
 
-1. Select relationship between the account, and the Dealerships table.
+1. Select relationship between the Account, and the Dealerships table.
 
 1. Select **Read** privilege.
 
@@ -202,15 +202,16 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. Select **Car listings** table.
 
-1. Select relationship between the dealerships, and the Car listings table.
+1. Select relationship between the Dealerships, and the Car listings table.
 
 1. Select **Read** privilege.
-
-1. **Sales** role is inherited from the parent table permission.
 
 1. From the list of available roles, select **Sales**.
 
     ![Contoso Limited - child table permission](media/entity-permissions-studio-walkthrough/contoso-ltd-child-table-permission.png "Contoso Limited - child table permission")
+
+    > [!NOTE]
+    > **Sales** role is inherited from the parent table permission.
 
 1. Select **Save**.
 
@@ -225,7 +226,7 @@ Now that you have all the table permissions configured, this is how the permissi
 - **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
 - **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
 
-As this scenario explains how to configure table permissions under various real-world scenarios to achieve business goals, you can now use the learnings from this tutorial to configure table permissions for your portal to meet your business requirements.
+This scenario explained how to configure table permissions in a real-world scenario to achieve business goals. You can now use the learnings from this tutorial to configure table permissions for your portal to meet your business requirements.
 
 ### See also
 
