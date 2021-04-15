@@ -49,7 +49,7 @@ For example, consider a portal in an environment with [Northwind Traders sample 
 
 In this sample portal, consider a total of 68 products in the *Order Products* table. However, a user has permissions to access only 10 products.
 
-When the user searches for products, only 10 results show up, even though the search faced shows the total number of products as 68, including the configured filters.
+When the user searches for products, only 10 results show up, even though the search facet shows the total number of products as 68, including the configured filters.
 
 ![Search result with mismatch of results count and actual results](media/progressive-search/incorrect-results-count.png "Search result with mismatch of results count and actual results")
 
