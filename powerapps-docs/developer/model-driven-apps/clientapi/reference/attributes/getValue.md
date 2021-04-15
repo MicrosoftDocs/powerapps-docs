@@ -31,7 +31,7 @@ All
 
 **Type**: Depends on the type of column. 
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 | Column Type | Return Type| 
 |----|-----|

@@ -26,7 +26,7 @@ You can also set an object to control how appointment, recurring appointment, or
 
 `formContext.data.save(saveOptions).then(successCallback, errorCallback);`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
