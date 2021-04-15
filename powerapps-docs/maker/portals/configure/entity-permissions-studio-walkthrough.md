@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: configure record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
+title: "Tutorial: configure record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
 description: "This article walks through a scenario with step-by-step example about how to configure record-based security by using table permissions for a portal using Power Apps portals Studio."
 author: tapanm-msft
 ms.service: powerapps
@@ -10,9 +10,9 @@ ms.author: ckwan
 ms.reviewer: tapanm
 ---
 
-# Walkthrough: Configure table permissions using portals Studio
+# Tutorial: Configure table permissions using portals Studio
 
-In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step walkthrough.
+In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step tutorial.
 
 The goal of using this scenario is to show how to use portals Studio to configure table permissions with real-world case study. The scenario showcases using each [access type available in portals Studio](entity-permissions-studio.md#available-access-types-in-studio) to match the real-world scenario with a business requirement with the relevant Microsoft Dataverse tables, and table relationships.
 
@@ -21,30 +21,28 @@ The goal of using this scenario is to show how to use portals Studio to configur
 Before you begin with this scenario, understand how to use Power Apps portals Studio to configure table permissions. You'll also need a portal, and access to the Dataverse environment.
 
 > [!NOTE]
-> This walkthrough does not include configuration of web pages, basic or advanced forms, or Dataverse tables. The focus of this walkthrough is configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
+> This tutorial does not include configuration of web pages, basic or advanced forms, or Dataverse tables. The focus of this tutorial is configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
 
 ## Scenario
 
-For this walkthrough scenario, consider an example of Contoso Limited that deals with buying and selling used cars. Contoso has a B2B (business-to-business) portal to manage the inventory posted by sales staff at the car dealerships across the country.
-
-![Contoso Limited - car business example](media/entity-permissions-studio-walkthrough/contoso-ltd.png "Contoso Limited - car business example")
+For this tutorial scenario, consider an example of Contoso Limited that deals with buying and selling used cars. Contoso has a B2B (business-to-business) portal to manage the inventory posted by sales staff at the car dealerships across the country.
 
 ### Roles
 
 Contoso has the following web roles available.
 
-- Authenticated users - default role for all authenticated users.
-- Anonymous users - default role for all anonymous users.
-- Admin - IT Administrators for Contoso.
-- Sales - Sales staff to manage car sales across dealerships.
-- Managers - Managers of the sales and dealership staff.
+- **Authenticated users** - default role for all authenticated users.
+- **Anonymous users** - default role for all anonymous users.
+- **Admin** - IT Administrators for Contoso.
+- **Sales** - Sales staff to manage car sales across dealerships.
+- **Managers** - Managers of the sales and dealership staff.
 
 ### Tables
 
 Contoso uses the following Dataverse tables for this configuration.
 
-- Car listings - contains listings of all cars in Contoso inventory across all dealerships.
-- Dealerships - contains details about all car dealerships along with the address and inventory summary.
+- **Car listings** - contains listings of all cars in Contoso inventory across all dealerships.
+- **Dealerships** - contains details about all car dealerships along with the address and inventory summary.
 
 ## View all car listings
 
