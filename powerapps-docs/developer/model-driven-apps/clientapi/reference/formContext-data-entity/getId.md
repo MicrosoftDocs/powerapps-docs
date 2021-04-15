@@ -25,7 +25,7 @@ search.app:
 
 `formContext.data.entity.getId();`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 

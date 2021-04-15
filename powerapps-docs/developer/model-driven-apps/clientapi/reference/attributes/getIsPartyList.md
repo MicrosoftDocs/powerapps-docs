@@ -27,6 +27,8 @@ Lookup
 
 `formContext.getAttribute(arg).getIsPartyList()`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: Boolean. 

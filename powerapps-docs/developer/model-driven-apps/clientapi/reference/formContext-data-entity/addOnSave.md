@@ -23,7 +23,7 @@ search.app:
 
 `formContext.data.entity.addOnSave(myFunction)`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

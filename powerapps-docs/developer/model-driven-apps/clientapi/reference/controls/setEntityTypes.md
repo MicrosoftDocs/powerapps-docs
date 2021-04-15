@@ -35,7 +35,7 @@ Lookup control
 |--|--|--|--|
 |entityLogicalNames|Array of String|Yes|Specify the logical name of the tables allowed in the lookup control.|
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ### Related topics
 

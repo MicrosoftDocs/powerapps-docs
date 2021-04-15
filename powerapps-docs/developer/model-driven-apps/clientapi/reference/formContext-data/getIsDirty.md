@@ -29,7 +29,7 @@ search.app:
 
 **Description**: true if the form data has changed; false otherwise.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ### Related topics
 

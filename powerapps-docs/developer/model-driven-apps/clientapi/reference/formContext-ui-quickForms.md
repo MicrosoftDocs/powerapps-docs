@@ -25,7 +25,7 @@ You can retrieve a quick view control in the **quickForms** collection by using 
 
 `quickViewControl = formContext.ui.quickForms.get(arg)`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Quick form control Methods
 

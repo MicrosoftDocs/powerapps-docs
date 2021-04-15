@@ -39,7 +39,7 @@ Lookup
 
 - **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that table type. Otherwise, it applies to all types of tables returned.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Remarks
 

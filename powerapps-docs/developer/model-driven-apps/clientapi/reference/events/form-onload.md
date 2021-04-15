@@ -23,7 +23,7 @@ You can determine in what context the `OnLoad` event occurs by using [getEventAr
 
 Data for related tables on a form, such as data for subgrids and quick view forms are not guaranteed to be available when the `OnLoad` event handler is executed. Logic that depends on related data should use the [Subgrid OnLoad](./subgrid-onload.md) event, quick view form should use the [isLoaded](../formcontext-ui-quickforms/isloaded.md) function, or the appropriate function for determining when the data should be loaded for the particular related data.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 Controls and other UI of the form are not guaranteed to be rendered and in the DOM when the `OnLoad` event occurs. Logic in the `OnLoad` event handler cannot prevent the form from loading.
 

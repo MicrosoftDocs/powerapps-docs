@@ -26,7 +26,7 @@ An execution context object is passed to event handlers for this event. You can 
 - **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
 - **getStage**: Returns a stage object. Except when the navigation moves to a new table, the stage returned represents the destination stage object,that is, the next active stage. When the navigation moves to a new table, the stage is the stage being navigated from, that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Methods supported for this event
 - **formContext.data.process**.[addOnStageChange](../formcontext-data-process/eventhandlers/addOnStageChange.md) method to add event handlers for this event.

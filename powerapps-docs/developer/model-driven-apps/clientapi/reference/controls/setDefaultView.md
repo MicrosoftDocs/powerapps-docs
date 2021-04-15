@@ -33,7 +33,7 @@ Lookup
 |--|--|--|--|
 |viewId|String|Yes|The ID of the view to be set as the default view.|
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Example
 

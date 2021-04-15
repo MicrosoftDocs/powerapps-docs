@@ -26,7 +26,7 @@ The `OnChange` event occurs in the following situations:
 
 All columns support the `OnChange` event. Data in the column is validated before and after the `OnChange` event.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 The `OnChange` event does not occur if the column is changed programmatically using the [attribute.setValue](../attributes/setValue.md) method. If you want event handlers for the `OnChange` event to run after you set the value you must use the `formContext.data.entity attribute.`[fireOnchange](../attributes/fireOnChange.md) method in your code. 
 

@@ -27,6 +27,8 @@ All
 
 `formContext.getAttribute(arg).getParent()`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: `formContext.data.entity` object. 

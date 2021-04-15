@@ -19,7 +19,7 @@ search.app:
 
 Gets the types of tables allowed in the lookup control. 
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Control types supported
 

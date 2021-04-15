@@ -19,7 +19,7 @@ search.app:
 
 Each item represents one of the available navigation options available in the navigation bar for tables that have been updated to the new user experience or on the left side of the form for tables that have not been updated.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 > [!NOTE]
 > These methods do not work with Microsoft Dynamics 365 for tablets in versions earlier than 9.0.

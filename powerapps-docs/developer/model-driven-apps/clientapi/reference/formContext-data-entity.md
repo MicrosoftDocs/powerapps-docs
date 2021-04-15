@@ -20,7 +20,7 @@ search.app:
 
 Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included in the form. Column data is limited to columns represented on the form.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Properties
 

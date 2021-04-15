@@ -39,7 +39,7 @@ Lookup
 - **layoutXml**: String. The XML that defines the layout of the view.
 - **isDefault**: Boolean: Indicates whether the view should be the default view.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Remarks
 

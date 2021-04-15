@@ -41,7 +41,7 @@ When a primary contact phone number is updated, update the same on the account p
 |myFunction|function reference|Yes|The function to add to the PostSave event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 |||||
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 <!--Code Example:
 We call below method and it will display org name. For making decisions on whether the save succeeded or failed, executioncontext object will have params such as 

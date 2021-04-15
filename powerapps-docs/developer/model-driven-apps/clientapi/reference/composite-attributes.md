@@ -19,7 +19,7 @@ search.app:
 
 Some columns added to a form can represent multiple items of data. These *composite columns* behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly.
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 The following table lists the composite columns available in model-driven apps:
 
