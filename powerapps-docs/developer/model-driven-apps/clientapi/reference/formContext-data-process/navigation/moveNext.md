@@ -27,7 +27,7 @@ Moving to next stage is not supported for different table.
 
 `formContext.data.process.moveNext(callbackFunction);`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 

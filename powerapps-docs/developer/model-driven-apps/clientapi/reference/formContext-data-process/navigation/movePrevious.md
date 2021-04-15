@@ -25,6 +25,8 @@ You can also move to a previous stage in a different table.
 
 `formContext.data.process.movePrevious(callbackFunction);`
 
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
+
 ## Parameters
 
 <table style="width:100%">

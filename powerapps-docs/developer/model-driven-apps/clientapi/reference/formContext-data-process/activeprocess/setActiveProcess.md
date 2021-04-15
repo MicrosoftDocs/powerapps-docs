@@ -30,7 +30,7 @@ If there is an active instance of the process, the table record is loaded with t
 
 `formContext.data.process.setActiveProcess(processId, callbackFunction);`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

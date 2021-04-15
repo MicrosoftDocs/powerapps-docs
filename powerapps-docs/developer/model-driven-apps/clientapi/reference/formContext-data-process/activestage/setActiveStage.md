@@ -23,7 +23,7 @@ search.app:
 
 `formContext.data.process.setActiveStage(stageId, callbackFunction);`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 

@@ -23,7 +23,7 @@ search.app:
 
 `formContext.data.process.getEnabledProcesses(callbackFunction(enabledProcesses));`
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

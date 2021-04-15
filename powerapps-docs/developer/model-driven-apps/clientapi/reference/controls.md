@@ -30,7 +30,7 @@ Controls are categorized by type. You can determine the type of a control by usi
 
 This article provides information about the methods available per control type. 
 
-[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## standard control type
 

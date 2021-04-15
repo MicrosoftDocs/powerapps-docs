@@ -25,7 +25,7 @@ The active path represents stages currently rendered in the process control base
 
 `var stageCollection = formContext.data.process.getActivePath();`
 
-[!INCLUDE[cc-terminology](./../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 

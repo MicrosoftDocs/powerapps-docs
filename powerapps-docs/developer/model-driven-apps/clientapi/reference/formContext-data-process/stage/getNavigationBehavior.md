@@ -29,7 +29,7 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
     return true|false;
 }
 ```
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Returns
 
