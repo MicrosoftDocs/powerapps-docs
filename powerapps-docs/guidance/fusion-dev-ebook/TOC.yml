@@ -11,3 +11,5 @@
     href: 02-intro-sample-scenario.md
   - name: "Chapter 3: Building a low-code prototype"
     href: 03-building-low-code-prototype.md
+  - name: "Chapter 4: Using Dataverse as data source"
+    href: 04-using-dataverse-as-data-source.md
