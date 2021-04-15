@@ -1,7 +1,7 @@
 ---
 title: "formContext.data.entity (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included in the form.
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -15,15 +15,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # formContext.data.entity (Client API reference)
 
-Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included in the form. Attribute data is limited to attributes represented by fields on the form.
+Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included in the form. Column data is limited to columns represented on the form.
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 ## Properties
 
 |Name|Description|
 |--|--|
-|attributes|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Attributes](attributes.md).
+|attributes|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
 
 ## Methods
 

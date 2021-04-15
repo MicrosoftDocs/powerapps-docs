@@ -1,5 +1,6 @@
 ---
 title: "addOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Adds a function to be called when the OnSave event is triggered.
 ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: "reference"
@@ -21,6 +22,8 @@ search.app:
 ## Syntax
 
 `formContext.data.entity.addOnSave(myFunction)`
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

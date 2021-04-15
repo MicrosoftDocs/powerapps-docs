@@ -1,6 +1,7 @@
 ---
 title: "movePrevious (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Moves to the previous stage.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,11 +17,9 @@ search.app:
 ---
 # movePrevious (Client API reference)
 
-
-
 [!INCLUDE[./includes/movePrevious-description.md](./includes/movePrevious-description.md)]
 
-You can also move to a previous stage in a different entity.
+You can also move to a previous stage in a different table.
 
 ## Syntax
 
@@ -51,7 +50,7 @@ You can also move to a previous stage in a different entity.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The previous stage is for a different entity.</td>
+<td>The previous stage is for a different table.</td>
 </tr>
 <tr>
 <td>beginning</td>
