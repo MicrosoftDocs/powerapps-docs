@@ -46,6 +46,16 @@ Contoso uses the following Dataverse tables for this configuration.
 - **Car listings** - contains listings of all cars in Contoso inventory across all dealerships.
 - **Dealerships** - contains details about all car dealerships along with the address and inventory summary.
 
+Along with the above tables, this scenario also uses existing tables such as **Contact**, and **Account**.
+
+### Relationships
+
+Contoso has the following relationships configured between tables in Dataverse.
+
+- **Account (One) to Dealerships (Many)** - One account can own multiple dealerships.
+- **Contact (One) to Car listings (Many)** - One sales staff (contact) can have multiple car listings.
+- **Dealership (One) to Car listings (Many)** - One dealership can have multiple car listings.
+
 ## View all car listings
 
 Contoso has a web page with a basic form that shows all current car listings in the inventory to all authenticated users.
