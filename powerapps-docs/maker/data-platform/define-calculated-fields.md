@@ -54,29 +54,35 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 > [!IMPORTANT]
 >  To create a calculated column you must have the Write privilege on the [Field Security Profile table](../../developer/data-platform/reference/entities/fieldsecurityprofile.md). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
 
-## Create a calculated column
+## Column types that support calculations
 
-Use the column editor to specify a calculated column. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit columns](create-edit-fields.md)
-  
-1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+  - Text
+  - Choice  
+  - Yes/No  
+  - Whole Number  
+  - Decimal Number  
+  - Currency  
+  - Date Time
+
+## Create a calculated column
+ 
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
-1. Select the table you want and choose **Columns**. Choose **Add Field**.  
+1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
 1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**. 
-1. If the data type is one of types that support calculated columns, you can make the column a calculated column by selecting **Add** > **Calculation**.
+1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
     ![Make column calculated](media/make-field-calculated-maker.png)
 
-    These are the types of columns that support calculations:
-    - Text
-    - Choice  
-    - Yes/No  
-    - Whole Number  
-    - Decimal Number  
-    - Currency  
-    - Date Time
 
-1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
-1. This will open the calculated column definition editor, where the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
+
+1. Selecting **Calculation** requires that you save the changes to the table. Select **Done** now or select **Save** when you're prompted to do so.
+1. On the **Columns** tab open the column that you saved in the previous step.
+1. On the column properties pane select **Open calculation**.
+
+   <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
+
+1. In the calculated column definition editor. Notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form](media/empty-field-calculation.png)
 - In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
 - In the **Action** section, you provide the formula for the calculated column.  
