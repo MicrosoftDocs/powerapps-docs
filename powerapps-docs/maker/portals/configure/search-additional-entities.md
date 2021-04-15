@@ -220,7 +220,8 @@ The following walkthrough explains each step in detail with a sample database an
 
 ### See also
 
-[Search related site settings](search.md#related-site-settings)
+[Search related site settings](search.md#related-site-settings) <br>
+[Progressive search](progressive-search.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -24,7 +24,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Use the /`RuleDefinitions`/DisplayRules/`<DisplayRule>` element to define rules controlling when the ribbon element should be displayed.  
 
 - Use the /CommandDefinitions/`CommandDefinition`/DisplayRules/`<DisplayRule>` element to associate specific display rules to a command definition.  
-- 
+
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Control when ribbon elements are displayed  
