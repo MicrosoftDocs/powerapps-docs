@@ -649,3 +649,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 28. Close the preview window and return to Power Apps Studio.
 
 Maria, Kiana, and Preeti have successfully incorporated the Web API and Azure Cognitive Search into the app.
+
+> [!div class="step-by-step"]
+> [Previous](05-creating-publishing-web-api-in-azure.md)
+> [Next](07.md)

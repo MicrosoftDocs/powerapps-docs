@@ -142,4 +142,6 @@ A good approach to application lifecycle management (ALM) is to start in aÂ newÂ
 
 For detailed information about ALM with Power Apps as it applies to VanArsdel, see [Scenario 1: Citizen Development](/power-platform/alm/citizen-dev-alm) in the Power Platform ALM guide.
 
-
+> [!div class="step-by-step"]
+> [Previous](07.md)
+> [Next](conclusion.md)

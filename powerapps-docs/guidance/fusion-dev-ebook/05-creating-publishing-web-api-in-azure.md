@@ -1056,3 +1056,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
 13. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. Verify that the operations for the **Appointments**, **Customer**, and **ScheduleEngineer** controllers are now available.
 
 The Web API is now ready to be incorporated into the Power App.
+
+> [!div class="step-by-step"]
+> [Previous](04-using-dataverse-as-data-source.md)
+> [Next](06-using-web-api-in-app.md)

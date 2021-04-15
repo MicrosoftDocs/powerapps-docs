@@ -77,4 +77,6 @@ VanArsdel Heating and Air Conditioning have started a Fusion Development Team to
 
 -   **Preeti Rajdan: IT Operations**. Preeti is responsible for making sure the IT systems are up and running. She worries a lot about security and applications that might accidentally leave *backdoors* open. She also is stretched thin and needs to be sure any new apps are easy to govern and administer.
 
- 
+> [!div class="step-by-step"]
+> [Previous](01-what-is-fusion-dev-approach.md)
+> [Next](03-building-low-code-prototype.md)

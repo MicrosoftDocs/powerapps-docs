@@ -646,4 +646,6 @@ Finally, you can test the app.
 
 The prototype app is now complete.
 
-
+> [!div class="step-by-step"]
+> [Previous](02-02-intro-sample-scenario.md)
+> [Next](04-using-dataverse-as-data-source.md)

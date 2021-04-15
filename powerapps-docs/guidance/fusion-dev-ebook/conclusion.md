@@ -20,3 +20,6 @@ Fusion development combines the technical and business skills of an organization
 In this ebook, you've seen how the staff at VanArsdel followed a fusion development approach. They produced an app that meets the expectations of the users represented by Caleb, the technician, Maria, the inventory manager, and Malik, who schedules engineers. Preeti is also satisfied that the system is safe and maintainable. The project was completed in record time - from the initial discussions between Caleb and Maria, to the rollout to all technicians.
 
 The VanArsdel team has now experienced how fusion development teams work and is excited to keep collaborating on future projects.
+
+> [!div class="step-by-step"]
+> [Previous](08-protecting-deploying-app.md)

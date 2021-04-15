@@ -40,4 +40,4 @@ Clone this repository locally on your computer and read the README.md file caref
 
 > [!div class="step-by-step"]
 > [Previous](foreword.md)
-> [Next](what-is-fusion-dev-approach.md) 
+> [Next](01-what-is-fusion-dev-approach.md)
