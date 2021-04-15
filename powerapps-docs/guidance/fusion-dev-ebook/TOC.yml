@@ -17,3 +17,9 @@
     href: 05-creating-publishing-web-api-in-azure.md
   - name: "Chapter 6: Using the Web API in the app"
     href: 06-using-web-api-in-app.md
+  - name: "Chapter 7: TODO"
+    href: 07.md
+  - name: "Chapter 8: Protecting and deploying the app"
+    href: 08-protecting-deploying-app.md
+  - name: Conclusion
+    href: conclusion.md
