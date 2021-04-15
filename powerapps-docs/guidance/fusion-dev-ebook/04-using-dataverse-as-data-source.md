@@ -82,7 +82,7 @@ The business rules designer supports the following actions:
 > [!NOTE]
 > Business rules are best suited to model-driven apps. Not all business rule actions are supported by canvas apps.
 
-## Defining Business Activities
+## Defining business activities
 
 There are two fundamental types of table in Dataverse: *Standard* tables (including custom tables), which contain data, and *Activity* tables, which represent business actions and workflows that can be scheduled to run by Dataverse. An activity table contains references to the data entities involved in the activity (such as customers or salespeople), a series of states through which the activity can go, the current state, and other information used by Dataverse to schedule operations when appropriate.
 
