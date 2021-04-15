@@ -110,7 +110,7 @@ To configure table permissions for contact access to owning sales staff:
 
 1. Select **Contact access** as the access type.
 
-1. Select **Created (schema_name)** for the relationship between the contact, and the Car listings table.
+1. Select relationship between the contact, and the Car listings table.
 
 1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
@@ -150,7 +150,7 @@ To configure table permissions for account access to sales staff for dealerships
 
 1. Select **Account access** as the access type.
 
-1. Select **Owning company (schema_name)** for the relationship between the account, and the Dealerships table.
+1. Select relationship between the account, and the Dealerships table.
 
 1. Select **Read** privilege.
 
@@ -186,15 +186,13 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. Select **Add child permission**.
 
-    ![Contoso Ltd. - add table permission](media/entity-permissions-studio-walkthrough/contoso-ltd-add-table-permission.png "Contoso Ltd. - add table permission")
-
 1. Enter table permission name as "Cars in dealerships".
 
 1. Select **Car listings** table.
 
 1. Select **Account access** as the access type.
 
-1. Select **Owning unit (schema_name)** for the relationship between the dealerships, and the Car listings table.
+1. Select relationship between the dealerships, and the Car listings table.
 
 1. Select **Read** privilege.
 
