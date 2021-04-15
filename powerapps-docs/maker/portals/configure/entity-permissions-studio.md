@@ -14,15 +14,7 @@ ms.reviewer: tapanm
 
 In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from the Portal Management app. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio.
 
-## Portals Studio changes
-
-Before you begin, understand the differences between the interface and terminology used for configuring table permissions between Portal Management app, and Power Apps portals Studio.
-
-### Scope is Access type
-
-When using Portal Management app to configure a table permission, you select **Scope** that the permissions apply to. Scope for a table permission defines the impact range for the given table permission and it's privileges. Power Apps portals Studio refers to scope as **Access type** instead. This change is to ensure a better alignment of the terminology for the feature area.
-
-### Available access types in Studio
+## Available access types in Studio
 
 Portals Studio shows four different **Access types**. Depending on the access type you select, the selected table permission and privileges apply to the users from the selected roles for the following tables.
 
@@ -73,11 +65,11 @@ To create a table permission using portals Studio:
 1. Select **Add roles** to add the roles that this table permission will apply to.
 
     > [!TIP]
-    > If you have not created a web role yet, you can also create it using portals Studio. To create a role, select **New role** from the roles flyout. Enter role **Name**, **Description** (optional), and add **Contacts** (optional). If you don't add any contacts while creating a new role, ensure to add them later for the table permission to take effect.
+    > If you have not created a web role yet, you can select **Manage roles** from the roles flyout to open Portal Management app and create roles.
 
 1. Select **Save**.
 
-    ![Table permission example](media/entity-permissions-studio/create-table-permission-example.png "Table permission example")
+    ![Table permission example](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Table permission example")
 
 ### View table permissions in portals Studio
 
@@ -95,7 +87,7 @@ To view table permissions using portals Studio:
 
 1. Select **Table permissions** to view table permissions.
 
-    ![View table permissions](media/entity-permissions-studio/view-table-permissions.png "View table permissions")
+    ![View table permissions](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "View table permissions")
 
 1. To group, or filter table permissions, select a view (List/Group by roles/Group by table/Group by state), or enter a table permission name in the filter text box.
 
@@ -176,8 +168,6 @@ To add a child permission to an existing table permission using portals Studio:
     1. Privileges - grant privileges for the child permissions.
     
     1. Roles - roles for a child permission are inherited from the parent table permission. To add/remove roles, edit the parent table permission instead.
-    
-    More information: [Create table permissions using portals Studio](#create-table-permissions-using-portals-studio)
 
 1. Select **Save**.
 
@@ -185,7 +175,7 @@ To view, edit, deactivate/activate or delete child permissions using portals Stu
 
 ## Next steps
 
-[Walkthrough: Configure table permissions using portals Studio](entity-permissions-studio-walkthrough.md)
+[Tutorial: Configure table permissions using portals Studio](entity-permissions-studio-walkthrough.md)
 
 ### See also
 
