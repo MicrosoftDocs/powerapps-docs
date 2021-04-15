@@ -23,7 +23,7 @@ The Azure resources that an app accesses are also subject to authorization. Serv
 
 Azure helps to protect data in-flight by using transport layer security to encrypt it. This feature is vital for ensuring the integrity and privacy for any distributed system that transmits data over a network such as the public internet. In the case of VanArsdel, technicians will be running the app on mobile devices, utilizing roaming network connections that are outside the organization's control. Preeti is keen to ensure that unauthorized users cannot view or compromise sensitive data.
 
-Data at rest, in storage accounts, databases, and other services in Azure, can also be encrypted. This provides an additional layer of privacy should the datacenter housing this information be breached. For a full list of the security features provided by Azure, read *Introduction to Azure security* at <https://aka.ms/AAbvtkn>.
+Data at rest, in storage accounts, databases, and other services in Azure, can also be encrypted. This provides an additional layer of privacy should the datacenter housing this information be breached. For a full list of the security features provided by Azure, see [Introduction to Azure security](/azure/security/fundamentals/overview).
 
 ## Personalizing the app
 
