@@ -2,7 +2,7 @@
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
 ms.custom: ""
-ms.date: 05/25/2018
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -35,12 +35,11 @@ For example, a salesperson may want to know the weighted revenue for an opportun
   
 - Calculated columns use the columns from the current table or related parent tables.  
 - The expression support is available on the current table and the related parent table columns in the **Condition** sections and the **Action** sections. The built-in functions include:  
- **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  
+ **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  More information: [Functions syntax](#functions-syntax) 
 - A rich conditional support provides branching and multiple conditions. The logical operations include **AND** and **OR** operators.  
 - The visual editing capabilities include modern user interface and intellisense in the **ACTION** section. 
 - A seamless integration of the calculated columns with the forms, views, charts, and reports is available in real time.  
 - You can configure calculated columns to use custom controls.  
-  
   
 ## Scenarios
   
@@ -56,27 +55,25 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 ## Column types that support calculations
 
-  - Text
-  - Choice  
-  - Yes/No  
-  - Whole Number  
-  - Decimal Number  
-  - Currency  
-  - Date Time
+- Text
+- Choice  
+- Yes/No  
+- Whole Number  
+- Decimal Number  
+- Currency  
+- Date Time
 
 ## Create a calculated column
- 
+
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
 1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
-1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**. 
+1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
     ![Make column calculated](media/make-field-calculated-maker.png)
 
-
-
-1. Selecting **Calculation** requires that you save the changes to the table. Select **Done** now or select **Save** when you're prompted to do so.
+1. By selecting **Calculation** you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
 1. On the **Columns** tab open the column that you saved in the previous step.
 1. On the column properties pane select **Open calculation**.
 
@@ -84,8 +81,8 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 1. In the calculated column definition editor. Notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form](media/empty-field-calculation.png)
-- In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
-- In the **Action** section, you provide the formula for the calculated column.  
+   - In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
+   - In the **Action** section, you provide the formula for the calculated column.  
   
 > [!NOTE]
 >  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
