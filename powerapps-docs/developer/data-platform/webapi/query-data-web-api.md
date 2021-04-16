@@ -489,7 +489,7 @@ Additional details on OData data aggregation can be found here: [OData Extension
   
 ## Use parameter aliases with system query options
 
- You can use parameter aliases for `$filter` and `$orderby` system query options. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn’t assigned a value it is assumed to be null.  
+ You can use parameter aliases for `$filter` and `$orderby` system query options (but currently not inside the `$expand` option). Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn’t assigned a value it is assumed to be null.  
   
  Without parameter aliases:
 
@@ -507,8 +507,8 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
 &$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
   
- You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)  
-    
+ You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md) 
+     
 <a name="bkmk_retrieveCount"></a>
  
 ## Retrieve a count of entities
