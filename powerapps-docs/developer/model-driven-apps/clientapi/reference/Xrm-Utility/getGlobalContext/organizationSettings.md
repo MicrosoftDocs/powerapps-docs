@@ -140,7 +140,7 @@ Returns a boolean indicating whether the organization is a trial organization.
 
 **Type**: Boolean
 
-**Description**: TRUE if the organization is a trial organization. FALSE otherwise.
+**Description**: **true** if the organization is a trial organization; **false** otherwise.
 
 ## organizationExpiryDate
 
