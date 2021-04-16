@@ -1,13 +1,16 @@
 ---
-title: "Tutorial: Use Power Apps CLI with Power Apps portals for CI/CD | MicrosoftDocs"
-description: "Learn about how to use Power Apps CLI with Power Apps portals for CI/CD ."
+title: Tutorial - Use Power Apps CLI with portals
+description: A tutorial with examples about how to use Power Apps CLI with Power Apps portals for CI/CD .
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/29/2021
+ms.date: 04/23/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Tutorial: Use Power Apps CLI with portals
@@ -86,8 +89,8 @@ previous step.
 Change the configuration using Visual Studio Code and save your changes.
 
 > [!NOTE]
-> Ensure you update only the supported entities for use with Power Apps
-CLI. More information: [Supported entities](power-apps-cli.md#supported-entities)
+> Ensure you update only the supported tables for use with Power Apps
+CLI. More information: [Supported tables](power-apps-cli.md#supported-tables)
 
 For example, the default portal page shows the text such as this:
 
@@ -127,7 +130,7 @@ the path for the above command (--path) should be
 
 The upload only happens for content that has changed. In this example, since the
 change is made to a web page, content is uploaded only for the adx_webpage
-entity.
+table.
 
 ![Upload completed only for changed content](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
 
@@ -146,7 +149,7 @@ To confirm the changes made to the portal webpage:
     ![View updated page content](media/power-apps-cli/changed-page.png "View updated page content")
 
 This concludes the tutorial. You can repeat the above steps and change the
-portals content for other [supported entities](power-apps-cli.md#supported-entities).
+portals content for other [supported tables](power-apps-cli.md#supported-tables).
 
 ## Next steps
 

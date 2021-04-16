@@ -1,13 +1,16 @@
 ---
-title: "Overview of how to work with Power Apps CLI for CI/CD improvements of a portal. | MicrosoftDocs"
-description: "Learn about how to work with Power Apps CLI for CI/CD improvements of a portal."
+title: Portals support for Power Apps CLI (Preview)
+description: Learn about how to work with Power Apps CLI for CI/CD improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/29/2021
+ms.date: 04/23/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portals support for Power Apps CLI (Preview)
@@ -74,9 +77,9 @@ configured to enable support for this feature.
 For a step-by-step instructions, please refer to [Install Power Apps
 CLI](../../developer/data-platform/powerapps-cli.md#install-power-apps-cli).
 
-## Supported entities
+## Supported tables
 
-Portals support for Power Apps CLI is limited to the entities listed below.
+Portals support for Power Apps CLI is limited to the tables listed below.
 
 :::row:::
    :::column span="":::
@@ -256,7 +259,7 @@ Portals support for Power Apps CLI is limited to the entities listed below.
 :::row-end:::
 
 > [!IMPORTANT]
-> Custom entities and portal template-specific entities (such as
+> Custom tables and portal template-specific tables (such as
 blog, community, or ideas portal) are not supported for customization using
 Power Apps CLI.
 
@@ -314,6 +317,11 @@ Upload portal website content to the current Dataverse environment.
 #### Example
 
 *pac paportal upload --path "C:\\portals\\starter-portal"*
+
+## Additional considerations
+
+- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
+- For duplicate records such as a duplicate web page name, Power Apps CLI creates two different folders&mdash;one with the name of the web page, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
 
 ## Next steps
 
