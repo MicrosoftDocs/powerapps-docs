@@ -38,11 +38,11 @@ The knowledge base part of the app currently just contains a placeholder **Brows
 -   When all matching tips have been found, the technician can select a tip to view its details.
 -   A technician can also add new tips to the knowledge base, as well as add notes and comments to existing tips.
 
-    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Search to provide the search functionality, as described earlier. To support the Power App, Kiana decides that the following operations are required from the Web API:
+    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Search to provide the search functionality, as described earlier. To support the app, Kiana decides that the following operations are required from the Web API:
 
 -   Find the details of a specified knowledge base tip from the **Tips** table.
 -   Update an existing knowledge base tip in the **Tips** table.
--   Add a new knowledge base tip to the **Tips** table, which might also involve adding rows to the **BoilerParts** and **Engineers** tables if the specified part or engineer currently have no tips recorded against them. The routine that actually performs the logic behind adding a new tip will be implemented as an Azure Logic app called from the Power Apps app.
+-   Add a new knowledge base tip to the **Tips** table, which might also involve adding rows to the **BoilerParts** and **Engineers** tables if the specified part or engineer currently have no tips recorded against them. The routine that actually performs the logic behind adding a new tip will be implemented as an Azure Logic app called from Power Apps.
 
 ## Defining the Web API operations: Field scheduling
 
@@ -55,7 +55,7 @@ Scheduling technician appointments requires not only querying, adding, and remov
 > [!NOTE]
 > The database actually contains a fourth table named **AppointmentsStatus**. This table contains a list of valid appointment statuses and is simply a lookup used by other parts of the existing appointments system.
 
-Kiana decides that the following operations would be useful for the Field Scheduling part of the Power App:
+Kiana decides that the following operations would be useful for the Field Scheduling part of the app:
 
 -   Find all appointments for a specified technician.
 -   Find all appointments for the current day for a specified technician.
@@ -1055,7 +1055,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
 
 13. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. Verify that the operations for the **Appointments**, **Customer**, and **ScheduleEngineer** controllers are now available.
 
-The Web API is now ready to be incorporated into the Power App.
+The Web API is now ready to be incorporated into the app.
 
 > [!div class="step-by-step"]
 > [Previous](04-using-dataverse-as-data-source.md)

@@ -27,7 +27,7 @@ When a technician arrives at a customer's home and finds they don't have a part 
 
 A solution is to create a app that allows the field technician to check inventory from the field and place an order immediately if that's necessary. The app will interface with a Web API running in Azure, that provides controlled access to the legacy inventory management system. The office inventory manager can connect to the same legacy system through a desktop app running on-premises. The desktop app enables the office inventory manager to see what parts are currently in stock, and when to place orders to replenish areas that are running low.
 
-![Field Inventory Management Power Apps app](media/image5.png)
+![Field Inventory Management app](media/image5.png)
 
 ## Field knowledgebase
 
@@ -41,7 +41,7 @@ It's impossible for one single technician to know everything about every model o
 
 A solution is to capture the information about furnaces and air conditioners, problems that have occurred, and how they were fixed, in a knowledge base. An app could allow a technician to record comments about a job and the repairs performed while still at the customer's premises. The same app could provide an interface that allows the technician to query the knowledge base about useful information that other technicians may have addressed on similar jobs. The knowledge base itself could be implemented as a database with Azure Cognitive Search providing the lookup facility, based on one or more key words.
 
-![Field Knowledgebase Power Apps app](media/image6.png)
+![Field Knowledgebase app](media/image6.png)
 
 ## Field scheduling and notes
 
@@ -61,7 +61,7 @@ There are several obvious drawbacks to the current scheduling strategy:
 
 VanArsdel could use an app that acts as a front end to the legacy system. It would enable the office receptionist staff to record appointments and cancellations, and add any additional notes to customer records. An app that's available to technicians can provide access to their appointments schedule in real time and see any changes. The same app should enable technicians to enter notes about a finished job and save this information back to the legacy system.
 
-![Field Scheduling Power Apps app](media/image7.png)
+![Field Scheduling app](media/image7.png)
 
 ## Fusion development team members
 

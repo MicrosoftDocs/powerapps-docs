@@ -232,7 +232,7 @@ Now that the connection has been added to the app, Maria can modify the screens 
 
 15. Change the **Default** property of the **Image\_DataCard1** control to **ThisItem.imageUrl**.
 
-16. In the left pane, on the **Data** tab, right-click the **Table1** data connection, and then select **Remove** to delete it from the Power App. This connection is no longer required.
+16. In the left pane, on the **Data** tab, right-click the **Table1** data connection, and then select **Remove** to delete it from the app. This connection is no longer required.
 
     ![Remove the Table1 connection](media/image127.png)
 
@@ -369,7 +369,7 @@ This formula displays the time element of the **startDateTime** field.
     Navigate(AppointmentDetails, ScreenTransition.None);
     ```
 
-22. In the left pane, on the **Data** tab, right-click the **Appointments** data connection, and then select **Remove** to delete it from the Power App.
+22. In the left pane, on the **Data** tab, right-click the **Appointments** data connection, and then select **Remove** to delete it from the app.
 
 23. Save the app.
 
@@ -536,7 +536,7 @@ Kiana can now create a custom connector that Power Apps uses to send search requ
 
 ## Updating the app to use Azure Cognitive Search: Field Knowledgebase
 
-Maria can now use the custom connector in the Power App. But first, she requires a key that grants her the privileges required to connect to the Azure Cognitive Search service. Preeti obtains the key from the **Keys** page for the service in the Azure portal, and gives it to Maria:
+Maria can now use the custom connector in the app. But first, she requires a key that grants her the privileges required to connect to the Azure Cognitive Search service. Preeti obtains the key from the **Keys** page for the service in the Azure portal, and gives it to Maria:
 
 ![Search Service key in the Azure portal](media/image154.png)
 
@@ -590,7 +590,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 12. Close the preview window and return to Power Apps Studio.
 
-13. In the **Tree view** pane, right-click the **PartDetails** screen, and select **Duplicate screen**. This action will add another screen to the Power App, named **PartDetails\_1**:
+13. In the **Tree view** pane, right-click the **PartDetails** screen, and select **Duplicate screen**. This action will add another screen to the app, named **PartDetails\_1**:
 
     ![Duplicate the PartDetails screen](media/image159.png)
 

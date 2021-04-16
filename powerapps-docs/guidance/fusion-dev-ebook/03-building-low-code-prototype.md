@@ -17,7 +17,7 @@ ms.reviewer: kvivek
 > [!NOTE] 
 > [Chapter 2](02-intro-sample-scenario.md) referenced the mobile app used by the field technicians and engineers, and desktop Power Apps used by on-premises staff. The following chapters focus on the design, implementation, and rollout of the mobile apps built using Power Apps. The desktop apps are left as an exercise for the reader.
 
-Kiana is skeptical of low-code solutions and Power Apps, but she and Maria decide to build an app together to help the field technicians check inventory (and order parts if necessary), query the knowledge base, and check their next appointment while out of the office, on service calls. Kiana and Maria plan to use this experience to explore how to add controls and use formulas in a Power App.
+Kiana is skeptical of low-code solutions and Power Apps, but she and Maria decide to build an app together to help the field technicians check inventory (and order parts if necessary), query the knowledge base, and check their next appointment while out of the office, on service calls. Kiana and Maria plan to use this experience to explore how to add controls and use formulas in Power Apps.
 
 Although building an initial low-code prototype is primarily a typical citizen developer task, Kiana decides to pay attention to the process to ensure that she understands how the app is constructed. She needs this information to enable her to help Maria integrate the real-world data sources, Web APIs, and other services required into the app.
 
@@ -34,7 +34,7 @@ Maria is very familiar with the existing inventory management system and underst
 
 If you are a relational database designer, you'll notice that the Excel spreadsheet presents a denormalized view of the data. For example, in a relational database, **CategoryID** would most likely be a numeric identifier that references a separate table containing the details of the category, including the name.
 
-The URLs in the **Image** column are currently just placeholders. In the completed Power App, these URLs will be replaced with the addresses of real image files.
+The URLs in the **Image** column are currently just placeholders. In the completed app, these URLs will be replaced with the addresses of real image files.
 
 Follow these steps to create the app using Power Apps:
 
@@ -267,7 +267,7 @@ Maria decides to create a new screen based on the **List** template available in
 
 ## Item 3: Field scheduling and notes
 
-Maria works with Malik, the office receptionist, to design the interface for the field scheduling and appointments part of the Power App. Malik provides an Excel spreadsheet with some sample data that Maria can use to build the appointments screen. The spreadsheet contains a table with the following columns:
+Maria works with Malik, the office receptionist, to design the interface for the field scheduling and appointments part of the app. Malik provides an Excel spreadsheet with some sample data that Maria can use to build the appointments screen. The spreadsheet contains a table with the following columns:
 
 -   ID (the appointment ID)
 -   Customer ID (a unique identifier for the customer)
@@ -293,12 +293,12 @@ Maria stores this spreadsheet in her OneDrive account with the name **Appointmen
 
 Maria wants to build the appointments part of the app directly from the Excel spreadsheet. She decides to follow a similar approach to that of the Field Inventory Management functionality, except that this time the engineer will be allowed to create and edit appointments.
 
-Maria decides to build the appointments screens, initially as a separate Power App. This way, she can use Power Apps Studio to generate much of the app automatically. Power Apps Studio doesn't currently let you generate additional screens from a data connection in an existing app. When Maria has created and tested the screens, she will copy them to the Field Inventory and Knowledgebase app.
+Maria decides to build the appointments screens, initially as a separate app. This way, she can use Power Apps Studio to generate much of the app automatically. Power Apps Studio doesn't currently let you generate additional screens from a data connection in an existing app. When Maria has created and tested the screens, she will copy them to the Field Inventory and Knowledgebase app.
 
 > [!NOTE] 
 > An alternative approach is to add the **Appointments** table in the Excel spreadsheet as a second data source to the existing app and then hand-craft the screens for appointments. Maria opted to generate the new screens from the spreadsheet and copy the screens; she is currently more familiar with the concepts of *copy and paste* than building screens manually, although she will gradually learn how to create screens from scratch as the process of building this app progresses.
 
-You can follow these steps to create the Appointments Power App:
+You can follow these steps to create the Appointments app:
 
 1.  In Power Apps Studio, select the **File** menu in the toolbar.
 
@@ -468,7 +468,7 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 1.  Open a new browser window and sign in to Power Apps Studio with your account details.
 
-2.  In the left pane, select **Apps**, select the **VanArdselApp** Power App, and then select **Edit.**
+2.  In the left pane, select **Apps**, select the **VanArdselApp** app, and then select **Edit.**
 
     ![Open the VanArsdel app](media/image60.png)
 
@@ -529,9 +529,9 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 ## Adding a Home screen to the app
 
-The final stage is to add a **Home** screen to the Power App. The **Home** screen will enable the engineer to move between the different parts of the app (inventory management, knowledge base, and appointments).
+The final stage is to add a **Home** screen to the app. The **Home** screen will enable the engineer to move between the different parts of the app (inventory management, knowledge base, and appointments).
 
-1.  In the **VanArsdelApp** Power App, in the toolbar, select **New screen**, and then select **Blank**.
+1.  In the **VanArsdelApp** app, in the toolbar, select **New screen**, and then select **Blank**.
 
 2.  In the **Tree view** pane, change the name of the screen (**Screen2**) to **Home**.
 
@@ -626,7 +626,7 @@ Finally, you can test the app.
 
 1.  On the **File** menu, on the **Save** tab, enter the text **Complete version with Home screen** in the **Version note** box, and select **Save**.
 
-2.  Select the back arrow icon to return to the **Home** screen and press **F5** to run the Power App.
+2.  Select the back arrow icon to return to the **Home** screen and press **F5** to run the app.
 
 3.  Verify that the **Home** screen for the app appears.
 
