@@ -1,6 +1,7 @@
 ---
 title: "setActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Sets a process as the active process.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,7 +21,7 @@ search.app:
 
 [!INCLUDE[./includes/setActiveProcess-description.md](./includes/setActiveProcess-description.md)]
 
-If there is an active instance of the process, the entity record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the entity record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
+If there is an active instance of the process, the table record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the table record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
 
 > [!NOTE]
 > The `setActiveProcess` method should be used while creating or editing a record. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `processInstanceId` with `Xrm.Navigation.openForm` method . 
@@ -28,6 +29,8 @@ If there is an active instance of the process, the entity record is loaded with 
 ## Syntax
 
 `formContext.data.process.setActiveProcess(processId, callbackFunction);`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 
