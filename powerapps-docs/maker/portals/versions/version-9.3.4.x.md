@@ -15,13 +15,13 @@ contributor:
 
 # Power Apps portals version 9.3.4.x
 
-Power Apps portal version 9.3.4.x is in Early Upgrade phase. To know the release schedule, check Office 365 message center for release schedule in your geographical region.
+Power Apps portals version 9.3.4.x is in Early Upgrade phase. To know the release schedule, check Office 365 message center for release schedule in your geographical region.
 
 This article describes the features, enhancements, and scope of the release.
 
 ## Updates included with version 9.3.4.x
 
-This release includes only an updated portal host and no solution package updates. The portal host will automatically be updated to version 9.3.4.2 by Microsoft.
+This release includes only an updated portal host, and no solution package updates. The portal host will automatically be updated to version 9.3.4.2 by Microsoft.
 
 Portal host Version 9.3.4.2  resolves the following issues:
 
@@ -31,19 +31,19 @@ Portal host Version 9.3.4.2  resolves the following issues:
 
 - Custom JavaScript defined on the Home is executing when any page is opened in a modal popup.
 
-- When a code component (control) is added on a web form, an error is shown in browser console.
+- When a code component (control) is added on a web form, an error is shown in the browser console.
 
-- If a Bing map configuration is set on an entity form, it gets displayed even if "Map Enabled" setting isn't enabled.
+- If a Bing map configuration is set on an entity form, it gets displayed even if **Map Enabled** setting isn't enabled.
 
 - If a note is added with multiple lines in model-driven app, it shows in a single line on the portal.
 
 - When strict request validation mode is enabled on portal, a generic error is shown on the portal if a special character is added on a field on the form. After this change, a validation error is shown.
 
-- Power BI authentication error logs are available in diagnostic logging to help debug configuration issues.
+- Power BI authentication error logs are available in diagnostics logging to help debug configuration issues.
 
 - If certain types of site settings are added multiple times in configuration, portal throws a server error during startup. After this change, the duplicate settings are ignored, and the first value is picked. This behavior leads to unwanted results if you have duplicate site settings present in the configuration with different values.
 
-- The focus is going to start of the page when **Esc** or **Cancel** button is hit in modal entity forms.
+- The focus is going to start of the page when **Esc** key, or **Cancel** button is hit in modal entity forms.
 
 - Save changes warning message doesn’t show when the datetime field is edited on the web form.
 
@@ -57,7 +57,7 @@ Portal host Version 9.3.4.2  resolves the following issues:
 
 - Resolve case option in entity list action options doesn’t work properly.
 
-- When trying to load a pick-list control with null value on entity list, an error is shown on portal.
+- When trying to load a pick-list control with null value on entity list, an error is shown on the portal.
 
 This release also contains performance, security fixes and improves overall reliability of Power Apps portals.
 

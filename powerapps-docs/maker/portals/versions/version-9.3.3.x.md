@@ -15,7 +15,7 @@ contributor:
 
 # Power Apps portals version 9.3.3.x
 
-Power Apps portal version 9.3.3.x is generally available. To know the release schedule, check Office 365 message center for release schedule in your geographical region.
+Power Apps portals version 9.3.3.x is generally available. To know the release schedule, check the [Message center](/microsoft-365/admin/manage/message-center) for release schedule in your geographical region.
 
 In this article, you'll learn about:
 
