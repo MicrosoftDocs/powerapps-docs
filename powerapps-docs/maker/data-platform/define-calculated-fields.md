@@ -23,11 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Define calculated columns to automate manual calculations
+# Define calculated columns to automate calculations
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use calculated columns to automate manual calculations used in your business processes. 
+Use calculated columns to automate otherwise manual calculations used in your business processes.
 
 For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
@@ -73,22 +73,22 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
     ![Make column calculated](media/make-field-calculated-maker.png)
 
-1. By selecting **Calculation** you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
+1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
 1. On the **Columns** tab open the column that you saved in the previous step.
-1. On the column properties pane select **Open calculation**.
+1. On the column properties pane, select **Open calculation**.
 
    <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
 
-1. In the calculated column definition editor. Notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
+1. In the calculated column definition editor, notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form](media/empty-field-calculation.png)
-   - In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
-   - In the **Action** section, you provide the formula for the calculated column.  
+   1. In the **Condition** section, select **Add condition** to specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators. When you're finished specifying the condition, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
+   1. After you've specified the condition, in the **Action** section, select **Add action** to provide the formula for the calculated column. When you're finished specifying the action, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
   
-> [!NOTE]
->  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
->   
->  Note that column level security will be ignored on the related table, so if there is sensitive data in the accessed column we suggest securing your calculated column as well.  
-
+   > [!NOTE]
+   >  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
+   >   
+   >  Note that column level security will be ignored on the related table, so if there is sensitive data in the accessed column we suggest securing your calculated column as well.  
+1. In the calculated column definition editor, select **Save and Close**.
 
 <a name="BusinessScenarios"></a> 
   
