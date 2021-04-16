@@ -29,7 +29,7 @@ search.app:
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
-For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
+For example, a salesperson may want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   
@@ -38,7 +38,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
  **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  More information: [Functions syntax](#functions-syntax) 
 - A rich conditional support provides branching and multiple conditions. The logical operations include **AND** and **OR** operators.  
 - The visual editing capabilities include modern user interface and intellisense in the **ACTION** section. 
-- A seamless integration of the calculated columns with the forms, views, charts, and reports is available in real time.  
+- A seamless integration of the calculated columns with the forms, views, charts, and reports are available in real time.  
 - You can configure calculated columns to use custom controls.  
   
 ## Scenarios
@@ -68,13 +68,13 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
 1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
-1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**.
+1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
     ![Make column calculated](media/make-field-calculated-maker.png)
 
 1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
-1. On the **Columns** tab open the column that you saved in the previous step.
+1. On the **Columns** tab, open the column that you saved in the previous step.
 1. On the column properties pane, select **Open calculation**.
 
    <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
@@ -100,7 +100,7 @@ Let’s take a look at calculated column examples in more detail.
 
 In this example, we are using the columns of the opportunity table to calculate the weighted revenue based on the opportunity’s probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
 
-In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step-by-step how to define the **Weighted Revenue** calculated column.  
+In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step by step how to define the **Weighted Revenue** calculated column.  
   
 #### Set the condition on the opportunities:
   
@@ -114,7 +114,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 ![Weighted revenue to est. revenue in Dynamics 365](media/calculated-field-open-opportunity.png)  
   
-### Follow-up date of opportunity 
+### Follow up date of opportunity 
  
 In this example, we are using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
 
@@ -126,7 +126,7 @@ In the **ACTION**, we provide two formulas:
  - To follow up in one week on the immediate opportunity
  - To follow up in one month if the opportunity is not likely to happen right away. 
 
-The following screenshots show step-by-step how to define the **Follow-up date** calculated column.  
+The following screenshots show step by step how to define the **Follow-up date** calculated column.  
   
 #### Set the two conditions on the originating lead:
   
