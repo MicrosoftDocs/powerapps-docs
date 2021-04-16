@@ -652,4 +652,4 @@ Maria, Kiana, and Preeti have successfully incorporated the Web API and Azure Co
 
 > [!div class="step-by-step"]
 > [Previous](05-creating-publishing-web-api-in-azure.md)
-> [Next](07.md)
+> [Next](07-adding-functionality-to-app.md)
