@@ -15,7 +15,7 @@ contributor:
 
 # Power Apps portals version 9.3.4.x
 
-Power Apps portals version 9.3.4.x is in Early Upgrade phase. To know the release schedule, check Office 365 message center for release schedule in your geographical region.
+Power Apps portals version 9.3.4.x is in Early Upgrade phase. To know the release schedule, check the [Message center](/microsoft-365/admin/manage/message-center) for release schedule in your geographical region.
 
 This article describes the features, enhancements, and scope of the release.
 
