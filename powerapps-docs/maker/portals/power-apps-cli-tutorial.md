@@ -30,7 +30,7 @@ commands](../../developer/data-platform/powerapps-cli.md#common-commands).
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-## Download and instal Visual Studio Code
+## Download and install Visual Studio Code
 
 To connect to Power Apps portals, and to use Power Apps CLI commands, use
 [Visual Studio Code](https://code.visualstudio.com/docs) and the [integrated
