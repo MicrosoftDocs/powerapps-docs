@@ -1,6 +1,6 @@
 ---
 title: "Chapter 7: Adding functionality to the app  | Microsoft Docs"
-description: "Learn about sdding functionality to the app."
+description: "Learn about adding functionality to the app."
 author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
@@ -18,7 +18,7 @@ Kiana and Maria are excited to show the inventory management app to Caleb, the f
 -   Add a photograph of the work done on a boiler or air conditioning unit, and add it to the appointment details on the **Edit Appointment** screen. This image could prove useful as documentary evidence of repairs performed. The **Edit Appointment** screen currently enables the user to add an image to the appointment, but the image isn't saved as this feature hasn't been fully implemented yet. The reason for this omission is that Kiana and Preeti need to determine the best place to store image data. Caleb would like this functionality added as soon as possible.
 
 
--   View a complete appointment history for a customer, to track repairs requested for that customer and monitor any ongoing issues that may require repeated callouts.
+-   View a complete appointment history for a customer, to track repairs requested for that customer, and monitor any ongoing issues that may require repeated callouts.
 
 -   Order parts from the **Part Details** screen.
 
@@ -195,7 +195,7 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
     Navigate(TakePhoto, ScreenTransition.None);
     ```
 
-    When the user clicks this icon, they will go to the **TakePhoto** screen, to enable them to take a photo or upload an image. The initial image displayed will be the default sample image.
+    When the user selects this icon, they will go to the **TakePhoto** screen, to enable them to take a photo or upload an image. The initial image displayed will be the default sample image.
 
 To test the app:
 
@@ -231,7 +231,7 @@ Having determined that Azure Blob Storage is an ideal location for saving pictur
 
 The app will pick up the new URL for each part image automatically, and the **Image** control on the **PartDetails** screen will display the image.
 
-## Tracking Appointment History for a Customer
+## Tracking appointment history for a customer
 
 Maria thinks that being able to quickly view all the history from a customer's previous technician's visits could be added to the app by creating a custom component. Working with Caleb on what information they want to see, Maria sketches out a simple design comprising the notes and the date of each visit.
 
@@ -675,8 +675,8 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
 
 10. On the **Query** tab, select **+ Add parameter**, add the following parameters, and then select **Save**:
 
-    -   Name: **boilerPartId**, Descripion**: Boiler Part ID**, Type: **long**
-    -   Name: **quantity**, Descripion**: Quantity**, Type : **integer**
+    -   Name: **boilerPartId**, Description**: Boiler Part ID**, Type: **long**
+    -   Name: **quantity**, Description**: Quantity**, Type: **integer**
 
     ![Add parameters to APIM query operation](media/image204.png)
 
@@ -688,9 +688,9 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
 
 12. On the **Query** tab, add the following parameters, and then select **Save**:
 
-    -   Name: **boilerPartId**, Descripion: **Boiler Part ID**, Type: **long**
+    -   Name: **boilerPartId**, Description: **Boiler Part ID**, Type: **long**
     -   Name: **engineerId**, Description: **Engineer ID**, Type: **string**
-    -   Name: **quantityToReserve**, Descripion: **Quantity to reserve**, Type: **integer**
+    -   Name: **quantityToReserve**, Description: **Quantity to reserve**, Type: **integer**
 
 13. On the **Revisions** tab, select the new version. On the ellipsis menu for this version, select **Make current**:
 
