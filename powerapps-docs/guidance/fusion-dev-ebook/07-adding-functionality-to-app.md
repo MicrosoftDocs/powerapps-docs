@@ -22,11 +22,11 @@ Kiana and Maria are excited to show the inventory management app to Caleb, the f
 
 -   Order parts from the **Part Details** screen.
 
-    Additionally, the image control on the **Part Details** screen displays the images stored at a specified URL. Currently the URLs in the data are simply placeholders. Like the photographs for the appointment screen, Kiana and Preeti need to determine the best place to store images so they're available to the Power App.
+    Additionally, the image control on the **Part Details** screen displays the images stored at a specified URL. Currently the URLs in the data are simply placeholders. Like the photographs for the appointment screen, Kiana and Preeti need to determine the best place to store images so they're available to the app.
 
 ## Adding a photograph to an appointment
 
-Photographs need to be stored somewhere accessible by the Power App. For performance and security reasons, Preeti doesn't want photographs to be saved in OneDrive or in Azure SQL Database. Instead, she and Kiana decide to use Azure Blob Storage. Blob Storage is optimized for holding large binary objects, and is robust, with built-in security. Power Apps has a connector that allows access to Blob Storage. Maria suggests adding a new picture-taking screen, improving the user experience for Caleb.
+Photographs need to be stored somewhere accessible by the app. For performance and security reasons, Preeti doesn't want photographs to be saved in OneDrive or in Azure SQL Database. Instead, she and Kiana decide to use Azure Blob Storage. Blob Storage is optimized for holding large binary objects, and is robust, with built-in security. Power Apps has a connector that allows access to Blob Storage. Maria suggests adding a new picture-taking screen, improving the user experience for Caleb.
 
 More information: [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/).
 
@@ -66,7 +66,7 @@ Preeti creates the Blob Storage account from the Azure portal:
 
     ![Storage account access keys](media/image165.png)
 
-Preeti gives the storage account name and key to Kiana, who uses this information to create a custom connector for the Power App:
+Preeti gives the storage account name and key to Kiana, who uses this information to create a custom connector for the app:
 
 1.  Sign in to [Power Apps](http://make.powerapps.com).
 
@@ -92,7 +92,7 @@ Maria can use this connection to Azure Blob Storage in the app to save and retri
 
     ![Search for the Blob Storage connector](media/image169.png)
 
-3.  In the **Azure Blob Storage** dialog box, select the **Azure Blob Storage** connector to add it to your Power App:
+3.  In the **Azure Blob Storage** dialog box, select the **Azure Blob Storage** connector to add it to your app:
 
     ![Add Blob Storage connection](media/image170.png)
 
@@ -221,7 +221,7 @@ To test the app:
 
 ## Displaying images of parts
 
-Having determined that Azure Blob Storage is an ideal location for saving pictures associated with appointments, Preeti and Kiana decide that they should use the same approach for storing the images of parts. A key advantage of this approach is that it doesn't require any modifications to the Power Apps app. The app reuses the same storage account and the same connection. As a separate migration exercise, they can:
+Having determined that Azure Blob Storage is an ideal location for saving pictures associated with appointments, Preeti and Kiana decide that they should use the same approach for storing the images of parts. A key advantage of this approach is that it doesn't require any modifications to the app. The app reuses the same storage account and the same connection. As a separate migration exercise, they can:
 
 1.  Create a new Blob container.
 
@@ -704,7 +704,7 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
     {"id":1,"totalReservations":5}
     ```
 
-The updated Web API is now available. In theory, Kiana could create a new custom connector for the updated Web API and add it to the app. The app could then implement its own logic to determine how many items of the specified product are currently in stock, how many are reserved, compare the results to the number of items required, place an order for more stock if necessary, or reserve items from the existing stock. However, this kind of logic is better implemented in an Azure Logic App. The Power Apps app can call the Logic App through a custom connector when a technician wishes to reserve or order a part.
+The updated Web API is now available. In theory, Kiana could create a new custom connector for the updated Web API and add it to the app. The app could then implement its own logic to determine how many items of the specified product are currently in stock, how many are reserved, compare the results to the number of items required, place an order for more stock if necessary, or reserve items from the existing stock. However, this kind of logic is better implemented in an Azure Logic App. Power Apps can call the Logic App through a custom connector when a technician wishes to reserve or order a part.
 
 To create the Logic App, Kiana uses the following steps:
 
@@ -765,13 +765,13 @@ To create the Logic App, Kiana uses the following steps:
 
     ![Logic App request schema](media/image210.png)
 
-    This schema defines the content of the HTTP request that the Logic App is expecting. The request body comprises the ID of a boiler part, the number of items to reserve, and the ID of the engineer making the request. The Power Apps app will send this request when an engineer wants to reserve a part.
+    This schema defines the content of the HTTP request that the Logic App is expecting. The request body comprises the ID of a boiler part, the number of items to reserve, and the ID of the engineer making the request. The app will send this request when an engineer wants to reserve a part.
 
 11. In the **Choose an operation** box, select **All**, and then select **HTTP**:
 
     ![SelectH tthe HTTP operation option](media/image211.png)
 
-    The Logic App will call the **BoilerParts{id}** operation of the Web API to retrieve information about the boiler part provided by the request from the Power Apps app.
+    The Logic App will call the **BoilerParts{id}** operation of the Web API to retrieve information about the boiler part provided by the request from the app.
 
 12. In the **Actions** pane, select the **HTTP** action:
 
@@ -936,7 +936,7 @@ To create the Logic App, Kiana uses the following steps:
 
 42. In the top left of the **Logic Apps Designer** page, select **Save**. Verify that the Logic App saves without any errors.
 
-To create the custom connector that the Power Apps app can use to trigger the Logic App, Kiana performs the following steps while still in the Azure portal:
+To create the custom connector that Power Apps can use to trigger the Logic App, Kiana performs the following steps while still in the Azure portal:
 
 1.  On the **Overview** page for the Logic App, select **Export**.
 

@@ -40,7 +40,7 @@ Dataverse contains a collection of open-sourced, standardized, extensible data e
 In Dataverse, each entity is tabular, with a default set of columns also defined by the Open Data Initiative. You can view the definition of a table using the *Edit* command for that entity in the list of tables. You can extend a table with your own columns, but as before, it's good practice to use existing columns wherever possible. The example below shows the default definition of the *Account* table.
 
 > [!NOTE]
-> You can modify the display name of tables and columns without changing their names. The display names are the default labels that appear on forms in a Power App.
+> You can modify the display name of tables and columns without changing their names. The display names are the default labels that appear on forms in Power Apps.
 
 ![The Account table in Dataverse](media/image77.png)
 

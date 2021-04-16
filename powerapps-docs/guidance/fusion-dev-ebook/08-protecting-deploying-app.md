@@ -27,7 +27,7 @@ Data at rest, in storage accounts, databases, and other services in Azure, can a
 
 ## Personalizing the app
 
-When someone runs a Power Apps app, it can retrieve information about the user from the Office365 environment. This information can be used to personalize the app. For example, currently the app that Maria and Kiana have developed doesn't distinguish between the different users; they all have access to the same data. Ideally, the app should be personalized to display the information most relevant to the engineer who uses it. Power Apps provides a function named **User** that enables the app to retrieve the email and full name of the current user. This app also requires the user ID (a unique Guid assigned to each user). The rationale behind this requirement is that usernames can be changed, but the ID cannot. The user ID is accessible using the features provided by the **Office365** connector. The steps below illustrate how to add this connector to the app:
+When someone runs an app, it can retrieve information about the user from the Office365 environment. This information can be used to personalize the app. For example, currently the app that Maria and Kiana have developed doesn't distinguish between the different users; they all have access to the same data. Ideally, the app should be personalized to display the information most relevant to the engineer who uses it. Power Apps provides a function named **User** that enables the app to retrieve the email and full name of the current user. This app also requires the user ID (a unique Guid assigned to each user). The rationale behind this requirement is that usernames can be changed, but the ID cannot. The user ID is accessible using the features provided by the **Office365** connector. The steps below illustrate how to add this connector to the app:
 
 1.  Using Power Apps Studio, in the **Tree view** pane, select the **Home** screen.
 
@@ -102,7 +102,7 @@ The app is now ready to deploy and roll out.
 
 ## Deploying the app
 
-The simplest way to deploy an app is to publish it to your Office 365 domain. All users who have the **Can use** permission can run the app, either from Power Apps Studio, or by using the Microsoft **Power Apps** app, available in the Windows Store at <https://aka.ms/AAbvtko>. Power Apps can be run on mobile devices like tablets and phones as soon as they're published; users only need find the Power Apps app in their devices' app store.
+The simplest way to deploy an app is to publish it to your Office 365 domain. All users who have the **Can use** permission can run the app, either from Power Apps Studio, or by using the Microsoft **Power Apps** app, available in the Windows Store at <https://aka.ms/AAbvtko>. Power Apps can be run on mobile devices like tablets and phones as soon as they're published; users only need find the app in their devices' app store.
 
 To publish an app:
 
@@ -143,5 +143,5 @@ A good approach to application lifecycle management (ALM) is to start in aÂ newÂ
 For detailed information about ALM with Power Apps as it applies to VanArsdel, see [Scenario 1: Citizen Development](/power-platform/alm/citizen-dev-alm) in the Power Platform ALM guide.
 
 > [!div class="step-by-step"]
-> [Previous](07.md)
+> [Previous](07-adding-functionality-to-app.md)
 > [Next](conclusion.md)
