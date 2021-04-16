@@ -56,6 +56,17 @@ Contoso has the following relationships configured between tables in Dataverse.
 - **Contact (One) to Car listings (Many)** - One sales staff (contact) can have multiple car listings.
 - **Dealership (One) to Car listings (Many)** - One dealership can have multiple car listings.
 
+### Customizations
+
+Contoso has the following customizations configured for this scenario.
+
+- Web pages have table permissions enabled. More information: [Manage page permissions](webpage-access-control.md)
+- Web pages have [lists](entity-lists.md) configured with the tables, views, and the ability to create/view/edit/delete records as appropriate.
+    - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission.
+    - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions.
+    - To show [all car dealerships](#view-all-car-dealerships), the web page has list with a view from the **Dealerships** table having View, Create, Edit, and Delete records permissions.
+    - To show [car listings for an associated dealership](#view-car-listings-for-associated-dealership), the web page has a list with a view from the **Dealerships** table. This list can be used to view the dealership details, with view having subgrid that shows the car listings associated to the selected dealership with View, Create, Edit, and delete records permissions.
+
 ## View all car listings
 
 Contoso has a web page with a basic form that shows all current car listings in the inventory to all authenticated users.

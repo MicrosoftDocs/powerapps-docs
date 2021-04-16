@@ -22,11 +22,12 @@ Portals Studio shows four different **Access types**. Depending on the access ty
 
 1. **Global access** - Applies the selected table permission and privileges to the users from the selected roles for *all records*.
 1. **Contact access** - Applies the selected table permission and privileges to the users from the selected role *associated to the signed-in user*.
-1. **Account access** - Applies the selected table permission and privileges to the users from the selected role *associated to the signed-in user's parent account*.
+1. **Account access** - Applies the selected table permission and privileges to the users from the selected role *associated to the signed-in user's account*.
 1. **Self access** - Applies the selected table permission and privileges to the users from the selected role *for only their own contact record*.
 
 > [!NOTE]
-> **Parent scope** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent**, directly add or associate child permission to existing table permissions when using portals Studio.
+> - **Parent access type** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent**, directly add child permission to existing table permissions when using portals Studio.
+> - Ensure you enable table permissions on web pages for permissions to take effect. More information: [Manage page permissions](webpage-access-control.md)
 
 ## Configure table permissions using portals Studio
 
@@ -165,7 +166,7 @@ To add a child permission to an existing table permission using portals Studio:
     
     1. Table - table that the child permission is for.
     
-    1. Access type - relationship between the table for primary table permission, and the selected table for the child permission.
+    1. Relationship - relationship between the table for primary table permission, and the selected table for the child permission.
     
     1. Privileges - grant privileges for the child permissions.
     
