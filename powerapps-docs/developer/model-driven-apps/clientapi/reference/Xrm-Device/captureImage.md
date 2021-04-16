@@ -29,7 +29,7 @@ search.app:
 
 | Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|imageOptions |Object | No|An object with the following attributes:<br/>- **allowEdit**: Indicates whether to edit the image before saving. Boolean.<br/>- **height**: Height of the image to capture. Number.<br/>- **quality**: Quality of the image file in percentage. Number.<br/>- **width**: Width of the image to capture. Number..|
+|imageOptions |Object | No|An object with the following attributes:<br/>- **allowEdit**: Indicates whether to edit the image before saving. Boolean.<br/>- **quality**: Quality of the image file in percentage. Number.<br/>- **height**: Height of the image to capture. Number.<br/>- **width**: Width of the image to capture. Number.<br/>**Note**: Both the height and width dimensions must be specified if used.|
 |successCallback |Function | Yes|A function to call when image is returned. A base64 encoded image object with the following attributes is passed to the function:<br/>- **fileContent**: Contents of the image file. String <br/>- **fileName**: Name of the image file. String.<br/>- **fileSize**: Size of the image file in KB. Number.<br/>- **mimeType**: Image file MIME type. String.|
 |errorCallback |Function | Yes|A function to call when the operation fails. |
  

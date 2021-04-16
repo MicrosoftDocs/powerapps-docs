@@ -1,6 +1,6 @@
 ---
 title: formatLanguage | Microsoft Docs
-description: 
+description: Returns a formatted string that represents the datetime value after being formatted.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

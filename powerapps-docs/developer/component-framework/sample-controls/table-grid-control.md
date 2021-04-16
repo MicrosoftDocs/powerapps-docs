@@ -1,6 +1,6 @@
 ---
 title: " Table grid component| Microsoft Docs" 
-description: "Implementing table grid component" 
+description: "This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -14,6 +14,8 @@ author: Nkrb
 
 This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
 The component header columns and internal record values are bound to the existing views. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableGrid).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Table Grid component](../media/table-grid-control.png "Table Grid component")

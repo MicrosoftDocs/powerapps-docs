@@ -1,6 +1,7 @@
 ---
 title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
-ms.date: 01/13/2021
+description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
@@ -18,6 +19,8 @@ search.app:
 All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
 
 You can associate event handlers to only some events using the UI. For events that are not available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 ## Add or remove event handler function to event using UI
 

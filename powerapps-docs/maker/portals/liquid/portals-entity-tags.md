@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/28/2019
+ms.date: 04/07/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -569,6 +569,13 @@ Performs a query against the portal search index. The matching results can then 
 {% endif %}
 
 {% endsearchindex %}
+
+<style>
+
+    .highlight {background-color: #FFFCAC;}
+
+</style>
+
 ```
 
 By default, the search index object will be given the variable name searchindex. Optionally, a different variable name can be provided.
