@@ -903,71 +903,53 @@ The following variables are used by the location type section.
 
 1. Selecting the save button updates the colLocationTypes and Area Inspection Location Types table.
 
-#### Grouped Location Section
+#### Grouped location section
 
-##### Collections Used
+This section explains details about the location type section.
 
-1.  **colGalGroups** – Used to collect the list of grouped locations
+##### Grouped location collections
 
-2.  **colLocTypeSettings** – Used to collect the different setting types
-    available in the app.
+The following collections are used by the location type section.
 
-3.  **colGroupCounter** – used to store the number of grouped locations
-    available
+| Collection name | Description |
+| - | - |
+| colGalGroups | Used to collect the list of grouped locations. |
+| colLocTypeSettings | Used to collect the different setting types available in the app. |
+| colGroupCounter | Used to store the number of grouped locations available. |
+| colTempGalGroup | Used for the helper screen. |
 
-4.  **colTempGalGroup** –
+##### Grouped location variables
 
-##### Variables Uses 
+The following collections are used by the location type section.
 
-1.  **gblTempAddGroupType –**
+| Variable name | Description |
+| - | - |
+| gblTempAddGroupType | Variable to check whether a new group is being created from the settings screen. |
+| gblGroupChanged | Global variable to indicate that the checklist step has been updated. |
+| gblDontChangeAreaType | Variable to handle whether the Area type should be allowed to change or not. |
+| gblSelectedGroup | Global variable which denotes the group which seleted. |
+| gblResetAreaDropdown | Global variable to reset the Area Dropdown. |
 
-2.  **gblGroupChanged –** global variable to indicate that the checklist step
-    has been updated
+##### Grouped location execution details
 
-3.  **gblDontChangeAreaType –**
+1. The **galGroups** gallery displays the list of available group locations with the Title, Locations and Location Type Label from the **colGalGroups** collection in the ascending order.
 
-4.  **gblSelectedGroup – global variable which denotes the group which seleted**
+1. The dropdown values for the Locations are from the Area Inspection Locations table and the Location type values are from the Area Inspection Location Types table.
 
-5.  **gblResetAreaDropdown – global variable to reset the Area Dropdown**
+1. Selecting **+ Add Group** sets the values of **gblTempAddGroupType**, **gblGroupChanged**, and **gblDontChangeAreaType** variables to true.
 
-##### Detailed Steps
+1. A new record created in **colGalGroups** collection is set to **gblSelectedGroup** variable, and the value of **gblResetAreaDropdown** variable is set to true.
 
-1.  The **galGroups** gallery displays the list of available Group Locations
-    with the Title, Locations and Location Type Label from the **colGalGroups**
-    collection in Ascending order.
+1. A new grouped location is created with the title, Location and Location type values as blank.
 
-2.  The dropdown values for the Locations are from the Area Inspection Locations
-    table and the Location type values are from the 'Area Inspection Location
-    Types table.
+1. A grouped location can be deleted using **Delete** next to the record. Deleting updates the **gblWarningType** variable to **locationgroupdelete** and **gblDisplayWarning** to true, displaying the delete dialog.
 
-3.  Clicking on the “+ Add Group” button will set the values of
-    **gblTempAddGroupType** and **gblGroupChanged** and
-    **gblDontChangeAreaType** variables to true.
+1. When **I understand** checkbox is checked, the delete button is enabled. When selected, the group is removed from the Area inspection Groups table. The **colGroupCounter** collection is set to 1 and the **colGalGroups** collection is updated.
 
-4.  A new record created in **colGalGroups** is set to **gblSelectedGroup**
-    variable and the value of **gblResetAreaDropdown** is set to true.
+#### Customize experience section
 
-5.  A new grouped location is created with the title, Location and Location type
-    values as blank.
+This section explains details about the customize experience section.
 
-6.  A grouped location can be deleted by clicking on the Delete button next to
-    the record, clicking on which will update **gblWarningType** variable to
-    locationgroupdelete and gblDisplayWarning true displaying the Delete dialog.
-
-7.  Once the user checks the “I understand” checkbox, the delete button will be
-    enabled, Clicking on which the group is removed from the Area inspection
-    Groups table, the **colGroupCounter** is set to 1 and the **colGalGroups**
-    collection is updated.
-
-##### Screens 
-
-![](media/inspection-architecture/82948c8f06b382ee073ad2a374e0ade1.png)
-
-![](media/inspection-architecture/f076f64f353505cc40252e89db5e0239.png)
-
-![](media/inspection-architecture/44f4b663740c0fff6f940af68b08bb0f.png)
-
-#### Customize Experience Section
 
 ##### Collections Used
 
