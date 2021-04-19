@@ -107,7 +107,7 @@ This article showed you how to get started with embedding a canvas app in a mode
     - Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent table of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app. - Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
     - With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
   	> [!NOTE]
-  	> The embedded canvas app has full access to row from the host model-driven form via ModelDrivenFormIntegration.Item. 
+  	> The embedded canvas app has full access to read from the host model-driven form via ModelDrivenFormIntegration.Item. 
   	> As an example, to get the value of a column with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
 18.	In the property pane on the right, next to **Columns**, select **Edit columns**.
 19.	Select **+ Add column** to add another column to the canvas app form or reorder existing columns using drag and drop. Close the data pane when you are done adding and reordering columns.
