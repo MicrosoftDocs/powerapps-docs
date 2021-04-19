@@ -1104,69 +1104,46 @@ The following variables are used by the welcome screen.
 
 1. **gblTeamAvgTime** and **gblUserAvgTime** global variables are used to compare the average inspection time by the team versus the average inspection time by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
-### Items Screen
+### Locations screen in inspection app
 
-#### Collections Involved
+This section explains app [Locations](inspection.md#choose-a-location-to-inspect) screen collections, variables, and execution details.
 
-1.  **colMenuAreaTypes-** collection of all area/asset/Item types including
-    ‘All’ as a type where ‘All’ is used to show all the areas/assets/items
-    without filtering them with associated Type.
+#### Inspection app locations screen collections
 
-2.  **colSelectedLocation –** collection of the selected area/asset/item
+The following collections are used by the locations screen.
 
-3.  **colFormChecklistSteps-** collection of checklist steps that are going to
-    be used for the inspection if there is only one Checklist (form) associated
-    to the area’s/ asset’s / item’s type.
+| Collection name | Description |
+| - | - |
+| colMenuAreaTypes | Collection of all area/asset/item types including "All" as a type. "All" is used to show all the areas/assets/items without filtering them with associated type. |
+| colSelectedLocation | Collection of the selected area/asset/item. |
+| colFormChecklistSteps | Collection of checklist steps that are going to be used for the inspection if there is only one Checklist (form) associated to the area/asset/item type. |
+| colChecklistSteps | Collection of checklist steps associated to the selected checklist. |
 
-4.  **colChecklistSteps-** collection of checklist steps associated to selected
-    checklist
+#### Inspection app locations screen variables
 
-#### Variables involved
+The following variables are used by the locations screen.
 
-1.  **gblSkipFormNav –** global variable to control whether the user should be
-    navigated to the forms screen or directly to the checklist overview screen.
+| Variable name | Description |
+| - | - |
+| gblSkipFormNav | Global variable to control whether the user should be taken to the forms screen or directly to the checklist overview screen. |
+| gblFormStepsCount | Global variable to store number of checklist steps in the selected form. |
+| gblDisplayNoStepWarning | Global variable to display warning if the number of checklist steps for the selected form is zero. |
+| gblSelectedLocation | Global variable to store the selected area/asset/item. |
+| gblSelectedChecklist | Global variable to store the checklist associated to the type of the selected area/asset/item. Applicable only when there's a single checklist for the area/asset/item type. |
 
-2.  **gblFormStepsCount** - global variable to store number of checklist steps
-    in the selected form.
+#### Location screen execution details
 
-3.  **gblDisplayNoStepWarning –** global variable to display warning if the
-    number of checklist steps for the selected form is zero
+1. **colMenuAreaTypes** collection is used to show the available area/asset/item types by its label. The text is truncated if the length of the text is more than nine letters.
 
-4.  **gblSelectedLocation –** global variable to store the selected area / asset
-    / item
+1. All the areas/assets/items are shown by default on this screen and user can pick any area/asset/item to start the inspection.
 
-5.  **gblSelectedChecklist –** global variable to store the checklist associated
-    to the type of the selected area / asset / item. Applicable only when there
-    is a single checklist for the area / asset / Item type
+1. On selecting any of the area/asset/item type by the menu, the list of the areas/assets/items will be filtered based on the type selected.
 
-#### Detailed Steps
+1. On selecting any of the area/asset/item it is stored in the **gblSelectedLocation** global variable. If there's only one checklist associated to the type then the checklist is stored in **gblSelectedChecklist** global variable instead.
 
-1.  **colMenuAreaTypes** is used to show the available area / asset / item types
-    by its label and the text will be truncated if the length of the text is
-    more than nine letters.
+1. The associated checklist steps of **gblSelectedChecklist** global variable is collected into the **colFormChecklistSteps** collection.
 
-2.  All the areas / assets / items are shown by default on this screen and user
-    can pick any area/ asset / item to start the inspection
-
-3.  On selecting any of the area / asset /item type by the menu, the list of the
-    areas/ assets / items will be filtered based on the type selected.
-
-4.  On selecting any of the area /asset/ item it is stored at
-    **gblSelectedLocation**, if there is only one checklist associated to the
-    type then the checklist is stored at **gblSelectedChecklist.**
-
-5.  The associated checklist steps of **gblSelectedChecklist** is collected in
-    to **colFormChecklistSteps.**
-
-6.  Based on the number of associated Checklists for the
-    **gblSelectedLocation,** the app navigates to either ‘Forms Screen’ in case
-    if there are more than one checklist for the type the
-    **gblSelectedLocation** is associated to, or navigates to ‘Overview Screen’
-    if there is only one checklist.
-
-#### Screens<br>
-
-![](media/inspection-architecture/8bdd264d6bc9e74339dc17086bb46383.png)
+1. Based on the number of associated checklists for the **gblSelectedLocation** global variable, the app takes to either the Forms screen in case if there are more than one checklist for the type the **gblSelectedLocation** global variable is associated to, or takes to the Overview screen if there's only one checklist.
 
 ### Forms Screen
 
