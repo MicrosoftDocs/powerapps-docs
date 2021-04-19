@@ -950,45 +950,35 @@ The following collections are used by the location type section.
 
 This section explains details about the customize experience section.
 
+##### Customize experience collections
 
-##### Collections Used
+The following collections are used by the customize experience section.
 
-1.  **colLocConfig**–
+| Collection name | Description |
+| - | - |
+| colLocConfig | Collection used to set the name and type of the main section and sub-section. |
+| colLocTypeSettings | Used to collect the different setting types available in the app. |
 
-2.  **colLocTypeSettings –** Used to collect the different setting types
-    available in the app.
+##### Customize experience variables
 
-##### Variables Uses 
+The following variables are used by the customize experience section.
 
-1.  **gblTempAddGroupType –**
+| Variable name | Description |
+| - | - |
+| gblTempAddGroupType | Global variable set to true when a new group added. |
+| gblLabelChanged | Global variable to indicate that the checklist step has been updated. |
+| gblWorkType | Used to store the work type value which is in context. |
+| gblSelectedWorkType | Used to store the selected work type. |
 
-2.  **gblLabelChanged-** global variable to indicate that the checklist step has
-    been updated
+##### Customize experience execution details
 
-3.  **gblWorkType –** used to store the work type value which is in context
+1. The **colLocTypeSettings** collection is used to display the list of available setting types in the **galSettings** gallery.
 
-4.  **gblSelectedWorkType –** used to store the selected work type
+1. Users can update the verbiage used in the app. Inspection, Audit and Walk are the available options. Selecting any of these updates the **gblSelectedWorkType** variable to the selected value, and **gblLabelChanged** to true indicating the label has been changed, enabling the save button.
 
-##### Detailed Steps
+1. Users can also update the main and sub-section names stored in the **colLocConfig** collection.
 
-1.  The **colLocTypeSettings is used to display the list of available setting
-    types in the galSettings** gallery.
-
-2.  Users can update the verbiage used in the app. Inspection, Audit and Walk
-    are the available options. Clicking on any of these will update the
-    **gblSelectedWorkType** variable to the selected value and
-    **gblLabelChanged** to true indicating the Label has been changed and thus
-    enabling the Save button.
-
-3.  Users can also update the Main and Sub section names stored in the
-    **colLocConfig** collection.
-
-4.  Clicking on the Save button will set the value of the **gblWorkType** to
-    **gblSelectedWorkType** and update the Area Inspection Labels table**.**
-
-##### Screens
-
-![](media/inspection-architecture/4a2edcdbb218afd52c7ccbed3aae25e6.png)
+1. Selecting **Save** sets the value of the **gblWorkType** global variable to **gblSelectedWorkType**, and update the Area Inspection Labels table.
 
 Collections
 -----------
