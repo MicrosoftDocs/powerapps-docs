@@ -50,7 +50,7 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-an-artifact-table-dashboard-or-business-process-flow).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
@@ -325,6 +325,17 @@ If your organization has turned on both search options (old relevance search and
 
     > [!div class="mx-imgBorder"]
     > ![Relevance search box](media/relevance-search-box.png "Relevance search box")
+    > 
+
+## Use keyboard shortcuts
+
+The following keyboard shortcuts apply to grids. For more information, see:
+
+- [Navigation](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#navigation) 
+- [Editing](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#editing)
+- [Selection](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#selection)
+
+
 
 ### See also
 
