@@ -2,7 +2,7 @@
 title: "Use XRM tooling to delete data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to delete data from Microsoft Dataverse"
 ms.custom: ""
-ms.date: 03/20/2019
+ms.date: 04/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -23,13 +23,13 @@ search.app:
 ---
 # Use XRM tooling to delete data
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.  
   
 ## DeleteEntity  
 
-`DeleteEntity` is used to remove a single row of data from Dataverse. To use this method, you need to know the entity schema name you wish to affect, and the GUID of the row you want to remove.  
+`DeleteEntity` is used to remove a single row of data from Dataverse. To use this method, you need to know the table schema name you wish to affect, and the GUID of the row you want to remove.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
@@ -57,7 +57,7 @@ else
   
 ## DeleteEntityAssociation  
 
-`DeleteEntityAssociation` removes the many-to-many association between records in entities. In this example, we will remove the association between a record in the lead and account entities.  
+`DeleteEntityAssociation` removes the many-to-many association between records in tables. In this example, we will remove the association between a record in the lead and account tables.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
