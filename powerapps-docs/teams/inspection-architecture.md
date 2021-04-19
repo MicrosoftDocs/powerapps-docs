@@ -1145,48 +1145,47 @@ The following variables are used by the locations screen.
 
 1. Based on the number of associated checklists for the **gblSelectedLocation** global variable, the app takes to either the Forms screen in case if there are more than one checklist for the type the **gblSelectedLocation** global variable is associated to, or takes to the Overview screen if there's only one checklist.
 
-### Forms Screen
+### Inspection form screen
+
+This section explains app [inspection form](inspection.md#inspection-form) screen collections, variables, and execution details.
+
+#### Inspection form collections
+
+The following collections are used by the locations screen.
+
+| Collection name | Description |
+| - | - |
+| ColGroupFroms | Collection of checklists associated to the selected area/asset/item type. |
+| colFormChecklistSteps | Collection of checklist steps associated to the selected checklist. |
+
+#### Inspection form variables
+
+The following variables are used by the locations screen.
+
+| Variable name | Description |
+| - | - |
+| gblFormStepsCount | Global variable to store number of checklist steps in the selected form. |
+| gblDisplayNoStepWarning | Global variable to display warning if the number of checklist steps for the selected form is zero. |
+| gblSelectedChecklist | Global variable to store the selected checklist. |
+
+#### Inspection form execution details
+
+1. When a checklist is selected, the **gblSelectedChecklist** global variable is used to store the selected checklist and the associated checklist steps are collected using the **colFormChecklistSteps** collection.
+
+1. If the checklist steps count if less than or equal to zero then the app shows a warning message that the user can’t perform an inspection. This behavior is controlled by the **gblDisplayNoStepWarning** global variable.
+
+1. If the checklist steps count is greater than zero, then the app takes the user to the Overview screen.
+
+### Overview screen
+
+This section explains app [Overview](inspection.md#inspection-overview) screen collections, variables, and execution details.
 
 #### Collections Involved
 
-1.  **ColGroupFroms-** collection of checklists associated to the selected area
-    / asset / item’s type.
+The following collections are used by the locations screen.
 
-2.  **colFormChecklistSteps –** collection of checklist steps associated to the
-    selected checklist.
-
-#### Variables involved
-
-1.  **gblFormStepsCount -** global variable to store number of checklist steps
-    in the selected form.
-
-2.  **gblDisplayNoStepWarning –** global variable to display warning if the
-    number of checklist steps for the selected form is zero
-
-3.  **gblSelectedChecklist –** global variable to store the selected checklist.
-
-#### Detailed Steps
-
-1.  On select of any checklist from the available list, **gblSelectedChecklist**
-    stores the seleted checklist and the associated checklist steps are
-    collected at **colFormChecklistSteps.**
-
-2.  If the checklist steps count if less than or equal to ‘0’ then the app shows
-    a warning message as with no steps the user can’t perform an inspection and
-    this behavior is controlled by **gblDisplayNoStepWarning** variable.
-
-3.  If the checklist steps count is greater than ‘0’, then the app navigates to
-    ‘Overview Screen’.
-
-#### Screens
-
-![](media/inspection-architecture/5e42b576e9b8e05ae2ff415d5c4b8235.png)
-
-![](media/inspection-architecture/e1831856c7ee75bbf3caaca011d1632b.png)
-
-### Overview Screen
-
-#### Collections Involved
+| Collection name | Description |
+| - | - |
 
 1.  **colFormChecklistSteps** - collection of checklist steps that are
     associated to the selected checklist
