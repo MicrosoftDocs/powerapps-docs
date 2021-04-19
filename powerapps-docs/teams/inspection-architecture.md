@@ -1180,44 +1180,32 @@ The following variables are used by the locations screen.
 
 This section explains app [Overview](inspection.md#inspection-overview) screen collections, variables, and execution details.
 
-#### Collections Involved
+#### Overview screen collections
 
 The following collections are used by the locations screen.
 
 | Collection name | Description |
 | - | - |
+| colFormChecklistSteps | Collection of checklist steps that are associated to the selected checklist. |
 
-1.  **colFormChecklistSteps** - collection of checklist steps that are
-    associated to the selected checklist
+#### Overview screen variables
 
-#### Variables involved
+The following variables are used by the locations screen.
 
-1.  **gblLocationType –** global variable to store the selected area’s / asset’s
-    / item’s type.
+| Variable name | Description |
+| - | - |
+| gblLocationType | Global variable to store the selected area/asset/item type. |
+| gblSelectedLocation | Global variable to store the selected area/asset/item. |
 
-2.  **gblSelectedLocation –** global variable to store the selected area/ asset
-    / item
+#### Overview screen execution details
 
-#### Detailed Steps
+1. When this screen is visible, the **gblLocationType** global variable is set to the selected area/asset/item type.
 
-1.  On visible of this screen **gblLocationType** is set to the selected area’s
-    / asset’s / item’s type.
+1. The screen shows the image of the selected area/asset/item using the **gblSelectedLocation** global variable.
 
-2.  The screen shows the image of the selected area/ asset/ item using
-    **gblSelectedLocation.**
+1. The list of checklists is displayed in a sequential order using the collection **colFormChecklistSteps**.
 
-3.  The list of checklists is displayed in a sequential order using the
-    collection **colFormChecklistSteps.**
-
-4.  User can either select any of the checklist step to navigate to inspection
-    screen with the focus of selected checklist step.
-
-5.  Or the user can click on ‘Begin Inspection’ to start the inspection in the
-    sequential order shown.
-
-#### Screens<br>
-
-![](media/inspection-architecture/0adaf12bfe1bbec123efe09e7cac0541.png)
+1. User can select any of the checklist steps to go to the inspection screen with the focus of selected checklist step, or select **Begin Inspection** to start the inspection in the sequential order shown.
 
 ### Checklist Steps Screen
 
