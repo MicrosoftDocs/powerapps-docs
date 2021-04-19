@@ -998,277 +998,82 @@ is a group of items that are similar, such as products in a product list.
     With a single function, ClearCollect offers the combination of Clear and
     then Collect.
 
-| Collection Name             | Description                                                                                                                     | Screen Used                                                                       |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| colLocalization             | Used to build a Localization Collection based on the User Language App OnStart                                  | App OnStart                                                       |
-| colLabelSettings            | Used to collect the labels and icons used in the app (Inspection, Audit and Walk)                                               | App OnStart                                                       |
-| colUserSettings             | Used to collect User Settings CDS record if it exists                                                                           | App OnStart                                                       |
-| colLocationTypeIcons        | Used to collect the name and order of the icons used in the app                                                                 | App OnStart                                                       |
-| colLocConfig                | Used to collect and set the Name and type of the Main Section and Sub section                                                   | App OnStart                                                       |
-| colLocationTypeSettings     |                                                                                                                                 |                                                                                   |
-| colInspection               | Used to collect the Location of the Area Inspection                                                                             | App OnStart                                                       |
-| colPlannerBuckets           | To collect the list of Planner Buckets in a particular plan based on the Plan and Team ID’s                                     | App OnStart                                                       |
-| colPlannerTasks             | To collect the list of Planner Tasks in a particular plan based on the Plan and Team ID’s                                       | App OnStart                                                       |
-| colLocationTypes            | To collect the Active Area Inspection Locations types                                                                           | OnSelect property of the Edit icon on the Locations screen                        |
-| colLocationTypeCounter      | Used to collect and set the Location Type counter to 1                                                                          | OnSelect property of the Edit icon on the Locations screen                        |
-| colGalLocationTypes         | Used to collect the Title, UniqueID, Title, Symbol, Order and Photo of a Grouped Location                                       | OnSelect property of the Edit icon on the Locations screen                        |
-| colIconLocationTypeCounter  | Used to collect and set the Icon Location Type counter to 1                                                                     | OnSelect property of the Edit icon on the Locations screen                        |
-| colGalIconLocationTypes     |                                                                                                                                 | OnSelect property of the Edit icon on the Locations screen                        |
-| colGroupCounter             | Used to collect and set the Group counter to 1                                                                                  | OnSelect property of the Edit icon on the Locations screen                        |
-| colGalGroups                | Used to collect the Title, Area Type, Record, Unique ID and Sort Order of an Area inspection Group                              | OnSelect property of the Edit icon on the Locations screen                        |
-| colRemoveInspections        | Used to collect the selected inspectionrecord to be removed from the locations                                                 | Onclick property of the Delete button on the Warning screen of the Locations Page |
-| colNewLocation              | Used to collect the Name, Location Type and the Primary Image of a newly added Location                                         | OnClick property of the Save button on the Locations Screen                       |
-| colTempGalGroup             |                                                                                                                                 | Helper screen , we only have clear                                                |
-| colGroupCount               |                                                                                                                                 | Not Available                                                                     |
-| colChecklistStepsTemp       | Used to collect the selected Area Inspection checklist steps                                                                    | OnSelect property of a hidden button on the Inspection Forms screen.              |
-| colChecklistSteps           | Used to collect the information of the Checklist steps of an Inspection Form                                                    | OnSelect property of the Inspection form button on the Locations screen.          |
-| colChecklistStepsOutput1    |                                                                                                                                 | OnSelect property of the Inspection form button on the Locations screen.          |
-| colChecklistStepsImage      | To collect the image of the checklist steps on the Inspection from                                                              | OnSelect property of the Inspection form button on the Locations screen.          |
-| colPatchSteps1              | To collect all the details of a selected inspection form to duplicate it as a new Inspection form                               | OnSelect property of the Duplicate button on the Inspection forms screen.         |
-| colChecklistStepsRemoveTemp | To collect the information of the deleted checklist step of an Inspection form                                                  | OnSelect property of the Save button on the Inspection forms screen.              |
-| colCounter                  |                                                                                                                                 | OnSelect property of the Save button on the Inspection forms screen.              |
-| colTeamDurations            | Used to collect Date, Start and End times of an Inspection for calculations                                                     | OnVisible property of the Insights forms screen.                                  |
-| colBarChartTemp             | To collect the top contributors bar chart last 7 days - count of inspections which are grouped by owner                         | OnVisible property of the Insights forms screen.                                  |
-| colBarChart                 | Used to sort and group information from the top contributors bar chart based on the Owner name and Grouped location             | OnVisible property of the Insights forms screen.                                  |
-| colLineChartForms           | To Collect the average inspection time by form line chart - inspections time for inspections in the last 7 days grouped by form | OnVisible property of the Insights forms screen.                                  |
-| colLineChart                | Used to sort and group information of the average inspection time by form line chart based on the Form ID and Grouped location  | OnVisible property of the Insights forms screen.                                  |
-| colLocTypesTemp             |                                                                                                                                 |                                                                                   |
-| colInspectionsByLocTypeID   |                                                                                                                                 |                                                                                   |
-| colInspectionsByLocType     |                                                                                                                                 | Gallery on the Helper screen                                                      |
-| colInspectionsByLocTypeName |                                                                                                                                 |                                                                                   |
-| colLocTypes                 |                                                                                                                                 |                                                                                   |
-| colPieChart                 |                                                                                                                                 |                                                                                   |
+## Inspection app
 
-### Global Variables
+This section explains collections, global variables used by the [Inspection](inspection.md#inspection-app) app, and execution details for the app.
 
-| Variable Name                   | Type    | Description                                                                                                            |
-|---------------------------------|---------|------------------------------------------------------------------------------------------------------------------------|
-| gblAppLoaded                    | Boolean | To check whether the App is completely loaded                                                                          |
-| gblAppContext                   | Boolean | To check the context of where the app is running (web, desktop or mobile)                                              |
-| gblUserLanguage                 | Text    | To check the logged in User’s Language                                                                                 |
-| gblFirstRun                     | Boolean | Variable to check whether the app is being run for the first time after installation                                   |
-| gblWorkType                     | Text    | Variable to load work type - inspection, walk, or audit, if none exists, then set it to inspection                     |
-| gblSelectedWorkType             | Text    | Variable to store the selected Work type.                                                                              |
-| gblParamTeamId                  | Text    | To set the Group ID from Planner                                                                                       |
-| gblParamChannelId               | Text    | To set the Channel ID from Planner                                                                                     |
-| gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark                                                                        |
-| gblThemeContrast                | Boolean | To check whether the Teams theme is set to High Contrast                                                               |
-| gblAppManager                   | Boolean | To check the User team role                                                                                            |
-| gblRecordUserSettings           | Record  | Variable to use the Oldest Record in case multiple records exist                                                       |
-| gblFontSizes                    | Record  | Used to set the font sizes in the app                                                                                  |
-| gblPadding                      | Record  | Used to set padding values in the app                                                                                  |
-| gblScreenHeightMin              | Number  | Used to set the minimum Screen height of the app                                                                       |
-| gblScreenWidthMin               | Number  | Used to set the minimum Screen Width of the app                                                                        |
-| gblEditLocation                 | Boolean | Variable Used to control whether a Location can be edited or not                                                       |
-| gblView                         | Text    | Variable to set the view as Locations                                                                                  |
-| gblViewInspection               | Boolean | Variable to set the Inspection view                                                                                    |
-| gblManageLocationTypes          | Boolean |                                                                                                                        |
-| gblTempAddLocType               | Boolean |                                                                                                                        |
-| gblWarningType                  | Text    | global variable which controls which warning message to be displayed.                                                  |
-| gblDisplayWarning               | Boolean | Variable to hide and show the Warning message while deleting the inspection                                            |
-| gblAddLocation                  | Boolean | Variable to show and hide the Add location button                                                                      |
-| gblShowLocationTypeIcons        | Boolean | Variable to show and hide location type icons                                                                          |
-| gblFirstTimeNavigation          | Boolean |                                                                                                                        |
-| gblParamTenantId                | Text    | Variable to set the Tenant ID from Planner                                                                             |
-| gblParamLocaleId                | Text    | Variable to set the Locale ID from Planner                                                                             |
-| gblCheckLabelSettings           | Number  | To get the number of area type labels from the 'Area Inspection Labels (View)                                          |
-| gblRecordSettings               | Record  | To check Teams settings for current team and channel ID                                                                |
-| gblLocation                     | Record  | Variable to select the first location available under the Location view                                                |
-| colCharsWidth                   | Table   | Variable used for auto width of header buttons                                                                         |
-| gblNavToSettings                | Boolean | variable to denote navigation to settings from other screens                                                           |
-| gblSettingPlannerPlanID         | Text    | Variable to get the planner ID from the record settings                                                                |
-| gblSettingTeamId                | Text    | Variable to get the Team ID from the record settings                                                                   |
-| gblSettingSharePointLocation    | Text    | Variable to get the SharePoint location from the record settings                                                       |
-| gblEditImage                    | Boolean | Variable to edit an image while adding / editing a location                                                            |
-| gblForm                         | Record  | Variable to get the checklist steps of the selected inspection form                                                    |
-| gblDontChangeAreaType           | Boolean | Variable to handle whether the Area type should be allowed to change or not                                            |
-| gblResetAreaTypeDropdown        | Boolean | Variable used to reset the Area Type dropdown values                                                                   |
-| gblSelectedGroup                | Record  | Variable to store the group which is selected                                                                          |
-| gblGroupChanged                 | Boolean | global variable to indicate that the group has been updated                                                            |
-| gblLocTypeSetting               | Text    |                                                                                                                        |
-| gblGalWorkType                  | Text    |                                                                                                                        |
-| gblTypeChanged                  | Boolean | Variable to check whether the location type changed or not                                                             |
-| gblLabelChanged                 | Boolean | Variable to check whether the label changed or not                                                                     |
-| gblAreaChanged                  | Boolean | Variable to check whether the area is changed or not                                                                   |
-| gblIssueImageView               | Boolean |                                                                                                                        |
-| gblIssueStepImageSelected       | Boolean |                                                                                                                        |
-| gblOkImageView                  | Boolean |                                                                                                                        |
-| gblOkStepImageSelected          | Boolean |                                                                                                                        |
-| gblResetInspectionGal           | Record  | Variable to reset the Inspections gallery                                                                              |
-| gblCurrentLocation              | Guid    | Variable to set the Current location while navigating to the locations screen                                          |
-| popupVisible                    | Boolean | Variable to hide and show the popup message                                                                            |
-| gblLocType                      | Record  | Variable to store the selected location type                                                                           |
-| gblTempAddGroupType             | Boolean | Variable to check whether a new group is being created from the settings screen                                        |
-| gblResetAreaDropdown            | Boolean | Variable to reset the Area dropdown when a new group is being created from the settings screen                         |
-| gblOriginalAreaType             | Record  | Variable to get the Original Area Type for a selected location                                                         |
-| gblAddLocationImage             | Image   | Variable to add the selected image while creating a new location                                                       |
-| gblIssueImage                   | Record  |                                                                                                                        |
-| gblOKImage                      | Record  |                                                                                                                        |
-| Grou                            | Boolean |                                                                                                                        |
-| gblInspection                   | Table   | Variable used to check whether the Inspection outcome is an Issue while sorting the Inspections on the location screen |
-| gblNav                          | Boolean |                                                                                                                        |
-| gblEditForm                     | Boolean | Variable to enable the Add Checklist Step button when the form is being edited                                         |
-| gblAddForm                      | Boolean | Variable to enable the Add Checklist Step button when a new Inspection form is being created                           |
-| gblStepChanged                  | Boolean | Variable to check when a new Step is added under an Inspection form                                                    |
-| gblImageChanged                 | Boolean |                                                                                                                        |
-| gblFormClick                    | Boolean |                                                                                                                        |
-| gblTempAdd                      | Boolean | Variable to add checklist step fields when the User tries to Add a New Step                                            |
-| gblFormForGallerySelection      | Record  |                                                                                                                        |
-| gblNewFirstForm                 | Record  |                                                                                                                        |
-| gblNewForm                      | Record  | Variable to add a new copy of the Inspection form when the Duplicate button is clicked                                 |
-| gblEditStepImage                | Boolean | Variable to handle whether the Checklist Step image should be editable or not                                          |
-| gblOne                          | Number  |                                                                                                                        |
-| gblCountSteps                   | Number  | To check the count of the number of steps once a checklist step is deleted                                             |
-| gblMinStepSeq                   | Table   | Variable used to sort the checklist steps in ascending order                                                           |
-| gblStepImaged                   | Boolean |                                                                                                                        |
-| gblInspectionsCount             | Number  | Variable used to count the total number of inspections to decide if charts or zero state images should be visible      |
-| gblTeamAvgTime                  | Number  | Variable to store the Avg time spent by the team on completing the Inspections                                         |
-| gblChartView                    | Text    | Variable to set the default value of the Chart view to 7                                                               |
-| gblBarChartView                 | Text    | Variable to set the default value of the Bar Chart view to 7                                                           |
-| gblFormBarChartView             | Text    | Variable to set the default value of the Form Bar Chart view to 7                                                      |
-| gblLineChartView                | Text    | Variable to set the default value of the Line Chart view to 7                                                          |
-| gblAppSetting_inputMobileOnWeb  | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop                                                  |
-| gblAppSetting_inputMobile       | Boolean | Variables to Scale fonts for mobile-oriented apps                                                                      |
-| gblAppSetting_inputScaleFontsBy | Number  | Use this variable for scaling all fonts by a fixed amount                                                              |
-| gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to High Contrast                                                               |
-| gblAppColors                    | Record  | Variable to set the Color value in the app                                                                             |
-| gblAppSizes                     | Record  | Variable to set the Size values in the app                                                                             |
-| gblAppStyles                    | Record  | Variable to set the Styling values in the app                                                                          |
+### Inspection app OnStart
 
-Inspection App<br>Story 
-========================
+This section explains app OnStart collections, variables, and execution details.
 
-OnStart 
---------
+### Inspection app OnStart collections
 
-### Collections involved
+Collections used during app OnStart:
 
-1.  **staticLocalizations–** collection of localized text based on user’s
-    language**.**
+| Collection name | Description |
+| - | - |
+| staticLocalizations | Collection of localized text based on user’s language. |
+| colMenuAreaTypes | Collection of all area type with addition to "All". |
+| colAreaTypes | Collection of available areas/assets types on which a user can perform inspection and their associated Planner buckets. |
+| colLabelSettings | Collection of labels for each of the area/asset type. |
+| colLocationTypeIcons | Collection of area/asset type icons. |
+| colWeekInspections | Collection of total inspections in the last seven days. |
+| colWeekIssues | Collection of total issues in last seven days. |
+| colTeamDurations | Collection of all durations for the inspections. |
+| colUserDurations | Collection of all durations for the inpections completed by the current user. |
 
-2.  **colMenuAreaTypes –** collection of all area type with addition to ‘All’.
+### Inspection app OnStart variables
 
-3.  **colAreaTypes –** collection of available areas / assets types on which a
-    user can perform inspection and their associated Planner buckets.
+Variables used during app OnStart:
 
-4.  **colLabelSettings –** collection of labels for each of the area / asset
-    type
+| Variable name | Description |
+| - | - |
+| gblAppLoaded | Global variable to check if the app has loaded completely. |
+| gblAppContext | Global variable to check the context of where the app is running. |
+| gblUserLanguage | Global variable to store the user’s language. |
+| gblParamTeamId | Global variable to set the Group ID from Planner. |
+| gblParamChannelId | Global variable to set the Channel ID from Planner. |
+| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas settings table. |
+| gblPlannerPlanId | Global variable to store the Planner ID. |
+| gblPlannerGroupId | Global variable to store the Team ID. |
+| gblToday | Global variable to store the present day’s date. |
+| gblUserFirstName | Global variable to store the User’s first name. |
+| gblCurrentUserIssueCount | Global variable to store the number of inspection issues that are submitted by the current user for the last seven days. |
+| gblTotalIssueCount | Global variable to store the total number of inspection issues that are submitted for the last seven days. |
+| gblTeamAvgTime | Global variable to store the team’s average time spent on an inspection. |
+| gblUserAvgTime | Global variable to store the user’s average time spent on an inspection. |
+| gblCurrUser | Global variable to store the current user details. |
+| gblWorkType | Global variable to fetch work type from settings to use inspection, audit, or walk. If there's no setting, use inspection instead. |
+| gblThemeDark | Global variable to set the app theme to dark if the app is running in dark theme else use default theme. |
+| gblThemeHiCo | Global variable to set the app theme to High Contrast if the app is running in High Contrast theme else use default theme. |
+| gblIsHostClientMobile | Global variable to check if the user is on mobile or not. |
+| gblAppMobileOnDesktop | Global variable to check if the user is running mobile app on desktop. |
+| gblMobileMode | Global variable to check if the user is on Android or iOS. |
+| gblCheckLabelSettings | Global variable to check settings record to get the labels/verbiage in the app, if there is no such setting app to use area and area type, else app will get the labels/verbiage it from the settings record. |
+| areaLabel | Global variable to hold the verbiage for "Area". |
+| areaTypeLabel | Global variable to hold the verbiage for "Area Type". |
 
-5.  **colLocationTypeIcons -** collection of area / asset type icons.
+### Inspection app OnStart execution details
 
-6.  **colWeekInspections –** collection of total inspections in the last 7 days
+1. When a user accesses the app, **gblAppLoaded** variable is set to false. The user’s language code is stored in the **gblUserLanguage**, with "English - US" being the default. The **gblAppContext** variable checks the context of where the app is running.
 
-7.  **colWeekIssues –** collection of total issues in last 7 days
+1. The user’s language is then used to collect localized text used throughout the app (such as, label and button text) in the **staticLocalizations** collection.
 
-8.  **colTeamDurations –** collection of all durations for the inspections
+1. The Group ID and Channel ID received from parameters are stored in the **gblParamTeamId** and **gblParamChannelId** variables, respectively.
 
-9.  **colUserDurations –** collection of all durations for the inpections
-    completed by current user
+1. The settings record is fetched using **gblParamTeamId** and **gblParamChannelId** variables; and stored in **gblRecordSettings** variable.
 
-### Variables involved
+1. The Planner and Team ID’s are stored in the **gblPlannerPlanId** and **gblPlannerGroupId** variables.
 
-1.  **gblAppLoaded** – global variable to check if the app has loaded
-    completely.
+1. The app checks for the theme in Teams, and adopt to the selected theme using parameters from **gblThemeDark and gblThemeHiCo** global variables.
 
-2.  **gblAppContext –** global variable to check the context of where the app is
-    running.
+1. The inspections that are created from the last seven days are being collected in to the **colWeekInspections** collection. And the related issues are collected in to the **colWeekIssues** collection for statistics that will be display on the first screen of the app.
 
-3.  **gblUserLanguage** – global variable to store the user’s language.
+1. The inspection’s durations for whole team and current user are being collected at **colTeamDurations** and **colUserDurations** collections respectively for displaying the statistics of average team’s duration versus the current users average duration for completing an inspection for last seven days.
 
-4.  **gblParamTeamId –** global variable to set the Group ID from Planner
+1. The verbiage used across the app are stored in at **arealabel** and **areaTypeLabel** labels, fetched from the settings record.
 
-5.  **gblParamChannelId –** global variable to set the Channel ID from Planner
-
-6.  **gblRecordSettings –** global variable used to set the Team and Channel Id
-    to the Employee Ideas settings table.
-
-7.  **gblPlannerPlanId –** global variable to store the Planner ID
-
-8.  **gblPlannerGroupId –** global variable to store the Team ID
-
-9.  **gblToday- global** variable to store the present day’s date.
-
-10. **gblUserFirstName –** global variable to store the User’s first name.
-
-11. **gblCurrentUserIssueCount –** global variable to store the number of
-    inspection issues that are submitted by the current user for the last 7
-    days.
-
-12. **gblTotalIssueCount -** global variable to store the total number of
-    inspection issues that are submitted for the last 7 days.
-
-13. **gblTeamAvgTime –** global variable to store the team’s average time spent
-    on an inspection
-
-14. **gblUserAvgTime –** global variable to store the user’s average time spent
-    on an inspection
-
-15. **gblCurrUser –** global variable to store the current user details
-
-16. **The**
-
-17. **gblWorkType –** global variable to fetch work type from settings to use
-    inspection, audit, or walk - if there is no setting, use inspection
-
-18. **gblThemeDark –** global variable to set the app theme to dark if the app
-    is running in dark theme else use default theme.
-
-19. **gblThemeHiCo -** global variable to set the app theme to High Contrast if
-    the app is running in High Contrast theme else use default theme.
-
-20. **gblIsHostClientMobile –** global variable to check if the user is on
-    mobile or not
-
-21. **gblAppMobileOnDesktop –** global variable to check if the user is running
-    mobile app on desktop
-
-22. **gblMobileMode-** global variable to check if the user is on Android or IOS
-
-23. **gblCheckLabelSettings** – global variable to check settings record to get
-    the labels / verbiage in the app, if there is no such setting app to use
-    Area and Area type, else app will get the labels / verbiage it from the
-    settings record.
-
-24. **areaLabel –** global variable to hold the verbiage for ‘Area’
-
-25. **areaTypeLabel -** global variable to hold the verbiage for ‘Area Type’
-
-### Detailed Steps
-
-1.  When a user accesses the app, **gblAppLoaded** is set to false. The user’s
-    language code is stored in **gblUserLanguage**, with English - US being the
-    default one. The gblAppContext where the app is running.
-
-2.  The user’s language is then used to collect localized text used throughout
-    the app (e.g. label and button text) in **staticLocalizations** collection.
-
-3.  The Group ID and Channel ID received from Parameters are stored in the
-    **gblParamTeamId** and **gblParamChannelId** variables, respectively.
-
-4.  The settings record is fetched using **gblParamTeamId** and
-    **gblParamChannelId** variables and stored in **gblRecordSettings**
-    variable.
-
-5.  The Planner and Team ID’s are stored in **gblPlannerPlanId** and
-    **gblPlannerGroupId** variables.
-
-6.  The app checks for the theme of the Teams and adopt to the Team’s theme by
-    knowing the parameters from **gblThemeDark and gblThemeHiCo**
-
-7.  The inspections that are created from last 7 days are being collected in to
-    **colWeekInspections** and the issues among these are collected in to
-    **colWeekIssues** for statistics that will be display on the first screen of
-    the app.
-
-8.  The inspection’s durations for whole team and current user are being
-    collected at **colTeamDurations** and **colUserDurations** respectively for
-    displaying the statistics of average team’s duration vs current users
-    average duration for completing an inspection for last 7 days.
-
-9.  The verbiage used across the app are stored in at **arealabel** and
-    **areaTypeLabel** which is fetched from the settings record.
-
-### Welcome Screen<br>
+### Welcome Screen
 
 #### Collections involved
 
