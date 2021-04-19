@@ -858,86 +858,50 @@ The following variables are used by the general section in settings screen.
 
 1. Selecting **Cancel** takes the user back to the previous screen.
 
-##### Screens
+#### Location Type section
 
-![](media/inspection-architecture/c32478a9ad28ce6f6b6ee398ed4bd617.png)
+This section explains details about the location type section.
 
-#### Location Type Section
+##### Location Type collections
 
-##### Collections Used
+The following collections are used by the location type section.
 
-1.  **colLocTypeSettings** – Used to collect the different setting types
-    available in the app.
+| Collection name | Description |
+| - | - |
+| colLocTypeSettings | Used to collect the different setting types available in the app. |
+| colGalIconLocationTypes | Used to collect the selected icon. |
+| colGalLocationTypes | Used to collect location types, and the location is removed when deleted from this collection.  |
+| colTempGalGroup | Used for the helper screen. |
 
-2.  colGalIconLocationTypes –
+##### Location Type variables
 
-3.  **colGalLocationTypes -**
+The following variables are used by the location type section.
 
-4.  **colTempGalGroup –**
+| Variable name | Description |
+| - | - |
+| gblShowLocationTypeIcons | Global variable to control the visibility of the location type icons. |
+| gblTypeChanged | Global variable to indicate that the location type has been updated. |
+| gblWarningType | Global variable which controls which warning message to be displayed. |
+| colGroupCounter | Used to store the number of grouped locations available. |
+| gblDisplayWarning | Global variable to control visibility of warning messages. |
 
-##### Variables Uses 
+##### Execution details of location type screen
 
-1.  **gblShowLocationTypeIcons** – global variable to control the visibility of
-    the Location type icons.
+1. The **galAreaTypes** gallery displays the list of available Location Types with the Title, Menu Label, Icon and the cover image.
 
-2.  **gblTypeChanged** – global variable to indicate that the location type has
-    been updated
+1. Selecting each of the fields allows the user to update the values. Selecting the update icon set the values of **gblShowLocationTypeIcons**, and **gblDisplayWarning** global variables to true, displaying the **galIconPicker** gallery.
 
-3.  **gblWarningType** – global variable which controls which warning message to
-    be displayed.
+1. Upon selecting any icon, the updated icon is stored in the **colGalIconLocationTypes** collection, and the value of **gblShowLocationTypeIcons** global variable is set to false, hiding the icon picker. The value of the **gblTypeChanged** global variable is set to true enabling the save button.
 
-4.  **colGroupCounter –** used to store the number of grouped locations
-    available
+1. A location type can be deleted by selecting the delete icon next to the record. When deleting, the value of the **gblWarningType** variable is set to **locationtypedelete** in case there are no locations associated with the type.
 
-5.  **gblDisplayWarning –** global variable to control visibility of Warning
-    messages
+1. In case there are locations associated to the type, the value of the **gblWarningType** variable is set to **locationtypenodelete** collection, displaying relevant message.
 
-##### Detailed Steps
+1. Upon checking the **I understand** checkbox, the delete button is enabled. Selecting delete removes the type from the **colGalLocationTypes**, and **colGalIconLocationTypes** collections, and from the Area Inspection Location Types table.
 
-1.  The **galAreaTypes** gallery displays the list of available Location Types
-    with the Title, Menu Label, Icon and the cover image.
+1. Selecting the **+ Add vehicle type** creates a new record in the **colLocationTypes** collection with the name, menu label and cover image being blank.
 
-2.  Clicking on each of the fields allow the user to update the values. Clicking
-    on the Update Icon button will set the values of **gblShowLocationTypeIcons
-    and gblDisplayWarning** to true thus displaying the **galIconPicker**
-    gallery**.**
-
-3.  Clicking on any icon the updated icon is stored in the
-    **colGalIconLocationTypes** collection and the value of
-    **gblShowLocationTypeIcons** to false thus hiding the icon picker and the
-    value of **gblTypeChanged** is set to true thus enabling the save button.
-
-4.  A location type can be deleted by clicking the delete icon next to the
-    record. Clicking on which the value of the **gblWarningType** is set to
-    **locationtypedelete** in case there are no locations associated with the
-    type.
-
-5.  Incase there are locations associated to the type, the value of the
-    **gblWarningType** is set to **locationtypenodelete** thus displaying a
-    relevant message.
-
-6.  Once the user checks the “I understand” checkbox, The delete button will be
-    enabled, Clicking on which the type is removed from the
-    **colGalLocationTypes** , **colGalIconLocationTypes** collection and from
-    the Area Inspection Location Types table.
-
-7.  Clicking on the “+ Add vehicle type” will create a new record in the
-    **colLocationTypes**
-
-    Collection with the name, menu label and cover image being blank.
-
-8.  Clicking on the Save button once all the changes are made will update the
-    colLocationTypes and Area Inspection Location Types table.
-
-##### Screens
-
-![](media/inspection-architecture/e2aae0147d1de71e9cb503cc3b3e9f9d.png)
-
-![](media/inspection-architecture/15138fd6f14bc6057b02103b25fa3f8b.png)
-
-![](media/inspection-architecture/1a04fd68fc2ee74592037c97bef9b17a.png)
-
-![](media/inspection-architecture/abe336da99a1b4b50a6567581cea5edd.png)
+1. Selecting the save button updates the colLocationTypes and Area Inspection Location Types table.
 
 #### Grouped Location Section
 
