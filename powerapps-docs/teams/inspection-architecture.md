@@ -55,8 +55,8 @@ The following table lists the collections used by the inspection apps.
 | colMenuAreaTypes      | Used to populate the collection with all area types.                                                           | App OnStart                                                |
 | colAreaTypes          | Used to collect all area types and their associated Planner bucket Id.                                         | App OnStart                                                |
 | colLocationTypeIcons  | Used to collect the name and order of the icons used in the app.                                               | App OnStart                                                |
-| colWeekInspections    | To collect the total number of inspections in the last 7 days from **Active Area Inspections - Last 7 Days** view | App OnStart                                                |
-| colWeekIssues         | To collect the total number of issues recorded in the last 7 days.                                       | App OnStart                                                |
+| colWeekInspections    | To collect the total number of inspections in the last seven days from **Active Area Inspections - Last seven days** view | App OnStart                                                |
+| colWeekIssues         | To collect the total number of issues recorded in the last seven days.                                       | App OnStart                                                |
 | colTeamDurations      | To collect the team inspection duration in minutes                                                            | App OnStart                                                |
 | colUserDurations      | To collect the logged in user’s inspection duration in minutes.                                                | App OnStart                                                |
 | colStepOutcomes       | To collect the outcome and notes of inspection steps.                                                          | App OnStart                                                |
@@ -94,10 +94,10 @@ The following table lists the global variables used by the inspection apps.
 | areaLabel                       | Text     | To set area label and area type label from settings. If no settings exist, use area and area type.                                                                                                          |
 | gblCurrUserEmail                | Text     | To fetch the current user’s email ID.                                                                                                                                                                       |
 | gblCurrUser                     | Record   | To fetch the current user’s record.                                                                                                                                                                         |
-| gblTotalInspectionCount         | Number   | To fetch the total inspection count in the last 7 days.                                                                                                                                                     |
-| gblCurrentUserInspectionCount   | Number   | To get the total inspection count for the current in the last 7 days.                                                                                                                                       |
-| gblCurrentUserIssueCount        | Number   | To get the issue count for the current in the last 7 days.                                                                                                                                                  |
-| gblTotalIssueCount              | Number   | To get the total issue count in the last 7 days.                                                                                                                                                            |
+| gblTotalInspectionCount         | Number   | To fetch the total inspection count in the last seven days.                                                                                                                                                     |
+| gblCurrentUserInspectionCount   | Number   | To get the total inspection count for the current in the last seven days.                                                                                                                                       |
+| gblCurrentUserIssueCount        | Number   | To get the issue count for the current in the last seven days.                                                                                                                                                  |
+| gblTotalIssueCount              | Number   | To get the total issue count in the last seven days.                                                                                                                                                            |
 | gblTeamAvgTime                  | Number   | To get the average team inspection time.                                                                                                                                                                    |
 | gblUserAvgTime                  | Number   | To get current user’s inspection duration.                                                                                                                                                                 |
 | gblUpdateInspectionCount        | Boolean  | Variable to control updating of inspection count when a user navigates to the Welcome screen.                                                                                                               |
@@ -202,7 +202,7 @@ Variables used during app OnStart:
 | gblParamLocaleId | Global variable to set the locale ID from parameters. |
 | gblCheckLabelSettings | Global variable to store the active area inspection label. |
 | gblRecordSettings | Global variable used to set the Team and Channel Id to the Area Inspection Settings table. |
-| gblSettingPlannerPlanId | Global variable to get the planner ID from the record settings. |
+| gblSettingPlannerPlanId | Global variable to get the Planner ID from the record settings. |
 | gblSettingTeamId | Global variable to get the Team ID from the record settings. |
 | gblLocation | Global variable to set the first area inspections location. |
 | gblNavToSettings | Global variable to denote navigation to settings from other screens.
@@ -493,7 +493,7 @@ The following collections are used when reviewing inspection insights.
 | - | - |
 | colInspections | Used to collect inspection records. |
 | colTeamDurations | Used to collect the date difference between the inspection start and end dates in minutes. |
-| colBarChartTemp | Used to collect the active area inspections grouped by owner in the last 7 days. |
+| colBarChartTemp | Used to collect the active area inspections grouped by owner in the last seven days. |
 | colBarChart | Used to collect the count of inspections grouped by owner. |
 | colLineChartForms | Used to collect the average inspection time grouped by forms. |
 | colLineChart | Used to collect the average inspection time grouped by forms. |
@@ -510,10 +510,10 @@ The following variables are used when reviewing inspection insights.
 | gblView | Variable to denote the view being displayed. |
 | gblTeamAvgTime | Global variable to store the average completion time of the inspections. |
 | gblAreaChanged | Global variable to indicate that the location has been updated. |
-| gblChartView | Global variable to set the default value of the chart view to 7 days. |
-| gblBarChartView | Global variable to set the default value of the bar chart view to 7 days. |
-| gblFormBarChartView | Global variable to set the default value of the form bar chart view to 7 days. |
-| gblLineChartView | Global variable to set the default value of the line chart view to 7 days. |
+| gblChartView | Global variable to set the default value of the chart view to seven days. |
+| gblBarChartView | Global variable to set the default value of the bar chart view to seven days. |
+| gblFormBarChartView | Global variable to set the default value of the form bar chart view to seven days. |
+| gblLineChartView | Global variable to set the default value of the line chart view to seven days. |
 
 #### Execution details when reviewing inspection insights
 
@@ -523,9 +523,9 @@ The following variables are used when reviewing inspection insights.
 
 1. The average inspection time (duration of all completed inspections divided by the total number of inspections) is calculated using the **colTeamDurations** collection value and is stored in the **gblTeamAvgTime** variable.
 
-1. The top contributors bar chart (count of inspections grouped by owner) for the last 7 days is collected using the **colBarChartTemp** and **colBarChart** collections.
+1. The top contributors bar chart (count of inspections grouped by owner) for the last seven days is collected using the **colBarChartTemp** and **colBarChart** collections.
 
-1. The average inspection time for line chart (inspections time for inspections in the last 7 days grouped by form) are collected using the **colLineChartForms** and **colLineChart** collections.
+1. The average inspection time for line chart (inspections time for inspections in the last seven days grouped by form) are collected using the **colLineChartForms** and **colLineChart** collections.
 
 1. The **conInspectionStats** container displays the number of inspections that are pending review, pending action, closed inspections and the average completion time.
 
@@ -854,7 +854,7 @@ The following variables are used by the general section in settings screen.
 
 1. **Save** button is enabled when the dropdown value selected or the Team Owner restricted value is different from the value stored in the variable gblRecordSettings (which is set at app OnStart).
 
-1. When **Save** is selected, the details are updated in the Area Inspection Settings table. The notification channel and the planner instance details are updated using the **gblSettingPlannerPlanId** variable and takes the user to the locations screen.
+1. When **Save** is selected, the details are updated in the Area Inspection Settings table. The notification channel and the Planner instance details are updated using the **gblSettingPlannerPlanId** variable and takes the user to the locations screen.
 
 1. Selecting **Cancel** takes the user back to the previous screen.
 
@@ -980,24 +980,6 @@ The following variables are used by the customize experience section.
 
 1. Selecting **Save** sets the value of the **gblWorkType** global variable to **gblSelectedWorkType**, and update the Area Inspection Labels table.
 
-Collections
------------
-
-Use a collection to store data that users can manage in your app. A collection
-is a group of items that are similar, such as products in a product list.
-
-### Important Functions
-
-1.  **Collect**: The Collect function adds records to a data source.
-
-2.  **Clear**: The Clear function deletes all the records of a collection. The
-    columns of the collection will remain.
-
-3.  **ClearCollect**: The ClearCollect function deletes all the records from a
-    collection. And then adds a different set of records to the same collection.
-    With a single function, ClearCollect offers the combination of Clear and
-    then Collect.
-
 ## Inspection app
 
 This section explains collections, global variables used by the [Inspection](inspection.md#inspection-app) app, and execution details for the app.
@@ -1069,99 +1051,58 @@ Variables used during app OnStart:
 
 1. The inspections that are created from the last seven days are being collected in to the **colWeekInspections** collection. And the related issues are collected in to the **colWeekIssues** collection for statistics that will be display on the first screen of the app.
 
-1. The inspection’s durations for whole team and current user are being collected at **colTeamDurations** and **colUserDurations** collections respectively for displaying the statistics of average team’s duration versus the current users average duration for completing an inspection for last seven days.
+1. The inspection’s durations for whole team and current user are being collected at **colTeamDurations** and **colUserDurations** collections respectively for displaying the statistics of average team’s duration versus the current users average duration for completing an inspection for the last seven days.
 
 1. The verbiage used across the app are stored in at **arealabel** and **areaTypeLabel** labels, fetched from the settings record.
 
-### Welcome Screen
+### Welcome screen
 
-#### Collections involved
+This section explains app [welcome](inspection.md#home-screen) screen collections, variables, and execution details.
 
-1.  **colWeekInspections –** collection of total inspections in the last 7 days
-    [works only when the user completes the inspection and return to this
-    screen]
+#### Welcome screen collections
 
-2.  **colWeekIssues –** collection of total issues in last 7 days [works only
-    when the user completes the inspection and return to this screen]
+The following collections are used by the welcome screen.
 
-3.  **colTeamDurations –** collection of all durations for the inspections
-    [works only when the user completes the inspection and return to this
-    screen]
+| Collection name | Description |
+| - | - |
+| colWeekInspections | Collection of total inspections in the last seven days (works only when the user completes the inspection and returns to this screen). |
+| colWeekIssues | Collection of total issues in last seven days (works only when the user completes the inspection and return to this screen). |
+| colTeamDurations | Collection of all durations for the inspections works only when the user completes the inspection and return to this screen. |
+| colUserDurations | Collection of all durations for the inspections completed by current user (works only when the user completes the inspection and return to this screen). |
+| colPlannerTasks | Collection of Planner tasks associated to the Planner that the application is associated to. |
+| tasksforme | Collection of Planner tasks owned by current user. |
+| tasksforall | Collection of all Planner tasks. |
+| overdue | Collection of all overdue tasks owned by the current user. |
 
-4.  **colUserDurations –** collection of all durations for the inspections
-    completed by current user. [works only when the user completes the
-    inspection and return to this screen]
+#### Welcome screen variables
 
-5.  **colPlannerTasks –** collection of planner tasks associated to the planner
-    that the application is associated to.
+The following variables are used by the welcome screen.
 
-6.  **tasksforme –** collection of planner tasks owned by current user
+| variables name | Description |
+| - | - |
+| gblTotalInspectionCount | Global variable to store the total number active inspections for the last seven days. |
+| gblCurrentUserInspectionCount | Global variable to store the number of active inspections submitted by current user for the last seven days. |
+| gblCurrentUserIssueCount | Global variable to store the number of inspection issues that are submitted by the current user for the last seven days. |
+| gblTotalIssueCount | Global variable to store the total number of inspection issues that are submitted for the last seven days. |
+| gblTeamAvgTime | Global variable to store the team’s average time spent on an inspection. |
+| gblUserAvgTime | Global variable to store the user’s average time spent on an inspection. |
+| gblCurrUser | Global variable to store the current user details. |
 
-7.  **tasksforall –** collection of all planner tasks
+#### Welcome screen execution details
 
-8.  **overdue –** collection of all overdue tasks owned by the current user
+1. **gblCurrUser** global variable is used get the first name of the current user and to greet the user is greeted with a welcome message on the Insights screen.
 
-#### Variables involved
+1. **tasksforme, tasksforall** and **overdue** global variables are used to show the planer stats
 
-1.  **gblTotalInspectionCount-** global variable to store the total number
-    active inspections for the last 7 days
+1. **gblTotalInspectionCount** and **gblCurrentUserInspectionCount** are used to compare the total inspections submitted by the team versus the total inspections submitted by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
-2.  **gblCurrentUserInspectionCount –** global variable to store the number of
-    active inspections submitted by current user for the last 7 days.
+1. The inspections that are created from last seven days are being collected in to **colWeekInspections** and the issues among these are collected in to **colWeekIssues** for statistics that will be display on the first screen of the app (used only when the user returns to this screen after submitting an inspection).
 
-3.  **gblCurrentUserIssueCount –** global variable to store the number of
-    inspection issues that are submitted by the current user for the last 7
-    days.
+1. **gblTotalIssueCount** and **gblCurrentUserIssueCount** global variables are used to compare the total inspection issues submitted by the team versus the total inspection issues submitted by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
-4.  **gblTotalIssueCount -** global variable to store the total number of
-    inspection issues that are submitted for the last 7 days.
+1. The inspection’s durations for whole team and current user are being collected at **colTeamDurations** and **colUserDurations** respectively for displaying the statistics of average team’s duration versus the current user's average duration for completing an inspection for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
-5.  **gblTeamAvgTime –** global variable to store the team’s average time spent
-    on an inspection
-
-6.  **gblUserAvgTime –** global variable to store the user’s average time spent
-    on an inspection
-
-7.  **gblCurrUser –** global variable to store the current user details
-
-#### Detailed Steps
-
-1.  **gblCurrUser** is used get the first name of the current user and to greet
-    the user is greeted with a welcome message on the Insights screen.
-
-2.  **tasksforme, tasksforall** and **overdue** global variables are used in to
-    show the planer stats
-
-3.  **gblTotalInspectionCount** and **gblCurrentUserInspectionCount** are used
-    to compare the total inspections submitted by the team vs total inspections
-    submitted by the current user for the last 7 days. (used only when the user
-    returns to this screen after submitting an inspection)
-
-4.  The inspections that are created from last 7 days are being collected in to
-    **colWeekInspections** and the issues among these are collected in to
-    **colWeekIssues** for statistics that will be display on the first screen of
-    the app. (used only when the user returns to this screen after submitting an
-    inspection)
-
-5.  **gblTotalIssueCount** and **gblCurrentUserIssueCount** are used to compare
-    the total inspection issues submitted by the team vs total inspection issues
-    submitted by the current user for the last 7 days. (used only when the user
-    returns to this screen after submitting an inspection)
-
-6.  The inspection’s durations for whole team and current user are being
-    collected at **colTeamDurations** and **colUserDurations** respectively for
-    displaying the statistics of average team’s duration vs current users
-    average duration for completing an inspection for last 7 days (used only
-    when the user returns to this screen after submitting an inspection)
-
-7.  **gblTeamAvgTime** and **gblUserAvgTime** are used to compare the average
-    inspection time by the team vs average inspection time by the current user
-    for the last 7 days. (used only when the user returns to this screen after
-    submitting an inspection)
-
-#### Screens<br>
-
-![](media/inspection-architecture/a1c8ee64a05404c9b96ca8ecfad747bf.png)
+1. **gblTeamAvgTime** and **gblUserAvgTime** global variables are used to compare the average inspection time by the team versus the average inspection time by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
 ### Items Screen
 
@@ -1325,7 +1266,7 @@ Variables used during app OnStart:
 7.  **colImages –** collection to store the images uploaded to the inspection
     step.
 
-8.  **colAreaPlannerTasks –** collection to store planner task details.
+8.  **colAreaPlannerTasks –** collection to store Planner task details.
 
 #### Variables involved
 
@@ -1380,7 +1321,7 @@ Variables used during app OnStart:
 5.  **colImages –** collection to store the images uploaded to the inspection
     step.
 
-6.  **colAreaPlannerTasks –** collection to store planner task details.
+6.  **colAreaPlannerTasks –** collection to store Planner task details.
 
 #### Variables involved
 
@@ -1410,9 +1351,9 @@ Variables used during app OnStart:
     ‘**colImages’** collection the app will create inspection image records and
     will associate to the inspection steps respectively.
 
-6.  If there are any planner tasks for the inspection, using
+6.  If there are any Planner tasks for the inspection, using
     ‘**colAreaPlannerTasks’** collection the app will create inspection tasks
-    records which will help in associating the planner tasks to the inspection.
+    records which will help in associating the Planner tasks to the inspection.
 
 #### Screens<br>
 
