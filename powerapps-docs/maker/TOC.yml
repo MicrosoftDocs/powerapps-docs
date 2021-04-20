@@ -1771,7 +1771,7 @@
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
-      href: ./portals/faq.md
+      href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
       href: ./portals/legacy-portal-faq.md
     - name: Version releases and updates
