@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/20/2020
+ms.date: 04/20/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -127,9 +127,9 @@ After you change the **OnStart** property, test it by hovering over the **App** 
 
 ## StartScreen property
 
-The **StartScreen** property determines which screen will be displayed first.  It is evaluated once when the app is loaded and returns the screen object to be displayed.  By default, the first screen in the Studio Tree view is shown first.
+The **StartScreen** property determines which screen will be displayed first.  It is evaluated once when the app is loaded and returns the screen object to be displayed.  By default, this propery will be empty, and the first screen in the Studio Tree view is shown first.
 
-**StartScreen** is a data flow property that cannot contain behavior functions.  All data flow functions are available, it particular you can use these functions and signals:
+**StartScreen** is a data flow property that cannot contain behavior functions.  All data flow functions are available, in particular use these functions and signals to determine which screen to show first:
 - [**Param**](function-param.md) function to read parameters used to start the app
 - [**User**](function-user.md) function to read information about the current user
 - [**LookUp**](function-filter-lookup.md), [**Filter**](function-filter-lookup.md), [**CountRows**](function-table-counts.md), [**Max**](function-aggregates.md), and other functions that read from a data source
@@ -139,7 +139,19 @@ The **StartScreen** property determines which screen will be displayed first.  I
 > [!NOTE]
 > Global variables and collections, including those created in **OnStart**, are specifically not avilaable in **StartScreen**.  There are declarative alternatives for doing this that are on the way.  We'd love your feedback on this restriction, either here on the doecs or in the Power Apps community.
 
+If **StartScreen** returns an error, the first screen in the Studio Tree view will be shown as if StartScreen had not been set.  Use the **IfError** function to catch any errors and redirect to an appropriate error screen.
+
+After changing **StartScreen** in Studio, test it by hovering over the **App** object in the **Tree view** pane, selecting the ellipsis (...) that appears, and then selecting **Run StartScreen**.  The screen will change as if the app has just been loaded.
+
+> [!div class="mx-imgBorder"]
+> ![App-item shortcut menu for Run OnStart](media/object-app/appobject-runstartscreen.png)
+
 ### Examples
+
+```powerapps-dot
+Screen9
+```
+Indicates that `Screen9` should be shown first whenever the app starts.
 
 ```powerapps-dot
 If( Param( "admin-mode" ) = 1, HomeScreen, AdminScreen )
@@ -150,5 +162,15 @@ Checks if the Param "admin-mode" has been set by the user and uses it to decide 
 If( LookUp( Attendees, User = User().Email ).Staff, StaffPortal, HomeScreen )
 ```
 Checks if an attendee to a conference is a staff member and directs them to the proper screen on startup.
+
+```powerapps-dot
+IfError( If( CustomConnector.APICall() = "Forest", 
+             ForestScreen, 
+             OceanScreen 
+         ), 
+         ErrorScreen 
+)
+```
+Directs the app based on an API call to either `ForestScreen` or `OceanScreen`.  If the API fails for any reason, the `ErrorScreen` is used insead.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
