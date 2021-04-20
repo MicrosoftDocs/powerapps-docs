@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/02/2021
+ms.date: 04/20/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -34,7 +34,7 @@ The following table lists common identity providers for portals, the protocol th
 | LinkedIn | OAuth 2.0 | [LinkedIn](configure-oauth2-linkedin.md) |
 | Facebook | OAuth 2.0 | [Facebook](configure-oauth2-facebook.md) |
 | Google | OAuth 2.0 | [Google](configure-oauth2-google.md) |
-| Twitter | OAuth 2.0 | [Twitter](configure-oauth2-twitter.md) |
+| Twitter | OAuth 2.0 | [Twitter](configure-oauth2-twitter.md) <br> **Note**: Twitter authentication for portals is temporarily unavailable because of the compatibility issues. |
 | Local authentication <br>(not recommended) | Not applicable | [Local authentication](set-authentication-identity.md) |
 
 > [!NOTE]
