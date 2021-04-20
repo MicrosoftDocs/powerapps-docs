@@ -64,6 +64,8 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
 
+**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
+
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
