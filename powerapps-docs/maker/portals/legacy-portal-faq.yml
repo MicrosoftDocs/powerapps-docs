@@ -20,4 +20,5 @@ summary: |
   [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
 sections:
-  - name: Ignored
+- name: Ignored
+questions:
