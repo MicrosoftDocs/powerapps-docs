@@ -1207,65 +1207,47 @@ The following variables are used by the locations screen.
 
 1. User can select any of the checklist steps to go to the inspection screen with the focus of selected checklist step, or select **Begin Inspection** to start the inspection in the sequential order shown.
 
-### Checklist Steps Screen
+### Checklist steps screen
 
-#### Collections Involved
+This section explains app [checklist steps](inspection.md#inspection-overview) screen collections, variables, and execution details. The checklist steps screen shows up when you select a checklist from the form.
 
-1.  **colActiveInspections**- collection of all active inspections
+#### Checklist steps collections
 
-2.  **colLastInspection –** collection of inspection details used to create
-    inspection record.
+The following collections are used by the checklist steps screen.
 
-3.  **colChecklistSteps** - collection of checklist steps.
+| Collection name | Description |
+| - | - |
+| colActiveInspections | Collection of all active inspections. |
+| colLastInspection | Collection of inspection details used to create inspection record. |
+| colChecklistSteps | Collection of checklist steps. |
+| colLastInspectionSteps | Collection of checklist steps for the inspection being carried out. |
+| colStepDetails | Collection of variables to control visibility of sub-components of a checklist step, such as notes and photo. |
+| colStepOutcomes | Collection to hold outcome and notes of inspection steps. |
+| colImages | Collection to store the images uploaded to the inspection step. |
+| colAreaPlannerTasks | Collection to store Planner task details. |
 
-4.  **colLastInspectionSteps –** collection of checklist steps for the
-    inspection being carried out.
+#### Checklist steps variables
 
-5.  **colStepDetails -** collection of variables to control visibility of sub
-    components of a checklist step like notes, photo etc..
+The following variables are used by the checklist steps screen.
 
-6.  **colStepOutcomes – c**ollection to hold outcome and notes of inspection
-    steps.
+| Variables name | Description |
+| - | - |
+| gblSelectedStepImage | Global variable used to enlarge the image uploaded. |
+| gblViewEnlargedImage | Global variable used to control the visibility of enlarged image. |
+| gblLastInspection | Global variable to hold the newly created inspection. |
+| gblInspectionPatchComplete | Global variable to check if the checklist steps are updated with step outcomes into Dataverse. |
 
-7.  **colImages –** collection to store the images uploaded to the inspection
-    step.
+#### Checklist steps execution details
 
-8.  **colAreaPlannerTasks –** collection to store Planner task details.
+1. On visible of this screen, the checklist steps are loaded for the inspection from the **colChecklistSteps** collection.
 
-#### Variables involved
+1. User select the outcome, and add notes which are then stored using the **colStepOutcomes** collection.
 
-1.  **gblSelectedStepImage –** global variable used to enlarge the image
-    uploaded.
+1. The collection **colStepDetails** is used to control the visibility of the controls while performing an inspection.
 
-2.  **gblViewEnlargedImage –** global variable used to control the visibility of
-    enlarged image.
+1. When the user uploads an image for an inspection step, the images are stored in the **colImages** collection.
 
-3.  **gblLastInspection -** global variable to hold the newly created
-    inspection.
-
-4.  **gblInspectionPatchComplete –** global variable to check if the checklist
-    steps are updated with step outcomes into CDS.
-
-#### Detailed Steps
-
-1.  On visible of this screen the checklist steps are loaded for the inspection
-    from **colChecklistSteps**
-
-2.  User will select the outcome and add notes and the details are stored at
-    **colStepOutcomes.**
-
-3.  **colStepDetails** is used to control the visibility of controls while
-    performing an inspection.
-
-4.  When the user uploads an image for an inspection step, the images will be
-    stored at **colImages**
-
-5.  Once all the checklist steps are completed by the user, the user proceeds to
-    next screen by selecting ‘Review Inspection’ button.
-
-#### Screens<br>
-
-![](media/inspection-architecture/2c35513724b34a0fffdcc0459a5c5d49.png)
+1. After completing all checklist steps, the user goes to the next screen using **Review Inspection**.
 
 ### Review Screen
 
