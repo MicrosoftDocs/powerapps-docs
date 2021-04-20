@@ -5,9 +5,12 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/06/2021
+ms.date: 04/20/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - navjotm
 ---
 
 # Understand Inspection app architecture
@@ -1249,59 +1252,48 @@ The following variables are used by the checklist steps screen.
 
 1. After completing all checklist steps, the user goes to the next screen using **Review Inspection**.
 
-### Review Screen
+### Review inspection screen
 
-#### Collections Involved
+This section explains app [review inspection](inspection.md#review-inspection) screen collections, variables, and execution details.
 
-1.  **colLastChecklistSteps** - collection of checklist steps that are
-    associated to the Inspection being carried out.
+#### Review inspection screen collections
 
-2.  **colStepOutcomes – c**ollection to hold outcome and notes of inspection
-    steps.
+The following collections are used by the review inspection screen.
 
-3.  **colLastInspection –** collection of recent inspection being carried out.
+| Collection name | Description |
+| - | - |
+| colLastChecklistSteps | Collection of checklist steps that are associated to the inspection being carried out. |
+| colStepOutcomes | Collection to hold outcome and notes of inspection steps. |
+| colLastInspection | Collection of recent inspection being carried out. |
+| colLastInspectionSteps | Collection of inspection steps that are associated to the inspection being carried out. |
+| colImages | Collection to store the images uploaded to the inspection step. |
+| colAreaPlannerTasks | Collection to store Planner task details. |
 
-4.  **colLastInspectionSteps –** collection of inspection steps that are
-    associated to the inspection being carried out.
+#### Review inspection screen variables
 
-5.  **colImages –** collection to store the images uploaded to the inspection
-    step.
+The following variables are used by the review inspection screen.
 
-6.  **colAreaPlannerTasks –** collection to store Planner task details.
+| Variable name | Description |
+| - | - |
+| gblLastInspection | Global variable to hold the newly created inspection. |
 
-#### Variables involved
+#### Review inspection screen execution details
 
-1.  **gblLastInspection –** global variable to hold the newly created
-    inspection.
+1. On visible of this screen it shows all the inspection steps associated to the inspection being carried using the **colLastChecklistSteps** collection.
 
-#### Detailed Steps
+1. A visual representation based on the outcome of the inspection step is shown on this screen using the collection **colStepOutcomes** so the user knows if any inspection step is incomplete.
 
-1.  On visible of this screen it shows all the inspection steps associated to
-    the inspection being carried using **colLastChecklistSteps**.
+1. If all the steps are steps are completed, the user can **Submit inspection**, otherwise **Continue inspection** to complete the missed inspection steps.
 
-2.  A visual representation based on the outcome of the inspection step will be
-    shown on this screen using the collection **colStepOutcomes,** so the user
-    knows if any inspection step is incomplete.
+1. When selecting **Submit inspection**, the **colLastInspection** collection is cleared so that the collection is ready for next inspection. And using **colLastChecklistSteps** collection, the app creates inspection steps and associate them to the inspection that has the information of the step outcomes and the notes.
 
-3.  If all the steps are steps are completed, the user can click on ‘submit
-    inspection’ else can click on ‘continue inspection’ button to complete the
-    missed inspection steps.
+1. If there are any images attached to any inspection step, using **colImages** collection, the app creates inspection image records and associates them to the inspection steps respectively.
 
-4.  Onclick of ‘submit inspection’**, colLastInspection** collection is cleared
-    so that the collection will be ready for next inspection. And using
-    ‘**colLastChecklistSteps**’ collection the app will create inspection steps
-    and will associate them to the inspection which will have the information of
-    the step outcomes along with the notes.
+1. If there are any Planner tasks for the inspection, using the **colAreaPlannerTasks’** collection, the app creates inspection task records that help in associating the Planner tasks to the inspection.
 
-5.  If there are any images attached to any inspection step, using
-    ‘**colImages’** collection the app will create inspection image records and
-    will associate to the inspection steps respectively.
+### See also
 
-6.  If there are any Planner tasks for the inspection, using
-    ‘**colAreaPlannerTasks’** collection the app will create inspection tasks
-    records which will help in associating the Planner tasks to the inspection.
-
-#### Screens<br>
-
-![](media/inspection-architecture/4077e596f9002da4ff6bcc6829fa3c99.png)
-
+[Inspection sample apps](inspection.md) <br>
+[Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
+[Customize sample apps installed from Teams store](customize-sample-apps.md) <br>
+[Frequently Asked Questions (FAQs) for sample apps](sample-apps-faqs.md)

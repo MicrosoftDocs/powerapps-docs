@@ -5,9 +5,12 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/06/2021
+ms.date: 04/20/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - navjotm
 ---
 
 # Understand Bulletins sample app architecture
