@@ -1,6 +1,6 @@
 ---
-title: Understand the Inspection app architecture | Microsoft Docs
-description: Learn about the architecture of the Inspection sample app.
+title: Understand Inspection sample apps architecture | Microsoft Docs
+description: Learn about the architecture of the Inspection sample apps.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,7 +13,7 @@ contributors:
     - navjotm
 ---
 
-# Understand Inspection app architecture
+# Understand Inspection sample apps architecture
 
 In this article, you'll learn about the collections and global variables used by the [Inspection](inspection.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Inspection sample apps](inspection.md).
 

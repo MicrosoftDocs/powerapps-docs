@@ -1,5 +1,5 @@
 ---
-title: Understand Bulletins app architecture | Microsoft Docs
+title: Understand Bulletins sample app architecture | Microsoft Docs
 description: Learn about the architecture of the Bulletins sample app.
 author: navjotm
 ms.service: powerapps

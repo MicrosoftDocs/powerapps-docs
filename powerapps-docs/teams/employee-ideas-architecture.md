@@ -1,5 +1,5 @@
 ---
-title: Understand Employee ideas app architecture | Microsoft Docs
+title: Understand Employee ideas sample app architecture | Microsoft Docs
 description: Learn about the architecture of the Employee ideas sample app.
 author: navjotm
 ms.service: powerapps
@@ -13,7 +13,7 @@ contributors:
     - navjotm
 ---
 
-# Understand Employee ideas app architecture
+# Understand Employee ideas sample app architecture
 
 In this article, you'll learn about the collections and global variables used by the [Employee ideas](employee-ideas.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Employee ideas sample app instead, go to [Employee ideas](employee-ideas.md).
 
