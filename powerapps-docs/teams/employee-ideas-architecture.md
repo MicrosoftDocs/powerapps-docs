@@ -37,14 +37,14 @@ The following diagram explains the data model used by the Employee ideas sample 
 
 | Table name | Description |
 | - | - |
-| Employee Idea Campaign | A campaign is any series of actions or events that are meant to achieve a particular goal. Details such as title, description, start and end dates of the campaign, team and channel ID’s are stored in the Employee Idea Campaign table. An idea campaign can have multiple ideas and idea questions.
-| Employee Idea | Ideas are thoughts or suggestions provided by employees to achieve a particular goal which is mentioned as part of a campaign. Details such as title, description, related campaign, outcome and the vote count are stored in the Employee Idea table. There can be multiple files and idea questions associated to an idea. |
-| Employee Idea Questions | Idea questions help us to get more inputs from employees regarding an idea. Details such as instructions, associated campaign, the response type and values for the question are stored in the Employee Idea Questions table. Each idea question may have multiple responses. |
-| Employee Idea Responses | Idea responses are used to get answers from the employees to the idea questions. Details such as instructions, associated idea, idea question, sequence, the response type and values for the question are stored in the Employee Ideas Responses table. A Response can only be associated to one idea question. |
-| Employee Idea Image | Images are used to better understand an idea. Users can add a cover image for their Idea. Details such as the name, associated idea and the selected image are stored in the Employee Idea Images table. An idea can have only one cover image selected at a given point of time. |
-| Employee Idea File | Employees can attach multiple supporting files which explains their Idea in a better way. Details such as the file name, the attachment and the associated idea are stored in the Employee Idea file table. |
-| Employee Idea User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
-| Employee Idea Settings | Settings are used to store user preferences pertaining the Team Id, and Channel Id used for notifications. |
+| Employee Idea Campaign | A campaign is any series of actions or events that are meant to achieve a particular goal. Details such as title, description, start, and end dates of the campaign, team, and channel IDs are stored in the Employee Idea Campaign table. An idea campaign can have multiple ideas and idea questions.
+| Employee Idea | Ideas are thoughts or suggestions provided by employees to achieve a particular goal that is mentioned as part of a campaign. Details such as title, description, related campaign, outcome, and the vote count are stored in the Employee Idea table. There can be multiple files and idea questions associated to an idea. |
+| Employee Idea Questions | Idea questions help us to get more inputs from employees regarding an idea. Details such as instructions, associated campaign, the response type, and values for the question are stored in the Employee Idea Questions table. Each idea question may have multiple responses. |
+| Employee Idea Responses | Idea responses are used to get answers from the employees to the idea questions. Details such as instructions, associated idea, idea question, sequence, the response type, and values for the question are stored in the Employee Ideas Responses table. A Response can only be associated to one idea question. |
+| Employee Idea Image | Images are used to better understand an idea. Users can add a cover image for their Idea. Details such as the name, associated idea, and the selected image are stored in the Employee Idea Images table. An idea can have only one cover image selected at a given point of time. |
+| Employee Idea File | Employees can attach multiple supporting files that explains their Idea in a better way. Details such as the file name, the attachment, and the associated idea are stored in the Employee Idea file table. |
+| Employee Idea User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app. There is one record for each user. |
+| Employee Idea Settings | Settings are used to store user preferences pertaining the Team ID, and Channel ID used for notifications. |
 
 ### Collections
 
@@ -74,7 +74,7 @@ The following table lists the variables used by the Employee Ideas app.
 
 | Variable Name                        | Type    | Description                                                                        |
 |--------------------------------------|---------|------------------------------------------------------------------------------------|
-| gblAppLoaded                         | Boolean | To check whether the app is completely loaded.                                      |
+| gblAppLoaded                         | Boolean | To check whether the app is loaded.                                      |
 | gblAppContext                        | Boolean | To check the context of where the app is running.                                   |
 | gblUserLanguage                      | Text    | To check the logged in User’s Language                                             |
 | gblParamTeamId                       | Text    | To set the Group ID from Planner.                                                   |
@@ -95,7 +95,7 @@ The following table lists the variables used by the Employee Ideas app.
 | gblSettingTeamId                     | Text    | Variable to set the Notification Team ID.                                           |
 | gblSelectedRecordCampaign            | Record  | Variable to get the Selected campaign record.                                       |
 | gblRecordCampaignIdea                | Record  | Variable to get the Selected campaign Idea.                                         |
-| gblSelectedRecordCampaign_FormValues | Record  | Variable to store the field values of the campaign which is being added or edited. |
+| gblSelectedRecordCampaign_FormValues | Record  | Variable to store the field values of the campaign being added or edited. |
 | gblAppSetting_inputMobileOnWeb       | Boolean | Variables to scale fonts for mobile-oriented apps, running in desktop.              |
 | gblAppSetting_inputMobile            | Boolean | Variables to scale fonts for mobile-oriented apps.                                  |
 | gblAppSetting_inputScaleFontsby      | Number  | Use this variable for scaling all fonts by a fixed amount.                          |
@@ -136,13 +136,13 @@ Variables used during app OnStart:
 | gblThemeDark | Global variable to define whether Teams is running with a dark theme. |
 | blThemeHiCo | Global variable to define whether Teams is running with a high contrast theme. |
 | gblMobileMode | Global variable to store if the app is being accessed from a mobile device. |
-| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas Settings table. |
-| gblRandomizeData | Global variable to check whether we have to randomize data (whether this is the first run of the app). |
+| gblRecordSettings | Global variable used to set the Team and Channel ID to the Employee Ideas Settings table. |
+| gblRandomizeData | Global variable to check whether we have to randomize data (whether this run is the first run of the app). |
 | gblRecordUserSettings | Global variable to store the latest Employee Ideas User Settings records for the current user. |
 | gblUserFirstName | Global variable to store the user’s first name. |
 | gblDropdownChannel | Global variable to store the list of channels for a group. |
 | gblSettingNotificationChannelId | Global variable to store the channel ID where notifications will be posted. |
-| gblSettingTeamId | Global variable to store the Team Id. |
+| gblSettingTeamId | Global variable to store the Team ID. |
 | gblPadding | Global variable to set the padding values. |
 | gblMobileWidth | Global variable to define the width of the app for mobile. |
 | gblToday | Global variable to store the present day’s date. |
@@ -162,7 +162,7 @@ Variables used during app OnStart:
 
 1. The **gblRandomizeData** variable checks whether the app is being run for the first time to randomize data.
 
-1. User details from the Employee Ideas Settings table is collected using **colUserSettings** collection. If no records exist, a new user settings record is created under the Employee Ideas User Settings table.
+1. User details from the Employee Ideas Settings table are collected using **colUserSettings** collection. If no records exist, a new user settings record is created under the Employee Ideas User Settings table.
 
 1. If in case multiple user settings record exists, the oldest settings record is selected and stored in the **gblRecordUserSettings** variable.
 
@@ -192,7 +192,7 @@ Variables used when the app runs the first time:
 
 ### First run experience execution details
 
-1. On visible of project screen a dialog pop-up appears if **locShowModal** variable value is true. If false, the app proceeds with loading the Campaign Summary screen.
+1. When project screen shows up, a dialog pop-up appears if **locShowModal** variable value is true. If false, the app proceeds with loading the Campaign Summary screen.
 
 1. The **locShowModal** variable is set (true/false) depending upon project settings records that gets created when the app runs for the first time. When the app runs for the first time, it creates a Employee Ideas User Setting record when the user completes the first run experience.
 
@@ -226,9 +226,9 @@ Variables used by summary screen:
 
 1. The campaign summary leader board is displayed on the campaign summary screen. The screen also shows the list of weekly top contributors, and weekly top ideas.
 
-1. The weekly top contributors are listed in the   **galCampaignStatsTopContributors** gallery, the total number of ideas, and the ideas by owner columns are taken from the **colIdeaStats_Raw** collection. The top 3 contributors with the number of ideas are also displayed in the descending order.
+1. The weekly top contributors are listed in the   **galCampaignStatsTopContributors** gallery, the total number of ideas, and the ideas by owner columns are taken from the **colIdeaStats_Raw** collection. The top three contributors with the number of ideas are also displayed in the descending order.
 
-1. The weekly top ideas are listed in the **galCampaignStatsTopIdeas** gallery. The ideas for which the vote count is not blank are taken from the **colIdeaStats_Raw** collection, and the top 3 ideas with the number of votes received are displayed in the descending order.
+1. The weekly top ideas are listed in the **galCampaignStatsTopIdeas** gallery. The ideas for which the vote count is not blank are taken from the **colIdeaStats_Raw** collection, and the top three ideas with the number of votes received are displayed in the descending order.
 
 1. If the logged in User has the team role, the **galCampaignSummary** gallery displays the list of Active, Expired, Not Started and all the Campaigns in the descending order (campaign start date) that can be controlled using a drop-down field.
 
@@ -261,7 +261,7 @@ Variables used by campaign details screen:
 | locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that an existing campaign can be edited if the value is true). |
 | locVisibleCampaignView | Local variable to control the visible property of the **conCampaignDetailCard** data card (indicates the campaign can only be viewed in case the value is true). |
 | locVisibleCampaignCreate | Local variable to control the visible property of the **conCampaignUpsert** container (indicates that a new campaign can be created if the value is true). |
-| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be only be viewed but not edited)
+| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be viewed but not edited)
 | locVisibleIdeaCommands | Local variable used to control the visibility of the **Idea Delete** button (galIdeaCommands). |
 | locSortGalCampaignDetailNav | Local variable used to sort the **galCampaignDetailNav** gallery.
 
@@ -273,13 +273,13 @@ Variables used by campaign details screen:
 
 1. Add campaign button enables the user to add a new campaign.
 
-1. Selecting any of the campaign sets the **gblSelectedRecordCampaign** variable to the selected campaign.
+1. Selecting any of the campaigns sets the **gblSelectedRecordCampaign** variable to the selected campaign.
 
 1. The ideas for the selected campaign(**gblSelectedRecordCampaign** variable) are filtered from the Employee Ideas table, and collected in the **colIdeas** collection.
 
 1. Temporary vote offset is removed from the **colVoteCounter** collection for the actual value.
 
-1. The **conCampaignDetailCard** container displays the name, description, the campaign duration dates, the cover image and the number of days for campaign start, end, or expiry.
+1. The **conCampaignDetailCard** container displays the name, description, the campaign duration dates, the cover image, and the number of days for campaign start, end, or expiry.
 
 1. The **galCampaignDetailsIdeas** gallery lists the ideas available (**colIdeas** collection) for the selected campaign. The ideas can be sorted based on a dropdown selection. The available options are "Newest", "Oldest", and "Top voted".
 
@@ -307,7 +307,7 @@ The following collections are used when you add an idea campaign:
 | - | - |
 | colQuestions | Used to collect the idea questions. |
 | colStockImages | Used for the collection of stock cover images. |
-| colQuestionsToDelete | Used to collect the questions which are deleted while adding/editing a campaign. |
+| colQuestionsToDelete | Used to collect the deleted questions while adding/editing a campaign. |
 | colIdeas | Used to collect ideas for a particular campaign. |
 
 ### Variables used when adding an idea campaign
@@ -320,13 +320,13 @@ The following variables are used when you add an idea campaign:
 | locVisibleCampaignCreate | Local variable to control the visible property of the **conCampaignUpsert** container (indicates whether a new campaign can be created if the value is true). |
 | locVisibleCampaignEdit | Local variable to control the visible property of the **conCampaignUpsert** container (indicates whether an existing campaign can be edited if the value is true). |
 | locVisibleCampaignView | Local variable to control the visible property of the **conCampaignDetailCard** data card (indicates whether the campaign can only be viewed in case the value is true). |
-| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be only be viewed but not edited). |
+| locVisibleCampaignIdea | Local variable to control the visible property of the **conCampaignDetailsIdeas** container (indicates that an idea can be viewed but not edited). |
 | locCreateNewCampaign | Used to control the visibility of the **conCampaignUpsert** container. |
 | gblSelectedRecordCampaign | Global variable to store the campaign record currently in context. |
-| gblSelectedRecordCampaign_FormValues | Global variable to store the field values of the campaign which is being added or edited. |
+| gblSelectedRecordCampaign_FormValues | Global variable to store the field values of the campaign added or edited. |
 | locSelectedStockImage | Local variable to check whether a stock image has been selected or not. |
-| locFormRecordCampaignPatch | Local variable to store the campaign record which is being updated. |
-| locShowCampaignFormErrors | Local variable which controls the visibility of the error message to be shown in case there are any missing fields. |
+| locFormRecordCampaignPatch | Local variable to store the campaign record being updated. |
+| locShowCampaignFormErrors | Local variable that controls the visibility of the error message to be shown in case there are any missing fields. |
 | gblParamTeamId | Global variable to set the Group ID from Planner. |
 | gblParamChannelId | Global variable to set the Channel ID from Planner. |
 
@@ -336,7 +336,7 @@ The following variables are used when you add an idea campaign:
 
 1. Selecting the **Add Campaign** button sets the **locVisibleCampaignCreate**, **locVisibleCampaignEdit**, and **locVisibleCampaignIdea** variables to false. **locVisibleCampaignView**, **locCreateNewCampaign**, and **locBlockUserInput** variables to true. And moves to the Campaign Details screen.
 
-1. The **galCampaignDetailNav** gallery is disabled based on the values of the **locVisibleCampaignView**, **locVisibleCampaignIdea** and **locCreateNewIdea** variables.
+1. The **galCampaignDetailNav** gallery is disabled based on the values of the **locVisibleCampaignView**, **locVisibleCampaignIdea, and **locCreateNewIdea** variables.
 
 1. Campaign name, description, and start/end dates of the campaign are part of the **conCampaignForm** container where the details can be filled in.
 
@@ -391,7 +391,7 @@ The following variables are used when you edit an idea campaign:
 
 ### Execution details while editing an idea campaign
 
-1. The list of existing campaigns are shown in the **galCampaignSummary** gallery. Selecting any of the campaign sets the **gblSelectedRecordCampaign** variable to the selected campaign, and the user is taken to the campaign details page.
+1. The list of existing campaigns is shown in the **galCampaignSummary** gallery. Selecting any of the campaigns sets the **gblSelectedRecordCampaign** variable to the selected campaign, and the user is taken to the campaign details page.
 
 1. Selecting the **Edit** button gets the campaign details (such as title, and description) using the **gblSelectedRecordCampaign** variable, and the idea questions from the **colQuestions** collection.
 
@@ -439,11 +439,11 @@ The following variables are used when duplicating an idea campaign:
 
 1. A campaign can be duplicated using the **Duplicate** button on the campaign details screen.
 
-1. Selecting the **Duplicate** button sets the **gblSelectedRecordCampaign_FormValues** variable with the details of the campaign which is being duplicated (such as title, description, stat/end dates). The cover image is set to blank. The title of the newly created campaign is appended by (1).
+1. Selecting the **Duplicate** button sets the **gblSelectedRecordCampaign_FormValues** variable with the details of the campaign being duplicated (such as title, description, stat/end dates). The cover image is set to blank. The title of the newly created campaign is appended by (1).
 
-1. The value of the **locVisibleCampaignCreate** variable is updated to true which displays the **conCampaignUpsert** container.
+1. The value of the **locVisibleCampaignCreate** variable is updated to true, which displays the **conCampaignUpsert** container.
 
-1. The User can make additional changes to the newly created campaign, and select the **Add Campaign** button.
+1. User can make more changes to the newly created campaign, and select the **Add Campaign** button.
 
 1. When selecting **Add Campaign** button, the updated fields are saved to the Employee Idea Campaigns table (**gblSelectedRecordCampaign** variable holds the edited campaign record).
 
@@ -473,7 +473,7 @@ The following variables are used when deleting an idea campaign:
 
 | Collections name | Description |
 | - | - |
-| gblSelectedRecordCampaign | Global variable to store the campaign record which is in context. |
+| gblSelectedRecordCampaign | Global variable to store the campaign record in the current context. |
 | locVisibleDialog | Local variable to control the visibility of the dialog background. |
 | locVisibleDialogDelete | Local variable to control the visibility of the delete dialog. |
 
@@ -530,8 +530,8 @@ The following collections are used when deleting an idea question:
 
 | Collections name | Description |
 | - | - |
-| colQuestions | Used to collect the idea questions.
-| colQuestionsToDelete | Used to collect the questions which are deleted while adding/deleting a campaign.
+| colQuestions | Used to collect the idea questions. |
+| colQuestionsToDelete | Used to collect the deleted questions while adding/deleting a campaign. |
 
 ## Variables used when deleting an idea question
 
@@ -539,7 +539,7 @@ Deleting an idea question doesn't use any variables.
 
 ### Execution details while deleting an idea question
 
-1. Existing ddea questions can be deleted while a campaign is being edited.
+1. Existing idea questions can be deleted while a campaign is being edited.
 
 1. Selecting **Delete** removes question from the **colQuestions** collection, and adds the deleted question the **colQuestionsToDelete** collection.
 
@@ -625,7 +625,7 @@ The following variables are used when submitting a new idea:
 | gblSelectedRecordCampaign | Global variable to store the campaign record in the current context. |
 | locVisibleCampaignIdea | Local variable used to control the visibility of the idea details screen. |
 | locCreateNewIdea | Local variable used to control the visibility of the idea details screen. |
-| locFormRecordIdea | Local variable used to store the idea record which is being created. |
+| locFormRecordIdea | Local variable used to store the idea record being created. |
 | gblParamTeamId | Variable to store the Planner group ID. |
 | gblParamChannelId | Variable to store the Planner Channel ID. |
 
@@ -639,9 +639,9 @@ The following variables are used when submitting a new idea:
 
 1. The **colFiles** collection is cleared, and the **locCreateNewIdea** and **locVisibleCampaignIdea** variables are set to true.
 
-1. The value of the **locVisibleCampaignIdea** and **locCreateNewIdea** variables are set to true, displaying the **conCampaignIdeaPane** and **conIdeaImage** containers.
+1. The values of the locVisibleCampaignIdea and locCreateNewIdea variables are set to true, displaying the **conCampaignIdeaPane** and **conIdeaImage** containers.
 
-1. The **galIdeaResponses** displays the fields which the Users must fill in order to save the idea.
+1. The **galIdeaResponses** gallery displays the fields that must be filled to save the idea.
 
 1. Using the **New File** image allows the users to add related files.
 
@@ -681,7 +681,7 @@ The following variables are used when deleting an idea:
 | Variable name | Description |
 | - | - |
 | locVisibleIdeaCommands | Local variable used to control the visibility of the idea delete button (galIdeaCommands). |
-| gblRecordCampaignIdea | Global variable to store the campaign idea record which is in context. |
+| gblRecordCampaignIdea | Global variable to store the campaign idea record in the current context. |
 | locVisibleCampaignIdea | Local variable used to control the visibility of the idea details. |
 | locVisibleDialog | Local variable to control the visibility of the dialog background. |
 | locVisibleDialogDelete | Local variable to control the visibility of the delete dialog. |
@@ -689,7 +689,7 @@ The following variables are used when deleting an idea:
 
 ### Execution details when deleting an idea
 
-1. Selecting any of the idea from the **galCampaignDetailsIdeas** gallery sets the **gblRecordCampaignIdea** variable to the selected idea, and the corresponding details stored in the **colResponses** and **colFiles** are displayed.
+1. Selecting any of the ideas from the **galCampaignDetailsIdeas** gallery sets the **gblRecordCampaignIdea** variable to the selected idea, and the corresponding details stored in the **colResponses** and **colFiles** are displayed.
 
 1. The value of the **locVisibleCampaignIdea** variable set to true displays the idea details.
 
@@ -697,7 +697,7 @@ The following variables are used when deleting an idea:
 
 1. **Delete** sets the values of **locVisibleDialog**, and **locVisibleDialogDelete** to true displaying the **conConfirmDelete** container (Deletion confirmation dialog).
 
-1. User must check the **I Understand** checkbox to proceed with deleting the campaign.
+1. User must check the **I Understand** checkbox to continue with deleting the campaign.
 
 1. When **Delete** is selected, the selected campaign is removed from the Employee Ideas Campaigns table, the related ideas are removed from the Employee Ideas table and the **colIdeas** collection is updated.
 
@@ -722,8 +722,8 @@ Settings screen uses the following variables:
 | Variable name | Description |
 | - | - |
 | locBlockUserInput | Local variable used to block the user input by displaying a dialog while something is being saved. |
-| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas settings table. |
-| gblSettingNotificationChannelId | Global variable to store the Channel Id where notifications will be posted.
+| gblRecordSettings | Global variable used to set the Team and Channel ID to the Employee Ideas settings table. |
+| gblSettingNotificationChannelId | Global variable to store the Channel ID where notifications will be posted.
 | gblDropdownChannel | Global variable to store the list of channels for a group.  
 
 ### Settings screen execution details

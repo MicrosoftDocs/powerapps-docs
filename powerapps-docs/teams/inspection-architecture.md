@@ -38,15 +38,15 @@ The following diagram explains the data model used by the Inspection sample app.
 | Table name | Description |
 | - | - |
 | Area Inspection | An inspection is, most generally, an organized examination or formal evaluation exercise. This table holds the inspection checklist results using the area inspection step when an inspection is performed using a checklist/form. |
-| Area Inspection Step | An inspection step is one of the checklist item result of an inspection, and holds the outcome and notes of that particular inspection step. |
-| Area Inspection Location | An inspection location is place or item or audit that the user needs to inspect. All the inspection steps are performed on this location or item. One inspection can have multiple inspection steps which depends on number of checklist steps that are made available for the inspection. |
+| Area Inspection Step | An inspection step is one of the checklist item results of an inspection, and holds the outcome and notes of that particular inspection step. |
+| Area Inspection Location | An inspection location is place or item or audit that the user needs to inspect. All the inspection steps are performed on this location or item. One inspection can have multiple inspection steps that depend on the number of checklist steps that are made available for the inspection. |
 | Area Inspection Checklist | A checklist is a list of all the things that you need to do while inspecting. It holds multiple Checklist steps, and is connected to the type of the inspection. During the inspection, all the associated checklists are available to the user to choose and perform the inspection. |
 | Area Inspection Checklist Step | Checklist steps are the steps that are performed in a sequential order while inspecting an item/area using a checklist. Each checklist step is associated to only one checklist. A series of checklist steps make one checklist. |
 | Area Inspection Image | All the images that are taken or uploaded during the inspection are stored in this table, and these images are associated to area inspection steps. |
 | Area Inspection Location | This table holds the information of the area, asset, or items that needs to be inspected. |
-| Area Inspection Location Type | This table holds the type or category that the area, asset, or item is aligned to. Based on the type of area, asset, or item, the associated checklists is made available for the user to start the inspection. |
-| User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
-| User Setting | Team settings are used to store Team, Channel and Planner preferences while using the application. |
+| Area Inspection Location Type | This table holds the type or category that the area, asset, or item is aligned to. Based on the type of area, asset, or item, the associated checklists are made available for the user to start the inspection. |
+| User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app. There is one record for each user. |
+| User Setting | Team settings are used to store Team, Channel, and Planner preferences while using the application. |
 
 ### Collections
 
@@ -54,9 +54,9 @@ The following table lists the collections used by the inspection apps.
 
 | Collection name       | Description                                                                                                   | Where used                                                                |
 |-----------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| colLocalization       | Used to build a localization lollection based on the user's language.                                            | App OnStart                                                |
+| colLocalization       | Used to build a localization collection based on the user's language.                                            | App OnStart                                                |
 | colMenuAreaTypes      | Used to populate the collection with all area types.                                                           | App OnStart                                                |
-| colAreaTypes          | Used to collect all area types and their associated Planner bucket Id.                                         | App OnStart                                                |
+| colAreaTypes          | Used to collect all area types and their associated Planner bucket ID.                                         | App OnStart                                                |
 | colLocationTypeIcons  | Used to collect the name and order of the icons used in the app.                                               | App OnStart                                                |
 | colWeekInspections    | To collect the total number of inspections in the last seven days from **Active Area Inspections - Last seven days** view | App OnStart                                                |
 | colWeekIssues         | To collect the total number of issues recorded in the last seven days.                                       | App OnStart                                                |
@@ -66,7 +66,7 @@ The following table lists the collections used by the inspection apps.
 | colPlannerTasks       | To collect the list of Planner tasks in a particular plan based on the Plan and Group ID.                    | OnVisible property of the Welcome screen                                   |
 | tasksforme            | To collect the list of Planner Tasks assigned to the logged in User.                                           | OnVisible property of the Welcome screen                                   |
 | tasksforall           | To collect the list of Planner Tasks assigned to all the Users.                                                | OnVisible property of the Welcome screen                                   |
-| overdue               | To collect the list of Planner Tasks assigned to the logged in user that are overdue.                         | OnVisible property of the Welcome screen                                   |
+| overdue               | To collect the list of overdue Planner Tasks assigned to the logged in user.                         | OnVisible property of the Welcome screen                                   |
 | ColGroupFroms         | To collect the available locations for the selected area type.                                                 | OnVisible property of the Forms screen                                     |
 | colFormChecklistSteps | To collect the checklist steps for a selected location.                                                        | Items property of the individual area checklist gallery on Overview screen. |
 | colAreaPlannerTasks   | To collect the task, step and the inspection IDs.                                                                 | OnSelect property of Add Task button on the Task Creation screen.           |
@@ -80,7 +80,7 @@ The following table lists the global variables used by the inspection apps.
 
 | Variable name                   | Type     | Description                                                                                                                                                                                                |
 |---------------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| gblAppLoaded                    | Boolean  | To check if the app is completely loaded.                                                                                                                                                              |
+| gblAppLoaded                    | Boolean  | To check if the app is loaded.                                                                                                                                                              |
 | gblUserLanguage                 | Text     | To check the logged in user’s language.                                                                                                                                                                     |
 | gblWorkType                     | Text     | To fetch the work type from app settings (inspection, audit, or walk).                                                                                                                                      |
 | gblThemeDark                    | Boolean  | To check if the Teams theme is set to Dark.                                                                                                                                                            |
@@ -114,7 +114,7 @@ The following table lists the global variables used by the inspection apps.
 | gblDisplayNoLocationWarning     | Boolean  | To display a warning if the number of locations in the selected group is zero.                                                                                                                             |
 | gblselectedareainspection       | Boolean  | Variable to store the selected inspection.                                                                                                                                                                  |
 | gblSelectedChecklist            | Record   | Variable to collect areas within the selected group and the forms relevant to that group.                                                                                                                   |
-| gblSelectedGroup                | Record   | Set the value of the particular item If the selected group has more than 1 form.                                                                                                                           |
+| gblSelectedGroup                | Record   | Set the value of the particular item if the selected group has more than one form.                                                                                                                           |
 | gblLocationType                 | Record   | Variable to store the selected the location type.                                                                                                                                                               |
 | gblSelectedLocation             | Record   | Variable to store the selected location.                                                                                                                                                                    |
 | LastSynced                      | DateTime | Variable to set the last synchronization time.                                                                                                                                                                       |
@@ -193,10 +193,10 @@ Variables used during app OnStart:
 | gblScreenWidthMin | Global variable to set the minimum screen width. |
 | gblEditLocation | Global variable to check whether a location is being edited. |
 | gblView | Global variable to store the view to be displayed. |
-| gblViewInspection | Global variable which indicates an inspection is being viewed.
+| gblViewInspection | Global variable that indicates an inspection is being viewed.
 | gblManageLocationTypes | Global variable to check if location type exists. |
 | gblTempAddLocType | Global variable to check for adding location type. |
-| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblWarningType | Global variable that controls which warning message to be displayed. |
 | gblDisplayWarning | Global variable to control visibility of warning messages. |
 | gblAddLocation | Global variable to show or hide location button. |
 | gblShowLocationTypeIcons | Global variable to control visibility of location type icons. |
@@ -204,7 +204,7 @@ Variables used during app OnStart:
 | gblParamTenantId | Global variable to set the tenant ID from parameters. |
 | gblParamLocaleId | Global variable to set the locale ID from parameters. |
 | gblCheckLabelSettings | Global variable to store the active area inspection label. |
-| gblRecordSettings | Global variable used to set the Team and Channel Id to the Area Inspection Settings table. |
+| gblRecordSettings | Global variable used to set the Team and Channel ID to the Area Inspection Settings table. |
 | gblSettingPlannerPlanId | Global variable to get the Planner ID from the record settings. |
 | gblSettingTeamId | Global variable to get the Team ID from the record settings. |
 | gblLocation | Global variable to set the first area inspections location. |
@@ -218,7 +218,7 @@ Variables used during app OnStart:
 
 1. The value and icons of the labels are stored in the **colLabelSettings** collection. The work type is set using the **gblWorkType** and **gblSelectedWorkType** variables. It's set to inspections if other values do not exist.
 
-1. The channel, group, tenant and locale IDs from the parameter values are stored in the **gblParamTeamId**, **gblParamChannelId**, **gblParamTenantId**, and **gblParamLocaleId** variables.
+1. The channel, group, tenant, and locale IDs from the parameter values are stored in the **gblParamTeamId**, **gblParamChannelId**, **gblParamTenantId**, and **gblParamLocaleId** variables.
 
 1. User's Teams theme is checked: Default, Dark, or High Contrast. The **gblThemeDark** and **gblThemeHiCo** variables are set accordingly.
 
@@ -226,12 +226,12 @@ Variables used during app OnStart:
 
 1. User details from the Area Inspection User Settings table are collected in **colUserSettings** collection. If no records exist, a new project user setting record is created. If there are multiple area inspection user settings records exist, the oldest record is selected and stored in the **gblRecordUserSettings** variable.
 
-1. Predefined font sizes, padding values, minimum screen height and width values are stored in the **gblFontSizes**, **gblPadding**,
+1. Predefined font sizes, padding values, minimum screen height, and width values are stored in the **gblFontSizes**, **gblPadding**,
     **gblScreenHeightMin**, and **gblScreenWidthMin** variables.
 
-1. The **gblView** variable which controls the view to be displayed is set to “Locations”.
+1. The **gblView** variable that controls the view to be displayed is set to “Locations”.
 
-1. The order, name and the icon values used in the app are collected in the **colLocationTypeIcons** collection. The number of active area inspection labels are stored in the **gblCheckLabelSettings** variable.
+1. The order, name, and the icon values used in the app are collected in the **colLocationTypeIcons** collection. The number of active area inspection labels are stored in the **gblCheckLabelSettings** variable.
 
 1. The main and sub section values are collected in the **colLocConfig** collection. If they are blank, the values are set to area and area type.
 
@@ -267,7 +267,7 @@ Variables used during the first run experience for locations:
 
 | Variable name | Description |
 | - | - |
-| locShowCustomize | Local variable to check whether to show customize option. |
+| locShowCustomize | Local variable to check whether to show the option to customize. |
 | locShowRestricted | Local variable to show locations with restrictions. |
 | locShowSetupChannelPlanner | Local variable to show Planner setup channel. |
 | locShowSetup | Local variable to show setup option. |
@@ -299,13 +299,13 @@ Variables used when displaying the list of locations:
 | Variable name | Description |
 | - | - |
 | locAreaSortOrder | Local variable used to control the sorting order of locations. |
-| locInspectionSortBy | Local variable to denote on what field are inspection records sorted by. |
+| locInspectionSortBy | Local variable to signify the field used to sort inspection records. |
 
 ##### Execution details when displaying the list of locations
 
-1. The list of locations in the Area Inspection Locations table are displayed in the **galAreas** gallery along with the location types.
+1. The list of locations in the Area Inspection Locations table is displayed in the **galAreas** gallery along with the location types.
 
-1. The locations can be searched based on their names. Using the sort button toggles the value of **locAreaSortOrder** variable which sorts the locations in ascending or descending order based on the name.
+1. The locations can be searched based on their names. Using the sort button toggles the value of **locAreaSortOrder** variable that sorts the locations in ascending or descending order based on the name.
 
 1. Selecting any location in the **galAreas** gallery updates the **locInspectionSortBy** variable to date. The value of the **gblLocation** variable is set to the selected location.
 
@@ -346,13 +346,13 @@ Variables used when displaying the list of inspections based on the selected loc
 
 1. The **galInspections** gallery displays the list of inspections collected in the **colInspections** collection based on the selected location.
 
-1. The Inspection Form name, Submitted By, Number of ays since the inspection was submitted, Status and the number of issues columns are shown.
+1. The Inspection Form name, Submitted By, Number of days since the inspection was submitted, Status and the number of issues columns are shown.
 
 1. **locInspectionSortBy** variable is used to control the sorting of the columns.
 
 1. The **gblInspection** variable is filtered for the number of inspections where the issue outcome is as issue.
 
-1. Selecting any of the column headings toggles the value of the **locInspectionSortOrder** variable which ends up sorting the values.
+1. Selecting any of the column headings toggles the value of the **locInspectionSortOrder** variable that ends up sorting the values.
 
 1. Checkbox next to the inspection name is used to select the inspection for deletion. Selecting the checkbox next to the inspection header selects all inspection records.
 
@@ -376,7 +376,7 @@ The following variables are used when deleting inspections.
 | Variable name | Description |
 | - | - |
 | gblDisplayWarning | Global variable to control visibility of warning messages. |
-| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblWarningType | Global variable that controls which warning message to be displayed. |
 
 #### Execution details when deleting inspections
 
@@ -384,7 +384,7 @@ The following variables are used when deleting inspections.
 
 1. **Delete** button is only enabled after one or more inspection records are selected.
 
-1. Selecting **Delete** sets the value of the **gblDisplayWarning** variable to true. This change ends up displaying the **conWarning** container which in turn displays the delete confirmation dialog.
+1. Selecting **Delete** sets the value of the **gblDisplayWarning** variable to true. This change ends up displaying the **conWarning** container that in turn displays the delete confirmation dialog.
 
 1. The value of **gblWarningType** variable is set to **inspectiondelete** indicating an inspection is being deleted.
 
@@ -414,7 +414,7 @@ The following variables are used when deleting inspections.
 | gblAreaChanged | Global variable to indicate that the location has been updated. |
 | gblLocation | Global variable to store the location in the current context. |
 | gblLocType | Global variable to store the location type. |
-| gblCurrentLocation | Variable to store the location which is being edited. |
+| gblCurrentLocation | Variable to store the location that is being edited. |
 | gblAddLocationImage | Global variable to store the image added as part of a location.
 
 #### Execution details when editing location types
@@ -468,7 +468,7 @@ The following variables are used when deleting inspections.
 
 1. The performed inspections can be reviewed by selecting the required record in the **galInspections** gallery.
 
-1. Selecting an inspection record sets the value of the **gblViewInspection** variable to true which controls the visibility of the **galIssues** and **galNoIssues** galleries.
+1. Selecting an inspection record sets the value of the **gblViewInspection** variable to true that controls the visibility of the **galIssues** and **galNoIssues** galleries.
 
 1. The items property of both the galleries are filtered based on the **gblInspection** value.
 
@@ -476,9 +476,9 @@ The following variables are used when deleting inspections.
 
     1. **galNoIssues** gallery for inspections where the Outcome is OK or N/A.
 
-1. The users can see the notes, attachments and tasks created while performing the inspection.
+1. The users can see the notes, attachments, and tasks created while performing the inspection.
 
-1. Selecting the task launches Planner with the selected task open based on the values of the Tenant, Locale, Team and Plan ID collected during the start of the app.
+1. Selecting the task launches Planner with the selected task open based on the values of the Tenant, Locale, Team, and Plan ID collected during the start of the app.
 
 1. The "Review status" field has Pending Review, Pending Action, Closed and Incomplete as choices. Changing the value will update the Area Inscriptions table and the **colInspections** collection with the selected status and saves the record.
 
@@ -528,7 +528,7 @@ The following variables are used when reviewing inspection insights.
 
 1. The top contributors bar chart (count of inspections grouped by owner) for the last seven days is collected using the **colBarChartTemp** and **colBarChart** collections.
 
-1. The average inspection time for line chart (inspections time for inspections in the last seven days grouped by form) are collected using the **colLineChartForms** and **colLineChart** collections.
+1. The average inspection time for line chart (inspection time for inspections in the last seven days grouped by form) is collected using the **colLineChartForms** and **colLineChart** collections.
 
 1. The **conInspectionStats** container displays the number of inspections that are pending review, pending action, closed inspections and the average completion time.
 
@@ -536,7 +536,7 @@ The following variables are used when reviewing inspection insights.
 
 1. The **galAvgInspectionTime** gallery displays the average inspection time data in the **colLineChart** collection in descending order.
 
-1. The **colPieChart** displays a pie chart depicting the open inspections based on the location type. The legend next to the pie chart displays the list of location types which have at least 1 or more inspections.
+1. The **colPieChart** displays a pie chart depicting the open inspections based on the location type. The legend next to the pie chart displays the list of location types that have at least one or more inspections.
 
 1. The **galTopContributors** gallery displays the top contributors’ details (having at least one or more inspections) from the **colBarChart** collection.
 
@@ -546,7 +546,7 @@ The following variables are used when reviewing inspection insights.
 
     - Selecting the number of days on the average inspection time sets the **gblLineChartView** variable to 30 or 60 days based on the selection. The average inspections time for inspections in the last 30 or 60 days grouped by form are collected in the **colLineChartForms** and **colLineChart** collections. The stored data is refreshed and displayed.
 
-    - Selecting the number of top inspection report contributors bar chart sets the **gblBarChartView** variable to 30 or 60 based on the selection. The count of inspections grouped by owner for the last 30 o 60 days grouped is collected using the **colBarChartTemp** and **colBarChart** collections. The stored data is refreshed and displayed.
+    - Selecting the number on top of the inspection report contributor bar chart sets the **gblBarChartView** variable to 30 or 60 based on the selection. The count of inspections grouped by owner for the last 30 o 60 days grouped is collected using the **colBarChartTemp** and **colBarChart** collections. The stored data is refreshed and displayed.
 
 ### Inspection forms screen
 
@@ -574,11 +574,11 @@ The following collections are used when displaying the list of inspection forms.
 | Variable name | Description |
 | - | - |
 | gblFormClick | Local variable used to control the sorting order of locations. |
-| gblForm | Local variable to denote on what field are inspection records sorted by. |
+| gblForm | Local variable used to determine the field used to sort inspection records by. |
 
 ##### Execution details when displaying the list of inspection forms
 
-1. The list of inspection forms in the Area Inspection Checklists table are displayed in the **galForms** gallery along with the number of checklist steps in the ascending order of their names.
+1. The list of inspection forms in the Area Inspection Checklists table is displayed in the **galForms** gallery along with the number of checklist steps in the ascending order of their names.
 
 1. Selecting location in the **galForms** gallery updates the **gblFormClick** variable to true. The **gblForm** variable is set to the selected inspection form.
 
@@ -613,7 +613,7 @@ The following variables are used when displaying the list of checklist steps bas
 
 1. The checklist steps for the selected inspection form are displayed in the **galFormChecklistSteps** gallery based on the values stored in the **colChecklistSteps** collection.
 
-1. The title, action buttons, instructions and the reference image for each checklist step is displayed.
+1. The title, action buttons, instructions, and the reference image for each checklist step is displayed.
 
 #### Creating an inspection form
 
@@ -645,15 +645,15 @@ The following variables are used when creating an inspection form.
 
 1. A new inspection form can be created by selecting the **+ New Inspection Form** button above the **galForms** gallery.
 
-1. After selecting the **+ New Inspection Form** button, the value of the **gblAddForm** variable is set to true and the **colChecklistSteps**, **colChecklistStepsOutput1** and **colChecklistStepsImage** collections are cleared.
+1. After selecting the **+ New Inspection Form** button, the value of the **gblAddForm** variable is set to true and the **colChecklistSteps**, **colChecklistStepsOutput1, and **colChecklistStepsImage** collections are cleared.
 
 1. As the value of the **gblAddForm** is true, a new inspection form is displayed to the user.
 
 1. A new checklist step can be added by selecting the **+ Add Step** button.
 
-1. A new checklist step is added with the title, location types, checklist steps and the reference image being blank.
+1. A new checklist step is added with the title, location types, checklist steps, and the reference image being blank.
 
-1. The action button values are by default set to Pass, Fail and N/A. These values can be modified as required.
+1. The action button values are by default set to Pass, Fail, and N/A. These values can be modified as required.
 
 1. The N/A option can be hidden if desired by using the **Step Unhide** button (**imgNAStepUnhide**). This button updates the
     **colChecklistStepsOutput1** collection for this step and updates the **gblStepChanged** value to true.
@@ -662,23 +662,23 @@ The following variables are used when creating an inspection form.
 
 1. The checklist step can be duplicated by selecting on the duplicate icon present on the respective step. This action updates the sequence of the step in the collections **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage**.
 
-1. The details (title, instructions, action button values and reference image) from the parent step is copied to the newly created checklist step and the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections are updated.
+1. The details (title, instructions, action button values, and reference image) from the parent step is copied to the newly created checklist step and the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections are updated.
 
 1. The sequence of the checklist steps can be updated by selecting the Up and Down arrows present next Step.
 
 1. The Up-arrow button is disabled for the first checklist step and the down arrow button is disabled for the last step in the gallery. The display mode is controlled by the value of **msft_sequence** field.
 
-1. The **colChecklistStepsOutput1, colChecklistStepsImage** and **colChecklistSteps** collections are updated based on the value of the **msft_sequence** field and the value of **gblStepChanged** is updated to true.
+1. The **colChecklistStepsOutput1, colChecklistStepsImage, and **colChecklistSteps** collections are updated based on the value of the **msft_sequence** field and the value of **gblStepChanged** is updated to true.
 
 1. A new checklist step can be added by selecting the **+ Add Step** button. This action updates the **colChecklistSteps**, **colChecklistStepsOutput1**, and **colChecklistStepsImage** collections.
 
-1. A new checklist step is created with the title, location types, checklist steps and the reference image being blank.
+1. A new checklist step is created with the title, location types, checklist steps, and the reference image being blank.
 
 1. The values of the variables **gblImageChanged, gblTempAdd**, and **gblStepChanged** are set to true.
 
 1. Selecting **Delete** icon present in each step removes the checklist step and updates the **msft_sequence** field in **colChecklistStepsOutput1**, **colChecklistStepsImage**, and **colChecklistSteps** collections.
 
-1. After all the required details are entered, selecting **Save** (enabled only when the title, location type and at least 1 checklist step is present) renames the columns in the **colChecklistStepsOutput1**, and store the details in **colPatchSteps1** collection. The newly created checklist steps are updated in the Area Inspection Checklist Steps table and the newly created inspection form is updated to the Area Inspections Checklists table.
+1. After all the required details are entered, selecting **Save** (enabled only when the title, location type and at least one checklist step is present) renames the columns in the colChecklistStepsOutput1, and stores the details in **colPatchSteps1** collection. The newly created checklist steps are updated in the Area Inspection Checklist Steps table and the newly created inspection form is updated to the Area Inspections Checklists table.
 
 1. Selecting **Cancel** sets the **gblStepChanged**, **gblImageChanged**, **gblAddForm**, and **gblEditForm** variables to false and navigate back to the inspection form view with the first record in the **galForms** gallery being selected.
 
@@ -715,9 +715,9 @@ The following variables are used when editing an inspection form.
 
 1. The value of the **gblEditForm** variable set to true indicates that the inspection form is editable, and the user can update all the fields.
 
-1. The users can update the title, location type, duplicate, delete and rearrange the checklist steps.
+1. The users can update the title, location type, duplicate, delete, and rearrange the checklist steps.
 
-1. Once the required changes are made, selecting **Save** renames the columns in the **colChecklistStepsOutput1** and store the details in **colPatchSteps1** collection. The modified checklist steps are updated in the Area Inspection Checklist Steps table. Inspection form is updated to the Area Inspections Checklists table.
+1. Once the required changes are made, selecting **Save renames the columns in the colChecklistStepsOutput1 and stores the details in **colPatchSteps1** collection. The modified checklist steps are updated in the Area Inspection Checklist Steps table. Inspection form is updated to the Area Inspections Checklists table.
 
 1. The removed inspection steps are stored in the **colChecklistStepsRemoveTemp** collection, and the **gblCountSteps** variable is used to store the number of checklist steps in the selected inspection form. The changed images are updated in the **colChecklistStepsImage** collection.
 
@@ -777,14 +777,14 @@ The following variables are used when deleting an inspection form.
 
 | Variable name | Description |
 | - | - |
-| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblWarningType | Global variable that controls which warning message to be displayed. |
 | gblDisplayWarning | Global variable to control visibility of warning messages. |
 
 ##### Execution details while deleting an inspection form
 
 1. An existing inspection form can be deleted by selecting **Delete**.
 
-1. Delete action sets the **gblWarningType** variable to "formdelete" and the value of **gblDisplayWarning** variable to true displaying the **conWarning** container which displays the delete confirmation dialog.
+1. Delete action sets the **gblWarningType** variable to "formdelete" and the value of **gblDisplayWarning** variable to true displaying the **conWarning** container that displays the delete confirmation dialog.
 
 1. Checking **I understand** enables the **Delete** button, which when selected, sets the **gblDisplayWarning** value to false hiding the delete dialog. And removes the deleted inspection form from the Area Inspection Checklists table. The collection **colChecklistSteps** is also cleared.
 
@@ -844,16 +844,16 @@ The following variables are used by the general section in settings screen.
 | gblLocTypeSetting | Global variable to set the location type. |
 | gblManageLocationTypes | Global variable to denote whether the location types are being edited. |
 | gblSettingTeamId | Global variable to get the Team ID from the record settings. |
-| gblRecordSettings | Global variable used to set the Team and Channel Id to the Area Inspection settings table. |
+| gblRecordSettings | Global variable used to set the Team and Channel ID to the Area Inspection settings table. |
 | gblSettingPlannerPlanId | Global variable to get the Planner ID from the record settings. |
 
 ##### Execution details of general section
 
 1. The users have the feasibility to update whether only Team owners will be able to add campaigns and select the channel where messages will be posted.
 
-1. The list of channels in the dropdown are from the **gblParamTeamId** variable.
+1. The list of channels in the dropdown is from the **gblParamTeamId** variable.
 
-1. The list of Planner instances in the dropdown are from the **gblSettingTeamId** variable.
+1. The list of Planner instances in the dropdown is from the **gblSettingTeamId** variable.
 
 1. **Save** button is enabled when the dropdown value selected or the Team Owner restricted value is different from the value stored in the variable gblRecordSettings (which is set at app OnStart).
 
@@ -884,13 +884,13 @@ The following variables are used by the location type section.
 | - | - |
 | gblShowLocationTypeIcons | Global variable to control the visibility of the location type icons. |
 | gblTypeChanged | Global variable to indicate that the location type has been updated. |
-| gblWarningType | Global variable which controls which warning message to be displayed. |
+| gblWarningType | Global variable that controls which warning message to be displayed. |
 | colGroupCounter | Used to store the number of grouped locations available. |
 | gblDisplayWarning | Global variable to control visibility of warning messages. |
 
 ##### Execution details of location type screen
 
-1. The **galAreaTypes** gallery displays the list of available Location Types with the Title, Menu Label, Icon and the cover image.
+1. The **galAreaTypes** gallery displays the list of available Location Types with the Title, Menu Label, Icon, and the cover image.
 
 1. Selecting each of the fields allows the user to update the values. Selecting the update icon set the values of **gblShowLocationTypeIcons**, and **gblDisplayWarning** global variables to true, displaying the **galIconPicker** gallery.
 
@@ -898,11 +898,11 @@ The following variables are used by the location type section.
 
 1. A location type can be deleted by selecting the delete icon next to the record. When deleting, the value of the **gblWarningType** variable is set to **locationtypedelete** in case there are no locations associated with the type.
 
-1. In case there are locations associated to the type, the value of the **gblWarningType** variable is set to **locationtypenodelete** collection, displaying relevant message.
+1. If there are locations associated to the type, the value of the **gblWarningType** variable is set to **locationtypenodelete** collection, displaying relevant message.
 
-1. Upon checking the **I understand** checkbox, the delete button is enabled. Selecting delete removes the type from the **colGalLocationTypes**, and **colGalIconLocationTypes** collections, and from the Area Inspection Location Types table.
+1. When **I understand** is checked, the delete button is enabled. Selecting delete removes the type from the **colGalLocationTypes**, and **colGalIconLocationTypes** collections, and from the Area Inspection Location Types table.
 
-1. Selecting the **+ Add vehicle type** creates a new record in the **colLocationTypes** collection with the name, menu label and cover image being blank.
+1. Selecting the **+ Add vehicle type** creates a new record in the **colLocationTypes** collection with the name, menu label, and cover image being blank.
 
 1. Selecting the save button updates the colLocationTypes and Area Inspection Location Types table.
 
@@ -930,12 +930,12 @@ The following collections are used by the location type section.
 | gblTempAddGroupType | Variable to check whether a new group is being created from the settings screen. |
 | gblGroupChanged | Global variable to indicate that the checklist step has been updated. |
 | gblDontChangeAreaType | Variable to handle whether the Area type should be allowed to change or not. |
-| gblSelectedGroup | Global variable which denotes the group which seleted. |
+| gblSelectedGroup | Global variable that denotes the selected group. |
 | gblResetAreaDropdown | Global variable to reset the Area Dropdown. |
 
 ##### Grouped location execution details
 
-1. The **galGroups** gallery displays the list of available group locations with the Title, Locations and Location Type Label from the **colGalGroups** collection in the ascending order.
+1. The **galGroups** gallery displays the list of available group locations with the Title, Locations, and Location Type Label from the **colGalGroups** collection in the ascending order.
 
 1. The dropdown values for the Locations are from the Area Inspection Locations table and the Location type values are from the Area Inspection Location Types table.
 
@@ -943,7 +943,7 @@ The following collections are used by the location type section.
 
 1. A new record created in **colGalGroups** collection is set to **gblSelectedGroup** variable, and the value of **gblResetAreaDropdown** variable is set to true.
 
-1. A new grouped location is created with the title, Location and Location type values as blank.
+1. A new grouped location is created with the title, Location, and Location type values as blank.
 
 1. A grouped location can be deleted using **Delete** next to the record. Deleting updates the **gblWarningType** variable to **locationgroupdelete** and **gblDisplayWarning** to true, displaying the delete dialog.
 
@@ -959,7 +959,7 @@ The following collections are used by the customize experience section.
 
 | Collection name | Description |
 | - | - |
-| colLocConfig | Collection used to set the name and type of the main section and sub-section. |
+| colLocConfig | Collection used to set the name and type of the main section and subsection. |
 | colLocTypeSettings | Used to collect the different setting types available in the app. |
 
 ##### Customize experience variables
@@ -970,16 +970,16 @@ The following variables are used by the customize experience section.
 | - | - |
 | gblTempAddGroupType | Global variable set to true when a new group added. |
 | gblLabelChanged | Global variable to indicate that the checklist step has been updated. |
-| gblWorkType | Used to store the work type value which is in context. |
+| gblWorkType | Used to store the work type value that is in context. |
 | gblSelectedWorkType | Used to store the selected work type. |
 
 ##### Customize experience execution details
 
 1. The **colLocTypeSettings** collection is used to display the list of available setting types in the **galSettings** gallery.
 
-1. Users can update the verbiage used in the app. Inspection, Audit and Walk are the available options. Selecting any of these updates the **gblSelectedWorkType** variable to the selected value, and **gblLabelChanged** to true indicating the label has been changed, enabling the save button.
+1. Users can update the verbiage used in the app. Inspection, Audit, and Walk are the available options. Selecting any of these updates the **gblSelectedWorkType** variable to the selected value, and **gblLabelChanged** to true indicating the label has been changed, enabling the save button.
 
-1. Users can also update the main and sub-section names stored in the **colLocConfig** collection.
+1. Users can also update the main and subsection names stored in the **colLocConfig** collection.
 
 1. Selecting **Save** sets the value of the **gblWorkType** global variable to **gblSelectedWorkType**, and update the Area Inspection Labels table.
 
@@ -1005,7 +1005,7 @@ Collections used during app OnStart:
 | colWeekInspections | Collection of total inspections in the last seven days. |
 | colWeekIssues | Collection of total issues in last seven days. |
 | colTeamDurations | Collection of all durations for the inspections. |
-| colUserDurations | Collection of all durations for the inpections completed by the current user. |
+| colUserDurations | Collection of all durations for the inspections completed by the current user. |
 
 ### Inspection app OnStart variables
 
@@ -1018,7 +1018,7 @@ Variables used during app OnStart:
 | gblUserLanguage | Global variable to store the user’s language. |
 | gblParamTeamId | Global variable to set the Group ID from Planner. |
 | gblParamChannelId | Global variable to set the Channel ID from Planner. |
-| gblRecordSettings | Global variable used to set the Team and Channel Id to the Employee Ideas settings table. |
+| gblRecordSettings | Global variable used to set the Team and Channel ID to the Employee Ideas settings table. |
 | gblPlannerPlanId | Global variable to store the Planner ID. |
 | gblPlannerGroupId | Global variable to store the Team ID. |
 | gblToday | Global variable to store the present day’s date. |
@@ -1048,7 +1048,7 @@ Variables used during app OnStart:
 
 1. The settings record is fetched using **gblParamTeamId** and **gblParamChannelId** variables; and stored in **gblRecordSettings** variable.
 
-1. The Planner and Team ID’s are stored in the **gblPlannerPlanId** and **gblPlannerGroupId** variables.
+1. The Planner and Team IDs are stored in the **gblPlannerPlanId** and **gblPlannerGroupId** variables.
 
 1. The app checks for the theme in Teams, and adopt to the selected theme using parameters from **gblThemeDark and gblThemeHiCo** global variables.
 
@@ -1056,7 +1056,7 @@ Variables used during app OnStart:
 
 1. The inspection’s durations for whole team and current user are being collected at **colTeamDurations** and **colUserDurations** collections respectively for displaying the statistics of average team’s duration versus the current users average duration for completing an inspection for the last seven days.
 
-1. The verbiage used across the app are stored in at **arealabel** and **areaTypeLabel** labels, fetched from the settings record.
+1. The verbiage used across the app is stored in at **arealabel** and **areaTypeLabel** labels, fetched from the settings record.
 
 ### Welcome screen
 
@@ -1093,13 +1093,13 @@ The following variables are used by the welcome screen.
 
 #### Welcome screen execution details
 
-1. **gblCurrUser** global variable is used get the first name of the current user and to greet the user is greeted with a welcome message on the Insights screen.
+1. **gblCurrUser** global variable is used to get the first name of the current user and to greet the user is greeted with a welcome message on the Insights screen.
 
-1. **tasksforme, tasksforall** and **overdue** global variables are used to show the planer stats
+1. **tasksforme, tasksforall, and **overdue** global variables are used to show the planer stats
 
 1. **gblTotalInspectionCount** and **gblCurrentUserInspectionCount** are used to compare the total inspections submitted by the team versus the total inspections submitted by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
-1. The inspections that are created from last seven days are being collected in to **colWeekInspections** and the issues among these are collected in to **colWeekIssues** for statistics that will be display on the first screen of the app (used only when the user returns to this screen after submitting an inspection).
+1. The inspections that are created from last seven days are being collected in to **colWeekInspections** and the issues are collected in to **colWeekIssues** for statistics that will be display on the first screen of the app (used only when the user returns to this screen after submitting an inspection).
 
 1. **gblTotalIssueCount** and **gblCurrentUserIssueCount** global variables are used to compare the total inspection issues submitted by the team versus the total inspection issues submitted by the current user for the last seven days (used only when the user returns to this screen after submitting an inspection).
 
@@ -1140,11 +1140,11 @@ The following variables are used by the locations screen.
 
 1. All the areas/assets/items are shown by default on this screen and user can pick any area/asset/item to start the inspection.
 
-1. On selecting any of the area/asset/item type by the menu, the list of the areas/assets/items will be filtered based on the type selected.
+1. On selecting any of the area/asset/item types by the menu, the list of the areas/assets/items will be filtered based on the type selected.
 
-1. On selecting any of the area/asset/item it is stored in the **gblSelectedLocation** global variable. If there's only one checklist associated to the type then the checklist is stored in **gblSelectedChecklist** global variable instead.
+1. On selecting any of the area/asset/item, it is stored in the **gblSelectedLocation** global variable. If there's only one checklist associated to the type, then the checklist is stored in **gblSelectedChecklist** global variable instead.
 
-1. The associated checklist steps of **gblSelectedChecklist** global variable is collected into the **colFormChecklistSteps** collection.
+1. The associated checklist steps of gblSelectedChecklist global variable are collected into the **colFormChecklistSteps** collection.
 
 1. Based on the number of associated checklists for the **gblSelectedLocation** global variable, the app takes to either the Forms screen in case if there are more than one checklist for the type the **gblSelectedLocation** global variable is associated to, or takes to the Overview screen if there's only one checklist.
 
@@ -1175,7 +1175,7 @@ The following variables are used by the locations screen.
 
 1. When a checklist is selected, the **gblSelectedChecklist** global variable is used to store the selected checklist and the associated checklist steps are collected using the **colFormChecklistSteps** collection.
 
-1. If the checklist steps count if less than or equal to zero then the app shows a warning message that the user can’t perform an inspection. This behavior is controlled by the **gblDisplayNoStepWarning** global variable.
+1. If the checklist steps count if less than or equal to zero, then the app shows a warning message that the user can’t perform an inspection. This behavior is controlled by the **gblDisplayNoStepWarning** global variable.
 
 1. If the checklist steps count is greater than zero, then the app takes the user to the Overview screen.
 
@@ -1224,7 +1224,7 @@ The following collections are used by the checklist steps screen.
 | colLastInspection | Collection of inspection details used to create inspection record. |
 | colChecklistSteps | Collection of checklist steps. |
 | colLastInspectionSteps | Collection of checklist steps for the inspection being carried out. |
-| colStepDetails | Collection of variables to control visibility of sub-components of a checklist step, such as notes and photo. |
+| colStepDetails | Collection of variables to control visibility of subcomponents of a checklist step, such as notes and photo. |
 | colStepOutcomes | Collection to hold outcome and notes of inspection steps. |
 | colImages | Collection to store the images uploaded to the inspection step. |
 | colAreaPlannerTasks | Collection to store Planner task details. |
@@ -1244,7 +1244,7 @@ The following variables are used by the checklist steps screen.
 
 1. On visible of this screen, the checklist steps are loaded for the inspection from the **colChecklistSteps** collection.
 
-1. User select the outcome, and add notes which are then stored using the **colStepOutcomes** collection.
+1. User selects the outcome, and adds notes that are then stored using the **colStepOutcomes** collection.
 
 1. The collection **colStepDetails** is used to control the visibility of the controls while performing an inspection.
 
@@ -1279,13 +1279,13 @@ The following variables are used by the review inspection screen.
 
 #### Review inspection screen execution details
 
-1. On visible of this screen it shows all the inspection steps associated to the inspection being carried using the **colLastChecklistSteps** collection.
+1. On visible of this screen, it shows all the inspection steps associated to the inspection being carried using the **colLastChecklistSteps** collection.
 
 1. A visual representation based on the outcome of the inspection step is shown on this screen using the collection **colStepOutcomes** so the user knows if any inspection step is incomplete.
 
-1. If all the steps are steps are completed, the user can **Submit inspection**, otherwise **Continue inspection** to complete the missed inspection steps.
+1. If all the steps are completed, the user can **Submit inspection**, otherwise **Continue inspection** to complete the missed inspection steps.
 
-1. When selecting **Submit inspection**, the **colLastInspection** collection is cleared so that the collection is ready for next inspection. And using **colLastChecklistSteps** collection, the app creates inspection steps and associate them to the inspection that has the information of the step outcomes and the notes.
+1. When selecting **Submit inspection**, the **colLastInspection** collection is cleared so that the collection is ready for next inspection. And using **colLastChecklistSteps** collection, the app creates inspection steps and associates them to the inspection that has the information of the step outcomes and the notes.
 
 1. If there are any images attached to any inspection step, using **colImages** collection, the app creates inspection image records and associates them to the inspection steps respectively.
 
