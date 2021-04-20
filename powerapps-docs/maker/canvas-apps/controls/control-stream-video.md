@@ -18,7 +18,7 @@ search.app:
 A video player for Microsoft Stream videos and channels.
 
 ## Description
-The control will allow app users to play videos and browse through channels from the Microsoft Stream service.
+The control will allow app users to play videos and browse through channels from the Microsoft Stream service.  Please review the [Microsoft Stream FAQ](https://docs.microsoft.com/en-us/stream/faq#which-regions-does-microsoft-stream-host-my-data-in-) for supported regions. 
 
 ## Limitations
 The control is currently not supported in the native Windows player for Power Apps.  It works successfully in web browsers as well as the Android and iOS Power Apps players.
