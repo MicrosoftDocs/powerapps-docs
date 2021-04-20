@@ -246,6 +246,10 @@ More information:
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 - [Use an alternate key to create a record](../use-alternate-key-create-record.md)
 
+## Update and delete documents in storage partitions
+
+If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data. More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md)
+
 ## Use Upsert
 
 Typically in data integration scenarios you will need to create or update data in Microsoft Dataverse from other sources. Dataverse may already have records with the same unique identifier, which may be an alternate key. If an entity record exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
