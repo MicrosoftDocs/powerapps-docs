@@ -1317,7 +1317,7 @@
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile (preview) 
+  - name: Use relevance search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
@@ -1620,6 +1620,8 @@
           href: ./portals/configure/improve-portal-search-faceted-search.md
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
+        - name: Configure progressive search counts
+          href: ./portals/configure/progressive-search.md
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -1780,6 +1782,8 @@
            items:
               - name: Version 9.3.3.x
                 href: ./portals/versions/version-9.3.3.x.md
+              - name: Version 9.3.4.x
+                href: ./portals/versions/version-9.3.4.x.md
          - name: Starter Portal package updates
            items:
               - name: Package 9.2.2103.x
@@ -2097,7 +2101,9 @@
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
-    - name: Publish and share your app
+    - name: Set permission and share your app
+      href: ../teams/set-perms-and-share.md
+    - name: Publish your app
       href: ../teams/publish-and-share-apps.md
     - name: Remove your apps
       href: ../teams/remove-your-apps.md

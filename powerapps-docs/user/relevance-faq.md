@@ -28,7 +28,7 @@ The scope of content that's searched is defined by your administrator. An admini
 
 ## Why am I not seeing search results from a table that is enabled for relevance search?
 
-This happens when the table is not part of the model-driven app. Use the Power Apps app designer to verify that the table is included in tha app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-an-artifact-table-dashboard-or-business-process-flow).
+This happens when the table is not part of the model-driven app. Use the Power Apps app designer to verify that the table is included in tha app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 
 ## Can I configure quick actions to show or hide certain commands?

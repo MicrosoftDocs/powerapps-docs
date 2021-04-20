@@ -1,6 +1,7 @@
 ---
 title: "setDefaultView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Sets teh default view for the lookup control dialog box.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # setDefaultView (Client API reference)
-
-
 
 Sets the default view for the lookup control dialog box.
 
@@ -34,9 +33,11 @@ Lookup
 |--|--|--|--|
 |viewId|String|Yes|The ID of the view to be set as the default view.|
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Example
 
-This **setDefaultViewSample** function will set the **account** entity form primary contact lookup default view to the **My Active Contacts** view.
+This **setDefaultViewSample** function will set the **account** form primary contact lookup default view to the **My Active Contacts** view.
 
 ```JavaScript
 function setDefaultViewSample(executionContext) {
