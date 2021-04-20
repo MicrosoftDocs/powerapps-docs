@@ -128,6 +128,34 @@ Returns the ID of the current organization.
 
 **Description**: Id of the current organization.
 
+## isTrialOrganization
+
+Returns a boolean indicating whether the organization is a trial organization.
+
+### Syntax
+
+`organizationSettings.isTrialOrganization`
+
+### Return Value
+
+**Type**: Boolean
+
+**Description**: **true** if the organization is a trial organization; **false** otherwise.
+
+## organizationExpiryDate
+
+Returns the expiry date of the current organization if it is a trial organization.
+
+### Syntax
+
+`organizationSettings.organizationExpiryDate`
+
+### Return Value
+
+**Type**: Date
+
+**Description**: Returns a `Date` object with the organization's expiry date if it is a trial organizaiton. Returns NULL if the organization is not a trial organization.
+
 ## uniqueName 
 
 Returns the unique name of the current organization.
