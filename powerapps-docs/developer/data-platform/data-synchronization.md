@@ -1,6 +1,6 @@
 ---
 title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Sometimes you’ll need to synchronize and integrate Microsoft Dataverse data with data that is stored in other systems. The common data integration patterns include taking data from an external system and pushing it into Dataverse, taking data from Dataverse and synchronizing it to some external data store, or updating Dataverse with external data. You can now use several new capabilities to make it easier to write code to achieve these scenarios." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
