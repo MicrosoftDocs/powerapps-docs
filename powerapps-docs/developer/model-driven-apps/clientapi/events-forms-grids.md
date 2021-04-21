@@ -26,7 +26,7 @@ You can associate event handlers to only some events using the UI. For events th
 
 ### [Legacy](#tab/add-event-handlers-legacy)
 
-Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and fields.
+Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and columns.
 
 ![Event Handler section in Form Properties](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
 
@@ -45,7 +45,7 @@ To add or remove event handler functions to events in the new Unified Interface:
 
     ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
 
-1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
+1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
 
