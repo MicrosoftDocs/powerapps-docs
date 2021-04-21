@@ -1,20 +1,26 @@
 ---
-title: Table permissions using portals Studio
+title: Table permissions using portals Studio (Preview)
 description: Learn how to add security by using table permissions for a portal using Power Apps portals Studio.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2021
+ms.date: 04/21/2021
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
 ---
 
-# Table permissions using portals Studio
+# Table permissions using portals Studio (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In the previous article, you learned about how to configure security in portals by using table permissions configuration from the Portal Management app. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Available access types in Studio
 
