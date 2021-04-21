@@ -12,13 +12,18 @@ metadata:
     
 title: Legacy Adxstudio Portals v7 FAQ
 summary: |
-  We have compiled a list of frequently asked questions about changes coming for legacy Adxstudio Portals v7.
-  
-  Click [here](https://aka.ms/gk1u9t) to download the FAQ.
-  
-  
-  [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+ 
 
 sections:
-- name: Ignored
-questions:
+  - name: General
+    questions:
+      - question: |
+          Legacy Adxstudio Portals v7 FAQ
+        answer: |
+          We have compiled a list of frequently asked questions about changes coming for legacy Adxstudio Portals v7.
+  
+          Click [here](https://aka.ms/gk1u9t) to download the FAQ.
+  
+  
+          [!INCLUDE[footer-include](../../includes/footer-banner.md)]
