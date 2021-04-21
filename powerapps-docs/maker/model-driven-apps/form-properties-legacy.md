@@ -22,6 +22,8 @@ search.app:
 
 # Model-driven app form properties 
 
+This article describes the classic form editor. We recommend that you u se the modern form designer to edit properties for your model-driven app forms. More information: [Configure a form](create-and-edit-forms.md#configure-a-form)
+
 You can access **Form properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then on the **Home** tab, select **Form Properties**.
 
 ![Form properties](media/form-properties.png)
