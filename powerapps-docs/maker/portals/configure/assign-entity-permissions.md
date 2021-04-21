@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/06/2021
+ms.date: 04/23/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -13,11 +13,11 @@ contributors:
     - GitanjaliSingh33msft
 ---
 
-# Add record-based security by using table permissions for portals
+# Configure security using table permissions
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-To apply record-based security in portals to individual records, use table permissions. You add table permissions to web roles so you can define roles in your organization that correspond logically to the privileges and concepts of record ownership and access that are introduced by using table permissions. Remember that a given contact can belong to any number of roles, and a given role can contain any number of table permissions. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md) 
+To apply security in portals to individual records, use table permissions. You add table permissions to web roles so you can define roles in your organization that correspond logically to the privileges and concepts of record ownership and access that are introduced by using table permissions. Remember that a given contact can belong to any number of roles, and a given role can contain any number of table permissions. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md) 
 
 Although permissions to change and access URLs in a portal site map is granted via Content Authorization, site managers will also want to secure their custom web applications built with basic forms and lists. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define basic forms](entity-forms.md) and [Define lists](entity-lists.md)  
 

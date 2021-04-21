@@ -1,7 +1,7 @@
 ---
 title: "formContext.ui.FormSelector (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 04/21/2020
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,6 +18,8 @@ search.app:
 # formContext.ui.formSelector (Client API reference)
 
 The **formContext.ui.formSelector** property lets you work with form items where a form item represents a form that is available to a user because it is associated with a security role that the user is also associated to. Often there will be only one form. When more than one form is available, methods for a form item can be used to change the form the user is viewing.
+
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 Form Items are available through any of the following:
 
