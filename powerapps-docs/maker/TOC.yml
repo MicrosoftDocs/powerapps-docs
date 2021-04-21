@@ -1604,8 +1604,12 @@
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
-            - name: Assign entity permissions
+            - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
+            - name: Configure table permissions using portals Studio (Preview)
+              href: ./portals/configure/entity-permissions-studio.md
+            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
