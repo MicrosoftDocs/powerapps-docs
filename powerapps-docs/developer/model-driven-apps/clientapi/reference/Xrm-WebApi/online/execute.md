@@ -1,6 +1,7 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 08/11/2020
+description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -42,16 +43,16 @@ search.app:
 <ul>
 <li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
 <ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
-<li>Specify <code>null</code> if the action or function to execute is not bound to any entity.</li>
-<li>Specify <code>entity</code> in case the action or function to execute is bound to an entity. </li></ul>
+<li>Specify <code>null</code> if the action or function to execute is not bound to any table.</li>
+<li>Specify <code>entity</code> in case the action or function to execute is bound to a table. </li></ul>
 <li><b>operationName</b>: (Optional). String. Name of the action, function, or one of the following values if you are executing a CRUD request: "Create", "Retrieve", "Update", or "Delete".</li>
 <li><b>operationType</b>: (Optional). Number. Indicates the type of operation you are executing; specify one of the following values:
 <br/><code>0: Action</code>
 <br/><code>1: Function</code>
 <br/><code>2: CRUD</code></li>
-<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following attributes:
+<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following values:
 <ul>
-<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string attributes: <b>name</b> and <b>value</b></li>
+<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string values: <b>name</b> and <b>value</b></li>
 <li><b>structuralProperty</b>: Number. The category of the parameter type. Specify one of the following values:
 <br/><code>0: Unknown</code>
 <br/><code>1: PrimitiveType</code>
@@ -69,7 +70,7 @@ search.app:
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following values:</p>
 <ul>
 <li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
@@ -93,7 +94,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object with the attributes specified earlier in the description of **successCallback** function.
+On success, returns a promise object with the values specified earlier in the description of **successCallback** function.
 
 ## Examples
 

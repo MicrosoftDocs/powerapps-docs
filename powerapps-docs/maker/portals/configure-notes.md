@@ -174,13 +174,13 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
 
-1. [Associate the entity permission](configure/assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
+1. [Associate the entity permission](configure/assign-entity-permissions.md#add-table-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
     For example, add the entity permission created in the previous step to the web role used in this instance for managing leads.
 
     ![Add web roles to an entity permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an entity permission")
 
-1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 2.
+1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-access-type) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 2.
 
     | Note action | Required permissions |
     | - | - |
