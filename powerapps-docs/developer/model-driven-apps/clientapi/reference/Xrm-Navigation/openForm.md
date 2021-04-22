@@ -168,11 +168,11 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
-// Set lookup field
+// Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
 formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
 formParameters["preferredsystemuseridtype"] = "systemuser"; // Table name. 
-// End of set lookup field
+// End of set lookup column
 
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
@@ -203,11 +203,11 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
-// Set lookup field
+// Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
 formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
 formParameters["preferredsystemuseridtype"] = "systemuser"; // Table name.
-// End of set lookup field
+// End of set lookup column
 
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(

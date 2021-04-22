@@ -21,7 +21,7 @@ search.app:
 
 The ability to pass values to a web page by using query strings represents a concern for security. Model-driven apps applies the best practice of always comparing any parameter passed as a query string against a list of expected parameter names and data types.  
   
- By default, model-driven apps allows a specified set of query string parameters to be passed to a form. You use these parameters to set default values when you create a new record in the application. Each parameter must use a standard naming convention that includes a reference to the column logical name. More information: [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).  
+ By default, model-driven apps allows a specified set of query string parameters to be passed to a form. You use these parameters to set default values when you create a new record in the application. Each parameter must use a standard naming convention that includes a reference to the column logical name. More information: [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).  
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -79,7 +79,7 @@ The ability to pass values to a web page by using query strings represents a con
   
 ### See also  
 
- [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
+ [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
  [Open forms and views with a URL](open-forms-views-dialogs-reports-url.md)
 
 
