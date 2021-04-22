@@ -95,9 +95,9 @@ Any data displayed on portal is rendered from the portal cache. This cache gets 
 
 However, if you're seeing stale data for a long time in non-portal metadata tables, it can be because of variety of issues listed below:
 
-### Entities not enabled for cache invalidation
+### Tables not enabled for cache invalidation
 
-If you're seeing stale data only for certain tables and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific entity.
+If you're seeing stale data only for certain tables and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific table.
 
 If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the tables that are referenced on portal in list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
@@ -360,9 +360,9 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 3.    Find the **Access Denied** site marker record.
 4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
-## Profile advanced form isn't available for contact entity
+## Profile advanced form isn't available for contact table
 
-Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Dataverse environment when portal is provisioned. This error is displayed when the **Profile** advanced form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
+Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact table. This form is created in your Dataverse environment when portal is provisioned. This error is displayed when the **Profile** advanced form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
 
 ## Published state isn't available for this website
 
