@@ -98,11 +98,11 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Entity forms
+          - text: Basic forms
             url: configure/entity-forms.md
-          - text: Entity lists
+          - text: Lists
             url: configure/entity-lists.md
-          - text: Web forms
+          - text: Advanced forms
             url: configure/web-form-properties.md
 
   # Card
@@ -114,7 +114,7 @@ landingContent:
             url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
-          - text: Assign entity permissions
+          - text: Assign table permissions
             url: configure/assign-entity-permissions.md
           - text: Control web page access
             url: configure/webpage-access-control.md
