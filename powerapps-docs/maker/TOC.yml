@@ -2018,6 +2018,8 @@
       href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
+  - name: Business Events (preview)
+    href: ./data-platform/business-events.md
   - name: Translate customized table and column text
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
