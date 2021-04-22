@@ -13,9 +13,10 @@ ms.reviewer: matp
 
 Whether you’re using Power Apps to build a small app for your team or a mission critical app for your business, there are many great options for data. 
 
-This article focuses on three of the most popular data technologies used in Microsoft Power Platform: Microsoft Lists, Microsoft Dataverse for Teams, and Microsoft Dataverse. 
-With the answers to the questions below, you can quickly understand and apply the key considerations that will help you pick the correct one for your application.
+This article focuses on three of the most popular data technologies used in Microsoft Power Platform: Microsoft Lists, Microsoft Dataverse for Teams, and Microsoft Dataverse. With the answers to the questions below, you can quickly understand and apply the key considerations that will help you pick the correct one for your application.
+
 The questions are broken out into four categories: 
+
 | Category |Questions |
 |------------|------------|
 | Data |What types of data (and how much of it) will your application require?<br/>How do you want to search the data?              |
@@ -39,7 +40,7 @@ Using the answers to the questions above, use the table below to help identify t
 |Guest Limitations  |Can't create or delete a list  |Can't make, install, or edit apps  |Must be in Azure AD using Azure B2B  |
 |Pro Dev  |REST API<br/>Graph API  | -  |REST API<br/>Software Development Kit (SDK)<br/> Plug-in Support <br/>Integration (Event Hub, Service Bus, Webhook, Export to Lake) SQL Server Management Studio Integration  |
 |Package and deploy  |Package and deploy Lists  |Single unmanaged solution per environment  |Unlimited  |
-|Additional capabilities  |Calculations and rollups  |-  |Business Workflows<br/>Business Rules<br/>Calculations + rollups<br/>Mobile offline  |
+|Additional capabilities  |Calculations and rollups  |-  |Business workflows<br/>Business rules<br/>Calculations and rollups<br/>Mobile offline  |
 
 ### See also
 
