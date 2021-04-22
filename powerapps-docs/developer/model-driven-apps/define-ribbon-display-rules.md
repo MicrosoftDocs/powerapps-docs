@@ -190,7 +190,7 @@ All display rules provide an optional parameter to specify whether the default v
 - Spla  
 
   `<ValueRule>`  
-  Use this rule to check the value of a specific field in the record being displayed in the form.  
+  Use this rule to check the value of a specific column in the record being displayed in the form.  
 
 > [!NOTE]
 >  For commands defined for subgrid for forms using the updated user experience, value rules cannot be used within display rules. Use this element within an `<EnableRule>` to hide an element.  

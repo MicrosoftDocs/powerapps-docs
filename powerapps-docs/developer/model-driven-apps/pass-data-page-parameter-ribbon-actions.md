@@ -55,16 +55,16 @@ You can also specify **CommandProperties** as `<CrmParameter>` value in your rib
 
 ## Form values
 
-With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known fields. 
+With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known columns. 
 
-For example, the following sample code shows how to retrieve the account name field on the account form, and then set a value in the websiteurl field based on the account name value:
+For example, the following sample code shows how to retrieve the account name column on the account form, and then set a value in the websiteurl column based on the account name value:
 
 ```JavaScript
 function mySampleFunction(primaryControl) {
     var formContext = primaryControl;    
     var accountName = formContext.getControl("name").getAttribute().getValue();    
 
-    // Set the WebSiteURL field if account name contains "Contoso"
+    // Set the WebSiteURL column if account name contains "Contoso"
     if (accountName.toLowerCase().search("contoso") != -1) {
         formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
     }
