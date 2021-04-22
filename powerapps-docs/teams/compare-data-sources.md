@@ -17,9 +17,9 @@ This article focuses on three of the most popular data technologies used in Micr
 
 The questions are broken out into four categories: 
 
-| Category |Questions |
-|------------|------------|
-| Data |What types of data (and how much of it) will your application require?<br/>How do you want to search the data?              |
+|Category |Questions |
+|----------|---------|
+| Data |What types of data (and how much of it) will your application require?<br/>How do you want to search the data? |
 |Application | How will the app be made available, for example in Teams, custom code, etc.?<br/>Will guests be accessing your application?<br/>Who will build the app; low-code or pro developers?<br/>What special capabilities does your application need? |
 |Integration |What do you want to integrate the system with, for example, databases, services, etc.? |
 |Admin and governance | What are your organizations requirements related to security and compliance?<br/>Are there special requirements for backing up and restoring the data? |
