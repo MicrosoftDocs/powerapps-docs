@@ -2081,6 +2081,8 @@
           displayName: Overview of Dataverse for Teams
         - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
+        - name: Compare Microsoft Lists, Dataverse for Teams, and Dataverse
+          href: ../teams/compare-data-sources.md
         - name: Create a table
           href: ../teams/create-table.md
           displayName: Create a Dataverse for Teams table
