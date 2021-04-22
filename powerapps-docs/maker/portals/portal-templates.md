@@ -1,13 +1,16 @@
 ---
-title: Portal templates available in Power Apps | Microsoft Docs
+title: Portal templates
 description: Learn about various portal templates available in Power Apps.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portal templates
@@ -71,7 +74,7 @@ The table below summarizes the features associated with each portal template:
 | Web Notifications|  *| *|  *| *| *|* |*
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity|   *|  *|  *|   *| *|* |*
 | Identity Workflows| *|  *| *|   *| *|* |*
-| Web Forms|  *| *|    *| *| *|* |*
+| Advanced Forms|  *| *|    *| *| *|* |*
 | Feedback|   *|  *|  *| *| *|* |*
 ||
 
