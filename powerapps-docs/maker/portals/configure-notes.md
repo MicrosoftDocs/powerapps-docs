@@ -1,40 +1,43 @@
 ---
-title: "Configure notes as attachments on entity forms and web forms for a portal | MicrosoftDocs"
-description: "Instructions to add and configure notes as attachments on entity forms and web forms in a portal."
+title: Configure notes as attachments for basic and advanced forms
+description: Instructions to add and configure notes as attachments on basic forms and advanced forms in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/26/2021
+ms.date: 04/21/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
-# Configure notes as attachments for entity forms and web forms on portals
+# Configure notes as attachments for basic and advanced forms
 
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> - Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign entity permissions](#assign-entity-permissions).
+> - Explicit [Table Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign table permissions](#assign-table-permissions).
 > - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
 
-## Notes configuration for entity forms
+## Notes configuration for basic forms
 
 1. Open the [Portal Management](./configure/configure-portal.md) app.
 
-1. Select **Entity Forms** under **Content** from left pane:
+1. Select **Basic Forms** under **Content** from left pane:
 
-    ![Entity forms](media/configure-notes/entity-forms.png)
+    ![Basic forms](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
-1. From the available tabs in form settings, select **Entity Form Metadata**:
+1. From the available tabs in form settings, select **Basic Form Metadata**:
 
-    ![Entity form metadata](media/configure-notes/entity-form-metadata.png)
+    ![Basic form metadata](media/configure-notes/entity-form-metadata.png)
 
-1. Select **New Entity Form Metadata**:
+1. Select **New Basic Form Metadata**:
 
-    ![New entity form metadata](media/configure-notes/new-entity-form-metadata.png)
+    ![New basic form metadata](media/configure-notes/new-entity-form-metadata.png)
 
 1. Select **Type** as **Note**:
 
@@ -60,11 +63,11 @@ After adding the configuration, the Note control will be rendered by using the a
 | Name                  | Description                                                                                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Basic settings**    |                                                                                                                                                              |
-| Create Enabled        | Enables the ability to add new notes to the entity.                                                                                                          |
+| Create Enabled        | Enables the ability to add new notes to the table.                                                                                                          |
 | Create Dialog Options | Contains settings for configuring the dialog box when **Create Enabled** is true. More information: [Create Dialog Options](#create-dialog-options)                                 |
-| Edit Enabled          | Enables the ability to edit existing notes on the entity.                                                                                                    |
+| Edit Enabled          | Enables the ability to edit existing notes on the table.                                                                                                    |
 | Edit Dialog Options   | Contains settings for configuring the dialog box when **EditEnabled** is true. More information: [Edit Dialog Options](#edit-dialog-options)                                         |
-| Delete Enabled        | Enables the ability to delete notes from the entity.                                                                                                         |
+| Delete Enabled        | Enables the ability to delete notes from the table.                                                                                                         |
 | Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. More information: [Delete Dialog Options](#delete-dialog-options)           |
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
 |Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
@@ -77,7 +80,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Loading Message       | Overrides the message shown while the list of notes is loading.                                                                                              |
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
-| Empty Message         | Overrides the message shown when the current entity doesn't have any notes that can be viewed.                                                              |
+| Empty Message         | Overrides the message shown when the current table doesn't have any notes that can be viewed.                                                              |
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following options: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
@@ -155,43 +158,43 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class   | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                      |
 |||
 
-### Assign entity permissions
+### Assign table permissions
 
-Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
+Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the basic or advanced form unless you create and assign the appropriate table permissions to the records as follows:
 
 > [!IMPORTANT]
-> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
+> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them table permissions.
 
-1. Ensure the **Enable Entity Permissions** checkbox is selected on the entity form, or the web form step for the entity permissions to take effect.
+1. Ensure the **Enable Table Permissions** checkbox is selected on the basic form, or the advanced form step for the table permissions to take effect.
 
-    For example, entity form for leads that show notes need to have entity permissions enabled.
+    For example, basic form for leads that show notes need to have table permissions enabled.
 
-    ![Enable entity permissions on an entity form](media/configure-notes/enable-entity-permissions-form.png "Enable entity permissions on an entity form")
+    ![Enable table permissions on a basic form](media/configure-notes/enable-entity-permissions-form.png "Enable table permissions on a basic form")
 
-1. Create an entity permission with the required privileges for the entity that has the Notes control enabled on it. The scope should be appropriately set depending on the level of access required to end users.
+1. Create a table permission with the required privileges for the table that has the Notes control enabled on it. The scope should be appropriately set depending on the level of access required to end users.
 
-    For example, Lead entity that shows the notes on the entity form.
+    For example, Lead table that shows the notes on the basic form.
 
-    ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
+    ![Create new table permissions](media/configure-notes/new-entity-permission.png "Create new table permissions")
 
-1. [Associate the entity permission](configure/assign-entity-permissions.md#add-table-permissions-to-a-web-role) created in step 1 with a web role for the user.
+1. [Associate the table permission](configure/assign-entity-permissions.md#add-table-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
-    For example, add the entity permission created in the previous step to the web role used in this instance for managing leads.
+    For example, add the table permission created in the previous step to the web role used in this instance for managing leads.
 
-    ![Add web roles to an entity permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an entity permission")
+    ![Add web roles to an table permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an table permission")
 
-1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-access-type) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 2.
+1. Create a table permission on the **Annotation** table with the [Parental access type](configure/assign-entity-permissions.md#parental-access-type with the required privileges as explained in the table below. The **Parent Table Permission** for the Parent Scope on this table permission mut be set to the table permission created in step 2.
 
     | Note action | Required permissions |
     | - | - |
     | **Read** | Read |
-    | **Add** | Create, Append (Append To required on parent entity permission) |
+    | **Add** | Create, Append (Append To required on parent table permission) |
     | **Edit** | Write |
     | **Delete** | Delete |
 
-    For example, create an entity permission for the Annotation entity having the entity permission created in step 1 as the parent entity.
+    For example, create a table permission for the Annotation table having the table permission created in step 1 as the parent table.
     
-    ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
+    ![Add table permissions](media/configure-notes/entity-permission.png "Add table permissions")
 
 ### Notes created with rich-text editor
 
@@ -212,21 +215,21 @@ However, when editing the note from portal web page, you'll see the note in HTML
 > [!IMPORTANT]
 > If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
-## Notes configuration for web forms
+## Notes configuration for advanced forms
 
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
+Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
 
 ## Enable file attachment on form
 
-Enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes.
+Enable **Attach File** option for the **Basic Form** to show the attachment option available with the notes.
 
-To enable attachment on an entity form:
+To enable attachment on an basic form:
 
 1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 
-1. Select **Entity Forms** under **Content** from left pane:
+1. Select **Basic Forms** under **Content** from left pane:
 
-    ![Entity forms](media/configure-notes/entity-forms.png)
+    ![Basic forms](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 

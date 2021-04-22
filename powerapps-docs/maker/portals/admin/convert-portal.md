@@ -1,13 +1,16 @@
 ---
-title: "Convert a portal to different lifecycle stages. | MicrosoftDocs"
-description: "Information about how to convert a portal to different lifecycle stages."
+title: Convert a portal
+description: Learn how to convert a portal to different lifecycle stages.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Convert a portal

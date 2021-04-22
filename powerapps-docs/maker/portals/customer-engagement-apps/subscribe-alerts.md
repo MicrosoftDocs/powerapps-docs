@@ -1,13 +1,16 @@
 ---
-title: "Subscribe to alerts on a portal | MicrosoftDocs"
-description: "Instructions to create and manage alerts in a portal."
+title: Subscribe to alerts
+description: Learn how to create and manage alerts in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Subscribe to alerts
