@@ -1,13 +1,16 @@
 ---
-title: "Release updates in Power Apps portals | MicrosoftDocs"
-description: "Learn about release updates of Power Apps portals."
+title: Release updates
+description: Learn about release updates of Power Apps portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2021
+ms.date: 04/21/2021
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - dileepsinghmicrosoft
 ---
 
 # Release updates
@@ -59,7 +62,7 @@ Dynamics 365 Portals version 9.0.10 for the customer engagement apps brings thes
 
 - **Restrict portal access by IP address**: As a portal administrator, you can now define a list of IP addresses that are allowed to access your portal. When a request to the portal is generated from any user, their IP address is evaluated against the allow list. If the IP address is not on the list, the portal displays a web page with an HTTP 403 status code. More information: [Restrict portal access by IP address](admin/ip-address-restrict.md)
 
-- **Manage SharePoint documents**: Dynamics 365 Portals now supports uploading and displaying documents to and from SharePoint directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create folders to organize their documents. More information: [Manage SharePoint documents](manage-sharepoint-documents.md)
+- **Manage SharePoint documents**: Dynamics 365 Portals now supports uploading and displaying documents to and from SharePoint directly on an basic form or advanced form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create folders to organize their documents. More information: [Manage SharePoint documents](manage-sharepoint-documents.md)
 
 - **New portal content editor (preview)**: In this preview, a new and simplified portal editor is available for Dynamics 365 Portals customizers to reduce the learning curve on Dynamics 365 Portals customization and increase a customizer's productivity.
 
@@ -101,7 +104,7 @@ Dynamics 365 Portals version 8.3 for the customer engagement apps has many new u
   > [!Note]
   > Search for attachments can only be performed on the note's description and file attachment name. The content of the attached file is not searchable.
   
-- **Administrative wizard to add an entity to the portal**: This feature introduces a new administrative wizard to easily expose data on the portal. The entity created through the wizard takes the data from your organization and makes a subset of it available to your portal customers, based on the security and permission model you choose.
+- **Administrative wizard to add a table to the portal**: This feature introduces a new administrative wizard to easily expose data on the portal. The table created through the wizard takes the data from your organization and makes a subset of it available to your portal customers, based on the security and permission model you choose.
 
 - **Import metadata translation**: Use this feature to import the metadata translation of newly activated languages after you install a portal. More information: [Import metadata translation](admin/import-metadata-translation.md)
 

@@ -1116,7 +1116,7 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
-        - name: Form editor overview
+        - name: Use the classic form editor
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
           - name: Form properties overview
@@ -1131,8 +1131,6 @@
           href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
-        - name: Add a column to a form
-          href: ./model-driven-apps/add-field-form.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
@@ -1410,17 +1408,17 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with entity forms
+            - name: Work with basic forms
               href: ./portals/configure/entity-forms.md
-            - name: Work with entity lists
+            - name: Work with lists
               href: ./portals/configure/entity-lists.md
-            - name: Work with web forms
+            - name: Work with advanced forms
               items:
-                - name: Define web form properties
+                - name: Define advanced form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Web form steps
+                - name: Advanced form steps
                   items:
-                    - name: Define web form steps
+                    - name: Define advanced form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1430,9 +1428,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure web form metadata
+                - name: Configure advanced form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure a web form subgrid
+                - name: Configure an advanced form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1604,8 +1602,12 @@
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
-            - name: Assign entity permissions
+            - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
+            - name: Configure table permissions using portals Studio (Preview)
+              href: ./portals/configure/entity-permissions-studio.md
+            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -1614,7 +1616,7 @@
       items:
         - name: Portal search overview
           href: ./portals/configure/search.md
-        - name: Configure search for additional entities
+        - name: Configure search for additional tables
           href: ./portals/configure/search-additional-entities.md
         - name: Use faceted search
           href: ./portals/configure/improve-portal-search-faceted-search.md
@@ -1680,7 +1682,7 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
-                - name: Render the entity list for a page
+                - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
                   href: ./portals/liquid/render-rss-custom-page-template.md

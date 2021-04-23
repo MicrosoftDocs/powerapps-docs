@@ -1,13 +1,16 @@
 ---
-title: "Accessibility in Power Apps portals | MicrosoftDocs"
-description: "Learn about making Power Apps portal accessible."
+title: Accessibility in Power Apps portals
+description: Learn about making Power Apps portal accessible.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Accessibility in Power Apps portals
