@@ -238,13 +238,13 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create variables to point to a quote record and to a specific field
+// Create variables to point to a quote record and to a specific column
 var quoteId = {
     "@odata.type": "Microsoft.Dynamics.CRM.quote",
     "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
 };
 
-// The roll-up field for which we want to force a re-calculation
+// The roll-up column for which we want to force a re-calculation
 var fieldName = "new_test_rollup";
 
 // Create variable calculateRollupFieldRequest and pass those variables created above
@@ -303,7 +303,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create a variable to point to a contact record and with specific data in the needed fields
+// Create a variable to point to a contact record and with specific data in the needed columns
 var contactRecord = {
     "@odata.type": "Microsoft.Dynamics.CRM.contact",
     "firstname": "Test",
@@ -551,7 +551,7 @@ Xrm.WebApi.online.execute(deleteRequest).then(
 ```
 
 ### Associate a record
-The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -618,7 +618,7 @@ Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
 ```
 
 ### Disassociate a record
-The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
 > Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.

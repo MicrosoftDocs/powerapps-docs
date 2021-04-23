@@ -100,7 +100,7 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ## Pass form data  
 
- Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Field OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
+ Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Column OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
 
  If you’re using the data parameter to pass data to a Silverlight web resource, you can use the [getData](clientapi/reference/controls/getData.md) and [setData](clientapi/reference/controls/setData.md) methods to manipulate the value passed via the data parameter. For webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
 
@@ -117,13 +117,13 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Example  
 
- The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of an option set field.  
+ The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
 
 ```javascript  
 //Get the value of a choice column  
 var value = Xrm.Page.data.entity.attributes.get("new_pagechooser").getValue();  
 var newTarget = "";  
-//Set the target based on the value of the option set  
+//Set the target based on the value of the choice  
 switch (value) {  
     case 100000001:  
         newTarget = "https://myServer/test/pageOne.aspx";  
