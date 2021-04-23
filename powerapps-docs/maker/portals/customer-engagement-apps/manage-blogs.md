@@ -1,13 +1,16 @@
 ---
-title: "Manage blogs on a portal | MicrosoftDocs"
-description: "Instructions to manage blogs on a portal."
+title: Manage blogs
+description: Learn how to manage blogs on a portal."
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage blogs

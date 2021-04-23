@@ -1,7 +1,7 @@
 ---
 title: "getIsSaveSuccess (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Information about getIsSaveSuccess parameter.
-ms.date: 02/01/2021
+description: Includes description and supported parameters for the getIsSaveSuccess method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

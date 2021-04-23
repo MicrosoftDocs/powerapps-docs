@@ -5,9 +5,12 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/02/2021
+ms.date: 04/12/2021
 ms.author: jshum
-ms.reviewer: 
+ms.reviewer: tapanm-msft
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 
 # Create your first app in Microsoft Teams
@@ -39,13 +42,13 @@ After installing the Power Apps app from the Teams store:
     
     ![Power Apps](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. Select the team that will be responsible for customizing and maintaining the app. You will have an opportunity to share the app to other teams once you’re done building the app.
+1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Set permission and share apps with colleagues](set-perms-and-share.md)
 
-    ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
+    ![Select a team to create the app](media/select-a-team-for-this-app.png "Select a team to create the app")
 
     If this is the first app being created in the selected team, a new Dataverse for Teams environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
-    ![Creating the first app in a team](media/create-app-3.png "Creating the first app in a team")
+    ![Creating the first app in a team](media/select-a-team-for-this-app-environment.png "Creating the first app in a team")
 
 1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app with an email and a Teams notification.
 

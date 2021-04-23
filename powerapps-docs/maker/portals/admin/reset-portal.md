@@ -1,13 +1,16 @@
 ---
-title: "Reset a portal | MicrosoftDocs"
-description: "Learn how to reset a portal."
+title: Reset a portal
+description: Learn how to reset a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Reset a portal
@@ -54,7 +57,7 @@ A Power Apps portal consists of the following components:
 
 - **Portal configuration**: The portal configuration in the Dataverse environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
 
-- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata entities for any portal.
+- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata tables for any portal.
 
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 

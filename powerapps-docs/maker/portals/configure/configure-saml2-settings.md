@@ -1,13 +1,17 @@
 ---
-title: "Configure SAML 2.0 provider for portals with AD FS. | MicrosoftDocs"
-description: "Instructions to configure SAML 2.0 provider for portals with AD FS."
+title: Configure a SAML 2.0 provider for portals with AD FS
+description: Learn how to configure SAML 2.0 provider for portals with AD FS.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a SAML 2.0 provider for portals with AD FS

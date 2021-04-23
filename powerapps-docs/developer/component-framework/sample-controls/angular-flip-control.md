@@ -38,7 +38,7 @@ Model-driven apps and canvas apps (public preview)
 </manifest>
 ```
 
-## overview
+## Overview
 
 This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between Power Apps component framework, component model and third-party inner data model in bi-direction.
 

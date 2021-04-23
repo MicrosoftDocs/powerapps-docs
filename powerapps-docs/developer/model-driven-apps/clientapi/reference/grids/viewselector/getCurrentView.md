@@ -1,6 +1,7 @@
 ---
 title: "getCurrentView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getCurrentView method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -32,7 +33,7 @@ Read-only grid
 
 **Type**: Lookup object
 
-**Description**: The Lookup object has the following attributes:
+**Description**: The Lookup object has the following values:
 
 - **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.
 - **id**: String. The Id for the view the user can select.

@@ -215,6 +215,12 @@ OData-Version: 4.0
 
 See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during Update operation.
 
+## Update and delete documents in storage partitions
+
+If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data.
+
+More information: [Access entity data faster using storage partitions](azure-storage-partitioning.md)
+
 ### See also
 
 [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
