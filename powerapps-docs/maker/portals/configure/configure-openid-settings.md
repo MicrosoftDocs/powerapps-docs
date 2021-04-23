@@ -1,13 +1,17 @@
 ---
-title: "Configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow.  | MicrosoftDocs"
-description: "Instructions to configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow."
+title: Configure an OpenID Connect provider for portals with Azure AD
+description: Learn how to configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure an OpenID Connect provider for portals with Azure AD

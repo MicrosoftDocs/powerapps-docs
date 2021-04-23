@@ -24,7 +24,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Use the /`RuleDefinitions`/DisplayRules/`<DisplayRule>` element to define rules controlling when the ribbon element should be displayed.  
 
 - Use the /CommandDefinitions/`CommandDefinition`/DisplayRules/`<DisplayRule>` element to associate specific display rules to a command definition.  
-- 
+
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Control when ribbon elements are displayed  
@@ -190,7 +190,7 @@ All display rules provide an optional parameter to specify whether the default v
 - Spla  
 
   `<ValueRule>`  
-  Use this rule to check the value of a specific field in the record being displayed in the form.  
+  Use this rule to check the value of a specific column in the record being displayed in the form.  
 
 > [!NOTE]
 >  For commands defined for subgrid for forms using the updated user experience, value rules cannot be used within display rules. Use this element within an `<EnableRule>` to hide an element.  

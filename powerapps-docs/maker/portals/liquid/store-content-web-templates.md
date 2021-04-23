@@ -1,24 +1,27 @@
 ---
-title: "Store source content by using web templates on a portal | MicrosoftDocs"
-description: "Instructions to store content by using web templates on a portal."
+title: Store source content by using web templates
+description: Learn how to store content by using web templates on a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Store source content by using web templates
 
-Web Template is a Power Apps entity (adx\_webtemplate), included with Power Apps portals, that is used to store template source content. A web template will generally contain Liquid for dynamic content rendering and is the central entity used to integrate Liquid templates with the rest of the Power Apps portals system.
+Web Template is a Power Apps table (adx\_webtemplate), included with Power Apps portals, that is used to store template source content. A web template will generally contain Liquid for dynamic content rendering and is the central table used to integrate Liquid templates with the rest of the Power Apps portals system.
 
 Web Templates can be included in other content or combined with other templates by using template tags, and are referenced in these tags by their **Name** attribute. They can also be used to create entire custom Page Templates, or create custom headers and footers for your portal website.
 
 ## Web template attributes
 
-|           |                                                                                                                                                                                                                                                                                 |
+|  Atribute         |     Description                                                                                                                                                                                                                                                                            |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   Name    |                                                                         The name of the template. Used to reference this template when it is included in other content, or extended by other templates.                                                                         |
 |  Source   |                                  The source content of the template. In Power Apps, a source code editor with syntax highlighting and other code editing features is provided for this field.                                  |

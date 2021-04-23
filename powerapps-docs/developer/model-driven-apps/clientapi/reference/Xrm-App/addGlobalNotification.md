@@ -1,6 +1,7 @@
 ---
 title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/09/2020
+description: Includes description and supported parameters for the addGlobalNotification method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -32,9 +33,9 @@ search.app:
 <td>notification</td>
 <td>Object</td>
 <td>Yes</td>
-<td>The notification to add. The object contains the following attributes:
+<td>The notification to add. The object contains the following values:
 <ul>
-<li><b>action</b>: (Optional) Object. Contains the following attributes:
+<li><b>action</b>: (Optional) Object. Contains the following values:
 <ul>
 <li><b>actionLabel</b>: (Optional) String. The label for the action in the message.</li>
 <li><b>eventHandler</b>: (Optional) Function reference. The function to execute when the action label is clicked.</li>

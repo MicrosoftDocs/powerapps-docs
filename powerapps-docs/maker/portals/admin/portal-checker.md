@@ -1,13 +1,16 @@
 ---
-title: "Run Portal checker to identify common problems with your portal. | MicrosoftDocs"
-description: "Learn about how to run Portal Checker on your portal to identify common problems and resolutions."
+title: Portal Checker
+description: Learn about how to run Portal Checker on your portal to identify common problems and resolutions.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Portal Checker

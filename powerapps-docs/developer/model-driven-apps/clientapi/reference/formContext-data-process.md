@@ -1,7 +1,7 @@
 ---
 title: "formContext.data.process (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 06/30/2019
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,6 +20,9 @@ search.app:
 
 
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
+
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+
 
 ## Process events and event handler methods
 
