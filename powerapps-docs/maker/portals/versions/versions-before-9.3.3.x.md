@@ -18,7 +18,7 @@ contributor:
 In this article, you'll see a list of features added for Dynamics 365 Portals for versions earlier than 9.3.3.x. For more information updates for Dynamics 365 Portals to date, see [portal capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/help/3181191).
 
 > [!NOTE]
-> Power Apps portals were earlier known as Dynamics 365 Portals.
+> Power Apps portals was earlier known as Dynamics 365 Portals.
 
 ## Dynamics 365 Portals version 9.1.4 for the customer engagement apps
 
