@@ -35,7 +35,7 @@ The following articles provide details about the portals version updates.
 
 ## Starter portal package updates
 
-The following articles provide details about portals packages.
+The following articles provide details about the starter portal package updates.
 
 - [Starter portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
 - [Starter portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
