@@ -19,7 +19,7 @@ This topic provides resources where you can learn about the new features that ha
 
 ## Portals release plans
 
-For information about new features releasing over the next few months that you can use for planning, see:
+For information about the roadmap and new features releasing over the next few months that you can use for planning, see:
 
 - [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps-portals/)
 - [2020 release wave 2 plan](/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
