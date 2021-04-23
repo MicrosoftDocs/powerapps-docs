@@ -1,8 +1,8 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
+description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API, and then learn how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 02/07/2021
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Compose HTTP requests and handle errors
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You interact with the Web API by composing and sending HTTP requests. You need to know how to set the appropriate HTTP headers and handle any errors included in the response.  
 
@@ -43,12 +44,11 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
 |Resource|The name of the entity, function, or action you want to use.|
 
-
 The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
 
 <a name="version_compatiblity"></a>
 
-###   Version compatibility
+### Version compatibility
 
 This release introduces capabilities which are not available in previous versions. Subsequent minor versions may provide additional capabilities which will not be back ported to earlier minor versions. Your code written for v9.0 will continue to work in future versions when you reference v9.0 in the URL you use.
 

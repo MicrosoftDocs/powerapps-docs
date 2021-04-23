@@ -8,7 +8,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
-  - "Dynamics 365 (online)"
+  - "Dynamics 365 (online)" 
 ms.assetid: d80cfb87-d4f1-4c75-bcc8-4f54d1351e26
 caps.latest.revision: 27
 author: "JimDaly" # GitHub ID
@@ -21,8 +21,6 @@ search.app:
   - D365CE
 ---
 # Web API types and operations
-
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 In order to use the Web API you need to find information about what is available for you to use. The service describes itself via service and metadata documents that you can access. This topic will introduce important concepts and describe how you can find the information you need using documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions. 
 
@@ -105,7 +103,7 @@ Each `Annotation` element includes a `Term` attribute that describes the type of
   
 |Term|Description|  
 |----------|-----------------|  
-|`Org.OData.Core.V1.Description`|A description of an entitytype or property.|  
+|`Org.OData.Core.V1.Description`|A description of an entity type or property.|  
 |`Org.OData.Core.V1.Permissions`|A list of permissions available for a property when permissions are restricted.  Typically this will appear for properties with only a single `<EnumMember>Org.OData.Core.V1.PermissionType/Read</EnumMember>` child element to indicate that the property is read-only.|  
 |`Org.OData.Core.V1.Computed`|Whether the property is computed. These are also usually read-only.|  
 |`OData.Community.Keys.V1.AlternateKeys`|Contains a collection of elements that describe any alternate keys defined for an entity. More information:[Alternate keys](#bkmk_alternateKeys)|  

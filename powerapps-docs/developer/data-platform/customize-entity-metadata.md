@@ -17,7 +17,7 @@ search.app:
 ---
 # Customize table definitions
 
-Tables are defined by table definitions. By defining or changing the table definitions, you can control the capabilities of a able. To view the table definitions for your environment, use the metadata browser. [Download the table definitions browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
+Tables are defined by table definitions. By defining or changing the table definitions, you can control the capabilities of a table. To view the table definitions for your environment, use the metadata browser. [Download the table definitions browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
