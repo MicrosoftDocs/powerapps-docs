@@ -1,5 +1,6 @@
 ---
 title: "Work with any type of app | MicrosoftDocs"
+description: Learn how Microsoft Dataverse provides multiple ways to integrate with any type of app, device, system, or service.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
