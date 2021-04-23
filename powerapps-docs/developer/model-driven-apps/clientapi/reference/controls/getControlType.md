@@ -39,9 +39,9 @@ All
 |iframe|An IFRAME control|
 |kbsearch|A knowledge base search control|
 |lookup|A lookup control|
-|choices|A multi-select option set control|
+|choices|A choices control|
 |notes|A notes control|
-|choice|An option set control|
+|choice|A choice control|
 |quickform | A [quick view](../formContext-ui-quickForms.md) control|
 |subgrid | A [subgrid](../grids.md) control|
 |timercontrol | A timer control|
