@@ -20,20 +20,20 @@ search.app:
   - D365CE
 ---
 # Design productive main forms in model-driven apps
-<!--note from editor: Title and H1 (and description) need to be unique. Please check the edit to the title.-->
+
 Building experiences where tasks can be completed quickly and effectively is crucial to user satisfaction. Model-driven apps provide many options to build highly performant experiences, including application-level options, site map organization options, and many form-creation options.
 
 This article shows you how to design highly efficient and productive forms in a model-driven app, including how to work with main forms, main form dialogs, form component controls, quick create forms, and quick view forms.
 
-Form layout and design are important to building highly efficient and productive forms. However, it's also important to build forms that load quickly and allow for fast navigation within the form and across tabs. We recommend that you understand best practices for optimizing form performance<!--note from editor: Suggested.--> and how to make forms load fast in your model-driven app. More information: [Optimize model-driven app form performance](optimize-form-performance.md)
+Form layout and design are important to building highly efficient and productive forms. However, it's also important to build forms that load quickly and allow for fast navigation within the form and across tabs. We recommend that you understand best practices for optimizing form performance and how to make forms load fast in your model-driven app. More information: [Optimize model-driven app form performance](optimize-form-performance.md)
 
 ## Working with main forms
 
-Use a main form in a model-driven app when you're working with and editing a specific record's data for a table and you want to make sure that users interacting with that record stay within the constraints of the table structure.<!--note from editor: Here and throughout, edits to passive voice are suggested.-->
+Use a main form in a model-driven app when you're working with and editing a specific record's data for a table and you want to make sure that users interacting with that record stay within the constraints of the table structure.
 
-A form allows you to build around the table data, and often requires that you work with and interact with related records from other tables.<!--note from editor: Suggested, to clarify the agent of action.--> One important consideration is how a model-driven form is bound to data. The out-of-the-box controls for a form are bound to fields from the table. These controls allow you to quickly build a form for creating and editing data, but without more customization they aren't as flexible when you want to use a form for multiple tasks that need user input, or you want to take additional action before saving information.
+A form allows you to build around the table data, and often requires that you work with and interact with related records from other tables. One important consideration is how a model-driven form is bound to data. The out-of-the-box controls for a form are bound to fields from the table. These controls allow you to quickly build a form for creating and editing data, but without more customization they aren't as flexible when you want to use a form for multiple tasks that need user input, or you want to take additional action before saving information.
 
-One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit related records. Forms also support custom Power Apps component framework controls to extend functionality beyond the standard controls. Forms primarily support child or secondary data relationships for a record;<!--note from editor: Suggested.--> they don't easily support tertiary or higher-order relationships. For example, if you have an account record that has a one-to-one or one-to-many relationship with contacts, you can quickly add interactions with both the parent and child data with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types will be covered in more detail later in this article.
+One of the strengths of model-driven forms is the ease of use with standard (out-of-the-box) controls like lookups, subgrids, and reference panels to quickly view or edit related records. Forms also support custom Power Apps component framework controls to extend functionality beyond the standard controls. Forms primarily support child or secondary data relationships for a record; they don't easily support tertiary or higher-order relationships. For example, if you have an account record that has a one-to-one or one-to-many relationship with contacts, you can quickly add interactions with both the parent and child data with a form by using lookups that interact with other forms, including a main form dialog or embedded forms like a quick view or form component control. Each of these form types will be covered in more detail later in this article.
 
 Being able to interact or work with related data of the child record isn't easily achieved without additional effort, including using a main form dialog to work with related records of the main form dialog or using a custom canvas page. Multiple-entity forms can be created by using main form dialogs or form component controls. However, a main form doesn't directly support tertiary-related records on the main form.
 
@@ -67,7 +67,7 @@ The user accesses all information found on the form multiple times a day, so the
 
 ### Account data
 
-The first section on the form contains the fields that are used to manage the data and information for that record. Here, a user can quickly review and edit information they use throughout their workday.<!--note from editor: Suggested.--> It's important to make sure that required fields and most-used fields are at the top of this section, to drive efficiencies in the job or task related to the record. In this example, a quick view form of the primary contact is added at the top so users can quickly view and use the information to contact the individual who's important for their daily tasks.
+The first section on the form contains the fields that are used to manage the data and information for that record. Here, a user can quickly review and edit information they use throughout their workday. It's important to make sure that required fields and most-used fields are at the top of this section, to drive efficiencies in the job or task related to the record. In this example, a quick view form of the primary contact is added at the top so users can quickly view and use the information to contact the individual who's important for their daily tasks.
 
 :::image type="content" source="media/primary-contact-quickview.png" alt-text="Quick view form for contact lookup":::
 
@@ -83,7 +83,7 @@ Next to the contact subgrid is the reference panel. This control can give even f
 
 :::image type="content" source="media/reference-panel.png" alt-text="Reference panel on a main form":::
 
-Currently, you add a reference panel control by using the classic form designer. On the **Insert** tab, expand **Sections**, and then select **Reference panel**.<!--note from editor: This appears to be the sequence.-->
+Currently, you add a reference panel control by using the classic form designer. On the **Insert** tab, expand **Sections**, and then select **Reference panel**.
 
 :::image type="content" source="media/add-reference-panel.png" alt-text="Add a reference panel to a form":::
 
@@ -95,7 +95,7 @@ Below the contacts subgrid is the activities timeline wall. The timeline control
 
 ## Working with data on a main form best practices
 
-- If you need additional requirements added to data on the form that isn't configured on the table, it's important to make sure that the data that's required is always visible and editable&mdash;for example, a required field for your user that's based on a business rule. If you require a field and make it read-only, it will block users from completing tasks and can create frustration and dissatisfaction. Although hidden and read-only components are supported by the Power Apps platform, it's important to know that if a user saves data on a form that includes a required field that isn't editable, the save will be processed. This ensures that a user is never blocked from completing a task based on a bad design pattern.<!--note from editor: I missed the best practice here. If the user can save a form that includes a required field that isn't editable, is that a good thing?-->
+- If you need additional requirements added to data on the form that isn't configured on the table, it's important to make sure that the data that's required is always visible and editable&mdash;for example, a required field for your user that's based on a business rule. If you require a field and make it read-only, it will block users from completing tasks and can create frustration and dissatisfaction. Although hidden and read-only components are supported by the Power Apps platform, it's important to know that if a user saves data on a form that includes a required field that isn't editable, the save will be processed. This ensures that a user is never blocked from completing a task based on a bad design pattern.
 
 - Hidden fields can be used like read-only fields and are handy when building data-dense forms. However, the same caution applies as when working with required fields: you should never hide a required field if it can be null when editing a record. You can use business rules or events to hide or show fields on a form; however, the form will behave the same as a read-only field when it's being saved. Model-driven forms will always allow for the save if a field is required but hidden on the form.
 
@@ -117,7 +117,7 @@ In this example, a user needs to access the primary contact record, update the p
 
 ### Using the form component control
 
-Often you only need to edit information on a related record that doesn't require the user to interact with the entire form and doesn't require an additional business process flow, but you don't want to give users the ability to navigate to the related form.<!--note from editor: Suggested.--> To accomplish this scenario and streamline managing data inline on the main form, you can use a form component control. The form component control provides the user with access to the related record, including all the sections, controls, and fields on the related record form. Form components can also be used for specific actions with forms designed for only that task. An example of this is the Microsoft Dynamics Field Service Mobile experience. Form components are used to manage work orders and tasks related to those work orders in a streamlined and more efficient process.
+Often you only need to edit information on a related record that doesn't require the user to interact with the entire form and doesn't require an additional business process flow, but you don't want to give users the ability to navigate to the related form. To accomplish this scenario and streamline managing data inline on the main form, you can use a form component control. The form component control provides the user with access to the related record, including all the sections, controls, and fields on the related record form. Form components can also be used for specific actions with forms designed for only that task. An example of this is the Microsoft Dynamics Field Service Mobile experience. Form components are used to manage work orders and tasks related to those work orders in a streamlined and more efficient process.
 
 Note that a form component control will use any form that you've created for that record and it will honor any event, including loading a form, saving data, or on change information. It will also honor any business rules and actions on the form, including opening a main form dialog from a lookup (if you've configured the form to work in that manner). It will also include any duplicate detection rules and parent/child relationships when working with data in the related record form component. The form control component promotes unsaved changes to the main form, and notifies users when a field is required and if there are data entry errors on the related form component.
 
@@ -127,7 +127,7 @@ In this example, a user is editing the primary contact information directly on t
 
 ### Using quick create forms
 
-There will be times when you want to create an experience where users can quickly create records without additional navigation or clicks. A quick create form is a good solution for this. It can be used in multiple scenarios, which include creating appointments from an activity timeline wall, creating a contact from a lookup if a main form dialog isn't needed, or quickly creating a record&mdash;like an account or contact that doesn't require additional relationships for data integrity&mdash;from a view page (app menu **+** option).<!--note from editor: Edit okay? I wasn't sure what this meant.--> More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](create-edit-quick-create-forms.md)
+There will be times when you want to create an experience where users can quickly create records without additional navigation or clicks. A quick create form is a good solution for this. It can be used in multiple scenarios, which include creating appointments from an activity timeline wall, creating a contact from a lookup if a main form dialog isn't needed, or quickly creating a record&mdash;like an account or contact that doesn't require additional relationships for data integrity&mdash;from a view page (app menu **+** option). More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](create-edit-quick-create-forms.md)
 
 In the following example, a user needs to quickly create a lead by using the **+** menu option in the app header.
 
@@ -158,7 +158,7 @@ Form display options should be used when you want to lessen the number of action
 
 Also consider that when you hide certain components like the command bar or the tab list, you'll remove navigation that might be necessary to complete a task. Be sure to account for those requirements in your form design by using additional controls created with the Power Apps component framework.
 
-In this example, the command bar has been removed to reduce any unnecessary actions when working with an account. This form has been designed to not need the command bar, so the maker has removed it to keep the user on task. More information: [setCommandBarVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setCommandBarVisible.md)<!--note from editor: Please verify the edits to alt text in the following four images are correct. I wanted to make it very clear what was being modified.-->
+In this example, the command bar has been removed to reduce any unnecessary actions when working with an account. This form has been designed to not need the command bar, so the maker has removed it to keep the user on task. More information: [setCommandBarVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setCommandBarVisible.md)
 
 :::image type="content" source="media/form-no-command-bar.png" alt-text="Form with no command bar shown in an app":::
 
