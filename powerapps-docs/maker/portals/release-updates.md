@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 04/22/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributors:
@@ -33,15 +33,15 @@ The following articles provide details about the portals version updates.
 - [Power Apps portals version 9.3.3.x](versions/version-9.3.3.x.md)
 - [Power Apps portals versions before 9.3.3.x](versions/versions-before-9.3.3.x.md)
 
-## Starter Portal package updates
+## Starter portal package updates
 
 The following articles provide details about portals packages.
 
-- [Starter Portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
-- [Starter Portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
-- [Starter Portal package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
-- [Starter Portal package version 9.2.2003.2](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2003-2-7f556cae-1f68-2b5f-3a11-b2b4977e49d8)
-- [Starter Portal package version 9.1.9.0](https://support.microsoft.com/topic/portal-solution-release-version-9-1-9-0-for-microsoft-dynamics-365-5fdcd754-2064-be3c-0fa8-463391fa1769) 
+- [Starter portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
+- [Starter portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
+- [Starter portal package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
+- [Starter portal package version 9.2.2003.2](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2003-2-7f556cae-1f68-2b5f-3a11-b2b4977e49d8)
+- [Starter portal package version 9.1.9.0](https://support.microsoft.com/topic/portal-solution-release-version-9-1-9-0-for-microsoft-dynamics-365-5fdcd754-2064-be3c-0fa8-463391fa1769) 
 
 ### Privacy notice
 

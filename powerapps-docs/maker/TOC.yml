@@ -1788,7 +1788,7 @@
                 href: ./portals/versions/version-9.3.3.x.md
               - name: Versions before 9.3.3.x
                 href: ./portals/versions/versions-before-9.3.3.x.md
-         - name: Starter Portal package updates
+         - name: Starter portal package updates
            items:
               - name: Package 9.2.2103.x
                 href: ./portals/versions/package-version-9.2.2103.md
