@@ -17,7 +17,7 @@ contributors:
 
 This topic provides resources where you can learn about the new features that have recently released and new features that will be releasing over the next few months.
 
-## Power Apps portals updates
+## Portals release plans
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
