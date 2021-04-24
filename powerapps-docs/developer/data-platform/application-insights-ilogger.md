@@ -39,7 +39,7 @@ Using ILogger will provide true telemetry data and is intended to work together 
 |Amount of data|Each log message can pass a String value.|Only 10kb of text can be written for each plug-in execution. Any more will be truncated.|
 |Available in runtime errors|No|Available in model-driven app client errors and as annotations in Web API. More information: [Include additional details with errors](webapi/compose-http-requests-handle-errors.md#include-additional-details-with-errors)|
 
-You should continue to use the [ITracingService.Trace](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace) to write to the Plug-in Trace Log table when needed. Not every organization will enable Application Insights. If your plug-in code uses the ILogger interface and the organization does not have Application Insights integration enabled, nothing will be written. So, it is important to continue to use the ITracingService Trace method in your plug-ins. Plug-in trace logs continue to be an important way to capture data while developing and debugging plug-ins, but they were never intended to provide telemetry data. More information: [Plug-ins: Tracing and logging](logging-tracing)
+You should continue to use the [ITracingService.Trace](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace) to write to the Plug-in Trace Log table when needed. Not every organization will enable Application Insights. If your plug-in code uses the ILogger interface and the organization does not have Application Insights integration enabled, nothing will be written. So, it is important to continue to use the ITracingService Trace method in your plug-ins. Plug-in trace logs continue to be an important way to capture data while developing and debugging plug-ins, but they were never intended to provide telemetry data. More information: [Plug-ins: Tracing and logging](logging-tracing.md)
 
 You should use [ILogger](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) because it will allow for telemetry about what happens within a plug-in to be integrated with the larger scope of data captured with the Application Insights integration. The Application Insights integration will tell you when a plug-in executes, how long it takes to run and whether it makes any external http requests, but Microsoft cannot add any telemetry code within the plug-ins that people write to extend the behavior of the platform.
 
@@ -47,7 +47,7 @@ If you are an ISV with a product that includes plug-ins, your customers who enab
 
 ## Use ILogger
 
-ILogger is a common interface for capturing log information. The implementation provided with the SDK provides common methods to support establishing a scope and different levels of logging.  There is currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view. 
+ILogger is a common interface for capturing log information. The implementation provided with the SDK provides common methods to support establishing a scope and different levels of logging.  There is currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
 
 The following is an example of a plug-in using both ILogger and ITracingService.Trace.
 
