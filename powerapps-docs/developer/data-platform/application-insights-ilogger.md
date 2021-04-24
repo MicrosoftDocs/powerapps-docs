@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Write Telemetry to your Application Insights resource using ILogger (preview)
+# Write Telemetry to your Application Insights resource using ILogger (Preview)
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the SDK will write telemetry to your Application Insights resource. To learn more about the Application Insights integration and how to enable it, see [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry).
 
@@ -28,14 +28,14 @@ Telemetry data that comes from plug-ins using the ILogger interface is different
     - This means there will be less latency in viewing this data.
 - You must update your plug-in code to use the ILogger interface.
 
-Using ILogger will provide true telemetry data and is intended to work together with the existing Plug-in Trace Logs written using the [ITracingService Interface](/dotnet/api/microsoft.xrm.sdk.itracingservice) . The following table compares the capabilities:
+Using ILogger will provide true telemetry data and is intended to work together with the existing Plug-in Trace Logs written using the [ITracingService Interface](/dotnet/api/microsoft.xrm.sdk.itracingservice). The following table compares the capabilities:
 
 
 |Criteria |ILogger for Application Insights  |ITracingService Trace for Plug-in Trace Logs  |
 |---------|---------|---------|
 |Intended use|Capture telemetry over time for analysis and debugging.|While developing and debugging plug-ins|
 |How long data is stored|According to your Application Insights data retention period, which is 90 days by default|24 hours|
-|Available|Only for Organizations that have subscribed to Application Insights integration.|For any organization when Plug-in tracing is enabled.|
+|Available|Only for organizations that have subscribed to Application Insights integration.|For any organization when Plug-in tracing is enabled.|
 |Amount of data|Each log message can pass a String value.|Only 10kb of text can be written for each plug-in execution. Any more will be truncated.|
 |Available in runtime errors|No|Available in model-driven app client errors and as annotations in Web API. More information: [Include additional details with errors](webapi/compose-http-requests-handle-errors.md#include-additional-details-with-errors)|
 
@@ -188,7 +188,7 @@ namespace ILoggerExample
 ```
 When this plug-in is registered on a synchronous `PostOperation` step for the `Create` of an account, you can use Application Insights Logs to view the output within a few minutes. You can use [Kusto Query Language (KQL)](/azure/data-explorer/kql-quick-reference) to query the results.
 
-You can filter items for a single operation using the operation_ParentId that represents the request id of the response header.
+You can filter items for a single operation using the `operation_ParentId` that represents the request id of the response header.
 
 :::image type="content" source="media/application-insights-ilogger-trace-operation_parentid.png" alt-text="Filter items for a single operation using the operation_ParentId ":::
 
@@ -216,7 +216,7 @@ And this query will limit the results to the logs added during the `OutboundCall
 
 ## Logging Exceptions
 
-At the bottom of the the plug-in code example above, the following code sues [LogError](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror) to log a caught exception and throws the [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception):
+At the bottom of the the plug-in code example above, the following code uses [LogError](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror) to log a caught exception and throws an [InvalidPluginExecutionException](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception):
 
 ```csharp
 catch (Exception e)
@@ -270,7 +270,7 @@ Date: Sat, 24 Apr 2021 18:24:46 GMT
 }
 ```
 
-The Plug-in Trace Log will contain this exception data, which includes the `TraceMessage` data.
+The Plug-in Trace Log will contain this exception data, which includes the `ExceptionDetails` data.
 
 ```
 Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
