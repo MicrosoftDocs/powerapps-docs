@@ -327,11 +327,11 @@ The formatted message text is captured as part of the `customDimensions`.
 
 ### See also
 
-[Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)
-[Plug-ins](plug-ins.md)  
-[Debug a plug-in](debug-plug-in.md#use-tracing)  
-[View trace logs](tutorial-write-plug-in.md#view-trace-logs)  
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)  
+[Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<br />
+[Plug-ins](plug-ins.md)<br />
+[Debug a plug-in](debug-plug-in.md#use-tracing)<br />
+[View trace logs](tutorial-write-plug-in.md#view-trace-logs)<br />
+[Use the tracing service](write-plug-in.md#use-the-tracing-service)<br />
 [PluginTraceLog Table](reference/entities/plugintracelog.md)
 
 
