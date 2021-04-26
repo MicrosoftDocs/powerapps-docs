@@ -1,7 +1,7 @@
 ---
 title: "Fusion development: Conclusion  | Microsoft Docs"
 description: "Conclusion of the ebook on the fusion development approach in Power Apps."
-author: spboyer
+author: shboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
