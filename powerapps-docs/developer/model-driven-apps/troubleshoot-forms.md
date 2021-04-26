@@ -131,7 +131,7 @@ If you're troubleshooting an issue caused by a business process flow, disable th
 
 Some common issues that can cause unexpected behavior when a model-driven app form is loaded are:
 
-- Fields or controls don't have the values you expect.
+- Columns or controls don't have the values you expect.
 
 - Controls aren't disabled or aren't enabled.
 
@@ -139,7 +139,7 @@ Some common issues that can cause unexpected behavior when a model-driven app fo
 
 These behaviors occur after the form is opened&mdash;for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](./clientapi/reference/events/form-onload.md) scripts that run synchronously or asynchronously to change the field or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
+There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](./clientapi/reference/events/form-onload.md) scripts that run synchronously or asynchronously to change the column or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
 
 If the form loads normally after you disable the form handler, there's an issue with the script that's blocking or causing an error when the form is loading.
 
@@ -274,9 +274,9 @@ This issue occurs if a business rule or custom script used to work in the legacy
 
 **Resolution**:
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in the legacy web client, but in the Unified Interface, the composite control is divided into parts and is stored differently. For example, if the field `fullname` is part of the business rule or custom script in the legacy web client, the fields `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
+An example of a common issue where this can happen is when a composite control is included in a script that exists in the legacy web client, but in the Unified Interface, the composite control is divided into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script in the legacy web client, the columns `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
 
-You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the fields that can be used in the business rule or custom script instead.
+You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the columns that can be used in the business rule or custom script instead.
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
@@ -350,7 +350,7 @@ If there are multiple updates happening to a control's value, there will be an `
 > [!div class="mx-imgBorder"]
 > ![Control value before](media/control-default-value-after.png "Control value before")
 
-There are scenarios where fields are populated based on a relationship field mapping, in which case the event will show that.
+There are scenarios where columns are populated based on a relationship column mapping, in which case the event will show that.
 
 > [!div class="mx-imgBorder"]
 > ![Control value after](media/control-default-value-update-sequence.png "Control value after")
@@ -361,7 +361,7 @@ Verify where the value is coming from and take an action based on the below tabl
 |--|--|
 | Client API script | Contact the script owner. |
 | Default value | Check the control's configuration. |
-| Relationship field mapping | Check the relationship configuration and update the field mapping. |
+| Relationship column mapping | Check the relationship configuration and update the column mapping. |
 | Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
 
 

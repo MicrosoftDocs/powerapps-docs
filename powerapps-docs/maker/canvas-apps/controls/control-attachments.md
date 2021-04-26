@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 08/10/2020
+ms.date: 04/21/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -63,6 +63,8 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
+
+**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 

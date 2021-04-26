@@ -1,16 +1,20 @@
 ---
-title: "Moderate forums on a portal | MicrosoftDocs"
-description: "Instructions to moderate forums in a portal."
+title: Moderate forums
+description: Learn how to moderate forums in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Moderate forums
+
 The moderators are users of the forum who are granted access to the forum's threads and posts of all members for moderating the discussion and keeping the forum clean (neutralizing spam and spambots, for example). Moderators also answer users' concerns about the forum, general questions, as well as respond to specific complaints. They also can do anything to lend a helping hand to a user in need. Common privileges of moderators include: deleting, adding, editing, removing of threads or posts. Essentially, it is the duty of the moderator to manage the day-to-day affairs of a forum or board as it applies to the stream of user contributions and interactions. The relative effectiveness of this user management directly impacts the quality of a forum in general, its appeal, and its usefulness as a community of interrelated users.
 
 ## Assign moderators to forums
