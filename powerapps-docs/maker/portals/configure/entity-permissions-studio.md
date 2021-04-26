@@ -70,6 +70,9 @@ To create a table permission using portals Studio:
 
     ![Contact or Account access type](media/entity-permissions-studio/contact-account-access-type.png "Contact or Account access type")
 
+    > [!NOTE]
+    > If you don't have any relationships available for the selected table, you can select **New relationship** to create a new relationship.
+
 1. Select privileges that you want to grant.
 
 1. Select **Add roles** to add the roles that this table permission will apply to.
@@ -103,6 +106,14 @@ To view table permissions using portals Studio:
 
     ![Group or filter table permissions](media/entity-permissions-studio/group-table-permissions.png "Group or filter table permissions")
 
+    > [!NOTE]
+    > - When you group table permissions by role, table, or state, the permissions are listed as a flat structure without the parent-child relationships for configured permissions.
+    > - You can only filter for parent table permissions, not child permissions.
+
+1. To sort the table permissions, select a column at the top in the list of table permissions.
+
+    ![Sort table permissions](media/entity-permissions-studio/sort-permissions.png "Sort table permissions")
+
 ### Edit table permissions using portals Studio
 
 To edit a table permission using portals Studio:
@@ -120,6 +131,8 @@ To edit a table permission using portals Studio:
 1. Select **Table permissions**.
 
 1. Select the table permission that you want to edit.
+
+1. Select **Edit** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Edit**.
 
 1. Change table permission details, such as the name, table, access type, privileges, and applicable roles. More information: [Create table permissions using portals Studio](#create-table-permissions-using-portals-studio)
 
@@ -143,7 +156,7 @@ To deactivate/activate or delete a table permission using portals Studio:
 
 1. Select the table permission that you want to deactivate/activate or delete.
 
-1. Select **Deactivate**, **Activate**, or **Delete**.
+1. Select **Deactivate**, **Activate**, or **Delete** from the menu. 1. Select **Edit** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose your option.
 
 1. Confirm when prompted.
 
@@ -165,7 +178,7 @@ To add a child permission to an existing table permission using portals Studio:
 
 1. Select the table permission that you want to add the child permission to.
 
-1. Select **Add child permission**.
+1. Select **Add child permission** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Add child permission**.
 
 1. Create the child permission with the following details:
 
@@ -182,6 +195,30 @@ To add a child permission to an existing table permission using portals Studio:
 1. Select **Save**.
 
 To view, edit, deactivate/activate or delete child permissions using portals Studio, follow the steps explained in the earlier section to [configure table permissions using portals Studio](#configure-table-permissions-using-portals-studio).
+
+## Additional considerations
+
+Table permissions configuration is subject to the following additional considerations and rules.
+
+### Parent table permission missing web role associated to its child
+
+When you have a child permission associated with one or more web roles missing from the parent permissions, you'll see the following error while editing the child permissions.
+
+"One or more roles applied to this permission aren't available to its parent table permission. Modify roles in either permissions."
+
+For example, a child table permission shows the below message when the parent table permission doesn't have the *Marketing* web role associated, even though the child permission is still associated.
+
+![Parent table permission missing one or more web roles associated to child table permission](media/entity-permissions-studio/missing-webrole-parent.png "Parent table permission missing one or more web roles associated to child table permission")
+
+To fix this problem, add the *Marketing* web role to the parent table permission, or remove the *Marketing* web role from the child table permission.
+
+### Table permissions without any web roles associated
+
+For a table permission to take effect, it has to be associated to one or more web roles. Users that belong to web roles are granted the privileges you select for the associated table permission.
+
+The following message shows when you try to save a table permission without any web role associated.
+
+![Saving a table permission without any associated web role](media/entity-permissions-studio/table-permission-without-webrole.png "Saving a table permission without any associated web role")
 
 ## Next steps
 
