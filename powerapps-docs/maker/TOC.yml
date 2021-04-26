@@ -1082,6 +1082,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Design forms for efficiency
+          href: ./model-driven-apps/design-productive-forms.md
+          items: 
+          - name: Design considerations for main forms
+            href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
           href: ./model-driven-apps/form-designer-overview.md
           items:
@@ -1125,10 +1130,8 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
-        - name: Design considerations for main forms
-          href: ./model-driven-apps/design-considerations-main-forms.md
-        - name: How main forms appear
-          href: ./model-driven-apps/main-form-presentations.md
+          - name: How main forms appear
+            href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
@@ -1773,9 +1776,9 @@
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
-      href: ./portals/faq.md
+      href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
-      href: ./portals/legacy-portal-faq.md
+      href: ./portals/legacy-portal-faq.yml
     - name: Version releases and updates
       items:
          - name: Release updates
