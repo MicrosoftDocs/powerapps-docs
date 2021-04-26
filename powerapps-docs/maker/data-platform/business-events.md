@@ -128,7 +128,9 @@ When you associate a Custom API or Custom Process action to a catalog, you can s
 
 ## Use Business Events to trigger automation
 
-When Business events are enabled, there will be multiple ways to enable automation. The first experience where business events will be exposed is in Power Automate Dataverse connector using the When an action is performed trigger.
+As business events becomes a common pattern, there will be multiple ways to enable automation.
+
+The first experience where business events will be exposed is in Power Automate Dataverse connector using the **When an action is performed** trigger.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
