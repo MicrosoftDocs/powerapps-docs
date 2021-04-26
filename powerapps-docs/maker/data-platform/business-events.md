@@ -27,7 +27,7 @@ Automation of business logic and integration with other systems are driven by ev
 - Web Hooks
 - Dataverse plug-ins
 
-Microsoft Dataverse has always had a robust event framework to capture system events within Dataverse. You have always had the ability to respond to data operations like Create, Update, and Delete of table rows as well as specialized events where data changes occur within the system.
+Microsoft Dataverse has always had a robust event framework to capture system events *within* Dataverse. You have always had the ability to respond to data operations like Create, Update, and Delete of table rows as well as specialized events where data changes occur within the system.
 
 Dataverse business events takes this further in two ways:
 
@@ -88,3 +88,47 @@ You have an ERP application has a VendorPaymentPosted event and you simply want 
 This example expects nothing to be done in Dataverse except enable asynchronous logic to be to be registered for the event.
 
 ### Invoking Custom API from external applications
+
+The key requirement to use custom API to send business events is that your application must have the ability to make authorized HTTP requests to Dataverse. For authorization, requests originating from other applications will typically use a special Application User account that must be created in the Dataverse environment. Licensed and authenticated Dataverse users can also use applications to send these requests.
+
+By removing all synchronous logic from the custom api the likelihood of an error causing the operation to fail is extremely low, but not impossible. Your calling application must provide a way to deal with transient errors in the event the Dataverse service isn’t responding, there are network connectivity issues, or service protection limit errors are returned.
+
+To enable authorized calls to Dataverse from your application there must be an Application user configured for the Dataverse environment. More information: [Build web applications using server-to-server (S2S) authentication](../../developer/data-platform/build-web-applications-server-server-s2s-authentication.md).
+
+## Catalog Events
+
+In order for a system action or a custom action to be available as an event, it must be cataloged. More information: [Catalog and CatalogAssignment tables (Preview)](../../developer/data-platform/catalog-catalogassignment.md)
+
+A catalog makes it easier for people to discover the event because they will be grouped by the containing solution and categories defined for that solution. It also excludes low value events.
+
+Solution publishers should provide a catalog that includes the relevant tables containing business data as well as any custom api or custom process actions that represent high-value business events.
+
+The following represents a catalog for a solution called Contoso Customer Management:
+
+- Contoso Customer Management
+  - Tables
+    - Account
+    - Contact
+    - Membership
+  - Customer Events
+    - Entered Store
+    - Visit Web Site
+    - Purchase Product
+    - Return Product
+
+This example uses **Tables** and **Customer Events** as categories but you can use any category grouping that makes sense for your solution.
+
+### Table events
+
+When a table is assigned to a category, certain operations bound to the table will be included. If the table supports Create, Update, and Delete operations, these events will be included. Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security related to the owner. The owner of any record in the table will be able to share it. Operations related to sharing are exposed as GrantAccess, ModifyAccess, and RevokeAccess events.
+
+### Action events
+
+When you associate a Custom API or Custom Process action to a catalog, you can subscribe to that specific operation and receive the data that was used for parameters to that action and any data returned by that action. In the case of an external business event, only data sent as parameters will be available.
+
+## Use Business Events to trigger automation
+
+When Business events are enabled, there will be multiple ways to enable automation. The first experience where business events will be exposed is in Power Automate Dataverse connector using the When an action is performed trigger.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
