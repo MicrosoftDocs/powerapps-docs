@@ -150,7 +150,7 @@ In many scenarios, a user just needs to quickly see information from a related t
 
 :::image type="content" source="media/quick-view-form.gif" alt-text="Quick view form example":::
 
-### Using form display options to reduce clutter and build focused forms
+## Using form display options to reduce clutter and build focused forms
 
 There are many times when you need to build an experience that focuses the user on the task at hand without additional distraction that might cause inefficiency. This is especially important when you're working with tables and records that have global components, which are created and automatically added to forms regardless of the task you're trying to build. Although this provides a shareable and easy-to-build infrastructure that drives consistency across an app, it does at times provide unnecessary distraction.
 
