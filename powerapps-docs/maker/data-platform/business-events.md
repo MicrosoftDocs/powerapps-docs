@@ -132,5 +132,7 @@ As business events becomes a common pattern, there will be multiple ways to enab
 
 The first experience where business events will be exposed is in Power Automate Dataverse connector using the **When an action is performed** trigger.
 
+:::image type="content" source="../../developer/data-platform/media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger":::
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
