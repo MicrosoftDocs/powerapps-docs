@@ -39,6 +39,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
+
 You can modify the component by using many [properties](#input-properties).
 
 ### Set a default search radius

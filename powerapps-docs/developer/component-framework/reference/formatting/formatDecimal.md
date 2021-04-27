@@ -1,6 +1,6 @@
 ---
 title: formatDecimal | Microsoft Docs
-description: 
+description: Returns a formatted string that represents the decimal value after being formatted.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

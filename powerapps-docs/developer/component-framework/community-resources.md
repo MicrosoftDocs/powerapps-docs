@@ -14,6 +14,8 @@ ms.topic: "article"
 
 # Community resources for Power Apps component framework
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
 
 > [!NOTE]            

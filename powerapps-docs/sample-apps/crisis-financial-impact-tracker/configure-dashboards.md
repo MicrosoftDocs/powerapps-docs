@@ -304,11 +304,11 @@ When you open the Power BI template, you'll see a series of tabs at the bottom o
 - **Department**: Opens the **Department** view.
 
 Your organization can add its logos to all pages in the template by inserting
-an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-copy-paste)
+an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](/power-bi/visuals/power-bi-visualization-copy-paste)
 
 ## Connect to Dataverse
 
-To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-powerbi-connector)
+To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](../../maker/data-platform/data-platform-powerbi-connector.md)
 
 To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Dataverse environment URL. 
 
