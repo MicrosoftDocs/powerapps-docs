@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 04/27/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -124,6 +124,7 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 ### See also
 
+- [Track changes to Power Apps portals configuration](../faq#how-do-i-track-changes-to-power-apps-portals-configuration-).
 - Tenant to tenant migration of a [Power Platform environment](/power-platform/admin/move-environment-tenant).
 - Tenant to tenant migration of [model-driven apps](/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
 
