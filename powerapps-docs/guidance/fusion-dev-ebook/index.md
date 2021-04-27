@@ -19,7 +19,7 @@ ms.reviewer: kvivek
 
 PUBLISHED BY
 
-Microsoft Developer Relations, and Power Apps product teams
+Microsoft Developer Relations and Power Apps product teams
 
 A division of Microsoft Corporation
 
