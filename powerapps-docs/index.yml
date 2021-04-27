@@ -149,7 +149,10 @@ conceptualContent:
         - text: Planning a Power Apps project
           url: /powerapps/guidance/planning/introduction
           itemType: reference
-    
+        - text: "Ebook: Fusion development approach"
+          url: /powerapps/guidance/fusion-dev-ebook/
+          itemType: overview
+
     - title: Learning catalog
       links:
         - text: App maker

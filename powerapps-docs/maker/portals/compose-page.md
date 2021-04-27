@@ -1,18 +1,21 @@
 ---
-title: Customize page using Power Apps portals Studio through the WYSIWYG editor. | Microsoft Docs
+title: WYSIWYG editor
 description: Learn about how to customize page using Power Apps portals Studio through the WYSIWYG editor.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # WYSIWYG editor
 
-After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
+After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG (What You See Is What You Get) editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
 - [Sections](add-sections.md)
     - One column section

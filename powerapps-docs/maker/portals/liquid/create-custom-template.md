@@ -1,13 +1,16 @@
 ---
-title: "Create a custom page template by using Liquid and a web template page template for a portal | MicrosoftDocs"
-description: "Instructions to create a custom page template by using Liquid operators."
+title: Create a custom page template
+description: Learn how to create a custom page template by using Liquid operators.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Create a custom page template
@@ -107,7 +110,7 @@ Now, all that's left to do is to create a web page that uses our page template, 
 ### See also
 
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
