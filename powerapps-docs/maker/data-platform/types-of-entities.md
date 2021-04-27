@@ -2,7 +2,7 @@
 title: "Types of tables | MicrosoftDocs"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 04/27/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
