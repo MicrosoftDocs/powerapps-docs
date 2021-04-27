@@ -45,7 +45,7 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 - **Business Unit**. A few system tables are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
 
 > [!IMPORTANT]
->  After a standard table is created, you can’t change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
+>  After a custom table is created, you can’t change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
   
 ## Activity tables
 
