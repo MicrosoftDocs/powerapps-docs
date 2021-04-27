@@ -23,11 +23,59 @@ In this article, you'll learn how to create a multi-language app with localized 
 
 ## Create a translation component
 
-When working with a multi-language app, the first step is to create a reusable component for translation. In this component, you'll store 
+When working with a multi-language app, the first step is to create a reusable component for translation.
 
-1. In your app create a new **component** using the canvas editor. Give the component a name such as “**Translation Component**”
+In this component, you'll store a table that acts as the dictionary of all translations you'll need. An output property will be used to provide output strings from this dictionary table based on the language of the user running the app that uses this component.
 
-   ![Microsoft Power Apps Canvas App Editor: Create a new Power Apps component](media/multi-language-apps/image-20210305114316890.png)
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. On the left pane, select **Apps**.
+
+1. Under **Apps**, select **Component libraries (preview)**.
+
+    ![Select Component libraries (preview)](media/multi-language-apps/apps-component-libraries.png "Select Component libraries (preview)")
+
+1. Select **+ New component library (preview)**.
+
+1. Enter a name, such as "Translation components", and select **Create** to open the component in Power Apps Studio.
+
+1. Rename "Component1" by selecting **...** on the left pane, and then select **Rename** as "Translation component".
+
+   ![Rename component](media/multi-language-apps/rename-component.png "Rename component")
+
+1. From the property pane on the right-side of the screen, select **+ New custom property**.
+
+1. Set the following property values:
+
+    | Property name | Value |
+    | - | - |
+    | Display name | Language |
+    | Name | Language |
+    | Description | The language that you want to translate the text to. |
+    | Property type | Input |
+    | Data type | Text |
+
+1. Select **Raise OnReset when value changes** checkbox.
+
+    ![New custom property](media/multi-language-apps/new-custom-property.png "New custom property")
+
+1. Select **Create**.
+
+1. From the property pane on the right-side of the screen, select **+ New custom property**.
+
+1. Set the following property values:
+
+    | Property name | Value |
+    | - | - |
+    | Display name | Labels |
+    | Name | Labels |
+    | Description | Translated labels. |
+    | Property type | Output |
+    | Data type | Record |
+
+
+
+1. Select **Create**.
 
 1. Create the Input and Output parameters for your component, as follows: 
 
