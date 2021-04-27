@@ -20,7 +20,7 @@ search.app:
 
 You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
 
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
+Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
 
 The following prebuilt components can be used for geospatial and mapping scenarios:
 
@@ -94,3 +94,6 @@ Start installing the components in your apps:
 
 - Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
 - See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

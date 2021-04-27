@@ -1,5 +1,6 @@
 ---
 title: "getDataXml (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Returns a string representing the XML that will be sent to the server when the record is saved.
 ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: "reference"
@@ -24,11 +25,13 @@ search.app:
 
 `formContext.data.entity.getDataXml();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: String.
 
-**Description**: In this example, the following three fields for an account record were updated: name, accountnumber, telephone2.
+**Description**: In this example, the following three columns for an account record were updated: name, accountnumber, telephone2.
 
 ```"<account><name>Contoso</name><accountnumber>55555</accountnumber><telephone2>425 555-1234</telephone2></account>"```
 
@@ -38,3 +41,6 @@ This method does not work with Microsoft Dynamics 365 for tablets.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

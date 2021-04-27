@@ -78,17 +78,11 @@ it.
 
     ![Data select](media/data-select.png)
 
-3.  In the **Data** list, select **Dataflows** and then select
-    **New dataflow**.
+3.  In the **Data** list, select **Dataflows**, select **New dataflow**, and then select **Start from blank**.
 
     ![Create a dataflow](media/create-a-dataflow.png)
 
-4.  On the **Select load target** page, select the destination storage where you want tables to be
-stored. Dataflows can store tables in Dataverse or in your organization's Azure Data Lake
-storage account. Once you select a destination to load data to, enter a **Name**
-for the dataflow, and then select **Create**.
-
-    ![Select load target](media/select-load-target.png)
+4.  On the **New Dataflow** page enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**. <!-- On the **Select load target** page, select the destination storage where you want tables to be stored. Dataflows can store tables in Dataverse or in your organization's Azure Data Lake storage account. Once you select a destination to load data to, enter a **Name** for the dataflow, and then select **Create**. -->
 
      > [!IMPORTANT]
      > There is only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
@@ -99,12 +93,12 @@ for the dataflow, and then select **Create**.
      > accessible via the Power Platform Dataflow connector and access to it requires
      > membership within the environment it was created in.
 
-5. On the **Choose data source** page, select the data source where the tables are stored, and then select **Create**. The selection of data sources displayed allows you to create dataflow tables. 
+5. On the **Choose data source** page, select the data source where the tables are stored. The selection of data sources displayed allows you to create dataflow tables. 
 
     ![Choose a data source](media/choose-data-source.png)
 
 6. After you select a data source, you’re prompted to provide the connection
-settings, including the account to use when connecting to the data source.
+settings, including the account to use when connecting to the data source. Select **Next**.
 
     ![Connect to data source](media/data-source-provide-cred.png)
 
@@ -138,7 +132,7 @@ table columns as defined by the Common Data Model. Standard tables have a
 known schema defined by the Common Data Model.
 
 For more information about this approach, and about the Common Data Model, see [The Common Data
-Model](/powerapps/common-data-model/overview).
+Model](/common-data-model/).
 
 To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
@@ -229,6 +223,9 @@ The following articles are useful for further information and scenarios when usi
 
 For more information about the Common Data Model:
 
--   [Common Data Model - overview](/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](/common-data-model/)
 
 -   [Learn more about the Common Data Model schema and tables on GitHub](https://github.com/Microsoft/CDM)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

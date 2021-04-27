@@ -36,3 +36,6 @@ When a solution is developed with unit testing, developers report greater produc
 
 [Testing tools for client-side development](../model-driven-apps/testing-tools-client.md)<br />
 [Video: Introduction to DevOps with Dynamics 365](https://youtu.be/AorM792M8nY)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

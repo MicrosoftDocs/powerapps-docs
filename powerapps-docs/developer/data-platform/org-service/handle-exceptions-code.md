@@ -133,4 +133,7 @@ When an uncaught exception is thrown that contains sensitive information that th
 
  [Web service error codes](web-service-error-codes.md)   
  [Handle exceptions in plug-ins](../handle-exceptions.md)   
- [.NET Framework Developer Center](https://docs.microsoft.com/dotnet/framework/development-guide)
+ [.NET Framework Developer Center](/dotnet/framework/development-guide)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

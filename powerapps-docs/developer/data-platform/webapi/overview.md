@@ -1,8 +1,8 @@
 ---
 title: "Use the Microsoft Dataverse Web API (Dataverse)| Microsoft Docs"
-description: "The Microsoft Dataverse Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
+description: "The Microsoft Dataverse Web API implements the OData v4 protocol and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
-ms.date: 03/31/2020
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,11 +21,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use the Microsoft Dataverse Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The Web API is one of two web services you can use to work with data and metadata in Dataverse. The other is the [Organization Service](../org-service/overview.md).
+The Web API is one of two web services you can use to work with data, and table and column definitions in Dataverse. The other is the [Organization Service](../org-service/overview.md).
 
 The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
 
@@ -51,3 +52,6 @@ If you are a JavaScript developer and want to use the Web API in model-driven ap
 [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)<br />
 [OData Version 4.0 Part 2: URL Conventions Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)<br />
 [OData Version 4.0 Part 3: Common Schema Definition Language (CSDL) Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

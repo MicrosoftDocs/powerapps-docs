@@ -322,3 +322,6 @@ catch (Exception ex)
 ### See also
 
 [Implement all types of queries when filtering results using PreOperation RetrieveMultiple](../../best-practices/business-logic/implement-all-types-of-queries-when-filtering-preoperation-retrievemultiple.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

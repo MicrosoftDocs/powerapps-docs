@@ -97,7 +97,7 @@ If an entity has an alternate key defined, you can also use the alternate key to
 ```http
 GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
-If the alternate key definition contains Lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [lookup property](/powerapps/developer/data-platform/webapi/web-api-types-operations#lookup-properties) as shown here.
+If the alternate key definition contains Lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [lookup property](./web-api-types-operations.md#lookup-properties) as shown here.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
@@ -106,6 +106,12 @@ GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0
 Any time you need to uniquely identify an entity to retrieve, update, or delete, you can use alternate keys configured for the entity. By default, there are no alternate keys configured for entities. Alternate keys will only be available if the organization or a solution adds them.
 
 <a name="bkmk_retrieveSingleValue"></a>
+
+## Retrieve documents in storage partitions
+
+If you are retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
+
+More information: [Access entity data faster using storage partitions](azure-storage-partitioning.md)
 
 ## Retrieve a single property value
 
@@ -452,3 +458,6 @@ Requesting formatted values for individual record retrievals is done the same wa
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

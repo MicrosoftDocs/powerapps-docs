@@ -1,6 +1,6 @@
 ---
 title: SecurityPrivilegesMetadata | Microsoft Docs
-description: Information about entity metadata security privileges.
+description: Information about table definitions security privileges.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # SecurityPrivilegesMetadata
 
-Provides all the information about the entity metadata security privileges.
+Provides all the information about the table definitions security privileges.
 
 ## Available for
 
@@ -26,8 +26,8 @@ Model-driven apps
 |-----|----|---------|
 |CanBeBasic|boolean|Determines if the user has privilege depth as basic.|
 |CanBeDeep|boolean|Determines if the user has privilege depth as deep.|
-|CanBeEntityReference|boolean|Determines if the user has privilege depth as entity reference.|
-|CanBeParentEntityReference|boolean|Determines if the user has privilege depth as parent entity reference.|
+|CanBeEntityReference|boolean|Determines if the user has privilege depth as table/entity reference.|
+|CanBeParentEntityReference|boolean|Determines if the user has privilege depth as parent table/entity reference.|
 |CanBeLocal|boolean|Determines if the user has privilege depth as local.|
 |Name|string|Name of the privilege.|
 |PrivilegeId|string|The GUID of the privilege.|
@@ -38,3 +38,5 @@ Model-driven apps
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

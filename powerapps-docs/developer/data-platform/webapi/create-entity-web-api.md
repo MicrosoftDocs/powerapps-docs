@@ -325,7 +325,11 @@ Accept: application/json
 }
 ```
 
+## Create documents in storage partitions
 
+If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records.
+
+More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
 
 ### See also
 
@@ -343,3 +347,6 @@ Accept: application/json
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

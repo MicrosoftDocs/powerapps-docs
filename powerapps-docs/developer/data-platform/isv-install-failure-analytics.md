@@ -24,11 +24,12 @@ search.app:
 
 # Install failures
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 As an ISV, you need data like failure details or failure count to quickly resolve the issues for the customers. You can use the install failures feature to get the install failures data. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The install failures features makes it easy for you to quickly resolve the issues that customer encounter while installing your application by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
 
@@ -116,3 +117,6 @@ ISVs can filter the install failures dashboard using the filters available. For 
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [AppSource checker](isv-app-management-appsource-checker.md)<br/>
 [Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

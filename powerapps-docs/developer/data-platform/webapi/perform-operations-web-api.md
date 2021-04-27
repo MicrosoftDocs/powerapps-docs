@@ -49,3 +49,6 @@ The Web API provides a modern, RESTful web service you can use to interact with 
 [Use the Dataverse Web API](overview.md)<br />
 [Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Web API types, functions and actions](web-api-types-operations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

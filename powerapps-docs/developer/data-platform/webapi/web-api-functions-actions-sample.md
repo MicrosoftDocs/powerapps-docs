@@ -489,3 +489,6 @@ Expected custom error: ContactFirstName and ContactLastName are required when Cu
 [Use Web API actions](use-web-api-actions.md)<br />
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

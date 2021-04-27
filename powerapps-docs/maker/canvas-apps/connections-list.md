@@ -56,7 +56,7 @@ For more information about how to customize your formula for custom updates, see
 
 ## Popular connectors
 
-This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](https://docs.microsoft.com/connectors/connector-reference/).
+This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](/connectors/connector-reference/).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
@@ -96,3 +96,9 @@ This type of connection is not very secure because it does not rely on end-user 
 ### Windows Authentication
 
 This type of connection is not very secure because it doesn't rely on end-user authentication. Use Windows authentication when you need to connect to a data source that is **on-premises**. An example of this type of connection is to an on-premises server that has a SQL Server. The connection must go through a gateway. Since it goes through a gateway, the connector has access to all of the data on that data source. As a result, any information that you can access with the Windows credentials you supply are available to the connector. And once the application is published, the connection is also published and available to your users.  This means that your end users can also create applications using this same connection and access the data on that machine. Connections to the data source are also **Implicitly Shared** with users that the app is shared with. This type of connection may be valid when your data source only lives on an on-premises server and the data on that source is freely shareable.
+
+## Data sources in solutions
+
+Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

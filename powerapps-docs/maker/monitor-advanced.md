@@ -56,3 +56,6 @@ Monitor doesn't support the scenarios in the following table.
 
 [Debugging canvas apps with Monitor](monitor-canvasapps.md)  
 [Debugging model-driven apps with Monitor](monitor-modelapps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

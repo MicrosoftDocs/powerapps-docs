@@ -49,3 +49,6 @@ var sectionObj = tabObj.sections.get(arg);
 [formcontext.ui.tabs](formcontext-ui-tabs.md)
 
 [formContext](../clientapi-form-context.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

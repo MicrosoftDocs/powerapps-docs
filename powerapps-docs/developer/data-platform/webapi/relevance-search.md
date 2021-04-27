@@ -29,7 +29,7 @@ search.app:
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
 enabled in your target environment by an administrator before you can use the
-feature. More information: [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search)
+feature. More information: [Using relevance search to search for records](../../../user/relevance-search.md)
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -179,6 +179,11 @@ The Lucene query syntax supports the following functionality:
 | Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
+
+> [!NOTE]
+> Wildcards are used only for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
+
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
 ### Example: basic search
 
@@ -514,7 +519,11 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Microsoft Dataverse](/powerapps/user/search)  
+[Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
+[Compare search options in Microsoft Dataverse](../../../user/search.md)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
-[Query Data using the Web API](query-data-web-api.md)
+[Query Data using the Web API](query-data-web-api.md)  
+[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

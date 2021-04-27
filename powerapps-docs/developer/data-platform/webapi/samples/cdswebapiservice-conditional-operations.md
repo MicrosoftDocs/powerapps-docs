@@ -297,3 +297,6 @@ namespace PowerApps.Samples
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)  
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)  
 [Use the Dataverse Web API](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

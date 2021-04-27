@@ -67,7 +67,7 @@ install-package System.Net.Http
   
 3. Confirm that all the required references have been added to the project.  
   
-4. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
+4. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](/previous-versions/wkze6zky(v=vs.140)).  
   
    Because the Dataverse Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Dataverse apps do require these.
   
@@ -131,10 +131,13 @@ This section explains how to add a basic set of settings and instructions to per
  At this point the solution can be built without errors. If you edit the application configuration file to supply values for your Dynamics 365 Server, the program should also successfully connect to that server. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Dataverse Web API.  
   
 > [!TIP]
->  Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://msdn.microsoft.com/library/xkh1wxd8.aspx) instructions to create the template.  
+>  Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](/previous-versions/visualstudio/visual-studio-2015/ide/how-to-create-project-templates) instructions to create the template.  
   
 ### See also
 
  [Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)   
- [Use the Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
+ [Use the Web API Helper Library (C#)](./enhanced-quick-start.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,7 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 08/11/2020
+description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -42,16 +43,16 @@ search.app:
 <ul>
 <li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
 <ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
-<li>Specify <code>null</code> if the action or function to execute is not bound to any entity.</li>
-<li>Specify <code>entity</code> in case the action or function to execute is bound to an entity. </li></ul>
+<li>Specify <code>null</code> if the action or function to execute is not bound to any table.</li>
+<li>Specify <code>entity</code> in case the action or function to execute is bound to a table. </li></ul>
 <li><b>operationName</b>: (Optional). String. Name of the action, function, or one of the following values if you are executing a CRUD request: "Create", "Retrieve", "Update", or "Delete".</li>
 <li><b>operationType</b>: (Optional). Number. Indicates the type of operation you are executing; specify one of the following values:
 <br/><code>0: Action</code>
 <br/><code>1: Function</code>
 <br/><code>2: CRUD</code></li>
-<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following attributes:
+<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following values:
 <ul>
-<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string attributes: <b>name</b> and <b>value</b></li>
+<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string values: <b>name</b> and <b>value</b></li>
 <li><b>structuralProperty</b>: Number. The category of the parameter type. Specify one of the following values:
 <br/><code>0: Unknown</code>
 <br/><code>1: PrimitiveType</code>
@@ -69,7 +70,7 @@ search.app:
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following values:</p>
 <ul>
 <li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
@@ -93,7 +94,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object with the attributes specified earlier in the description of **successCallback** function.
+On success, returns a promise object with the values specified earlier in the description of **successCallback** function.
 
 ## Examples
 
@@ -237,13 +238,13 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create variables to point to a quote record and to a specific field
+// Create variables to point to a quote record and to a specific column
 var quoteId = {
     "@odata.type": "Microsoft.Dynamics.CRM.quote",
     "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
 };
 
-// The roll-up field for which we want to force a re-calculation
+// The roll-up column for which we want to force a re-calculation
 var fieldName = "new_test_rollup";
 
 // Create variable calculateRollupFieldRequest and pass those variables created above
@@ -302,7 +303,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create a variable to point to a contact record and with specific data in the needed fields
+// Create a variable to point to a contact record and with specific data in the needed columns
 var contactRecord = {
     "@odata.type": "Microsoft.Dynamics.CRM.contact",
     "firstname": "Test",
@@ -550,7 +551,7 @@ Xrm.WebApi.online.execute(deleteRequest).then(
 ```
 
 ### Associate a record
-The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -617,7 +618,7 @@ Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
 ```
 
 ### Disassociate a record
-The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
 > Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.
@@ -682,3 +683,6 @@ Xrm.WebApi.online.execute(manyToManyDisassociateRequest).then(
 
 [Xrm.WebApi](../../xrm-webapi.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

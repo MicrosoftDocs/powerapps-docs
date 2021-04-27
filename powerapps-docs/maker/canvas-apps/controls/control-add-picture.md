@@ -148,3 +148,6 @@ The same guidelines for **[Button](control-button.md)** and **[Image](control-im
 * **Add picture button** must have **[TabIndex](properties-accessibility.md)** of zero or greater so that keyboard users can navigate to it.
 * **Add picture button** must have clearly visible focus indicators. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

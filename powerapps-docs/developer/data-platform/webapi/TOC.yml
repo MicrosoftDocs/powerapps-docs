@@ -16,8 +16,12 @@
       href: enhanced-quick-start.md
     - name: Start Web API project in Visual Studio
       href: start-web-api-project-visual-studio-csharp.md
-- name: Authenticate
-  href: authenticate-web-api.md
+- name: Security and web service access
+  items:
+  - name: Web service authentication
+    href: authenticate-web-api.md
+  - name: Active Directory group teams
+    href: aad-group-team.md
 - name: Types and operations
   href: web-api-types-operations.md
 - name: Perform operations
@@ -34,15 +38,15 @@
       href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
-  - name: Create an entity
+  - name: Create an entity record
     href: create-entity-web-api.md
-  - name: Retrieve an entity
+  - name: Retrieve an entity record
     href: retrieve-entity-using-web-api.md
-  - name: Update and delete entities 
+  - name: Update and delete entity records 
     href: update-delete-entities-using-web-api.md
   - name: Associate and disassociate entities
     href: associate-disassociate-entities-using-web-api.md
-  - name: Merge entities 
+  - name: Merge entity records 
     href: merge-entity-using-web-api.md
   - name: Use functions
     href: use-web-api-functions.md
@@ -56,6 +60,8 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
+  - name: Access entity data faster using partitions
+    href: azure-storage-partitioning.md
 - name: Work with metadata
   items:
   - name: Get started with using metadata

@@ -1,1 +1,1 @@
-Sets the name of the entity to be displayed on the form.
+Sets the name of the table to be displayed on the form.

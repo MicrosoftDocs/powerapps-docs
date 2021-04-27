@@ -23,10 +23,9 @@ search.app:
 
 # The App page
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-
 After the user selects an app, the user is navigated to the app's detail page, which provides a view to analyze the install history across tenants for that particular app. The app description is from [AppSource](https://appsource.microsoft.com/).
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![App detail page](media/isv-portal-apppage-appname.png)
@@ -95,3 +94,6 @@ ISVs can filter the app page using the filters available. For example, an ISV ca
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [AppSource checker](isv-app-management-appsource-checker.md)<br/>
 [Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

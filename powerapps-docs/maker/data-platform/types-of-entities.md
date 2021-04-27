@@ -58,21 +58,55 @@ The following table lists activity tables that are available in a default Datave
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
-|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](/powerapps/developer/data-platform/reference/tables/appointment)|
-|**Email**|Activity that is delivered using email protocols.|Yes|[Email](/powerapps/developer/data-platform/reference/tables/email)|
-|**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](/powerapps/developer/data-platform/reference/tables/fax)|
-|**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](/powerapps/developer/data-platform/reference/tables/letter)|
-|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall](/powerapps/developer/data-platform/reference/tables/phonecall)|
-|**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](/powerapps/developer/data-platform/reference/tables/recurringappointmentmaster)|
-|**Task**|Generic activity representing work needed to be done.|Yes|[Task](/powerapps/developer/data-platform/reference/tables/task)|
+|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](../../developer/data-platform/reference/entities/appointment.md) |
+|**Email**|Activity that is delivered using email protocols.|Yes|[Email](../../developer/data-platform/reference/entities/email.md)|
+|**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](../../developer/data-platform/reference/entities/fax.md)|
+|**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](../../developer/data-platform/reference/entities/letter.md)|
+|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall](../../developer/data-platform/reference/entities/phonecall.md)|
+|**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](../../developer/data-platform/reference/entities/recurringappointmentmaster.md)|
+|**Task**|Generic activity representing work needed to be done.|Yes|[Task](../../developer/data-platform/reference/entities/task.md)|
   
 You can create new custom activity tables. For example you might create a custom activity table to row instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
 
 To create a custom activity table, open the **More settings** section in the **New table** panel, select **Activity table** option from the **Choose table type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
 
+### Enable activities for a table
+
+Enable activities to add activities to a table and use the Regarding lookup for the table.
+
+1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
+
+  
+2. On the left nav, select **Data** to expand it and then select **Tables**.  
+
+   > [!div class="mx-imgBorder"]
+   >![Go to Tables in maker portal](media/maker-data-tables.png "Go to Tables in maker portal")
+   
+  
+3. Select a table.
+
+4. On the command bar, select **Settings**. 
+
+   > [!div class="mx-imgBorder"]
+   >![Select settings](media/maker-row-settings.png "Select setting")
+
+5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
+
+   > [!div class="mx-imgBorder"]
+   >![Communication and collaboration activity enabled](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
+   
+   > [!IMPORTANT]
+   > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.
+   
+6.  Select **Save Table** and then publish the table.
+
+
 ## Virtual tables
 
-A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create or edit tables](create-edit-entities.md)
+[Create or edit tables](./data-platform-create-entity.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

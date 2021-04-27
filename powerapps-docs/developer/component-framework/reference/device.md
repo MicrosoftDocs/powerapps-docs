@@ -1,6 +1,6 @@
 ---
 title: Device | Microsoft Docs
-description: 
+description: Provides methods to use native device capabilities.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -51,3 +51,5 @@ Model-driven apps and canvas apps (public preview)
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

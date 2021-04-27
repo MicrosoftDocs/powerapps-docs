@@ -4,7 +4,7 @@ description: "Learn how to invoke a custom action from a workflow"
 ms.custom: ""
 ms.date: 11/22/2018
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -40,7 +40,7 @@ Let’s look at the scenario in which a custom action is invoked from a workflow
 <a name="action"></a>   
 ## Example: Create a custom action using the opportunity table
   
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.  
+1. In [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Processes**.  
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Action** category.  
   
@@ -59,7 +59,7 @@ Before you can invoke the action from a workflow, you have to activate it. After
 <a name="workflow"></a>   
 ## Invoke a custom action from a workflow  
   
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.   
+1. In [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Processes**.   
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Workflow** category.  
   
@@ -74,3 +74,6 @@ You can set the action’s input properties by choosing **Set Properties**. We a
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

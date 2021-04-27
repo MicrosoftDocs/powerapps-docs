@@ -1,1 +1,1 @@
-Returns the primary attribute value for the record in the row.
+Returns the primary column value for the record in the row.

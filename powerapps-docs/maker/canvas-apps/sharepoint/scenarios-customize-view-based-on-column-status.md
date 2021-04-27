@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2020
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -47,7 +47,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Share the list with a user—for example, Kenny Smith.
 
-1. Select **Power Apps**, and then select **Create an app** from the SharePoint list page.
+1. Select **Integrate** -> **Power Apps** -> **Create an app** from the SharePoint list page.
 
     ![Create an app](./media/scenarios-customize-view-based-on-column-status/create-app.png "Create an app")
 
@@ -96,3 +96,6 @@ Similarly, you can use different screens in your app based on the column value, 
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

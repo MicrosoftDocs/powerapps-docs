@@ -41,3 +41,6 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/duplicate-d
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/duplicaterule-entities
 
 -->
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

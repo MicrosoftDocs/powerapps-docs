@@ -233,3 +233,6 @@ expense report), here's what we documented.
 
 > [!div class="nextstepaction"]
 > [Next step: What activities are being done?](what-activities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

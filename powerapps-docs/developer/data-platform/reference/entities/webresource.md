@@ -1,22 +1,24 @@
 ---
-title: "WebResource entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WebResource table."
-ms.date: 11/14/2020
+title: "WebResource table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the WebResource table/entity."
+ms.date: 03/04/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# WebResource entity reference
+
+# WebResource table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Data equivalent to files used in Web development. Web resources provide client-side components that are used to provide custom user interface elements.
 
@@ -25,15 +27,16 @@ Data equivalent to files used in Web development. Web resources provide client-s
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/webresourceset<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/webresourceset<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST [*org URI*]/api/data/v9.0/webresourceset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/webresourceset<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -51,9 +54,9 @@ Data equivalent to files used in Web development. Web resources provide client-s
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CanBeDeleted](#BKMK_CanBeDeleted)
 - [Content](#BKMK_Content)
@@ -195,7 +198,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAvailableForMobileOffline Options
+#### IsAvailableForMobileOffline Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -231,7 +234,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsEnabledForMobileClient Options
+#### IsEnabledForMobileClient Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -331,7 +334,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### WebResourceType Options
+#### WebResourceType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -351,11 +354,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
+- [ContentFileRef_Name](#BKMK_ContentFileRef_Name)
+- [ContentJsonFileRef_Name](#BKMK_ContentJsonFileRef_Name)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
@@ -388,7 +393,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -397,6 +402,42 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |2|Deleted|
 |3|Deleted Unpublished|
 
+
+
+### <a name="BKMK_ContentFileRef_Name"></a> ContentFileRef_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|contentfileref_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ContentJsonFileRef_Name"></a> ContentJsonFileRef_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|contentjsonfileref_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -486,7 +527,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -680,11 +721,12 @@ Listed by **SchemaName**.
 - [solution_configuration_webresource](#BKMK_solution_configuration_webresource)
 - [webresource_userqueryvisualizations](#BKMK_webresource_userqueryvisualizations)
 - [lk_theme_logoid](#BKMK_lk_theme_logoid)
+- [webresource_FileAttachments](#BKMK_webresource_FileAttachments)
 
 
 ### <a name="BKMK_webresource_savedqueryvisualizations"></a> webresource_savedqueryvisualizations
 
-Same as savedqueryvisualization entity [webresource_savedqueryvisualizations](savedqueryvisualization.md#BKMK_webresource_savedqueryvisualizations) Many-To-One relationship.
+Same as savedqueryvisualization table [webresource_savedqueryvisualizations](savedqueryvisualization.md#BKMK_webresource_savedqueryvisualizations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -699,7 +741,7 @@ Same as savedqueryvisualization entity [webresource_savedqueryvisualizations](sa
 
 ### <a name="BKMK_solution_configuration_webresource"></a> solution_configuration_webresource
 
-Same as solution entity [solution_configuration_webresource](solution.md#BKMK_solution_configuration_webresource) Many-To-One relationship.
+Same as solution table [solution_configuration_webresource](solution.md#BKMK_solution_configuration_webresource) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -714,7 +756,7 @@ Same as solution entity [solution_configuration_webresource](solution.md#BKMK_so
 
 ### <a name="BKMK_webresource_userqueryvisualizations"></a> webresource_userqueryvisualizations
 
-Same as userqueryvisualization entity [webresource_userqueryvisualizations](userqueryvisualization.md#BKMK_webresource_userqueryvisualizations) Many-To-One relationship.
+Same as userqueryvisualization table [webresource_userqueryvisualizations](userqueryvisualization.md#BKMK_webresource_userqueryvisualizations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -729,7 +771,7 @@ Same as userqueryvisualization entity [webresource_userqueryvisualizations](user
 
 ### <a name="BKMK_lk_theme_logoid"></a> lk_theme_logoid
 
-Same as theme entity [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) Many-To-One relationship.
+Same as theme table [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -741,41 +783,66 @@ Same as theme entity [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) Many-To-On
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_webresource_FileAttachments"></a> webresource_FileAttachments
+
+Same as fileattachment table [webresource_FileAttachments](fileattachment.md#BKMK_webresource_FileAttachments) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fileattachment|
+|ReferencingAttribute|objectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|webresource_FileAttachments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_webresourcebase_modifiedonbehalfby](#BKMK_lk_webresourcebase_modifiedonbehalfby)
 - [webresource_createdby](#BKMK_webresource_createdby)
 - [lk_webresourcebase_createdonbehalfby](#BKMK_lk_webresourcebase_createdonbehalfby)
 - [webresource_modifiedby](#BKMK_webresource_modifiedby)
 - [webresource_organization](#BKMK_webresource_organization)
+- [FileAttachment_WebResource_ContentFileRef](#BKMK_FileAttachment_WebResource_ContentFileRef)
+- [FileAttachment_WebResource_ContentJsonFileRef](#BKMK_FileAttachment_WebResource_ContentJsonFileRef)
 
 
 ### <a name="BKMK_lk_webresourcebase_modifiedonbehalfby"></a> lk_webresourcebase_modifiedonbehalfby
 
-See systemuser Entity [lk_webresourcebase_modifiedonbehalfby](systemuser.md#BKMK_lk_webresourcebase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_webresourcebase_modifiedonbehalfby](systemuser.md#BKMK_lk_webresourcebase_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_webresource_createdby"></a> webresource_createdby
 
-See systemuser Entity [webresource_createdby](systemuser.md#BKMK_webresource_createdby) One-To-Many relationship.
+See systemuser Table [webresource_createdby](systemuser.md#BKMK_webresource_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_webresourcebase_createdonbehalfby"></a> lk_webresourcebase_createdonbehalfby
 
-See systemuser Entity [lk_webresourcebase_createdonbehalfby](systemuser.md#BKMK_lk_webresourcebase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_webresourcebase_createdonbehalfby](systemuser.md#BKMK_lk_webresourcebase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_webresource_modifiedby"></a> webresource_modifiedby
 
-See systemuser Entity [webresource_modifiedby](systemuser.md#BKMK_webresource_modifiedby) One-To-Many relationship.
+See systemuser Table [webresource_modifiedby](systemuser.md#BKMK_webresource_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_webresource_organization"></a> webresource_organization
 
-See organization Entity [webresource_organization](organization.md#BKMK_webresource_organization) One-To-Many relationship.
+See organization Table [webresource_organization](organization.md#BKMK_webresource_organization) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_WebResource_ContentFileRef"></a> FileAttachment_WebResource_ContentFileRef
+
+See fileattachment Table [FileAttachment_WebResource_ContentFileRef](fileattachment.md) One-To-Many relationship.
+
+### <a name="BKMK_FileAttachment_WebResource_ContentJsonFileRef"></a> FileAttachment_WebResource_ContentJsonFileRef
+
+See fileattachment Table [FileAttachment_WebResource_ContentJsonFileRef](fileattachment.md) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.webresource?text=webresource EntityType" />

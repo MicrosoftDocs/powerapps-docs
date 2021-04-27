@@ -144,3 +144,6 @@ In this topic, you create or edit filters by performing the following tasks:
 [Choose and configure columns](choose-and-configure-columns.md)  
 [Edit filter criteria](edit-filter-criteria.md)  
 [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../data-platform/create-edit-1n-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

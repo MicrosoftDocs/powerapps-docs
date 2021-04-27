@@ -52,10 +52,10 @@ This article shows you how to delete a canvas app.
 
 If owner of an app is unavailable, an administrator such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin can set the owner of an app. And then, the [new owner can delete the app](#delete-an-app-as-the-owner).
 
-To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](https://docs.microsoft.com/power-platform/admin/powerapps-powershell).
+To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell).
 
 > [!TIP]
-> You can also recover a deleted canvas app using [Power Apps cmdlets for administrators](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#recover-a-deleted-canvas-app) as long as the app is [discoverable](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#display-a-list-of-deleted-power-apps-in-an-environment).
+> You can also recover a deleted canvas app using [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#recover-a-deleted-canvas-app) as long as the app is [discoverable](/power-platform/admin/powerapps-powershell#display-a-list-of-deleted-power-apps-in-an-environment).
 
 ### See also
 
@@ -63,3 +63,6 @@ To set a user as the owner of an app, use the [Power Apps cmdlets for administra
 - [Change app name and tile](set-name-tile.md)  
 - [Restore an app to a previous version](restore-an-app.md)
 - [Export and import an app](export-import-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
