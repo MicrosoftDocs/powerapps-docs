@@ -83,7 +83,7 @@ Contoso has a web page with a basic form that shows all current car listings in 
 
 To configure table permissions for global access to all authenticated users:
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -121,7 +121,7 @@ Contoso has a web page with a basic form that allows sales staff to view, update
 
 To configure table permissions for contact access to owning sales staff:
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -161,7 +161,7 @@ Contoso has a web page with a basic form that allows sales staff to view all the
 
 To configure table permissions for account access to sales staff for dealerships:
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -201,7 +201,7 @@ Contoso has a web page with a basic form that allows sales staff to view car lis
 
 To configure table permissions for sales staff to view associated dealership's car listings:
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
