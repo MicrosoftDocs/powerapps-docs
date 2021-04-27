@@ -1,6 +1,7 @@
 ---
 title: "getActiveStage (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getActiveStage method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

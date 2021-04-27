@@ -299,7 +299,7 @@ For custom workflow activities you must specify the following properties to cont
 
 ## Debug Workflow Activities
 
-With custom workflow activities deployed to Dataverse you can capture profiles to replay for local debugging and use the tracing service to write information to an table.
+With custom workflow activities deployed to Dataverse you can capture profiles to replay for local debugging and use the tracing service to write information to a table.
 
 The following example shows using the tracing service to write the following message: `Add your message.`
 

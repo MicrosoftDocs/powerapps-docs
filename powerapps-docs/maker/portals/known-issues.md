@@ -1,37 +1,36 @@
 ---
-title: Known issues in Power Apps portals | Microsoft Docs
+title: Known issues
 description: Learn about the known issues in Power Apps portals 
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/12/2021
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
+    - GitanjaliSingh33msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Known issues
 
-> [!NOTE]
-> Effective November 2020:
-> - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
-> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](../data-platform/data-platform-intro.md)
->
-> Power Apps portals articles will be updated soon to reflect the latest terminology.
-
 ## General issues
 
-- You receive the following error message when configuring or using entity fields:
+- You receive the following error message when configuring or using table fields:
 
     ***Field Name**: You have exceeded the maximum number of X characters in this field.*
 
-    This can happen if the referenced field for the entity exceeds characters limit mentioned in the error. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
+    This can happen if the referenced field for the table exceeds characters limit mentioned in the error. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable table and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
 
     Fields where limit may need to be increased:
 
-    | Entity | Field Display Name |
+    | Table | Field Display Name |
     | - | - |
-    | Entity Form | Settings (adx_settings) |
+    | Basic Form | Settings (adx_settings) |
     | Enity List | View (adx_views) |
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
     | Web Page | Copy (adx_copy) |

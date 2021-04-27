@@ -77,7 +77,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 ```JavaScript
 function EnableRule()
 {
-    const value = Xrm.Page.getAttribute("field1").getValue();
+    const value = Xrm.Page.getAttribute("column1").getValue();
     return value === "Active";
 }
 ```
@@ -170,7 +170,7 @@ function EnableRule() {
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
 ### Value Rule
-Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
+Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
 ### Show On Quick Action Rule
 
