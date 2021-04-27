@@ -11,7 +11,7 @@ ms.reviewer: kvivek
 
 ---
 
-# Fusion development approach to building apps using Power Apps
+# Ebook: Fusion development approach to building apps using Power Apps
 
 ![cover image](./media/cover/power-apps-ebook-monitor.svg)
 
