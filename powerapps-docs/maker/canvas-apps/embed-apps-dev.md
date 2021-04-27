@@ -94,3 +94,6 @@ Keep the following points in mind for authenticating users of your app:
 - If your website uses any other sign-in mechanism or is not authenticated, your users see a sign-in prompt on the iframe. After they sign-in, they will be able to run the app as long as the author of the app has shared it with them.
 
 As you can see, embedding apps is simple and powerful. Embedding enables you to bring apps right to the places you and your customers work – websites, Power BI dashboards, SharePoint pages, and more.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

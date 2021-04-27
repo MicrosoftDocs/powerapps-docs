@@ -1,6 +1,7 @@
 ---
 title: "retrieveRecord (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the retrieveRecord method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -37,13 +38,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to retrieve. For example: "account".</td>
+<td>The table logical name of the record you want to retrieve. For example: "account".</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to retrieve.</td>
+<td>GUID of the table record you want to retrieve.</td>
 </tr>
 <tr>
 <td>options</td>
@@ -51,11 +52,11 @@ search.app:
 <td>No</td>
 <td><p>OData system query options, <b>$select</b> and <b>$expand</b>, to retrieve your data.</p>
 <ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related entities is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
+<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
 </ul>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&</code> to separate the query options. For example:</p>
 <code>?$select=name&$expand=primarycontactid($select=contactid,fullname)</code>
-<p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve scenarios.</td>
+<p>See examples later in this article to see how you can define the <code>options</code> parameter for various retrieve scenarios.</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -74,7 +75,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise containing a JSON object with the retrieved attributes and their values.
+On success, returns a promise containing a JSON object with the retrieved columns and their values.
 
 ## Examples
 
@@ -99,7 +100,7 @@ The above example displays the following in your console; you might see other va
 
 `Retrieved values: Name: Sample Account, Revenue: 5000000`
 
-### Retrieve related entities for an entity instance by expanding single-valued navigation properties
+### Retrieve related tables for a table instance by expanding single-valued navigation properties
 
  The following example demonstrates how to retrieve the contact for an account record with record ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact record, we are only retrieving the **contactid** and **fullname** properties.
 
@@ -131,3 +132,6 @@ The above example displays the following in your console; you might see other va
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

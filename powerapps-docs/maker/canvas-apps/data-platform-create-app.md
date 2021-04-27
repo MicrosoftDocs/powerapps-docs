@@ -18,13 +18,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](/power-platform/admin/working-with-environments) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
 
 ## Create an app
 
@@ -64,3 +64,6 @@ In this quickstart, you created an app to manage sample data about accounts in D
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

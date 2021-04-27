@@ -1,13 +1,16 @@
 ---
-title: "Download public key of a portal | MicrosoftDocs"
-description: "Learn how to download public key of a portal."
+title: Download public key of a portal
+description: Learn how to download public key of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Download public key of portal
@@ -17,7 +20,7 @@ The public key of a portal is used to configure Live Assist for customer engagem
 > [!TIP]
 > To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2.	Go to **Portal Actions** > **Get Public Key**. The key is displayed.
 
@@ -30,3 +33,6 @@ Alternately, you can also get the public key by going to the URL: `<portal_base_
 
 > [!NOTE]
 > If the portal is currently being provisioned or the package install is not finished in the organization, an error is displayed if you try to download the public key. You must wait until portal provisioning is complete and the portal is up and running.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

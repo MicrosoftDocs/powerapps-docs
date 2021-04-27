@@ -26,7 +26,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 -   [Find your administrator or support person](find-admin.md)  
 
--   [Enable OneDrive for Business](https://docs.microsoft.com/power-platform/admin/enable-onedrive-for-business)  
+-   [Enable OneDrive for Business](/power-platform/admin/enable-onedrive-for-business)  
 
 
 ## The first time you view your documents  
@@ -102,3 +102,6 @@ Be aware of the following regarding OneDrive for Business in Dataverse:
 - OneDrive storage folders are created in the user's current Dataverse language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
 - There might be a delay between when the documents are shared in OneDrive and when they're available to other users. 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

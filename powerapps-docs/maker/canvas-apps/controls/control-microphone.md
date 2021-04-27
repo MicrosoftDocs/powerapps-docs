@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/28/2020
+ms.date: 01/07/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -39,14 +39,6 @@ Captured media is referenced by a text string URI. For more information, read th
 
 > [!NOTE]
 > The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
-
-## Considerations for Teams Mobile
-
-The following conditions apply when using the Microphone control in apps created using Power Apps on Teams Mobile:
-
-1. The audio format for microphone recordings in Teams will always be *AAC* with a file extension of .MP4.
-1. Teams has its own recording experience. Hence, the microphone control inside apps created using Power Apps will be disabled during the recording period.
-1. Microphone recordings are limited to a maximum duration of 10 minutes.
 
 ## Key properties
 
@@ -206,3 +198,10 @@ Consider adding an alternative form of input for users with speech disabilities 
 ### Screen reader support
 
 - [AccessibleLabel](properties-accessibility.md) must be present.
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

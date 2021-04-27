@@ -32,3 +32,6 @@ If you stored details about playing cards in a [collection](../working-with-data
 
 **Shuffle(Deck)**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

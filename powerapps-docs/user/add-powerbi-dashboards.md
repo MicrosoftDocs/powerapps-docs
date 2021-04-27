@@ -99,3 +99,6 @@ To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short
 [!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../includes/cc-privacy-powerbi-tiles-dashboards.md)]
   
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

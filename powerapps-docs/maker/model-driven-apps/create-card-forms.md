@@ -64,3 +64,6 @@ Although card forms can be created and edited in the same way as other form type
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

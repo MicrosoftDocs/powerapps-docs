@@ -1,13 +1,16 @@
 ---
-title: Work with templates | Microsoft Docs
-description: Instructions to work with templates in portal.
+title: Work with templates
+description: Learn how to work with templates in portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Work with templates
@@ -38,3 +41,16 @@ To open a template in code editor:
 > [!NOTE]
 > - You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 > - The page templates you create using the [Portal Management app](configure/configure-portal.md) are also displayed in the **Templates** pane.
+
+## Next steps
+
+[Work with themes](theme-overview.md)
+
+### See also
+
+[Power Apps portals Studio](portal-designer-anatomy.md) <br>
+[Create and manage webpages](create-manage-webpages.md) <br>
+[WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

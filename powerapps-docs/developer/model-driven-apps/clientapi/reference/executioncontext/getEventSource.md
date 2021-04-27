@@ -1,7 +1,7 @@
 ---
 title: "getEventSource (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getEventSource method that returns a reference to the object that the event occurred on." 
-ms.date: 05/31/2020
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -27,11 +27,13 @@ Returns a reference to the object that the event occurred on.
 
 **Type**: Object
 
-**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity** attribute object that represents the changed attribute.
+**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity**  object that represents the changed column.
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 |Events|Return Object|
 |-------|------------|
-|[OnChange](../events/attribute-onchange.md)|[attribute](../attributes.md)|
+|[OnChange](../events/attribute-onchange.md)|[column](../attributes.md)|
 |[OnDataLoad](../events/form-data-onload.md)|[formContext.data.entity](../formcontext-data-entity.md)|
 |[OnGridDataLoad](../events/subgrid-onload.md)|[SubGrid](../controls.md#subgrid-control-type) control|
 |[OnLoad](../events/form-onload.md)|[formContext.ui](../formcontext-ui.md)|
@@ -53,3 +55,6 @@ Returns a reference to the object that the event occurred on.
 ### Related topics
 
 [Execution context](../execution-context.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

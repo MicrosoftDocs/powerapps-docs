@@ -38,3 +38,6 @@ If a column in your table contains images, include "image" in the name of that c
 ## Next steps
 * [Generate an app from Excel in Power Apps](get-started-create-from-data.md) based on a table that you specify. The app will have three screens by default: one each for browsing records, displaying details about a single record, and creating or updating a record.
 * [Create an app from scratch](get-started-create-from-blank.md) using the table you format in Excel. You can manually create and customize your app to display, browse, or edit the data in your table.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Understand delegation in a canvas app
+
 Power Apps includes a powerful set of functions for filtering, sorting, and shaping tables of data in a canvas app: **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, and **[AddColumns](functions/function-table-shaping.md)** functions to name just a few. With these functions, you can provide your users with focused access to the information they need. For those with a database background, using these functions is the equivalent of writing a database query.
 
 The key to building efficient apps is to minimize the amount of data that must be brought to your device. Perhaps you need only a handful of records from a sea of million, or a single aggregate value can represent thousands of records. Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more. Being focused can dramatically reduce the processing power, memory, and network bandwidth that your app needs, resulting in snappier response times for your users, even on phones connected via a cellular network. 
@@ -29,11 +30,11 @@ Where this becomes complicated, and the reason this article exists, is because n
 > Delegation warnings were previously flagged in Power Apps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, Power Apps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
 
 ## Delegable data sources
-Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](https://docs.microsoft.com/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
+Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-- [Common Data Service](https://docs.microsoft.com/connectors/commondataservice/) 
-- [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
-- [SQL Server](https://docs.microsoft.com/connectors/sql/) 
+- [Common Data Service](/connectors/commondataservice/) 
+- [SharePoint](/connectors/sharepointonline/) 
+- [SQL Server](/connectors/sql/) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.
 
@@ -75,7 +76,7 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sourcesdelegable-data-sources) for details.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
@@ -145,7 +146,7 @@ Marching dots appear momentarily near the top of the screen as the app communica
 
 ![Search text-input control](./media/delegation-overview/products-apple.png)
 
-The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search team at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
+The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
 
 ![Remove SortByColumns call](./media/delegation-overview/products-apple-delegationwarning.png)
 
@@ -159,3 +160,11 @@ But it worked, didn't it? Well, kind of. And that is why this is a warning and n
 
 - If the table contains fewer than 500 records, the formula worked perfectly. All records were brought to the device, and **Filter** was applied locally.
 - If the table contains more than 500 records, the formula won't return record 501 or higher, even if it matches the criteria.
+
+### See also
+
+[Impact of using non-delegable functions and inappropriate data row limits on performance](common-performance-issue-resolutions.md#use-of-non-delegable-functions-and-inappropriate-data-row-limits-for-non-delegable-queries) <br>
+[Performance tips and best practice to use delegation](performance-tips.md#use-delegation)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

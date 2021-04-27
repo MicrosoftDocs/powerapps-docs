@@ -25,7 +25,7 @@ It's a quick way to create multiple connections and roles for a particular row. 
 
 Connection roles are directly associated to a connection. To use a connection role, you must first add a connection to your row.
 
-Before you can add connection roles, it needs to be enabled by your admin. For more information see, [Configure connection roles](https://docs.microsoft.com/powerapps/maker/common-data-service/configure-connection-roles).
+Before you can add connection roles, it needs to be enabled by your admin. For more information see, [Configure connection roles](../maker/data-platform/configure-connection-roles.md).
 
 1. To add or manage connections, select the row you want to manage like an opportunity.  
 2. Select the **Related** tab and then select **Connection**. This will open the connection grid with the list of connections for the row.
@@ -78,3 +78,6 @@ You can also manage the connection role types that you want associate to the con
     > ![Manage Row Type](media/connection6.png "Manage Row Type") 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

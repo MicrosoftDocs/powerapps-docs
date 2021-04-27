@@ -45,22 +45,16 @@ With Power Apps, model-driven apps are comprised of components such as tables, d
 |![Step 2](media/walkthrough-green-2.png "Step 2")|Define navigation for an app using the site map designer.|[Create a site map for an app](create-site-map-app.md)|  
 |![Step 3](media/walkthrough-green-3.png "Step 3")|Apps are composed of components like dashboards, tables, business process flows, forms, views, and charts. Include the required ones in your app by using the app designer.|[Add or edit app components](add-edit-app-components.md)|  
 |![Step 4](media/walkthrough-green-4.png "Step 4")|Check your app for any required components you haven't added. After all required components are added make the app available for use. |[Validate and publish an app](validate-app.md)|  
-|![Step 5](media/walkthrough-green-5.png "Step 5")|Give users access to the apps you created by using security roles.|[Share a model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app)|  
+|![Step 5](media/walkthrough-green-5.png "Step 5")|Give users access to the apps you created by using security roles.|[Share a model-driven app](./share-model-driven-app.md)|  
   
-## Support matrix for the app designer and site map designer  
- The following table shows the supported operating systems and browsers.  
-  
-|Browser/OS|Windows 10|Windows 8.1|Windows 8|Mac OS X|  
-|-----------------|----------------|-----------------|---------------|--------------|  
-| Microsoft Edge |Yes||||  
-| Internet Explorer 11 |Yes|Yes|||  
-| Internet Explorer 11 Modern ||Yes|||  
-| Internet Explorer 10 |||Yes||  
-| Internet Explorer 10 Modern |||Yes||  
-| Mozilla Firefox |Yes|Yes|Yes||  
-| Google Chrome |Yes|Yes|Yes||  
-| Apple Safari ||||Yes|  
-  
-## Next steps  
- [Build your first model-driven app from scratch](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+## Supported web browsers
 
+ For information about the supported web browsers to use with the app designer and site map designer, see [Supported web browsers and mobile devices](/power-platform/admin/supported-web-browsers-and-mobile-devices).  
+  
+### Next steps
+
+ [Build your first model-driven app from scratch](./build-first-model-driven-app.md)
+
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -62,3 +62,6 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
 ## Accessibility guidelines
 ### Screen reader support
 * **DisplayName** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

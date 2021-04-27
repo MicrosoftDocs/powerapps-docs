@@ -1,6 +1,6 @@
 ---
 title: Navigation | Microsoft Docs
-description: 
+description: Provides navigation-related methods.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -41,3 +41,5 @@ To learn more about how to implement navigation methods, see [Navigation API com
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

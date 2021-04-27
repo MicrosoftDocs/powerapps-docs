@@ -126,3 +126,6 @@ The export functionality isn't supported in web browsers.
 
 ## Accessibility guidelines
 The same guidelines for **[Button](control-button.md)**  apply because **Export** and **Import** are just specialized buttons.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

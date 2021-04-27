@@ -107,3 +107,6 @@ To generate a single GUID instead of a table, use this formula:
 ```powerapps-dot
 Set( NewGUID, GUID() )
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

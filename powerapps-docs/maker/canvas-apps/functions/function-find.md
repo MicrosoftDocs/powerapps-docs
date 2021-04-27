@@ -29,3 +29,6 @@ The **Find** function looks for a string within another string and is case sensi
 * *WithinString* - Required.  The string to search within.
 * *StartingPosition* - Optional.  The starting position to start searching.  Position 1 is the first character.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

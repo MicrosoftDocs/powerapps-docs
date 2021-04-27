@@ -51,3 +51,6 @@ The user running these formulas is located in the United States and has selected
 | **Value( "$ 12.34" )** |The currency symbol for the current language is ignored. |12.34 |
 | **Value( "24e3" )** |Scientific notation for 24 x 10<sup>3</sup>. |24000 |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

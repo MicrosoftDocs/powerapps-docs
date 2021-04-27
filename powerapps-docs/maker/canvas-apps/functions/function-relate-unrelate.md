@@ -49,7 +49,7 @@ You can use these functions only in [behavior formulas](../working-with-formulas
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
+Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../data-platform/create-edit-entities-portal.md):
 
 | Relationship display name | Related entity | Relationship type |
 | --- | --- |
@@ -333,3 +333,6 @@ Many-to-many relationships are symmetric. You can extend the example to add prod
 With this new screen, users can add a contact to a product and then flip to a view of contacts and see the associated product. The relationships are symmetric and shared between the two screens.
 
 ![Demonstrate many-to-many relationship from either side](media/function-relate-unrelate/contacts-reverse.gif)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
