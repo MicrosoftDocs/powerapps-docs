@@ -61,6 +61,9 @@ In this component, you'll store a table that acts as the dictionary of all trans
 
 1. Select **Create**.
 
+    > [!NOTE]
+    > This input property will receive the current locale ID (LCID) of the logged-in user.
+
 1. From the property pane on the right-side of the screen, select **+ New custom property**.
 
 1. Set the following property values:
@@ -73,57 +76,50 @@ In this component, you'll store a table that acts as the dictionary of all trans
     | Property type | Output |
     | Data type | Record |
 
-
+    ![New labels property](media/multi-language-apps/new-labels-property.png "New labels property")
 
 1. Select **Create**.
 
-1. Create the Input and Output parameters for your component, as follows: 
+    > [!NOTE]
+    > This output property exposes the translated labels based on the input locale ID.
 
-   - **Language**: An input property that will receive the current LCID (Locale ID) of the logged-in user. 
-   
-      - Select the Data type "Text"
+1. On the upper-left side of the screen, select the property list drop-down and choose **OnReset** property for the component.
 
-      - Select the option “Raise OnReset when value changes”, since this will call the formula on the OnReset event of the component that we will write later.
+    ![OnReset property for the component](media/multi-language-apps/onreset.png "OnReset property for the component")
 
-      ![Microsoft Power Apps Canvas App Editor: Custom Language Property](media/multi-language-apps/image-20210304105245593.png)
-   
-   - **Labels**: An output property of type Table that will expose the translated labels based on the input LCID property.
+1. Copy and pate the following formula in the formula bar for the **OnReset** property.
 
-      ![Microsoft Power Apps Canvas App Editor: Custom Labels Property](media/multi-language-apps/image-20210304105449314.png)
-
-1. Next, create a table that will be the dictionary of all translations. To do this, declare a table variable on the **OnReset** event of the component as follows:
-
-   ![Microsoft Power Apps Canvas App Editor: Create Table OnReset](media/multi-language-apps/image-20210304131142608.png)
-
-   ```
+   ```powerapps-dot
    Set(
     varTranslations,
     Table(
-        {
-            Language: "en-us",
-            Labels: {
-                Title: "UI Tips for Building Canvas Apps",
-                JobTitle: "Power Platform Specialist",
-                Close: "Close",
-                Open: "Open",
-                Cancel: "Cancel"
+            {
+                Language: "en-us",
+                Labels: {
+                    Title: "UI Tips for building canvas apps",
+                    JobTitle: "Power Platform Specialist",
+                    Close: "Close",
+                    Open: "Open",
+                    Cancel: "Cancel"
+                }
+            },
+            {
+                Language: "pt-br",
+                Labels: {
+                    Title: "Dicas de UI para construir canvas apps",
+                    JobTitle: "Especialista de Power Platform",
+                    Close: "Fechar",
+                    Open: "Abrir",
+                    Cancel: "Cancelar"
+                }
             }
-        },
-        {
-            Language: "pt-br",
-            Labels: {
-                Title: "Dicas de UI para construir Canvas Apps",
-                JobTitle: "Especialista de Power Platform",
-                Close: "Fechar",
-                Open: "Abrir",
-                Cancel: "Cancelar"
-            }
-        }
-    )
-   )
+        )
+       )
    ```
 
-   The table should have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
+    The formula uses [Set()](functions/function-set.md) function to create a [table](functions/function-table.md) with the labels in different languages as a dictionary. To customize this table as the dictionary for your translations, change the control names such as *Title*, *JobTitle*, *Platform*, *Close*, *Open*, *Cancel*, and so on. You can add, or remove translations for control names depending on your business requirement.
+
+    The table should also have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
 
 1. Now change the formula of the output property **Labels** as follows:
 
