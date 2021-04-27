@@ -6,7 +6,7 @@ metadata:
   ms.service: powerapps
   ms.topic: conceptual
   ms.custom: 
-  ms.date: 04/23/2021
+  ms.date: 04/27/2021
   ms.author: sandhan
   ms.reviewer: tapanm
   contributors:
@@ -23,6 +23,11 @@ summary: |
 sections:
   - name: General
     questions:
+      - question: |
+          How do I track changes to Power Apps portals configuration?
+        answer: |
+          You can use [auditing in Microsoft Dataverse](../../developer/data-platform/auditing-overview.md) to keep track of changes to Power Apps portals configuration entities. Auditing helps determine the change history if configuration data needs to be reverted.
+
       - question: |
           Does Power Apps portals support TLS 1.2?
         answer: |
