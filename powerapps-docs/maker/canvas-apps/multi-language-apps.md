@@ -1,5 +1,5 @@
 ---
-title: Build a multi-language app. | Microsoft Docs
+title: Build a multi-language app
 description: Use Power Apps to build apps that that can support multiple languages.
 author: tapanm-msft
 ms.service: powerapps
@@ -15,12 +15,15 @@ search.app:
 ---
 
 # Build a multi-language app
-> [!IMPORTANT] 
-> This approach uses a feature of canvas apps that is still in public preview. For more information, see [Create a component for canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/create-component)
 
-In this article we'll describe an approach to creating multi-language apps that makers can use to provide their users with a localized experience. The approach uses canvas app components to make translations available across the entire app using a uniform formula syntax. 
+In this article, you'll learn how to create a multi-language app with localized experience. With this method, you can use canvas app components and make translations available in an app using a uniform formula syntax.
 
-## Create the Translation Component
+> [!IMPORTANT]
+> The method described in this article use components for canvas apps which is in public preview. For more information, see [Create a component for canvas apps](create-component.md)
+
+## Create a translation component
+
+When working with a multi-language app, the first step is to create a reusable component for translation. In this component, you'll store 
 
 1. In your app create a new **component** using the canvas editor. Give the component a name such as “**Translation Component**”
 
