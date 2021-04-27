@@ -1,11 +1,11 @@
 ---
-title: "Chapter 5: Creating and publishing a Web API in Azure  | Microsoft Docs"
+title: "5: Creating and publishing a Web API in Azure  | Microsoft Docs"
 description: "Learn about creating and publishing a Web API in Azure."
 author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/21/2021
+ms.date: 04/26/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Chapter 5: Creating and publishing a Web API in Azure
 
-Having established that the data for the technicians' app should be sourced from the existing systems through a Web API, Maria and Kiana work together to determine exactly which information is needed, and in what format. Kiana will then create a web app that exposes the appropriate Web API and arrange for it to be hosted in Azure. The app can connect to Azure from anywhere there is a wireless connection.
+Having established that the data for the technicians' app should be sourced from existing systems through a Web API, Maria and Kiana work together to determine exactly which information is needed, and in what format. Kiana will then create a web app that exposes the appropriate Web API and arrange for it to be hosted in Azure. The app can connect to Azure from anywhere there's a wireless connection.
 
 ## Defining the Web API operations: Field inventory management
 
@@ -22,27 +22,27 @@ The **Browse** screen of the Field Inventory Management section of the app displ
 In the existing inventory database (named **InventoryDB**), information about parts is held in a single table named **BoilerParts**. Kiana determines that the Web API should support the following requests:
 
 -   Get all boiler parts.
--   Get the details of a part given the part ID.
+-   Get the details of a part, given the part ID.
 
 ## Defining the Web API operations: Field Knowledgebase
 
-In the existing system, the knowledge base database (named **KnowledgeDB)** contains three tables that record and manage the relationships between tips, engineers, and parts:
+In the existing system, the knowledge base database (named **KnowledgeDB)** contains three tables that record and manage the relationships among tips, engineers, and parts:
 
--   **Tips**, which contains the details of a tip. Each tip comprises a single line summary identifying a particular problem (the *subject*), and a more detailed explanation describing how to solve the problem (the *body*). Each tip also references a part, and the engineer who recorded the tip.
+-   **Tips**, which contains the details of a tip. Each tip comprises a single line summary identifying a particular problem (the *subject*), and a more detailed explanation describing how to solve the problem (the *body*). Each tip also references a part and the engineer who recorded the tip.
 -   **BoilerParts**, which contains a list of the parts referenced by tips. The details of the parts themselves are stored in the **BoilerParts** table in the **InventoryDB** database.
 -   **Engineers**, which lists the technicians who have authored each tip.
 
 The knowledge base part of the app currently just contains a placeholder **Browser** screen. Maria wants to implement the following functionality:
 
--   The technician specifies a search term on the **Browse** screen to find all matching tips. The match could be in the name of the part to which the tip refers, the text in the subject or body of the tip, or the name of a technician who is an expert with a specific piece of equipment.
+-   The technician specifies a search term on the **Browse** screen to find all matching tips. The match could be in the name of the part to which the tip refers, text in the subject or body of the tip, or the name of a technician who's an expert with a specific piece of equipment.
 -   When all matching tips have been found, the technician can select a tip to view its details.
 -   A technician can also add new tips to the knowledge base, as well as add notes and comments to existing tips.
 
-    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Search to provide the search functionality, as described earlier. To support the app, Kiana decides that the following operations are required from the Web API:
+    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Cognitive Search to provide the search functionality, as described earlier. To support the app, Kiana decides that the following operations are required from the Web API:
 
 -   Find the details of a specified knowledge base tip from the **Tips** table.
 -   Update an existing knowledge base tip in the **Tips** table.
--   Add a new knowledge base tip to the **Tips** table, which might also involve adding rows to the **BoilerParts** and **Engineers** tables if the specified part or engineer currently have no tips recorded against them. The routine that actually performs the logic behind adding a new tip will be implemented as an Azure Logic app called from Power Apps.
+-   Add a new knowledge base tip to the **Tips** table, which might also involve adding rows to the **BoilerParts** and **Engineers** tables if the specified part or engineer currently have no tips recorded against them. The routine that actually performs the logic behind adding a new tip will be implemented as a logic app called from Power Apps.
 
 ## Defining the Web API operations: Field scheduling
 
@@ -53,25 +53,25 @@ Scheduling technician appointments requires not only querying, adding, and remov
 -   **Engineers**, which lists each technician attending appointments.
 
 > [!NOTE]
-> The database actually contains a fourth table named **AppointmentsStatus**. This table contains a list of valid appointment statuses and is simply a lookup used by other parts of the existing appointments system.
+> The database actually contains a fourth table named **AppointmentsStatus**. This table contains a list of valid values for the status of an appointment and is simply a lookup used by other parts of the existing appointments system.
 
 Kiana decides that the following operations would be useful for the Field Scheduling part of the app:
 
 -   Find all appointments for a specified technician.
 -   Find all appointments for the current day for a specified technician.
 -   Find the next scheduled appointment for a specified technician.
--   Update the details of an appointment, such as adding notes and a photograph.
--   Find the details of a customer.
+-   Update the details of an appointment, such as adding notes or a photograph.
+-   Find details about a customer.
 
 ## Building the Web API: Field inventory management
 
-The existing systems store data using Azure SQL Database. Kiana decides to build the Web API using the Entity Framework Core, because this approach can generate a lot of the code that queries, inserts, and updates data automatically. The Web API template provided by Microsoft can also create the Swagger descriptions that describe each operation in the API. These descriptions are useful for testing the API operations. Many tools can use this information to integrate the API with other services, such as Azure API Management.
+The existing systems store data by using Azure SQL Database. Kiana decides to build the Web API by using the Entity Framework Core, because this approach can generate a lot of the code that queries, inserts, and updates data automatically. The Web API template provided by Microsoft can also create the Swagger descriptions that describe each operation in the API. These descriptions are useful for testing the API operations. Many tools can use this information to integrate the API with other services, such as Azure API Management.
 
-Kiana started with the Field Inventory functionality because this is the most straightforward part. The Field Inventory operations in the Web API query a single table, **BoilerParts**, in the **InventoryDB** database. This table contains the columns shown below:
+Kiana started with the Field Inventory functionality because this is the most straightforward part. The Field Inventory operations in the Web API query a single table, **BoilerParts**, in the **InventoryDB** database. This table contains the columns shown in the following image.
 
-![The BoilerParts table](media/image82.png)
+![The BoilerParts table showing Id, Name, CategoryId, Price, Overview, NumberInStock, and ImageURL columns](media/image82.png)
 
-Kiana took the *Code First* approach to building the Web API. With this strategy, she:
+Kiana took the "code-first" approach to building the Web API. With this strategy, she did the following:
 
 1.  Defined her own C\# **model** class that mirrored the structure of the **BoilerParts** table in the **InventoryDB** database.
 
@@ -83,9 +83,9 @@ Kiana took the *Code First* approach to building the Web API. With this strategy
 
 5.  Used the Swagger API to test the Web API.
 
-The diagram below shows the high-level structure of the Web API:
+The following image shows the high-level structure of the Web API.
 
-![The Inventory Web API](media/image83.png)
+![High-level structure of the Inventory Web API](media/image83.png)
 
 Kiana used the following procedure to create the Web API using .NET 5.0 command-line tools and Visual Studio Code:
 
@@ -93,21 +93,21 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
 
     ![New Terminal Window in VS Code](media/image84.png)
 
-2.  Run the following command to create a new Web API project named **FieldEngineerApi**:
+2.  Run the following command to create a new Web API project named **FieldEngineerApi**.
 
     ```shell
     dotnet new webapi -o FieldEngineerApi
     ```
 
-3.  Open the **FieldEngineerApi** folder:
+3.  Open the **FieldEngineerApi** folder.
 
     ![Open the FieldEngineerApi folder](media/image85.png)
 
-4.  Remove the example **WeatherForecastController.cs** controller and **WeatherForecast.cs** class file that was created by the Web API template:
+4.  Remove the example **WeatherForecastController.cs** controller and **WeatherForecast.cs** class file that was created by the Web API template.
 
     ![Delete WeatherForecast files](media/image86.png)
 
-5.  In the **Terminal** window, add the following Entity Framework packages and tools, together with support for using SQL Server, to the project:
+5.  In the **Terminal** window, add the following Entity Framework packages and tools, together with support for using SQL Server, to the project.
 
     ```shell
     dotnet add package Microsoft.EntityFrameworkCore.SqlServer
@@ -123,7 +123,7 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     dotnet tool install --global dotnet-aspnet-codegenerator
     ```
 
-6.  In the **FieldEngineerApi** folder, create a new folder called **Models**:
+6.  In the **FieldEngineerApi** folder, create a new folder named **Models**.
 
     ![Create Models folder](media/image87.png)
 
@@ -131,7 +131,7 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
 
     ![Create BoilerPart class](media/image88.png)
 
-8.  In this file, add the properties and fields shown below. These properties and fields mirror the structure of the **BoilerParts** table in the **InventoryDB** database:
+8.  In this file, add the following properties and fields. These properties and fields mirror the structure of the **BoilerParts** table in the **InventoryDB** database.
 
     ```csharp
     using System.Collections.Generic;
@@ -162,7 +162,7 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     }
     ```
 
-9.  In the **Models** folder, create another C\# code file named **InventoryContext.cs**. Add the code shown below to this class. The class provides the connection between the controller (to be created next), and the database.
+9.  In the **Models** folder, create another C\# code file named **InventoryContext.cs**. Add the following code to this class. The class provides the connection between the controller (to be created next), and the database.
 
     ```csharp
     using Microsoft.EntityFrameworkCore;
@@ -182,7 +182,7 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     }
     ```
 
-10. Edit the **appsettings.Development.json** file for the project, and add a **ConnectionStrings** section with the **InventoryDB** connection string shown below. Replace *\<server name\>* with the name of the Azure SQL Database server you created to hold the **InventoryDB** database.
+10. Edit the **appsettings.Development.json** file for the project, and add a **ConnectionStrings** section with the following **InventoryDB** connection string. Replace *\<server name\>* with the name of the SQL Database server you created to hold the **InventoryDB** database.
 
     ```xml
     {
@@ -202,14 +202,14 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     > [!IMPORTANT]
     > For the purposes of this guide only, the connection string contains the user ID and password for the database. In a production system, you should never store these items in clear text in a configuration file.
 
-11. Edit the **Startup.cs** file and add the following **using** directives to the list at the start of the file:
+11. Edit the **Startup.cs** file and add the following **using** directives to the list at the start of the file.
 
     ```csharp
     using FieldEngineerApi.Models;
     using Microsoft.EntityFrameworkCore;
     ```
 
-12. In the **Startup** class, find the **ConfigureServices** method. Add the statement shown below to this method:
+12. In the **Startup** class, find the **ConfigureServices** method. Add the following statement to this method.
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -223,7 +223,7 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     }
     ```
 
-13. Modify the **Configure** method, and enable the Swagger UI even when the app is running in production mode, as shown below (this change involves relocating the two **app.UseSwagger** method calls outside of the **if** statement):
+13. Modify the **Configure** method, and enable the Swagger UI even when the app is running in production mode, as shown (this change involves relocating the two **app.UseSwagger** method calls outside of the **if** statement).
 
     ```csharp
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -240,9 +240,9 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     ```
 
     > [!IMPORTANT]
-    > This change enables the Swagger endpoint to be exposed for Azure API Management integration. Once APIM has been configured, you should move this code back inside the **if** statement and redeploy the Web API. **Never leave the Swagger endpoint open in a production system**.
+    > This change enables the Swagger endpoint to be exposed for API Management integration. After API Management has been configured, you should move this code back inside the **if** statement and redeploy the Web API. *Never leave the Swagger endpoint open in a production system.*
 
-14. In the **Terminal** window, run the following command to generate the **BoilerParts** controller from the **BoilerPart** model class and the **InventoryContext** context class:
+14. In the **Terminal** window, run the following command to generate the **BoilerParts** controller from the **BoilerPart** model class and the **InventoryContext** context class.
 
     ```shell
     dotnet aspnet-codegenerator controller ^
@@ -252,8 +252,8 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
 
     The **BoilerParts** controller should be created in the **Controllers** folder.
 
-    > **NOTE:**
-    > The line terminator character, **\^**, is only recognized by Windows. If you are running Visual Studio Code on a Linux system, use the **\\** character instead.
+    >  [!NOTE]
+    > The line terminator character, **\^**, is only recognized by Windows. If you're running Visual Studio Code on a Linux system, use the **\\** character instead.
 
 15. Open the **BoilerParts.cs** file in the **Controllers** folder and review its contents. The **BoilerPartsController** class exposes the following REST methods:
 
@@ -263,16 +263,16 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
     -   **PostBoilerPart(BoilerPart boilerPart)**, which creates a new boiler part.
     -   **DeleteBoilerPart(long id)**, which removes the specified boiler part from the database.
 
-    > **NOTE:**
+    > [!NOTE]
     > The technician's app only requires the two **Get** methods, but the others are useful for the desktop inventory management app (not covered in this guide).
 
-16. Compile and build the Web API:
+16. Compile and build the Web API.
 
     ```shell
     dotnet build
     ```
 
-    The Web API should build without reporting any errors or warnings.
+The Web API should build without reporting any errors or warnings.
 
 ## Deploying the Web API to Azure: Field inventory management
 
@@ -280,7 +280,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
 1.  Using the Azure Account extension in Visual Studio Code, sign in to your Azure subscription.
 
-2.  From the Terminal window in Visual Studio Code, create a new resource group called **webapi\_rg** in your Azure subscription. In the command below, replace *\<location\>* with your nearest Azure region:
+2.  From the Terminal window in Visual Studio Code, create a new resource group named **webapi\_rg** in your Azure subscription. In the following command, replace *\<location\>* with your nearest Azure region.
 
     ```shell
     az group create ^
@@ -288,7 +288,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
         --location <location>
     ```
 
-3.  Create an Azure Appservice Plan to provide the resources for hosting the Web API:
+3.  Create an Azure App Service plan to provide the resources for hosting the Web API.
 
     ```shell
     az appservice plan create ^
@@ -298,9 +298,9 @@ Kiana deployed and tested the Web API, by performing the following tasks:
     ```
 
     > [!NOTE]
-    > **F1** is the free SKU for Appservice plans. It provides limited throughput and capacity, and is only suitable for development purposes.
+    > **F1** is the free SKU for App Service plans. It provides limited throughput and capacity, and is only suitable for development purposes.
 
-4.  Create an Azure Web App using the Appservice Plan. Replace *\<webapp name\>* with a unique name for the web app:
+4.  Create an Azure web app by using the App Service plan. Replace *\<webapp name\>* with a unique name for the web app.
 
     ```shell
     az webapp create ^
@@ -309,7 +309,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
         --plan webapi_plan
     ```
 
-5.  In Visual Studio Code, edit the **appSettings.json** file, and add the same connection string that you previously wrote to the **appSettings.Development.json** file. Remember to replace *\<server name\>* with the name of the Azure SQL Database server you created to hold the **InventoryDB** database.
+5.  In Visual Studio Code, edit the **appSettings.json** file, and add the same connection string that you previously wrote to the **appSettings.Development.json** file. Remember to replace *\<server name\>* with the name of the SQL Database server you created to hold the **InventoryDB** database.
 
     ```xml
     {
@@ -327,7 +327,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
     }
     ```
 
-6.  In the Terminal window, package the Web API ready for deployment to Azure:
+6.  In the Terminal window, package the Web API ready for deployment to Azure.
 
     ```shell
     dotnet publish -c Release -o ./publish
@@ -335,35 +335,35 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
     This command saves the packaged files to a folder named **publish**.
 
-7.  In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**:
+7.  In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**.
 
     ![Deploy the Web app from VS Code](media/image89.png)
 
-8.  Select the name of the web app you created in Step 4 above (*\<webapp name\>*). In the example below, the web app is called **my-fieldengineer-webapp**:
+8.  Select the name of the web app you created earlier in step 4 (*\<webapp name\>*). In the following example, the web app is named **my-fieldengineer-webapp**.
 
     ![Select the Web app](media/image90.png)
 
-9.  At the prompt in the Visual Studio Code dialog box, select **Deploy** to accept the warning and deploy the web app:
+9.  At the prompt in the Visual Studio Code dialog, select **Deploy** to accept the warning and deploy the web app.
 
     ![VS Code deployment warning](media/image91.png)
 
-10. Verify that the web app deploys successfully, and then browse to the website:
+10. Verify that the web app is deployed successfully, and then browse to the website.
 
-    ![Browse to website dialog box in VS Code](media/image92.png)
+    ![Browse to website dialog in VS Code](media/image92.png)
 
-11. The website will open in a new browser window, but will display an HTTP 404 error (not found). This is because the Web API operations are available through the **api** endpoint rather than the root of the website. Change the URL to **https://*\<webapp name\>*.azurewebsites.net/api/BoilerParts**. This URI invokes the **GetBoilerParts** method in the **BoilerParts** controller. The Web API should respond with a JSON document that lists all the boiler parts in the **InventoryDB** database:
+11. The website will open in a new browser window, but will display an HTTP 404 error (not found). This is because the Web API operations are available through the **api** endpoint rather than the root of the website. Change the URL to **https://*\<webapp name\>*.azurewebsites.net/api/BoilerParts**. This URI invokes the **GetBoilerParts** method in the **BoilerParts** controller. The Web API should respond with a JSON document that lists all the boiler parts in the **InventoryDB** database.
 
     ![Parts list displayed in the Web browser](media/image93.png)
 
-12. Change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The Swagger API should appear. This is a graphical user interface that enables a developer to verify and test each of the operations in a Web API. It also acts as a useful documentation tool:
+12. Change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The Swagger API should appear. This is a graphical user interface that enables a developer to verify and test each of the operations in a Web API. It also acts as a useful documentation tool.
 
     ![The Swagger UI displaying the list of operations](media/image94.png)
 
-13. Select **GET** adjacent to the **/api/BoilerParts/{id} endpoint, and then select **Try it out**.
+13. Select **GET** adjacent to the **/api/BoilerParts/{id}** endpoint, and then select **Try it out**.
 
     ![The "Try it out" screen in the Swagger UI](media/image95.png)
 
-14. In the **id** field, enter the ID of a part, and then select **Execute**. This action calls the **GetBoilerPart(long id)** method in the **BoilerParts** controller. It'll return a JSON document with the details of the part, or an HTTP 404 error if no matching part is found in the database:
+14. In the **id** field, enter the ID of a part, and then select **Execute**. This action calls the **GetBoilerPart(long id)** method in the **BoilerParts** controller. It will return a JSON document with the details of the part or an HTTP 404 error if no matching part is found in the database.
 
     ![The response in the Swagger UI](media/image96.png)
 
@@ -371,13 +371,13 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
 ## Building and deploying the Web API: Field Knowledgebase
 
-The Field Knowledgebase operations in the Web API work on three tables in the **KnowledgeDB** database: **Tips**, **BoilerParts**, and **Engineers**. The diagram below shows the relationships between these tables and the columns they contain:
+The Field Knowledgebase operations in the Web API work on three tables in the **KnowledgeDB** database: **Tips**, **BoilerParts**, and **Engineers**. The following image shows the relationships among these tables and the columns they contain.
 
-![Knowledgebase tables](media/image97.png)
+![Knowledgebase tables relationships](media/image97.png)
 
 Kiana adopted a similar approach for the Field Knowledgebase database that she used for the Field Inventory Management database. She performed the following tasks:
 
-1.  Create C\# model classes that mirror the structure of the **Tips**, **BoilerParts**, and **Engineers** table in the **KnowledgeDB** database. The code for each of these classes is shown below:
+1.  Create C\# model classes that mirror the structure of the **Tips**, **BoilerParts**, and **Engineers** table in the **KnowledgeDB** database. The code for each of these classes is shown in the following.
 
     > [!NOTE]
     > The **BoilerParts** table in the **KnowledgeDB** database is distinct from the **BoilerParts** table in the **InventoryDB** database. To avoid a name clash, the model classes for tables in the **KnowledgeDB** database have the **KnowledgeBase** prefix.
@@ -457,7 +457,7 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
     }
     ```
 
-2.  Create another Entity Framework **context** class that the Web API uses to connect to the **KnowledgeDB** database:
+2.  Create another Entity Framework **context** class that the Web API uses to connect to the **KnowledgeDB** database.
 
     ```csharp
     // KnowledgeBaseContext.cs
@@ -483,7 +483,7 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
     }
     ```
 
-3.  Edit the **appsettings.Development.json** file for the project, and add the **KnowledgDB** connection string below to the **ConnectionStrings** section. Replace *\<server name\>* with the name of the Azure SQL Database server you created to hold the **KnowledgeDB** database.
+3.  Edit the **appsettings.Development.json** file for the project, and add the following **KnowledgDB** connection string to the **ConnectionStrings** section. Replace *\<server name\>* with the name of the SQL Database server you created to hold the **KnowledgeDB** database.
 
     ```xml
     {
@@ -501,7 +501,7 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
     > [!IMPORTANT]
     > For the purposes of this guide only, the connection string contains the user ID and password for the database. In a production system, you should never store these items in clear text in a configuration file.
 
-4.  Edit the **Startup.cs** file and, in the **ConfigureServices** method, add the statements shown below:
+4.  Edit the **Startup.cs** file and, in the **ConfigureServices** method, add the following statements.
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -520,9 +520,9 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
     }
     ```
 
-The second statement controls the way in which data is serialized when it s retrieved. Some of the model classes have references to other model classes, which in turn can reference further model classes. Some of these references can result in recursive loops (Entity A references Entity B, which references back to Entity A, which references Entity B again, and so on). The **ReferenceLoopHandling** option causes the serializer to ignore such loops in the data, and only return an entity and the objects that it immediately references, but no more.
+    The second statement controls the way in which data is serialized when it's retrieved. Some of the model classes have references to other model classes, which in turn can reference further model classes. Some of these references can result in recursive loops (Entity A references Entity B, which references back to Entity A, which references Entity B again, and so on). The **ReferenceLoopHandling** option causes the serializer to ignore such loops in the data, and only return an entity and the objects that it immediately references, but no more.
 
-5.  In the **Terminal** window, run the following command to generate controllers from the **KnowledgeBaseBoilerTip**, **KnowledgeBaseBoilerPart**, and **KnowledgeBaseEngineer** model classes and the **KnowledgeBaseContext** context class:
+5.  In the **Terminal** window, run the following command to generate controllers from the **KnowledgeBaseBoilerTip**, **KnowledgeBaseBoilerPart**, and **KnowledgeBaseEngineer** model classes and the **KnowledgeBaseContext** context class.
 
     ```shell
     dotnet aspnet-codegenerator controller ^
@@ -543,7 +543,7 @@ The second statement controls the way in which data is serialized when it s retr
 
     All three controllers should be created in the **Controllers** folder.
 
-6.  Edit the **KnowledgeBaseBoilerPartController.cs** file. This file contains the code for the **KnowledgeBaseBoilerPart** controller. It should follow the same pattern as the **BoilerPartsController** class created earlier, exposing REST methods that enable a client to list, query, insert, update, and delete entities**.** Add the **GetTipsForPart** method shown below to the controller:
+6.  Edit the **KnowledgeBaseBoilerPartController.cs** file. This file contains the code for the **KnowledgeBaseBoilerPart** controller. It should follow the same pattern as the **BoilerPartsController** class created earlier, exposing REST methods that enable a client to list, query, insert, update, and delete entities. Add the following **GetTipsForPart** method to the controller.
 
     ```csharp
     [Route("api/[controller]")]
@@ -571,7 +571,7 @@ The second statement controls the way in which data is serialized when it s retr
 
     This method returns all the knowledge base tips that reference a specified part. It queries the **Tips** table in the database through the **KnowledgeBaseContext** object to find this information.
 
-7.  Edit the **KnowledgeBaseEngineerController.cs** file and add the method shown below to the **KnowledgeBaseEngineerController** class:
+7.  Edit the **KnowledgeBaseEngineerController.cs** file and add the following method to the **KnowledgeBaseEngineerController** class.
 
     ```csharp
     [Route("api/[controller]")]
@@ -599,7 +599,7 @@ The second statement controls the way in which data is serialized when it s retr
 
     The **GetTipsForEngineer** method finds all knowledge base tips posted by the specified engineer.
 
-8.  In the **Terminal** window, compile and build the Web API:
+8.  In the **Terminal** window, compile and build the Web API.
 
     ```shell
     dotnet build
@@ -607,7 +607,7 @@ The second statement controls the way in which data is serialized when it s retr
 
     The Web API should build without reporting any errors or warnings.
 
-9.  Edit the **appSettings.json** file and add the connection string for the **KnowledgeDB** database. This string should be the same that you previously wrote to the **appSettings.Development.json** file:
+9.  Edit the **appSettings.json** file and add the connection string for the **KnowledgeDB** database. This string should be the same that you previously wrote to the **appSettings.Development.json** file.
 
     ```xml
     {
@@ -622,30 +622,30 @@ The second statement controls the way in which data is serialized when it s retr
     }
     ```
 
-10. In the **Terminal** window, package the Web API ready for deployment to Azure:
+10. In the **Terminal** window, package the Web API ready for deployment to Azure.
 
     ```shell
     dotnet publish -c Release -o ./publish
     ```
 
-11. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**. Deploy to the same Azure Web app that you created previously. Allow the wizard to overwrite the existing web app with the new code.
+11. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**. Deploy to the same Azure web app that you created previously. Allow the wizard to overwrite the existing web app with the new code.
 
-12. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The operations for the **KnowledgeBaseBoilerPart**, **KnowledgeBaseEngineer**, and **KnowldgeBaseTip** controllers should be listed, as well as the existing **BoilerParts** operations. Verify that the **KnowledgeBaseBoilerPart** operations include a **GET** operation for the URI **/api/KnowledgeBaseBoilerPart/{id}/Tips**, and the **KnowledgeBaseEngineer** operations include a **GET** operation for the URI **/api/KnowledgeBaseEngineer/{id}/Tips**:
+12. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The operations for the **KnowledgeBaseBoilerPart**, **KnowledgeBaseEngineer**, and **KnowldgeBaseTip** controllers should be listed in addition to the existing **BoilerParts** operations. Verify that the **KnowledgeBaseBoilerPart** operations include a **GET** operation for the URI **/api/KnowledgeBaseBoilerPart/{id}/Tips**, and the **KnowledgeBaseEngineer** operations include a **GET** operation for the URI **/api/KnowledgeBaseEngineer/{id}/Tips**.
 
     ![Swagger UI with new operations](media/image98.png)
 
 ## Building and Deploying the Web API: Field Scheduling
 
-The Field Scheduling operations use the tables **Appointments**, **AppointmentStatuses** (this is a simple lookup table that lists the valid appointment status values), **Customers**, and **Engineers**, shown in the diagram below. These tables are stored in the **SchedulesDB** database:
+The Field Scheduling operations use the tables **Appointments**, **AppointmentStatuses** (this is a simple lookup table that lists the valid appointment status values), **Customers**, and **Engineers**, shown in the following image. These tables are stored in the **SchedulesDB** database.
 
-![Appointments and scheduling tables](media/image99.png)
+![Appointments and scheduling tables relationships](media/image99.png)
 
 To create the Web API operations for the Field Scheduling part of the system, Kiana performed the following tasks:
 
-1.  Create C\# model classes that mirror the structure of the **AppointmentStatus**, **Appointments**, **Customers**, and **Engineers** table in the **SchedulesDB** database. The code for each of these classes is shown below:
+1.  Create C\# model classes that mirror the structure of the **AppointmentStatus**, **Appointments**, **Customers**, and **Engineers** table in the **SchedulesDB** database. The following code shows each of these classes.
 
     > [!NOTE]
-    > The model class for **Engineers** table is named **ScheduleEngineer** to distinguish it from the model for the **Engineers** table in the **InventoryDB** database.
+    > The model class for the **Engineers** table is named **ScheduleEngineer** to distinguish it from the model for the **Engineers** table in the **InventoryDB** database.
 
     ```csharp
     // AppointmentStatus.cs
@@ -757,7 +757,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-2.  Create an Entity Framework **context** class that the Web API uses to connect to the **SchedulesDB** database:
+2.  Create an Entity Framework **context** class that the Web API uses to connect to the **SchedulesDB** database.
 
     ```csharp
     // ScheduleContext.cs
@@ -786,7 +786,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-3.  Edit the **appsettings.Development.json** file for the project, and add the **SchedulesDB** connection string shown below to the **ConnectionStrings** section. Replace *\<server name\>* with the name of the Azure SQL Database server you created to hold the **KnowledgeDB** database.
+3.  Edit the **appsettings.Development.json** file for the project, and add the following **SchedulesDB** connection string to the **ConnectionStrings** section. Replace *\<server name\>* with the name of the SQL Database server you created to hold the **KnowledgeDB** database.
 
     ```xml
     {
@@ -802,7 +802,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-4.  Edit the **Startup.cs** file and in the **ConfigureServices** method, add the statement shown below:
+4.  Edit the **Startup.cs** file and in the **ConfigureServices** method, add the following statement.
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -820,7 +820,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-5.  In the **Terminal** window, run the following command to generate controllers from the **Appointment**, **Customer** and **ScheduleEngineer** model classes, and the **ScheduleContext** context class:
+5.  In the **Terminal** window, run the following command to generate controllers from the **Appointment**, **Customer** and **ScheduleEngineer** model classes, and the **ScheduleContext** context class.
 
     > [!NOTE]
     > Don't create a separate controller for the **AppointmentStatus** model.
@@ -842,7 +842,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
         -dc ScheduleContext -outDir Controllers
     ```
 
-6.  Edit the **AppointmentsController.cs** file. In the **AppointmentsController** class, find the **GetAppointments** method. Modify the return** statement as shown below. This change ensures that the **Customer**, **Engineer**, and **AppointmentStatus** information is retrieved as part of the **GET** operation; these fields reference other entities that would otherwise be left null due to the lazy loading mechanism of the Entity Framework.
+6.  Edit the **AppointmentsController.cs** file. In the **AppointmentsController** class, find the **GetAppointments** method. Modify the **return** statement, as shown. This change ensures that the **Customer**, **Engineer**, and **AppointmentStatus** information is retrieved as part of the **GET** operation; these fields reference other entities that would otherwise be left null due to the lazy loading mechanism of the Entity Framework.
 
     ```csharp
     public class AppointmentsController : ControllerBase
@@ -870,7 +870,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-7.  In the same file, modify the **GetAppointment(long id)** method as shown below:
+7.  In the same file, modify the **GetAppointment(long id)** method, as shown.
 
     ```csharp
     // GET: api/Appointments/5
@@ -893,11 +893,9 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-    This version of the method populates the **Customer**, **Engineer**, and **AppointmentStatus** fields of an appointment when it is retrieved (lazy loading will leave these fields empty otherwise).
+    This version of the method populates the **Customer**, **Engineer**, and **AppointmentStatus** fields of an appointment when it's retrieved (lazy loading would leave these fields empty otherwise).
 
-8.  Find the **PutAppointment** method, and replace it with the code shown below:
-
-    This version of the **PutAppointment** method takes the fields in an appointment that a user can modify in the app rather than a complete **Appointment** object:
+8.  Find the **PutAppointment** method, and replace it with the following code. This version of the **PutAppointment** method takes the fields in an appointment that a user can modify in the app rather than a complete **Appointment** object.
 
     ```csharp
     [HttpPut("{id}")]
@@ -946,7 +944,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     > [!NOTE]
     > As a general rule, PUT operations should only modify data that a user should be allowed to update, not necessarily every field in an entity.
 
-9.  Open the **ScheduleEngineerController.cs** file and add the **GetScheduleEngineerAppointments** method shown below to the **ScheduleEngineerController** class:
+9.  Open the **ScheduleEngineerController.cs** file and add the following **GetScheduleEngineerAppointments** method to the **ScheduleEngineerController** class.
 
     ```csharp
     [Route("api/[controller]")]
@@ -979,7 +977,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
 
     These methods retrieve the appointments for the specified technician.
 
-10. Edit the **CustomerController.cs** file and add the **GetAppointments** and **GetNotes** methods, shown below, to the **CustomerController** class:
+10. Edit the **CustomerController.cs** file and add the **GetAppointments** and **GetNotes** methods, as shown, to the **CustomerController** class.
 
     ```csharp
     [Route("api/[controller]")]
@@ -1019,9 +1017,9 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-    The **GetAppointments** method finds all appointments for the specified customer. The **GetNotes** method retrieves all the technician's notes made on previous visits to the customer.
+    The **GetAppointments** method finds all appointments for the specified customer. The **GetNotes** method retrieves all the notes the technician made on previous visits to the customer.
 
-11. Edit the **appSettings.json** file and add the connection string for the **KnowledgeDB** database. This string should be the same that you previously wrote to the **appSettings.Development.json** file:
+11. Edit the **appSettings.json** file and add the connection string for the **KnowledgeDB** database. This string should be the same that you previously wrote to the **appSettings.Development.json** file.
 
     ```xml
     {
@@ -1037,7 +1035,7 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
     }
     ```
 
-12. In the **Terminal** window, compile and build the Web API:
+12. In the **Terminal** window, compile and build the Web API.
 
     ```shell
     dotnet build
@@ -1045,13 +1043,13 @@ To create the Web API operations for the Field Scheduling part of the system, Ki
 
     The Web API should build without reporting any errors or warnings.
 
-13. In the **Terminal** window, package the Web API ready for deployment to Azure:
+13. In the **Terminal** window, package the Web API ready for deployment to Azure.
 
     ```shell
     dotnet publish -c Release -o ./publish
     ```
 
-14. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**. Deploy to the same Azure Web app that you created previously. Allow the wizard to overwrite the existing web app with the new code.
+14. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**. Deploy to the same Azure web app that you created previously. Allow the wizard to overwrite the existing web app with the new code.
 
 13. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. Verify that the operations for the **Appointments**, **Customer**, and **ScheduleEngineer** controllers are now available.
 

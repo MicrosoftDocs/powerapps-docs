@@ -1,11 +1,11 @@
 ---
-title: "Chapter 7: Adding functionality to the app  | Microsoft Docs"
+title: "7: Adding functionality to the app  | Microsoft Docs"
 description: "Learn about adding functionality to the app."
 author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/21/2021
+ms.date: 04/26/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -17,22 +17,21 @@ Kiana and Maria are excited to show the inventory management app to Caleb, the f
 
 -   Add a photograph of the work done on a boiler or air conditioning unit, and add it to the appointment details on the **Edit Appointment** screen. This image could prove useful as documentary evidence of repairs performed. The **Edit Appointment** screen currently enables the user to add an image to the appointment, but the image isn't saved as this feature hasn't been fully implemented yet. The reason for this omission is that Kiana and Preeti need to determine the best place to store image data. Caleb would like this functionality added as soon as possible.
 
-
--   View a complete appointment history for a customer, to track repairs requested for that customer, and monitor any ongoing issues that may require repeated callouts.
+-   View a complete appointment history for a customer, to track repairs that were requested and monitor any ongoing issues that might require technicians to be repeatedly called out.
 
 -   Order parts from the **Part Details** screen.
 
-    Additionally, the image control on the **Part Details** screen displays the images stored at a specified URL. Currently the URLs in the data are simply placeholders. Like the photographs for the appointment screen, Kiana and Preeti need to determine the best place to store images so they're available to the app.
+Additionally, the image control on the **Part Details** screen displays the images stored at a specified URL. Currently the URLs in the data are simply placeholders. Like the photographs for the appointment screen, Kiana and Preeti need to determine the best place to store images so they're available to the app.
 
 ## Adding a photograph to an appointment
 
 Photographs need to be stored somewhere accessible by the app. For performance and security reasons, Preeti doesn't want photographs to be saved in OneDrive or in Azure SQL Database. Instead, she and Kiana decide to use Azure Blob Storage. Blob Storage is optimized for holding large binary objects, and is robust, with built-in security. Power Apps has a connector that allows access to Blob Storage. Maria suggests adding a new picture-taking screen, improving the user experience for Caleb.
 
-More information: [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/).
+More information: [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 
-Preeti creates the Blob Storage account from the Azure portal:
+Preeti creates the Blob Storage account from the Azure portal by following these steps:
 
-1.  In the [Azure portal](https://portal.azure.com), on the **Home** page, select **+ Create a resource**. In the **Search the Marketplace** box, enter **Storage account** and press **Enter**.
+1.  In the [Azure portal](https://portal.azure.com), on the **Home** page, select **+ Create a resource**. In the **Search the Marketplace** box, enter **Storage account**, and then select **Enter**.
 
     ![Azure Marketplace search](media/image161.png)
 
@@ -54,61 +53,61 @@ Preeti creates the Blob Storage account from the Azure portal:
 
 5.  Go to the page for the new storage account.
 
-6.  On the **Overview** page, select **Containers**:
+6.  On the **Overview** page, select **Containers**.
 
     ![Storage account Overview page](media/image163.png)
 
-7.  On the **Containers** page, select **+ Container**. Create a new container named **photos**, and then select **Create**. Change the public access level** to **Blob**:
+7.  On the **Containers** page, select **+ Container**. Create a new container named **photos**, and then select **Create**. Change **Public access level** to **Blob**.
 
     ![Create the Photos container](media/image164.png)
 
-8.  Back on the **Overview** page for the storage account, under settings, select **Access keys**. On the **Access keys** page, select **Show keys.** Make a note of the value of the key for **key1**:
+8.  Back on the **Overview** page for the storage account, under settings, select **Access keys**. On the **Access keys** page, select **Show keys.** Make a note of the value of the key for **key1**.
 
     ![Storage account access keys](media/image165.png)
 
-Preeti gives the storage account name and key to Kiana, who uses this information to create a custom connector for the app:
+Preeti gives the storage account name and key to Kiana, who uses this information to create a custom connector for the app by following these steps:
 
 1.  Sign in to [Power Apps](http://make.powerapps.com).
 
-2.  In the left pane, expand **Data**, and select **Connections**. The existing connections used by the app should be listed. Select **+ New connection**:
+2.  On the left pane, expand **Data**, and select **Connections**. The existing connections used by the app should be listed. Select **+ New connection**.
 
     ![Power Apps connections page](media/image166.png)
 
-3.  On the **New connection** page, scroll down, select **Connections**, select **Azure Blob Storage**, and then select **Create**:
+3.  On the **New connection** page, scroll down, select **Connections**, select **Azure Blob Storage**, and then select **Create**.
 
     ![Select Azure Blob Storage connector](media/image167.png)
 
-4.  In the **Azure Blob Storage** dialog box, enter the storage account name and access key that Preeti provided, and then select **Create**:
+4.  In the **Azure Blob Storage** dialog, enter the storage account name and access key that Preeti provided, and then select **Create**.
 
     ![Enter storage credentials](media/image168.png)
 
 5.  Wait while the new connection is created. It should appear on the list of connections.
 
-Maria can use this connection to Azure Blob Storage in the app to save and retrieve photographic images. Her first task is to add the connection to the app:
+Maria can use this connection to Blob Storage in the app to save and retrieve photographic images. Her first task is to add the connection to the app by following these steps:
 
 1.  Open the **VanArsdelApp** app for editing in Power Apps Studio.
 
-2.  In the **Data** pane, select **Add data**, search for the **Azure Blob Storage** connector, and then select this connector:
+2.  On the **Data** pane, select **Add data**, search for the **Azure Blob Storage** connector, and then select the connector.
 
     ![Search for the Blob Storage connector](media/image169.png)
 
-3.  In the **Azure Blob Storage** dialog box, select the **Azure Blob Storage** connector to add it to your app:
+3.  In the **Azure Blob Storage** dialog, select the **Azure Blob Storage** connector to add it to your app.
 
-    ![Add Blob Storage connection](media/image170.png)
+    ![Add a Blob Storage connection](media/image170.png)
 
-Maria's next task is to add a screen that enables a technician or engineer to save a photograph. Maria decides to add a new screen with a Picture control. When the app is run on a mobile device, this control can integrate with the camera to enable the technician to take a photograph. On other devices, this control prompts the user to upload an image file instead. She adds a link to this new screen from the **EditAppointment** screen:
+Maria's next task is to add a screen that enables a technician or engineer to save a photograph. Maria decides to add a new screen with a Picture control. When the app is run on a mobile device, this control can integrate with the camera to enable the technician to take a photograph. On other devices, this control prompts the user to upload an image file instead. She adds a link to this new screen from the **EditAppointment** screen by following these steps:
 
-1.  On the **Insert** menu, select **New screen**, and then select the **Scrollable** template:
+1.  On the **Insert** menu, select **New screen**, and then select the **Scrollable** template.
 
     ![New screen from the Scrollable template](media/image171.png)
 
-2.  In the **Tree view** pane, select the new screen and rename it as **TakePhoto**.
+2.  On the **Tree view** pane, select the new screen and rename it as **TakePhoto**.
 
 3.  Change the **Text** property of the **LblAppName*X*** control on this screen to **Take a photograph**.
 
 4.  Delete the **Canvas*X*** control from the screen.
 
-5.  In the **Insert** menu, from the **Media** drop-down list, select **Add picture** to create a new picture control:
+5.  In the **Insert** menu, from the **Media** dropdown list, select **Add picture** to create a new picture control.
 
     ![Add a Picture control](media/image172.png)
 
@@ -117,25 +116,25 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
 
 6.  Resize and reposition the picture control to occupy the body of the screen.
 
-7.  In the **Tree view** pane, select the **IconBackarrow*X*** control on the **AppointmentDetails** screen, and select **Copy**:
+7.  On the **Tree view** pane, select the **IconBackarrow*X*** control on the **AppointmentDetails** screen, and then select **Copy**.
 
     ![Copy the Back Arrow control](media/image173.png)
 
-8.  In the **Tree view** menu, right-click the **TakePhoto** screen, and then select **Paste**. The **IconBackArrow*X*** control will be added to the screen:
+8.  On the **Tree view** menu, right-click the **TakePhoto** screen, and then select **Paste**. The **IconBackArrow*X*** control will be added to the screen.
 
     ![Paste the Back Arrow control in the TakePhoto screen](media/image174.png)
 
-9.  Move the **IconBackArrow*X*** control to the top left of the header bar.
+9.  Move the **IconBackArrow*X*** control to the upper left of the header bar.
 
-10. In the **Tree view** pane, select the **IconBackArrow*X*** control on the **TakePhoto** screen. In the right pane, on the **Advanced** tab, modify the **OnSelect** action property to **Navigate(EditAppointment, ScreenTransition.None)**.
+10. On the **Tree view** pane, select the **IconBackArrow*X*** control on the **TakePhoto** screen. On the right pane, on the **Advanced** tab, modify the **OnSelect** action property to **Navigate(EditAppointment, ScreenTransition.None)**.
 
-11. Add a new **Save** icon control to the top right of the header bar. Set the **Visible** property of this control to **If(IsBlank(AddMediaButton1.Media), false, true)**.
+11. Add a new **Save** icon control to the upper right of the header bar. Set the **Visible** property of this control to **If(IsBlank(AddMediaButton1.Media), false, true)**.
 
     This setting makes the **Save** icon invisible if the user hasn't selected an image.
 
     ![Add Save icon control](media/image175.png)
 
-12. Change the formula in the **OnSelect** action property of the **Save** icon control to:
+12. Change the formula in the **OnSelect** action property of the **Save** icon control to the following.
 
     ```
     Set(ImageID, GUID() & ".jpg");
@@ -149,13 +148,13 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
 
     Replace **\<storage account name\>** with the name of the Azure storage account that Preeti created.
 
-    This code uploads the image to the **photos** container in Azure Blob Storage. Each image is given a unique filename. The **Patch** function updates the **imageUrl** property in the appointments record with the URL of the image in Blob Storage.
+    This code uploads the image to the **photos** container in Blob Storage. Each image is given a unique filename. The **Patch** function updates the **imageUrl** property in the appointments record with the URL of the image in Blob Storage.
 
-13. In the **Tree view** pane, expand the **AddMediaWithImageX** control. Modify the **Image** property of the **UploadedImage*X*** control, and set it to **AppointmentImage**.
+13. On the **Tree view** pane, expand the **AddMediaWithImageX** control. Modify the **Image** property of the **UploadedImage*X*** control, and set it to **AppointmentImage**.
 
     AppointmentImage is a variable that will be populated with an image either uploaded by the user, or as the result of taking a photograph. You'll initialize this variable in the **EditAppointment** screen later.
 
-14. In the **Tree view** pane, select the **AddMediaButton*X*** control. Set the **UseMobileCamera** property of this control to **true**. Set the **OnChange** action property of the control to:
+14. On the **Tree view** pane, select the **AddMediaButton*X*** control. Set the **UseMobileCamera** property of this control to **true**. Set the **OnChange** action property of the control to the following.
 
     ```
     Set(AppointmentImage, AddMediaButton1.Media)
@@ -163,9 +162,9 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
 
     This formula changes the **AppointmentImage** variable to reference the new image. The **UploadedImage*X*** control will display this image.
 
-15. In the **Tree view** pane, select the **EditAppointment** screen.
+15. On the **Tree view** pane, select the **EditAppointment** screen.
 
-16. Expand the **EditForm*X*** control. Under the **Image\_DataCardX** control, remove the **AddPictureX** control:
+16. Expand the **EditForm*X*** control. Under the **Image\_DataCardX** control, remove the **AddPictureX** control.
 
     ![Remove the AddPicture control](media/image176.png)
 
@@ -180,14 +179,14 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
     > [!NOTE]
     > The image control will drop down below the bottom of the screen, but a scroll bar will be added automatically to enable the image to be viewed.
 
-18. Add a **Camera** icon to the data card then position it between the **Image** label and the **ImageX** control. Change the name of the control to **CameraIcon**:
+18. Add a **Camera** icon to the data card then position it between the **Image** label and the **ImageX** control. Change the name of the control to **CameraIcon**.
 
     > [!NOTE]
-    > Make sure you select the Camera Icon control, and **not** the Camera Media control.
+    > Make sure you select the Camera Icon control, *not* the Camera Media control.
 
     ![Add Camera icon](media/image177.png)
 
-19. Set the **OnSelect** action property of the **CameraIcon** control to:
+19. Set the **OnSelect** action property of the **CameraIcon** control to the following.
 
     ```
     Set(AppointmentImage, SampleImage);
@@ -195,13 +194,13 @@ Maria's next task is to add a screen that enables a technician or engineer to sa
     Navigate(TakePhoto, ScreenTransition.None);
     ```
 
-    When the user selects this icon, they will go to the **TakePhoto** screen, to enable them to take a photo or upload an image. The initial image displayed will be the default sample image.
+    When the user selects this icon, they'll go to the **TakePhoto** screen, where they can take a photo or upload an image. The initial image displayed will be the default sample image.
 
-To test the app:
+To test the app, do the following:
 
-1.  In the **Tree view** pane, select the **Home** screen.
+1.  On the **Tree view** pane, select the **Home** screen.
 
-2.  Press **F5** to preview the app.
+2.  Select **F5** to preview the app.
 
 3.  On the **Home** screen, select **Appointments**.
 
@@ -213,7 +212,7 @@ To test the app:
 
 7.  Verify that the **Take a photograph** screen appears.
 
-8.  Select **Change Picture** and upload a picture of your choice (or take a photograph if you're running on a mobile device).
+8.  Select **Change Picture** and upload a picture of your choice (or take a photograph, if you're running the app on a mobile device).
 
 9.  Select **Save**. Verify that the image appears on the details page, and then select the tick icon to save the changes back to the database.
 
@@ -221,9 +220,9 @@ To test the app:
 
 ## Displaying images of parts
 
-Having determined that Azure Blob Storage is an ideal location for saving pictures associated with appointments, Preeti and Kiana decide that they should use the same approach for storing the images of parts. A key advantage of this approach is that it doesn't require any modifications to the app. The app reuses the same storage account and the same connection. As a separate migration exercise, they can:
+Having determined that Blob Storage is an ideal location for saving pictures associated with appointments, Preeti and Kiana decide that they should use the same approach for storing the images of parts. A key advantage of this approach is that it doesn't require any modifications to the app. The app reuses the same storage account and the same connection. As a separate migration exercise, they can do the following:
 
-1.  Create a new Blob container.
+1.  Create a new Blob Storage container.
 
 2.  Upload the part images to this container.
 
@@ -241,15 +240,15 @@ Looking at the data, Maria believes that a gallery control is the best way to di
 
 Maria creates the custom component as follows:
 
-1.  Using Power Apps Studio, in the **Tree view** pane, select **Components**, and then select **+ New component**:
+1.  Using Power Apps Studio, on the **Tree view** pane, select **Components**, and then select **+ New component**.
 
     ![Create a new component](media/image179.png)
 
-    A new blank component named **Component1** is created. Rename the component as **DateHistoryComponent**:
+    A new blank component named **Component1** is created. Rename the component as **DateHistoryComponent**.
 
     ![Rename the component](media/image180.png)
 
-2.  On the **Insert** menu, select **Gallery**, and then choose the **Blank flexible height** gallery template:
+2.  On the **Insert** menu, select **Gallery**, and then choose the **Blank flexible height** gallery template.
 
     ![Add a Gallery control](media/image181.png)
 
@@ -259,7 +258,7 @@ Maria creates the custom component as follows:
 
     ![Add a Text label to the component](media/image182.png)
 
-5.  In the **Tree view** pane, rename the label control as **NotesLabel**. Set the **Overflow** property to **Overflow.Scroll**. This setting enables the control to display several lines of text and allow the user to scroll through it. Set the following properties so you can position and size the control:
+5.  On the **Tree view** pane, rename the label control as **NotesLabel**. Set the **Overflow** property to **Overflow.Scroll**. This setting enables the control to display several lines of text and allow the user to scroll through it. Set the following properties so you can position and size the control:
 
     -   LineHeight: **2**
     -   X: **28**
@@ -267,7 +266,7 @@ Maria creates the custom component as follows:
     -   Width: **574**
     -   Height: **140**
 
-6.  Add a second text label to the control. Rename this control as **DateLabel** and set the following properties:
+6.  Add a second text label to the control. Rename this control as **DateLabel**, and set the following properties:
 
     -   LineHeight: **2**
     -   X: **28**
@@ -275,28 +274,28 @@ Maria creates the custom component as follows:
     -   Width: **574**
     -   Height: **70**
 
-7.  To see how the control will look when inserted into the app and using its theme, in the **Tree view** pane, select **DateHistoryComponent**. In the right pane, on the **Advanced** tab, select the **Fill** field and change the color to **RGBA(0, 0, 0, 1)**.
+7.  To see how the control will look when inserted into the app and displayed with its theme, on the **Tree view** pane, select **DateHistoryComponent**. On the right pane, on the **Advanced** tab, select the **Fill** field and change the color to **RGBA(0, 0, 0, 1)**.
 
     ![View the component](media/image183.png)
 
-8.  From the **Insert** pane, expand **Shapes**, and add a **Rectangle** control to the custom component. Set the following properties for this control:
+8.  On the **Insert** pane, expand **Shapes**, and add a **Rectangle** control to the custom component. Set the following properties for this control:
 
     -   X: **0**
     -   Y: **273**
     -   Width: **Parent.Width**
     -   Height: **2**
 
-    This control acts as a separator between the records displayed in the gallery:
+    This control acts as a separator between the records displayed in the gallery.
 
     ![Add a Rectangle control](media/image184.png)
 
-Maria is familiar with adding controls to screens and building Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, she must add some additional custom input properties. Kiana also explained that Maria needs to provide example data for these properties, to allow her to reference the data fields in the controls in her component, as follows:
+Maria is familiar with adding controls to screens and building apps with Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, she must add some additional custom input properties. Kiana also explained that Maria needs to provide example data for these properties, to allow her to reference the data fields in the controls in her component, as follows:
 
-1.  In the **Tree view** pane, select **DateHistoryComponent**. In the right pane, on the **Properties** tab, select **New custom property**:
+1.  On the **Tree view** pane, select **DateHistoryComponent**. On the right pane, on the **Properties** tab, select **New custom property**.
 
     ![New custom property](media/image185.png)
 
-2.  In the **New custom property** dialog box, specify the following values, and then select **Create**:
+2.  In the **New custom property** dialog, specify the following values, and then select **Create**:
 
     -   Display name: **Data**
     -   Name: **Data**
@@ -307,42 +306,42 @@ Maria is familiar with adding controls to screens and building Power Apps. Howev
 
     ![New custom property properties](media/image186.png)
 
-3.  To change the sample data displayed by the control, select the new **Data** custom property. In the formula field, type **Table({Notes: "Example notes field text.", \'Appointment Date\': Text(Today())})**.
+3.  To change the sample data displayed by the control, select the new **Data** custom property. In the formula field, enter **Table({Notes: "Example notes field text.", \'Appointment Date\': Text(Today())})**.
 
     ![Change the sample data](media/image187.png)
 
-4.  In the **Tree view** pane, select the **Gallery*X*** control in **DateHistoryComponent**, and rename it as **AppointmentHistory**.
+4.  On the **Tree view** pane, select the **Gallery*X*** control in **DateHistoryComponent**, and rename it as **AppointmentHistory**.
 
-5.  In the right pane, on the **Advanced** tab, set the **Items** property of the **AppointmentHistory** gallery control to **Parents.Data**.
+5.  On the right pane, on the **Advanced** tab, set the **Items** property of the **AppointmentHistory** gallery control to **Parents.Data**.
 
     ![Update the Items property for the gallery control](media/image188.png)
 
-6.  Select the **NotesLabel** control. In the right pane on the **Advanced** tab, change the **Text** property to **ThisItem.Notes,** and change the **Size** property to **20**.
+6.  Select the **NotesLabel** control. On the right pane on the **Advanced** tab, change the **Text** property to **ThisItem.Notes,** and change the **Size** property to **20**.
 
     > [!NOTE]
     > The **Size** property specifies the font size for the text displayed by the control.
 
-7.  Select the **DateLabel** control to change the **Text** property to **ThisItem.\'Appointment Date\'** and change the **Size** property to **20**. The fields in the custom component should display the sample data:
+7.  Select the **DateLabel** control to change the **Text** property to **ThisItem.\'Appointment Date\'** and change the **Size** property to **20**. The fields in the custom component should display the sample data.
 
     ![Custom component with sample data](media/image189.png)
 
-The custom component is complete. Maria creates a new screen to display the appointments history for a customer using this component:
+The custom component is complete. Maria creates a new screen to display the appointments history for a customer by using this component, as follows:
 
-1.  In the **Tree view** pane, select the **Screens** tab.
+1.  On the **Tree view** pane, select the **Screens** tab.
 
-2.  Expand the **BrowseAppointments** screen, expand the **BrowseAppointmentsGallery** control, and select the **Body1\_1** control. On the **Insert** menu, select **Icons**, and then select the **Detail list** icon:
+2.  Expand the **BrowseAppointments** screen, expand the **BrowseAppointmentsGallery** control, and select the **Body1\_1** control. On the **Insert** menu, select **Icons**, and then select the **Detail list** icon.
 
     ![Add Details list icon](media/image190.png)
 
 3.  Change the name of the icon control to **ViewAppointments**.
 
-4.  In the **Tree view** menu, select the **BrowseAppointmentsGallery** control. In the right pane, on the **Advanced** tab, change the **TemplateSize** property to **220**. Increasing this property expands the space available in the gallery.
+4.  On the **Tree view** menu, select the **BrowseAppointmentsGallery** control. On the right pane, on the **Advanced** tab, change the **TemplateSize** property to **220**. Increasing this property expands the space available in the gallery.
 
-5.  Move the **ViewAppointments** icon into the empty space below the customer name:
+5.  Move the **ViewAppointments** icon into the empty space below the customer name.
 
     ![Amended appointments gallery](media/image191.png)
 
-6.  Select the **ViewAppointments** icon control. Set the **OnSelect** action property to the following formula:
+6.  Select the **ViewAppointments** icon control. Set the **OnSelect** action property to the following formula.
 
     ```
     ClearCollect(customerAppointmentsCollection, FieldEngineerAPI.getapicustomeridappointments(ThisItem.customerId));
@@ -352,17 +351,17 @@ The custom component is complete. Maria creates a new screen to display the appo
 
     This formula populates a collection named **customerAppointmentsCollection** with the appointments for the selected customer, and then moves to the **AppointmentHistoryScreen** to display them. You'll create this screen in the following steps.
 
-7.  On the **Insert** menu, select **New screen**, and then select the **Scrollable** template:
+7.  On the **Insert** menu, select **New screen**, and then select the **Scrollable** template.
 
     ![New screen based on the Scrollable template](media/image192.png)
 
 8.  Change the name of the new screen to **AppointmentHistoryScreen**.
 
-9.  Delete the **Canvas*X*** control that was added to this screen:
+9.  Delete the **Canvas*X*** control that was added to this screen.
 
     ![Delete the Canvas control](media/image193.png)
 
-10. Select the **LblAppName*X*** control on this screen. In the right pane, on the **Advanced** tab, change the **Text** property to:
+10. Select the **LblAppName*X*** control on this screen. On the right pane, on the **Advanced** tab, change the **Text** property to the following.
 
     ```
     "Appointments History for " &  BrowseAppointmentsGallery.Selected.customer.name
@@ -381,11 +380,11 @@ The custom component is complete. Maria creates a new screen to display the appo
 
     ![Empty AppointmentsHistory screen](media/image194.png)
 
-14. On the **Insert** menu, select **Custom**, and then select the **DateHistoryComponent**:
+14. On the **Insert** menu, select **Custom**, and then select the **DateHistoryComponent**.
 
     ![Add DateHistory component](media/image195.png)
 
-15. Move and resize the component so that it occupies the body of the screen, below the heading:
+15. Move and resize the component so that it occupies the body of the screen, below the heading.
 
     ![Resized component](media/image196.png)
 
@@ -397,11 +396,11 @@ The custom component is complete. Maria creates a new screen to display the appo
 
 17. Save the app.
 
-To test the app:
+To test the app, do the following:
 
-1.  In the **Tree view** pane, select the **Home** screen.
+1.  On the **Tree view** pane, select the **Home** screen.
 
-2.  Press **F5** to preview app.
+2.  Select **F5** to preview app.
 
 3.  On the **Home** screen, select **Appointments**.
 
@@ -415,11 +414,11 @@ To test the app:
 
 A key requirement of the system is to enable a technician to order any parts required while visiting a customer. If the parts are in stock, it should be possible to schedule another visit to complete the repair at the next convenient date for the customer. If the parts are currently out of stock and have to be ordered, the technician can tell the customer. Malik can then arrange an appointment with the customer when Maria receives notice that the parts have arrived in the warehouse.
 
-The reservations part of the app uses the tables in the **InventoryDB** database shown in the diagram below. The **Orders** table holds information about orders placed for parts. The **Reservations** table lists the reservation requests that technicians and engineers have made for parts. The **Engineers** table provides the name and contact number for the engineer who made the reservation, in case of any queries by Maria, the inventory manager.
+The reservations part of the app uses the tables in the **InventoryDB** database shown in the following image. The **Orders** table holds information about orders placed for parts. The **Reservations** table lists the reservation requests that technicians and engineers have made for parts. The **Engineers** table provides the name and contact number for the engineer who made the reservation, which makes it easy for Maria the inventory manager to query if necessary.
 
 ![The Reservations data model](media/image197.png)
 
-To support this feature, Kiana has to update the Web API with a method that fetches the number of reserved items for a specified part:
+To support this feature, Kiana has to update the Web API with a method that fetches the number of reserved items for a specified part, as follows:
 
 1.  Open the **FieldEngineerApi** Web API project in Visual Studio Code.
 
@@ -461,7 +460,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-3.  Add another new file named **Reservation.cs** to the **Models** folder and add the code shown below to this file. The **Reservation** class contains information about the number of items for a given part that are currently reserved for other customers.
+3.  Add another new file named **Reservation.cs** to the **Models** folder and add the following code to this file. The **Reservation** class contains information about the number of items for a given part that are currently reserved for other customers.
 
     ```csharp
     using System;
@@ -487,7 +486,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-4.  Add one more file, named **InventoryEngineer.cs,** to the **Models** folder, with the following code. The **InventoryEngineer** class records which engineers have made which reservations:
+4.  Add one more file, named **InventoryEngineer.cs,** to the **Models** folder, with the following code. The **InventoryEngineer** class records which engineers have made which reservations.
 
     ```csharp
     using System.ComponentModel.DataAnnotations;
@@ -510,7 +509,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-5.  Open the **InventoryContext.cs** file in the **Models** folder, and add the statements shown below to the **InventoryContext** class:
+5.  Open the **InventoryContext.cs** file in the **Models** folder, and add the following statements to the **InventoryContext** class.
 
     ```csharp
     public class InventoryContext : DbContext
@@ -528,7 +527,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-6.  In the Terminal window in Visual Studio Code, run the following commands to build controllers for handling orders and reservations:
+6.  In the Terminal window in Visual Studio Code, run the following commands to build controllers for handling orders and reservations.
 
     ```shell
     dotnet aspnet-codegenerator controller ^
@@ -542,7 +541,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
         -dc InventoryContext -outDir Controllers
     ```
 
-7.  Open the **BoilerPartController.cs** file in the **Controllers** folder, and add the **GetTotalReservations** method, shown below, to the **BoilerPartsController** class:
+7.  Open the **BoilerPartController.cs** file in the **Controllers** folder, and add the following **GetTotalReservations** method to the **BoilerPartsController** class.
 
     ```csharp
     public class BoilerPartsController : ControllerBase
@@ -578,7 +577,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-8.  Edit the **OrdersController.cs** file, and modify the **PostOrder** method in the **OrdersController** class as shown below:
+8.  Edit the **OrdersController.cs** file, and modify the **PostOrder** method in the **OrdersController** class as shown by the following.
 
     ```csharp
     [HttpPost]
@@ -601,7 +600,7 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-9.  Edit the **ReservationsController.cs** file. Modify the **PostReservation** method in the **ReservationsController** class as follows:
+9.  Edit the **ReservationsController.cs** file. Modify the **PostReservation** method in the **ReservationsController** class, as follows.
 
     ```csharp
     [HttpPost]
@@ -621,37 +620,37 @@ To support this feature, Kiana has to update the Web API with a method that fetc
     }
     ```
 
-10. In the Terminal window, run the following commands to build and publish the Web API ready for deployment:
+10. In the Terminal window, run the following commands to build and publish the Web API ready for deployment.
 
     ```
     dotnet build
     dotnet publish -c Release -o ./publish
     ```
 
-11. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**:
+11. In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**.
 
-Preeti can now update the Azure API Management service used by the VanArsdel app to reflect the updated Web API. This is a non-breaking change; existing operations will continue to work, the differences being the new controllers and operations to make reservations and place orders. Preeti performs the following tasks:
+Preeti can now update the API Management service used by the VanArsdel app to reflect the updated Web API. This is a non-breaking change; existing operations will continue to work, the difference being the new controllers and operations to make reservations and place orders. Preeti performs the following tasks:
 
 > [!NOTE]
-> Preeti could have chosen to delete the existing Field Engineer API and replace it with a new version, but this approach risks breaking any existing applications that may be currently using the API. It's better practice to leave the existing API in place and add the modifications as a revision.
+> Preeti could have chosen to delete the existing Field Engineer API and replace it with a new version, but that approach risks breaking any existing applications that might be currently using the API. It's better practice to leave the existing API in place and add the modifications as a revision.
 
-1.  In the Azure portal, go to the APIM service.
+1.  In the Azure portal, go to the API Management service.
 
-2.  On the **API Management service** page, in the left pane, under **APIs**, select **APIs**:
+2.  On the **API Management service** page, on the left pane under **APIs**, select **APIs**.
 
-3.  Select the **Field Engineer API**, select the ellipsis menu, and then select **Add revision**:
+3.  Select the **Field Engineer API**, select the ellipsis menu, and then select **Add revision**.
 
     ![Add a revision to the Field Engineer API](media/image198.png)
 
-4.  In the **Create a new revision of the Field Engineer API** dialog box, enter the description **Added GET operation and POST operations for part reservations and orders**, and then select **Create**:
+4.  In the **Create a new revision of the Field Engineer API** dialog, enter the description **Added GET operation and POST operations for part reservations and orders**, and then select **Create**.
 
     ![Create the revision](media/image199.png)
 
-5.  On the **REVISION 2** page, select **Design**:
+5.  On the **REVISION 2** page, select **Design**.
 
     ![Design the revision](media/image200.png)
 
-6.  On the **Design** page, select **Add operation**. In the **FrontEnd** pane, set the following properties, and then select **Save**. This operation is used for retrieving the number of items reserved for a given boiler part:
+6.  On the **Design** page, select **Add operation**. On the **FrontEnd** pane, set the following properties, and then select **Save**. This operation is used for retrieving the number of items reserved for a given boiler part:
 
     -   Display name: **api/BoilerParts/{id}/Reserved**
     -   Name: **api-boilerparts-id-reserved**
@@ -659,15 +658,15 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
 
     ![Add the Reserved API operation](media/image201.png)
 
-7.  On the **Test** tab for the new operation, set the **id** parameter to a valid part number (the example in the image uses part 1), and then select **Send**:
+7.  On the **Test** tab for the new operation, set the **id** parameter to a valid part number (the example in the image uses part 1), and then select **Send**.
 
     ![Test the Web API](media/image202.png)
 
-8.  Verify that the test is successful. The operation should complete with an HTTP 200 response, and a body that shows the number of reservations for the product:
+8.  Verify that the test is successful. The operation should complete with an HTTP 200 response, and a body that shows the number of reservations for the product.
 
     ![The test response](media/image203.png)
 
-9.  On the **Design** page, select **Add operation**. In the **FrontEnd** pane, set the following properties. This operation defines POST requests for creating new orders:
+9.  On the **Design** page, select **Add operation**. On the **FrontEnd** pane, set the following properties (this operation defines POST requests for creating new orders):
 
     -   Display name: **api/Orders - POST**
     -   Name: **api-orders-post**
@@ -678,9 +677,9 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
     -   Name: **boilerPartId**, Description**: Boiler Part ID**, Type: **long**
     -   Name: **quantity**, Description**: Quantity**, Type: **integer**
 
-    ![Add parameters to APIM query operation](media/image204.png)
+    ![Add parameters to the API Management query operation](media/image204.png)
 
-11. Select **Add operation** again In the **FrontEnd** pane, and set the following properties. This operation defines POST requests for creating new reservations:
+11. Select **Add operation** again on the **FrontEnd** pane, and set the following properties (this operation defines POST requests for creating new reservations):
 
     -   Display name: **api/Reservations - POST**
     -   Name: **api-reservations-post**
@@ -692,34 +691,34 @@ Preeti can now update the Azure API Management service used by the VanArsdel app
     -   Name: **engineerId**, Description: **Engineer ID**, Type: **string**
     -   Name: **quantityToReserve**, Description: **Quantity to reserve**, Type: **integer**
 
-13. On the **Revisions** tab, select the new version. On the ellipsis menu for this version, select **Make current**:
+13. On the **Revisions** tab, select the new version. On the ellipsis menu for this version, select **Make current**.
 
     ![Set the current version for the revision](media/image205.png)
 
-14. In the **Make revision current** dialog box, select **Save**.
+14. In the **Make revision current** dialog, select **Save**.
 
-15. Open another page in your web browser and go to the URL **https://*\<APIM name\>*.azure-api.net/api/boilerparts/1/reserved** where **\<APIM name\>** is the name of your API service. Verify that you get a response similar to the following:
+15. Open another page in your web browser and go to the URL **https://*\<APIM name\>*.azure-api.net/api/boilerparts/1/reserved** where **\<APIM name\>** is the name of your API service. Verify that you get a response similar to the following.
 
     ```js
     {"id":1,"totalReservations":5}
     ```
 
-The updated Web API is now available. In theory, Kiana could create a new custom connector for the updated Web API and add it to the app. The app could then implement its own logic to determine how many items of the specified product are currently in stock, how many are reserved, compare the results to the number of items required, place an order for more stock if necessary, or reserve items from the existing stock. However, this kind of logic is better implemented in an Azure Logic App. Power Apps can call the Logic App through a custom connector when a technician wishes to reserve or order a part.
+The updated Web API is now available. In theory, Kiana could create a new custom connector for the updated Web API and add it to the app. The app could then implement its own logic to determine how many items of the specified product are currently in stock, how many are reserved, compare the results to the number of items required, place an order for more stock if necessary, or reserve items from the existing stock. However, this kind of logic is better implemented in an Azure logic app. Power Apps can call the logic app through a custom connector when a technician wishes to reserve or order a part.
 
-To create the Logic App, Kiana uses the following steps:
+To create the logic app, Kiana uses the following steps:
 
 > [!NOTE]
-> To keep things simple, the Logic App created in this example is non-transactional. It's possible that between checking the availability of a part and making a reservation, a concurrent user might make a conflicting reservation. You could implement transactional semantics by replacing some of the logic in this Logic App with a stored procedure in the **InventoryDB** database.
+> To keep things simple, the logic app created in this example is non-transactional. It's possible that between checking the availability of a part and making a reservation, a concurrent user might make a conflicting reservation. You could implement transactional semantics by replacing some of the logic in this logic app with a stored procedure in the **InventoryDB** database.
 
 1.  In the [Azure portal](https://portal.azure.com), on the **Home** page, select **+ Create a resource**.
 
-2.  In the **Search the marketplace** box, type **Logic App**, and then press **Enter**.
+2.  In the **Search the marketplace** box, enter **Logic App**, and then select **Enter**.
 
 3.  On the **Logic App** page, select **Create**.
 
-    ![Create the Logic App](media/image206.png)
+    ![Create the logic app](media/image206.png)
 
-4.  On the **Create a logic app** page, enter the following values, and then select **Review + create**.
+4.  On the **Create a logic app** page, enter the following values, and then select **Review + create**:
 
     -   Subscription: Select your Azure subscription
     -   Resource group: **webapi\_rg**
@@ -728,23 +727,23 @@ To create the Logic App, Kiana uses the following steps:
     -   Associate with integration service environment: Leave blank
     -   Enable log analytics: Leave blank
 
-5.  On the verification page, select **Create**, and wait while the Logic App is deployed.
+5.  On the verification page, select **Create**, and wait while the logic app is deployed.
 
 6.  When the deployment is complete, select **Go to resource**.
 
-7.  On the **Logic Apps Designer** page, scroll down to the **Templates** section, and then select **Blank Logic App**:
+7.  On the **Logic Apps Designer** page, scroll down to the **Templates** section, and then select **Blank Logic App**.
 
     ![Select the Blank Logic App template](media/image207.png)
 
-8.  On the **All** tab, in the **Search connectors and triggers** text box, select **Request**:
+8.  On the **All** tab, in the **Search connectors and triggers** text box, select **Request**.
 
     ![Select the Request trigger](media/image208.png) 
 
-9.  On the **Triggers** tab, select **When a HTTP request is received**:
+9.  On the **Triggers** tab, select **When a HTTP request is received**.
 
     ![Trigger when an HTTP request is received](media/image209.png)
 
-10. In the **Request Body JSON Schema** box, enter the following schema, and then select **+ New step**:
+10. In the **Request Body JSON Schema** box, enter the following schema, and then select **+ New step**.
 
     ```js
     {
@@ -763,38 +762,38 @@ To create the Logic App, Kiana uses the following steps:
     }
     ```
 
-    ![Logic App request schema](media/image210.png)
+    ![Logic app request schema](media/image210.png)
 
-    This schema defines the content of the HTTP request that the Logic App is expecting. The request body comprises the ID of a boiler part, the number of items to reserve, and the ID of the engineer making the request. The app will send this request when an engineer wants to reserve a part.
+    This schema defines the content of the HTTP request that the logic app is expecting. The request body comprises the ID of a boiler part, the number of items to reserve, and the ID of the engineer making the request. The app will send this request when an engineer wants to reserve a part.
 
-11. In the **Choose an operation** box, select **All**, and then select **HTTP**:
+11. In the **Choose an operation** box, select **All**, and then select **HTTP**.
 
     ![SelectH tthe HTTP operation option](media/image211.png)
 
-    The Logic App will call the **BoilerParts{id}** operation of the Web API to retrieve information about the boiler part provided by the request from the app.
+    The logic app will call the **BoilerParts{id}** operation of the Web API to retrieve information about the boiler part provided by the request from the app.
 
-12. In the **Actions** pane, select the **HTTP** action:
+12. On the **Actions** pane, select the **HTTP** action.
 
     ![Select the HTTP action option](media/image212.png)
 
-13. In the **HTTP** action box, on the ellipsis menu, select **Rename**, and change the name of the action to **CheckBoilerPart**:
+13. In the **HTTP** action box, on the ellipsis menu, select **Rename**, and change the name of the action to **CheckBoilerPart**.
 
     ![Rename the HTTP action](media/image213.png)
 
 14. Set the properties of the HTTP action as follows, and then select **+ New Step**:
 
     -   Method: **GET**
-    -   URI: **https://*\<APIM name\>*.azure-api.net/api/boilerparts/**, where ***\<APIM name\>*** is the name of your APIM service. In the **Dynamic content** box for this URI, on the **Dynamic content** tab, select **boilerPartId**
+    -   URI: **https://*\<APIM name\>*.azure-api.net/api/boilerparts/**, where ***\<APIM name\>*** is the name of your API Management service. In the **Dynamic content** box for this URI, on the **Dynamic content** tab, select **boilerPartId**
 
     ![Specify dynamic content for HTTP action](media/image214.png)
 
-15. In the **Choose an operation** box, in the **Search connectors and actions** box, enter **Parse JSON**, and then select the **Parse JSON** action:
+15. In the **Choose an operation** box, in the **Search connectors and actions** box, enter **Parse JSON**, and then select the **Parse JSON** action.
 
     ![Select the Parse JSON action](media/image215.png)
 
 16. Using the ellipsis menu for the **Parse JSON** action, rename the action as **ParseBoilerPart**.
 
-17. In the **Content** box for the **ParseBoilerPart** action, in the **Dynamic Content** box, select **Body**. In the **Schema** box, enter the following JSON schema, and then select **+ New step**:
+17. In the **Content** box for the **ParseBoilerPart** action, in the **Dynamic Content** box, select **Body**. In the **Schema** box, enter the following JSON schema, and then select **+ New step**.
 
     ```js
     {
@@ -827,7 +826,7 @@ To create the Logic App, Kiana uses the following steps:
 
     ![Parsing the BoilerPart object](media/image216.png)
 
-    This action parses the response message returned by the **getBoilerParts/{id} request. The response contains the details of the boiler part, including the number currently in stock.
+    This action parses the response message returned by the **getBoilerParts/{id}** request. The response contains the details of the boiler part, including the number currently in stock.
 
 18. In the **Choose an operation** box for the new step, select the **HTTP** connector.
 
@@ -848,7 +847,7 @@ To create the Logic App, Kiana uses the following steps:
 
 24. Set the **Content** property to **Body**.
 
-25. Enter the following schema, and then select **+ New step**:
+25. Enter the following schema, and then select **+ New step**.
 
     ```js
     {
@@ -866,13 +865,13 @@ To create the Logic App, Kiana uses the following steps:
 
     ![Parsing the Reservations data](media/image218.png)
 
-26. In the **Choose an operation** box for the new action, in the **Search connectors and actions** box, enter **Condition**, and then select the **Condition Control** action:
+26. In the **Choose an operation** box for the new action, in the **Search connectors and actions** box, enter **Condition**, and then select the **Condition Control** action.
 
     ![Select the Condition control](media/image219.png)
 
 27. Rename the operation as **CompareStock**.
 
-28. Select the **Choose a value** box. In the **Add dynamic content** box, on the **Expression** tab, enter the following expression, and then select **OK**:
+28. Select the **Choose a value** box. In the **Add dynamic content** box, on the **Expression** tab, enter the following expression, and then select **OK**.
 
     ```
     add(body('ParseReservations')?['totalReservations'], triggerBody()?['numberToReserve'])
@@ -882,13 +881,13 @@ To create the Logic App, Kiana uses the following steps:
 
     ![The CompareStock condition](media/image220.png)
 
-29. In the condition drop-down list box, select **is greater than**.
+29. In the condition dropdown list box, select **is greater than**.
 
-30. In the remaining **Choose a value** box, in the **Dynamic content** box, on the **Dynamic content** tab, under **ParseBoilerPart**, select **numberInStock**:
+30. In the remaining **Choose a value** box, in the **Dynamic content** box, on the **Dynamic content** tab, under **ParseBoilerPart**, select **numberInStock**.
 
     ![Compare total reservations to number of items in stock](media/image221.png)
 
-31. If the number of items required plus the number reserved is greater than the number in stock, then the app needs to place an order to replenish the inventory. In the **True** branch of the **CompareStock** action, select **Add an action**.
+31. If the number of items required plus the number reserved is greater than the number in stock, the app needs to place an order to replenish the inventory. In the **True** branch of the **CompareStock** action, select **Add an action**.
 
 32. On the **All** tab for the new operation, select **HTTP**, and then select the **HTTP** action.
 
@@ -899,14 +898,14 @@ To create the Logic App, Kiana uses the following steps:
     -   Method: **POST**
     -   URI: **https://*\<APIM name\>*.azure-api.net/api/orders**
     -   In the **Queries** table, in the first row, enter the key **boilerPartId**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **boilerPartId **
-    -   In the second row of the **Queries** table, enter the key **quantity**. In the value field, enter **50**:
+    -   In the second row of the **Queries** table, enter the key **quantity**. In the value field, enter **50**.
 
     ![Post a request to order more parts](media/image222.png)
 
-    The Logic App will automatically order 50 items of the specified part when stock is running low.
+    The logic app will automatically order 50 items of the specified part when stock is running low.
 
-    > **NOTE:**
-    > The Logic App assumes that the engineer will nor actually attempt to reserve more than 50 items of a specified part in a single request!
+    > [!NOTE]
+    > The logic app assumes that the engineer won't actually attempt to reserve more than 50 items of a specified part in a single request!
 
 35. Leave the **False** branch of the **CompareStock** action empty.
 
@@ -918,11 +917,11 @@ To create the Logic App, Kiana uses the following steps:
 
 39. Set the following properties for the **PostReservation** operation:
 
--   Method: **POST**
--   URI: **https://*\<APIM name\>*.azure-api.net/api/reservations**
--   In the **Queries** table, in the first row, enter the key **boilerPartId**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **boilerPartId**.
--   In the second row, enter the key **engineerId**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **engineerId**
--   In the third row, enter the key **quantityToReserve**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **numberToReserve**
+    -   Method: **POST**
+    -   URI: **https://*\<APIM name\>*.azure-api.net/api/reservations**
+    -   In the **Queries** table, in the first row, enter the key **boilerPartId**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **boilerPartId**.
+    -   In the second row, enter the key **engineerId**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **engineerId**
+    -   In the third row, enter the key **quantityToReserve**. For the value in the **Add dynamic content** box, on the **Dynamic content** tab, select **numberToReserve**
 
 40. Select **+ New Step**. In the **Choose an operation** box, search for and select the **Response** action.
 
@@ -930,45 +929,45 @@ To create the Logic App, Kiana uses the following steps:
 
     -   Status Code: **200**
     -   Headers: Key - **content-type**, Value - **application/json**
-    -   Body: In the **Dynamic content** box, select the **Body** element from the **PostReservation** request. This is the body returned when the reservation is made:
+    -   Body: In the **Dynamic content** box, select the **Body** element from the **PostReservation** request. This is the body returned when the reservation is made.
 
-    ![Response message sent by the Logic App](media/image223.png)
+    ![Response message sent by the logic app](media/image223.png)
 
-42. In the top left of the **Logic Apps Designer** page, select **Save**. Verify that the Logic App saves without any errors.
+42. In the upper left of the **Logic Apps Designer** page, select **Save**. Verify that the logic app can be saved without any errors.
 
-To create the custom connector that Power Apps can use to trigger the Logic App, Kiana performs the following steps while still in the Azure portal:
+To create the custom connector that Power Apps can use to trigger the logic app, Kiana performs the following steps while still in the Azure portal:
 
-1.  On the **Overview** page for the Logic App, select **Export**.
+1.  On the **Overview** page for the logic app, select **Export**.
 
-    ![Export the Logic App](media/image224.png)
+    ![Export the logic app](media/image224.png)
 
-2.  In the **Export to Power Apps** pane, name the connector **PartsOrderingConnector**, select your Power Apps environment**,** and then select **OK**.
+2.  In the **Export to Power Apps** pane, name the connector **PartsOrderingConnector**, select your Power Apps environment, and then select **OK**.
 
-    ![Export the LOgic App to Power Apps](media/image225.png)
+    ![Export the logic app to Power Apps](media/image225.png)
 
 3.  Sign in to [Power Apps](https://make.powerapps.com).
 
-4.  In your environment, under **Data**, select **Custom Connectors** and verify that the **PartsOrderingConnector** is listed:
+4.  In your environment, under **Data**, select **Custom Connectors** and verify that the **PartsOrderingConnector** is listed.
 
     ![Power Apps custom connectors](media/image226.png)
 
-Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. She adds an **Order** button to the **PartDetails** screen.
+Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. She adds an **Order** button to the **PartDetails** screen, as follows:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com) (if not already signed in).
 
 2.  Under **Apps**, select the **VanArsdelApp** app. On the ellipsis menu for the app, select **Edit**.
 
-3.  In the **Data** pane, select **Add data**, search for the **PartsOrderingConnector** connector, and add a new connection using this connector:
+3.  On the **Data** pane, select **Add data**, search for the **PartsOrderingConnector** connector, and add a new connection using that connector.
 
     ![Add the PartsOrdering connector to the app](media/image227.png)
 
-4.  In the **Tree view** pane, expand the **PartDetails** screen, and then expand the **DetailForm1** form.
+4.  On the **Tree view** pane, expand the **PartDetails** screen, and then expand the **DetailForm1** form.
 
-5.  In the **Properties** pane on the right, select **Edit fields**. In the **Fields** pane, on the ellipsis menu, select **Add a custom card**:
+5.  On the **Properties** pane on the right, select **Edit fields**. On the **Fields** pane, on the ellipsis menu, select **Add a custom card**.
 
     ![Add a custom data card control to the app](media/image228.png)
 
-6.  In the **Tree view** pane, rename the new card from **DataCard1** to **ReserveCard**. In the **Design view** window, resize the card so that it occupies the lower part of the screen, below the **Image\_DataCard1** control:
+6.  On the **Tree view** pane, rename the new card from **DataCard1** to **ReserveCard**. In the **Design view** window, resize the card so that it occupies the lower part of the screen, below the **Image\_DataCard1** control.
 
     ![Rename and resize the data card control](media/image229.png)
 
@@ -976,21 +975,20 @@ Maria can now modify the VanArsdel app to enable a technician to order parts whi
 
 8.  Resize and position the controls so that they're adjacent, with the **Button** control to the right of the **Text Input** control, and the **Label** underneath the **Button** control.
 
-9.  In the **Properties** pane for the **Text Input** control, clear the **Default** property.
+9.  On the **Properties** pane for the **Text Input** control, clear the **Default** property.
 
-10. In the **Properties** pane for the **Button** control, set the **Text** property to **Reserve**.
+10. On the **Properties** pane for the **Button** control, set the **Text** property to **Reserve**.
 
     ![The layout of the ParttDetails screen](media/image230.png)
 
 11. Rename the **Text Input** control as **NumberToReserve**, rename the **Button** control as **Reserve**, and rename the **Label** control as **Message**.
 
-12. In the **Properties** pane for the **Message** control, set the **Text** property to **Parts Reserved**, and set the **Visible** property to **MessageIsVisible**.
+12. On the **Properties** pane for the **Message** control, set the **Text** property to **Parts Reserved**, and set the **Visible** property to **MessageIsVisible**.
 
+    > [!NOTE]
+    > **MessageIsVisible** is a variable that you'll initialize to **false** when the screen is displayed, but it will be changed to **true** if the user selects the **Reserve** button.
 
-    > **NOTE:**
-    > **MessageIsVisible** is a variable that you will initialize to **false** when the screen is displayed, but is changed to **true** if the user hits the **Reserve** button.
-
-13. Set the **OnSelect** property for the **Reserve** button control to the following formula:
+13. Set the **OnSelect** property for the **Reserve** button control to the following formula.
 
     ```
     FieldEngineerPartsOrdering.manualinvoke({boilerPartId:ThisItem.id, engineerId:"ab9f4790-05f2-4cc3-9f01-8dfa7d848179", numberToReserve:NumberToReserve.Text});
@@ -998,40 +996,41 @@ Maria can now modify the VanArsdel app to enable a technician to order parts whi
     Set(MessageIsVisible, true);
     ```
 
-
     > [!NOTE]
-    > This formula uses a hard-coded engineer ID to represent the technician currently running the app. Chapter 8 describes how to retrieve the ID for the logged-on user.
+    > This formula uses a hard-coded engineer ID to represent the technician currently running the app. Chapter 8 describes how to retrieve the ID for the signed-on user.
     >
-    > Additionally, the app performs no error checking; it assumes that the request to reserve parts always succeeds. For more information on error handling, see [Errors function in Power Apps](/powerapps/maker/canvas-apps/functions/function-errors).
+    > Additionally, the app performs no error checking; it assumes that the request to reserve parts always succeeds. For more information about error handling, go to [Errors function in Power Apps](/powerapps/maker/canvas-apps/functions/function-errors).
 
 14. Set the **OnVisible** property for the **PartDetails** screen to **Set(MessageIsVisible, false)**.
 
-To test the app:
+To test the app, do the following:
 
-1.  In the **Tree view** pane, select the **Home** screen.
+1.  On the **Tree view** pane, select the **Home** screen.
 
-2.  Press **F5** to preview the app.
+2.  Select **F5** to preview the app.
 
 3.  On the **Home** screen, select **Parts**.
 
 4.  In the browse screen, select any part.
 
-5.  On the **Part Details** screen, scroll down to the reservations section, enter a positive integer value, and then select **Reserve**. Verify that the **Parts reserved** message appears:
+5.  On the **Part Details** screen, scroll down to the reservations section, enter a positive integer value, and then select **Reserve**. Verify that the **Parts reserved** message appears.
 
     ![The PartDetails screen with the Reserve function enabled](media/image231.png)
 
 6.  Close the preview window and return to Power Apps Studio.
 
-7.  In the Azure portal, go to the page for the **InventoryDB** Azure SQL Database.
+7.  In the Azure portal, go to the page for the **InventoryDB** SQL Database.
 
 8.  Select the **Query editor**, and sign in as **sqladmin** with your password.
 
-9.  In the **Query 1** pane, enter the following query, and then select Run. Verify that the reservation you made in the VanArsdel app appears:
+9.  In the **Query 1** pane, enter the following query, and then select **Run**. Verify that the reservation you made in the VanArsdel app appears.
 
     ```sql
     SELECT * FROM [dbo].[Reservations]
     ```
 
-    ![The query results in Azure SQL Database](media/image232.png)
+    ![The query results in SQL Database](media/image232.png)
 
-
+> [!div class="step-by-step"]
+> [Previous](06-using-web-api-in-app.md)
+> [Next](08-protecting-deploying-app.md)
