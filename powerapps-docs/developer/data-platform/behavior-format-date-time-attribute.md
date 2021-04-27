@@ -116,7 +116,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
      For custom date and time columns that are part of a Dataverse organization, the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `True` unless the column or the parent table is not customizable.  
   
     > [!NOTE]
-    >  When you update `DateTimeAttributeMetadata.DateTimeBehavior` property of an column from `UserLocal` to `DateOnly`, ensure that you also change the`DateTimeAttributeMetadata.Format` property from `DateAndTime` to `DateOnly`. Otherwise, an exception will occur.  
+    >  When you update `DateTimeAttributeMetadata.DateTimeBehavior` property of a column from `UserLocal` to `DateOnly`, ensure that you also change the`DateTimeAttributeMetadata.Format` property from `DateAndTime` to `DateOnly`. Otherwise, an exception will occur.  
   
 -   The following out-of-box date and time columns in Dataverse are by default set to `DateOnly` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False` of these columns, which implies that you cannot change the behavior for these columns:  
   
@@ -136,7 +136,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
      The behavior of these columns is set to `UserLocal` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property to `True`, and you can change the behavior of these columns to `DateOnly` only. No other behavior transitions are allowed.  
   
- After updating the behavior of an column, you must publish the customizations for the change to take effect. Updating the behavior of a date and time column ensures that all the values entered/updated *after* the column behavior was changed, are stored in the system as per the new behavior. This does not impact the values that are already stored in the database, and they continue to be stored as UTC values. However, when you retrieve the existing values using SDK or view it in the UI, the existing values are displayed as per the new behavior of the column. For example, if you changed the behavior of a custom column on an account from `UserLocal` to `DateOnly` and retrieve an existing account record using SDK, the date and time will be displayed as \<Date> followed by time as 12 AM (00:00:00). Similarly, for the behavior change from `UserLocal` to `TimeZoneIndependent`, the actual value in the database will be displayed as is without any time zone conversions.  
+ After updating the behavior of a column, you must publish the customizations for the change to take effect. Updating the behavior of a date and time column ensures that all the values entered/updated *after* the column behavior was changed, are stored in the system as per the new behavior. This does not impact the values that are already stored in the database, and they continue to be stored as UTC values. However, when you retrieve the existing values using SDK or view it in the UI, the existing values are displayed as per the new behavior of the column. For example, if you changed the behavior of a custom column on an account from `UserLocal` to `DateOnly` and retrieve an existing account record using SDK, the date and time will be displayed as \<Date> followed by time as 12 AM (00:00:00). Similarly, for the behavior change from `UserLocal` to `TimeZoneIndependent`, the actual value in the database will be displayed as is without any time zone conversions.  
   
  The following sample code demonstrates how to update the behavior of a date and time column:  
   
@@ -212,11 +212,11 @@ Console.WriteLine("Published customizations to the Account .\n");
   
  Some important points to be considered while using the `ConvertDateAndTimeBehavior` message:  
   
--   You should avoid any major changes to the solutions in Dataverse during the execution of the message such as importing a solution or deleting an column or parent table. Doing so might lead to unexpected behavior; however no data loss will occur.  
+-   You should avoid any major changes to the solutions in Dataverse during the execution of the message such as importing a solution or deleting a column or parent table. Doing so might lead to unexpected behavior; however no data loss will occur.  
   
 -   Updates done in the system as a result of executing the message won’t run workflows and plug-ins.  
   
--   Updates done in the system as a result of executing the message won’t change the “last modified on” value for the columns, but will be audited to help the administrators to determine the time of the conversion and the original/changed values for an column.  
+-   Updates done in the system as a result of executing the message won’t change the “last modified on” value for the columns, but will be audited to help the administrators to determine the time of the conversion and the original/changed values for a column.  
   
  The following sample code shows how to use the message:  
   
