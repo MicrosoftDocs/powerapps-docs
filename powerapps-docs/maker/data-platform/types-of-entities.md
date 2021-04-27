@@ -39,10 +39,10 @@ There are two different types of standard and custom table ownership. When you c
 |---------------|-----------------|  
 |**Organization**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
 |**User or team**|Data belongs to a user or a team. Actions that can be performed on these rows can be controlled on a user level.|  
-  
-Notice that there are a few Dataverse  system tables that have a different type of ownership from organization and user or team ownership:
-- **None**. There are a few system tables that don’t have an owner, such as the Privilege table.
-- **Business Unit**. There are a few system tables that are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
+
+Notice that there are a few Dataverse  system tables that are similar to standard tables but have a different type of ownership from organization and user or team ownership:
+- **None**. Some system tables don’t have an owner, such as the Privilege table.
+- **Business Unit**. A few system tables are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
 
 > [!IMPORTANT]
 >  After a standard table is created, you can’t change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
