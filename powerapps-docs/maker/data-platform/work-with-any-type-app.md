@@ -1,5 +1,6 @@
 ---
 title: "Work with any type of app | MicrosoftDocs"
+description: Learn how Microsoft Dataverse provides multiple ways to integrate with any type of app, device, system, or service.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
@@ -123,7 +124,7 @@ Plug-ins can be synchronous or asynchronous, and perform the following tasks:
 
 Plug-ins are registered at points in the event pipeline, which are illustrated here.
 
-![Plug-in event pipeline](media/plug-in-event-pipeline.png "Plug-in event pipeline")
+<img src = "media/plug-in-event-pipeline.png" alt = "Plug-in event pipeline" width = "335" height = "433" >
 
 Within the event pipeline, the following events can occur: 
 

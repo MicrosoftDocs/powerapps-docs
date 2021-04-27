@@ -65,7 +65,8 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
 > [!NOTE]
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.  
-> - The storage account must be created in the same region as the Power Apps environment you'll use the feature in.  
+> - The storage account must be created in the same region as the Power Apps environment you'll use the feature in.
+> - You must have **Reader** role access to the resource group with the storage account.  
 > - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must be a Dataverse administrator. 
 > - Only tables that have change tracking enabled can be exported. 
 

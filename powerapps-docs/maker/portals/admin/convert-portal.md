@@ -1,13 +1,16 @@
 ---
-title: "Convert a portal to different lifecycle stages. | MicrosoftDocs"
-description: "Information about how to convert a portal to different lifecycle stages."
+title: Convert a portal
+description: Learn how to convert a portal to different lifecycle stages.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Convert a portal
@@ -89,7 +92,7 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 - [Understand lifecycle of a portal](portal-lifecycle.md) <br>
 - [Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
-- [Power Apps portals FAQ](../faq.md)
+- [Power Apps portals FAQ](../faq.yml)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
