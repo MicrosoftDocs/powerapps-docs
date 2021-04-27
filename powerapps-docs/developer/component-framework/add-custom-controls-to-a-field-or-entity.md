@@ -72,7 +72,7 @@ Following the steps below will change the default label and text box column of t
   
 10. Select **Save and Close** to close the form editor.  
   
-## Add code component to an table
+## Add code component to a table
 
 To add a code component like data-set component or simple table component to a grid or view, follow the steps below:
 

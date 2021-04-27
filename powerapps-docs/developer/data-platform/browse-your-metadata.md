@@ -77,7 +77,7 @@ You can perform the following actions for a single table:
     - **Filter Attributes**: Filter columns by any attribute property values.
     - **Filter Properties**: Filter the properties displayed for the selected attribute.
 
-- **Keys**: If alternate keys are enabled for an table you can examine how they are configured.
+- **Keys**: If alternate keys are enabled for a table you can examine how they are configured.
 
 - **Relationships**: View the three types of table relationships: One-To-Many, Many-To-One, and Many-To-Many. With these views you can:  
     - **Edit Relationship**: Open the selected relationship form in the default organization, if the relationship supports this.  
