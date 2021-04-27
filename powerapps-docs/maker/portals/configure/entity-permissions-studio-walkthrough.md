@@ -280,6 +280,7 @@ Now that you have all the table permissions configured, this is how the permissi
 - **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access** access type.
 - **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
 - **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
+- **Staff contact details** - This table permission allows sales staff the ability to change their profile information (their own Contact record).
 
 This scenario explained how to configure table permissions in a real-world scenario to achieve business goals. You can now use the learnings from this tutorial to configure table permissions for your portal to meet your business requirements.
 
