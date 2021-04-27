@@ -5,7 +5,7 @@ author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/21/2021
+ms.date: 04/26/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -38,7 +38,7 @@ The knowledge base part of the app currently just contains a placeholder **Brows
 -   When all matching tips have been found, the technician can select a tip to view its details.
 -   A technician can also add new tips to the knowledge base, as well as add notes and comments to existing tips.
 
-    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Cognitive Search<!--note from editor: Via Cloud Style Guide.--> to provide the search functionality, as described earlier. To support the app, Kiana decides that the following operations are required from the Web API:
+    The knowledge base is large and growing, and querying across multiple tables and columns can involve complex logic that requires significant compute power. To reduce the load on the Web API, Kiana decides to use Azure Cognitive Search to provide the search functionality, as described earlier. To support the app, Kiana decides that the following operations are required from the Web API:
 
 -   Find the details of a specified knowledge base tip from the **Tips** table.
 -   Update an existing knowledge base tip in the **Tips** table.
@@ -84,8 +84,8 @@ Kiana took the "code-first" approach to building the Web API. With this strategy
 5.  Used the Swagger API to test the Web API.
 
 The following image shows the high-level structure of the Web API.
-<!--note from editor: This image needs better alt text.-->
-![The Inventory Web API](media/image83.png)
+
+![High-level structure of the Inventory Web API](media/image83.png)
 
 Kiana used the following procedure to create the Web API using .NET 5.0 command-line tools and Visual Studio Code:
 
@@ -372,8 +372,8 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 ## Building and deploying the Web API: Field Knowledgebase
 
 The Field Knowledgebase operations in the Web API work on three tables in the **KnowledgeDB** database: **Tips**, **BoilerParts**, and **Engineers**. The following image shows the relationships among these tables and the columns they contain.
-<!--note from editor: This image needs better alt text.-->
-![Knowledgebase tables](media/image97.png)
+
+![Knowledgebase tables relationships](media/image97.png)
 
 Kiana adopted a similar approach for the Field Knowledgebase database that she used for the Field Inventory Management database. She performed the following tasks:
 
@@ -637,8 +637,8 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
 ## Building and Deploying the Web API: Field Scheduling
 
 The Field Scheduling operations use the tables **Appointments**, **AppointmentStatuses** (this is a simple lookup table that lists the valid appointment status values), **Customers**, and **Engineers**, shown in the following image. These tables are stored in the **SchedulesDB** database.
-<!--note from editor: This image needs better alt text.-->
-![Appointments and scheduling tables](media/image99.png)
+
+![Appointments and scheduling tables relationships](media/image99.png)
 
 To create the Web API operations for the Field Scheduling part of the system, Kiana performed the following tasks:
 

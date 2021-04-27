@@ -5,7 +5,7 @@ author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/21/2021
+ms.date: 04/26/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -17,7 +17,7 @@ Maria has built a prototype app by using test data held in Excel workbooks. She 
 
 ## What is Dataverse?
 
-Dataverse is a data store with a set of standard tables. You can use it to store business information, manage business rules, and define business dataflows. In many ways it acts like a database, except that it holds more than just data. You can use it to record elements of business logic for your solutions, and share this logic across apps. Dataverse includes scheduling capabilities that enable you to automate processing and workflows. Additionally, you can add charts and associate them with your data; Power Apps can reference these charts directly from Dataverse.
+Dataverse is a data store with a set of standard tables. You can use it to store business information, manage business rules, and define business dataflows. In many ways it acts like a database, except that it holds more than just data. You can use it to record elements of business logic for your solutions, and share this logic across apps. Dataverse includes scheduling capabilities that enable you to automate processing and workflows. Additionally, you can add charts and associate them with your data; Power Apps can reference these charts directly from Dataverse. More information: [What is Dataverse?](/powerapps/maker/data-platform/data-platform-intro) in Power Apps docs
 
 Dataverse follows the "low-code" approach of Power Apps, enabling a business user to create business entities and workflows. Additionally, Dataverse is a scalable, reliable, and secure system, implemented in Azure. Role-based access control limits the type of access to different users in your organization; users can only see or manipulate the entities to which they've been granted access.
 
@@ -80,7 +80,7 @@ The business rules designer supports the following actions:
 
 ## Defining business activities
 
-There are two fundamental types of table in Dataverse: *Standard* tables (including custom tables), which contain data, and *Activity* tables, which represent business actions and workflows that can be scheduled to run by Dataverse. An activity table contains references to the data entities involved in the activity (such as customers or salespeople), a series of states through which the activity can progress<!--note from editor: Suggested.-->, its current state, and other information used by Dataverse to schedule operations when appropriate.
+There are two fundamental types of table in Dataverse: *Standard* tables (including custom tables), which contain data, and *Activity* tables, which represent business actions and workflows that can be scheduled to run by Dataverse. An activity table contains references to the data entities involved in the activity (such as customers or salespeople), a series of states through which the activity can progress, its current state, and other information used by Dataverse to schedule operations when appropriate.
 
 Dataverse contains built-in activities for managing meetings, scheduling business processes, marketing, managing the sales process, creating recurring appointments, and handling customer service incidents. More information: [Activity tables](../../developer/data-platform/activity-entities.md)
 

@@ -14,14 +14,14 @@ ms.reviewer: kvivek
 # Chapter 3: Building a low-code prototype
 
 > [!NOTE] 
-> [Chapter 2](02-intro-sample-scenario.md) referenced the mobile app used by the field technicians and engineers, and desktop Power Apps used by on-premises staff. The following chapters focus on the design, implementation, and rollout of the mobile apps built with Power Apps. The desktop apps are left as an exercise for the reader.
+> [Chapter 2](02-intro-sample-scenario.md) referenced the mobile app used by the field technicians and engineers, and desktop app used by on-premises staff. The following chapters focus on the design, implementation, and rollout of the mobile apps built with Power Apps. The desktop apps are left as an exercise for the reader.
 
 Kiana is skeptical of low-code solutions and Power Apps, but she and Maria decide to build an app together to help the field technicians check inventory (and order parts, if necessary), query the knowledge base, and check their next appointment while they're out of the office on service calls. Kiana and Maria plan to use this experience to explore how to add controls and use formulas in Power Apps.
 
 Although building an initial, low-code prototype is typically a citizen developer task, Kiana decides to pay attention to the process to ensure that she understands how the app is constructed. She needs this information to enable her to help Maria integrate the real-world data sources, Web APIs, and other required services into the app.
 
 ## Item 1: Field inventory management
-<!--note from editor: Please note that in general, our style is not to use "should." I've mostly left instance of "should" alone because they seem to fit with the conversational tone of this article, but please consider writing around them. See https://styleguides.azurewebsites.net/StyleGuide/Read?id=2700&topicid=35667 in the style guide.-->
+
 Maria's initial aim is to build a canvas app that displays a list of parts and enables the user to view the details of any part. Eventually, the user should also be able to order a part; however, this initial version of the app will simply be a prototype and won't be hooked up to a back end yet. After she has obtained feedback from Caleb, the lead field technician, Maria will work with Kiana on integrating the canvas app with the inventory system running on-premises.
 
 Maria is very familiar with the existing inventory management system and understands the information that it contains. She starts by creating an Excel workbook that contains tables holding mock data with details for some sample parts. The fields in the table are **ID**, **Name**, **CategoryID**, **Price**, **Overview**, **NumberInStock**, and **Image** (a URL that references an image of the part). She can use this workbook to build and test the canvas app, to ensure that it displays the required data correctly. She stores this workbook in her OneDrive account with the name **BoilerParts.xlsx**.
@@ -36,7 +36,6 @@ If you're a relational database designer, you'll notice that the Excel workbook 
 > [!NOTE]
 > The URLs in the **Image** column are currently just placeholders. In the completed app, these URLs will be replaced with the addresses of real image files.
 
-<!--note from editor: In this chapter and in chapter 7, I found myself getting a bit lost among all these steps. The other chapters use many more headings to break up the procedures, and I think they're easier to follow.  Would it be possible to add H3s in these long procedures to break them up? I know this is more of a tutorial than a series of classic procedures, so the H3s could be worded more casually to keep the conversational tone. The following, for example, could simply be the same sentence but formatted as a heading.-->
 Follow these steps to create the app with Power Apps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
@@ -72,15 +71,23 @@ Follow these steps to create the app with Power Apps.
 
     ![Change the text for a label control](media/image15.png)
 
-9. Repeat the previous step for the **ID** and **Image** labels. Change the **Text** property of the **ID** field to **CategoryID**, and the **Text** property of the **Image** field to **Overview**. The **Browse** screen should now look like the following image, which a field engineer is more likely to find useful for selecting parts.<!--note from editor: Does the reader need to include "ThisItem" in the new label (i.e. ThisItem.CategoryID, ThisItem.Image), or is that automatically prepended to the field name? Also - please verify that the alt text captures the significance of the image. Most of the images in this article simply illustrate what the text has already said, but this one is carrying more meaning so the alt text needs to be better.-->
+9. Repeat the previous step for the **ID** and **Image** labels. Change the **Text** property of the **ID** field to **CategoryID**, and the **Text** property of the **Image** field to **Overview**. The **Browse** screen should now look like the following image, which a field engineer is more likely to find useful for selecting parts.
 
     ![A list of items that show the name of a part, the category it's in, and a descriptive overview](media/image16.png)
 
-10. The search feature of the **Browse** screen defaults to using the fields that were initially selected when the screen was generated&mdash;in this case, **CategoryID**, **ID**, and **Image**. The results are sorted by **CategoryID**. It makes sense to switch this to the **Name**, **CategoryID**, and **Overview** fields, with results sorted by **Name**. Select the **BrowseGallery1** control on the **Tree view** pane. In the dropdown list on the left side of the formula bar, select the **Items** property. Drag the lower edge of the formula bar down so the formula is completely visible. The formula contains the following expression:<!--note from editor: I used a break here to avoid ending punctuation.--><br>**SortByColumns(Search([\@Table1], TextSearchBox1.Text, "CategoryID","ID","Image"), "CategoryID", If(SortDescending1, Descending, Ascending))**
+10. The search feature of the **Browse** screen defaults to using the fields that were initially selected when the screen was generated&mdash;in this case, **CategoryID**, **ID**, and **Image**. The results are sorted by **CategoryID**. It makes sense to switch this to the **Name**, **CategoryID**, and **Overview** fields, with results sorted by **Name**. Select the **BrowseGallery1** control on the **Tree view** pane. In the dropdown list on the left side of the formula bar, select the **Items** property. Drag the lower edge of the formula bar down so the formula is completely visible. The formula contains the following expression:
+
+    ```
+    **SortByColumns(Search([\@Table1], TextSearchBox1.Text, "CategoryID","ID","Image"), "CategoryID", If(SortDescending1, Descending, Ascending))
+    ```
 
     ![Sort and search fields](media/image17.png)
 
-11. Change the **Search** expression to reference the **Name**, **CategoryID**, and **Overview** fields by using the following formula:<!--note from editor: Maybe this should be a fenced code block here, like line 341?--><br><br>**SortByColumns(Search([\@Table1], TextSearchBox1.Text, "Name", "CategoryID", "Overview"), "Name", If(SortDescending1, Descending, Ascending))**
+11. Change the **Search** expression to reference the **Name**, **CategoryID**, and **Overview** fields by using the following formula:
+
+    ```
+    SortByColumns(Search([\@Table1], TextSearchBox1.Text, "Name", "CategoryID", "Overview"), "Name", If(SortDescending1, Descending, Ascending))
+    ```
 
 12. The title in the form header isn't helpful, and the default theme doesn't match VanArsdel's corporate look and feel. In the **Browse** screen, select the **Table1** label, and on the **Formula** bar, change the **Text** property of the label to **"Browse Parts"** (include the double quotation marks in the value).
 
@@ -88,8 +95,9 @@ Follow these steps to create the app with Power Apps.
 
     ![Select the theme](media/image18.png)
 
-<!--note from editor: If you went with adding H3s to break up this section, you could add an H3 here that says something like "### Make the Details screen more useful".-->
-You've created the basic app and modified the **Browse** screen to display fields that an engineer can use to identify a part. The app also contains a **Details** screen, which shows all the information for a selected part. The fields on this screen aren't currently displayed in a logical sequence, so you should rearrange them. You can also delete the **ID** field<!--note from editor: Edit okay?--> from this screen, because this information is irrelevant to an engineer.
+#### Make the Details screen more useful
+
+You've created the basic app and modified the **Browse** screen to display fields that an engineer can use to identify a part. The app also contains a **Details** screen, which shows all the information for a selected part. The fields on this screen aren't currently displayed in a logical sequence, so you should rearrange them. You can also delete the **ID** field from this screen, because this information is irrelevant to an engineer.
 
 1. On the **Tree view** pane, scroll down and select **DetailScreen1**. This screen displays details about the part that a user selects on the **Browse** screen.
 
@@ -147,7 +155,7 @@ You've created the basic app and modified the **Browse** screen to display field
 
     ![Verify that the image control has been added](media/image27.png)
 
-11. On the **Tree view** pane, select **Image\_DataCard1**. On the right pane, on the **Advanced** tab<!--note from editor: Edit okay?-->, change **Height** to **500**, to allow sufficient space for an image to be displayed.
+11. On the **Tree view** pane, select **Image\_DataCard1**. On the right pane, on the **Advanced** tab, change **Height** to **500**, to allow sufficient space for an image to be displayed.
 
     ![Set the image data card height](media/image28.png)
 
@@ -158,10 +166,9 @@ You've created the basic app and modified the **Browse** screen to display field
     - Width: **550**
     - Height: **550**
 
-    > [!NOTE] 
+    > [!NOTE]
     > The image displayed is currently empty because the URL in the Excel workbook is just a placeholder. You'll address this issue, and fetch a real URL, when you bind the app to a Web API in a later chapter.
 
-<!--note from editor: This could be "### Don't let engineers edit the parts catalog" or something similar.-->
 The app also contains an **Edit** screen, which enables a user to change the information for a part. An engineer shouldn't be able to change the details of a part, create new parts, or delete parts from the catalog.
 
 1. On the **Tree view** pane, select **EditScreen1**. Select the ellipsis button, and then select **Delete** to remove this screen.
@@ -192,7 +199,7 @@ The app also contains an **Edit** screen, which enables a user to change the inf
 
 9. Select **IconNewItem1**, and then select **Delete**. As before, the text in the header for the screen disappears and an error message is displayed, and for the same reason.
 
-10. On the **Tree view** pane, under **BrowseScreen1**, select **LblAppName1**. Modify the expression for the **Width** property by removing the reference to **IconNewItem1.Width**.<!--note from editor: Edit okay?--> The new expression should be **Parent.Width - Self.X - IconSortUpDown1.Width - IconRefresh1.Width**.
+10. On the **Tree view** pane, under **BrowseScreen1**, select **LblAppName1**. Modify the expression for the **Width** property by removing the reference to **IconNewItem1.Width**. The new expression should be **Parent.Width - Self.X - IconSortUpDown1.Width - IconRefresh1.Width**.
 
     ![Change the label width](media/image34.png)
 
@@ -204,8 +211,9 @@ The app also contains an **Edit** screen, which enables a user to change the inf
 
 13. On the **Tree view** pane, select **IconRefresh1**. Change the expression for the **X** property to **Parent.Width - IconSortUpDown1.Width - Self.Width**. The errors should all disappear.
 
-<!--note from editor: The following sentence could be the whole H3. This same approach could work for the next sections also.-->
-Now you can save and test the application.
+#### Save and test the app
+
+Now you can save and test the app.
 
 1. Select **File** > **Save as**.
 
@@ -239,7 +247,7 @@ Maria decides to create a new screen based on the **List** template available in
 
     ![The List template](media/image40.png)
 
-2.  In the screen header, select the label that displays the text **\[Title]**<!--note from editor: Edit assumes the square brackets are literally part of the label.-->. Change the **Text** property to **"Query"** (include the quotation marks).
+2.  In the screen header, select the label that displays the text **\[Title]**. Change the **Text** property to **"Query"** (include the quotation marks).
 
     ![Modify the query screen header text](media/image41.png)
 
@@ -259,7 +267,7 @@ Maria decides to create a new screen based on the **List** template available in
 
 7.  Select **File** > **Save**.
 
-8.  In the **Version note** box, enter the text **Added Knowledgebase UI**, and then select **Save**.<!--note from editor: If the name of the button can't have any spaces, can we use "KnowledgeBase" instead of "Knowledgebase"? If it can have spaces, "Knowledge Base" would be even better.-->
+8.  In the **Version note** box, enter the text **Added Knowledgebase UI**, and then select **Save**.
 
 9.  Return to the **Home** screen and select **F5** to preview the new screen. It should look like the following image.
 
@@ -338,7 +346,7 @@ Maria decides to build the appointments screens initially as a separate app. Thi
 
     The details on the **Browse** screen name now display the customer name.
 
-9.  On the **Tree view** pane, select **BrowseGallery1**. Using the formula bar, examine the expression in the **Items** property. The control searches for appointments by using the appointment date, time, and contact number. Change this formula to search the customer name rather than the contact number:<!--note from editor: I'm a bit torn about using a fenced code block suddenly because everywhere else we've just used bold for these expressions. Certainly this is useful for the reader though.-->
+9.  On the **Tree view** pane, select **BrowseGallery1**. Using the formula bar, examine the expression in the **Items** property. The control searches for appointments by using the appointment date, time, and contact number. Change this formula to search the customer name rather than the contact number:
 
     ```
     SortByColumns(Search([@Appointments], TextSearchBox1.Text, "Appointment_x0020_Date","Appointment_x0020_Time","Customer_x0020_Name"), "Appointment_x0020_Date", If(SortDescending1, Descending, Ascending)).
@@ -353,7 +361,7 @@ Maria decides to build the appointments screens initially as a separate app. Thi
 
 13. On the **Tree view** pane, select **iconSortUpDown1**. Change the value for the **X** property to **Parent.Width - Self.Width**.
 
-14. On the **Tree view** pane, select **BrowseScreen1**<!--note from editor: Edit okay?-->, and then select the ellipsis button (**...**). On the dropdown menu that appears, select **Rename** and change the name of the screen to **BrowseAppointments**.
+14. On the **Tree view** pane, select **BrowseScreen1**, and then select the ellipsis button (**...**). On the dropdown menu that appears, select **Rename** and change the name of the screen to **BrowseAppointments**.
 
     ![Rename the browse screen](media/image53.png)
 
@@ -489,7 +497,7 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 5.  Repeat the previous step twice more, to add two more blank screens (**Screen3** and **Screen4**).
 
-6.  Rename **Screen3** as **AppointmentDetails**, and rename **Screen4** as **EditAppointment**.<!--note from editor: Edit okay?-->
+6.  Rename **Screen3** as **AppointmentDetails**, and rename **Screen4** as **EditAppointment**.
 
 7.  On the left toolbar of Power Apps Studio, select the **Data** icon. On the **Data** pane, select **Add data**. In the **Select a data source** dropdown list, in the **Search** field, enter **OneDrive**, and then select **OneDrive for Business**.
 
@@ -512,7 +520,7 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 15. Select **Ctrl+V** to paste the controls onto the screen.
 
     > [!NOTE]
-    > Sometimes the screen header appears slightly too low down. To fix this problem, select the **IconSortUpDOwn1\_1**, **IconRefresh1\_1**, **LblAppName1\_1**, and **RectQuickActionBar1\_1** controls On the **Tree view** pane (hold down **Shift**<!--note from editor: This is good for contiguous selection. If the controls aren't all listed next to each other, it should be "hold down **Ctrl**..."--> while clicking to select more than one control at a time), and then use the mouse or arrow keys to move them up in the design view pane.
+    > Sometimes the screen header appears slightly too low down. To fix this problem, select the **IconSortUpDOwn1\_1**, **IconRefresh1\_1**, **LblAppName1\_1**, and **RectQuickActionBar1\_1** controls On the **Tree view** pane (hold down **Shift** while clicking to select more than one control at a time), and then use the mouse or arrow keys to move them up in the design view pane.
 
 16. Switch back to the browser window that shows the **VanArsdelAppointments** app, and then select and copy the controls in the **AppointmentDetails** screen to the clipboard (**Ctrl+A** followed by **Ctrl+C**).
 
@@ -525,7 +533,7 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 19. Return to the browser window that shows the **VanArsdelApp** app, select the **EditAppointment** screen, and then paste the controls. Again, move the controls in the screen header if necessary.
 
-20. On the **Tree view** pane<!--note from editor: Edit ("pane" instead of "menu") okay?-->, select the **AppointmentDetails** screen and verify that the error indicated previously has now disappeared.
+20. On the **Tree view** pane, select the **AppointmentDetails** screen and verify that the error indicated previously has now disappeared.
 
 21. On the **Tree view** pane, select the **BrowseScreen1** screen. Rename this screen as **BrowseParts**.
 
@@ -559,11 +567,11 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
 
     ![Add a logo to the image](media/image66.png)
 
-6.  From the list of controls, add four **Text label** controls to the form and position them so they're stacked under the VanArsdel logo.<!--note from editor: The text needs to cover this so that if someone isn't looking at (or can't see) the image, they still know what to do. Alternatively, you could make the alt text more descriptive.-->
+6.  From the list of controls, add four **Text label** controls to the form and position them so they're stacked under the VanArsdel logo.
 
     ![Add text label controls](media/image67.png)
 
-7.  Select the uppermost **Text label** control. On the right pane, on the **Properties** tab,<!--note from editor: The screenshot in the following step (image69.png) seems to show that the **Text** property is set on the **Advanced** tab.--> set the **Text** property to **Next Appointment**. Set the **Font Size** to **30**, and use the color picker to set the font color to green (to match the logo).
+7.  Select the uppermost **Text label** control. On the right pane, on the **Properties** tab, set the **Text** property to **Next Appointment**. Set the **Font Size** to **30**, and use the color picker to set the font color to green (to match the logo).
 
     ![Set the font color](media/image68.png)
 
@@ -574,9 +582,9 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
     > [!NOTE]
     > Currently, this formula just acts as a placeholder. You'll modify the label later to retrieve the next appointment for the engineer, rather than always display the first one.
 
-9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date**.<!--note from editor: To be parallel, should this be "...set the **Text** property to **First(Appointments).\'Appointment Date'** (include the single quotation marks)."? (Note the second quotation mark).-->
+9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date**.
 
-10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time**. Set the **Font size** property to 30.<!--note from editor: Should the text string have a second quotation mark? Also, are these two settings done on the two different right-pane tabs?-->
+10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time**. Set the **Font size** property to 30.
 
 11. From the list of controls, add a **Rectangle** control. Set the following properties for this control:
 
@@ -592,7 +600,7 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
 
     ![Home screen buttons](media/image70.png)
 
-13. Select the **Appointments** button. Change the expression in the **OnSelect** action to the formula **Navigate(BrowseAppointments, ScreenTransition.Fade)**.<!--note from editor: Note that I moved the space from before the comma to after it, to be parallel.--> This action switches the display to the appointments screen when the user selects the button.
+13. Select the **Appointments** button. Change the expression in the **OnSelect** action to the formula **Navigate(BrowseAppointments, ScreenTransition.Fade)**. This action switches the display to the appointments screen when the user selects the button.
 
     ![Appointments button](media/image71.png)
 

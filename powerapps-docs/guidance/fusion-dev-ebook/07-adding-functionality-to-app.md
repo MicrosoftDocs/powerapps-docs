@@ -5,7 +5,7 @@ author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/21/2021
+ms.date: 04/26/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -17,7 +17,7 @@ Kiana and Maria are excited to show the inventory management app to Caleb, the f
 
 -   Add a photograph of the work done on a boiler or air conditioning unit, and add it to the appointment details on the **Edit Appointment** screen. This image could prove useful as documentary evidence of repairs performed. The **Edit Appointment** screen currently enables the user to add an image to the appointment, but the image isn't saved as this feature hasn't been fully implemented yet. The reason for this omission is that Kiana and Preeti need to determine the best place to store image data. Caleb would like this functionality added as soon as possible.
 
--   View a complete appointment history for a customer, to track repairs that were requested and monitor any ongoing issues that might require technicians to be repeatedly called out.<!--note from editor: Suggested.-->
+-   View a complete appointment history for a customer, to track repairs that were requested and monitor any ongoing issues that might require technicians to be repeatedly called out.
 
 -   Order parts from the **Part Details** screen.
 
@@ -415,7 +415,7 @@ To test the app, do the following:
 A key requirement of the system is to enable a technician to order any parts required while visiting a customer. If the parts are in stock, it should be possible to schedule another visit to complete the repair at the next convenient date for the customer. If the parts are currently out of stock and have to be ordered, the technician can tell the customer. Malik can then arrange an appointment with the customer when Maria receives notice that the parts have arrived in the warehouse.
 
 The reservations part of the app uses the tables in the **InventoryDB** database shown in the following image. The **Orders** table holds information about orders placed for parts. The **Reservations** table lists the reservation requests that technicians and engineers have made for parts. The **Engineers** table provides the name and contact number for the engineer who made the reservation, which makes it easy for Maria the inventory manager to query if necessary.
-<!--note from editor: I think the text covers what's going on well enough that this image doesn't need more elaborate alt text.-->
+
 ![The Reservations data model](media/image197.png)
 
 To support this feature, Kiana has to update the Web API with a method that fetches the number of reserved items for a specified part, as follows:

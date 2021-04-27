@@ -19,16 +19,16 @@ Maria and Kiana are ready to combine the app with the Web API. However, before p
 
 Preeti is concerned that the app and the Web API must be secure because they provide access to sensitive data stored in the various databases. She wants assurances that she will be able to include authentication and authorization, to prevent unwarranted access to information. Preeti is also aware that the company is rapidly expanding, and the volume of data involved in managing customers, appointments, parts, and the knowledge base is likely to increase exponentially in the near term. Consequently, she wants the solution to be scalable.
 
-Kiana explains to Preeti that the Web API is currently implemented with Azure App Service<!--note from editor: Edit okay? Azure App Service is an actual Azure service, so it wouldn't be right to use "an." Maybe it should be "an instance of Azure App Service"?-->. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Azure Active Directory because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
-<!--note from editor: If the reader needs information from this image about how to reach this UI, the image should have better alt text.-->
+Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Azure Active Directory because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
+
 ![App Service authentication configuration](media/image100.png)
 
 App Service also provides horizontal and vertical scalability. If needed, Preeti can scale up the resources available to the Web API by upgrading the App Service plan for the web app:
-<!--note from editor: If the reader needs information from this image about how to reach this UI, the image should have better alt text.-->
+
 ![App Service scale up](media/image101.png)
 
 She can also arrange for the system to scale out by configuring autoscaling. App Service enables an operations manager to define autoscale rules that determine the conditions under which the system should scale out across more instances when the load increases, or back in again as demand drops. She can also configure pre-emptive autoscaling to occur according to a schedule:
-<!--note from editor: If the reader needs information from this image about how to reach this UI, the image should have better alt text.-->
+
 ![App Service scale out](media/image102.png)
 
 A key part of the role of an IT Operations Manager is to have an eye for how systems might evolve, and to ensure that the underlying support structures will handle future expansion and changes. Preeti knows that the Web API developed by Kiana might be extended, and reused by other VanArsdel systems in the future. She needs to be able to manage and control the way in which developers request use of the Web API, protect it as a valuable resource, and monitor its use. Therefore Preeti decides to protect the Web API behind the Azure API Management service.
@@ -596,7 +596,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 14. On the **Tree view** pane, rename the **PartDetails\_1** screen as **KnowledgebaseDetails**.
 
-    -   Select the **LblAppName*X*** control on the screen; set the **Text** property to **"Article Details"** (including the quotes)<!--note from editor: Should this be its own step? I'm not sure how it fits in here. -->
+    Select the **LblAppName*X*** control on the screen; set the **Text** property to **"Article Details"** (including the quotes).
 
 15. On the **Tree view** pane, select the **DetailFormX** control on the screen. Set the following properties:
 
