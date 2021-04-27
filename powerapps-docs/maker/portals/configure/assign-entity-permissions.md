@@ -60,7 +60,7 @@ This access type means that the list will only show the records of the selected 
 
 ### Self access type
 
-Self Access Type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record. For example, [profile page in a car dealership](entity-permissions-studio-walkthrough#change-profile-details).
+Self Access Type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record. For example, [profile page in a car dealership](entity-permissions-studio-walkthrough.md#change-profile-details).
 
 ### Parental access type
 
