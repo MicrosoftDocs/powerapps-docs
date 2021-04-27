@@ -5,7 +5,7 @@ author: ckwan-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 04/27/2021
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
@@ -69,10 +69,11 @@ Contoso has the following customizations configured for this scenario.
 
 - Web pages have table permissions enabled. More information: [Manage page permissions](webpage-access-control.md)
 - Web pages have [lists](entity-lists.md) configured with the tables, views, and the ability to create/view/edit/delete records as appropriate.
-    - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission.
-    - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions.
-    - To show [all car dealerships](#view-all-car-dealerships), the web page has list with a view from the **Dealerships** table having View, Create, Edit, and Delete records permissions.
+    - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission. Access type: [Global access](assign-entity-permissions.md#global-access-type).
+    - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions. Access type: [Contact access](assign-entity-permissions.md#contact-access-type).
+    - To show [all car dealerships](#view-all-car-dealerships), the web page has list with a view from the **Dealerships** table having View, Create, Edit, and Delete records permissions. Access type: [Account access](assign-entity-permissions.md#account-access-type).
     - To show [car listings for an associated dealership](#view-car-listings-for-associated-dealership), the web page has a list with a view from the **Dealerships** table. This list can be used to view the dealership details, with view having subgrid that shows the car listings associated to the selected dealership with View, Create, Edit, and delete records permissions.
+- Default [profile page](#change-profile-details) to allow sales staff to change their contact details. Access type: [Self access](assign-entity-permissions.md#self-access-type).
 
 ## View all car listings
 
@@ -230,6 +231,42 @@ To configure table permissions for sales staff to view associated dealership's c
 
     > [!NOTE]
     > **Sales** role is inherited from the parent table permission.
+
+1. Select **Save**.
+
+## Change profile details
+
+Contoso uses the default profile page available with the portal template to allow sales staff to update their contact details.
+
+![Contoso Limited - sales staff able to change their own profile information](media/entity-permissions-studio-walkthrough/self-access.png "Contoso Limited - sales staff able to change their own profile information")
+
+To configure table permissions for sales staff to view associated dealership's car listings:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Enter table permission name as "Staff contact details".
+
+1. Select **Contact** table.
+
+1. Select **Self access** as the access type.
+
+1. Select **Read**, and **Write** privileges.
+
+1. Select **Add roles**.
+
+1. From the list of available roles, select **Authenticated Users**.
+
+    ![Contoso Limited - self access](media/entity-permissions-studio-walkthrough/contoso-ltd-self-access.png "Contoso Limited - self access")
 
 1. Select **Save**.
 
