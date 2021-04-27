@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/14/2019
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -31,17 +31,17 @@ There is one important usage difference: you can't directly access the fields of
 
 ## Polymorphic lookups
 
-Common Data Service supports relationships between records. Each record in the **Accounts** entity has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
+Microsoft Dataverse supports relationships between records. Each record in the **Accounts** entity has a **Primary Contact** lookup field to a record in the **Contacts** entity. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** entity. That last detail is important because you always know what fields will be available for the lookup.
 
-Common Data Service also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.
+Dataverse also supports polymorphic lookups, which can refer to a record from any entity in a set. For example, the **Owner** field can refer to a record in the **Users** entity or the **Teams** entity. The same lookup field in different records could refer to records in different entities. In this case, you don't always know what fields will be available.
 
-Canvas record references were designed for working with polymorphic lookups in Common Data Service. You can also use record references outside of this context, which is how the two concepts differ.
+Canvas record references were designed for working with polymorphic lookups in Dataverse. You can also use record references outside of this context, which is how the two concepts differ.
 
 In the next section, you'll start to explore these concepts by working with the **Owner** lookup.
 
 ## Show the fields of a record owner
 
-Every entity in Common Data Service includes an **Owner** field. This field can't be removed, you can't add another, and it always requires a value.
+Every entity in Dataverse includes an **Owner** field. This field can't be removed, you can't add another, and it always requires a value.
 
 To show that field in the **Account** entity:
 
@@ -62,7 +62,7 @@ This graphic shows a simple gallery of **Accounts**, where the **Accounts** enti
 > ![Accounts shown in a Gallery control](media/working-with-references/accounts-gallery.png)
 
 > [!IMPORTANT]
-> Throughout this topic, the graphics show some names and other values that aren't part of the sample data that ships with Common Data Service. The steps accurately demonstrate how to configure controls for a particular result, but your experience will vary based on the data for your organization.
+> Throughout this topic, the graphics show some names and other values that aren't part of the sample data that ships with Dataverse. The steps accurately demonstrate how to configure controls for a particular result, but your experience will vary based on the data for your organization.
 
 To show the owner of each account in the gallery, you might be tempted to use the formula **ThisItem.Owner.Name**. However, the name field in the **Team** entity is **Team Name**, and the name field in the **User** entity is **Full Name**. The app can't know which type of lookup you're working with until you run the app, and it can vary between records in the **Accounts** entity.
 
@@ -74,17 +74,15 @@ You need a formula that can adapt to this variance. You also need to add the dat
 With these data sources in place, use this formula to display the name of either a user or a team:
 
 ```powerapps-dot
-If( IsType( ThisItem.Owner, [@Teams] ),
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+If( IsType( ThisItem.Owner, Teams ),
+    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
 ```
 
 > [!div class="mx-imgBorder"]
 > ![Accounts shown in a Gallery control with Owner field displayed](media/working-with-references/accounts-displayowner.png)
 
 In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using the *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
-
-You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
 To use any fields of a record reference, you must first use the **AsType** function to cast it to a specific entity type. You can't access fields directly from the **Owner** field because the system doesn't know what entity type you want to use.
 
@@ -97,8 +95,8 @@ Then replace the previous formula with this one:
 
 ```powerapps-dot
 IfError(
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
 ```
 
 ## Filter based on an owner
@@ -163,7 +161,7 @@ With these changes, you can show all records or filter them based on either a us
 > [!div class="mx-imgBorder"]
 > ![Animation showing different filtered results based on the radio control and combo boxes](media/working-with-references/filter-allthree.gif)
 
-The formula is fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Common Data Service.
+The formula is fully delegable. The portion that's comparing the radio-button values is a constant across all records and is evaluated before the rest of the filter is sent to Dataverse.
 
 If you want to filter on the type of the owner, you can use the **IsType** function, but it's not yet delegable.
 
@@ -244,8 +242,8 @@ To add this capability to the app:
     ```powerapps-dot
     Patch( Accounts, Gallery1.Selected,
         { Owner: If( Radio1_1.Selected.Value = "Users",
-                ComboBox1_2.Selected,
-                ComboBox1_3.Selected ) } )
+                     ComboBox1_2.Selected,
+                     ComboBox1_3.Selected ) } )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -304,7 +302,7 @@ For each selection in the gallery, more fields of the account, including the rec
 
 ## Show the fields of a customer
 
-In Common Data Service, the **Customer** lookup field is another polymorphic lookup that's very similar to **Owner**.
+In Dataverse, the **Customer** lookup field is another polymorphic lookup that's very similar to **Owner**.
 
 **Owner** is limited to one per entity, but entities can include zero, one, or more **Customer** lookup fields. The **Contacts** system entity includes the **Company Name** field, which is a **Customer** lookup field.
 
@@ -357,9 +355,9 @@ Both of these changes are in the same formula, which appears in the custom card 
 
 ```powerapps-dot
 If( IsBlank( ThisItem.'Company Name' ), "",
-    IsType( ThisItem.'Company Name', [@Accounts] ),
-        "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+    IsType( ThisItem.'Company Name', Accounts ),
+        "Account: " & AsType( ThisItem.'Company Name', Accounts ).'Account Name',
+    "Contact: " & AsType( ThisItem.'Company Name', Contacts ).'Full Name'
 )
 ```
 
@@ -393,10 +391,10 @@ An important difference for **Regarding** is that it isn't limited to **Accounts
 
 ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
-    IsType( ThisItem.Regarding, [@Accounts] ),
-        "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
-    IsType( ThisItem.Regarding, [@Contacts] ),
-        "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
+    IsType( ThisItem.Regarding, Accounts ),
+        "Account: " & AsType( ThisItem.Regarding, Accounts ).'Account Name',
+    IsType( ThisItem.Regarding, Contacts ),
+        "Contacts: " & AsType( ThisItem.Regarding, Contacts ).'Full Name',
     ""
 )
 ```
@@ -413,7 +411,7 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 **Regarding** differs from **Owner** and **Customer** because the former involves a many-to-one relationship. By definition, a reverse, one-to-many relationship allows you to write **First( Accounts ).Faxes**.
 
-Let's back up and look at the entity definitions. In Common Data Service, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/common-data-service/activity-entities.md). You can also create your own [custom activity entities](../../developer/common-data-service/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**.
+Let's back up and look at the entity definitions. In Dataverse, entities such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity entities](../../developer/data-platform/custom-activities.md). When you view or create an activity entity, its settings appear under **More settings**.
 
 ![Activity entity setting when creating an entity](media/working-with-references/activity-entitytype.png)
 
@@ -498,10 +496,10 @@ Records are coming from the **Activity** entity, but you can nevertheless use th
 By using this formula, you can show the record type in a label control within the gallery:
 
 ```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+If( IsType( ThisItem, Faxes] ), "Fax",
+    IsType( ThisItem, 'Phone Calls' ), "Phone Call",
+    IsType( ThisItem, 'Email Messages' ), "Email Message",
+    IsType( ThisItem, Chats ), "Chat",
     "Unknown"
 )
 ```
@@ -512,13 +510,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 You can also use **AsType** to access the fields of the specific type. For example, this formula determines the type of each activity and, for phone calls, shows the phone number and call direction from the **Phone Numbers** entity:
 
 ```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ),
+If( IsType( ThisItem, Faxes ), "Fax",
+    IsType( ThisItem, 'Phone Calls' ),
        "Phone Call: " &
-       AsType( ThisItem, [@'Phone Calls'] ).'Phone Number' &
-       " (" & AsType( ThisItem, [@'Phone Calls'] ).Direction & ")",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+       AsType( ThisItem, 'Phone Calls' ).'Phone Number' &
+       " (" & AsType( ThisItem, 'Phone Calls' ).Direction & ")",
+    IsType( ThisItem, 'Email Messages' ), "Email Message",
+    IsType( ThisItem, Chats ), "Chat",
     "Unknown"
 )
 ```
@@ -559,3 +557,6 @@ Other than this difference, you use the **Regarding** lookup in the same manner 
 ## Activity parties
 
 As of this writing, canvas apps don't support activity parties.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

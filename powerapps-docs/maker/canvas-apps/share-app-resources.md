@@ -18,15 +18,15 @@ search.app:
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
-* entities in Common Data Service
+* Entities in Microsoft Dataverse.
 
     For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
     
-* a connection to a data source
-* an on-premises data gateway
-* a custom connector
-* an Excel workbook or other service
-* a flow
+* A connection to a data source.
+* An on-premises data gateway.
+* A custom connector.
+* An Excel workbook or other service.
+* A flow.
 
 Some of these resources are shared automatically when you share the app. Other resources require you or the people with whom you share the app to take extra steps so that the app works as you expect.
 
@@ -34,7 +34,7 @@ You can also share your connections, custom connectors and on-premises data gate
 
 ## Connections
 
-Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privleges (such as security roles for the Common Data Service, OneDrive for Business, SQL Server with Azure AD authentication).
+Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privleges (such as security roles for the Dataverse, OneDrive for Business, SQL Server with Azure AD authentication).
 
 You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 
@@ -73,3 +73,6 @@ If a shared app uses data to which not all users have access (such as an Excel w
 ## Flows
 If you share an app that includes a flow, users who run the app will be prompted to confirm or update any connections on which the flow relies. In addition, only the person who created the flow can customize its parameters. For example, you can create a flow that sends mail to an address that you specify, but other users can’t change that address.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

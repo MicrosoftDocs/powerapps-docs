@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -63,3 +63,6 @@ For these examples, values in the **Percentage** column of the **Scores** data s
 | **Validate( Scores, EditRecord, Gallery.Updates )** |Checks whether values in all columns are valid for the **Scores** data source. In this example, the value in the **Percentage** column is **10**. |*blank* |
 | **Validate( Scores, EditRecord, Gallery.Updates )** | Checks whether values in all columns are valid for the **Scores** data source. In this example, the value in the **Percentage** column is **120**. |"Values must be between 0 and 100." |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

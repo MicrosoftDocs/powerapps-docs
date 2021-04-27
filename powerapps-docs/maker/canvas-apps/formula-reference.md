@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/04/2020
+ms.date: 03/23/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,12 +15,16 @@ search.app:
   - PowerApps
 ---
 # Formula reference for Power Apps
+
+> [!NOTE]
+> Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)?
+
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
 * **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 * **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
-* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
+* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators)** and **[Self](functions/operators.md#self-and-parent-operators)**, provide access to information from within a container.
 
 Other elements include:
 
@@ -28,7 +32,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## A
+## <a id="-a"></a> A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
@@ -46,6 +50,8 @@ Other elements include:
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
 **[Assert](functions/function-assert.md)** – Evaluates to true or false in a test.
+
+**[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
 **[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
@@ -70,6 +76,8 @@ Other elements include:
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
+
+**[ClearData](functions/function-savedata-loaddata.md)** – Clears a collection or all collections from an app host such as a local device.
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
@@ -137,11 +145,13 @@ Other elements include:
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
+**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
+
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
-**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
+**[exactin](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case dependent.  Also used to check if a record is in a table.  
 
 **[Exit](functions/function-exit.md)** – Exits the currently running app and optionally signs out the current user.
 
@@ -172,6 +182,8 @@ Other elements include:
 **[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not. 
 
 **[IfError](functions/function-iferror.md)** - Detects errors and provides an alternative value or takes action. 
+
+**[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
@@ -205,7 +217,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -247,7 +259,7 @@ Other elements include:
 ## P
 **[Param](functions/function-param.md)** – Access parameters passed to a canvas app when launched.
 
-**[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
+**[Parent](functions/operators.md#self-and-parent-operators)** – Provides access to a container control's properties.
 
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
@@ -276,6 +288,8 @@ Other elements include:
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
+**[RequestHide](functions/function-requesthide.md)** – Hides a SharePoint form.
+
 **[Reset](functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 
 **[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
@@ -293,7 +307,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to an app host such as a local device.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -301,11 +315,15 @@ Other elements include:
 
 **[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
+**[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the properties of the current control.
+
+**[Sequence](functions/function-sequence.md)** – Generate a table of sequential numbers, useful when iterating with **ForAll**.
+
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
 
-**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
+**[SetProperty](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -340,7 +358,9 @@ Other elements include:
 
 **[Text](functions/function-text.md)** – Converts any value and formats a number or date/time value to a string of text.
 
-**[ThisItem](functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
+**[ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Returns the record for the current item in a gallery or form control.
+
+**[ThisRecord](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Returns the record for the current item in a record scope function, such as **ForAll**, **With**, and **Sum**.
 
 **[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
@@ -388,3 +408,6 @@ Other elements include:
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

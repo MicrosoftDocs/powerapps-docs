@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 09/14/2019
 ms.author: gregli
 search.audienceType: 
@@ -80,3 +80,6 @@ The **Distinct** function evaluates a formula across each record of a table and 
     > ![Output from Distinct function showing the first country by name](media/function-distinct/citypopulations-first.png)
 
      
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

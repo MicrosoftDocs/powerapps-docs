@@ -1,13 +1,14 @@
 ---
 title: "getGridType (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getGridType method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a441c08c-df32-433e-b666-4253f2cf878c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -44,3 +45,6 @@ Read-only and editable grids
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

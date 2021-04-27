@@ -1,5 +1,5 @@
 ---
-title: "Testing tools for client-side development (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Testing tools for client-side development (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about testing frameworks for client-side development." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -31,7 +31,10 @@ When a solution is developed with unit testing, developers report greater produc
 
 ### See also
 
-[Testing tools for server-side development](../common-data-service/testing-tools-server.md)<br />
+[Testing tools for server-side development](../data-platform/testing-tools-server.md)<br />
 [Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
 [Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
 [Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

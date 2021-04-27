@@ -1,13 +1,14 @@
 ---
 title: "getDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getDisabled method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: b9a26d0e-c0fb-4239-b17b-df5c9aa84cb2
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -31,3 +32,5 @@ Returns whether the control is disabled.
 ### Related topics
 
 [setDisabled](setDisabled.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,14 +1,16 @@
 ---
-title: "Add dynamic content and create custom templates for a portal | MicrosoftDocs"
-description: "Learn how to use Liquid, an open-source template language, into your portals."
-author: tapanm-msft
-manager: kvivek
+title: Work with Liquid templates
+description: Learn how to use Liquid, an open-source template language, into your portals.
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2020
+ms.author: gisingh
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Work with Liquid templates
@@ -31,3 +33,6 @@ Liquid is an open-source template language integrated into portals. It can be us
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

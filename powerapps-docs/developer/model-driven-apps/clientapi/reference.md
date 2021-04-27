@@ -7,9 +7,9 @@ ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +29,7 @@ This section contains reference documentation for client API object model that c
 
 The topics under this section are organized as follows:
 - Starts with reference for all the events, collections, and the execution context object.
-- Continues on to provide information about methods for **attributes** and **controls** in Customer Enagagement that are actually collections that appear under different objects in the Client API object model.
+- Continues on to provide information about methods for **attributes** and **controls** in Customer Engagement that are actually collections that appear under different objects in the Client API object model.
 - Provides reference for properties and methods for the **formContext** and **gridContext** objects.
 - Finally provides reference for namespaces in the **Xrm** object model. 
 
@@ -38,3 +38,6 @@ The topics under this section are organized as follows:
 [Apply business logic using client scripting in model-driven apps](../client-scripting.md)<br/>
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Model-driven apps Developer Overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

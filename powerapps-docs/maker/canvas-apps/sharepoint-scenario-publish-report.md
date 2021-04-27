@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/30/2018
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -30,7 +30,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 3. Enter a password, then click or tap **Sign in**.
    
     ![Enter account password](./media/sharepoint-scenario-publish-report/06-01-03-password.png)
-4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Collaborate in your Power BI app workspace](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
+4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Collaborate in your Power BI app workspace](/power-bi/service-collaborate-power-bi-workspace).
    
     ![Destination workspace](./media/sharepoint-scenario-publish-report/06-01-04-workspace.png)
 5. After publishing completes, click or tap **Open 'project-analysis.pbx' in Power BI**.
@@ -93,3 +93,9 @@ That wraps up most of the work in Power BI. If that was your first experience cr
 ## Next steps
 The next step in this tutorial series is to [set up data alerts for the Power BI project report](sharepoint-scenario-alerts-flow.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

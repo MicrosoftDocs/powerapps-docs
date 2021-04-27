@@ -1,16 +1,14 @@
 ---
 title: Deploy the Regional Government Emergency Response and Monitoring solution | Microsoft Docs
 description: Provides provides detailed instructions for regional IT admins to deploy the Regional Government Emergency Response and Monitoring solution for their organization.
-author: KumarVivek
+author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
-ms.author: kvivek
+ms.date: 06/05/2020
+ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Deploy the Regional Government Emergency Response and Monitoring solution
 
@@ -41,13 +39,13 @@ There is a different set of URLs to access Power Apps US Government environments
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
-- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
-- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+- [Power Apps for US Government](/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](/power-bi/service-govus-overview)
 
 ## Step 1: Download the deployment package
 
 > [!IMPORTANT]
-> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##add-and-manage-master-data).
+> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md#add-and-manage-master-data).
 
 Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
@@ -75,18 +73,18 @@ More information:
 
 - [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
 
-- [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
+- [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin)
 
-After you have purchased Power Apps, create an environment with a Common Data Service database.
+After you have purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2.  Create a Dataverse environment with the database. More information: [Create and manage environments](/power-platform/admin/create-environment)
 
     > [!IMPORTANT] 
     > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
 
-3.	Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+3.	Create appropriate users in your environment. More information: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 After you have created your environment, you can access it using the following URL: https://[myenv].crm.dynamics.com, where [myenv] is the name of your environment. Make a note of this environment URL.
 
@@ -139,7 +137,7 @@ You can install the app by using one of the following 3 options:
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
 
-3. In the environment details page, select **Manage Dynamics 365 apps**.
+3. In the environment details page, select **Dynamics 365 apps** under **Resources**.
 
     > [!div class="mx-imgBorder"] 
     > ![Environment settings](media/ppac-env-setting.png "Environment settings")
@@ -147,14 +145,14 @@ You can install the app by using one of the following 3 options:
 3.  On the Dynamics 365 apps page, select **Install app**. Next select **Regional Govt Emergency Response and Monitoring** in the right pane, and select **Next**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/ppac-install-app.png "Install app")
+    > ![Install app](media/ppac-install-app.png "Install app")
 
 4.  On the next page, agree to the terms, and select **Install**.
 
 5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
-    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+    > ![Monitor the app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -171,19 +169,19 @@ You can install the app by using one of the following 3 options:
 2.  On the Regional Govt Emergency Response and Monitoring page, select **Get It Now**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+    > ![App on AppSource](media/deploy-appsource-01.png "App on AppSource")
 
 3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
 
 4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select an environment](media/deploy-appsource-02.png "Select an environment")
+    > ![Select an environment and privacy/legal](media/deploy-appsource-02.png "Select an environment")
 
-5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+5.  You'll be taken to Power Platform admin center where you can monitor the progress of your app installation.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+    > ![Monitor app installation progress](media/deploy-appsource-03.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -206,7 +204,7 @@ You can install the app by using one of the following 3 options:
 
 4.  Select **Login** to continue.
 
-5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+5.  If you have access to more than one Dataverse environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
@@ -239,7 +237,7 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-Detailed information about using the template app from the AppSource is available here: [Connect to the Regional Emergency Response Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-regional-emergency-response)
+Detailed information about using the template app from the AppSource is available here: [Connect to the Regional Emergency Response Dashboard](/power-bi/connect-data/service-connect-to-regional-emergency-response)
 
 ### Option B: Publish using the .pbit file in the deployment package
 
@@ -249,7 +247,7 @@ This section provides information on how you can use the **Regional Emergency Re
 
 -   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
 
--   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
+-   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces)
 
 -   Install Power BI Desktop from the Microsoft Store: <https://aka.ms/pbidesktop>
 
@@ -264,17 +262,17 @@ This section provides information on how you can use the **Regional Emergency Re
 
 2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
 
-3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
+3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Dataverse environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
     > [!div class="mx-imgBorder"] 
     > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
 
-4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
+4.  You will be prompted to enter credentials to connect to your Dataverse environment. Select **Organizational account** \> **Sign in** to specify your Dataverse credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
+    > ![Connect to Dataverse environment](media/deploy-connect-cds.png "Connect to Dataverse environment")
 
-5.  After signing in, select **Connect** to connect to your data in Common Data Service.
+5.  After signing in, select **Connect** to connect to your data in Dataverse.
 
 6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
@@ -286,7 +284,7 @@ This section provides information on how you can use the **Regional Emergency Re
      > [!div class="mx-imgBorder"] 
      > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
 
-8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+8.  You'll be prompted to save the file as a .pbix file along with your Dataverse environment information. Provide a name and save it on your computer.
 
 9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
@@ -320,7 +318,7 @@ This section provides information on how you can use the **Regional Emergency Re
       > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
 
       > [!NOTE]
-      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](/power-bi/refresh-data#data-refresh)
       >- We recommend setting the data to refresh every 30 mins.
 
 15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
@@ -340,12 +338,12 @@ This section provides information on how you can use the **Regional Emergency Re
 
     2. On the **Navigation** tab, specify the location where you will publish it.
 
-    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
+    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
 
         > [!div class="mx-imgBorder"]
-        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
+        > ![Install this app automatically](media/select-install-apps-automatically.png)
 
-18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](/power-bi/service-create-distribute-apps#publish-your-app).
 
 
 ## Step 6: Embed Power BI report in portal
@@ -356,16 +354,16 @@ In this step, we will embed the Power BI report (published in the previous step)
 
 - You must have Global Admin role to perform this step.
 
-- Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](https://docs.microsoft.com/powerapps/maker/portals/admin/admin-overview).
+- Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](../../maker/portals/admin/admin-overview.md).
 
   > [!div class="mx-imgBorder"] 
   > ![Power Apps Portals admin center](media/deploy-admin-center.png "Power Apps Portals admin center")
 
 For step-by-step instructions, see the following in Power Apps portals docs:
 
--   [Enable Power BI visualization](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization)
+-   [Enable Power BI visualization](../../maker/portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization)
 
--   [Enable Power BI embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service)
+-   [Enable Power BI embedded service](../../maker/portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service)
 
 ### The process
 
@@ -420,7 +418,7 @@ Now, we will restart the portal for the changes to take effect.
 5.  Select **Restart** in the confirmation message to restart the portal.
 
   > [!NOTE]
-  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](https://docs.microsoft.com/powerapps/maker/portals/admin/add-custom-domain) in portals docs.
+  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](../../maker/portals/admin/add-custom-domain.md) in portals docs.
 
 ## Step 7: Add a custom title and logo for your portal
 
@@ -536,23 +534,33 @@ The newly created About page can be accessed by your portal users by using the *
 
 ## Step 9: Set up server-side synchronization of emails
 
-Server-side synchronization enables you to sync emails in Common Data Service with Microsoft Exchange Online, Microsoft Exchange Server (on-premises), and POP3 email server for web-hosted email like Gmail or Outlook.com.
+Server-side synchronization enables you to sync emails in Dataverse with Microsoft Exchange Online, Microsoft Exchange Server (on-premises), and POP3 email server for web-hosted email like Gmail or Outlook.com.
 
 > [!div class="mx-imgBorder"] 
 > ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
 
 For detailed steps on setting server-side sync; see the following resources:
 
--   [Set up server-side sync](https://docs.microsoft.com/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
+-   [Set up server-side sync](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
 
--   [Connect to Exchange Online](https://docs.microsoft.com/power-platform/admin/connect-exchange-online)
+-   [Connect to Exchange Online](/power-platform/admin/connect-exchange-online)
 
--   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/power-platform/admin/connect-exchange-server-on-premises)
+-   [Connect to Exchange Server (on-premises)](/power-platform/admin/connect-exchange-server-on-premises)
 
     > [!WARNING]
-    > Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
+    > Make sure this user is not configured for server-side sync on any other Dataverse or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
 
-## Step 10: Fix the Send Invitation process
+## Step 10: Fix the processes for the app
+
+In this step, we will be fixing the following processes:
+
+- Send Invitation
+
+- Send Password Reset To Contact
+
+- Assign Web Roles to New Users
+
+### Step 10.1: Fix the Send Invitation process
 
 In this step, we will fix the **Send Invitation** process to specify the email address from which the portal invitation will be sent out to individual hospital admins and the invitation URL sent out in the invitation email.
 
@@ -599,7 +607,7 @@ In this step, we will fix the **Send Invitation** process to specify the email a
     > [!div class="mx-imgBorder"] 
     > ![Activate the process](media/deploy-activate-process.png "Activate the process")    
 
-## Step 11: Fix the Send Password Reset To Contact process
+### Step 10.2: Fix the Send Password Reset To Contact process
 
 In this step, we will fix the **Send Password Reset To Contact** process to specify the email address from which the portal password reset email will be sent to the portal user when she/he requests to reset the password using the **Forgot password** link in the portal.
 
@@ -611,7 +619,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
     > [!div class="mx-imgBorder"] 
     > ![Send Password Reset To Contact ](media/deploy-password-reset.png "Send Password Reset To Contact ")
-    <!-- ![](media/2ff3f6344a7ea9aa564592a15833fcb3.png) -->
+   
 
 4.  On the **Processes** page, search for “Send Password Reset To Contact”, and select the **Send Password Reset To Contact** process in the search result to open it.
 
@@ -625,13 +633,13 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
         > [!div class="mx-imgBorder"] 
         > ![Set Properties for Send Email](media/deploy-set-email-properties.png "[Set Properties for Send Email")
-        <!-- ![](media/4a3c0bbf3785cdb7bad4c671964f0220.png) -->
+       
 
 6.  In the **Send Email** step definition page, remove the dynamic value (highlighted in yellow) in the **From** field.
 
     > [!div class="mx-imgBorder"] 
     > ![Send email step definition](media/deploy-email-step-definition.png "Send email step definition")
-    <!-- ![](media/8838a0341e240cfe49741d64e761555d.png) -->
+    
 
 7.  Select the email ID in the **From** field that will be used to send the portal invitation links. The user account specified here must have the server-side synchronization enabled for the email to be sent out.
 
@@ -641,7 +649,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
     > [!div class="mx-imgBorder"] 
     > ![Don’t update dynamic values](media/deploy-dynamic-values.png "Don’t update dynamic values")
-    <!-- ![](media/35a0f7a386b2e5345158def083c62402.png) -->
+    
 
 8.  Select **Save and Close** to save your changes.
 
@@ -650,7 +658,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")    
 
-## Step 12: Verify Assign Web Roles to New Users process is enabled
+### Step 10.3: Verify Assign Web Roles to New Users process is enabled
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 
@@ -668,7 +676,9 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
-## Step 13: Enable the Flow supply tracking flow
+## Step 11: Fix the flows for the app
+
+In this step, we will fix the flows that are required by the app. You can view all the flows used by the app using the following steps:
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -677,25 +687,38 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
 
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
+3.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
+    > ![Flows in the app](media/conf-all-flows.png "Flows in the app")
 
-4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+There are two sets of flows:
 
-5.  Fix the connection to connect to Common Data Service, and save the connection information.
+- First set of flows help with sending emails:
+    - Portal User Request: Send Email on Decline Request
+    - Portal User Request: Send Email to Admins on Request Creation
+    
+    For these flows, we have to authorize the connection and then specify a user account to send emails, and then enable the flow.
 
-6. In the flow definition, select **Turn On**.
+- Second set of flows help complete a task:
+    - Process new Supplies Entry records
+    - Flow supply tracking
+    - Populate CDC Data - Healthcare Staff
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+    - Process new Staffing Entry for the Portal 
 
-## Step 14: Update the details of flows for sending emails
+    For these flows, we have to authorize the connection and then enable the flow.
+
+
+### Step 11.1: Fix the flows for sending emails
 
 In this step, we are going to do the following:
 
 |Flow name|Changes|
 |--|--|
-|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
-|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Dataverse and then specify a user account to send emails.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Dataverse and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -711,29 +734,29 @@ In this step, we are going to do the following:
 
 4.  Select the **Portal User Request: Send Email on Decline Request** name to open the flow definition. Select **Edit** on the toolbar.
 
-5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+5.  Specify the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
 
     > [!div class="mx-imgBorder"] 
     > ![Fix credential](media/deploy-specify-cred.png "Fix credentials")
 
-6.  After fixing the connection to connect to Common Data Service, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
+6.  After fixing the connection to connect to Dataverse, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
+    > ![Specify Outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
 
 7. Select **Save** to save the changes, and then select **Turn On**.
 
 8.  Next, go to the flows list, and select the **Portal User Request: Send Email to Admins on Request Creation** name to open the flow definition. Select **Edit** on the command bar.
 
-9.  Fix the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
+9.  Fix the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
 
-10. After fixing the connection to connect to Common Data Service:
+10. After fixing the connection to connect to Dataverse:
      1. Select **IfRequestState ==**
-     2. Select **Connections** to specify the connection to connect to Common Data Service 
+     2. Select **Connections** to specify the connection to connect to Dataverse 
      3. Select **Connections** to specify the user account credentials that has a mailbox enabled account to send emails
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify outlook credentials](media/deploy-fix-cred3.png "Specify outlook credentials")
+    > ![Specify outlook credentials for connection](media/deploy-fix-cred3.png "Specify outlook credentials")
 
 11. In **Send an email**, ensure that you fix the URL as per your portal URL. For example, in this case, change rer6 to your URL value.
 
@@ -742,12 +765,39 @@ In this step, we are going to do the following:
 
 12. Select **Save** to save the changes, and then select **Turn On**.
 
-## Step 15: Share admin app with other admin users
+### Step 11.2: Fix the flows for performing specific tasks
+
+In this step, we will authorize the connection information for the flows that help perform specific tasks, and then enable them.
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
+
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+
+5.  Specify the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential for connection](media/authorize-cred.png "Fix credentials")
+
+6. Select **Save** to save the changes, and then select **Turn On**.
+
+7. Perform steps 4-6 with each of the following flows to authorize the connection, and then enable the flow:
+
+    - Process new Supplies Entry records
+    - Populate CDC Data - Healthcare Staff
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+    - Process new Staffing Entry for the Portal
+
+## Step 12: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
 > [!IMPORTANT]
-> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
+> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles).
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 
@@ -767,7 +817,7 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 -  Configure and manage the master data
 
--	Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
+-  Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
 
 - View Power BI dashboard in your tenant.
 
@@ -776,3 +826,6 @@ The deployment steps are complete now. Business admins can refer to the [configu
 - To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
 
 - For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

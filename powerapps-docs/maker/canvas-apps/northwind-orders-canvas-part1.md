@@ -16,7 +16,7 @@ search.app:
 ---
 # Create an order gallery in a canvas app
 
-Follow step-by-step instructions to create an order gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
+Follow step-by-step instructions to create an order gallery in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Microsoft Dataverse. For best results, explore these topics in this sequence:
 
 1. Create an order gallery (**this topic**).
 1. [Create a summary form](northwind-orders-canvas-part2.md).
@@ -250,7 +250,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 
     In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** entity that are associated with each record in the **Order** entity through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship to show and edit the line items in the lower-right area of the screen.
 
-    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because Common Data Service doesn't support delegation of complex aggregate functions (for example, the sum of a multiplication). You can ignore this information because no order in this example will contain more than 500 line items. If necessary for a different app, you can increase that limit in **App settings**.
+    This formula shows a blue underline and a [delegation warning](delegation-overview.md) because Dataverse doesn't support delegation of complex aggregate functions (for example, the sum of a multiplication). You can ignore this information because no order in this example will contain more than 500 line items. If necessary for a different app, you can increase that limit in **App settings**.
 
     The [**Text**](functions/function-text.md) function in this formula adds a currency symbol and formats the result with thousands and decimal separators. As written, the formula includes the language tag for U.S. English (**[$-en-US]**) and a dollar symbol (**$**). If you remove the language tag, it will be replaced with one based on your language settings, and the label will show the appropriate formats for that tag. If you leave the dollar symbol, the label will show the appropriate currency symbol based on the user's settings. However, you can force a different symbol to appear by replacing the dollar symbol with the one that you prefer.
 
@@ -282,3 +282,6 @@ In the next topic, you'll add an [**Edit form**](controls/control-form-detail.md
 
 > [!div class="nextstepaction"]
 > [Create the summary form](northwind-orders-canvas-part2.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

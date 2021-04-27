@@ -1,6 +1,6 @@
 ---
-title: Create and build a code component| Microsoft Docs
-description: Start creating a component using the Power Apps component framework tooling
+title: Create and build a code component in Microsoft Dataverse| Microsoft Docs
+description: Start creating a component using the Power Apps component framework tooling.
 keywords: Power Apps component framework, code components, Component Framework
 ms.author: nabuthuk
 author: Nkrb
@@ -16,6 +16,8 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 # Create and build a code component
 
 This article demonstrates how to create and deploy code components using Power Apps CLI. Ensure that you have installed [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Create a new component
 
@@ -45,13 +47,16 @@ Alternatively, you can build the component quickly using the `npm run build` com
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
 
-Finally when you're done implementing the component logic in TypeScript, you need to bundle all the code component elements into a solution file so that you can import the solution into Common Data Service. More information: [Package a code component](import-custom-controls.md)
+Finally when you're done implementing the component logic in TypeScript, you need to bundle all the code component elements into a solution file so that you can import the solution into Microsoft Dataverse. More information: [Package a code component](import-custom-controls.md)
 
 ### See also
 
 [Debug code components](debugging-custom-controls.md)<br/>
 [Package a code component](import-custom-controls.md)<br/>
-[Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a column or table](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing code components](updating-existing-controls.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -37,3 +37,6 @@ You can combine the **Defaults** function with the **[Patch](function-patch.md)*
 | --- | --- | --- |
 | **Defaults(&nbsp;Scores&nbsp;)** |Returns the default values for the **Scores** data source. |**{ Score: 0 }** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

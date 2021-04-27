@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType: 
@@ -192,3 +192,6 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | **Text(&nbsp;true&nbsp;)** | Converts a Boolean value to a string. | "true" |
 | **Text(&nbsp;GUID()&nbsp;)** | Converts a generated GUID value to a string.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
 | **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returns the first four characters of a generated GUID. | "2d9c" | 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

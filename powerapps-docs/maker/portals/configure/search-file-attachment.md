@@ -1,14 +1,16 @@
 ---
-title: "Search within file attachment content in a portal | MicrosoftDocs"
-description: "Learn how to configure your portal to search within file attachment content in a portal."
-author: tapanm-msft
-manager: kvivek
+title: Search within file attachment content
+description: Learn how to configure your portal to search within file attachment content in a portal.
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2020
+ms.author: sandhan
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Search within file attachment content
@@ -35,7 +37,7 @@ When you search for a term, the search results also include attachments. If the 
 ![Download attachment](../media/search-attachment-content.png "Download attachment") 
 
 > [!NOTE]
-> - To use this functionality, you must [enable relevance search](https://docs.microsoft.com/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/relevance-search-results)
+> - To use this functionality, you must [enable relevance search](/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](/dynamics365/customer-engagement/basics/relevance-search-results)
  
 ## Update portal configurations
 
@@ -119,3 +121,6 @@ To configure the facets to group annotations associated with knowledge base arti
 To allow attachments associated with knowledge articles to appear in the portal and search results, edit the **KnowledgeManagement/DisplayNotes** site setting and set its value to **True**. The site setting **KnowledgeManagement/NotesFilter** contains a prefix value that must be prefixed to the note text field on notes; only notes with the specified prefix value will appear on the portal. By default, the value is \*WEB\*, but you can change it through the site setting.
 
 To enable the indexing of file attachments associated with notes, create the **Search/IndexNotesAttachments** site setting and set its value to **True**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

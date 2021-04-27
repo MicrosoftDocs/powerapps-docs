@@ -1,13 +1,14 @@
 ---
 title: "setActiveStage (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Sets a completed stage as the active stage.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9c40a770-f4cb-4230-8893-0527f8472825
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -16,13 +17,13 @@ search.app:
 ---
 # setActiveStage (Client API reference)
 
-
-
 [!INCLUDE[./includes/setActiveStage-description.md](./includes/setActiveStage-description.md)]
 
 ## Syntax
 
 `formContext.data.process.setActiveStage(stageId, callbackFunction);`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -37,7 +38,7 @@ search.app:
 <td>stageId</td>
 <td>String</td>
 <td>Yes</td>
-<td>The ID of the completed stage for the entity to make the active stage. </td>
+<td>The ID of the completed stage for the table to make the active stage. </td>
 </tr>
 <tr>
 <td>callbackFunction</td>
@@ -87,3 +88,6 @@ search.app:
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

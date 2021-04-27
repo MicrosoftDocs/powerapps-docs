@@ -1,19 +1,26 @@
 ---
-title: "Change the Dynamics 365 instance, audience, or type of portal | MicrosoftDocs"
+title: Change the Dynamics 365 instance, audience, or type of portal
 description: "Learn how to change the Dynamics 365 instance, audience, or type of a portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/18/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2021
+ms.author: nenandw
+ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
  
 # Change the Dynamics 365 instance, audience, or type of portal
 
 After your portal is created and provisioned, you can change the details of your Dynamics 365 instance and portal.
+
+> [!IMPORTANT]
+> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
+
+To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
 1. Go to the **Dynamics 365 Administration Center** page, and then select the **Applications** tab.
 
@@ -27,3 +34,6 @@ After your portal is created and provisioned, you can change the details of your
 
    > [!div class="mx-imgBorder"]
    > ![Change Dynamics 365 instance](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: How to use the sample components? (Power Apps Component Framework) | Microsoft Docs
+title: How to use the sample components that are built using Power Apps component framework in Microsoft Dataverse | Microsoft Docs
 description: Provides information on how you can use the sample components created using Power Apps Component Framework in your model-driven and canvas apps
 keywords:
 author: Nkrb
@@ -15,6 +15,8 @@ ms.topic: "article"
 # How to use the sample components?
 
 All the sample components listed under this section are available to download from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) so that you can try them out in your model-driven or canvas apps.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
 
@@ -54,5 +56,8 @@ Follow the steps below to import and try the sample components in your model-dri
      msbuild /t:restore
     ```
 1. Again, run the command `msbuild`.
-1. The generated solution zip file will be available at `Solution\bin\debug` folder. Manually [import the solution](/powerapps/maker/common-data-service/import-update-export-solutions) into your Common Data Service environment using the web portal once the zip file is ready. Alternatively, to import the solution using Power Apps CLI commands, see the [Connecting to your environment](https://docs.microsoft.com/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment) and [Deployment](https://docs.microsoft.com/powerapps/developer/component-framework/import-custom-controls#deploying-code-components) sections.
-1. Finally, to add code components to your model-driven and canvas apps, see [Add components to model-driven apps](https://docs.microsoft.com/powerapps/developer/component-framework/add-custom-controls-to-a-field-or-entity) and [Add components to canvas apps](https://docs.microsoft.com/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app).
+1. The generated solution zip file will be available at `Solution\bin\debug` folder. Manually [import the solution](../../maker/data-platform/import-update-export-solutions.md) into your Microsoft Dataverse environment using the web portal once the zip file is ready. Alternatively, to import the solution using Power Apps CLI commands, see the [Connecting to your environment](./import-custom-controls.md#connecting-to-your-environment) and [Deployment](./import-custom-controls.md#deploying-code-components) sections.
+1. Finally, to add code components to your model-driven and canvas apps, see [Add components to model-driven apps](./add-custom-controls-to-a-field-or-entity.md) and [Add components to canvas apps](./component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

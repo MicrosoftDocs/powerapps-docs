@@ -1,13 +1,14 @@
 ---
 title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/06/2020
+description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 44296667-f1cd-49be-a300-7259bc3b41e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # getGlobalContext.userSettings (Client API reference)
-
-
 
 Returns information about the current user settings.
 
@@ -110,7 +109,7 @@ Returns the language ID for the current user.
 
 ## roles 
 
-Returns a collection of lookup objects containing the GUID and display name of each of the security role or teams that the user is associated with.
+Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to a team that the user is associated with. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -118,7 +117,7 @@ Returns a collection of lookup objects containing the GUID and display name of e
  
 ### Return Value
 
-**Type**: Array of objects
+**Type**: Collection
 
 **Description**: Object containing `id` and `name` of each of the security role or teams that the user is associated with.
 
@@ -156,7 +155,7 @@ Deprecated; use [userSettings.roles](#roles) instead to view the display names o
 
 ## transactionCurrency 
 
-Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user.
+Returns a lookup object containing the ID, display name, and table type of the transaction currency for the current user. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -238,3 +237,6 @@ Returns the difference in minutes between the local time and Coordinated Univers
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

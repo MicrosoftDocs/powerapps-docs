@@ -1,28 +1,25 @@
 ---
-title: Overview of themes in Power Apps portals | Microsoft Docs
-description: Introduction to themes in Power Apps portals.
-author: tapanm-msft
-manager: kvivek
+title: Themes overview
+description: Overview of themes and basic themes in Power Apps portals.
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
-ms.author: tapanm
+ms.date: 04/21/2021
+ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Overview of themes in Power Apps portals
+# Themes overview
 
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
 In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).
 
-> [!IMPORTANT]
-> The basic theme feature is in preview. For more information about preview features, see [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
-
-## Enable basic themes for existing portals (Preview)
-
-[This topic is pre-release documentation and is subject to change.]
+## Enable basic themes for existing portals
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -59,6 +56,9 @@ You can set any existing theme in your portal to a default theme.
 The selected theme is applied to your portal.
 
 ![Applied theme](./media/theme-overview/theme-applied.png "Applied theme")
+
+> [!NOTE]
+> After changing theme or theme properties such as colors inside the Studio, select **Browse website** to view the changes in a separate browser tab. If you make multiple changes using this method and switch to different pages inside the browser, the stale browser cache may cause your browser to show theme changes that aren't latest. If this happens, use **Ctrl+F5** to reload the page.
 
 ## Create a new theme
 
@@ -156,6 +156,15 @@ Sass variables work from top to bottom. You can set the *Header* color to ```lig
 - Changing the CSS for preset themes isn't supported.
 - The recommended theme foreground and background color contrast ratio is 4.5:1, for accessibility.
 
-### Next steps
+## Next steps
 
 [Edit theme CSS](edit-css.md)
+
+### See also
+
+[Power Apps portals Studio](portal-designer-anatomy.md) <br>
+[Create and manage webpages](create-manage-webpages.md) <br>
+[WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

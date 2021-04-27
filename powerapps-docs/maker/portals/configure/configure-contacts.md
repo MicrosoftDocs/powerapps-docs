@@ -1,14 +1,17 @@
 ---
-title: "Configure a contact for use on a portal  | MicrosoftDocs"
-description: "Instructions to add and configure a contact to be used in a portal."
-author: tapanm-msft
-manager: kvivek
+title: Configure a contact for use on a portal
+description: Learn how to add and configure a contact to be used in a portal.
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2021
+ms.author: sandhan
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a contact for use on a portal
@@ -55,3 +58,5 @@ Complete the change password workflow, and the necessary fields will be automati
 ### See also
 [Invite contacts to your portals](invite-contacts.md)  
 [Set authentication identity for a portal](set-authentication-identity.md)  
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

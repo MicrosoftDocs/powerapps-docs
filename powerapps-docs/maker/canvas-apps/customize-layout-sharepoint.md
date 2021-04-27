@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/06/2018
+ms.date: 06/18/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -41,7 +41,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service.
+[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Microsoft Dataverse.
 
 ## Open the generated app
 
@@ -144,3 +144,10 @@ In this tutorial, you've customized the gallery and made other changes to the de
 
 > [!div class="nextstepaction"]
 > [Customize forms](customize-forms-sharepoint.md)
+
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

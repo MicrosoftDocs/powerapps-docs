@@ -2,7 +2,7 @@
 title: "Work with Excel and Word templates| MicrosoftDocs"
 description: "Learn how to use Word and Excel templates"
 ms.custom: ""
-ms.date: 05/23/2019
+ms.date: 04/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,33 +26,27 @@ search.app:
    
 # Use Excel and Word templates
 
-You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Common Data Service data.
+You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Microsoft Dataverse data.
 
 ## Enable and work with Excel and Word templates
 
-1. Go to [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com). 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and in the upper-right corner, select the ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 
-2. Select **Environments**, select an environment, and then select **Open environment**.
-
-3. If you see published apps, select an app to open it. Otherwise, skip to Step 5.
+2. Select **Settings** > **Templates**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/published-apps.png "Published apps") 
+   > ![Settings Templates](media/settings-templates.png "Settings Templates") 
 
-4. In the upper-right corner, select the gear icon, and then select **Advanced settings**. If you don't see **Advanced settings**, proceed to the next step.
-
-5. Select **Settings** > **Templates**.
+3. On the **Templates** page, select **Document Template** to work with Excel or Word templates.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/settings-templates.png "Settings Templates") 
-
-6. On the **Templates** page, select **Document Template** to work with Excel or Word templates.
-
-   > [!div class="mx-imgBorder"] 
-   > ![](media/document-templates.png "Document Templates") 
+   > ![Document Templates](media/document-templates.png "Document Templates") 
 
 For information on using templates, see the following documentation:
 
-- Word templates:  [Use Word templates to create standardized documents](https://docs.microsoft.com/dynamics365/customer-engagement/admin/using-word-templates-dynamics-365)
-- Excel templates: [Analyze and share your data with Excel templates](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates)
+- Word templates:  [Use Word templates to create standardized documents](/dynamics365/customer-engagement/admin/using-word-templates-dynamics-365)
+- Excel templates: [Analyze and share your data with Excel templates](/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

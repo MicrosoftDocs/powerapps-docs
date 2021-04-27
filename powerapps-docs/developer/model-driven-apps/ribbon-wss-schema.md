@@ -24,7 +24,7 @@ The following is the schema definition for the ribbon types WSS of an import/exp
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 
-For more information, see [Package and Distribute Extensions with Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+For more information, see [Package and Distribute Extensions with Solutions](../data-platform/introduction-solutions.md).
 
 
 ## Schema  
@@ -1007,3 +1007,6 @@ For more information, see [Package and Distribute Extensions with Solutions](/dy
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbon Types Schema](ribbon-types-schema.md)   
  [Customization XML Reference](customization-xml-reference.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

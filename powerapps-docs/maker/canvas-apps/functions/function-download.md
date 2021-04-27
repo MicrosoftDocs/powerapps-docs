@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
@@ -77,3 +77,6 @@ The **Product Showcase** tablet layout template was used for the following examp
 ### See also
 
 [Canvas app formula reference](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

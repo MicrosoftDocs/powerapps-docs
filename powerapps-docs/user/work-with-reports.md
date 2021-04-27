@@ -21,7 +21,7 @@ search.app:
 
 Reports help you monitor your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
 
-For more information on organizing and creating reports, see: [Customize and organize reports](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
+For more information on organizing and creating reports, see: [Customize and organize reports](../maker/model-driven-apps/add-reporting-to-app.md).
   
 ## Run a report  
   
@@ -45,17 +45,17 @@ For more information on organizing and creating reports, see: [Customize and org
    > ![share a report](media/report-share.png "share a report")
   
 4. On the **Share Report** dialog box, select **Add User/Team**.    
-5. In the **Look Up Records** dialog box, find the users or team record that you want to share the report with, and select the check box next to the record.
+5. In the **Look Up Rows** dialog box, find the users or team row that you want to share the report with, and select the check box next to the row.
 
    > [!div class="mx-imgBorder"]
    > ![Select user to share a report](media/report-share1.png "Select a user to share report")
 
-6. Choose **Select** to add the user or team record to the **Selected records** box and then select **Add**.
+6. Choose **Select** to add the user or team row to the **Selected rows** box and then select **Add**.
 
    > [!div class="mx-imgBorder"]
    > ![Add user to share a report](media/report-share2.png "Add user to share report")
   
-7. In the **Share Report** dialog box, select the type of share access that you want. The available permissions are: Read, Write, Delete, Append, Assign, or Share. This will add the user or team record to the **Selected records** box.
+7. In the **Share Report** dialog box, select the type of share access that you want. The available permissions are: Read, Write, Delete, Append, Assign, or Share. This will add the user or team row to the **Selected rows** box.
 
    > [!div class="mx-imgBorder"]
    > ![Choose share access](media/report-share3.png "Choose share access")
@@ -96,3 +96,6 @@ The RDL file contains the fetchXML that the report is based on.
 [ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md)
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

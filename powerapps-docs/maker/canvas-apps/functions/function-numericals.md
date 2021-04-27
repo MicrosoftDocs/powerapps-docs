@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 09/13/2016
 ms.author: gregli
 search.audienceType: 
@@ -64,9 +64,9 @@ The examples in this section use a [data source](../working-with-data-sources.md
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. |<style> img { max-width: none } </style> ![](media/function-numericals/values-abs.png) |
-| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. |<style> img { max-width: none } </style> ![](media/function-numericals/values-exp.png) |
-| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. |<style> img { max-width: none } </style> ![](media/function-numericals/values-ln.png) |
+| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. | ![](media/function-numericals/values-abs.png) |
+| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. | ![](media/function-numericals/values-exp.png) |
+| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. | ![](media/function-numericals/values-ln.png) |
 | **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example
@@ -76,3 +76,6 @@ The examples in this section use a [data source](../working-with-data-sources.md
    **Sqrt( Value( Source.Text ) )**
 3. Type a number into **Source**, and confirm that the **Label** control shows the square root of the number that you typed.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

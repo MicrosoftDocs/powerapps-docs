@@ -25,11 +25,11 @@ search.app:
 ---
 # Change navigation within a model-driven app form
 
- Navigation within a form allows app users to view lists of related records. Each entity relationship has properties to control whether it should be shown. More information: [Navigation pane item for primary entity](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)  
+ Navigation within a form allows app users to view lists of related rows. Each table relationship has properties to control whether it should be shown. More information: [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)  
   
- Any entity relationships that are configured to be displayed can be overridden within the form editor. You can also include navigation links to display web resources or other web sites via form navigation.  
+ Any table relationships that are configured to be displayed can be overridden within the form editor. You can also include navigation links to display web resources or other web sites via form navigation.  
   
- For step-by-step instructions, see [Create and edit entity relationships for Common Data Service](../common-data-service/create-edit-entity-relationships.md)  
+ For step-by-step instructions, see [Create and edit table relationships for Microsoft Dataverse](../data-platform/create-edit-entity-relationships.md)  
   
  To enable editing navigation you must first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
  
@@ -41,7 +41,7 @@ search.app:
  > [!div class="mx-imgBorder"] 
  > ![Relationship explorer](media/relationship-explorer.png)
 
- To add a relationship from the **Relationship Explorer** just double-click the relationship and it will be added below the currently selected relationship in the navigation area. Double-click a relationship in the navigation area and you can change the label on the **Display** tab. On the **Name** tab you can see information about the relationship. Use the **Edit** button to open the definition of the entity.  
+ To add a relationship from the **Relationship Explorer** just double-click the relationship and it will be added below the currently selected relationship in the navigation area. Double-click a relationship in the navigation area and you can change the label on the **Display** tab. On the **Name** tab you can see information about the relationship. Use the **Edit** button to open the definition of the table.  
   
  There are five groups in the navigation area. You can drag them to reposition them and double-click them to change the label, but you can’t remove them. These groups will only display when there is something in them. So if you don’t want a group to appear, just don’t add anything to it.  
   
@@ -70,3 +70,6 @@ search.app:
 ## Next steps
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

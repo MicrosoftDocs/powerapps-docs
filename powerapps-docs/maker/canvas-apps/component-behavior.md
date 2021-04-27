@@ -16,7 +16,7 @@ search.app:
 # Behavior formulas for components
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
 
@@ -62,3 +62,6 @@ To do so, check **Raise OnReset when value changes** of the default input prope
 
 - [Canvas app components overview](create-component.md)
 - [Canvas app components library](component-library.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

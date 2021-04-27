@@ -1,5 +1,6 @@
 ---
 title: "init | MicrosoftDocs"
+description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -32,12 +33,13 @@ Model-driven apps and canvas apps (public preview)
 
 ## Example
 
-```JavaScript
-MyNameSpace.JSHelloWorldControl.prototype.init = function (context, notifyOutputChanged, state, container) {
-	this._labelElement = document.createElement("label");
-	this._labelElement.setAttribute("class", "JS_HelloWorldColor");
-	container.appendChild(this._labelElement);
-};
+```TypeScript
+public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
+{
+    this._labelElement = document.createElement("label");
+    this._labelElement.setAttribute("class", "HelloWorldColor");
+    container.appendChild(this._labelElement);
+}
 ```
 
 ### Related topics
@@ -45,3 +47,6 @@ MyNameSpace.JSHelloWorldControl.prototype.init = function (context, notifyOutput
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

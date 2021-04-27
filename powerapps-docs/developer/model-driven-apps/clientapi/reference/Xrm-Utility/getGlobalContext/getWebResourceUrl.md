@@ -1,11 +1,12 @@
 ---
 title: "getWebResourceUrl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/20/2020
+description: Includes description and supported parameters for the getWebResourceUrl method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -58,3 +59,6 @@ This will return the web resource URL with the caching token:
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

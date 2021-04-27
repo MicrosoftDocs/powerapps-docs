@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 03/11/2021
 ms.author: chmoncay
 search.audienceType:
   - maker
@@ -76,8 +76,6 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 **ShowNavigation** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by selecting an arrow.
 
 **ShowScrollbar** – Whether a scrollbar appears when the user hovers over a gallery.
-
-**Snap** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
 
 **TemplateFill** – The background color of a gallery.
 
@@ -154,3 +152,9 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
     > [!NOTE]
   > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
+
+### See also
+
+[Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md#use-delayitemloading-and-loading-spinner-to-improve-performance-in-gallery)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

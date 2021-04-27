@@ -21,7 +21,10 @@ A control that shows an image from, for example, a local file or a data source.
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
 ## Key properties
-**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control. 
+
+> [!NOTE]
+> Use HTTPS for all external images to ensure compatibility with modern browsers.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -151,3 +154,6 @@ If you add one or more **Image** controls to your app, you can show individual i
 
     > [!NOTE]
   > When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

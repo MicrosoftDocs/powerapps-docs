@@ -1,13 +1,14 @@
 ---
 title: "clearNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the clearNotification method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # clearNotification (Client API reference)
-
-
 
 Remove a message already displayed for a control.
 
@@ -27,6 +26,8 @@ All
 ## Syntax
 
 `formContext.getControl(arg).clearNotification(uniqueId);`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -46,3 +47,5 @@ All
 [addNotification](addNotification.md)
 
 [setNotification](setNotification.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

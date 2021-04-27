@@ -1,13 +1,14 @@
 ---
 title: "addOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the addOnSelection method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 66cfb2ff-4d78-4bb9-8dc0-e214ae1d2880
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # addOnSelection (Client API reference)
-
-
 
 Adds an event handler to the [OnSelection](../events/onselection.md) event. 
 
@@ -26,10 +25,11 @@ Knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 kbSearchControl.addOnSelection(myFunction);
 ```
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -42,3 +42,5 @@ kbSearchControl.addOnSelection(myFunction);
 [OnSelection event](../events/onselection.md)
 
 [removeOnSelection](removeOnSelection.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

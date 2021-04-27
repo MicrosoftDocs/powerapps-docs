@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -32,3 +32,6 @@ If you stored details about playing cards in a [collection](../working-with-data
 
 **Shuffle(Deck)**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

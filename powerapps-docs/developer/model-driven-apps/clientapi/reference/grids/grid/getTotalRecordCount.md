@@ -1,13 +1,14 @@
 ---
 title: "getTotalRecordCount (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getTotalRecordCount method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 8305f0cb-9959-4429-a721-a864ade4cd35
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -43,3 +44,6 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 See [Collections (Client API reference)](../../collections.md) for information on the methods available to access data in a collection.
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

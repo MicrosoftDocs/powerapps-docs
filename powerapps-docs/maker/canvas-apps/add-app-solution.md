@@ -18,11 +18,11 @@ search.app:
 
 Create an app from within a solution if, for example, you want to deploy the app to a different environment. Solutions can contain not only apps but also customized entities, option sets, and other components. You can quickly customize an environment in a variety of ways by creating apps and other components from within a solution, exporting the solution, and then importing it into another environment.
 
-For more information about solutions, see [Solutions overview](../common-data-service/solutions-overview.md).
+For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md).
 
 ## Prerequisite
 
-To follow the steps in this topic, you must switch to an environment that contains a Common Data Service database.
+To follow the steps in this topic, you must switch to an environment that contains a Microsoft Dataverse database.
 
 ## Create a solution
 
@@ -30,7 +30,7 @@ You can skip this procedure if you already have a solution in which you want to 
 
 1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then (if necessary) switch to the appropriate environment:
 
-    - If you want to create an app from within a solution, switch to any environment that contains a Common Data Service database.
+    - If you want to create an app from within a solution, switch to any environment that contains a Dataverse database.
     - If you want to link an existing app to a solution, switch to the environment that contains that app.
 
 1. In the left navigation bar, select **Solutions**.
@@ -115,9 +115,12 @@ If you want to link an app to a solution, both must be in the same environment, 
 
 ## Known limitations
 
-For information about known limitations, see [Use solutions in Power Apps](../common-data-service/use-solution-explorer.md#known-limitations). 
+For information about known limitations, see [Solutions overview](../data-platform/solutions-overview.md#known-limitations). 
 
 ## Next steps
 
-- Create or link more apps and [other components](../common-data-service/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
-- [Export your solution](../common-data-service/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
+- Create or link more apps and [other components](/powerapps/maker/canvas-apps/solutions-overview), such as entities, flows, and dashboards, to your solution.
+- [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

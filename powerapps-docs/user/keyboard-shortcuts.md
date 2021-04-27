@@ -1,13 +1,13 @@
 ---
 title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
-ms.custom: ""
+description: How to use keyboard shortcuts
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -37,12 +37,12 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Save| Ctrl+S |
 |Save and Close| N/A|
 |Cancel edits and close (Close) |Esc|
-|Delete the record (when forms are in edit mode)| N/A|
+|Delete the row (when forms are in edit mode)| N/A|
 |Save and then open a new form (Save and New) (when forms are in edit mode)| N/A|
 |Open the lookup menu with the most recently used items in alphabetical order| Down arrow|
 |Open a lookup drop-down list| Enter|
 |Close a lookup drop-down list|Esc|
-|Open a record found in lookup with forms in edit mode| Enter|
+|Open a row found in lookup with forms in edit mode| Enter|
 |Add an article to an email| N/A|
 |Apply an email template (when editing an email message)| N/A|
 
@@ -50,14 +50,16 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 |Task | Unified Interface |
 |---------|---------|
-|Move to the next option, option group, or field|Tab|
-|Move to the previous option, option group, or field| Shift+Tab |
+|Move to the next option, option group, or column|Tab|
+|Move to the previous option, option group, or column| Shift+Tab |
 |Move between options in an open list, or between options in a group of options|Arrow keys|
 |Go to the Command Bar| N/A |
 |Go to the landmark section of a page| Ctrl+\[ |
 
 
-<!--Is the one above supposed to include just one straight bracket? (I added the backslash to keep the bracket from causing GitHub format issues. It won't show up.)--> 
+## Email 
+
+For accessibility shortcuts available when using email, see [Accessibility shortcuts for email](view-create-email.md#accessibility-shortcuts).
 
 
 ## Editable grids (views)
@@ -67,21 +69,21 @@ If your administrator has enabled editable grids (views), you can edit data dire
 |---------|---------|
 |When the focus is on a column header, sort by column | Spacebar to drop down list and then down arrow to select an action, followed by Enter |
 |When the focus is on a column header, open filter dialog | Spacebar to drop down list and then down arrow to select the **Filter by** option, followed by Enter |
-|When the focus is on the cells, move to the next field |  Right arrow (→) key  | 
-|When the focus is on the cells, move to the previous field   |  Left arrow (←) key|
+|When the focus is on the cells, move to the next column |  Right arrow (→) key  | 
+|When the focus is on the cells, move to the previous column   |  Left arrow (←) key|
 |When the focus is on the column header, move to the next column header |  Tab  | 
 |When the focus is on the column header, move to the previous column header  |  Shift+Tab |
 |Move to the cell above | Up arrow (↑) key |
 |Move to the cell below|  Down arrow (↓) key **Or** Enter, when cell is not in edit mode |
-|Go to edit mode for Text, Number, and Simple fields when the focus is on a field  |  Type the value directly to overwrite the existing value **Or** Spacebar to continue modifying the existing value **Or** F2 to select the existing value  |
-|Go to edit mode for Date and Time fields| Type the value directly **Or** F4 or Alt+↓ to display the date/time picker |
-|Go to edit mode for drop-down (Lookup, Option Set) fields|Spacebar to open the list|
-|Go to edit mode for Two Options fields| Spacebar to switch between the two options **Or** F4 **Or** Alt+↓ to open the list|
+|Go to edit mode for Text, Number, and Simple columns when the focus is on a column  |  Type the value directly to overwrite the existing value **Or** Spacebar to continue modifying the existing value **Or** F2 to select the existing value  |
+|Go to edit mode for Date and Time columns| Type the value directly **Or** F4 or Alt+↓ to display the date/time picker |
+|Go to edit mode for drop-down (Lookup, Option Set) columns|Spacebar to open the list|
+|Go to edit mode for Two Options columns| Spacebar to switch between the two options **Or** F4 **Or** Alt+↓ to open the list|
 |Move between entries in an open drop-down list| Up/Down (↑/↓) Arrow keys|
 |Select an option in an open drop-down list|  Enter|
 |Close an open drop-down list|Esc|
 |Cancel your edits|Esc | 
-|Navigate to and open the lookup record| Enter when the focus is on (→) icon|
+|Navigate to and open the lookup row| Enter when the focus is on (→) icon|
 |Move to the next page (if any)| Page down key|
 |Move to the previous page (if any)|Page up key|
 |Move to the column header when the focus is in the grid|  Shift+Tab |
@@ -129,7 +131,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Move to the next element | Tab |
 |Move to the previous element | Shift+Tab |
 |Activate a button | Enter **Or** Spacebar |
-|Activate the **Sort by field** button and open flyout | Enter **Or** Spacebar **Or** Down (↓) arrow key |
+|Activate the **Sort by column** button and open flyout | Enter **Or** Spacebar **Or** Down (↓) arrow key |
 |Move to the next item | Down (↓) arrow key |
 |Move to the previous item | Up (↑) arrow key |
 |Move to the first item | Home |
@@ -190,8 +192,8 @@ If you use a screen reader, follow these steps to access any of the submenus tha
 > Several areas in the user interface (UI) have auto-collapse built in for menus. This includes the Navigation Bar and Form Navigation. Both expand when selected, but after 30 seconds of inactivity, the items collapse.
 
 ## Navigating through stages of a process
-If you’re in a record—for example, a lead—this section shows you the keyboard shortcuts to navigate through the different stages in the sales process to qualify the lead, and how to make selections in those stages. For example, if you want to move easily from the Qualify stage through to the Close stage, try these keyboard actions:
-- After you select a stage, get to the fields by selecting the Down (↓) arrow.
+If you’re in a row—for example, a lead—this section shows you the keyboard shortcuts to navigate through the different stages in the sales process to qualify the lead, and how to make selections in those stages. For example, if you want to move easily from the Qualify stage through to the Close stage, try these keyboard actions:
+- After you select a stage, get to the columns by selecting the Down (↓) arrow.
 - If a stage is collapsed, select Enter to expand it.
 
   > [!NOTE]
@@ -200,3 +202,6 @@ If you’re in a record—for example, a lead—this section shows you the keybo
 - **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). 
 - **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/HT201236).
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -50,3 +50,6 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
    * **\#123abc**
    * **\#1**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

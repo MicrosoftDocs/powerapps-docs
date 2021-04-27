@@ -1,0 +1,120 @@
+- name: Guidance
+  items: 
+  - name: Power Apps guidance documentation
+    href: index.yml
+  - name: Power Apps patterns
+    items:
+    - name: Patterns overview
+      href: patterns/overview.md
+    - name: Approval pattern
+      href: patterns/approval-pattern.md
+    - name: Asset management/resource booking pattern
+      href: patterns/asset-management-pattern.md  
+    - name: Calculation/transformation pattern
+      href: patterns/calculator-pattern.md
+    - name: Communication/announcement pattern
+      href: patterns/communication-pattern.md
+    - name: Inspection/audit pattern
+      href: patterns/inspection-pattern.md
+    - name: Project management pattern
+      href: patterns/project-management-pattern.md
+    - name: More patterns
+      href: patterns/more-patterns.md
+  - name: Planning a Power Apps project
+    items:
+    - name: Introduction
+      href: planning/introduction.md
+    - name: Differences between Power Apps and traditional app development approaches
+      href: planning/app-development-approaches.md
+    - name: Planning phase
+      items:
+      - name: Overview
+        href: planning/planning-phase.md
+      - name: Identifying the business problem to solve (the use case)
+        href: planning/identifying-business-problem-to-solve.md
+      - name: Example - Expense reporting
+        href: planning/example-expense-reporting.md
+      - name: Understanding the current business process
+        items:
+        - name: Overview and identifying key contributors
+          href: planning/understanding-current-business-process.md
+        - name: Documenting the business process
+          items:
+          - name: What is the task?
+            href: planning/what-is-task.md
+          - name: Who is doing the work?
+            href: planning/who-is-doing-work.md
+          - name: What activities are being performed?
+            href: planning/what-activities.md
+          - name: What data is needed?
+            href: planning/what-data-needed.md
+          - name: What data is created or edited?
+            href: planning/create-edit-data.md
+          - name: What decisions, approvals, or rules are there?
+            href: planning/decisions-approvals.md
+          - name: What is the next task?
+            href: planning/next-task.md
+          - name: Visually mapping the process
+            href: planning/visually-map-process.md
+      - name: Optimizing your business process
+        href: planning/optimizing-business-process.md
+      - name: Is it worth automating this process?
+        items:
+        - name: The cost of doing nothing
+          href: planning/worth-automating-process.md
+        - name: Defining the business value of solving the problem
+          href: planning/defining-business-value.md
+        - name: Measuring success against the business value
+          href: planning/measuring-success.md
+      - name: Creating a project plan
+        items:
+        - name: Defining the app project goals
+          href: planning/defining-app-project-objective.md
+        - name: Defining the project scope
+          href: planning/defining-project-scope.md
+        - name: Prioritizing feature requests
+          href: planning/prioritizing-features.md
+        - name: Identifying project team members
+          href: planning/identifying-project-members.md
+        - name: Listing project tasks and owners
+          href: planning/project-tasks-owners.md
+        - name: Defining the project schedule
+          href: planning/defining-project-schedule.md
+        - name: Identifying the risks
+          href: planning/identifying-risks.md
+        - name: Gaining support and sponsorship from management
+          href: planning/gaining-support.md
+    - name: Designing phase
+      items:
+      - name: Overview
+        href: planning/designing-phase.md
+      - name: Conceptual Design
+        items:
+        - name: Tasks to be done in the app
+          href: planning/app-tasks.md
+        - name: Sketching the screens
+          href: planning/sketching.md
+      - name: Architectural Design
+        items:
+        - name: Where is the data?
+          href: planning/where-is-data.md
+        - name: Working with enterprise systems
+          href: planning/enterprise-systems.md
+        - name: Data modeling
+          href: planning/data-modeling.md
+        - name: Determining which type of app to make
+          href: planning/app-type.md
+        - name: Determining where to place the logic
+          href: planning/logic.md
+        - name: Securing the app and data
+          href: planning/security.md
+    - name: Making phase
+      href: planning/making-phase.md
+    - name: Testing phase
+      href: planning/testing-phase.md
+    - name: Deploying and refining phase
+      items:
+      - name: Making your app discoverable
+        href: planning/discoverability.md
+      - name: Collecting feedback and analyzing telemetry
+        href: planning/feedback-telemetry.md

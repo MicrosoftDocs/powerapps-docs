@@ -1,14 +1,16 @@
 ---
-title: "Use Liquid types for a portal | MicrosoftDocs"
-description: "Learn about the available liquid types in a portal."
-author: tapanm-msft
-manager: kvivek
+title: Available Liquid types
+description: Learn about the available liquid types in a portal.
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2020
+ms.author: gisingh
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid types
@@ -20,7 +22,7 @@ Liquid objects can return one of seven basic types: **String**, **Number**, **Bo
 A String is declared by wrapping text in single or double quotes.
 
 ```
-{% assign string_a = Hello World! %}
+{% assign string_a = "Hello World!" %}
 
 {% assign string_b = 'Single quotes work too.' %}
 ```
@@ -76,7 +78,7 @@ An array holds a list of values of any type. You can access a given item by (zer
 
 {% if entitylist.views.size > 0 %}
 
-This entity list has {{ entitylist.views.size }} views.
+This list has {{ entitylist.views.size }} views.
 
 {% endif %}
 ```
@@ -123,3 +125,6 @@ This will render if the ID request parameter is NOT null.
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

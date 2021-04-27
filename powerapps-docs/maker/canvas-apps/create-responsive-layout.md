@@ -115,27 +115,27 @@ You can use these formula patterns for expressing common layout relationships be
 |  | **Width** | `Parent.Width - (N * 2)` |  |
 | **C** fills height of parent, with a margin of *N* | **Y** | `N` | ![Example of C filling height of parent](media/create-responsive-layout/c2.png) |
 |  | **Height** | `Parent.Height - (N * 2)` |  |
-| **C** aligned with right edge of parent, with margin of *N* | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c3.png) |
-| **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
+| **C** aligned with right edge of parent, with margin of *N* | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with right edge of parent](media/create-responsive-layout/c3.png) |
+| **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with bottom edge of parent](media/create-responsive-layout/c4.png) |
 | **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-layout/c5.png) |
 | **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-layout/c6.png) |
 
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-layout/d1.png) |
+| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of horizonal aligned pattern](media/create-responsive-layout/d1.png) |
 |  | **Width**    | `D.Width` |  |
-| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of pattern](media/create-responsive-layout/d2.png) |
+| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of vertical aligned pattern](media/create-responsive-layout/d2.png) |
 |  | **Height** | `D.Height` |  |
-| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of pattern](media/create-responsive-layout/d3.png) |
-| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-layout/d4.png) |
-| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-layout/d5.png) |
-| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-layout/d6.png) |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
-| **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-layout/d8.png) |
-| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
+| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of right edge aligned pattern](media/create-responsive-layout/d3.png) |
+| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of bottom edge aligned pattern](media/create-responsive-layout/d4.png) |
+| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of centered horizontally pattern](media/create-responsive-layout/d5.png) |
+| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of centered vertically pattern](media/create-responsive-layout/d6.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of positioned to the right pattern](media/create-responsive-layout/d7.png) |
+| **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of positioned below pattern](media/create-responsive-layout/d8.png) |
+| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of filling space between D and right edge pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |
-| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-layout/d10.png) |
-| | **Height** | ```Parent.Height - D.Y```
+| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of filling space between D and bottom of the edge pattern](media/create-responsive-layout/d10.png) |
+| | **Height** | ```Parent.Height - C.Y```
 
 ## Hierarchical layout
 
@@ -167,6 +167,10 @@ Set the properties for these controls to these values:
 For the **Header** control, `Parent` refers to the screen. For the others, `Parent` refers to the **Header** control.
 
 Having written these formulas, you can adjust the size or position of the **Header** control by changing the formulas for its properties. The sizes and positions of the child controls will automatically adjust accordingly.
+
+## Auto-layout container controls
+
+You can use an experimental feature, the **Auto-layout** container controls to automatically lay out the child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components. More information: [Auto-layout container controls](build-responsive-apps.md#auto-layout-containers)
 
 ### Components
 
@@ -260,3 +264,6 @@ You can also specify fewer breakpoints. For example, your app might need only th
 The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, and then open it on devices or in browser windows of various sizes and orientations.
 
 If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you'll overwrite those expressions or formulas if you later drag the control to a different location or resize the control by dragging its border.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

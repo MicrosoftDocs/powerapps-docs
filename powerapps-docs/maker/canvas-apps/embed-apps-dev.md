@@ -34,6 +34,11 @@ If you have an app you want to embed, the first step is to set parameters for th
 ```
 https://apps.powerapps.com/play/[AppID]?source=iframe
 ```
+For GCC users
+
+```
+https://apps.gov.powerapps.us/play[AppID]?source=iframe
+```
 
 > [!IMPORTANT]
 > As of August 2019, the URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play. Please update any embedded iframes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.
@@ -89,3 +94,6 @@ Keep the following points in mind for authenticating users of your app:
 - If your website uses any other sign-in mechanism or is not authenticated, your users see a sign-in prompt on the iframe. After they sign-in, they will be able to run the app as long as the author of the app has shared it with them.
 
 As you can see, embedding apps is simple and powerful. Embedding enables you to bring apps right to the places you and your customers work – websites, Power BI dashboards, SharePoint pages, and more.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

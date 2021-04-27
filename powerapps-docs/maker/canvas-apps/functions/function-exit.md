@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
@@ -41,3 +41,6 @@ While authoring the app, calling **Exit** doesn't exit or sign out the user.  Ho
 | **Exit(&nbsp;true&nbsp;)** | Exits the current app and the user is signed out.  The user will need to sign back in with their credentials before running an app. | 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

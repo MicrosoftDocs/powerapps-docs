@@ -1,13 +1,14 @@
 ---
 title: "getDefaultView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getDefaultView method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e8c3cda0-50ec-41c7-94be-043b11c9f5d8
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # getDefaultView (Client API reference)
-
-
 
 Returns the ID value of the default lookup dialog view.
 
@@ -39,3 +38,6 @@ Lookup
 
 [setDefaultView](setDefaultView.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

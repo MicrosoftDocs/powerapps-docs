@@ -1,14 +1,16 @@
 ---
-title: "Use Liquid tags for a portal | MicrosoftDocs"
-description: "Learn about the available liquid tags in a portal."
-author: tapanm-msft
-manager: kvivek
+title: Available Liquid tags
+description: Learn about the available liquid tags in a portal.
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2020
+ms.author: gisingh
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid tags
@@ -28,11 +30,11 @@ You can tell the engine to strip all leading or trailing white space by adding a
 **Code**
 
 ```
-{% for i in (1..5) --%}
+{% for i in (1..5) -%}
 
 {{ i }}
 
-{%-- endfor %}
+{%- endfor %}
 ```
 
 **Output**
@@ -45,3 +47,6 @@ You can tell the engine to strip all leading or trailing white space by adding a
 [Liquid types](liquid-types.md)  
 [Liquid Objects](liquid-objects.md)  
 [Liquid Filters](liquid-filters.md) 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

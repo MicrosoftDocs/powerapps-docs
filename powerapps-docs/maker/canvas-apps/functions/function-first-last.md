@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -47,3 +47,6 @@ This formula returns the first record from a table named **Employees**:<br>
 This formula returns the last 15 records from a table named **Employees**:<br>
 **LastN(Employees, 15)**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

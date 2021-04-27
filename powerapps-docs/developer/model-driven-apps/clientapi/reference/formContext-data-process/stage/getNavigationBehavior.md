@@ -1,13 +1,14 @@
 ---
 title: "getNavigationBehavior (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018    
+description: Returns a navigation behavior object for stage that can be used to define whether the create button is available for users.
+ms.date: 04/15/2021    
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # getNavigationBehavior (Client API reference)
-
-
 
 [!INCLUDE[./includes/getNavigationBehavior-description.md](./includes/getNavigationBehavior-description.md)]
 
@@ -30,18 +29,19 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
     return true|false;
 }
 ```
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Returns
 
 **Type**: Object 
 
-**Description**: An object with the `allowCreateNew` property that lets you define whether the **Create** button will be available in a stage so that user can create an instance of entityB from the entityA form in a cross-entity business process flow navigation scenario. 
+**Description**: An object with the `allowCreateNew` property that lets you define whether the **Create** button will be available in a stage so that user can create an instance of tableB from the tableA form in a cross-table business process flow navigation scenario. 
 
 For example, here is the **Create** button in the **Develop** stage of the **AccountToContactProcess** sample business process flow that lets you create a Contact record from the Account form.
 
-![](../../../../media/clientapi_getNavigationBehavior.png)
+![Create button in the Develop stage](../../../../media/clientapi_getNavigationBehavior.png)
 
-The `allowCreateNew` property will return **undefined** for business process flow records that do not implement cross-entity navigation.
+The `allowCreateNew` property will return **undefined** for business process flow records that do not implement cross-table navigation.
 
 ## Example
 
@@ -50,7 +50,7 @@ The following sample code shows how you can hide or display the **Create** butto
 ```JavaScript
 function sampleFunction(executionContext) {
     var formContext = executionContext.getFormContext();
-    formContext.data.process.getActiveStage.getNavigationBehavior().allowCreateNew = function () {
+    formContext.data.process.getActiveStage().getNavigationBehavior().allowCreateNew = function () {
         if (formContext.data.process.getName() === 'Test Process') {
             return false; // Create button is not available
         }
@@ -65,3 +65,6 @@ function sampleFunction(executionContext) {
  
 [formContext.data.process](../../formContext-data-process.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

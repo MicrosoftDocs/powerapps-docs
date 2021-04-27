@@ -1,13 +1,14 @@
 ---
 title: "movePrevious (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Moves to the previous stage.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -16,15 +17,15 @@ search.app:
 ---
 # movePrevious (Client API reference)
 
-
-
 [!INCLUDE[./includes/movePrevious-description.md](./includes/movePrevious-description.md)]
 
-You can also move to a previous stage in a different entity.
+You can also move to a previous stage in a different table.
 
 ## Syntax
 
 `formContext.data.process.movePrevious(callbackFunction);`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -51,7 +52,7 @@ You can also move to a previous stage in a different entity.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The previous stage is for a different entity.</td>
+<td>The previous stage is for a different table.</td>
 </tr>
 <tr>
 <td>beginning</td>
@@ -64,6 +65,10 @@ You can also move to a previous stage in a different entity.
 <tr>
 <td>dirtyForm</td>
 <td>This value will be returned if the data in the page is not saved.</td>
+</tr>
+<tr>
+<td>stageGate</td>
+<td>One or more required column on the current stage is empty.</td>
 </tr>
 </table>
 </td>
@@ -85,3 +90,6 @@ This methods will cause the [OnStageChange](../../events/onstagechange.md) event
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

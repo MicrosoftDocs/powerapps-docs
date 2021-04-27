@@ -1,13 +1,14 @@
 ---
 title: "getInitialUrl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getInitialUrl method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 2c6d6ab4-98a8-4444-b24a-65c140e8f192
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +16,6 @@ search.app:
   - D365CE
 ---
 # getInitialUrl (Client API reference)
-
-
 
 Returns the default URL that an IFRAME control is configured to display. 
 
@@ -37,3 +36,6 @@ iframe
 ### Related topics
 
 [Controls](../controls.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

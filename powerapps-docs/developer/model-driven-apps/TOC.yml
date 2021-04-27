@@ -1,22 +1,22 @@
-- name: Model-driven apps
-  href: ../../maker/model-driven-apps/model-driven-app-overview.md
+- name: Model-driven apps developer guide
+  href: index.yml
 - name: Developer overview
   href: overview.md
 - name: Get started
   href: supported-customizations.md
 - name: Design app interface using code
   items:
-  - name: Customize entity forms
+  - name: Customize forms
     href: customize-entity-forms.md
     items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Customize entity views
+  - name: Customize views
     href: customize-entity-views.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
-    - name: Set field values using parameters passed to a form
+    - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md
@@ -27,7 +27,7 @@
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Build code components using Power Apps component framework
-    href: /powerapps/developer/component-framework/overview
+    href: ../component-framework/overview.md
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
@@ -39,7 +39,9 @@
       - name: Actions on dashboards
         href: actions-dashboards.md
       - name: Create a dashboard
-        href: create-dashboard.md
+        href: create-dashboard.md    
+      - name: Sample dashboards
+        href: sample-dashboards.md
     - name: View data with visualizations (charts)
       href: view-data-with-visualizations-charts.md
       items:
@@ -48,7 +50,9 @@
       - name: Actions on visualizations (charts)
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
-        href: create-visualization-chart.md      
+        href: create-visualization-chart.md 
+      - name: Sample charts
+        href: sample-charts.md     
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:
@@ -69,13 +73,15 @@
     href: clientapi/walkthrough-write-your-first-client-script.md
   - name: Debug your JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
+  - name: Troubleshoot form issues in Unified Interface
+    href: troubleshoot-forms.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
     - name: Client-side events
       href: clientapi/reference/events.md
       items:
-      - name: Attribute OnChange event
+      - name: Column OnChange event
         href: clientapi/reference/events/attribute-onchange.md
       - name: Form OnLoad event
         href: clientapi/reference/events/form-onload.md
@@ -107,6 +113,8 @@
         href: clientapi/reference/events/onstagechange.md
       - name: OnStageSelected event
         href: clientapi/reference/events/onstageselected.md
+      - name: PostSave event
+        href: clientapi/reference/events/postsave.md
       - name: PostSearch event
         href: clientapi/reference/events/postsearch.md
       - name: PreSearch event
@@ -144,8 +152,14 @@
     - name: Save event arguments
       href: clientapi/reference/save-event-arguments.md
       items:
+      - name: getEntityReference
+        href: clientapi/reference/save-event-arguments/getEntityReference.md
+      - name: getIsSaveSuccess
+        href: clientapi/reference/save-event-arguments/getIsSaveSuccess.md
       - name: getSaveMode
         href: clientapi/reference/save-event-arguments/getSaveMode.md
+      - name: getSaveErrorInfo
+        href: clientapi/reference/save-event-arguments/getSaveErrorInfo.md
       - name: isDefaultPrevented
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
@@ -484,6 +498,13 @@
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification
         href: clientapi/reference/formcontext-ui/setFormNotification.md
+    - name: formContext.ui.footerSection
+      href: clientapi/reference/formcontext-ui-footerSection.md
+      items: 
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-footerSection/getVisible.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
       href: clientapi/reference/formcontext-ui-formselector.md
       items:
@@ -497,6 +518,21 @@
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-formselector/setVisible.md
+    - name: formContext.ui.headerSection
+      href: clientapi/reference/formContext-ui-headerSection.md
+      items:
+      - name: getBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getBodyVisible.md
+      - name: getCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getCommandBarVisible.md
+      - name: getTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getTabNavigatorVisible.md
+      - name: setBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setBodyVisible.md
+      - name: setCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setCommandBarVisible.md
+      - name: setTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setTabNavigatorVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:
@@ -559,6 +595,8 @@
       items:
       - name: addtabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getContentType
+        href: clientapi/reference/formContext-ui-tabs/getContentType.md
       - name: getDisplayState
         href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel
@@ -571,6 +609,8 @@
         href: clientapi/reference/formcontext-ui-tabs/getVisible.md
       - name: removeTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setContentType
+        href: clientapi/reference/formContext-ui-tabs/setContentType.md
       - name: setDisplayState
         href: clientapi/reference/formcontext-ui-tabs/setDisplayState.md
       - name: setFocus
@@ -735,6 +775,8 @@
         href: clientapi/reference/xrm-utility/getAllowedStatusTransitions.md
       - name: getEntityMetadata
         href: clientapi/reference/xrm-utility/getEntityMetadata.md
+      - name: getEntityMainFormDescriptor
+        href: clientapi/reference/xrm-utility/getEntityMainFormDescriptor.md
       - name: getGlobalContext
         href: clientapi/reference/xrm-utility/getGlobalContext.md
         items:
@@ -822,6 +864,8 @@
     href: define-ribbon-display-rules.md
   - name: Define ribbon actions
     href: define-ribbon-actions.md
+  - name: Override the default behavior to open records in grids
+    href: override-default-open-behavior-grids.md
   - name: Pass data from a page as a parameter to Ribbon Actions
     href: pass-data-page-parameter-ribbon-actions.md
   - name: Define custom actions to modify the ribbon
@@ -877,11 +921,7 @@
   - name: Pass multiple values to a  web resource through the data parameter
     href: sample-pass-multiple-values-web-resource-through-data-parameter.md
   - name: Import files as web resources
-    href: sample-import-files-web-resources.md
-  - name: Sample charts
-    href: sample-charts.md
-  - name: Sample dashboards
-    href: sample-dashboards.md
+    href: sample-import-files-web-resources.md  
 - name: Resources
   items:
   - name: Developer Tools

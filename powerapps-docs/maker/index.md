@@ -1,29 +1,31 @@
 ---
 title: Overview of creating apps | Microsoft Docs
-description: Overview of creating apps in either canvas or model-driven mode and incorporating the Common Data Service
-author: tapanm-msft
-manager: kvivek
-
+description: Overview of creating apps in either canvas or model-driven mode and incorporating the Microsoft Dataverse
+author: alaug
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
-ms.date: 12/05/2019
-ms.author: tapanm
-ms.reviewer:
+ms.custom: 
+ms.date: 01/07/2021
+ms.author: alaug
+ms.reviewer: tapanm-msft
+searchScope:
+  - "Power Apps"
 ---
 
 # Overview of creating apps in Power Apps
 
-Power Apps is a high-productivity development platform for business apps, and it has four major components:
+Power Apps is a high-productivity development platform for business apps, and has four major components:
 
-- [Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
-- [Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
-- [Portals](portals/overview.md) start to create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously.
-- [Common Data Service](common-data-service/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 applications are built; if you’re a Dynamics customer, your data is already in the Common Data Service.
+- Canvas apps
+- Model-driven apps
+- Portals
+- Microsoft Dataverse
 
-It's easy and simple to try building out your first app. We have a 30-day trial plan and a free community plan; find out which one is best for you and get started.
+Let's learn more about each of these.
 
 ## Canvas apps
+
+[Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of more than 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
 
 Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Allow your creativity and business sense to guide how you want your apps to look and feel.
 
@@ -36,13 +38,18 @@ Creating a canvas app is easy; with Power Apps, you can find or create your app 
 
 - [From data](canvas-apps/app-from-sharepoint.md)
 - [From a sample](canvas-apps/open-and-run-a-sample-app.md)
-- [From a Common Data Service source](canvas-apps/data-platform-create-app.md)
+- [From a Dataverse source](canvas-apps/data-platform-create-app.md)
 - [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
 - [Via AppSource](../user/app-source.md)
 
+> [!NOTE]
+> In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
+
 ## Model-driven apps
 
-When you create a model-driven app, you can use all of the power of the Common Data Service to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
+[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices. 
+
+When you create a model-driven app, you can use all of the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
 
@@ -54,29 +61,36 @@ Getting started with model-driven apps is simple, and you can begin with these t
 - [Add security](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Add business logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
-## Common Data Service
+## Portals
 
-The Common Data Service allows you to securely store and manage data within a set of standard and custom entities, and you can add fields to those entities when you need them.
+[Portals](portals/overview.md) help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
 
-Getting started with the Common Data Service is easy. For example, you can start with these items:
+Use these topics to quickly get started with portals:
 
-- [Create a custom entity](common-data-service/data-platform-create-entity.md)
-- [Manage fields](common-data-service/data-platform-manage-fields.md)
-- [Create custom option sets](common-data-service/custom-picklists.md)
+- [Create a starter portal](/powerapps/maker/portals/create-portal)
+- [About the portal lifecycle](/powerapps/maker/portals/admin/portal-lifecycle)
+- [Portal authentication](/powerapps/maker/portals/configure/configure-portal-authentication)
+- [Power BI integration for portals](/powerapps/maker/portals/admin/set-up-power-bi-integration)
+- [Azure integration for portals](/powerapps/maker/portals/enable-azure-storage)
+
+## Dataverse
+
+[Dataverse](data-platform/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
+
+Dataverse allows you to securely store and manage data within a set of standard and custom *tables*, and you can add columns to those tables when you need them.
+
+Getting started with Dataverse is easy. For example, you can start with these items:
+
+- [Create a custom table](data-platform/data-platform-create-entity.md)
+- [Manage columns](data-platform/data-platform-manage-fields.md)
+- [Create custom choices](data-platform/custom-picklists.md)
 - [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
-## Canvas and model-driven artifacts
+## Planning a Power Apps app or project
 
-While we merge the experiences of canvas and model-driven apps, these artifacts will be relevant for either canvas apps or model-driven apps.
+It's easy to try building out your first app. Simply sign-in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, like creating environments, we have a [30 day trial](signup-for-powerapps.md) or [community plan](dev-community-plan.md).
 
-| Artifact            | App Type     |
-|---------------------|--------------|
-| Entity > Views      | Model-driven |
-| Entity > Forms      | Model-driven |
-| Entity > Dashboards | Model-driven |
-| Connections         | Canvas       |
-| Gateways            | Canvas       |
-| Custom connectors   | Canvas       |
-| Apps > Import       | Canvas       |
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
-After you build your app, you can [share it](canvas-apps/share-app.md) with your team members.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

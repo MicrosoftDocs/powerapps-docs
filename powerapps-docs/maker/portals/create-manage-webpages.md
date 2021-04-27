@@ -1,14 +1,16 @@
 ---
-title: Create and manage webpages | Microsoft Docs
+title: Create and manage webpages
 description: Instructions to create and manage webpages in portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 04/21/2021
+ms.author: nenandw
+ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create and manage webpages
@@ -49,12 +51,15 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 > [!div class=mx-imgBorder]
 > ![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with a portal created in an environment containing model-driven apps in Dynamics 365, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+
+> [!IMPORTANT]
+> When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
@@ -75,8 +80,6 @@ If you are working with a portal created in an environment containing model-driv
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
 
-    - **Set as home page**: Set the page as the home page. The URL of the new home page is set to the root of the website and URL of the old page is updated accordingly.
-
     - **Move up**: Move the page up in hierarchy.
 
     - **Move down**: Move the page down in hierarchy.
@@ -93,7 +96,14 @@ If you are working with a portal created in an environment containing model-driv
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
+## Next steps
+
+[Customize webpages](compose-page.md)
+
+### See also
+
+[Work with templates](work-with-templates.md) <br>
+[Work with themes](theme-overview.md)
 
 
-
-
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

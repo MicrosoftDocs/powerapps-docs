@@ -1,5 +1,6 @@
 ---
 title: "updateView| MicrosoftDocs"
+description: This method will be called when any value in the property bag has changed. 
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -29,10 +30,11 @@ Model-driven apps and canvas apps (public preview)
 
 ## Example
 
-```JavaScript
-MyNameSpace.JSHelloWorldControl.prototype.updateView = function (context) {
-	this._labelElement.innerText = "Hello World! (JS)";
-};
+```TypeScript
+public updateView(context: ComponentFramework.Context<IInputs>): void
+{
+    this._labelElement.innerText = "Hello World! (TS)";
+}
 ```
 
 ## Remarks
@@ -45,3 +47,6 @@ Set the value of the field component to the raw value from the configured field
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

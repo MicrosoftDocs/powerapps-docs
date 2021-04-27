@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType: 
@@ -59,3 +59,6 @@ You reapply your change on top of the previous change, and your change succeed b
 
 ![](media/function-revert/icecream-success.png)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

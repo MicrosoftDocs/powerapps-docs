@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 12/19/2018
 ms.author: aheneay
 search.audienceType: 
@@ -33,3 +33,6 @@ Trace messages can also be defined in your app. These can be viewed in the Power
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

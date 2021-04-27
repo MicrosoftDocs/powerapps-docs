@@ -1,5 +1,6 @@
 ---
 title: "Create, edit or configure forms using the model-driven form designer | MicrosoftDocs"
+description: Learn how to create and edit model-driven app forms
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
@@ -31,8 +32,8 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 
 ## Create a form 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand **Data**, and then select **Entities**. 
-3. Select an entity, such as the account entity, and then select the **Forms** tab. 
+2. On the left navigation pane, expand **Data**, and then select **Tables**. 
+3. Select a table, such as the account table, and then select the **Forms** tab. 
 4. Select **Add form**, and then select one of the following
     - **Main form**  
     The contents of the new form are filled using the existing main form definition. If multiple main forms exist, the form at the top of the list in the form order is used to fill the new form. 
@@ -42,8 +43,8 @@ Use the new form designer to create, edit, or configure forms for model-driven a
 
 ## Edit a form 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand **Data**, and then select **Entities**. 
-3. Select an entity, such as the account entity, and then select the **Forms** tab.
+2. On the left navigation pane, expand **Data**, and then select **Tables**. 
+3. Select a table, such as the account table, and then select the **Forms** tab.
 4. Select the form name that you want to edit.  
     - You can also select the row for a form, and then in the command bar, select **Edit form**
     - Another alternative is to select **...** next to the form name, and then in the menu, select **Edit form**. 
@@ -54,14 +55,14 @@ These are the properties available to configure a form when you create or edit a
 
 |Name  |Description  |
 |---------|---------|
-|**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for an entity they will use this name to differentiate between the available forms. <br /><br />This property is required. |
-|**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for an entity in the solution explorer. |
+|**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table they will use this name to differentiate between the available forms. <br /><br />This property is required. |
+|**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for a table in the solution explorer. |
 |**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
-|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of the form. <br /><br /> See Enable or disable entity options for more information about entity options. |
+|**Show image** | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. <br /><br /> See Enable or disable table options for more information about table options. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
@@ -70,4 +71,7 @@ These are the properties available to configure a form when you create or edit a
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

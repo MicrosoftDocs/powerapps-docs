@@ -1,12 +1,13 @@
 ---
 title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 04/21/2020
+description: Includes description and supported parameters for the setVisible method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 21368fac-d4bc-4f75-8a9c-cce098fa0b45
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,3 +31,6 @@ search.app:
 ### Related topics
 
 [getVisible](getVisible.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

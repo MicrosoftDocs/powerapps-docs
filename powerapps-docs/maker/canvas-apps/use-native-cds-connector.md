@@ -1,30 +1,38 @@
 ---
 title: Upgrade to use native Common Data Service connector | Microsoft Docs
-description: 
-author: tapanm-msft
+description: Learn about upgrading native Common Data Service connector for improved data source experience.
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 03/03/2020
+ms.reviewer: tapanm
+ms.date: 12/14/2020
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Common Data Service and the improved data source experience
+# Microsoft Dataverse and the improved data source experience
+
+> [!NOTE]
+> - Effective November 2020:
+>     - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
+>     - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](../data-platform/data-platform-intro.md)
+>
+>     This article will be updated soon to reflect the latest terminology.
+> - Power Apps mobile app on Windows platform supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
 
 ## Overview
 
-If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefit of the most current version of the Common Data Service. 
+If you created a canvas app with either the Dataverse or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Dataverse. This article explains both the benefits of using the new experience and how to convert from the legacy Dataverse or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Common Data Service views** option.
 
 The **Improve data source experience and Common Data Service views** option has following benefits:
 
 1. Significant speed gains.
 2. Increased reliability.
-3. Access to Common Data Service **views** and **File and Image field attributes**.
+3. Access to Dataverse **views** and **File and Image field attributes**.
 
 The **Improve data source experience and Common Data Service views** option appears in the Advanced settings section:
 
@@ -45,7 +53,9 @@ You may also want to enable the **Explicit Column Selection** feature:
 ![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
 
 > [!NOTE]
-> **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - When this feature is *Off*, you'll see the following message. You can ignore this message when using Power Apps mobile app for Windows platform.
+> <br> `This app is using a connector for the Common Data Service or Dynamics 365 that will not be supported past Oct 1, 2020.`
 
 ### *Relational data, option sets and other new features for Common Data Service* is Off:
 
@@ -84,7 +94,7 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     It’s possible to have errors at this stage if you're using an option set field or hard-coded GUID text values.  <br><br> 
     
     - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-    See the [Detailed Examples](#detailed-examples) section for more information.
+    More information: [Detailed Examples](#detailed-examples).
     - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
     - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 
@@ -92,9 +102,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
 
 Use the following instruction to turn **Improve data source experience and Common Data Service views** feature *On*:
 
-1. Remove your existing Common Data Service data source connections. 
+1. Remove your existing Dataverse data source connections. 
 1. Turn *On* the **Improve data source experience and Common Data Service views** feature.
-1. Add the Common Data Service connection using the new data source selection experience.
+1. Add the Dataverse connection using the new data source selection experience.
 1. Save your application.
 
 > [!NOTE]
@@ -106,22 +116,26 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 
 1. Ensure the **Improve data source experience and Common Data Service views** feature is turned *On*.
 2. Remove your existing Dynamics 365 data source connections.
-3. Add the connections to your data sources to the Common Data Service using the new data source selection experience. 
+3. Add the connections to your data sources to the Dataverse using the new data source selection experience. 
 
     > [!NOTE] 
-    > If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - You need to meet one of the following requirements to be able to see an environment that you want to add the connection to:
+    >   - You're the **Owner** of the app, or the app is [shared](share-app.md) with you as a **Co-owner**.
+    >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
+
 4.	Save your application.
 
 *Possible errors and suggestions*:
 
-It’s possible to have errors as you convert if: you aren't using Display Names, if you are using GUID strings, or if you are using an option set field.
+It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using an option set field.
 
 - If control name conflicts, change the name of the control to be different and unique. 
 - For field and entity display name conflicts, you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
-- *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-See the [Detailed Examples](#detailed-examples) section for more information.
-- *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-- *Lookups*: If you are using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+- *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
+More information: [Detailed Examples](#detailed-examples).
+- *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
+- *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 - For any Polymorphic references, refer to the Detailed Examples section below. 
 
 ## Detailed Examples
@@ -130,17 +144,17 @@ Converting your app to use the new **Option sets** and **Two options** data type
 
 ### Option Sets
 
-Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there is a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
+Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there's a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
 
 #### Removing and adding Option set Data cards
 
-It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you are working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you're working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
 With the new *Improved data source experience and Common Data Service views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
 
-![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
+![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
 #### Editing the Option Set Filter expressions to use new syntax
 
@@ -150,13 +164,13 @@ Previously, if you wanted to use an Option Set value in a Filter expression you 
 Filter(Account,'Category Value' = "1")
 ```
 
-You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to look the following:
+You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to:
 
 ```powerapps-dot
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
-'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/common-data-service/create-edit-global-option-sets)
+'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](../data-platform/create-edit-global-option-sets.md)
 
 #### Editing Option Set Patch statements to use new syntax
 
@@ -184,13 +198,13 @@ Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
 
 #### Removing and adding Two Option set Data cards
 
-You should remove existing data cards and add them back to work with your Two Option set. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
+Remove existing data cards and add them back to work with your Two Option set. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
 
 ![Two Option Set - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
 With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
-![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Two Option Set - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
@@ -211,7 +225,7 @@ Using the [Patch](./functions/function-patch.md) function with Two option should
 
 ### Polymorphic lookups
 
-Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries with it the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
+Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
 
 #### Access, Set, and Filter on the Owner field of a record
 
@@ -256,7 +270,7 @@ Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure t
  
 #### Access and set the Company Name field (a Customer data type) of the Contacts entity
 
-Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-fields-of-a-customer) for more details.
  
 #### Access and set the Regarding field of activity entities such as Faxes, Phone Calls, Email Messages
 
@@ -273,15 +287,15 @@ If( IsBlank( ThisItem.Regarding ), "",
 
 ![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
-Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-lookup-fields) and [Regarding relationships](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#understand-regarding-relationships) for more details.
+Read [Regarding lookup fields](./working-with-references.md#understand-regarding-lookup-fields) and [Regarding relationships](./working-with-references.md#understand-regarding-relationships) for more details.
 
 #### Access the list of all Activities for a record
 
-In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
+In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity entities](../../developer/data-platform/custom-activities.md).
 
 You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
 
-Each time you add a record to (for example the Tasks entity), a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
+Each time you add a record to (for example the Tasks entity), a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](./working-with-references.md#activity-entity) for more details.
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
@@ -299,13 +313,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
 
- ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
+ ![New Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
 
 #### Access the list of Notes for a record
 
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
-![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
+![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 
@@ -325,9 +339,12 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ## Next steps
 
-- [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
-- [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
+- [Formula reference](./formula-reference.md)
+- [Controls reference](./reference-properties.md)
 
 ### See also
 
-[What is Common Data Service?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+[What is Dataverse?](../data-platform/data-platform-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

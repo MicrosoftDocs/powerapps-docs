@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -27,3 +27,6 @@ The return value is a Boolean **true** or **false**.
 
 * *Value* – Required. Value to test.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

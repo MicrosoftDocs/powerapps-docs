@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -28,3 +28,6 @@ The result has the same sign as the divisor.
 * *Number* - Required. Number to divide.
 * *Divisor* - Required.  Number to divide by.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

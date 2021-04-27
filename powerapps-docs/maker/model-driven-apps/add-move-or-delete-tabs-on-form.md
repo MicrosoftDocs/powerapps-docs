@@ -1,5 +1,6 @@
 ---
 title: "Add, configure, move, or delete tabs on a form using the form designer | MicrosoftDocs"
+description: Learn how to work with tabs on a form using Power Apps. 
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
@@ -30,7 +31,7 @@ Add, move, or delete tabs on a form using the form designer.
 To add tabs to a form, use the **Components** pane.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
    
   > [!NOTE]
   >  Tabs can only be added on main forms. More information: [Form types](types-forms.md)
@@ -100,14 +101,14 @@ You can move a tab on a form using drag and drop or cut and paste actions.
     > [!NOTE]
     >   - Tabs can only be deleted on main forms. More information: [Form types](types-forms.md)
     >   - If you delete a tab by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
-    >   - You can't delete a tab that contains sections with required or locked fields. 
+    >   - You can't delete a tab that contains sections with required or locked columns. 
     >   - You can't delete a tab that has locked sections. 
     >   - A form must have at least one tab. You can't delete the last remaining tab on the form. 
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
@@ -115,4 +116,7 @@ You can move a tab on a form using drag and drop or cut and paste actions.
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
