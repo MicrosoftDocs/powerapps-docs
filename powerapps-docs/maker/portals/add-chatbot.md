@@ -8,6 +8,9 @@ ms.custom:
 ms.date: 12/01/2020
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add chatbot to a page
