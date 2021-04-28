@@ -96,9 +96,6 @@ When working with a multi-language app, the first step is to create a reusable c
                 Labels: {
                     Title: "UI Tips for building canvas apps",
                     JobTitle: "Power Platform Specialist",
-                    Close: "Close",
-                    Open: "Open",
-                    Cancel: "Cancel"
                 }
             },
             {
@@ -106,9 +103,6 @@ When working with a multi-language app, the first step is to create a reusable c
                 Labels: {
                     Title: "Dicas de UI para construir canvas apps",
                     JobTitle: "Especialista de Power Platform",
-                    Close: "Fechar",
-                    Open: "Abrir",
-                    Cancel: "Cancelar"
                 }
             }
         )
@@ -155,21 +149,99 @@ Earlier, you created the translation component library for reuse. In this sectio
 
 1. On the left pane, select **Apps**.
 
-1. Add the component to the app and set the Name to "**Translation**".
+1. Select **New app** -> **Canvas app**.
 
-   ![Microsoft Power Apps Canvas App Editor: Add the Translation Component](media/multi-language-apps/image-20210305114727047.png)
+1. Select the **Blank app** template with **Phone layout**.
 
-1. Set the component **Visible** to **false**
-   
-   ![Microsoft Power Apps Canvas App Editor: Set Translation Component Visible to False](media/multi-language-apps/image-20210304135035793.png)
-1. Pass the value of the **Language** to the input property of the **translation component**. In this case we have a toggle control that sets a variable called `varLanguage` to the language selected by the user.
+1. On the left-side of the screen, select **+** (Insert).
 
-   ![Microsoft Power Apps Canvas App Editor: Set Translation Component Language input parameter to the language of your app](media/multi-language-apps/image-20210304135729817.png)
+1. On the bottom-left side of the screen, select **Get more components**.
 
-1. On every control in your app that needs to be translated, instead of using static text as the label, use the formula `Translation.Labels.[ControlName]` where [ControlName] is the name of the control defined in the dictionary.
+1. Select **Translation component**.
 
-   ![Microsoft Power Apps Canvas App Editor: Update Controls to use Translation Component](media/multi-language-apps/image-20210304170138224.png)
+    ![Select Translation component library](media/multi-language-apps/import-translation-component.png "Select Translation component library")
 
-With this approach, whenever the user changes their language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
+    > [!NOTE]
+    > The name might be different if you saved the component library created earlier with a different name.
 
-![Power Apps: Multi-Language Support](media/multi-language-apps/multi-langugage.gif)
+1. Select **Import**.
+
+1. On the left-side of the screen, select **+** (Insert).
+
+1. Under **Library components**, select **Translation component** to add the component to this app.
+
+1. On the left-side of the screen, select the tree view.
+
+1. Select the translation component.
+
+1. On the upper-left side of the screen, select the property list drop-down and choose **Visible** property for the component.
+
+1. Set the value of the **Visible** property to **false** to make the component invisible on the app.
+
+1. Under **Input** in the list of controls, select **Toggle**.
+
+1. On the upper-left side of the screen, select the property list drop-down and choose **OnChange** property for the component.
+
+1. Update the formula for the **OnCheck** property of the toggle control to the following.
+
+    ```powerapps-dot
+        Set(varLanguage,"pt-br")
+    ```
+
+    In this formula, the toggle sets a variable called **varLanguage** with the value of "pt-br" using the function [Set()](functions/function-set.md), for Portuguese (BR) language code.
+
+1. Update the formula for the **OnUncheck** property of the toggle control to the following.
+
+    ```powerapps-dot
+        Set(varLanguage,"en-us")
+    ```
+
+    In this formula, the toggle sets a variable called **varLanguage** with the value of "en-us" using the function [Set()](functions/function-set.md), for English (US) language code.
+
+1. On the left-side of the screen, select the translation component.
+
+1. On the upper-left side of the screen, select the property list drop-down and choose **Language** property for the component.
+
+1. Set the formula value for **Language** property to `varLanguage`. The variable **varLanguage** is determined by the toggle configured earlier. When the toggle is checked, the language is set to "pt-br". When unchecked, the language is set to "en-us".
+
+1. On the left-side of the screen, select **+** (Insert).
+
+1. Select **Text label**.
+
+1. Update the label control name to **Title** from the right-side of the screen using the property pane.
+
+1. Select **Text label** again to add one more label.
+
+1. Update the label control name to **JobTitle**.
+
+1. Set the **Title**, and **JobTitle** labels below the toggle control so that both labels are visible.
+
+1. Set the **Text** property for **Title**, and **JobTitle** labels from the upper-left side of the screen to the following.
+
+    | Label | Formula |
+    | - | - |
+    | Title | `'Translation component_1'.Labels.Title`  |
+    | JobTitle | `'Translation component_1'.Labels.JobTitle` |
+
+    > [!NOTE]
+    > Replace **'Translation component_1'** in this formula to the name of the component in your app, if different.
+
+    Similarly, you can use different labels, and properties, as defined in the component that you created earlier to pass additional property values.
+
+1. Select **File** -> **Save**, update the name for your app, and then select **Save** to save your app. More information: [Save and publish an app](save-publish-app.md)
+
+## Test your app with language translation
+
+Now your app is using the translation component. Go to [Power Apps](https://make.powerapps.com) and select the app to run.
+
+When the toggle is selected, the language is changed to Portuguese (BR) for the labels. When unchecked, the language is set back to English (US).
+
+![Translation demo](media/multi-language-apps/translation-demo.png "Translation demo")
+
+With this approach, you can now create your own component having the translations dictionary that fits your business requirement. And then, create additional canvas apps that use the component that gives the business users the ability to use different languages.
+
+### See also
+
+[Add and configure controls](add-configure-controls.md) <br>
+[Understand variables](working-with-variables.md) <br>
+[Formula reference](formula-reference.md)
