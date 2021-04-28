@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/01/2021
+ms.date: 04/28/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
