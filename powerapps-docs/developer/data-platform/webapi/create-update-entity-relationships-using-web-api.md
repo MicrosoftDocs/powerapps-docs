@@ -243,6 +243,7 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
 
 <!-- TODO:
 [Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
+[Use multi-table lookup columns](multitable-lookup.md)  
 [Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
