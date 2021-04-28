@@ -19,9 +19,8 @@ search.app:
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
 > [!NOTE]
-> For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](execution-phases-data-flow.md) section.
-> 
-> If you're having trouble accessing or starting Power Apps, read the topics under the [troubleshooting startup issues](../../troubleshooting-startup-issues.md) section.
+> - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](execution-phases-data-flow.md) section.
+> - If you're having trouble accessing or starting Power Apps, read [troubleshooting startup issues](../../troubleshooting-startup-issues.md) section for help.
 
 ## General Troubleshooting
 If you're running into issues using Power Apps, try these common troubleshooting steps first.
