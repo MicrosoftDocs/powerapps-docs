@@ -2,7 +2,7 @@
 title: "Productive main form design in model-driven apps | MicrosoftDocs"
 description: Learn how to design productive main forms for your model-driven apps.
 ms.custom: ""
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -50,6 +50,8 @@ The following image shows the layout of a Unified Interface application.
 - Form headers also have a mode where you can add more than four fields and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access from the form header. Additional tabs should be used to access information that isn't primary to the task at hand, or to focus the user on data or information that's specific to a given task but isn't primary to the job. Information that's necessary and is primary to working with data should be on the first tab and should never be hidden.
 - The form body is the area on the form that should be used to interact with data of the primary record and any related records that are essential to completing a task. We recommend that you limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs. You should also consider [building forms based on specific business needs and roles](design-considerations-main-forms.md) when designing your application. Also, if some data is rarely used you should consider building another form that can be accessed when a user needs to reference that data or information. This will help ensure a highly performant form and will help the user stay focused on important tasks that need to be completed.
 - The form footer displays the form status and commands for saving and displaying the form in a new pop-out window. Only the form footer width can be customized.
+> [!IMPORTANT]
+> [Form footers will be deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-app-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). We recommend that you plan to remove any controls you have added out of the footer as it will no longer render on model-driven app forms.
 
 ## Example scenario of productive form design
 
@@ -119,7 +121,7 @@ In this example, a user needs to access the primary contact record, update the p
 
 Often you only need to edit information on a related record that doesn't require the user to interact with the entire form and doesn't require an additional business process flow, but you don't want to give users the ability to navigate to the related form. To accomplish this scenario and streamline managing data inline on the main form, you can use a form component control. The form component control provides the user with access to the related record, including all the sections, controls, and fields on the related record form. Form components can also be used for specific actions with forms designed for only that task. An example of this is the Microsoft Dynamics Field Service Mobile experience. Form components are used to manage work orders and tasks related to those work orders in a streamlined and more efficient process.
 
-Note that a form component control will use any form that you've created for that record and it will honor any event, including loading a form, saving data, or on change information. It will also honor any business rules and actions on the form, including opening a main form dialog from a lookup (if you've configured the form to work in that manner). It will also include any duplicate detection rules and parent/child relationships when working with data in the related record form component. The form control component promotes unsaved changes to the main form, and notifies users when a field is required and if there are data entry errors on the related form component.
+Note that a form component control will use any form that you've created for that record and it will honor any event, including loading a form, saving data, or on change information. It will also honor any business rules and actions on the form, including opening a main form dialog from a lookup (if you've configured the form to work in that manner). It will also include any duplicate detection rules and parent/child relationships when working with data in the related record form component. The form control component promotes unsaved changes to the main form, and notifies users when a field is required and if there are data entry errors on the related form component. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
 
 In this example, a user is editing the primary contact information directly on the account main form and scrolls down the form to create a new appointment for the primary contact without leaving the account form.
 
@@ -150,7 +152,7 @@ In many scenarios, a user just needs to quickly see information from a related t
 
 :::image type="content" source="media/quick-view-form.gif" alt-text="Quick view form example":::
 
-### Using form display options to reduce clutter and build focused forms
+## Using form display options to reduce clutter and build focused forms
 
 There are many times when you need to build an experience that focuses the user on the task at hand without additional distraction that might cause inefficiency. This is especially important when you're working with tables and records that have global components, which are created and automatically added to forms regardless of the task you're trying to build. Although this provides a shareable and easy-to-build infrastructure that drives consistency across an app, it does at times provide unnecessary distraction.
 

@@ -15,8 +15,6 @@ contributors:
 
 # About lists
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 An list is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. By using lists, you can expose records for display on portals.
 
 The grid supports sorting and will be paginated if the number of records is larger than the page size specified. If **Web Page for Details View** has been specified, each record will contain a link to the page, and the ID of the record will be appended to the query string along with the ID Query String Parameter Name. The list also supports multiple views. If more than one view has been specified, a drop-down list will be rendered to allow the user to switch between the various views.
@@ -284,9 +282,9 @@ In addition, any actions that are defined for the list will respect the correspo
 
 However, good website design requires that if a user is not in a role that has any permissions for the table (that is, there will never be a situation where they should see any records), they should not have access to the page at all. Ideally, the page should be protected by using Webpage Access Permissions.
 
-If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **TableList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case table, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
+If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case table, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
 
-If the **TableList/ShowRecordLevelActions** site setting is set to **false** and the table has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
+If the **EntityList/ShowRecordLevelActions** site setting is set to **false** and the table has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
 
 ## Adding a view details page
 
