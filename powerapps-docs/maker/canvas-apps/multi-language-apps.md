@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/05/2021
+ms.date: 04/27/2021
 ms.author: lunune
 search.audienceType: 
   - maker
@@ -23,9 +23,7 @@ In this article, you'll learn how to create a multi-language app with localized 
 
 ## Create a translation component
 
-When working with a multi-language app, the first step is to create a reusable component for translation.
-
-In this component, you'll store a table that acts as the dictionary of all translations you'll need. An output property will be used to provide output strings from this dictionary table based on the language of the user running the app that uses this component.
+When working with a multi-language app, the first step is to create a reusable component for translation. In this component, you'll store a table that acts as the dictionary of all translations you'll need. An output property will be used to provide output strings from this dictionary table based on the language of the user running the app that uses this component.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -121,27 +119,41 @@ In this component, you'll store a table that acts as the dictionary of all trans
 
     The table should also have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
 
-1. Now change the formula of the output property **Labels** as follows:
+1. On the upper-left side of the screen, select the property list drop-down and choose **Labels** property for the component.
 
-   ![Microsoft Power Apps Canvas App Editor: Set Custom Output Labels Formula](media/multi-language-apps/image-20210304132515675.png)
+    ![Labels property for the component](media/multi-language-apps/labels.png "Labels property for the component")
 
-   > [!NOTE] 
-   > The formula will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current user's language as the filter, hence the usage of the [Coalesce](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
+1. Copy and pate the following formula in the formula bar for the **OnReset** property.
 
-   ```
-   LookUp(
-    varTranslations,
-    Language = Lower(
-        Coalesce(
-            Self.Language,
-            Language()
-        )
-    )).Labels
+    ```powerapps-dot
+       LookUp(
+        varTranslations,
+        Language = Lower(
+            Coalesce(
+                Self.Language,
+                Language()
+            )
+        )).Labels
     ```
 
-## Use the Translation Component in a Canvas App
+    The formula finds the right translation entry based on the input **Language** using the [Lookup()](functions/function-filter-lookup.md) function. In case where the language isn't set, the formula uses the current user's language as the filter through [Coalesce](functions/function-isblank-isempty.md) function.
 
-To use the translation component in your app
+1. Select **File** -> **Save** to save the component library.
+
+1. Select **Publish** to publish the component library.
+
+    > [!TIP]
+    > To learn more about creating, saving, and publishing component library, go to [Create an example component library](component-library.md#create-an-example-component-library)
+
+Your translation component library is created, saved, and published for use.
+
+## Use the translation component in your app
+
+Earlier, you created the translation component library for reuse. In this section, you'll create an app that uses the translation component library and demonstrate the language translation based on the selected language.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. On the left pane, select **Apps**.
 
 1. Add the component to the app and set the Name to "**Translation**".
 
