@@ -113,7 +113,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/main.aspx?pagetype=entitylist&etn=account&amp;viewid=%7b<GUID value of view id>%7d”  
+Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d”  
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
