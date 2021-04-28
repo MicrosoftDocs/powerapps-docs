@@ -24,7 +24,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 If you don't find the answer to your issue, then email us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues) and include your device make and model, session ID, and provide the exact error message that you get.
 
 
-## Unable to sign in on Android device when signing in using Authenticator or Company Portal
+## Unable to sign in on Android device using Authenticator or Company Portal
 
 There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which causes sign-in to fail with no error message in the Power Apps mobile app.
 
@@ -35,6 +35,16 @@ A fix will be released shortly. Regularly check the Authenticator app or the Com
 
 If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
+## Unable to open an app
+
+There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which prevents apps opening in the Power Apps mobile app.
+
+A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+
+1.	Make sure you have a good internet connection.
+2.	Close Power Apps mobile and then wait for one minute and then try signing in again.
+
+If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
 ## Error: There was a problem signing you in
 
