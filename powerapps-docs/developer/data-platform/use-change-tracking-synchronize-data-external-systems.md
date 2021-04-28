@@ -39,6 +39,7 @@ Changes made in tables can be tracked using Web API requests by adding `odata.tr
 
 Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked; for example, the request that generated the results containing the delta link. The delta link encodes the collection of tables for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
 
+Note: Delta links expire after 30 days. Attempting to use an expired link will fail with a `400` error complaining that the "Version stamp associated with the client has expired. Please perform a full sync." (code 0x80044352).
 
 ## Retrieve changes in tables using Web API example
 
@@ -119,7 +120,9 @@ System query options `$filter`, `$orderby`, `$expand` and `$top` are not support
 
 When change tracking is enabled for a table, you can use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest> message to retrieve the changes for that table. The first time this message is used it returns all records for the table and that data can be used to populate the external storage. The message also returns a version number that will be sent back with the next use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest> message so that only data for those changes that occurred since that version will be returned.  
 
-Note: If retrieve changes is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won’t be returned. 
+Notes: 
+- If retrieve changes is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won’t be returned. 
+- Changes will be returned if the token is within a default value of 90 days. If it is more than 90 days, the system will return all the records.  
 
 
 ## Points of awareness
@@ -127,9 +130,7 @@ Note: If retrieve changes is executed with no version / or token, the server wil
 You should be aware of the following constraints when retrieving changes for a table:  
   
 - Only changes for the specified table will be returned (includes changes in how a row from the current table is related to rows in other tables). However, changes made to data in related tables will not be included.
-  
-- Changes will be returned if the token (Organizational Service) or delta link (Web API) is within a default value of 90 days. If it is more than 90 days, the system will return all the records.  
-  
+   
 - If a client has a set of changes for a table, say version 1, and a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn’t have the item to begin with.  
   
 - Records are retrieved in the order determined by server side logic. Usually, the end user will always get all new or updated records first (sorted by version number) followed by deleted records.  If there are 3000 records created or updated and 2000 records deleted, Dataverse returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.  
