@@ -226,7 +226,7 @@ Earlier, you created the translation component library for reuse. In this sectio
     > [!NOTE]
     > Replace **'Translation component_1'** in this formula to the name of the component in your app, if different.
 
-    Similarly, you can use different labels, and properties, as defined in the component that you created earlier to pass additional property values.
+    Similarly, you can use different labels, and properties, as defined in the component that you created earlier to pass additional property values. For example, in addition to *Title*, and *JobTitle*, you can create additional properties such as *Description*, or *Instructions* in the component library with the translated text. And then, use such properties on the respective labels, as *'Translation component_1'.Labels.Description*, or *'Translation component_1'.Labels.Instructions*.
 
 1. Select **File** -> **Save**, update the name for your app, and then select **Save** to save your app. More information: [Save and publish an app](save-publish-app.md)
 
