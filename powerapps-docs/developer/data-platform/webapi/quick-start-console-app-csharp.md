@@ -179,7 +179,7 @@ The quick start sample shows a simple approach to create a Visual Studio project
 
 This is enough to verify you can connect, but it doesn't represent a good pattern for building an app.
 
-The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the acces token, and introduces how to build re-usable methods to perform data operations.
+The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the access token, and introduces how to build re-usable methods to perform data operations.
 
 ## Next steps
 

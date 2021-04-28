@@ -1082,6 +1082,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Design forms for efficiency
+          href: ./model-driven-apps/design-productive-forms.md
+          items: 
+          - name: Design considerations for main forms
+            href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
           href: ./model-driven-apps/form-designer-overview.md
           items:
@@ -1116,7 +1121,7 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
-        - name: Form editor overview
+        - name: Use the classic form editor
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
           - name: Form properties overview
@@ -1125,14 +1130,10 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
-        - name: Design considerations for main forms
-          href: ./model-driven-apps/design-considerations-main-forms.md
-        - name: How main forms appear
-          href: ./model-driven-apps/main-form-presentations.md
+          - name: How main forms appear
+            href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
-        - name: Add a column to a form
-          href: ./model-driven-apps/add-field-form.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
@@ -1229,16 +1230,16 @@
         href: ./model-driven-apps/configure-interactive-experience-dashboards.md
       - name: Set properties for a chart or list
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
-      - name: Use system controls for data visualizations
+      - name: Use controls for data entry and display visualizations
         items:
+        - name: List of controls available
+          href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
         - name: Set up the timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
-        - name: Custom controls available
-          href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
@@ -1317,7 +1318,7 @@
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile (preview) 
+  - name: Use relevance search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
@@ -1410,17 +1411,17 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with entity forms
+            - name: Work with basic forms
               href: ./portals/configure/entity-forms.md
-            - name: Work with entity lists
+            - name: Work with lists
               href: ./portals/configure/entity-lists.md
-            - name: Work with web forms
+            - name: Work with advanced forms
               items:
-                - name: Define web form properties
+                - name: Define advanced form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Web form steps
+                - name: Advanced form steps
                   items:
-                    - name: Define web form steps
+                    - name: Define advanced form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1430,9 +1431,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure web form metadata
+                - name: Configure advanced form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure a web form subgrid
+                - name: Configure an advanced form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1604,8 +1605,12 @@
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
-            - name: Assign entity permissions
+            - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
+            - name: Configure table permissions using portals Studio (Preview)
+              href: ./portals/configure/entity-permissions-studio.md
+            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -1614,12 +1619,14 @@
       items:
         - name: Portal search overview
           href: ./portals/configure/search.md
-        - name: Configure search for additional entities
+        - name: Configure search for additional tables
           href: ./portals/configure/search-additional-entities.md
         - name: Use faceted search
           href: ./portals/configure/improve-portal-search-faceted-search.md
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
+        - name: Configure progressive search counts
+          href: ./portals/configure/progressive-search.md
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -1678,7 +1685,7 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
-                - name: Render the entity list for a page
+                - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
                   href: ./portals/liquid/render-rss-custom-page-template.md
@@ -1693,7 +1700,13 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
-            href: ./portals/web-api-http-requests-handle-errors.md          
+            href: ./portals/web-api-http-requests-handle-errors.md
+        - name: Code components (Preview)
+          items:
+          - name: Overview of code components in portals
+            href: ./portals/component-framework.md          
+          - name: "Tutorial: Use code components in portals"
+            href: ./portals/component-framework-tutorial.md          
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
@@ -1763,17 +1776,25 @@
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
-      href: ./portals/faq.md
+      href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
-      href: ./portals/legacy-portal-faq.md
+      href: ./portals/legacy-portal-faq.yml
     - name: Version releases and updates
       items:
          - name: Release updates
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.4.x
+                href: ./portals/versions/version-9.3.4.x.md
               - name: Version 9.3.3.x
-                href: ./portals/version-9.3.3.x.md
+                href: ./portals/versions/version-9.3.3.x.md
+              - name: Versions before 9.3.3.x
+                href: ./portals/versions/versions-before-9.3.3.x.md
+         - name: Starter portal package updates
+           items:
+              - name: Package 9.2.2103.x
+                href: ./portals/versions/package-version-9.2.2103.md
 - name: Dataverse
   items:
   - name: Dataverse
@@ -2087,7 +2108,9 @@
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
-    - name: Publish and share your app
+    - name: Set permission and share your app
+      href: ../teams/set-perms-and-share.md
+    - name: Publish your app
       href: ../teams/publish-and-share-apps.md
     - name: Remove your apps
       href: ../teams/remove-your-apps.md
@@ -2100,11 +2123,23 @@
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Bulletins (Preview)
-          href: ../teams/bulletins.md
+          items:
+            - name: Use Bulletins (Preview) sample app
+              href: ../teams/bulletins.md
+            - name: Understand Bulletins (Preview) sample app architecture
+              href: ../teams/bulletins-architecture.md
         - name: Employee ideas
-          href: ../teams/employee-ideas.md
+          items:
+            - name: Use Employee ideas sample app
+              href: ../teams/employee-ideas.md
+            - name: Understand Employee ideas sample app architecture
+              href: ../teams/employee-ideas-architecture.md
         - name: Inspection
-          href: ../teams/inspection.md
+          items:
+            - name: Use Inspection sample app
+              href: ../teams/inspection.md
+            - name: Understand Inspection sample app architecture
+              href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)

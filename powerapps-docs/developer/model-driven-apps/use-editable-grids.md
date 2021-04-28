@@ -2,7 +2,7 @@
 title: "Use editable grids in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -26,11 +26,11 @@ Editable grid is a custom control that provides rich inline editing capabilities
 
 ## Enable editable grids  
 
-You can enable editable grids at the entity level to use in the main grid, or at the form level to replace read-only subgrids (associated grids) with an editable grid.  
+You can enable editable grids at the table level to use in the main grid, or at the form level to replace read-only subgrids (associated grids) with an editable grid.  
   
 1. Open [solution explorer](../../maker/model-driven-apps/advanced-navigation.md#solution-explorer).  
   
-2. In the **Entities** list, open the appropriate entity, select the **Controls** tab, and then select **Add Control**.  
+2. In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
      ![Add Editable Grids custom control](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
@@ -44,7 +44,9 @@ You can enable editable grids at the entity level to use in the main grid, or at
    >  At runtime, users can toggle between editable grids and read-only grids. 
   
 To enable editable grid for a grid in a form, open the form editor, double-click the read-only grid that you want to replace with the editable grid, and then click on the **Controls** tab and select the editable grid from the list of controls.  
-  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 You can revert to the non-editable grid at any time for main grid and associated grids, if required. Also, at runtime, users can toggle between editable grids and read-only grids.  
   
 More information: [Make model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)  
@@ -55,35 +57,33 @@ More information: [Make model-driven apps grids (lists) editable using the Edita
 
 The editable grids support client-side events and methods that can be used to write custom client extensions according to your business need. More information: [Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)
   
-<a name="EntitiesSupported"></a>  
+## Tables and views supported by editable grid 
 
-## Entities and views supported by editable grid 
-
-Not all entities and views support the use of editable grid.  
+Not all tables and views support the use of editable grid.  
   
-On the web client, an entity will support editable grid if all of the following conditions are true:  
+On the web client, a table will support editable grid if all of the following conditions are true:  
   
-- The entity is customizable (IsCustomizable = true)  
+- The table is customizable (IsCustomizable = true)  
   
-- The entity is either refreshed (IsAIRUpdated = true) or a custom entity (IsCustomEntity = true)  
+- The table is either refreshed (IsAIRUpdated = true) or a custom table (IsCustomEntity = true)  
   
-- The entity is not a child entity (IsChildEntity = false)  
+- The table is not a child table (IsChildEntity = false)  
   
- On the mobile client, an entity will support editable grid if the entity can be displayed in the mobile client's site map.  
+ On the mobile client, a table will support editable grid if the table can be displayed in the mobile client's site map.  
   
-For information about the entities that support editable grids, see **Supported out-of-the-box entities** section in [Make model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md) 
+For information about the tables that support editable grids, see **Supported out-of-the-box tables** section in [Make model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md) 
    
 Editable grids do not support roll up associated views (**Rollup type** = `Related`).  
   
-Use the following sample code to generate an XML file that you can open in Excel as an XML table to view the entity-support information for editable controls. Excel will figure out the schema automatically, and display the information under the following columns:  
+Use the following sample code to generate an XML file that you can open in Excel as an XML table to view the table-support information for editable controls. Excel will figure out the schema automatically, and display the information under the following columns:  
   
-- `LogicalName`: Logical name of entity.  
+- `LogicalName`: Logical name of table.  
   
-- `DisplayName`: Display name of entity.  
+- `DisplayName`: Display name of table.  
   
-- `CanEnableEditableGridWeb`: Displays status  (True or False) whether editable grid is supported for the entity  on the web client.  
+- `CanEnableEditableGridWeb`: Displays status  (True or False) whether editable grid is supported for the table  on the web client.  
   
-- `CanEnableEditableGridMobile`: Displays status (True or False) whether editable grid is supported for the entity on mobile clients. (Dynamics 365 for phones and Dynamics 365 for tablets).  
+- `CanEnableEditableGridMobile`: Displays status (True or False) whether editable grid is supported for the table on mobile clients. (Dynamics 365 for phones and Dynamics 365 for tablets).  
   
 ```csharp  
 using System;  
@@ -111,7 +111,7 @@ using Microsoft.Crm.Sdk.Messages;
 namespace Microsoft.Crm.Sdk.Samples  
 {  
     /// <summary>  
-    /// This sample generates an XML table to display the entity-support information for   
+    /// This sample generates an XML table to display the table-support information for   
     ///  editable controls.  
     /// </summary>  
     public class DumpEditableGridEntityInfo  
@@ -123,7 +123,7 @@ namespace Microsoft.Crm.Sdk.Samples
         /// </summary>  
         OrganizationServiceProxy _serviceProxy;  
   
-        // Create storage for new attributes being created  
+        // Create storage for new columns being created  
         public List<AttributeMetadata> addedAttributes;  
   
         // Specify which language code to use in the sample. If you are using a language  

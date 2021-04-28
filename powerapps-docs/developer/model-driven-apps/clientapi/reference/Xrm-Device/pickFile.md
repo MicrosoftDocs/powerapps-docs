@@ -29,8 +29,8 @@ search.app:
 
 | Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|pickFileOptions |Object | No|An object with the following attributes:<br/>- **accept**: Image file types to select. Valid values are "audio", "video", or "image". String.<br/>- **allowMultipleFiles**: Indicates whether to allow selecting multiple files. Boolean.<br/>- **maximumAllowedFileSize**: Maximum size of the files(s) to be selected. Number.|
-|successCallback |Function | Yes|A function to call when selected files are returned. An array of objects with *each* object having the following attributes is passed to the function:<br/>- **fileContent**: Contents of the file. String <br/>- **fileName**: Name of the file. String.<br/>- **fileSize**: Size of the file in KB. Number.<br/>- **mimeType**: File MIME type. String.|
+|pickFileOptions |Object | No|An object with the following values:<br/>- **accept**: Image file types to select. Valid values are "audio", "video", or "image". String.<br/>- **allowMultipleFiles**: Indicates whether to allow selecting multiple files. Boolean.<br/>- **maximumAllowedFileSize**: Maximum size of the files(s) to be selected. Number.|
+|successCallback |Function | Yes|A function to call when selected files are returned. An array of objects with *each* object having the following values is passed to the function:<br/>- **fileContent**: Contents of the file. String <br/>- **fileName**: Name of the file. String.<br/>- **fileSize**: Size of the file in KB. Number.<br/>- **mimeType**: File MIME type. String.|
 |errorCallback |Function | Yes|A function to call when the operation fails. |
  
 
