@@ -21,7 +21,7 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
