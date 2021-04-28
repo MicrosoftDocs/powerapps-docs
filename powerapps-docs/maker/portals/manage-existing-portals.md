@@ -87,7 +87,7 @@ For information on security roles and privileges, see [Security roles and privil
 3.  Select **Manage Roles**.
 
     > [!NOTE]
-    > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=tablelist&etn=systemuser&forceUCI=0
+    > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
 
 4.  In the **Manage User Roles** dialog box, select the security role that you created earlier, and then select **OK**.
 
