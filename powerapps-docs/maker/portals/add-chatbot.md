@@ -1,11 +1,11 @@
 ---
-title: Add Power Virtual Agents chatbot to Power Apps portals page to answer questions using a bot. | Microsoft Docs
+title: Add chatbot to a page
 description: Learn about how to add Power Virtual Agents chatbot to Power Apps portals page to answer questions using a bot.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2020
+ms.date: 04/28/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -19,7 +19,7 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 
 ## Prerequisites
 
-Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
+Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. If you don't have any available bots, you'll have the option in portals to go to Power Virtual Agents to create a bot. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
 
 ## Add chatbot component
 
@@ -39,54 +39,48 @@ To add a chatbot component to portal page:
 
     ![Add chatbot component to a page](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
 
-1. Enter **Bot ID** in the chatbot component configuration pane that appears on the left.
+1. Select your bot.
 
-    ![Enter bot ID](media/add-chatbot/enter-bot-id.png "Enter bot ID")
+    ![Select your bot](media/add-chatbot/select-your-bot.png "Select your bot")
 
     > [!NOTE]
-    > To learn about how to get the bot ID, go to [Get a Power Virtual Agents bot ID](#get-the-power-virtual-agents-bot-id).
+    > If you don't have a bot already created, or want to create a new bot to use in portals, select **Power Virtual Agents**. After you create bot, select **Sync configuration** inside portals Studio to reflect the bot changes.
 
-1. If necessary, update the display name.
+1. Select whether the bot appears on all pages in your portal, or the selected pages.
 
-1. If necessary, update the chat window height, width, header background color, and header text color.
+1. If you select **Specific pages**, use **Manage bots in pages** to control pages that can use this bot.
 
-Chatbot component is now added to your portal page. Browse your portal to interact with the chatbot.
+You can add more bots from your environment across different pages in a portal. For example, a bot that answers questions related to workplace such as "Back to work" can be added to HR page. Or, a bot that answers to basic queries for payroll, such as "Payroll questions" can be added to Finance page. However, you can't have one page use more than one bot.
 
-## Get the Power Virtual Agents bot ID
+## Advanced configuration
 
-To get the ID of a bot created using Power Virtual Agents:
+Chatbot component is rendered using a web template called **Power Virtual Agents**.
 
-1. Go to [Power Virtual Agents](https://powerva.microsoft.com).
+![Chatbot web template](media/add-chatbot/pva-web-template.png "Chatbot web template")
 
-1. From the top-right side of the screen, select the **Bots panel**.
+You can change the values for the following parameters inside the "window.PvaEmbeddedWebChat.renderWebChat()" function.
 
-    ![Bots panel](media/add-chatbot/bots-panel.png "Bots panel")
+| Parameter | Value |
+| - | - |
+| width | Uses variable "chatWidth". To change width, update the width in pixel: <br> `let chatWidth = "320px";` |
+| height | Uses variable "chatHeight". To change height, update the height in pixel: <br> `let chatHeight =  "480px";` |
+| headerText | Title of the bot. By default, uses the bot's name. To change, add "headerText" parameter with the bot header value: <br> `"headerText": 'Contoso chatbot';` | 
+| webChatHeaderStyleOptions | Determines header style for the chatbot component, such as the color of font, and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor", and "backgroundColor" properties: <br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white',}`
 
-1. Select the environment that the bot is created in.
+> [!NOTE]
+> Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
-    ![Select environment](media/add-chatbot/select-environment.png "Select environment")
+## Other considerations
 
-1. Select the bot that you want to get the bot ID for.
+If your portal template isn't upgraded to add support for chatbot component, you'll see following message when you try to add the component.
 
-    ![Select your bot](media/add-chatbot/select-bot.png "Select your bot")
+"Portal upgrade required" <br>
+"An upgrade is required to use this feature on your portal. If you upgrade the portal, ensure you Sync Configuration to refresh your current portals Studio session with new portals package."
 
-1. Expand **Manage** from the left pane.
+When this message appears, upgrade your portal package. More information: [Update portals solution](admin/update-portal-solution.md)
 
-    ![Select Manage](media/add-chatbot/select-manage.png "Select Manage")
-
-1. Select **Channels**.
-
-    ![Select Channels](media/add-chatbot/select-channels.png "Select Channels")
-
-1. Select **Custom website** channel.
-
-    ![Select Custom Website](media/add-chatbot/select-custom-website.png "Select Custom Website")
-
-1. Copy the bot ID from the embed code.
-
-    ![Copy the bot ID](media/add-chatbot/bot-id.png "Copy the bot ID")
-
-1. Paste the bot ID into the **Bot ID** text box inside Power Apps portals Studio while adding the [chatbot component](#add-chatbot-component).
+> [!NOTE]
+> Upgrading starter portal package will enable any additional portals in your environment with the capability to use chatbot component. More information: [Starter portal package updates](release-updates.md#starter-portal-package-updates)
 
 ### See also
 
