@@ -67,6 +67,8 @@ You can change the values for the following parameters inside the "window.PvaEmb
 | headerText | Title of the bot. By default, uses the bot's name. To change, add "headerText" parameter with the bot header value: <br> `"headerText": 'Contoso chatbot';` | 
 | webChatHeaderStyleOptions | Determines header style for the chatbot component, such as the color of font, and background. To change, update "webChatHeaderStyleOptions" parameter with the values for "fontColor", and "backgroundColor" properties: <br> `"webChatHeaderStyleOptions": {"fontColor":'black',"backgroundColor":'white',}`
 
+After changing the web template, ensure you select **Sync configuration** to update the configuration in open Studio session and reflect the changes.
+
 > [!NOTE]
 > Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
