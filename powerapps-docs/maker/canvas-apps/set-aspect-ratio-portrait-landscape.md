@@ -79,8 +79,7 @@ Customize a canvas app by changing its screen size and orientation.
 
 ## Next steps
 
-* [Create responsive layouts in canvas apps](create-responsive-layout.md).
-
-* Check [common issues and resolutions](common-issues-and-resolutions.md) if you're running into any problems.
+- [Create responsive layouts in canvas apps](create-responsive-layout.md).
+- Check [common issues and resolutions](common-issues-and-resolutions.md) if you're running into any problems.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
