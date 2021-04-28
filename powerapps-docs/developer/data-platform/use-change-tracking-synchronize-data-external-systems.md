@@ -118,14 +118,19 @@ System query options `$filter`, `$orderby`, `$expand` and `$top` are not support
 ## Retrieve changes for a table using the Organization Service
 
 When change tracking is enabled for a table, you can use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest> message to retrieve the changes for that table. The first time this message is used it returns all records for the table and that data can be used to populate the external storage. The message also returns a version number that will be sent back with the next use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest> message so that only data for those changes that occurred since that version will be returned.  
+
+Note: If retrieve changes is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won’t be returned. 
+
+
+## Points of awareness
   
 You should be aware of the following constraints when retrieving changes for a table:  
   
-- Only one table will be tracked in retrieve changes. If retrieve changes is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won’t be returned.  
+- Only changes for the specified table will be returned (includes changes in how a row from the current table is related to rows in other tables). However, changes made to data in related tables will not be included.
   
-- Changes will be returned if the last token is within a default value of 90 days. If it is more than 90 days, the system will return all the records.  
+- Changes will be returned if the token (Organizational Service) or delta link (Web API) is within a default value of 90 days. If it is more than 90 days, the system will return all the records.  
   
-- If a client has a set of changes for a table, say version 1, a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn’t have the item to begin with.  
+- If a client has a set of changes for a table, say version 1, and a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn’t have the item to begin with.  
   
 - Records are retrieved in the order determined by server side logic. Usually, the end user will always get all new or updated records first (sorted by version number) followed by deleted records.  If there are 3000 records created or updated and 2000 records deleted, Dataverse returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.  
   
