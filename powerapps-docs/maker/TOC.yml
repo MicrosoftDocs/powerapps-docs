@@ -1325,7 +1325,7 @@
   - name: Create push notifications for Power Apps Mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps Mobile
-    href: ../user/powerapps-mobile-troubleshoot.md
+    href: ../mobile/powerapps-mobile-troubleshoot.md
     
 - name: Portals
   items:
@@ -1952,11 +1952,11 @@
         items:
         - name: Use actions
           href: ./data-platform/actions.md
-        - name: Create a custom action
+        - name: Create a custom process action
           href: ./data-platform/create-actions.md
-        - name: Configure custom actions from a real-time workflow
+        - name: Configure actions from a real-time workflow
           href: ./data-platform/configure-actions.md    
-        - name: Invoke custom actions from a real-time workflow
+        - name: Invoke actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
@@ -2123,11 +2123,23 @@
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Bulletins (Preview)
-          href: ../teams/bulletins.md
+          items:
+            - name: Use Bulletins (Preview) sample app
+              href: ../teams/bulletins.md
+            - name: Understand Bulletins (Preview) sample app architecture
+              href: ../teams/bulletins-architecture.md
         - name: Employee ideas
-          href: ../teams/employee-ideas.md
+          items:
+            - name: Use Employee ideas sample app
+              href: ../teams/employee-ideas.md
+            - name: Understand Employee ideas sample app architecture
+              href: ../teams/employee-ideas-architecture.md
         - name: Inspection
-          href: ../teams/inspection.md
+          items:
+            - name: Use Inspection sample app
+              href: ../teams/inspection.md
+            - name: Understand Inspection sample app architecture
+              href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)
