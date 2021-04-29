@@ -254,7 +254,7 @@ The following example demonstrates the use of the `count` parameter of the Fetch
 var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
 
-Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
         for (var i = 0; i < result.entities.length; i++) {
             console.log(result.entities[i]);
@@ -379,7 +379,7 @@ function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
     "?fetchXml=" +
     encodeURIComponent(CreateXml(fetchXml, pagingCookie, pageNumber, count));
 
-  return Xrm.WebApi.retrieveMultipleRecords(entityName, fetchXml).then(
+  return Xrm.WebApi.online.retrieveMultipleRecords(entityName, fetchXml).then(
     function success(result) {
       return result;
     },
