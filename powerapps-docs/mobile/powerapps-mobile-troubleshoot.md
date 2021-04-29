@@ -31,9 +31,9 @@ There is an intermittent issue with Microsoft Authenticator app version 6.2104.2
 A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
 
 1.	Make sure you have a good internet connection.
-2.	Wait for one minute and then try opening the app again.
+2.	Wait for one minute and then try signing in again.
 
-If you still can't open the app after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
+If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
 ## Unable to open an app
 
