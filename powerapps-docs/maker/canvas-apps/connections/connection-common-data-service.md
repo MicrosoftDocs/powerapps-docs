@@ -37,7 +37,60 @@ The name of the selected environment appears under the tables list.
 
 The Microsoft Dataverse connector is more robust than the Dynamics 365 connector and approaching feature parity.
 
-### Dataverse and the improved data source experience
+## Power Apps data type mappings
+
+| Power Apps | Microsoft Dataverse                                                                                            |
+|-----------------------------------|---------------------------------------------------------------------------------------------|
+| Choice                            | Choice, Yes/No                                                                              |
+| DateTime                          | Date Time, Date and Time, Date Only                                                         |
+| Image                             | Image                                                                                       |
+| Number                            | Floating Point Number, Currency, Decimal Number, Duration, Language, TimeZone, Whole Number |
+| Text                              | Email, Multiline Text, Phone, Text, Text Area, Ticker Symbol, URL                           |
+| Guid                              | Unique Identifier                                                                           |
+
+## Power Apps delegable functions and operations for Dataverse
+
+These Power Apps operations, for a given data type, may be delegated to
+Dataverse for processing (rather than processing locally within Power Apps).
+
+| **Item**                                                        | **Number [1]** | **Text [2]** | **Choice** | **DateTime [3]** | **Guid** |
+|-----------------------------------------------------------------|----------------|--------------|------------|------------------|----------|
+| Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| Sort                                                            | Yes            | Yes          | No         | Yes              | \-       |
+| SortByColumns                                                   | Yes            | Yes          | No         | Yes              | \-       |
+| Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
+| \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
+| And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
+| StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
+| IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
+| Sum, Min, Max, Avg                                              | Yes [5]        | \-           | \-         | No               | \-       |
+
+1.  Numeric with arithmetic expressions (for example, Filter(table, field + 10
+    \> 100) ) aren't delegable. Language and TimeZone aren't delegable.
+
+2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
+    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc.
+
+3.  DateTime is generally delegatable except for DateTime functions Now() and
+    Today().
+
+4.  Supports comparisons. For example, Filter(TableName, MyCol = Blank()).
+
+5.  The aggregate functions are limited to a collection of 50,000 rows. If
+    needed, use the Filter function to select 50,000 rows from a larger set
+    before using the aggregate function.
+
+> [!NOTE]
+> Choices, Guids, and Aggregate functions for Dataverse are supported only with
+the new version of the connector. Depending on the version of Power Apps that
+you're using, enable this connector with either the Preview switch titled:
+> - **Relational data, choices, and other new features for Dataverse**  
+> or this Experimental switch:
+> - **Use the Dataverse connector**  
+> To find these switches, open the **File menu**, and then select **App settings** \> **Advanced settings**.
+
+## Dataverse and the improved data source experience
 
 If you created a canvas app with a Microsoft Dataverse connector prior to November 2019, then you might not have the benefit of the most current version of the Dataverse. Read [Dataverse connection improvements](../use-native-cds-connector.md) for more details and to upgrade your connection.
 
