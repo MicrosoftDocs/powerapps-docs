@@ -248,7 +248,7 @@ Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoke
 The following example demonstrates the use of the `count` parameter of the FetchXML to specify the number of records (3) to be displayed in a page.
 
 > [!NOTE]
-> The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](../online.md)). It is not supported offline.
+> The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](online.md)). It is not supported offline.
 
 ```JavaScript
 var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
