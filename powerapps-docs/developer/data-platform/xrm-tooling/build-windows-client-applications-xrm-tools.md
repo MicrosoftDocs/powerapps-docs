@@ -23,8 +23,6 @@ search.app:
 ---
 # Build Windows client applications using the XRM tools
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 XRM tooling is a set of APIs built on top of the Microsoft Dataverse assembly APIs (Organization service and Discovery service) that provide support for building Windows client applications for Dataverse. It provides the following capabilities:  
   
 - Supports all the authentication modes to sign in to Dataverse instance.  

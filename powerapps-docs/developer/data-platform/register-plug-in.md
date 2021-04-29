@@ -235,7 +235,7 @@ In Dataverse, only the following messages support table images:
 
 #### Types of table images
 
-There are two types of table images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure an table image, you will define an *table alias* value that will be the key value you will use to access a specific table image from the `PreEntityImages` or `PostEntityImages` properties.
+There are two types of table images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure a table image, you will define an *table alias* value that will be the key value you will use to access a specific table image from the `PreEntityImages` or `PostEntityImages` properties.
 
 #### Availability of images
 
@@ -247,9 +247,9 @@ When you configure a table image it is important that you recognize that the typ
 - For an `Update` operation that is registered in the **PostOperation** stage you can have both a **Pre Image** AND a **Post Image**.
 
 
-#### Add an table image
+#### Add a table image
 
-See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add an table image.
+See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add a table image.
 
 ### Add step to solution
 

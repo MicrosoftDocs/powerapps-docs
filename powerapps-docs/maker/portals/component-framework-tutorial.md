@@ -1,11 +1,11 @@
 ---
-title: A walkthrough with example steps about using sample code component added to a model-driven app form inside portals. | Microsoft Docs
-description: Learn about using sample code component added to a model-driven app form inside portals.
+title: Tutorial about how to use code components in portals (Preview)
+description: A walk-through with example steps about using sample code component added to a model-driven app form inside portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -16,17 +16,19 @@ contributors:
 
 # Tutorial: Use code components in portals (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
 then add the component to model-driven app. Then, you’ll configure Power Apps
-portals to add the component to an entity form, set access for the Web Resource
-entity, and add the entity form to a web page. Finally, you’ll visit the portals
+portals to add the component to an basic form, set access for the Web Resource
+table, and add the basic form to a web page. Finally, you’ll visit the portals
 web page and interact with the component.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field) in a model-driven app currently.
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app currently.
 
 ## Prerequisites
 
@@ -35,8 +37,8 @@ web page and interact with the component.
 
 > [!NOTE]
 > This tutorial is based on the existing Power Apps component framework
-tutorial that walks you through to create [TSLinearInputComponent](../../developer/component-framework/implementing-controls-using-typescript.md) for **Opportunity** entity on the **Main** form. You can also use any existing or
-new component, and any other entity for this tutorial. In this case, ensure to
+tutorial that walks you through to create [TSLinearInputComponent](../../developer/component-framework/implementing-controls-using-typescript.md) for **Opportunity** table on the **Main** form. You can also use any existing or
+new component, and any other table for this tutorial. In this case, ensure to
 use your component and form when following the steps in this tutorial.
 
 ## Step 1. Create your first component
@@ -50,36 +52,36 @@ TSLinearInputComponent packaged and uploaded to your Dataverse environment.
 ## Step 2. Add a code component to a field in model-driven app
 
 Now that you have the TSLinearInputComponent component uploaded to the Dataverse environment, follow the steps in the tutorial [Add a code component to a field in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
-to add the component to the **Opportunity** entity on the **Main** form.
+to add the component to the **Opportunity** table on the **Main** form.
 
 ## Step 3. Verify the model-driven app with the new component
 
 You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md), or [create a new
 app](../model-driven-apps/build-first-model-driven-app.md) with the form that you added the component to. For example, the following image shows how the
-**Opportunity** entity **Main** form looks like when using the code component in this tutorial.
+**Opportunity** table **Main** form looks like when using the code component in this tutorial.
 
 ![Slider control added to the Budget Amount field in model-driven app form](media/component-framework/model-driven-app.png "Slider control added to the Budget Amount field in model-driven app form")
 
-## Step 4. Add code component to an entity form in portals
+## Step 4. Add code component to an basic form in portals
 
-In this step, you’ll create a new entity form in portals. And then, add the
-component to the created entity form. You can also use an existing entity form
+In this step, you’ll create a new basic form in portals. And then, add the
+component to the created basic form. You can also use an existing basic form
 instead.
 
-### Step 4.1. Create a new entity form
+### Step 4.1. Create a new basic form
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  On the left-pane, under **Content**, select **Entity Forms.**
+2.  On the left-pane, under **Content**, select **Basic Forms.**
 
 3.  Select **New**.
 
-4.  Enter **Name**. For example, *Opportunities entity form with code
+4.  Enter **Name**. For example, *Opportunities basic form with code
     component*.
 
-5.  Select **Entity Name** as *Opportunity*.
+5.  Select **Basic Name** as *Opportunity*.
 
 6.  For **Form Name**, select the model-driven app form that you added the code
     component to earlier in this tutorial.
@@ -88,25 +90,25 @@ instead.
 
 8.  Select your portal **Website**.
 
-    ![Configure entity form using Portal Management app](media/component-framework/new-entity-form.png "Configure entity form using Portal Management app")
+    ![Configure basic form using Portal Management app](media/component-framework/new-entity-form.png "Configure basic form using Portal Management app")
 
 9.  Select **Save & Close**.
 
-### Step 4.2. Add code component to the entity form
+### Step 4.2. Add code component to the basic form
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  On the left-pane, under **Content**, select **Entity Forms.**
+2.  On the left-pane, under **Content**, select **Basic Forms.**
 
-3.  Select the entity form that you created in the earlier in this tutorial.
+3.  Select the basic form that you created in the earlier in this tutorial.
 
 4.  Select **Related**.
 
-5.  Select **Entity Form Metadata**.
+5.  Select **Basic Form Metadata**.
 
-6.  Select **New Entity Form Metadata**.
+6.  Select **New Basic Form Metadata**.
 
 7.  Select **Type** as **Attribute**.
 
@@ -122,20 +124,20 @@ instead.
 
 11. Select **Save & Close**.
 
-## Step 5. Allow Read access to Web Resource entity
+## Step 5. Allow Read access to Web Resource table
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  On the left-pane, under **Security**, select **Entity Permissions.**
+2.  On the left-pane, under **Security**, select **Table Permissions.**
 
 3.  Select **New**.
 
 4.  Enter **Name**. For example, *Permissions for code component on the Web
-    Resource entity*.
+    Resource table*.
 
-5.  Select **Entity** as **Web Resource (webresource)**.
+5.  Select **Table** as **Web Resource (webresource)**.
 
 6.  Select your **Website**.
 
@@ -157,7 +159,7 @@ instead.
 
 12. Select **Save & Close**.
 
-## Step 6. Create a web page in portals with the entity form
+## Step 6. Create a web page in portals with the basic form
 
 1.  Open your portal in [Power Apps portals
     Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy).
@@ -186,7 +188,7 @@ instead.
 
 12. On the right-side property pane, select **Use existing**.
 
-13. Under **Name**, select the entity form that you created earlier in this
+13. Under **Name**, select the basic form that you created earlier in this
     tutorial.
 
     > [!TIP]
@@ -195,7 +197,7 @@ instead.
 
 14. On the top-right corner, select **Browse website**.
 
-The web page now shows the entity form for **Opportunities** entity with the code component as the slider, similar to how it appears using model-driven app for the same form.
+The web page now shows the basic form for **Opportunities** table with the code component as the slider, similar to how it appears using model-driven app for the same form.
 
 ![Example preview of the Budget Amount slider control on portals page](media/component-framework/example-preview.png "Example preview of the Budget Amount slider control on portals page")
 
@@ -207,5 +209,4 @@ The web page now shows the entity form for **Opportunities** entity with the cod
 
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
-[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
-
+[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)

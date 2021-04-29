@@ -1,6 +1,6 @@
 ---
 title: loadNextPage | Microsoft Docs
-description: 
+description: Request the next page of results to be loaded.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

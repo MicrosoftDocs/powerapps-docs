@@ -1,6 +1,6 @@
 ---
 title: "Create entities using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to create entities using the Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -271,6 +271,10 @@ Guid contactid = svc.Create(contact);
 Another way to create an entity is by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> class. An upsert will create a new entity when there is no existing record that has the unique identifiers included in the entity passed with the request.
 
 More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
+
+## Create documents in storage partitions
+
+If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records. More information: [Improve performance when accessing documents using storage partitions](azure-storage-partitioning-sdk.md)
 
 
 ### See also

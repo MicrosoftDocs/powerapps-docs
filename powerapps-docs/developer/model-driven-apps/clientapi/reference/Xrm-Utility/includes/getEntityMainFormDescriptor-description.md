@@ -1,1 +1,1 @@
-Returns the default main form descriptor for the specified entity.
+Returns the default main form descriptor for the specified table.

@@ -1,6 +1,7 @@
 ---
 title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Returns the logical name of the table associated with the stage.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,19 +17,19 @@ search.app:
 ---
 # getEntityName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]
 
 ## Syntax
 
 `var stageEntityName = stageObj.getEntityName();`
 
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: String. 
 
-**Description**: Logical name of the entity associated with the stage.
+**Description**: Logical name of the table associated with the stage.
 
 ### Related topics
  

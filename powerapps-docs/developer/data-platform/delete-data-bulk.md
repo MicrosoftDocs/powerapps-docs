@@ -69,7 +69,7 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
   
  You can perform a bulk deletion on all tables that are supported by the delete action. For information about possible actions on table records, see [Actions on table records](/dynamics365/customer-engagement/developer/introduction-entities#ActionsOnEntityRecords).  
   
- If a plug-in or a workflow (process) is triggered by the delete action on a specific table type, it is triggered every time that an table record of this type is deleted by the bulk delete job.  
+ If a plug-in or a workflow (process) is triggered by the delete action on a specific table type, it is triggered every time that a table record of this type is deleted by the bulk delete job.  
   
 ## Samples
 
