@@ -28,13 +28,9 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
 
-1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Make your own app**, and select **Microsoft Dataverse**.
 
-	![Option to create an app](./media/data-platform-create-app/start-from-data.png)
-
-1. On the **Microsoft Dataverse** tile, select **Phone layout**.
-
-	![Connection tile](./media/data-platform-create-app/connection-tile.png)
+1. If this is you first time, you're prompted to create a connection to Microsoft Dataverse. Select **Create** this connection. If you see the connection already open with a list of tables, go to the next step.
 
 1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
