@@ -2,7 +2,7 @@
 title: "Create and update entity relationships using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating entity Microsoft Dataverse uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/29/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -225,7 +225,17 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
 OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
-```  
+```
+
+## Create relationships to support a multi-table lookup
+
+Multi-table lookup type columns allow a user to use a specific table that has
+multiple one-to-many (1:M) relationships to other tables in the environment. A single lookup
+type column can refer to multiple other tables. A lookup value submitted to the
+multi-table type column will be matched to a record in any of the related
+tables.
+
+More information: [Use multi-table lookup columns](multitable-lookup.md)
   
 <a name="bkmk_updateRelationships"></a>
 
@@ -243,7 +253,6 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
 
 <!-- TODO:
 [Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
-[Use multi-table lookup columns](multitable-lookup.md)  
 [Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
