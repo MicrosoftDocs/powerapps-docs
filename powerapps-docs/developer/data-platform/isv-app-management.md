@@ -55,7 +55,7 @@ The ISV must be associated with a Microsoft registered Partner organization [ISV
 ## Pre-requisites for Dynamics 365 Finance and Operations
 
 - For Dynamics 365 Finance and Operations, update the `SolutionID` in the descriptors with the `ProductId` of their offer in Partner Center. The `ProductId` of their offer can be found in the URL in Partner Center.
-- Ask customers to install the latest solution with the above. They need to be on version `10.0.16` or above to see the telemetry feature in ISV Studio.
+- Ask customers to install the latest solution with the above. They need to be on version `10.0.16` or above to see the telemetry feature in ISV Studio. More information: [ISV Studio solutions](/dynamics365/fin-ops-core/dev-itpro/dev-tools/isv-studio-solutions)
 
 ### Admin access to ISV Studio
 
