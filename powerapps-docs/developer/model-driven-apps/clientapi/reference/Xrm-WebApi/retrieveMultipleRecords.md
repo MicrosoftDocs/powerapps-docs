@@ -57,7 +57,7 @@ search.app:
 <td>Number</td>
 <td>No</td>
 <td><p>Specify a positive number that indicates the number of entity records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
-<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next set of entities. </td>
+<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next page of entities. </td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -66,8 +66,8 @@ search.app:
 <td><p>A function to call when entity records are retrieved. An object with the following attributes is passed to the function:</p>
 <ul>
 <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values as <code>key: value</code> pairs. The Id of the entity record is retrieved by default.</li>
-<li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return next set of records.</li>
-<li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of results.</li>
+<li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return the next page of records.</li>
+<li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
 </ul>
 </td>
 </tr>
@@ -81,9 +81,9 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+For a successful OData query retrieveMultipleRecords operation, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
 
-The promise response may also contain a **fetchXmlPagingCookie** attribute (optional) when the fetchXml-based retrieveMultipleRecords operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of results.
+For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of results.
 
 ## Examples
 
