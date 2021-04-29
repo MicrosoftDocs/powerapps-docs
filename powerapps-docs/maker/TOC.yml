@@ -1776,20 +1776,22 @@
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
-      href: ./portals/faq.md
+      href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
-      href: ./portals/legacy-portal-faq.md
+      href: ./portals/legacy-portal-faq.yml
     - name: Version releases and updates
       items:
          - name: Release updates
            href: ./portals/release-updates.md
          - name: Version updates
            items:
-              - name: Version 9.3.3.x
-                href: ./portals/versions/version-9.3.3.x.md
               - name: Version 9.3.4.x
                 href: ./portals/versions/version-9.3.4.x.md
-         - name: Starter Portal package updates
+              - name: Version 9.3.3.x
+                href: ./portals/versions/version-9.3.3.x.md
+              - name: Versions before 9.3.3.x
+                href: ./portals/versions/versions-before-9.3.3.x.md
+         - name: Starter portal package updates
            items:
               - name: Package 9.2.2103.x
                 href: ./portals/versions/package-version-9.2.2103.md
@@ -2121,11 +2123,23 @@
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Bulletins (Preview)
-          href: ../teams/bulletins.md
+          items:
+            - name: Use Bulletins (Preview) sample app
+              href: ../teams/bulletins.md
+            - name: Understand Bulletins (Preview) sample app architecture
+              href: ../teams/bulletins-architecture.md
         - name: Employee ideas
-          href: ../teams/employee-ideas.md
+          items:
+            - name: Use Employee ideas sample app
+              href: ../teams/employee-ideas.md
+            - name: Understand Employee ideas sample app architecture
+              href: ../teams/employee-ideas-architecture.md
         - name: Inspection
-          href: ../teams/inspection.md
+          items:
+            - name: Use Inspection sample app
+              href: ../teams/inspection.md
+            - name: Understand Inspection sample app architecture
+              href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)

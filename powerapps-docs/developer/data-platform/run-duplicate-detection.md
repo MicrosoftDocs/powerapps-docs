@@ -28,7 +28,7 @@ There are several ways to perform duplicate detection after you enable it and pu
 
 Detect and retrieve duplicates:
 
-- Before you create an table
+- Before you create a table
 - For an existing table
 - For other tables that correspond to duplicate rules across tables. For example, any Lead table which matches a contact table.
 

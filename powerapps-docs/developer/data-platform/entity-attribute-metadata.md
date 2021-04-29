@@ -114,7 +114,7 @@ If you try to retrieve a column that is not valid for read, a null value will be
 
 ## Column requirement level
 
-The `RequiredLevel` property is a Boolean managed property that describes if an column value is required.
+The `RequiredLevel` property is a Boolean managed property that describes if a column value is required.
 
 This property can have the following values set:
 
