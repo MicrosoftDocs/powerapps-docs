@@ -84,7 +84,7 @@ The geospatial features require additional terms of use that must be reviewed an
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Common Data Service and Spatial Services connectors. 
+The geospatial components require Microsoft Dataverse and connection to Spatial Services.
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 

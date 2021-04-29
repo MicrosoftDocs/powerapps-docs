@@ -34,7 +34,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 	![Option to create an app](./media/data-platform-create-app/start-from-data.png)
 
-1. On the **Common Data Service** tile, select **Phone layout**.
+1. On the **Microsoft Dataverse** tile, select **Phone layout**.
 
 	![Connection tile](./media/data-platform-create-app/connection-tile.png)
 
