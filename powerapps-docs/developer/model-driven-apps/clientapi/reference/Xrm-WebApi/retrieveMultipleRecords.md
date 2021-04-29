@@ -108,6 +108,29 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 );
 ```
 
+### Basic retrieve multiple with FetchXML
+
+This example queries the `account` entity using fetchXML.
+
+```JavaScript
+var fetchXml = "<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+
+Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
 ### Retrieve or filter by lookup properties
 For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
 
@@ -219,6 +242,166 @@ Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoke
   
 > [!IMPORTANT]
 >  The value of the `nextLink` property is URI encoded. If you URI encode the value before you send it, the XML cookie information in the URL will cause an error.
+
+#### FetchXML Example
+The following example demonstrates the use of the `count` parameter of the FetchXML to specify the number of records (3) to be displayed in a page.
+
+```JavaScript
+var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+
+Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }          
+
+        console.log("Paging cookie: " + result.fetchXmlPagingCookie);
+
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+This example will display 3 records and return a FetchXML Paging Cookie to the retrieve the results of the next page if there are additional records belonging to the result set. Here is an example output from the **Console** in the browser developer tools:
+
+```JSON
+{
+	"entities": [
+		{
+			"@odata.etag": "W/\"1035542\"",
+			"accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "Blue Yonder Airlines"
+		},
+		{
+			"@odata.etag": "W/\"1031348\"",
+			"accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "City Power & Light"
+		},
+		{
+			"@odata.etag": "W/\"1035543\"",
+			"accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "Coho Winery"
+		}
+	],
+	"fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
+}
+```
+
+We can use the `fetchXmlPagingCookie` as shown in the example below to fetch large result sets with paging.
+
+```JavaScript
+function CreateXml(fetchXml, pagingCookie, page, count) {
+  var domParser = new DOMParser();
+  var xmlSerializer = new XMLSerializer();
+
+  var fetchXmlDocument = domParser.parseFromString(fetchXml, "text/xml");
+
+  if (page) {
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute("page", page.toString());
+  }
+
+  if (count) {
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute("count", count.toString());
+  }
+
+  if (pagingCookie) {
+    var cookieDoc = domParser.parseFromString(pagingCookie, "text/xml");
+    var innerPagingCookie = domParser.parseFromString(
+      decodeURIComponent(
+        decodeURIComponent(
+          cookieDoc
+            .getElementsByTagName("cookie")[0]
+            .getAttribute("pagingcookie")
+        )
+      ),
+      "text/xml"
+    );
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute(
+        "paging-cookie",
+        xmlSerializer.serializeToString(innerPagingCookie)
+      );
+  }
+
+  return xmlSerializer.serializeToString(fetchXmlDocument);
+}
+
+function retrieveAllRecords(entityName, fetchXml, page, count, pagingCookie) {
+  if (!page) {
+    page = 0;
+  }
+
+  return retrievePage(entityName, fetchXml, page + 1, count, pagingCookie).then(
+    function success(pageResults) {
+      if (pageResults.fetchXmlPagingCookie) {
+        return retrieveAllRecords(
+          entityName,
+          fetchXml,
+          page + 1,
+          count,
+          pageResults.fetchXmlPagingCookie
+        ).then(
+          function success(results) {
+            if (results) {
+              return pageResults.entities.concat(results);
+            }
+          },
+          function error(e) {
+            throw e;
+          }
+        );
+      } else {
+        return pageResults.entities;
+      }
+    },
+    function error(e) {
+      throw e;
+    }
+  );
+}
+
+function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
+  var fetchXml =
+    "?fetchXml=" +
+    encodeURIComponent(CreateXml(fetchXml, pagingCookie, pageNumber, count));
+
+  return Xrm.WebApi.retrieveMultipleRecords(entityName, fetchXml).then(
+    function success(result) {
+      return result;
+    },
+    function error(e) {
+      throw e;
+    }
+  );
+}
+
+var count = 3;
+var fetchXml =
+  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+
+retrieveAllRecords("account", fetchXml, null, count, null).then(
+  function success(result) {
+    console.log(result);
+
+    // perform additional operations on retrieved records
+  },
+  function error(error) {
+    console.log(error.message);
+    // handle error conditions
+  }
+);
+
+```
 
 ### Retrieve related entities by expanding navigation properties
 #### For online scenario (connected to server)
