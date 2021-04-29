@@ -96,9 +96,11 @@ In addition to storing the data structure and logic associated with a business e
 
 Dataverse is an excellent choice of repository for many situations. You should seriously consider it for Power Apps development based on new systems and services, and adding new functionality to existing applications; especially if you're creating model-driven apps.
 
-However, in the application that Maria is building, the data already exists in a legacy database. Plus a web API exists that connects to that database to retrieve and modify data and it's deployed in Azure App Service. Those legacy solutions are proven to work and Kiana and her high-code development team are very comfortable supporting those solutions going forward.
+However, in the application that Maria is building, the data already exists in a legacy database. A web API exists that connects to that database to retrieve and modify data and it's deployed in Azure App Service. Those legacy solutions are proven to work and Kiana and her high-code development team are very comfortable supporting those solutions going forward.
 
 An advantage of fusion development teams and Dataverse is fusion development teams allow members to be their most productive in tools that they already know and are most comfortable with. A team does not need to migrate their existing data to Dataverse immediately to build a Power App application. Likewise, when a team is building an application that requires new data, Dataverse makes a ton of sense as an option. It is not uncommon to see a Power App application using a combination of legacy data sources and data in Dataverse.
+
+When Maria starts to develop the new functionality of her app to power the knowledge base, as discussed in the second chapter of this book, she expects to use Dataverse to store that data.
 
 So, for the time being Maria will connect the web API Kiana's team has already developed to her Power App application to obtain the data needed. The following chapters will walk through that process.
 
