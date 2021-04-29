@@ -230,7 +230,7 @@ In the real world, though, apps are designed to meet certain business requiremen
 
 ## Performance considerations for using Dataverse as the data source
 
-When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow when connecting to Microsoft Dataverse](execution-phases-data-flow.md#data-call-flow-with-the-common-data-service-connector-for-dataverse-environments)
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow when connecting to Microsoft Dataverse](execution-phases-data-flow.md#data-call-flow-with-microsoft-dataverse)
 
 > [!TIP]
 > When custom tables are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](/power-platform/admin/security-roles-privileges)
