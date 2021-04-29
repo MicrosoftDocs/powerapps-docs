@@ -17,12 +17,11 @@ search.app:
 ---
 # Behavior and format of the date and time column
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref href="Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> class) is used to define and manage columns of type `DateTime` in Microsoft Dataverse. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior>) to define whether to store date and time values with or without time zone information, and use the `DateTimeAttributeMetadata.Format` property to specify the display format of these columns.  
 
-  
- You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the Date and Time column](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
+You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the date and time column](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
@@ -42,7 +41,7 @@ If you have users and offices around the world, it is important to properly repr
  The following sample code demonstrates how to set a `UserLocal` behavior for a new date time column:  
   
  ```csharp
-// Create a date time attribute for the Account entity
+// Create a date time attribute for the Account
 // with the UserLocal behavior
 dtAttribute = new DateTimeAttributeMetadata
 {                             
@@ -61,7 +60,7 @@ CreateAttributeRequest createAttributeRequest = new CreateAttributeRequest
     Attribute = dtAttribute
 };
 _serviceProxy.Execute(createAttributeRequest);
-Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Account entity.\n", 
+Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Account.\n", 
                             dtAttribute.SchemaName);
 ```
   
@@ -117,7 +116,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
      For custom date and time columns that are part of a Dataverse organization, the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `True` unless the column or the parent table is not customizable.  
   
     > [!NOTE]
-    >  When you update `DateTimeAttributeMetadata.DateTimeBehavior` property of an column from `UserLocal` to `DateOnly`, ensure that you also change the`DateTimeAttributeMetadata.Format` property from `DateAndTime` to `DateOnly`. Otherwise, an exception will occur.  
+    >  When you update `DateTimeAttributeMetadata.DateTimeBehavior` property of a column from `UserLocal` to `DateOnly`, ensure that you also change the`DateTimeAttributeMetadata.Format` property from `DateAndTime` to `DateOnly`. Otherwise, an exception will occur.  
   
 -   The following out-of-box date and time columns in Dataverse are by default set to `DateOnly` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False` of these columns, which implies that you cannot change the behavior for these columns:  
   
@@ -137,7 +136,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
      The behavior of these columns is set to `UserLocal` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property to `True`, and you can change the behavior of these columns to `DateOnly` only. No other behavior transitions are allowed.  
   
- After updating the behavior of an column, you must publish the customizations for the change to take effect. Updating the behavior of a date and time column ensures that all the values entered/updated *after* the column behavior was changed, are stored in the system as per the new behavior. This does not impact the values that are already stored in the database, and they continue to be stored as UTC values. However, when you retrieve the existing values using SDK or view it in the UI, the existing values are displayed as per the new behavior of the column. For example, if you changed the behavior of a custom column on an account from `UserLocal` to `DateOnly` and retrieve an existing account record using SDK, the date and time will be displayed as \<Date> followed by time as 12 AM (00:00:00). Similarly, for the behavior change from `UserLocal` to `TimeZoneIndependent`, the actual value in the database will be displayed as is without any time zone conversions.  
+ After updating the behavior of a column, you must publish the customizations for the change to take effect. Updating the behavior of a date and time column ensures that all the values entered/updated *after* the column behavior was changed, are stored in the system as per the new behavior. This does not impact the values that are already stored in the database, and they continue to be stored as UTC values. However, when you retrieve the existing values using SDK or view it in the UI, the existing values are displayed as per the new behavior of the column. For example, if you changed the behavior of a custom column on an account from `UserLocal` to `DateOnly` and retrieve an existing account record using SDK, the date and time will be displayed as \<Date> followed by time as 12 AM (00:00:00). Similarly, for the behavior change from `UserLocal` to `TimeZoneIndependent`, the actual value in the database will be displayed as is without any time zone conversions.  
   
  The following sample code demonstrates how to update the behavior of a date and time column:  
   
@@ -173,13 +172,13 @@ _serviceProxy.Execute(updateRequest);
 Console.WriteLine("Updated the behavior and format of '{0}' to DateOnly.",
     retrievedAttributeMetadata.SchemaName);
 
-// Publish customizations to the account entity
+// Publish customizations to the account 
 PublishXmlRequest pxReq = new PublishXmlRequest
 {
     ParameterXml = String.Format("<importexportxml><entities><entity>account</entity></entities></importexportxml>")
 };
 _serviceProxy.Execute(pxReq);
-Console.WriteLine("Published customizations to the Account entity.\n");
+Console.WriteLine("Published customizations to the Account .\n");
  
 ``` 
   
@@ -213,11 +212,11 @@ Console.WriteLine("Published customizations to the Account entity.\n");
   
  Some important points to be considered while using the `ConvertDateAndTimeBehavior` message:  
   
--   You should avoid any major changes to the solutions in Dataverse during the execution of the message such as importing a solution or deleting an column or parent table. Doing so might lead to unexpected behavior; however no data loss will occur.  
+-   You should avoid any major changes to the solutions in Dataverse during the execution of the message such as importing a solution or deleting a column or parent table. Doing so might lead to unexpected behavior; however no data loss will occur.  
   
 -   Updates done in the system as a result of executing the message won’t run workflows and plug-ins.  
   
--   Updates done in the system as a result of executing the message won’t change the “last modified on” value for the columns, but will be audited to help the administrators to determine the time of the conversion and the original/changed values for an column.  
+-   Updates done in the system as a result of executing the message won’t change the “last modified on” value for the columns, but will be audited to help the administrators to determine the time of the conversion and the original/changed values for a column.  
   
  The following sample code shows how to use the message:  
   
@@ -271,7 +270,7 @@ To resolve this, a user can either:
 ### See also  
 
  [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
- [Behavior and format of the Date and Time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
+ [Behavior and format of the date and time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
  [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 

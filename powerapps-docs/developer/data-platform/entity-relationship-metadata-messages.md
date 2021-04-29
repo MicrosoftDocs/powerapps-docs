@@ -17,9 +17,9 @@ search.app:
 ---
 # Table relationship definitions messages
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Table relationships define how tables are related to each other. This includes information about how relationships are represented in the application. Also, when actions are performed on a record, the relationship indicates what actions to perform on related records.  
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
 The following table lists the messages that you can use to create, retrieve, update, and delete relationships.  
   
@@ -33,7 +33,7 @@ The following table lists the messages that you can use to create, retrieve, upd
   
 ### See also  
 
- [Relationship Eligibility](entity-relationship-eligibility.md)   
+ [Relationship eligibility](entity-relationship-eligibility.md)   
  [Configure relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)
 
 

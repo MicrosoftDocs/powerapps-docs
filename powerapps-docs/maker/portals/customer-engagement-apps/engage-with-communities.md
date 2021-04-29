@@ -1,13 +1,16 @@
 ---
-title: "Engage with communities by using a community portal | MicrosoftDocs"
-description: "Instructions to engage with communities by using the community portal."
+title: Engage with communities by using the community portal
+description: Learn how to engage with communities by using the community portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Engage with communities by using the community portal

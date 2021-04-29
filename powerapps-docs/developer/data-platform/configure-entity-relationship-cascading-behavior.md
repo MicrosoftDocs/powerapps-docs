@@ -24,9 +24,9 @@ search.app:
 
 # Configure table relationship cascading behavior  
 
- [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Using Web API to configure cascading behavior
 
@@ -50,8 +50,9 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |UserOwned|Cascade User Owned|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
 
 >[!NOTE]
-> Cascading actions on Active records will only include records that have a Status Code of Active. Any other solution provided or custom status 
-> codes that indicate a record as live and in use will not be processed as an Active record for cascading purposes.
+> Cascading actions on active records will only include records that have a state code of "Active" and a status code of "Open". 
+> If custom status and state code labels are being used, this is the same as `statecode` value=0 and `statuscode` value=1 in most cases. 
+> Any other solution provided or custom status codes with values other than the above will not be processed as an active record for cascading purposes.
 
 
  The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
@@ -81,7 +82,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
- The reparent action is very similar to the share action except that it deals with the inherited read access rights instead of explicit read access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited read access rights for related tables might change. The cascade actions related to the reparent action refer to changes to read access rights for the table record and any table records related to it.  
+ The reparent action is very similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for ReadAccess, WriteAccess, DeleteAccess, AssignAccess, ShareAccess, AppendAccess and AppendToAccess. It will not change for CreateAccess. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
 
 <a name="BKMK_MergeAction"></a>  
 ### About the merge action  

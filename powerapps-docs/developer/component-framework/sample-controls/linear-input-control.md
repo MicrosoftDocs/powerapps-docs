@@ -1,6 +1,6 @@
 ---
 title: " Linear Input component| Microsoft Docs" 
-description: "Implementing linear input component"
+description: "This sample component changes the user experience of interacting with numeric types on the form."
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing linear input component
 
 This sample component changes the user experience of interacting with numeric types on the form. Instead of typing in the numbers, the linear input component provides a linear slider using which the value of the attribute can be set on the form.  
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 To implement this component, first you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and them implement the custom logic in TypeScript. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LinearInputControl).
 

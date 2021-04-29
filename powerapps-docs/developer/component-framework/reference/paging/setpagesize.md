@@ -1,6 +1,6 @@
 ---
 title: setPageSize | Microsoft Docs
-description: 
+description: Sets the number of results to return per page on the next data refresh.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

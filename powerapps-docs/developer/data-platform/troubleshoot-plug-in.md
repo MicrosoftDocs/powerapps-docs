@@ -306,7 +306,7 @@ Because these behaviors can be configured differently between environments, the 
 
 ### Indexes on new tables
 
-If the plug-in is performing operations using an table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
+If the plug-in is performing operations using a table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
 
 ## Errors due to user privileges
 
@@ -365,7 +365,7 @@ At run-time the error is frequently due to the developer assuming that the value
 
 To prevent this error you must check that the key exists before attempting to use it to access a value. 
 
-For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in an table as shown in the following code.
+For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in a table as shown in the following code.
 
 ```csharp
 // Obtain the execution context from the service provider.  

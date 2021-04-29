@@ -24,9 +24,9 @@ search.app:
 
 # Column definitions
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Tables include a collection of columns that represent the data that can be included within each record. Developers need to understand the different types of columns and how to work with them. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 More information: [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
 
@@ -114,7 +114,7 @@ If you try to retrieve a column that is not valid for read, a null value will be
 
 ## Column requirement level
 
-The `RequiredLevel` property is a Boolean managed property that describes if an column value is required.
+The `RequiredLevel` property is a Boolean managed property that describes if a column value is required.
 
 This property can have the following values set:
 

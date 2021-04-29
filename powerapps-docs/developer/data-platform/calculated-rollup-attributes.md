@@ -17,16 +17,16 @@ search.app:
 ---
 # Calculated and rollup columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+*Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
 
-*Calculated* and *rollup* column free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
- [Video: Rollup and Calculated columns in Microsoft Dynamics CRM 2015](https://youtu.be/RoahCH1p3T8)  
+ [Video: Rollup and Calculated columns in Microsoft Dataverse](https://youtu.be/RoahCH1p3T8)  
   
 <a name="BKMK_CommonElements"></a>   
 
 ## Common elements and characteristics  
- Calculated and rollup column share some common elements and characteristics, for example:  
+ Calculated and rollup columns share some common elements and characteristics, for example:  
   
 - They’re read-only.  
   
@@ -62,14 +62,14 @@ search.app:
 |      Property       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `FormulaDefinition` |                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Contains the XAML definition of the formula used to perform the calculation or rollup. The only supported way to change this value is through the application formula editor.<br /><br /> For information about configuring the formulas for these columns see the following topics in the customization guide: [Define rollup columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-rollup-fields) and [Define calculated columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields).                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|  `SourceTypeMask`   | The bitmask value of this read-only property describes the types of sources used in the formula of the calculated column or if the formula of a calculated or rollup column is not valid.<br /><br /> -   0: **Undefined**. The default value for simple and rollup columns.<br />-   1: **Simple**. The calculated column refers to an column in the same record.<br />-   2: **Related**. The calculated column refers to an column in a related record.<br />-   4: `Logical`. The calculated column refers to an column in the same record which is actually stored in a different database table. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)<br />-   8: `Calculated`. The calculated column refers to another calculated column.<br />-   16: `Rollup`. The calculated column refers a rollup column.<br />-   32: `Invalid`. The calculated or rollup column is invalid.<br />     Typically this would be where a column refers to an column that no longer exists. **Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
+|  `SourceTypeMask`   | The bitmask value of this read-only property describes the types of sources used in the formula of the calculated column or if the formula of a calculated or rollup column is not valid.<br /><br /> -   0: **Undefined**. The default value for simple and rollup columns.<br />-   1: **Simple**. The calculated column refers to a column in the same record.<br />-   2: **Related**. The calculated column refers to a column in a related record.<br />-   4: `Logical`. The calculated column refers to a column in the same record which is actually stored in a different database table. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)<br />-   8: `Calculated`. The calculated column refers to another calculated column.<br />-   16: `Rollup`. The calculated column refers a rollup column.<br />-   32: `Invalid`. The calculated or rollup column is invalid.<br />     Typically this would be where a column refers to a column that no longer exists. **Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
   
 
 ## Calculated columns 
  
  Calculated columns are calculated in real-time when they are retrieved. Calculated columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields).  
   
- Calculated column values are available in the retrieve plug-in pipeline. Post image of table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Table Images](understand-the-data-context.md#table-images)
+ Calculated column values are available in the retrieve plug-in pipeline. Post image of table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Table images](understand-the-data-context.md#table-images)
   
 ### Limitations  
  You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
@@ -158,11 +158,11 @@ search.app:
     /// </summary>  
     Undefined = 0,  
     /// <summary>  
-    /// Simple: 1 - The calculated column refers to an column in the same record.  
+    /// Simple: 1 - The calculated column refers to a column in the same record.  
     /// </summary>  
     Simple = 1,  
     /// <summary>  
-    /// Related: 2 - The calculated column refers to an column in a related record.  
+    /// Related: 2 - The calculated column refers to a column in a related record.  
     /// </summary>  
     Related = 2,  
     /// <summary>  
@@ -179,14 +179,14 @@ search.app:
     Rollup = 16,  
     /// <summary>  
     /// Invalid: 32 - The calculated or rollup column is invalid.  
-    /// Typically this would be where a field refers to an column that no longer exists.   
+    /// Typically this would be where a field refers to a column that no longer exists.   
     /// </summary>  
     Invalid = 32  
 }  
 ```  
   
 ### See also  
- [Video: Rollup and Calculated columns in Microsoft Dynamics CRM 2015](https://youtu.be/RoahCH1p3T8)   
+ [Video: Rollup and calculated columns in Dataverse](https://youtu.be/RoahCH1p3T8)   
  [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields)   
  [Define rollup columns](https://docs.microsoft.com/powerapps/maker/data-platform/define-rollup-fields)

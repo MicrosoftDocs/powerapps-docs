@@ -1,6 +1,6 @@
 ---
-title: ConditionExpression | Microsoft Docs
-description: 
+title: ConditionExpression in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for ConditionExpression in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -78,7 +78,7 @@ The `conditionOperator` value is an enum with the following possible values
 
 ### entityAliasName
 
-Entity alias name so filtering can be used on linked entities.
+Table alias name so filtering can be used on linked tables.
 
 **Type**: `string`
 
