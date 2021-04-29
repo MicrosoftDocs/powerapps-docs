@@ -100,7 +100,7 @@ However, in the application that Maria is building, the data already exists in a
 
 An advantage of fusion development teams and Dataverse is fusion development teams allow members to be their most productive in tools that they already know and are most comfortable with. A team does not need to migrate their existing data to Dataverse immediately to build a Power App application. Likewise, when a team is building an application that requires new data, Dataverse makes a ton of sense as an option. It is not uncommon to see a Power App application using a combination of legacy data sources and data in Dataverse.
 
-When Maria starts to develop the new functionality of her app to power the knowledge base, as discussed in the second chapter of this book, she expects to use Dataverse to store that data.
+When Maria starts to add new functionality to her app, for example having the field technicians add customer visit notes, she expects to use Dataverse to store that data.
 
 So, for the time being Maria will connect the web API Kiana's team has already developed to her Power App application to obtain the data needed. The following chapters will walk through that process.
 
