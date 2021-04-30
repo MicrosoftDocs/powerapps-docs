@@ -39,7 +39,10 @@ Verify the following prerequisites before you start creating an app:
 1. Select **New** > **App** > **Model-driven app**.
 
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
-1. On the left navigation pane, select **Navigation** to display the navigation tree. Expand **Area1**, and then expand **Group1**. Notice that a basic site map is already created for you.
+1. On the left navigation pane, select **Navigation** to display the navigation tree. 
+   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
+
+1. Expand **Area1**, and then expand **Group1**. Notice that a basic site map is already created for you.
    :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
 1. Select **Group1** and change the title to *Accounts and Contacts*.
 1. Select **Subarea1**, and make the following changes: 
@@ -48,15 +51,15 @@ Verify the following prerequisites before you start creating an app:
    - **Table**: Account
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
-   - Notice the preview pane displays your app. Selecting a component, such as a table affects what's displayed in the preview. If your environment includes data that you have access to view, that also appears in the preview.
+   - Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview. If your environment includes data that you have access to view, that also appears in the preview.
    :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables":::
 1. Select **Save**, and then select **Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Preview**.
 
-## Adding and removing forms, views, and dashboards for a table
+## Adding and removing app components
 
-By default, all table forms, views, and dashboards are included in the app. To remove one or more forms, views, and dashboards, in the left navigation pane select **Pages**, select the component you want, such as **Account form**. On the right properties pane, select **Manage forms** to add or remove one or more forms.
+By default, all forms, views, and dashboards are included for a table in the app. To remove one or more forms, views, and dashboards, in the left navigation pane select **Pages**, select the component you want, such as **Account form**. On the right properties pane, select **Manage forms** to add or remove one or more forms.
 
 ### See also
 [Overview of the model-driven app designer](app-designer-overview.md)
