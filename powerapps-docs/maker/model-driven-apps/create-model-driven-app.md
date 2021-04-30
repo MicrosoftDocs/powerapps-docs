@@ -1,6 +1,6 @@
 ---
-title: "Overview of the model-driven app designer | MicrosoftDocs"
-description: Learn about the app designer for model-driven apps.
+title: "Create a model-driven app using the designer | MicrosoftDocs"
+description: Learn how to create a model-driven app.
 ms.custom: ""
 ms.date: 04/30/2021
 ms.service: powerapps
@@ -21,7 +21,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create a model-driven app using the app designer
+# Create a model-driven app with the app designer
 
 In this article you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
