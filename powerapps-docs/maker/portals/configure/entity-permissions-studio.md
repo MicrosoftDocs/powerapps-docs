@@ -33,8 +33,7 @@ Portals Studio shows four different **Access types**. Depending on the access ty
 1. **Self access** - Applies the selected table permission and privileges to the users from the selected role *for only their own contact record*.
 
 > [!NOTE]
-> - **Parent access type** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent**, directly add child permission to existing table permissions when using portals Studio.
-> - Ensure you enable table permissions on web pages for permissions to take effect. More information: [Manage page permissions](webpage-access-control.md)
+> **Parent access type** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent**, directly add child permission to existing table permissions when using portals Studio.
 
 ## Configure table permissions using portals Studio
 
@@ -132,13 +131,17 @@ To edit a table permission using portals Studio:
 
 1. Select the table permission that you want to edit.
 
-1. Select **Edit** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Edit**.
+1. Select **Edit** from the menu at the top. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Edit**.
 
 1. Change table permission details, such as the name, table, access type, privileges, and applicable roles. More information: [Create table permissions using portals Studio](#create-table-permissions-using-portals-studio)
 
 1. Select **Save**.
 
 ### Deactivate/activate or delete table permissions using portals Studio
+
+A deactivated table permission becomes ineffective. You can activate a deactivated table permission later. When a table permission is deactivated, its child table permissions remain active but are not in effect due to the ineffective parent table permission. You can deactivate child permissions separately.
+
+When a table permission is deleted, it also deletes all associated child permissions.
 
 To deactivate/activate or delete a table permission using portals Studio:
 
@@ -156,7 +159,7 @@ To deactivate/activate or delete a table permission using portals Studio:
 
 1. Select the table permission that you want to deactivate/activate or delete.
 
-1. Select **Deactivate**, **Activate**, or **Delete** from the menu. 1. Select **Edit** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose your option.
+1. Select **Deactivate**, **Activate**, or **Delete** from the menu at the top. 1. Select **Edit** from the menu at the top. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose your option.
 
 1. Confirm when prompted.
 
@@ -178,7 +181,7 @@ To add a child permission to an existing table permission using portals Studio:
 
 1. Select the table permission that you want to add the child permission to.
 
-1. Select **Add child permission** from the menu. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Add child permission**.
+1. Select **Add child permission** from the menu at the top. Alternatively, you can also select :::image type="icon" source="media/entity-permissions-studio/more-commands.png"::: (More Commands), and then choose **Add child permission**.
 
 1. Create the child permission with the following details:
 

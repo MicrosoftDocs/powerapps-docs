@@ -67,7 +67,7 @@ Contoso has the following relationships configured between tables in Dataverse.
 
 Contoso has the following customizations configured for this scenario.
 
-- Web pages have table permissions enabled. More information: [Manage page permissions](webpage-access-control.md)
+- Lists on web pages have table permissions enabled. More information: [Configure lists](entity-lists.md)
 - Web pages have [lists](entity-lists.md) configured with the tables, views, and the ability to create/view/edit/delete records as appropriate.
     - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission. Access type: [Global access](assign-entity-permissions.md#global-access-type).
     - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions. Access type: [Contact access](assign-entity-permissions.md#contact-access-type).
