@@ -1,8 +1,8 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API, and then learn how to identify and handle errors returned in the response"
+description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 04/21/2021
+ms.date: 04/29/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -42,7 +42,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
-|Resource|The name of the entity, function, or action you want to use.|
+|Resource|The name of the entity (table), function, or action you want to use.|
 
 The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
 
@@ -105,13 +105,13 @@ You can use additional headers to enable specific capabilities.
   
 -   To return formatted values with a query, include the odata.include-annotations preference set to `Microsoft.Dynamics.CRM.formattedvalue` using the [Prefer](https://tools.ietf.org/html/rfc7240) header. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)  
   
--   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
+-   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of tables (entities) to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
   
--   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute. More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
+-   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser table/entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
   
 -   To apply optimistic concurrency, you can apply the [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) header with an `Etag` value. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency).  
   
--   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert an entity](update-delete-entities-using-web-api.md#bkmk_upsert).  
+-   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert a table (entity)](update-delete-entities-using-web-api.md#bkmk_upsert).  
   
 -   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
 
@@ -288,16 +288,15 @@ This can also be done using the Organization Service: [Add a Shared Variable fro
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Query data using the Web API](query-data-web-api.md)<br />
+[Create a table (entity) using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table (entity) using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables (entities) using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables (entities) using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
