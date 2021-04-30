@@ -40,7 +40,7 @@ Use Power Apps CLI commands to clone the solution. To clone a solution:
  
 1. Create an authentication profile for the environment where you want to add your solution by using the command: 
 
-   ```azurecli
+   ```CLI
     pac auth create --name <name of your choice> --kind Dataverse -–url <your dataverse url> --username <your username> --password <your password>`
    ```
 1. Clone the existing solution by using the command:  
@@ -82,8 +82,8 @@ The plan definition file should contain the following columns:
 - **Display Name:** The display name for your plan. The display name is shown to users on the license check error dialogs.
 - **More info URL:** The URL where you would like to direct users to get more information about the solution if they get any license check errors.
 
-> [!div class="mx-imgBorder"]
-> ![Plan definition file](media/plan-definition-file.png "Plan definition file")
+   > [!div class="mx-imgBorder"]
+   > ![Plan definition file](media/plan-definition-file.png "Plan definition file")
 
 ### Plan mapping file
  
@@ -92,8 +92,8 @@ The plan mapping file should contain the following columns:
 - **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
 - **Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the solution viewer.
 
-> [!div class="mx-imgBorder"]
-> ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
+  > [!div class="mx-imgBorder"]
+  > ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
 
 Once you have created your own licensing CSV files, the next step is to add the information from these files to your solution. 
 
@@ -103,7 +103,7 @@ To add the license information from the CSV files (created above) to the solutio
  
 - Open a **Developer Command Prompt for VS 2017** or higher window. NAvigate to the location where you have cloned solution. Enter the following command:
 
-   ```azurecli
+   ```CLI
    pac solution add-license -pd <path to plan definition file> -pm <path to plan mapping file>
    ```
 - To check whether the licensing information is added, navigate to the location where you have cloned your solution zip file, you should see a new folder **ServicePlans** is created with two XML files. 
