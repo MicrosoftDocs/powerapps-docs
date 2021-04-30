@@ -1115,9 +1115,10 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
-      - name: Use the classic app designer to build an app
-        href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
+      - name: Use the classic designers
         items:
+        - name: Design model-driven apps by using the app designer
+          href: href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
         - name: Create an app
           href: ./model-driven-apps/create-edit-app.md
         - name: Create a site map for an app
