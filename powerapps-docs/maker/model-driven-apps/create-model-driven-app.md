@@ -49,6 +49,10 @@ Verify the following prerequisites before you start creating an app:
    - **Title**: Accounts
    - **Content type**: Table
    - **Table**: Account
+
+   > [!NOTE]
+> A subarea won't appear in the app preview until you add a content type to it.
+
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
    - Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview. If your environment includes data that you have access to view, that also appears in the preview.
