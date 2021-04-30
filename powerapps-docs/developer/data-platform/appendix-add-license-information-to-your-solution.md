@@ -58,8 +58,12 @@ To add licensing information to your solution, you need to create two `.CSV` fil
  
 In this article, we will create two CSV files. You can choose any licensing approach you like. In this article, we will follow the **Russian doll** licensing model as shown in the following table: 
 
-> [!div class="mx-imgBorder"]
-> ![Licensing table](media/create-licensing-csv-files-2.png "Licensing table")
+|Plan|Gets access to|
+|------|--------|
+|Gold plan|Gold App, Silver App, Bronze App|
+|Silver plan|Silver App, Bronze App|
+|Bronze plan|Bronze App|
+|||
 
 The solution contains three model-driven apps (Gold App, Silver App, and Bronze App) each model-driven app different from one another.
 
