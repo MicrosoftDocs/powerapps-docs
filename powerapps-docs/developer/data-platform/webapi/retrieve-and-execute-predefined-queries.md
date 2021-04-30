@@ -1,8 +1,8 @@
 ---
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
-description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
+description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
 ms.custom: ""
-ms.date: 01/04/2020
+ms.date: 04/29/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,9 +24,9 @@ search.app:
 
 # Retrieve and execute predefined queries
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 <a name="bkmk_predefinedQueries"></a>
 
@@ -36,8 +36,8 @@ Dataverse allows you to define, save, and execute two types of queries as listed
 
 |Query type|Description|
 |----------------|-----------------|
-|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information: [Customize entity views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information: [UserQuery (saved view) entity](../saved-queries.md)|
+|**Saved Query**|System-defined views for an entity. These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType />. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType />. More information: [UserQuery (saved view) table](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
