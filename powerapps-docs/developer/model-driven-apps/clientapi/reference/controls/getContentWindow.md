@@ -63,7 +63,7 @@ function setClientApiContext(xrm, formContext) {
 }
 ```
 
-Next, add the following code in the form onLoad event handler:
+Next, add the following code in the form OnLoad event handler:
 
 ```javascript
 // This should be in a script loaded on the form. 
@@ -80,6 +80,8 @@ function form_onload(executionContext) {
     }
 }
 ```
+
+Similar initialization code should be added to a TabStateChange event handler if such initialization is necessary. Any initialization code should be idempotent if it is re-used. For performance reasons, the form may destroy and re-initialize the control during tab navigations.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
