@@ -42,7 +42,7 @@ Verify the following prerequisites before you start creating an app:
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
    :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
 
-1. Expand **Area1**, and then expand **Group1**. Notice that a basic site map is already created for you.
+1. Notice that a basic site map is already created for you. Expand **Area1**, and then expand **Group1**.
    :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
 1. Select **Group1** and change the title to *Accounts and Contacts*.
 1. Select **Subarea1**, and make the following changes: 
