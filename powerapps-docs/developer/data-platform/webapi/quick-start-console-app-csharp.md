@@ -74,7 +74,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
+    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
 
 ## Edit Program.cs
 

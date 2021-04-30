@@ -239,7 +239,7 @@ The Web API supports these standard OData string query functions:
   
 ### Microsoft Dataverse Web API query functions
 
-Dataverse provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex /> for a list of these functions. The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function /> searching for accounts with a number of employees between 5 and 2000.  
+Dataverse provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=nameWithType> for a list of these functions. The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function /> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
 GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
@@ -448,11 +448,11 @@ To get the same results as the example above, you can retrieve records of two en
 
 Follow the steps in the below example to understand how we can filter results using the iteration method:
 
-1. Get a distinct list of <xref:Microsoft.Dynamics.CRM.team />._administratorid_value values.
+1. Get a distinct list of <xref:Microsoft.Dynamics.CRM.team?displayProperty=nameWithType>._administratorid_value values.
       - `GET [OrganizationURI]/api/data/v9.1/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
       - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
       - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
-2. Query <xref:Microsoft.Dynamics.CRM.systemuser /> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function /> to compare the `systemuserid` values with the list collected in Step 1.
+2. Query <xref:Microsoft.Dynamics.CRM.systemuser?displayProperty=nameWithType> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function /> to compare the `systemuserid` values with the list collected in Step 1.
 
 <a name="bkmk_order"></a>
 
