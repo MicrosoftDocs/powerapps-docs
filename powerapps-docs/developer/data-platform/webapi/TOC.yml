@@ -34,7 +34,7 @@
     items:
     - name: Query data
       href: query-data-web-api.md
-    - name: Retrieve related tables with query
+    - name: Retrieve related records with query
       href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
@@ -44,7 +44,7 @@
     href: retrieve-entity-using-web-api.md
   - name: Update and delete table records 
     href: update-delete-entities-using-web-api.md
-  - name: Associate and disassociate tables
+  - name: Associate and disassociate records
     href: associate-disassociate-entities-using-web-api.md
   - name: Merge table records 
     href: merge-entity-using-web-api.md

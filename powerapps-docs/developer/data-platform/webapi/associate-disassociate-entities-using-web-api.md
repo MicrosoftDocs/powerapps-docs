@@ -2,7 +2,7 @@
 title: "Associate and disassociate entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to add  reference to a collection-valued navigation property, remove a reference and change an existing reference using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/3/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,6 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Associate and disassociate entities using the Web API
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
@@ -52,6 +53,36 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```  
   
+
+
+<a name="bkmk_Changethereferenceinasingle"></a>
+ 
+## Change the reference in a single-valued navigation property
+
+ You can associate entities by setting the value of a single-valued navigation property using PUT request with the following pattern.  
+  
+ **Request**
+
+```http 
+PUT [Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref HTTP/1.1  
+Content-Type: application/json  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+  
+{  
+ "@odata.id":"accounts(00000000-0000-0000-0000-000000000002)"  
+}  
+```  
+  
+ **Response**  
+
+```http 
+HTTP/1.1 204 No Content  
+OData-Version: 4.0  
+```  
+
+
 <a name="bkmk_Removeareferencetoanentity"></a>
 
 ## Remove a reference to an entity
@@ -94,33 +125,10 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
 ```  
-  
-<a name="bkmk_Changethereferenceinasingle"></a>
- 
-## Change the reference in a single-valued navigation property
 
- You can associate entities by setting the value of a single-valued navigation property using PUT request with the following pattern.  
-  
- **Request**
 
-```http 
-PUT [Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref HTTP/1.1  
-Content-Type: application/json  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
   
-{  
- "@odata.id":"[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)"  
-}  
-```  
-  
- **Response**  
 
-```http 
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-```  
   
 <a name="bkmk_Associateentitiesoncreate"></a>
 
@@ -128,9 +136,13 @@ OData-Version: 4.0
 
  As described in [Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
   
+## Associate and disassociate entities on update
+
+You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate records.
+
 <a name="bkmk_Associateentitiesonupdate"></a>
 
-## Associate entities on update using single-valued navigation property
+### Associate entities on update
 
  You can associate entities on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the @odata.bind annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
   
@@ -144,7 +156,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
   
 {  
- "customerid_account@odata.bind":"[Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)"  
+ "customerid_account@odata.bind":"accounts(00000000-0000-0000-0000-000000000002)"  
 }  
 ```  
   
@@ -154,6 +166,43 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
 ```  
+
+### Disassociate entities on update
+
+You can remove a reference to a single-valued navigation property when updating by setting the value to `null`. This method allows you to disassociate multiple references in a single operation.
+There are two ways to do this:
+
+You can set the value to `null` using the `@odata.bind` annotation:
+
+```http  
+PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+
+{
+	"parentaccountid@odata.bind":  null,
+	"primarycontactid@odata.bind": null
+}
+
+
+```  
+  
+ Or, just use the name of the single-valued navigation property. 
+  
+```http 
+PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+
+{
+    "parentaccountid":  null,
+    "primarycontactid": null
+}
+
+``` 
+
 <a name="bkmk_Associateentitiesonupdate_multi"></a>
 
 ## Associate entities on update using collection-valued navigation property
