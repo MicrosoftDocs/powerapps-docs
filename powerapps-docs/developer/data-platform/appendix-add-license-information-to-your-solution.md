@@ -113,9 +113,10 @@ To add the license information from the CSV files (created above) to the solutio
  
 ## Build the solution and create an AppSource package
 
-To build a solution, see [Create a managed solution for your app](/powerapps/developer/data-platform/create-solution-app-appsource). To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
+1. To build a solution, see [Create a managed solution for your app](/powerapps/developer/data-platform/create-solution-app-appsource). 
 
-To validate whether the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
+1. To validate whether the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
+1. To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
 ## See also
 
