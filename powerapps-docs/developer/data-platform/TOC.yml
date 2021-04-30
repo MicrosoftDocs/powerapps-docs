@@ -359,6 +359,8 @@
       href: appendix-app-design-best-practices-checklist.md
     - name: 'Appendix: App certification checklist'
       href: appendix-app-certification-checklist.md
+    - name: 'Appendix: Add licensing information to your solution'
+      href: appendix-add-license-information-to-your-solution.md
   - name: Monitor your app in ISV Studio
     items:
     - name: Introduction to ISV Studio
