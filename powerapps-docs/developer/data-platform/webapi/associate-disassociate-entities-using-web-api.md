@@ -134,7 +134,9 @@ OData-Version: 4.0
 
 ## Associate entities on create
 
- As described in [Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
+As described in [Associate entity records on create](create-entity-web-api.md#associate-entity-records-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
+
+As described in [Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
   
 ## Associate and disassociate entities on update
 
@@ -144,7 +146,7 @@ You can set the value of single-valued navigation properties using `PATCH` to as
 
 ### Associate entities on update
 
- You can associate entities on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the @odata.bind annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
+ You can associate entities on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
   
  **Request**
 
@@ -202,6 +204,8 @@ OData-Version: 4.0
 }
 
 ``` 
+
+More information: [Basic update](update-delete-entities-using-web-api.md#basic-update)
 
 <a name="bkmk_Associateentitiesonupdate_multi"></a>
 
