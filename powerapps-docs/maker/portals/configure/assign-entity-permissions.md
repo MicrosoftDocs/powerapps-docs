@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2021
+ms.date: 04/30/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -42,13 +42,13 @@ When creating a new Table Permission record, the first step is to determine the 
 
 ### Global access type
 
-If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via an basic form that they don't have access to, they'll receive a permission error. For example, [show all car listings to all authenticated users in a car dealership](entity-permissions-studio-walkthrough.md#view-all-car-listings).
+If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the Microsoft Dataverse views that have been defined for that list. Further, if a user attempts to access a record via an basic form that they don't have access to, they'll receive a permission error. For example, [show all car listings to all authenticated users in a car dealership](entity-permissions-studio-walkthrough.md#view-all-car-listings).
 
 ### Contact access type
 
 With Contact access type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's contact record via a defined relationship.
 
-On an list, this access type means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.) For example, [show, update, and delete owned car listings in a car dealership](entity-permissions-studio-walkthrough.md#view-update-and-delete-owned-car-listings).
+On an list, this access type means that a filter will be added to whatever Microsoft Dataverse views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.) For example, [show, update, and delete owned car listings in a car dealership](entity-permissions-studio-walkthrough.md#view-update-and-delete-owned-car-listings).
 
 Basic forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. More information: [Define basic forms](entity-forms.md).  
 
