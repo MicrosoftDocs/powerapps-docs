@@ -1,8 +1,8 @@
 - name: Work with data using code
   href: ../work-with-data.md
-- name: Use Web API
+- name: Use the Web API
   href: overview.md
-- name: Get started
+- name: Get started using code
   items:
   - name: (C#)
     items:
@@ -24,7 +24,7 @@
     href: aad-group-team.md
 - name: Types and operations
   href: web-api-types-operations.md
-- name: Perform operations
+- name: Perform Web API operations
   items:
   - name: Get started with performing operations
     href: perform-operations-web-api.md
@@ -34,19 +34,19 @@
     items:
     - name: Query data
       href: query-data-web-api.md
-    - name: Retrieve related entities with query
+    - name: Retrieve related tables with query
       href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
-  - name: Create an entity record
+  - name: Create a table record
     href: create-entity-web-api.md
-  - name: Retrieve an entity record
+  - name: Retrieve a table record
     href: retrieve-entity-using-web-api.md
-  - name: Update and delete entity records 
+  - name: Update and delete table records 
     href: update-delete-entities-using-web-api.md
-  - name: Associate and disassociate entities
+  - name: Associate and disassociate tables
     href: associate-disassociate-entities-using-web-api.md
-  - name: Merge entity records 
+  - name: Merge table records 
     href: merge-entity-using-web-api.md
   - name: Use functions
     href: use-web-api-functions.md
@@ -60,21 +60,21 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-  - name: Access entity data faster using partitions
+  - name: Access table data faster using partitions
     href: azure-storage-partitioning.md
-- name: Work with metadata
+- name: Work with table definitions (metadata)
   items:
-  - name: Get started with using metadata
+  - name: Use the Web API with table definitions
     href: use-web-api-metadata.md
-  - name: Query metadata
+  - name: Query table definitions
     href: query-metadata-web-api.md
-  - name: Retrieve metadata by name or MetadataId
+  - name: Retrieve table definitions by name or MetadataId
     href: retrieve-metadata-name-metadataid.md
-  - name: Create and update entity definitions
+  - name: Create and update table definitions
     href: create-update-entity-definitions-using-web-api.md 
-  - name: Create and update entity relationships
+  - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
-  - name: Work with Option sets
+  - name: Work with choices (option sets)
     href: create-update-optionsets.md
 - name: Use Postman with Web API
   items:
