@@ -18,17 +18,17 @@ search.app:
 
 # Appendix: Add licensing information to your solution
 
-This article outlines how to add licensing information to Microsoft Dataverse solution, package the solution, and upload it to Microsoft AppSource. To add licensing information to your solution, you need to get the **Service ID** values created in the Partner Center when you create plans in the Partner Center. More information: [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
+This article outlines how to add licensing information to a Microsoft Dataverse solution, package it, and upload the solution zip file to Microsoft AppSource.  More information: [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
 The following steps are required to add license information to your solution: 
 
 - Clone existing solution.
-- Use the Power Apps CLI tool to add license information to the solution based on your desired licensing approach.  
-- Build the solution and package it and upload the zip file to Partner Center. 
+- Use the Power Apps CLI tool to add license information to the solution.  
+- Build the solution, package it, and upload the zip file to AppSource. 
 
 ## Download the latest version of the Power Apps CLI 
 
-You can download the latest version of Power Apps CLI from [here](/powerapps/developer/data-platform/powerapps-cli). The Power Apps CLI tool includes commands that are required for adding license information to the solution. To verify that you have the correct version of the tool:
+You can download the latest version of Power Apps CLI from [here](/powerapps/developer/data-platform/powerapps-cli). The Power Apps CLI tool includes commands that are required for adding licensing information to the solution. To verify that you have the latest version of the tool:
 
 - Open a **Developer Command Prompt for VS 2017** or higher window. 
 - Enter the command `pac install latest`. This will install the latest version of the tooling.
@@ -38,40 +38,49 @@ You can download the latest version of Power Apps CLI from [here](/powerapps/dev
 
 Use Power Apps CLI commands to clone the solution. To clone a solution:
  
-1. Create an authentication profile for the environment that your solution is added to by using the command: 
+1. Create an authentication profile for the environment where you want to add your solution by using the command: 
 
-   `pac auth create --name <name of your choice> --kind Dataverse -–url <your dataverse url> --username <your username> --password <your password>`
-
+   ```azurecli
+    pac auth create --name <name of your choice> --kind Dataverse -–url <your dataverse url> --username <your username> --password <your password>`
+   ```
 1. Clone the existing solution by using the command:  
     
-    ` pac solution clone --name <your solution name> --outputDirectory <your chosen output directory>`
+    ```CLI
+    pac solution clone --name <your solution name> --outputDirectory <your chosen output directory>
+    ```
 
 ## Create licensing files
 
-To add license information to your solution, you need to create two `.CSV` files using the text editor of your choice. The following are the two files that you need to create:
+To add licensing information to your solution, you need to create two `.CSV` files using the text editor of your choice. The following are the two files that you need to create:
  
 - **Plan definition file**: Define the details of the plans you created in the Partner Center.
 - **Plan mapping file**: Maps those plans to the components of your solution.
  
-In this article, we will create two CSV files. This solution has three model-driven apps (Gold App, Silver App, and Bronze App) each of which has different features. We will follow the **Russian doll** licensing model as shown in the following table: 
+In this article, we will create two CSV files. You can choose any licensing approach you like. In this article, we will follow the **Russian doll** licensing model as shown in the following table: 
 
 > [!div class="mx-imgBorder"]
 > ![Licensing table](media/create-licensing-csv-files-2.png "Licensing table")
 
-You need to create these plans in the Partner Center. More information: [Create plans on AppSource](/azure/marketplace/dynamics-365-customer-engage-plans). Here is what they look like in Partner Center with the **Service ID** for each plan: 
+In this article, the solution contains three model-driven apps (Gold App, Silver App, and Bronze App) each model-driven app different from one another.
+
+> [!div class="mx-imgBorder"]
+> ![Create licensing file 1](media/create-license-csv-file-1.png "Create licensing file 1")
+
+To add licensing information to your solution, you need to get the **Service ID** values created in the Partner Center. You need to create these plans in the Partner Center to get the **Service ID** values. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans). 
+
+> [!div class="mx-imgBorder"]
+> ![Create licensing file 3](media/create-license-csv-file-3.png "Create licensing file 3")
 
 > [!NOTE]
 > Currently model-driven apps are the only types of solution components that can be mapped to licenses. In future releases, we plan to add support for other component types such as canvas apps and tables. 
-
-
 
 ### Plan definition file
  
 The plan definition file should contain the following columns: 
 
-**Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans on AppSource](/azure/marketplace/dynamics-365-customer-engage-plans).
-**Display Name:** The display name for your plan. The display name is shown to users on the license check error dialogs.
-**More info URL:** The URL where you would like to direct users to get more information about the solution if they get any license check errors.
+- **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
+- **Display Name:** The display name for your plan. The display name is shown to users on the license check error dialogs.
+- **More info URL:** The URL where you would like to direct users to get more information about the solution if they get any license check errors.
 
 > [!div class="mx-imgBorder"]
 > ![Plan definition file](media/plan-definition-file.png "Plan definition file")
@@ -80,30 +89,34 @@ The plan definition file should contain the following columns:
  
 The plan mapping file should contain the following columns: 
 
-**Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans on AppSource](/azure/marketplace/dynamics-365-customer-engage-plans).
-**Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the solution viewer.
+- **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
+- **Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the solution viewer.
 
 > [!div class="mx-imgBorder"]
-> ![Plan mapping file](media/plan-definition-file.png "Plan mapping file")
+> ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
 
 Once you have created your own licensing CSV files, the next step is to add the information from these files to your solution. 
 
-### Add licensing information
+## Add licensing information
 
 To add the license information from the CSV files (created above) to the solution: 
  
-- Open a **Developer Command Prompt for VS 2017** or higher window. Enter the following command:
+- Open a **Developer Command Prompt for VS 2017** or higher window. NAvigate to the location where you have cloned solution. Enter the following command:
 
-   `pac solution add-license`
-
+   ```azurecli
+   pac solution add-license -pd <path to plan definition file> -pm <path to plan mapping file>
+   ```
 - To check whether the licensing information is added, navigate to the location where you have cloned your solution zip file, you should see a new folder **ServicePlans** is created with two XML files. 
-- Optional- To determine how the license information from the CSV files was captured, open the XML files in your favorite editor. 
+- Optional: To determine how the license information from the CSV files was captured, open the XML files in your favorite editor. 
 - The **ServicePlans.xml** file contains the plan definition information from the plan definition file. 
 - The **ServicePlansAppModules.xml** file contains the plan mapping information from the plan mapping file.
  
 ## Build the solution and create an AppSource package
 
-To build and create AppSource package, see [Create a managed solution for your app](/powerapps/developer/data-platform/create-solution-app-appsource). To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
+To build a solution, see [Create a managed solution for your app](/powerapps/developer/data-platform/create-solution-app-appsource). To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
-To validate if the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
+To validate whether the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
 
+## See also
+
+[Appendix: App certification checklist](appendix-app-certification-checklist.md)
