@@ -30,9 +30,9 @@ The following steps are required to add license information to your solution:
 
 You can download the latest version of Power Apps CLI from [here](/powerapps/developer/data-platform/powerapps-cli). The Power Apps CLI tool includes commands that are required for adding licensing information to the solution. To verify that you have the latest version of the tool:
 
-- Open a **Developer Command Prompt for VS 2017** or higher window. 
-- Enter the command `pac install latest`. This will install the latest version of the tooling.
-- Enter the command `pac solution help` and verify that you see the `add-license` option in the list.  
+1. Open a **Developer Command Prompt for VS 2017** or higher window. 
+2. Enter the command `pac install latest`. This will install the latest version of the tooling.
+3. Enter the command `pac solution help` and verify that you see the `add-license` option in the list.  
  
 ## Clone a solution
 
