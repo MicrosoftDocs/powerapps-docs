@@ -61,7 +61,7 @@ In this article, we will create two CSV files. You can choose any licensing appr
 > [!div class="mx-imgBorder"]
 > ![Licensing table](media/create-licensing-csv-files-2.png "Licensing table")
 
-In this article, the solution contains three model-driven apps (Gold App, Silver App, and Bronze App) each model-driven app different from one another.
+The solution contains three model-driven apps (Gold App, Silver App, and Bronze App) each model-driven app different from one another.
 
 > [!div class="mx-imgBorder"]
 > ![Create licensing file 1](media/create-license-csv-file-1.png "Create licensing file 1")
