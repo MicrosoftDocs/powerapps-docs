@@ -66,7 +66,7 @@ In this article, the solution contains three model-driven apps (Gold App, Silver
 > [!div class="mx-imgBorder"]
 > ![Create licensing file 1](media/create-license-csv-file-1.png "Create licensing file 1")
 
-To add licensing information to your solution, you need to get the **Service ID** values created in the Partner Center. You need to create these plans in the Partner Center to get the **Service ID** values. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans). 
+To add licensing information to your solution, you need to create plans in the Partner Center. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans). Once you're finished creating the plans, each plan creates a **Service ID** value which is required while creating [Plan definition file](#plan-definition-file).
 
 > [!div class="mx-imgBorder"]
 > ![Create licensing file 3](media/create-license-csv-file-3.png "Create licensing file 3")
@@ -101,15 +101,15 @@ Once you have created your own licensing CSV files, the next step is to add the 
 
 To add the license information from the CSV files (created above) to the solution: 
  
-- Open a **Developer Command Prompt for VS 2017** or higher window. NAvigate to the location where you have cloned solution. Enter the following command:
+1. Open a **Developer Command Prompt for VS 2017** or higher window. Navigate to the location where you have cloned solution. Enter the following command:
 
    ```CLI
    pac solution add-license -pd <path to plan definition file> -pm <path to plan mapping file>
    ```
-- To check whether the licensing information is added, navigate to the location where you have cloned your solution zip file, you should see a new folder **ServicePlans** is created with two XML files. 
-- Optional: To determine how the license information from the CSV files was captured, open the XML files in your favorite editor. 
-- The **ServicePlans.xml** file contains the plan definition information from the plan definition file. 
-- The **ServicePlansAppModules.xml** file contains the plan mapping information from the plan mapping file.
+1. To check whether the licensing information is added, navigate to the location where you have cloned your solution zip file, you should see a new folder **ServicePlans** is created with two XML files. 
+1. Optional: To determine how the license information from the CSV files was captured, open the XML files in your favorite editor. 
+1. The **ServicePlans.xml** file contains the plan definition information from the plan definition file. 
+1. The **ServicePlansAppModules.xml** file contains the plan mapping information from the plan mapping file.
  
 ## Build the solution and create an AppSource package
 
