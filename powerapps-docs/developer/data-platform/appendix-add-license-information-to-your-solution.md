@@ -18,6 +18,8 @@ search.app:
 
 # Appendix: Add licensing information to your solution
 
+This article is related to the license management capability that Microsoft provides for ISVs to manage and enforce licenses for their products. More information: [Third-party app license management through Microsoft](https://docs.microsoft.com/azure/marketplace/third-party-license) 
+
 This article outlines how to add licensing information to a Microsoft Dataverse solution, package it, and upload the solution zip file to Microsoft AppSource.  More information: [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
 The following steps are required to add license information to your solution: 
@@ -56,7 +58,7 @@ To add licensing information to your solution, you need to create two `.CSV` fil
 - **Plan definition file**: Define the details of the plans you created in the Partner Center.
 - **Plan mapping file**: Maps those plans to the components of your solution.
  
-In this article, we will create two CSV files. You can choose any licensing approach you like. In this article, we will follow the **Russian doll** licensing model as shown in the following table: 
+In this article, we will create these two CSV files for an example solution called F365. This solution contains several model-driven apps for which we want to restrict access to via license management. We will follow a **Russian doll** licensing model for this solution as shown in the following table:
 
 |Plan|Gets access to|
 |------|--------|
@@ -64,8 +66,6 @@ In this article, we will create two CSV files. You can choose any licensing appr
 |Silver plan|Silver App, Bronze App|
 |Bronze plan|Bronze App|
 |||
-
-The solution contains three model-driven apps (Gold App, Silver App, and Bronze App) each model-driven app different from one another.
 
 > [!div class="mx-imgBorder"]
 > ![Create licensing file 1](media/create-license-csv-file-1.png "Create licensing file 1")
@@ -80,24 +80,26 @@ To add licensing information to your solution, you need to create plans in the P
 
 ### Plan definition file
  
-The plan definition file should contain the following columns: 
+The plan definition file must include the following columns laid out in the format shown in the example below: 
 
-- **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
-- **Display Name:** The display name for your plan. The display name is shown to users on the license check error dialogs.
-- **More info URL:** The URL where you would like to direct users to get more information about the solution if they get any license check errors.
+> [!div class="mx-imgBorder"]
+> ![Plan definition file](media/plan-definition-file.png "Plan definition file")
 
-   > [!div class="mx-imgBorder"]
-   > ![Plan definition file](media/plan-definition-file.png "Plan definition file")
+**Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
+
 
 ### Plan mapping file
  
-The plan mapping file should contain the following columns: 
+The plan mapping file must include the following columns laid out in the format shown in the example below: 
 
-- **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
-- **Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the solution viewer.
+> [!div class="mx-imgBorder"]
+> ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
 
-  > [!div class="mx-imgBorder"]
-  > ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
+**Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
+
+**Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the Power Apps solution viewer (image above).
+
+
 
 Once you have created your own licensing CSV files, the next step is to add the information from these files to your solution. 
 
@@ -112,8 +114,8 @@ To add the license information from the CSV files (created above) to the solutio
    ```
 1. To check whether the licensing information is added, navigate to the location where you have cloned your solution zip file, you should see a new folder **ServicePlans** is created with two XML files. 
 1. Optional: To determine how the license information from the CSV files was captured, open the XML files in your favorite editor. 
-1. The **ServicePlans.xml** file contains the plan definition information from the plan definition file. 
-1. The **ServicePlansAppModules.xml** file contains the plan mapping information from the plan mapping file.
+   - The **ServicePlans.xml** file contains the plan definition information from the plan definition file. 
+   - The **ServicePlansAppModules.xml** file contains the plan mapping information from the plan mapping file.
  
 ## Build the solution and create an AppSource package
 
