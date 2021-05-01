@@ -2,7 +2,7 @@
 title: "Update and delete entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on entities using the Web API"
 ms.custom: ""
-ms.date: 02/16/2021
+ms.date: 04/30/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,6 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Update and delete entities using the Web API
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
@@ -72,7 +73,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate entities on update](associate-disassociate-entities-using-web-api.md#bkmk_Associateentitiesonupdate) for information about associating entities on update.  
+>  See [Associate and disassociate entities on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-entities-on-update) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
