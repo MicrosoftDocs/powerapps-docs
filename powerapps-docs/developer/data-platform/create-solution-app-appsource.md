@@ -48,7 +48,7 @@ For detailed information about using the Configuration Migration tool to create 
 
 You will have a solution file (example: *SampleSolution.zip*) and optionally a demo data file (example: *SampleData.zip*) for your app.
 
-**Optional licensing information:** If you wish to add licensing information to your solution, please see [Appendix: Add licensing information to your solution](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/appendix-add-license-information-to-your-solution).
+**Optional licensing information:** If you wish to add licensing information to your solution, see [Appendix: Add licensing information to your solution](appendix-add-license-information-to-your-solution.md).
 
 > [!div class="nextstepaction"]
 > [Step 3: Create an AppSource package for your app](create-package-app-appsource.md) 
