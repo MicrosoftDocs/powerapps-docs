@@ -6,8 +6,8 @@ ms.date: 01/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+author: "Bluebear73" # GitHub ID
+ms.author: "andreas.munzinger" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
