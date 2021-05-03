@@ -70,7 +70,7 @@ Following are the limitations in virtual tables that must be considered.
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 
 ### See also
-[Virtual table walkthrough using the OData v4 Data Provider](../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md)
+[Virtual table walkthrough using the OData v4 Data Provider](../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md)<br/>
 [API considerations of virtual tables](api-considerations-ve.md)<br />
 [Custom virtual table data providers](custom-ve-data-providers.md)<br />
 [Sample: Generic virtual table data provider plug-in](sample-generic-ve-plugin.md)

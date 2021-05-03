@@ -23,6 +23,9 @@ Opens the current screen in the default browser print dialog.
 
 The print function allows you to select any screen and fit it to a page in order to send it to a printer for printing or allows you to save it as a PDF file.  
 
+> [!NOTE]
+> The Print function currently is not supported on mobile devices and on SharePoint custom forms.
+
 The different configurations of the screen enable different printing outcomes. For fixed screens, they fit the size of the page, for use of the screen templates/special sized screens, we will fit the content to the size of the print.  
 
 > [!NOTE]

@@ -2,7 +2,7 @@
   href: get-started-ve.md
   items:
   - name: Walkthrough using the OData v4 data provider
-    href: ../../../virtual-entity-walkthrough-using-odata-provider.md
+    href: ../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md
   - name: API considerations
     href: api-considerations-ve.md
   - name: Custom data providers
