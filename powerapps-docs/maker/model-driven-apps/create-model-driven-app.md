@@ -51,7 +51,7 @@ Verify the following prerequisites before you start creating an app:
    - **Table**: Account
 
    > [!NOTE]
-> A subarea won't appear in the app preview until you add a content type to it.
+   > A subarea won't appear in the app preview until you add a content type to it.
 
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
@@ -61,7 +61,7 @@ Verify the following prerequisites before you start creating an app:
 
 To see how the app runs in a full browser window, on the command bar, select **Preview**.
 
-## Adding and removing app components
+## Add, remove, and edit app components
 
 By default, all forms, views, and dashboards are included for a table in the app. To remove one or more forms, views, and dashboards, in the left navigation pane select **Pages**, select the component you want, such as **Account form**. On the right properties pane, select **Manage forms** to add or remove one or more forms.
 
