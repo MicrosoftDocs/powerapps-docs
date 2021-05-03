@@ -1,8 +1,8 @@
 - name: Get started with virtual tables (entities)
   href: get-started-ve.md
   items:
-  - name: Walkthrough using the OData provider
-    href: virtual-entity-walkthrough-using-odata-provider.md
+  - name: Walkthrough using the OData v4 data provider
+    href: ../../../virtual-entity-walkthrough-using-odata-provider.md
   - name: API considerations
     href: api-considerations-ve.md
   - name: Custom data providers
