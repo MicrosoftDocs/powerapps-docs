@@ -87,6 +87,10 @@ The plan definition file must include the following columns laid out in the form
 
 **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
 
+**Display Name:** This is a descriptive name for your plan which you can choose. It will be show to users on license check error screens so it should be easily recognizable to your customers.
+
+**More info URL:** This is a URL where you would like to direct users to get more information about your solution, in the event they run into a license check error.
+
 
 ### Plan mapping file
  
