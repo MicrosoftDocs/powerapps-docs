@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.topic: "article"
 author: "Bluebear73" # GitHub ID
 ms.author: "munzinge" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
