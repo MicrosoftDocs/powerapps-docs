@@ -36,8 +36,8 @@ Dataverse allows you to define, save, and execute two types of queries as listed
 
 |Query type|Description|
 |----------------|-----------------|
-|**Saved Query**|System-defined views for an entity. These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType />. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType />. More information: [UserQuery (saved view) table](../saved-queries.md)|
+|**Saved Query**|System-defined views for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType />. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType />. More information: [UserQuery (saved view) table](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -51,7 +51,7 @@ You can then use the `savedqueryid` value and pass it as the value to the savedQ
 GET [Organization URI]/api/data/v9.0/accounts?savedQuery=00000000-0000-0000-00aa-000010001002
 ```
 
-Use the same approach to get the userqueryid and pass it as the value to the `userQuery` parameter to the entity set that matches the corresponding `returnedtypecode` of the saved query.
+Use the same approach to get the `userqueryid` and pass it as the value to the `userQuery` parameter to the entity set that matches the corresponding `returnedtypecode` of the saved query.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?userQuery=121c6fd8-1975-e511-80d4-00155d2a68d1
@@ -159,7 +159,7 @@ A paging cookie must be requested as an annotation. Set the `odata.include-annot
 
 <a name="bkmk_FetchXMLwithinBatch"></a>
 
-### Use FetchXML within a Batch request
+### Use FetchXML within a batch request
 
 The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
@@ -232,15 +232,14 @@ OData-Version: 4.0
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
