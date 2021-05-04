@@ -263,7 +263,7 @@ See [Detect duplicate data using Web API](manage-duplicate-detection-create-upda
 
 <a name="bkmk_initializefrom"></a>
 
-## Create a new table row from another entity
+## Create a new table row from another table
 
 Use `InitializeFrom` function to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
 
