@@ -1707,7 +1707,7 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Power Apps CLI
+        - name: Use Power Apps CLI (Preview)
           items:
           - name: Overview of portals support for Power Apps CLI
             href: ./portals/power-apps-cli.md
