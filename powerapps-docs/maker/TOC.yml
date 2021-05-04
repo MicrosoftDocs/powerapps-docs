@@ -1706,7 +1706,13 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md          
+            href: ./portals/component-framework-tutorial.md            
+        - name: Use Power Apps CLI (Preview)
+          items:
+          - name: Overview of portals support for Power Apps CLI
+            href: ./portals/power-apps-cli.md
+          - name: "Tutorial: Use Power Apps CLI with portals"
+            href: ./portals/power-apps-cli-tutorial.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
