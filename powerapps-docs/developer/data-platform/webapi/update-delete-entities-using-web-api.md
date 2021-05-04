@@ -72,7 +72,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate and disassociate tables on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-entities-on-update) for information about associating and disassociating entities on update.  
+>  See [Associate and disassociate tables on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-tables-on-update) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 

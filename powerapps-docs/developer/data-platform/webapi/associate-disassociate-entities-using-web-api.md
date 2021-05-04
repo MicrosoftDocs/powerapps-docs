@@ -130,7 +130,7 @@ OData-Version: 4.0
 
 ## Associate tables on create
 
-As described in [Associate table rows on create](create-entity-web-api.md#associate-entity-records-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
+As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
 
 As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
   
