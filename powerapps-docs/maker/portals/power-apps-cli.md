@@ -279,44 +279,16 @@ Power Apps CLI command for portals is “*paportal”*.
 The following sections provides additional details about different properties of
 “*paportal”* command.
 
-### Command: list
-
-Lists all portal websites from the current Microsoft Dataverse environment.
-
-#### Example
-
-*pac paportal list*
-
-### Command: download
-
-Download portal website content from the current Dataverse environment.
-
 #### Parameters
 
-| **Name**     | **Description**                                                                                                             |
-|--------------|-----------------------------------------------------------------------------------------------------------------------------|
-| \--path      | Path where the website content will be downloaded (alias: -p).                                                              |
-| \--webSiteId | Portal website id to download (alias: -id).                                                                                 |
-| \--overwrite | (Optional) *true* - to overwrite existing content, *false* - to fail if the folder already has website content (alias: -o). |
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
+|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p).<br/> - *webSiteId*: Portal website ID to download (alias: -id).<br/> - *overwrite*: (Optional) true - to overwrite existing content, false - to fail if the folder already has website content (alias: -o).|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
 
-#### Example
-
-*pac paportal download --path "C:\\portals" --webSiteId
-f88b70cc-580b-4f1a-87c3-41debefeb902*
-
-### Command: upload
-
-Upload portal website content to the current Dataverse environment.
-
-#### Parameters
-
-| **Name** | **Description**                                       |
-|----------|-------------------------------------------------------|
-| \--path  | Path where the website content is stored (alias: -p). |
-
-#### Example
-
-*pac paportal upload --path "C:\\portals\\starter-portal"*
+> [!NOTE]
+> To learn about all commands used in CLI in addition to portals, go to [Common commands in Power Apps CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
 
 ## Additional considerations
 
