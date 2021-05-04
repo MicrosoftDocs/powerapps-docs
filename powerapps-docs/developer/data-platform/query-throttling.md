@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Query Throttling
+# Query throttling
 
 If a specific query creates a disproportional load on the database storing
 Microsoft Dataverse data, it can starve the database of resources and negatively impact
