@@ -1,8 +1,8 @@
 ---
-title: "Associate and disassociate entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Read how to add  reference to a collection-valued navigation property, remove a reference and change an existing reference using the Web API"
+title: "Associate and disassociate tables using the Web API (Microsoft Dataverse)| Microsoft Docs"
+description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
 ms.custom: ""
-ms.date: 04/3/2021
+ms.date: 05/03/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,11 +22,11 @@ search.app:
   - D365CE
 ---
 
-# Associate and disassociate entities using the Web API
+# Associate and disassociate tables using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are several methods you can use to associate and disassociate entities. Which method you apply depends on whether you’re creating or updating the entities and whether you’re operating in the context of the referenced entity or the referencing entity.  
+There are several methods you can use to associate and disassociate tables (entities). Which method you apply depends on whether you’re creating or updating the tables and whether you’re operating in the context of the referenced table or the referencing table.  
 
 <a name="bkmk_Addareferencetoacollection"></a>
 
@@ -85,7 +85,7 @@ OData-Version: 4.0
 
 <a name="bkmk_Removeareferencetoanentity"></a>
 
-## Remove a reference to an entity
+## Remove a reference to a table
 
  Use a DELETE request to remove a reference to an entity. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
   
@@ -124,27 +124,23 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-```  
+```
 
-
-  
-
-  
 <a name="bkmk_Associateentitiesoncreate"></a>
 
-## Associate entities on create
+## Associate tables on create
 
-As described in [Associate entity records on create](create-entity-web-api.md#associate-entity-records-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
+As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new record to existing records by setting the navigation properties using the `@odata.bind` annotation.
 
-As described in [Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
+As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new entities can be created with relationships using *deep insert*.  
   
-## Associate and disassociate entities on update
+## Associate and disassociate tables on update
 
 You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate records.
 
 <a name="bkmk_Associateentitiesonupdate"></a>
 
-### Associate entities on update
+### Associate tables on update
 
  You can associate entities on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
   
@@ -169,7 +165,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```  
 
-### Disassociate entities on update
+### Disassociate tables on update
 
 You can remove a reference to a single-valued navigation property when updating by setting the value to `null`. This method allows you to disassociate multiple references in a single operation.
 There are two ways to do this:
@@ -209,12 +205,12 @@ More information: [Basic update](update-delete-entities-using-web-api.md#basic-u
 
 <a name="bkmk_Associateentitiesonupdate_multi"></a>
 
-## Associate entities on update using collection-valued navigation property
+## Associate tables on update using collection-valued navigation property
 
 The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) entities with an [Email](../reference/entities/email.md) entity using collection-valued navigation property `email_activity_parties`.
 
 > [!NOTE]
-> Associating multiple entities with an entity on update is a special scenario that is possible only with <xref href="Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType" />.
+> Associating multiple entities with an entity on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType />.
 
 **Request**
 
@@ -255,14 +251,13 @@ OData-Version: 4.0
  [Perform operations using the Web API](perform-operations-web-api.md)   
  [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)   
  [Query Data using the Web API](query-data-web-api.md)   
- [Create an entity using the Web API](create-entity-web-api.md)   
- [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)   
- [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)   
+ [Create a table using the Web API](create-entity-web-api.md)   
+ [Retrieve a table using the Web API](retrieve-entity-using-web-api.md)   
+ [Update and delete tables using the Web API](update-delete-entities-using-web-api.md)   
  [Use Web API functions](use-web-api-functions.md)   
  [Use Web API actions](use-web-api-actions.md)   
  [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
  [Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
  [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
