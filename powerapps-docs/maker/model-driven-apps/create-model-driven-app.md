@@ -23,6 +23,8 @@ search.app:
 ---
 # Create a model-driven app with the app designer
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 In this article you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites

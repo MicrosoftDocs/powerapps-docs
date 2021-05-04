@@ -23,6 +23,8 @@ search.app:
 ---
 # Overview of the model-driven app designer
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps. The designer includes several improvements not available in the classic model-driven app designer.
 
 The designer shows a real-time WYSIWYG preview while you author an app. Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
