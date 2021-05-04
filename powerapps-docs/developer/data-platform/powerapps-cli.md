@@ -93,7 +93,7 @@ Command to work with solution packages. It has the following parameters:
 
 ### Paportal
 
-Commands to work with [Portals support for Power Apps CLI (Preview)](../../maker/portals/power-apps-cli.md). It has the following parameters:
+Commands to work with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md). It has the following parameters:
 
 #### Parameters
 
