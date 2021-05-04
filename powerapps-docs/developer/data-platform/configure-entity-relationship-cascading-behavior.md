@@ -81,7 +81,7 @@ Cascading actions on active records will only include records that have a state 
 
 
 
-The `CascadeConfiguration` ( <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration/> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType />) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
+The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?displayProperty=nameWithType>) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
   
 |Action|Description|Valid options|  
 |------------|-----------------|-------------------|  
