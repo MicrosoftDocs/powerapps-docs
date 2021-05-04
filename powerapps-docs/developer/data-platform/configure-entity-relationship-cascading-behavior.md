@@ -50,6 +50,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |UserOwned|Cascade User Owned|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
 
 **Active Records considered for Cascading action**
+
 Cascading actions on active records will only include records that have a state code of “Active”. The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. However, any other solution provided or custom status codes with values other than the above will not be processed as an active record for cascading purposes.
 
 | Table Name                       |    State Code 0       |    State Code 1       |    State Code 2       |    State Code 3       | 
