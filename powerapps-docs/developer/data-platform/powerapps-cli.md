@@ -54,7 +54,7 @@ This table lists some of the common commands used in the CLI:
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
-|[paportal](#paportal)|Commands for working with [Portals support for Power Apps CLI (Preview)](../../maker/portals/power-apps-cli.md).|
+|[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
 |[pcf](#pcf)|Commands to work with [Power Apps component framework](../component-framework/overview.md).|
 |[plugin](#plugin)|Command to create a [plug-in](./plug-ins.md) project.|
 |[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
