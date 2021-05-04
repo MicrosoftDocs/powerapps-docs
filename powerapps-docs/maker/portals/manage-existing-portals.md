@@ -1,16 +1,19 @@
 ---
-title: Manage existing portals in Power Apps | Microsoft Docs
-description: Instructions to manage a portal in Power Apps.
+title: Manage existing portals
+description: Learn how to manage a portal in Power Apps.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
-# Manage existing portals in Power Apps
+# Manage existing portals
 
 Once you've created a portal, it's visible under the **Recent apps** section on the Power Apps home page.
 
@@ -31,7 +34,7 @@ Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the co
 
 Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you've one or more fields for the Contact entity set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
+If you've one or more fields for the Contact table set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
 
 `Contact creation failed` <br>
 `A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
@@ -59,7 +62,7 @@ Share your portal with internal or external users. Follow the steps mentioned in
 To share the portal with internal users, you must first create a security role and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
-> As a user in Microsoft Dataverse, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Dataverse database.
+> As a user in Microsoft Dataverse, if you do not have appropriate privileges on portal tables, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Dataverse database.
 
 #### Step 1: Create a security role
 
@@ -69,7 +72,7 @@ To share the portal with internal users, you must first create a security role a
 
 3.  In the **New Security Role** window, enter the role name.
 
-4.  Set the privileges for all the entities used in your portal.
+4.  Set the privileges for all the tables used in your portal.
 
 5.  When you have finished configuring the security role, on the toolbar, select **Save and Close**.
 
@@ -90,7 +93,7 @@ For information on security roles and privileges, see [Security roles and privil
 
 ### Share with external users
 
-Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](configure/configure-contacts.md), [Invite contacts to your portals](configure/invite-contacts.md), [Create web roles for portals](configure/create-web-roles.md), [Assign entity permissions](configure/assign-entity-permissions.md).  
+Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](configure/configure-contacts.md), [Invite contacts to your portals](configure/invite-contacts.md), [Create web roles for portals](configure/create-web-roles.md), [Assign table permissions](configure/assign-entity-permissions.md).  
 
 ## Settings
 
@@ -115,10 +118,9 @@ To learn about how to delete a portal completely, go to [Delete a portal](admin/
 
 ## Details
 
-Displays details such as owner of the portal, date, and time when it was created and last modified, and the URL of the portal.
+Displays details such as owner of the portal, date, and time when it was created and last modified, the URL of the portal, and identity provider settings.
 
-> [!div class=mx-imgBorder]
-> ![portal details](media/portal-details.png "Portal details")  
+![portal details](media/portal-details.png "Portal details")  
 
 ## Next steps
 

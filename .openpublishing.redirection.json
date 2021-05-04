@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/user/powerapps-mobile-troubleshoot.md",
+      "redirect_url": "../mobile/powerapps-mobile-troubleshoot",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/add-field-form.md",
+      "redirect_url": "add-move-or-delete-fields-on-form",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/version-9.3.3.x.md",
       "redirect_url": "versions/version-9.3.3.x",
       "redirect_document_id": "false"

@@ -1,8 +1,8 @@
 ---
 title: "CustomAPIResponseProperty table columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes the table columns or entity attributes to set when creating a Custom API Response Property" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes the table columns (entity attributes) to set when creating a Custom API Response Property" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/15/2021
+ms.date: 04/15/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,8 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # CustomAPIResponseProperty Table Columns
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API Action to return any value, but it must return a value if defined as a Function.
 
@@ -31,7 +33,7 @@ If there is only a single **Entity** or **EntityCollection** response property d
 
 For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
-This table includes columns/attributes of the Custom API Response Property table/entity that you can set.
+The table below includes columns (attributes) of the Custom API Response Property table that you can set.
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
@@ -40,7 +42,7 @@ This table includes columns/attributes of the Custom API Response Property table
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for custom API response property  instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name** <br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for custom API response property  instances. For use when the message parameter is exposed to be called in an app.|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the custom api response property can be customized or deleted when part of a managed solution.|
-|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|The logical name of the entity bound to the custom API response property .<br/>**Cannot be changed after it is saved.**|
+|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|The logical name of the table bound to the custom API response property .<br/>**Cannot be changed after it is saved.**|
 |**Name**<br />`Name`<br />`name`|String|The primary name of the custom API response property .  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
 |**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
 |**Type**<br />`Type`<br />``|Picklist|The data type of the custom API response property <ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
@@ -51,11 +53,10 @@ This table includes columns/attributes of the Custom API Response Property table
 
 ### See also
 
-[CustomAPIResponseProperty table/entity reference](reference/entities/customapiresponseproperty.md)<br />
+[CustomAPIResponseProperty table reference](reference/entities/customapiresponseproperty.md)<br />
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

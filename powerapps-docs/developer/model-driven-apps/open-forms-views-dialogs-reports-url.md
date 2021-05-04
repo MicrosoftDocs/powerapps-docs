@@ -72,7 +72,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 |  Parameter   |    Description    |
 |--------------|------------------------------|
 |   **etn**    |  The logical name of the table. **Important:**  Do not use the **etc** (table type code) parameter that contains an integer code for the table. This integer code varies for custom tables in different organizations.  |
-| **extraqs**  |  Optional for forms. This parameter contains encoded parameters within this parameter.<br /><br /> Use this parameter to pass values to a form. For more information, see [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).<br /><br /> When a table has more than one form defined, you can use this parameter to specify which form to open by passing the encoded parameter `formid` with the value equal to the ID value of the form. For example, to open a form with the ID of ‘6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf’, include this value in the `extraqs` parameter: `formid%3D6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf%0D%0A`.     |
+| **extraqs**  |  Optional for forms. This parameter contains encoded parameters within this parameter.<br /><br /> Use this parameter to pass values to a form. For more information, see [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).<br /><br /> When a table has more than one form defined, you can use this parameter to specify which form to open by passing the encoded parameter `formid` with the value equal to the ID value of the form. For example, to open a form with the ID of ‘6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf’, include this value in the `extraqs` parameter: `formid%3D6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf%0D%0A`.     |
 | **pagetype** |  The type of page. There are two possible values:<br /><br /> - **entityrecord**<br />  Displays a record form.<br />- **entitylist**<br /> Displays an  view.  |
 |    **id**    |   Optional for forms. Use this when you open a specific table record. Pass in the encoded GUID identifier for the table. The encoded version of the GUID substitutes opening and closing brackets “{“ and “}” with “%7B” and “%7D”, respectively, for example `{91330924-802A-4B0D-A900-34FD9D790829}` is `%7B91330924-802A-4B0D-A900-34FD9D790829%7D`.|
 |  **viewid**  |   Required for views. This is the ID of the `savedquery` or `userquery` table record that defines the view. The easiest way to get the URL for a view is to copy it. For more information, see [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL).|
@@ -113,7 +113,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/main.aspx?pagetype=entitylist&etn=account&amp;viewid=%7b<GUID value of view id>%7d”  
+Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d”  
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
@@ -129,11 +129,11 @@ A common customization is to enable a user to open a specific dialog process in 
 
 To open a dialog you need the following:  
 
--   The unique identifier for the dialog.  
+- The unique identifier for the dialog.  
 
--   The logical name for the table the dialog is created for.  
+- The logical name for the table the dialog is created for.  
 
--   The unique identifier for the record you want to have the dialog run against.  
+-  The unique identifier for the record you want to have the dialog run against.  
 
 > [!TIP]
 >  To get the unique identifier for the dialog, navigate to **Settings**, in the default solution select **Processes**. Select a process and then in the **Actions** options on the command bar, click **Copy a Link**. This will copy a link to edit the dialog to your clipboard, for example, *[organization url]*`/sfa/workflow/edit.aspx?id=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d`.  
@@ -213,7 +213,7 @@ function getReportURL(action,fileName,id) {
 
 ### See also   
 
- [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)<br/>
+ [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)<br/>
  [Xrm.Navigation.openUrl](./clientapi/reference/xrm-navigation/openurl.md)<br/>
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the ribbon](customize-commands-ribbon.md)<br/>

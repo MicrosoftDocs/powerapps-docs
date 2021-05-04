@@ -77,7 +77,7 @@ You have to be aware of the following conditions and possible exceptions when us
   
 - If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the ID of the record that matched the provided key values, and populate the ID value of the <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> with this value.  
   
-- If you specify an column set that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
+- If you specify a column set that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
   
 ### See also
 

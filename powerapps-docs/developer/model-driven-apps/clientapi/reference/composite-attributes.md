@@ -302,7 +302,7 @@ To access just the **address_line1** control in the **address1_composite** contr
 
 ## Composite columns in mobile clients
 
-The mobile client for model-driven apps use the same form definitions used for the tables that have composite columns but it interprets them differently. If a composite column is found in the form definition, it will show all the columns that are part of the composite column in that section of the form. There is no need for a flyout because all the fields are visible. You can write scripts for the form accessing each of the individual columns just as if they had been individually added to the form.
+The mobile client for model-driven apps use the same form definitions used for the tables that have composite columns but it interprets them differently. If a composite column is found in the form definition, it will show all the columns that are part of the composite column in that section of the form. There is no need for a flyout because all the columns are visible. You can write scripts for the form accessing each of the individual columns just as if they had been individually added to the form.
 However, the actual composite control will not be present in the model-driven apps mobile clients page.
 
 ## Mitigate the differences
