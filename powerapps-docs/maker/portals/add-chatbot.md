@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2021
+ms.date: 05/04/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -26,6 +26,9 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 ## Prerequisites
 
 Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. If you don't have any available bots, you'll have the option in portals to go to Power Virtual Agents to create a bot. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
+
+> [!IMPORTANT]
+> This feature requires starter portal package version [9.2.2103.x](versions/package-version-9.2.2103.md) or later. For more information, see [upgrade considerations](#upgrade-considerations).
 
 ## Add chatbot component
 
@@ -78,7 +81,7 @@ After changing the web template, ensure you select **Sync configuration** to upd
 > [!NOTE]
 > Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
-## Other considerations
+## Upgrade considerations
 
 If your portal template isn't upgraded to add support for chatbot component, you'll see following message when you try to add the component.
 
