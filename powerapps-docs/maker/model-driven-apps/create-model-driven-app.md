@@ -83,8 +83,7 @@ From the **Settings** dialog box you can make app-level changes such as app name
 1. On the **General** tab, select from the following options: 
    - **Name**: The name of the app.
    - **Description**: A description of the app is optional.
-   - **Can be used offline**: Allows the app to be run without a network connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md)
-
+   - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md)
 
 ### See also
 

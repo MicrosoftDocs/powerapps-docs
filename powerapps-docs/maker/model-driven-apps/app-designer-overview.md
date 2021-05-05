@@ -44,8 +44,8 @@ The app designer interface has the following areas:
 
 3. Panes - The left navigation pane consists of the following areas: 
 
-- **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add for each table.
-- **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. 
+- **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
+- **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
 - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
 
 4. Property pane – Displays properties of the selected component, and also allows you to make changes.
