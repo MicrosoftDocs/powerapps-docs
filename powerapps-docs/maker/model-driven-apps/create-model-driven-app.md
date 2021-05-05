@@ -54,7 +54,7 @@ Verify the following prerequisites before you start creating an app:
 
    > [!NOTE]
    > - A subarea won't appear in the app preview until you add a content type to it.
-   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Edit and remove app components](#edit-and-remove-app-components).
+   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Create, add, and remove app components](#create-add-and-remove-app-components).
 
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
