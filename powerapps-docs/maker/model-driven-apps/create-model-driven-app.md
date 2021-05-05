@@ -73,7 +73,7 @@ Create, add, or remove one or more forms or views for a table.
 1. On the **Manage forms** flyout, select the forms you want to add or remove, and then select **Save**. Alternatively, select **New form** to open the form designer to create a new form.
    :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface":::
 
-1. Select **Publish** to make the forms available to users.
+1. Select **Publish** to make the changes available to users.
 
 ## Configure app properties
 
