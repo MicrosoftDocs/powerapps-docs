@@ -53,7 +53,8 @@ Verify the following prerequisites before you start creating an app:
    - **Table**: Account
 
    > [!NOTE]
-   > A subarea won't appear in the app preview until you add a content type to it.
+   > - A subarea won't appear in the app preview until you add a content type to it.
+   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Edit and remove app components](#edit-and-remove-app-components).
 
 1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
 1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
@@ -63,9 +64,28 @@ Verify the following prerequisites before you start creating an app:
 
 To see how the app runs in a full browser window, on the command bar, select **Preview**.
 
-## Add, remove, and edit app components
+## Create, add, and remove app components
 
-By default, all forms, views, and dashboards are included for a table in the app. To remove one or more forms, views, and dashboards, in the left navigation pane select **Pages**, select the component you want, such as **Account form**. On the right properties pane, select **Manage forms** to add or remove one or more forms.
+Create, add, or remove one or more forms or views for a table.
+
+1. On the left navigation pane select **Pages**, and then select the component you want, such as **Account form**. 
+1. On the right properties pane, select **Manage forms**.
+1. On the **Manage forms** flyout, select the forms you want to add or remove, and then select **Save**. Alternatively, select **New form** to open the form designer to create a new form.
+   :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface":::
+
+1. Select **Publish** to make the forms available to users.
+
+## Configure app properties
+
+From the **Settings** dialog box you can make app-level changes such as app name and description.
+
+1. On the command bar select **Settings**.
+1. On the **General** tab, select from the following options: 
+   - **Name**: The name of the app.
+   - **Description**: A description of the app is optional.
+   - **Can be used offline**: Allows the app to be run without a network connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md)
+
 
 ### See also
+
 [Overview of the model-driven app designer](app-designer-overview.md)
