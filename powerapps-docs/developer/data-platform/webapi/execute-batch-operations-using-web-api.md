@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 03/15/2021
+ms.date: 05/04/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Execute batch operations using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they are specified.
   
@@ -638,14 +639,13 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
