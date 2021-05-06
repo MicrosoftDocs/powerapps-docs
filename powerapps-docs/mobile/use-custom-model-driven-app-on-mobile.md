@@ -35,7 +35,7 @@ Legend:
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used rows, access settings, and more.
 2. **Search**: Search for app rows in Microsoft Dataverse.
 3. **New**: Create a new row and quickly enter almost any type of information into the system.
-4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
+4. **Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
 
@@ -71,7 +71,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 2. On the **Recent** rows screen, select the push-pin icon next to a row to add it to your favorites (pinned rows).
 
-3. To view the newly pinned rows, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
+3. To view the newly pinned rows, select **X**, and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
    
    > [!div class="mx-imgBorder"]
@@ -117,6 +117,18 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
    > ![Create a row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
 
 
+## Sort rows
+
+From a list of rows, select the arrow to sort the list in ascending or descending order.
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Sorta rows by ascending or descending order](media/sort-arrow.png "Sorta rows by ascending or descending order")
+
+To sort by a field in the row, select the current **Sort by** order to choose another field.
+
+   > [!div class="mx-imgBorder"]
+   > ![How to sort rows](media/sort-rows.gif "This image demonstrates how to sort rows")
+ 
 ## View commands for a row (Android)
 
 1. From the Home screen, open a row.
