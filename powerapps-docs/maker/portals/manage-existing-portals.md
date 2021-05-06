@@ -124,11 +124,11 @@ Displays details such as owner of the portal, date, and time when it was created
 
 ## Next steps
 
-[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md)
+[Power Apps portals Studio](portal-designer-anatomy.md)
 
 ## See also
 
+[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md) <br>
 [Understand and clear server-side cache in portals](admin/clear-server-side-cache.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

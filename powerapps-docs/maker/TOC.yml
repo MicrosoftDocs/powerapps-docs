@@ -1485,6 +1485,8 @@
           href: ./portals/configure/websites.md
         - name: Configure website bindings
           href: ./portals/configure/website-bindings.md
+        - name: View activities in portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
         - name: Edit portal using portal content editor
@@ -1531,8 +1533,6 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
-        - name: View activities in portal timeline
-          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: View capacity consumption reports
@@ -1712,7 +1712,13 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md          
+            href: ./portals/component-framework-tutorial.md            
+        - name: Use Power Apps CLI (Preview)
+          items:
+          - name: Overview of portals support for Power Apps CLI
+            href: ./portals/power-apps-cli.md
+          - name: "Tutorial: Use Power Apps CLI with portals"
+            href: ./portals/power-apps-cli-tutorial.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
