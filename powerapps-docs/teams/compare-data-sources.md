@@ -42,7 +42,7 @@ Using the answers to the questions above, use the table below to help identify t
 |Package and deploy  |Package and deploy Lists  |Single unmanaged solution per environment  |Unlimited  |
 |Additional capabilities  |Calculations and rollups  | N/A  |Business workflows<br/>Business rules<br/>Calculations and rollups<br/>Mobile offline  |
 
-<sup>1</sup>You can't create or pin lists on mobile.
+<sup>1</sup>You can't create or pin lists on Power Apps mobile.
 
 ### See also
 
