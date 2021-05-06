@@ -127,7 +127,7 @@ From a list of rows, select the arrow to sort the list in ascending or descendin
 To sort by a field in the row, select the current **Sort by** order to choose another field.
 
    > [!div class="mx-imgBorder"]
-   > ![How to sort rows](media/sort-rows.gif "This image demonstrates how to sort rows")
+   > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
 ## View commands for a row (Android)
 
