@@ -5,11 +5,10 @@ author: dileepsinghmicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom:
+ms.custom: intro-internal
 ms.date: 01/14/2021
 ms.author: dileeps
 ms.reviewer:
-ms.custom: intro-internal
 ---
 # Power Apps Community Plan: a free development environment for individual use
 If you want to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:

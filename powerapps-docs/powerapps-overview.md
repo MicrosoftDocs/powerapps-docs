@@ -5,13 +5,12 @@ author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 01/07/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - "Power Apps"
-ms.custom: intro-internal
 ---
 # What is Power Apps?
 

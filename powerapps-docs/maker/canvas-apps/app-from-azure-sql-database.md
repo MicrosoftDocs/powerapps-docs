@@ -77,7 +77,7 @@ You can configure Power Apps access to Azure SQL Database server using the Azure
 
 To configure access using the Azure portal, sign in to the [Azure portal](https://portal.azure.com/), and go to your **SQL Server**. Select **Firewalls and virtual networks** and set the control **Allow Azure services and resources to access this server** to **ON**. Select **Save** to submit changes.
 
-You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current) with IP address **0.0.0.0** to allow Azure services access to your SQL Database server.
+You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database) with IP address **0.0.0.0** to allow Azure services access to your SQL Database server.
 
 ## Limitations
 
