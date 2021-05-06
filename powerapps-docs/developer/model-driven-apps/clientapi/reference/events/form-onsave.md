@@ -66,22 +66,28 @@ In this scenario, since there are multiple async processes and both calls return
 
 App setting is a platform component that allows you to override a setting on an app. 
 
-To enable the Async OnSave event for a specific app, add the below XML in the `customization.xml`  file. This should be added under the existing AppModule node in your `customization.xml` file.
+To enable the Async OnSave event for a specific app, add the below XML in the `customization.xml`  file. This should be added in the existing AppModule node in your `customization.xml` file.
 
 Setting the `<value>true</value>`, enables the Async OnSave event for that specific app. Any form within this app will be able to get access to the Async OnSave functionality.
 
 ```XML
-<AppModule>
  <appsettings>
-    <appsetting uniquename="MyAppName_AsyncOnSave">
-     <value>true</value>
-     <settingdefinitionid>
-     <uniquename>AsyncOnSave</uniquename>
-     </settingdefinitionid>
- </appsetting>
- </AppModule>
+   <appsetting uniquename="MyAppName_AsyncOnSave">
+      <iscustomizable>1</iscustomizable>
+      <settingdefinitionid>
+         <uniquename>AsyncOnSave</uniquename>
+      </settingdefinitionid>
+      <value>true</value>
+   </appsetting>
+</appsettings>
  ```
+You can verify that the configuration has been successfully installed using the following request: 
 
+```http
+GET https://org00000000.crm0.dynamics.com/api/data/v9.2/appsettings?$filter=(uniquename eq 'MyAppName_AsyncOnSave')
+Accept: application/json
+Authorization: Bearer ey...
+```
 ### Related article
 
 [Grid OnSave Event](grid-onsave.md)  
