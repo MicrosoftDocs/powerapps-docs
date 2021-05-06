@@ -8,6 +8,7 @@ ms.custom: canvas
 ms.date: 03/23/2020
 ms.author: alaug
 ms.reviewer: kvivek
+ms.custom: intro-internal
 ---
 # Explore Power Apps for free for 30 days
 

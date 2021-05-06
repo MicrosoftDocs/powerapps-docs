@@ -5,7 +5,7 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom:
+ms.custom: intro-internal
 ms.reviewer: 
 ms.date: 03/21/2021
 ms.author: tapanm

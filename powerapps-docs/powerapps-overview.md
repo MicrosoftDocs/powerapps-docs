@@ -11,6 +11,7 @@ ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - "Power Apps"
+ms.custom: intro-internal
 ---
 # What is Power Apps?
 

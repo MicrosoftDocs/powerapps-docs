@@ -5,7 +5,9 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: tapanm
 ms.date: 04/23/2020
 ms.author: lanced

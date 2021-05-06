@@ -4,7 +4,9 @@ description: In Power Apps, automatically create a canvas app to manage data in 
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 04/26/2021
 ms.author: tapanm

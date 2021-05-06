@@ -4,7 +4,7 @@ description: Learn about the available authentication providers, protocols, and 
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/26/2021
 ms.author: sandhan
 ms.reviewer: tapanm
