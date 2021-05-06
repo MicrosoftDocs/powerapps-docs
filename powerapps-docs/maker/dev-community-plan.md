@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom:
+ms.custom: intro-internal
 ms.date: 01/14/2021
 ms.author: dileeps
 ms.reviewer:
