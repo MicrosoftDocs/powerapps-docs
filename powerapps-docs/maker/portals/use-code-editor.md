@@ -28,6 +28,10 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > [!NOTE]
 > You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 
+## Next steps
+
+[Add Power BI](add-powerbi.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
