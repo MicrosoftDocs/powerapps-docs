@@ -4,9 +4,11 @@ description: In Power Apps, automatically create a canvas app to manage data in 
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
-ms.date: 04/26/2021
+ms.date: 05/06/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -42,17 +44,13 @@ The principles of generating an app won't change even if you create a list that'
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Start from data**, select **SharePoint**.
 
-	![Option to create an app](./media/app-from-sharepoint/start-from-data.png)
-
-1. On the SharePoint tile, select **Phone layout**.
-
-	![Option to create an app](./media/app-from-sharepoint/sharepoint-tile.png)
+    ![Select SharePoint under "Start from data"](./media/app-from-sharepoint/sharepoint.png)
 
 1. With the **Connect directly** option selected, select **Create**.
 
-    ![Create connection](./media/app-from-sharepoint/create-connection.png)
+    ![Create SharePoint connection](./media/app-from-sharepoint/create-connection.png "Create SharePoint connection")
 
 1. Under **Connect to a SharePoint site**, type or paste the URL for your SharePoint Online site, and then select **Go**.
 
@@ -76,11 +74,11 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
 2. In the panel that appears, type a name for your app, and then select **Create**.
 
-    ![Name the app](./media/app-from-sharepoint/app-name.png)
+    ![Name the app](./media/app-from-sharepoint/app-name.png "Name the app")
 
     A new tab appears in your web browser that shows the app that you created based on your SharePoint list. The app appears in Power Apps Studio, where you can customize it.
 
-    ![Default app](./media/app-from-sharepoint/default-app.png)
+    ![Default app](./media/app-from-sharepoint/default-app.png "Default app")
 
 3. (optional) Refresh the browser tab for your SharePoint list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
 

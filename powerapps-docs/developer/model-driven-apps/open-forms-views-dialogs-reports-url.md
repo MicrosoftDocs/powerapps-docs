@@ -113,7 +113,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/main.aspx?pagetype=entitylist&etn=account&amp;viewid=%7b<GUID value of view id>%7d”  
+Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d”  
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
@@ -129,11 +129,11 @@ A common customization is to enable a user to open a specific dialog process in 
 
 To open a dialog you need the following:  
 
--   The unique identifier for the dialog.  
+- The unique identifier for the dialog.  
 
--   The logical name for the table the dialog is created for.  
+- The logical name for the table the dialog is created for.  
 
--   The unique identifier for the record you want to have the dialog run against.  
+-  The unique identifier for the record you want to have the dialog run against.  
 
 > [!TIP]
 >  To get the unique identifier for the dialog, navigate to **Settings**, in the default solution select **Processes**. Select a process and then in the **Actions** options on the command bar, click **Copy a Link**. This will copy a link to edit the dialog to your clipboard, for example, *[organization url]*`/sfa/workflow/edit.aspx?id=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d`.  
