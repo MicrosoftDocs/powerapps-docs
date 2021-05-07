@@ -27,6 +27,10 @@ After you create the web link set:
 
     ![Navigation menu](media/navigation-menu.png "Navigation menu")
 
+## Next steps
+
+[Use code editor](use-code-editor.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
