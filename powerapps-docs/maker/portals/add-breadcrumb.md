@@ -29,6 +29,10 @@ To add breadcrumb component to your portal:
 
 5.  Under **Portal components**, select **Breadcrumb**.
 
+## Next steps
+
+[Add custom menu](add-custom-menu.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
