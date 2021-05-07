@@ -36,7 +36,7 @@ To learn about how to get a dashboard path, and ID of the dashboard tile, refer 
 
 ## Using a dashboard or report connecting to Azure Analysis Services
 
-You can add **powerbiembedded** Liquid tag with a dashboard, or report that connects to [Azure Analysis Services](azure/analysis-services/analysis-services-connect-pbi).
+You can add **powerbiembedded** Liquid tag with a dashboard, or report that connects to [Azure Analysis Services](/azure/analysis-services/analysis-services-connect-pbi).
 
 To add a dashboard or report connecting to Azure Analysis Services, use [CustomData](/dax/customdata-function-dax) parameter in the connection string.
 
@@ -55,7 +55,7 @@ Examples:
 As the **customdata** tag returns a string, it may be necessary to convert this string to an integer in the [DAX query](/dax/dax-queries).
 
 > [!IMPORTANT]
-> Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](azure/analysis-services/analysis-services-gateway).
+> Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](/azure/analysis-services/analysis-services-gateway).
 
 ### Azure Analysis Services and Roles (RLS)
 
