@@ -129,9 +129,9 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
    > [!div class="mx-imgBorder"]
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
-## Access the actions menu for a row
+## Access the actions
 
-From a list view, swipe left on a row to access the actions menu.
+From a list view, swipe left to acess the actions menu for a row.
 
    > [!div class="mx-imgBorder"]
    > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
