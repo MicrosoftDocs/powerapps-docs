@@ -243,11 +243,11 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. In the formula bar, set **Gallery2**'s **Items** property to **Gallery1.Selected.Contacts**.
 
-    ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
+    ![Configure ContactsGallery - Items property](media/function-relate-unrelate/contacts-gallery.png)
 
 1. On the **Properties** tab, set **Layout** to **Image and title**.
 
-    ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery-right.png)
+    ![Configure ContactsGallery - Layout](media/function-relate-unrelate/contacts-gallery-right.png)
 
 1. In **Gallery2**, ensure that the **Label** control is named **Title2**, and then set its **Text** property to **ThisItem.'Full Name'**.
 
