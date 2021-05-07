@@ -72,6 +72,10 @@ To add a form component:
         > [!div class=mx-imgBorder]
         > ![Form properties](media/form-props.png "Form properties")
 
+## Next steps
+
+[Add list](add-list.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
