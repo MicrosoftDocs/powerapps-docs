@@ -119,7 +119,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 ## Sort rows
 
-From a list of rows, select the arrow to sort the list in ascending or descending order.
+From a list view, select the arrow to sort the list in ascending or descending order.
  
    > [!div class="mx-imgBorder"]
    > ![Sorta rows by ascending or descending order](media/sort-arrow.png "Sorta rows by ascending or descending order")
@@ -131,7 +131,7 @@ Select the current **Sort by** field and then select another field to sort by.
  
 ## Access the actions menu for a row
 
-From a list of rows, swipe left on a row to access the actions menu.
+From a list view, swipe left on a row to access the actions menu.
 
    > [!div class="mx-imgBorder"]
    > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
