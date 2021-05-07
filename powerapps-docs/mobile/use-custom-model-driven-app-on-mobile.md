@@ -119,12 +119,12 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 ## Sort rows
 
-From a list view, select the arrow to sort the list in ascending or descending order.
+**Sort in ascending or descending order**: From a list view, select the arrow to sort the list in ascending or descending order.
  
    > [!div class="mx-imgBorder"]
    > ![Sorta rows by ascending or descending order](media/sort-arrow.png "Sorta rows by ascending or descending order")
 
-Select the current **Sort by** field and then select another field to sort by.
+**Sort by field**: Select the current **Sort by** field and then select another field to sort by.
 
    > [!div class="mx-imgBorder"]
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
