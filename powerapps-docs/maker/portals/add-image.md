@@ -54,6 +54,10 @@ To add image component:
     > [!NOTE]
     > You can also select the image on the canvas and drag the handles to resize it.
 
+## Next steps
+
+[Add IFrame](add-iframe.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
