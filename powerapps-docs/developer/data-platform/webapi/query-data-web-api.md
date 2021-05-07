@@ -518,7 +518,9 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
  Use the `$count` system query option with a value of `true` to include a count of entities that match the filter criteria up to 5000.  
   
 > [!NOTE]
-> The count value does not represent the total number of entities in the system. It is limited by the maximum number of entities that  can be returned. More information: [Limits on number of tables returned](#bkmk_limits)
+> The count value does not represent the total number of entities in the system. It is limited by the maximum number of entities that can be returned in a page. More information: [Limits on number of tables returned](#bkmk_limits)
+> 
+To determine whether a count of 5000 is being returned because there are exactly that many matching entities or because the actual count is larger but maxed out at 5000, ask for `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` annotations when you make your `GET` request (for example, by adding header `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"`). This will result in JSON property `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` being included with the returned results. If this property is set to `true`, the count maxed out at 5000; if it is `false`, the returned count is the actual count.
 >
 > If you want to retrieve the total number of records for an entity beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function />.
   
