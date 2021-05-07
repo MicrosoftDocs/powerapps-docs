@@ -129,7 +129,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
    > [!div class="mx-imgBorder"]
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
-## Access the actions
+## Access the actions menu
 
 From a list view, swipe left to acess the actions menu for a row.
 
