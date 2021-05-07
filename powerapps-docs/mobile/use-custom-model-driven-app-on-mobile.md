@@ -124,12 +124,20 @@ From a list of rows, select the arrow to sort the list in ascending or descendin
    > [!div class="mx-imgBorder"]
    > ![Sorta rows by ascending or descending order](media/sort-arrow.png "Sorta rows by ascending or descending order")
 
-To sort by a field in the row, select the current **Sort by** order to choose another field.
+Select the current **Sort by** field and then select another field to sort by.
 
    > [!div class="mx-imgBorder"]
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
-## View commands for a row (Android)
+## Access actions for a row
+
+From a list of rows, swipe left on a row to access actions for the row.
+
+   > [!div class="mx-imgBorder"]
+   > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
+
+ 
+## Access more commands (Android)
 
 1. From the Home screen, open a row.
 2. On the open row, select **More** ![More row commands icon"](media/access_record_commands_icon.png "More row commands icon") to access more commands.
