@@ -63,6 +63,10 @@ To add list component:
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")
 
+## Next steps
+
+[Add breadcrumb](add-breadcrumb.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
