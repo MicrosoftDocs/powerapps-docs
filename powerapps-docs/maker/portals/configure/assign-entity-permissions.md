@@ -1,6 +1,6 @@
 ---
 title: Configure security using table permissions
-description: Learn how to add an table permission and assign web roles to it.
+description: Learn how to add a table permission and assign web roles to it.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -31,7 +31,7 @@ To secure these features, table permissions allow for granular rights to be gran
 
 4. Select **Add Existing Table Permission** to add an existing table permission to a web role. 
 
-4. Browse for an table permission or select **New Table Permission** to create a new Table Permission record.
+4. Browse for a table permission or select **New Table Permission** to create a new Table Permission record.
 
     ![Add table permissions to a web role](../media/add-entity-permission-web-role.png "Add table permissions to a web role")  
 
@@ -42,13 +42,13 @@ When creating a new Table Permission record, the first step is to determine the 
 
 ### Global access type
 
-If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via an basic form that they don't have access to, they'll receive a permission error.
+If a Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via a basic form that they don't have access to, they'll receive a permission error.
 
 ### Contact access type
 
 With Contact access type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's contact record via a defined relationship.
 
-On an list, this access type means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
+On a list, this access type means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
 
 Basic forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define basic forms](entity-forms.md).  
 
@@ -56,7 +56,7 @@ Basic forms will only allow the appropriate permission for Read, Create, Write, 
 
 With Account Access Type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's parent account record via a defined relationship.
 
-This access type means that the list will only show the records of the selected table that are associated to the user's parent account. For example, if an table permission allows Read access to Lead table with the Account access type, the user having this permission can view all the leads of only the parent account of the user.
+This access type means that the list will only show the records of the selected table that are associated to the user's parent account. For example, if a table permission allows Read access to Lead table with the Account access type, the user having this permission can view all the leads of only the parent account of the user.
 
 ### Self access type
 
@@ -64,7 +64,7 @@ Self Access Type allows you to define the rights a user has to their own Contact
 
 ### Parental access type
 
-In this most complex case, permissions are granted for a table that is a relationship away from a table for which an Table Permission record has already been defined. This permission is actually a child record of the parent table permission.
+In this most complex case, permissions are granted for a table that is a relationship away from a table for which a Table Permission record has already been defined. This permission is actually a child record of the parent table permission.
 
 The Parent Permission record defines a permission and access type for a table (probably Global or Contact access type, although Parent is also possible). That table might be related to a Contact (if there's Contact access type) or globally defined. With that permission in place, a child permission is created that defines a relationship from another table to the table defined in the parent relationship.
 
@@ -92,7 +92,7 @@ The following table explains the table permission attributes.
 
 ## Global permissions for tasks related to leads
 
-In one scenario, we might want to use an list and basic forms to surface all leads on the portal to anyone in a custom Lead Manager web role. On the Lead Edit Form, which is launched whenever a lead row is selected on the list, a subgrid will display related Task records. These records should be accessible to anyone in the Lead Manager role. As the first step, we'll give Global permissions to leads to anyone in our Lead Manager Role.
+In one scenario, we might want to use a list and basic forms to surface all leads on the portal to anyone in a custom Lead Manager web role. On the Lead Edit Form, which is launched whenever a lead row is selected on the list, a subgrid will display related Task records. These records should be accessible to anyone in the Lead Manager role. As the first step, we'll give Global permissions to leads to anyone in our Lead Manager Role.
 
 This role has a related Table Permission for the Lead table, with a Global access type.
 
@@ -126,7 +126,7 @@ In order for your list to respect these permissions:
 
 Also, if you want to enable Read or Create permissions for tasks, you'll need to configure those basic forms too, and edit the forms to remove the Regarding lookup field.  
 
-This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on an basic form.
+This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on a list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on a basic form.
 
 ![Task example](../media/tasks-example.png "Task example")  
 
