@@ -49,7 +49,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
-![Site map screen](media/site_map_iphone.png "Site map screen")
+![Site map and navigation](media/site_map_iphone.png "Site map and navigation")
 
 Legend
 
@@ -114,7 +114,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
+   > ![Save and create another row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
 
 
 ## Sort rows
