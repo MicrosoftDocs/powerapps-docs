@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.component: canvas
-ms.date: 08/27/2019
+ms.date: 05/06/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -28,7 +28,7 @@ Any property or calculated value in Power Apps can be *blank*.  For example, a B
 In the context of the **IsEmpty** function, *empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table. A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
 
 > [!NOTE]
-> We are in a period of transition.  Until now, *blank* has also been used to report errors, making it impossible to differentiate a valid "no value" from an error.  For this reason, at this time, storing *blank* values is supported only for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the proper separation of *blank* values from errors.
+> We are in a period of transition.  Until now, *blank* has also been used to report errors, making it impossible to differentiate a valid "no value" from an error.  For this reason, at this time, storing *blank* values is supported only for local collections.  You can store *blank* values in other data sources if you turn on the **Formula-level error management** experimental feature under the **File** > **Settings** > **Upcoming features** > **Experimental**.  We are actively working to finish this feature and complete the proper separation of *blank* values from errors.
 
 ## Description
 The **Blank** function returns a *blank* value. Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
@@ -61,7 +61,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ## Examples
 ### Blank
 > [!NOTE]
-> At this time, the following example only works for local collections.  You can store *blank* values in other data sources if you turn on the "Formula-level error management" experimental feature under the File menu, App settings, Advanced settings, Experimental features.  We are actively working to finish this feature and complete the separation of *blank* values from errors.
+> At this time, the following example only works for local collections.  You can store *blank* values in other data sources if you turn on the **Formula-level error management** experimental feature under the **File** > **Settings** > **Upcoming features** > **Experimental**.  We are actively working to finish this feature and complete the separation of *blank* values from errors.
 
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
