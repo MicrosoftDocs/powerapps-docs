@@ -129,9 +129,9 @@ Select the current **Sort by** field and then select another field to sort by.
    > [!div class="mx-imgBorder"]
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
-## Access actions for a row
+## Access the actions menu for a row
 
-From a list of rows, swipe left on a row to access actions for the row.
+From a list of rows, swipe left on a row to access the actions menu.
 
    > [!div class="mx-imgBorder"]
    > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
