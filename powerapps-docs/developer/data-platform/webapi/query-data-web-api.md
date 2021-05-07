@@ -424,7 +424,7 @@ OData-Version: 4.0
 ### Filter results based on values of collection-valued navigation properties
 
 > [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-tables).
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 
