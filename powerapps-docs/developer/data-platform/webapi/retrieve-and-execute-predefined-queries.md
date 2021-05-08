@@ -24,9 +24,32 @@ search.app:
 
 # Retrieve and execute predefined queries
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+
+> [!NOTE]
+> Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with null values. When the value is `null`, the property will not be included in the results.
+
+When a query is returned using OData syntax, a record will include a property with a `null` value like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountnumber": null,
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
+When retrieved using a pre-defined query or with FetchXml, the same record will not include the `accountnumber` property because it is `null`, like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
 
 <a name="bkmk_predefinedQueries"></a>
 
