@@ -27,7 +27,7 @@ search.app:
 Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 > [!NOTE]
-> Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with null values. When the value is `null`, the property will not be included in the results.
+> Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with `null` values. When the value is `null`, the property will not be included in the results.
 
 When a query is returned using OData syntax, a record will include a property with a `null` value like so:
 
