@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/10/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -22,7 +22,7 @@ As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-p
 
 ## Step 1. Create a Facebook app
 
-To use **Facebook** as an identity provider, you need to [create an app in Facebook](https://developers.facebook.com) with a redirect URL.
+To use **Facebook** as an identity provider, you need to [create an app in Facebook](https://developers.facebook.com) with a redirect URL. For detailed steps about creating an app in Facebook, refer to [Facebook for Developers: Create an app](https://developers.facebook.com/docs/development/create-an-app).
 
 > [!NOTE]
 > The Reply URL is used by the Facebook app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​
@@ -30,18 +30,16 @@ To use **Facebook** as an identity provider, you need to [create an app in Faceb
 **To create an app in Facebook**
 
 1. Open [Facebook Developers App Dashboard](https://developers.facebook.com/apps).
-2. Select **Add a New App**.
-3. Select **Website**.
-4. Select **Skip and Create App ID**.
-    - Enter a **Display Name**.
-    - Select a **Category**.
-    - Select **Create App ID**.
-
-5. While on the dashboard for the new app, go to **Settings** &gt; **Basic** tab and add the following details:
-    - App Domains (optional). For example, `contoso.powerappsportals.com`.  
-    - Contact Email: *&lt;email address of your choice&gt;* 
-    - Select **Add Platform**, and then select **Website**. 
-    - Site URL: `https://contoso.powerappsportals.com/` or `https://contoso.powerappsportals.com/signin-facebook`
+1. Select products, permissions, and features, such as **Business**.
+1. Select **Continue**.
+1. Enter **App Display Name**.
+1. Select **App Purpose**.
+1. Select **Create App**.
+1. While on the dashboard for the new app, go to **Settings** &gt; **Basic** tab and add the following details:
+    - **App Domains** (optional). For example, `contoso.powerappsportals.com`.
+    -  **Privacy Policy URL**: URL for your privacy policy, must be accessible anonymously.
+    - **Contact Email**: *&lt;email address of your choice&gt;*
+    - Select **Add Platform**, and then select **Website** with **Site URL**: `https://contoso.powerappsportals.com/` or `https://contoso.powerappsportals.com/signin-facebook`
 
 6. Select **Save Changes**.
 7. Go to **Status & Review** &gt; **Status** tab.
