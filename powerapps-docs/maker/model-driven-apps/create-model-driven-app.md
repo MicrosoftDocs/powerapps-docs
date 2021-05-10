@@ -69,7 +69,7 @@ To see how the app runs in a full browser window, on the command bar, select **P
 By default, a model-driven app's navigation or site map is created that includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map. 
 
 In a model-driven app, there are the following app runtime navigation components. 
-1. Areas. Displayed in the lower left navigation pane as a switch control. 
+1. Areas. For apps with more than one area, a switch control is displayed in the lower left navigation pane. 
 1. Groups. Group names appear as a label in an app with the subarea names within the group listed under it.
 1. Subareas. Subareas and pages appear under the group that they're configured under in the app designer.
 
