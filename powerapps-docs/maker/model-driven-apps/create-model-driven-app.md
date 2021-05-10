@@ -87,10 +87,10 @@ In a model-driven app, there are the three main app runtime navigation component
    - For subareas:
       - **Title**: Enter a title used to describe the group.
       - **ID**: The system generates an identifier for the subarea. Except the system generated ID or enter a new one.
-      - **Content type**: Select either Table or Dashboard.
+      - **Content type**: Select either **Table** or **Dashboard**.
       - **Table** or **Dashboard**: Depending on the content type you selected, select a table or dashboard from the list.
-1. To save your app navigation changes select Save.
-1. To publish the changes to make them available to users, select Publish.
+1. To save your app navigation changes select **Save**.
+1. To publish the changes to make them available to users, select **Publish**.
 
 ### Remove a group or subarea
 
