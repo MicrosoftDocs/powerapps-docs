@@ -66,7 +66,7 @@ To see how the app runs in a full browser window, on the command bar, select **P
 
 ## App navigation
 
-By default, a model-driven app's navigation (or sitemap) is created that includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map. 
+By default, a new model-driven app's navigation (or sitemap) is created that includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map. 
 
 In a model-driven app, there are the three main app runtime navigation components.
 
@@ -81,6 +81,16 @@ In a model-driven app, there are the three main app runtime navigation component
 1. On the left navigation pane, select **Navigation**.
 1. Select **Add**, and then select **Group** or **Subarea**.
 1. Complete the properties pane for the group or subarea.
+   - For groups:
+      - **Title**: Enter a title used to describe the group.
+      - **ID**: The system generates an identifier for the group. Except the system generated ID or enter a new one.
+   - For subareas:
+      - **Title**: Enter a title used to describe the group.
+      - **ID**: The system generates an identifier for the subarea. Except the system generated ID or enter a new one.
+      - **Content type**: Select either Table or Dashboard.
+      - **Table** or **Dashboard**: Depending on the content type you selected, select a table or dashboard from the list.
+1. To save your app navigation changes select Save.
+1. To publish the changes to make them available to users, select Publish.
 
 ### Remove a group or subarea
 
@@ -107,9 +117,6 @@ Create, add, or remove one or more forms or views for a table.
    :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface":::
 
 1. Select **Publish** to make the changes available to users.
-
-
-
 
 ## Configure app properties
 
