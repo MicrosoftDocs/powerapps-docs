@@ -72,7 +72,7 @@ In a model-driven app, there are the three main app runtime navigation component
 
 1. Areas. For apps with more than one area, a switch control is displayed in the lower left navigation pane. In the screenshot below, the current area is named *Accounts*.
 1. Groups. Group names appear as a navigation element in an app with the subarea names within the group listed beneath it. In the screenshot below, one group is named *Accounts* and one is named *New Group*.
-1. Subareas. Subareas and pages appear under the group that they're configured under in the app designer. In the screenshot below, one subarea is named *All accounts revenue* and another subarea is named *Contacts*.
+1. Subareas. Subareas and pages appear under the group that they're configured within in the app designer. In the screenshot below, one subarea is named *All accounts revenue* and another subarea is named *Contacts*.
 
    :::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map":::
 
