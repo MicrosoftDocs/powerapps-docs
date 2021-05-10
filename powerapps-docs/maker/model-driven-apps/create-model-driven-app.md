@@ -64,6 +64,23 @@ Verify the following prerequisites before you start creating an app:
 
 To see how the app runs in a full browser window, on the command bar, select **Preview**.
 
+## App navigation
+
+By default, a model-driven app's navigation or site map is created that includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map. 
+
+In a model-driven app, there are the following app runtime navigation components. 
+1. Areas. Displayed in the lower left navigation pane as a switch control. 
+1. Groups. Group names appear as a label in an app with the subarea names within the group listed under it.
+1. Subareas. Subareas and pages appear under the group that they're configured under in the app designer.
+
+:::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map":::
+
+### Create and remove groups and subareas
+
+1. On the left navigation pane, select **Navigation**.
+1. Select **Add**, and then select **Group** or **Subarea**.
+1. 
+
 ## Create and remove pages
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
@@ -84,6 +101,9 @@ Create, add, or remove one or more forms or views for a table.
    :::image type="content" source="media/app-design-manage-forms.png" alt-text="Manage forms interface":::
 
 1. Select **Publish** to make the changes available to users.
+
+
+
 
 ## Configure app properties
 
