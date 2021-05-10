@@ -64,7 +64,17 @@ Verify the following prerequisites before you start creating an app:
 
 To see how the app runs in a full browser window, on the command bar, select **Preview**.
 
-## Create, add, and remove app components
+## Create and remove pages
+
+App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
+
+To create a page, select **New page**, select the page type of either **Table based view and form** or **Dashboard**, and then select **Next**. Select the components you want and then select **Add**.
+
+To remove a page, select a page, select **...**, and then select **Remove**.
+
+To remove a component from a page, expand a page, select the component, such as a form, view, or dashboard, select **...**, and then select **Remove**.
+
+## Create, add, and remove forms, views, or dashboards
 
 Create, add, or remove one or more forms or views for a table.
 
