@@ -33,20 +33,20 @@ The app designer interface has the following areas:
 
 1. Command bar – Displays available actions:
 
-- **New page**. Create a new page for one or more table forms and views or table dashboards for the app.
-- **Settings**. Opens the app properties such as name, description, and whether the app can be used offline.
-- **Switch to classic**. Opens the app in the classic app designer.
-- **Save**. Saves the app.
-- **Publish**. Makes the app available to users in the environment.
-- **Preview**. Opens a new tab to view the app at run time in a full browser window.
+   - **New page**. Create a new page for one or more table forms and views or table dashboards for the app.
+   - **Settings**. Opens the app properties such as name, description, and whether the app can be used offline.
+   - **Switch to classic**. Opens the app in the classic app designer.
+   - **Save**. Saves the app.
+   - **Publish**. Makes the app available to users in the environment.
+   - **Preview**. Opens a new tab to view the app at run time in a full browser window.
 
 2. App preview – Displays a real-time preview of the form as it will appear to users when published.
 
 3. Panes - The left navigation pane consists of the following areas: 
 
-- **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
-- **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
-- **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
+   - **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
+   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
+   - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
 
 4. Property pane – Displays properties of the selected component, and also allows you to make changes.
 
