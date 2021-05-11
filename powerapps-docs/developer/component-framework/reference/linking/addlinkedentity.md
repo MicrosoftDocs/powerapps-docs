@@ -1,6 +1,6 @@
 ---
-title: addLinkedEtity | Microsoft Docs
-description: 
+title: addLinkedEntity | Microsoft Docs
+description: Adds a new linked table relationship with the existing query primary table.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -37,3 +37,5 @@ Model-driven apps
 [Linking](../linking.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

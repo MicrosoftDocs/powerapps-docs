@@ -1,13 +1,17 @@
 ---
-title: "Configure the OpenID Connect provider for Power Apps portals.  | MicrosoftDocs"
-description: "Learn how to configure the OpenID Connect provider for Power Apps portals."
+title: Configure an OpenID Connect provider for portals
+description: Learn how to configure the OpenID Connect provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure an OpenID Connect provider for portals
@@ -107,3 +111,6 @@ To edit a configured OpenID Connect provider, see [Edit a provider](use-simplifi
 
 [Configure an OpenID Connect provider for portals with Azure AD](configure-openid-settings.md)  
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

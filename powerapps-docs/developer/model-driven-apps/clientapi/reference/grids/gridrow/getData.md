@@ -1,6 +1,7 @@
 ---
 title: "getData (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getData method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -38,3 +39,6 @@ Read-only and editable grids
 
 To get the `gridRow` object, see [GridRow](../gridrow.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

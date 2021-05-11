@@ -179,3 +179,6 @@ negotiate better rates. We'll note this in our project plan.
 
 > [!div class="nextstepaction"]
 > [Next step: What are the business rules?](decisions-approvals.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

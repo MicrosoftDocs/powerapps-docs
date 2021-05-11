@@ -1,6 +1,6 @@
 ---
 title: PopupService | Microsoft Docs
-description: 
+description: Provides properties and methods to create and manage popups.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -38,3 +38,5 @@ Model-driven apps and canvas apps (public preview)
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

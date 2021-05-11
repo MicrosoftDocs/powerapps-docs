@@ -1,13 +1,17 @@
 ---
-title: "Configure Facebook as the identity provider for Power Apps portals. | MicrosoftDocs"
-description: "Learn how to configure Facebook as the identity provider for Power Apps portals."
+title: Configure the Facebook provider for portals
+description: Learn how to configure Facebook as the identity provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the Facebook provider for portals
@@ -53,3 +57,6 @@ After you've created the app in Facebook, configure the site settings for the pr
 ## (Optional) Step 3. Additional settings
 
 To configure **Additional settings** for the Facebook provider, see [Configure additional settings for OAuth 2.0 providers](configure-oauth2-settings.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

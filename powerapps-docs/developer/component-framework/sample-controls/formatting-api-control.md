@@ -1,6 +1,6 @@
 ---
 title: Formatting API component | Microsoft Docs
-description: 
+description: This sample component explores the various methods available as part of the Power Apps component framework formatting API.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -16,6 +16,8 @@ ms.assetid: 3b875f06-0fd9-49fa-bc34-939d00e17185
 # Implementing formatting API component
 
 This sample component explores the various methods available as part of the Power Apps component framework formatting API. In this sample, you create a series of input elements which calls into the respective methods of the formatting API that matches with the value displayed. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_FormattingAPI).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Formatting API component](../media/formatting-api.png "Formatting API component")
@@ -288,3 +290,6 @@ export class FormattingAPI
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

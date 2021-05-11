@@ -87,3 +87,6 @@ Hence, the relationship between employees and vendors is many-to-many.
 
 > [!div class="nextstepaction"]
 > [Next step: Determine which type of app to make](app-type.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

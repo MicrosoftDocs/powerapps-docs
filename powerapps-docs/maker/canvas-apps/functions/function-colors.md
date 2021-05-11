@@ -218,3 +218,6 @@ If you specify a **Color** enumeration value or you build a **ColorValue** formu
 | **Color.WhiteSmoke** |**ColorValue( "#f5f5f5"&nbsp;)**<br>**ColorValue( "whitesmoke"&nbsp;)** |**RGBA(&nbsp;245,&nbsp;245,&nbsp;245,&nbsp;1&nbsp;)** |![whitesmoke](./media/function-colors/color-whitesmoke.png) |
 | **Color.Yellow** |**ColorValue( "#ffff00"&nbsp;)**<br>**ColorValue( "Yellow"&nbsp;)** |**RGBA(&nbsp;255,&nbsp;255,&nbsp;0,&nbsp;1&nbsp;)** |![yellow](./media/function-colors/color-yellow.png) |
 | **Color.YellowGreen** |**ColorValue( "#9acd32"&nbsp;)**<br>**ColorValue( "YELLOWGREEN"&nbsp;)** |**RGBA(&nbsp;154,&nbsp;205,&nbsp;50,&nbsp;1&nbsp;)** |![yellowgreen](./media/function-colors/color-yellowgreen.png) |
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

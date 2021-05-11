@@ -1,6 +1,7 @@
 ---
 title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/26/2020
+description: Includes description and supported parameters for the setVisible method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -43,3 +44,6 @@ Another way to hide a tab is to hide all the sections within it. If all the sect
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

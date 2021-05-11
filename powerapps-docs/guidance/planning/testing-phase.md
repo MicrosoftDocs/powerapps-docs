@@ -121,7 +121,10 @@ repository](https://github.com/Microsoft/EasyRepro).
 ### Solution checker
 
 The solution checker is a tool that checks whether the solution you've created is healthy. You
-can quickly review issues and see recommended fixes. More information: [Use solution checker to validate your model-driven apps in Power Apps](../../maker/common-data-service/use-powerapps-checker.md)
+can quickly review issues and see recommended fixes. More information: [Use solution checker to validate your model-driven apps in Power Apps](../../maker/data-platform/use-powerapps-checker.md)
 
 > [!div class="nextstepaction"]
 > [Next step: Publish and share the app](discoverability.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

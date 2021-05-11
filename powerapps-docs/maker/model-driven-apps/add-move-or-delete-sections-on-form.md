@@ -110,7 +110,7 @@ You can move sections using drag and drop or cut and paste actions.
     >   - You can't delete a section that contains a column that is required or locked. 
     >   - You can't delete a section that is locked. 
     >   - A tab needs to have at least one section in each tab column. If you delete the last remaining section in a tab column a new section will be automatically added.
-    >   - In the Unified Interface, sections won't be rendered if you have selected to hide them including the title and the border.  This is different than the legacy web client, and is by design to ensure proper rendering of the form across differing view ports from extra wide to narrow.
+    >   - In Unified Interface, sections won't be rendered if you have selected to hide them including the title and the border.  This is different than the legacy web client, and is by design to ensure proper rendering of the form across differing view ports from extra wide to narrow.
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
@@ -123,4 +123,7 @@ You can move sections using drag and drop or cut and paste actions.
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

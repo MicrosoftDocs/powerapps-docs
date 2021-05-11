@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2016
+ms.date: 04/28/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -18,6 +18,9 @@ search.app:
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 
 Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
+
+> [!NOTE] 
+> Newly created SQL data sources are no longer prefixed with "[dbo]" as they have been in previous versions of Power Apps. See the [common issues and resolutions](../common-issues-and-resolutions.md) page for more information.
 
 ## Prerequisites
 
@@ -31,9 +34,6 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
     
     If you don't have this information, ask the administrator of the database that you want to use.
 * For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
-  
-    > [!NOTE]
-  > Gateways and on-premises connections can only be created and used in the user's [default environment](../working-with-environments.md).
 
 ## Generate an app automatically
 1. In Power Apps Studio, click or tap **New** on the **File** menu (along the left edge).
@@ -48,7 +48,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure.png)
+       ![Server details](./media/connection-azure-sqldatabase/connect-azure.png "Server details")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
        ![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
@@ -71,10 +71,10 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
+       ![Connect directly (cloud services)](./media/connection-azure-sqldatabase/connect-azure-portal.png "Connect directly (cloud services)")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
+       ![Connect using on-premises data gateway](./media/connection-azure-sqldatabase/connect-onprem-portal.png "Connect using on-premises data gateway")
      
        > [!NOTE]
      > If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
@@ -92,7 +92,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
+       ![Connect to a database in Azure - cloud services](./media/connection-azure-sqldatabase/connect-azure-fromblank.png "Connect to a database in Azure - cloud services")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
        ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
@@ -232,3 +232,6 @@ Result of the stored procedure execution.
 |ResultSets|object|No | Result sets|
 
 -->
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

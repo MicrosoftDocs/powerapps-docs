@@ -17,16 +17,16 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# User guide for model-driven apps running on the Power Apps mobile app
+# User guide for model-driven apps running on Power Apps mobile
 
-Use the Power Apps mobile app to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run model-driven apps and canvas apps on Power Apps mobile](run-powerapps-on-mobile.md).
+Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run model-driven apps and canvas apps on Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
-> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
+> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 
 ## Home screen 
 
-It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements on the Home screen. 
+It's easy to get around in Power Apps mobile. The following illustration shows the primary navigation elements on the Home screen. 
 
 ![Navigation controls, expanded view](media/home_screen_iphone.png "Navigation controls, expanded view")
 
@@ -35,7 +35,7 @@ Legend:
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used rows, access settings, and more.
 2. **Search**: Search for app rows in Microsoft Dataverse.
 3. **New**: Create a new row and quickly enter almost any type of information into the system.
-4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
+4. **Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
 
@@ -49,7 +49,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
-![Site map screen](media/site_map_iphone.png "Site map screen")
+![Site map and navigation](media/site_map_iphone.png "Site map and navigation")
 
 Legend
 
@@ -59,8 +59,8 @@ Legend
 4. **Recent rows**: View a list of rows you were recently using. 
 5. **Pinned rows**: View and open your favorite (pinned) rows. 
 6. **Table navigator**: This area lists the table available in the app.
-7. **Help**: Access help content for more information about how to use the Power Apps mobile app.
-8. **Offline status**: Work with your data in offline mode, even when you don't have internet access. More information: [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode)
+7. **Help**: Access help content for more information about how to use Power Apps mobile.
+8. **Offline status**: Work with your data in offline mode, even when you don't have internet access. More information: [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode)
 9. **Settings**: Access settings.
 
 ## Pin favorite rows
@@ -71,7 +71,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 2. On the **Recent** rows screen, select the push-pin icon next to a row to add it to your favorites (pinned rows).
 
-3. To view the newly pinned rows, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
+3. To view the newly pinned rows, select **X**, and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
    
    > [!div class="mx-imgBorder"]
@@ -114,10 +114,30 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
+   > ![Save and create another row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
 
 
-## View commands for a row (Android)
+## Sort rows
+
+**Sort in ascending or descending order**: From a list view, select the arrow to sort the list in ascending or descending order.
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Sorta rows by ascending or descending order](media/sort-arrow.png "Sorta rows by ascending or descending order")
+
+**Sort by field**: Select the current **Sort by** field and then select another field to sort by.
+
+   > [!div class="mx-imgBorder"]
+   > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
+ 
+## Access the actions menu
+
+From a list view, swipe left to acess the actions menu for a row.
+
+   > [!div class="mx-imgBorder"]
+   > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
+
+ 
+## Access more commands (Android)
 
 1. From the Home screen, open a row.
 2. On the open row, select **More** ![More row commands icon"](media/access_record_commands_icon.png "More row commands icon") to access more commands.
@@ -150,3 +170,6 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 ## Sign out
 
 From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select the profile icon ![Profile icon](media/profile_icon.png "Site map icon"), and then select **Sign out**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

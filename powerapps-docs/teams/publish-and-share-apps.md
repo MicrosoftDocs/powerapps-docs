@@ -1,16 +1,16 @@
 ---
-title: Publish and share your app using Power Apps app in Teams | Microsoft Docs
+title: Publish your app using Power Apps app in Teams | Microsoft Docs
 description: Learn how to publish and share your apps using Power Apps app in Teams.
 author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 04/07/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
 
-# Publish and share your app in Teams
+# Publish your app in Teams
 
 In this article, learn about how you can publish and add apps to Microsoft Teams team.
 
@@ -46,13 +46,10 @@ Moving an app to another Teams channel in the same team requires publishing the 
 - To publish an app to the new channel: Follow the steps to [publish and add an app to Teams](#publish-and-add-an-app-to-teams). But before you select **Save + close**, select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab") for the new channel you want. And then, select **Save + close** to publish the app to the new channel.
 - To remove the app from a channel: Follow the steps to [remove an app](remove-your-apps.md).
 
-## Share an app
-
-You can't share apps or data outside of a team currently. This capability is coming soon as a new **Share with your colleagues** experience.
-
-![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
-
 ### See also
 
-[Use sample apps from Teams store](use-sample-apps-from-teams-store.md)  
-[Manage your apps](manage-your-apps.md)
+[Set permission and share apps with colleagues](set-perms-and-share.md)
+
+[Manage your apps in Teams](manage-your-apps.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

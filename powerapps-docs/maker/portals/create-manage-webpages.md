@@ -1,13 +1,16 @@
 ---
-title: Create and manage webpages | Microsoft Docs
+title: Create and manage webpages
 description: Instructions to create and manage webpages in portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create and manage webpages
@@ -48,7 +51,7 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 > [!div class=mx-imgBorder]
 > ![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
@@ -77,8 +80,6 @@ If you are working with a portal created in an environment containing customer e
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
 
-    - **Set as home page**: Set the page as the home page. The URL of the new home page is set to the root of the website and URL of the old page is updated accordingly.
-
     - **Move up**: Move the page up in hierarchy.
 
     - **Move down**: Move the page down in hierarchy.
@@ -95,3 +96,14 @@ If you are working with a portal created in an environment containing customer e
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
+## Next steps
+
+[Customize webpages](compose-page.md)
+
+### See also
+
+[Work with templates](work-with-templates.md) <br>
+[Work with themes](theme-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -38,3 +38,6 @@ The app is now removed from your Teams channel.
 
 [Uninstall the Power Apps personal app](uninstall-personal-apps.md)  
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

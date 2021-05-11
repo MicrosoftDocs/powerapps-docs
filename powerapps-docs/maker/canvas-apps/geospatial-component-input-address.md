@@ -2,12 +2,12 @@
 title: Enter and resolve address in maps
 description: Use the address input component in your apps to let users search for and find addresses.
 author: iaanw
-manager: shellha
+manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 7/7/2020
+ms.date: 1/19/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Address input component (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Address input component 
 
 Entering addresses can be frustrating and error-prone, particularly in mobile scenarios. 
 
@@ -25,7 +23,7 @@ The address input component lets you see dynamic address suggestions as you type
 
 The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) in addition to [enabling geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
 
@@ -41,11 +39,8 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to bias results by the user's current location.
 
-    ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
-
-You can modify the component by using a number of [properties](#input-properties).
+You can modify the component by using many [properties](#input-properties).
 
 ### Set a default search radius
 
@@ -63,13 +58,13 @@ You can save addresses that a user inputs into the address component as a data c
 
 1. App the map component and the input address component to your app.
 2. On the **Insert** menu, select **Button** and move it into your app.
-3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following:
+3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following code:
 
     ```json
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 
-    This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
+    This code causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
 
     ![Screenshot of the button on the app](./media/geospatial/input-code.png)
 
@@ -114,7 +109,7 @@ The following table lists the output properties available.
 | SelectedLongitude | Longitude of the user-selected address in the input field. |
 | SearchResultJson | The search result (based on the UserInput property), displayed as a string in JSON format. |
 | FreeformAddress | Selected address from the list of suggested addresses. |
-| LocalName | An address component which represents the name of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. |
+| LocalName | An address component which represents the name of a geographic area or locality that groups multiple addressable objects for addressing purposes, without being an administrative unit. |
 | PostalCode | Postal code. |
 | ExtendedPostalCode | Extended Postal Code. |
 | CountryCode | Country code. |
@@ -215,3 +210,6 @@ The following table lists the output properties available.
 ## Other geospatial components
 
 To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
