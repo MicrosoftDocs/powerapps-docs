@@ -130,6 +130,8 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
    > ![How to sort rows](media/sort-rows-1.gif "This image demonstrates how to sort rows")
  
 ## Access the actions menu
+>[!IMPORTANT]
+> When accessed within the Power Apps mobile app, the Flow action menu does not support [Power Automate flows](https://docs.microsoft.com/power-automate/overview-cloud) created in a solution. 
 
 From a list view, swipe left to acess the actions menu for a row.
 
