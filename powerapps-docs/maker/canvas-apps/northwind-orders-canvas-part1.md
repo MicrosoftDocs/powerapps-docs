@@ -84,7 +84,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 
     > [!div class="mx-imgBorder"]
-    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
+    > ![Select a data source in gallery](media/northwind-orders-canvas-part1/orders-02.png)
 
 1. We could connect it directly to **Orders** here, but instead we'd like to control the sort order of the gallery.  Ignore the fly out dialog and in the formula bar set the gallery's **Items** property to this formula:
 
@@ -95,7 +95,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     The [**Sort**](functions/function-sort.md) function orders the list so that the newest order (which has the highest order number) appears first.
 
     > [!div class="mx-imgBorder"]
-    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02b.png)
+    > ![Sort orders in the gallery](media/northwind-orders-canvas-part1/orders-02b.png)
 
 1. After a few moments the Result View will appear below the formula bar.  Pull down on the arrow at the left to see the result of our formula.  Scroll to the right to see the **Order Number** column and ensure it is sorted the way want (highest to lowest).  
 
@@ -117,7 +117,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 1. Select **Edit** (next to **Fields**) in the **Properties** tab near the right edge.
 
     > [!div class="mx-imgBorder"]
-    > ![Select a layout](media/northwind-orders-canvas-part1/orders-04b.png)
+    > ![Select edit to update fields](media/northwind-orders-canvas-part1/orders-04b.png)
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
@@ -232,7 +232,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 1. On the **Insert** tab, select **Label** to add another label:
 
     > [!div class="mx-imgBorder"]
-    > ![Add a label](media/northwind-orders-canvas-part1/aggregate-02.png)
+    > ![Add another label](media/northwind-orders-canvas-part1/aggregate-02.png)
 
 1. Move the new label so that it appears under the status label:
 

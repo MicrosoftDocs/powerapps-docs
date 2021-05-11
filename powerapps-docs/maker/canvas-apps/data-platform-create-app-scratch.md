@@ -106,7 +106,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     The screen reflects your changes.
 
-    ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/field-list.png)
+    ![Screen after the changes](./media/data-platform-create-app-scratch/field-list.png)
 
 1. Rename this screen **FormScreen**.
 
