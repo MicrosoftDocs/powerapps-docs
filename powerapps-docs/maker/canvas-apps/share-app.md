@@ -70,11 +70,11 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If your app connects to data for which users need access permissions, specify security roles as appropriate.
 
-    For example, your app might connect to an table in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that table.
+    For example, your app might connect to a table in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that table.
 
     ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png "Assign a security role")
 
-    For more information about managing security for an table, go to [Manage table permissions](#manage-table-permissions).
+    For more information about managing security for a table, go to [Manage table permissions](#manage-table-permissions).
 
     If your app uses connections to other data sources&mdash;such as an Excel file hosted on OneDrive for Business&mdash;ensure that you share these data sources with the users you shared the app with.
 

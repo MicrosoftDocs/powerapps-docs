@@ -34,7 +34,7 @@ This article provides details for the data types that canvas apps support. When 
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Option set** | A choice from a set of options, backed by a number. This data type combines a localizable text label with a numeric value. The label appears in the app, and the numeric value is stored and used for comparisons. | **ThisItem.OrderStatus** |
 | **Record** | A record of data values. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
-| **Record reference** | A reference to a record in an table. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
+| **Record reference** | A reference to a record in a table. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
 | **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, and omitted fields are treated as *blank*. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Text** | A Unicode text string. | **"Hello, World"** |
 | **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
@@ -216,7 +216,7 @@ But you can use this formula:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
-For global option sets (which tables share), the name of the option-set enumeration matches the name of the global option set. For local option sets (which are scoped to an table), the name might contain the name of the table. This behavior avoids conflicts if multiple tables have option sets that have the same name. For example, the **Accounts** table might have an **OrderStatus** option set, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
+For global option sets (which tables share), the name of the option-set enumeration matches the name of the global option set. For local option sets (which are scoped to a table), the name might contain the name of the table. This behavior avoids conflicts if multiple tables have option sets that have the same name. For example, the **Accounts** table might have an **OrderStatus** option set, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
 
 In addition, two-option values can also behave as boolean values. For example, a two-option value named **TaxStatus** might have the labels **Taxable** and **Non-Taxable**, which correspond to *true* and *false* respectively. To demonstrate, you can use this formula:
 

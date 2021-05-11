@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/14/2020
+ms.date: 05/10/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -71,7 +71,7 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     
     It’s possible that some of the newly shown display names may conflict with the display names for other tables, fields, or controls. For example, you may have a control and a field with the same name. You can change the name of the control with a unique value to fix.
     
-    For any field and table display name conflict, you may see a formula that expects an table but resolves to a locally scoped field name.
+    For any field and table display name conflict, you may see a formula that expects a table but resolves to a locally scoped field name.
 
     Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
     
@@ -114,7 +114,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 3. Add the connections to your data sources to the Dataverse using the new data source selection experience. 
 
     > [!NOTE] 
-    > - If you have connections to other environments (other than current), select the *Table* category and then the *More* (...) option to change the environment. You can then select an table from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - If you have connections to other environments (other than current), select the *Table* category and then the *More* (...) option to change the environment. You can then select a table from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
     > - You need to meet one of the following requirements to be able to see an environment that you want to add the connection to:
     >   - You're the **Owner** of the app, or the app is [shared](share-app.md) with you as a **Co-owner**.
     >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
@@ -126,7 +126,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using an option set field.
 
 - If control name conflicts, change the name of the control to be different and unique. 
-- For field and table display name conflicts, you may see a formula that is expecting an table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
+- For field and table display name conflicts, you may see a formula that is expecting a table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
 - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
 More information: [Detailed Examples](#detailed-examples).
 - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
@@ -224,7 +224,7 @@ Following guidelines help to upgrade your application if it referenced [polymorp
 
 #### Access, Set, and Filter on the Owner field of a record
 
-For instance, the Owner field in an table can refer to a record in the Users table or the Teams table. The same lookup field in different records could refer to records in different tables.
+For instance, the Owner field in a table can refer to a record in the Users table or the Teams table. The same lookup field in different records could refer to records in different tables.
  
 ![Polymorphic Owner field](./media/use-native-cds-connector/Polymorphic1.png)
  
@@ -265,7 +265,7 @@ Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure t
  
 #### Access and set the Company Name field (a Customer data type) of the Contacts table
 
-Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But an table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But a table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-fields-of-a-customer) for more details.
  
 #### Access and set the Regarding field of activity tables such as Faxes, Phone Calls, Email Messages
 
@@ -288,7 +288,7 @@ Read [Regarding lookup fields](./working-with-references.md#understand-regarding
 
 In Dataverse, tables such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity tables](../../developer/data-platform/custom-activities.md).
 
-You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an table such as account. Add the Activities table and other individual tables whose data you plan to display in the canvas app.
+You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with a table such as account. Add the Activities table and other individual tables whose data you plan to display in the canvas app.
 
 Each time you add a record to (for example the Tasks table), a record in the Activity table with the fields common across all activity tables is created. Read [activity table](./working-with-references.md#activity-table) for more details.
 
@@ -296,7 +296,7 @@ The following example shows that as you select an Account, all the Activities as
  
 ![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
-The records are being displayed from the Activity table. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an table type, you must add the necessary data source.
+The records are being displayed from the Activity table. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with a table type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
 
@@ -312,7 +312,7 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 #### Access the list of Notes for a record
 
-When you create an table, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
+When you create a table, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
 
 ![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
@@ -326,7 +326,7 @@ First( Accounts ).Notes
 
 ##### Patch
 
-You can't set the Notes field on an table by using Patch. To add a record to an table's Notes table, you can use the Relate function. Create the note first, as in this example:
+You can't set the Notes field on a table by using Patch. To add a record to a table's Notes table, you can use the Relate function. Create the note first, as in this example:
 
 ```powerapps-dot
 Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )

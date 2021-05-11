@@ -27,7 +27,7 @@ Many operations on record references are identical to working with records. You 
 
 There is one important usage difference: you can't directly access the fields of a record reference without first establishing to which table it refers. This is because canvas apps require that all types be known when you write formulas. Because you don't know the type of a record reference until the app is running, you can't use the simple .*Field* notation directly. You must first dynamically determine the table type with the [**IsType**](functions/function-astype-istype.md) function and then use .*Field* notation on the result of the [**AsType**](functions/function-astype-istype.md) function.
 
-*Table type* refers to the schema of each record in an table. Each table has a unique set of fields with different names and data types. Each record of the table inherits that structure; two records have the same table type if they come from the same table.
+*Table type* refers to the schema of each record in a table. Each table has a unique set of fields with different names and data types. Each record of the table inherits that structure; two records have the same table type if they come from the same table.
 
 ## Polymorphic lookups
 
@@ -309,7 +309,7 @@ In Dataverse, the **Customer** lookup field is another polymorphic lookup that's
 > [!div class="mx-imgBorder"]
 > ![Contact table showing Company Name field as a Customer data type that isn't required](media/working-with-references/customer-companyname.png)
 
-You can add more **Customer** lookup fields to an table by selecting the **Customer** data type for a new field.
+You can add more **Customer** lookup fields to a table by selecting the **Customer** data type for a new field.
 
 ![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
 
@@ -413,11 +413,11 @@ After you make these changes, you work with the **Regarding** lookup just as you
 
 Let's back up and look at the table definitions. In Dataverse, tables such as **Faxes**, **Tasks**, **Emails**, **Notes**, **Phone Calls**, **Letters**, and **Chats** are designated as [*activities*](../../developer/data-platform/activity-entities.md). You can also create your own [custom activity tables](../../developer/data-platform/custom-activities.md). When you view or create an activity table, its settings appear under **More settings**.
 
-![Activity table setting when creating an table](media/working-with-references/activity-entitytype.png)
+![Activity table setting when creating a table](media/working-with-references/activity-entitytype.png)
 
 Other tables can be related to an activity table if they're enabled as an *activity task* in the table's settings. **Accounts**, **Contacts**, and many other standard tables are so designated (again, under **More settings**).
 
-![Activity task setting when creating an table](media/working-with-references/activity-entityuse.png)
+![Activity task setting when creating a table](media/working-with-references/activity-entityuse.png)
 
 All activity tables and activity-task tables have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** table, and then select the **Relationships** tab, all tables that can be a target of a **Regarding** lookup appear.
 
@@ -488,7 +488,7 @@ You can show all activities by changing only one line in the previous example. R
 > [!div class="mx-imgBorder"]
 > ![Change of Items property for the second gallery, changing from faxes to activities](media/working-with-references/activitypointer-gallery.png)
 
-Records are coming from the **Activity** table, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with an table type, you must add the data source.
+Records are coming from the **Activity** table, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with a table type, you must add the data source.
 
 > [!div class="mx-imgBorder"]
 > ![Data pane showing all the tables required for the IsType function](media/working-with-references/activity-datasources.png)
@@ -533,10 +533,10 @@ As a result, the app shows a complete list of activities. The **Subject** field 
 
 So far, all of the **Regarding** examples have been based on activities, but the **Notes** table represents another case.
 
-When you create an table, you can enable attachments.
+When you create a table, you can enable attachments.
 
 > [!div class="mx-imgBorder"]
-> ![Enabling attachments and notes when creating an table](media/working-with-references/notes-entity.png)
+> ![Enabling attachments and notes when creating a table](media/working-with-references/notes-entity.png)
 
 If you select the check box for enabling attachments, you'll create a **Regarding** relationship with the **Notes** table, as this graphic shows for the **Accounts** table:
 

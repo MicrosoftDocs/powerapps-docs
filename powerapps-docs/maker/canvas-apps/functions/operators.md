@@ -265,7 +265,7 @@ Some data sources such as SharePoint and Microsoft Dataverse have two different 
  
 Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an table in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
+For example, imagine you have added a **Custom Field** to a table in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
 > ![Accounts table with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)

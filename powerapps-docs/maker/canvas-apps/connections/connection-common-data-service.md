@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/04/2020
+ms.date: 05/10/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -35,9 +35,9 @@ The name of the selected environment appears under the tables list.
 
 ![New environments](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
 
-The Microsoft Dataverse connector is more robust than the Dynamics 365 connector and approaching feature parity.
-
 ## Power Apps data type mappings
+
+The Microsoft Dataverse connector is more robust than the Dynamics 365 connector and approaching feature parity. The following table lists the data types in Power Apps, and how they map to data types in Dataverse.
 
 | Power Apps | Microsoft Dataverse                                                                                            |
 |-----------------------------------|---------------------------------------------------------------------------------------------|
