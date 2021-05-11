@@ -1,8 +1,8 @@
 ---
-title: "Create and update entity definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn about creating and updating entity definitions using the Web API."
+title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about creating and updating table definitions using the Web API."
 ms.custom: ""
-ms.date: 02/07/2021
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,22 +21,22 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and update entity definitions using the Web API
+# Create and update table definitions using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on model entities that you can with the organization service. This topic focuses on working with metadata entities using the Web API. To find details about the entity metadata properties, see [Customize entity metadata](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
+You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
 
 <a name="bkmk_createEntities"></a>
 
 > [!TIP]
 > Entities, attributes, and global option sets (also known as tables, columns, and choices) are all solution components. When you create them you can associate them with a solution by using the `MSCRM.SolutionUniqueName` request header and setting the value to the  unique name of the solution it should be part of.
 
-## Create entities
+## Create table definitions
 
-To create an entity, POST the JSON representation of the entity data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute for the entity. You don’t need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you do not specify will be set to default values. To understand the default values, look at the example in the [Update entities](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities) section. The example in this topic uses the following entity properties.  
+To create a table definition, POST the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don’t need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you do not specify will be set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this topic uses the following entity properties.  
   
-|Entity property|Value|  
+|EntityMetadata property|Value|  
 |---------------------|-----------|  
 |SchemaName|new_BankAccount **Note:**  You should include the customization prefix that matches the solution publisher. Here the default value “new_” is used, but you should choose the prefix that works for your solution.|  
 |DisplayName|Bank Account|  
@@ -63,7 +63,7 @@ To create an entity, POST the JSON representation of the entity data to the `Ent
 > [!NOTE]
 >  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user’s language preference and is read-only.  
   
-The following example shows the creation of a custom entity with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
+The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
  **Request**  
 ```http 
@@ -162,24 +162,24 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
   
 <a name="bkmk_updateEntities"></a>
  
-## Update entities
+## Update table definitions
   
 > [!IMPORTANT]
->  You can’t use the HTTP PATCH method to update model entities. The metadata entities have parity with the organization service 
+>  You can’t use the HTTP PATCH method to update data model entities. The table definitions have parity with the Organization service 
 >  <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> that replaces the entity definition with the one included. 
->  Therefore, you must use the HTTP PUT method when updating model entities and be careful to include all the existing properties that you don’t intend to change. 
+>  Therefore, you must use the HTTP PUT method when updating data model entities and be careful to include all the existing properties that you don’t intend to change. 
 >  You can’t update individual properties.  
   
- When you update metadata entities with labels, you should include a custom `MSCRM.MergeLabels` header to control how any labels in the update should be handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. With `MSCRM.MergeLabels` set to `true`, any new labels defined will only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.  
+ When you update table definitions with labels, you should include a custom `MSCRM.MergeLabels` header to control how any labels in the update should be handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. With `MSCRM.MergeLabels` set to `true`, any new labels defined will only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.  
   
 > [!IMPORTANT]
 >  If you don’t include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
   
- When you update an entity or attribute, you must use the 
+ When you update a table or column definition, you must use the 
  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" /> or 
 <xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action" /> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
- Typically, you will retrieve the JSON definition of the attribute and modify the properties before you send it back. The following example contains all the metadata properties of the entity created in the [Create entities](create-update-entity-definitions-using-web-api.md#bkmk_createEntities) example, but with the DisplayName changed to “Bank Business Name.” It may be useful to note that the JSON here provides the default values for properties not set in the [Create entities](create-update-entity-definitions-using-web-api.md#bkmk_createEntities) example.  
+ Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to “Bank Business Name.” It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
   
  **Request**  
 ```http 
@@ -487,13 +487,13 @@ OData-Version: 4.0
   
 <a name="bkmk_CreateAttributes"></a>
 
-## Create attributes
+## Create columns
 
-You can create attributes at the same time you create the entity by including the JSON definition of the attributes in the `Attributes` array for the entity you post in addition to the string attribute that serves as the primary name attribute. If you want to add attributes to an entity that is already created, you can send a POST request including the JSON definition of them to the entity `Attributes` collection-valued navigation property.  
+You can create table columns (entity attributes) at the same time you create the table definition by including the JSON definition of the attributes in the `Attributes` array for the entity you post in addition to the string attribute that serves as the primary name attribute. If you want to add attributes to an entity that is already created, you can send a POST request including the JSON definition of them to the entity `Attributes` collection-valued navigation property.  
   
 <a name="bkmk_CreateString"></a>
 
-### Create a string attribute
+### Create a string column
 
 The following example will use these properties to create a string attribute.  
   
@@ -568,7 +568,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
   
 <a name="bkmk_createMoney"></a>
 
-### Create a Money attribute
+### Create a Money column
 
 The following example will use these properties to create a money attribute.  
   
@@ -579,8 +579,6 @@ The following example will use these properties to create a money attribute.
 |Description|Enter the balance amount.|  
 |RequiredLevel|None|  
 |PrecisionSource|2 <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
-
-
   
 The following example creates a money attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2. The URI for the attribute is returned in the response.  
   
@@ -637,7 +635,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
   
 <a name="bkmk_createDateTime"></a>
 
-### Create a datetime attribute
+### Create a datetime column
 
 The following example will use these properties to create a datetime attribute.  
   
@@ -706,7 +704,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
   
 <a name="bkmk_CreateCustomerLookup"></a>
 
-### Create a customer lookup attribute
+### Create a customer lookup column
 
 Unlike  other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action" />. 
 
@@ -796,19 +794,19 @@ OData-Version: 4.0
   
 <a name="bkmk_updateAttribute"></a>
  
-## Update an attribute
+## Update a column
 
-As mentioned in [Update entities](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), model entities are updated using the HTTP PUT method with the entire JSON definition of the current item. This applies to attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
+As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP PUT method with the entire JSON definition of the current item. This applies to entity attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
   
 ### See also
 
 [Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md)<br />
-[Query Metadata using the Web API](query-metadata-web-api.md)<br />
-[Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
-[Model entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
+[Query table definitions using the Web API](query-metadata-web-api.md)<br />
+[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
+[Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
 
-[Work with metadata using the Organization service](../org-service/work-with-metadata.md)<br />
-[Attribute metadata](../entity-attribute-metadata.md)
+[Work with table definitions using the Organization service](../org-service/work-with-metadata.md)<br />
+[Column (attribute) definitions](../entity-attribute-metadata.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
