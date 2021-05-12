@@ -94,11 +94,11 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Set the following properties:
 
-    - **ItemsLabels** as *TestData.Name*
-    - **ItemLatitudes** as *TestData.Latitude*
-    - **ItemsLongitudes** as *TestData.Longitude*
-    - (Optional) **ItemsColors** as *TestData.Colors*
-    - (Optional) **ItemsIcons** as *TestData.Icons*
+    - **ItemsLabels** as *"Name"*
+    - **ItemsLatitudes** as *"Latitude"*
+    - **ItemsLongitudes** as *"Longitude"*
+    - (Optional) **ItemsColors** as *"Colors"*
+    - (Optional) **ItemsIcons** as *"Icons"*
 
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
