@@ -4,7 +4,7 @@ description: Design and build websites using Power Apps that allow external user
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm

@@ -15,8 +15,6 @@ contributors:
 
 # Dataverse entity tags
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
 ## chart

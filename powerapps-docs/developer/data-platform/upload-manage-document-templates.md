@@ -21,7 +21,7 @@ In Microsoft Dataverse, the *template* tables help you create consistent layout 
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-These are the types of template entites:
+These are the types of template tables:
 
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 

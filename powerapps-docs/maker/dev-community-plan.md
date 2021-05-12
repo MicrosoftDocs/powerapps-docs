@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom:
+ms.custom: intro-internal
 ms.date: 01/14/2021
 ms.author: dileeps
 ms.reviewer:
@@ -15,13 +15,13 @@ If you want to build skills and learn more about Power Apps, Power Automate, and
 
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
-* Explore how you can use [the Dataverse](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
+* Explore how you can use [Dataverse](/powerapps/maker/data-platform/data-platform-intro) to build powerful business apps with the common data model and the SDK.
 * Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/data-platform/publish-app-appsource.md) so your customers can test-drive them.
 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
 
-* Want to build skills and learn more about Power Apps, Power Automate, and the Dataverse.
+* Want to build skills and learn more about Power Apps, Power Automate, and Dataverse.
 * Are interested in building business apps and workflows to distribute on Microsoft AppSource.
 
 ## Where can I sign up for the Power Apps Community Plan?
@@ -44,8 +44,8 @@ With the individual environment, you get the following functionality:
 | **Key features** | |
 | Create and run apps |Yes. You can create unlimited apps |
 | Share apps |No<sup>(1)</sup> |
-| Use the Dataverse |Yes |
-| Model your data using the Dataverse |Yes|
+| Use Dataverse |Yes |
+| Model your data using Dataverse |Yes|
 | Enterprise-grade administration of the environment and user policies |Yes |
 | **Connectivity** | |
 | Connect to Office 365, Dynamics 365, and other connectors |Yes |
@@ -54,9 +54,9 @@ With the individual environment, you get the following functionality:
 | Access on‐premises data using an on-premises gateway |Yes |
 | Create custom connectors to connect to your own systems |Yes. You can create unlimited custom connectors |
 | **Common Data Service** | |
-| Create and run applications on the Dataverse |Yes |
-| Model your data in the Dataverse |Yes |
-| Create a database in the Dataverse |Yes |
+| Create and run applications on Dataverse |Yes |
+| Model your data in Dataverse |Yes |
+| Create a database in Dataverse |Yes |
 | Create and use dataflows |No |
 | **Management**<sup>(3)</sup> | |
 | Add co-workers as environment makers and admins |No |
@@ -66,7 +66,7 @@ With the individual environment, you get the following functionality:
 
 <sup>(1)</sup>You can't share resources such as apps, flows, or connections with any other users from your tenant.
 <br> 
-<sup>(2)</sup>Using [premium connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-premium-connectors) to connect to the data sources outside Power Apps will require you to have [standalone plans](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-apps-and-power-automate-standalone-plans).
+<sup>(2)</sup>Using [premium connectors](/connectors/connector-reference/connector-reference-premium-connectors) to connect to the data sources outside Power Apps will require you to have [standalone plans](/power-platform/admin/pricing-billing-skus#power-apps-and-power-automate-standalone-plans).
 <br> 
 <sup>(3)</sup>You can't add any other user as an environment admin or a maker, or to the database roles from the admin center.
 
@@ -106,7 +106,7 @@ Yes, you should be able to export the resources from this environment to other e
 
 ### Will my Power Apps Community Plan subscription ever expire?
 
-You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Dataverse Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Dataverse.
+You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Dataverse Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in Dataverse.
 
 ### Can I get or create multiple individual environments?
 
@@ -126,7 +126,7 @@ No, you can only sign up with your [work or school account](signup-for-powerapps
 
 ### Can I delete my individual environment?
 
-Tenant-level admins have the permissions needed to delete an individual environment through the user interface. An end user can delete an individual environment through a [Power Apps PowerShell admin cmdlet](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview).
+Tenant-level admins have the permissions needed to delete an individual environment through the user interface. An end user can delete an individual environment through a [Power Apps PowerShell admin cmdlet](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview).
 
 ```powershell
 Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
@@ -134,7 +134,7 @@ Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
 
 ### Can I reset my developer environment
 
-Resetting a developer environment is not currently supported; however, it can be deleted. The next time the Community Plan licensed user signs into the Power Apps Maker portal a new developer environment will be created. The user can then provision a Common Database Service database in the environment. At present, the only way to remove the Community Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
+Resetting a developer environment is not currently supported; however, it can be deleted. The next time the Community Plan licensed user signs into the Power Apps Maker portal a new developer environment will be created. The user can then provision a Common Database Service database in the environment. At present, the only way to remove the Community Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
 
 
 

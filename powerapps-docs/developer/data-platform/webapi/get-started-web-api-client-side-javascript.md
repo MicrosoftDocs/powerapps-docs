@@ -20,15 +20,11 @@ search.app:
 ---
 # Client-side JavaScript using Web API in model-driven apps
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 In HTML web resources, form scripts, or ribbon commands in model-driven apps, you can use JavaScript to perform operations on Microsoft Dataverse data using the Web API. Use the [Xrm.WebApi](../../model-driven-apps/clientapi/reference/xrm-webapi.md) client API methods to use Web API with JavaScript and web resources.
 
 ### See also
 [Apply business logic using client scripting](../../model-driven-apps/client-scripting.md)<br/>
 [Customize commands and ribbon](../../model-driven-apps/customize-commands-ribbon.md)<br/>
 [Web resources](../../model-driven-apps/web-resources.md)
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
