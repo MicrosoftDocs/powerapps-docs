@@ -17,7 +17,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by a visitor on your portal page. A chatbot (bot) configured with different topics, and trigger phrases, can automatically respond to questions posted by a visitor in a chat conversation.
+Power Apps portals allows you to add a [Power Virtual Agents chatbot](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by a visitor on your portal page. A chatbot (bot) configured with different topics, and trigger phrases, can automatically respond to questions posted by a visitor in a chat conversation.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -25,7 +25,7 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 
 ## Prerequisites
 
-Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. If you don't have any available bots, you'll have the option in portals to go to Power Virtual Agents to create a bot. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
+Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. If you don't have any available bots, you'll have the option in portals to go to Power Virtual Agents to create a bot. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](/power-virtual-agents/authoring-first-bot).
 
 > [!IMPORTANT]
 > This feature requires the following versions for starter portal package and portal host:
@@ -118,4 +118,4 @@ To restart your portal:
 
 ### See also
 
-- [Add the bot to your live website](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels)
+- [Add the bot to your live website](/power-virtual-agents/publication-connect-bot-to-web-channels)
