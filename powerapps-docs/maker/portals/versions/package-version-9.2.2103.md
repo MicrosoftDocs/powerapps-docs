@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/26/2021
+ms.date: 05/04/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -36,6 +36,7 @@ The package update includes the following enhancements extending the capabilitie
 - Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
 - Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
 - Handle XSS vector gracefully on page load.
+- Added new solution **MicrosoftPortalBot** enabling the capability to add Power Virtual Agents chatbots to portals.
 
 ## Fixes
 
