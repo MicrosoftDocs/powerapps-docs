@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/16/2020
+ms.date: 05/11/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -94,13 +94,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
    
     A **Data table** control is added to the screen.
 3. Rename the **Data table** control **SalesOrderTable**, and resize it so that it covers the whole screen.
-4. In the right pane, click or tap the down arrow to the right of the **No data source selected** text, and then click or tap **Add a data source**.
-   
-    ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
-5. In the list of connections, click or tap the connection for your Dataverse database.
-   
-    ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
-6. In the list of tables, click or tap **Sales order**, and then click or tap **Connect**.
+4. In the right pane, select **Data sources**, and select **Sales orders**. If the table isn't listed, search for the table, and connect to Microsoft Dataverse.
    
     ![Select the Sales order table](./media/control-data-table/choose-so-data-table.png)
    
