@@ -1481,6 +1481,8 @@
           href: ./portals/configure/websites.md
         - name: Configure website bindings
           href: ./portals/configure/website-bindings.md
+        - name: View activities in portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
         - name: Edit portal using portal content editor
@@ -1527,8 +1529,6 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
-        - name: View activities in portal timeline
-          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: View capacity consumption reports
@@ -2094,6 +2094,8 @@
           displayName: Overview of Dataverse for Teams
         - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
+        - name: Compare Microsoft Lists, Dataverse for Teams, and Dataverse
+          href: ../teams/compare-data-sources.md
         - name: Create a table
           href: ../teams/create-table.md
           displayName: Create a Dataverse for Teams table

@@ -4,7 +4,7 @@ description: "Learn how global search works in a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
