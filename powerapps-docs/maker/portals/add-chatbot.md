@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2021
+ms.date: 05/12/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -28,7 +28,9 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. If you don't have any available bots, you'll have the option in portals to go to Power Virtual Agents to create a bot. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
 
 > [!IMPORTANT]
-> This feature requires starter portal package version [9.2.2103.x](versions/package-version-9.2.2103.md) or later. For more information, see [upgrade considerations](#upgrade-considerations).
+> This feature requires the following versions for starter portal package and portal host:
+> - Portal host version [9.3.4.x](versions/version-9.3.4.x.md) or later.
+> - Starter portal package version [9.2.2103.x](versions/package-version-9.2.2103.md) or later. More information: [additional considerations](#additional-considerations)
 
 ## Add chatbot component
 
@@ -81,9 +83,13 @@ After changing the web template, ensure you select **Sync configuration** to upd
 > [!NOTE]
 > Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
-## Upgrade considerations
+## Additional considerations
 
-If your portal template isn't upgraded to add support for chatbot component, you'll see following message when you try to add the component.
+Consider the following when using Power Virtual Agents chatbot inside portals.
+
+### Portal template version
+
+This feature requires starter portal package version [9.2.2103.x](versions/package-version-9.2.2103.md) or later. If your portal template isn't upgraded to add support for chatbot component, you'll see following message when you try to add the component.
 
 "Portal upgrade required" <br>
 "An upgrade is required to use this feature on your portal. If you upgrade the portal, ensure you Sync Configuration to refresh your current portals Studio session with new portals package."
@@ -92,6 +98,23 @@ When this message appears, upgrade your portal package. More information: [Updat
 
 > [!NOTE]
 > Upgrading starter portal package will enable any additional portals in your environment with the capability to use chatbot component. More information: [Starter portal package updates](release-updates.md#starter-portal-package-updates)
+
+### Solution deletion
+
+This feature comes with a portal solution called **MicrosoftPortalBot** with display name of **Dynamics 365 Portals - Bot**. Your portal will stop working if you delete this solution, and do not perform the following action.
+
+If you delete **MicrosoftPortalBot** solution, you must restart your portal to ensure the portal works correctly.
+
+To restart your portal:
+
+1. Open [Power Platform admin center](admin/admin-overview.md) for your portal.
+1. On the left-pane, select **Portal Actions**.
+1. Select **Restart** to restart the portal.
+
+    > [!IMPORTANT]
+    > Restarting the portal will make it unavailable for several minutes and users won’t be able to access the portal URL during this time..
+
+1. Select **Restart** to confirm restarting the portal.
 
 ### See also
 
