@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/17/2020
+ms.date: 05/11/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -29,32 +29,34 @@ There is one important usage difference: you can't directly access the fields of
 
 *Table type* refers to the schema of each record in a table. Each table has a unique set of fields with different names and data types. Each record of the table inherits that structure; two records have the same table type if they come from the same table.
 
+> [!NOTE]
+> You can choose from many different connectors to connect to different types of data sources for canvas apps. However, when working with canvas apps inside Power Apps Studio, **columns** in Microsoft Dataverse are referred to as **fields** similar to all other data sources. **Column** is only used when referring to a column inside Dataverse. More information: [Dataverse terminology updates](../data-platform/data-platform-intro.md#terminology-updates)
+
 ## Polymorphic lookups
 
-Microsoft Dataverse supports relationships between records. Each record in the **Accounts** table has a **Primary Contact** lookup field to a record in the **Contacts** table. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** table. That last detail is important because you always know what fields will be available for the lookup.
+Microsoft Dataverse supports relationships between records. Each record in the **Accounts** table has a **Primary Contact** lookup column to a record in the **Contacts** table. The lookup can only refer to a record in **Contacts** and can't refer to a record in, say, the **Teams** table. That last detail is important because you always know what columns will be available for the lookup.
 
-Dataverse also supports polymorphic lookups, which can refer to a record from any table in a set. For example, the **Owner** field can refer to a record in the **Users** table or the **Teams** table. The same lookup field in different records could refer to records in different tables. In this case, you don't always know what fields will be available.
+Dataverse also supports polymorphic lookups, which can refer to a record from any table in a set. For example, the **Owner** column can refer to a record in the **Users** table or the **Teams** table. The same lookup column in different records could refer to records in different tables. In this case, you don't always know what columns will be available.
 
 Canvas record references were designed for working with polymorphic lookups in Dataverse. You can also use record references outside of this context, which is how the two concepts differ.
 
 In the next section, you'll start to explore these concepts by working with the **Owner** lookup.
 
-## Show the fields of a record owner
+## Show the columns of a record owner
 
-Every table in Dataverse includes an **Owner** field. This field can't be removed, you can't add another, and it always requires a value.
+Every table in Dataverse includes an **Owner** column. This column can't be removed, you can't add another, and it always requires a value.
 
-To show that field in the **Account** table:
+To show that column in the **Account** table:
 
-1. Open [this Power Apps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the left navigation bar, select **Data** > **tables**.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the left pane bar, select **Data** > **Tables**.
 1. In the list of tables, select **Account**.
 1. In the upper-right corner, open the filter list (which is set to **Default** by default), and then select **All**.
-1. Scroll down until the **Owner** field appears.
+1. Scroll down until the **Owner** column appears.
 
- > [!div class="mx-imgBorder"]
- > ![Owner field on Account table](media/working-with-references/owner-field.png)
+    ![Owner column on Account table](media/working-with-references/owner-field.png)
 
-This lookup field can refer to a record from either the **Teams** table or the **Users** table. Not every record in these tables has permission to be an **Owner**; check the supported roles if you run into a problem.
+This lookup column can refer to a record from either the **Teams** table or the **Users** table. Not every record in these tables has permission to be an **Owner**; check the supported roles if you run into a problem.
 
 This graphic shows a simple gallery of **Accounts**, where the **Accounts** table has been added to the app as a data source:
 
@@ -68,8 +70,7 @@ To show the owner of each account in the gallery, you might be tempted to use th
 
 You need a formula that can adapt to this variance. You also need to add the data sources for the table types that **Owner** could be (in this case, **Users** and **Teams**). Add these three data sources to your app:
 
-> [!div class="mx-imgBorder"]
-> ![Accounts, Teams, and Users tables in the Data pane](media/working-with-references/accounts-datasources.png)
+![Accounts, Teams, and Users tables in the Data pane](media/working-with-references/accounts-datasources.png)
 
 With these data sources in place, use this formula to display the name of either a user or a team:
 
@@ -88,8 +89,7 @@ To use any fields of a record reference, you must first use the **AsType** funct
 
 The **AsType** function returns an error if the **Owner** field doesn't match the table type being requested, so you can use the **IfError** function to simplify this formula. First, turn on the experimental feature **Formula-level error management**:
 
-> [!div class="mx-imgBorder"]
-> ![Experimental switch to turn on formula-level error management](media/working-with-references/accounts-iferror.png)
+![Experimental switch to turn on formula-level error management](media/working-with-references/accounts-iferror.png)
 
 Then replace the previous formula with this one:
 
@@ -300,23 +300,21 @@ For each selection in the gallery, more fields of the account, including the rec
 > [!div class="mx-imgBorder"]
 > ![Animation showing the form control responding to changes in the gallery](media/working-with-references/form-allthree.gif)
 
-## Show the fields of a customer
+## Show the columns of a customer
 
-In Dataverse, the **Customer** lookup field is another polymorphic lookup that's very similar to **Owner**.
+In Dataverse, the **Customer** lookup column is another polymorphic lookup that's very similar to **Owner**.
 
-**Owner** is limited to one per table, but tables can include zero, one, or more **Customer** lookup fields. The **Contacts** system table includes the **Company Name** field, which is a **Customer** lookup field.
+**Owner** is limited to one per table, but tables can include zero, one, or more **Customer** lookup column. The **Contacts** system table includes the **Company Name** column, which is a **Customer** lookup column.
 
-> [!div class="mx-imgBorder"]
-> ![Contact table showing Company Name field as a Customer data type that isn't required](media/working-with-references/customer-companyname.png)
+![Contact table showing Company Name column as a Customer data type that isn't required](media/working-with-references/customer-companyname.png)
 
-You can add more **Customer** lookup fields to a table by selecting the **Customer** data type for a new field.
+You can add more **Customer** lookup columns to a table by selecting the **Customer** data type for a new column.
 
-![Customer data type from the list of data types when creating a field](media/working-with-references/customer-datatype.png)
+![Customer data type from the list of data types when creating a column](media/working-with-references/customer-datatype.png)
 
 A **Customer** lookup field can refer to a record from either the **Accounts** table or the **Contacts** table. You'll use the **IsType** and **AsType** functions with these tables, so now is a good time to add them as data sources (you can leave **Teams** and **Users** in place).
 
-> [!div class="mx-imgBorder"]
-> ![Accounts, Teams, Users, and Contacts tables in the Data pane](media/working-with-references/customer-datasources.png)
+![Accounts, Teams, Users, and Contacts tables in the Data pane](media/working-with-references/customer-datasources.png)
 
 The treatment of the **Customer** and **Owner** fields is so similar that you can literally copy the app (**File** > **Save as**, and then specify a different name) and make these simple replacements:
 
@@ -369,11 +367,11 @@ With these changes, you can view and change the **Company Name** field in the **
 > [!div class="mx-imgBorder"]
 > ![Animation that shows how selecting a contact changes the other controls and the form](media/working-with-references/customer-allthree.gif)
 
-## Understand Regarding lookup fields
+## Understand Regarding lookup columns
 
-The **Regarding** lookup field differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
+The **Regarding** lookup column differs a little from those that you've already worked with in this topic. You'll start by applying the patterns that this topic described earlier, and then you'll learn other tricks.
 
-You can start simply with the **Faxes** table. This table has a polymorphic **Regarding** lookup field, which can refer to **Accounts**, **Contacts**, and other tables. You can take the app for **Customers** and modify it for **Faxes**.
+You can start simply with the **Faxes** table. This table has a polymorphic **Regarding** lookup column, which can refer to **Accounts**, **Contacts**, and other tables. You can take the app for **Customers** and modify it for **Faxes**.
 
 | Location | **Customer** sample | **Faxes** sample |
 |----------|-----------|------------------|
@@ -384,8 +382,7 @@ You can start simply with the **Faxes** table. This table has a polymorphic **Re
 
 Again, you'll need to add a data source: this time for **Faxes**. On the **View** tab, select **Data sources**:
 
-> [!div class="mx-imgBorder"]
-> ![Data pane showing Accounts, Teams, Users, Contacts, and Faxes tables](media/working-with-references/faxes-datasources.png)
+![Data pane showing Accounts, Teams, Users, Contacts, and Faxes tables](media/working-with-references/faxes-datasources.png)
 
 An important difference for **Regarding** is that it isn't limited to **Accounts** and **Contacts**. In fact, the list of tables is extensible with custom tables. Most of the app can accommodate this point without modification, but you must update the formula for the label in the gallery and the form:
 
@@ -421,13 +418,11 @@ Other tables can be related to an activity table if they're enabled as an *activ
 
 All activity tables and activity-task tables have an implied relationship. If you change the filter to **All** at the top of the screen, select the **Faxes** table, and then select the **Relationships** tab, all tables that can be a target of a **Regarding** lookup appear.
 
-> [!div class="mx-imgBorder"]
-> ![Relationships of the Faxes table showing Regarding many-to-one relationships](media/working-with-references/activity-manytoone.png)
+![Relationships of the Faxes table showing Regarding many-to-one relationships](media/working-with-references/activity-manytoone.png)
 
 If you show the relationships for the **Accounts** table, all the tables that can be a source of a **Regarding** lookup field appear.
 
-> [!div class="mx-imgBorder"]
-> ![Relationships of the Account table showing Regarding one-to-many relationships](media/working-with-references/activity-onetomany.png)
+![Relationships of the Account table showing Regarding one-to-many relationships](media/working-with-references/activity-onetomany.png)
 
 What does it all mean?
 
@@ -478,10 +473,9 @@ As the previous section describes, you can show all the faxes for an account. Ho
 
 For the latter scenario, you use the **Activity** table. You can show this table by turning on **All** in the upper-right corner to remove the filter from the list of tables.
 
-> [!div class="mx-imgBorder"]
-> ![List of tables showing the Activity table](media/working-with-references/activitypointer-entity.png)
+![List of tables showing the Activity table](media/working-with-references/activitypointer-entity.png)
 
-The **Activity** table is special. Whenever you add a record to the **Faxes** table, the system also creates a record in the **Activity** table with the fields that are common across all activity tables. Of those fields, **Subject** is one of the most interesting.
+The **Activity** table is special. Whenever you add a record to the **Faxes** table, the system also creates a record in the **Activity** table with the columns that are common across all activity tables. Of those columns, **Subject** is one of the most interesting.
 
 You can show all activities by changing only one line in the previous example. Replace `Gallery2.Selected.Faxes` with `Gallery2.Selected.Activities`.
 
@@ -490,8 +484,7 @@ You can show all activities by changing only one line in the previous example. R
 
 Records are coming from the **Activity** table, but you can nevertheless use the **IsType** function to identify which kind of activity they are. Again, before you use **IsType** with a table type, you must add the data source.
 
-> [!div class="mx-imgBorder"]
-> ![Data pane showing all the tables required for the IsType function](media/working-with-references/activity-datasources.png)
+![Data pane showing all the tables required for the IsType function](media/working-with-references/activity-datasources.png)
 
 By using this formula, you can show the record type in a label control within the gallery:
 
@@ -535,20 +528,18 @@ So far, all of the **Regarding** examples have been based on activities, but the
 
 When you create a table, you can enable attachments.
 
-> [!div class="mx-imgBorder"]
-> ![Enabling attachments and notes when creating a table](media/working-with-references/notes-entity.png)
+![Enabling attachments and notes when creating a table](media/working-with-references/notes-entity.png)
 
 If you select the check box for enabling attachments, you'll create a **Regarding** relationship with the **Notes** table, as this graphic shows for the **Accounts** table:
 
-> [!div class="mx-imgBorder"]
-> ![Account table showing relationship to Notes through a one-to-many relationship](media/working-with-references/notes-relationships.png)
+![Account table showing relationship to Notes through a one-to-many relationship](media/working-with-references/notes-relationships.png)
 
 Other than this difference, you use the **Regarding** lookup in the same manner in which you use activities. Tables that are enabled for attachments have a one-to-many relationship to **Notes**, as in this example:
 
 `First( Accounts ).Notes`
 
 > [!NOTE]
-> As of this writing, the **Regarding** lookup isn't available for the **Notes** table. You can't read or filter based on the **Regarding** field, and you can't set the field by using **Patch**.
+> As of this writing, the **Regarding** lookup isn't available for the **Notes** table. You can't read or filter based on the **Regarding** column, and you can't set the column by using **Patch**.
 >
 > However, the reverse **Notes** one-to-many relationship is available, so you can filter a list of notes for a record that's enabled for attachments. You can also use the [**Relate**](functions/function-relate-unrelate.md) function to add a note to a record's **Notes** table, but the note must be created first, as in this example:
 >
