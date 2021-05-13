@@ -30,7 +30,7 @@ To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](
 
 > [!IMPORTANT]
 > If the pane displays an error message, see Office Store Add-in download disabling.
-> If this is the first time that you've run the Power Apps Excel Add-in, you must Trust this Add-in to allow the Excel Add-in to run.
+> If this is the first time that you've run the Power Apps Excel Add-in, you must **Trust this Add-in** to allow the Excel Add-in to run.
 
 ## Next steps
 - [View and refresh data in Excel](../maker/data-platform/data-platform-excel-addin.md#view-and-refresh-data-in-excel)
