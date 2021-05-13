@@ -29,8 +29,9 @@ To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](
 1. In Excel, select **Enable editing** to enable the Power Apps Excel Add-in to run. The Excel Add-in runs in a pane on the right side of the Excel window.
 
 > [!IMPORTANT]
-> If the pane displays an error message, see Office Store Add-in download disabling.
-> If this is the first time that you've run the Power Apps Excel Add-in, you must **Trust this Add-in** to allow the Excel Add-in to run.
+> - If the pane displays an error message, see Office Store Add-in download disabling.
+> - If this is the first time that you've run the Power Apps Excel Add-in, you must **Trust this Add-in** to allow the Excel Add-in to run.
+> - The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
 
 ## Next steps
 - [View and refresh data in Excel](../maker/data-platform/data-platform-excel-addin.md#view-and-refresh-data-in-excel)

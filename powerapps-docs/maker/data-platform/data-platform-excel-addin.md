@@ -88,11 +88,9 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 > [!NOTE]
 > - Make sure to always include the ID and required columns in your workbook, as you may receive errors when publishing.
-> - When adding look up columns, make sure to add both the ID and the Display columns.
+> - When adding look up columns, make sure to add both the **ID** and the **Display** columns.
 
 ## Troubleshooting
-
-There are a few issues that can be resolved through some easy steps.
 
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
