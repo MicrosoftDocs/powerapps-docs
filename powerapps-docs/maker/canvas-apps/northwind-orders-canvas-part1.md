@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/06/2019
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType:
   - maker
@@ -49,25 +49,13 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 ## Add the data
 
-1. On the **View** tab, select **Data sources**:
+1. On the left-pane, select **Data** > **Add data** > search for, and select **Orders** table.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
-
-1. Type **orders** into the search box:
-
-    > [!div class="mx-imgBorder"]
-    > ![List of connections](media/northwind-orders-canvas-part1/datasource-02.png)
-
-1. Select the **Orders** data source to use in your app:
-
-    > [!div class="mx-imgBorder"]
-    > ![List of tables](media/northwind-orders-canvas-part1/datasource-03.png)
+    ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
 
     The **Orders** table contains many fields of various types:
 
-    > [!div class="mx-imgBorder"]
-    > ![List of fields in the Orders table](media/northwind-orders-canvas-part1/datasource-05.png)
+    ![List of fields in the Orders table](media/northwind-orders-canvas-part1/datasource-05.png)
 
     Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
@@ -81,10 +69,6 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > ![Insert, Gallery, Blank vertical](media/northwind-orders-canvas-part1/orders-01.png)
 
 	The control will be placed on the canvas and a fly out dialog will appear asking which data source to connect to.  
-
-
-    > [!div class="mx-imgBorder"]
-    > ![Select a data source in gallery](media/northwind-orders-canvas-part1/orders-02.png)
 
 1. We could connect it directly to **Orders** here, but instead we'd like to control the sort order of the gallery.  Ignore the fly out dialog and in the formula bar set the gallery's **Items** property to this formula:
 
@@ -152,8 +136,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
     You can show all the relationships from the **Orders** table to other tables, including the **Customer** table:
 
-    > [!div class="mx-imgBorder"]
-    > ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
+    ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
 
 1. Close the **Data** pane by selecting the close icon (x) in its upper-right corner.
 
@@ -190,10 +173,9 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Set the Text property](media/northwind-orders-canvas-part1/status-05.png)
 
-    In the **Orders** table, the **Order Status** field holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can specify only those options that are in the set. The **Orders Status** option set is also global, not local, so you can use it in other tables:
+    In the **Orders** table, the **Order Status** field holds a value from the **Orders Status** choice. A choice is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can specify only those options that are in the set. The **Orders Status** choice is also global, not local, so you can use it in other tables:
 
-    > [!div class="mx-imgBorder"]
-    > ![Orders Status option set](media/northwind-orders-canvas-part1/status-06.png)
+    ![Orders Status choice](media/northwind-orders-canvas-part1/status-06.png)
 
     Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 

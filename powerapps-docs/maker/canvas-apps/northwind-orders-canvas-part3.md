@@ -568,7 +568,7 @@ To recap, you added another gallery to show order details and controls adding an
 - The **Patch** function to create an **Order Details** record: `Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
 - The **Remove** function to delete an **Order Details** record: `Remove( 'Order Details', ThisItem )`
 
-This series of topics has been a quick walkthrough of using Dataverse relationships and option sets in a canvas app for educational purposes. Before you release any app to production, you should consider field validation, error handling, and many other factors.
+This series of topics has been a quick walkthrough of using Dataverse relationships and choices in a canvas app for educational purposes. Before you release any app to production, you should consider field validation, error handling, and many other factors.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -296,7 +296,7 @@ Since display names are not unique, the same display name may appear more than o
 > [!div class="mx-imgBorder"]  
 > ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
 
-Name disambiguation strings are added in other situations where name conflicts occur, such as the names of table, option sets, and other Dataverse items. 
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of table, choices, and other Dataverse items. 
 
 ## Disambiguation operator
 

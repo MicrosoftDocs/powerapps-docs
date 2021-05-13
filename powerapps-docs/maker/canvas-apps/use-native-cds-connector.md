@@ -33,7 +33,7 @@ The **Improve data source experience and Microsoft Dataverse views** option appe
 
 ![Improve data source experience and Microsoft Dataverse views](media/use-native-cds-connector/improved-data-source-setting.png)
 
-The **Relational data, option sets, and other new features for Microsoft Dataverse** now appears in the Deprecated features section.
+The **Relational data, choices, and other new features for Microsoft Dataverse** now appears in the Deprecated features section.
 
 ## How do I upgrade?
 
@@ -52,12 +52,12 @@ You may also want to enable the **Explicit Column Selection** feature:
 > - When this feature is *Off*, you'll see the following message. You can ignore this message when using Power Apps mobile app for Windows platform.
 > <br> `This app is using a connector for the Microsoft Dataverse or Dynamics 365 that will not be supported past Oct 1, 2020.`
 
-### *Relational data, option sets and other new features for Microsoft Dataverse* is Off:
+### *Relational data, choices and other new features for Microsoft Dataverse* is Off:
 
 Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, option sets and other new features for Microsoft Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
+> If you don't see **Relational data, choices and other new features for Microsoft Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
@@ -76,9 +76,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
     
     
-- **Step 2**: Turn **Relational data, option sets and other new features for Microsoft Dataverse** and **Use GUID data types instead of strings** features **On**:
+- **Step 2**: Turn **Relational data, choices and other new features for Microsoft Dataverse** and **Use GUID data types instead of strings** features **On**:
     
-    1. Turn **Relational data, option sets and other new features for Microsoft Dataverse** feature *On*.
+    1. Turn **Relational data, choices and other new features for Microsoft Dataverse** feature *On*.
     1. Turn **Use GUID data types instead of strings** feature *On*.
     1. Wait for the health monitor to finish analyzing your app.
     1. Resolve all formula errors.
@@ -86,9 +86,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     
     *Possible errors and suggestions*:
     
-    It’s possible to have errors at this stage if you're using an option set field or hard-coded GUID text values.  <br><br> 
+    It’s possible to have errors at this stage if you're using an choice field or hard-coded GUID text values.  <br><br> 
     
-    - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
+    - *Choice values*: If you're using choice field with a text identifier for the choice value, use the dot notation instead to reference the choice value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
     More information: [Detailed Examples](#detailed-examples).
     - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
     - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the table) instead.
@@ -123,11 +123,11 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 
 *Possible errors and suggestions*:
 
-It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using an option set field.
+It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using a choice.
 
 - If control name conflicts, change the name of the control to be different and unique. 
 - For field and table display name conflicts, you may see a formula that is expecting a table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
-- *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
+- *Choice values*: If you're using a choice field with a text identifier for the choice value, use the dot notation instead to reference the choice value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
 More information: [Detailed Examples](#detailed-examples).
 - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
 - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the table) instead.
@@ -135,41 +135,41 @@ More information: [Detailed Examples](#detailed-examples).
 
 ## Detailed Examples
 
-Converting your app to use the new **Option sets** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improved data source experience and Microsoft Dataverse views* feature.
+Converting your app to use the new **Choices** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improved data source experience and Microsoft Dataverse views* feature.
 
-### Option Sets
+### Choices
 
-Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there's a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
+Separate `_myfield` and `_myfield_label` fields were used for choice earlier. Now, there's a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
 
-#### Removing and adding Option set Data cards
+#### Removing and adding choice Data cards
 
-It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you're working with the Account table and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+It's recommended to remove existing data cards and add them back to work with your choice. For example, if you're working with the Account table and the Category choice, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
-With the new *Improved data source experience and Microsoft Dataverse views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
+With the new *Improved data source experience and Microsoft Dataverse views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Choice* back. The new data card is *Choice* aware.
 
 ![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
-#### Editing the Option Set Filter expressions to use new syntax
+#### Editing the Choice Filter expressions to use new syntax
 
-Previously, if you wanted to use an Option Set value in a Filter expression you would need to use the *Value* field. For example:
+Previously, if you wanted to use an Choice value in a Filter expression you would need to use the *Value* field. For example:
 
 ```powerapps-dot
 Filter(Account,'Category Value' = "1")
 ```
 
-You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to:
+You'll need to edit this formula. Choice text identifer is no longer used for the value. This expression should be updated to:
 
 ```powerapps-dot
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
-'Category(Accounts)' is the name of enum used in the Category field of the Accounts table. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](../data-platform/create-edit-global-option-sets.md)
+'Category(Accounts)' is the name of enum used in the Category field of the Accounts table. This is a local choice.  You can read more about local and global choices here: [Global choices.](../data-platform/create-edit-global-option-sets.md)
 
-#### Editing Option Set Patch statements to use new syntax
+#### Editing choices patch statements to use new syntax
 
-Following is an example of earlier Patch statement for Option Set:
+Following is an example of earlier Patch statement for choice:
 
 ```powerapps-dot
 Patch( Accounts, First(Accounts), { ‘Category Value’: 1 } ) )
@@ -181,9 +181,9 @@ You'll need to update your statements to follow this form:
 Patch( Accounts, First(Accounts), { Category: ‘Category (Accounts)’.’Preferred Customer’ } )
 ```
 
-#### Option Set disambiguation
+#### Choice disambiguation
 
-If the display name of an Option set **field** and the name of the Option set are the same, you'll need to disambiguate the formula. To continue using the Accounts Category Code example, the **@** implies to use the Option Set, not the field.
+If the display name of an choice **field** and the name of the choice are the same, you'll need to disambiguate the formula. To continue using the Accounts Category Code example, the **@** implies to use the choice, not the field.
 
 ```powerapps-dot
 Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
@@ -191,15 +191,15 @@ Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
 
 ### Two Options
 
-#### Removing and adding Two Option set Data cards
+#### Removing and adding Yes/No Data cards
 
-Remove existing data cards and add them back to work with your Two Option set. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
+Remove existing data cards and add them back to work with your Yes/No. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
 
-![Two Option Set - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
+![Yes/No - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
-With the new *Improved data source experience and Microsoft Dataverse views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
+With the new *Improved data source experience and Microsoft Dataverse views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the choice back. You'll see an edit control with two options by default after you add.
 
-![Two Option Set - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Yes/No - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 

@@ -48,10 +48,10 @@ In the lower-right corner, another gallery shows information about which product
 
 ## Explore the data sources
 
-To create this app, you'll show data from five tables and an option set. In fact, most areas of this app show data from multiple tables. For example, the order gallery contains this information:
+To create this app, you'll show data from five tables and an choice. In fact, most areas of this app show data from multiple tables. For example, the order gallery contains this information:
 
 - The order number is a field in the **Orders** table.
-- The status is another field in the **Orders** table, an option from the **Orders Status** option set.
+- The status is another field in the **Orders** table, an option from the **Orders Status** choice.
 - The customer name is a field in the **Customers** table.
 - The total cost is calculated based on data in the **Order Details** table.
 
