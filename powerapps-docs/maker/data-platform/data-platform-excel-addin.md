@@ -73,7 +73,7 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 1. Expand the **Data Connector** section, and then select the **Enable design** check box, and then select **OK**.
 
-   :::image type="content" source="media/power-apps-excel-addin-settings2.png" alt-text="Configuration option in the add-in":::
+   <img src = "media/power-apps-excel-addin-settings2.png" alt = "Configuration option in the add-in" width = "407" height = "735">
 
 1. Select **Design** in the Excel add-in. All the data sources are listed.
 
