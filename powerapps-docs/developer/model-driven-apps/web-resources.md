@@ -5,6 +5,7 @@ ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
