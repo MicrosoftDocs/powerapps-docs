@@ -402,7 +402,7 @@ To add the code components to a canvas app, follow the steps in the article [Add
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Microsoft Power Platform Build Tools](https://docs.microsoft.com/powerapps/developer/data-platform/build-tools-overview)<br/>
+[Microsoft Power Platform Build Tools](/powerapps/developer/data-platform/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
 

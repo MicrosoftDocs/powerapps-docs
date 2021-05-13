@@ -4,9 +4,10 @@ description: In Power Apps, use formulas to customize a canvas app.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
-ms.custom: "intro-internal"
+ms.custom: 
+- "intro-internal"
+- "canvas"
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/01/2019
 ms.author: gregli
