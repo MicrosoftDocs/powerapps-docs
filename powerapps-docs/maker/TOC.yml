@@ -2104,6 +2104,8 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
+        - name: Edit table data in Excel
+          href: edit-data-in-excel.md
         - name: Move customizations between environments
           href: ../teams/import-solution-in-teams.md 
         - name: View table data in Power BI
