@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 01/22/2019
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -96,11 +96,8 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Microsoft Dataverse** > **Products** > **Connect**.  
-
+1. In the **Data** pane, select **Add data** > select **Products**. <br>
     The Products table is part of the sample data loaded above.
-
-     ![Add the Products table as a data source](media/function-relate-unrelate/products-connect.png)
 
 1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
@@ -217,19 +214,11 @@ The sample data doesn't include a many-to-many relationship, but you'll create o
 
 1. Scroll down, open the **Product** table, and select **Relationships**.
 
-    ![Relationships tab for the Product table](media/function-relate-unrelate/entity-relationships.png)
-
 1. Select **Add relationship** > **Many-to-many**.
-
-    ![Add many-to-many relationship](media/function-relate-unrelate/entity-manytomany.png)
 
 1. Select the **Contact** table for the relationship.
 
-    ![Select the Contact table](media/function-relate-unrelate/entity-contact.png)
-
 1. Select **Done** > **Save table**.
-
-    ![List of relationships for Products table](media/function-relate-unrelate/entity-done.png)
 
 #### Relate and unrelate contacts with one or more products
 
