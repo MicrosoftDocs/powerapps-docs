@@ -1,6 +1,6 @@
 ---
 title: Configure security using table permissions
-description: Learn how to add an table permission and assign web roles to it.
+description: Learn how to add a table permission and assign web roles to it.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -31,7 +31,7 @@ To secure these features, table permissions allow for granular rights to be gran
 
 4. Select **Add Existing Table Permission** to add an existing table permission to a web role. 
 
-4. Browse for an table permission or select **New Table Permission** to create a new Table Permission record.
+4. Browse for a table permission or select **New Table Permission** to create a new Table Permission record.
 
     ![Add table permissions to a web role](../media/add-entity-permission-web-role.png "Add table permissions to a web role")  
 
@@ -64,7 +64,7 @@ Self Access Type allows you to define the rights a user has to their own Contact
 
 ### Parental access type
 
-In this most complex case, permissions are granted for a table that is a relationship away from a table for which an Table Permission record has already been defined. This permission is actually a child record of the parent table permission.
+In this most complex case, permissions are granted for a table that is a relationship away from a table for which a Table Permission record has already been defined. This permission is actually a child record of the parent table permission.
 
 The Parent Permission record defines a permission and access type for a table (probably Global or Contact access type, although Parent is also possible). That table might be related to a Contact (if there's Contact access type) or globally defined. With that permission in place, a child permission is created that defines a relationship from another table to the table defined in the parent relationship.
 
@@ -92,7 +92,7 @@ The following table explains the table permission attributes.
 
 ## Global permissions for tasks related to leads
 
-In one scenario, we might want to use an list and basic forms to surface all leads on the portal to anyone in a custom Lead Manager web role. On the Lead Edit Form, which is launched whenever a lead row is selected on the list, a subgrid will display related Task records. These records should be accessible to anyone in the Lead Manager role. As the first step, we'll give Global permissions to leads to anyone in our Lead Manager Role.
+In one scenario, we might want to use a list and basic forms to surface all leads on the portal to anyone in a custom Lead Manager web role. On the Lead Edit Form, which is launched whenever a lead row is selected on the list, a subgrid will display related Task records. These records should be accessible to anyone in the Lead Manager role. As the first step, we'll give Global permissions to leads to anyone in our Lead Manager Role.
 
 This role has a related Table Permission for the Lead table, with a Global access type.
 
@@ -126,7 +126,7 @@ In order for your list to respect these permissions:
 
 Also, if you want to enable Read or Create permissions for tasks, you'll need to configure those basic forms too, and edit the forms to remove the Regarding lookup field.  
 
-This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on an basic form.
+This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on a list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on a basic form.
 
 ![Task example](../media/tasks-example.png "Task example")  
 

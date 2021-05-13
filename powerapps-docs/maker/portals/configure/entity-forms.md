@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/11/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -192,7 +192,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside basic form fields:
 
-![Request validation error](../media/request-validation-error.png)
+`Found field(s) submitted with potentially dangerous value(s) such as HTML, or script. Please review the field value(s) and try again.`
 
 To disable request validation, follow these steps:
 
