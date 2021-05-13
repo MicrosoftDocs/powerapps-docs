@@ -126,7 +126,7 @@ You can configure your app with formulas so that users can change your app's app
 
     As you type the closing parenthesis, the screen's background will change to dark gray based on the default value of each slider, which is **50**. At the moment when you finish typing the formula, it's calculated and used as the value of the background fill color. You can interact with your app while in the default workspace without needing to open Preview:
 
-    ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
+    ![Change the maximum value of each slider 1](./media/working-with-formulas/three-sliders-complete-rgba.png)
 5. Adjust the sliders, and see how your changes affect the background color.
 
     As each slider changes, the formula that contains the **[RGBA](functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
