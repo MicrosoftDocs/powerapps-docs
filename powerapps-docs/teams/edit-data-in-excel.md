@@ -34,5 +34,5 @@ To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](
 
 ## Next steps
 - [View and refresh data in Excel](../maker/data-platform/data-platform-excel-addin.md#view-and-refresh-data-in-excel)
-- [Edit data in Excel](../maker/data-platform/data-platform-excel-addin#edit-data-in-excel)
-- [Add or remove columns](../maker/data-platform/data-platform-excel-addin#add-or-remove-columns)
+- [Edit data in Excel](../maker/data-platform/data-platform-excel-addin.md#edit-data-in-excel)
+- [Add or remove columns](../maker/data-platform/data-platform-excel-addin.md#add-or-remove-columns)
