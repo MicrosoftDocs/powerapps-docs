@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/13/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -15,7 +15,7 @@ contributors:
 
 # Manage existing portals
 
-Once you've created a portal, it's visible under the **Recent apps** section on the Power Apps home page.
+Once you've created a portal, it's visible when you sign in to [Power Apps](https://make.powerapps.com), and then select **Apps**.
 
 > [!div class=mx-imgBorder]
 > ![recent apps](media/recent-apps.png "Recent apps")  
