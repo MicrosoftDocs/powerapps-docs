@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 07/19/2020
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -91,19 +91,15 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
 
 1. Create a blank canvas app for tablets.
 
-1. On the **View** tab, select **Data sources**, and then add the **Contacts** and **Accounts** tables as data sources.
-    > [!div class="mx-imgBorder"]
-    > ![Blank app with two data sources: accounts and contacts](media/function-astype-istype/contacts-add-datasources.png)
+1. On the left-pane, select **Data** > **Add data**. And then, add **Accounts** and **Contacts** tables.
 
-1. Insert a **Gallery** control with a **Blank vertical** orientation.
+    ![Blank app with two data sources: accounts and contacts](media/function-astype-istype/contacts-add-datasources.png)
 
-    > [!div class="mx-imgBorder"]
-    > ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
+1. On the left-pane, select **+** (Insert) > **Layout** > **Blank vertical gallery**.
 
-1. On the **Properties** tab near the right side of the screen, set the gallery's **Items** property to **Contacts**.
+    ![Insert a gallery control with a blank vertical layout](media/function-astype-istype/contacts-customer-gallery.png)
 
-    > [!div class="mx-imgBorder"]
-    > ![Set items to Contacts in the properties pane](media/function-astype-istype/contacts-customer-datasource.png)
+1. Select **Connect to data**, and then select **Contacts** as the data source.
 
 1. Set the gallery's layout to **Title and subtitle**.
 
