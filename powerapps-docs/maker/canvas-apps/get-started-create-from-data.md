@@ -5,9 +5,11 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
-ms.date: 12/05/2019
+ms.date: 05/06/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -33,21 +35,19 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Start from data**, select **Other data sources**.
 
-    ![Option to create an app](./media/get-started-create-from-data/start-from-data.png)
+    ![Choose other data sources](./media/get-started-create-from-data/start-from-data.png)
 
-1. Under **Start with your data**, click or tap **Phone layout** on the tile for your cloud-storage account.
+1. Choose your connection, or select **New connection** to create, and then select **Create**.
 
-    ![Option to create an app](./media/get-started-create-from-data/odfb-tile.png)
-
-1. If prompted, click or tap **Connect**, and provide your credentials for that account.
+    ![Choose your data source](./media/get-started-create-from-data/odfb-tile.png)
 
 1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it. 
 
 1. Under **Choose a table**, click or tap **FlooringEstimates**, and then click or tap **Connect**.
 
-    ![Option to create an app](./media/get-started-create-from-data/choose-table.png)
+    ![Choose your table](./media/get-started-create-from-data/choose-table.png)
 
 ## Run the app
 

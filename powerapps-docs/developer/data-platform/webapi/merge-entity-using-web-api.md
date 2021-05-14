@@ -1,8 +1,8 @@
 ---
-title: "Merge entity records using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Read how to use the Merge unbound action to merge two entity records"
+title: "Merge table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
+description: "Read how to use the Merge unbound action to merge two table rows"
 ms.custom: ""
-ms.date: 06/04/2020
+ms.date: 05/04/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +21,9 @@ search.app:
   - D365CE
 ---
 
-# Merge entity records using the Web API 
+# Merge table rows using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 When you find duplicate records you can combine them into one using the [Merge Action](/dynamics365/customer-engagement/web-api/merge).
 
@@ -88,11 +88,9 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-
 ### See also
 
 [Merge duplicate records](../../../user/merge-duplicate-records.md)<br />
 <xref:Microsoft.Crm.Sdk.Messages.MergeRequest>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

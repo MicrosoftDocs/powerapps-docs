@@ -137,7 +137,7 @@ The following procedure describes how to configure an event handler for a form. 
 3. Select **Save** and close the web resource page.  
 
 ### Next steps
-
+[Walkthrough: Write your first client script](/powerapps/developer/model-driven-apps/clientapi/walkthrough-write-your-first-client-script) <br />
 [Use the Main form and its components](use-main-form-and-components.md)
 
 
