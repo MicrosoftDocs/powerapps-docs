@@ -106,7 +106,7 @@ In this section, you'll add controls to show a summary of any order that the use
 1. If the **Fields** pane is not empty, remove the fields that have already been inserted.  
 
     > [!div class="mx-imgBorder"]
-    > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-06a.png)
+    > ![Open the Fields pane option](media/northwind-orders-canvas-part2/form-06a.png)
 
 1. After the fields list is empty, select **Add field**, and then select the check boxes for the **Customer** and **Employee** fields.
 
@@ -122,10 +122,10 @@ In this section, you'll add controls to show a summary of any order that the use
     - **Paid Date**
 
     > [!div class="mx-imgBorder"]
-    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06c.png)
+    > ![Add five more fields to the Edit form control part 1](media/northwind-orders-canvas-part2/form-06c.png)
 
     > [!div class="mx-imgBorder"]
-    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06d.png)
+    > ![Add five more fields to the Edit form control part 2](media/northwind-orders-canvas-part2/form-06d.png)
 
 1. At the bottom of the **Fields** pane, select **Add**, and then close the **Fields** pane.
 
@@ -184,12 +184,12 @@ In this example, you don't need the time portions of the date fields because tha
     All selected controls disappear from the form:
 
     > [!div class="mx-imgBorder"]
-    > ![Set Visible property to false.](media/northwind-orders-canvas-part2/form-10.png)
+    > ![Set Visible property to false for the control.](media/northwind-orders-canvas-part2/form-10.png)
 
 1. Resize the [**Date picker**](controls/control-date-picker.md) control to show the complete date:
 
     > [!div class="mx-imgBorder"]
-    > ![Resize the Date picker control](media/northwind-orders-canvas-part2/form-11.png)
+    > ![Resize the Date picker.](media/northwind-orders-canvas-part2/form-11.png)
 
     Next, you'll repeat the last few steps for the **Paid Date** field.
 

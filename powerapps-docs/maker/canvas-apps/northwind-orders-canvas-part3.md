@@ -117,7 +117,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Insert** tab, insert an [**Image**](controls/control-image.md) control into the detail gallery:
 
     > [!div class="mx-imgBorder"]
-    > ![Insert image control](media/northwind-orders-canvas-part3/details-10.png)
+    > ![Insert image control on canvas](media/northwind-orders-canvas-part3/details-10.png)
 
 1. Resize and move the image and the label to be side by side.
 
@@ -161,7 +161,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-14.png)
+    > ![Change alignment to right](media/northwind-orders-canvas-part3/details-14.png)
 
 1. On the **Insert** tab, insert another label into the detail gallery, and then resize and move the label to the right of the quantity label.
 
@@ -179,7 +179,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-16.png)
+    > ![Change alignment towards right](media/northwind-orders-canvas-part3/details-16.png)
 
 1. On the **Insert** tab, insert another label control into the detail gallery, and then resize and move the new label to the right of the unit price.
 
@@ -197,7 +197,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-18.png)
+    > ![Change alignment on right](media/northwind-orders-canvas-part3/details-18.png)
 
     You're done adding controls to the detail gallery for now.
 
@@ -299,7 +299,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Insert** tab, insert a label, and then resize and move it under the detail gallery.
 
     > [!div class="mx-imgBorder"]
-    > ![Insert a label](media/northwind-orders-canvas-part3/add-details-02.png)
+    > ![Insert label](media/northwind-orders-canvas-part3/add-details-02.png)
 
 1. Double-click the text of the new label, and then press Delete.
 
@@ -402,7 +402,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Home** tab, set the text alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/add-details-22.png)
+    > ![Change alignment of the control to right](media/northwind-orders-canvas-part3/add-details-22.png)
 
 ## Show the unit and extended prices
 
@@ -430,7 +430,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Home** tab, set the text alignment of the list-price label to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/add-details-25.png)
+    > ![Change alignment of control to right side](media/northwind-orders-canvas-part3/add-details-25.png)
 
 1. Copy and paste the list-price label, and then resize and move the copy to the right of the list-price label.
 
@@ -482,7 +482,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Set the icon's OnSelect property](media/northwind-orders-canvas-part3/add-details-31.png)
+    > ![Set the icon OnSelect property](media/northwind-orders-canvas-part3/add-details-31.png)
 
     In general, the [**Patch**](functions/function-patch.md) function updates and creates records, and the specific arguments in this formula determine the exact changes that the function will make.
 

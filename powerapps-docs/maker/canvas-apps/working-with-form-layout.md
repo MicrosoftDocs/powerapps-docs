@@ -41,7 +41,7 @@ This article is written as though you have a data source that's named **Sales or
     ![Sales order list](./media/working-with-form-layout/gallery-layout.png)
 3. In the gallery, click or tap **SO004**.
    
-    ![Sales order list](./media/working-with-form-layout/sales-order-gallery-screen.png)
+    ![Sales order list SO004](./media/working-with-form-layout/sales-order-gallery-screen.png)
    
     This record will appear in the form that you build by following steps later in this article.
 
@@ -150,7 +150,7 @@ The delivery address includes several pieces of information that we want to visu
    
     The height of the card shrinks when its contents take up less space.
    
-    ![Sales order delivery address renaming the second line label](./media/working-with-form-layout/delivery-address-move-input.png)
+    ![Sales order delivery address renaming the second line label for height](./media/working-with-form-layout/delivery-address-move-input.png)
 
 Now let's turn our attention to the third line of the address. Similar to what we just did, let's shorten the text of each label for these cards and arrange the Text input box to be to the right of each label. Here are the steps for the **State** card:
 
@@ -161,7 +161,7 @@ Now let's turn our attention to the third line of the address. Similar to what w
 | 3 |Place the cursor to the right of the text, and then delete the portion that we don't need. |![Change the text within a control within a card](./media/working-with-form-layout/state-morph-3b.png) |
 | 4 |Using the grab handles on the sides, size the label control to fit the new text size. |![Resize a control within a card](./media/working-with-form-layout/state-morph-4b.png) |
 | 5 |Select the text input control within this card. |![Select a different control within the card](./media/working-with-form-layout/state-morph-6.png) |
-| 6 |Using the grab handles on the sides, size the text input control to the size that you want. |![Resize a control within a card](./media/working-with-form-layout/state-morph-6b.png) |
+| 6 |Using the grab handles on the sides, size the text input control to the size that you want. |![Resize a control within card](./media/working-with-form-layout/state-morph-6b.png) |
 | 7 |Drag up the text input box and to the right of the label control, and then drop the text input box. |![Move a control within a card](./media/working-with-form-layout/state-morph-7b.png) |
 | Our modifications to the **State** card are now complete. |![Modifications to the card are complete](./media/working-with-form-layout/state-morph-8.png) | |
 

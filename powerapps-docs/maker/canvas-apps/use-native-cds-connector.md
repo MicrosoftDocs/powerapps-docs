@@ -57,7 +57,7 @@ You may also want to enable the **Explicit Column Selection** feature:
 Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, choices and other new features for Microsoft Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
+> If you don't see **Relational data, choices and other new features for Microsoft Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-microsoft-dataverse-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
@@ -265,7 +265,7 @@ Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure t
  
 #### Access and set the Company Name field (a Customer data type) of the Contacts table
 
-Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But a table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But a table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](./working-with-references.md#show-the-columns-of-a-customer) for more details.
  
 #### Access and set the Regarding field of activity tables such as Faxes, Phone Calls, Email Messages
 
@@ -282,7 +282,7 @@ If( IsBlank( ThisItem.Regarding ), "",
 
 ![Gallery with Regarding](./media/use-native-cds-connector/Polymorphic-With-Regarding.png)
  
-Read [Regarding lookup fields](./working-with-references.md#understand-regarding-lookup-fields) and [Regarding relationships](./working-with-references.md#understand-regarding-relationships) for more details.
+Read [Regarding lookup fields](./working-with-references.md#understand-regarding-lookup-columns) and [Regarding relationships](./working-with-references.md#understand-regarding-relationships) for more details.
 
 #### Access the list of all Activities for a record
 

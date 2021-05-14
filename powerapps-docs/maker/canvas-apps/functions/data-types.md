@@ -177,7 +177,7 @@ If you need the Unix time in a **Date** value for further calculations or displa
 
 ### SQL Server
 
-SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
 
 Canvas apps use the included time-zone information in **Datetimeoffset** fields when converting a value to the app's internal UTC representation. The apps always use UTC as the time zone (zero time zone offset) when they write data.
 
