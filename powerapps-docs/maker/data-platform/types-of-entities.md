@@ -29,12 +29,12 @@ search.app:
 
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
-Before creating or editing tables in Microsoft Dataverse, you should understand that there are different types of tables. Once a custom table is created, these types can't be changed. The two main table types are standard tables and activity tables.  
+Before creating or editing tables in Microsoft Dataverse, you should understand that there are different types of tables. The two main table types are standard tables and activity tables.  
   
 There are three primary types of tables:
 - Standard: Several standard tables, also known as out-of-box tables, are already included with Dataverse environments. Account, business unit, contact, task, and user tables are examples of standard tables. Tables that are imported as a managed solution and set as customizable also appear as standard tables.
 - Managed: Are tables that aren’t customizable and have been imported into the environment as part of a managed solution.
-- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the Dataverse environment.  
+- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the Dataverse environment. When you create a table, you can specify it as a standard or [Activity](#activity-tables) table.
 
 For more information about how components are customizable, see [Managed properties](solutions-overview.md#managed-properties).
 
@@ -44,7 +44,7 @@ For more information about managed and unmanaged customizations, see [Managed an
 
 An activity can be thought of as any action for which an entry can be made on a calendar. An activity has time dimensions (start time, stop time, due date, and duration) that help determine when the action occurred or will occur. Activities also contain data that helps determine what action the activity represents, for example, subject and description. An activity can be opened, canceled, or completed. The completed status of an activity will have several sub-status values associated with it to clarify the way that the activity was completed.  
   
-Activity tables are a special kind of standard table that can only be owned by a user or team, they can’t be owned by an organization.  
+Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. 
   
 The following table lists activity tables that are available in a default Dataverse environment.
   
@@ -94,7 +94,7 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 
 ## Table ownership
 
-There are two different types of standard and custom table ownership. When you create a custom table the ownership options are **User or team** or **Organization** owned.
+There are two different types of standard and custom table ownership. When you create a custom table the ownership options are **User or team** or **Organization** owned. Once a table is created, the ownership type can't be changed.
   
 |Ownership|Description|  
 |---------------|-----------------|  
