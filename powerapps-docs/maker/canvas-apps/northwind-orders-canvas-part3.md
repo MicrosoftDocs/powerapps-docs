@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/06/2019
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -53,10 +53,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Add a blank vertical gallery](media/northwind-orders-canvas-part3/details-03.png)
 
-    The new gallery, which will show order details, appears in the upper-left corner:
-
-    > [!div class="mx-imgBorder"]
-    > ![Default location of order-details gallery](media/northwind-orders-canvas-part3/details-04.png)
+    The new gallery, which will show order details, appears in the upper-left corner.
 
 1. Close the fly out data source dialog, and then resize and move the detail gallery to the lower-right corner, below the new title bar:
 
@@ -76,8 +73,7 @@ Before you start this topic, you must install the database as described earlier 
 
     You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** table. If that order contains one or more line items, the record in the **Orders** table is linked to one or more records in the **Order details** table, and data from those records appears in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** tables. The formula that you specified "walks" that relationship by using dot notation:
 
-    > [!div class="mx-imgBorder"]
-    > ![One-to-many relationship between the Orders table and the Order Details table](media/northwind-orders-canvas-part3/schema-orders-rel.png)
+    ![One-to-many relationship between the Orders table and the Order Details table](media/northwind-orders-canvas-part3/schema-orders-rel.png)
 
 ## Show product names
 
@@ -110,13 +106,11 @@ Before you start this topic, you must install the database as described earlier 
 
     This expression walks from a record in the **Order Details** table. The record is held in **ThisItem** over to the **Order Products** table through a many-to-one relationship:
 
-    > [!div class="mx-imgBorder"]
-    > ![Many-to-one relationship between the Order Details table and the Order Product table](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
+    ![Many-to-one relationship between the Order Details table and the Order Product table](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
 
-    The **Product Name** field (and other fields that you're about to use) are extracted:
+    The **Product Name** column (and other columns that you're about to use) are extracted:
 
-    > [!div class="mx-imgBorder"]
-    > ![Fields in the Order Products table](media/northwind-orders-canvas-part3/schema-products-fields.png)
+    ![Column in the Order Products table](media/northwind-orders-canvas-part3/schema-products-fields.png)
 
 ## Show product images
 
@@ -323,10 +317,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     The [**Combo box**](controls/control-combo-box.md) control appears in the upper-left corner.
 
-1. In the fly out dialog, select the **Order Products** data source:
-
-    > [!div class="mx-imgBorder"]
-    > ![Set the combo box's Items property](media/northwind-orders-canvas-part3/add-details-09.png)
+1. In the fly out dialog, select the **Order Products** data source.
 
 1. In the **Properties** tab for the combo box, select **Edit** (next to **Fields**) to open the **Data** pane.  Ensure that the **Primary text** and **SearchField** are set to **nwind_productname**.
 

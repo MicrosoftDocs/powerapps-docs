@@ -96,9 +96,6 @@ In this section, you'll add controls to show a summary of any order that the use
 
 1. Select the **Orders** data source.
 
-    > [!div class="mx-imgBorder"]
-    > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
-
 ## Add and arrange fields
 
 1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane.
