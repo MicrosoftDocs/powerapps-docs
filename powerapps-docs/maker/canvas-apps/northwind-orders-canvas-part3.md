@@ -208,7 +208,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Insert** tab, insert another label on to the screen:
 
     > [!div class="mx-imgBorder"]
-    > ![Insert label](media/northwind-orders-canvas-part3/details-19.png)
+    > ![Screenshot of insert label](media/northwind-orders-canvas-part3/details-19.png)
 
 1. Resize and move the new label above the pictures of the products in the second title bar, and then change the text's color to white on the **Home** tab.
 
