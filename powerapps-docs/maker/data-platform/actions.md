@@ -1,8 +1,8 @@
 ---
 title: "Use custom process actions | MicrosoftDocs"
-description: "With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an action creates a custom message."
+description: "With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an custom process action creates a custom message."
 ms.custom: ""
-ms.date: 03/20/2021
+ms.date: 04/28/2021
 ms.reviewer: ""
 ms.service: powerapps
 author: MSFTMAN
@@ -19,9 +19,10 @@ search.audienceType:
   - flowmaker
   - enduser
 ---
-# Use custom process actions
 
-Custom process actions open a range of possibilities for composing business logic. With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an action creates a custom message. Developers refer to these actions as *messages*. Each of these messages is based on actions taken on a table row. If the goal of a process is to create a row, then update it, and then assign it, there are three separate steps. Each step is defined by the capabilities of the table—not necessarily your business process.  
+# Use Custom process actions
+
+Custom process actions, also known as *Custom actions*, or just *actions*. open a range of possibilities for composing business logic. With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, a custom process action creates a custom message. Developers refer to these actions as *messages*. If the goal of a process is to create a row, then update it, and then assign it, there are three separate steps. Each step is defined by the capabilities of the table—not necessarily your business process.  
   
 Custom process actions provide the ability to define a single verb (or message) that matches an operation you need to perform for your business. These new messages are driven by a process or behavior rather than what can be done with a table. These messages can correspond to verbs like Escalate, Convert, Schedule, Route, or Approve—whatever you need. The addition of these verbs helps provide a richer vocabulary for you to fluently define your business processes. You can apply this richer vocabulary from clients or integrations rather than having to write the action within clients. This also makes it easier because you can manage and log the success or failure of the entire action as a single unit.  
   

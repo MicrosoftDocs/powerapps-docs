@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance while working with metadata for the Microsoft Dataverse | Microsoft Docs"
-description: Best practices and guidance while working with metadata for developers of the Microsoft Dataverse in Power Apps.
+title: "Developers: Best practices and guidance while working with table definitions in Microsoft Dataverse | Microsoft Docs"
+description: Best practices and guidance while working with table definitions for developers of the Microsoft Dataverse in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 03/24/2021
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -22,20 +22,20 @@ search.app:
   - D365CE
 ---
 
-# Best practices and guidance while working with metadata for the Microsoft Dataverse
+# Best practices and guidance while working with table definitions in Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+This list below contains all of the guidance and best practices regarding interacting and working with table definitions in Dataverse.
 
-This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Dataverse.
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 
 |Best Practice  |Description  |
 |---------|---------|
-|[Retrieve published metadata](retrieve-published-metadata.md)     |Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect.         |
-|[Retrieve specific columns for an entity via query APIs](retrieve-specific-columns-entity-via-query-apis.md)     |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
+|[Retrieve published definitions](retrieve-published-metadata.md)     |Retrieving unpublished definitions not only will add overhead to processing the request itself, performing more slowly, it could also return definitions that the requestor does not expect.         |
+|[Retrieve specific columns for a= table via query APIs](retrieve-specific-columns-entity-via-query-apis.md)     |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
 
 ### See Also
-[Work with metadata using code](../../metadata-services.md)<br />
+[Work with definitions using code](../../metadata-services.md)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -74,7 +74,7 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 ## Resolutions for common errors
 
-| Error | Microsoft Edge | Google Chrome | *Microsoft Internet Explorer 11 |  Safari (iOS) |
+| Error | Microsoft Edge | Google Chrome | Microsoft Internet Explorer 11* |  Safari (iOS) |
 | - | - | - | - | - |
 | <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) | [Enable third-party cookies and local data](#instructions-for-safari-ios) |
 | <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem | Possible network problem |

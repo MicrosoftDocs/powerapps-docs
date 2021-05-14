@@ -1,10 +1,10 @@
 ---
-title: Import components  | Microsoft Docs
-description: This article describes how to import code components
+title: Import components into model-driven apps in MIcrosoft Dataverse | Microsoft Docs
+description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 06/20/2019
+ms.date: 04/01/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.topic: "article"
@@ -14,6 +14,8 @@ author: Nkrb
 # Package a code component
 
 This article describes how to import code components into Microsoft Dataverse. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 To create and import a solution file:
 
@@ -175,7 +177,7 @@ If you want to remove a code component from a solution file:
 
 ### See also
 
-[Add code components to a field or entity in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a column or table in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)

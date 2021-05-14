@@ -4,7 +4,7 @@ description: Overview of creating apps in either canvas or model-driven mode and
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 01/07/2021
 ms.author: alaug
 ms.reviewer: tapanm-msft

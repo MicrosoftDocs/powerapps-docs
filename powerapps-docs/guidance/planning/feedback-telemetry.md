@@ -47,12 +47,12 @@ counts, unique users by day, and so on.
 ![A screenshot of an app usage report](media/telemetry.png "A screenshot of an app usage report")
 
 If you're an administrator, you can access analytics at the overall tenant level.
-More information: [Admin Analytics for Power Apps](https://docs.microsoft.com/power-platform/admin/analytics-powerapps)
+More information: [Admin Analytics for Power Apps](/power-platform/admin/analytics-powerapps)
 
 ### Adding manual telemetry using Azure Application Insights
 
 You can gain additional insights and telemetry about the app by setting up a
-connection to Application Insights, a feature that's part of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+connection to Application Insights, a feature that's part of [Azure Monitor](/azure/azure-monitor/overview).
 Some of the telemetry you can gain from setting this up includes:
 
 - Number of active users using the app.

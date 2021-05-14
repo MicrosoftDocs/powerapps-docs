@@ -1,20 +1,19 @@
 ---
-title: "Overview of Power Apps portals admin center | MicrosoftDocs"
-description: "Information about Power Apps portals admin center."
+title: Power Apps portals admin center
+description: Learn about Power Apps portals admin center.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 03/12/2021
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Power Apps portals admin center
-
-> [!NOTE]
-> - Based on the [terminology changes in Dataverse](../../data-platform/data-platform-intro.md), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md)
-> - We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
 
 The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 

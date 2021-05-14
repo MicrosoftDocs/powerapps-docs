@@ -1,13 +1,16 @@
 ---
-title: "Use template tags for a portal | MicrosoftDocs"
-description: "Learn about template tags available in portal"
+title: Template tags
+description: Learn about template tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Template tags
@@ -47,7 +50,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
     </table> 
     ```
 
-- *EntityName*
+- *TableName*
 
     Gets the logical name of the entity.
 
@@ -78,7 +81,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 
 ### XML attribute
 
-XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
+XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how table permission is getting applied on this *fetchxml* tag.  
 
 ## include
 

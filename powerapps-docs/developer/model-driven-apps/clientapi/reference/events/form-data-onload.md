@@ -1,6 +1,7 @@
 ---
-title: "Form data OnLoad Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "Form data OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the form data OnLoad event.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,13 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Form data OnLoad Event (Client API reference)
-
-
+# Form data OnLoad event (Client API reference)
 
 This event occurs whenever form data is loaded, specifically:
 
-- On initial page load
+- On initial page load.
 - When the page data is explicitly refreshed using formContext.data.[refresh](../formContext-data/refresh.md) method.
 - When the data is refreshed on a page on saving a record, if there are any changes.
  

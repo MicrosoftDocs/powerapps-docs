@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/16/2020 #Required; mm/dd/yyyy format.
+  ms.date: 04/06/2021 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -39,7 +39,7 @@ highlightedContent:
     # Card
     - title: Power Apps training on Microsoft Learn
       itemType: learn
-      url: https://docs.microsoft.com/en-us/learn/browse/?products=power-apps
+      url: /learn/powerplatform/power-apps
 
 # conceptualContent section
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -149,7 +149,10 @@ conceptualContent:
         - text: Planning a Power Apps project
           url: /powerapps/guidance/planning/introduction
           itemType: reference
-    
+        - text: "Ebook: Fusion development approach"
+          url: /powerapps/guidance/fusion-dev-ebook/
+          itemType: overview
+
     - title: Learning catalog
       links:
         - text: App maker
