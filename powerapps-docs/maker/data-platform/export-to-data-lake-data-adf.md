@@ -119,7 +119,9 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Sink type**: Select **DelimitedText**. 
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service.
 
-      ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
+
+      The way of configuring the Siink has changed and this part of the documentation should be updated with new screesnhoots
+      
 
 3. On the **Settings** tab, do the following:
 
