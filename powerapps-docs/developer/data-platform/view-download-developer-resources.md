@@ -92,4 +92,3 @@ More information: [Discover the URL for your organization using the Web API](/po
 This is the endpoint address for the SOAP version of the Discovery service to use for your instance. You can also download the service document here.
 More information: [Discover the URL for your organization using the Organization service](/powerapps/developer/data-platform/org-service/discovery-service)
   
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
