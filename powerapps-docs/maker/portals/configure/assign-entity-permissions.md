@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/13/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -42,25 +42,25 @@ When creating a new Table Permission record, the first step is to determine the 
 
 ### Global access type
 
-If a Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via a basic form that they don't have access to, they'll receive a permission error.
+If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the Microsoft Dataverse views that have been defined for that list. Further, if a user attempts to access a record via an basic form that they don't have access to, they'll receive a permission error. For example, [show all car listings to all authenticated users in a car dealership](entity-permissions-studio-walkthrough.md#view-all-car-listings).
 
 ### Contact access type
 
 With Contact access type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's contact record via a defined relationship.
 
-On a list, this access type means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
+On an list, this access type means that a filter will be added to whatever Microsoft Dataverse views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.) For example, [show, update, and delete owned car listings in a car dealership](entity-permissions-studio-walkthrough.md#view-update-and-delete-owned-car-listings).
 
-Basic forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define basic forms](entity-forms.md).  
+Basic forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. More information: [Define basic forms](entity-forms.md).  
 
 ### Account access type
 
 With Account Access Type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's parent account record via a defined relationship.
 
-This access type means that the list will only show the records of the selected table that are associated to the user's parent account. For example, if a table permission allows Read access to Lead table with the Account access type, the user having this permission can view all the leads of only the parent account of the user.
+This access type means that the list will only show the records of the selected table that are associated to the user's parent account. For example, if an table permission allows Read access to Lead table with the Account access type, the user having this permission can view all the leads of only the parent account of the user. For example, [show all car dealerships](entity-permissions-studio-walkthrough.md#view-all-car-dealerships).
 
 ### Self access type
 
-Self Access Type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record.
+Self Access Type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record. For example, [profile page in a car dealership](entity-permissions-studio-walkthrough.md#change-profile-details).
 
 ### Parental access type
 

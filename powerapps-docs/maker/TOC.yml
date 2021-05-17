@@ -1960,9 +1960,9 @@
           href: ./data-platform/actions.md
         - name: Create a custom process action
           href: ./data-platform/create-actions.md
-        - name: Configure actions from a real-time workflow
+        - name: Configure custom process actions from a real-time workflow
           href: ./data-platform/configure-actions.md    
-        - name: Invoke actions from a real-time workflow
+        - name: Invoke custom process actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
@@ -2104,6 +2104,8 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
+        - name: Edit table data in Excel
+          href: ../teams/edit-data-in-excel.md
         - name: Move customizations between environments
           href: ../teams/import-solution-in-teams.md 
         - name: View table data in Power BI
