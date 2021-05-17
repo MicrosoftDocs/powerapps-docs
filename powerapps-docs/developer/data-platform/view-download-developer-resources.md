@@ -22,8 +22,6 @@ search.app:
 
 # View or download developer resources
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 This article provides resources for developers and information about the specific environment you're working with.
 
 ## View the Developer Resources page for your environment
@@ -71,6 +69,8 @@ This is the URL for the SOAP endpoint for the Organization Service for your inst
 You can download the WSDL for this service here, but usually you will use the CrmSvcUtil.exe code generation tool to build table classes for .NET projects. More information: 
 - [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
 - [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ### Instance Reference Information
 
