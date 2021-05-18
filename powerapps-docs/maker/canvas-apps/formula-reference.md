@@ -1,5 +1,5 @@
 ---
-title: Functions, signals, and enumerations | Microsoft Docs
+title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
 manager: kvivek
