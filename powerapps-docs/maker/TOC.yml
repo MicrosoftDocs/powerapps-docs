@@ -759,6 +759,8 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Rand
             href: ./canvas-apps/functions/function-rand.md
+          - name: ReadNFC
+            href: ./canvas-apps/functions/function-readnfc.md
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
           - name: Relate
