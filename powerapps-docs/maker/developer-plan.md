@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Power Apps Developer Plan
 
-The Power Apps Developer Plan gives you a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse. 
+The Power Apps Developer Plan gives you a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse.
 
 The plan enables you to:
 
