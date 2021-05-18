@@ -104,6 +104,9 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
     ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
 
+ >[!NOTE]
+ > Each map component has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map component. Therefore, for pins with both latitude/longtude and an address bound, the map component will prioritize using the latitude/longitude to avoid geocoding the address. 
+
 
 
 ## Other interactive map features
