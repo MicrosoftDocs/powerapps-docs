@@ -1,5 +1,5 @@
 ---
-title: Add and configure a canvas-app control | Microsoft Docs
+title: Add and configure controls in canvas apps
 description: Step-by-step instructions for adding and configuring canvas-app controls directly, from the toolbar, in the Properties tab, or in the formula bar.
 author: tapanm-msft
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add and configure a canvas-app control in Power Apps
+# Add and configure controls in canvas apps
 
 Add a variety of UI elements to your canvas app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 

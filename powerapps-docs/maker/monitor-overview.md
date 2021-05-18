@@ -1,6 +1,6 @@
 ---
-title: Overview of Power Apps with Monitor | Microsoft Docs
-description: Learn about Power Apps Monitor.
+title: Monitor overview
+description: Overview of Power Apps Monitor.
 author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual

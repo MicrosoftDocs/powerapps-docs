@@ -1,6 +1,6 @@
 ---
-title: Build responsive apps in canvas apps | Microsoft Docs
-description: Reference information about building responsive apps in canvas apps
+title: Building responsive canvas apps
+description: Learn about how to build responsive canvas apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Building responsive apps  
+# Building responsive canvas apps  
 
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
 

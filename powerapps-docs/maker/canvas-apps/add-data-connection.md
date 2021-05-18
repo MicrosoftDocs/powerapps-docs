@@ -1,6 +1,6 @@
 ---
-title: Add a data connection in a canvas app | Microsoft Docs
-description: Add a data connection in an existing canvas app or a blank app
+title: Add data connections to canvas apps
+description: Learn about how to add a data connection in an existing canvas app.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add a data connection to a canvas app in Power Apps
+# Add data connections to canvas apps
 
 In Power Apps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Microsoft Dataverse, Salesforce, OneDrive, or [many other data sources](connections-list.md).
 

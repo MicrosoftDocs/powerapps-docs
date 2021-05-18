@@ -1,5 +1,5 @@
 ---
-title: Collaborative troubleshooting using Monitor with features such as inviting a user or connecting a user to Monitor. | Microsoft Docs
+title: Collaborative troubleshooting using Monitor
 description: Learn about collaborative troubleshooting using Monitor with features such as inviting a user or connecting a user to Monitor.
 author: hasharaf
 ms.service: powerapps
