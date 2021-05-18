@@ -31,7 +31,7 @@ With Power Apps, forms provide the user interface that people use to interact wi
 
 In the default solution or an unmanaged solution, you can create new forms or edit existing forms for all tables that allow form customization. 
 In an unmanaged solution, you can edit the managed properties for an unmanaged custom table that was created for the solution.
-If you’re viewing a managed solution, you can’t create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms to that table. 
+If you’re viewing a managed solution, you can’t create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table. 
   
 
 <a name="BKMK_TypesOfForms"></a> 
@@ -61,9 +61,9 @@ There are still a number of tables, referred to here as classic tables, that ret
 Create or edit forms for model-driven apps. More information: [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)
 
 ## Delete a form
-To delete a form, sign in to Power Apps and the go to **Solutions** > Open the solution your want > select the table that you want > **Forms** tab. Select the form, and then select **Delete** on the command bar.
+To delete a form, sign in to Power Apps and go to **Solutions** > Open the solution you want > select the table that you want > **Forms** tab. Select the form, and then select **Delete** on the command bar.
 
-There are a couple reasons you may not be able to delete a form.
+There are a couple of reasons you may not be able to delete a form.
 
 |Reason  |Work around  |
 |---------|---------|
@@ -75,15 +75,15 @@ There are a couple reasons you may not be able to delete a form.
 ### Why is my form not visible in the form selector drop down in my app?
 A form may not be available because it hasn’t been added to the app.
 1. Open the app in app designer.
-2. In the **Table View** area select **Forms** next to the table.
-3. On the **Components** tab verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
+2. In the **Table View** area, select **Forms** next to the table.
+3. On the **Components** tab, verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
 
    > [!div class="mx-imgBorder"] 
    > ![Forms included with app](media/forms-included-in-app.png "Forms included with app")
    
 ### Why isn't my form displayed as the default form in the app?
 A form can be set as the default form through the form order configuration or when a user sets the default form as a personalization setting.
-1. Open solution explorer. Expand the table that has the forms your want to order, and then select **Forms**.
+1. Open solution explorer. Expand the table that has the forms you want to order, and then select **Forms**.
 2. On the toolbar select **Form Order** > **Main Form Set**. 
 
    > [!div class="mx-imgBorder"] 
