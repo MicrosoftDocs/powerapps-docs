@@ -164,6 +164,8 @@
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
         href: clientapi/reference/save-event-arguments/preventDefault.md
+      - name: preventDefaultOnError
+        href: clientapi/reference/save-event-arguments/preventDefaultOnError.md
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
