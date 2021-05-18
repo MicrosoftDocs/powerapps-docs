@@ -85,7 +85,7 @@ More information: [Image columns](image-attributes.md), [Sample: Set and retriev
 
 ## Types of tables
 
-The capabilities and behavior of tables depends on several table properties. Most of these properties are relatively simple and have descriptive names. Four that require some additional explanation are: *Ownership*, *Activity tables*, *Activityparty table* and *Child tables*.
+The capabilities and behavior of tables depends on several table properties. Most of these properties are relatively simple and have descriptive names. Among four properties that require some additional explanation are: *Ownership*, *Activity tables*, *Activityparty table* and *Child tables*.
 
 ### Table ownership
 
