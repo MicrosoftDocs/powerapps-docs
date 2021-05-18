@@ -84,7 +84,7 @@ Getting started with Dataverse is easy. For example, you can start with these it
 - [Create a custom table](data-platform/data-platform-create-entity.md)
 - [Manage columns](data-platform/data-platform-manage-fields.md)
 - [Create custom choices](data-platform/custom-picklists.md)
-- [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+- [Create a business rule](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 ## Planning a Power Apps app or project
 
