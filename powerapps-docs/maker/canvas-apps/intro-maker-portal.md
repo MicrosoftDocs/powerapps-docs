@@ -1,5 +1,5 @@
 ---
-title: Sign in to Power Apps for the first time | Microsoft Docs
+title: Sign in to Power Apps for the first time
 description: An introduction to the first-time sign-in experience for Power Apps.
 author: tapanm-msft
 manager: kvivek
