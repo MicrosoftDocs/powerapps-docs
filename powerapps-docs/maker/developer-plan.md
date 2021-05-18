@@ -1,24 +1,27 @@
 ---
-title: "<5/18/21 – No more changes to this doc – for PR/draft changes, reach out to tapanm >  \n  \nPower Apps Developer Plan: Build and test Power Apps for free "
+title: Power Apps Developer Plan
+description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse.
+author: dileepsinghmicrosoft 
+manager: kvivek
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: intro-internal
+ms.date: 01/14/2021
+ms.author: dileeps
+ms.reviewer:
 ---
 
-The Power Apps Developer Plan gives you a free development environment to build
-and test with Power Apps, Power Automate, and Microsoft Dataverse. The plan
-enables you to:
+# Power Apps Developer Plan
 
--   Create apps and flows without writing code, with full-featured Power Apps
-    and Power Automate development tools. Easily share and collaborate on these
-    solutions with others.
+The Power Apps Developer Plan gives you a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse. 
 
--   Connect to any data source by using 400+ [out of the box
-    connectors](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list) or
-    by creating your own [custom
-    connectors](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/register-custom-api).
+The plan enables you to:
 
--   With [Dataverse](https://docs.microsoft.com/en-us/common-data-service/entity-reference/introduction), utilize
-    a fully managed, scalable data platform, including support for common
-    business app actions. Use out-of-the-box common tables or build your own
-    data schema.
+- Create apps and flows without writing code, with full-featured Power Apps and Power Automate development tools. Easily share and collaborate on these solutions with others.
+
+- Connect to any data source by using 400+ [out of the box connectors](canvas-apps/connections-list.md) or by creating your own [custom connectors](canvas-apps/register-custom-api.md).
+
+- With [Dataverse](/common-data-service/entity-reference/introduction), utilize a fully managed, scalable data platform, including support for common business app actions. Use out-of-the-box common tables or build your own data schema.
 
 -   Create additional environments to exercise application lifecycle management
     (coming soon).
