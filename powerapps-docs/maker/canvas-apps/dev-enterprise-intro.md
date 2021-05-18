@@ -1,6 +1,6 @@
 ---
-title: Power Apps for enterprise developers, partners, and ISVs | Microsoft Docs
-description: An introduction to developing solutions with canvas apps.
+title: Canvas apps for enterprise developers, partners, and ISVs
+description: Learn about developing solutions with canvas apps for enterprise developers, partners, and ISVs.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual

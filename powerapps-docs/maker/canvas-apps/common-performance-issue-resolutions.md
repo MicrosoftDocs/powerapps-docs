@@ -1,5 +1,5 @@
 ---
-title: Common canvas apps performance issues and resolutions | Microsoft Docs
+title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
 ms.service: powerapps

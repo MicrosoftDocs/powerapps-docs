@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from Microsoft Dataverse | Microsoft Docs
-description: In Power Apps, automatically create a canvas app to manage data in Microsoft Dataverse
+title: Create a canvas app with data from Microsoft Dataverse
+description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from Microsoft Dataverse in Power Apps
+# Create a canvas app with data from Microsoft Dataverse
 
 In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 

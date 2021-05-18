@@ -1,6 +1,6 @@
 ---
-title: Understand delegation in a canvas app | Microsoft Docs
-description: Use delegation to process large data sets efficiently in a canvas app.
+title: Understand delegation in a canvas app
+description: Learn about how to use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps

@@ -1,5 +1,5 @@
 ---
-title: Behavior formulas for components | Microsoft Docs
+title: Behavior formulas for components
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: yifwang
 ms.service: powerapps

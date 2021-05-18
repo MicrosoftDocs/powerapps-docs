@@ -1,6 +1,6 @@
 ---
-title: "Display a full-sized image on a canvas app form | MicrosoftDocs"
-description: "Understand how to display a full-sized image on a canvas app form"
+title: Display a full-sized image on a canvas app form
+description: Learn about how to display a full-sized image on a canvas app form.
 keywords: ""
 ms.date: 11/09/2020
 ms.service: powerapps

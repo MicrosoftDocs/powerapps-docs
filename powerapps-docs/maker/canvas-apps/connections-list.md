@@ -1,6 +1,6 @@
 ---
-title: Connectors overview for canvas apps | Microsoft Docs
-description: Overview of all the available connections that you can use to build canvas apps
+title: Overview of connectors for canvas apps
+description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Overview of canvas-app connectors for Power Apps
+# Overview of connectors for canvas apps
+
 Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
