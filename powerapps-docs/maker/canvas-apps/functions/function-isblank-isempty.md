@@ -101,8 +101,8 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Coalesce(&nbsp;Blank(),&nbsp;1&nbsp;)** |Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**1** |
-| **Coalesce( "", 2 )** |Tests the first argument which is an empty string. Because the first argument is an empty string, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**2** |
-| **Coalesce( Blank(), "", Blank(), "", 3, 4 )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value and non-empty string is found.  In this case, the first four arguments all return *blank* or an empty string, so evaluation continues to the fifth argument. The fifth argument is non-*blank* and non-empty string, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**3** |
+| **Coalesce( "", "2" )** |Tests the first argument which is an empty string. Because the first argument is an empty string, evaluation continues with the next argument until a non-*blank* value and non-empty string is found. |**2** |
+| **Coalesce( Blank(), "", Blank(), "", "3", "4" )** |**Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value and non-empty string is found.  In this case, the first four arguments all return *blank* or an empty string, so evaluation continues to the fifth argument. The fifth argument is non-*blank* and non-empty string, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. |**3** |
 | **Coalesce( "" )** | Tests the first argument which is an empty string. Because the first argument is an empty string, and there are no more arguments, the function returns *blank*.   |*blank* |
 
 ### IsBlank
