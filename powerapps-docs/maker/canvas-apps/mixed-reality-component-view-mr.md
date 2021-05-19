@@ -50,7 +50,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
 
-You can modify the component with a number of properties.
+You can modify the component with several properties.
 
 ### Properties
 
@@ -76,19 +76,20 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ### How object scaling is handled
 
-When you insert a model with the **View in MR** component, it typically has some (or all) dimensions specified - these are the **Object width**, **Object height**, and **Object depth** properties.
+When you insert a model with the **View in MR** component, it typically has some (or all) dimensions specified - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
 
 If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
 
 - If no dimensions are set, we assume the model is already at its real-world scale and leave it as is.  
 
 - If one dimension is set, and the others are left at the default `0`, we scale the whole object equally based on the set dimension.  
-  This is similar to using a setting such as "keep aspect ratio" when resizing an image.  
+  This behavior is similar to using a setting such as "keep aspect ratio" when resizing an image.  
 
 - If two dimensions are set, we force the model to match the given dimensions and average the scale for the third dimension.  
-  - For example, say you had a model with a height of 12, a width of 6, and a depth of 3. You set **Object height** to `24`, and **Object width** to `9`, but leave **Object depth** unchanged.  
+  - For example, say you had a model with an **Object height** of `12`, an **Object width** of `6`, and an **Object depth** of `3`.  
+  You set **Object height** to `24`, and **Object width** to `9`, but leave **Object depth** unchanged.  
   The height has increased by a factor of 2, but the width has increased by a factor of 1.5 - we average these two measurements to come to 1.75 and then scale the depth by that amount.  
-  This means the final scaled model would have an **Object height** of `24`, **Object width** of `9`, and **Object depth** of `5.25`.  
+  The final scaled model would have an **Object height** of `24`, **Object width** of `9`, and **Object depth** of `5.25`.  
 
 - If all three dimensions are set, we match the size of the model to what you specify.  
   If the measurements don't adhere to the aspect ratio, you could end up with a squashed or distorted model when you view it in MR.
