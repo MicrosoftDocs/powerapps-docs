@@ -53,7 +53,7 @@ Anyone with a [work or school email address](signup-for-powerapps.md#faq) can 
 Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevPlan). If you're an existing Power Apps user, you can also [create a developer environment](https://make.powerapps.com/community/signup).
 
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
-may need to select your developer environment in the top right of the screen. It will be shown with your name, for example 'John Doe's environment'. If there's already an environment with that name, the individual environment will be named 'John Doe's (1) environment'. You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
+may need to select your developer environment in the top right of the screen. It will be shown with your name, for example "John Doe's environment'" If there's already an environment with that name, the individual environment will be named "John Doe's (1) environment". You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
 
 ![Individual environment for Developer Plan](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
 
@@ -171,7 +171,6 @@ Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
 
 ### Can I reset my developer environment?
 
-Resetting a developer environment isn't currently supported; however, it can be deleted. The next time the Developer Plan licensed user signs into the Power
-Apps Maker portal a new developer environment will be created. The user can then provision a Dataverse database in the environment. Currently, the only way to remove the Developer Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
+Resetting a developer environment isn't currently supported; however, it can be deleted. A new developer environment will be created if the Developer Plan licensed user (who's environment is deleted) signs into the Power Apps maker portal again. The user can then provision a Dataverse database in the environment. Currently, the only way to remove the Developer Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
