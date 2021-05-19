@@ -67,11 +67,13 @@ Azure Data Lake is a storage solution that allows you to process data on demand,
 
 ### See also
 
-[Analyze exported data with Power BI](./export-to-data-lake-data-powerbi.md)
+[Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace](./azure-synapse-link-synapse.md)
 
-[Ingest exported data with Azure Data Factory](./export-to-data-lake-data-adf.md)
+[Configure Azure Synapse Link for Dataverse with your Azure Data Lake](./azure-synapse-link-data-lake.md)
 
-[Export to data lake FAQ](export-data-lake-faq.yml)
+[Azure Synapse Link FAQ](azure-synapse-link-faq.yml)
+
+[Blog: Announcing Azure Synapse Link for Dataverse](https://aka.ms/synapse-dataverse)
 
 [Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
 
