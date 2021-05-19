@@ -47,7 +47,7 @@ The flip component sample consists of a label and a button. When you click on th
 - When the component is loaded, the label shows the text based on the bind column value. The `context.parameters.[property_name].attributes` contains the associated definitions.
 - For Yes/No columns, `context.parameters.[property_name].Options` will include both true and false value. 
 - Selecting on the Flip button, the label will update the value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to Power Apps component framework. 
-- ClientAPI updates the bind column value, and the updated value flows to the component label. You can also use `ClientAPI` to update an column value to trigger control's [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
+- ClientAPI updates the bind column value, and the updated value flows to the component label. You can also use `ClientAPI` to update a column value to trigger control's [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
 
 
 ## Code

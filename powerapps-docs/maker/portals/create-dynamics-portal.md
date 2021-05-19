@@ -4,7 +4,7 @@ description: Instructions to create a portal in an environment containing custom
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm

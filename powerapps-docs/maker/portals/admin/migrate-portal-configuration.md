@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/07/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -30,9 +30,11 @@ Schema files are available for the following portal types:
 
 - **Portals created in an environment with Dataverse**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162831) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
 
 - **Portals created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service)**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2162733) (for version [9.2.2103.x](../versions/package-version-9.2.2103.md))
     - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
     - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
     - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
@@ -124,6 +126,7 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 ### See also
 
+- [Track changes to Power Apps portals configuration](../faq.yml#how-do-i-track-changes-to-power-apps-portals-configuration-).
 - Tenant to tenant migration of a [Power Platform environment](/power-platform/admin/move-environment-tenant).
 - Tenant to tenant migration of [model-driven apps](/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
 
