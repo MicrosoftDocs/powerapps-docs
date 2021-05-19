@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -115,7 +115,7 @@ You can update theme name, description, color, and other typography settings in 
 
 1. Select **Theme** from the components pane.
 
-1. Select the theme from presets that you want to copy, select **...**, and then select **Save as Copy**.
+1. Select the theme from presets that you want to copy, select **...**, and then select **Customize**.
 
     ![Copy preset theme](./media/theme-overview/copy-preset-theme.png "Copy a preset theme")
 
