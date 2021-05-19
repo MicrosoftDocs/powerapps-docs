@@ -66,13 +66,33 @@ Text | Label for the button. | String | Properties (also in **Advanced**)
 Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
 Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
-Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
-Object height | Height of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
-Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)
+Object width | Width of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
+Object height | Height of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
+Object depth | The three-dimensional depth of the 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
 Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
 OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
 OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
+
+### How object scaling is handled
+
+When you insert a model with the **View in MR** component, it typically has some (or all) dimensions specified - these are the **Object width**, **Object height**, and **Object depth** properties.
+
+If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
+
+- If no dimensions are set, we assume the model is already at its real-world scale and leave it as is.  
+
+- If one dimension is set, and the others are left at the default `0`, we scale the whole object equally based on the set dimension.  
+  This is similar to using a setting such as "keep aspect ratio" when resizing an image.  
+
+- If two dimensions are set, we force the model to match the given dimensions and average the scale for the third dimension.  
+  - For example, say you had a model with a height of 12, a width of 6, and a depth of 3. You set **Object height** to `24`, and **Object width** to `9`, but leave **Object depth** unchanged.  
+  The height has increased by a factor of 2, but the width has increased by a factor of 1.5 - we average these two measurements to come to 1.75 and then scale the depth by that amount.  
+  This means the final scaled model would have an **Object height** of `24`, **Object width** of `9`, and **Object depth** of `5.25`.  
+
+- If all three dimensions are set, we match the size of the model to what you specify.  
+  If the measurements don't adhere to the aspect ratio, you could end up with a squashed or distorted model when you view it in MR.
+
 
 ### Additional properties
 
