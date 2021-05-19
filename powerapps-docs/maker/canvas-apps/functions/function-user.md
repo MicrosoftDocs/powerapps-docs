@@ -1,6 +1,6 @@
 ---
-title: User function | Microsoft Docs
-description: Reference information, including syntax, for the User function in Power Apps
+title: User function in Power Apps
+description: Reference information including syntax and examples for the User function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

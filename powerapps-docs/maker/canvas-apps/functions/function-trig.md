@@ -1,6 +1,6 @@
 ---
-title: Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Abs and Sqrt functions in Power Apps
+title: Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions in Power Apps
+description: Reference information including syntax and examples for the Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

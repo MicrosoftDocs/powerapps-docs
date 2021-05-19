@@ -1,6 +1,6 @@
 ---
-title: AsType and IsType functions in canvas apps | Microsoft Docs
-description: Reference information, including syntax and an example, for the AsType and IsType functions in canvas apps
+title: AsType and IsType functions in Power Apps
+description: Reference information including syntax and examples for the AsType and IsType functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# AsType and IsType functions in canvas apps
+# AsType and IsType functions in Power Apps
 
 Checks a record reference for a specific table type (**IsType**) and treats the reference as a specific type (**AsType**).
 

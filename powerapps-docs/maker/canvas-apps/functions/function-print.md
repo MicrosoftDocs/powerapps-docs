@@ -1,6 +1,6 @@
 ---
-title: Print function in Power Apps| Microsoft Docs
-description: Reference information, including syntax and examples, for the print function in Power Apps
+title: Print function in Power Apps
+description: Reference information including syntax and examples for the Print function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

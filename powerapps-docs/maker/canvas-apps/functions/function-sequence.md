@@ -1,6 +1,6 @@
 ---
-title: Sequence function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Sequence function in Power Apps
+title: Sequence function in Power Apps
+description: Reference information including syntax and examples for the Sequence function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: Data types | Microsoft Docs
-description: Data types in canvas apps
+title: Data types in Power Apps
+description: Learn about the different data types in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Data types in canvas apps
+# Data types in Power Apps
 
 Information flows through an app in small, discrete values, very much like the cells of a spreadsheet. For example, data in a **Birthday** field and an **Anniversary** field would both flow through as a **Date** value that includes the year, the month, and the day. The app knows how to format these values, constrain input to what is appropriate for each, and share the values with a database. Birthdays differ from anniversaries to people, but the system handles them in exactly the same manner. In this case, **Date** is an example of a [data type](https://en.wikipedia.org/wiki/Data_type).
 

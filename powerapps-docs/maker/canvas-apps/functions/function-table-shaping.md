@@ -1,6 +1,6 @@
 ---
-title: AddColumns, DropColumns, RenameColumns, and ShowColumns functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the AddColumns, DropColumns, RenameColumns, and ShowColumns functions in Power Apps
+title: AddColumns, DropColumns, RenameColumns, and ShowColumns functions in Power Apps
+description: Reference information including syntax and examples for the AddColumns, DropColumns, RenameColumns, and ShowColumns functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

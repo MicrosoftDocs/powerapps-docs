@@ -1,6 +1,6 @@
 ---
-title: Language function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Language function in Power Apps
+title: Language function in Power Apps
+description: Reference information including syntax and examples for the Language function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

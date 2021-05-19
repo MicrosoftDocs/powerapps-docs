@@ -1,6 +1,6 @@
 ---
-title: Relate and Unrelate functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Relate and Unrelate functions in Power Apps
+title: Relate and Unrelate functions in Power Apps
+description: Reference information including syntax and examples for the Relate and Unrelate functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

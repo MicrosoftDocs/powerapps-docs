@@ -1,6 +1,6 @@
 ---
-title: Revert function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Revert function in Power Apps
+title: Revert function in Power Apps
+description: Reference information including syntax and examples for the Revert function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
