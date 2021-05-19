@@ -1,5 +1,5 @@
 ---
-title: Upgrade to use native Microsoft Dataverse connector | Microsoft Docs
+title: Microsoft Dataverse and the improved data source experience
 description: Learn about upgrading native Microsoft Dataverse connector for improved data source experience.
 author: lancedMicrosoft
 manager: kvivek

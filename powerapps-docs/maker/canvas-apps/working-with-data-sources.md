@@ -1,6 +1,6 @@
 ---
-title: Understand data sources for canvas apps | Microsoft Docs
-description: Reference information about working with connections and data sources for canvas apps.
+title: Understand data sources for canvas apps
+description: Learn about working with connections and data sources for canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand data sources for canvas apps in Power Apps
+# Understand data sources for canvas apps
 
 In Power Apps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
 

@@ -1,6 +1,6 @@
 ---
-title: Create a flow to manage project approvals | Microsoft Docs
-description: In this task we'll create a flow that drives the process of approving projects.
+title: Create a flow to manage project approvals
+description: Learn about how to create a flow that drives the process of approving projects.
 author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps

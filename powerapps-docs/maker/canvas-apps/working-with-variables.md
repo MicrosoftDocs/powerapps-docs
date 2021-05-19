@@ -1,6 +1,6 @@
 ---
-title: Understand variables in canvas apps | Microsoft Docs
-description: Reference information about working with state, context variables, and collections in canvas apps
+title: Understand variables in canvas apps
+description: Reference information about working with state, context variables, and collections in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app variables in Power Apps
+# Understand variables in canvas apps
 
 If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** Power Apps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 

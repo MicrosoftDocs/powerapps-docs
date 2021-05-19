@@ -1,6 +1,6 @@
 ---
-title: Share Excel files used by an app | Microsoft Docs
-description: Share Excel files in Dropbox, OneDrive, and Google Drive. Users can edit and can view files and folders.
+title: Share Excel files used by an app
+description: Learn about sharing Excel files in Dropbox, OneDrive, and Google Drive.
 author: jamesol-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Share Excel data used by your app
+
 You can share Excel data with your app users in a [cloud account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 For example, you might create an app that shows the names and phone numbers of the technical-support group at your company. The information is stored in an Excel spreadsheet, which you put in a folder in Dropbox. You then share the folder with your app users so that they can see the names and phone numbers.

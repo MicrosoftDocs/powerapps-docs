@@ -1,5 +1,5 @@
 ---
-title: Automate tests with Azure Pipelines using classic editor | Microsoft Docs
+title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
 author: aengusheaney
 manager: kvivek

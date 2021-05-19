@@ -1,6 +1,6 @@
 ---
-title: Understand tables in canvas apps | Microsoft Docs
-description: Reference information about working with canvas-app tables, columns, and records in Power Apps
+title: Understand tables and records in canvas apps
+description: Reference information about working with tables, columns, and records in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app tables and records in Power Apps
+# Understand tables and records in canvas apps
 
 In Power Apps, you can create a canvas app that accesses information in Microsoft Excel, SharePoint, SQL Server, and several other sources that store data in records and tables. To work most effectively with this kind of data, review the concepts that underlie these structures.
 

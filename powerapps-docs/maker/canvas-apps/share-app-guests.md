@@ -1,6 +1,6 @@
 ---
-title: Share canvas apps with guests | Microsoft Docs
-description: Share your canvas app with guest users 
+title: Share a canvas app with guest users
+description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual

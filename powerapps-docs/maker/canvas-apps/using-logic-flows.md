@@ -1,6 +1,6 @@
 ---
-title: Start a flow in a canvas app | Microsoft Docs
-description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in a canvas app.
+title: Start a flow in a canvas app
+description: Learn about how to create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in a canvas app.
 author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps

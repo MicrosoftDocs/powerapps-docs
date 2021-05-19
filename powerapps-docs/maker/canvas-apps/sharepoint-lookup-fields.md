@@ -1,6 +1,6 @@
 ---
-title: Create a relationship between SharePoint lists via a lookup column in a canvas app | Microsoft Docs
-description: In Power Apps, create a relationship between SharePoint lists by using a lookup column in a canvas app.
+title: How to link SharePoint lists using a lookup column in Power Apps
+description: Learn about how to link SharePoint lists using lookup columns in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps

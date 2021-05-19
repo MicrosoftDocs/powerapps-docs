@@ -1,6 +1,6 @@
 ---
-title: Show, sort, and filter data in a gallery | Microsoft Docs
-description: Use a gallery to display images and text. Sort and filter the images in Power Apps.
+title: Show, sort, and filter data in a canvas app gallery
+description: Learn about how to use a gallery to display images and text, and how to sort and filter the images in canvas apps.
 author: adrianorth
 manager: kvivek
 ms.service: powerapps
@@ -14,15 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show, sort, and filter data in a Power Apps gallery
+# Show, sort, and filter data in a canvas app gallery
 Create a gallery to show images and text about several products, and sort and filter that information.
 
 In Power Apps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
 
 > [!NOTE]
 > This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
-> 
-> 
 
 ### Prerequisites
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
