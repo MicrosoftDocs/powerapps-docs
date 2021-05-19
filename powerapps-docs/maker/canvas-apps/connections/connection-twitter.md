@@ -1,6 +1,6 @@
 ---
-title: Overview of the Twitter connection | Microsoft Docs
-description: See how to connect to Twitter, step through some examples, and see all the functions
+title: Connect to Twitter from Power Apps
+description: See how to connect to Twitter, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to Twitter from Power Apps
+
 ![Twitter](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.

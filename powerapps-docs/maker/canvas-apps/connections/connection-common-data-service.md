@@ -1,5 +1,5 @@
 ---
-title: Connect to Microsoft Dataverse | Microsoft Docs
+title: Connect to Microsoft Dataverse
 description: Learn how to connect to Microsoft Dataverse and use it for building apps in Power Apps.
 author: tapanm-msft
 manager: kvivek

@@ -1,5 +1,5 @@
 ---
-title: Overview of the SharePoint connection | Microsoft Docs
+title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
 manager: kvivek

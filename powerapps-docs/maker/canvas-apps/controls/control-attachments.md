@@ -1,6 +1,6 @@
 ---
-title: 'Attachments control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Attachments control
+title: Attachments control in Power Apps
+description: Learn about the details, properties and examples of the attachments control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -15,9 +15,11 @@ search.app:
   - PowerApps
 ---
 # Attachments control in Power Apps
+
 A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse table.
 
 ## Limitations
+
 The attachment control has these limitations:
 1. Attachments are supported with SharePoint lists and Dataverse tables.
 

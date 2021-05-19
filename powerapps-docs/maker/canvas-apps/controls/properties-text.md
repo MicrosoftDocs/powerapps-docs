@@ -1,6 +1,6 @@
 ---
-title: Text properties | Microsoft Docs
-description: Reference material for properties such as Text, Tooltip, and HintText
+title: Text properties in Power Apps
+description: Reference information about text properties in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

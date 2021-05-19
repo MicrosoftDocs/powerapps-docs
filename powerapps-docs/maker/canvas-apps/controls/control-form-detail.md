@@ -1,6 +1,6 @@
 ---
-title: 'Display form and Edit form controls: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Display form and Edit form controls
+title: Edit form and Display form controls in Power Apps
+description: Learn about the details, properties and examples of the Edit form and Display form controls in Power Apps.
 author: aneesmsft
 manager: kvivek
 ms.service: powerapps

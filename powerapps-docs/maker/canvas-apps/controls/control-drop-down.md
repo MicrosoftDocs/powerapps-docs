@@ -1,6 +1,6 @@
 ---
-title: 'Drop down control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Drop down control
+title: Drop down control in Power Apps
+description: Learn about the details, properties and examples of the drop down control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

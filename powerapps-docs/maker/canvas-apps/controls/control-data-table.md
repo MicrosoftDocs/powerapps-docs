@@ -1,6 +1,6 @@
 ---
-title: 'Data table control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Data table control
+title: Data table control in Power Apps
+description: Learn about the details, properties and examples of the data table control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference
