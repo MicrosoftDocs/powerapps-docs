@@ -28,7 +28,9 @@ contributors:
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective June 2021 and will continue to export to data to the data lake as well as Azure Synapse Analytics.
+> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export to data to the data lake as well as Azure Synapse Analytics.
+
+## Introduction
 
 The Azure Synapse Link for Dataverse is a pipeline to continuously export data from
 
@@ -49,27 +51,25 @@ The Azure Synapse Link for Dataverse provides these features:
 - Continuous snapshot updates for large analytics scenarios.
 - Facilitated metadata discovery and interoperability between data producers and consumers such as Azure Synapse Analytics, Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning.
 
-## How data and metadata are exported
-
 The Azure Synapse Link for Dataverse service supports initial and incremental writes for table data and metadata. Any data or metadata changes in Dataverse are automatically pushed to the Azure Synapse metastore and Azure Data Lake, depending on the configuration, without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals.
 
 Both standard and custom tables can be exported. Notice that the change tracking table attribute in Dataverse is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
 
 All create, update, and delete operations are exported from Dataverse to the data lake. For example, when a user deletes an Account table row in Dataverse, the transaction is replicated in the destination location.
 
-## When to use Azure Synapse Analytics as the Destination for Dataverse Data
+## Rapidly analyze your Dataverse data in Azure Synapse Analytics
 
 Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing, and big data analytics. It gives you the freedom to query data on your terms, using either serverless or dedicated resources—at scale. It also allows you to build analytics solutions on top of the Apache Spark engine. With Azure Synapse you can ingest, explore, prepare, manage, and serve data for immediate business intelligence and machine learning needs all from a single service.
 
-## When to use Azure Data Lake Storage Gen2 as the Destination for Dataverse Data
+## Flexibly analyze your Dataverse data with Azure Data Lake Storage Gen2
 
-Azure Data Lake is a storage solution that allows you to process data on demand, scale instantly, and only pay per job. It provides enterprise-grade security, auditing and support. Azure Data Lake is a great landing page for your Dataverse data before being utilized in another service or application. It gives you the flexibility to utilize your data in various forms and ways.
+Azure Data Lake is a storage solution that allows you to process data on demand, scale instantly, and only pay per job. It provides enterprise-grade security, auditing and support. Azure Data Lake is a great landing page for your Dataverse data before being utilized in another service or application. Every business is different and has different scenarios. Azure Data Lake gives you the flexibility to customize consumption and transition your data to other destinations.
 
 ### See also
 
 [Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace](./azure-synapse-link-synapse.md)
 
-[Configure Azure Synapse Link for Dataverse with your Azure Data Lake](./azure-synapse-link-data-lake.md)
+[Configure Azure Synapse Link for Dataverse with Azure Data Lake](./azure-synapse-link-data-lake.md)
 
 [Azure Synapse Link for Dataverse Advanced Configuration](./azure-synapse-link-advanced-configuration.md)
 
