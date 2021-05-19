@@ -33,7 +33,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Twitter**:  
 
-    ![Connect to Twitter](./media/connection-twitter/addconnection.png)
+    ![Add connection](./media/connection-twitter/addconnection.png)
 
     ![Connect to Twitter](./media/connection-twitter/add-twitter.png)
 4. Select **Connect**, enter your Twitter sign in credentials, and then select **Authorize app**.

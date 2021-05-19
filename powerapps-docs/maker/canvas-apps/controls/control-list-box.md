@@ -153,7 +153,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
    
-    ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
+    ![Selected lists](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.
 
 

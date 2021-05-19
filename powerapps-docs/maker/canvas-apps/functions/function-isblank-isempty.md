@@ -140,7 +140,7 @@ Other examples:
 
     A collection named **IceCream** is created and contains this data:
 
-    ![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
+    ![Example of collection named IceCream](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
 
     This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 4. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
@@ -150,7 +150,7 @@ Other examples:
 
     The collection is now empty:
 
-    ![](media/function-isblank-isempty/icecream-clear.png)
+    ![IceCream example preview and empty](media/function-isblank-isempty/icecream-clear.png)
 
     The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 

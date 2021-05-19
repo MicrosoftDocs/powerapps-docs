@@ -58,13 +58,13 @@ In addition to creating and managing connections in [powerapps.com](https://make
     ![Connections Manage](./media/add-manage-connections/open-connections.png)
 3. Select **New connection**.
    
-    ![Connections Add](./media/add-manage-connections/add-connection.png)
+    ![New connection](./media/add-manage-connections/add-connection.png)
 4. Select a connector in the list that appears, and then follow the prompts.
    
-   ![Connections Add](./media/add-manage-connections/choose-connection.png)
+   ![Select a connector](./media/add-manage-connections/choose-connection.png)
 5. Select the **Create** button.
    
-   ![Connections Add](./media/add-manage-connections/create-connection.png)
+   ![Select Create](./media/add-manage-connections/create-connection.png)
 6. Follow the prompts. Some connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. Others such as **Microsoft Translator**, do not.
    
    For example, these connectors require additional information before you can use them.

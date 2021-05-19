@@ -82,7 +82,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. Close the **Data** pane, select the gallery, and then set the **Layout** field to **Title and subtitle**.
 
-    ![Set the gallery's Items property, and change the fields that it shows](./media/create-update-collection/change-layout.png)
+    ![Change layout of the gallery](./media/create-update-collection/change-layout.png)
 
     Your screen resembles this example:
 

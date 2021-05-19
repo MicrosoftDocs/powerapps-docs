@@ -68,7 +68,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 
     The data table shows five random decimal numbers:
 
-    ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/rand-collection-1.png)
+    ![Data table with five decimal numbers](media/function-rand/rand-collection-1.png)
 
 1. Select the button again to show a different list of random numbers:
 

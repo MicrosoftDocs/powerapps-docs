@@ -41,7 +41,7 @@ Now, let's add some controls to the canvas to see how the scrolling screen works
 
 1. In the canvas you added, click or tap **Add an item from the Insert tab**.
    
-    ![][4]
+    ![Add an item from the Insert tab][4]
 2. On the **Insert** tab, click or tap **Charts**, and then click or tap **Column Chart**.
    
     ![The option to add a column chart][5]

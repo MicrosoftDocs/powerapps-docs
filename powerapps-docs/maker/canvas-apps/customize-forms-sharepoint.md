@@ -43,7 +43,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 1. Hide a field, such as **Description**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
+    > ![Hide description](./media/customize-forms-sharepoint/hide-fields.png)
 
 1. Show a field by selecting **Add field**, typing or pasting the first few letters of the field's name in the search box, selecting the field's check box, and then selecting **Add**.
 
