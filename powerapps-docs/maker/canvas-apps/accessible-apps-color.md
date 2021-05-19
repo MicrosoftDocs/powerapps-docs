@@ -31,8 +31,8 @@ In practical terms, all interactive controls must have adequate color contrast b
 * **[HoverColor](controls/properties-color-border.md)** and **[HoverFill](controls/properties-color-border.md)**
 
 ## Minimum contrast for non-text
-* Non-text components, like icons and borders, must have a contrast ratio of at least 3:1 with the colors outside of them
-* Disabled and decorative components have no contrast requirements
+* Non-text components, such as icons and borders, must have a contrast ratio of at least 3:1 with the colors outside of them.
+* Disabled and decorative components have no contrast requirements.
 
 ### User interface components
 All interactive controls must have adequate color contrast between:
