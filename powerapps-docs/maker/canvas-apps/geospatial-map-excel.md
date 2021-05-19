@@ -1,6 +1,6 @@
 ---
-title: Insert pins from data stored in Excel
-description: Add customized pins to your map component in Power Apps by using a dataset you've created in Excel.
+title: Insert pins from data source
+description: Add customized pins to your map component in Power Apps by using a dataset.
 author: iaanw
 manager: shellyha
 ms.service: powerapps
@@ -16,9 +16,9 @@ search.app:
 ---
 
 
-# Use data from Excel to insert pins
+# Use datasource to insert pins
 
-You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
+You can load a table that contains existing data into the map component. The component will then plot each row in your table as a map pin.
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
@@ -27,7 +27,7 @@ You can load a table that contains existing data from an Excel workbook into the
 
 ## Add pin data from an Excel workbook
 
-Your Excel workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
 
 Column description | Maps to property | Required
 -- | -- | --
@@ -67,7 +67,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 
 
-1. Copy and paste the table into a new Excel workbook.
+1. Copy and paste the table into a new data source. In this example, we are using an Excel workbook.  
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
@@ -103,6 +103,21 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
     ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
+
+
+
+## Save geocoded addresses from map component to data source
+
+To avoid geocoding the same set of addresses every time the map component is launched, makers can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude/longitude instead of geocoding the addresses again. 
+
+To do so, add a button to save the geocoded address back to the original data source with the following formula: 
+
+```text
+ ForAll(Map1.GeocodedItems, Patch(Accounts1, LookUp(Accounts1, ThisRecord.Address = Address && ThisRecord.Name = Label), {Latitude: Latitude, Longitude: Longitude }))
+```
+
+
+![image](https://user-images.githubusercontent.com/66707906/118740084-d3081d80-b7ff-11eb-9295-2855bd7e9a96.png)
 
 
 
