@@ -1,6 +1,6 @@
 ---
-title: "Export to data lake | MicrosoftDocs"
-description: "Learn how to export table data to an Azure data lake in Power Apps"
+title: "Azure Synapse Link | MicrosoftDocs"
+description: "Learn how to export table data to an Azure Synapse Analytics and Azure Data Lake in Power Apps"
 ms.custom: ""
 ms.date: 02/10/2021
 ms.reviewer: "Mattp123"
@@ -23,27 +23,43 @@ contributors:
   - sama-zaki
 ---
 
-# Export table data to Azure Data Lake Storage Gen2
+# Export table data to Azure Synapse Analytics and Azure Data Lake Storage Gen2
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The Export to Data Lake service is a pipeline to continuously export data from Microsoft Dataverse to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
+> [!NOTE]
+> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective June 2021 and will continue to export to data to the data lake as well as Azure Synapse Analytics.
 
-![Export to data lake overview](media/export-data-lake-overview.png "Export to Data Lake overview")
+The Azure Synapse Link for Dataverse is a pipeline to continuously export data from
 
-Export to Data Lake provides these features: 
+-	Microsoft Dataverse to Azure Synapse Analytics
+- Microsoft Dataverse to Azure Data Lake Storage Gen2
 
-- Linking or unlinking the Dataverse environment to Data Lake Storage Gen2 in your Azure subscription. 
-- Continuous replication of tables to Data Lake Storage Gen2.
-- Initial write, followed by incremental writes for data and metadata. 
-- Replication of both standard and custom tables. 
-- Replication of create, update, and delete (CUD) transactions. 
-- Continuous snapshot updates for large analytics scenarios. 
-- Facilitated metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning.
+The Azure Synapse Link for Dataverse is a service designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments.
+
+![Azure Synapse Link overview](media/azure-synapse-link-overview.png "Azure Synapse Link overview")
+
+The Azure Synapse Link for Dataverse provides these features:
+
+- Linking or unlinking the Dataverse environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
+- Continuous replication of tables to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
+- Initial write, followed by incremental writes for data and metadata.
+- Replication of both standard and custom tables.
+- Replication of create, update, and delete (CUD) transactions.
+- Continuous snapshot updates for large analytics scenarios.
+- Facilitated metadata discovery and interoperability between data producers and consumers such as Azure Synapse Analytics, Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning.
+
+## When to use Azure Synapse Analytics as the Destination for Dataverse Data
+
+Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing, and big data analytics. It gives you the freedom to query data on your terms, using either serverless or dedicated resources—at scale. It also allows you to build analytics solutions on top of the Apache Spark engine. With Azure Synapse you can ingest, explore, prepare, manage, and serve data for immediate business intelligence and machine learning needs all from a single service.
+
+## When to use Azure Data Lake Storage Gen2 as the Destination for Dataverse Data
+
+Azure Data Lake is a storage solution that allows you to process data on demand, scale instantly, and only pay per job. It provides enterprise-grade security, auditing and support. Azure Data Lake is a great landing page for your Dataverse data before being utilized in another service or application. It gives you the flexibility to utilize your data in various forms and ways.
 
 ## How data and metadata are exported
 
-The Export to Data Lake service supports initial and incremental writes for table data and metadata. Any data or metadata changes in Dataverse are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals. 
+The Export to Data Lake service supports initial and incremental writes for table data and metadata. Any data or metadata changes in Dataverse are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals.
 
 Both standard and custom tables can be exported. Notice that the change tracking table attribute in Dataverse is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
