@@ -71,6 +71,8 @@ Azure Data Lake is a storage solution that allows you to process data on demand,
 
 [Configure Azure Synapse Link for Dataverse with your Azure Data Lake](./azure-synapse-link-data-lake.md)
 
+[Azure Synapse Link for Dataverse Advanced Configuration](./azure-synapse-link-advanced-configuration.md)
+
 [Azure Synapse Link FAQ](azure-synapse-link-faq.yml)
 
 [Blog: Announcing Azure Synapse Link for Dataverse](https://aka.ms/synapse-dataverse)
