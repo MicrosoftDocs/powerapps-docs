@@ -1,6 +1,7 @@
 ---
 title: "invokeProcessAction (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the invokeProcessAction method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,7 +21,7 @@ search.app:
 
 [!INCLUDE[./includes/invokeProcessAction-description.md](./includes/invokeProcessAction-description.md)] 
 
-For more information about actions, see [Use actions](/powerapps/maker/data-platform/actions)
+For more information about actions, see [Use actions](../../../../../maker/data-platform/actions.md)
 
 ## Syntax
 
@@ -41,7 +42,7 @@ On success, returns an object with the Web API result along with any action outp
 On failure, returns an object with error details.
 
 ### Related topics
-[Use actions](/powerapps/maker/data-platform/actions)
+[Use actions](../../../../../maker/data-platform/actions.md)
 
 [Xrm.Utility](../xrm-utility.md)
 

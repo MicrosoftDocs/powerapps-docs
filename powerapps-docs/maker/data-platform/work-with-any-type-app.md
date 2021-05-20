@@ -1,5 +1,6 @@
 ---
 title: "Work with any type of app | MicrosoftDocs"
+description: Learn how Microsoft Dataverse provides multiple ways to integrate with any type of app, device, system, or service.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
@@ -21,9 +22,7 @@ search.app:
 
 # Work with any type of app 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-Microsoft Dataverse provides multiple ways to integrate in any type of app&&mdash;mobile, web, desktop, device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
+Microsoft Dataverse provides multiple ways to integrate in any type of app (mobile, web, desktop), device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
 works well if solutions are running inside of containers.
 
 In some cases, integration with an app can be achieved by using business logic contained in Dataverse. In other cases, it will involve integration via events, the Dataverse OData API, or using plug-ins.
@@ -125,7 +124,7 @@ Plug-ins can be synchronous or asynchronous, and perform the following tasks:
 
 Plug-ins are registered at points in the event pipeline, which are illustrated here.
 
-![Plug-in event pipeline](media/plug-in-event-pipeline.png "Plug-in event pipeline")
+<img src = "media/plug-in-event-pipeline.png" alt = "Plug-in event pipeline" width = "335" height = "433" >
 
 Within the event pipeline, the following events can occur: 
 

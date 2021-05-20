@@ -2,7 +2,7 @@
 title: "Add transformation mappings for import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Transformation mapping enables optional modification of source data before importation." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,15 +19,15 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use transformation mapping to modify data before importing it. For example, split a full name that is contained in the source file into a first name and a last name to match the target attributes for an entity.  
+Use transformation mapping to modify data before importing it. For example, split a full name that is contained in the source file into a first name and a last name to match the target columns for a table.  
   
- To implement transformation mapping, use the transformation mapping (`TransformationMapping`) entity and transformation parameter mapping (`TransformationParameterMapping`) entity.  
+ To implement transformation mapping, use the transformation mapping (`TransformationMapping`) table and transformation parameter mapping (`TransformationParameterMapping`) table.  
   
- The transformed data must be compatible with the Microsoft Dataverse entity attribute types.  
+ The transformed data must be compatible with the Microsoft Dataverse column types.  
   
  The transformation type is described by the `TransformationMapping.TransformationTypeName` property. The valid values for this property are listed in the following table:  
   
-|Field|Value|  
+|Column|Value|  
 |-----------|-----------|  
 |AddToCurrentDate|"Microsoft.Crm.Transformations.AddToCurrentDate"|  
 |AddToDate|"Microsoft.Crm.Transformations.AddToDate"|  
@@ -41,6 +41,7 @@ Use transformation mapping to modify data before importing it. For example, spli
  The following sections describe the available transformations.  
   
 <a name="BKMK_Concatenation"></a>   
+
 ## Concatenation  
  Concatenates strings and separates them with a delimiter.  
   
@@ -56,6 +57,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |String|Concatenated string.|  
   
 <a name="BKMK_Split"></a>   
+
 ## Split  
  Separates a string that includes a delimiter into substrings. There can be up to ten substrings.  
   
@@ -95,6 +97,7 @@ Use transformation mapping to modify data before importing it. For example, spli
  j;k  
   
 <a name="BKMK_Substring"></a>   
+
 ## Substring  
  Returns a substring of a specified length, starting at a specified point in the string.  
   
@@ -109,6 +112,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |Substring|Returned substring.|  
   
 <a name="BKMK_Replace"></a>   
+
 ## Replace  
  Replaces all occurrences of a specified string with another specified string.  
   
@@ -123,6 +127,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |Value|Replacement value (same as assigned value).|  
   
 <a name="BKMK_AssignValue"></a>   
+
 ## Assign value  
  Replaces all values with a specified value.  
   
@@ -138,6 +143,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 >  Date transformations can only be used for correctly formatted dates. For information about how to format dates, see Dataverse Help.  
   
 <a name="BKMK_AddToDate"></a>   
+
 ## Add to date  
  Adds a specified number of days, months, and years to a date.  
   
@@ -153,6 +159,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |New Date|New data string that contains day, month, and year added in this order.|  
   
 <a name="BKMK_AdjustCurrentDate"></a>   
+
 ## Adjust current date and set time  
  Adds a specified number of days, months, and years to the current date and sets the specified time. The offsets can only be integer numbers.  
   
@@ -164,7 +171,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |Hours|Value that is used to set the hours component of a current date.|  
 |Minutes|Value that is used to set the minutes component of a current date.|  
 |Seconds|Value that is used to set the seconds component of a current date.|  
-|Day of Week|Day of the week that can be Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. The days of the week are represented by whole numbers, starting with decimal 1 for Monday. The values for days of the week are contained in the `DayOfWeek` enumeration. For more information about this enumeration, see the MSDN topic, [DayOfWeekEnumeration](https://msdn.microsoft.com/library/system.dayofweek.aspx). <br />If the calculated current date does not fall on the specified day of the week, it is adjusted to the nearest earlier date that falls on the specified day of the week. The current date is always adjusted to a date in the past. <br />For example, if you specify Wednesday as a day of the week, and the newly calculated date falls on Tuesday, March 9, then the date is adjusted to Wednesday, March 3.|  
+|Day of Week|Day of the week that can be Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. The days of the week are represented by whole numbers, starting with decimal 1 for Monday. The values for days of the week are contained in the `DayOfWeek` enumeration. For more information about this enumeration, see the MSDN topic, [DayOfWeekEnumeration](/dotnet/api/system.dayofweek). <br />If the calculated current date does not fall on the specified day of the week, it is adjusted to the nearest earlier date that falls on the specified day of the week. The current date is always adjusted to a date in the past. <br />For example, if you specify Wednesday as a day of the week, and the newly calculated date falls on Tuesday, March 9, then the date is adjusted to Wednesday, March 3.|  
   
 |Output Parameters|Description|  
 |-----------------------|-----------------|  
@@ -179,11 +186,11 @@ Use transformation mapping to modify data before importing it. For example, spli
 |Input Parameters|Description|  
 |----------------------|-----------------|  
 |Year Offset|Positive or negative value that is added to the year component of a current date or absolute year.|  
-|Year Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` attribute. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the picklist values for this entity. To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata). You can also browse the reference documentation for entities in the [Entity Reference](/dynamics365/customer-engagement/developer/about-entity-reference).  
+|Year Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table. To view the metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata). You can also browse the reference documentation for tables in the [Table Reference](/dynamics365/customer-engagement/developer/about-entity-reference).  
 |Month Offset|Positive or negative value that is added to the month component of a current date or absolute month.|  
-|Month Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` attribute. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the picklist values for this entity.|  
+|Month Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table.|  
 |Day Offset|Positive or negative value that is added to the day component of a current date or absolute day.|  
-|Day Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` attribute. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the picklist values for this entity.|  
+|Day Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table.|  
 |Hours|Value that sets the hours component of a current date.|  
 |Minutes|Value that sets the minutes component of a current date.|  
 |Seconds|Value that sets the seconds component of a current date.|  

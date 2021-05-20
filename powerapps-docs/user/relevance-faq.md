@@ -24,7 +24,16 @@ search.app:
 
 The scope of content that's searched is defined by your administrator. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
 
-![An example of search results on the Contacts tab](media/search-faq-1.png "An example of search results on the Contacts tab")  
+![An example of search results on the Contacts tab](media/search-faq-1.png "An example of search results on the Contacts tab") 
+
+## Why am I not seeing search results from a table that is enabled for relevance search?
+
+This happens when the table is not part of the model-driven app. Use the Power Apps app designer to verify that the table is included in tha app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+
+
+## Can I configure quick actions to show or hide certain commands?
+Yes, you can with version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. They can be configured using ribbon rules
+For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ## Why are results that appear in suggestions sometimes not seen on the results page?
 
@@ -40,9 +49,6 @@ Currently, relevance search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
-## Can I configure quick actions to show or hide certain commands?
-
-[Quick actions](relevance-search.md#quick-actions-preview) are currently a subset of a table's grid-level command set. They can't be configured. However, we're working to enable this functionality in a future release.
 
 ### See also
 

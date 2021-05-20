@@ -179,6 +179,8 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Find it with unified search
+    href: search.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -344,17 +346,23 @@
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
             - name: View and manipulate 3D models
-              href: ./canvas-apps/mixed-reality-component-view-3d.md
-            - name: View predefined shapes in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-shape.md
-            - name: View 3D models and 2D images in mixed reality
-              href: ./canvas-apps/mixed-reality-component-view-mr.md
-            - name: Measure in mixed reality
-              href: ./canvas-apps/mixed-reality-component-measure-distance.md
-            - name: Add pins to 3D models
-              href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
-            - name: Upload photos from mixed reality
-              href: ./canvas-apps/mixed-reality-take-upload-photos.md
+              items:
+              - name: View 3D models in Power Apps
+                href: ./canvas-apps/mixed-reality-component-view-3d.md
+              - name: Load models with the View in 3D component
+                href: ./canvas-apps/mixed-reality-component-view-3d-store.md
+              - name: Add pins to 3D models
+                href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
+            - name: Use mixed reality experiences in Power Apps
+              items:
+              - name: View predefined shapes in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-shape.md
+              - name: View 3D models and 2D images in mixed reality
+                href: ./canvas-apps/mixed-reality-component-view-mr.md
+              - name: Measure in mixed reality
+                href: ./canvas-apps/mixed-reality-component-measure-distance.md
+              - name: Upload photos from mixed reality
+                href: ./canvas-apps/mixed-reality-take-upload-photos.md
           - name: "Add geospatial components"
             items:
             - name: Geospatial components
@@ -743,6 +751,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: Power
             href: ./canvas-apps/functions/function-numericals.md
+          - name: Print
+            href: ./canvas-apps/functions/function-print.md
           - name: Proper
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: Radians
@@ -1072,6 +1082,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Design forms for efficiency
+          href: ./model-driven-apps/design-productive-forms.md
+          items: 
+          - name: Design considerations for main forms
+            href: ./model-driven-apps/design-considerations-main-forms.md        
         - name: Use the new form designer
           href: ./model-driven-apps/form-designer-overview.md
           items:
@@ -1106,7 +1121,7 @@
             href: ./model-driven-apps/create-edit-quick-view-forms.md
           - name: "Create a card form"
             href: ./model-driven-apps/create-card-forms.md
-        - name: Form editor overview
+        - name: Use the classic form editor
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
           - name: Form properties overview
@@ -1115,14 +1130,10 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
-        - name: Design considerations for main forms
-          href: ./model-driven-apps/design-considerations-main-forms.md
-        - name: How main forms appear
-          href: ./model-driven-apps/main-form-presentations.md
+          - name: How main forms appear
+            href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
-        - name: Add a column to a form
-          href: ./model-driven-apps/add-field-form.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
@@ -1173,7 +1184,7 @@
           href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
         - name: "Share an embedded canvas app"
           href: ./model-driven-apps/share-embedded-canvas-app.md
-        - name: "Embedded canvas app guidelines"
+        - name: "Embedded canvas app guidelines and known issues"
           href: ./model-driven-apps/embedded-canvas-app-guidelines.md
         - name: "Migrating embedded canvas from public preview"
           href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
@@ -1219,16 +1230,16 @@
         href: ./model-driven-apps/configure-interactive-experience-dashboards.md
       - name: Set properties for a chart or list
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
-      - name: Use system controls for data visualizations
+      - name: Use controls for data entry and display visualizations
         items:
+        - name: List of controls available
+          href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
         - name: Set up the timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
-        - name: Custom controls available
-          href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
@@ -1307,14 +1318,14 @@
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps Mobile (preview) 
+  - name: Use relevance search on Power Apps Mobile  
     href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps Mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps Mobile
-    href: ../user/powerapps-mobile-troubleshoot.md
+    href: ../mobile/powerapps-mobile-troubleshoot.md
     
 - name: Portals
   items:
@@ -1382,6 +1393,8 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
+                - name: Add a chatbot (Preview)
+                  href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
@@ -1400,17 +1413,17 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with entity forms
+            - name: Work with basic forms
               href: ./portals/configure/entity-forms.md
-            - name: Work with entity lists
+            - name: Work with lists
               href: ./portals/configure/entity-lists.md
-            - name: Work with web forms
+            - name: Work with advanced forms
               items:
-                - name: Define web form properties
+                - name: Define advanced form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Web form steps
+                - name: Advanced form steps
                   items:
-                    - name: Define web form steps
+                    - name: Define advanced form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1420,9 +1433,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure web form metadata
+                - name: Configure advanced form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure a web form subgrid
+                - name: Configure an advanced form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1438,7 +1451,7 @@
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
-        - name: Configure CORS support
+        - name: Setup HTTP headers
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
@@ -1468,6 +1481,8 @@
           href: ./portals/configure/websites.md
         - name: Configure website bindings
           href: ./portals/configure/website-bindings.md
+        - name: View activities in portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
         - name: Edit portal using portal content editor
@@ -1514,10 +1529,10 @@
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
-        - name: View activities in portal timeline
-          href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
+        - name: View capacity consumption reports
+          href: ./portals/admin/portal-consumption-reports.md
     - name: Configure security in portals
       items:
         - name: Portal authentication
@@ -1592,8 +1607,12 @@
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
-            - name: Assign entity permissions
+            - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
+            - name: Configure table permissions using portals Studio (Preview)
+              href: ./portals/configure/entity-permissions-studio.md
+            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -1602,12 +1621,14 @@
       items:
         - name: Portal search overview
           href: ./portals/configure/search.md
-        - name: Configure search for additional entities
+        - name: Configure search for additional tables
           href: ./portals/configure/search-additional-entities.md
         - name: Use faceted search
           href: ./portals/configure/improve-portal-search-faceted-search.md
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
+        - name: Configure progressive search counts
+          href: ./portals/configure/progressive-search.md
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -1666,7 +1687,7 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
-                - name: Render the entity list for a page
+                - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
                   href: ./portals/liquid/render-rss-custom-page-template.md
@@ -1681,7 +1702,19 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
-            href: ./portals/web-api-http-requests-handle-errors.md          
+            href: ./portals/web-api-http-requests-handle-errors.md
+        - name: Code components (Preview)
+          items:
+          - name: Overview of code components in portals
+            href: ./portals/component-framework.md          
+          - name: "Tutorial: Use code components in portals"
+            href: ./portals/component-framework-tutorial.md            
+        - name: Use Power Apps CLI (Preview)
+          items:
+          - name: Overview of portals support for Power Apps CLI
+            href: ./portals/power-apps-cli.md
+          - name: "Tutorial: Use Power Apps CLI with portals"
+            href: ./portals/power-apps-cli-tutorial.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
@@ -1751,17 +1784,25 @@
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
-      href: ./portals/faq.md
+      href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
-      href: ./portals/legacy-portal-faq.md
+      href: ./portals/legacy-portal-faq.yml
     - name: Version releases and updates
       items:
          - name: Release updates
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.4.x
+                href: ./portals/versions/version-9.3.4.x.md
               - name: Version 9.3.3.x
-                href: ./portals/version-9.3.3.x.md
+                href: ./portals/versions/version-9.3.3.x.md
+              - name: Versions before 9.3.3.x
+                href: ./portals/versions/versions-before-9.3.3.x.md
+         - name: Starter portal package updates
+           items:
+              - name: Package 9.2.2103.x
+                href: ./portals/versions/package-version-9.2.2103.md
 - name: Dataverse
   items:
   - name: Dataverse
@@ -1919,11 +1960,11 @@
         items:
         - name: Use actions
           href: ./data-platform/actions.md
-        - name: Create a custom action
+        - name: Create a custom process action
           href: ./data-platform/create-actions.md
-        - name: Configure custom actions from a real-time workflow
+        - name: Configure custom process actions from a real-time workflow
           href: ./data-platform/configure-actions.md    
-        - name: Invoke custom actions from a real-time workflow
+        - name: Invoke custom process actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
@@ -2053,6 +2094,8 @@
           displayName: Overview of Dataverse for Teams
         - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
+        - name: Compare Microsoft Lists, Dataverse for Teams, and Dataverse
+          href: ../teams/compare-data-sources.md
         - name: Create a table
           href: ../teams/create-table.md
           displayName: Create a Dataverse for Teams table
@@ -2063,6 +2106,8 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
+        - name: Edit table data in Excel
+          href: ../teams/edit-data-in-excel.md
         - name: Move customizations between environments
           href: ../teams/import-solution-in-teams.md 
         - name: View table data in Power BI
@@ -2075,7 +2120,9 @@
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
-    - name: Publish and share your app
+    - name: Set permission and share your app
+      href: ../teams/set-perms-and-share.md
+    - name: Publish your app
       href: ../teams/publish-and-share-apps.md
     - name: Remove your apps
       href: ../teams/remove-your-apps.md
@@ -2088,11 +2135,23 @@
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
         - name: Bulletins (Preview)
-          href: ../teams/bulletins.md
+          items:
+            - name: Use Bulletins (Preview) sample app
+              href: ../teams/bulletins.md
+            - name: Understand Bulletins (Preview) sample app architecture
+              href: ../teams/bulletins-architecture.md
         - name: Employee ideas
-          href: ../teams/employee-ideas.md
+          items:
+            - name: Use Employee ideas sample app
+              href: ../teams/employee-ideas.md
+            - name: Understand Employee ideas sample app architecture
+              href: ../teams/employee-ideas-architecture.md
         - name: Inspection
-          href: ../teams/inspection.md
+          items:
+            - name: Use Inspection sample app
+              href: ../teams/inspection.md
+            - name: Understand Inspection sample app architecture
+              href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)

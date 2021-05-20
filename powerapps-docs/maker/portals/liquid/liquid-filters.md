@@ -1,13 +1,16 @@
 ---
-title: "Use Liquid filters for a portal | MicrosoftDocs"
-description: "Learn about the available liquid filters in a portal."
+title: Available Liquid filters
+description: Learn about the available liquid filters in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid filters
@@ -634,9 +637,9 @@ Mon, 07 May 2018 07:20:46 Z
 ```
 
 
-## Entity list filters
+## List filters
 
-Entity List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create entity list views.  
+List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create list views.  
 
 ### current\_sort
 

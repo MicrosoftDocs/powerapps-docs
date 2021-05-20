@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/19/2021
+ms.date: 03/27/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -79,6 +79,14 @@ by Holger Bruchelt and Ronald Chang
 **A Deep Dive into Serverless Applications on Power Apps and Azure**  
 by Simona Cotin  
 [Register and watch now](https://info.microsoft.com/ww-Landing-ADeepDiveintoServerlessApplications.html?LCID=EN-US)
+
+**Unlock the Future of Azure IoT through Power Platform**  
+by Samuel Adranyi  
+[Register and watch now](https://info.microsoft.com/ww-Landing-UnlocktheFutureofAzureIoTthroughPowerPlatform.html?LCID=EN-US)
+
+**Anyone Can Be a Developer with Microsoft Dataverse for Teams**  
+by Bryony Wolf and Corey Sanders  
+[Register and watch now](https://info.microsoft.com/ww-Landing-AnyoneCanBeaDeveloperwithMicrosoftDataverseforTeams.html?LCID=EN-US)
 
 ### See also
 

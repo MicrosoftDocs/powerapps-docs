@@ -78,7 +78,7 @@ If the business value you'll receive by automating the process doesn't compare f
 
 However, if the business value you receive by solving the business problem is
 greater than the cost of doing nothing&mdash;plus your development time and the
-monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
+monthly cost of any [software license](/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
 process.
 
 ## Example: The business value of automating the expense process

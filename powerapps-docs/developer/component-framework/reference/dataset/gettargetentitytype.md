@@ -1,6 +1,6 @@
 ---
 title: getTargetEntityType | Microsoft Docs
-description: 
+description: Returns the target table type name.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -67,7 +67,7 @@ Some key questions to ask:
 
   - Automating the action taken
 
-  - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
+  - [Using AI](/ai-builder/overview) to replace
         human attention
 
 ## Example: Optimizing the expense report process

@@ -1,6 +1,6 @@
 ---
 title: Code Element | Microsoft Docs
-description: 
+description: Refers to the path where the resource files are located.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -25,7 +25,7 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 Model-driven apps and canvas apps (public preview)
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
