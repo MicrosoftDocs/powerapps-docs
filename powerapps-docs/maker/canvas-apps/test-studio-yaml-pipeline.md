@@ -17,7 +17,7 @@ search.app:
 
 # Automate tests with Azure Pipelines using YAML
 
-In this article, you'll learn how to set up and run your canvas app tests built in the Test Studio by using a [YAML pipeline](/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-yaml-syntax) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
+In this article, you'll learn how to set up and run your canvas app tests built in the Test Studio by using a [YAML pipeline](/azure/devops/pipelines/get-started/pipelines-get-started#define-pipelines-using-yaml-syntax) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 You can use a public project on GitHub&mdash;[Microsoft/PowerAppsTestAutomation](https://GitHub.com/microsoft/PowerAppsTestAutomation)&mdash;to:
 
