@@ -10,9 +10,7 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Bulletins sample app (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Bulletins sample app
 
 In this tutorial, you'll learn about configuring, and using the **Bulletins** sample app.
 
