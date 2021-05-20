@@ -32,30 +32,30 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Image**.
    
-   ![][2]
+   ![Insert media][2]
 2. Set the **[Image](controls/properties-visual.md)** property to this formula:
    <br>**User().Image**
    
-    ![][3]
+    ![Image property][3]
 3. On the **Insert** tab, click or tap **Text**, and then click or tap **Label**:  
    
-    ![][4]
+    ![Text label][4]
 4. Set the **[Text](controls/properties-core.md)** property to this formula:
    <br>**User().FullName**
    
-   ![][6]
+   ![Text property with formula][6]
    
    When you do this, the label is automatically populated with your full name. Move the label so it's below the image control, similar to the following:
    
-   ![][5]
+   ![Image of label][5]
 5. Add another label, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**User().Email**  
    
-    ![][8]
+    ![Text property with user email][8]
    
     When you do this, the label is automatically populated with your email address. Move the label so it's below the first label, similar to the following:  
    
-    ![][7]
+    ![Image with name and email][7]
 
 [2]: ./media/show-current-user/add-image.png
 [3]: ./media/show-current-user/imageproperty.png

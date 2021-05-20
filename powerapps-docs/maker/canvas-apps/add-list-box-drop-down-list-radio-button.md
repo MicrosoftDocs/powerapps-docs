@@ -68,7 +68,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 3. Rename the **Radio** control to **Choices**, and set its **[Items](controls/properties-core.md)** property to this formula:  
    ```["red","green","blue"]```  <br/>
 
-    !Rename control[][12]  
+    ![Rename control][12]  
 
     If needed, resize the control to show all the options.
 

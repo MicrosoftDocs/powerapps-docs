@@ -307,10 +307,10 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
     ![Axis in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-00-axis.png)
 4. Drag **VarProjectedActual** from **Project Details** in the **Fields** pane to **Value** in the **Visualizations** pane.
    
-    ![Value in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
+    ![VarProjectedActual value in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
 5. Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then select the **Completed** check box.
    
-    ![Filter by Status column](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
+    ![Filter by Status column in Project Details](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
    
     The visualization should now look like the following image.
    

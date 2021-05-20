@@ -47,12 +47,12 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 Besides resetting a component instance from outside of the component, there's another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property. It allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset the default value easily. 
 
-> ![OnReset property](./media/component-behavior/property-trigger.png "OnReset property")
+> ![OnSelect property](./media/component-behavior/property-trigger.png "OnSelect property")
 
 ### Example
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example animation](./media/component-behavior/updateordernumber2.gif "OnReset example animation")
+> ![OnSelect example animation](./media/component-behavior/updateordernumber2.gif "OnSelect example animation")
 
 The example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of the numeric up and down component is reset to display the order number of the selected tool. **Raise OnReset when value changes** made it possible to reset the default value when the input changes. 
 

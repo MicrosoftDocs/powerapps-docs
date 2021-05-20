@@ -40,14 +40,14 @@ The current Power Apps user has the following information:
 
 * Full Name: **"John Doe"**
 * Email address: **"john.doe@contoso.com"**
-* Image: ![](media/function-user/john-doe-picture.png) 
+* Image: ![Picture of John Doe](media/function-user/john-doe-picture.png) 
 
 |       Formula       |                                                                    Description                                                                    |                                                 Result                                                  |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 |     **User()**      |                                             Record of all information for the current Power Apps user.                                             |    { FullName:&nbsp;"John Doe", Email:&nbsp;"john.doe@contoso.com", Image:&nbsp;"blob:1234...5678" }    |
 |  **User().Email**   |                                                 The email address of the current Power Apps user.                                                  |                                         "john.doe@contoso.com"                                          |
 | **User().FullName** |                                                   The full name of the current Power Apps user.                                                    |                                               "John Doe"                                                |
-|  **User().Image**   | The image URL for the current Power Apps user.  Set the **Image** property of the **Image** control to this value to display the image in the app. | "blob:1234...5678"<br><br>With **ImageControl.Image**:<br>![](media/function-user/john-doe-picture.png) |
+|  **User().Image**   | The image URL for the current Power Apps user.  Set the **Image** property of the **Image** control to this value to display the image in the app. | "blob:1234...5678"<br><br>With **ImageControl.Image**:<br>![Image control](media/function-user/john-doe-picture.png) |
 
 
 

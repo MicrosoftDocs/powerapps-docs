@@ -90,7 +90,7 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 ## Step 4: Add time estimates for the project
 1. Click or tap ![Back icon](./media/sharepoint-scenario-summary/icon-back.png) to go back to the first screen, then click or tap **Update Details**.
    
-    ![Update project details](./media/sharepoint-scenario-summary/09-04-00-intro-screen.png)
+    ![Update details](./media/sharepoint-scenario-summary/09-04-00-intro-screen.png)
 2. On the **View Projects** screen, enter "Mobile" in the search box.
    
     ![Search in app](./media/sharepoint-scenario-summary/09-04-01-search-mobile.png)

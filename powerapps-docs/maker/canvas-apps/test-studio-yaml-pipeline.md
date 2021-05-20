@@ -55,7 +55,7 @@ A *[fork](https://help.GitHub.com/GitHub/getting-started-with-GitHub/fork-a-repo
 
 1. Select **Fork**.
 
-    ![Fork](media/test-studio-classic-pipeline-editor/fork.png "Fork")
+    ![Select Fork](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
 
 1. Select where you want to locate the fork.
 
@@ -129,7 +129,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Create Pipeline**.
 
-    ![Create a pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Create a pipeline")
+    ![Select Create a pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Select Create a pipeline")
 
 1. Select **GitHub YAML**.
 

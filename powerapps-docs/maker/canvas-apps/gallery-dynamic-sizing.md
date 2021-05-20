@@ -22,7 +22,7 @@ If different items in your data set contain different amounts of data in the sam
 
 In this tutorial, you show data about flooring products in a **Flexible height** gallery control. The image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
 
-![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
+![Dynamic app](./media/gallery-dynamic-sizing/dynamic-app.png)
 
 **Suggested reading**
 

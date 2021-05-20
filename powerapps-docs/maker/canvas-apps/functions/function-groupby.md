@@ -119,7 +119,7 @@ ClearCollect( CityPopulations,
    
     Which results in:
    
-    ![Cities by country](media/function-groupby/cities-hase.png)
+    ![Cities by country after ungroup](media/function-groupby/cities-hase.png)
 
 ### Aggregate results
 Something else we can do with a grouped table is to aggregate the results.  In this example, we will sum the population of the major cities in each country.

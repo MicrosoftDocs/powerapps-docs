@@ -115,7 +115,7 @@ To navigate the Power Apps visual using the keyboard, follow these steps:
 3. Use the **Ctrl+Right** key on the keyboard to enter the visual.
 3. Use the  **Tab** key on the keyboard until the component of the visual you want is selected.
 
-For more information, go to [Power BI Accessibility Documentation]( https://docs.microsoft.com/power-bi/desktop-accessibility)
+For more information, go to [Power BI Accessibility Documentation](/power-bi/desktop-accessibility)
 
 
 ## Next steps
