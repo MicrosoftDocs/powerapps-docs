@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/13/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -32,8 +32,6 @@ To add a Power BI component to a web page:
 1. Select **Components** from the left side of the screen.
 
 1. From Portal components section, select **Power BI**. The Power BI placeholder is added to the canvas:
-
-    ![Components](media/components-powerbi.png)
 
 1. In the properties pane on the right side of the screen, enter the following information:
 
