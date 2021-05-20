@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/23/2021
+ms.date: 05/20/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -36,10 +36,6 @@ If you're on a Windows device, you can only run canvas apps; model-driven apps a
 > Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 
 In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device 
-
-## Early access feature
-
-If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
 
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
