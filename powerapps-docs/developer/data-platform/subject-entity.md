@@ -18,7 +18,7 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-A *subject* categorizes table rows, such as articles and sales literature. By using subjects, you can create a hierarchy of topics to organize and maintain information in Microsoft Dataverse. The information organized in the subject tree can be used by any table in Dataverse. The `Subject` entity categorizes the following:  
+A *subject* categorizes table rows, such as articles and sales literature. By using subjects, you can create a hierarchy of topics to organize and maintain information in Microsoft Dataverse. The information organized in the subject tree can be used by any table in Dataverse. The `Subject` table categorizes the following:  
   
 - Knowledge base articles  
   

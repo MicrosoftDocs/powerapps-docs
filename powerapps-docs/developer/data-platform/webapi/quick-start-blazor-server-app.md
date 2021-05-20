@@ -17,8 +17,6 @@ search.app:
 ---
 # Quickstart: Blazor Server Web API sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
 You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI](/dynamics365/customer-engagement/web-api/whoami) function. The response will be a [WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse) complex type. After call completion, the `UserId` property value is displayed.
@@ -83,7 +81,7 @@ By default, the template will create a registered application. Connecting to Dat
       }
     }
     ```
-    
+
 1. Navigate to **API permissions**
 
 1. Select **Add a permission** and choose **Dynamics CRM**
@@ -152,7 +150,7 @@ The application requires some extra steps to capture the authentication token an
 
 1. Obtain the environment name for the Dataverse management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
 
-1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v.9.0/` to the end of the URL so it looks like this:
+1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v9.0/` to the end of the URL so it looks like this:
 
     ```json
     { "CDSAPI": "https://{org}.crm.dynamics.com/api/data/v9.0/" }
@@ -280,6 +278,5 @@ Learn how to structure your code for a better design.
 ### See Also
 
 [Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

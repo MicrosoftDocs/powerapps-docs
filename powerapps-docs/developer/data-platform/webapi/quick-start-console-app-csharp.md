@@ -1,6 +1,6 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
+description: "Demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
 ms.date: 03/03/2021
 ms.service: powerapps
@@ -17,9 +17,7 @@ search.app:
 ---
 # Quick Start: Web API sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
-In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API. 
+In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API.
 
 You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
 
@@ -28,7 +26,7 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 ## Prerequisites
 
- - Visual Studio (2017 recommended)
+ - Visual Studio (2017 or later recommended)
  - Internet connection
  - Valid user account for a Dataverse instance
     - Your username
@@ -69,14 +67,14 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     > [!IMPORTANT]
     > **Do not install the latest version of this NuGet package.**
     >
-    > This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version of this library.
+    > This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version (or greater) version of this library.
 
     > [!NOTE]
     > You must select **I Accept** in the **Licence Acceptance** dialog.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    ![Install Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
+    ![Install the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package](../media/quick-start-web-api-console-app-csharp-4.png)
 
 ## Edit Program.cs
 
@@ -187,6 +185,5 @@ Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
