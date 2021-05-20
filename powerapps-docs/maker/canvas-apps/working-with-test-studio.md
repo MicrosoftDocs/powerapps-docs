@@ -15,12 +15,9 @@ search.app:
   - PowerApps
 ---
 
-# Working with Test Studio (experimental)
+# Working with Test Studio
 
 In this quickstart, you'll create tests for a canvas app called Kudos. You can also explore and discover testing concepts and apply them to writing tests for your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available to download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/en-us/blog/powerapps-employee-experience-starter-kit).
-
-> [!NOTE]
-> This feature is still experimental and we recommend you use it to write tests for non-production apps. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Open Test Studio
 
