@@ -115,6 +115,9 @@ You can use global choices that are defined in your organization to configure va
 ## Using the right type of number
 
 When choosing the correct type of number column to use, the choice to use a **Whole Number** or **Currency** type should be straightforward. The choice between using **Floating Point** or **Decimal** numbers requires more thought.  
+
+Watch this video to help you decide what number column type to use:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEmPd]
   
 Decimal numbers are stored in the database exactly as specified. Floating point numbers store an extremely close approximation of the value. Why choose extremely close approximation when you can have the exact value? The answer is that you get different system performance.  
   
