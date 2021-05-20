@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/25/2021
+ms.date: 5/20/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -76,11 +76,11 @@ OnChange | Behavior that is triggered when any property on the button is changed
 
 ### How object scaling is handled
 
-When you insert a model with the **View in MR** component, it typically has some (or all) dimensions specified - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
+When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
 
 If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
 
-- If no dimensions are set, we assume the model is already at its real-world scale and leave it as is.  
+- If no dimensions are set, we assume the model is already at its intended scale and leave it as is.  
 
 - If one dimension is set, and the others are left at the default `0`, we scale the whole object equally based on the set dimension.  
   This behavior is similar to using a setting such as "keep aspect ratio" when resizing an image.  
@@ -91,8 +91,10 @@ If you want to change the size of the model, we apply certain scaling techniques
   The height has increased by a factor of 2, but the width has increased by a factor of 1.5 - we average these two measurements to come to 1.75 and then scale the depth by that amount.  
   The final scaled model would have an **Object height** of `24`, **Object width** of `9`, and **Object depth** of `5.25`.  
 
-- If all three dimensions are set, we match the size of the model to what you specify.  
-  If the measurements don't adhere to the aspect ratio, you could end up with a squashed or distorted model when you view it in MR.
+- If all three dimensions are set, we match the size of the model to what you specify.
+
+> [!NOTE]
+> If the measurements don't adhere to the original aspect ratio, you could end up with a squashed or distorted model when you view it in MR.
 
 
 ### Additional properties
