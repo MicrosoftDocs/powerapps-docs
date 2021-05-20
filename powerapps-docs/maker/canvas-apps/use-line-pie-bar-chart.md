@@ -87,7 +87,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
-    ![Items property][12]  
+    ![Items property to ProductRevenue][12]  
 
     The column chart shows the revenue data from 2012:
 

@@ -96,7 +96,7 @@ Using these steps, you imported data that includes .jpg images into a collection
    
     **If(ThisItem.IsSelected, true)**
    
-    A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![Preview][2] to see and test what you're creating.
+    A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![Preview button][2] to see and test what you're creating.
 
 > [!TIP]
 > Select the rectangle, select **Reorder** on the **Home** tab, and then select **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
@@ -144,7 +144,7 @@ Now, let's add to our filter:
    ![Preview slider with 30][14]  
 
 ## Tips and Tricks
-* At anytime, you can select the preview button (![Preview button][2]) to see what you created and test it.
+* At anytime, you can select the preview button (![Preview button image][2]) to see what you created and test it.
 * When designing your app, you can re-size the controls and move them around using click-and-drag.
 * Press **ESC** or select the **X** to close the preview window.
 * When using a gallery, select the first item in the gallery to change all items in the gallery. For example, select the first item to add a border to all items in the gallery.
