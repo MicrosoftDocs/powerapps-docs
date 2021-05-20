@@ -1,7 +1,7 @@
 ---
 title: "ExportSolutionUpload table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ExportSolutionUpload table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/exportsolutionuploads<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -695,7 +694,6 @@ Listed by **SchemaName**.
 - [exportsolutionupload_ProcessSession](#BKMK_exportsolutionupload_ProcessSession)
 - [exportsolutionupload_BulkDeleteFailures](#BKMK_exportsolutionupload_BulkDeleteFailures)
 - [exportsolutionupload_PrincipalObjectAttributeAccesses](#BKMK_exportsolutionupload_PrincipalObjectAttributeAccesses)
-- [exportsolutionupload_FileAttachments](#BKMK_exportsolutionupload_FileAttachments)
 
 
 ### <a name="BKMK_exportsolutionupload_SyncErrors"></a> exportsolutionupload_SyncErrors
@@ -833,23 +831,6 @@ Same as principalobjectattributeaccess table [exportsolutionupload_PrincipalObje
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
-### <a name="BKMK_exportsolutionupload_FileAttachments"></a> exportsolutionupload_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [exportsolutionupload_FileAttachments](fileattachment.md#BKMK_exportsolutionupload_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|exportsolutionupload_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -862,9 +843,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_exportsolutionupload_modifiedonbehalfby](#BKMK_lk_exportsolutionupload_modifiedonbehalfby)
 - [user_exportsolutionupload](#BKMK_user_exportsolutionupload)
 - [team_exportsolutionupload](#BKMK_team_exportsolutionupload)
-- [owner_exportsolutionupload](#BKMK_owner_exportsolutionupload)
 - [business_unit_exportsolutionupload](#BKMK_business_unit_exportsolutionupload)
-- [FileAttachment_ExportSolutionUpload_SolutionFile](#BKMK_FileAttachment_ExportSolutionUpload_SolutionFile)
 
 
 ### <a name="BKMK_lk_exportsolutionupload_createdby"></a> lk_exportsolutionupload_createdby
@@ -903,23 +882,11 @@ See systemuser Table [user_exportsolutionupload](systemuser.md#BKMK_user_exports
 
 See team Table [team_exportsolutionupload](team.md#BKMK_team_exportsolutionupload) One-To-Many relationship.
 
-### <a name="BKMK_owner_exportsolutionupload"></a> owner_exportsolutionupload
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_exportsolutionupload](owner.md#BKMK_owner_exportsolutionupload) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_exportsolutionupload"></a> business_unit_exportsolutionupload
 
 **Added by**: System Solution Solution
 
 See businessunit Table [business_unit_exportsolutionupload](businessunit.md#BKMK_business_unit_exportsolutionupload) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_ExportSolutionUpload_SolutionFile"></a> FileAttachment_ExportSolutionUpload_SolutionFile
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_ExportSolutionUpload_SolutionFile](fileattachment.md) One-To-Many relationship.
 
 ### See also
 
