@@ -78,7 +78,13 @@ There are some columns used by the system that you cannot add using the designer
 |**Status**|A system column that has options that generally correspond to active and inactive status. Some system attributes have additional options, but all custom attributes have only **Active** and **Inactive** status options.  |
 |**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each row.|
 
-  
+## Text columns
+
+Text columns can contain text characters. This column type has several format options that will change the presentation of the text.
+
+Watch this video for a quick overview about text columns:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7j0]
+
 ## Choices
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
@@ -228,14 +234,14 @@ App users can now select the image to display on the form. When an app user open
 > [!IMPORTANT]
 > If the row is a new row that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
-### Change the image for a row
-Once a table form has an image column, app users can change the image for a given row. 
+### Change the image for a record
+Once a table form has an image column, app users can change the image for a given record. 
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
    > ![Default table image](../data-platform/media/default-entity-image-on-form.png "Default table image")
 
-2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the row. 
+2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the record. 
    > [!div class="mx-imgBorder"] 
    > ![Changed image saved to a row](../data-platform/media/custom-entity-icon-record.png "Changed image saved to a row")
 
