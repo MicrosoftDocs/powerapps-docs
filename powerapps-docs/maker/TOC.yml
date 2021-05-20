@@ -2041,16 +2041,16 @@
       href: ./data-platform/azure-synapse-link.md
     - name: Azure Synapse Analytics
       items:
-      - name: Configure Auzure Synapse Link with a Synapse Workspace
+      - name: Configure Azure Synapse Link with a Synapse Workspace
         href: ./data-platform/azure-synapse-link-synapse.md
     - name: Azure Data Lake Storage Gen2
       items:
-      - name: Configure Auzure Synapse Link with Data Lake
+      - name: Configure Azure Synapse Link with Data Lake
         href: ./data-platform/azure-synapse-link-data-lake.md
       - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-data-adf.md
+        href: ./data-platform/azure-synapse-link-data-lake-adf.md
       - name: Analyze exported data with Power BI
-        href: ./data-platform/azure-synapse-link-data-powerbi.md
+        href: ./data-platform/azure-synapse-link-data-lake-powerbi.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
