@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -19,20 +19,20 @@ Render the List associated with the current page as a paginated sortable table. 
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
-  <div class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <div class="navbar navbar-default" | h >
+    <div class="container-fluid" | h >
+      <div class="navbar-header" | h >
         <button type="button" class="navbar-toggle"
           data-toggle="collapse"
-          data-target="#entitylist-navbar-{{ entitylist.id }}">
+          data-target="#entitylist-navbar-{{ entitylist.id }} | h ">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ page.url }}">{{ entitylist.adx_name }}</a>
+        <a class="navbar-brand" href="{{ page.url }}">{{ entitylist.adx_name }} | h </a>
       </div>
-      <div class="collapse navbar-collapse" id="entitylist-navbar-{{ entitylist.id }}">
+      <div class="collapse navbar-collapse" id="entitylist-navbar-{{ entitylist.id }} | h ">
 
         {% if entitylist.views.size > 1 %}
           <ul class="nav navbar-nav">
