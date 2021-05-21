@@ -137,7 +137,7 @@ From a list view, swipe left to acess the actions menu for a row.
    > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
 
 >[!NOTE]
-> When accessed within the Power Apps mobile, the Flow action menu does not support [Power Automate flows](/power-automate/overview-cloud) created in a solution.
+> The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
  
 ## Access more commands (Android)
 
