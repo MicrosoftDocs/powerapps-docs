@@ -28,7 +28,7 @@ search.app:
 In this article you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
 ## Prerequisites
-Verify the following prerequisites before you start creating an app:
+Verify the following prerequisites before you start creating an app: 
 
 - A Power Apps environment used for app development. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
 - Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
