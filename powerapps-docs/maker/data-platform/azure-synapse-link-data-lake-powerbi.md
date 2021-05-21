@@ -30,12 +30,11 @@ contributors:
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export to data to the data lake as well as Azure Synapse Analytics.
 
-
 After exporting data from Dataverse to Azure Data Lake Storage Gen2
-with the Export to Data Lake service, you can use Power BI to create business
+with Azure Synapse Link for Dataverse, you can use Power BI to create business
 reports and analytics. This can be useful for sales managers and sales associates to refine and build additional reports and dashboards in Power BI.
 
-This article shows you how to perform the following tasks: 
+This article shows you how to perform the following tasks:
 
 1. Connect the Data Lake Storage Gen2 storage container containing the exported Dataverse data to Power BI.
 
@@ -44,10 +43,12 @@ This article shows you how to perform the following tasks:
 ## Prerequisites
 
 This section describes the prerequisites necessary to consume Dataverse data with Power BI by using the Export to Data Lake service.
--  **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
 
--  **Export to data lake:** This guide assumes that you have already exported data from Dataverse by using the [Export to Data Lake service](export-to-data-lake.md). In this example, account table data is exported to the data lake and will generate a report by using the account table columns.
--  **Storage Account Access.** You must be granted one of the following roles for the storage account: Blob Data Reader, Blob Data Contributor, or Blob Data Owner.
+- **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
+
+- **Azure Synapse Link for Dataverse:** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](azure-synapse-link.md). In this example, the account table data is exported to the data lake and will generate a report by using the account table columns.
+
+- **Storage Account Access.** You must be granted one of the following roles for the storage account: Storage Blob Data Reader, Storage Blob Data Contributor, or Storage Blob Data Owner.
 
 ## Connect the Data Lake Storage Gen2 storage to Power BI Desktop
 
@@ -57,7 +58,7 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 3. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
 
-4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
+4. Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
 
 5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Dataverse data.
 
@@ -95,5 +96,6 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 [Configure Azure Synapse Link for Dataverse with Azure Data Lake](./azure-synapse-link-data-lake.md)
 
+[Ingest Dataverse data in Azure Data Lake Storage Gen2 with Azure Data Factory](azure-synapse-link-data-adf.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
