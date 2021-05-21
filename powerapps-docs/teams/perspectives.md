@@ -53,6 +53,14 @@ Before using this app:
 In this section, you'll learn about the following capabilities in the Perspectives app:
 
 - [Open the Perspectives app](#open-the-perspectives-app)
+- [Understanding the Perspectives interface](#understanding-the-perspectives-interface)
+- [Add a topic](#add-a-topic)
+- [Find a topic](#find-a-topic)
+- [View discussions](#view-discussions)
+- [Add a discussion](#add-a-discussion)
+- [Add a response](#add-a-response)
+- [Edit a response](#edit-a-response)
+- [Edit the Perspectives app in Power Apps](#edit-the-perspectives-app-in-power-apps)
 
 
 
@@ -70,7 +78,7 @@ To open the Perspectives app:
 
 5. Select **Allow** if the app asks for your permissions to use the connectors.
 
-## Understanding the Perspectives interface (Teams)
+## Understanding the Perspectives interface
 
 The Perspectives app is a place to listen and be heard in your organization. A simple search-and-browse experience makes it easy to find interesting discussions, whether you're looking to share your perspective or tap into the collective knowledge of your team. The most relevant content rises to the top when team members upvote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
 
@@ -100,7 +108,7 @@ Do you have a topic that you would like to discuss? Add a topic to get started.
 
 ![image-20210520150607180](media/perspectives/image-20210520150607180.png)
 
-## Find a discussion
+## Find a topic
 
 If you want to find topics that interest you, you can search for them using the following steps:
 
@@ -108,7 +116,7 @@ If you want to find topics that interest you, you can search for them using the 
 
 2. Type the name of the discussion you want to find.
 
-3. Topics that include discussions which match the search words will be displayed. Select the desired Topic.
+3. Topics which match the search words will be displayed. Select the desired Topic.
 
 
 
