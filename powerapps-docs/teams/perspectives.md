@@ -41,7 +41,7 @@ Benefits of using the Perspectives app:
 
 Before using this app:
 
-1. Install the app by sideloading the app manifest into Teams. You can get the app manifest at https://aka.ms/TeamsPerspectives.
+1. Install the app by side-loading the app manifest into Teams. You can get the app manifest at https://aka.ms/TeamsPerspectives.
 
 2. Set up the app for the first use.
 

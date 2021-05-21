@@ -45,6 +45,8 @@ In this section, you'll learn about the following capabilities in the Boards app
 
 - [Open the Boards app](#open-the-boards-app)
 
+- [Understanding the Boards interface](#understanding-the-boards-interface)
+
 - [Add a board](#add-a-board)
 
 - [Open a board](#open-a-board)
@@ -79,7 +81,7 @@ To open the Boards app:
 
 ![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/6ac9156cc42eaa17dd693ef66cc1eaa3.png)
 
-## Understanding the Boards interface (Teams)
+## Understanding the Boards interface
 
 The Boards app displays boards grouped by category. A Board is a collection of pinned items regarding a topic.
 
@@ -93,7 +95,7 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 2.  Select the Boards tab
 
-3.  In right corner, click the Add a board
+3.  In right corner, select **Add a board**
 
 4.  Enter the Title
 
@@ -103,7 +105,7 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 7.  Click on **Save**
 
-![The add a board button is selected](media/boards/image-20210520033530693.png)
+![The add a board button on the Boards main screen is selected](media/boards/image-20210520033530693.png)
 
 ![The fields that should be populated when creating a board](media/boards/0392d443b13bf039bbba310e5c5872b0.png)
 
@@ -117,7 +119,7 @@ From the Boards app you can search for board topics that interest you and open t
 
 1. In the Boards app in Microsoft Teams, select the **Find a Board** search field.
 
-1.  Type the name of the Board or Category you want to find.
+1.  Type the name of the board or category you want to find.
 2.  Boards in your organization which match the search words will be displayed. Select the desired board.
 6.  The selected board will be displayed. From this screen you can see information regarding the websites, Teams, channels, and conversation chats
     regarding the board.
@@ -211,7 +213,7 @@ the following steps:
 
 ## Edit the Boards app in Power Apps
 
-1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the elipses in the app menu, searching for Power Apps, and then selecting **install.**
+1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
 2.  Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
 3.  Select **Build** tab.
 4.  Select the team in which the Boards app is installed, then select **Installed apps.**
