@@ -202,7 +202,7 @@ You can Edit your response using the following steps:
 
 ## Edit the Perspectives app in Power Apps
 
-1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the elipses in the app menu, searching for Power Apps, and then selecting **install.**
+1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
 2.  Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
 3.  Select **Build** tab.
 4.  Select the team in which the Perspectives app is installed, then select **Installed apps.**
