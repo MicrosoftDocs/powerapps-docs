@@ -1,12 +1,12 @@
 ---
 title: Use Boards template Power App for Microsoft Teams | Microsoft Docs
 description: Learn how to use the Boards app.
-author: v-ljoel
+author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/20/2021
-ms.author: 
+ms.author: v-ljoel
 ms.reviewer:
 ---
 
@@ -25,9 +25,8 @@ Benefits of using the Boards app:
 -   Discover items pinned by colleagues.
 
 > [!NOTE]
->-   Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample
-    apps**](https://docs.microsoft.com/en-us/powerapps/teams/use-sample-apps-from-teams-store#step-1---allow-connections)
->-   This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), The app automatically updates to match the selected theme. More information: [**Get the Teams theme using the Teams integration object**](https://docs.microsoft.com/en-us/powerapps/teams/use-teams-integration-object#get-the-teams-theme)
+> - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
 >-   This is a preview feature.
@@ -50,7 +49,7 @@ In this section, you'll learn about the following capabilities in the Boards app
 
 - [Open a board](#open-a-board)
 
-- [Pin an item to a board](pin-an-item-to-a-board)
+- [Pin an item to a board](#pin-an-item-to-a-board)
 
 - [Sort boards](#sort-boards)
 
@@ -78,14 +77,13 @@ To open the Boards app:
 
 
 
-![Graphical user interface, application, Teams Description automatically
-generated](media/boards/6ac9156cc42eaa17dd693ef66cc1eaa3.png)
+![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/6ac9156cc42eaa17dd693ef66cc1eaa3.png)
 
 ## Understanding the Boards interface (Teams)
 
 The Boards app displays boards grouped by category. A Board is a collection of pinned items regarding a topic.
 
-![image-20210520032212363](media/boards/image-20210520032212363.png)
+![The main screen of the Boards app](media/boards/image-20210520032212363.png)
 
 
 
@@ -105,13 +103,13 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 7.  Click on **Save**
 
-![image-20210520033530693](media/boards/image-20210520033530693.png)
+![The add a board button is selected](media/boards/image-20210520033530693.png)
 
-![](media/boards/0392d443b13bf039bbba310e5c5872b0.png)
+![The fields that should be populated when creating a board](media/boards/0392d443b13bf039bbba310e5c5872b0.png)
 
-![](media/boards/285536139e1553beae3e0902fd534b46.png)
+![New board screen with data populated](media/boards/285536139e1553beae3e0902fd534b46.png)
 
-![image-20210520033858912](media/boards/image-20210520033858912.png)
+![A new board is created](media/boards/image-20210520033858912.png)
 
 ## Open a board
 
@@ -125,13 +123,13 @@ From the Boards app you can search for board topics that interest you and open t
     regarding the board.
 7.  Search results are organized by category, or you can select **All** to view all returned results.
 
-![](media/boards/4aa332eff0d91be8fa1aecaed6e0e4ca.png)
+![Search field is selected and search results displayed](media/boards/4aa332eff0d91be8fa1aecaed6e0e4ca.png)
 
-![](media/boards/53617780235e55b7321a9a012aa5c88b.png)
+![category selector allows item list to be filtered by item category](media/boards/53617780235e55b7321a9a012aa5c88b.png)
 
-![](media/boards/ce63b481f6329d2b56cfb4c7965bfe21.png)
+![Selected items pinned in the Hiking board](media/boards/ce63b481f6329d2b56cfb4c7965bfe21.png)
 
-![](media/boards/98c515325ea16429193159d37eae0c30.png)
+![When the channel category is selected, only channels are displayed.](media/boards/98c515325ea16429193159d37eae0c30.png)
 
 
 
@@ -147,9 +145,9 @@ If you want to share an item with your colleagues, you can easily pin it to the 
 6. You will see  a preview of what the card will look like.
 7. Select **Save.**
 
-![image-20210520043725726](media/boards/image-20210520043725726.png)
+![The add a board button is selected](media/boards/image-20210520043725726.png)
 
-![image-20210520043756586](media/boards/image-20210520043756586.png)
+![The fields that must be populated to add an item to a board.](media/boards/image-20210520043756586.png)
 
 ## Sort boards
 
@@ -161,8 +159,8 @@ You can sort the order in which board categories are displayed on the main Board
 3.  To hide a category from the boards screen, select the visibility button.
 4.  Click **Apply**
 5.  Boards matching the selected sort order will be displayed.  
-    ![](media/boards/a653dcf60388f05bf26d5eeb1e150863.png)  
-    ![](media/boards/0897d98a791b2c864aa8a1eb6038b265.png)  
+    ![Board category sort and display options](media/boards/a653dcf60388f05bf26d5eeb1e150863.png)  
+    ![Board category sort preferences after sort order is changed](media/boards/0897d98a791b2c864aa8a1eb6038b265.png)  
 
 ## Edit a board
 
@@ -183,8 +181,8 @@ the following steps:
 
 7.  Click on **Save  
     **  
-    ![](media/boards/95984d3e113a36eac1072ff483bc17c5.png)  
-    ![](media/boards/e9db94dd95bf71682f734af3c5b9ca04.png)
+    ![Edit button is selected](media/boards/95984d3e113a36eac1072ff483bc17c5.png)  
+    ![A custom image is selected for the board image](media/boards/e9db94dd95bf71682f734af3c5b9ca04.png)
 
 ## Add categories
 
@@ -205,11 +203,11 @@ the following steps:
 
 7.  Click on **Save  
     **  
-    ![](media/boards/53f8d9d6e416d4be955494e38a7789b2.png)
+    ![Settings gear is selected](media/boards/53f8d9d6e416d4be955494e38a7789b2.png)
 
-![](media/boards/eabbd7f4da236e41cb48d70c33a256da.png)
+![Add category button is selected](media/boards/eabbd7f4da236e41cb48d70c33a256da.png)
 
-![](media/boards/852ac8fe7bd617e0d41cd9394a83bfa1.png)
+![New category is added to category list](media/boards/852ac8fe7bd617e0d41cd9394a83bfa1.png)
 
 ## Edit the Boards app in Power Apps
 
@@ -223,8 +221,8 @@ the following steps:
 
 
 
-![](media/boards/6f18286b36e30970397f719f5174c8a2.png)
+![The main screen for Power Apps app in Microsoft Teams](media/boards/6f18286b36e30970397f719f5174c8a2.png)
 
-![image-20210520041954603](media/boards/image-20210520041954603.png)
+![Installed apps tab is selected and boards tile is selected](media/boards/image-20210520041954603.png)
 
-![image-20210520042324348](media/boards/image-20210520042324348.png)
+![Boards Power App in Power Apps studio in Microsoft Teams](media/boards/image-20210520042324348.png)
