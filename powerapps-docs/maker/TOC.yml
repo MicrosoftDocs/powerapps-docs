@@ -2056,7 +2056,7 @@
     - name: Azure Synapse Link FAQ
       href: ./data-platform/azure-synapse-link-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security
+    href: /power-platform/admin/wp-security.md
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
