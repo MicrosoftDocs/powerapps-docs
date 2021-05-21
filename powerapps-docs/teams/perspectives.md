@@ -81,7 +81,7 @@ To open the Perspectives app:
 
 The Perspectives app is a place to listen and be heard in your organization. A simple search-and-browse experience makes it easy to find interesting discussions, whether you're looking to share your perspective or tap into the collective knowledge of your team. The most relevant content rises to the top when team members upvote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
 
-![](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
+![Perspectives main screen](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
 
  Let's explore the primary functions of the Perspectives app.
 
