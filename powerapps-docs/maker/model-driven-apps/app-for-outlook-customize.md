@@ -34,7 +34,9 @@ Before you can customize the App for Outlook, you must install the solution and 
    > [!div class="mx-imgBorder"]
    > ![Install Outlook App](media/appsource.png "Install Outlook App")
 
-## Customize Dynamics 365 App for Outlook
+## Customize App for Outlook
+
+Once the app has been deployed to your organization, you can then customize it.
 
 - Modify the columns on a contact card that is used to track an email or appointment using Set Regarding: [Customize the track regarding contact card](/dynamics365/customer-engagement/outlook-app/customize-the-track-regarding-card)
 - Enable a table to appear in the create New menu (quick create) in App for Outook: [Add a table to the quick create menu](/dynamics365/customer-engagement/outlook-app/add-a-custom-entity-to-quick-create)
