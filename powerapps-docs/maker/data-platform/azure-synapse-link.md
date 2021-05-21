@@ -23,7 +23,7 @@ contributors:
   - sama-zaki
 ---
 
-# Export Dataverse data to Azure Synapse Analytics and Azure Data Lake Storage Gen2
+# What is Azure Synapse Link for Dataverse?
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
