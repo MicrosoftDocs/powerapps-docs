@@ -5,7 +5,7 @@ keywords: outlook app; app for outlook; Dynamics 365
 author: mduelae
 ms.author: mkaur
 manager: kvivek
-ms.date: 06/19/2019
+ms.date: 05/21/2021
 ms.service: powerapps
 ms.topic: article
 applies_to: 
@@ -39,7 +39,7 @@ Before you can customize the App for Outlook, you must install the solution and 
 Once the app has been deployed to your organization, you can then customize it.
 
 - Modify the columns on a contact card that is used to track an email or appointment using Set Regarding: [Customize the track regarding contact card](/dynamics365/customer-engagement/outlook-app/customize-the-track-regarding-card)
-- Enable a table to appear in the create New menu (quick create) in App for Outook: [Add a table to the quick create menu](/dynamics365/customer-engagement/outlook-app/add-a-custom-entity-to-quick-create)
+- Enable a table to appear in the create New menu (quick create) in App for Oultook: [Add a table to the quick create menu](/dynamics365/customer-engagement/outlook-app/add-a-custom-entity-to-quick-create)
 - Enable Set Regarding lookup: [Enable activities to use Set Regarding lookup in App for Outlook](/dynamics365/customer-engagement/outlook-app/enable-a-custom-entity-to-appear-in-the-regarding-lookup)
 - Enable the quick create auto-populate option for the case table: [Customize App for Outlook to auto populate data from an Outlook item to a quick create case table](/dynamics365/outlook-app/auto-populate-data-into-quickcreate)
 - Enable columns that Set Regarding lookup searches on: [Expand the columns which the Set Regarding lookup searches on](/dynamics365/outlook-app/search-on-custom-field-regarding-lookup)
