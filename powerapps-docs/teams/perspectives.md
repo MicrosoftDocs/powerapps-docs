@@ -166,7 +166,7 @@ Within a topic, you can have multiple discussions. A discussion is a question or
 
 5. Select **Save**.
 
-![Screen to add a new discussion](media/perspectives/begin-a-new-discussion.png "Begin a new discussion")
+    ![Screen to add a new discussion](media/perspectives/begin-a-new-discussion.png "Begin a new discussion")
 
   
 
