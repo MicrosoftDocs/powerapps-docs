@@ -44,7 +44,7 @@ Before using this app:
 
 ## Open the Profile+ app
 
-To open the Profile* app:
+To open the Profile+ app:
 
 1. Sign-in to Teams.
 
