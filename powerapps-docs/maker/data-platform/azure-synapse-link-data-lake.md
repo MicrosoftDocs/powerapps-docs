@@ -43,10 +43,9 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
 Additionally, we recommend that you set replication to **read-access geo-redundant storage (RA-GRS)**. More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage).
 
->   ![Storage account properties](media/storage-account-properties.png "Storage account properties")
+![Storage account properties](media/storage-account-properties.png "Storage account properties")
 
 > [!NOTE]
->
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
 > - You must have **Reader** role access to the resource group with the storage account.  
@@ -78,7 +77,8 @@ Your Dataverse environment is linked to the Azure Data Lake Storage Gen2 account
 You can follow the steps above to create a link from one Dataverse environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple Dataverse environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
-> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest) <br/>
+> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+>
 > Currently, you can't provide public IPs for Export to data lake service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
