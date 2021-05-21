@@ -81,7 +81,7 @@ To open the Perspectives app:
 
 The Perspectives app is a place to listen and be heard in your organization. A simple search-and-browse experience makes it easy to find interesting discussions, whether you're looking to share your perspective or tap into the collective knowledge of your team. The most relevant content rises to the top when team members upvote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
 
-![The Perspectives main screen](media/perspectives/image-20210520150135269.png)
+![](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
 
  Let's explore the primary functions of the Perspectives app.
 
@@ -93,19 +93,21 @@ Do you have a topic that you would like to discuss? Add a topic to get started.
 
 2. Select the Perspectives tab.
 
-3. In right corner, click **Add a Topic**. 
+3. Select **Add a Topic**. 
 
-4. Enter the Title 
+4. Enter the title. 
 
-5. Add Description
+5. Add description.
 
-6. Select an Image or an Icon 
+6. Select an image or an icon 
 
-7. Click on **Save**
+   ![Enter topic information](media/perspectives/add-topic-screen.png "Add topic screen")
 
-![Select add a topic](media/perspectives/image-20210520150222031.png) 
+7. Select **Save**.
 
-![Enter topic information](media/perspectives/image-20210520150607180.png)
+ 
+
+
 
 ## Find a topic
 
@@ -125,7 +127,7 @@ If you want to change the name of a topic, you can rename it with the following 
 
 1. Select a Topic.
 
-2. Click on Edit. 
+2. Select Edit. 
 
 3. Change the title and description
 
@@ -147,13 +149,13 @@ You can view the discussions in a topic using the following steps:
 
 Within a topic, you can have multiple discussions. A discussion is a question or conversation starter. Other users respond to the discussion by adding perspectives.
 
-![Topic screen displaying discussions](media/perspectives/image-20210520152039309.png)
+![Topic screen displaying discussions](media/perspectives/discussion-screen.png "Discussion Screen")
 
  You can add new discussions using the following steps:
 
-1. Select the Topic
+1. Select a Topic.
 
-2. Click on New Discussion
+2. Select **New Discussion**.
 
 3. Enter Title.
 
@@ -161,7 +163,7 @@ Within a topic, you can have multiple discussions. A discussion is a question or
 
 5. Select **Save**.
 
-![Screen to add a new discussion](media/perspectives/image-20210520152447778.png)
+![Screen to add a new discussion](media/perspectives/begin-a-new-discussion.png "Begin a new discussion")
 
   
 
@@ -173,14 +175,16 @@ Responses to discussions are displayed in a familiar conversation thread. You ca
 
 3. In the Boards app, select a topic..
 
-4. Click on a discussion .
+4. Select a discussion .
 
-5. Click on **Add a response.**
+5. Select **Add a response.**
+
+   ![The add a response button on the discssion screen](media/perspectives/add-response-button.png "Add response button")
 
 6. Add relevant text to put your perspective for the discussion.
 
-7. Click on **Add**. 
-   ![The add a response button on the discssion screen](media/perspectives/image-20210520160406259.png)
+7. Select **Add**. 
+   
 
 
 
@@ -190,33 +194,35 @@ You can Edit your response using the following steps:
 
 1. In the Perspectives app, select a topic.
 
-2. Click on a discussion.
+2. Select a discussion.
 
-3. Click on the Perspective which you have added.
+3. Select a response which you have added.
 
-4. Click on Edit.
+4. Select Edit.
 
-5. Click on **Update** .  
+5. Select **Update** .  
 
 ​             
 
 ## Edit the Perspectives app in Power Apps
 
-1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
-2.  Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
-3.  Select **Build** tab.
-4.  Select the team in which the Perspectives app is installed, then select **Installed apps.**
-5.  In the Boards tile, select the Perspectives app to open it in Power Apps in Team.
-6.  You may get prompted to authorize the app's connectors to connect. Select **Allow**.
-7.  From here you can customize the app.
+1. In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
 
+2. Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
 
+   ![Power Apps main screen in Microsoft Teams](media/perspectives/power-apps-first-screen.png "Power Apps first screen")
 
-![Power Apps main screen in Microsoft Teams](media/perspectives/6f18286b36e30970397f719f5174c8a2.png)
+3. Select **Build** tab.
 
- ![The Perspectives app in Power Apps](media/perspectives/SNAGHTML1e981b8.PNG)
+4. Select the team in which the Perspectives app is installed, then select **Installed apps.**
 
- ![Perspectives app open in Power Apps studio](media/perspectives/image-20210520173258974.png)
+5. In the Boards tile, select the **Perspectives** app to open it in Power Apps in Team.
+
+   ![The Perspectives app in Power Apps](media/perspectives/perspectives-tile.PNG)
+
+6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
+
+7. From here you can customize the app. ![Perspectives app open in Power Apps studio](media/perspectives/power-apps-screen.png "Power Apps Screen")
 
 
 

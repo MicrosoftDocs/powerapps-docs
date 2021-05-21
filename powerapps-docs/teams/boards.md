@@ -79,13 +79,13 @@ To open the Boards app:
 
 
 
-![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/6ac9156cc42eaa17dd693ef66cc1eaa3.png)
+![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/splash-screen.png "Splash screen")
 
 ## Understanding the Boards interface
 
 The Boards app displays boards grouped by category. A Board is a collection of pinned items regarding a topic.
 
-![The main screen of the Boards app](media/boards/image-20210520032212363.png)
+![The main screen of the Boards app](media/boards/main-boards-screen.png "Main Boards screen")
 
 
 
@@ -95,23 +95,19 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 2.  Select the Boards tab
 
-3.  In right corner, select **Add a board**
+3. In right corner, select **Add a board**.
 
-4.  Enter the Title
+   ![The add a board button on the Boards main screen is selected](media/boards/add-a-board-button.png "Add a board")
 
-5.  Select Category
+4. Enter the title, categroy, and a description of the board.
 
-6.  Add relevant description about the board
+   ![The fields that should be populated when creating a board](media/boards/add-new-board-screen.png "Add new board screen")
 
-7.  Click on **Save**
+5. Select **Save**.
 
-![The add a board button on the Boards main screen is selected](media/boards/image-20210520033530693.png)
+6. New board is created.
 
-![The fields that should be populated when creating a board](media/boards/0392d443b13bf039bbba310e5c5872b0.png)
-
-![New board screen with data populated](media/boards/285536139e1553beae3e0902fd534b46.png)
-
-![A new board is created](media/boards/image-20210520033858912.png)
+![A new board is created](media/boards/board-created.png "Board created")
 
 ## Open a board
 
@@ -119,112 +115,135 @@ From the Boards app you can search for board topics that interest you and open t
 
 1. In the Boards app in Microsoft Teams, select the **Find a Board** search field.
 
-1.  Type the name of the board or category you want to find.
-2.  Boards in your organization which match the search words will be displayed. Select the desired board.
-6.  The selected board will be displayed. From this screen you can see information regarding the websites, Teams, channels, and conversation chats
-    regarding the board.
-7.  Search results are organized by category, or you can select **All** to view all returned results.
+2. Type the name of the board or category you want to find.
 
-![Search field is selected and search results displayed](media/boards/4aa332eff0d91be8fa1aecaed6e0e4ca.png)
+   ![Search field is selected and search results displayed](media/boards/board-search.png "Board search")
 
-![category selector allows item list to be filtered by item category](media/boards/53617780235e55b7321a9a012aa5c88b.png)
+3. Boards in your organization which match the search words will be displayed. Select the desired board.
 
-![Selected items pinned in the Hiking board](media/boards/ce63b481f6329d2b56cfb4c7965bfe21.png)
+4. The selected board will be displayed. From this screen you can see information regarding the websites, Teams, channels, and conversation chats regarding the board.
 
-![When the channel category is selected, only channels are displayed.](media/boards/98c515325ea16429193159d37eae0c30.png)
+5. Search results are organized by category, or you can select **All** to view all returned results.
 
-
+   ![category selector allows item list to be filtered by item category](media/boards/category-filter.png "Category filter")
 
 ## Pin an item to a board
 
 If you want to share an item with your colleagues, you can easily pin it to the appropriate board for the item category. For example, you might want to share a link to War and Peace by Leo Tolstoy with the Book Club.
 
 1. Open the desired board. In this example, we open the sample board **Book Club.**
+
+   ![The add a board button is selected](media/boards/board-screen.png "Board screen")
+
 2. Select **Add to board.**
+
+   ![The fields that must be populated to add an item to a board.](media/boards/add-to-board.png "add to board")
+
 3. Select the appropriate item type.
+
 4. Add a link to the website.
+
 5. Enter title and description
+
 6. You will see  a preview of what the card will look like.
+
 7. Select **Save.**
 
-![The add a board button is selected](media/boards/image-20210520043725726.png)
 
-![The fields that must be populated to add an item to a board.](media/boards/image-20210520043756586.png)
+
+
 
 ## Sort boards
 
 You can sort the order in which board categories are displayed on the main Boards screen.
 
-1.  Select the Sort button
+1. Select the Sort button.
+
 2.  From the pop-up select arrows up or down to make categories sorted and
-    displayed in that order
-3.  To hide a category from the boards screen, select the visibility button.
-4.  Click **Apply**
-5.  Boards matching the selected sort order will be displayed.  
-    ![Board category sort and display options](media/boards/a653dcf60388f05bf26d5eeb1e150863.png)  
-    ![Board category sort preferences after sort order is changed](media/boards/0897d98a791b2c864aa8a1eb6038b265.png)  
+    displayed in that order. 
+    
+    ![Board category sort and display options](media/boards/category-sort.png "Category sort")
+    
+    
+    
+3. To hide a category from the boards screen, select the visibility button.
+
+4. Select **Apply**.
+
+5. Boards matching the selected sort order will be displayed.  
+
+     
 
 ## Edit a board
 
 You can Edit the boards under your organization under the Boards app. perform
 the following steps:
 
-1.  In Microsoft Teams, navigate to the team in which Boards is installed
+1.  In Microsoft Teams, navigate to the team in which Boards is installed.
 
-2.  Select the Boards tab
+2.  Select the Boards tab.
 
-3.  Select a Board
+3.  Select a Board.
 
-4.  Click on Edit
+4. Select **Edit**.
 
-5.  Change the Title, Category and Description accordingly
+   ![Edit button is selected](media/boards/edit-board.png "Edit board")
 
-6.  Add relevant Image
+5. Change the Title, Category and Description accordingly.
 
-7.  Click on **Save  
-    **  
-    ![Edit button is selected](media/boards/95984d3e113a36eac1072ff483bc17c5.png)  
-    ![A custom image is selected for the board image](media/boards/e9db94dd95bf71682f734af3c5b9ca04.png)
+6. Add relevant Image.
+
+7. Select **Save**.  
+
+   ![A custom image is selected for the board image](media/boards/save-button.png "Save button")
 
 ## Add categories
 
 You can add the categories under your organization under the Boards app. perform
 the following steps:
 
-1.  In Microsoft Teams, navigate to the team in which Boards is installed
+1.  In Microsoft Teams, navigate to the team in which Boards is installed.
 
-2.  Select the Boards tab
+2.  Select the Boards tab.
 
-3.  Select Settings
+3.  Select Settings gear in upper right corner.
 
-4.  Click on Add Category
+4. Select **Add Category**.
 
-5.  Change the Title, Category and Description accordingly
+   ![Add category button is selected](media/boards/add-category-button.png "add a category")
 
-6.  Add relevant Image
+5. Change the title, category and description.
 
-7.  Click on **Save  
-    **  
-    ![Settings gear is selected](media/boards/53f8d9d6e416d4be955494e38a7789b2.png)
+   ![New category is added to category list](media/boards/create-board-screen.png "Create Board Screen")
 
-![Add category button is selected](media/boards/eabbd7f4da236e41cb48d70c33a256da.png)
+6. Add an image.
 
-![New category is added to category list](media/boards/852ac8fe7bd617e0d41cd9394a83bfa1.png)
+7. Select **Save**.  
+
+   
+
+
+
+
 
 ## Edit the Boards app in Power Apps
 
-1.  In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
-2.  Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
-3.  Select **Build** tab.
-4.  Select the team in which the Boards app is installed, then select **Installed apps.**
-5.  In the Boards tile, select the Boards app to open it in Power Apps in Team.
-6.  You may get prompted to authorize the app's connectors to connect. Select **Allow**.
-7.  From here you can customize the app..
+1. In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
 
+2. Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
 
+   ![The main screen for Power Apps app in Microsoft Teams](media/boards/power-apps-screen.png "Power Apps screen")
 
-![The main screen for Power Apps app in Microsoft Teams](media/boards/6f18286b36e30970397f719f5174c8a2.png)
+3. Select **Build** tab.
 
-![Installed apps tab is selected and boards tile is selected](media/boards/image-20210520041954603.png)
+4. Select the team in which the Boards app is installed, then select **Installed apps.**
 
-![Boards Power App in Power Apps studio in Microsoft Teams](media/boards/image-20210520042324348.png)
+5. In the Boards tile, select the Boards app to open it in Power Apps in Team.
+
+   ![Installed apps tab is selected and boards tile is selected](media/boards/boards-tile.png "Boards tile")
+
+6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
+
+7. From here you can customize the app.
+
+![Boards Power App in Power Apps studio in Microsoft Teams](media/boards/power-apps-studio.png "Power Apps studio")
