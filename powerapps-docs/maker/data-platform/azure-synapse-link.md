@@ -2,7 +2,7 @@
 title: "Azure Synapse Link | MicrosoftDocs"
 description: "Learn how to export table data to an Azure Synapse Analytics and Azure Data Lake in Power Apps"
 ms.custom: ""
-ms.date: 02/10/2021
+ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -23,7 +23,7 @@ contributors:
   - sama-zaki
 ---
 
-# Export table data to Azure Synapse Analytics and Azure Data Lake Storage Gen2
+# Export Dataverse data to Azure Synapse Analytics and Azure Data Lake Storage Gen2
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -34,7 +34,7 @@ contributors:
 
 The Azure Synapse Link for Dataverse is a pipeline to continuously export data from
 
--	Microsoft Dataverse to Azure Synapse Analytics
+- Microsoft Dataverse to Azure Synapse Analytics
 - Microsoft Dataverse to Azure Data Lake Storage Gen2
 
 The Azure Synapse Link for Dataverse is a service designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments.
