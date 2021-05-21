@@ -36,7 +36,7 @@ Benefits of using the Boards app:
 
 Before using this app:
 
-1.  Install the app by sideloading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards.
+1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards.
 2.  Set up the app for the first use.
 
 ## Using Boards
@@ -99,7 +99,7 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
    ![The add a board button on the Boards main screen is selected](media/boards/add-a-board-button.png "Add a board")
 
-4. Enter the title, categroy, and a description of the board.
+4. Enter the title, category, and a description of the board.
 
    ![The fields that should be populated when creating a board](media/boards/add-new-board-screen.png "Add new board screen")
 
