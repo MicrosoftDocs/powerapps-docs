@@ -46,7 +46,7 @@ Once the app has been deployed to your organization, you can then customize it.
 - Expose only the relevant set of tables to your users: [Filter tables and views that appear in Dynamics 365 App for Outlook](/dynamics365/outlook-app/filter-entities-and-views)
 
 ### See also
- [Basic navigation in App for Outlook](../../user/basic-navigation.md)  
+ [Basic navigation in App for Outlook](/dynamics365/outlook-app/user/basic-navigation)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
