@@ -117,6 +117,4 @@ After successfully using the Export to Data Lake service, discover how you can a
 
 [Azure Synapse Link FAQ](azure-synapse-link-faq.yml)
 
-[Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
