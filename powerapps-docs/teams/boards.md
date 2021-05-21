@@ -1,16 +1,22 @@
 ---
-title: Use Boards template Power App for Microsoft Teams | Microsoft Docs
+title: Boards (Preview) sample app
 description: Learn how to use the Boards app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2021
+ms.date: 05/24/2021
 ms.author: v-ljoel
-ms.reviewer:
+ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
-# Boards sample app
+# Boards (Preview) sample app
+
+[This article is pre-release documentation and is subject to change.]
 
 In this tutorial, you'll learn about configuring and using the **Boards** sample app.
 
@@ -247,3 +253,18 @@ the following steps:
 7. From here you can customize the app.
 
 ![Boards Power App in Power Apps studio in Microsoft Teams](media/boards/power-apps-studio.png "Power Apps studio")
+
+### See also
+
+- [Understand Bulletins sample app architecture](bulletins-architecture.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones (Preview) sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

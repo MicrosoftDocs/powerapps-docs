@@ -267,10 +267,12 @@ To delete an idea:
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins (Preview) sample apps](bulletins.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 

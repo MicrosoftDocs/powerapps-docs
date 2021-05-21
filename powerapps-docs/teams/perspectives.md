@@ -1,18 +1,22 @@
 ---
-title: Use Perspectives template Power App for Microsoft Teams | Microsoft Docs
+title: Perspectives (Preview) sample app
 description: Learn how to use the Perspectives app.
 author: Joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2021
+ms.date: 05/24/2021
 ms.author: v-ljoel
-ms.reviewer:
+ms.reviewer: tapanm-msft
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
+# Perspectives (Preview) sample app
 
-
-# Perspectives sample app
+[This article is pre-release documentation and is subject to change.]
 
 In this tutorial, you'll learn about configuring and using the **Perspectives** sample app.
 
@@ -34,8 +38,6 @@ Benefits of using the Perspectives app:
 > [!IMPORTANT]
 >-   This is a preview feature.
 >-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-
 
 ## Prerequisites
 
@@ -224,6 +226,16 @@ You can Edit your response using the following steps:
 
 7. From here you can customize the app. ![Perspectives app open in Power Apps studio](media/perspectives/power-apps-screen.png "Power Apps Screen")
 
+### See also
 
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones (Preview) sample app](milestones.md)
 
- 
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

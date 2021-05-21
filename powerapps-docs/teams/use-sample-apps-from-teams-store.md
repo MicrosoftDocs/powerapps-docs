@@ -27,7 +27,7 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins (Preview)](bulletins.md) <br> Manager and user apps for company communications.
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
    :::column-end:::
    :::column span="":::
       ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
@@ -145,13 +145,14 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-- [Bulletins (Preview) sample app](bulletins.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
- 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
