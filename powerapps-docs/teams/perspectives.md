@@ -183,7 +183,7 @@ Responses to discussions are displayed in a familiar conversation thread. You ca
 7. Click on **Add**. 
    ![image-20210520160406259](media/perspectives/image-20210520160406259.png)
 
-  ![image-20210520161441172](media/perspectives/image-20210520161441172.png)
+
 
 ## Edit a response
 
