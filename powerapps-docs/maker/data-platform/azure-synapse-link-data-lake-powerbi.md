@@ -93,8 +93,7 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 ### See also
 
-[Export table data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
-
+[Configure Azure Synapse Link for Dataverse with Azure Data Lake](./azure-synapse-link-data-lake.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
