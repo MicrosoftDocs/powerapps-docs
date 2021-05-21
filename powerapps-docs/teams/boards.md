@@ -85,7 +85,7 @@ To open the Boards app:
 
 
 
-![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/splash-screen.png "Splash screen")
+    ![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/splash-screen.png "Splash screen")
 
 ## Understanding the Boards app interface
 
@@ -113,7 +113,7 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 6. New board is created.
 
-![A new board is created](media/boards/board-created.png "Board created")
+    ![A new board is created](media/boards/board-created.png "Board created")
 
 ## Open a board
 
