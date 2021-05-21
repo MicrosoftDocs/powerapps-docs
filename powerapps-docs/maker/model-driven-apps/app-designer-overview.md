@@ -68,6 +68,9 @@ The app designer interface has the following areas:
 - You can’t change the app’s icon.
 - You can’t specify the app’s URL.
 
+> [!TIP]
+> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the new designer.
+
 ## Next steps
 
 [Create a model-driven app using the app designer](create-model-driven-app.md)

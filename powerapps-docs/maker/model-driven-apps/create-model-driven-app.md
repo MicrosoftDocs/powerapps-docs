@@ -34,12 +34,13 @@ Verify the following prerequisites before you start creating an app:
 - Environment maker, system administrator, or system customizer role. More information: [About predefined security roles](share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create an app
+
 1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane.
 
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md) 
 
 1. Select **New** > **App** > **Model-driven app**.
-
+1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**.
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
    :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the Navigation pane":::
@@ -126,7 +127,7 @@ From the **Settings** dialog box you can make app-level changes such as app name
 1. On the **General** tab, select from the following options: 
    - **Name**: The name of the app.
    - **Description**: A description of the app is optional.
-   - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md)
+   <!-- - **Can be used offline**: Allows users to run the app and interact with data without an internet connection. More information: [Configure mobile offline synchronization for Power Apps mobile](../../mobile/setup-mobile-offline.md) -->
 
 ### See also
 
