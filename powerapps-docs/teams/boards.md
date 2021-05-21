@@ -42,7 +42,7 @@ Benefits of using the Boards app:
 
 Before using this app:
 
-1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards.
+1.  Install the app by side-loading the manifest for the app into Teams. You can get the manifest from https://aka.ms/TeamsBoards. For more information and help with installing this app, read the documentation available with the app manifest.
 2.  Set up the app for the first use.
 
 ## Using Boards
@@ -51,7 +51,7 @@ In this section, you'll learn about the following capabilities in the Boards app
 
 - [Open the Boards app](#open-the-boards-app)
 
-- [Understanding the Boards interface](#understanding-the-boards-interface)
+- [Understanding the Boards app interface](#understanding-the-boards-app-interface)
 
 - [Add a board](#add-a-board)
 
@@ -73,7 +73,7 @@ In this section, you'll learn about the following capabilities in the Boards app
 
 To open the Boards app:
 
-1.  Sign-in to Teams.
+1.  Sign in to Teams.
 2.  Select the Team in which the app was installed.
 3.  Select the channel where you installed the **Boards** app.
 4.  Select the **Boards** tab.
@@ -87,9 +87,9 @@ To open the Boards app:
 
 ![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/splash-screen.png "Splash screen")
 
-## Understanding the Boards interface
+## Understanding the Boards app interface
 
-The Boards app displays boards grouped by category. A Board is a collection of pinned items regarding a topic.
+The Boards app displays boards grouped by category. A Board is a collection of pinned items for a topic.
 
 ![The main screen of the Boards app](media/boards/main-boards-screen.png "Main Boards screen")
 
@@ -97,7 +97,7 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 ## Add a Board
 
-1.  In Microsoft Teams, navigate to the team in which Boards is installed
+1.  In Teams, go to the team in which Boards is installed
 
 2.  Select the Boards tab
 
@@ -117,17 +117,17 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 ## Open a board
 
-From the Boards app you can search for board topics that interest you and open them to view the pinned items. For example, if you are interested in hiking, you could search for hiking related boards and see what your colleagues have pinned regarding hiking.
+From the Boards app, you can search for board topics that interest you and open them to view the pinned items. For example, if you're interested in hiking, you could search for hiking-related boards and see what your colleagues have pinned regarding hiking.
 
-1. In the Boards app in Microsoft Teams, select the **Find a Board** search field.
+1. In the Boards app in Teams, select the **Find a Board** search field.
 
 2. Type the name of the board or category you want to find.
 
    ![Search field is selected and search results displayed](media/boards/board-search.png "Board search")
 
-3. Boards in your organization which match the search words will be displayed. Select the desired board.
+3. Boards in your organization that match the search words will be displayed. Select the board you want.
 
-4. The selected board will be displayed. From this screen you can see information regarding the websites, Teams, channels, and conversation chats regarding the board.
+4. The selected board will be displayed. From this screen you can see information about the websites, Teams, channels, and conversation chats related to the board.
 
 5. Search results are organized by category, or you can select **All** to view all returned results.
 
@@ -135,9 +135,11 @@ From the Boards app you can search for board topics that interest you and open t
 
 ## Pin an item to a board
 
-If you want to share an item with your colleagues, you can easily pin it to the appropriate board for the item category. For example, you might want to share a link to War and Peace by Leo Tolstoy with the Book Club.
+If you want to share an item with your colleagues, you can easily pin it to the appropriate board for the item category.
 
-1. Open the desired board. In this example, we open the sample board **Book Club.**
+For example, you might want to share a link to a book written by an author with the Book Club.
+
+1. Open the board you want. In this example, we open the sample board **Book Club.**
 
    ![The add a board button is selected](media/boards/board-screen.png "Board screen")
 
@@ -151,7 +153,7 @@ If you want to share an item with your colleagues, you can easily pin it to the 
 
 5. Enter title and description
 
-6. You will see  a preview of what the card will look like.
+6. You'll see  a preview of what the card will look like.
 
 7. Select **Save.**
 
@@ -165,7 +167,7 @@ You can sort the order in which board categories are displayed on the main Board
 
 1. Select the Sort button.
 
-2.  From the pop-up select arrows up or down to make categories sorted and
+2.  From the pop-up, select arrows up or down to make categories sorted and
     displayed in that order. 
     
     ![Board category sort and display options](media/boards/category-sort.png "Category sort")
@@ -182,10 +184,11 @@ You can sort the order in which board categories are displayed on the main Board
 
 ## Edit a board
 
-You can Edit the boards under your organization under the Boards app. perform
-the following steps:
+You can Edit the boards under your organization under the Boards app.
 
-1.  In Microsoft Teams, navigate to the team in which Boards is installed.
+To edit the boards:
+
+1.  In Teams, go to the team in which Boards is installed.
 
 2.  Select the Boards tab.
 
@@ -195,7 +198,7 @@ the following steps:
 
    ![Edit button is selected](media/boards/edit-board.png "Edit board")
 
-5. Change the Title, Category and Description accordingly.
+5. Change the Title, Category, and Description.
 
 6. Add relevant Image.
 
@@ -205,10 +208,11 @@ the following steps:
 
 ## Add categories
 
-You can add the categories under your organization under the Boards app. perform
-the following steps:
+You can add the categories under your organization under the Boards app. 
 
-1.  In Microsoft Teams, navigate to the team in which Boards is installed.
+To add categories:
+
+1.  In Teams, go to the team in which Boards is installed.
 
 2.  Select the Boards tab.
 
@@ -218,7 +222,7 @@ the following steps:
 
    ![Add category button is selected](media/boards/add-category-button.png "add a category")
 
-5. Change the title, category and description.
+5. Change the title, category, and description.
 
    ![New category is added to category list](media/boards/create-board-screen.png "Create Board Screen")
 
@@ -234,11 +238,11 @@ the following steps:
 
 ## Edit the Boards app in Power Apps
 
-1. In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
+1. In Teams, add the Power Apps app from the Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
 
-2. Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
+2. Right-click on Power Apps icon and select **Pop out app** to open the app in a new window. This pop-out action will ensure that you don't lose your changes if you browse somewhere else in Teams.
 
-   ![The main screen for Power Apps app in Microsoft Teams](media/boards/power-apps-screen.png "Power Apps screen")
+   ![The main screen for Power Apps app in Teams](media/boards/power-apps-screen.png "Power Apps screen")
 
 3. Select **Build** tab.
 
@@ -250,9 +254,9 @@ the following steps:
 
 6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
 
-7. From here you can customize the app.
+7. You can now customize the app.
 
-![Boards Power App in Power Apps studio in Microsoft Teams](media/boards/power-apps-studio.png "Power Apps studio")
+![Boards Power App in Power Apps studio in Teams](media/boards/power-apps-studio.png "Power Apps studio")
 
 ### See also
 

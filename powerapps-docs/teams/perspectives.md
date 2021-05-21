@@ -22,7 +22,7 @@ In this tutorial, you'll learn about configuring and using the **Perspectives** 
 
 ## Overview
 
-The Perspectives template app for Microsoft Teams provides a simple way to add topics and extend the topics with QA where anyone in the organization can have a perspective about the topic and have a discussion with the same in teams by adding the existing or new Teams Team to join
+The Perspectives sample app template for Microsoft Teams provides a simple way to add topics and extend the topics with Q&A where anyone in the organization can have a perspective about the topics, and have a discussion about them in Teams.
 
 Benefits of using the Perspectives app:
 
@@ -43,18 +43,17 @@ Benefits of using the Perspectives app:
 
 Before using this app:
 
-1. Install the app by side-loading the app manifest into Teams. You can get the app manifest at https://aka.ms/TeamsPerspectives.
+1. Install the app by side-loading the app manifest into Teams. You can get the app manifest at https://aka.ms/TeamsPerspectives. For more information and help with installing this app, read the documentation available with the app manifest.
 
 2. Set up the app for the first use.
 
-   
 
-## Using Perspectives
+## Using Perspectives app
 
 In this section, you'll learn about the following capabilities in the Perspectives app:
 
 - [Open the Perspectives app](#open-the-perspectives-app)
-- [Understanding the Perspectives interface](#understanding-the-perspectives-interface)
+- [Understanding the Perspectives app interface](#understanding-the-perspectives-app-interface)
 - [Add a topic](#add-a-topic)
 - [Find a topic](#find-a-topic)
 - [View discussions](#view-discussions)
@@ -69,7 +68,7 @@ In this section, you'll learn about the following capabilities in the Perspectiv
 
 To open the Perspectives app:
 
-1. Sign-in to Teams.
+1. Sign in to Teams.
 
 2. Select the Team in which the app is installed.
 
@@ -79,9 +78,11 @@ To open the Perspectives app:
 
 5. Select **Allow** if the app asks for your permissions to use the connectors.
 
-## Understanding the Perspectives interface
+## Understanding the Perspectives app interface
 
-The Perspectives app is a place to listen and be heard in your organization. A simple search-and-browse experience makes it easy to find interesting discussions, whether you're looking to share your perspective or tap into the collective knowledge of your team. The most relevant content rises to the top when team members upvote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
+The Perspectives app is a place to listen and be heard in your organization. A simple search-and-browse experience makes it easy to find interesting discussions, whether you're looking to share your perspective or tap into the collective knowledge of your team.
+
+The most relevant content rises to the top when team members up-vote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
 
 ![Perspectives main screen](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
 
@@ -91,7 +92,7 @@ The Perspectives app is a place to listen and be heard in your organization. A s
 
 Do you have a topic that you would like to discuss? Add a topic to get started.
 
-1. In Microsoft Teams, navigate to the team in which Perspectives is installed.
+1. In Teams, navigate to the team in which Perspectives is installed.
 
 2. Select the Perspectives tab.
 
@@ -101,7 +102,7 @@ Do you have a topic that you would like to discuss? Add a topic to get started.
 
 5. Add description.
 
-6. Select an image or an icon 
+6. Select an image or an icon. 
 
    ![Enter topic information](media/perspectives/add-topic-screen.png "Add topic screen")
 
@@ -117,9 +118,9 @@ If you want to find topics that interest you, you can search for them using the 
 
 1. In the Perspectives app, select the **Find a Topic** search field.
 
-2. Type the name of the discussion you want to find.
+2. Enter the name of the discussion you want to find.
 
-3. Topics which match the search words will be displayed. Select the desired Topic.
+3. Topics that match the search words will be displayed. Select the Topic you want.
 
 
 
@@ -131,7 +132,7 @@ If you want to change the name of a topic, you can rename it with the following 
 
 2. Select Edit. 
 
-3. Change the title and description
+3. Change the title and description.
 
 4. Select the Image.
 
@@ -173,15 +174,15 @@ Within a topic, you can have multiple discussions. A discussion is a question or
 
 ## Add a response
 
-Responses to discussions are displayed in a familiar conversation thread. You can add responses to a discussions using the following steps:
+Responses to discussions are displayed in a familiar conversation thread. You can add responses to a discussion using the following steps:
 
-3. In the Boards app, select a topic..
+3. In the Boards app, select a topic.
 
-4. Select a discussion .
+4. Select a discussion.
 
 5. Select **Add a response.**
 
-   ![The add a response button on the discssion screen](media/perspectives/add-response-button.png "Add response button")
+   ![The add a response button on the discussion screen](media/perspectives/add-response-button.png "Add response button")
 
 6. Add relevant text to put your perspective for the discussion.
 
@@ -198,21 +199,21 @@ You can Edit your response using the following steps:
 
 2. Select a discussion.
 
-3. Select a response which you have added.
+3. Select a response that you've added.
 
 4. Select Edit.
 
-5. Select **Update** .  
+5. Select **Update**.  
 
 ​             
 
 ## Edit the Perspectives app in Power Apps
 
-1. In Microsoft Teams, add the Power Apps app from the Microsoft Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **install.**
+1. In Teams, add the Power Apps app from the Teams store by selecting the ellipses in the app menu, searching for Power Apps, and then selecting **Install.**
 
-2. Right click on Power Apps icon and select **Pop out app** to open the app in a new window. This will ensure that you don't lose your changes if you navigate somewhere else in Microsoft Teams.
+2. Right-click on Power Apps icon and select **Pop out app** to open the app in a new window. This pop-out action will ensure that you don't lose your changes if you navigate somewhere else in Teams.
 
-   ![Power Apps main screen in Microsoft Teams](media/perspectives/power-apps-first-screen.png "Power Apps first screen")
+   ![Power Apps main screen in Teams](media/perspectives/power-apps-first-screen.png "Power Apps first screen")
 
 3. Select **Build** tab.
 
@@ -224,7 +225,7 @@ You can Edit your response using the following steps:
 
 6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
 
-7. From here you can customize the app. ![Perspectives app open in Power Apps studio](media/perspectives/power-apps-screen.png "Power Apps Screen")
+7. From here, you can customize the app. ![Perspectives app open in Power Apps studio](media/perspectives/power-apps-screen.png "Power Apps Screen")
 
 ### See also
 
