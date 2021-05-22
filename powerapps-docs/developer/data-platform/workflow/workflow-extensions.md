@@ -410,7 +410,7 @@ If your workflow extension depends on data passed in the execution context, the 
 
 ## Entity images for workflow extensions
 
-There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. Workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity images](../understand-the-data-context.md#table-images)
+There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. Workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity images](../understand-the-data-context.md#entity-images)
 
 ### See also
 
