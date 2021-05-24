@@ -91,9 +91,6 @@ There is an 80-MB maximum size limit for query results returned from the Dataver
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
-> [!NOTE]
-> Until a service update planned for January 2021 has deployed, using date filters will be slow.
-
 Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 Queries using the TDS endpoint execute under the service protection API limits.
