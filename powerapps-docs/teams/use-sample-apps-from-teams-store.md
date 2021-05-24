@@ -43,8 +43,8 @@ Several sample apps are available from the Teams store that you can add to your 
    :::column span="":::
       ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
-             
    :::column span="":::
+      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
    :::column-end:::
 :::row-end:::
 
@@ -152,6 +152,6 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Milestones (Preview) sample app](milestones.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
- 
+- [Profile+ (Preview) sample app](profile-app.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
