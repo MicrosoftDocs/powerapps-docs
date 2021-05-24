@@ -164,6 +164,8 @@
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
         href: clientapi/reference/save-event-arguments/preventDefault.md
+      - name: preventDefaultOnError
+        href: clientapi/reference/save-event-arguments/preventDefaultOnError.md
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
@@ -238,6 +240,8 @@
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
         href: clientapi/reference/controls/addOnLookupTagClick.md
+      - name: addOnPostSave
+        href: clientapi/reference/controls/addOnPostSave.md
       - name: addOnPostSearch
         href: clientapi/reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -302,6 +306,8 @@
         href: clientapi/reference/controls/refresh.md
       - name: removeOnLookupTagClick
         href: clientapi/reference/controls/removeOnLookupTagClick.md
+      - name: removeOnPostSave
+        href: clientapi/reference/controls/removeOnPostSave.md
       - name: removeOnPostSearch
         href: clientapi/reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened
