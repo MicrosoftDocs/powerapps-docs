@@ -48,8 +48,13 @@ Several sample apps are available from the Teams store that you can add to your 
    :::column-end:::
 :::row-end:::
 :::row:::
-:::column span="":::
+    :::column span="":::
       ![Perspectives (Preview) app](media/app-icons/milestones-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+   :::column-end:::
+   :::column span="":::
+      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -159,5 +164,6 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -408,7 +408,7 @@ To submit inspection of grouped locations:
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

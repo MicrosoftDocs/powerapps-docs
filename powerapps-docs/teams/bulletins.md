@@ -466,5 +466,6 @@ To view links, and contacts:
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
