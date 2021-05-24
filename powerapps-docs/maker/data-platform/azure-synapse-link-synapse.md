@@ -38,6 +38,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 1. Connect your Dataverse data to your Azure Synapse Analytics workspace with the Azure Synapse Link service.
 2. Query your data in Azure Synapse Analytics workspace.
 3. Generate a Power BI Report by connecting to the Serverless SQL Endpoint from your Azure Synapse Analytics workspace.
+4. Unlink your Azure Synapse Link.
 
 ## Prerequisites
 
@@ -109,6 +110,16 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
 
     ![Power BI simple table](media/pbi-simple-table.png "Power BI simple table")
+
+## Unlinking an Azure Synapse Link
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
+
+2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, then select desired Azure Synapse Link to unlink and select **Unlink data lake** from the command bar.
+
+3. By selecting the **Delete data lake file system**, you will delete both the Data Lake file system as well as the Synapse Database.
+
+4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
 ### See also
 
