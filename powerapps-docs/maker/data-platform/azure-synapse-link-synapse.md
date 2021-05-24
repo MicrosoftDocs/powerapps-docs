@@ -44,7 +44,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**.
 
-- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. To create a Synapse workspace, follow the steps [here](https://docs.microsoft.com/azure/synapse-analytics/get-started-create-workspace).
+- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. To create a Synapse workspace, follow the steps [here](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
 > When adding multiple users to the Synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
