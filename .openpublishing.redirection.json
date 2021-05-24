@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/user/powerapps-mobile-troubleshoot.md",
+      "redirect_url": "../mobile/powerapps-mobile-troubleshoot",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/add-field-form.md",
+      "redirect_url": "add-move-or-delete-fields-on-form",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/version-9.3.3.x.md",
       "redirect_url": "versions/version-9.3.3.x",
       "redirect_document_id": "false"
@@ -3187,8 +3197,13 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/solution-component-file-reference-solutionpackager.md",
-      "redirect_url": "../data-platform/solution-component-file-reference-solutionpackager",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/solution-component-file-reference-solutionpackager.md",
+      "redirect_url": "/power-platform/alm/solution-packager-tool",
+      "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/special-update-operation-behavior.md",
@@ -6253,6 +6268,11 @@
     {
       "source_path": "powerapps-docs/sample-apps/return-to-workplace/app-for-employee.md",
       "redirect_url": "/dynamics365/industry/return-to-workplace/app-for-employee",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/developer-resources-page.md",
+      "redirect_url": "/powerapps/developer/data-platform/view-download-developer-resources",
       "redirect_document_id": "false"
     }
   ]

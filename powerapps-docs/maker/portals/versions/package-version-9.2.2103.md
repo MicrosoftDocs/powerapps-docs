@@ -1,28 +1,31 @@
 ---
-title: "Information about the Starter Portal package version 9.2.2103 | MicrosoftDocs"
-description: "Learn about the Starter Portal package version 9.2.2103 and the changes."
+title: Starter portal package version 9.2.2103.x
+description: Learn about the Starter Portal package version 9.2.2103 and the changes.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 05/04/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
-# Starter Portal package version 9.2.2103.x
+# Starter portal package version 9.2.2103.x
 
-Starter Portal package version 9.2.2103.x is generally available. To learn about how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
+Starter portal package version 9.2.2103.x is generally available. To learn about how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
 
 In this article, you'll learn about the fixes and enhancements included in this update.
 
 > [!NOTE]
-> - The update package for Starter Portal shows as Common Data Service Starter Portal in Power Platform admin center.
+> - The update package for starter portal shows as "Common Data Service Starter Portal" in Power Platform admin center.
 > - Package updates are released in stages across regions. During the rollout phase, your environment may take time to show the new package update depending on your region.
 
 For a full list of all portal updates released to date and their corresponding KB articles, go to [Portal Capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/topic/portal-capabilities-for-microsoft-dynamics-365-releases-81f5fcc9-ef72-8b2e-5b4b-29e9840fb5c4).
 
-For more information about creating a portal with Starter Portal package, go to [Create a Dataverse starter portal](../create-portal.md) or [Create a starter portal in an environment containing customer engagement apps](../create-dynamics-portal.md).
+For more information about creating a portal with starter portal package, go to [Create a Dataverse starter portal](../create-portal.md) or [Create a starter portal in an environment containing customer engagement apps](../create-dynamics-portal.md).
 
 ## Enhancements
 
@@ -33,6 +36,7 @@ The package update includes the following enhancements extending the capabilitie
 - Change solutions upgrade behavior to update instead of upgrade if existing version is 9.2.x.
 - Support for special characters (\#, %, \*, ‰, €) in file name for attachments to [Azure Blob Storage](../enable-azure-storage.md).
 - Handle XSS vector gracefully on page load.
+- Added new solution **MicrosoftPortalBot** enabling the capability to add Power Virtual Agents chatbots to portals.
 
 ## Fixes
 

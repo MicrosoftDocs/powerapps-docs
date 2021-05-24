@@ -43,7 +43,7 @@ Content in this topic coverts the steps **in bold** above and supports the follo
 
 ## Test your assembly
 
-The simplest way to test your assembly may simply be to manually perform the operation using the app. But you should also be aware that events that cause plug-ins to execute can be initiated in multiple ways, such as an table created from a workflow, or from the web services.
+The simplest way to test your assembly may simply be to manually perform the operation using the app. But you should also be aware that events that cause plug-ins to execute can be initiated in multiple ways, such as a table created from a workflow, or from the web services.
 
 Execution context information may be different depending on how the action is performed. When writing your plug-in, make sure you practice defensive programming practices and don't assume that every value you expect will always be there.
 

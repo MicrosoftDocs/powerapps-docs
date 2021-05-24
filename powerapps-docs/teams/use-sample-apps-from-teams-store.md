@@ -4,7 +4,7 @@ description: Learn how to use sample apps from Teams store.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 01/29/2021
 ms.author: namarwah
 ms.reviewer: tapanm

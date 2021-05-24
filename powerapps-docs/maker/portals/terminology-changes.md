@@ -1,15 +1,18 @@
 ---
-title: Terminology changes in Power Apps portals | Microsoft Docs
+title: Terminology changes in Power Apps portals
 description: Learn about the changes to terms used in Power Apps portals, and changes from Microsoft Dataverse.
 author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/12/2021
+ms.date: 04/21/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 searchScope:
   - "Power Apps"
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Terminology changes in Power Apps portals
@@ -102,6 +105,17 @@ The following table includes terminology changes inside portals Studio.
 | Drop down option for Entity | Entity | Table |
 | Search setting checkbox label for Entity Lists | Enable search on entity list | Enable search on list |
 | Checkbox label to enable entity permissions | Enable entity permissions | Enable table permissions |
+
+## Legacy terminology in use
+
+Some of the Power Apps portals features, and areas continue to use the legacy terminology including the following.
+
+- Web API
+- Liquid templates
+- Schema names
+- Legacy user interface
+
+Features, and areas mentioned above continue to use legacy terminology to ensure existing customizations and integrations continue to work with portals.
 
 ## Next steps
 

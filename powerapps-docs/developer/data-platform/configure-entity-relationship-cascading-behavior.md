@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/11/2021
+ms.date: 05/04/2021
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -49,12 +49,40 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |Restrict|Restrict|Prevent the Referenced table record from being deleted when referencing tables exist.|  
 |UserOwned|Cascade User Owned|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
 
->[!NOTE]
-> Cascading actions on Active records will only include records that have a Status Code of Active. Any other solution provided or custom status 
-> codes that indicate a record as live and in use will not be processed as an Active record for cascading purposes.
+**Active Records considered for Cascading action**
+
+Cascading actions on active records will only include records that have a state code of “Active”. The following State Codes for these tables, are considered Active for Cascade actions. Different labels (other than Active) may be used for this state code in different tables. However, any other solution provided or custom status codes with values other than the above will not be processed as an active record for cascading purposes.
+
+| Table Name                       |    State Code 0       |    State Code 1       |    State Code 2       |    State Code 3       | 
+| :--------------------------------| :----------------:    | :----------------:    | :----------------:    | :-----------------:    |
+|  Account                         |          x            | 	                     | 	                     | 	                     |
+|  BulkOperation                   |          x            | 	                     | 	                     | 	                     |
+|  BulkOperation                   |          x            | 	                     | 	                     | 	                     |
+|  CampaignResponse                |          x            | 	                     | 	                     | 	                     |
+|  Contact	                       |          x            | 	                     | 	                     | 	                     |
+|  Email	                         |          x            | 	                     | 	                     | 	                     |
+|  Fax		                         |          x            | 	                     | 	                     | 	                     |
+|  Incident	                       |          x            | 	                     | 	                     | 	                     |
+|  IncidentResolution              |          x            | 	                     | 	                     | 	                     |
+|  Invoice	                       |          x            | 	                     | 	                     | 	                     |
+|  Lead		                         |          x            | 	                     | 	                     | 	                     |
+|  Letter	                         |          x            | 	                     | 	                     | 	                     |
+|  Opportunity	                   |          x            | 	                     | 	                     | 	                     |
+|  OpportunityClose   	           |          x            | 	                     | 	                     | 	                     |
+|  OrderClose	                     |          x            | 	                     | 	                     | 	                     |
+|  PhoneCall	                     |          x            | 	                     | 	                     | 	                     |
+|  SalesOrder	                     |          x            | 	                     | 	                     | 	                     |
+|  Task		                         |          x            | 	                     | 	                     | 	                     |
+|  All Custom Tables and Custom Activities |          x            | 	                     | 	                     | 	                     |
+|  Quotes                          |                       |          x            | 	                     |      	               |
+|  Contract                        |                       |                       |          x            | 	                     |
+|  Appointment                     |                       | 	                     | 	                     |          x            |
+|  ServiceAppointment              |                       | 	                     | 	                     |          x            |
+|  RecurringAppointmentMaster      |                       | 	                     | 	                     |          x            |
 
 
- The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
+
+The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?displayProperty=nameWithType>) contains the following properties representing actions that may be performed on the referenced table in the one-to-many relationship.  
   
 |Action|Description|Valid options|  
 |------------|-----------------|-------------------|  
@@ -81,7 +109,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
- The reparent action is very similar to the share action except that it deals with the inherited read access rights instead of explicit read access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited read access rights for related tables might change. The cascade actions related to the reparent action refer to changes to read access rights for the table record and any table records related to it.  
+ The reparent action is very similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for ReadAccess, WriteAccess, DeleteAccess, AssignAccess, ShareAccess, AppendAccess and AppendToAccess. It will not change for CreateAccess. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
 
 <a name="BKMK_MergeAction"></a>  
 ### About the merge action  

@@ -1,11 +1,11 @@
 ---
-title: Use code components created using Power Apps Component Framework inside Power Apps portals | Microsoft Docs
+title: Use code components in portals (Preview)
 description: Learn about using code components created using Power Apps Component Framework inside Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -28,14 +28,14 @@ Power Apps portals now supports controls for model-driven apps created using
 Power Apps component framework. To use code components in portals webpages,
 follow these steps:
 
-![Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the entity form for portals and allow Read permission to the Web Resource entity.](media/component-framework/steps.png "Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the entity form for portals and allow Read permission to the Web Resource entity.")
+![Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the basic form for portals and allow Read permission to the Web Resource table.](media/component-framework/steps.png "Create code component using component framework, then add the code component to a model-driven app form, and configure the code component field inside the basic form for portals and allow Read permission to the Web Resource table.")
 
-After following these steps, your users can now interact with the code component using the portal page that has the respective entity form.  
+After following these steps, your users can now interact with the code component using the portal page that has the respective basic form.  
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field) in a model-driven app currently.
+> - Portals only supports [code components that are added to a field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column) in a model-driven app currently.
 
 ## Prerequisites
 
@@ -153,7 +153,7 @@ More information: [Attributes list and descriptions](../../developer/component-f
 
 To learn about how to add code component to a field in model-driven app, go to
 [Add a code component to a
-field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-field).
+field](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column).
 
 > [!IMPORTANT]
 > Code components for portals are available for web browsers using the
@@ -162,26 +162,26 @@ client option of **Web**.
 ## Configure portal for code component
 
 After the code component is added to a field in model-driven app, you can now
-configure portals to use the code component in the entity form. Once you
-configure the code component on an entity form, ensure you configure entity
-permission to allow **Read** access to **Web Resource** entity for the portal
+configure portals to use the code component in the basic form. Once you
+configure the code component on an basic form, ensure you configure table
+permission to allow **Read** access to **Web Resource** table for the portal
 users before they can see the component on the portal page.
 
-To add code component to an entity form:
+To add code component to an basic form:
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
     app.
 
-2.  On the left-pane, select **Entity Forms**.
+2.  On the left-pane, select **Basic Forms**.
 
-3.  Select the entity form you want to add the code component to.
+3.  Select the basic form you want to add the code component to.
 
 4.  Select **Related**.
 
-5.  Select **Entity Form Metadata**.
+5.  Select **Basic Form Metadata**.
 
-6.  Select **New Entity Form Metadata**.
+6.  Select **New Basic Form Metadata**.
 
 7.  Select **Type** as **Attribute**.
 
@@ -193,24 +193,24 @@ To add code component to an entity form:
 
 11. Save and close the form.
 
-## Allow Read access to Web Resource entity
+## Allow Read access to Web Resource table
 
-Portals requires **Read** permission to be set on **Web Resource** entity before
-users can see the code component on the web page with the entity form.
+Portals requires **Read** permission to be set on **Web Resource** table before
+users can see the code component on the web page with the basic form.
 
-To configure Read access on Web Resource entity:
+To configure Read access on Web Resource table:
 
 1.  Open [Portal
     Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal)
     app.
 
-2.  On the left-pane, select **Entity Permission**.
+2.  On the left-pane, select **Table Permission**.
 
 3.  Select **New**.
 
 4.  Enter **Name.**
 
-5.  Select *Web Resource (webresource)* for **Entity Name**.
+5.  Select *Web Resource (webresource)* for **Table Name**.
 
 6.  Select your website record.
 
@@ -230,9 +230,9 @@ To configure Read access on Web Resource entity:
 
 12. Select **Save & Close**.
 
-Once you add the entity form to a web page, users assigned to the selected web
+Once you add the basic form to a web page, users assigned to the selected web
 role can now see the code component on the portal page having the selected
-entity form.
+basic form.
 
 ## Next steps
 
@@ -242,5 +242,4 @@ entity form.
 
 [Power Apps component framework overview](../../developer/component-framework/overview.md) <br>
 [Create your first component](../../developer/component-framework/implementing-controls-using-typescript.md) <br>
-[Add code components to a field or entity in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)
-
+[Add code components to a field or table in model-driven apps](../../developer/component-framework/add-custom-controls-to-a-field-or-entity.md)

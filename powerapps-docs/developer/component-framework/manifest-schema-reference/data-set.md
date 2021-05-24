@@ -1,6 +1,6 @@
 ---
 title: DataSet Element | Microsoft Docs
-description: 
+description: The data-set node in the component manifest represents a specific, configurable representation of a set of table records.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -20,7 +20,7 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 [!INCLUDE [data-set-description](includes/data-set-description.md)]
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-------|

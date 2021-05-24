@@ -84,7 +84,7 @@ Any usage of `window.top` should be avoided, if possible. The following are exam
 var myValue = window.top.myGlobalVariable;
 
 // Attempting to access the Xrm namespace at the top level
-myValue = window.top.Xrm.Page.getAttribute("field1");
+myValue = window.top.Xrm.Page.getAttribute("column1");
 ```
 
 <a name='additional'></a>

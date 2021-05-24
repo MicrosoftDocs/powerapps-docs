@@ -1,6 +1,6 @@
 ---
 title: Property | Microsoft Docs
-description:
+description: Interface for context.parameters.<property_key>
 keywords:
 ms.author: nabuthuk
 author: Nkrb

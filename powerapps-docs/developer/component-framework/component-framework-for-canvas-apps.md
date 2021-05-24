@@ -1,6 +1,6 @@
 ---
 title: Code components for canvas apps  | Microsoft Docs
-description: Create code components for canvas apps
+description: Learn how to create code components using Power Apps component framework for canvas apps.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -16,6 +16,8 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 # Code components for canvas apps
 
 Power Apps component framework enables app makers to create code components to use in an app or across the apps. More information: [Power Apps component framework overview](overview.md) 
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 In this public preview, Power Apps component framework enables app makers to create code components, debug, import, and add them to canvas apps using the Power Apps CLI tooling. Only specific APIs are supported in this public preview. We recommend you to check each API to determine whether it supports canvas apps. 
 
@@ -94,7 +96,7 @@ To delete a code component from a canvas app:
 
 ## Update existing code components
 
-Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` attribute in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
+Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` property in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
 
 > [!NOTE]
 > Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting the code components or adding the code component back into the app doesn't update the components.

@@ -1,6 +1,6 @@
 ---
 title: formatInteger | Microsoft Docs
-description: 
+description: Returns a formatted string represents a given integer value.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

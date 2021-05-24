@@ -264,6 +264,7 @@ To delete an idea:
 
 ### See also
 
+- [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Bulletins (Preview) sample apps](bulletins.md)

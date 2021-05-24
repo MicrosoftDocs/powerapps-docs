@@ -1,6 +1,7 @@
 ---
 title: "setCurrentView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the setCurrentView method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -32,7 +33,7 @@ Read-only grid
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|object|Lookup object|Yes|Specify the Lookup object that has the following attributes:<br/>- **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.<br/>- **id**: String. The Id for the view the user can select.<br/>- **name**: String. The name of the view the user can select.|
+|object|Lookup object|Yes|Specify the Lookup object that has the following values:<br/>- **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.<br/>- **id**: String. The Id for the view the user can select.<br/>- **name**: String. The name of the view the user can select.|
 
 ## Remarks
 

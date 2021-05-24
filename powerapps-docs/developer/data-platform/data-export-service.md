@@ -137,7 +137,7 @@ For instructions on how to obtain a `AppId` see [Authorize access to web applica
   
 4. The next record is processed.  
   
-Because the record is marked as processed, no future attempt is made to synchronize the record until its value or schema changes. (Note that writing identical values back into an table also marks it as modified.)  
+Because the record is marked as processed, no future attempt is made to synchronize the record until its value or schema changes. (Note that writing identical values back into a table also marks it as modified.)  
   
 The entries in the error log are write-only. Future successes or failures during synchronization of the same record do not result in the alteration of past entries for this record. For example, a failure entry will remain in the error log even after the record has been successfully synchronized during some later synchronization cycle.  
   
