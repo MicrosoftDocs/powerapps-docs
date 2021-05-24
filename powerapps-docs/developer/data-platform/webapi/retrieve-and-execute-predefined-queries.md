@@ -2,7 +2,7 @@
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
 ms.custom: ""
-ms.date: 04/29/2021
+ms.date: 05/07/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,9 +24,32 @@ search.app:
 
 # Retrieve and execute predefined queries
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+
+> [!NOTE]
+> Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with `null` values. When the value is `null`, the property will not be included in the results.
+
+When a query is returned using OData syntax, a record will include a property with a `null` value like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountnumber": null,
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
+When retrieved using a pre-defined query or with FetchXml, the same record will not include the `accountnumber` property because it is `null`, like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
 
 <a name="bkmk_predefinedQueries"></a>
 
@@ -78,6 +101,7 @@ You can pass URL encoded FetchXML as a query to the entity set corresponding to 
    <entity name='account'>
       <attribute name='accountid'/>
       <attribute name='name'/>
+      <attribute name='accountnumber'/>      
 </entity>
 </fetch>
 ```
@@ -85,7 +109,7 @@ You can pass URL encoded FetchXML as a query to the entity set corresponding to 
 The URL encoded value of this FetchXML is as shown here.
 
 ```text
-%3Cfetch%20mapping='logical'%3E%3Centity%20name='account'%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='name'/%3E%3C/entity%3E%3C/fetch%3E
+%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E
 ```
 
 Most programming languages include a function to URL encode a string. For example, in JavaScript you use the [encodeURI](https://www.ecma-international.org/ecma-262/5.1/) function. You should URL encode any request that you send to any RESTful web service. If you paste a URL into the address bar of your browser it should URL encode the address automatically. The following example shows a GET request using the FetchXML shown previously using the entity set path for accounts.
@@ -93,7 +117,7 @@ Most programming languages include a function to URL encode a string. For exampl
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping='logical'%3E%3Centity%20name='account'%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='name'/%3E%3C/entity%3E%3C/fetch%3E HTTP/1.1
+GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -109,7 +133,7 @@ OData-Version: 4.0
 {  
   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,name)","value":[  
     {  
-      "@odata.etag":"W/\"506678\"","accountid":"89390c24-9c72-e511-80d4-00155d2a68d1","name":"Fourth Coffee (sample)"  
+      "@odata.etag":"W/\"506678\"","accountid":"89390c24-9c72-e511-80d4-00155d2a68d1","name":"Fourth Coffee (sample)", "accountnumber":"1234",
     },{  
       "@odata.etag":"W/\"502172\"","accountid":"8b390c24-9c72-e511-80d4-00155d2a68d1","name":"Litware, Inc. (sample)"  
     },{  
@@ -134,6 +158,9 @@ OData-Version: 4.0
   ]  
 }  
 ```
+
+> [!NOTE]
+> Properties with null values will not be included in results returned using FetchXml. In the example above, only the first record returned has an `accountnumber` value.
 
 <a name="bkmk_WebAPIFetchPaging"></a>
 
