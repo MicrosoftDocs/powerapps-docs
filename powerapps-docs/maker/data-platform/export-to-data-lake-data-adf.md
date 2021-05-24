@@ -52,7 +52,7 @@ The user account that's used to sign in to Azure must be a member of the
 To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
 ### Azure Synapse Link for Dataverse
-This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](azure-synapse-link.md).
+This guide assumes that you've already exported Dataverse data by using [Azure Synapse Link for Dataverse](export-to-data-lake.md).
 
 In this example, the account table data is exported to the data lake.
 
@@ -159,6 +159,6 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 [Configure Azure Synapse Link for Dataverse with Azure Data Lake](./azure-synapse-link-data-lake.md)
 
-[Analyze Dataverse data in Azure Data Lake Storage Gen2 with Power BI](azure-synapse-link-data-powerbi.md)
+[Analyze Dataverse data in Azure Data Lake Storage Gen2 with Power BI](export-to-data-lake-data-powerbi.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

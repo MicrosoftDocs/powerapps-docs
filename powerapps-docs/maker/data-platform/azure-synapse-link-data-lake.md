@@ -109,12 +109,12 @@ After successfully using the Export to Data Lake service, discover how you can a
 
 ### See also
 
-[Analyze Dataverse data in the data lake with Power BI](./azure-synapse-link-data-lake-data-powerbi.md)
+[Analyze Dataverse data in the data lake with Power BI](./export-to-data-lake-data-powerbi.md)
 
-[Ingest Dataverse data in the data lake with Azure Data Factory](./azure-synapse-link-data-lake-data-adf.md)
+[Ingest Dataverse data in the data lake with Azure Data Factory](./export-to-data-lake-data-adf.md)
 
 [Azure Synapse Link for Dataverse Advanced Configuration](./azure-synapse-link-advanced-configuration.md)
 
-[Azure Synapse Link FAQ](azure-synapse-link-faq.yml)
+[Azure Synapse Link FAQ](export-data-lake-faq.yml)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

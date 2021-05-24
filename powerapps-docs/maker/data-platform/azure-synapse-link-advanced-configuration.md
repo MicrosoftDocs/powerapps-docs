@@ -127,6 +127,6 @@ From the Power Apps maker portal in the environment where you imported the Expor
 
 ### See also
 
-[Azure Synapse Link for Dataverse](./azure-synapse-link.md)
+[Azure Synapse Link for Dataverse](./export-to-data-lake.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
