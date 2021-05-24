@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.component: canvas
-ms.date: 05/06/2021
+ms.date: 05/24/2021
 ms.author: gregli
 search.audienceType: 
   - maker
