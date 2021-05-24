@@ -24,7 +24,7 @@ Monitor is available by default for all canvas apps. Using Monitor, you can trac
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+1. Create a [new app](canvas-apps/get-started-test-drive.md), or [edit an existing app](canvas-apps/edit-app.md).
 
 1. On the left pane, select **Advanced tools**.
 
@@ -88,7 +88,7 @@ display the table of events as they're occurring, along with specific details.
 ## Example: Using Monitor with canvas apps
 
 In this example, you'll use the Northwind Sample Data app included with
-the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
+the [Northwind sample solution](canvas-apps/northwind-install.md).
 
 The *Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse. You can also create a new app or use an existing app instead.
 
