@@ -104,7 +104,7 @@ Follow these instructions to create a rank for the each row by the *revenue* fie
      - **Incoming Stream**: Select the source name you want. In this case, the source name from the previous step.
      - **Options**: Leave the options unchecked.
      - **Rank column**: Enter the name of the rank column generated.
-     - **Sort conditions**: Select the *revenue* column and sorty by *Descending* order.
+     - **Sort conditions**: Select the *revenue* column and sort by *Descending* order.
 
        ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
 

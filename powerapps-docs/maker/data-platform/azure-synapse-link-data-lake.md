@@ -39,7 +39,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account) article, and note these requirements:
 
 - You must be granted an **Owner** and **Storage Blob Data Contributor** role on the storage account.
-- The storage account must have the **Hierarchical namespace** feature enabled. By enabling the hierarchical namespace, you are automatically setting the storage account to be a **Daata Lake Storage Gen2** account.
+- The storage account must have the **Hierarchical namespace** feature enabled. By enabling the hierarchical namespace, you are automatically setting the storage account to be a **Data Lake Storage Gen2** account.
 
 Additionally, we recommend that you set replication to **read-access geo-redundant storage (RA-GRS)**. More information: [Read-access geo-redundant storage](/azure/storage/common/storage-redundancy-grs#read-access-geo-redundant-storage).
 
