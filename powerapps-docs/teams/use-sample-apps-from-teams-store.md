@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/29/2021
+ms.date: 05/24/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -45,6 +45,11 @@ Several sample apps are available from the Teams store that you can add to your 
    :::column-end:::
    :::column span="":::
       ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
+   :::column-end:::
+:::row-end:::
+:::row:::
+:::column span="":::
+      ![Perspectives (Preview) app](media/app-icons/milestones-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
 :::row-end:::
 
