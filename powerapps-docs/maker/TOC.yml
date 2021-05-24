@@ -2048,13 +2048,13 @@
       - name: Configure Azure Synapse Link with Data Lake
         href: ./data-platform/azure-synapse-link-data-lake.md
       - name: Ingest exported data with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-data-lake-adf.md
+        href: ./data-platform/export-to-data-lake-data-adf.md
       - name: Analyze exported data with Power BI
-        href: ./data-platform/azure-synapse-link-data-lake-powerbi.md
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Azure Synapse Link FAQ
-      href: ./data-platform/azure-synapse-link-faq.yml
+      href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security.md
   - name: Privileges for customization
