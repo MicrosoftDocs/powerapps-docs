@@ -162,8 +162,8 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Profile+ (Preview) sample app](profile-app.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

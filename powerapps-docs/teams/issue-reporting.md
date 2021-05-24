@@ -354,7 +354,6 @@ To review and edit existing issues in Planner:
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
 - [Milestones (Preview) sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Profile+ (Preview) sample app](profile-app.md)
