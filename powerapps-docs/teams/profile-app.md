@@ -39,8 +39,8 @@ Benefits of using the Profile+ app:
 
 Before using this app:
 
-2. Install the app by sideloading the manifest in Microsoft Teams. You can download the manifest from https://aka.ms/TeamsProfilePlus..
-3. Set up the app for the first use.
+1. Install the app by sideloading the manifest in Microsoft Teams. You can download the manifest from https://aka.ms/TeamsProfilePlus. For more information and help with installing this app, read the documentation available with the app manifest.
+1. Set up the app for the first use.
 
 > [!IMPORTANT]
 > - This is a preview feature.
