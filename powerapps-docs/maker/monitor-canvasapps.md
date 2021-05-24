@@ -70,7 +70,7 @@ Monitor also displays a notification that the monitoring session that's currentl
 
 ![Published app session](media/monitor/published-app-session.png "Published app session")
 
-### Advanced setting: Debug published app
+### Setting: Debug published app
 
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
 
