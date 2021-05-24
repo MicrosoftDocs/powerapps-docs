@@ -2038,7 +2038,7 @@
   - name: Azure Synapse Link
     items:
     - name: Azure Synapse Link Overview
-      href: ./data-platform/azure-synapse-link.md
+      href: ./data-platform/export-to-data-lake.md
     - name: Azure Synapse Analytics
       items:
       - name: Configure Azure Synapse Link with a Synapse Workspace
