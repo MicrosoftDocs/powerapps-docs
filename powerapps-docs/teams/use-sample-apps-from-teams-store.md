@@ -49,7 +49,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
 :::column span="":::
-      ![Perspectives (Preview) app](media/app-icons/milestones-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> App to keep track of projects, and initiatives.
+      ![Perspectives (Preview) app](media/app-icons/milestones-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
    :::column-end:::
 :::row-end:::
 
