@@ -36,7 +36,7 @@ Before you add a Power Virtual Agents bot to a Power Apps portals page, you must
 
 To add a chatbot component to portal page:
 
-1. Go to [Power Apps](https://make.powerapps.com).
+1. Go to [Power Apps Preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** from the left pane.
 
