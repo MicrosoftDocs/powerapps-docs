@@ -135,6 +135,8 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- The [Power Automate mobile app](https://docs.microsoft.com/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
+- The Flow action menu in [Power Apps Mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
 - You can’t add an instant flow into a solution when the following are true:
    - The flow was created outside of a solution.
    - The flow trigger is set to manual.
