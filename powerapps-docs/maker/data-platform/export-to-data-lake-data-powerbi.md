@@ -27,12 +27,12 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!NOTE]
-> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-
 After exporting data from Dataverse to Azure Data Lake Storage Gen2
 with Azure Synapse Link for Dataverse, you can use Power BI to create business
 reports and analytics. This can be useful for sales managers and sales associates to refine and build additional reports and dashboards in Power BI.
+
+> [!NOTE]
+> Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 This article shows you how to perform the following tasks:
 
