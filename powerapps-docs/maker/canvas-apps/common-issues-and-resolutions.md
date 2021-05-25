@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/28/2021
+ms.date: 05/24/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -44,6 +44,8 @@ If you're running into issues using Power Apps, try these common troubleshooting
 1. **SQL data sources no longer add a "[dbo]" prefix to the data source name** (Apr 27, 2021)
 
    This was an intentional change as the prefix did not serve any practical purpose. Existing data sources will not be affected, but any newly added SQL data sources will not include the prefix. If you need to update a large number of formulas in one of your apps, the [Power Apps Source File Pack and Unpack Utility](https://powerapps.microsoft.com/en-us/blog/source-code-files-for-canvas-apps/) can be used to do a global search-and-replace.
+   
+   Starting in version 3.21054, we will automatically update broken legacy name references to the new data source name after re-adding the data source.
    
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**

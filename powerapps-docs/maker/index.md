@@ -53,13 +53,13 @@ When you create a model-driven app, you can use all of the power of the Datavers
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
 
-- [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app)
-- [Create and design forms](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms)
-- [Create or edit views](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-views)
-- [Create or edit a system chart](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-system-chart)
-- [Create or edit dashboards](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-dashboards)
-- [Add security](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
-- [Add business logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
+- [Create an app](/dynamics365/customer-engagement/customize/create-edit-app)
+- [Create and design forms](/dynamics365/customer-engagement/customize/create-design-forms)
+- [Create or edit views](/dynamics365/customer-engagement/customize/create-edit-views)
+- [Create or edit a system chart](/dynamics365/customer-engagement/customize/create-edit-system-chart)
+- [Create or edit dashboards](/dynamics365/customer-engagement/customize/create-edit-dashboards)
+- [Add security](/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
+- [Add business logic](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 ## Portals
 
@@ -84,11 +84,11 @@ Getting started with Dataverse is easy. For example, you can start with these it
 - [Create a custom table](data-platform/data-platform-create-entity.md)
 - [Manage columns](data-platform/data-platform-manage-fields.md)
 - [Create custom choices](data-platform/custom-picklists.md)
-- [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+- [Create a business rule](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 ## Planning a Power Apps app or project
 
-It's easy to try building out your first app. Simply sign-in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, like creating environments, we have a [30 day trial](signup-for-powerapps.md) or [community plan](dev-community-plan.md).
+It's easy to try building out your first app. Simply sign-in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, like creating environments, we have a [30 day trial](signup-for-powerapps.md) or [developer plan](developer-plan.md).
 
 If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
