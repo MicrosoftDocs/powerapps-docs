@@ -34,7 +34,7 @@ search.app:
 
 **Type**: String. 
 
-**Description**:Returns one of the following values: **active**, **aborted**, or **finished**. It will return **invalid** if the setStatus API fails.
+**Description**:Returns one of the following values: **active**, **aborted**, or **finished**. It returns **invalid** if the setStatus API fails.
 
 ### Related topics
 
