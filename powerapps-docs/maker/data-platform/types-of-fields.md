@@ -23,8 +23,8 @@ search.app:
 
 The names used for types depend on the designer used. [Power Apps(https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. 
 
-<!-- Watch this video for a quick overview about column types:
-> [!VIDEO link tbd]  -->
+Watch this video for a quick overview about column types:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWErxo]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
