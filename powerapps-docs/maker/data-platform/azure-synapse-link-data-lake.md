@@ -27,10 +27,10 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to connect your Dataverse data to your Azure Data Lake Storage Gen2 account.
+
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-
-You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to connect your Dataverse data to your Azure Data Lake Storage Gen2 account.
 
 ## Prerequisites
 
@@ -86,8 +86,8 @@ More information: [Configure Azure Storage firewalls and virtual networks]( /azu
 
 After you have set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
-1. On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
-2. On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
+- On the Power Apps maker portal **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
+- On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
 
    ![Select a table for export](media/select-entity-export.png "Select a table for export")
 

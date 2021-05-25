@@ -27,19 +27,21 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios. 
+
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
-Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios. This article covers:
+This article covers:
 
 1. Continuous Snapshot Updates
 2. In-Place Updates vs. Append-Only Writes
 3. User-Specified Partition Strategy
 4. Transporting the Azure Synapse Link for Dataverse Configuration across Environments
 
-## Continuous Snapshot Updates
+## Continuous snapshot updates
 
-Dataverse data can continuously change through create, update, and delete transactions. Snapshots provide a read-only copy of data that's updated at regular intervals, in this case every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.
+Microsoft Dataverse data can continuously change through create, update, and delete transactions. Snapshots provide a read-only copy of data that's updated at regular intervals, in this case every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.
 
 ![Continuous snapshot updates](media/snapshot-updates.png "Continuous snapshot updates")
 
@@ -55,7 +57,7 @@ Here's an example of the model.json file, which always points to the latest time
 
 ![Sample snapshot model.json file](media/sample-snapshot-json.png "Sample snapshot model.json file")
 
-## In-Place Updates vs. Append-Only Writes
+## In-place updates vs. append-only writes
 
 While writing Dataverse table data to the Azure data lake, based on the `createdOn` value, which is the date and time when the record was created, there are two different settings to choose from. They are, **In place update** and **Append only**.
 

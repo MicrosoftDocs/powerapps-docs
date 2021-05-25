@@ -26,10 +26,10 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
+After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
+
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-
-After exporting data from Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
 This article shows you how to perform the following tasks:
 
@@ -112,7 +112,7 @@ Follow these instructions to create a rank for the each row by the *revenue* fie
 
 ## Set the Data Lake Storage Gen2 storage account as a sink
 
-Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a Delimited Text file in the Data Lake.
+Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a delimited text file in the data lake.
 
 1. Select **+** in the lower-right corner of the previous transformation, and then search for and select **Sink**.
 
@@ -136,7 +136,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 4. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
-5. You can view your data in the **data preview** tab.
+5. You can view your data in the **Data preview** tab.
 
 ## Run your dataflow
 
