@@ -42,7 +42,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 |[Section 1: Basic create and update operations](#bkmk_section1)|[Basic create](create-entity-web-api.md#bkmk_basicCreate) <br /> [Create with data returned](create-entity-web-api.md#bkmk_createWithDataReturned) <br /> [Basic update](update-delete-entities-using-web-api.md#bkmk_update) <br /> [Update with data returned](update-delete-entities-using-web-api.md#bkmk_updateWithDataReturned)|  
 |[Section 2: Create with association](#bkmk_section2)|[Associate entities on create](associate-disassociate-entities-using-web-api.md#bkmk_Associaterowsoncreate)|  
 |[Section 3: Create related entities (deep insert)](#bkmk_section3)|[Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated)|  
-|[Section 4: Associate and disassociate existing entities](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows-using-web-api.md)|  
+|[Section 4: Associate and disassociate existing entities](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
 |[Section 5: Delete entities (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
   
 > [!NOTE]
