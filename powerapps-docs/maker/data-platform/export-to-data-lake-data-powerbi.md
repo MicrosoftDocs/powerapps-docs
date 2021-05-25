@@ -42,7 +42,7 @@ This article shows you how to perform the following tasks:
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to consume Dataverse data with Power BI by using the Export to Data Lake service.
+This section describes the prerequisites necessary to consume Dataverse data with Power BI by using the Azure Synapse Link for Dataverse service.
 
 - **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
 

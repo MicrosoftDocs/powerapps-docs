@@ -79,7 +79,7 @@ You can follow the steps above to create a link from one Dataverse environment t
 > [!NOTE]
 > The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
-> Currently, you can't provide public IPs for Export to data lake service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
+> Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
 ## Manage table data to the data lake
@@ -91,7 +91,7 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
    ![Select a table for export](media/select-entity-export.png "Select a table for export")
 
-To unlink all linked tables, on the Power Apps maker portal **Export to data lake** area, select **Unlink data lake**.
+To unlink all linked tables, on the Power Apps maker portal **Azure Synapse Link** area, select **Unlink data lake**.
 
 ## View your data in Azure Data Lake Storage Gen2
 
@@ -104,7 +104,7 @@ A folder that includes snapshot comma-delimited (CSV format) files is displayed 
    ![Table data in the data lake](media/entity-data-in-lake.png "Table data in the data lake")
 
 ### What's next?
-After successfully using the Export to Data Lake service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Export to data lake**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
+After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
 ![Discover Hub](media/discover-hub.png "Discover Hub")
 
 ### See also

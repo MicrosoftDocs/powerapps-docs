@@ -121,7 +121,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output stream name**: Enter the name you want, such as *Sink1*.
     - **Incoming stream**: Select the source name you want. In this case, the source name from the previous step.
     - **Sink type**: Select **DelimitedText**.
-    - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service.
+    - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Azure Synapse Link for Dataverse service.
 
       ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
 
