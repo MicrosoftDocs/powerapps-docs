@@ -5,7 +5,9 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: overview
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 06/16/2020
 ms.author: tapanm

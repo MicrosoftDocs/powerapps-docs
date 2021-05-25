@@ -30,21 +30,21 @@ To determine which button was clicked to perform the save, use the getSaveMode m
 
 You can cancel the save action by using the preventDefault method within the event arguments object. The preventDefault method is accessible by using the getEventArgs method that is part of the execution context. Execution context is automatically passed to the form event handler.
 
-## Async OnSave event
+## Asynchronous event handler support
 
-Async OnSave event gives the ability to wait for promises to settle down before saving, allowing the `OnSave` event to be asynchronous.
+The OnSave event has ability to wait for promises returned by event handlers to settle before saving, allowing the `OnSave` event to be asynchronous ("async").
 
-Async OnSave event occurs when the `OnSave` event is triggered and a promise is returned by the `OnSave` event handler. Enable the `Async OnSave` event by updating the `customization.xml` file for the app you want. More information: [Enable Async OnSave event](#enable-async-onsave-using-app-setting).
+The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler and support is enabled. Enable the support by updating the `customization.xml` file for the app you want. More information: [Enable Async OnSave](#enable-async-onsave-using-app-setting).
 
-Saving of the record happens when the promise is resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
+Saving of the record happens when each promise returned by a handler are resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
 
 If the promise is rejected or timed out, the save operation continues to behave similarly to the current script errors. Use the [preventDefault](../save-event-arguments/preventDefault.md) method within the event arguments object in that particular handler if you want to prevent the save event to happen if there is a script error/rejected promise or handler times out.
 
 You can also cancel the save operation irrespective of the error in the handler or not using the [preventDefault](../save-event-arguments/preventDefault.md) method within the event arguments object. If this method is called, the Async OnSave event will still wait for all the promises to settle, but the save will not occur. This means the logic within `.then()` & `.catch()` will still execute.
 
-Async OnSave event will only wait for one promise returned per handler. If multiple promises are required, it is recommended to wrap all the promises in the `Promise.all()` method. For multiple handlers that all return a promise, we recommend you to create one handler that calls all the events and return a single promise that wraps all required promises. This is to minimize wait times caused by the timeout.
+The `OnSave` event will only wait for one promise returned per handler. If multiple promises are required, it is recommended to wrap all the promises in the `Promise.all()` method and return the single resulting promise. For multiple handlers that all return a promise, we recommend you to create one handler that calls all the events and return a single promise that wraps all required promises. This is to minimize wait times caused by the timeout.
 
-### Example scenario on when to use Async OnSave event
+### Example scenario on when to use async OnSave handlers
 
 Consider creating a Work Order Service Task, you need to validate that the Customer Asset selected has the same account listed in the Work Order. Fetching the account on the Work Order and Customer Asset are both asynchronous processes and need to be completed before the validation can occur. 
 
@@ -64,11 +64,11 @@ In this scenario, since there are multiple async processes and both calls return
 
 ### Enable Async OnSave using app setting 
 
-App setting is a platform component that allows you to override a setting on an app. 
+An app setting is a platform component that allows you to override a setting on an app. 
 
-To enable the Async OnSave event for a specific app, add the below XML in the `customization.xml`  file. This should be added in the existing AppModule node in your `customization.xml` file.
+To enable the async `OnSave` event handlers for a specific app, add the below XML in the `customization.xml`  file. This should be added in the existing AppModule node in your `customization.xml` file.
 
-Setting the `<value>true</value>`, enables the Async OnSave event for that specific app. Any form within this app will be able to get access to the Async OnSave functionality.
+Setting the `<value>true</value>` enables async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
 
 ```XML
  <appsettings>

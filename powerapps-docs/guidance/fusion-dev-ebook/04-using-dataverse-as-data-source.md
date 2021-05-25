@@ -5,7 +5,7 @@ author: spboyer
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ebook
-ms.date: 04/26/2021
+ms.date: 05/07/2021
 ms.author: shboyer
 ms.reviewer: kvivek
 
@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Chapter 4: Using Microsoft Dataverse as the data source
 
-Maria has built a prototype app by using test data held in Excel workbooks. She can now consider how to connect the app to data sources that will provide real-world data. She has heard about Microsoft Dataverse as an option for doing this, however it isn't an option for VanArsdel because it won't work with their legacy systems and databases. Still, she wants to know more about it. 
+Maria has built a prototype app by using test data held in Excel workbooks. She can now consider how to connect the app to data sources that will provide real-world data. She has heard about Microsoft Dataverse as an option for doing this, and wants to know more about it.
 
 ## What is Dataverse?
 
@@ -47,9 +47,9 @@ Dataverse supports a rich set of data types for columns, ranging from simple tex
 
 You can also define relationships among tables. These relationships can be *many-to-one*, *one-to-many*, or *many-to-many*. In addition, you specify the behavior of the related entities as part of the relationship. The behavior can be:
 
--   **Referential**, with or without restricted delete. Restricted delete prevents a row in a related table from being removed if it's referenced by another row in the same, or a different, table.
--   **Parental**, in which any action performed on a row is also applied to any rows that it references.
--   **Custom**, which enables you to specify how referenced rows are affected by an action performed on the referencing row.
+- **Referential**, with or without restricted delete. Restricted delete prevents a row in a related table from being removed if it's referenced by another row in the same, or a different, table.
+- **Parental**, in which any action performed on a row is also applied to any rows that it references.
+- **Custom**, which enables you to specify how referenced rows are affected by an action performed on the referencing row.
 
 The following example shows how to add a one-to-many relationship from the Account table to a custom table named SalesLT Customer. The behavior prevents a customer from being deleted if it's referenced by a row in the Account table.
 
@@ -67,13 +67,13 @@ You use business rules to define validations and automate the flow of control wh
 
 The business rules designer supports the following actions:
 
--   Set column values.
--   Clear column values.
--   Set column requirement levels.
--   Show or hide columns (for model-driven apps only).
--   Enable or disable columns (for model-driven apps only).
--   Validate data and show error messages.
--   Create business recommendations based on business intelligence (for model-driven apps only).
+- Set column values.
+- Clear column values.
+- Set column requirement levels.
+- Show or hide columns (for model-driven apps only).
+- Enable or disable columns (for model-driven apps only).
+- Validate data and show error messages.
+- Create business recommendations based on business intelligence (for model-driven apps only).
 
 > [!NOTE]
 > [Business rules](/powerapps/maker/data-platform/data-platform-create-business-rule) are best suited to model-driven apps. Not all business rule actions are supported by canvas apps.
@@ -92,11 +92,17 @@ In addition to storing the data structure and logic associated with a business e
 
 ![Defining a chart](media/image81.png)
 
-## Why didn't VanArsdel use Dataverse?
+## Maria's decision to use Dataverse
 
-Dataverse is an excellent choice of repository for many situations. You should seriously consider it for Power Apps development based on new systems and services, especially if you're creating model-driven apps. 
+Dataverse is an excellent choice of repository for many situations. You should seriously consider it for Power Apps development based on new systems and services and adding new functionality to existing applications, especially if you're creating model-driven apps.
 
-However, VanArsdel's current operations are heavily dependent on existing legacy systems and databases. For the time being, VanArsdel wants to focus on getting the apps out into the field rather than spend time migrating to Dataverse. Kiana and Maria, the professional and citizen developers, want to integrate their existing systems and processes into a Power Apps solution for Caleb, the field technician, as quickly as possible. They also want to minimize disruption to the critical operations performed by the receptionist Malik and avoid compromising the security and IT operations managed by Preeti. To achieve this, they'll create a Web API around their existing systems and connect to this Web API from Power Apps. They can then integrate the Web API into their canvas app. The following chapters walk through this process.
+However, in the application that Maria is building, the data already exists in a legacy database. A web API exists that connects to that database to retrieve and modify data and it's deployed in Azure App Service. Those legacy solutions are proven to work and Kiana and her high-code development team are very comfortable supporting those solutions going forward.
+
+An advantage of fusion development teams and Dataverse is fusion development teams allow members to be their most productive in tools that they already know and are most comfortable with. A team does not need to migrate their existing data to Dataverse immediately to build an app using Power Apps. Likewise, when a team is building an application that requires new data, Dataverse makes a ton of sense as an option. It is not uncommon to see an app built using Power Apps to use a combination of legacy data sources and data in Dataverse.
+
+When Maria starts to add new functionality to her app, for example having the field technicians add customer visit notes, she expects to use Dataverse to store that data.
+
+So, for the time being Maria will connect the web API Kiana's team has already developed to her app to obtain the data needed. The following chapters will walk through that process.
 
 > [!div class="step-by-step"]
 > [Previous](03-building-low-code-prototype.md)
