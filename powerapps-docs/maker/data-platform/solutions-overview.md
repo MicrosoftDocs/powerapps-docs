@@ -143,6 +143,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
+- [Copy and pate of flow actions](https://docs.microsoft.com/business-applications-release-notes/april19/microsoft-flow/copy-paste-actions) is currently not supported when creating solution flows
 
 For details about customizing the individual components in a solution, see the following topics:  
   
