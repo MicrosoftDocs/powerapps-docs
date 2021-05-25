@@ -27,7 +27,7 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After exporting data from Dataverse to Azure Data Lake Storage Gen2
+After exporting data from Microsoft Dataverse to Azure Data Lake Storage Gen2
 with Azure Synapse Link for Dataverse, you can use Power BI to create business
 reports and analytics. This can be useful for sales managers and sales associates to refine and build additional reports and dashboards in Power BI.
 
