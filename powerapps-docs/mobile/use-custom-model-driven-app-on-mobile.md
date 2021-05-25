@@ -131,11 +131,13 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
  
 ## Access the actions menu
 
-From a list view, swipe left to acess the actions menu for a row.
+From a list view, swipe left to access the actions menu for a row.
 
    > [!div class="mx-imgBorder"]
    > ![How to access actions for a row](media/row-actions.gif "This image demonstrates access actions for a row")
 
+>[!NOTE]
+> The Flow actions menu in Power Apps mobile doesn't support flows created in a solution.
  
 ## Access more commands (Android)
 
