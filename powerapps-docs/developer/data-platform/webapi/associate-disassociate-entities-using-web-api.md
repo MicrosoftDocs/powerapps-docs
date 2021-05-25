@@ -85,7 +85,7 @@ OData-Version: 4.0
 
 <a name="bkmk_Removeareferencetoarow"></a>
 
-## Remove a reference to a row
+## Remove a reference to a table row
 
  Use a DELETE request to remove a reference to a row. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
   
@@ -128,19 +128,19 @@ OData-Version: 4.0
 
 <a name="bkmk_Associaterowsoncreate"></a>
 
-## Associate rows on create
+## Associate table rows on create
 
 As described in [Associate rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new row to existing rows by setting the navigation properties using the `@odata.bind` annotation.
 
 As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new tables can be created with relationships using *deep insert*.  
   
-## Associate and disassociate rows on update
+## Associate and disassociate table rows on update
 
 You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate rows.
 
 <a name="bkmk_Associaterowsonupdate"></a>
 
-### Associate rows on update
+### Associate table rows on update
 
  You can associate rows on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
   
@@ -165,7 +165,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```  
 
-### Disassociate rows on update
+### Disassociate table rows on update
 
 You can remove a reference to a single-valued navigation property when updating by setting the value to `null`. This method allows you to disassociate multiple references in a single operation.
 There are two ways to do this:
@@ -205,7 +205,7 @@ More information: [Basic update](update-delete-entities-using-web-api.md#basic-u
 
 <a name="bkmk_Associaterowsonupdate_multi"></a>
 
-## Associate rows on update using collection-valued navigation property
+## Associate table rows on update using collection-valued navigation property
 
 The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using collection-valued navigation property `email_activity_parties`.
 
