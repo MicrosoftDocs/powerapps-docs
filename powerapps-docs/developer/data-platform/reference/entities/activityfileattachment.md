@@ -1033,4 +1033,3 @@ See postcomment Table [post_comment_activity_file_attachment](postcomment.md#BKM
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.activityfileattachment?text=activityfileattachment EntityType" />

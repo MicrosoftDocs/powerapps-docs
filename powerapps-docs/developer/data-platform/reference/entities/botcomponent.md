@@ -1217,4 +1217,3 @@ IntersectEntityName: botcomponent_workflow<br />
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />

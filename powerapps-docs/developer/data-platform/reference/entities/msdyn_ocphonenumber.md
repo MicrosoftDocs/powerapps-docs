@@ -822,7 +822,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_msdyn_msdyn_ocphonenumber_systemuser_phonenumberid"></a> msdyn_msdyn_ocphonenumber_systemuser_phonenumberid
 
-Same as systemuser table [msdyn_msdyn_ocphonenumber_systemuser_phonenumberid](systemuser.md#BKMK_msdyn_msdyn_ocphonenumber_systemuser_phonenumberid) Many-To-One relationship.
+Same as systemuser table [msdyn_msdyn_ocphonenumber_systemuser_phonenumberid](systemuser.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -852,31 +852,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_ocphonenumber_createdby](systemuser.md#BKMK_lk_msdyn_ocphonenumber_createdby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_ocphonenumber_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_ocphonenumber_createdonbehalfby"></a> lk_msdyn_ocphonenumber_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_ocphonenumber_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_ocphonenumber_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_ocphonenumber_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_ocphonenumber_modifiedby"></a> lk_msdyn_ocphonenumber_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_ocphonenumber_modifiedby](systemuser.md#BKMK_lk_msdyn_ocphonenumber_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_ocphonenumber_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_ocphonenumber_modifiedonbehalfby"></a> lk_msdyn_ocphonenumber_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_ocphonenumber_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_ocphonenumber_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_ocphonenumber_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_user_msdyn_ocphonenumber"></a> user_msdyn_ocphonenumber
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_ocphonenumber](systemuser.md#BKMK_user_msdyn_ocphonenumber) One-To-Many relationship.
+See systemuser Table [user_msdyn_ocphonenumber](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_msdyn_occommunicationprovidersetting_msdyn_ocphonenumber_communicationprovidersettingid"></a> msdyn_msdyn_occommunicationprovidersetting_msdyn_ocphonenumber_communicationprovidersettingid
 
@@ -886,4 +886,3 @@ See msdyn_occommunicationprovidersetting Table [msdyn_msdyn_occommunicationprovi
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_ocphonenumber?text=msdyn_ocphonenumber EntityType" />

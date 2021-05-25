@@ -939,4 +939,3 @@ See catalog Table [parentcatalog_catalog](catalog.md#BKMK_parentcatalog_catalog)
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.catalog?text=catalog EntityType" />

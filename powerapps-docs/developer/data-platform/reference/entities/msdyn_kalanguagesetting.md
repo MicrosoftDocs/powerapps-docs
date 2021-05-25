@@ -881,4 +881,3 @@ See businessunit Table [business_unit_msdyn_kalanguagesetting](businessunit.md#B
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_kalanguagesetting?text=msdyn_kalanguagesetting EntityType" />

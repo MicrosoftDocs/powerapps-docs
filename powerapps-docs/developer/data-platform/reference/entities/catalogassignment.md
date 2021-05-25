@@ -978,4 +978,3 @@ See customapi Table [catalogassignment_customapi](customapi.md#BKMK_catalogassig
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.catalogassignment?text=catalogassignment EntityType" />

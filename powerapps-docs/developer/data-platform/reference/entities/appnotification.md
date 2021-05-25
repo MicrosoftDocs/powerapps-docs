@@ -982,4 +982,3 @@ See appmodule Table [appmodule_appnotification_app](appmodule.md#BKMK_appmodule_
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.appnotification?text=appnotification EntityType" />

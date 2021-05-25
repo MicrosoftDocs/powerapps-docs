@@ -749,34 +749,33 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_occommunicationprovidersetting_createdby](systemuser.md#BKMK_lk_msdyn_occommunicationprovidersetting_createdby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_occommunicationprovidersetting_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_occommunicationprovidersetting_createdonbehalfby"></a> lk_msdyn_occommunicationprovidersetting_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_occommunicationprovidersetting_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_occommunicationprovidersetting_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_occommunicationprovidersetting_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_occommunicationprovidersetting_modifiedby"></a> lk_msdyn_occommunicationprovidersetting_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_occommunicationprovidersetting_modifiedby](systemuser.md#BKMK_lk_msdyn_occommunicationprovidersetting_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_occommunicationprovidersetting_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_occommunicationprovidersetting_modifiedonbehalfby"></a> lk_msdyn_occommunicationprovidersetting_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_occommunicationprovidersetting_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_occommunicationprovidersetting_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_occommunicationprovidersetting_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_user_msdyn_occommunicationprovidersetting"></a> user_msdyn_occommunicationprovidersetting
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_occommunicationprovidersetting](systemuser.md#BKMK_user_msdyn_occommunicationprovidersetting) One-To-Many relationship.
+See systemuser Table [user_msdyn_occommunicationprovidersetting](systemuser.md) One-To-Many relationship.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_occommunicationprovidersetting?text=msdyn_occommunicationprovidersetting EntityType" />
