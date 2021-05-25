@@ -1,7 +1,7 @@
 ---
 title: "ImportLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ImportLog table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,6 @@ Failure reason and other detailed information for a record that failed to import
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/importlogs(*importlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -709,24 +708,18 @@ Same as asyncoperation table [ImportLog_AsyncOperations](asyncoperation.md#BKMK_
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_importlog_createdonbehalfby](#BKMK_lk_importlog_createdonbehalfby)
-- [owner_importlogs](#BKMK_owner_importlogs)
 - [BusinessUnit_ImportLogs](#BKMK_BusinessUnit_ImportLogs)
 - [SystemUser_ImportLogs](#BKMK_SystemUser_ImportLogs)
 - [lk_importlogbase_modifiedby](#BKMK_lk_importlogbase_modifiedby)
 - [lk_importlogbase_createdby](#BKMK_lk_importlogbase_createdby)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
 - [team_ImportLogs](#BKMK_team_ImportLogs)
-- [ImportLog_ImportData](#BKMK_ImportLog_ImportData)
 - [lk_importlog_modifiedonbehalfby](#BKMK_lk_importlog_modifiedonbehalfby)
 
 
 ### <a name="BKMK_lk_importlog_createdonbehalfby"></a> lk_importlog_createdonbehalfby
 
 See systemuser Table [lk_importlog_createdonbehalfby](systemuser.md#BKMK_lk_importlog_createdonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_importlogs"></a> owner_importlogs
-
-See owner Table [owner_importlogs](owner.md#BKMK_owner_importlogs) One-To-Many relationship.
 
 ### <a name="BKMK_BusinessUnit_ImportLogs"></a> BusinessUnit_ImportLogs
 
@@ -751,10 +744,6 @@ See importfile Table [ImportLog_ImportFile](importfile.md#BKMK_ImportLog_ImportF
 ### <a name="BKMK_team_ImportLogs"></a> team_ImportLogs
 
 See team Table [team_ImportLogs](team.md#BKMK_team_ImportLogs) One-To-Many relationship.
-
-### <a name="BKMK_ImportLog_ImportData"></a> ImportLog_ImportData
-
-See importdata Table [ImportLog_ImportData](importdata.md#BKMK_ImportLog_ImportData) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importlog_modifiedonbehalfby"></a> lk_importlog_modifiedonbehalfby
 
