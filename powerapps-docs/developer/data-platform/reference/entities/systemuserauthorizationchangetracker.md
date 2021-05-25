@@ -298,7 +298,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_userauthztracker](systemuser.mdr) One-To-Many relationship.
+See systemuser Table [user_userauthztracker](systemuser.md) One-To-Many relationship.
 
 ### See also
 
