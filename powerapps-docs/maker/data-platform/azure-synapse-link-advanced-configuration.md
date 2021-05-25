@@ -108,12 +108,12 @@ In Power Apps, solutions are used to transport apps and components from one envi
 ### Add an Azure Synapse Link configuration to a solution
 
 > [!IMPORTANT]
-> Before you can add an Export to Data Lake configuration, you must install the Export to Data Lake Core solution described earlier.
+> Before you can add an Azure Synapse Link for Dataverse configuration, you must install the Export to Data Lake Core solution described earlier.
 
-1. From the Power Apps maker portal, select the environment where you want to distribute the Export to Data Lake configuration, and then on the leftmost navigation pane, select **Solutions**.
+1. From the Power Apps maker portal, select the environment where you want to distribute the Azure Synapse Link for Dataverse configuration, and then on the leftmost navigation pane, select **Solutions**.
 2. Select **New solution**, provide a name, select a publisher, and then specify a version number.  
 3. Open the solution you created in the previous step, select **Add existing** > **Other** > **Export to data lake config**.
-4. Select the linked data lake configurations that you want, and then select **Add**.
+4. Select the link configurations that you want, and then select **Add**.
 5. In the **Solutions** area, select the solution, and then on the command bar, select **Export**.
 6. In the **Before you export** pane, select **Publish** to publish all changes before you export, and then select **Next**.
 
