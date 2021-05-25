@@ -86,10 +86,9 @@ In a model-driven app, there are the three main app runtime navigation component
       - **Title**: Enter a title used to describe the group.
       - **ID**: The system generates an identifier for the group. Except the system generated ID or enter a new one.
    - For subareas:
-      - **Title**: Enter a title used to describe the group.
-      - **ID**: The system generates an identifier for the subarea. Except the system generated ID or enter a new one.
       - **Content type**: Select either **Table** or **Dashboard**.
       - **Table** or **Dashboard**: Depending on the content type you selected, select a table or dashboard from the list.
+      - **Title**: Leave the default title or enter a title used to describe the subarea.
 1. To save your app navigation changes select **Save**.
 1. To publish the changes to make them available to users, select **Publish**.
 
@@ -102,7 +101,7 @@ In a model-driven app, there are the three main app runtime navigation component
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
 
-To create a page, select **New page**, select the page type of either **Table based view and form** or **Dashboard**, and then select **Next**. Select the components you want and then select **Add**.
+To create a page, select **New page**, select the page type of either **Table based view and form** or **Dashboard**, and then select **Next**. If you don't want your page to appear in the app's site map, clear **Show in navigation**. Select the components you want and then select **Add**. 
 
 To remove a page, select a page, select **...**, and then select **Remove**.
 
