@@ -37,7 +37,7 @@ When a form does not specify header density or when a new form is created, the f
     
 ## Low density header
 [!IMPORTANT]
->Low-density headers will be deprecated in 2021 Release Wave 2 and will render as high-density with flyout.  Please make sure you do not set your headers to low-density and if you have forms set to low-density please set them to high-density with floyout.
+>Low-density headers will be deprecated in 2021 Release Wave 2. At that time, existing low-density headers will render as high-density with flyout. We recommend that you set your forms to high-density with flyout and not low-density. 
 
 Low density form header allows users to directly edit the column values in the header. It also allows visualizations such as custom components and web resources.  
   
