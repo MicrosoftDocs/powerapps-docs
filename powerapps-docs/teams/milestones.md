@@ -10,7 +10,7 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Milestones sample app (Preview)
+# Milestones sample app 
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -204,7 +204,7 @@ To delete an existing project:
     ![Delete project](media/milestones/delete-project.png "Delete project")
 
 1. Select **I understand** checkbox.
-    
+   
 1. Select **Delete** to permanently delete the project.
 
 ### See also
