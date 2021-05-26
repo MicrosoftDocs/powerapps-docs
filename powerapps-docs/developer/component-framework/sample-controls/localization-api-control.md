@@ -1,6 +1,6 @@
 ---
 title: " Localization API component| Microsoft Docs" 
-description: "Implementing localization api component" 
+description: "This sample showcases how localization is done for code components." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -14,7 +14,9 @@ author: Nkrb
 
 This sample showcases how localization is done for code components. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](https://docs.microsoft.com/dynamics365/customer-engagement/developer/resx-web-resources). You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LocalizationAPI).
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+
+Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](/dynamics365/customer-engagement/developer/resx-web-resources). You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LocalizationAPI).
 
 > [!div class="mx-imgBorder"]
 > ![Localization API component](../media/localization-api-control.png "Localization API component")
@@ -454,3 +456,5 @@ When this line of code is executed, the Power Apps component framework automatic
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

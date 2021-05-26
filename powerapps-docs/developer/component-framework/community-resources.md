@@ -14,6 +14,8 @@ ms.topic: "article"
 
 # Community resources for Power Apps component framework
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
 
 > [!NOTE]            
@@ -61,6 +63,7 @@ The following is the list of blogs created by Power Apps community.
 - [Beyond the Power Apps component framework](https://www.itaintboring.com/dynamics-crm/beyond-the-powerapps-component-framework)
 - [Beyond the citizen developer: Why pros see promise in Microsoft's Power Apps component framework](https://msdynamicsworld.com/story/beyond-citizen-developer-why-pros-see-promise-microsofts-powerapps-component-framework)
 - [Create code components](https://debajmecrm.com/2019/04/26/in-depth-end-end-walkthrough-develop-your-custom-controls-using-power-apps-component-framework-and-use-it-on-your-crm-interface/)
+- [Dianamics Power Apps component framework lady (Multiple topics)](https://dianabirkelbach.wordpress.com/category/pcf/)
 - [Editing the DOM with supported code components](https://www.magnetismsolutions.com/blog/adammurchison/2019/05/29/editing-the-dom-with-supported-dynamics-365-custom-controls)
 - [How to configure Node.js and Typescript into your environment](https://capuanodanilo.com/2019/06/11/how-to-configure-node-js-and-typescript-into-your-environment-to-develop-powerapps-component-frameworks-pcf)
 - [How to simulate desired events using bound properties](https://technomancy.com.au/2020/03/27/how-to-handle-events-and-reset-component-in-pcf/)
@@ -74,3 +77,6 @@ The following is the list of blogs created by Power Apps community.
 ## Tools
 
 The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

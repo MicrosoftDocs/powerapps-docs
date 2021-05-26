@@ -64,9 +64,9 @@ Legend
   
 1. **Click to change app**: Select the current app name to change to a different app. 
 2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
-3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
-4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
-5.  **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
+3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows.
+4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list.
+5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
 
 ### Area switcher 
 
@@ -93,7 +93,7 @@ Usually, when you first open a table, you'll see the list view, which shows a li
 
 Legend:
 
-1. **Go back** (For early access): Select to go back to the previous page.
+1. **Go back**: Select to go back to the previous page.
 2. **Select rows**: Select one or more rows by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected rows at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to ten rows to send via email. 
 3. **Open a row**: Select any row in the list to open its row view, which shows all the details about the row. Usually you select from the **Name** column to open a row from the current table. Some tables provide links to rows from related tables in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
@@ -124,16 +124,7 @@ Navigate through multiple rows by using preset views and queries. The row-focuse
 
 The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
-**Current**
-
-1. To use row set navigation in the current release, open a page with a list of rows.
-2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_1.png "Row set button") and then select a row from the list.  
-
- ![Row set navigation](media/recordsetnav.gif "This show how to use the row set navigation feature")     
-
-**Early Access**
-
-1. To use row set navigation in the early access release, open a page with a list of rows.
+1. To use row set navigation, open a page with a list of rows.
 2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
@@ -173,3 +164,6 @@ Legend:
 If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
 
 ![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

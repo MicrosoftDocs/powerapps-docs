@@ -42,3 +42,6 @@ The Common Data Service connector is more robust than the Dynamics 365 connector
 ### Dataverse and the improved data source experience
 
 If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Dataverse. Read [Dataverse connection improvements](../use-native-cds-connector.md) for more details and to upgrade your connection.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

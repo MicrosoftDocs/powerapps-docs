@@ -1,5 +1,5 @@
 ---
-title: Use Inspection apps from teams store | Microsoft Docs
+title: Inspection sample apps | Microsoft Docs
 description: Learn how to use the Inspection apps from Teams store.
 author: navjotm
 ms.service: powerapps
@@ -32,11 +32,11 @@ plant&mdash;to assets and equipment, such as vehicles and machines. There are tw
     - Inspect something, such as an asset or an area within a building or other location, in the course of completing their job. The app provides inspection checklists so that multiple locations can be inspected. For example, a store employee can use this app to inspect a section of a retail store to verify that the store is ready to open for the day.
     - Log an issue when an issue is found during the inspection and assign it to the right person so that it can be resolved quickly.
 
+Watch this video for a demonstration of this app.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4LRsh]
+
 > [!NOTE]
 > Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
-
-> [!TIP]
-> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsInspectionVideo).
 
 ## Prerequisites
 
@@ -399,7 +399,15 @@ To submit inspection of grouped locations:
 
 ### See also
 
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Issue Reporting sample app](issue-reporting.md)
 - [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones (Preview) sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

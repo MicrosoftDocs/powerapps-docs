@@ -216,3 +216,6 @@ Again, the **ForAll** function can't be delegated at this time.  If our **Produc
 
 Note that we are not capturing the result of the **ForAll**.  The **Collect** function calls made from within it will return the **NewOrder** data source for all the records, which could add up to numerous data if we were capturing it.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

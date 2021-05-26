@@ -1,6 +1,6 @@
 ---
 title: feature-usage | Microsoft Docs
-description: 
+description: The feature-usage element acts as a wrapper around the uses-feature elements, which themselves allow developers to declare which features their component wants to use.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -48,3 +48,6 @@ Model-driven apps
     <uses-feature name="WebAPI" required="true" />
  </feature-usage>
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

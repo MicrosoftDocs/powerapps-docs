@@ -14,7 +14,7 @@ ms.reviewer: kathyos
 
 # Pattern: Communication
 
-![Collage of communication app screenshots](media/communication-collage.png "Collage of communication app screenshots")
+<!--![Collage of communication app screenshots](media/communication-collage.png "Collage of communication app screenshots")-->
 
 Want to quickly share news, event announcements, and the latest up-to-date information
 with your employees no matter where they are? A common use of Microsoft Power Platform is
@@ -89,7 +89,7 @@ and information, and reach out for assistance.
 
 ![A screenshot of the Crisis Communication employee app](media/crisis-communication-employee-app.jpg "A screenshot of the Crisis Communication employee app")
 
-More information:<br>[Video demo of the Crisis Communication solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis Communication sample template](https://docs.microsoft.com/powerapps/maker/canvas-apps/sample-crisis-communication-app)
+More information:<br>[Video demo of the Crisis Communication solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis Communication sample template](../../maker/canvas-apps/sample-crisis-communication-app.md)
 
 ## How customers are using the communication pattern
 
@@ -162,3 +162,6 @@ app's key capabilities and benefits include:
     signature be automatically populated.
 
 ![Some screenshots of the Hexion Broadcast app](media/hexion-broadcaster-app.png "Some screenshots of the Hexion Broadcast app")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -154,3 +154,6 @@ If you add one or more **Image** controls to your app, you can show individual i
 
     > [!NOTE]
   > When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

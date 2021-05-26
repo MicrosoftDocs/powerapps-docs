@@ -18,6 +18,8 @@ search.app:
 ---
 # Overview of the model-driven app form editor user interface
 
+This article describes the classic form editor. We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
+
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 
 - [File tab](#file-tab)
@@ -61,7 +63,7 @@ Located on the right side, the content of the explorer area depends on the conte
   
 When you select **Body**, **Header**, or **Footer** in the **Select** group of the **Home** tab, you’ll see the **Column Explorer**. Use the **Column Explorer** to drag columns you want to display into a section in the form or within the header or footer. You can include the same column multiple times in a form. Use the **New Column** button as a shortcut to create a new column.  
   
-When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table).
+When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table).
   
 You can use the **New 1:N** and **New N:N buttons** as a shortcut to add new table relationships.  
 
@@ -137,8 +139,8 @@ The Insert tab displays the commands in the following table:
 ||**IFRAME**|You can add an IFRAME to a form to integrate content from another website within a form.| 
 ||**Timeline**|Insert a timeline control in the form. This control shows the timeline of activities related to the table on a form.|  
 ||**Navigation Link**|Using this option, you can insert a link into a form navigation.|  
-||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
-||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
+||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
+||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
 ||**Relationship Assistant**|Using this option, you can insert a relationship assistant control in the form.|
 
 >[!Note] 
@@ -148,3 +150,6 @@ The Insert tab displays the commands in the following table:
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

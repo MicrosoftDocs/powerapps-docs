@@ -5,12 +5,16 @@ author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/22/2018
+ms.date: 02/18/2021
 ms.author: tahoon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tahoon-ms
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Show or hide content from assistive technologies for canvas apps
@@ -40,4 +44,13 @@ Use any of these techniques:
 
 ## Next steps
 
-Learn about [accessibility properties](controls/properties-accessibility.md) of controls in canvas apps.
+[Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

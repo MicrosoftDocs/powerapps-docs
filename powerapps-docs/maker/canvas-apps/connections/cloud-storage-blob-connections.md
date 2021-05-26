@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2016
+ms.date: 03/15/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -17,9 +17,12 @@ search.app:
 # Connect to cloud-storage from Power Apps
 Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
-| **Azure Blob** | **Box** | **Dropbox** | **Google Drive** | **OneDrive** | **OneDrive<br>for Business** |
-| --- | --- | --- | --- | --- | --- |
-| ![Icon](./media/cloud-storage-blob-connections/blobicon.png) |![API Icon][boxicon] |![API Icon][dropboxicon] |![API Icon][googledriveicon] |![API Icon][onedriveicon] |![API Icon][onedriveforbusinessicon] |
+[Box](/connectors/box/) | [Dropbox](/connectors/dropbox/) | [Google Drive](/connectors/googledrive/) | [OneDrive](/connectors/onedrive/) | [OneDrive for Business](/connectors/onedriveforbusiness/) |
+| --- | --- | --- | --- | --- |
+| ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+
+> [!NOTE]
+> To learn about using Azure Blob Storage with Power Apps, go to [Connect to Azure Blob Storage from Power Apps](connection-azure-blob-storage.md).
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
@@ -80,9 +83,14 @@ If you're sharing a folder in Dropbox, the shared folder must be attached to the
 There are [certain limitations](#sharing-excel-tables) with connectors involving Excel files.
 
 ## Known limitations
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+- If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+- If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+
+- Power Apps mobile app for Windows platform doesn't support **Dropbox** connector. A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
 
 ### Sharing Excel tables
 To share data in an Excel file:
@@ -103,3 +111,6 @@ Some additional gallery resources include [Show a list of items](../add-gallery.
 [googledriveicon]: ./media/cloud-storage-blob-connections/googledriveicon.png
 [onedriveicon]: ./media/cloud-storage-blob-connections/onedriveicon.png
 [onedriveforbusinessicon]: ./media/cloud-storage-blob-connections/onedriveforbusinessicon.png
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

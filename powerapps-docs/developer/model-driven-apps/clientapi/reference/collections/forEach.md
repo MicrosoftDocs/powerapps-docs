@@ -27,7 +27,7 @@ search.app:
 
 ## Parameters
 
-Delegate function with parameters for attribute and index. |
+Delegate function with parameters for column and index. |
 
 ### Related topics
 [Collections in Client API](../collections.md)
@@ -38,3 +38,6 @@ Delegate function with parameters for attribute and index. |
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

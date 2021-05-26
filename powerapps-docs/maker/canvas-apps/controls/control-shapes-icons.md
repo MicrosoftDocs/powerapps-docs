@@ -120,3 +120,6 @@ For example, you might set the **[AccessibleLabel](properties-accessibility.md)*
 
     > [!NOTE]
     > When **[TabIndex](properties-accessibility.md)** is zero or greater, the icon or shape is rendered as a button. Its appearance doesn't change, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the icon or shape is identified as an image.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

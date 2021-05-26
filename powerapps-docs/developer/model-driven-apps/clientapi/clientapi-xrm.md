@@ -53,3 +53,6 @@ To access the global context information in a standalone HTML Web resource, you 
 
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2020
+ms.date: 03/27/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -56,7 +56,42 @@ by Omar Aftab and Marina Kolomiets
 by Sandra Ahlgrimm and Dawid van Heerden  
 [Register and watch now](https://info.microsoft.com/ww-Landing-DeliverJavaAppsQuicklyUsingCustomConnectors.html?LCID=EN-US)
 
+**Develop, test and deliver applications with GitHub Actions for Power Platform**  
+by Pierce Boggan and Hailey Huber  
+[Register and watch now](https://info.microsoft.com/ww-landing-develop-test-and-deliver-applications-with-github-actions-for-power-platform.html?lcid=en-us)
+
+**Get Your Business On Board with Microsoft Power Apps**  
+by Georgia Tsoraklidou and Alan Chai  
+[Register and watch now](https://info.microsoft.com/ww-Landing-GetYourBusinessOnBoard.html?LCID=EN-US)
+
+**Transforming Companies and Careers in Nigeria with Microsoft Power Apps**  
+by Foyin Olajide-Bello  
+[Register and watch now](https://info.microsoft.com/ww-Landing-TransformingCompanieswithPowerApps.html?LCID=EN-US)
+
+**Easily build your own low-code apps with Microsoft Power Apps**  
+by Brian Dang and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-Landing-EasilyBuildBusinessApps.html?LCID=EN-US)
+
+**Extend SAP solutions using Microsoft Power Platform**  
+by Holger Bruchelt and Ronald Chang  
+[Register and watch now](https://info.microsoft.com/ww-Landing-Extend-SAP-solutions-using-Microsoft-Power-Platform.html?LCID=EN-US)
+
+**A Deep Dive into Serverless Applications on Power Apps and Azure**  
+by Simona Cotin  
+[Register and watch now](https://info.microsoft.com/ww-Landing-ADeepDiveintoServerlessApplications.html?LCID=EN-US)
+
+**Unlock the Future of Azure IoT through Power Platform**  
+by Samuel Adranyi  
+[Register and watch now](https://info.microsoft.com/ww-Landing-UnlocktheFutureofAzureIoTthroughPowerPlatform.html?LCID=EN-US)
+
+**Anyone Can Be a Developer with Microsoft Dataverse for Teams**  
+by Bryony Wolf and Corey Sanders  
+[Register and watch now](https://info.microsoft.com/ww-Landing-AnyoneCanBeaDeveloperwithMicrosoftDataverseforTeams.html?LCID=EN-US)
+
 ### See also
 
 [Webinars and videos by Power Apps community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery)<br/>
 [Power Automate webinars](/power-automate/webinars)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

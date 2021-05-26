@@ -1,7 +1,7 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 11/10/2020
+ms.date: 01/13/2021
 author: mduelae
 ms.author: mkaur
 ms.service: powerapps
@@ -17,7 +17,7 @@ search.app:
 
 # Work with rows in the calendar view
 
-The calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-calendar-control). The **Calendar Control V2** control can be added to any table.
+The calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md). The **Calendar Control V2** control can be added to any table.
 
 By default, rows are displayed in a read-only grid. 
 
@@ -30,6 +30,8 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
+> [!NOTE]
+> The **Calendar Control V2** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](/dynamics365/mobile-app/work-in-offline-mode).
 
 ## Switch between calendar view and grid view
 
@@ -55,7 +57,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
 You can choose from these calendar views:
 
 - **Day**: View the current day.
-- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.
+- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.<br/>To view the week numbers, ask your admin to enable displaying the week numbers in the calendar view for your environment. Follow the steps in [Customize regional options](/power-platform/admin/customize-regional-options-admins) and select **Show week numbers on Calendar views**.
 - **Month**: View the entire month.
 
 To change the calendar format, on the calendar select the drop-down menu and then select **Day**, **Week**, or **Month**.
@@ -64,7 +66,7 @@ To change the calendar format, on the calendar select the drop-down menu and the
  > ![Select the current calendar view](media/cal-nav-bar-1.png "Select the current calendar view") 
 
 
-If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#activities-tab-options).
+If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](./set-personal-options.md#activities-tab-options).
 
 ## View details of a calendar item and take action
 
@@ -113,7 +115,7 @@ The calendar view allows you to easily create a new row.
 
 ## Search through rows
 
-You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Use search on a grid](https://docs.microsoft.com/powerapps/user/grid-filters#use-search-on-a-grid).
+You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Use search on a grid](./grid-filters.md#use-search-on-a-grid).
 
 > [!div class="mx-imgBorder"]
 > ![Use a search term to filter calendar rows](media/search-cal.png "Use a search term to filter calendar rows")
@@ -121,3 +123,6 @@ You can use the search box to search for data in the view you're in. For example
 ### See also
 
 [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
