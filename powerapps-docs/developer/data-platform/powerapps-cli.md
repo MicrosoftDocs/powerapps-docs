@@ -21,9 +21,7 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 > Effective May 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).<br/>
 We will soon update the docs to reflect this change.
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
-
-Power Apps CLI tooling is the first step toward a comprehensive application lifecycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
 
 ## Install Power Apps CLI
 
