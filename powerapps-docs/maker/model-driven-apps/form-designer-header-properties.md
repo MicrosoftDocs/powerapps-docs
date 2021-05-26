@@ -72,7 +72,7 @@ With a high-density form header, the header flyout displays all header columns i
 
 ### Low-density header flyout
 [!IMPORTANT]
->Low-density headers will be deprecated in 2021 Release Wave 2 and will render as high-density with flyout.  Please make sure you do not set your headers to low-density and if you have forms set to low-density please set them to high-density with floyout.
+>Low-density headers will be deprecated in 2021 Release Wave 2. At that time, existing low-density headers will render as high-density with flyout. We recommend that you set your forms to high-density with flyout and not low-density.
 
 With a low-density form header, the header flyout displays only overflow columns, such as  columns that the form is unable to display directly in the header based on the width of the form. The header flyout is also automatically displayed or hidden based on the number of columns in the header and the width of the form. Makers can't control the visibility of the header flyout when using a low-density header.
 
