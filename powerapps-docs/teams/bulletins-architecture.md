@@ -1,21 +1,20 @@
 ---
-title: Understand Bulletins sample app architecture | Microsoft Docs
+title: Understand Bulletins sample app architecture
 description: Learn about the architecture of the Bulletins sample app.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2021
+ms.date: 05/24/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
-    - tapanm-msft
-    - navjotm
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Understand Bulletins sample app architecture
-
-[This article is pre-release documentation and is subject to change.]
 
 In this article, you'll learn about the collections and global variables used by the [Manage Bulletins](bulletins.md#manage-bulletins-app) and [Bulletins](bulletins.md#bulletins-app) apps, and understand how to use them effectively. If you want to learn more about how to install, and use the Bulletins sample app instead, go to [Bulletins sample app](bulletins.md).
 
@@ -30,10 +29,6 @@ To understand and use information in this article, you'll need to know about dif
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](bulletins.md) Bulletins sample app.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Data model
 

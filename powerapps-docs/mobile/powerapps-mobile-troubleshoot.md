@@ -119,6 +119,9 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
+## Flows created in a solution is not supported on Power Apps mobile
+
+The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
 ### See also  
 

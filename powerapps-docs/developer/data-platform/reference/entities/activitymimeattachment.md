@@ -1,7 +1,7 @@
 ---
 title: "ActivityMimeAttachment table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ActivityMimeAttachment table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ MIME attachment for an activity.
 |Create|POST [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -579,7 +578,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [template_activity_mime_attachments](#BKMK_template_activity_mime_attachments)
 - [email_activity_mime_attachment](#BKMK_email_activity_mime_attachment)
 - [activity_pointer_activity_mime_attachment](#BKMK_activity_pointer_activity_mime_attachment)
-- [attachment_activity_mime_attachments](#BKMK_attachment_activity_mime_attachments)
 
 
 ### <a name="BKMK_appointment_activity_mime_attachment"></a> appointment_activity_mime_attachment
@@ -597,10 +595,6 @@ See email Table [email_activity_mime_attachment](email.md#BKMK_email_activity_mi
 ### <a name="BKMK_activity_pointer_activity_mime_attachment"></a> activity_pointer_activity_mime_attachment
 
 See activitypointer Table [activity_pointer_activity_mime_attachment](activitypointer.md#BKMK_activity_pointer_activity_mime_attachment) One-To-Many relationship.
-
-### <a name="BKMK_attachment_activity_mime_attachments"></a> attachment_activity_mime_attachments
-
-See attachment Table [attachment_activity_mime_attachments](attachment.md#BKMK_attachment_activity_mime_attachments) One-To-Many relationship.
 
 ### See also
 

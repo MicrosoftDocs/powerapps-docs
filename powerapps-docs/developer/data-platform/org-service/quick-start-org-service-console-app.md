@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Organization service sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This quickstart will show you how to connect to the organization service of the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 02/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
