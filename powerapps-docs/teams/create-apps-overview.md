@@ -4,7 +4,7 @@ description: Provides an overview of creating apps in Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 12/18/2020
 ms.author: kvivek
 ms.reviewer: 
@@ -13,7 +13,7 @@ ms.reviewer:
 
 With the significant number of enterprise employees working remotely, and millions of them meeting and collaborating through Microsoft Teams, there's significant interest in building low-code and no-code applications that can make remote work easier and more productive.
 
-Introducing [Microsoft Dataverse for Teams](overview-data-platform.md) (formerly called Project Oakdale), a built-in, low-code data platform for Teams that empowers you to build custom apps and workflows in Teams by using Power Apps and Power Automate. Dataverse for Teams, built on [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) (formerly called Common Data Service), provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to the Teams app store.  
+Introducing [Microsoft Dataverse for Teams](overview-data-platform.md) (formerly called Project Oakdale), a built-in, low-code data platform for Teams that empowers you to build custom apps and workflows in Teams by using Power Apps and Power Automate. Dataverse for Teams, built on [Microsoft Dataverse](../maker/data-platform/data-platform-intro.md) (formerly called Common Data Service), provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to the Teams app store.  
 
 The new Power Apps app in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams, and quickly publish and share them for anyone on the team to use, without having to switch between multiple apps and services. With Power Apps Studio embedded in the Power Apps app in Teams and the new built-in data platform providing an easy-to-use, editable data table, you can quickly build apps based on custom data tables that are Teams-specific and scenario-specific.
 
@@ -47,7 +47,7 @@ You can create:
 
 - Power Automate flows by using the new Power Apps app in Teams. More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)
 
-- Chatbots by using the new Power Virtual Agents app in Teams. More information: [Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs)
+- Chatbots by using the new Power Virtual Agents app in Teams. More information: [Power Virtual Agents in Teams](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams)
 
 ### Next steps
 

@@ -1,22 +1,24 @@
 ---
-title: "SLAItem entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SLAItem table."
-ms.date: 11/14/2020
+title: "SLAItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SLAItem table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SLAItem entity reference
+
+# SLAItem table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Contains information about a tracked support KPI for a specific customer.
 
@@ -25,13 +27,13 @@ Contains information about a tracked support KPI for a specific customer.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/slaitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/slaitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/slaitems<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/slaitems<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Contains information about a tracked support KPI for a specific customer.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [actionflowuniquename](#BKMK_actionflowuniquename)
 - [ActionURL](#BKMK_ActionURL)
@@ -131,7 +133,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AllowPauseResume Options
+#### AllowPauseResume Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -257,7 +259,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### msdyn_AdvancedPauseConfiguration Options
+#### msdyn_AdvancedPauseConfiguration Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -486,9 +488,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [businesshoursidName](#BKMK_businesshoursidName)
 - [ComponentState](#BKMK_ComponentState)
@@ -550,7 +552,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -696,7 +698,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -972,7 +974,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SLAItem_SyncErrors"></a> SLAItem_SyncErrors
 
-Same as syncerror entity [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErrors) Many-To-One relationship.
+Same as syncerror table [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -989,7 +991,7 @@ Same as syncerror entity [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErro
 
 **Added by**: Service Level Agreement (SLA) Extension Solution
 
-Same as slakpiinstance entity [msdyn_slaitem_slakpiinstance](slakpiinstance.md#BKMK_msdyn_slaitem_slakpiinstance) Many-To-One relationship.
+Same as slakpiinstance table [msdyn_slaitem_slakpiinstance](slakpiinstance.md#BKMK_msdyn_slaitem_slakpiinstance) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1005,7 +1007,7 @@ Same as slakpiinstance entity [msdyn_slaitem_slakpiinstance](slakpiinstance.md#B
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_slaitembase_createdby](#BKMK_lk_slaitembase_createdby)
 - [lk_slaitembase_modifiedonbehalfby](#BKMK_lk_slaitembase_modifiedonbehalfby)
@@ -1020,46 +1022,44 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_slaitembase_createdby"></a> lk_slaitembase_createdby
 
-See systemuser Entity [lk_slaitembase_createdby](systemuser.md#BKMK_lk_slaitembase_createdby) One-To-Many relationship.
+See systemuser Table [lk_slaitembase_createdby](systemuser.md#BKMK_lk_slaitembase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_slaitembase_modifiedonbehalfby"></a> lk_slaitembase_modifiedonbehalfby
 
-See systemuser Entity [lk_slaitembase_modifiedonbehalfby](systemuser.md#BKMK_lk_slaitembase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_slaitembase_modifiedonbehalfby](systemuser.md#BKMK_lk_slaitembase_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_slaitembase_createdonbehalfby"></a> lk_slaitembase_createdonbehalfby
 
-See systemuser Entity [lk_slaitembase_createdonbehalfby](systemuser.md#BKMK_lk_slaitembase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_slaitembase_createdonbehalfby](systemuser.md#BKMK_lk_slaitembase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_SLAItem"></a> TransactionCurrency_SLAItem
 
-See transactioncurrency Entity [TransactionCurrency_SLAItem](transactioncurrency.md#BKMK_TransactionCurrency_SLAItem) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_SLAItem](transactioncurrency.md#BKMK_TransactionCurrency_SLAItem) One-To-Many relationship.
 
 ### <a name="BKMK_sla_slaitem_slaId"></a> sla_slaitem_slaId
 
-See sla Entity [sla_slaitem_slaId](sla.md#BKMK_sla_slaitem_slaId) One-To-Many relationship.
+See sla Table [sla_slaitem_slaId](sla.md#BKMK_sla_slaitem_slaId) One-To-Many relationship.
 
 ### <a name="BKMK_lk_slaitembase_modifiedby"></a> lk_slaitembase_modifiedby
 
-See systemuser Entity [lk_slaitembase_modifiedby](systemuser.md#BKMK_lk_slaitembase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_slaitembase_modifiedby](systemuser.md#BKMK_lk_slaitembase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_slaitembase_workflowid"></a> slaitembase_workflowid
 
-See workflow Entity [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workflowid) One-To-Many relationship.
+See workflow Table [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workflowid) One-To-Many relationship.
 
 ### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
 
-See calendar Entity [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) One-To-Many relationship.
+See calendar Table [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_msdyn_slakpi_slaitem"></a> msdyn_msdyn_slakpi_slaitem
 
 **Added by**: Service Level Agreement (SLA) Extension Solution
 
-See msdyn_slakpi Entity [msdyn_msdyn_slakpi_slaitem](msdyn_slakpi.md#BKMK_msdyn_msdyn_slakpi_slaitem) One-To-Many relationship.
+See msdyn_slakpi Table [msdyn_msdyn_slakpi_slaitem](msdyn_slakpi.md#BKMK_msdyn_msdyn_slakpi_slaitem) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.slaitem?text=slaitem EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

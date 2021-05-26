@@ -1,13 +1,16 @@
 ---
-title: "Configure and manage category for knowledge articles for a portal | MicrosoftDocs"
-description: "Instructions to create and manage a category for knowledge article."
+title: Configure and manage category for knowledge articles
+description: Learn how to create and manage a category for knowledge article.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Configure and manage category for knowledge articles
@@ -41,7 +44,7 @@ This section helps you understand how to create a new category for knowledge art
    ![Associate a category to a knowledge article](media/kb-associate-category.png "Associate a category to a knowledge article")
 
 > [!NOTE]
-> You can also add related articles, related products, and keywords to a knowledge article. For more information on managing knowledge articles, see [Create and manage knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article).
+> You can also add related articles, related products, and keywords to a knowledge article. For more information on managing knowledge articles, see [Create and manage knowledge articles](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article).
 
 ## Remove a category from an article
 
@@ -99,9 +102,9 @@ Following considerations apply when using collapsible sections:
 
 You can customize the default CSS and JS files and create additional customization. The default CSS file name is `collapsible.css` and JavaScript file name is `collapsible.js`.
 
-The following example shows a [web template](https://docs.microsoft.com/powerapps/maker/portals/liquid/store-content-web-templates) using default JavaScript and CSS files. Update the file name and location for the web template to your customized JavaScript and CSS files:
+The following example shows a [web template](../liquid/store-content-web-templates.md) using default JavaScript and CSS files. Update the file name and location for the web template to your customized JavaScript and CSS files:
 
 ![Web template](media/web-template.png)
 
 ### See also
-[Get started with the portal content editor](../portal-content-editor.md) 
+[Get started with the portal content editor](../portal-content-editor.md)

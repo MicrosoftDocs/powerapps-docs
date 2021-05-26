@@ -1,8 +1,8 @@
 ---
 title: "Discover the URL for your organization (Microsoft Dataverse)| Microsoft Docs"
 description: "Use the Discovery Service to find the organizations (instances) that the logged-on user belongs to"
-ms.custom: ""
-ms.date: 1/16/2020
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,7 @@ search.app:
 ---
 # Discover the URL for your organization
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
@@ -31,22 +31,21 @@ When accessing the Discovery Service using the OData V4 RESTful API, you can add
 
 > [!IMPORTANT]
 > - Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated). Applications must use the global Discovery Service that is documented in this topic.  
-> - For Dynamics 365 US Government users, a *global* Discovery Service endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
+> - For Dynamics 365 US Government users, a *global* Discovery Service endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
 
-  
 ## Information provided by the Discovery Service 
- 
-Organization information is stored in the `Instance` entity of the Discovery Service.  To see the kind of information contained in that entity, send an HTTP GET request to the service for one of your instances.  
+
+Organization information is stored in the `Instance` table of the Discovery Service.  To see the kind of information contained in that table, send an HTTP GET request to the service for one of your instances.  
   
 ```http  
 GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName='myorg')  
-```  
-  
+```
+
 In the above example, the global Discovery Service is used to obtain the organization information of the instance with a unique name of "myorg". More details about this request is provided later in this topic.  
 
 ### Scope of the returned information
 
-For the global Discovery Service, the `Instances` entity set, returns the set of instances that the user has access to across all geographies, when no filters are applied.   The returned data has a scope as described below.  
+For the global Discovery Service, the `Instances` entity set, returns the set of instances (environments) that the user has access to across all geographies, when no filters are applied.   The returned data has a scope as described below.  
   
 -   Includes all instances in the commercial cloud where the user is provisioned and enabled, except sovereign clouds instances are not returned
 -   Does not  include instances where the user's account is disabled
@@ -84,7 +83,7 @@ The Discovery Service supports the CORS standard for cross-origin access. For mo
     GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(<guid>)
     ```  
   
--   You can use the UniqueName attribute as an alternate key.  
+-   You can use the UniqueName column as an alternate key.  
   
     ```http  
     GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName='myorg')  
@@ -99,7 +98,5 @@ The Discovery Service supports the CORS standard for cross-origin access. For mo
 ## See also
 
 [Discovery Service sample (C#)](samples/global-discovery-service-csharp.md)
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

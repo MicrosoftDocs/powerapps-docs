@@ -1,13 +1,14 @@
 ---
 title: Microsoft Dataverse Developer Guide | Microsoft Docs
-description: Learn how developers can add value using Microsoft Dataverse.
+description: Introducing the Developer Guide for Microsoft Dataverse.
 author: JimDaly
 manager: annbe
 ms.service: powerapps
 ms.topic: article
-ms.date: 03/27/2019
+ms.date: 03/11/2021
 ms.author: jdaly
 ms.reviewer: "pehecke"
+ms.custom: intro-internal
 search.audienceType: 
   - developer
 search.app: 
@@ -17,11 +18,9 @@ search.app:
 
 # Microsoft Dataverse Developer Guide
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Power Apps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. Microsoft Dataverse is the underlying data platform for Power Apps that contains the core functionality such as server-side logic (plug-ins and workflows), business process flows, a highly sophisticated security model, and an extensible platform for developers to build apps. 
 
-There are many aspects to how developers can contribute to creating apps that use Dataverse. While it is possible to build an application with code using Dataverse as your data source, most projects will use either [model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-overview) or [canvas apps](/powerapps/maker/canvas-apps/getting-started) to generate the experience that people will use. 
+There are many aspects to how developers can contribute to creating apps that use Dataverse. While it is possible to build an application with code using Dataverse as your data source, most projects will use either [model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md) or [canvas apps](../../maker/canvas-apps/getting-started.md) to generate the experience that people will use. 
 
 ## Working with model-driven apps
 
@@ -31,7 +30,7 @@ Model-driven apps share the method of distributing customizations and extensions
 
 Model driven apps also have a number of points for developers to write code to extend. For information on what developers can do with model-driven apps, see [Model-driven apps Developer Guide](../model-driven-apps/overview.md).
 
-Some examples of model-driven apps available from Microsoft are [Dynamics 365 Customer Service](https://docs.microsoft.com/dynamics365/customer-service/help-hub), [Dynamics 365 Field Service](https://docs.microsoft.com/dynamics365/field-service/overview), and [Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/help-hub).
+Some examples of model-driven apps available from Microsoft are [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub), [Dynamics 365 Field Service](/dynamics365/field-service/overview), and [Dynamics 365 Marketing](/dynamics365/marketing/help-hub).
 
 ## Understand when to write code
 
@@ -48,7 +47,7 @@ Dataverse is not available for on-premise deployments at this time. Content in t
 
 ### See also
 
-[Power Apps for developers](/powerapps/#pivot=home&panel=developer)<br/>
+[Power Apps for developers](../../index.yml?panel=developer)<br/>
 [Model-driven apps Developer Guide](../model-driven-apps/overview.md)
 
 

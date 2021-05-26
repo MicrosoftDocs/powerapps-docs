@@ -4,7 +4,7 @@ description: Provides an overview of using Power Apps with Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 11/16/2020
 ms.author: kvivek
 ms.reviewer:
@@ -29,7 +29,7 @@ Scenario|Description
 [What is Dataverse for Teams?](overview-data-platform.md)<br/>
 [Create your first app in Teams](create-first-app.md)<br/>
 [Use flows in Microsoft Teams](/power-automate/teams/overview)<br/>
-[Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs)
+[Power Virtual Agents in Teams](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

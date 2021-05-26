@@ -1,8 +1,8 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: ""
-ms.date: 09/15/2020
+ms.custom: intro-internal
+ms.date: 05/25/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -133,15 +133,17 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
 - Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
-  - The app and flow will not currently be connected in the target environment after deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
+- The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
 - You can’t add an instant flow into a solution when the following are true:
    - The flow was created outside of a solution.
    - The flow trigger is set to manual.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
+- [Copy and paste of flow actions](/business-applications-release-notes/april19/microsoft-flow/copy-paste-actions) is currently not supported when creating flows in a solution.
 
 For details about customizing the individual components in a solution, see the following topics:  
   

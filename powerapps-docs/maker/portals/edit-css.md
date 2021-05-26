@@ -1,21 +1,24 @@
 ---
-title: Edit CSS in a portal | Microsoft Docs
-description: Instructions on editing CSS in a portal.
+title: Edit CSS for themes
+description: Learn how to edit CSS for customizing themes in portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Edit CSS for themes in Power Apps portal
+# Edit CSS for themes
 
 Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
 > [!NOTE]
-> Power Apps portals are based on Bootstrap 3.3.x with the exception of [Event portal](https://docs.microsoft.com/dynamics365/marketing/developer/event-management-web-application). Portal developers should not replace Bootstrap 3 with other CSS libraries as some of the scenarios in Power Apps portals are dependent on Bootstrap 3.3.x. For more information, see [Understanding Bootstrap framework](#understanding-bootstrap-framework) and [Customize Bootstrap](#customize-bootstrap) sections in this article.
+> Power Apps portals are based on Bootstrap 3.3.x with the exception of [Event portal](/dynamics365/marketing/developer/event-management-web-application). Portal developers should not replace Bootstrap 3 with other CSS libraries as some of the scenarios in Power Apps portals are dependent on Bootstrap 3.3.x. For more information, see [Understanding Bootstrap framework](#understanding-bootstrap-framework) and [Customize Bootstrap](#customize-bootstrap) sections in this article.
 
 To open a CSS in code editor:
 
@@ -66,8 +69,8 @@ Or, depending on the customizer application used, it might only contain bootstra
 
 ### See also
 
-- [Microsoft Learn: Advanced CSS in Power Apps portals](https://docs.microsoft.com/learn/modules/extend-power-app-portals/4-portal-css)
-- [Microsoft Learn: Advanced client-side development](https://docs.microsoft.com/learn/modules/extend-power-app-portals/5-advanced-portal-development)
+- [Microsoft Learn: Advanced CSS in Power Apps portals](/learn/modules/extend-power-app-portals/4-portal-css)
+- [Microsoft Learn: Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

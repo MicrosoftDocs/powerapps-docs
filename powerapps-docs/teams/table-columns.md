@@ -26,6 +26,9 @@ For more information about the columns available, see these Dataverse articles:
 
 ## Create a column
 
+Watch this video to learn how to create columns in Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7js]
+
 1. On the **Build** tab, select **See all**, and then expand **Tables**. 
 2. Select the table you want to add a column to, and then select **Add column** on the command bar.
     > [!div class="mx-imgBorder"] 
@@ -41,7 +44,7 @@ In Dataverse for Teams, choices can only be created as a column within a table. 
 
 ## Calculated and rollup columns
 
-The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated columns to automate manual calculations](../maker/data-platform/define-calculated-fields.md) and [Define rollup columns that aggregate values](../maker/data-platform/define-rollup-fields.md)
+Calculated columns and rollup columns are not currently supported in Dataverse for Teams.
 
 ### See also
 

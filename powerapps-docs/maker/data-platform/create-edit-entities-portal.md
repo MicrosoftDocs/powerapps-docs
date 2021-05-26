@@ -30,7 +30,7 @@ search.app:
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Microsoft Dataverse.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
-- [Create and edit tables in Dataverse](create-edit-entities.md)
+- [Create and edit tables in Dataverse](./data-platform-create-entity.md)
 - [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 ## View tables
@@ -163,7 +163,7 @@ If the table has dependencies that prevent it from being deleted you will see an
 
 ### See also
 
-[Create and edit tables in Dataverse](create-edit-entities.md)<br />
+[Create and edit tables in Dataverse](./data-platform-create-entity.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 

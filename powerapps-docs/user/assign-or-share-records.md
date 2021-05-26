@@ -23,7 +23,7 @@ When you create a row, you are the owner of the row. If you would like another p
 
 If you want to keep ownership of the row but let someone else work on it with you, then use the **Share** option to share the row. 
 
-For more information on how privileges and access works, see [How access to a row is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
+For more information on how privileges and access works, see [How access to a row is determined](/power-platform/admin/how-record-access-determined).
 
 ## Assign a row to a user or team
 
@@ -153,6 +153,16 @@ Use advanced find to search for rows and then reassign them to someone else. For
      > [!div class="mx-imgBorder"]
      > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
  
+ 
+ ## Remove someone from a shared row
+ 
+ When you are the assigned owner of a row, you can remove another user the row is shared with.
+ 
+ 1. From a list of rows that you own, select the row that you want to remove someone from the shared row.
+ 2. On the command bar, select **Share**.
+ 3. On the share dialog box, select the user or team who you want to remove sharing from.
+ 4. Select the **Remove Selected items**.
+ 5. Select the **Share** button.
 
  
 

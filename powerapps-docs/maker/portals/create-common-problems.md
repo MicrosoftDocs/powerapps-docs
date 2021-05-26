@@ -1,13 +1,16 @@
 ---
-title: Common problems, issues, FAQs and resolutions while creating a Power Apps portal. | Microsoft Docs
+title: Common problems and resolutions while creating a portal
 description: Learn about frequent issues, problems, FAQs and resolutions while creating a Power Apps portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Common problems and resolutions while creating a portal
@@ -18,8 +21,7 @@ In this article, you'll learn about the common problems that occur while creatin
 
 If you don't have sufficient privileges to create a portal in an environment, you'll see an error as follows:
 
-> [!div class=mx-imgBorder]
-> ![Create portal error](media/portal-create-error.png "You don't have appropriate permissions to create a portal in this environment. Try selecting another environment or create new environment.")
+![Create portal error](media/portal-create-error.png "You don't have appropriate permissions to create a portal in this environment. Try selecting another environment or create new environment. If that doesn't help, contact your global administrator.")
 
 For permissions and role memberships required to create portals, see [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
 
@@ -39,7 +41,7 @@ When you create a portal, portal as a new application is registered in Azure Act
 > [!div class=mx-imgBorder]
 > ![Azure Active Directory error](media/azure-ad-error.png "You don't have required permissions to create Azure Active Directory applications in this tenant.")
 
-To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
+To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
 
 ### See also
 

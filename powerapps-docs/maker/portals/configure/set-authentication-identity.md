@@ -1,13 +1,17 @@
 ---
-title: "Understand how to use local authentication, registration, and other settings for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about different site settings for portals, local authentication, and registration process in Power Apps portals."
+title: Local authentication, registration, and other settings
+description: Learn about different site settings for portals, local authentication, and registration process in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Local authentication, registration, and other settings
@@ -26,7 +30,7 @@ The portals feature provides authentication functionality built on the [ASP.NET 
 - Invitation code sign-up for registering prepopulated contact records
 
 > [!NOTE]
-> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact entity currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
+> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact table currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
 
 ## Requirements
 
@@ -236,7 +240,7 @@ The following describes the settings for adjusting username and password validat
 
 | Site setting name      | Description                             |
 |------------------------|-----------------------------------------|
-| Authentication/UserManager/PasswordValidator/EnforcePasswordPolicy      | Determines whether the password contains characters from three of the following categories:<br><ul><li>Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)</li><li>Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)</li><li>Base 10 digits (0 through 9)</li><li>Nonalphanumeric characters (special characters) (for example, !, $, \#, %)</li></ul>Default: true. More information: [Password policy](https://technet.microsoft.com/library/hh994562(v=ws.10).aspx).   |  
+| Authentication/UserManager/PasswordValidator/EnforcePasswordPolicy      | Determines whether the password contains characters from three of the following categories:<br><ul><li>Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)</li><li>Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)</li><li>Base 10 digits (0 through 9)</li><li>Nonalphanumeric characters (special characters) (for example, !, $, \#, %)</li></ul>Default: true. More information: [Password policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh994562(v=ws.10)).   |  
 | Authentication/UserManager/UserValidator/AllowOnlyAlphanumericUserNames | Determines whether to allow only alphanumeric characters for the username. <br> Default: false |  
 | Authentication/UserManager/UserValidator/RequireUniqueEmail             | Determines whether a unique email address is needed for validating the user. <br> Default: true |  
 | Authentication/UserManager/PasswordValidator/RequiredLength             | The minimum required password length. <br> Default: `8` |  
@@ -288,7 +292,7 @@ The following describes settings for modifying default authentication cookie beh
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)  
+[Microsoft Learn: Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

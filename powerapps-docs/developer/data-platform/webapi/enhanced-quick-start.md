@@ -1,7 +1,7 @@
 ---
-title: "Enhanced quick Start(Microsoft Dataverse)| Microsoft Docs"
+title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 02/02/2019
 ms.service: powerapps
 ms.suite: ""
@@ -22,8 +22,6 @@ search.app:
   - D365CE
 ---
 # Enhanced quick start
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic.
 
@@ -74,6 +72,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
   </connectionStrings>
 </configuration>
 ```
+
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
 Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Microsoft Dataverse environment.
@@ -418,21 +417,18 @@ In your Visual Studio project perform the following steps:
 
 1. Press F5 to run the sample and you should get the same results as before.
 
-
 ## Troubleshooting
 
-If you have any troubles running these samples, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
+If you have any trouble running this sample, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
 
-This sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) located in the `PowerApps-Samples-master\PowerApps-Samples-master\cds\webapi\C#\SimpleWebApi` folder.
-
-You should be able to open the `SimpleWebApi.sln` file in Visual Studio and run the sample. It should work for you as long as you have valid credentials.
+This enhanced quick start sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) sample located in the repo under the cds\webapi\C#\SimpleWebApi folder.
 
 > [!IMPORTANT]
-> All the samples on the GitHub repo are configured to use a common App.config that is located at `PowerApps-Samples-master\cds\App.config`. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
+> All the samples on the GitHub repo are configured to use a common App.config that is located at PowerApps-Samples:cds\App.config. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
 
 ## Create a Template project
 
-Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
+Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
   
 ## Next steps
 
@@ -442,7 +438,6 @@ Use the following resources to learn more:
 > [Perform operations using the Web API](perform-operations-web-api.md)<br /><br />
 > [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br />
 > [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
-
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

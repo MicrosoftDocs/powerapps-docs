@@ -1,6 +1,6 @@
 ---
 title: getViewId | Microsoft Docs
-description: 
+description: Returns the Id of view used by data-set parameter.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

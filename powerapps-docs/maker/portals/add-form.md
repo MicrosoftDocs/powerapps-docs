@@ -1,20 +1,23 @@
 ---
-title: Add form component to a Power Apps portals page using portals Studio. | Microsoft Docs
+title: Add form
 description: Learn about how to add form component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add form
 
 Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
 
-Forms are [created in Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
+Forms are [created in Microsoft Dataverse](../model-driven-apps/form-designer-overview.md). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
 
 To add a form component:
 
@@ -37,9 +40,9 @@ To add a form component:
 
     - **Name**: Name of the form.
 
-    - **Entity**: The name of the entity from which the form is loaded.
+    - **Table**: The name of the table from which the form is loaded.
 
-    - **Form layout**: The name of the form on the target entity in Dataverse that is to be rendered.
+    - **Form layout**: The name of the form on the target table in Dataverse that is to be rendered.
 
     - **Mode**: Select one of the following options:
 
@@ -64,7 +67,7 @@ To add a form component:
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
+    - **Enable table permissions**: Table permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)
 
         > [!div class=mx-imgBorder]
         > ![Form properties](media/form-props.png "Form properties")

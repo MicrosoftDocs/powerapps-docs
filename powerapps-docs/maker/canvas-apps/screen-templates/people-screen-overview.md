@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/30/2018
+ms.date: 03/29/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -63,7 +63,7 @@ If you want to modify the screen further, use the [people-screen reference](./pe
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
+This screen uses the [Office365Users.SearchUser](/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
 
 1. In the **UserBrowseGallery**, select a label to modify (or add one and keep it selected).
 
@@ -90,7 +90,7 @@ The people screen caches your people selections in the **MyPeople** collection. 
 1. Set the **OnSelect** property of **SendIcon** to this formula:
 
     ```powerapps-dot
-    Office365.SendEmail( 
+    Office365.SendEmailV2( 
         Concat( MyPeople, UserPrincipalName & ";" ), 
         SubjectLine.Text, 
         MessageBody.Text 

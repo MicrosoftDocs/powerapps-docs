@@ -1,7 +1,7 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 09/03/2020
 ms.reviewer: ""
 ms.service: powerapps
@@ -38,7 +38,7 @@ If you’re viewing a managed solution, you can’t create new forms or edit exi
 ## Type of forms
 There are different types of forms, and each type has a specific functionality or use. More information: [Type of forms in Power Apps](types-forms.md).  
 
-## Main form dialogs (Preview)
+## Main form dialogs
 With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api) 
   
 <a name="BKMK_FormDifferencesByEntity"></a>   

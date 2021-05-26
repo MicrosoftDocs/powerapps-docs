@@ -1,6 +1,6 @@
 ---
 title: RetrieveRecord | Microsoft Docs
-description: 
+description: Retrieves a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -38,13 +38,13 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to retrieve. For example: &quot;account&quot;.</td>
+<td>The table logical name of the record you want to retrieve. For example: &quot;account&quot;.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to retrieve.</td>
+<td>GUID of the table record you want to retrieve.</td>
 </tr>
 <tr>
 <td>options</td>
@@ -52,7 +52,7 @@ Model-driven apps
 <td>No</td>
 <td><p>OData system query options, <b>$select</b> and <b>$expand</b>, to retrieve your data.</p>
 <ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related entities is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
+<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
 </ul>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&amp;</code> to separate the query options. For example:</p>
 <code>?$select=name&amp;$expand=primarycontactid($select=contactid,fullname)</code>
