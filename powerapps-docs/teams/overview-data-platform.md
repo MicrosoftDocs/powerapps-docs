@@ -1,6 +1,6 @@
 ---
 title: Microsoft Dataverse for Teams overview | Microsoft Docs
-description: Provides an overview of Dataverse for Teams.
+description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
