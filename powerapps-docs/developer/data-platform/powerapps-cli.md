@@ -23,7 +23,7 @@ We will soon update the docs to reflect this change.
 
 Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
 
-Power Apps CLI tooling is the first step toward a comprehensive application life-cycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Power Apps CLI tooling is the first step toward a comprehensive application lifecycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
 
 ## Install Power Apps CLI
 
