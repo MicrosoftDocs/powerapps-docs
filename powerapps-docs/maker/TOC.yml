@@ -1715,6 +1715,8 @@
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Power Apps CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
+          - name: Use the Visual Studio Code extension for portals
+            href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
