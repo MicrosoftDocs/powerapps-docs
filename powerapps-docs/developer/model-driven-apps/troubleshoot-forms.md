@@ -433,5 +433,19 @@ See the examples below to understand the reasons for filtering. Based on the exp
 > [!div class="mx-imgBorder"]
 > ![Table not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
 
+## Unexpected "unsaved changes"?
+
+There are 3 scenarios that are covered here:
+- Why the "unsaved changes" message appears in the footer
+- Why the unsaved changes dialog appears on navigation
+- Why form is getting saved even though no changes were made
+
+**Resolution**:
+Long story short, the answer is - there are changes that were done on the form. If the user hasn't done them manually, changes could be coming from a script or business rule. You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` event that will help the user find the source of their changes. You should filter by OperationType "UnsavedChanges". The "all attributes modified" section includes a quick summary of which fields are causing the unsaved changes, as well as their values. Then the "unsaved changes" section shows what happened to the fields in detail. For every field, there is a list of controls provided - any of them could be causing a change. The value change is also displayed (previousValue -> newValue), as well as a call stack (the callstack has been modified for demonstration purpose). In the screenshot below, we can see that a change came from an onload script. Please note that if a user has manually done a change, call stack will not be provided.
+
+See the example below:
+
+![image](https://user-images.githubusercontent.com/82106269/119713249-5932ee00-be16-11eb-9f65-d680f4c9759e.png)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
