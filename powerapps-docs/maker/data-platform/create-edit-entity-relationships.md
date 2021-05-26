@@ -1,6 +1,6 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/17/2020
 ms.reviewer: ""
 ms.service: powerapps
