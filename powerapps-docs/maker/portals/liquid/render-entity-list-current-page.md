@@ -78,7 +78,7 @@ Render the List associated with the current page as a paginated sortable table. 
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="{{ entitylist.create_url  | h }}">
-                <i class="fa fa-plus"></i> {{ entitylist.create_label | default: 'Create' } | h }
+                <i class="fa fa-plus"></i> {{ entitylist.create_label | default: 'Create' | h }}
               </a>
             </li>
           </ul>
