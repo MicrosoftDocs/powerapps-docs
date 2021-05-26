@@ -2,6 +2,7 @@
 title: Model-driven app form properties in Power Apps | MicrosoftDocs
 description: Understand the main form properties
 Keywords: Main form properties; Dynamics 365
+ms.custom: intro-internal
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
