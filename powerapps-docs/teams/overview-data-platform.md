@@ -4,7 +4,7 @@ description: Provides an overview of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
