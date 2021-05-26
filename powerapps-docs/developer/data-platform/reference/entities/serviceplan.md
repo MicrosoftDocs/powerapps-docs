@@ -1,7 +1,7 @@
 ---
 title: "ServicePlan table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ServicePlan table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Service Plan
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 
 ## Properties
 
@@ -58,6 +57,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DisplayName](#BKMK_DisplayName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [MoreInfoUrl](#BKMK_MoreInfoUrl)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ServicePlanId](#BKMK_ServicePlanId)
@@ -139,6 +139,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_MoreInfoUrl"></a> MoreInfoUrl
+
+|Property|Value|
+|--------|-----|
+|Description|More Info Url of service plan|
+|DisplayName|More Info Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|moreinfourl|
+|MaxLength|2048|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -149,6 +165,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|300|
 |RequiredLevel|SystemRequired|

@@ -1,6 +1,6 @@
 ---
 title: "Develop IPlugin implementations as stateless | MicrosoftDocs"
-description: "Members of classes that implement IPlugin are exposed to potential thread-safety issues which could lead to data inconsistency or performance problems."
+description: "Members of classes that implement IPlugin are exposed to potential thread-safety issues, which could lead to data inconsistency or performance problems."
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -27,7 +27,7 @@ search.app:
 
 **Category**: Design, Performance
 
-**Impact potential**: High
+**Potential risk**: High
 
 <a name='symptoms'></a>
 
@@ -199,7 +199,7 @@ After Microsoft Dataverse instantiates the plug-in class, the platform caches th
 
 Because the platform caches plug-in class instances, the constructor is not called for every invocation of plug-in execution.  For this reason, IPlugin implementations should not depend on the timing of operations in the constructor apart from obtaining static configuration data. 
 
-Another reason IPlugins should be stateless is that multiple system threads could execute the same, shared, plug-in instance concurrently.  This opens up members of classes that implement IPlugin to potential thread-safety issues which could lead to data inconsistency or performance problems.
+Another reason IPlugins should be stateless is that multiple system threads could execute the same, shared, plug-in instance concurrently.  This opens up members of classes that implement IPlugin to potential thread-safety issues, which could lead to data inconsistency or performance problems.
 
 <a name='seealso'></a>
 

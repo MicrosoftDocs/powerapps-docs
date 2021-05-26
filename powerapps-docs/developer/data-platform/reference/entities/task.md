@@ -1,7 +1,7 @@
 ---
 title: "Task table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Task table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Generic activity representing work needed to be done.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/tasks<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1171,7 +1170,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [task_PostRegardings](#BKMK_task_PostRegardings)
 - [task_PostFollows](#BKMK_task_PostFollows)
 - [Task_SyncErrors](#BKMK_Task_SyncErrors)
 - [Task_QueueItem](#BKMK_Task_QueueItem)
@@ -1187,21 +1185,6 @@ Listed by **SchemaName**.
 - [Task_Annotation](#BKMK_Task_Annotation)
 - [task_connections1](#BKMK_task_connections1)
 - [Task_AsyncOperations](#BKMK_Task_AsyncOperations)
-
-
-### <a name="BKMK_task_PostRegardings"></a> task_PostRegardings
-
-Same as postregarding table [task_PostRegardings](postregarding.md#BKMK_task_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|task_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_task_PostFollows"></a> task_PostFollows
@@ -1450,7 +1433,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_task](#BKMK_sla_task)
 - [manualsla_task](#BKMK_manualsla_task)
 - [lk_task_modifiedonbehalfby](#BKMK_lk_task_modifiedonbehalfby)
-- [owner_tasks](#BKMK_owner_tasks)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
@@ -1516,10 +1498,6 @@ See sla Table [manualsla_task](sla.md#BKMK_manualsla_task) One-To-Many relations
 ### <a name="BKMK_lk_task_modifiedonbehalfby"></a> lk_task_modifiedonbehalfby
 
 See systemuser Table [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_tasks"></a> owner_tasks
-
-See owner Table [owner_tasks](owner.md#BKMK_owner_tasks) One-To-Many relationship.
 
 ### See also
 

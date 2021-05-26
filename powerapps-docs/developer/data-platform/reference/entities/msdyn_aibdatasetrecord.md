@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIBDatasetRecord table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_AIBDatasetRecord table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasetrecords(*msdyn_aibdatasetrecordid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasetrecords<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -846,7 +845,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby)
 - [user_msdyn_aibdatasetrecord](#BKMK_user_msdyn_aibdatasetrecord)
 - [team_msdyn_aibdatasetrecord](#BKMK_team_msdyn_aibdatasetrecord)
-- [owner_msdyn_aibdatasetrecord](#BKMK_owner_msdyn_aibdatasetrecord)
 - [business_unit_msdyn_aibdatasetrecord](#BKMK_business_unit_msdyn_aibdatasetrecord)
 - [msdyn_AIBDatasetRecord_msdyn_AIBDataset](#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset)
 
@@ -886,12 +884,6 @@ See systemuser Table [user_msdyn_aibdatasetrecord](systemuser.md#BKMK_user_msdyn
 **Added by**: System Solution Solution
 
 See team Table [team_msdyn_aibdatasetrecord](team.md#BKMK_team_msdyn_aibdatasetrecord) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_aibdatasetrecord"></a> owner_msdyn_aibdatasetrecord
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_aibdatasetrecord](owner.md#BKMK_owner_msdyn_aibdatasetrecord) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_aibdatasetrecord"></a> business_unit_msdyn_aibdatasetrecord
 
