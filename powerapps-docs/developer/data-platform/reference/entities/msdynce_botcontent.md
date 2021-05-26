@@ -1,7 +1,7 @@
 ---
 title: "msdynce_botcontent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdynce_botcontent table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdynce_botcontents(*msdynce_botcontentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdynce_botcontents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -778,7 +777,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdynce_botcontent_modifiedonbehalfby](#BKMK_lk_msdynce_botcontent_modifiedonbehalfby)
 - [user_msdynce_botcontent](#BKMK_user_msdynce_botcontent)
 - [team_msdynce_botcontent](#BKMK_team_msdynce_botcontent)
-- [owner_msdynce_botcontent](#BKMK_owner_msdynce_botcontent)
 - [business_unit_msdynce_botcontent](#BKMK_business_unit_msdynce_botcontent)
 
 
@@ -817,12 +815,6 @@ See systemuser Table [user_msdynce_botcontent](systemuser.md#BKMK_user_msdynce_b
 **Added by**: System Solution Solution
 
 See team Table [team_msdynce_botcontent](team.md#BKMK_team_msdynce_botcontent) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdynce_botcontent"></a> owner_msdynce_botcontent
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdynce_botcontent](owner.md#BKMK_owner_msdynce_botcontent) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdynce_botcontent"></a> business_unit_msdynce_botcontent
 

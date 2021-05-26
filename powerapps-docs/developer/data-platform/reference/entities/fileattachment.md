@@ -346,7 +346,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_FileAttachment_SyncErrors"></a> FileAttachment_SyncErrors
 
-Same as syncerror table [FileAttachment_SyncErrors](syncerror.md#BKMK_FileAttachment_SyncErrors) Many-To-One relationship.
+Same as syncerror table [FileAttachment_SyncErrors](syncerror.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -381,69 +381,69 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_FileAttachment_Solution"></a> FileAttachment_Solution
 
-See solution Table [FileAttachment_Solution](solution.md#BKMK_FileAttachment_Solution) One-To-Many relationship.
+See solution Table [FileAttachment_Solution](solution.md) One-To-Many relationship.
 
 ### <a name="BKMK_stagesolutionupload_FileAttachments"></a> stagesolutionupload_FileAttachments
 
 **Added by**: StageSolutionUpload Solution
 
-See stagesolutionupload Table [stagesolutionupload_FileAttachments](stagesolutionupload.md#BKMK_stagesolutionupload_FileAttachments) One-To-Many relationship.
+See stagesolutionupload Table [stagesolutionupload_FileAttachments](stagesolutionupload.md) One-To-Many relationship.
 
 ### <a name="BKMK_exportsolutionupload_FileAttachments"></a> exportsolutionupload_FileAttachments
 
 **Added by**: ExportSolutionUpload Solution
 
-See exportsolutionupload Table [exportsolutionupload_FileAttachments](exportsolutionupload.md#BKMK_exportsolutionupload_FileAttachments) One-To-Many relationship.
+See exportsolutionupload Table [exportsolutionupload_FileAttachments](exportsolutionupload.md) One-To-Many relationship.
 
 ### <a name="BKMK_asyncoperation_FileAttachments"></a> asyncoperation_FileAttachments
 
-See asyncoperation Table [asyncoperation_FileAttachments](asyncoperation.md#BKMK_asyncoperation_FileAttachments) One-To-Many relationship.
+See asyncoperation Table [asyncoperation_FileAttachments](asyncoperation.md) One-To-Many relationship.
 
 ### <a name="BKMK_canvasapp_FileAttachments"></a> canvasapp_FileAttachments
 
-See canvasapp Table [canvasapp_FileAttachments](canvasapp.md#BKMK_canvasapp_FileAttachments) One-To-Many relationship.
+See canvasapp Table [canvasapp_FileAttachments](canvasapp.md) One-To-Many relationship.
 
 ### <a name="BKMK_workflowlog_FileAttachments"></a> workflowlog_FileAttachments
 
-See workflowlog Table [workflowlog_FileAttachments](workflowlog.md#BKMK_workflowlog_FileAttachments) One-To-Many relationship.
+See workflowlog Table [workflowlog_FileAttachments](workflowlog.md) One-To-Many relationship.
 
 ### <a name="BKMK_flowsession_FileAttachments"></a> flowsession_FileAttachments
 
 **Added by**: Power Automate Extensions core package Solution
 
-See flowsession Table [flowsession_FileAttachments](flowsession.md#BKMK_flowsession_FileAttachments) One-To-Many relationship.
+See flowsession Table [flowsession_FileAttachments](flowsession.md) One-To-Many relationship.
 
 ### <a name="BKMK_workflowbinary_FileAttachments"></a> workflowbinary_FileAttachments
 
 **Added by**: Power Automate Extensions core package Solution
 
-See workflowbinary Table [workflowbinary_FileAttachments](workflowbinary.md#BKMK_workflowbinary_FileAttachments) One-To-Many relationship.
+See workflowbinary Table [workflowbinary_FileAttachments](workflowbinary.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_knowledgearticleimage_FileAttachments"></a> msdyn_knowledgearticleimage_FileAttachments
 
 **Added by**: Knowledge Management Online Features Solution
 
-See msdyn_knowledgearticleimage Table [msdyn_knowledgearticleimage_FileAttachments](msdyn_knowledgearticleimage.md#BKMK_msdyn_knowledgearticleimage_FileAttachments) One-To-Many relationship.
+See msdyn_knowledgearticleimage Table [msdyn_knowledgearticleimage_FileAttachments](msdyn_knowledgearticleimage.md) One-To-Many relationship.
 
 ### <a name="BKMK_mailbox_FileAttachments"></a> mailbox_FileAttachments
 
-See mailbox Table [mailbox_FileAttachments](mailbox.md#BKMK_mailbox_FileAttachments) One-To-Many relationship.
+See mailbox Table [mailbox_FileAttachments](mailbox.md) One-To-Many relationship.
 
 ### <a name="BKMK_webresource_FileAttachments"></a> webresource_FileAttachments
 
-See webresource Table [webresource_FileAttachments](webresource.md#BKMK_webresource_FileAttachments) One-To-Many relationship.
+See webresource Table [webresource_FileAttachments](webresource.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aiconfiguration_FileAttachments"></a> msdyn_aiconfiguration_FileAttachments
 
 **Added by**: AISolution Solution
 
-See msdyn_aiconfiguration Table [msdyn_aiconfiguration_FileAttachments](msdyn_aiconfiguration.md#BKMK_msdyn_aiconfiguration_FileAttachments) One-To-Many relationship.
+See msdyn_aiconfiguration Table [msdyn_aiconfiguration_FileAttachments](msdyn_aiconfiguration.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aibfile_FileAttachments"></a> msdyn_aibfile_FileAttachments
 
 **Added by**: AI Solution default templates Solution
 
-See msdyn_aibfile Table [msdyn_aibfile_FileAttachments](msdyn_aibfile.md#BKMK_msdyn_aibfile_FileAttachments) One-To-Many relationship.
+See msdyn_aibfile Table [msdyn_aibfile_FileAttachments](msdyn_aibfile.md) One-To-Many relationship.
 
 ### See also
 

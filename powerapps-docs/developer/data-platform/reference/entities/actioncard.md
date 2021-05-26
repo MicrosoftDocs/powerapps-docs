@@ -1,7 +1,7 @@
 ---
 title: "ActionCard table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ActionCard table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Action card entity to show action cards.
 |Create|POST [*org URI*]/api/data/v9.0/actioncards<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/actioncards(*actioncardid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/actioncards(*actioncardid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/actioncards<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/actioncards(*actioncardid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -935,7 +934,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 - [contact_actioncard](#BKMK_contact_actioncard)
 - [lk_actioncardbase_modifiedby](#BKMK_lk_actioncardbase_modifiedby)
-- [owner_actioncards](#BKMK_owner_actioncards)
 - [letter_actioncard](#BKMK_letter_actioncard)
 - [phonecall_actioncard](#BKMK_phonecall_actioncard)
 - [task_actioncard](#BKMK_task_actioncard)
@@ -958,10 +956,6 @@ See contact Table [contact_actioncard](contact.md#BKMK_contact_actioncard) One-T
 ### <a name="BKMK_lk_actioncardbase_modifiedby"></a> lk_actioncardbase_modifiedby
 
 See systemuser Table [lk_actioncardbase_modifiedby](systemuser.md#BKMK_lk_actioncardbase_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_owner_actioncards"></a> owner_actioncards
-
-See owner Table [owner_actioncards](owner.md#BKMK_owner_actioncards) One-To-Many relationship.
 
 ### <a name="BKMK_letter_actioncard"></a> letter_actioncard
 
