@@ -6,6 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
+ms.custom: intro-internal
 ms.date: 11/10/2020
 ms.reviewer: matp
 ms.author: matp

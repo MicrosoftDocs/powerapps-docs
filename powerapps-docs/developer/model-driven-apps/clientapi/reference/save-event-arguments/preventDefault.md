@@ -17,8 +17,6 @@ search.app:
 ---
 # preventDefault (Client API reference)
 
-
-
 [!INCLUDE[./includes/preventDefault-description.md](./includes/preventDefault-description.md)]
 
 ## Syntax

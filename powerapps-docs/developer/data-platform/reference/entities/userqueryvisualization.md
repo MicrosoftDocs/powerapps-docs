@@ -1,7 +1,7 @@
 ---
 title: "UserQueryVisualization table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the UserQueryVisualization table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Chart attached to an entity.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/userqueryvisualizations(*userqueryvisualizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userqueryvisualizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -598,7 +597,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_userqueryvisualizationbase_createdonbehalfby](#BKMK_lk_userqueryvisualizationbase_createdonbehalfby)
 - [team_userqueryvisualizations](#BKMK_team_userqueryvisualizations)
 - [business_unit_userqueryvisualizations](#BKMK_business_unit_userqueryvisualizations)
-- [owner_userqueryvisualizations](#BKMK_owner_userqueryvisualizations)
 - [lk_userqueryvisualization_createdby](#BKMK_lk_userqueryvisualization_createdby)
 - [lk_userqueryvisualization_modifiedby](#BKMK_lk_userqueryvisualization_modifiedby)
 
@@ -626,10 +624,6 @@ See team Table [team_userqueryvisualizations](team.md#BKMK_team_userqueryvisuali
 ### <a name="BKMK_business_unit_userqueryvisualizations"></a> business_unit_userqueryvisualizations
 
 See businessunit Table [business_unit_userqueryvisualizations](businessunit.md#BKMK_business_unit_userqueryvisualizations) One-To-Many relationship.
-
-### <a name="BKMK_owner_userqueryvisualizations"></a> owner_userqueryvisualizations
-
-See owner Table [owner_userqueryvisualizations](owner.md#BKMK_owner_userqueryvisualizations) One-To-Many relationship.
 
 ### <a name="BKMK_lk_userqueryvisualization_createdby"></a> lk_userqueryvisualization_createdby
 

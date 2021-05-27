@@ -5,12 +5,13 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/19/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
     - neerajnandwana-msft
     - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Portal templates
@@ -57,8 +58,8 @@ The table below summarizes the features associated with each portal template:
 | Theming   | *   | *   | *    | *   | *   |* |*
 | Content Management                     | *                            |                | *                            | *                |               |
 | Knowledge Management                   | *                            | *              | *                            | *                |               |
-| Support/Case Management                | *                            |                | *                            | *                |               |
-| Forums                                 | *                            |                | *                            | *                |               |
+| Support/Case Management                | *                            |   *             | *                            | *                |               |
+| Forums                                 | *                            | *               | *                            | *                |               |
 | Faceted Search                         | *                            |                | *                            |                  |               |
 | Profile Management                     | *                            |                | *                            |                  |               | |*
 | Subscribe to Forum Thread              | *                            |                | *                            |                  |               |
