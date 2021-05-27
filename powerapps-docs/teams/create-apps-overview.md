@@ -4,7 +4,7 @@ description: Provides an overview of creating apps in Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 12/18/2020
 ms.author: kvivek
 ms.reviewer: 

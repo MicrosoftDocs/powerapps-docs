@@ -1,7 +1,7 @@
 ---
 title: "Client-side JavaScript using Web API in model-driven apps | Microsoft Docs"
 description: "JavaScript can be used in HTML web resources, form scripts or ribbon commands to perform operations on Microsoft Dataverse for Apps data using Web API"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/28/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps

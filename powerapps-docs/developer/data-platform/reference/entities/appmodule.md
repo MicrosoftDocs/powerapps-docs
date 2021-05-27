@@ -1,7 +1,7 @@
 ---
 title: "AppModule table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the AppModule table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ A role-based, modular business app that provides task-based functionality for a 
 |RemoveAppComponents|<xref href="Microsoft.Dynamics.CRM.RemoveAppComponents?text=RemoveAppComponents Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveAppComponentsRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveAppComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveAppComponents?text=RetrieveAppComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appmodules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -894,6 +893,7 @@ Listed by **SchemaName**.
 
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
 - [appmodule_appmodulecomponent](#BKMK_appmodule_appmodulecomponent)
+- [appmodule_appnotification_app](#BKMK_appmodule_appnotification_app)
 
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
@@ -924,6 +924,23 @@ Same as appmodulecomponent table [appmodule_appmodulecomponent](appmodulecompone
 |ReferencedEntityNavigationPropertyName|appmodule_appmodulecomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_appmodule_appnotification_app"></a> appmodule_appnotification_app
+
+**Added by**: AppNotifications Solution
+
+Same as appnotification table [appmodule_appnotification_app](appnotification.md#BKMK_appmodule_appnotification_app) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appnotification|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|appmodule_appnotification_app|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
