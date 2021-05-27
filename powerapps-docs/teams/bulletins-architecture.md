@@ -65,7 +65,7 @@ The section describes the tables contained in the Bulletins solution, along with
 | Bulletin Link                | Links created in the Bulletins app are stored in Bulletin Link table. |
 | Bulletin Contact             | Contacts created in the Bulletins app are stored in the Bulletin Contact table. |
 | Bulletin Link Category       | Bulletin Link Category provides the list of categories that can be associated with links and contacts in the Bulletins app. Since users in the app create, edit, and remove categories, a lookup table was used for categorization rather than a choice field. |
-| Bulletin User Settings       | User settings, such as do not display the splash screen, are stored in the Bulletin User Settings table. |
+| Bulletin User Settings       | User settings, such as don't display the splash screen, are stored in the Bulletin User Settings table. |
 
 
 
@@ -114,7 +114,7 @@ Manage Bulletins app uses following global variables.
 #### OnStart execution details
 
 1. When a user accesses the app, **gblAppLoaded** is set to false. The user’s language code is stored in **gblUserLanguage**, with English - US being the default one.
-2. The user’s language is then used to collect localized text used throughout the app (e.g. label and button text) in **colLocalization**.
+2. The user’s language is then used to collect localized text used throughout the app (for example, label and button text) in **colLocalization**.
 3. User details from Bulletin User Settings table is collected in **colUserSettings**. If no records exist, a new Bulletin user setting record is created. This in turn controls the visibility of the splash dialog. If there are multiple project user settings record exist, the oldest record is selected and stored in the **gblRecordUserSettings** variable.
 
 ### Bulletins screen
@@ -123,7 +123,7 @@ This section explains bulletins screen execution details. There are no collectio
 
 #### Bulletins screen execution details
 
-This screen will mainly show the information of Bulletins retrieved from Dataverse table **Bulletins**. The bulletins are divided in to two types which are **Draft** and **Published**.  **GalBulletins_Drafts_Records** and **galBulletins_Published_Records** galleries data sources will be pointed to CDS entity views which will filter the records based on its status, such as draft or published.
+This screen will mainly show the information of Bulletins retrieved from Dataverse table **Bulletins**. The bulletins are divided in to two types that are **Draft** and **Published**.  **GalBulletins_Drafts_Records** and **galBulletins_Published_Records** galleries data sources will be pointed to Dataverse table views that will filter the records based on its status, such as draft or published.
 
 
 
@@ -148,7 +148,7 @@ Variables used by the home screen:
 | Variable name | Description |
 | - | - |
 |  gblRecordBulletin              | Global variable record to store the newly entered bulletin’s details|
-|  locBlockUserInput              | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+|  locBlockUserInput              | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 |  locVisibleDialogReadyForReview | Local variable to set the visibility of the dialog showing confirmation once a bulletin is created                |
 | locVisibleDialog                | Local variable to set the visibility of a dialog|
 | varValidCategory                | Variable to check if the category is blank or not|
@@ -158,10 +158,10 @@ Variables used by the home screen:
 #### New bulletin execution details
 
 1. On selecting **New Bulletin** button from Bulletins screen, **gblRecordBulletin** is set to blank, so it gets updated when the user fills in the Bulletins information such as title, sub title, Image, category, or description and saves the information
-2. Once the required information is filled the **Save** button gets activated. **varValidCategory , varValidTitle** and **varValidDescription** variables are used to know if the required fields contains data or not.
+2. Once the required information is filled the **Save** button gets activated. **varValidCategory , varValidTitle, and **varValidDescription** variables are used to know if the required fields contains data or not.
 3. When **Save** button is pressed,  a bulletin record will get created with either **Draft** state or **Pending** state based up on the status value selection of the **Ready for Review** checkbox.
 4. Once the save process is complete, a dialog confirming the action will be shown using the variables **locVisibleDialogReadyForReview** and **locVisibleDialog**.
-5. If the newly created bulletin is marked **Ready for Review**, its status will be **Pending** and the team owner needs to approve it and publish it before it is visible to users in the Bulletins app. If the bulletin is not flagged as ready for review, it will be in **Draft** state so the user can make updates to the bulletin.
+5. If the newly created bulletin is marked **Ready for Review**, its status will be **Pending** and the team owner needs to approve it and publish it before it's visible to users in the Bulletins app. If the bulletin isn't flagged as ready for review, it will be in **Draft** state so the user can make updates to the bulletin.
 
 ### Updating a bulletin
 
@@ -182,36 +182,36 @@ Variables used during the update of a bulletin:
 | Variable name                  | Description                                                  |
 | ------------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletin              | Global variable record to store the selected draft bulletin. |
-| locBlockUserInput              | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput              | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 | locVisibleDialogReadyForReview | Local variable to set the visibility of the dialog showing confirmation once a bulletin is created. |
 | locVisibleDialog               | Local variable to set the visibility of a dialog.            |
 | varValidCategory               | Variable to check if the category is blank or not.           |
 | varValidTitle                  | Variable to check if the title is blank or not.              |
 | varValidDescription            | Variable to check if the description(body) is blank or not.  |
-| varDirtyCategory               | Variable to check if the category selected is not the same as before. |
-| varDirtyTitle                  | Variable to check if the title entered is not the same as before. |
-| varDirtySubtitle               | Variable to check if the subtitle entered is not the same as before. |
-| varDirtyBody                   | Variable to check if the body/description entered is not the same as before. |
-| varDirtyStockImage             | Variable to check if the stock image selected is not the same as before. |
-| varDirtyImage -                | Variable to check if the image selected is not the same as before. |
-| varDirtyVideoUrl               | Variable to check if the video URL entered is not the same as before. |
+| varDirtyCategory               | Variable to check if the category selected isn't the same as before. |
+| varDirtyTitle                  | Variable to check if the title entered isn't the same as before. |
+| varDirtySubtitle               | Variable to check if the subtitle entered isn't the same as before. |
+| varDirtyBody                   | Variable to check if the body/description entered isn't the same as before. |
+| varDirtyStockImage             | Variable to check if the stock image selected isn't the same as before. |
+| varDirtyImage -                | Variable to check if the image selected isn't the same as before. |
+| varDirtyVideoUrl               | Variable to check if the video URL entered isn't the same as before. |
 | varDirtyReadyForReview         | Variable to check if ready for review is selected same as previous. |
 | varDirtyScheduled              | Variable to check if scheduled is selected same as previous. |
-| varDirtyScheduleOn             | Variable to check if the scheduled on date is not the same as before. |
-| varDirtyFeaturedUntil          | Variable to check if the featured until date is not the same as before. |
-| varDirtyButtonTitle            | Variable to check if the button title entered is not the same as before. |
-| varDirtyButtonUrl              | Variable to check if the button url is not the same as before. |
-| varDirtyAuthors -              | Variable to check if the authors are not the same as before  |
+| varDirtyScheduleOn             | Variable to check if the scheduled on date isn't the same as before. |
+| varDirtyFeaturedUntil          | Variable to check if the featured until date isn't the same as before. |
+| varDirtyButtonTitle            | Variable to check if the button title entered isn't the same as before. |
+| varDirtyButtonUrl              | Variable to check if the button url isn't the same as before. |
+| varDirtyAuthors -              | Variable to check if the authors aren't the same as before  |
 
 #### Bulletin update execution details
 
 1. On Selecting any Draft bulletin from Bulletin’s screen, **gblRecordBulletin** is set to the bulletin selected, and gets updated as the user updates the Bulletin information, such as title, sub title, image, category, and description in Bulletin Detain Screen.
 
-2. The user can make updates to the Bulletin information, and the save button will be activated only if there is any valid change in data. This validation uses the **varDirtyCategory, varDirtyTitle, varDirtySubtitle, varDirtyBody, varDirtyStockImage, varDirtyImage, varDirtyVideoUrl, varDirtyReadyForReview, varDirtyScheduled, varDirtyScheduleOn, varDirtyFeaturedUntil, varDirtyButtonTitle, varDirtyButtonUrl,** and **varDirtyAuthors** variables
+2. The user can make updates to the Bulletin information, and the save button will be activated only if there's any valid change in data. This validation uses the **varDirtyCategory, varDirtyTitle, varDirtySubtitle, varDirtyBody, varDirtyStockImage, varDirtyImage, varDirtyVideoUrl, varDirtyReadyForReview, varDirtyScheduled, varDirtyScheduleOn, varDirtyFeaturedUntil, varDirtyButtonTitle, varDirtyButtonUrl,** and **varDirtyAuthors** variables
 
-3. The process also verifies that required fields on for bulletins are not blank before activating the save button. This is controlled by checking the required fields contains data with the help of **varValidCategory**, **varValidTitle** and **varValidDescription**. 
+3. The process also verifies that required fields on for bulletins aren't blank before activating the save button. This is controlled by checking the required fields contains data with the help of **varValidCategory**, **varValidTitle, and **varValidDescription**. 
 
-4. Updating the mandatory field to blank will not be treated as an update.
+4. Updating the mandatory field to blank won't be treated as an update.
 
 5. Once a valid update is made then the **Save** button gets activated.
 
@@ -230,18 +230,18 @@ Variables used when a bulletin is published:
 | Variable name     | Description                                                                                                                    |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | gblRecordBulletin | Global variable record to store the selected draft bulletin                                                                    |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner.              |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner.              |
 | varPublishOnDate  | Local variable to store scheduled date and time if bulletin have a schedule date and time else to store current date and time. |
 
 #### Bulletin publish execution details
 
 1. Once a team owner selects any bulletin from the draft list the **gblRecordBulletin** stores the selected draft bulletin and opens the record in the Bulletin Details Screen
 
-2. The **Publish** button will be enabled. If the user is not a team owner, the same button will be disabled and this is controlled with the help of **locBlockUserInput,**
+2. The **Publish** button will be enabled. If the user isn't a team owner, the same button will be disabled and this is controlled with the help of **locBlockUserInput,**
 
 3. When the **Publish** button is selected, the approval status of the bulletin is updated to **Approved** and the published on date will be either scheduled date and time if scheduled date contains data or the current date and time. This is updated with the help of **varPublishOnDate.**
 
-4. Once published, the app will navigate back to bulletins screen and the bulletin just published can be seen in the **Published** list as long as the current date is on or after the **published on** date.
+4. Once published, the app will navigate back to bulletins screen and the published bulletin can be seen in the **Published** list as long as the current date is on or after the **published on** date.
 
 
 
@@ -283,7 +283,7 @@ The following are the variables used when a FAQ is viewed from the FAQ screen.
 | **Variable name**    | **Description**                                              |
 | -------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinFAQ | Global variable  record to store the selected Bulletin FAQ.  |
-| locBlockUserInput    | **L**ocal variable to control  restrictions for App user when there is a functionality that is specific to  team owner. |
+| locBlockUserInput    | **L**ocal variable to control  restrictions for App user when there's a functionality that is specific to  team owner. |
 
 #### FAQ view execution variables
 
@@ -302,7 +302,7 @@ The following are the variables used when an FAQ is created from the FAQ detail 
 | Variable name                  | Description                                                  |
 | ------------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletinFAQ           | Global variable record to store the newly entered Bulletin FAQ. |
-| locBlockUserInput              | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput              | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 | locVisibleDialogReadyForReview | Local variable to set the visibility of the dialog showing confirmation once a bulletin is created. |
 | locVisibleDialog               | Local variable to set the visibility of a dialog.            |
 | varValidCategory               | Variable to check if the category is blank or not.           |
@@ -312,8 +312,8 @@ The following are the variables used when an FAQ is created from the FAQ detail 
 #### FAQ creation execution details
 
 1. Once a user selects any Bulletin FAQ from FAQ’s screen, the selected Bulletin FAQ will be stored at a global variable **gblRecordBulletinFAQ.** 
-2. The Bulletin FAQ details like category, question and answer are displayed using **gblRecordBulletinFAQ**. 
-3. If the user makes any changes to the Bulletin FAQ then the ‘Save’ button gets activated. This is known with the help of **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured variables**. 
+2. The Bulletin FAQ details like category, question, and answer are displayed using **gblRecordBulletinFAQ**. 
+3. If the user makes any changes to the Bulletin FAQ, then the ‘Save’ button gets activated. This is known with the help of **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured variables**. 
 4. Once saved, the Bulletin FAQ moves to Draft state if ‘Ready for review’ is marked as ‘No’ else Bulletin FAQ moves to pending state if ‘Ready for review’ is marked as ‘Yes’. So Team owners can approve them to publish.
 
 #### Updating an FAQ
@@ -332,9 +332,9 @@ The following are the variables used when an FAQ is updated from the FAQ detail 
 
 1. When a user selects any Bulletin FAQ from **FAQs** screen, the selected Bulletin FAQ will be stored at a global variable **gblRecordBulletinFAQ.**
 
-2. The Bulletin FAQ details like category, question and answer are displayed using **gblRecordBulletin.**
+2. The Bulletin FAQ details like category, question, and answer are displayed using **gblRecordBulletin.**
 
-3. If the user makes any changes to the Bulletin FAQ the **Save** button gets activated. This validation leverages the **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured** variables.
+3. If the user makes any changes to the Bulletin FAQ the **Save** button gets activated. This validation uses the **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured** variables.
 4. Once saved, the Bulletin FAQ moves to draft state if **Ready for review** is marked as **No.** Otherwise, Bulletin FAQ moves to pending state if **Ready for review** is marked as **Yes**.
 
 #### Publishing an FAQ
@@ -348,12 +348,12 @@ The following are the variables used when an FAQ is published from the FAQ detai
 | Variable name        | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinFAQ | Global variable record to store the newly entered Bulletin FAQ. |
-| locBlockUserInput    | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput    | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### FAQ publish execution details
 
 1. Once a team owner selects any bulletin from **Drafts** list the **gblRecordBulletinFAQ** stores the selected draft Bulletin FAQ and opens the record in the **FAQ Detail Screen**.
-2. The **Publish** button will be enabled. If the user is not a team owner the same button will be disabled and this is controlled with the help of **locBlockUserInput.**
+2. The **Publish** button will be enabled. If the user isn't a team owner the same button will be disabled and this is controlled with the help of **locBlockUserInput.**
 3. On selecting **Publish** button, the approval status of the Bulletin FAQ gets updated to **Approved.**
 4. Once published the app will navigate back to FAQs screen and the same Bulletin FAQ’s Approval status can be seen as **Approved**.
 
@@ -366,7 +366,7 @@ This section explains the variables and execution details used when deleting an 
 | Variable name        | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinFAQ | Global variable record to store the newly entered Bulletin FAQ. |
-| locBlockUserInput    | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput    | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### FAQ delete execution details
 
@@ -385,7 +385,7 @@ This section explains the execution details used when viewing links and contacts
 
 #### Link and contact view execution details
 
-1. This screen will mainly show the information of Links and Contacts with respect to their categories using Dataverse tables **Bulletin Links**, **Bulletin Contacts** and **Bulletin Link Categories.**
+1. This screen will mainly show the information of Links and Contacts related to their categories using Dataverse tables **Bulletin Links**, **Bulletin Contacts** and **Bulletin Link Categories.**
 2. User can search the needed **Bulletin Links**, **Bulletin Contacts** and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
 3. Using **launch** function, the links will be opened in a separate browser tab.
 
@@ -402,7 +402,7 @@ The following are the variables used when a link is created:
 | Variable name         | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinLink | Global variable record to store the newly created Bulletin Link. |
-| locBlockUserInput     | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput     | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Link creation execution details
 
@@ -421,13 +421,13 @@ The following are the variables used when a link is updated
 | Variable name         | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinLink | Global variable record to store the newly created Bulletin Link. |
-| locBlockUserInput     | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput     | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Link update execution details
 
 1. Once a user selects any Bulletin Link from Links and Contacts screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinLink.**
-2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
-3. If the user makes any changes to the Bulletin Link then the **Save** button becomes active. This validation is facilitated by  **varDirtyCategory, varDirtyTitle, varDirtyDescription and varDirtyURL** variables that check if the details are not same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help of **varValidCategory, varValidTitle and varValidURL** variables that check the mandatory fields are filled. 
+2. The Bulletin Link details like title, category, URL, and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
+3. If the user makes any changes to the Bulletin Link, then the **Save** button becomes active. This validation is facilitated by  **varDirtyCategory, varDirtyTitle, varDirtyDescription and varDirtyURL** variables that check if the details aren't same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help of **varValidCategory, varValidTitle and varValidURL** variables that check the mandatory fields are filled. 
 4. Once the Save process is complete the app navigates to Links and Bulletins screen.
 
 #### Deleting a Bulletin Link
@@ -441,12 +441,12 @@ The following are the variables used when a link is updated
 | Variable name         | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
 | gblRecordBulletinLink | Global variable record to store the selected Bulletin Link.  |
-| locBlockUserInput     | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput     | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Link deletion execution details
 
 1. Once a user selects any Bulletin Link from Links and Bulletins screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinLink.**
-2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
+2. The Bulletin Link details like title, category, URL, and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
 3. If the user is a team owner, then the user can see **Delete** button this is identified by using the variable **locBlockUserInput.**
 4. If the user selects **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
 5. The user needs to check the **I understand** checkbox to activate the **Delete** button.
@@ -464,7 +464,7 @@ This section explains the variables and execution details used when creating a n
 | Variable name            | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletinContact | Global variable record to store the selected Bulletin Contact. |
-| locBlockUserInput        | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput        | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Contact creation execution details
 
@@ -484,13 +484,13 @@ The following variables are used in the contact update process:
 | Variable name            | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletinContact | Global variable record to store the selected Bulletin Contact. |
-| locBlockUserInput        | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput        | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Contact update execution details
 
 1. Once a user selects any contact from Links and Contacts screen, the selected Bulletin Contact will be stored at a global variable **gblRecordBulletinContact.**
-2. The Bulletin Contact details like name, category, email and description are displayed using **gblRecordBulletinContact** in **Contact Details Screen**. The fields displayed will be different depending on whether the contact is an internal or external contact.
-3. If the user makes any changes to the Bulletin Contact, then the **Save** button gets activated. This validation is facilitated by the **varDirtyCategory, varDirtyName, varDirtyEmail, varDirtyDescription and varDirtyInternal** variables that check if the details are not same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help **varValidCategory, varValidName, varValidEmail and varValidDescription** variables that check the mandatory fields are filled. 
+2. The Bulletin Contact details like name, category, email, and description are displayed using **gblRecordBulletinContact** in **Contact Details Screen**. The fields displayed will be different depending on whether the contact is an internal or external contact.
+3. If the user makes any changes to the Bulletin Contact, then the **Save** button gets activated. This validation is facilitated by the **varDirtyCategory, varDirtyName, varDirtyEmail, varDirtyDescription and varDirtyInternal** variables that check if the details aren't same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help **varValidCategory, varValidName, varValidEmail and varValidDescription** variables that check the mandatory fields are filled. 
 4. Once the Save process is complete the app navigates to Links and Bulletins screen.
 
 ### Deleting a Bulletin Contact
@@ -504,7 +504,7 @@ The following variables are used in the contact deletion process:
 | Variable name            | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletinContact | Global variable record to store the selected Bulletin Contact. |
-| locBlockUserInput        | local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput        | local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Contact update execution details
 
@@ -526,13 +526,13 @@ This section describes the variables used when navigating the **About** screen.
 
 2. There are help links available in the **galAbout_HelpLinks** gallery.
 
-   Selecting **Learn how to customize this app** button navigates to an external link which explains on how to make customizations on the app. 
+   Selecting **Learn how to customize this app** button navigates to an external link that explains on how to make customizations on the app. 
 
    Selecting **Send us your ideas** button navigates to an external link where ideas can be posted for the Milestones app.
 
    Selecting **Engage with community** button navigates to the Power Apps Community.
 
-3. The **conAbout_AppVideo** container contains the video link which provides an overview of the Milestones app.
+3. The **conAbout_AppVideo** container contains the video link that provides an overview of the Milestones app.
 
 4. The gallery **galAbout_OtherApps** contains the links to other Microsoft apps. 
 
@@ -554,7 +554,7 @@ The following variable is used what a category is created:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Bulletin category creation execution details
 
@@ -564,7 +564,7 @@ The following variable is used what a category is created:
 
 #### Updating a Bulletin Category
 
-This section explains the collections, variables and execution details used when updating a category from the settings screen. 
+This section explains the collections, variables, and execution details used when updating a category from the settings screen. 
 
 #### Bulletin category update collections
 
@@ -580,7 +580,7 @@ The following variable is used what a category is updated:
 
 | Collection name   | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for app user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for app user when there's a functionality that is specific to team owner. |
 
 #### Bulletin category update execution details
 
@@ -589,7 +589,7 @@ The following variable is used what a category is updated:
 
 ### Deleting a Bulletin Category
 
-This section explains the collections, variables and execution details used when deleting a category from the settings screen. 
+This section explains the collections, variables, and execution details used when deleting a category from the settings screen. 
 
 #### Bulletin category deletion collections
 
@@ -606,13 +606,13 @@ The following variable is used what a category is updated:
 
 | Collection name   | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for app user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for app user when there's a functionality that is specific to team owner. |
 
 #### Bulletin category deletion execution details
 
 1. On selecting the **delete** icon for any bulletin category, the category gets added to **colDeleteBulletinCategory** collection and the ‘Update’ button gets activated.
 2. On selecting **Update** button, the categories that are collected at **colDeleteBulletinCategory** will get deleted from Dataverse
-3. The bulletins which are associated to the deleted bulletin categories are collected in **colReparentBulletins** and will get updated with the default category.
+3. The bulletins that are associated to the deleted bulletin categories are collected in **colReparentBulletins** and will get updated with the default category.
 
 ### Creating a new Bulletin FAQ Category
 
@@ -624,7 +624,7 @@ The following variables are used what an FAQ category is created:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### FAQ category creation execution details
 
@@ -634,7 +634,7 @@ The following variables are used what an FAQ category is created:
 
 ### Updating a Bulletin FAQ Category
 
-This section explains the collections, variables and execution details used when updating an FAQ category from the settings screen. 
+This section explains the collections, variables, and execution details used when updating an FAQ category from the settings screen. 
 
 #### FAQ category update collections
 
@@ -652,7 +652,7 @@ The following variables are used what an FAQ category is created:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### FAQ category update execution details
 
@@ -661,7 +661,7 @@ The following variables are used what an FAQ category is created:
 
 ### Deleting a Bulletin FAQ Category
 
-This section explains the collections, variables and execution details used when deleting an FAQ category from the settings screen. 
+This section explains the collections, variables, and execution details used when deleting an FAQ category from the settings screen. 
 
 #### FAQ category deletion collections
 
@@ -678,17 +678,17 @@ The following variables are used in the deletion of FAQ categories:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### FAQ category deletion execution details
 
 1. On selection of the **Delete** icon for any bulletin category, the bulletin category gets added to **colDeleteBulletinFAQCategory** collection and the **Update** button gets activated.
 2. On selection of the  **Update** button, the bulletin categories that are collected at **colDeleteBulletinFAQCategory** will get deleted from Dataverse.
-3. The bulletins which are associated to the deleted bulletin categories are collected at **colReparentFAQs** and will get updated with the default category.
+3. The bulletins that are associated to the deleted bulletin categories are collected at **colReparentFAQs** and will get updated with the default category.
 
 ### Creating a new Bulletin Link Category
 
-This section explains the collections, variables and execution details used when creating a bulletin link category from the settings screen. 
+This section explains the collections, variables, and execution details used when creating a bulletin link category from the settings screen. 
 
 #### Bulletin link category creation variables
 
@@ -696,17 +696,17 @@ The following variable is used in the deletion of FAQ categories:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Bulletin link category creation execution details
 
 1. On selection of **Add category** button under Link categories, a text input control is shown to enter the name of the Link category.
 2. Once the user enters the name the user can select either save button on **cancel** icon available next to this text box.
-3. On selection of **Save** icon a new bulletin link category record gets created in CDS.
+3. On selection of **Save** icon a new bulletin link category record gets created in Dataverse.
 
 ### Updating a bulletin link category
 
-This section explains the collections, variables and execution details used when updating a bulletin link category from the settings screen. 
+This section explains the collections, variables, and execution details used when updating a bulletin link category from the settings screen. 
 
 #### Bulletin link category update collections
 
@@ -722,7 +722,7 @@ The following collection is used in the update of bulletin link categories:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Bulletin link category update execution details
 
@@ -731,7 +731,7 @@ The following collection is used in the update of bulletin link categories:
 
 ### Deleting a bulletin link category
 
-This section explains the collections, variables and execution details used when deleting a bulletin link category from the settings screen. 
+This section explains the collections, variables, and execution details used when deleting a bulletin link category from the settings screen. 
 
 #### Bulletin link category deletion collections
 
@@ -748,15 +748,15 @@ The following collection is used in the deletion of bulletin link categories:
 
 | Variable name     | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| locBlockUserInput | Local variable to control restrictions for App user when there is a functionality that is specific to team owner. |
+| locBlockUserInput | Local variable to control restrictions for App user when there's a functionality that is specific to team owner. |
 
 #### Bulletin link category deletion execution details
 
 1. On selecting the ‘Delete’ icon for any Bulletin category, the Bulletin category gets added to **colDeleteBulletinLinkCategory** collection and the ‘Update’ button gets activated.
 
-2. On selecting ‘Update’ button, the Bulletin categories that are collected at **colDeleteBulletinLinkCategory** will get deleted from CDS
+2. On selecting ‘Update’ button, the Bulletin categories that are collected at **colDeleteBulletinLinkCategory** will get deleted from Dataverse
 
-3. The bulletins which are associated to the deleted bulletin categories are collected at **colReparentLinks** and will get updated with the default category.
+3. The bulletins that are associated to the deleted bulletin categories are collected at **colReparentLinks** and will get updated with the default category.
 
  
 
