@@ -44,6 +44,8 @@ help with code completion, assistance, and hinting while customizing portals
 interface using VS Code. Using the VS Code extension, you can also configure portals through the [portals
 support for Power Apps CLI](power-apps-cli.md).
 
+![Animation that explains how to install and set Power Platform VS Code Extension with file icon theme](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform VS Code Extension with file icon theme")
+
 ## Prerequisites
 
 Before using VS Code extension for Power Apps portals, you must:
@@ -57,9 +59,7 @@ Before using VS Code extension for Power Apps portals, you must:
 ## Install VS Code extension
 
 After you install Visual Studio Code, you need to install the extension for
-Power Apps portals plugin for VS Code. More information: [Install extensions
-from VSIX
-file](https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix)
+Power Apps portals plugin for VS Code. 
 
 To install VS code extension:
 
