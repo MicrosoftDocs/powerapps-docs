@@ -40,9 +40,8 @@ The following diagram illustrates the way that users and systems interact with d
 
 The following connectors are used in the Bulletins app:
 
-- Microsoft Dataverse: Used to read and write data in Dataverse.
-
-- Office 365 Users: Used to read O365 user profile data.
+- **Microsoft Dataverse** - used to read and write data in Dataverse.
+- **Office 365 Users** - used to read Microsoft 365 user profile data.
 
 ## Data model
 
