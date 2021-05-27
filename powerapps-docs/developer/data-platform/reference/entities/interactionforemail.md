@@ -1,7 +1,7 @@
 ---
 title: "InteractionForEmail table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,6 @@ search.app:
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Delete|DELETE [*org URI*]/api/data/v9.0/interactionforemails(*interactionforemailid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/interactionforemails<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -860,7 +859,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_interactionforemail_modifiedonbehalfby](#BKMK_lk_interactionforemail_modifiedonbehalfby)
 - [user_interactionforemail](#BKMK_user_interactionforemail)
 - [team_interactionforemail](#BKMK_team_interactionforemail)
-- [owner_interactionforemail](#BKMK_owner_interactionforemail)
 - [business_unit_interactionforemail](#BKMK_business_unit_interactionforemail)
 - [TransactionCurrency_InteractionForEmail](#BKMK_TransactionCurrency_InteractionForEmail)
 
@@ -888,10 +886,6 @@ See systemuser Table [user_interactionforemail](systemuser.md#BKMK_user_interact
 ### <a name="BKMK_team_interactionforemail"></a> team_interactionforemail
 
 See team Table [team_interactionforemail](team.md#BKMK_team_interactionforemail) One-To-Many relationship.
-
-### <a name="BKMK_owner_interactionforemail"></a> owner_interactionforemail
-
-See owner Table [owner_interactionforemail](owner.md#BKMK_owner_interactionforemail) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_interactionforemail"></a> business_unit_interactionforemail
 

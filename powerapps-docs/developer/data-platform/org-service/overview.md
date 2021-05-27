@@ -1,7 +1,7 @@
 ---
 title: "Use the Microsoft Dataverse Organization Service (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use Microsoft Dataverse Organization Service to work with data, and table and column definitions." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 04/15/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
