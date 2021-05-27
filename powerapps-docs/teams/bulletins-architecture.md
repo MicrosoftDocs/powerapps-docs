@@ -161,7 +161,7 @@ Variables used by the home screen:
 2. Once the required information is filled the **Save** button gets activated. **varValidCategory , varValidTitle** and **varValidDescription** variables are used to know if the required fields contains data or not.
 3. When **Save** button is pressed,  a bulletin record will get created with either **Draft** state or **Pending** state based up on the status value selection of the **Ready for Review** checkbox.
 4. Once the save process is complete, a dialog confirming the action will be shown using the variables **locVisibleDialogReadyForReview** and **locVisibleDialog**.
-5. If the newly created bulletin is marked **Ready for Review**, its status will be **Pending** and the team owner needs to approve it and publish it before it is visible to users in the Bulletins app. If the bulletin is not flagged as ready for review, it will be in **Draft*’ state so the user can make updates to the bulletin.
+5. If the newly created bulletin is marked **Ready for Review**, its status will be **Pending** and the team owner needs to approve it and publish it before it is visible to users in the Bulletins app. If the bulletin is not flagged as ready for review, it will be in **Draft** state so the user can make updates to the bulletin.
 
 ### Updating a bulletin
 
@@ -386,7 +386,7 @@ This section explains the execution details used when viewing links and contacts
 #### Link and contact view execution details
 
 1. This screen will mainly show the information of Links and Contacts with respect to their categories using Dataverse tables **Bulletin Links**, **Bulletin Contacts** and **Bulletin Link Categories.**
-2. User can search the needed **Bulletin Link**s, **Bulletin Contacts** and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
+2. User can search the needed **Bulletin Links**, **Bulletin Contacts** and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
 3. Using **launch** function, the links will be opened in a separate browser tab.
 
 ### Links Details Screen
@@ -446,7 +446,7 @@ The following are the variables used when a link is updated
 #### Link deletion execution details
 
 1. Once a user selects any Bulletin Link from Links and Bulletins screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinLink.**
-2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in Link Details Screen**.**
+2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
 3. If the user is a team owner, then the user can see **Delete** button this is identified by using the variable **locBlockUserInput.**
 4. If the user selects **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
 5. The user needs to check the **I understand** checkbox to activate the **Delete** button.
@@ -910,7 +910,7 @@ Links and contacts screen doesn't use any variables.
 
 1. Links and contacts screen shows the information of FAQs retrieved from Dataverse&mdash;**Bulletin Link Categories**, **Bulletin Contacts**, and **Bulletin Link Categories**.
 
-1. User can search the needed **Bulletin Link Categories, **Bulletin Contacts**, and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
+1. User can search the needed **Bulletin Link Categories**, **Bulletin Contacts**, and **Bulletin Link Categories** by using search box and the results will be filtered in the respective galleries.
 
 1. Using **launch** function, the links will be opened in a separate browser tab.
 
