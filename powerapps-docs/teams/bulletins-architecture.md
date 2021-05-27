@@ -125,17 +125,15 @@ This section explains bulletins screen execution details. There are no collectio
 
 This screen will mainly show the information of Bulletins retrieved from Dataverse table **Bulletins**. The bulletins are divided in to two types that are **Draft** and **Published**.  **GalBulletins_Drafts_Records** and **galBulletins_Published_Records** galleries data sources will be pointed to Dataverse table views that will filter the records based on its status, such as draft or published.
 
-
-
 ### Bulletin details screen
 
 #### Creating a new bulletin
 
-This section explains bulletin details screen collections, global variables, and execution details used when creating a new bulletin.
+This section explains collections, global variables, and execution details used when creating a new bulletin.
 
 #### New bulletin collections
 
-Collections used by the bulletin details screen:
+Collections used by new bulletin screen:
 
 | Collection name | Description                     |
 | --------------- | ------------------------------- |
@@ -143,7 +141,7 @@ Collections used by the bulletin details screen:
 
 #### New bulletin variables
 
-Variables used by the home screen:
+Variables used by new bulletin screen:
 
 | Variable name | Description |
 | - | - |
@@ -209,7 +207,7 @@ Variables used during the update of a bulletin:
 
 2. The user can make updates to the Bulletin information, and the save button will be activated only if there's any valid change in data. This validation uses the **varDirtyCategory, varDirtyTitle, varDirtySubtitle, varDirtyBody, varDirtyStockImage, varDirtyImage, varDirtyVideoUrl, varDirtyReadyForReview, varDirtyScheduled, varDirtyScheduleOn, varDirtyFeaturedUntil, varDirtyButtonTitle, varDirtyButtonUrl,** and **varDirtyAuthors** variables
 
-3. The process also verifies that required fields on for bulletins aren't blank before activating the save button. This is controlled by checking the required fields contains data with the help of **varValidCategory**, **varValidTitle, and **varValidDescription**. 
+3. The process also verifies that required fields on for bulletins aren't blank before activating the save button. This is controlled by checking the required fields contains data with the help of **varValidCategory**, **varValidTitle**, and **varValidDescription**.
 
 4. Updating the mandatory field to blank won't be treated as an update.
 
@@ -242,8 +240,6 @@ Variables used when a bulletin is published:
 3. When the **Publish** button is selected, the approval status of the bulletin is updated to **Approved** and the published on date will be either scheduled date and time if scheduled date contains data or the current date and time. This is updated with the help of **varPublishOnDate.**
 
 4. Once published, the app will navigate back to bulletins screen and the published bulletin can be seen in the **Published** list as long as the current date is on or after the **published on** date.
-
-
 
 #### Deleting a published bulletin
 
@@ -313,8 +309,8 @@ The following are the variables used when an FAQ is created from the FAQ detail 
 
 1. Once a user selects any Bulletin FAQ from FAQ’s screen, the selected Bulletin FAQ will be stored at a global variable **gblRecordBulletinFAQ.** 
 2. The Bulletin FAQ details like category, question, and answer are displayed using **gblRecordBulletinFAQ**. 
-3. If the user makes any changes to the Bulletin FAQ, then the ‘Save’ button gets activated. This is known with the help of **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured variables**. 
-4. Once saved, the Bulletin FAQ moves to Draft state if ‘Ready for review’ is marked as ‘No’ else Bulletin FAQ moves to pending state if ‘Ready for review’ is marked as ‘Yes’. So Team owners can approve them to publish.
+3. If the user makes any changes to the Bulletin FAQ, then the **Save** button gets activated. This is known with the help of **varDirtyCategory, varDirtyQuestion, varDirtyAnswer, varDirtyReadyForReview, varDirtyFeatured variables**. 
+4. Once saved, the Bulletin FAQ moves to Draft state if "Ready for review" is marked as "No" else Bulletin FAQ moves to pending state if ‘Ready for review’ is marked as ‘Yes’. So Team owners can approve them to publish.
 
 #### Updating an FAQ
 
@@ -407,7 +403,7 @@ The following are the variables used when a link is created:
 #### Link creation execution details
 
 1.  When **Add a link** button is selected from **Links and contacts** screen, **gblRecordBulletinLink** is set to blank, so it gets updated when the user fills the Bulletin Link information such as Title, Category, Description & URL and saves it.
-2. Once the required information is filled then the ‘Save’ button gets activated. **varValidCategory, varValidTitle and varValidURL** variables are used to know if the required fields contain data or not.
+2. Once the required information is filled then the **Save** button gets activated. **varValidCategory, varValidTitle and varValidURL** variables are used to know if the required fields contain data or not.
 3. When **Save** button is selected, a new Bulletin Link record will get created and the **gblRecordBulletinLink** global variable is set to the newly created record. Once the save process is complete, the app navigates to **Links and Bulletins** screen.
 
 #### Updating a Bulletin Link
@@ -436,7 +432,7 @@ This section explains the variables and execution details used when deleting a l
 
 #### Link deletion variables
 
-The following are the variables used when a link is updated
+The following are the variables used when a link is deleted.
 
 | Variable name         | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
@@ -512,7 +508,7 @@ The following variables are used in the contact deletion process:
 2. The Bulletin Contact details are displayed using **gblRecordBulletinContact**. 
 3. If the user is a team owner, then the user can see **Delete** button this is identified by using the variable **locBlockUserInput.**
 4. If the user selects **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
-5. The user needs to check the **I understand** checkbox to activate the ‘Delete’ button.
+5. The user needs to check the **I understand** checkbox to activate the **Delete** button.
 6. On selecting **Delete** button the Bulletin Link record from Dataverse that matches with **gblRecordBulletinContact** will be deleted.
 7. Once the delete process is complete the app navigates to Links and Contacts screen.
 
@@ -564,7 +560,7 @@ The following variable is used what a category is created:
 
 #### Updating a Bulletin Category
 
-This section explains the collections, variables, and execution details used when updating a category from the settings screen. 
+This section explains the collections, variables, and execution details used when updating a category from the settings screen.
 
 #### Bulletin category update collections
 
@@ -584,7 +580,7 @@ The following variable is used what a category is updated:
 
 #### Bulletin category update execution details
 
-1. On change of any bulletin category, the bulletin category ID and the name of the bulletin category are added to **colUpdateBulletinCategory** collection and the ‘Update’ button become active.
+1. On change of any bulletin category, the bulletin category ID and the name of the bulletin category are added to **colUpdateBulletinCategory** collection and the "Update"’" button become active.
 2. On selecting **Update** button, the Bulletin categories that have changes in their name will get updated.
 
 ### Deleting a Bulletin Category
@@ -610,7 +606,7 @@ The following variable is used what a category is updated:
 
 #### Bulletin category deletion execution details
 
-1. On selecting the **delete** icon for any bulletin category, the category gets added to **colDeleteBulletinCategory** collection and the ‘Update’ button gets activated.
+1. On selecting the **delete** icon for any bulletin category, the category gets added to **colDeleteBulletinCategory** collection and the **Update** button gets activated.
 2. On selecting **Update** button, the categories that are collected at **colDeleteBulletinCategory** will get deleted from Dataverse
 3. The bulletins that are associated to the deleted bulletin categories are collected in **colReparentBulletins** and will get updated with the default category.
 
@@ -630,7 +626,7 @@ The following variables are used what an FAQ category is created:
 
 1. On selecting **Add category** button under FAQ categories, a text input control is shown to enter the name of the FAQ category.
 2. Once the user enters the name the user can select either **save** button or **cancel** icon available next to this text box.
-3. On selection of ‘Save’ icon a new Bulletin FAQ category record gets created in Dataverse.
+3. On selection of **Save** icon a new Bulletin FAQ category record gets created in Dataverse.
 
 ### Updating a Bulletin FAQ Category
 
@@ -726,8 +722,8 @@ The following collection is used in the update of bulletin link categories:
 
 #### Bulletin link category update execution details
 
-1. On change of any FAQ category, the bulletin link category ID and the name of the bulletin link category are added to **colUpdateBulletinLinkCategory** collection and the ‘Update’ button gets activated.
-2. On selecting ‘Update’ button, the Bulletin Link categories that have changes in their name will get updated.
+1. On change of any FAQ category, the bulletin link category ID and the name of the bulletin link category are added to **colUpdateBulletinLinkCategory** collection and the **Update** button gets activated.
+2. On selecting **Update**button, the Bulletin Link categories that have changes in their name will get updated.
 
 ### Deleting a bulletin link category
 
@@ -752,9 +748,9 @@ The following collection is used in the deletion of bulletin link categories:
 
 #### Bulletin link category deletion execution details
 
-1. On selecting the ‘Delete’ icon for any Bulletin category, the Bulletin category gets added to **colDeleteBulletinLinkCategory** collection and the ‘Update’ button gets activated.
+1. On selecting the **Delete** icon for any Bulletin category, the Bulletin category gets added to **colDeleteBulletinLinkCategory** collection and the **Update** button gets activated.
 
-2. On selecting ‘Update’ button, the Bulletin categories that are collected at **colDeleteBulletinLinkCategory** will get deleted from Dataverse
+2. On selecting **Update** button, the Bulletin categories that are collected at **colDeleteBulletinLinkCategory** will get deleted from Dataverse
 
 3. The bulletins that are associated to the deleted bulletin categories are collected at **colReparentLinks** and will get updated with the default category.
 
