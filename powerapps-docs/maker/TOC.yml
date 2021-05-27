@@ -4,8 +4,8 @@
     href: ../powerapps-overview.md
   - name: Sign up for 30-day trial version
     href: signup-for-powerapps.md
-  - name: Sign up for Community Plan
-    href: dev-community-plan.md
+  - name: Sign up for Developer Plan
+    href: developer-plan.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
@@ -1393,6 +1393,8 @@
                   href: ./portals/use-code-editor.md
                 - name: Add Power BI
                   href: ./portals/add-powerbi.md
+                - name: Add a chatbot (Preview)
+                  href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
@@ -2033,18 +2035,28 @@
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
     href: ./data-platform/import-translated-entity-field-text.md
-  - name: Export to data lake
+  - name: Azure Synapse Link
     items:
-    - name: Export to Azure Data Lake Storage Gen2
+    - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Ingest exported data with Azure Data Factory
-      href: ./data-platform/export-to-data-lake-data-adf.md
-    - name: Analyze exported data with Power BI
-      href: ./data-platform/export-to-data-lake-data-powerbi.md
-    - name: Export to data lake FAQ
+    - name: Azure Synapse Analytics
+      items:
+      - name: Configure Azure Synapse Link with a Synapse Workspace
+        href: ./data-platform/azure-synapse-link-synapse.md
+    - name: Azure Data Lake Storage Gen2
+      items:
+      - name: Configure Azure Synapse Link with Data Lake
+        href: ./data-platform/azure-synapse-link-data-lake.md
+      - name: Ingest exported data with Azure Data Factory
+        href: ./data-platform/export-to-data-lake-data-adf.md
+      - name: Analyze exported data with Power BI
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Advanced Configuration Settings
+      href: ./data-platform/azure-synapse-link-advanced-configuration.md
+    - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security
+    href: /power-platform/admin/wp-security-cds.md
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
@@ -2132,11 +2144,13 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Bulletins (Preview)
+        - name: Boards (Preview)
+          href: ../teams/boards.md
+        - name: Bulletins
           items:
-            - name: Use Bulletins (Preview) sample app
+            - name: Use Bulletins sample app
               href: ../teams/bulletins.md
-            - name: Understand Bulletins (Preview) sample app architecture
+            - name: Understand Bulletins sample app architecture
               href: ../teams/bulletins-architecture.md
         - name: Employee ideas
           items:
@@ -2154,6 +2168,10 @@
           href: ../teams/issue-reporting.md
         - name: Milestones (Preview)
           href: ../teams/milestones.md
+        - name: Perspectives (Preview)
+          href: ../teams/perspectives.md
+        - name: Profile+ (Preview)
+          href: ../teams/profile-app.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
