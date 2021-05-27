@@ -84,6 +84,9 @@ To install VS code extension:
 To authenticate against a Microsoft Dataverse environment, and to download
 portals content, refer to the tutorial [Use Power Apps CLI with portals - download portals content](power-apps-cli-tutorial.md#step-3-download-portals-content).
 
+> [!TIP]
+> The Power Platform VS Code Extension automatically enables using Power Apps CLI commands from within VS Code through [Visual Studio Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+
 ## Snippet support
 
 When customizing downloaded content using VS Code, you can now use IntelliSense
@@ -147,6 +150,13 @@ The autocomplete capability in the VS Code extension shows the current context
 being edited, and the relevant autocomplete elements through IntelliSense.
 
 ![An example of autocomplete for the page template ID.](media/vs-code-extension/auto-complete.png "An example of autocomplete for the page template ID")
+
+## Limitations
+
+The following limitations apply to Power Platform VS Code Extension currently.
+
+- [Snippet support](#snippet-support), and [autocomplete](#autocomplete) features only support limited functionality.
+- [Live preview](#live-preview) doesn't support custom themes, and liquid objects.
 
 ### See also
 
