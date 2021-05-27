@@ -61,7 +61,7 @@ The section describes the tables contained in the Bulletins solution, along with
 | Bulletin Category            | Bulletin Category provides the list of categories that can be associated with Bulletins. Since users in the app create, edit, and remove categories, a lookup table was used for categorization rather than a choice field. |
 | Bulletin Category Preference | When a user changes the sort and display options for Bulletin Categories, records are created in Bulletin Category Preference table. |
 | Bulletin FAQ                 | FAQ records are stored in the Bulletin FAQ table.            |
-| Buletin FAQ Category         | Bulletin FAQ Category provides the list of categories that can be associated with FAQs. Since users in the app create, edit, and remove categories, a lookup table was used for categorization rather than a choice field. |
+| Bulletin FAQ Category         | Bulletin FAQ Category provides the list of categories that can be associated with FAQs. Since users in the app create, edit, and remove categories, a lookup table was used for categorization rather than a choice field. |
 | Bulletin Link                | Links created in the Bulletins app are stored in Bulletin Link table. |
 | Bulletin Contact             | Contacts created in the Bulletins app are stored in the Bulletin Contact table. |
 | Bulletin Link Category       | Bulletin Link Category provides the list of categories that can be associated with links and contacts in the Bulletins app. Since users in the app create, edit, and remove categories, a lookup table was used for categorization rather than a choice field. |
