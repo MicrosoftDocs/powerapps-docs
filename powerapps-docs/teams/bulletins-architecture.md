@@ -1,11 +1,11 @@
 ---
 title: Understand Bulletins sample app architecture
 description: Learn about the architecture of the Bulletins sample app.
-author: navjotm
+author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/24/2021
+ms.date: 05/27/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -287,7 +287,7 @@ The following are the variables used when a FAQ is viewed from the FAQ screen.
 
 #### FAQ view execution variables
 
-This screen will mainly show the information of FAQs retrieved from Dataverse table **Bulletin FAQs**. The FAQs are displayed as a table list with the key information. User can click on any of the FAQs to navigate to FAQ Detail screen to view the FAQ in more detail.
+This screen will mainly show the information of FAQs retrieved from Dataverse table **Bulletin FAQs**. The FAQs are displayed as a table list with the key information. User can select on any of the FAQs to navigate to FAQ Detail screen to view the FAQ in more detail.
 
 ### FAQ detail screen
 
@@ -308,7 +308,7 @@ The following are the variables used when an FAQ is created from the FAQ detail 
 | varValidTitle                  | Variable to check if the title is blank or not.              |
 | varValidDescription            | Variable to check if the description(body) is blank or not.  |
 
-#### FAQ creation excution details
+#### FAQ creation execution details
 
 1. Once a user selects any Bulletin FAQ from FAQ’s screen, the selected Bulletin FAQ will be stored at a global variable **gblRecordBulletinFAQ.** 
 2. The Bulletin FAQ details like category, question and answer are displayed using **gblRecordBulletinFAQ**. 
@@ -372,7 +372,7 @@ This section explains the variables and execution details used when deleting an 
 1. Once a user selects an FAQ from FAQs screen, the selected bulletin will be stored at a global variable **gblRecordBulletinFAQ** and the record will be opened in the **FAQ Detail Screen**.
 2. The bulletin details will be displayed using **gblRecordBulletinFAQ.**
 3. Based upon the user's access the user can update or delete the selected Bulletin FAQ from this screen.
-4. If the user clicks on **Delete** a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
+4. If the user selects **Delete**, a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
 5. The user needs to check the **I understand** checkbox to activate the **Delete** button.
 6. On select of **Delete** button the Bulletin FAQ row from Dataverse that matches with **gblRecordBulletinFAQ** will be deleted.
 
@@ -425,7 +425,7 @@ The following are the variables used when a link is updated
 #### Link update execution details
 
 1. Once a user selects any Bulletin Link from Links and Contacts screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinLink.**
-2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in Link Details Screen**.**
+2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in **Link Details Screen**.
 3. If the user makes any changes to the Bulletin Link then the **Save** button becomes active. This validation is facilitated by  **varDirtyCategory, varDirtyTitle, varDirtyDescription and varDirtyURL** variables that check if the details are not same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help of **varValidCategory, varValidTitle and varValidURL** variables that check the mandatory fields are filled. 
 4. Once the Save process is complete the app navigates to Links and Bulletins screen.
 
@@ -447,7 +447,7 @@ The following are the variables used when a link is updated
 1. Once a user selects any Bulletin Link from Links and Bulletins screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinLink.**
 2. The Bulletin Link details like title, category, URL and description are displayed using **gblRecordBulletin** in Link Details Screen**.**
 3. If the user is a team owner, then the user can see **Delete** button this is identified by using the variable **locBlockUserInput.**
-4. If the user clicks on **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
+4. If the user selects **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
 5. The user needs to check the **I understand** checkbox to activate the **Delete** button.
 6. When the **Delete** button is selected,  the link row from Dataverse that matches with **gblRecordBulletinLink** will be deleted.
 7. Once the Delete process is complete the app navigates to Links and Bulletins screen.
@@ -488,7 +488,7 @@ The following variables are used in the contact update process:
 #### Contact update execution details
 
 1. Once a user selects any contact from Links and Contacts screen, the selected Bulletin Contact will be stored at a global variable **gblRecordBulletinContact.**
-2. The Bulletin Contact details like name, category, email and description are displayed using **gblRecordBulletinContact** in Contact Details Screen**.** The fields displayed will be different depending on whether the contact is an internal or external contact.
+2. The Bulletin Contact details like name, category, email and description are displayed using **gblRecordBulletinContact** in **Contact Details Screen**. The fields displayed will be different depending on whether the contact is an internal or external contact.
 3. If the user makes any changes to the Bulletin Contact, then the **Save** button gets activated. This validation is facilitated by the **varDirtyCategory, varDirtyName, varDirtyEmail, varDirtyDescription and varDirtyInternal** variables that check if the details are not same as previously saved. Further it also validates if mandatory information is filled to activate **Save** button with the help **varValidCategory, varValidName, varValidEmail and varValidDescription** variables that check the mandatory fields are filled. 
 4. Once the Save process is complete the app navigates to Links and Bulletins screen.
 
@@ -510,9 +510,9 @@ The following variables are used in the contact deletion process:
 1. Once a user selects any Bulletin Contact from Links and Bulletins screen, the selected Bulletin Link will be stored at a global variable **gblRecordBulletinContact.**
 2. The Bulletin Contact details are displayed using **gblRecordBulletinContact**. 
 3. If the user is a team owner, then the user can see **Delete** button this is identified by using the variable **locBlockUserInput.**
-4. If the user clicks on **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
+4. If the user selects **Delete** then a dialog appears asking for confirmation, the visibility of this dialog is controlled by using **locVisibleDialog** and **locVisibleDialogDelete.**
 5. The user needs to check the **I understand** checkbox to activate the ‘Delete’ button.
-6. On click of **Delete** button the Bulletin Link record from Dataverse that matches with **gblRecordBulletinContact** will be deleted.
+6. On selecting **Delete** button the Bulletin Link record from Dataverse that matches with **gblRecordBulletinContact** will be deleted.
 7. Once the delete process is complete the app navigates to Links and Contacts screen.
 
 ### About screen
@@ -521,7 +521,7 @@ This section describes the variables used when navigating the **About** screen.
 
 #### About screen navigation execution details
 
-1. Clicking the info icon the app navigates to **About Screen.**
+1. Selecting the info icon the app navigates to **About Screen.**
 
 2. There are help links available in the **galAbout_HelpLinks** gallery.
 
@@ -557,7 +557,7 @@ The following variable is used what a category is created:
 
 #### Bulletin category creation execution details
 
-1. When **Add category** button is selectedunder Bulletin categories, a text input control is shown to enter the name of the Bulletin category.
+1. When **Add category** button is selected under Bulletin categories, a text input control is shown to enter the name of the Bulletin category.
 2. Once the user enters the name the user can select either save button on cancel icon available next to this text box
 3. On selection of **Save** icon a new Bulletin category record gets created in Dataverse.
 
