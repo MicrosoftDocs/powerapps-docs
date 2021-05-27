@@ -53,6 +53,7 @@ The following diagram explains the data model used by the Bulletins sample app.
 ### Tables
 
 The section describes the tables contained in the Bulletins solution, along with their purpose.
+
 | Table name                   | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
 | Bulletin                     | The primary table in the Bulletins solution. Primary Bulletin data is stored in this table. |
@@ -298,6 +299,7 @@ This section explains the variables and execution details used when creating an 
 #### FAQ creation variables
 
 The following are the variables used when an FAQ is created from the FAQ detail screen:
+
 | Variable name                  | Description                                                  |
 | ------------------------------ | ------------------------------------------------------------ |
 | gblRecordBulletinFAQ           | Global variable record to store the newly entered Bulletin FAQ. |
