@@ -1,7 +1,7 @@
 ---
 title: "CallbackRegistration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Callback Registration that stores configuration.
 |Create|POST [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -610,7 +609,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_callbackregistration_createdonbehalfby](#BKMK_lk_callbackregistration_createdonbehalfby)
 - [lk_callbackregistration_createdby](#BKMK_lk_callbackregistration_createdby)
 - [businessunit_callbackregistration](#BKMK_businessunit_callbackregistration)
-- [owner_callbackregistration](#BKMK_owner_callbackregistration)
 
 
 ### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
@@ -632,10 +630,6 @@ See systemuser Table [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_c
 ### <a name="BKMK_businessunit_callbackregistration"></a> businessunit_callbackregistration
 
 See businessunit Table [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) One-To-Many relationship.
-
-### <a name="BKMK_owner_callbackregistration"></a> owner_callbackregistration
-
-See owner Table [owner_callbackregistration](owner.md#BKMK_owner_callbackregistration) One-To-Many relationship.
 
 ### See also
 

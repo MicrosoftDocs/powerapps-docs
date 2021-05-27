@@ -1609,9 +1609,9 @@
               href: ./portals/configure/create-web-roles.md
             - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
-            - name: Configure table permissions using portals Studio (Preview)
+            - name: Configure table permissions using portals Studio
               href: ./portals/configure/entity-permissions-studio.md
-            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+            - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
@@ -2035,18 +2035,28 @@
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
     href: ./data-platform/import-translated-entity-field-text.md
-  - name: Export to data lake
+  - name: Azure Synapse Link
     items:
-    - name: Export to Azure Data Lake Storage Gen2
+    - name: Azure Synapse Link Overview
       href: ./data-platform/export-to-data-lake.md
-    - name: Ingest exported data with Azure Data Factory
-      href: ./data-platform/export-to-data-lake-data-adf.md
-    - name: Analyze exported data with Power BI
-      href: ./data-platform/export-to-data-lake-data-powerbi.md
-    - name: Export to data lake FAQ
+    - name: Azure Synapse Analytics
+      items:
+      - name: Configure Azure Synapse Link with a Synapse Workspace
+        href: ./data-platform/azure-synapse-link-synapse.md
+    - name: Azure Data Lake Storage Gen2
+      items:
+      - name: Configure Azure Synapse Link with Data Lake
+        href: ./data-platform/azure-synapse-link-data-lake.md
+      - name: Ingest exported data with Azure Data Factory
+        href: ./data-platform/export-to-data-lake-data-adf.md
+      - name: Analyze exported data with Power BI
+        href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Advanced Configuration Settings
+      href: ./data-platform/azure-synapse-link-advanced-configuration.md
+    - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security
+    href: /power-platform/admin/wp-security-cds.md
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
@@ -2156,7 +2166,7 @@
               href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
-        - name: Milestones (Preview)
+        - name: Milestones
           href: ../teams/milestones.md
         - name: Perspectives (Preview)
           href: ../teams/perspectives.md
