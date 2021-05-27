@@ -723,7 +723,7 @@ The following collection is used in the update of bulletin link categories:
 #### Bulletin link category update execution details
 
 1. On change of any FAQ category, the bulletin link category ID and the name of the bulletin link category are added to **colUpdateBulletinLinkCategory** collection and the **Update** button gets activated.
-2. On selecting **Update**button, the Bulletin Link categories that have changes in their name will get updated.
+2. On selecting **Update** button, the Bulletin Link categories that have changes in their name will get updated.
 
 ### Deleting a bulletin link category
 
