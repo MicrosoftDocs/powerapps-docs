@@ -1,16 +1,19 @@
 ---
-title: Overview of themes in Power Apps portals | Microsoft Docs
-description: Introduction to themes in Power Apps portals.
+title: Themes overview
+description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/11/2020
+ms.date: 05/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Overview of themes in Power Apps portals
+# Themes overview
 
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
@@ -112,7 +115,7 @@ You can update theme name, description, color, and other typography settings in 
 
 1. Select **Theme** from the components pane.
 
-1. Select the theme from presets that you want to copy, select **...**, and then select **Save as Copy**.
+1. Select the theme from presets that you want to copy, select **...**, and then select **Customize**.
 
     ![Copy preset theme](./media/theme-overview/copy-preset-theme.png "Copy a preset theme")
 
@@ -153,6 +156,15 @@ Sass variables work from top to bottom. You can set the *Header* color to ```lig
 - Changing the CSS for preset themes isn't supported.
 - The recommended theme foreground and background color contrast ratio is 4.5:1, for accessibility.
 
-### Next steps
+## Next steps
 
 [Edit theme CSS](edit-css.md)
+
+### See also
+
+[Power Apps portals Studio](portal-designer-anatomy.md) <br>
+[Create and manage webpages](create-manage-webpages.md) <br>
+[WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

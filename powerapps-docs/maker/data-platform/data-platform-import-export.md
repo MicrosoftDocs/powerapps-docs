@@ -137,4 +137,7 @@ The following data types aren't currently supported.
 - Image
 
     > [!NOTE]
-    > Get Data from Excel and Export Data features are currently not included in the Power Apps Community Plan.
+    > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

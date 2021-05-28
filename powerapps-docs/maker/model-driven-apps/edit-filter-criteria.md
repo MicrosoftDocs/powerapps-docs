@@ -98,7 +98,10 @@ Change the filter criteria for a view.
 
 3.  Select **OK** to save and the filter criteria.  
   
-For more information about constructing filter clauses, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).   
+For more information about constructing filter clauses, see [Create, edit, or save an Advanced Find search](/dynamics365/customer-engagement/basics/save-advanced-find-search).   
  
 ## Next steps
 [Understand views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

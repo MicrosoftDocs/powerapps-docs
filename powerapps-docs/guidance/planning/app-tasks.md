@@ -54,3 +54,6 @@ screens and components:
 
 > [!div class="nextstepaction"]
 > [Next step: Sketching the screens](sketching.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

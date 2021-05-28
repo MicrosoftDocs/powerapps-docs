@@ -116,3 +116,6 @@ This example extracts the hours, minutes, and seconds from an ISO 8601 duration 
 
 Note that although the sub-matches contain numbers they are still in a text string.  Use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

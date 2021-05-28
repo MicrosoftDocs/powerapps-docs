@@ -34,7 +34,7 @@ sections:
 
       - question: How to use rich data types in code components such as Collections?
         answer: |
-          Currently, this feature is not supported. However, there is a [JSON function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-json) in canvas-apps that allows app makers to stringify their data.
+          Currently, this feature is not supported. However, there is a [JSON function](../../maker/canvas-apps/functions/function-json.md) in canvas-apps that allows app makers to stringify their data.
           
           1. Pass the collection into the JSON function.
           2. Pass the string representation of the collection data that is returned from the JSON function into one of the component's string properties.
@@ -68,4 +68,4 @@ additionalContent: |
   ## See also
 
   [Power Apps component framework API reference](reference/index.md)<br/>
-  [Power Apps component framework overview](overview.md) 
+  [Power Apps component framework overview](overview.md)

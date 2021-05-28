@@ -6,7 +6,7 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "sriharibs" # GitHub ID Srihari Srinivasa
+author: "sriharibs-msft" # GitHub ID Srihari Srinivasa
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -26,3 +26,6 @@ All outlook client topics ought to be in powerapps-docs/developer/data-platform/
 
 A replacement for 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook -->
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

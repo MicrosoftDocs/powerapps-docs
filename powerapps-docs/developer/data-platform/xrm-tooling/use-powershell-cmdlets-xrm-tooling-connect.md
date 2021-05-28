@@ -19,8 +19,6 @@ search.app:
 ---
 # Use PowerShell cmdlets for XRM tooling to connect to Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 XRM tooling provides you with the following **Windows PowerShell** cmdlets that you can use to connect to Dataverse and retrieve organizations that the current user has access to: `Get-CrmConnection` and `Get-CrmOrganizations`.  
 
  
@@ -146,3 +144,6 @@ Use the `Get-CrmConnection` cmdlet to connect to a Dataverse instance. The cmdle
 [Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
 [Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://cloudblogs.microsoft.com/dynamics365/no-audience/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm/)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

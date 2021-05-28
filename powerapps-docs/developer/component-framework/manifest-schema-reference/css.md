@@ -1,6 +1,6 @@
 ---
 title: CSS Element | Microsoft Docs
-description: 
+description: CSS describes how code components are to be displayed on UI.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -24,7 +24,7 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 Model-driven apps and canvas apps (public preview)
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
@@ -51,3 +51,6 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

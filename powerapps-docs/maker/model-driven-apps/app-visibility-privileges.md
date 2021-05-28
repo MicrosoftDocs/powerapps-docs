@@ -35,3 +35,5 @@ However, users who have the Environment Maker, System Administrator, or System C
 
 [Manage teams](/power-platform/admin/manage-teams) <br />
 [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

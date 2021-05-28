@@ -1,6 +1,7 @@
 ---
 title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Returns a lookup value that references a record.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,23 +17,26 @@ search.app:
 ---
 # getEntityReference (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEntityReference-description.md](./includes/getEntityReference-description.md)]
 
 ## Syntax
 
 `formContext.data.entity.getEntityReference();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: Lookup object.
 
-**Description**: The returned object has following three attributes:
+**Description**: The returned object has following three parameters:
 
-- **entityType**: String. Logical name of the entity record. For example, "account".
-- **id**: String. GUID value of the entity record.
-- **name**: (Optional) String. Name of the entity record. 
+- **entityType**: String. Logical name of the table record. For example, "account".
+- **id**: String. GUID value of the table record.
+- **name**: (Optional) String. Name of the table record. 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

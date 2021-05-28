@@ -132,3 +132,6 @@ More information: [Use column comparison in queries](../column-comparison.md)
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
  [Use the FilterExpression Class](use-filterexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

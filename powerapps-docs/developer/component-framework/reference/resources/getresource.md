@@ -1,6 +1,6 @@
 ---
 title: getResource | Microsoft Docs
-description: 
+description: Provides access to the methods to get all the information about the resource files defined in the manifest.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -56,3 +56,5 @@ Model-driven apps
 [Resources](../resources.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

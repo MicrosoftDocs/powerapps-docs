@@ -172,3 +172,6 @@ td
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
  [Using Data (XML) Web Resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

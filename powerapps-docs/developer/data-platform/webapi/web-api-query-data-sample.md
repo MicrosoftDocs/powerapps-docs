@@ -2240,3 +2240,6 @@ Saved User Query:
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
 [Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

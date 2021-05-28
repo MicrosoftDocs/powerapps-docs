@@ -69,3 +69,6 @@ This can happen because the label has no translations. The following behavior oc
 ### See also
 [Translate customized table and column text into other languages](export-customized-entity-field-text-translation.md) <br />
 [Import translated table and column text back into an app](import-translated-entity-field-text.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

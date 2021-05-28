@@ -107,5 +107,8 @@ The following table lists the table options that you can enable or disable at an
 
 ### See also
 
-[Create a table](create-edit-entities.md)<br />
+[Create a table](./data-platform-create-entity.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
