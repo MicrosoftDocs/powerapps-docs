@@ -60,7 +60,7 @@ Follow the procedures given below to access the form editor.
 
 ### Access the form editor through the default solution
 
-1.  Sign in to [Power Apps](https://?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
