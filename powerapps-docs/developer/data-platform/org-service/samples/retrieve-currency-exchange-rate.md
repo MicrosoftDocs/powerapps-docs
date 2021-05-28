@@ -47,3 +47,6 @@ The `RetrieveExchangeRateRequest` message retrieves the exchange rate against th
 ### Clean up
 
 Display an option to delete the sample data created  in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

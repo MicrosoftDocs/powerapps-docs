@@ -17,7 +17,7 @@ search.app:
 ---
 # Appendix: App design best practices checklist
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Use the following checklist to evaluate your app design. 
 
@@ -129,3 +129,6 @@ For information on best practices for creating Canvas apps, see [Canvas App Codi
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

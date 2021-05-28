@@ -28,3 +28,6 @@ The object implements the following methods:
 
 These methods control the lifecycle of the code component.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

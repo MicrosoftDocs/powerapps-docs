@@ -89,3 +89,6 @@ Before you can share a personal view, it must be saved.
    > [!div class="mx-imgBorder"] 
    > ![Share the view](media/saved_views_5.png "Select share to share the view")
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -55,3 +55,6 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)   
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)    
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

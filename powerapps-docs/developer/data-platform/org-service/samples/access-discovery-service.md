@@ -62,3 +62,6 @@ In SampleMethods.cs there is a `DataCenter` enumeration for each of the known da
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

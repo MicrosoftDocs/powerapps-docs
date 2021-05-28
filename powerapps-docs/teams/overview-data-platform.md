@@ -1,10 +1,10 @@
 ---
 title: Microsoft Dataverse for Teams overview | Microsoft Docs
-description: Provides an overview of Dataverse for Teams.
+description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
@@ -64,3 +64,6 @@ You can administer and manage Dataverse for Teams environment using the Power Pl
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)<br/>
 [Dataverse for Teams FAQs](data-platform-faqs.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

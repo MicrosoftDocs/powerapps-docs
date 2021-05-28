@@ -47,3 +47,6 @@ search.app:
  ## Next steps
 
  [Create and edit columns](create-edit-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

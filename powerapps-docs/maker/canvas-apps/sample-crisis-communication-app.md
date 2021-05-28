@@ -34,7 +34,7 @@ In this walkthrough, you'll learn how to:
 Estimated time to complete these steps: **20&ndash;25 minutes**.
 
 > [!NOTE]
-> The Crisis Communication sample app is also available for the Power Apps US Government and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government versions are different from the commercial versions. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls)
+> The Crisis Communication sample app is also available for the Power Apps US Government and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government versions are different from the commercial versions. More information: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)
 
 ## Demo: Crisis Communication app
 
@@ -499,7 +499,7 @@ To manage the app you imported, repeat the same steps for the admin app.
 
 At this point, you've successfully imported both the Crisis Communication app and its admin app. You can now start creating the initial content. To start, open the Crisis Communication Admin app.
 
-If you have a GCC environment, you need to enable GCC mode. More information: [How to configure mobile clients for GCC environments](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#configure-mobile-clients).
+If you have a GCC environment, you need to enable GCC mode. More information: [How to configure mobile clients for GCC environments](/power-platform/admin/powerapps-us-government#configure-mobile-clients).
 
 ![The Crisis Communication Admin app](media/sample-crisis-communication-app/09-Admin-App.png)
 
@@ -826,7 +826,7 @@ a trend of such absences over several days. We can publish the report so other p
 
 ![Power BI Publish Report](media/sample-crisis-communication-app/007-PowerBI-Publish-nolines.PNG)
 
-Your report is now published. You can share it with others in your organization. You can also [schedule the report refresh frequency](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh).
+Your report is now published. You can share it with others in your organization. You can also [schedule the report refresh frequency](/power-bi/refresh-scheduled-refresh).
 
 ## Integrate your app into Teams
 
@@ -914,7 +914,7 @@ you might want to pin the crisis management admin app or the Power BI report to 
 
 * **What licenses do I need to run this solution?**
 
-    - The solution in this app uses Office connectors, therefore a seeded Power Apps license from Office is sufficient to run and play the user and admin apps. More information: [Power Platform licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+    - The solution in this app uses Office connectors, therefore a seeded Power Apps license from Office is sufficient to run and play the user and admin apps. More information: [Power Platform licensing overview](/power-platform/admin/pricing-billing-skus)
     - If you want to use the Power BI report (packaged as part of the solution), you'll need a Power BI license. More information: [Power BI pricing](https://powerbi.microsoft.com/pricing/)
 
 * **Where should I go if I have feedback about the solution?**
@@ -945,3 +945,6 @@ you might want to pin the crisis management admin app or the Power BI report to 
 
 - [Formula reference](formula-reference.md)
 - [Controls reference](reference-properties.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

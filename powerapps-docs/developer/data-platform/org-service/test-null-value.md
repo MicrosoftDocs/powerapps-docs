@@ -55,3 +55,6 @@ qba.AddAttributeValue("donotfax", null);
 ### See also  
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
  [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

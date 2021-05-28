@@ -181,3 +181,6 @@ For a comprehensive overview of how forms work, see [Understand data forms](../w
 ## Accessibility guidelines
 ### Screen reader support
 * Consider adding a heading to the form using a **[Label](control-text-box.md)**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

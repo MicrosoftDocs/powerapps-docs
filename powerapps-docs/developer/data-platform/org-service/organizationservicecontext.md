@@ -1,7 +1,7 @@
 ---
 title: "Use OrganizationServiceContext (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The OrganizationServiceContext class lets you track changes, manage identities and relationships, and gives you access to the LINQ provider." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
@@ -201,3 +201,6 @@ To delete an entity record, the organization service context must be tracking th
 [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)<br />
 <xref:Microsoft.Xrm.Sdk.IOrganizationService><br />
 <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

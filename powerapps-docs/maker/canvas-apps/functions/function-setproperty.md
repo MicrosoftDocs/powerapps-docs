@@ -49,3 +49,5 @@ The SetProperty function simulates interactions with input controls as if the us
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

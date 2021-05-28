@@ -6,7 +6,7 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "sriharibs" # GitHub ID
+author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -94,3 +94,6 @@ Console.WriteLine();
 [Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md) 
 <xref:Microsoft.Xrm.Sdk.IOrganizationService>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

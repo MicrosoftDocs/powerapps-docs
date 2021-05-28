@@ -25,7 +25,7 @@ Before you can use OneNote, it must be enabled by your system administrator. Mor
 
 -   [Find your administrator or support person](find-admin.md)  
 
--   [Set up OneNote integration](https://docs.microsoft.com/power-platform/admin/set-up-onenote-integration-in-dynamics-365)  
+-   [Set up OneNote integration](/power-platform/admin/set-up-onenote-integration-in-dynamics-365)  
 
 ## Start a new OneNote notebook
 
@@ -60,3 +60,6 @@ Before you can use OneNote, it must be enabled by your system administrator. Mor
  
     > [!div class="mx-imgBorder"]
     > ![Open an existing OneNote notebook](media/existing_onenote.png "Open an existing OneNote notebook")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -23,7 +23,7 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
  All code examples referenced in this document are found in [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes).  
   
- The technical article [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx) provides a JavaScript library to use the objects and messages in client-sided code.  
+ The technical article [Query Metadata Using JavaScript](/previous-versions/dynamics-crm2011/developer-articles/jj919080(v=crm.6)) provides a JavaScript library to use the objects and messages in client-sided code.  
   
 <a name="BKMK_MetadataStrategies"></a> 
   
@@ -294,7 +294,7 @@ AttributeProperties.PropertyNames.Add("AttributeType");
   
 ### Retrieve labels
   
- Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](https://go.microsoft.com/fwlink/?LinkId=122128). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
+ Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](/previous-versions/windows/embedded/ms912047(v=winembedded.10)). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
   
  The following example defines a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that will limit labels to only those representing the users preferred language.  
   
@@ -464,4 +464,7 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
  [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
  [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
- [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx)
+ [Query Metadata Using JavaScript](/previous-versions/dynamics-crm2011/developer-articles/jj919080(v=crm.6))
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

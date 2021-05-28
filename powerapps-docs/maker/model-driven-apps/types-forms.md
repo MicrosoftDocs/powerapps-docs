@@ -1,7 +1,7 @@
 ---
 title: "Type of model-driven app forms in Power Apps | MicrosoftDocs"
 description: "Understand the different types of forms"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: powerapps
@@ -41,3 +41,6 @@ While each form type has specific needs, when working with forms you use the For
 ## Next steps
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

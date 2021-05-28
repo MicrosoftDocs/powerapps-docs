@@ -38,11 +38,11 @@ The following is required to build and run the CDSWebApiService C# samples :
   
 ## How to run this sample
 
-1. Go to [Web API CDSWebApiService Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/CDSWebApiService), clone or download the samples repository, and extract its contents into a local folder.
+1. Go to the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) GitHub repository, clone or download the samples repository, and extract its contents into a local folder.
 
-1. Open the [CDSWebApiService.sln](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/CDSWebApiService.sln).
+1. Navigate to the repository folder cds/webapi/C#/AsyncParallelOperations, and then open the AsyncParallelOperations.sln file in Visual Studio.
 
-1. Select the **AsyncParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
+1. In **Solution Explorer**, under the **AsyncParallelOperations** project, open the App.config file. This is a shared application configuration file used by all the Web API C# samples. Once you edit this file, you do not have to edit it again unless you're changing the environment or logon used to run the samples.
 
 1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
@@ -186,3 +186,6 @@ namespace PowerApps.Samples
 [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />
 [Create an entity using the Web API](../create-entity-web-api.md)<br />
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

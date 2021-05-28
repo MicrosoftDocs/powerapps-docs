@@ -82,3 +82,6 @@ In the list of connections, find the connection that you want to update or delet
 * To delete the connection, select delete.
 * Select the information icon to see the connection details.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
