@@ -1,7 +1,7 @@
 ---
 title: "IOrganizationService Interface (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the common methods exposed to perform data operations with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about managed code development tools and requirements."
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/03/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps

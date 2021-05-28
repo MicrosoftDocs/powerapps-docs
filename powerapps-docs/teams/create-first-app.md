@@ -4,7 +4,7 @@ description: Learn how to create your first app in Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 05/13/2021
 ms.author: jshum
 ms.reviewer: tapanm-msft

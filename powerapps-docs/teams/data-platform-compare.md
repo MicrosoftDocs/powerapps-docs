@@ -4,7 +4,7 @@ description: Explains the differences between Dataverse for Teams and Dataverse.
 author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 03/19/2021
 ms.author: mmercuri
 ms.reviewer: matp
