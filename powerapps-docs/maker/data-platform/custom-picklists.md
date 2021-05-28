@@ -5,7 +5,7 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2018
 ms.author: lanced
 search.audienceType: 
