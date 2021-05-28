@@ -52,7 +52,7 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
 
 :::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table":::
 
-1. In the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) , within your solution, select **+New**and then select **Virtual Entity Metadata**
+1. In the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) , within your solution, select **+New** and then select **Virtual Entity Metadata**.
 
     :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution":::
 
@@ -69,11 +69,12 @@ There are two issues you may encounter while doing this:
 
     The workaround for this is:
 
-    - Within your solution, select **+Add existing**
-    - Select **Virtual Entity Metadata**
+    1. Within your solution, select **+Add existing**
+    1. Select **Virtual Entity Metadata**
+
         :::image type="content" source="../media/add-virtualentitymetadata-solution.png" alt-text="Add the virtual entity metadata you made to your solution.":::
         
-        Then search for the item you just created and add it.
+    1. Then search for the item you just created and add it.
 
 When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table).
 
@@ -282,7 +283,7 @@ Before using these messages, you may want to use the procedure describe in [View
 Because these are OData actions bound to an table collection, you can follow the pattern documented here: [Use Web API actions> Bound actions> Actions bound to a table collection](../webapi/use-web-api-actions.md#actions-bound-to-a-table-collection). The following are some examples showing the use of the `new_people` virtual table.
 
 If the  Id value is known by the calling system, it should always be included.
-The Entity property passed using the **Target** Parameter must have the appropriate `@odata.type` annotation property set to define the type of entity. If this is not included an error will be returned.
+The entity instance passed using the **Target** Parameter must have the appropriate `@odata.type` annotation property set to define the type of entity. If this is not included an error will be returned.
 
 These calls should always return `204: No Content`.
 
