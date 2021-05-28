@@ -62,30 +62,30 @@ The `PrimaryNameAttribute` property value is the logical name of the column that
 > [!NOTE]
 > Not every table will have a primary name. Some tables are not intended to be displayed in a UI.
 
-## Table images
+## Entity images
 
 The `PrimaryImageAttribute` property value is the logical name of the column that stores the image data for the table record. Each table can have only one image column and the logical name of that column is always `entityimage`.
 
 **Example**: The [Contact table](reference/entities/contact.md) [EntityImage](reference/entities/contact.md#BKMK_EntityImage) column can store a picture of the contact.
 
-For performance reasons, table images are not included in retrieve operations unless explicitly requested.
+For performance reasons, entity images are not included in retrieve operations unless explicitly requested.
 
-Each table that supports table images will have three supporting columns.
+Each table that supports entity images will have three supporting columns.
 
 |SchemaName|Type|Description|
 |--|--|--|
 |`EntityImage_Timestamp` |`BigIntType`|The value represents when the image was last updated and is used to help make sure that the latest version of the image is downloaded and cached on the client.|
-|`EntityImage_URL`|`StringType`|An absolute URL to display the table image in a client.|
+|`EntityImage_URL`|`StringType`|An absolute URL to display the entity image in a client.|
 |`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image.|
 
-More information: [Image columns](image-attributes.md), [Sample: Set and retrieve table images](org-service/samples/set-retrieve-entity-images.md)
+More information: [Image columns](image-attributes.md), [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
 
 > [!NOTE]
 > This is different from the icon displayed for a table in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
 
 ## Types of tables
 
-The capabilities and behavior of tables depends on several table properties. Most of these properties are relatively simple and have descriptive names. Four that require some additional explanation are: *Ownership*, *Activity tables*, *Activityparty table* and *Child tables*.
+The capabilities and behavior of tables depends on several table properties. Most of these properties are relatively simple and have descriptive names. Among four properties that require some additional explanation are: *Ownership*, *Activity tables*, *Activityparty table* and *Child tables*.
 
 ### Table ownership
 

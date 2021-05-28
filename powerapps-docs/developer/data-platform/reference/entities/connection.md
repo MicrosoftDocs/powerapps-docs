@@ -1,7 +1,7 @@
 ---
 title: "Connection table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Connection table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Relationship between two entities.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/connections<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1105,7 +1104,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [socialactivity_connections1](#BKMK_socialactivity_connections1)
 - [connection_related_connection](#BKMK_connection_related_connection)
 - [contact_connections2](#BKMK_contact_connections2)
-- [owner_connections](#BKMK_owner_connections)
 - [lk_connectionbase_createdonbehalfby](#BKMK_lk_connectionbase_createdonbehalfby)
 - [activitypointer_connections1](#BKMK_activitypointer_connections1)
 - [systemuser_connections1](#BKMK_systemuser_connections1)
@@ -1270,10 +1268,6 @@ See connection Table [connection_related_connection](connection.md#BKMK_connecti
 ### <a name="BKMK_contact_connections2"></a> contact_connections2
 
 See contact Table [contact_connections2](contact.md#BKMK_contact_connections2) One-To-Many relationship.
-
-### <a name="BKMK_owner_connections"></a> owner_connections
-
-See owner Table [owner_connections](owner.md#BKMK_owner_connections) One-To-Many relationship.
 
 ### <a name="BKMK_lk_connectionbase_createdonbehalfby"></a> lk_connectionbase_createdonbehalfby
 
