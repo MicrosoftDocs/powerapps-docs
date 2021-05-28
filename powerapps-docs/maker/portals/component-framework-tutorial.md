@@ -21,7 +21,7 @@ contributors:
 In this tutorial, you’ll create a sample component using Power Apps component
 framework. You’ll then package this component to a Dataverse environment, and
 then add the component to model-driven app. Then, you’ll configure Power Apps
-portals to add the component to an basic form, set access for the Web Resource
+portals to add the component to a basic form, set access for the Web Resource
 table, and add the basic form to a web page. Finally, you’ll visit the portals
 web page and interact with the component.
 
@@ -62,7 +62,7 @@ app](../model-driven-apps/build-first-model-driven-app.md) with the form that yo
 
 ![Slider control added to the Budget Amount field in model-driven app form](media/component-framework/model-driven-app.png "Slider control added to the Budget Amount field in model-driven app form")
 
-## Step 4. Add code component to an basic form in portals
+## Step 4. Add code component to a basic form in portals
 
 In this step, you’ll create a new basic form in portals. And then, add the
 component to the created basic form. You can also use an existing basic form

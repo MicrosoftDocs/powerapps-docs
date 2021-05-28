@@ -223,7 +223,7 @@ Advanced form notes are configured in the same way as [basic form notes](#notes-
 
 Enable **Attach File** option for the **Basic Form** to show the attachment option available with the notes.
 
-To enable attachment on an basic form:
+To enable attachment on a basic form:
 
 1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 

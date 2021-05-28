@@ -42,7 +42,7 @@ When creating a new Table Permission record, the first step is to determine the 
 
 ### Global access type
 
-If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the Microsoft Dataverse views that have been defined for that list. Further, if a user attempts to access a record via an basic form that they don't have access to, they'll receive a permission error. For example, [show all car listings to all authenticated users in a car dealership](entity-permissions-studio-walkthrough.md#view-all-car-listings).
+If an Table Permission record with Read permission is granted to a role that has global access type, any contact in that role will have access to all records of the defined table. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any lists, essentially showing all records according to the Microsoft Dataverse views that have been defined for that list. Further, if a user attempts to access a record via a basic form that they don't have access to, they'll receive a permission error. For example, [show all car listings to all authenticated users in a car dealership](entity-permissions-studio-walkthrough.md#view-all-car-listings).
 
 ### Contact access type
 

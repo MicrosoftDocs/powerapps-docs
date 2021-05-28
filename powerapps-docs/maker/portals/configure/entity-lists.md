@@ -296,7 +296,7 @@ The important thing to be aware of is that each record listed in the grid will h
 
 ![Add view details page](../media/add-view-details-page.png "Add view details page")  
 
-**Using an basic form to display details**
+**Using a basic form to display details**
 
 To create a basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
