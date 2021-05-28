@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 04/22/2021 
+  ms.date: 05/27/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Use the Visual Studio Code extension (Preview)
+            url: vs-code-extension.md
           - text: Add chatbot to a page (Preview)
             url: add-chatbot.md
           - text: Table permissions using portals Studio (Preview)
