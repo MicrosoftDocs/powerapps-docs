@@ -48,7 +48,7 @@ If an Table Permission record with Read permission is granted to a role that has
 
 With Contact access type, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's contact record via a defined relationship.
 
-On an list, this access type means that a filter will be added to whatever Microsoft Dataverse views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.) For example, [show, update, and delete owned car listings in a car dealership](entity-permissions-studio-walkthrough.md#view-update-and-delete-owned-car-listings).
+On a list, this access type means that a filter will be added to whatever Microsoft Dataverse views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.) For example, [show, update, and delete owned car listings in a car dealership](entity-permissions-studio-walkthrough.md#view-update-and-delete-owned-car-listings).
 
 Basic forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. More information: [Define basic forms](entity-forms.md).  
 
