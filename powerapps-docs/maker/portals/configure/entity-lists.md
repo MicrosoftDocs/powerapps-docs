@@ -149,7 +149,7 @@ Generally, you can configure the corresponding dialog box for each action, which
 
 **Create action settings**
 
-Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with an basic form that the user can use to create a new record, provided the Create privilege has been granted by Table Permissions.
+Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with a basic form that the user can use to create a new record, provided the Create privilege has been granted by Table Permissions.
 
 | Name               | Description                          |
 |--------------------|--------------------------------------|
@@ -290,7 +290,7 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an basic form or Advanced form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or Advanced form.
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
@@ -298,7 +298,7 @@ The important thing to be aware of is that each record listed in the grid will h
 
 **Using an basic form to display details**
 
-To create an basic form please refer the instructions found on the [basic form](entity-forms.md) page.
+To create a basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the basic form.
 
@@ -306,7 +306,7 @@ The Record ID Parameter Name on Basic Form must match the ID Query String Parame
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
-**Using avanced form to display details**
+**Using advanced form to display details**
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the Advanced form.
 
@@ -396,7 +396,7 @@ The Lookup Set uses the following attributes:
 |**Name**     |**Description**                                                                                                                                           |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Relationship | The name of the related table to the list's selected table type to filter by. Only tables with a one-to-many or many-to-many relationship with the list's selected table type appear as options for this filter type.          |
-| Display Name | Override the label for the filter when the list is displayed. By default, this will be automatically be set to the name of the selected relationship. |
+| Display Name | Override the label for the filter when the list is displayed. By default, this will be automatically set to the name of the selected relationship. |
 | Options      | A collection of possible values to filter by. See below for more details.                                                                                 |
 
 **Lookup Set options**
