@@ -1,5 +1,5 @@
 ---
-title: "Update and delete tables using the Web API (Microsoft Dataverse)| Microsoft Docs"
+title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
 ms.custom: ""
 ms.date: 05/03/2021
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Update and delete tables using the Web API
+# Update and delete table rows using the Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
