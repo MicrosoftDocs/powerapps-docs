@@ -225,7 +225,7 @@ Or:
 
 **Creating the record**
 
-When creating the record, use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` additional parameter which will add the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
+When creating the record, use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` additional parameter which will add the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
 
 ```csharp
 var createRequest = new CreateRequest
