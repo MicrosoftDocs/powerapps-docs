@@ -54,8 +54,8 @@ Follow the procedures given below to access the form editor.
 > [!NOTE]
 > If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
 
-> [!NOTE]
-> The webclient main form is also compatible with the Customer Service Hub and is available to be edited using the app designer.
+<!-- > [!NOTE]
+> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
 
 
 ### Access the form editor through the default solution
