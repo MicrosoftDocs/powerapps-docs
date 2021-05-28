@@ -23,7 +23,6 @@ Reports help you monitor your progress towards your business goals by helping yo
 
 The reporting features needs to be enabled for your model-driven app for you to see the reports area on the left navigation pane. More information, see [Add reporting features to your model-driven app](/maker/model-driven-apps/add-reporting-to-app).
 
-For more information on organizing and creating reports, see [Customize and organize reports](../maker/model-driven-apps/add-reporting-to-app.md).
   
 ## Run a report  
   
