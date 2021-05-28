@@ -34,7 +34,7 @@ The app designer interface has the following areas:
 1. Command bar – Displays available actions:
 
    - **New page**. Create a new page for one or more table forms and views or table dashboards for the app.
-   - **Settings**. Opens the app properties such as name, description, and whether the app can be used offline.
+   - **Settings**. Opens the app properties such as name and description. <!-- and whether the app can be used offline-->
    - **Switch to classic**. Opens the app in the classic app designer.
    - **Save**. Saves the app.
    - **Publish**. Makes the app available to users in the environment.
