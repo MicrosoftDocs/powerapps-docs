@@ -1,7 +1,7 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 05/25/2020
 ms.reviewer: ""
 ms.service: powerapps
