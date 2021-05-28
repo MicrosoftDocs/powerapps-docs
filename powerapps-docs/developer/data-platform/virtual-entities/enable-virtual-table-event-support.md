@@ -75,7 +75,7 @@ There are two issues you may encounter while doing this:
         
         Then search for the item you just created and add it.
 
-When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual entity](#view-the-messages-created-to-support-your-virtual-entity).
+When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table).
 
 ### Enable with code
 
@@ -125,7 +125,7 @@ HTTP/1.1 200 OK
 
 Then, create the virtualentitymetadata record while associating it to the entity entitytype using the MetadataId retrieved in the first step.
 
-Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtualentitymetadata record to the solution as it is created. More information: [HTTP headers](webapi/compose-http-requests-handle-errors#http-headers)
+Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtualentitymetadata record to the solution as it is created. More information: [HTTP headers](/webapi/compose-http-requests-handle-errors#http-headers)
 
 **Request**
 
@@ -161,7 +161,7 @@ HTTP/1.1 204 No Content
 
 #### Using Organization Service
 
-Regardless of whether you use early or late bound types, the first task is to retrieve the MetadataId of the table, which is retrieved in the same way for both cases. In this case for a virtual entity named `new_people` using [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).
+Regardless of whether you use early or late bound types, the first task is to retrieve the MetadataId of the table, which is retrieved in the same way for both cases. In this case for a virtual entity named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).
 
 ```csharp
 var service = new CrmServiceClient(conn);
@@ -225,7 +225,7 @@ Or:
 
 **Creating the record**
 
-When creating the record, use the [CreateRequest Class](dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` additional parameter which will add the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
+When creating the record, use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` additional parameter which will add the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
 
 ```csharp
 var createRequest = new CreateRequest
@@ -348,7 +348,7 @@ When using the Organization Service, you can use either early or late binding ty
 
 #### Early-bound types
 
-This example uses the [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types.
 
 ```csharp
 var service = new CrmServiceClient(conn);
@@ -400,7 +400,7 @@ var deleteRequest = new OnExternalDeletedRequest
 
 #### Late-bound types
 
-This example uses the [CrmServiceClient](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types.
 
 ```csharp
 var service = new CrmServiceClient(conn);
