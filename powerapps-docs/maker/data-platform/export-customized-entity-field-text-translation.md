@@ -52,7 +52,7 @@ After you create customized table and column text in your unmanaged solution, yo
 9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and column text](import-translated-entity-field-text.md).
 
 > [!NOTE]
-> Not all content can be translated using this tool. This includes labels for sitemap areas, groups, and subareas. To translate these labels, [use the **More Titles** property in the sitemap designer](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-site-map-app#add-an-area-to-the-site-map).
+> Not all content can be translated using this tool. This includes labels for sitemap areas, groups, and subareas. To translate these labels, [use the **More Titles** property in the sitemap designer](../model-driven-apps/create-site-map-app.md#add-an-area-to-the-site-map).
 
 ## Community tools
 
