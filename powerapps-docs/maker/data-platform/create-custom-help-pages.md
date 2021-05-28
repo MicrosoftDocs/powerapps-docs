@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 10/02/2020
+ms.date: 05/28/2021
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.suite: ""
@@ -49,13 +49,13 @@ Custom help panes don't provide the following key features that are available wi
 - Help pages per role.
 - Help pages for per-device form factor, such as smartphones. 
 
-## Prerequisites 
-To author custom help panes, you need the following: 
-- Version 9.1.0.10300 or later.
-- Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
-- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
+## Prerequisites
 
-## Enable custom help panes for your environment
+To use the custom help panes feature, you environment needs the following: 
+- Be version 9.1.0.10300 or later.
+- [Must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
+
+### Enable custom help panes for your environment
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
@@ -67,7 +67,14 @@ To author custom help panes, you need the following:
 > [!IMPORTANT]
 > - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
 > - Some environments may require that you also set **Enable Learning Path** to **Yes**.
- 
+
+## Privileges required
+
+- To author help panes, app makers need global create, read, write, delete, append, and append to privileges on the **Help Page** table. By default, System Administrator and System Customizer security roles both have this privilege.
+- To view help panes in an app, users need read privilege on the **Help Page** table. By default, the Help Page Consumer security role has this privilege. By default, the Basic User security role doesn’t have any privileges on the Help Page table.
+
+More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
 - Application 
