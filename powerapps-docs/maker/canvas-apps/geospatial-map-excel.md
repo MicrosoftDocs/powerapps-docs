@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# Use datasource to insert pins
+# Use a data source to insert pins
 
 You can load a table that contains existing data into the map component. The component will then plot each row in your table as a map pin.
 
@@ -108,7 +108,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 ## Save geocoded addresses from map component to data source
 
-To avoid geocoding the same set of addresses every time the map component is launched, makers can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude/longitude instead of geocoding the addresses again. 
+To avoid geocoding the same set of addresses every time the map component is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again. 
 
 To do so, add a button to save the geocoded address back to the original data source with the following formula: 
 
@@ -117,7 +117,7 @@ To do so, add a button to save the geocoded address back to the original data so
 ```
 
 
-![image](https://user-images.githubusercontent.com/66707906/118740084-d3081d80-b7ff-11eb-9295-2855bd7e9a96.png)
+![Screenshot of the app showing the formula in the formula bar.](https://user-images.githubusercontent.com/66707906/118740084-d3081d80-b7ff-11eb-9295-2855bd7e9a96.png)
 
 
 
