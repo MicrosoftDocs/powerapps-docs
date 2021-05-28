@@ -38,7 +38,7 @@ The app designer interface has the following areas:
    - **Switch to classic**. Opens the app in the classic app designer.
    - **Save**. Saves the app.
    - **Publish**. Makes the app available to users in the environment.
-   - **Preview**. Opens a new tab to view the app at run time in a full browser window.
+   - **Play**. Opens a new tab to view the app at run time in a full browser window.
 
 2. App preview – Displays a real-time preview of the form as it will appear to users when published.
 

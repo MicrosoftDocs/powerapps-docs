@@ -49,9 +49,9 @@ Verify the following prerequisites before you start creating an app:
    :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
 1. Select **Group1** and change the title to *Accounts and Contacts*.
 1. Select **Subarea1**, and make the following changes: 
-   - **Title**: Accounts
    - **Content type**: Table
    - **Table**: Account
+   - **Title**: Accounts
 
    > [!NOTE]
    > - A subarea won't appear in the app preview until you add a content type to it.
@@ -63,7 +63,7 @@ Verify the following prerequisites before you start creating an app:
    :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables":::
 1. Select **Save**, and then select **Publish**.
 
-To see how the app runs in a full browser window, on the command bar, select **Preview**.
+To see how the app runs in a full browser window, on the command bar, select **Play**.
 
 ## App navigation
 
