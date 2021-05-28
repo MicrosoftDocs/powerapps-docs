@@ -24,16 +24,12 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Add chatbot to a page (Preview)
+            url: add-chatbot.md
           - text: Table permissions using portals Studio (Preview)
             url: configure/entity-permissions-studio.md
           - text: "Tutorial: Configure table permissions using portals Studio (Preview)"
             url: configure/entity-permissions-studio-walkthrough.md
-          - text: Progressive search
-            url: configure/progressive-search.md
-          - text: Code components (Preview) in portals
-            url: component-framework.md
-          - text: "Tutorial: Code components (Preview) in portals"
-            url: component-framework-tutorial.md
        - linkListType: reference
          links:
           - text: Portals version 9.3.4.x released

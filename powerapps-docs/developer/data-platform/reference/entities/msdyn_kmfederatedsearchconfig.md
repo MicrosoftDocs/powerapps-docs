@@ -1,7 +1,7 @@
 ---
 title: "msdyn_kmfederatedsearchconfig table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_kmfederatedsearchconfig table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_kmfederatedsearchconfigs(*msdyn_kmfederatedsearchconfigid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_kmfederatedsearchconfigs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -49,7 +48,7 @@ search.app:
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|msdyn_kmfederatedsearchconfigs|
-|DisplayCollectionName|Search providers (Preview)|
+|DisplayCollectionName|Search providers|
 |DisplayName|Search provider|
 |EntitySetName|msdyn_kmfederatedsearchconfigs|
 |IsBPFEntity|False|
@@ -68,7 +67,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ConnectionId](#BKMK_ConnectionId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [IsDefault](#BKMK_IsDefault)
 - [msdyn_Description](#BKMK_msdyn_Description)
 - [msdyn_kmfederatedsearchconfigId](#BKMK_msdyn_kmfederatedsearchconfigId)
 - [msdyn_Name](#BKMK_msdyn_Name)
@@ -115,29 +113,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_IsDefault"></a> IsDefault
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Is Default|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|isdefault|
-|RequiredLevel|None|
-|Type|Boolean|
-
-#### IsDefault Choices/Options
-
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
-
-**DefaultValue**: False
-
 
 
 ### <a name="BKMK_msdyn_Description"></a> msdyn_Description
@@ -907,7 +882,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_kmfederatedsearchconfig_modifiedonbehalfby](#BKMK_lk_msdyn_kmfederatedsearchconfig_modifiedonbehalfby)
 - [user_msdyn_kmfederatedsearchconfig](#BKMK_user_msdyn_kmfederatedsearchconfig)
 - [team_msdyn_kmfederatedsearchconfig](#BKMK_team_msdyn_kmfederatedsearchconfig)
-- [owner_msdyn_kmfederatedsearchconfig](#BKMK_owner_msdyn_kmfederatedsearchconfig)
 - [business_unit_msdyn_kmfederatedsearchconfig](#BKMK_business_unit_msdyn_kmfederatedsearchconfig)
 
 
@@ -946,12 +920,6 @@ See systemuser Table [user_msdyn_kmfederatedsearchconfig](systemuser.md#BKMK_use
 **Added by**: System Solution Solution
 
 See team Table [team_msdyn_kmfederatedsearchconfig](team.md#BKMK_team_msdyn_kmfederatedsearchconfig) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_kmfederatedsearchconfig"></a> owner_msdyn_kmfederatedsearchconfig
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_kmfederatedsearchconfig](owner.md#BKMK_owner_msdyn_kmfederatedsearchconfig) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_kmfederatedsearchconfig"></a> business_unit_msdyn_kmfederatedsearchconfig
 

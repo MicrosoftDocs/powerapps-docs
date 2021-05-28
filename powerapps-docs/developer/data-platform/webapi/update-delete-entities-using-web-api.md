@@ -72,7 +72,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate and disassociate tables on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-tables-on-update) for information about associating and disassociating entities on update.  
+>  See [Associate and disassociate tables on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-table-rows-on-update) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
@@ -175,7 +175,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  This can’t be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoanentity).  
+>  This can’t be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoarow).  
   
 <a name="bkmk_upsert"></a>
 
