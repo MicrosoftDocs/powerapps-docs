@@ -44,7 +44,7 @@ There are two steps to enable this:
 
 ## How to enable notification APIs for virtual tables
 
-You can enable notification APIs by manually configuring them in the maker portal or using code.
+You can enable notification APIs by manually configuring them in the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) or using code.
 
 ### Enable manually using the maker portal
 
@@ -52,7 +52,7 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
 
 :::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table":::
 
-1. In the maker portal, within your solution, select **+New**and then select **Virtual Entity Metadata**
+1. In the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) , within your solution, select **+New**and then select **Virtual Entity Metadata**
 
     :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution":::
 
