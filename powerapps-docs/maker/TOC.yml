@@ -1615,9 +1615,9 @@
               href: ./portals/configure/create-web-roles.md
             - name: Assign table permissions
               href: ./portals/configure/assign-entity-permissions.md
-            - name: Configure table permissions using portals Studio (Preview)
+            - name: Configure table permissions using portals Studio
               href: ./portals/configure/entity-permissions-studio.md
-            - name: "Tutorial: Configure table permissions using portals Studio (Preview)"
+            - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
@@ -1721,6 +1721,8 @@
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Power Apps CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
+          - name: Use the Visual Studio Code extension for portals
+            href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
@@ -2062,7 +2064,7 @@
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security.md
+    href: /power-platform/admin/wp-security-cds.md
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
@@ -2172,7 +2174,7 @@
               href: ../teams/inspection-architecture.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
-        - name: Milestones (Preview)
+        - name: Milestones
           href: ../teams/milestones.md
         - name: Perspectives (Preview)
           href: ../teams/perspectives.md
