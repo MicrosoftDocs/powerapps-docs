@@ -57,3 +57,6 @@ To create this collection, set the **OnSelect** property of a **[Button](../cont
 > [!NOTE]
 > Extra spaces don't appear if you display a collection by clicking or tapping **Collections** on the **File** menu. To verify string length, use the **[Len](function-len.md)** function.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

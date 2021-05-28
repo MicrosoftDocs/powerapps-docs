@@ -109,3 +109,6 @@ In addition to text, consider checking color contrast with essential graphical o
 
     > [!NOTE]
   > When a new **Screen** is loaded, screen readers will announce its name.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

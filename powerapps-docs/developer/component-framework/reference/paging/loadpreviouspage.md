@@ -1,6 +1,6 @@
 ---
 title: loadPreviousPage | Microsoft Docs
-description: 
+description: Request the previous page of results to be loaded.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -31,3 +31,5 @@ Model-driven apps
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

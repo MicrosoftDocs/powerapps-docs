@@ -42,3 +42,6 @@ You can link the custom attributes created for the `RecurringAppointmentMaster` 
  [RecurringAppointmentMaster Entity](/reference/entities/recurringappointmentmaster.md)   
  [Sample: Link Custom Attributes between Series and Instances](org-service/samples/link-custom-attributes-between-series-instances.md)   
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

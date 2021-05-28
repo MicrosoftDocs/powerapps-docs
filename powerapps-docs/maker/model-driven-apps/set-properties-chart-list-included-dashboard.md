@@ -80,3 +80,6 @@ You can set the following list properties from the **Set Properties** dialog box
  
 ## Next steps  
  [Create or customize dashboards](create-edit-dashboards.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

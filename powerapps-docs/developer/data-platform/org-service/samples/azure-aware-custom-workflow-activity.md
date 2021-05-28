@@ -39,3 +39,6 @@ When registering this custom workflow activity with Dataverse, you must register
 ## What this sample does
 
 This sample shows how to write a custom workflow activity that can post the data context from the current Dataverse operation to the Azure Service Bus. The posting of the data context is done through the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService.Execute(Microsoft.Xrm.Sdk.EntityReference,Microsoft.Xrm.Sdk.IExecutionContext)> method.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

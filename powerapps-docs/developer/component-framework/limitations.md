@@ -27,3 +27,6 @@ With the release of Power Apps component framework, you can now create your own 
 
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

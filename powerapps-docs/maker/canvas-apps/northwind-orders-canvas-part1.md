@@ -282,3 +282,6 @@ In the next topic, you'll add an [**Edit form**](controls/control-form-detail.md
 
 > [!div class="nextstepaction"]
 > [Create the summary form](northwind-orders-canvas-part2.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

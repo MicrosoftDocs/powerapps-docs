@@ -70,3 +70,6 @@ To remove the map control from the form, select the **Map View** control, and th
 
 ### See also
 [Create and design model-driven app forms](create-design-forms.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

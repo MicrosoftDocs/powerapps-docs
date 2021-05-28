@@ -56,3 +56,6 @@ can help with screen design, interactions, and data architecture.
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying the risks](identifying-risks.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

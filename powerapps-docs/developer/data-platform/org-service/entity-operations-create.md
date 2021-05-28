@@ -1,6 +1,6 @@
 ---
 title: "Create entities using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to create entities using the Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -272,6 +272,10 @@ Another way to create an entity is by using the <xref:Microsoft.Xrm.Sdk.Messages
 
 More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 
+## Create documents in storage partitions
+
+If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records. More information: [Improve performance when accessing documents using storage partitions](azure-storage-partitioning-sdk.md)
+
 
 ### See also
 
@@ -279,3 +283,6 @@ More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

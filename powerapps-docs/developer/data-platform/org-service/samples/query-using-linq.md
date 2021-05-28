@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-These samples show how to query business data using [Language-Integrated Query (LINQ)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
+These samples show how to query business data using [Language-Integrated Query (LINQ)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
 
 ## How to run this sample
 
@@ -50,3 +50,6 @@ Code in the `Demonstrate` region of the `Main`() method performs one or more LIN
 Displays an option to delete the records created in [Setup](#setup).
 
 The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

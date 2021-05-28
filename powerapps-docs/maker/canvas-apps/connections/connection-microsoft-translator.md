@@ -163,3 +163,6 @@ None.
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -23,8 +23,6 @@ search.app:
 ---
 # Use XRM tooling to execute actions in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Dataverse data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Dataverse using XRM tooling.  
   
 ## In This Section
@@ -39,3 +37,6 @@ After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Toolin
 
 [Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

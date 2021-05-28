@@ -1,8 +1,8 @@
 ---
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 11/26/2020
+ms.custom: intro-internal
+ms.date: 05/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -84,13 +84,15 @@ More information:
 
 ## Passing optional parameters with a request
 
-You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are two optional parameters you can pass with messages
+You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are several optional parameters you can pass with messages:
 
 |Parameter|Description|Messages|  
 |-----------------|-----------------|--------------|  
-|`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information: [Dependency tracking for solution components](../dependency-tracking-solution-components.md).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
+|`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information: [Dependency tracking for solution components](/power-platform/alm/dependency-tracking-solution-components).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
 |`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
 |`tag`|A value to include within the `ExecutionContext` `SharedVariables` collection. |Any message that can have a plug-in step registered. More information: [Add a Shared Variable from the Organization Service](#add-a-shared-variable-from-the-organization-service)|
+|`PartitionId`| A unique `String` value used to access non-relational entity data in NoSql tables within a storage partition. Used to improve performance when accessing entity data in Azure heterogenous storage. <p/>More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md) |<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest><br /> <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> |
+|`BypassCustomPluginExecution`|Bypasses custom plug-ins when included in a request sent by someone with the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)|Any request that could include custom plug-ins.|  
   
  The following sample shows how to pass an optional parameter:  
   
@@ -131,7 +133,7 @@ This can also be done using the Web API: [Add a Shared Variable from the Web API
 
 ## Private Messages
 
-Microsoft Dataverse contains some messages which are not intended for 3rd party developers to use. These messages are typically added by Microsoft to enable feature functionality, but can also be added by 3rd party solutions with the Custom API feature. Private messages are indicated by the [SdkMessage.IsPrivate](/powerapps/developer/data-platform/reference/entities/sdkmessage#BKMK_IsPrivate) property.
+Microsoft Dataverse contains some messages which are not intended for 3rd party developers to use. These messages are typically added by Microsoft to enable feature functionality, but can also be added by 3rd party solutions with the Custom API feature. Private messages are indicated by the [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property.
 
 > [!CAUTION]
 > You should not use private messages unless you created them as a Custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
@@ -148,3 +150,6 @@ More information: [Create and use Custom APIs](../custom-api.md)
 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

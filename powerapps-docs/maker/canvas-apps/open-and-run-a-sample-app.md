@@ -4,7 +4,9 @@ description: Step-by-step instructions for creating a canvas app based on a samp
 author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: tapanm
 ms.date: 10/16/2020
 ms.author: wimcoor
@@ -74,3 +76,6 @@ In this quickstart, you created a sample that uses fictitious data. For more hel
 
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

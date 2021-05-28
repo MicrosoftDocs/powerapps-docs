@@ -96,3 +96,6 @@ Quite often, developers create a new Visual Studio project for each plug-in/cust
 
 [Event Framework](../../event-framework.md)<br />
 [Use plug-ins to extend business processes](../../plug-ins.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

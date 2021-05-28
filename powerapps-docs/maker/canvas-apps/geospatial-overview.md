@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 6/12/2020
+ms.date: 1/19/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -16,11 +16,13 @@ search.app:
 
 ---
 
-# Add geospatial components to your app 
+
+# Add geospatial components to your app
+
 
 You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
 
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
+Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
 
 The following prebuilt components can be used for geospatial and mapping scenarios:
 
@@ -71,8 +73,7 @@ The geospatial features require additional terms of use that must be reviewed an
     >
     >Additional licensing requirements might be required to enable this feature.  
 
-    ![Screenshot of the geospatial services toggle switch to On](./media/geospatial/ppac-geo-on.png "Screenshot of the geospatial services toggle switch to On")
-    
+   
     >[!NOTE]
     >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
     >
@@ -89,10 +90,12 @@ The geospatial components require the Common Data Service and Spatial Services c
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
-
 ### Next steps
 
 Start installing the components in your apps:
 
 - Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
 - See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

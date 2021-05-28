@@ -118,3 +118,6 @@ Click and drag the column header to the correct position.
   
 ## Next steps
 [Create or edit views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

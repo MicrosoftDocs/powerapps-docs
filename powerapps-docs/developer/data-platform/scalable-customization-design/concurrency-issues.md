@@ -90,3 +90,6 @@ It is common that when investigating SQL timeout errors, users are also reportin
 ## Next steps
 
 Understand design patterns you can apply (or avoid) to minimize performance issues. More information: [Scalable Customization Design: Transaction design patterns](transaction-design-patterns.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

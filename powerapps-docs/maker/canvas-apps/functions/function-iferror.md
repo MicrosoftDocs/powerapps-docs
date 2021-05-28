@@ -87,7 +87,7 @@ In the simple example described earlier:
 IfError( 1/x, 0 )
 ```
 
-The types of `1/x` and `0` were compatible as both were text strings.  If they're not, the second argument will be coerced to match the type of the first argument.
+The types of `1/x` and `0` were compatible as both were numbers.  If they're not, the second argument will be coerced to match the type of the first argument.
 
 Excel will display **#DIV/0!** when a division by zero occurs.
 
@@ -188,3 +188,6 @@ Using **IsError** will prevent any further processing of the error.
 ### See also
 
 [Formula reference for Power Apps](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

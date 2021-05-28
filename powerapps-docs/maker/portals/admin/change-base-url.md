@@ -1,13 +1,16 @@
 ---
-title: "Change the base URL of a portal | MicrosoftDocs"
-description: "Learn how to change the base URL of a portal."
+title: Change the base URL of a portal
+description: Learn how to change the base URL of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Change the base URL of a portal
@@ -17,7 +20,7 @@ You can change the base URL of a portal after it is provisioned. For example, if
 > [!NOTE]
 > Once you change the base URL of your portal, the older URL will no longer be accessible and it will become available for other customers to use for their portals.
 
-1.	Open [Power Apps Portals admin center](admin-overview.md).
+1.	Open [Power Apps portals admin center](admin-overview.md).
 
 2.	Go to **Portal Actions** > **Change base URL**. 
 
@@ -43,3 +46,6 @@ If changing the base URL of a portal fails, an error is displayed as shown in th
 > ![Error while changing the base URL of the portal](../media/change-base-url-error.png "Error while changing the base URL of the portal")
 
 Typically, these are transient errors and you must select **Change base URL** to retry changing the base URL. If the issue persists, contact Microsoft support.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

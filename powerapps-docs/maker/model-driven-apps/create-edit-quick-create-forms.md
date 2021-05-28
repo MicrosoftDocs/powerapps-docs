@@ -162,3 +162,6 @@ If there is a customization made in a version 9.0 solution to tables where **Ena
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
