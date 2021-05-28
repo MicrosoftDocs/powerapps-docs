@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -50,15 +50,14 @@ To use the WYSIWYG editor:
 
 5.  Select the component to be added.
 
-    > [!div class=mx-imgBorder]
-    > ![components pane](media/components-pane.png "Components pane")  
+    ![components pane](media/components-pane.png "Components pane")  
 
     The selected component is added to the canvas inside the editable element.
 
 6.  To delete a component, select the component on the canvas and then select **Delete** on the command bar at the top of the page.
 
     > [!div class=mx-imgBorder]
-    > ![delete component](media/delete-component.png "Delete component")  
+    ![delete component](media/delete-component.png "Delete component")  
 
 ## Next steps
 

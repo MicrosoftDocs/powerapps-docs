@@ -4,6 +4,7 @@ description: "Microsoft Dataverse displays commands in different ways depending 
 keywords: ""
 ms.date: 04/15/2021
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: article
 ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
 author: Nkrb # GitHub ID
