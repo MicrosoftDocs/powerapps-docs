@@ -26,21 +26,21 @@ This topic will describe some of the most frequently used properties and methods
 
 ## Entity.LogicalName
 
-When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> class instance using the late-bound style you must provide a valid string value to specify what type of entity it is. The `LogicalName` is defined in the entity metadata (table definition).
+When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> class instance using the late-bound style you must provide a valid string value to specify what entity type it is. The `LogicalName` is defined in the entity metadata (table definition).
 
 When using the early-bound style, this value is set by the constructor of the generated class. For example: `var account = new Entity("account");`
 
-In your code, if you later want to retrieve the string value that describes the type of entity, you can use the <xref:Microsoft.Xrm.Sdk.Entity.LogicalName> property. This is useful for the many APIs that require an entity logical name as a parameter.
+In your code, if you later want to retrieve the string value that describes the entity type, you can use the <xref:Microsoft.Xrm.Sdk.Entity.LogicalName> property. This is useful for the many APIs that require an entity logical name as a parameter.
 
 ## Entity.Id
 
-When you instantiate an `Entity` class instance, whether using the late-bound or early-bound style, it doesn't have a unique id set. If you are creating an entity, you shouldn't set it, but allow it to be set by the system when you create (save) it.
+When you instantiate the `Entity` class, whether using the late-bound or early-bound style, it doesn't have a unique id set. If you are creating an entity, you shouldn't set it, but allow it to be set by the system when you create (save) it.
 
-If you are retrieving an entity, it will include the primary key attribute value whether you request it or not. The primary key attribute name is different for each type of entity. Generally, the name of the primary key attribute is the entity `logicalname` + `id`. For an account entity it is `accountid` and for contact it is `contactid`.
+If you are retrieving an entity, it will include the primary key attribute value whether you request it or not. The primary key attribute name is different for each type of entity. Generally, the name of the primary key attribute is the entity `logicalname` + `id`. For an account it is `accountid` and for contact it is `contactid`.
 
 While you can get or set the primary key value using the primary key attribute, you can also use the <xref:Microsoft.Xrm.Sdk.Entity.Id>  property to access the value without having to remember the name of the primary key attribute.
 
-## Early bound access to attributes
+## Early bound access to table columns
 
 If you are using the early-bound style with generated classes, you will find typed properties for each attribute in the class. The properties for the attributes use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> and they can be accessed directly on the `Entity` class instance.
 
@@ -67,17 +67,17 @@ account.Revenue = new Money(new decimal(5000000.00));
 account.AccountCategoryCode = new OptionSetValue(1); //Preferred customer
 ```
 
-## Late bound access to attributes
+## Late bound access to table columns
 
 The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref:Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
 
-### Discover attribute names and data types
+### Discover column names and data types
 
 In the late-bound style, you need to know the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> for the attribute and the data type. The `LogicalName` is the lowercase version of the `SchemaName`. You can discover the `LogicalName` and type for attributes in several ways:
 
-- View the definition of the attribute in the customization tools
-- For system entities, you can review the [Table/entity Reference](../reference/about-entity-reference.md)
-- Use a tool to browse the metadata for entities, such as the Metadata Browser described in [Browse the metadata for your environment](../browse-your-metadata.md)
+- View the definition of the column (attribute) in the web application customization tools
+- For system tables, you can review the [Table/entity Reference](../reference/about-entity-reference.md)
+- Use a tool to browse the table definitions, such as the Metadata Browser described in [Browse the metadata for your environment](../browse-your-metadata.md)
 
 Attribute types can be any of the following:
 
@@ -156,7 +156,7 @@ Any entity attribute value that can be displayed in the UI and is not a string w
 
 - Money values will have a string value with the appropriate currency and precision formatting.
 - Date values will have the formatting set depending on how the system is configured
-- OptionSet values will display the localized label that represents the integer value
+- OptionSet (choices) values will display the localized label that represents the integer value
 
 > [!NOTE]
 > Formatted values only apply to entities that have been retrieved. Once you set the value, a new formatted value is not calculated until you save the entity and retrieve the entity again. The formatted value is generated on the server.
@@ -172,9 +172,9 @@ var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 
 More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
 
-## Entity.RelatedEntities 
+## Entity.RelatedEntities
 
-When you create an entity record you can also define a set of related entity records to create in the same operation. More information: [Create related table rows in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
+When you create an entity record (table row) you can also define a set of related entity records to create in the same operation. More information: [Create related table rows in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
 
 When you retrieve an entity record using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> you can set <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related entity records in the results. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-records)
 
@@ -194,7 +194,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 ```
 
 > [!NOTE]
-> This method cannot be used to convert a generated Entity class instance to another generated class or to <xref:Microsoft.Xrm.Sdk.Entity> . It can only be used to convert an <xref:Microsoft.Xrm.Sdk.Entity> instance to one of the generated classes that inherit from it. If the <xref:Microsoft.Xrm.Sdk.Entity> instance isn't actually an instance of the generated class this message will throw an error.
+> This method cannot be used to convert a generated `Entity` class instance to another generated class or to <xref:Microsoft.Xrm.Sdk.Entity> . It can only be used to convert an <xref:Microsoft.Xrm.Sdk.Entity> instance to one of the generated classes that inherit from it. If the <xref:Microsoft.Xrm.Sdk.Entity> instance isn't actually an instance of the generated class this message will throw an error.
 
 ## Next Steps
 

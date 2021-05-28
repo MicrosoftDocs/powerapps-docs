@@ -28,7 +28,7 @@ Late binding allows you to work with custom tables (entities) or columns (attrib
 
 ## Late-bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to entities and attributes using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to tables and columns (entities and attributes) using their `LogicalName` property values: 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
@@ -75,9 +75,9 @@ Guid accountid = svc.Create(account);
 
 ## Early-bound
 
-Early-bound programming requires that you first generate a set of classes based on the metadata (table definitions) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
+Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
 
-After generating early-bound `Entity` derived classes using the code generation tool you will enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
+After generating early-bound classes using the code generation tool you will enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>
@@ -87,9 +87,9 @@ Simply instantiate the class and let Visual Studio IntelliSense provide the name
 
 The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This will provide you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
 
-There is also an option to extend the code generation tool to change the output. One extension creates enumerations for each optionset (choice) option value. This provides a better experience because you don't have to look up the integer value for each option. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
+There is also an option to extend the code generation tool to change the output. One extension creates enumerations for each optionset (choices) option value. This provides a better experience because you don't have to look up the integer value for each choice. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
 
-Classes are generated using table definitions from a specific environment instance and each instance may have different entities and attributes where these can change over time. You may need to write code to work for entities that are not present when you generate the strongly typed classes.
+Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that are not present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
 > If you are using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> to provide the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods you will use, you must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.EnableProxyTypes> method to enable early bound types.
