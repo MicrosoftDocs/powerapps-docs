@@ -65,7 +65,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 1. In the **Properties** panel for the **View in MR** component, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** component.  
 
-    You can also use the expression editor at the top of the window: type `ViewIn3D1.Src`.
+    You can also use the expression editor at the top of the window: type `ViewIn3D1.Source`.
 
    ![Screenshot showing the Source property with ViewIn3D1.Source in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Source in the expression editor")
 
