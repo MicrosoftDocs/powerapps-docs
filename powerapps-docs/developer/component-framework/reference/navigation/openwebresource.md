@@ -1,6 +1,6 @@
 ---
 title: openWebResource | Microsoft Docs
-description: 
+description: Opens a HTML web resource.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -38,3 +38,5 @@ Model-driven apps
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

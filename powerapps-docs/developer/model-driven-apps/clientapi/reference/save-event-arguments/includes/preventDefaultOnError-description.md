@@ -1,0 +1,1 @@
+Cancels the save operation if the event handler has a script error, returns a rejected promise for an async event handler or the operation times out.

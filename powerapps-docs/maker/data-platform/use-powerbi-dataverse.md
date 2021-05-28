@@ -3,8 +3,8 @@ title: " Use Power BI using Microsoft Dataverse data | MicrosoftDocs"
 description: "Learn how to use Power BI to create reports using Microsoft Dataverse data."
 keywords: PBI
 ms.date: 05/26/2020
-ms.service: crm-online
-ms.custom: 
+ms.service: powerapps
+ms.custom: intro-internal
 ms.topic: article
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
@@ -41,3 +41,6 @@ Power BI is a comprehensive collection of services and  tools that you use to vi
 
 ### See also  
 [Use Power BI](../model-driven-apps/use-power-bi.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

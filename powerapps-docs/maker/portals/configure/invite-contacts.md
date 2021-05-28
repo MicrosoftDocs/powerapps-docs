@@ -1,13 +1,16 @@
 ---
-title: "Invite contacts to your portal  | MicrosoftDocs"
-description: "Instructions to create and configure invitations in a portal."
+title: Invite contacts to your portals
+description: Learn how to create and configure invitations in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/16/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Invite contacts to your portals
@@ -98,3 +101,6 @@ The table below explains the attributes of the **Invitation** page:
 
 [Configure a contact for use on a portal](configure-contacts.md)  
 [Set authentication identity for a portal](set-authentication-identity.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: Formatting | Microsoft Docs
-description: 
+description: Provides properties and methods to work with formatting.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -45,3 +45,5 @@ To learn more about how to implement formatting methods, see [Formatting API com
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

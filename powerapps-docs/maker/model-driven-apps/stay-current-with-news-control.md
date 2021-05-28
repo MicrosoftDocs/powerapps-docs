@@ -138,3 +138,5 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 ### See also 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

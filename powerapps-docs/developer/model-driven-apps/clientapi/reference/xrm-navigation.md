@@ -37,3 +37,6 @@ Provides navigation-related methods.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

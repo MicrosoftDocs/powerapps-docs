@@ -55,3 +55,6 @@ We later discovered additional tasks through talking with other team members:
 
 > [!div class="nextstepaction"]
 > [Next step: Who's doing the work?](who-is-doing-work.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

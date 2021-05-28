@@ -1,11 +1,11 @@
 ---
 title: Improve FetchXML request performance | Microsoft Docs
-description: Learn how developers can improve FetchXML request performance when using Microsoft Dataverse.
+description: "Learn how developers can improve FetchXML request performance when using Microsoft Dataverse."
 author: NHelgren
 manager: annbe
 ms.service: powerapps
 ms.topic: article
-ms.date: 09/28/2020
+ms.date: 03/25/2021
 ms.author: nhelgren
 ms.reviewer: "pehecke"
 search.audienceType: 
@@ -17,20 +17,20 @@ search.app:
 
 # Improve FetchXML request performance
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 You can use the `LateMaterialize` option in FetchXML requests to break up such
 requests into smaller, more usable segments, which can improve the performance of long-running FetchXML requests.
 
 > [!NOTE]
 > Performance improvements depend on the data distribution for each
-> participating entity and linked entity. Late materialization might not always
+> participating table and linked table. Late materialization might not always
 > provide a performance benefit. It's best used if you're experiencing
 > performance issues with your existing fetch request.
 
-Executing a traditional fetch for a given number of the top entity records will pull all
+Executing a traditional fetch for a given number of the top table records will pull all
 the columns in the select list that meet the filter criteria. Let's say you're
-pulling the top 500 records on an entity that has 100 columns and 100,000 rows
+pulling the top 500 records on a table that has 100 columns and 100,000 rows
 that meet the filter criteria. This request can cause issues in two ways:
 
 - The 99,500 rows will pull all columns, even though you only need to populate
@@ -52,11 +52,11 @@ excluded.
 
 This is most beneficial when:
 
-- The entity you're querying has one or more links to other entities for column data.
+- The table you're querying has one or more links to other tables for column data.
 
-- The entity contains many columns.
+- The table contains many columns.
 
-- The entity contains logical attributes.
+- The table contains logical columns.
 
 ## Syntax
 
@@ -117,3 +117,6 @@ This is most beneficial when:
 ### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

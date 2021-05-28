@@ -1,5 +1,6 @@
 ---
 title: "init | MicrosoftDocs"
+description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -46,3 +47,6 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

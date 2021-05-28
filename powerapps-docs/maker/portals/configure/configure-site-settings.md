@@ -1,13 +1,16 @@
 ---
-title: "Configure site settings for a portal | MicrosoftDocs"
-description: "Instructions to add and configure site settings for a portal and global settings for all portals in your organization."
+title: Configure site settings for portals
+description: Learnhow to add and configure site settings for a portal and global settings for all portals in your organization.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2019
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Configure site settings for portals
@@ -76,8 +79,8 @@ For site settings related to various portal features, see:
 - [Search within file attachment content](search-file-attachment.md)
 - [Behavior and format of the date and time field](behavior-format-date-time-field.md)
 - [Add geolocation](add-geolocation.md)
-- [Implementing General Data Protection Regulations](https://docs.microsoft.com/dynamics365/customer-engagement/portals/implement-gdpr)
-- [Enable header and footer output caching](https://docs.microsoft.com/dynamics365/customer-engagement/portals/enable-header-footer-output-caching)
+- [Implementing General Data Protection Regulations](implement-gdpr.md)
+- [Enable header and footer output caching](enable-header-footer-output-caching.md)
 
 ## Manage global portal settings
 
@@ -103,3 +106,6 @@ For site settings related to various portal features, see:
 > Bing Maps integration is not supported in the German Sovereign Cloud. If you try to create the BinMap/Key or Adxstudio/ProductivityPack/BingMap/Key setting in this environment, an error message will be displayed.
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

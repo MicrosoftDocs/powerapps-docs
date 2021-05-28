@@ -1,13 +1,17 @@
 ---
-title: "Configure the Azure Active Directory B2C identity provider for Power Apps portals. | MicrosoftDocs"
+title: Configure the Azure Active Directory B2C provider (Preview)
 description: "Learn how to configure the Azure Active Directory B2C identity provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the Azure Active Directory B2C provider (Preview)
@@ -68,7 +72,7 @@ In this step, you select an existing Azure AD B2C tenant or create a new one.
 Select this option if you already have an existing Azure AD B2C tenant. Other details such as the initial domain name, country/region, and location will be automatically updated.
 
 > [!NOTE]
-> Ensure that the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring Azure AD B2C authentication. For information about adding different types of user accounts to an Azure AD B2C tenant, go to [Overview of user accounts in Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/user-overview).
+> Ensure that the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring Azure AD B2C authentication. For information about adding different types of user accounts to an Azure AD B2C tenant, go to [Overview of user accounts in Azure Active Directory B2C](/azure/active-directory-b2c/user-overview).
 
 ![Select an existing Azure AD B2C tenant](media/authentication/b2c-tenant-select.png "Select an existing Azure AD B2C tenant")
 
@@ -79,12 +83,15 @@ Select **Next** to continue.
 Select this option to create a new Azure AD B2C tenant.
 
 > [!NOTE]
-> Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
+> - Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
+> - Ensure the Azure subscription has the **Microsoft.AzureActiveDirectory** resource provider registered. Otherwise, creating the new Azure AD B2C tenant will fail with this error:
+> <br> `Error occurred while creating Azure AD B2C tenant. The subscription is not registered to use namespace 'Microsoft.AzureActiveDirectory'. See https://aka.ms/rps-not-found for how to register subscriptions.` More information: [Resolve errors for resource provider registration in Azure](/azure/azure-resource-manager/templates/error-register-resource-provider)
 
 ![Create a new Azure AD B2C tenant](media/authentication/new-b2c-tenant.png "Create a new Azure AD B2C tenant")
 <!--markdownlint-disable MD036-->
 **To create a new Azure AD B2C tenant**
 <!--markdownlint-enable MD036-->
+
 1. Select the Azure AD tenant or directory.
 
 1. Select a subscription for the tenant, or&mdash;if you want to create a new subscription from the Azure portal&mdash;select **Add subscription**.
@@ -135,7 +142,7 @@ In this step, you register your portal as an application with Azure AD. You can 
 
 ## Step 4. Configure user flows
 
-In this step, you configure the **Sign up and sign in** and **Password reset** user flows. The **Sign up and sign in** user flow enables a user to create an account or sign in to their account. The **Password reset** flow enables a user to choose a new password after email verification. More information: [User flow and policy in Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-overview#user-flow-versions)
+In this step, you configure the **Sign up and sign in** and **Password reset** user flows. The **Sign up and sign in** user flow enables a user to create an account or sign in to their account. The **Password reset** flow enables a user to choose a new password after email verification. More information: [User flow and policy in Azure AD B2C](/azure/active-directory-b2c/user-flow-overview#user-flow-versions)
 
 ![Configure user flows](media/authentication/b2c-user-flows.png "Configure user flows")
 
@@ -165,3 +172,6 @@ To delete the configuration, select **Delete** for the **Azure Active Directory 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

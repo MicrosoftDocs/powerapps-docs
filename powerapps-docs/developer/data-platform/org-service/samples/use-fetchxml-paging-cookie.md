@@ -22,7 +22,7 @@ search.app:
 <!-- This could be greatly simplified IMHO 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-fetchxml-paging-cookie
 -->
-This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the [IOrganizationService. RetrieveMultiple](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseFetchXMLWithPaging).
+This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the [IOrganizationService. RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseFetchXMLWithPaging).
 
 ## How to run this sample
 
@@ -49,3 +49,6 @@ The `fetchXml` creates the FetchXML string for retrieving all child accounts to 
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

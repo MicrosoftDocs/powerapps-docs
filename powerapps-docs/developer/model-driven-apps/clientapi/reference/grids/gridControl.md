@@ -1,6 +1,7 @@
 ---
 title: "GridControl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the GridControl method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -59,3 +60,6 @@ Along with the methods mentioned above, subgrid also have the following methods:
 [Grids and subgrids in model-driven apps](../grids.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

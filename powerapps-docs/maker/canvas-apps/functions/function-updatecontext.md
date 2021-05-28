@@ -96,3 +96,6 @@ Every context variable is scoped to a screen. If you want to define a context va
    
 [Another example](../add-screen-context-variables.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

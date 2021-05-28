@@ -16,6 +16,8 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 If you are a Power Apps component framework Private Preview participant for model-driven apps and have already built code components, you need to make some minor updates to make it compatible with the new ALM-centric project structures. 
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 A few changes are required to use the new Power Apps CLI tooling with your existing Power Apps component framework code components.
 
 > [!NOTE]
@@ -40,7 +42,7 @@ But there are a couple of important semantic changes:
 1. The `code` resource entry must now point to the precompiled source file of the code component. The file name defaults to **index.ts**.
 
    For example, if your component source is implemented in a file called `MyControl.ts`, then the `code` entry in `ControlManifest.Input.xml` must point to that file. The `code` file must also be a valid TypeScript file. This is in contrast to legacy manifest files that specified the compiled JS output file in the `code` entry.
-2. The `path` attribute of the resource element like `code` or `css` now refers to the local path to the file on disk. For example:
+2. The `path` parameter of the resource element like `code` or `css` now refers to the local path to the file on disk. For example:
 
     ```XML
    <resources>
@@ -48,7 +50,7 @@ But there are a couple of important semantic changes:
     </resources>
     ```
 
-The `path` attribute above indicates that the `YourControlName.css` file is located in the `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
+The `path` parameter above indicates that the `YourControlName.css` file is located in the `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
 
 Update the ControlManifest.Input.xml files as follows:
 
@@ -143,3 +145,6 @@ To use the new typing file:
 [Limitations of Power Apps component framework](limitations.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

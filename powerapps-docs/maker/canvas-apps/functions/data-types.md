@@ -177,11 +177,11 @@ If you need the Unix time in a **Date** value for further calculations or displa
 
 ### SQL Server
 
-SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
 
 Canvas apps use the included time-zone information in **Datetimeoffset** fields when converting a value to the app's internal UTC representation. The apps always use UTC as the time zone (zero time zone offset) when they write data.
 
-Canvas apps read and write values of the [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) data type in SQL Server as text strings in the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). For example, you must parse this string format and use the [**Time**](function-date-time.md) function to convert the text string **"PT2H1M39S"** to a **Time** value:
+Canvas apps read and write values of the [**Time**](/sql/t-sql/data-types/time-transact-sql) data type in SQL Server as text strings in the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). For example, you must parse this string format and use the [**Time**](function-date-time.md) function to convert the text string **"PT2H1M39S"** to a **Time** value:
 
 ```powerapps-dot
 With( 
@@ -225,3 +225,6 @@ In addition, two-option values can also behave as boolean values. For example, a
 You can also use this equivalent formula:
 
 `If( ThisItem.Taxable, ...`
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

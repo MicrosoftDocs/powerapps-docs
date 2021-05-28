@@ -19,7 +19,7 @@ search.app:
 
 This article explains how to set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app. System administrators and system customizers can create system reports and dashboards, which can be made available to model-driven app users.  Users need to have the relevant Power BI license and authorization to consume content.  Read more about relevant Power BI licenses at [Power BI pricing](https://powerbi.microsoft.com/en-us/pricing/).
 
-To learn more about Power BI reports and dashboards, see [Create reports and dashboards in Power BI](https://docs.microsoft.com/power-bi/create-reports/).
+To learn more about Power BI reports and dashboards, see [Create reports and dashboards in Power BI](/power-bi/create-reports/).
 
 > [!NOTE]
 > Power BI embedded in a system dashboard or form ignores the Power Platform admin center **Power BI visualization embedding** environment setting. That setting controls whether end users can add embedded Power BI reports to personal views, charts, and dashboards.
@@ -104,3 +104,6 @@ When a solution with a Power BI embedded component will be moved to other enviro
 [Use Power BI](use-power-bi.md) <br />
 [Use Power BI with Microsoft Dataverse](../data-platform/use-powerbi-dataverse.md) <br />
 [Create a Power BI report using the Common Data Service connector](../data-platform/data-platform-powerbi-connector.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
