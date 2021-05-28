@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Dataverse real-time workflows | MicrosoftDocs"
 description: "Microsoft Dataverse real-time workflows"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/27/2020
 ms.reviewer: "matp"
 ms.service: powerapps

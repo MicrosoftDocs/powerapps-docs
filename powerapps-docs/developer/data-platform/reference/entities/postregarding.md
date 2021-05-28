@@ -240,7 +240,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_post_PostRegardings"></a> post_PostRegardings
 
-Same as post table [post_PostRegardings](post.md#BKMK_post_PostRegardings) Many-To-One relationship.
+Same as post table [post_PostRegardings](post.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -274,51 +274,51 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_task_PostRegardings"></a> task_PostRegardings
 
-See task Table [task_PostRegardings](task.md#BKMK_task_PostRegardings) One-To-Many relationship.
+See task Table [task_PostRegardings](task.md) One-To-Many relationship.
 
 ### <a name="BKMK_appointment_PostRegardings"></a> appointment_PostRegardings
 
-See appointment Table [appointment_PostRegardings](appointment.md#BKMK_appointment_PostRegardings) One-To-Many relationship.
+See appointment Table [appointment_PostRegardings](appointment.md) One-To-Many relationship.
 
 ### <a name="BKMK_phonecall_PostRegardings"></a> phonecall_PostRegardings
 
-See phonecall Table [phonecall_PostRegardings](phonecall.md#BKMK_phonecall_PostRegardings) One-To-Many relationship.
+See phonecall Table [phonecall_PostRegardings](phonecall.md) One-To-Many relationship.
 
 ### <a name="BKMK_recurringappointmentmaster_PostRegardings"></a> recurringappointmentmaster_PostRegardings
 
-See recurringappointmentmaster Table [recurringappointmentmaster_PostRegardings](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_PostRegardings) One-To-Many relationship.
+See recurringappointmentmaster Table [recurringappointmentmaster_PostRegardings](recurringappointmentmaster.md) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_PostRegardings"></a> knowledgearticle_PostRegardings
 
-See knowledgearticle Table [knowledgearticle_PostRegardings](knowledgearticle.md#BKMK_knowledgearticle_PostRegardings) One-To-Many relationship.
+See knowledgearticle Table [knowledgearticle_PostRegardings](knowledgearticle.md) One-To-Many relationship.
 
 ### <a name="BKMK_processsession_PostRegardings"></a> processsession_PostRegardings
 
-See processsession Table [processsession_PostRegardings](processsession.md#BKMK_processsession_PostRegardings) One-To-Many relationship.
+See processsession Table [processsession_PostRegardings](processsession.md) One-To-Many relationship.
 
 ### <a name="BKMK_account_PostRegardings"></a> account_PostRegardings
 
-See account Table [account_PostRegardings](account.md#BKMK_account_PostRegardings) One-To-Many relationship.
+See account Table [account_PostRegardings](account.md) One-To-Many relationship.
 
 ### <a name="BKMK_systemuser_PostRegardings"></a> systemuser_PostRegardings
 
-See systemuser Table [systemuser_PostRegardings](systemuser.md#BKMK_systemuser_PostRegardings) One-To-Many relationship.
+See systemuser Table [systemuser_PostRegardings](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_PostRegarding"></a> business_unit_PostRegarding
 
-See businessunit Table [business_unit_PostRegarding](businessunit.md#BKMK_business_unit_PostRegarding) One-To-Many relationship.
+See businessunit Table [business_unit_PostRegarding](businessunit.md) One-To-Many relationship.
 
 ### <a name="BKMK_contact_PostRegardings"></a> contact_PostRegardings
 
-See contact Table [contact_PostRegardings](contact.md#BKMK_contact_PostRegardings) One-To-Many relationship.
+See contact Table [contact_PostRegardings](contact.md) One-To-Many relationship.
 
 ### <a name="BKMK_team_PostRegardings"></a> team_PostRegardings
 
-See team Table [team_PostRegardings](team.md#BKMK_team_PostRegardings) One-To-Many relationship.
+See team Table [team_PostRegardings](team.md) One-To-Many relationship.
 
 ### <a name="BKMK_queue_PostRegardings"></a> queue_PostRegardings
 
-See queue Table [queue_PostRegardings](queue.md#BKMK_queue_PostRegardings) One-To-Many relationship.
+See queue Table [queue_PostRegardings](queue.md) One-To-Many relationship.
 
 ### See also
 

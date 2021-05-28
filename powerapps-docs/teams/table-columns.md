@@ -26,6 +26,9 @@ For more information about the columns available, see these Dataverse articles:
 
 ## Create a column
 
+Watch this video to learn how to create columns in Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7js]
+
 1. On the **Build** tab, select **See all**, and then expand **Tables**. 
 2. Select the table you want to add a column to, and then select **Add column** on the command bar.
     > [!div class="mx-imgBorder"] 

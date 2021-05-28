@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/dev-community-plan.md",
+      "redirect_url": "developer-plan",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/user/powerapps-mobile-troubleshoot.md",
       "redirect_url": "../mobile/powerapps-mobile-troubleshoot",
       "redirect_document_id": "false"
