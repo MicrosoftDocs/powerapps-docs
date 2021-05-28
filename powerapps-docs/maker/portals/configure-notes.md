@@ -225,7 +225,7 @@ Enable **Attach File** option for the **Basic Form** to show the attachment opti
 
 To enable attachment on a basic form:
 
-1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
+1. Open the [Portal Management](configure/configure-portal.md) app.
 
 1. Select **Basic Forms** under **Content** from left pane:
 

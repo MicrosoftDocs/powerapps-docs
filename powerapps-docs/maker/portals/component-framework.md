@@ -201,7 +201,7 @@ users can see the code component on the web page with the basic form.
 To configure Read access on Web Resource table:
 
 1.  Open [Portal
-    Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal)
+    Management](configure/configure-portal.md)
     app.
 
 2.  On the left-pane, select **Table Permission**.

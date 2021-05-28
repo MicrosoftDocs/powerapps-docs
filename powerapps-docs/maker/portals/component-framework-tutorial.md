@@ -162,7 +162,7 @@ instead.
 ## Step 6. Create a web page in portals with the basic form
 
 1.  Open your portal in [Power Apps portals
-    Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy).
+    Studio](portal-designer-anatomy.md).
 
 2.  On the top-left corner, select **New page** drop-down menu.
 
