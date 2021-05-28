@@ -1,7 +1,7 @@
 ---
 title: "Calendar table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Calendar table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -31,7 +31,6 @@ Calendar used by the scheduling system to define when an appointment or activity
 |Delete|DELETE [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |ExpandCalendar|<xref href="Microsoft.Dynamics.CRM.ExpandCalendar?text=ExpandCalendar Function" />|<xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/calendars<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -531,8 +530,6 @@ Listed by **SchemaName**.
 - [BusinessUnit_Calendar](#BKMK_BusinessUnit_Calendar)
 - [slabase_businesshoursid](#BKMK_slabase_businesshoursid)
 - [calendar_organization](#BKMK_calendar_organization)
-- [inner_calendar_calendar_rules](#BKMK_inner_calendar_calendar_rules)
-- [calendar_calendar_rules](#BKMK_calendar_calendar_rules)
 - [calendar_slaitem](#BKMK_calendar_slaitem)
 
 
@@ -654,36 +651,6 @@ Same as organization table [calendar_organization](organization.md#BKMK_calendar
 |ReferencedEntityNavigationPropertyName|calendar_organization|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_inner_calendar_calendar_rules"></a> inner_calendar_calendar_rules
-
-Same as calendarrule table [inner_calendar_calendar_rules](calendarrule.md#BKMK_inner_calendar_calendar_rules) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|calendarrule|
-|ReferencingAttribute|innercalendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|inner_calendar_calendar_rules|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_calendar_calendar_rules"></a> calendar_calendar_rules
-
-Same as calendarrule table [calendar_calendar_rules](calendarrule.md#BKMK_calendar_calendar_rules) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|calendarrule|
-|ReferencingAttribute|calendarid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|calendar_calendar_rules|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem

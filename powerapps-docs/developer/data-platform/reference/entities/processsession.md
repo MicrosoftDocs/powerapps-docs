@@ -1,7 +1,7 @@
 ---
 title: "ProcessSession table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ProcessSession table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Information that is generated when a dialog is run. Every time that you run a di
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processsessions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -360,7 +359,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,annotation,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,bot,botcomponent,businessunit,businessunitnewsarticle,canvasappextendedmetadata,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,connection,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,email,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,goal,goalrollupquery,holidaywrapper,internalcatalogassignment,kbarticle,kbarticlecomment,kbarticletemplate,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_dataflow,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_kmfederatedsearchconfig,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgesearchinsight,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,newprocess,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,position,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshiprole,report,revokeinheritedaccessrecordstracker,rollupfield,routingrule,routingruleitem,serviceplan,settingdefinition,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,translationprocess,usermapping,usermobileofflineprofilemembership,workflowbinary|
+|Targets|account,activityfileattachment,annotation,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appnotification,appointment,appsetting,appusersetting,bot,botcomponent,businessunit,businessunitnewsarticle,canvasappextendedmetadata,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,connection,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,email,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,flowmachine,flowmachinegroup,goal,goalrollupquery,holidaywrapper,internalcatalogassignment,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,managedidentity,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_dataflow,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_kalanguagesetting,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pminferredtask,msdyn_pmrecording,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,newprocess,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,position,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshiprole,report,revokeinheritedaccessrecordstracker,rollupfield,routingrule,routingruleitem,serviceplan,settingdefinition,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,translationprocess,usermapping,usermobileofflineprofilemembership,workflowbinary|
 |Type|Lookup|
 
 
@@ -1098,7 +1097,6 @@ Listed by **SchemaName**.
 - [lk_processsession_nextlinkedsessionid](#BKMK_lk_processsession_nextlinkedsessionid)
 - [lk_processsession_originatingsessionid](#BKMK_lk_processsession_originatingsessionid)
 - [processsession_connections2](#BKMK_processsession_connections2)
-- [processsession_PostRegardings](#BKMK_processsession_PostRegardings)
 - [ProcessSession_SyncErrors](#BKMK_ProcessSession_SyncErrors)
 - [processsession_connections1](#BKMK_processsession_connections1)
 - [processsession_PostFollows](#BKMK_processsession_PostFollows)
@@ -1194,21 +1192,6 @@ Same as connection table [processsession_connections2](connection.md#BKMK_proces
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processsession_PostRegardings"></a> processsession_PostRegardings
-
-Same as postregarding table [processsession_PostRegardings](postregarding.md#BKMK_processsession_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processsession_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_ProcessSession_SyncErrors"></a> ProcessSession_SyncErrors
 
 Same as syncerror table [ProcessSession_SyncErrors](syncerror.md#BKMK_ProcessSession_SyncErrors) Many-To-One relationship.
@@ -1298,7 +1281,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Connection_ProcessSessions](#BKMK_Connection_ProcessSessions)
 - [lk_processsession_executedby](#BKMK_lk_processsession_executedby)
 - [team_processsession](#BKMK_team_processsession)
-- [owner_processsessions](#BKMK_owner_processsessions)
 - [metric_ProcessSessions](#BKMK_metric_ProcessSessions)
 - [ExpiredProcess_ProcessSessions](#BKMK_ExpiredProcess_ProcessSessions)
 - [KbArticle_ProcessSessions](#BKMK_KbArticle_ProcessSessions)
@@ -1331,12 +1313,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [datalakeworkspace_ProcessSession](#BKMK_datalakeworkspace_ProcessSession)
 - [datalakeworkspacepermission_ProcessSession](#BKMK_datalakeworkspacepermission_ProcessSession)
 - [msdyn_dataflow_ProcessSession](#BKMK_msdyn_dataflow_ProcessSession)
-- [systemuserauthorizationchangetracker_ProcessSession](#BKMK_systemuserauthorizationchangetracker_ProcessSession)
 - [serviceplan_ProcessSession](#BKMK_serviceplan_ProcessSession)
 - [applicationuser_ProcessSession](#BKMK_applicationuser_ProcessSession)
 - [connector_ProcessSession](#BKMK_connector_ProcessSession)
 - [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
 - [environmentvariablevalue_ProcessSession](#BKMK_environmentvariablevalue_ProcessSession)
+- [flowmachine_ProcessSession](#BKMK_flowmachine_ProcessSession)
+- [flowmachinegroup_ProcessSession](#BKMK_flowmachinegroup_ProcessSession)
 - [processstageparameter_ProcessSession](#BKMK_processstageparameter_ProcessSession)
 - [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
@@ -1346,6 +1329,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [bot_ProcessSession](#BKMK_bot_ProcessSession)
 - [botcomponent_ProcessSession](#BKMK_botcomponent_ProcessSession)
 - [Territory_ProcessSessions](#BKMK_Territory_ProcessSessions)
+- [activityfileattachment_ProcessSession](#BKMK_activityfileattachment_ProcessSession)
 - [msdyn_serviceconfiguration_ProcessSession](#BKMK_msdyn_serviceconfiguration_ProcessSession)
 - [msdyn_slakpi_ProcessSession](#BKMK_msdyn_slakpi_ProcessSession)
 - [msdyn_federatedarticle_ProcessSession](#BKMK_msdyn_federatedarticle_ProcessSession)
@@ -1354,16 +1338,21 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgearticleimage_ProcessSession](#BKMK_msdyn_knowledgearticleimage_ProcessSession)
 - [msdyn_knowledgeinteractioninsight_ProcessSession](#BKMK_msdyn_knowledgeinteractioninsight_ProcessSession)
 - [msdyn_knowledgesearchinsight_ProcessSession](#BKMK_msdyn_knowledgesearchinsight_ProcessSession)
+- [msdyn_kalanguagesetting_ProcessSession](#BKMK_msdyn_kalanguagesetting_ProcessSession)
+- [msdyn_kmpersonalizationsetting_ProcessSession](#BKMK_msdyn_kmpersonalizationsetting_ProcessSession)
 - [msdyn_knowledgearticletemplate_ProcessSession](#BKMK_msdyn_knowledgearticletemplate_ProcessSession)
+- [msdyn_knowledgepersonalfilter_ProcessSession](#BKMK_msdyn_knowledgepersonalfilter_ProcessSession)
+- [msdyn_knowledgesearchfilter_ProcessSession](#BKMK_msdyn_knowledgesearchfilter_ProcessSession)
+- [keyvaultreference_ProcessSession](#BKMK_keyvaultreference_ProcessSession)
+- [managedidentity_ProcessSession](#BKMK_managedidentity_ProcessSession)
 - [catalog_ProcessSession](#BKMK_catalog_ProcessSession)
 - [catalogassignment_ProcessSession](#BKMK_catalogassignment_ProcessSession)
 - [customapi_ProcessSession](#BKMK_customapi_ProcessSession)
 - [customapirequestparameter_ProcessSession](#BKMK_customapirequestparameter_ProcessSession)
 - [customapiresponseproperty_ProcessSession](#BKMK_customapiresponseproperty_ProcessSession)
-- [teammobileofflineprofilemembership_ProcessSession](#BKMK_teammobileofflineprofilemembership_ProcessSession)
-- [usermobileofflineprofilemembership_ProcessSession](#BKMK_usermobileofflineprofilemembership_ProcessSession)
 - [organizationdatasyncsubscription_ProcessSession](#BKMK_organizationdatasyncsubscription_ProcessSession)
 - [organizationdatasyncsubscriptionentity_ProcessSession](#BKMK_organizationdatasyncsubscriptionentity_ProcessSession)
+- [appnotification_ProcessSession](#BKMK_appnotification_ProcessSession)
 - [msdyn_richtextfile_ProcessSession](#BKMK_msdyn_richtextfile_ProcessSession)
 - [msdyn_aiconfiguration_ProcessSession](#BKMK_msdyn_aiconfiguration_ProcessSession)
 - [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
@@ -1379,6 +1368,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aiodlabel_ProcessSession](#BKMK_msdyn_aiodlabel_ProcessSession)
 - [msdyn_aiodtrainingboundingbox_ProcessSession](#BKMK_msdyn_aiodtrainingboundingbox_ProcessSession)
 - [msdyn_aiodtrainingimage_ProcessSession](#BKMK_msdyn_aiodtrainingimage_ProcessSession)
+- [msdyn_pminferredtask_ProcessSession](#BKMK_msdyn_pminferredtask_ProcessSession)
+- [msdyn_pmrecording_ProcessSession](#BKMK_msdyn_pmrecording_ProcessSession)
 - [msdyn_analysiscomponent_ProcessSession](#BKMK_msdyn_analysiscomponent_ProcessSession)
 - [msdyn_analysisjob_ProcessSession](#BKMK_msdyn_analysisjob_ProcessSession)
 - [msdyn_analysisresult_ProcessSession](#BKMK_msdyn_analysisresult_ProcessSession)
@@ -1544,10 +1535,6 @@ See systemuser Table [lk_processsession_executedby](systemuser.md#BKMK_lk_proces
 
 See team Table [team_processsession](team.md#BKMK_team_processsession) One-To-Many relationship.
 
-### <a name="BKMK_owner_processsessions"></a> owner_processsessions
-
-See owner Table [owner_processsessions](owner.md#BKMK_owner_processsessions) One-To-Many relationship.
-
 ### <a name="BKMK_metric_ProcessSessions"></a> metric_ProcessSessions
 
 See metric Table [metric_ProcessSessions](metric.md#BKMK_metric_ProcessSessions) One-To-Many relationship.
@@ -1700,12 +1687,6 @@ See datalakeworkspacepermission Table [datalakeworkspacepermission_ProcessSessio
 
 See msdyn_dataflow Table [msdyn_dataflow_ProcessSession](msdyn_dataflow.md#BKMK_msdyn_dataflow_ProcessSession) One-To-Many relationship.
 
-### <a name="BKMK_systemuserauthorizationchangetracker_ProcessSession"></a> systemuserauthorizationchangetracker_ProcessSession
-
-**Added by**: AuthorizationCore Solution
-
-See systemuserauthorizationchangetracker Table [systemuserauthorizationchangetracker_ProcessSession](systemuserauthorizationchangetracker.md#BKMK_systemuserauthorizationchangetracker_ProcessSession) One-To-Many relationship.
-
 ### <a name="BKMK_serviceplan_ProcessSession"></a> serviceplan_ProcessSession
 
 **Added by**: License Enforcement Solution
@@ -1735,6 +1716,18 @@ See environmentvariabledefinition Table [environmentvariabledefinition_ProcessSe
 **Added by**: Environment Variables Solution
 
 See environmentvariablevalue Table [environmentvariablevalue_ProcessSession](environmentvariablevalue.md#BKMK_environmentvariablevalue_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_flowmachine_ProcessSession"></a> flowmachine_ProcessSession
+
+**Added by**: Power Automate Extensions core package Solution
+
+See flowmachine Table [flowmachine_ProcessSession](flowmachine.md#BKMK_flowmachine_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_flowmachinegroup_ProcessSession"></a> flowmachinegroup_ProcessSession
+
+**Added by**: Power Automate Extensions core package Solution
+
+See flowmachinegroup Table [flowmachinegroup_ProcessSession](flowmachinegroup.md#BKMK_flowmachinegroup_ProcessSession) One-To-Many relationship.
 
 ### <a name="BKMK_processstageparameter_ProcessSession"></a> processstageparameter_ProcessSession
 
@@ -1790,6 +1783,12 @@ See botcomponent Table [botcomponent_ProcessSession](botcomponent.md#BKMK_botcom
 
 See territory Table [Territory_ProcessSessions](territory.md#BKMK_Territory_ProcessSessions) One-To-Many relationship.
 
+### <a name="BKMK_activityfileattachment_ProcessSession"></a> activityfileattachment_ProcessSession
+
+**Added by**: Activities Patch Solution
+
+See activityfileattachment Table [activityfileattachment_ProcessSession](activityfileattachment.md#BKMK_activityfileattachment_ProcessSession) One-To-Many relationship.
+
 ### <a name="BKMK_msdyn_serviceconfiguration_ProcessSession"></a> msdyn_serviceconfiguration_ProcessSession
 
 **Added by**: Service Level Agreement (SLA) Extension Solution
@@ -1838,11 +1837,47 @@ See msdyn_knowledgeinteractioninsight Table [msdyn_knowledgeinteractioninsight_P
 
 See msdyn_knowledgesearchinsight Table [msdyn_knowledgesearchinsight_ProcessSession](msdyn_knowledgesearchinsight.md#BKMK_msdyn_knowledgesearchinsight_ProcessSession) One-To-Many relationship.
 
+### <a name="BKMK_msdyn_kalanguagesetting_ProcessSession"></a> msdyn_kalanguagesetting_ProcessSession
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_kalanguagesetting Table [msdyn_kalanguagesetting_ProcessSession](msdyn_kalanguagesetting.md#BKMK_msdyn_kalanguagesetting_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_kmpersonalizationsetting_ProcessSession"></a> msdyn_kmpersonalizationsetting_ProcessSession
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_kmpersonalizationsetting Table [msdyn_kmpersonalizationsetting_ProcessSession](msdyn_kmpersonalizationsetting.md#BKMK_msdyn_kmpersonalizationsetting_ProcessSession) One-To-Many relationship.
+
 ### <a name="BKMK_msdyn_knowledgearticletemplate_ProcessSession"></a> msdyn_knowledgearticletemplate_ProcessSession
 
 **Added by**: Knowledge Management Features Solution
 
 See msdyn_knowledgearticletemplate Table [msdyn_knowledgearticletemplate_ProcessSession](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgepersonalfilter_ProcessSession"></a> msdyn_knowledgepersonalfilter_ProcessSession
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_knowledgepersonalfilter Table [msdyn_knowledgepersonalfilter_ProcessSession](msdyn_knowledgepersonalfilter.md#BKMK_msdyn_knowledgepersonalfilter_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_knowledgesearchfilter_ProcessSession"></a> msdyn_knowledgesearchfilter_ProcessSession
+
+**Added by**: Knowledge Management Features Solution
+
+See msdyn_knowledgesearchfilter Table [msdyn_knowledgesearchfilter_ProcessSession](msdyn_knowledgesearchfilter.md#BKMK_msdyn_knowledgesearchfilter_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_keyvaultreference_ProcessSession"></a> keyvaultreference_ProcessSession
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See keyvaultreference Table [keyvaultreference_ProcessSession](keyvaultreference.md#BKMK_keyvaultreference_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_managedidentity_ProcessSession"></a> managedidentity_ProcessSession
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See managedidentity Table [managedidentity_ProcessSession](managedidentity.md#BKMK_managedidentity_ProcessSession) One-To-Many relationship.
 
 ### <a name="BKMK_catalog_ProcessSession"></a> catalog_ProcessSession
 
@@ -1874,18 +1909,6 @@ See customapirequestparameter Table [customapirequestparameter_ProcessSession](c
 
 See customapiresponseproperty Table [customapiresponseproperty_ProcessSession](customapiresponseproperty.md#BKMK_customapiresponseproperty_ProcessSession) One-To-Many relationship.
 
-### <a name="BKMK_teammobileofflineprofilemembership_ProcessSession"></a> teammobileofflineprofilemembership_ProcessSession
-
-**Added by**: MobileOfflineMembership Solution
-
-See teammobileofflineprofilemembership Table [teammobileofflineprofilemembership_ProcessSession](teammobileofflineprofilemembership.md#BKMK_teammobileofflineprofilemembership_ProcessSession) One-To-Many relationship.
-
-### <a name="BKMK_usermobileofflineprofilemembership_ProcessSession"></a> usermobileofflineprofilemembership_ProcessSession
-
-**Added by**: MobileOfflineMembership Solution
-
-See usermobileofflineprofilemembership Table [usermobileofflineprofilemembership_ProcessSession](usermobileofflineprofilemembership.md#BKMK_usermobileofflineprofilemembership_ProcessSession) One-To-Many relationship.
-
 ### <a name="BKMK_organizationdatasyncsubscription_ProcessSession"></a> organizationdatasyncsubscription_ProcessSession
 
 **Added by**: OrganizationDataSyncSolution Solution
@@ -1897,6 +1920,12 @@ See organizationdatasyncsubscription Table [organizationdatasyncsubscription_Pro
 **Added by**: OrganizationDataSyncSolution Solution
 
 See organizationdatasyncsubscriptionentity Table [organizationdatasyncsubscriptionentity_ProcessSession](organizationdatasyncsubscriptionentity.md#BKMK_organizationdatasyncsubscriptionentity_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_appnotification_ProcessSession"></a> appnotification_ProcessSession
+
+**Added by**: AppNotifications Solution
+
+See appnotification Table [appnotification_ProcessSession](appnotification.md#BKMK_appnotification_ProcessSession) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_richtextfile_ProcessSession"></a> msdyn_richtextfile_ProcessSession
 
@@ -1987,6 +2016,18 @@ See msdyn_aiodtrainingboundingbox Table [msdyn_aiodtrainingboundingbox_ProcessSe
 **Added by**: AI Solution default templates Solution
 
 See msdyn_aiodtrainingimage Table [msdyn_aiodtrainingimage_ProcessSession](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_pminferredtask_ProcessSession"></a> msdyn_pminferredtask_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See msdyn_pminferredtask Table [msdyn_pminferredtask_ProcessSession](msdyn_pminferredtask.md#BKMK_msdyn_pminferredtask_ProcessSession) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_pmrecording_ProcessSession"></a> msdyn_pmrecording_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See msdyn_pmrecording Table [msdyn_pmrecording_ProcessSession](msdyn_pmrecording.md#BKMK_msdyn_pmrecording_ProcessSession) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysiscomponent_ProcessSession"></a> msdyn_analysiscomponent_ProcessSession
 

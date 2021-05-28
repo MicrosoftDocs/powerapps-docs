@@ -8,7 +8,7 @@ ms.component: pa-user
 ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: mkaur
-ms.custom: ""
+ms.custom: intro-internal
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 

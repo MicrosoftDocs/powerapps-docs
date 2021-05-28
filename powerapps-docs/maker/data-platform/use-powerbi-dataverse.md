@@ -4,7 +4,7 @@ description: "Learn how to use Power BI to create reports using Microsoft Datave
 keywords: PBI
 ms.date: 05/26/2020
 ms.service: powerapps
-ms.custom: 
+ms.custom: intro-internal
 ms.topic: article
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)

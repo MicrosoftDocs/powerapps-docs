@@ -612,7 +612,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [teammobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_teammobileofflineprofilemembership_SyncErrors) Many-To-One relationship.
+Same as syncerror table [teammobileofflineprofilemembership_SyncErrors](syncerror.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -629,7 +629,7 @@ Same as syncerror table [teammobileofflineprofilemembership_SyncErrors](syncerro
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [teammobileofflineprofilemembership_AsyncOperations](asyncoperation.md#BKMK_teammobileofflineprofilemembership_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [teammobileofflineprofilemembership_AsyncOperations](asyncoperation.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -646,7 +646,7 @@ Same as asyncoperation table [teammobileofflineprofilemembership_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [teammobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [teammobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -663,7 +663,7 @@ Same as mailboxtrackingfolder table [teammobileofflineprofilemembership_MailboxT
 
 **Added by**: System Solution Solution
 
-Same as processsession table [teammobileofflineprofilemembership_ProcessSession](processsession.md#BKMK_teammobileofflineprofilemembership_ProcessSession) Many-To-One relationship.
+Same as processsession table [teammobileofflineprofilemembership_ProcessSession](processsession.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -680,7 +680,7 @@ Same as processsession table [teammobileofflineprofilemembership_ProcessSession]
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [teammobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md#BKMK_teammobileofflineprofilemembership_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [teammobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -697,7 +697,7 @@ Same as bulkdeletefailure table [teammobileofflineprofilemembership_BulkDeleteFa
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -728,43 +728,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_teammobileofflineprofilemembership_createdby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_createdby) One-To-Many relationship.
+See systemuser Table [lk_teammobileofflineprofilemembership_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_teammobileofflineprofilemembership_createdonbehalfby"></a> lk_teammobileofflineprofilemembership_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_teammobileofflineprofilemembership_createdonbehalfby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_teammobileofflineprofilemembership_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_teammobileofflineprofilemembership_modifiedby"></a> lk_teammobileofflineprofilemembership_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_teammobileofflineprofilemembership_modifiedby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_teammobileofflineprofilemembership_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_teammobileofflineprofilemembership_modifiedonbehalfby"></a> lk_teammobileofflineprofilemembership_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_teammobileofflineprofilemembership_modifiedonbehalfby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_teammobileofflineprofilemembership_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_teammobileofflineprofilemembership](organization.md#BKMK_organization_teammobileofflineprofilemembership) One-To-Many relationship.
+See organization Table [organization_teammobileofflineprofilemembership](organization.md) One-To-Many relationship.
 
 ### <a name="BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId
 
 **Added by**: System Solution Solution
 
-See mobileofflineprofile Table [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md#BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId) One-To-Many relationship.
+See mobileofflineprofile Table [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md) One-To-Many relationship.
 
 ### <a name="BKMK_team_teammobileofflineprofilemembership_TeamId"></a> team_teammobileofflineprofilemembership_TeamId
 
 **Added by**: System Solution Solution
 
-See team Table [team_teammobileofflineprofilemembership_TeamId](team.md#BKMK_team_teammobileofflineprofilemembership_TeamId) One-To-Many relationship.
+See team Table [team_teammobileofflineprofilemembership_TeamId](team.md) One-To-Many relationship.
 
 ### See also
 

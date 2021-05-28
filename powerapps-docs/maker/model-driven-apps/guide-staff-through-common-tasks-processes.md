@@ -1,7 +1,7 @@
 ---
 title: "Apply custom business logic with business rules and flows in model-driven apps | MicrosoftDocs"
 description: "Learn about the types of business logic you can use in your app"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/02/2018
 ms.reviewer: ""
 ms.service: powerapps

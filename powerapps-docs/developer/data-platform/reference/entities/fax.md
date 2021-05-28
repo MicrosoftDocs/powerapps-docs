@@ -1,7 +1,7 @@
 ---
 title: "Fax table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Fax table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Activity that tracks call outcome and number of pages for a fax and optionally s
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/faxes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1511,7 +1510,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_fax_modifiedby](#BKMK_lk_fax_modifiedby)
 - [Contact_Faxes](#BKMK_Contact_Faxes)
 - [lk_fax_modifiedonbehalfby](#BKMK_lk_fax_modifiedonbehalfby)
-- [owner_faxes](#BKMK_owner_faxes)
 
 
 ### <a name="BKMK_business_unit_fax_activities"></a> business_unit_fax_activities
@@ -1577,10 +1575,6 @@ See contact Table [Contact_Faxes](contact.md#BKMK_Contact_Faxes) One-To-Many rel
 ### <a name="BKMK_lk_fax_modifiedonbehalfby"></a> lk_fax_modifiedonbehalfby
 
 See systemuser Table [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_faxes"></a> owner_faxes
-
-See owner Table [owner_faxes](owner.md#BKMK_owner_faxes) One-To-Many relationship.
 
 ### See also
 
