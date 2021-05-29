@@ -48,6 +48,21 @@ The following diagram explains the data model used by the Inspection sample app.
 | User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app. There is one record for each user. |
 | User Setting | Team settings are used to store Team, Channel, and Planner preferences while using the application. |
 
+### Architecture Model
+
+The following diagram shows how users interact with systems and data in the Inspection app.
+
+![Inspection sample app architecture model](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
+
+### Connectors
+
+The following connectors are used in the Issue Reporting app:
+
+- **Microsoft Dataverse** - Used to read and write data in Dataverse.
+- **Office 365 Users** - Used to read Microsoft 365 user profile data.
+- **Location** - Used to capture the user's location for Planner tasks.
+- **Microsoft Planner** - Used to create tasks.
+
 ### Collections
 
 The following table lists the collections used by the inspection apps.
