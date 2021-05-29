@@ -976,7 +976,3 @@ The following variables are used in the issue submission screen.
 3. Selecting the **Return to Home** button navigates the user to the “Insights screen” along with clearing the **colDataverseIssueQuestions** and **colDataverseIssueAssignments** collections and sets the **gblRecordTemplate** value to blank.
 
 4. Selecting the **View In Planner** button will navigate to Planner and display the created using the group, plan and task ID’s stored in the **gblPlannerGroupId**, **gblPlannerPlanId** and **locTaskId** variables..
-
- 
-
-#  
