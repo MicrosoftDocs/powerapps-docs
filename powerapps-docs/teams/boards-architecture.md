@@ -293,7 +293,7 @@ This section explains the collections, variables, and execution details used whe
 
 ##### Boards display collections
 
-The following collections are used when the boards screen is dislplayed.
+The following collections are used when the boards screen is displayed.
 
 | **Collection name**               | **Description                                          |
 | --------------------------------- | ------------------------------------------------------ |
