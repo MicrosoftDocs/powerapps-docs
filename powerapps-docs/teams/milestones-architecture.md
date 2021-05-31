@@ -17,7 +17,7 @@ contributors:
 
 # Understand Milestones sample app architecture
 
-In this article, you'll learn about the collections and global variables used by the [Milestones](milestones.md#milestones-app) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Milestones sample app instead, go to [Milestones sample app](milestones.md).
+In this article, you'll learn about the collections and global variables used by the [Milestones](milestones.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Milestones sample app instead, go to [Milestones sample app](milestones.md).
 
 ## Prerequisites
 
@@ -31,12 +31,12 @@ To understand and use information in this article, you'll need to know about dif
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](milestones.md) Milestones sample app.
 
-# Data Model  
+## Data Model  
 
 
 ![Milestones sample app data model](media/milestones-architecture/data-model.png "Milestones sample app data model")
 
-# Architecture model
+## Architecture model
 
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
