@@ -5,14 +5,15 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/27/2021
-ms.author:v-ljoel
+ms.date: 05/31/2021
+ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
   - navjotm
-  - tapanm-msft
 ---
+
+
 
 # Understand Milestones sample app architecture
 
@@ -114,7 +115,7 @@ Milestones app includes the following tables:
 | gblAppStyles                    | Record  | Variable to set the Styling values in the app                |
 | gblProject                      | Record  | Variable to store a project record which is in context       |
 
-## App Onstart
+## App OnStart
 
 This section explains app OnStart collections, variables, and execution details.
 
@@ -178,7 +179,7 @@ Variables used during app OnStart:
 
 ## Loading Screen
 
-This section explains app loading screen collections, variables,a nd execution details.
+This section explains app loading screen collections, variables, and execution details.
 
 ### Navigating to Projects Screen
 
@@ -339,7 +340,7 @@ The following variables are used when a user views or updates the project cover 
     **gblProject** variable.
 
 2.  selectThe gallery **galProjectColors** presents the user with a list of
-    colors based on the Microsoft GTeams theme. This is achieved by filtering the
+    colors based on the Microsoft Teams theme. This is achieved by filtering the
     **colProjectCoverColors** collection based on the Teams theme.
 
 3.  If the selected project has a color defined, that color is denoted with a
@@ -501,7 +502,7 @@ The following variables are use when viewing work items.
     the list of work items for the first project in **galProjects** is displayed
     without the need to select on the project when a user is navigated to the
     Projects Screen for the 1st time. Loading of work items does not happen in
-    subsequent navigations to the Projects Screen by going back from Abouts
+    subsequent navigations to the Projects Screen by going back from About
     Screen or Settings Screen. This is controlled by **locBackNavigation**.
 
 3.  The default sort by column (**locSortWorkItemBy**) is set to **eta**
@@ -1154,7 +1155,7 @@ The following variables are used when a category is created.
 
 This section explains the collections, variables, and execution details used when a category is deleted from the settings screen.
 
-#### Category deletion colletions
+#### Category deletion collections
 
 The following collections are used when deleting a category.
 
