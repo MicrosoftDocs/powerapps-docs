@@ -17,7 +17,8 @@ contributors:
 # Local authentication, registration, and other settings
 
 > [!IMPORTANT]
-> - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+> - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md) for the following reasons:
+> 1. 
 > - Configuring local authentication requires that you use the [Portal Management app](configure-portal.md) to configure the required site settings manually.
 
 The portals feature provides authentication functionality built on the [ASP.NET Identity](https://www.asp.net/identity) API. ASP.NET Identity is in turn built on the [OWIN](https://www.asp.net/aspnet/overview/owin-and-katana) framework, which is also an important component of the authentication system. The services provided include:
