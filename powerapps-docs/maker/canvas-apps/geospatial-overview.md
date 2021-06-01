@@ -73,7 +73,6 @@ The geospatial features require additional terms of use that must be reviewed an
     >
     >Additional licensing requirements might be required to enable this feature.  
 
-   
     >[!NOTE]
     >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
     >
