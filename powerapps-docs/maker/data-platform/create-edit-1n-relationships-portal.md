@@ -114,3 +114,6 @@ Deleting the relationship will delete the lookup column on the related table.
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Edit a column](create-edit-field-portal.md#edit-a-column)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

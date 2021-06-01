@@ -87,3 +87,6 @@ A quick view control on a model-driven app form displays data from a row that is
 
 [Use the Main form and its components](use-main-form-and-components.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

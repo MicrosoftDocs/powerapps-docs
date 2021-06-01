@@ -199,5 +199,8 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
  > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
 
 ### See also
- [Use solutions](use-solution-explorer.md) <br />
+ [Use solutions](./solutions-overview.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

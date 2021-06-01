@@ -5,7 +5,9 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 12/05/2019
 ms.author: tapanm
@@ -85,7 +87,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. At the top of the new screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
-     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Change title bar for view records](./media/get-started-create-from-blank/change-title-bar.png)
 
 1. In the left navigation bar, select **BrowseGallery1**.
 
@@ -174,7 +176,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Near the top of the **ViewScreen**, select the circular-arrow icon.
 
-    ![Add record](./media/get-started-create-from-blank/refresh-icon.png)
+    ![Add record for refresh](./media/get-started-create-from-blank/refresh-icon.png)
 
 1. Set the **OnSelect** property for that icon to this formula:
 
@@ -270,3 +272,6 @@ For more information about these and other functions, see the [formula reference
 - [Share the app](share-app.md) so that other people can run it.
 - Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
 - [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

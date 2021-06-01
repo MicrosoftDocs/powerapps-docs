@@ -5,7 +5,9 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 01/29/2020
 ms.author: tapanm
@@ -31,7 +33,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
     ![New canvas app](./media/get-started-test-drive/new-canvas-app.png)
 
-    This opens [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) in a new tab.
+    This opens [Power Apps Studio](../../powerapps-overview.md#power-apps-for-app-makerscreators) in a new tab.
 
 1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
 
@@ -70,3 +72,6 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 > [!IMPORTANT]
 > Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

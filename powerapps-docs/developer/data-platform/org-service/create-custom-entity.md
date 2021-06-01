@@ -194,3 +194,6 @@ _serviceProxy.Execute(req);
  [Create a custom activity entity](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   
  [Change Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
  [Change Entity Messages](/dynamics365/customer-engagement/developer/modify-messages-entity)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

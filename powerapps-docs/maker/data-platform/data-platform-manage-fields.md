@@ -105,3 +105,6 @@ As you create and modify columns, keep these points in mind:
 ## Privacy notice
 With the Microsoft Power Apps common data model we collect and store custom table and column names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The table and column names that Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service’s standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

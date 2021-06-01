@@ -1,6 +1,7 @@
 ---
 title: "removeOnPreStageChange (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 08/05/2019
+description: Includes description and supported parameters for the removeOnPreStageChange method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -35,3 +36,6 @@ search.app:
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

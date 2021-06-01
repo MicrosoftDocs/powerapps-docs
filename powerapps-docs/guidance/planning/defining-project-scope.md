@@ -77,3 +77,6 @@ appropriate.
 
 > [!div class="nextstepaction"]
 > [Next step: Prioritzing features](prioritizing-features.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

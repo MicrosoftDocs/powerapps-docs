@@ -1,13 +1,17 @@
 ---
-title: "Migrate identity providers to Azure AD B2C. | MicrosoftDocs"
-description: "Learn how to migrate identity providers to Azure AD B2C."
+title: Migrate identity providers to Azure AD B2C
+description: Learn how to migrate identity providers to Azure AD B2C.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Migrate identity providers to Azure AD B2C
@@ -85,3 +89,6 @@ The following field is added in the portal contact record to indicate whether lo
 ### See also
 
 [Configure the Azure AD B2C provider for portals](configure-azure-ad-b2c-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

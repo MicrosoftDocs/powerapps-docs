@@ -75,3 +75,6 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
     ![The same screen showing a data table with a new set of five different decimal values 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
 To generate a single random number instead of a table, use **Set( RandomNumber, Rand() )**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

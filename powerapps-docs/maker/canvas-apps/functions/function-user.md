@@ -49,3 +49,6 @@ The current Power Apps user has the following information:
 | **User().FullName** |                                                   The full name of the current Power Apps user.                                                    |                                               "John Doe"                                                |
 |  **User().Image**   | The image URL for the current Power Apps user.  Set the **Image** property of the **Image** control to this value to display the image in the app. | "blob:1234...5678"<br><br>With **ImageControl.Image**:<br>![](media/function-user/john-doe-picture.png) |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

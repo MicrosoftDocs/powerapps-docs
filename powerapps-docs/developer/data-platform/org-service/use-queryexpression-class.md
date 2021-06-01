@@ -70,7 +70,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion | MAXRECURSION number |
 
-More information: [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)
+More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### See also  
  [Building Queries with QueryExpression](build-queries-with-queryexpression.md)   
@@ -78,3 +78,6 @@ More information: [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/
  [Using the ConditionExpression Class](use-conditionexpression-class.md)   
  [Using the FilterExpression Class](use-filterexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -88,3 +88,6 @@ You can expand your search to include the **Company** column as well as the **Na
 | **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** |Filters the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. | ![](media/function-startswith/customers-all-co-contains.png) |
 | **Search( Customers, SearchInput.Text, "Name", "Company" )** |Similar to using the **in** operator, the **Search** function searches the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. The **Search** function is easier to read and write than **Filter** if you want to specify multiple columns and multiple **in** operators. Note that you must enclose the names of the columns in double quotation marks. | ![](media/function-startswith/customers-all-co-contains.png) |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

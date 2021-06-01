@@ -49,3 +49,6 @@ use it.
 
 > [!div class="nextstepaction"]
 > [Next step: Architectural design](where-is-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

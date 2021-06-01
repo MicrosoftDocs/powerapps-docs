@@ -1,6 +1,6 @@
 ---
 title: " IFRAME component| Microsoft Docs" 
-description: "Implementing IFRAME component" 
+description: "This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -12,6 +12,8 @@ author: Nkrb
 # Implementing a IFRAME component
 
 This sample describes how to bind a code component to different fields on the form and use the value of these fields as input properties to the component. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IFrameControl).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![IFRAME component](../media/iframe-control.png "IFRAME component")
@@ -192,3 +194,6 @@ The [updateView](../reference/control/updateview.md) method is invoked whenever 
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
 [Power Apps component framework API reference](../reference/index.md)<br />
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
