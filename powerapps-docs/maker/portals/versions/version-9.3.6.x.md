@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date - 06/01/2021
+ms.date: 06/01/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributor:
