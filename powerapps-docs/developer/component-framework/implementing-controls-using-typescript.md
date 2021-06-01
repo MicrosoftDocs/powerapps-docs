@@ -171,10 +171,7 @@ export class TSLinearInputComponent
     this._value = context.parameters.sliderValue.raw
       ? context.parameters.sliderValue.raw
       : 0;
-    this.inputElement.value =
-      context.parameters.sliderValue.formatted
-        ? context.parameters.sliderValue.formatted
-        : "0";
+    this.inputElement.value = this._value.toString();
     
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted
       ? context.parameters.sliderValue.formatted
@@ -202,11 +199,7 @@ export class TSLinearInputComponent
       ? context.parameters.sliderValue.raw
       : 0;
     this._context = context;
-    this.inputElement.value =
-     
-      context.parameters.sliderValue.formatted
-        ? context.parameters.sliderValue.formatted
-        : "";
+    this.inputElement.value = this._value.toString();
     
     this.labelElement.innerHTML = context.parameters.sliderValue.formatted
       ? context.parameters.sliderValue.formatted
