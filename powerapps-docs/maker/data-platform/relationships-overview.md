@@ -1,7 +1,7 @@
 ---
 title: "table relationships in Power Apps | MicrosoftDocs"
 description: "Learn about table relationships in Power Apps"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/25/2018
 ms.reviewer: ""
 ms.service: powerapps
@@ -35,3 +35,6 @@ Table relationships define the ways that table rows can be associated with rows 
 ## See also
 [Create a relationship between tables](data-platform-entity-lookup.md) <br/>
 [Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

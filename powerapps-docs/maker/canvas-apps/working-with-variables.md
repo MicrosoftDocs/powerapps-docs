@@ -320,3 +320,6 @@ Let's recreate our adding machine by using a collection:
 
 > [!NOTE]
 > **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

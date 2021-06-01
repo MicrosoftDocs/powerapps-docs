@@ -85,3 +85,6 @@ Quadrants, to aid mutual understanding.
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying project team members](identifying-project-members.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,7 @@
 ---
 title: "setTabNavigatorVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/09/2020
+description: Includes description and supported parameters for the setTabNavigationVisible method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -36,3 +37,5 @@ search.app:
 ## Related topics
 
 [formContext.ui.headerSection](../formContext-ui-headerSection.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

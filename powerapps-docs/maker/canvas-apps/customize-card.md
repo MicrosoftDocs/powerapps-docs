@@ -74,3 +74,5 @@ In this procedure, you'll unlock a card and update the **Max** property of the *
 ## Next steps
 
 Now that you have a basic understanding of how to generate an app and customize a gallery, a form, and a card, you can [build your own app from scratch](data-platform-create-app-scratch.md).
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: isOffline | Microsoft Docs
-description: 
+description: Returns the information whether the server is online or offline.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -35,3 +35,6 @@ Description: **true** if the server is offline; **false** otherwise.
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

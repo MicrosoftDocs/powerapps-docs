@@ -93,3 +93,6 @@ The entire process is costing the company:
 
 > [!div class="nextstepaction"]
 > [Next step: Defining the business value](defining-business-value.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

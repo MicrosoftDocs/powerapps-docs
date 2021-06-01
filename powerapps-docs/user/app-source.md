@@ -32,3 +32,6 @@ Microsoft AppSource is now embedded in the [Dynamics 365](https://home.dynamics.
 Apps built with Power Apps and shared with a security group or the entire company with **User** permission will appear here, instead of cluttering your home page by default. When you get an app from AppSource, it will then appear on the home page and be easily accessible throughout the experience.
 
   ![Apps on Dynamics 365](./media/app-source/appsource.png)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

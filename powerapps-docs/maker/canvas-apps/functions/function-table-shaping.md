@@ -133,3 +133,6 @@ Let's try some of the examples from earlier in this topic.
 	As this graphic shows, the second formula returned a new table with the added column. The **ClearCollect** function captured the new table in the **FirstExample** collection, adding something to the original table as it flowed through the function without modifying the source:
 
 	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

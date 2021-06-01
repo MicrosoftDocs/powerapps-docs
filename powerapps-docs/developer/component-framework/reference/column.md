@@ -1,6 +1,6 @@
 ---
-title: Column | Microsoft Docs
-description: 
+title: Column in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for column in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -55,7 +55,7 @@ The column visibility state.
 
 ### isPrimary
 
-Is specific column the primary attribute of the view's entity.
+Is specific column the primary column of the view's table.
 
 **Type**: `boolean`<br />
 
@@ -82,3 +82,5 @@ Customized column width ratios.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

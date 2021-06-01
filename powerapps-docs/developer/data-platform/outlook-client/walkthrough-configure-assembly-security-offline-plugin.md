@@ -6,7 +6,7 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "sriharibs" # GitHub ID
+author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -47,3 +47,6 @@ The Microsoft Dataverse platform applies an additional security restriction to r
  [Plug-in Development](/dynamics365/customer-engagement/developer/plugin-development)   
  [Sample: Create a basic plug-in](../org-service/samples/basic-followup-plugin.md)   
  [Register and Deploy Plug-ins](/dynamics365/customer-engagement/developer/register-deploy-plugins)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -36,7 +36,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Prerequisites
 Before you start to follow this topic:
-- Switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create tables.
+- Switch to an [environment](/power-platform/admin/working-with-environments) in which you can create tables.
 - You must have a Power Apps per user plan or Power Apps per app plan.
 
 ## Specify the source data
@@ -102,3 +102,6 @@ If an [error message about permissions](troubleshoot-power-query-issues.md) appe
 
 > [!WARNING]
 > There is a limit of 500,000 rows per run and per project that can be loaded using this feature.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -17,9 +17,9 @@ search.app:
 ---
 # Step 3: Create an AppSource package for your app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 |File|Description|
 |--|--|
@@ -58,6 +58,8 @@ A package lets you bundle and deploy multiple files related to your app at once.
       <Default Extension="html" ContentType="application/octet-stream" />
       <Default Extension="db" ContentType="application/octet-stream" />
       <Default Extension="css" ContentType="application/octet-stream" />
+      <Default Extension="json" ContentType="application/octet-stream" />
+      <Default Extension="msapp" ContentType="application/octet-stream" />
     </Types>
     ```
 
@@ -139,3 +141,6 @@ The final step is to add all the components that you created earlier into a sing
 
 > [!div class="nextstepaction"]
 > [Step 4: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

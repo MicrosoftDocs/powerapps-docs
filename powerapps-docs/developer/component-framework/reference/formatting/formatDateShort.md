@@ -1,6 +1,6 @@
 ---
 title: formatDateShort | Microsoft Docs
-description: 
+description: Returns a string represents the datetime value after being formatted. Result pattern is based on culture. In USA it is represented as MM/DD/YYYY.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -42,3 +42,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

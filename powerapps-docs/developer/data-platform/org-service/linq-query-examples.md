@@ -629,7 +629,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 <a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>   
 ## Use the Skip and Take operators without paging 
 
- The following sample shows how to retrieve just two records after skipping two records where the LastName is not “Parker” using the [Skip](https://msdn.microsoft.com/library/bb358985.aspx) and [Take](https://msdn.microsoft.com/library/bb503062.aspx)operators.  
+ The following sample shows how to retrieve just two records after skipping two records where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -653,7 +653,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_UsingTheFirstOrDefaultAndSingleOrDefaultOperators"></a>   
 ## Use the FirstOrDefault and SingleOrDefault operators  
- The [FirstOrDefault](https://msdn.microsoft.com/library/system.linq.enumerable.firstordefault.aspx) operator returns the first element of a sequence, or a default value if no element is found. The [SingleOrDefault](https://msdn.microsoft.com/library/system.linq.enumerable.singleordefault.aspx) operator returns a single, specific element of a sequence, or a default value if that element is not found. The following sample shows how to use these operators.  
+ The [FirstOrDefault](/dotnet/api/system.linq.enumerable.firstordefault) operator returns the first element of a sequence, or a default value if no element is found. The [SingleOrDefault](/dotnet/api/system.linq.enumerable.singleordefault) operator returns a single, specific element of a sequence, or a default value if that element is not found. The following sample shows how to use these operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -884,7 +884,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="mathoperators"></a>   
 ## Use Math methods  
- The following sample shows how to use various [Math](https://msdn.microsoft.com/library/system.math.aspx) methods.  
+ The following sample shows how to use various [Math](/dotnet/api/system.math) methods.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -931,7 +931,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_UsingSelectMany"></a>   
 ## Use SelectMany  
- The following sample shows how to use the [SelectMany Method](https://msdn.microsoft.com/library/system.linq.enumerable.selectmany.aspx).  
+ The following sample shows how to use the [SelectMany Method](/dotnet/api/system.linq.enumerable.selectmany).  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -1017,3 +1017,6 @@ if (benAndrews != null)
 }
 ```
   
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -106,3 +106,6 @@ can be centralized in one place (Dataverse).
 
 > [!div class="nextstepaction"]
 > [Next step: Determine where to place logic](logic.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

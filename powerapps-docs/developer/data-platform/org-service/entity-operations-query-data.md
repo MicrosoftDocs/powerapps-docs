@@ -257,3 +257,14 @@ The [SavedQuery](../reference/entities/savedquery.md) entity stores system views
 More information: [Sample: Convert queries between Fetch and QueryExpression](samples/convert-queries-fetch-queryexpression.md)
 
 
+## Query Condition Limits 
+
+Dataverse has a limit of 500 total conditions allowed in a query. Any joins included in the query are counted as part of this limit. If a query (and its joins) exceeds 500 conditions, the user will receive the following error when the query is executed:  "Number of conditions in query exceeded maximum limit." 
+
+If this occurs aa user must either: 
+
+- Reduce the number of conditions in their query. 
+- Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 08/10/2020
+ms.date: 04/21/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -64,6 +64,8 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
 
+**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
+
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
@@ -116,3 +118,6 @@ The following properties must be present:
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

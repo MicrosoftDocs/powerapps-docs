@@ -33,3 +33,6 @@ The plug-in demonstrates how to obtain the execution context and the tracing ser
 > This sample requires a service endpoint to be created first, and its ID passed to the plug-in constructor through the unsecure configuration parameter when the plug-in step is registered.
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -100,10 +100,13 @@ Power Apps creates an app that has three screens and shows data from the table t
 
 1. System.Data.OracleClient requires Oracle client software version 8.1.7 or greater.
    
-    This error appears if the Oracle client SDK isn't installed on the same computer as the on-premises data gateway. To resolve this issue, [install the official provider](https://go.microsoft.com/fwlink/p/?LinkID=272376).
+    This error appears if the Oracle client SDK isn't installed on the same computer as the on-premises data gateway. To resolve this issue, [install the official provider](/power-bi/connect-data/desktop-connect-oracle-database).
 
 3. Table '[Tablename]' doesn't define any key columns.
    
     This error appears if you're connecting to a table that doesn't have a primary key, which the Oracle Database connection requires.
 
 4. Stored procedures, tables with composite keys, and nested object types in tables aren't directly supported in Power Apps. However, stored procedures using Power Automate are supported.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

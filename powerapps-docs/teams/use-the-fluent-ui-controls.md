@@ -5,7 +5,7 @@ author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 05/20/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 ---
@@ -94,17 +94,6 @@ help ensure that the user specifies a date in the correct format.
 
 *Value* – The date currently selected in a date control. This date is
 represented in local time.
-
-*Format* – The text format in which the control shows the date and the user
-specifies the date. You can set this property to ShortDate (default) or LongDate to format dates based on the Language property of this control. You can also set this property to an expression, such as yyyy/mm/dd, if you want the same format independent of the language. For example:
-
--   The control shows 12/31/2017 if the user selects the last day of
-    2017, the Format property is set to ShortDate, and the Language property is
-    set to en-us.
-
--   The control shows dimanche 31 December 2017 if the user selects the
-    last day of 2017, the Format property is set to LongDate, and the Language
-    property is set to fr-fr.
 
 ## Label
 
@@ -240,3 +229,6 @@ Properties of controls have been simplified for the ease of use. The following t
 
 [Create additional apps](create-additional-apps.md)  
 [Understand Power Apps Studio](understand-power-apps-studio.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

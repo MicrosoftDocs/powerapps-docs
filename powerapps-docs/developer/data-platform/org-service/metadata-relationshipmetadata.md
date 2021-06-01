@@ -266,3 +266,6 @@ Console.WriteLine("Retrieved {0} Many-to-Many relationship by Name", retrieveMan
 ### See Also  
  
  [Entity Relationship Metadata Messages](../entity-relationship-metadata-messages.md)   
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

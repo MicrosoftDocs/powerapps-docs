@@ -41,7 +41,7 @@ In a typical asset management scenario:
 
 ## Template: Return to the Workplace solution
 
-[Return to the Workplace Solution documentation](https://docs.microsoft.com/powerapps/sample-apps/return-to-workplace/overview)
+[Return to the Workplace Solution documentation](/dynamics365/industry/return-to-workplace/overview)
 
 Reopen responsibly, monitor intelligently, and protect continuously with
 solutions for a safer work environment. Equip facility managers and task force
@@ -70,11 +70,11 @@ your workforce.
 
 ### Apps for for workspace scheduling
 
-- Facilities managers use the [Facility Safety Management app](https://docs.microsoft.com/powerapps/sample-apps/return-to-workplace/app-for-facility-manager) to set up facilities available for booking and see a dashboard of bookings.
+- Facilities managers use the [Facility Safety Management app](/dynamics365/industry/return-to-workplace/app-for-facility-manager) to set up facilities available for booking and see a dashboard of bookings.
 
   ![Screenshot of the Facility Safety Management app](media/RTW-facility-safety-management-app.png "Screenshot of the Facility Safety Management app")
 
-- Employees use the [Employee Return to the Workplace app](https://docs.microsoft.com/powerapps/sample-apps/return-to-workplace/app-for-employee) to book a space.
+- Employees use the [Employee Return to the Workplace app](/dynamics365/industry/return-to-workplace/app-for-employee) to book a space.
 
   ![Screenshot of an employee pass](media/RTW-facility-pass.png "Screenshot of a employee pass")
 
@@ -186,3 +186,6 @@ serial numbers and crew payroll numbers. On some days volunteers were handing
 out as many as 250 iPads per day.
 
 ![Screenshot of Crew iPad Asset Management app](media/virgin-atlantic-crew-ipad-app.png "Screenshot of Crew iPad Asset Management app")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

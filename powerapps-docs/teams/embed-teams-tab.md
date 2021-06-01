@@ -8,7 +8,7 @@ ms.component: pa-user
 ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: mkaur
-ms.custom: ""
+ms.custom: intro-internal
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -84,3 +84,6 @@ In the desktop app for Microsoft Teams:
 ## Clean up resources
 
 To remove the app from the channel, choose the **Product Showcase** tab > **Remove**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

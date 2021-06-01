@@ -34,3 +34,6 @@ These functions have no return value. You can use them only in [behavior formula
 
 * *Signal* - Required.  The signal to turn on or off.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

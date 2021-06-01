@@ -55,3 +55,6 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 
 ## Next steps
 [Understand views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

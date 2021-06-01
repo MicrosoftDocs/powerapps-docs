@@ -91,7 +91,7 @@ if:
 
 - You want to reduce dependency on device-side processing power.
 
-More information: [Power Automate documentation](https://docs.microsoft.com/power-automate/)
+More information: [Power Automate documentation](/power-automate/)
 
 ## Dataverse
 
@@ -113,3 +113,6 @@ More information: [Apply business logic in Dataverse](../../maker/data-platform/
 
 > [!div class="nextstepaction"]
 > [Next step: Secure the app and data](security.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

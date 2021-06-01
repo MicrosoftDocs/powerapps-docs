@@ -99,3 +99,6 @@ Note the negative sign before **TimeZoneOffset** to subtract the offset rather t
 
 To see the result, use the **Text** function with the format *dd-mm-yyyy hh:mm*, which will result in **15-07-2013 13:02** if you're in Pacific Daylight Time.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

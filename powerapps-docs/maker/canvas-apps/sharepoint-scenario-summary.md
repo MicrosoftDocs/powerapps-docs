@@ -166,3 +166,6 @@ Let us know in the comments if you have any feedback on this series, suggestions
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

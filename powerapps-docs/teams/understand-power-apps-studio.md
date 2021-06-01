@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 02/11/2021
 ms.author: emcoope
 ms.reviewer: tapanm
 ---
@@ -167,7 +167,7 @@ version, and other session details. You can also turn the **Auto save** option *
 | Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
 | Power Apps version | Shows the version of Power Apps. |
 | About Power Apps | Additional information and help. |
-| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md?branch=teams-preview#about-tab)
+| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md#about)
 
 > [!NOTE]
 > We recommend that you keep the **Auto save** setting turned **On** and
@@ -308,6 +308,16 @@ select the control, or select **(...)** and then select **Add to canvas**.
 
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
+
+#### Classic controls
+
+Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If required, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** -> **Advanced settings** -> toggle **Classic controls** to **On** under experimental features.
+
+After you enable classic controls, you'll be able to see and add them from the **Classic** category.
+
+![Classic controls](media/classic-control.png "Classic controls")
+
+For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
 
 ### Data
 
@@ -501,3 +511,6 @@ authoring a canvas app has no impact on the aspect ratio configured for the app 
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

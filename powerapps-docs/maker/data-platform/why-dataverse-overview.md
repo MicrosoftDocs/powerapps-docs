@@ -1,7 +1,7 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
 ms.service: powerapps
@@ -49,7 +49,7 @@ As a result, a wide range of enterprise integration scenarios&mdash;from retriev
 data sent in a spreadsheet as an email attachment to emerging scenarios like
 using Dataverse data in a blockchain network&mdash;can be achieved with ease and with little to no code required. Integration efforts that previously were measured in days and weeks can now often be measured in hours and minutes.
 
-In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Work with any data](work-with-any-data.md)
+In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ## Work with any type of app
 
@@ -151,11 +151,11 @@ Service limits aren't expected to negatively affect normal usage of Dataverse.
 
 For information about current service protection limits for each service, see:
 
-- [Dataverse API request limits](/powerapps/developer/data-platform/api-limits): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
+- [Dataverse API request limits](../../developer/data-platform/api-limits.md): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
 
 - [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
 
-- [Limits in connectors](https://docs.microsoft.com/connectors/): Applicable for Power Automate and Power Apps.
+- [Limits in connectors](/connectors/): Applicable for Power Automate and Power Apps.
 
 ### Capacity add-ons
 
@@ -197,3 +197,6 @@ For the current list of datacenter regions, see [Datacenter regions](/power-plat
 ### See also
 
 [Work with any data](work-with-any-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

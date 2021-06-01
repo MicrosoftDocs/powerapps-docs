@@ -75,3 +75,6 @@ Service level agreements (SLAs) in Microsoft Dataverse help you define the level
   
 ### See also  
  [Enhanced service level agreements (SLAs)](/dynamics365/customer-engagement/admin/enhanced-service-level-agreements)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -67,7 +67,7 @@ Some key questions to ask:
 
   - Automating the action taken
 
-  - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
+  - [Using AI](/ai-builder/overview) to replace
         human attention
 
 ## Example: Optimizing the expense report process
@@ -98,3 +98,6 @@ Our proposed optimized process looks like the following illustration.
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

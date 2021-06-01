@@ -1,6 +1,6 @@
 ---
-title: "Enhanced user experience with the Unified Interface for model-driven apps | MicrosoftDocs"
-description: Overview of the unified interface in Power Apps
+title: "Enhanced user experience with Unified Interface for model-driven apps | MicrosoftDocs"
+description: Overview of Unified Interface in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -17,23 +17,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Enhanced user experience with the Unified Interface for model-driven apps 
+# Enhanced user experience with Unified Interface for model-driven apps 
 
-The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
+Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
 > ![Unified Interface adapts to the screen](media/Reflow_2.png "Unified Interface adapts to the screen")
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
-> [!NOTE]
-> The legacy web client will be deprecated and customers must transition to Unified Interface before December 4, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
-
-
-
-
 ## Reflow 
 
-The Unified Interface is designed for a modern reflow experience. 
+Unified Interface is designed for a modern reflow experience. 
 
 For forms, there are pixel breakpoints that cause information on a form to move on the screen based on the space available for the form to display in. This happens when the display space available to the form decreases. For example, if you resize the window that your app is in and decrease the width of the window it will decrease the space available for the form to display in. When the width decreases past certain breakpoints, information that would be hidden will move below where it used to be so that it is either visible or you can vertically scroll down to see it.
 
@@ -74,10 +68,13 @@ The business process flow has been improved by the docking mechanism. You can do
 The improved accessibility experience lets you use screen readers to translate on-screen information into audible sound and print to a Braille reader so that more people can use the app. For more information, see [Use a screen reader](screen-reader.md).
 
 ## Create a Unified Interface app
-If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](../maker/model-driven-apps/model-driven-app-overview.md).
 
 ![Create new Unified Interface app](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 
 ## Unified Interface Community
 
-Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to get help with planning and executing a smooth transition to the Unified Interface and engage with experts and peers on blogs, webinars, videos, events, and more.
+Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to engage with experts and peers on blogs, webinars, videos, events, and more.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

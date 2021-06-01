@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 7b1ee741-8f2d-453d-bc36-ea9ea1de721e
 ---
 
-Retrieves a collection of entity records.
+Retrieves a collection of table records.
