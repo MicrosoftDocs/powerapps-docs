@@ -68,17 +68,7 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
-
-Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. 
-
-### Lookup column type behaviors
-Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a result set.
-
-### Choice column type behaviors
-Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
->[!TIP]
-> After making changes to labels for a choice column, the table needs to have customizations published. 
+Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
 The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
 `ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
@@ -92,6 +82,14 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 > left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
 > group by act.activityid, act.subject
 > ```
+
+### Lookup column type behaviors
+Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a result set.
+
+### Choice column type behaviors
+Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
+>[!TIP]
+> After making changes to labels for a choice column, the table needs to have customizations published. 
 
 ## Limitations
 
