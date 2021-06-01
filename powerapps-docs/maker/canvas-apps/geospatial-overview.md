@@ -16,7 +16,9 @@ search.app:
 
 ---
 
+
 # Add geospatial components to your app
+
 
 You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
 
