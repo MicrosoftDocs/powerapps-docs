@@ -41,8 +41,12 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-
-
+4. To show the user's current location, 
+	- Toggle **Show current location** to **On**. 
+	- Under the property **Current location latitude**, insert **Location.Latitude**. 
+	- Under the property **Current location longitude**, insert **Location.Longitde**. 
+	- The current location pin should now appear on the map.
+	
 You can modify the component by using a number of [properties](#input-properties).
 
 ### Use the map component with data from Excel
@@ -180,9 +184,11 @@ The component outputs various properties when a user interacts with it inside an
 The following table lists the output properties available.
 
 
-| Property | Description | Type |
-| -- | -- | -- |
-| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. | Integer |
+
+| Property | Description |
+| -- | -- |
+| CenterLocation | Center location of the map. |
+| OnMapClick | The last clicked location on the map. |
 | Selected | The selected pin on the map. | Record |
 | SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
 | GeocodedItems | The geocoded locations of the pins on the map. | Table |
