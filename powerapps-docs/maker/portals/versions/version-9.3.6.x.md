@@ -44,7 +44,7 @@ Portal host Version 9.3.6.5 resolves the following issues:
 - Accessibility - Unable to access some controls like "Select month",  "Select year", "Previous", "Next" in datetime Calendar control using keyboard.
 - Accessibility - Error message isn't displayed when wrong format date is given manually in datetime calendar control.
 - Accessibility - Narrator/NVDA isn't reading role of "Choose Date" button in "Datetime calendar" control.
-- Accessibility - "Previous(<)" and "Next(>)" controls  under calendar button in datetime calendar control are set as group control.
+- Accessibility - "Previous" (<) and "Next" (>) controls  under calendar button in datetime calendar control are set as group control.
 - Accessibility - No error message is provided to JAWS/NVDA when the maximum number of characters has been reached on text field.
 - Accessibility - Screen readers doesn't announce search results on Lookup modal dialog.
 - Accessibility - Keyboard focus isn't landed on the error message link after accessing the next button in an advanced form without selecting the mandatory field rendered as a checkbox.
