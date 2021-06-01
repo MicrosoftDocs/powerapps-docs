@@ -285,9 +285,9 @@ You can save addresses that a user inputs into the address component as a data c
 
 5. Set the following properties:
 
-    - **ItemsLabels** as *locations*
-    - **ItemLatitudes** as *locations.Latitude*
-    - **ItemsLongitudes** as *locations.Longitude*
+    - **Items** as *locations*
+    - **ItemsLatitudes** as *"Latitude"*
+    - **ItemsLongitudes** as *"Longitude"*
 
 Each time a user selects the button, the result from the address input component will be added to the map as a new pin.
 
