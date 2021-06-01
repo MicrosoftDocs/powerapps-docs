@@ -1,13 +1,13 @@
 ---
-title - Power Apps portals version 9.3.6.x
-description - Learn about the Power Apps portals version 9.3.6.x and the changes.
-author - dileepsinghmicrosoft
-ms.service - powerapps
-ms.topic - conceptual
-ms.custom - 
+title: Power Apps portals version 9.3.6.x
+description: Learn about the Power Apps portals version 9.3.6.x and the changes.
+author: dileepsinghmicrosoft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
 ms.date - 06/01/2021
-ms.author - dileeps
-ms.reviewer - tapanm
+ms.author: dileeps
+ms.reviewer: tapanm
 contributor:
     - tapanm-msft
     - dileepsinghmicrosoft
