@@ -81,10 +81,10 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Compass control | Whether the compass component appears on the map. | Boolean | Properties |
 | Pitch control | Whether the pitch component appears on the map. | Boolean | Properties |
 | Pin color | The color of the pins. | Color picker | Properties |
-| ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
-| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
-| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
-| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced |
+| ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | ColumnName | Advanced |
+| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | ColumnName | Advanced |
+| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | ColumnName | Advanced |
+| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | ColumnName | Advanced |
 | ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
@@ -98,9 +98,9 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Enable shape drawing | Whether the drawing tools component appears on the map. | Boolean | Properties |
 | Enable shape deleting and label editing | Whether shapes can be deleted and their labels can be edited on the map. | Boolean | Properties |
 | Shapes_Items | Name of the table in your data source that contains all the records with GeoJSON objects that you want to show in the map as shapes. | TableName | Advanced |
-| ShapeGeoJSONObjects | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes. | TableName.ColumnName | Advanced |
-| ShapeLabels | A column in Shapes_Items with the strings you want to use as labels for the shapes. | TableName.ColumnName | Advanced |
-| ShapeColors | Color of the shapes. | TableName.ColumnName | Advanced |
+| ShapeGeoJSONObjects | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes. | ColumnName | Advanced |
+| ShapeLabels | A column in Shapes_Items with the strings you want to use as labels for the shapes. | ColumnName | Advanced |
+| ShapeColors | Color of the shapes. | ColumnName | Advanced |
 | OnShapeSelected | How the app responds when a shape on the map is selected. | Event | Advanced |
 | OnShapeCreated | How the app responds when a shape on the map is created. | Event | Advanced |
 | OnShapeEdited | How the app responds when a shape on the map is edited. | Event | Advanced |
@@ -113,13 +113,13 @@ The component outputs various properties when a user interacts with it inside an
 The following table lists the output properties available.
 
 
-| Property | Description | Type
-| -- | -- |
-| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. | Integer
-| Selected | The selected pin on the map. | Record 
-| SelectedItems | The selected pin or pins of the selected cluster on the map. | Table 
-| GeocodedItems | The geocoded locations of the pins on the map. | Table 
-| ClickedLocation | The last clicked location on the map as either `.Latitude` or `.Longitude`. | Record 
+| Property | Description | Type |
+| -- | -- | -- |
+| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. | Integer |
+| Selected | The selected pin on the map. | Record |
+| SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
+| GeocodedItems | The geocoded locations of the pins on the map. | Table |
+| ClickedLocation | The last clicked location on the map as either `.Latitude` or `.Longitude`. | Record |
 | Shapes_Selected | The record of the selected shape from **Shapes_Items**. | Record |
 | Shapes_SelectedItems | The records of the selected overlapping shapes from **Shapes_Items**. | Table |
 | SelectedShape | The selected shape on the map with `.Perimeter` and `.Area`. | Record |
