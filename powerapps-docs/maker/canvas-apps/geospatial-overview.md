@@ -90,6 +90,7 @@ The geospatial components require the Common Data Service and Spatial Services c
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
+
 ### Next steps
 
 Start installing the components in your apps:
