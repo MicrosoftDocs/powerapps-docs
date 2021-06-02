@@ -45,7 +45,7 @@ Boards sample app.
 >-   This is a preview feature.
 >-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Architecture Model
+## Architecture model
 
 The following diagram illustrates the way that users and systems interact with
 data in the Boards solution
