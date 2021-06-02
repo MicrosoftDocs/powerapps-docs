@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/18/2021
+ms.date: 06/01/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -29,7 +29,7 @@ Use **ReadNFC** to read an NFC tag that is in close proximity to your device.  W
 | **Text** | Text | The text payload of the NFC tag if RTD is RTD_TEXT, *blank* otherwise.   | 
 | **URI** | Hyperlink | The URI payload of the NFC tag if RTD is RTD_URI, *blank* otherwise.  |
 
-If the tag is not supported, for example the TNF is not TNF_WELL_KNOWN, or the scan timeoud out, then the record itself will be *blank* (and all fields will be *blank* too).
+If the tag is not supported, for example the TNF is not TNF_WELL_KNOWN, or the scan timed out, then the record itself will be *blank* (and all fields will be *blank* too).
 
 Always check the payload value for *blank* using the [**IsBlank**](function-isblank-isempty.md) function before using it.  You do not need to check the **RTD** and **TNF** values yourself as they must be the correct values for **Text** and **URI** to have a non *blank* value.
 
