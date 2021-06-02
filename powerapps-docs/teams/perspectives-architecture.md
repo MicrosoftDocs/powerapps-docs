@@ -1,3 +1,4 @@
+---
 title: Understand Perspectives sample app architecture
 description: Learn about the architecture of the Perspectives sample app.
 author: joel-lindstrom
@@ -8,6 +9,8 @@ ms.date: 06/02/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
+---
+
 
 # Understand Perspectives sample apps architecture
 
