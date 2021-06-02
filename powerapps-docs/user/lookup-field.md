@@ -127,18 +127,23 @@ Once enabed **Advanced lookup** is aviliable on any lookup column that's on a qu
 
 1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then selct **Advanced lookup**. 
 
-> [!div class="mx-imgBorder"]
-> ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
 
 2. The **Advanced lookup** gird opens with a list of rows.
 
 
-1. **Search**: Enter search text to find the row that you're looking for. if you changes views your search text is still retained. 
-2. **Change view**: Select the current view to select another views to change views.
-3. **Select row**: Select the row and then select **Done**.
-4. **Sort**: Select to sort by acending or decending order. 
-5. **Open row**: Select to open the row. You can edit the row and save your changes the changes will show in the **Advanced lookup** grid.
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid](media/advanced-lookup-control-grid.png "Advanced lookup grid")  
+
+Legend
+
+1. **Search**: Enter search text to find the row that you're looking for. If you changes views your search text is still retained. 
+2. **Change views**: Select the current view and select another view to change views.
+3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The select row will appear under **Selected record**.
+4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the **Advanced lookup** grid.
+5. **Sort**: Select the arrow at the top of any column to sort in acending or decending order. 
 6. **Only my records**: Select to only show rows that you own.
-7. **Add new record**: Opens the quick create where you can add a new row for the table. When you save the new row, the **Advanced lookup** grid will refresh and show the newly added row.
+7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the **Advanced lookup** grid will refresh and show the newly added row.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
