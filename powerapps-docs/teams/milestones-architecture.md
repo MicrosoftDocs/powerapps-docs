@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/31/2021
+ms.date: 06/02/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -1441,3 +1441,9 @@ The following variables are used when a status is deleted.
     Project Work Item Statuses table if it has an ID (which means it is an
     existing status).
 
+### See also
+
+- [Milestones sample app](milestones.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
