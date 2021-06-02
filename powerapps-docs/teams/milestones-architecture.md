@@ -58,62 +58,62 @@ Milestones app includes the following tables:
 | Table name           | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | Project              | A project denotes an individual or collaborative enterprise that is carefully planned to achieve a particular aim. Details such as name, when and by whom was it created or modified are stored under the Projects entity. A single project can have multiple milestones, work items, team members and activities associated to it. |
-| Project Milestone    | A Project Milestone is a task which depicts an important achievement in a<br>Project. Milestones should represent a sequence of events that incrementally<br>build up until a Project is complete.<br><br>Details such as name, the project to which it is associated to and the date<br>when the Milestone must be completed are stored under the Project Milestones<br>entity. A milestone can only be part of a single project but can have<br>multiple work items associated to it. |
-| Project Work Item    | A work item indicates the type of work, what needs to be done and the date within which it must be completed. Details such as the name, description, to whom it has been assigned to, status, priority and the target date define a work item. A work item can be a part of a single milestone and can have only one status, priority, category, and team member associated to it. It can, however, have multiple associated activities. |
-| Project Status       | Status summarizes the overall status of a work item. Default status values include New, In Progress, Blocked and Completed. Additional statuses can be added from within the Settings section in the app. Each status has a name and an associated color. |
-| Work Item Priorities | Priority represents the order of importance in which a work item must be completed when compared to the remaining work items. Default priorities include P0, P1, P2 and P3. Additional priorities can be added from within the Settings section in the app. Each priority has a name and an associated color. |
-| Work Item Categories | Categories help in classifying work items. Default priorities include high, medium, and low. Additional categories can be added from within the Settings section in the app. Each category has a name and an associated color. |
+| Project Milestone    | A Project Milestone is a task that depicts an important achievement in a<br>Project. Milestones should represent a sequence of events that incrementally<br>build up until a Project is complete.<br><br>Details such as name, the project to which it is associated to and the date<br>when the Milestone must be completed are stored under the Project Milestones<br>entity. A milestone can only be part of a single project but can have<br>multiple work items associated to it. |
+| Project Work Item    | A work item indicates the type of work, what needs to be done and the date within which it must be completed. Details such as the name, description, to whom it has been assigned to, status, priority, and the target date define a work item. A work item can be a part of a single milestone and can have only one status, priority, category, and team member associated to it. It can, however, have multiple associated activities. |
+| Project Status       | Status summarizes the overall status of a work item. Default status values include New, In Progress, Blocked and Completed. More statuses can be added from within the Settings section in the app. Each status has a name and an associated color. |
+| Work Item Priorities | Priority represents the order of importance in which a work item must be completed when compared to the remaining work items. Default priorities include P0, P1, P2, and P3. More priorities can be added from within the Settings section in the app. Each priority has a name and an associated color. |
+| Work Item Categories | Categories help in classifying work items. Default priorities include high, medium, and low. More categories can be added from within the Settings section in the app. Each category has a name and an associated color. |
 | Project Team Members | Team Members are individuals who work on one or more work items in a Project. An individual who is part of multiple projects will have one team member record per project. |
 | Project Activities   | Activities are used to provide updates made on work items of a project. A<br>single work item can have multiple activities. Activities get created as<br>work items are updated. An activity can also be created manually. |
-| Project User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user. |
+| Project User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app. There is one record for each user. |
 
 ### Collections 
 
 | Collection Name              | Description                                                  | Screen Used                                                  |
 | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| colLocalization              | Used to build a Localization Collection based on the User Language | OnStart property of the App                                  |
-| colWorkItems                 | Used to collect the Work items                               |                                                              |
-| colUserSettings              | Used to collect User Settings CDS record if it exists        | OnStart property of the App                                  |
-| colWorkItemHeaderIcons       | Used to collect the header icons of Work Items               | OnStart property of the App                                  |
-| colProjectCoverColors        | Used to collect the project cover colors                     | OnStart property of the App                                  |
-| colStockImages               | Collection to collect the Stock Images used in the app       | OnStart property of the app                                  |
-| colNewProjectMilestones      | Used to collect the default information of a newly added milestone | OnSelect Property of the Add Milestones Image on the Projects Screen |
-| colProjectTeamMembers        | Used to collect the Team members who are part of a Project   | OnVisible property of the Settings screen                    |
-| colRemovedProjectTeamMembers | Used to collect the Team members who have been removed from the project | OnSelect property of the Delete button under the Team Members settings |
-| colRemovedProjectMilestones  | Used to collect the Milestones which have been removed from the project | NA                                                           |
-| colCategories                | Used to collect the Category information                     | OnSelect Property of the Save button on the Settings screen  |
-| colNewProjectTeamMembers     | Used to collect the Team members who are newly added to a Project | OnSelect property of the Create button on the projects screen |
-| colProjectMilestones         | Used to collect the Milestones information for a Project     | OnSelect property of the Delete confirmation button          |
-| colRemovedCategories         | Used to collect the Categories which are being removed       | OnSelect Property of the Save button on the Settings screen  |
-| colPriorities                | Used to collect the Priorities information                   | OnSelect Property of the Save button on the Settings screen  |
-| colRemovedPriorities         | Used to collect the Priorities which are being removed       | OnSelect Property of the Save button on the Settings screen  |
-| colStatuses                  | Used to collect the Status information                       | OnSelect Property of the Save button on the Settings screen  |
-| colRemovedStatuses           | Used to collect the Priorities which are being removed       | OnSelect Property of the Save button on the Settings screen  |
-| colRemoveWorkItems           | Used to collect the Work items which have been checked for deletion | OnSelect property of the Delete button on the confirmation pop up on the Projects screen |
-| colRemovedMilestones         | Used to collect the Team members who have been removed from the project | OnSelect property of the Delete button under the Project details section on the settings page |
-| colWorkItemStatuses          | Used to collect the available statuses for work items        | Items property of the Status combo box on the Project screen |
+| colLocalization              | Used to build a Localization Collection based on the User Language. | OnStart property of the app                                  |
+| colWorkItems                 | Used to collect the Work items.                               |                                                              |
+| colUserSettings              | Used to collect User Settings dataverse record if it exists.        | OnStart property of the app                                  |
+| colWorkItemHeaderIcons       | Used to collect the header icons of Work Items.               | OnStart property of the app                                  |
+| colProjectCoverColors        | Used to collect the project cover colors.                     | OnStart property of the app                                  |
+| colStockImages               | Collection to collect the Stock Images used in the app.       | OnStart property of the app                                  |
+| colNewProjectMilestones      | Used to collect the default information of a newly added milestone. | OnSelect Property of the Add Milestones Image on the Projects Screen |
+| colProjectTeamMembers        | Used to collect the Team members who are part of a Project.   | OnVisible property of the Settings screen                    |
+| colRemovedProjectTeamMembers | Used to collect the Team members who have been removed from the project. | OnSelect property of the Delete button under the Team Members settings |
+| colRemovedProjectMilestones  | Used to collect the Milestones that have been removed from the project. | NA                                                           |
+| colCategories                | Used to collect the Category information.                     | OnSelect Property of the Save button on the Settings screen  |
+| colNewProjectTeamMembers     | Used to collect the Team members who are newly added to a Project. | OnSelect property of the Create button on the projects screen |
+| colProjectMilestones         | Used to collect the Milestones information for a Project.     | OnSelect property of the Delete confirmation button          |
+| colRemovedCategories         | Used to collect the Categories that are being removed.       | OnSelect Property of the Save button on the Settings screen  |
+| colPriorities                | Used to collect the Priorities information.                   | OnSelect Property of the Save button on the Settings screen  |
+| colRemovedPriorities         | Used to collect the Priorities that are being removed.       | OnSelect Property of the Save button on the Settings screen  |
+| colStatuses                  | Used to collect the Status information.                       | OnSelect Property of the Save button on the Settings screen  |
+| colRemovedStatuses           | Used to collect the Priorities that are being removed.       | OnSelect Property of the Save button on the Settings screen  |
+| colRemoveWorkItems           | Used to collect the Work items that have been checked for deletion. | OnSelect property of the Delete button on the confirmation pop-up on the Projects screen. |
+| colRemovedMilestones         | Used to collect the Team members who have been removed from the project. | OnSelect property of the Delete button under the Project details section on the settings page. |
+| colWorkItemStatuses          | Used to collect the available statuses for work items.        | Items property of the Status combo box on the Project screen |
 
 ### Global Variables 
 
 | Variable Name                   | Type    | Description                                                  |
 | ------------------------------- | ------- | ------------------------------------------------------------ |
-| gblAppLoaded                    | Boolean | To check whether the App is completely loaded                |
-| gblUserLanguage                 | Text    | To check the logged in Users Language                        |
+| gblAppLoaded                    | Boolean | To check whether the App is loaded.                |
+| gblUserLanguage                 | Text    | To check the logged in Users Language.                        |
 | colCharsWidth                   | Table   | Used to store character width for diff fonts, weights, sizes etc. |
-| gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark              |
-| gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to High Contrast     |
-| gblMobileWidth                  | Number  | Variable to set the width on mobile                          |
-| gblMobileMode                   | Boolean | Variable to check whether the app is running on mobile       |
-| gblAppSetting_inputMobileOnWeb  | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop |
-| gblAppSetting_inputScaleFontsby | Number  | Use this variable for scaling all fonts by a fixed amount    |
-| gblAppContext                   | Boolean | To check the context of where the app is running             |
-| gblFirstRun                     | Boolean | To check whether the app is being run for the first time     |
-| gblRecordUserSettings           | Record  | Variable to use the Oldest Record in case multiple records exist |
-| gblAppSetting_inputMobile       | Boolean | Variables to Scale fonts for mobile-oriented apps            |
-| gblAppColors                    | Record  | Variable to set the Color value in the app                   |
-| gblAppSizes                     | Record  | Variable to set the Color value in the app                   |
-| gblAppStyles                    | Record  | Variable to set the Styling values in the app                |
-| gblProject                      | Record  | Variable to store a project record which is in context       |
+| gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark.              |
+| gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to High Contrast.     |
+| gblMobileWidth                  | Number  | Variable to set the width on mobile.                          |
+| gblMobileMode                   | Boolean | Variable to check whether the app is running on mobile.       |
+| gblAppSetting_inputMobileOnWeb  | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop. |
+| gblAppSetting_inputScaleFontsby | Number  | Use this variable for scaling all fonts by a fixed amount.    |
+| gblAppContext                   | Boolean | To check the context of where the app is running.             |
+| gblFirstRun                     | Boolean | To check whether the app is being run for the first time.     |
+| gblRecordUserSettings           | Record  | Variable to use the Oldest Record in case multiple records exist. |
+| gblAppSetting_inputMobile       | Boolean | Variables to Scale fonts for mobile-oriented apps.            |
+| gblAppColors                    | Record  | Variable to set the Color value in the app.                   |
+| gblAppSizes                     | Record  | Variable to set the Color value in the app.                   |
+| gblAppStyles                    | Record  | Variable to set the Styling values in the app.                |
+| gblProject                      | Record  | Variable to store a project record that is in context.       |
 
 ## App OnStart
 
@@ -139,7 +139,7 @@ Variables used during app OnStart:
 | **Variable name**                | **Description**                                                                           |
 |----------------------------------|-------------------------------------------------------------------------------------------|
 | gblAppLoaded                     | - global variable to check if the app has loaded completely.                              |
-| gblUserLanguage                  | - global variable to store the users language.                                            |
+| gblUserLanguage                  | - global variable to store the user's language.                                            |
 | gblThemeDark                     | - global variable to store if Teams is running in dark mode.                              |
 | gblThemeHiCo                     | - global variable to store if Teams is running in contrast mode.                          |
 | gblMobileWidth                   | - global variable to define the width of the app for mobile.                              |
@@ -158,7 +158,7 @@ Variables used during app OnStart:
     default one.
 
 2.  The user's language is then used to collect localized text used throughout
-    the app (e.g. label and button text) in **colLocalization**.
+    the app (for example, label and button text) in **colLocalization**.
 
 3.  The user's Microsoft Teams theme/mode is checked to see if the theme is default, dark
     or high contrast. The **gblThemeDark** and **gblThemeHiCo** variables are
@@ -170,11 +170,11 @@ Variables used during app OnStart:
     theme and the other is for dark theme. For example, \#F4B9B9 is the default
     mode equivalent of \#791818.
 
-5.  User details from **Project User Settings** table is collected in
+5.  User details from Project User Settings table are collected in
     **colUserSettings**. If no records exist, a new project user setting record
     is created and the variable **gblFirstRun** is set to true. This in turn
     controls the visibility of the splash dialog. If there are multiple project
-    user settings record exist, the oldest record is selected and stored in the
+    user setting records exist, the oldest record is selected and stored in the
     **gblRecordUserSettings** variable.
 
 ## Loading Screen
@@ -242,7 +242,7 @@ The following variables are used to control the first run experience
 2.  If **locShowFirstRun** is true, the container **conDialogFirstRun** becomes
     visible and gives an overview of the app.
 
-3.  Select **Continue** sets **locShowFirstRun** to false which hides the
+3.  Select **Continue** sets **locShowFirstRun** to false that hides the
     **conDialogFirstRun** container. If **locShowPowerAppsPrompt** is true, the
     container **conDialogSplash_PowerApps** becomes visible showing the splash
     screen.
@@ -299,7 +299,7 @@ The following variables are used when a user views projects in Milestones.
     and also collects the work items of the selected project in the
     **colWorkItems** collection.
 
-7.  Select the + New project button on any of the above-mentioned screen updates
+7.  Select the + New project button on any of the above-mentioned screens updates
     the **locAddProject** variable to true and **locShowProjectTeamAssignment**
     variable (to learn about how this variable is used, go to Create a new
     project section) to false thus displaying the new project creation screen.
@@ -312,8 +312,7 @@ The following variables are used when a user views projects in Milestones.
     order from ascending to descending and vice versa.
 
 10. Select the menu icon updates the **locExpandProjectList** variable by
-    toggling its value from true to false and vice versa. This, in turn, expands
-    and collapses the project list section.
+    toggling its value from true to false and vice versa. This, in turn, expands, and collapses the project list section.
 
 ### Displaying and updating the project cover
 
@@ -334,9 +333,9 @@ The following variables are used when a user views or updates the project cover 
 
 #### Project cover update execution details
 
-1.  The project cover is part of the **conProjectHeader** container which
-    displays the selected projects name, the cover image (if there is one) and
-    cover color (if there is no cover image) which is fetched by using the
+1.  The project cover is part of the **conProjectHeader** container that
+    displays the selected projects name, the cover image (if any) and
+    cover color (if there's no cover image) which is fetched by using the
     **gblProject** variable.
 
 2.  selectThe gallery **galProjectColors** presents the user with a list of
@@ -351,10 +350,10 @@ The following variables are used when a user views or updates the project cover 
 4.  The default property of the gallery **galProjectColors** is used to select
     the cover color of **gblProject**. It is set as follows:
     1.  If the Teams theme is dark, Cover Color Dark of **gblProject** is looked
-        up. If this is blank, it means there is no project cover color.
+        up. If this is blank, it means there's no project cover color.
     
     2.  If the Teams theme is not dark, Cover Color of **gblProject** is looked
-        up. If this is blank, it means there is no project cover color.
+        up. If this is blank, it means there's no project cover color.
     
 5.  Selecting a color sets **locCoverImageSelected** to false,
     **locCoverColorSelected** to true, and **locCoverChanged** to true.
@@ -394,7 +393,7 @@ The following variables are used when a user views or updates the project cover 
         1.  If the current Teams theme is dark, the color selected from
             **galProjectColors** is set as Cover Color Dark. If the current
             Teams theme is not dark, the color selected from
-            **galProjectColors** is used to lookup the corresponding dark mode
+            **galProjectColors** is used to look up the corresponding dark mode
             color in **colProjectCoverColors** and this color is then set as
             Cover Color Dark. This is because if the Teams theme is not dark,
             **galProjectColors** is populated with default theme colors.
@@ -402,7 +401,7 @@ The following variables are used when a user views or updates the project cover 
         2.  If the current Teams theme is not dark, the color selected from
             **galProjectColors** is set as Cover Color. If the current Teams
             theme is dark, the color selected from **galProjectColors** is used
-            to lookup the corresponding default mode color in
+            to look up the corresponding default mode color in
             **colProjectCoverColors** and this color is then set as Cover Color.
             This is because if the Teams theme is dark, **galProjectColors** is
             populated with dark theme colors.
@@ -433,10 +432,10 @@ The following variables are used when viewing milestones.
 
 1.  There are four project status options available:
 
-2.  Team Status which shows the list of team members along with the number of
+2.  Team Status that shows the list of team members along with the number of
     work items assigned to them based on their statuses.
 
-3.  Milestone Status which shows the list of milestones along with the number of
+3.  Milestone Status that shows the list of milestones along with the number of
     work items related to them based on their statuses.
 
 4.  The items property of the **galMilestones** gallery is set to the milestones
@@ -446,7 +445,7 @@ The following variables are used when viewing milestones.
     completions (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100). The
     appropriate image is shown based on the percentage completion calculated by
     dividing number of work items for the milestone in Done status (which is the
-    1st status in **colWorkItemStatuses**, stored in **locCompletionStatus** in
+    first status in **colWorkItemStatuses**, stored in **locCompletionStatus** in
     the OnVisible of Projects Screen) by the total number of work items for that
     milestone.
 
@@ -456,7 +455,7 @@ The following variables are used when viewing milestones.
     Team members of the selected project **gblProject**.
 
 8.  The user photo for each team member is displayed using
-    Office365Users.UserPhotoV2 function. If there is no photo, a person icon is shown by default.
+    Office365Users.UserPhotoV2 function. If there's no photo, a person icon is shown by default.
     
 9.  The down arrow button next to the option label is used toggle between the Team Status and Milestone Status options. Select the arrow updates the value of **locShowProjectStatusOptions** variable toggling the value from true to false and vice versa controlling the visibility of the
     **galProjectStatusOptions** gallery.
@@ -467,7 +466,7 @@ This section explains the collections, variables, and execution details used for
 
 #### Work item display collections
 
-This following collections are used when viewing work items.
+These following collections are used when viewing work items.
 
 | **Collection name** | **Description**                                                     |
 |---------------------|---------------------------------------------------------------------|
@@ -480,13 +479,13 @@ The following variables are use when viewing work items.
 
 | **Variable name**      | **Description**                                                                                                  |
 |------------------------|------------------------------------------------------------------------------------------------------------------|
-| gblProject             | Global variable to store the selected project                                                                    |
-| locSortWorkItemBy      | Local variable to define the sort by column                                                                      |
-| locWorkItemSortOrder   | Local variable to define the sort order                                                                          |
-| locShowSearchWorkItem  | Local variable to control visibility of work item search box                                                     |
-| locFilterWorkItems     | Local variable to control visibility of work item filter dialog                                                  |
-| locApplyFilter         | Local variable to control if selected filters should be applied to work items                                    |
-| locBackNavigation      | Local variable to capture if navigation to Projects Screen is by going back from About Screen or Settings Screen |
+| gblProject             | Global variable to store the selected project.                                                                    |
+| locSortWorkItemBy      | Local variable to define the sort by column.                                                                      |
+| locWorkItemSortOrder   | Local variable to define the sort order.                                                                          |
+| locShowSearchWorkItem  | Local variable to control visibility of work item search box.                                                     |
+| locFilterWorkItems     | Local variable to control visibility of work item filter dialog.                                                  |
+| locApplyFilter         | Local variable to control if selected filters should be applied to work items.                                    |
+| locBackNavigation      | Local variable to capture if navigation to Projects Screen is by going back from About Screen or Settings Screen. |
 
 #### Work item display execution details
 
@@ -495,19 +494,19 @@ The following variables are use when viewing work items.
 
     -   First, the selected project gets stored in **gblProject**.
 
-    -   Second, all Project Work Items that lookup to this project get added to
+    -   Second, all Project Work Items that look up to this project get added to
         a collection **colWorkItems**.
 
 2.  The above steps also happen in the OnVisible of the Project Screen so that
     the list of work items for the first project in **galProjects** is displayed
     without the need to select on the project when a user is navigated to the
-    Projects Screen for the 1st time. Loading of work items does not happen in
-    subsequent navigations to the Projects Screen by going back from About
+    Projects Screen for the first time. Loading of work items does not happen in
+    subsequent navigation to the Projects Screen by going back from About
     Screen or Settings Screen. This is controlled by **locBackNavigation**.
 
 3.  The default sort by column (**locSortWorkItemBy**) is set to **eta**
     (Target) and the default sort order (**locWorkItemSortOrder**) is set to
-    true (i.e., Ascending). These are set in the OnVisible property of the
+    true (that is, Ascending). These are set in the OnVisible property of the
     **Projects Screen**.
 
 4.  There are 7 buttons that are headers for the work items gallery
@@ -547,7 +546,7 @@ The following variables are use when viewing work items.
     filter dialog and sets **locApplyFilter** to filter to not apply filters
     until the user has confirmed.
 
-11. **conFilterWorkItems** is the container which has all controls used for
+11. **conFilterWorkItems** is the container that has all controls used for
     filtering the gallery of work items. There are five combo boxes, one each for
     Milestones, Categories, Priorities, Team Members, and Statuses. They are all
     multi-select. Once the values have been selected, selecting **Apply** sets
@@ -587,8 +586,7 @@ The following variables are used when deleting variables.
     project from the projects gallery.
 
 3.  The delete icon remains disabled until at least one work item is selected.
-    Once enabled, select the **delete** icon sets **locDeleteWorkItems** to true
-    which makes the delete work item dialog visible.
+    Once enabled, select the **delete** icon sets **locDeleteWorkItems** to true that makes the delete work item dialog visible.
 
 4.  On the delete dialog, select **I understand** checkbox enables the delete
     button. The delete button first collects all items from the gallery that
@@ -617,8 +615,8 @@ The following variables are used when editing work items.
 | **Variable name**    | **Description**                                                                 |
 |----------------------|---------------------------------------------------------------------------------|
 | locEditWorkItem      | Local variable used to control the visibility of the conEditWorkItem container. |
-| locSelectedWorkItem  | Local variable to store the work item which is selected.                        |
-| locNewWorkItem       | Local variable which denotes to the work item which was updated.                |
+| locSelectedWorkItem  | Local variable to store the work item that is selected.                        |
+| locNewWorkItem       | Local variable that denotes to the work item that was updated.                |
 
 #### Work item editing execution details
 
@@ -658,7 +656,7 @@ The following variables are used when creating a project.
 | locMilestoneColorPicker       | - Local variable to control the visibility of the galMilestoneColorPicker.                                         |
 | locShowProjectTeamAssignment  | - Local variable to control the visibility of the project team assignment controllers (visible after Select Next). |
 | locShowUsersGallery           | - Local variable to control the visibility of the user gallery galAddTeamMembers.                                  |
-| galAddTeamMembers             | - local variable to store the selected users name.                                                                 |
+| galAddTeamMembers             | - local variable to store the selected user's name.                                                                 |
 | locNewProject                 | - local variable to store the newly created project.                                                               |
 
 #### Project creation execution details
@@ -674,7 +672,7 @@ The following variables are used when creating a project.
     **colNewProjectMilestones**.
 4.  Select the color button (**btnMilestoneColor**) sets
     **locMilestoneColorPicker** to true thus displaying the
-    **galMilestoneColorPicker** gallery which has a list of cover colors
+    **galMilestoneColorPicker** gallery that has a list of cover colors
     (**colProjectCoverColors**).
 5.  Select the desired color updates the milestone color and sets
     **locMilestoneColorPicker** value to false.
@@ -729,7 +727,7 @@ The following variables are used when creating work items.
 
 #### Work item creation execution details
 
-1.  Select the **+ New Work** Item button sets **locAddWorkItem** to true which
+1.  Select the **+ New Work** Item button sets **locAddWorkItem** to true that
     displays the **conAddWorkItem** container.
 
 2.  Once all the details are entered selecting the **Create** button creates a new work
@@ -752,12 +750,12 @@ This section explains the collections and execution details used by processes in
     back to the Project Screen.
 
 2.  Selecting the Customize using Power Apps button on the **conHeader_About**
-    container opens Power Apps tool link in Microsoft teams.
+    container opens Power Apps tool link in Microsoft Teams.
 
 3.  There are help links available in the **galAbout_HelpLinks** gallery.
 
 4.  Select the Learn how to customize this app button navigates to an external
-    link which explains on how to make customizations on the app.
+    link that explains on how to make customizations on the app.
 
 5.  Select the Send us your ideas button navigates to an external link where
     ideas can be posted for the Milestones app.
@@ -765,7 +763,7 @@ This section explains the collections and execution details used by processes in
 6.  Select the Engage with community button navigates to the Power Apps
     Community.
 
-7.  The **conAbout_AppVideo** container contains the video link which provides
+7.  The **conAbout_AppVideo** container contains the video link that provides
     an overview of the Milestones app.
 
 8.  The gallery **galAbout_OtherApps** contains the links to other Microsoft
@@ -815,7 +813,7 @@ The following variables are used when displaying milestones on the settings scre
     default.
 
 3.  Select any other project in **galProjects_Settings** stores the selected
-    project in **gblProject**. Then all milestones that lookup to this project
+    project in **gblProject**. Then all milestones that look up to this project
     get added to **colProjectMilestones**.
 
 ### Editing milestones
@@ -864,11 +862,11 @@ The following variables are used when editing milestones from the settings scree
     1.  If the current Teams theme is dark, the dark mode colors are presented
         to the user. So, Color column is updated by doing a lookup to
         **colProjectCoverColors** to find the default mode equivalent of the
-        color selected by the user. The Color Dark column is simply updated with
+        color selected by the user. The Color Dark column is updated with
         the color selected by the user.
 
     2.  If the current Teams theme is default, the default mode colors are
-        presented to the user. So, Color column is simply updated with the color
+        presented to the user. So, Color column is updated with the color
         selected by the user. The Color Dark column is updated by doing a lookup
         to **colProjectCoverColors** to find the dark mode equivalent of the
         color selected by the user.
@@ -883,7 +881,7 @@ The following collections are used when a milestone is added from the settings s
 
 | **Collection name**    | **Description**                                       |
 |------------------------|-------------------------------------------------------|
-| colProjectMilestones   | Collection of all milestones for the selected project |
+| colProjectMilestones   | Collection of all milestones for the selected project. |
 | colProjectCoverColors  | Collection of project cover colors.                   |
 
 #### Milestone creation variables
@@ -912,11 +910,11 @@ The following variables are used when a milestone is added from the settings scr
     -   If the current Microsoft Teams theme is dark, the dark mode colors are presented
         to the user. So, **Color** column is updated by doing a lookup to
         **colProjectCoverColors** to find the default mode equivalent of the
-        color selected by the user. The **Color Dark** column is simply updated with
+        color selected by the user. The **Color Dark** column is updated with
         the color selected by the user.
 
     -   If the current Microsoft Teams theme is default, the default mode colors are
-        presented to the user. So, **Color** column is simply updated with the color
+        presented to the user. So, **Color** column is updated with the color
         selected by the user. The Color Dark column is updated by doing a lookup
         to **colProjectCoverColors** to find the dark mode equivalent of the
         color selected by the user.
@@ -931,7 +929,7 @@ The following collections are used when milestones are deleted.
 
 | **Collection name**    | **Description**                                                                 |
 |------------------------|---------------------------------------------------------------------------------|
-| colProjectMilestones   | Collection of all milestones for the selected project                           |
+| colProjectMilestones   | Collection of all milestones for the selected project.                           |
 | colProjectCoverColors  | Collection of project cover colors.                                             |
 | colRemovedMiletones    | Collection of a milestone on select of delete icon with respect to a milestone. |
 
@@ -947,7 +945,7 @@ The following variables are used when milestones are deleted.
 
 #### Deleting milestones execution details
 
-1.  Select the **delete** icon sets **locDeleteSettings** to true which makes the
+1.  Select the **delete** icon sets **locDeleteSettings** to true that makes the
     delete milestone dialog visible and adds the milestone that needs to be
     deleted to **colRemovedMiletones**.
 
@@ -975,10 +973,10 @@ The following variables are used when a team member is added, edited, or removed
 
 | **Variable name**          | **Description**                                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------------------------------|
-| gblProject                 | - global variable to store the selected project.                                                          |
-| locDeleteProject           | - local variable to control the visibility of the deletion warning screen.                                |
-| locProjectToDelete         | - local variable to store the project being deleted.                                                      |
-| locTempNewSelectedProject  | - local variable to temporarily store the new project to be selected once the current project is deleted. |
+| gblProject                 | Global variable to store the selected project.                                                          |
+| locDeleteProject           | Local variable to control the visibility of the deletion warning screen.                                |
+| locProjectToDelete         | Llocal variable to store the project being deleted.                                                      |
+| locTempNewSelectedProject  | Llocal variable to temporarily store the new project to be selected once the current project is deleted. |
 
 #### Managing team member execution details
 
@@ -1002,7 +1000,7 @@ The following variables are used when a team member is added, edited, or removed
         **colWorkItems**.
 
     -   The project stored in **locProjectToDelete** is then used to delete all
-        related records i.e. milestones, work items, activities, team members.
+        related records that is, milestones, work items, activities, team members.
 
     -   Once all related records are deleted, the project itself is deleted.
 
@@ -1026,7 +1024,7 @@ The following variables are used when a project is deleted.
 | **Variable name**             | **Description**                                                                                                                |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | gblProject                    | Global variable to store the selected project.                                                                                 |
-| locShowProjectTeamAssignment  | Local variable to control the visibility of the project team assignment controllers (visible after clicking onselecting Next). |
+| locShowProjectTeamAssignment  | Local variable to control the visibility of the project team assignment controllers (visible after selecting Next). |
 | locShowUsersGallery           | Local variable to control the visibility of the user gallery galAddTeamMembers.                                                |
 | galAddTeamMembers             | Local variable to store the selected user's name.                                                                              |
 
@@ -1037,7 +1035,7 @@ The following variables are used when a project is deleted.
     **Screen**.
 
 2.  Select any other project in **galProjects_Settings** stores the selected
-    project in **gblProject**. Then all milestones that lookup to this project
+    project in **gblProject**. Then all milestones that look up to this project
     get added to **colProjectTeamMembers**.
 
 3.  Entering a search text sets **locShowUsersGallery** to false and hides the
@@ -1070,8 +1068,8 @@ The following collections are used when a category is viewed or edited.
 
 | **Collection name**    | **Description**                       |
 |------------------------|---------------------------------------|
-| colCategories          | - collection of categories.           |
-| colProjectCoverColors  | - collection of project cover colors. |
+| colCategories          | Collection of categories.           |
+| colProjectCoverColors  | Collection of project cover colors. |
 
 #### Category edit variables
 
@@ -1105,11 +1103,11 @@ The following variables are used when a category is viewed or edited.
     1.  If the current Teams theme is dark, the dark mode colors are presented
         to the user. So, Color column is updated by doing a lookup to
         **colProjectCoverColors** to find the default mode equivalent of the
-        color selected by the user. The Color Dark column is simply updated with
+        color selected by the user. The Color Dark column is updated with
         the color selected by the user.
 
     2.  If the current Teams theme is default, the default mode colors are
-        presented to the user. So, Color column is simply updated with the color
+        presented to the user. So, Color column is updated with the color
         selected by the user. The Color Dark column is updated by doing a lookup
         to **colProjectCoverColors** to find the dark mode equivalent of the
         color selected by the user.
@@ -1234,11 +1232,11 @@ The following variables are used when a priority is viewed or edited.
     1.  If the current Teams theme is dark, the dark mode colors are presented
         to the user. So, Color column is updated by doing a lookup to
         **colProjectCoverColors** to find the default mode equivalent of the
-        color selected by the user. The Color Dark column is simply updated with
+        color selected by the user. The Color Dark column is updated with
         the color selected by the user.
 
     2.  If the current Teams theme is default, the default mode colors are
-        presented to the user. So, **Color** column is simply updated with the color
+        presented to the user. So, **Color** column is updated with the color
         selected by the user. The **Color Dark** column is updated by doing a lookup
         to **colProjectCoverColors** to find the dark mode equivalent of the
         color selected by the user.
@@ -1360,11 +1358,11 @@ The following variables are used when statuses are viewed or edited.
     -   If the current Teams theme is dark, the dark mode colors are presented
         to the user. So, **Color** column is updated by doing a lookup to
         **colProjectCoverColors** to find the default mode equivalent of the
-        color selected by the user. The **Color Dark** column is simply updated with
+        color selected by the user. The **Color Dark** column is updated with
         the color selected by the user.
 
     -   If the current Teams theme is default, the default mode colors are
-        presented to the user. So, **Color** column is simply updated with the color
+        presented to the user. So, **Color** column is updated with the color
         selected by the user. The **Color Dark** column is updated by doing a lookup
         to **colProjectCoverColors** to find the dark mode equivalent of the
         color selected by the user.
