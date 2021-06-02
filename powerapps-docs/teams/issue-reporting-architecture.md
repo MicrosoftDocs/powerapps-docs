@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/29/2021
+ms.date: 06/02/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -26,7 +26,7 @@ To understand and use information in this article, you'll need to know about dif
 - [Collect, Clear, and ClearCollect functions in Power Apps](../maker/canvas-apps/functions/function-clear-collect-clearcollect.md)
 - [Understand canvas-app variables in Power Apps](../maker/canvas-apps/working-with-variables.md)
 - [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
-- [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
+- [Add a screen to a canvas app and browse between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](issue-reporting.md) Issue Reporting sample app.
 
@@ -57,12 +57,12 @@ The section describes the tables contained in the Issue Reporting solution, alon
 
 | Table                       | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
-| Issue Report                | Issues refer to a problem  or trouble being faced by the Users. Information such as the Name, Issue  category, issue template, Planner Task ID, due date, assigned user and  description are stored in the Issue reports table.     An issue can be related only to a single Category and Template. |
-| Issue  Report Category      | Categories  are used to group similar kind of issues. Details such as the Name, category  icon, Planner Bucket ID are stored in the Issue Report Categories table. A  Category can have multiple Issues and Issue Templates associated to it. |
-| Issue Report Template       | Issue  templates have predefined questions that must be answered by the users while  creating an issue which helps us in understanding it better. Details such as  the Due Date, Category the user to whom the tasks should be assigned, the  primary contact information are stored in the Issue Report Templates table.  There can be multiple questions and issues related to an Issue template. |
-| Issue  Report Questions     | Questions  are part of the Issue Templates which help in explaining the issue in a  better way. Details such as the Issue template and the sequence are stored in  the Issue Report Questions table. There can be multiple questions in an Issue  template. |
+| Issue Report                | Issues refer to a problem  or trouble being faced by the Users. Information such as the Name, Issue  category, issue template, Planner Task ID, due date, assigned user, and  description are stored in the Issue reports table.     An issue can be related only to a single Category and Template. |
+| Issue  Report Category      | Categories  are used to group similar issues. Details such as the Name, category  icon, Planner Bucket ID are stored in the Issue Report Categories table. A  Category can have multiple Issues and Issue Templates associated to it. |
+| Issue Report Template       | Issue  templates have predefined questions that must be answered by the users while  creating an issue that helps us in understanding it better. Details such as  the Due Date, Category the user to whom the tasks should be assigned, the  primary contact information are stored in the Issue Report Templates table.  There can be multiple questions and issues related to an Issue template. |
+| Issue  Report Questions     | Questions  are part of the Issue Templates that help in explaining the issue in a  better way. Details such as the Issue template and the sequence are stored in  the Issue Report Questions table. There can be multiple questions in an Issue  template. |
 | Issue Report Settings       | Settings  are used to store configurations for the app, including the Team and Planner IDs for where to log issues as Planner Tasks. |
-| Issue  Report User Settings | User settings are used to store user  preferences pertaining to seeing the Power Apps splash screen every time they  login to the app. There is one record for each user. |
+| Issue  Report User Settings | User settings are used to store user  preferences pertaining to seeing the Power Apps splash screen every time they  log in to the app. There is one record for each user. |
 
 ## Manage Issues app
 
@@ -75,16 +75,16 @@ Manage Issues app uses following collections.
 | Collection Name                      | Description                                                  | Screen Used                                                  |
 | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | colIcons                             | Used to collect the icons used in the app                    | OnStart property of the App                                  |
-| colUserSettings                      | Used to collect User Settings DATAVERSEDATAVERSE record  if it exists | OnStart property of the App                                  |
+| colUserSettings                      | Used to collect User Settings Dataverse record  if it exists | OnStart property of the App                                  |
 | colLocalization                      | Used to build a Localization Collection based on the User  Language | OnStart property of the App                                  |
-| colDataverseDataverseIssueCategories | Used to collect DATAVERSEDATAVERSE Issue report  categories  | OnStart property of the App                                  |
-| colDataverseDataverseIssueTemplates  | Used to collect DATAVERSEDATAVERSE Issue report templates    | OnStart property of the App                                  |
-| colPlannerBuckets                    | To collect the list of Planner Buckets in a particular  plan based on the Plan and Team ID’s | OnStart property of the App                                  |
-| colPlannerTasks                      | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team ID’s | OnStart property of the App                                  |
-| colDataverseIssueReports             | Collection to collect DATAVERSE Issue report categories      | OnStart property of the App                                  |
+| colDataverseDataverseIssueCategories | Used to collect Dataverse Issue report  categories  | OnStart property of the App                                  |
+| colDataverseDataverseIssueTemplates  | Used to collect Dataverse Issue report templates    | OnStart property of the App                                  |
+| colPlannerBuckets                    | To collect the list of Planner Buckets in a particular  plan based on the Plan and Team IDs | OnStart property of the App                                  |
+| colPlannerTasks                      | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team IDs | OnStart property of the App                                  |
+| colDataverseIssueReports             | Collection to collect Dataverse Issue report categories      | OnStart property of the App                                  |
 | colStats                             | Collection to collect the stats of the planner tasks         | OnVisible property of the Insights screen                    |
 | colUserProfiles                      | Used to collect User details from Office 365                 |                                                              |
-| colDataverseIssueAssignments         | Used to store  information about the User to whom Issue has been assigned to | OnSelect property of the Save button while creating a new  Issue template |
+| colDataverseIssueAssignments         | Used to store  information about the User to whom Issue has been assigned. | OnSelect property of the Save button while creating a new  Issue template |
 | colAppTemplateCounting               |                                                              |                                                              |
 | colDataverseIssueQuestions           | To collect the questions for a particular issue template     | OnSelect property of the Save button while creating a new  Issue template |
 | colQuestionsToDelete                 | To collect the questions to be deleted from the Issue  template | OnSelect property of the Save button while creating a new  Issue template |
@@ -95,7 +95,7 @@ Manage Issue app uses following global variables.
 
 | Variable  Name                  | Type    | Description                                                  |
 | ------------------------------- | ------- | ------------------------------------------------------------ |
-| gblAppLoaded                    | Boolean | To check whether the App is completely loaded                |
+| gblAppLoaded                    | Boolean | To check whether the App is loaded                |
 | gblAppContext                   | Boolean | To check the context of where the app is running             |
 | gblUserLanguage                 | Text    | To check the logged in User’s Language                       |
 | gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark              |
@@ -118,8 +118,8 @@ Manage Issue app uses following global variables.
 | gblAppColors                    | Record  | Variable to set the Color value in the app                   |
 | gblAppSizes                     | Record  | Variable to set the Color value in the app                   |
 | gblAppStyles                    | Record  | Variable to set the Styling values in the app                |
-| gblRecordCategory               | Record  | Variable used to store the Issue category record which is  being created / edited |
-| gblRecordTemplate               | Record  | Variable used to store the Issue template record which is  being created / edited |
+| gblRecordCategory               | Record  | Variable used to store the Issue category record that is  being created / edited |
+| gblRecordTemplate               | Record  | Variable used to store the Issue template record that is  being created / edited |
 
 ### App OnStart
 
@@ -151,7 +151,7 @@ The following collections are used during start of the app.
 | gblAppManager           | Global variable to check whether a User team  role is assigned. |
 | gblParamTeamId          | Global variable to set the Group ID from  Planner            |
 | gblParamChannelId       | Global variable to set the Channel ID from  Planner          |
-| gblRecordSettings       | Global variable used to set the Team and  Channel Id to the Employee Ideas settings table. |
+| gblRecordSettings       | Global variable used to set the Team and  Channel ID to the Employee Ideas settings table. |
 | gblRecordUserSettings   | Variable to use the Oldest Record in case  multiple records exist |
 | gblSettingPlannerPlanId | Global Variable to store the Planner Plan ID  from the settings record. |
 | gblSettingTeamId        | Global variable to store Team's ID from the  Settings record |
@@ -168,11 +168,11 @@ The following collections are used during start of the app.
 
 1. When a user accesses the app, **gblAppLoaded** is set to false. The user’s language code is stored in **gblUserLanguage**, with English - US being the default one. The gblAppContext where the app is running.
 
-2. If the value of gblAppContext is true it means the app is being accessed from within Teams. If False, the **gblAppLoaded** is set to true indicating the app is loaded completely.
+2. If the value of gblAppContext is true, it means the app is being accessed from within Teams. If False, the **gblAppLoaded** is set to true indicating the app is loaded completely.
 
 3. The user’s language code is stored in **gblUserLanguage**, with English - US being the default one.
 
-4. The user’s language is then used to collect localized text used throughout the app (e.g. label and button text) in **colLocalization** collection.
+4. The user’s language is then used to collect localized text used throughout the app (for example, label and button text) in **colLocalization** collection.
 
 5. The user’s Teams theme/mode is checked to see if the theme is default, dark or high contrast. The **gblThemeDark** and **gblThemeHiCo** variables are set accordingly.
 
@@ -180,13 +180,13 @@ The following collections are used during start of the app.
 
 7. The user team role is stored in the **gblAppManager** variable used to enable it for Studio.
 
-8. The gblRecordSettings variable is used to store the App settings from the Issue Report Settings table using the Group and Channel ID’s stored in the **gblParamTeamId** and **gblParamChannelId** variables.
+8. The gblRecordSettings variable is used to store the App settings from the Issue Report Settings table using the Group and Channel IDs stored in the **gblParamTeamId** and **gblParamChannelId** variables.
 
 9. In there are no available settings, the details are fetched using the Microsoft Team connector and updated to the Issue Report Settings table.
 
-10. User details from Issue Report User Settings table is collected in **colUserSettings**. If no records exist, a new Issue Report User Settings record is created. If there are multiple Issue Report User Settings record exist, the oldest record is selected and stored in the gblRecordUserSettings variable.
+10. User details from Issue Report User Settings table are collected in **colUserSettings**. If no records exist, a new Issue Report User Settings record is created. If there are multiple Issue Report User Settings records exist, the oldest record is selected and stored in the gblRecordUserSettings variable.
 
-11. The Planner and Team ID’s from the Parameters are fetched from the **gblRecordSettings** variable and are stored in the **gblSettingPlannerPlanId** and **gblSettingTeamId** variables.
+11. The Planner and Team IDs from the Parameters are fetched from the **gblRecordSettings** variable and are stored in the **gblSettingPlannerPlanId** and **gblSettingTeamId** variables.
 
 12. Predefined padding values are stored in the **gblPadding** variable and the present day’s date is stored in the **gblToday** variable.
 
@@ -198,7 +198,7 @@ The following collections are used during start of the app.
 
 16. The group plans are collected in the **gblDropdownPlanner** which is fetched using the value of **gblSettingTeamId variable.**
 
-17. Once all the details are collected and stored the value of **gblAppLoaded** is set to true indicating the app is loaded completely.
+17. After all the details are collected and stored, the value of **gblAppLoaded** is set to true indicating the app is loaded completely.
 
 
 
@@ -221,10 +221,10 @@ The following variables are used on the Insights screen
 | Variable name                | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
 | gblToday                     | Global variable to store the present day's  date.            |
-| varStatInProgress            | Variable to store the list of  tasks which are 50% complete. |
-| varStatNotStarted            | Variable to store the list of  tasks which are not started (0% complete). |
-| varStatNewIssues             | Variable to store the list of  tasks which are created on the present day. |
-| varStatCompletedLastWeek     | Variable to store the list of  tasks which are completed last week. |
+| varStatInProgress            | Variable to store the list of  tasks that are 50% complete. |
+| varStatNotStarted            | Variable to store the list of  tasks that are not started (0% complete). |
+| varStatNewIssues             | Variable to store the list of  tasks that are created on the present day. |
+| varStatCompletedLastWeek     | Variable to store the list of  tasks that are completed last week. |
 | varStatAverageResolutionTime | Variable to store the average  resolution time of tasks (in hours). |
 
 ### First run experience
@@ -247,13 +247,13 @@ This section explains the variables and execution details used in the first run 
 
 2. On visible of Insights screen a dialog pop-up appears if either **locShowSetup** or **locShowPowerAppsPrompt** is true, if not the app proceeds with loading the Insights data.
 
-3. **LocShowSetup** is set to true / false depending upon Issue report settings records that gets created when the app runs for the first time. So if the app runs for the first time it creates a report setting record when the user completes the first run experience. 
+3. **LocShowSetup** is set to true / false depending upon Issue report settings records that get created when the app runs for the first time. So if the app runs for the first time it creates a report setting record when the user completes the first run experience. 
 
 4. If it’s the first time when the user is running the app, then **locShowSetup** is set to ‘True’ and hence the app shows the first run dialog.
 
 5. if the **locShowSetup** is true then the first run dialog appears briefing about the app.
 
-6. When the user continues with the first run dialog, in the background it creates a Issue report setting record.
+6. When the user continues with the first run dialog, in the background it creates an Issue report setting record.
 
 7. Also if it’s a first run, the app also shows the splash screen based upon the boolean variable **locShowPowerAppsPrompt**
 
@@ -286,14 +286,14 @@ The following variables are used when issue category and template lists are disp
 | ------------------------------ | ------------------------------------------------------------ |
 | locSortCampaigns               | Local variable used to sort the categories  in ascending and descending orders. |
 | locSortTemplateList_Title      | Used to store the title of the Issue  Template               |
-| locSortTemplateList_NotStarted | Used to store the number of issues which are  not started.   |
-| locSortTemplateList_InProgress | Used to store the number of issues which are  in progress.   |
-| locSortTemplateList_Done       | Used to store the number of issues which are  completed.     |
-| gblRecordCategory              | Global variable to store the category which  is being created / edited. |
+| locSortTemplateList_NotStarted | Used to store the number of issues that are  not started.   |
+| locSortTemplateList_InProgress | Used to store the number of issues that are  in progress.   |
+| locSortTemplateList_Done       | Used to store the number of issues that are  completed.     |
+| gblRecordCategory              | Global variable to store the category that  is being created / edited. |
 
 ##### Issue category and template execution details
 
-1. The **galCategory** gallery displays the list of existing Issue categories from the Issue Category table which is stored in the **colDataverseIssueCategories** collection.
+1. The **galCategory** gallery displays the list of existing Issue categories from the Issue Category table that is stored in the **colDataverseIssueCategories** collection.
 
 2. The categories can be searched based on their names and can be sorted in ascending or descending orders by selecting the Sort category icon.
 
@@ -330,7 +330,7 @@ The following variables are used when creating a category.
 | locDisplayDialog            | Used to display a background dialog to  restrict user's from selecting background options. |
 | locSelectIcon               | Variable to control the visibility of the  Icon picker gallery. |
 | locFieldCategoryIcon        | Used to store the selected icon while  creating a new Issue category. |
-| gblRecordCategory           | Global variable to store the category which  is being created / edited. |
+| gblRecordCategory           | Global variable to store the category that  is being created / edited. |
 | gblSettingTeamId            | Global variable to store Team's ID from the  Settings record |
 | gblSettingPlannerPlanId     | Global Variable to store the Planner Plan ID  from the settings record.locBlockUserInput |
 | locRecordPlannerBucket      | Variable used to create a new bucket in  Planner.            |
@@ -338,13 +338,13 @@ The following variables are used when creating a category.
 
 ##### Category creation execution variables
 
-1. A new category can be added from the **Issue templates screen**. On selection of the **Add Category** button the **locScreenModeCreateCategory** variable is set to true thus enabling the user to enter the title and icon of the new category.
+1. A new category can be added from the **Issue templates screen**. Upon selection of the **Add Category** button, the **locScreenModeCreateCategory** variable is set to true thus enabling the user to enter the title and icon of the new category.
 
 2. The **galCategory** gallery will be In a disabled state when a new category is being added, The display mode is controlled by the **locScreenModeViewCategory** variable.
 
 3.  The category name can be entered in the title field. Selecting the update icon button would set the values of **locDisplayDialog** and **locSelectIcon** to true thus displaying the **conDialogIcon** container and blocking the user from accessing the other options.
 
-4. The **galIcons** gallery will display the list of stock icons stored in the **colIcons** collection. Selecting any one of the icon would store it in the **locFieldCategoryIcon** variable and update the values of **locDisplayDialog** and **locSelectIcon** variables to false.
+4. The **galIcons** gallery will display the list of stock icons stored in the **colIcons** collection. Selecting any one of the icons would store it in the **locFieldCategoryIcon** variable and update the values of **locDisplayDialog** and **locSelectIcon** variables to false.
 
 5. Once the title and icon are selected the Save button is enabled, clicking on which would set the value of **locBlockUserInput** to true blocking the user from making any changes while the app is being saved and a new bucket is created using the **locRecordPlannerBucket** variable and is collected in the **colPlannerBuckets** collection
 
@@ -376,7 +376,7 @@ The following variables are used when a category is edited.
 | locScreenModeCreateCategory | Variable to check whether an existing  category is being created. |
 | locDisplayDialog            | Used to display a background dialog to  restrict user's from selecting background options. |
 | locFieldCategoryIcon        | Used to store the selected icon while  creating a new Issue category. |
-| gblRecordCategory           | Global variable to store the category which  is being created / edited. |
+| gblRecordCategory           | Global variable to store the category that  is being created / edited. |
 | gblSettingTeamId            | Global variable to store Team's ID from the  settings record |
 | gblSettingPlannerPlanId     | Global Variable to store the Planner Plan ID  from the settings record. |
 | locBlockUserInput           | Local variable used to block the User Input  by displaying a dialog while something is being saved. |
@@ -423,12 +423,12 @@ the following variables are used when a category is deleted
 
 | Variable name             | Description                                                  |
 | ------------------------- | ------------------------------------------------------------ |
-| locScreenModeEditCategory | local variable which indicates a category Is  being edited   |
+| locScreenModeEditCategory | local variable that indicates a category Is  being edited   |
 | locDisplayDialog          | used to display a background dialog to  restrict user's from selecting background options. |
 | locDisplayDialogDelete    | variable to control the visibility of the  Delete Dialog.    |
 | locDeleteChecked          | variable to control the "I  Understand" checkbox value.      |
-| gblRecordCategory         | global variable to store the category which  is being created / edited. |
-| locScreenModeViewCategory | local variable which indicates a category Is  being viewed and not edited. |
+| gblRecordCategory         | global variable to store the category that  is being created / edited. |
+| locScreenModeViewCategory | local variable that indicates a category Is  being viewed and not edited. |
 
 ##### Category deletion execution details
 
@@ -457,7 +457,7 @@ The following collections are used when an issue template is created.
 | ---------------------------- | ------------------------------------------------------------ |
 | colDataverseIssueQuestions   | Used to collect the issue template  questions                |
 | colUserProfiles              | Used to collect Office 365 User Profiles                     |
-| colDataverseIssueAssignments | Used to store information about the User to  whom Issue has been assigned to |
+| colDataverseIssueAssignments | Used to store information about the User to  whom Issue has been assigned. |
 | colDataverseIssueTemplates   | Used to collect the issue templates for a  category          |
 
 ##### Issue template creation variables
@@ -466,18 +466,18 @@ The following variables are used when an issue template is created.
 
 | Variable name               | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
-| locScreenModeCreateTemplate | local variable to indicate a issue template  is being created. |
-| gblRecordTemplate           | global variable to store the template record  which is being edited/ created |
+| locScreenModeCreateTemplate | local variable to indicate an issue template  is being created. |
+| gblRecordTemplate           | global variable to store the template record  that is being edited/ created |
 | locDisplayDialog            | used to display a background dialog to  restrict user's from selecting background options. |
 | locDisplayAssignmentSelect  | Used to control the visibility of the User  Assignment container. |
 | locUserPrincipalName        | used to store the username of the searched  user.            |
-| locBlockUserInput           | variable to control the visibility of a  dialog which prevents users from making any changes when the app is being  saved. |
+| locBlockUserInput           | variable to control the visibility of a  dialog that prevents users from making any changes when the app is being  saved. |
 
 ##### Issue template creation execution details
 
 1. A new Issue template can be added from the **Issue templates screen** when a category is being viewed. On selection of the “+ Add Issue template” button the values of the **locScreenModeCreateTemplate** variable is set to true thus displaying **conTemplateForm** and **conTemplateQuestionHelp** container.
 
-2. Users can enter the title, select the number of due days and select the user to whom the issues created under this template would be assigned to.
+2. Users can enter the title, select the number of due days, and select the user to whom the issues created under this template would be assigned to.
 
 3. Selecting the user search box will set the **locDisplayDialog** and **locDisplayAssignmentSelect** variables to true this displaying the **conAssignUser** container.
 
@@ -487,17 +487,17 @@ The following variables are used when an issue template is created.
 
 6. Issue questions can be added by selecting the “+ Add Question” button. Selecting which a blank question is displayed in the galQuestionList gallery.
 
-7. Users can enter the required questions which are stored in the **colDataverseIssueQuestions** collection**.** A single-issue template can have multiple questions.
+7. Users can enter the required questions that are stored in the **colDataverseIssueQuestions** collection**.** A single-issue template can have multiple questions.
 
-8. Selecting the user search box will set the **locDisplayDialog, locSelectPrimaryContact** and **locDisplayAssignmentSelect** variables to true this displaying the **conAssignUser** container.
+8. Selecting the user search box will set the **locDisplayDialog, locSelectPrimaryContact, and **locDisplayAssignmentSelect** variables to true this displaying the **conAssignUser** container.
 
 9. Users can be selected from the **galAssignUser** gallery based on the search results.
 
 10. The input given is stored in the **locSelectPrimaryContact** variable and the same is used to collect the user profile details in the **colDataverseIssueAssignments** collection.
 
-11. Once all the details are filled, selecting the ave button will create the template in the Issue Report Templates table and **colDataverseIssueTemplates** collection.
+11. Once all the details are filled, selecting the Save button will create the template in the Issue Report Templates table and **colDataverseIssueTemplates** collection.
 
-12. The newly added questions which are stored in the **colDataverseIssueQuestions** collection is updated to the **Issue Report Questions** table.
+12. The newly added questions that are stored in the **colDataverseIssueQuestions** collection are updated to the **Issue Report Questions** table.
 
 13. The value of the **locScreenModeViewCategory** is set to true thus displaying the parent category.
 
@@ -513,7 +513,7 @@ The following collections are used when an issue template is edited.
 | ---------------------------- | ------------------------------------------------------------ |
 | colDataverseIssueQuestions   | Used to collect the issue template questions                 |
 | colDataverseIssueAssignments | Used to store information about the User to  whom Issue has been assigned. |
-| colQuestionsToDelete         | Used to collect the questions which are to  be deleted from the issue template. |
+| colQuestionsToDelete         | Used to collect the questions that are to  be deleted from the issue template. |
 
 
 ##### Issue template edit variables
@@ -522,9 +522,9 @@ The following variables are used when an issue template is edited.
 
 | Variable name             | Description                                                  |
 | ------------------------- | ------------------------------------------------------------ |
-| locScreenModeEditTemplate | Local variable which indicates a template is  being edited.  |
-| gblRecordTemplate         | Global variable to store the template record  which is being edited/ created |
-| locScreenModeViewTemplate | Local variable which indicates a template is  being viewed.  |
+| locScreenModeEditTemplate | Local variable that indicates a template is  being edited.  |
+| gblRecordTemplate         | Global variable to store the template record  that is being edited/ created |
+| locScreenModeViewTemplate | Local variable that indicates a template is  being viewed.  |
 | locSequenceCurrent        | Local variable to set the current sequence  number of the question. |
 | locSequenceNew            | Local variable to set the new sequence  number of the question. |
 
@@ -533,9 +533,9 @@ The following variables are used when an issue template is edited.
 
 1. An existing Issue template can be updated from the “Issue templates screen”. Selecting the **Edit** button will set the **gblRecordTemplate** to the selected template.
 
-2. The Issue questions and the Task Assignment details stored in the **colDataverseIssueQuestions**  and **colDataverseIssueAssignments** are displayed.
+2. The Issue questions and the Task Assignment details are stored in the **colDataverseIssueQuestions**  and **colDataverseIssueAssignments** tables.
 
-3. Required details can be updated, New questions can be added and existing ones can be deleted.
+3. Required details can be updated, new questions can be added, and existing ones can be deleted.
 
 4. Selecting the delete button next to the question will remove the question from the **galQuestionList** gallery and add it to the **colQuestionsToDelete** collection.
 
@@ -547,7 +547,7 @@ The following variables are used when an issue template is edited.
 
 8. Once the required details are updated, selecting the save button will update the template in the Issue Report Templates table and **colDataverseIssueTemplates** collection.
 
-9. The newly added questions and the deleted questions which are stored in the **colDataverseIssueQuestions and colQuestionsToDelete** collection are updated to the **Issue Report Questions** table.
+9. The newly added questions and the deleted questions that are stored in the **colDataverseIssueQuestions and colQuestionsToDelete** collection are updated to the **Issue Report Questions** table.
 
 10. The value of the **locScreenModeViewCategory** is set to true thus displaying the parent category.
 
@@ -568,7 +568,7 @@ The following collection is used when an issue template is duplicated.
 
 | Variable name              | Description                                                  |
 | -------------------------- | ------------------------------------------------------------ |
-| locRecordDuplicateTemplate | variable which indicates a issue template is  being duplicated. |
+| locRecordDuplicateTemplate | variable that indicates an issue template is  being duplicated. |
 
 #####  Issue template duplication execution details
 
@@ -586,7 +586,7 @@ The following collection is used when an issue template is deleted.
 
 | Collection name            | Description                                           |
 | -------------------------- | ----------------------------------------------------- |
-| colDataverseIssueTemplates | Used to collect the issue templates for a  category . |
+| colDataverseIssueTemplates | Used to collect the issue templates for a  category. |
 
 ##### Issue template deletion variables
 
@@ -597,7 +597,7 @@ The following variables are used when an issue template is deleted.
 | locDisplayDialog          | used to display a background dialog to  restrict user's from selecting background options. |
 | locDisplayDialogDelete    | variable to control the visibility of the  Delete Dialog.    |
 | locDeleteChecked          | variable to control the "I  Understand" checkbox value.      |
-| locScreenModeViewCategory | local variable which indicates a category Is  being viewed and not edited. |
+| locScreenModeViewCategory | local variable that indicates a category Is  being viewed and not edited. |
 
 #####  Issue template deletion execution details
 
@@ -615,23 +615,23 @@ The following variables are used when an issue template is deleted.
 
 ##### About screen execution details
 
-1. Selecting the “Customize using Power Apps button” on the **conAbout_Header** container opens Power Apps tool link in Microsoft teams.
+1. Selecting the “Customize using Power Apps button” on the **conAbout_Header** container opens Power Apps tool link in Microsoft Teams.
 
 2. There are help links available in the galAbout_HelpLinks gallery.
 
-  - Selecting the “Learn how to customize this app” button navigates to an external link which explains on how to make customizations on the app.
+  - Selecting the “Learn how to customize this app” button takes to an external link that explains on how to make customizations on the app.
 
-  - Selecting the “Send us your ideas” button navigates to an external link where ideas can be posted for the Milestones app.
+  - Selecting the “Send us your ideas” button takes to an external link where ideas can be posted for the Milestones app.
 
-  - Selecting the “Engage with community” button navigates to the Power Apps Community.
+  - Selecting the “Engage with community” button takes to the Power Apps Community.
 
-3. The **conAbout_AppVideo** container contains the video link which provides an overview of the Milestones app.
+3. The **conAbout_AppVideo** container contains the video link that provides an overview of the Milestones app.
 
 4. The gallery **galAbout_OtherApps** contains the links to other Microsoft apps. 
 
-- Selecting the “View app” button navigates to the app page in the Microsoft Teams app store.
+- Selecting the “View app” button takes to the app page in the Microsoft Teams app store.
 
-- Selecting the “App Overview” button navigates to the App overview video on YouTube.
+- Selecting the “App Overview” button takes to the App overview video on YouTube.
 
 - The **conAbout_Version** gives information about the app versioning.
 
@@ -656,10 +656,10 @@ This section explains the variables and execution details used by the settings s
 
 2. The list of Planner instances in the dropdown are from the **gblDropdownPlanner** variable.
 
-3. The **Save** button is enabled when the dropdown value selected, or the team owner restricted value is different is different from the value stored in the variable **gblRecordSettings** (which is set on start of the app).
+3. The **Save** button is enabled when the dropdown value selected, or the team owner restricted value is different from the value stored in the variable **gblRecordSettings** (which is set on start of the app).
 
 4. In case the values of **gblSettingPlannerPlanId** and **gblSettingTeamId** are not blank, The Planner buckets and tasks are updated in the **colPlannerBuckets** and **colPlannerTasks** collections, respectively.
-5. On selection of the save button, the details are updated in the **Issue Report Settings** table using the **gblRecordSettings** variable and the app will navigate to the **About** screen.
+5. On selection of the save button, the details are updated in the **Issue Report Settings** table using the **gblRecordSettings** variable and the app will take the user to the **About** screen.
 
 ## Issue Reporting app
 
@@ -673,15 +673,15 @@ The following collections are used in the Issue Reporting app.
 | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | staticLocalizations          | Used for localization of text.                               | All screens                                                  |
 | colIcons                     | Used to collect the icons used in the app                    | OnStart property of the App                                  |
-| colDataverseIssueCategories  | Used to collect DATAVERSE Issue report categories            | OnStart property of the App                                  |
-| colDataverseIssueTemplates   | Used to collect DATAVERSE Issue report templates             | OnStart property of the App                                  |
+| colDataverseIssueCategories  | Used to collect Dataverse Issue report categories            | OnStart property of the App                                  |
+| colDataverseIssueTemplates   | Used to collect Dataverse Issue report templates             | OnStart property of the App                                  |
 | colSaveDataCheck             | Used to check device offline capabilities                    | Temp save data screen                                        |
 | colSavedData                 | Used to save a session’s data                                | Temp  save data screen                                       |
-| colUserProfiles              | To store the User details (Profile ID, Email, User Photo  and Display Name) | Temp  save data screen                                       |
+| colUserProfiles              | To store the User details (Profile ID, Email, User Photo,  and Display Name) | Temp  save data screen                                       |
 | colDataverseIssueQuestions   | Used to store the session questions from the local device    | Temp  save data screen                                       |
 | colDataverseIssueAssignments | Used to store the session assignments from the local  device | Temp  save data screen                                       |
-| colPlannerBuckets            | To collect the list of Planner Buckets in a particular  plan based on the Plan and Team ID’s | OnStart property of the App                                  |
-| colPlannerTasks              | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team ID’s | Items property of the Week at glance gallery on the  Insights screen. |
+| colPlannerBuckets            | To collect the list of Planner Buckets in a particular  plan based on the Plan and Team IDs | OnStart property of the App                                  |
+| colPlannerTasks              | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team IDs | Items property of the Week at glance gallery on the  Insights screen. |
 | colDataverseIssueReports     | To store the list of issues based on the Planner Task ID     | OnSelect property of the View Issues button on the  Insights screen. |
 | colStats                     | Used to collect the stats of the  planner tasks              | Items property of the Week at glance gallery on the  Insights screen |
 | colMyIssues                  | Used to store the issues assigned for the user               | OnSelect property of the View Issues button on the  Insights screen. |
@@ -693,7 +693,7 @@ The following global variables are used in the Issue Reporting app.
 
 | Variable  Name                  | Type    | Description                                                  |
 | ------------------------------- | ------- | ------------------------------------------------------------ |
-| gblAppLoaded                    | Boolean | To check whether the App is completely loaded                |
+| gblAppLoaded                    | Boolean | To check whether the App is loaded                |
 | gblAppContext                   | Boolean | To check the context of where the app is running             |
 | gblUserLanguage                 | Text    | To check the logged in User’s Language                       |
 | gblParamTeamId                  | Text    | To set the Group ID from Planner                             |
@@ -716,7 +716,7 @@ The following global variables are used in the Issue Reporting app.
 | gblAppStyles                    | Record  | Variable to set the Styling values in the app                |
 | gblAppEnabledSaveData           | Boolean | Variable to check whether the app is enabled to store  data locally |
 | gblRecordCategory               | Record  | Variable to fetch the Record Category based on Guid          |
-| gblRecordTemplate               | Record  | Variable used to store the Issue template record which is  being created / edited |
+| gblRecordTemplate               | Record  | Variable used to store the Issue template record that is  being created / edited |
 | gblSessionValue_Location        | Text    | Used to set the cached location                              |
 | gblSessionValue_Description     | Text    | Used to set the cached Description                           |
 
@@ -746,7 +746,7 @@ The following variables are used when the Issue Reporting app starts.
 | gblUserLanguage     | Global variable to store the user's  language.               |
 | gblParamTeamId      | Global variable to set the Group ID from Planner.            |
 | gblParamChannelId   | Global variable to set the Channel ID from Planner.          |
-| gblRecordSettings   | Global variable used to set the Team and Channel Id to the Employee Ideas settings table. |
+| gblRecordSettings   | Global variable used to set the Team and Channel ID to the Employee Ideas settings table. |
 | gblPlannerPlanId    | Global variable to store the Planner ID.                     |
 | gblPlannerGroupId   | Global variable to store the Team ID.                        |
 | gblPadding          | Global variable to set the padding values.                   |
@@ -760,13 +760,13 @@ The following variables are used when the Issue Reporting app starts.
 
 1. When a user accesses the app, **gblAppLoaded** is set to false. The user’s language code is stored in **gblUserLanguage**, with English - US being the default one. The **gblAppContext** where the app is running.
 
-2. The user’s language is then used to collect localized text used throughout the app (e.g. label and button text) in **staticLocalizations** collection.
+2. The user’s language is then used to collect localized text used throughout the app (for example, label and button text) in **staticLocalizations** collection.
 
 3. The Group ID and Channel ID received from Parameters are stored in the **gblParamTeamId** and **gblParamChannelId** variables, respectively.
 
 4. The issue report settings record is fetched using **gblParamTeamId** and **gblParamChannelId** variables and stored in **gblRecordSettings** variable.
 
-5. The Planner and Team ID’s are stored in **gblPlannerPlanId** and **gblPlannerGroupId** variables.
+5. The Planner and Team IDs are stored in **gblPlannerPlanId** and **gblPlannerGroupId** variables.
 
 6. Predefined padding values and app boundary width are stored in the **gblPadding** and **gblAppBoundaryWidth** variables.
 
@@ -805,9 +805,9 @@ The following variables are used on the Insights screen
 
 1. The value stored in the gblUserFirstName variable is used to greet the user is greeted with a welcome message on the Insights screen.
 
-2. The locRefreshDataverseIssueReports variable is set to true when the insight screen is visible which will refresh the data in the **colDataverseIssueReports** collection. The planner tasks are stored in the **colPlannerTasks** based on the value of the **gblPlannerPlanId** variable**.**
+2. The locRefreshDataverseIssueReports variable is set to true when the insight screen is visible that will refresh the data in the **colDataverseIssueReports** collection. The planner tasks are stored in the **colPlannerTasks** based on the value of the **gblPlannerPlanId** variable**.**
 
-3. The percentage completion of the planner tasks are collected from the **colPlannerTasks** collection and stored in the **colStats** collection.
+3. The percentage completion of the planner tasks is collected from the **colPlannerTasks** collection and stored in the **colStats** collection.
 
 4. The **galIssuesReported** gallery displays the completed, In Progress and not started issues based on the data stored in the **colStats** collection.
 
@@ -854,7 +854,7 @@ The following variables are used in the issue stats screen.
 
 5. The issues can be searched based on the name and description.
 
-6. Each issue has a link which allows the user to view the issue in Planner. The Planner details are retrieved from the **gblPlannerGroupId** and **gblPlannerPlanId** variables.
+6. Each issue has a link that allows the user to view the issue in Planner. The Planner details are retrieved from the **gblPlannerGroupId** and **gblPlannerPlanId** variables.
 
  
 
@@ -905,8 +905,8 @@ The following variables are used when an issue is created.
 | gblPlannerPlanId        | Global variable to store the Planner ID.                     |
 | gblPlannerGroupId       | Global variable to store the Team ID.                        |
 | locPlannerBucketExists  | Local variable to check if a planner bucket  exists.         |
-| gblRecordCategory       | Global variable to store the category which  is being created / edited. |
-| gblRecordTemplate       | Global variable to store the issue template  which is being created / edited. |
+| gblRecordCategory       | Global variable to store the category that  is being created / edited. |
+| gblRecordTemplate       | Global variable to store the issue template  that is being created / edited. |
 | gblToday                | Global variable to store the present day's  date.            |
 | locNewTask              | Local variable to store information of a  newly created task. |
 | locRecordPlannerTask    | Local variable used to create a planner task  based on the provided input. |
@@ -916,7 +916,7 @@ The following variables are used when an issue is created.
 
 ##### Issue creation execution details
 
-1. Users can create a new issue by selectselecting the “Report an Issue” button on the Insights screen. Selecting which the user is navigated to the Issue report screen.
+1. Users can create a new issue by selecting the “Report an Issue” button on the Insights screen. Selecting which the user is taken to the Issue report screen.
 
 2. Selecting the **Select an Issue** button will take the users to the “Template selection screen.”
 
@@ -932,7 +932,7 @@ The following variables are used when an issue is created.
 
 8. Selecting the **Back to home** button takes the user back to the Insights screen.
 
-9. Selecting the **Submit an Issue** button will check if there is an existing bucket in the **colPlannerBuckets** collection. If not a new bucket is created and is updated in DATAVERSE.
+9. Selecting the **Submit an Issue** button will check if there is an existing bucket in the **colPlannerBuckets** collection. If not, a new bucket is created and is updated in Dataverse.
 
 10. If none of the fields are blank a new task is created with the user provided input (stored in **locNewTask**).
 
@@ -940,7 +940,7 @@ The following variables are used when an issue is created.
 
 12. Based on the values stored in **locNewTask**, A Planner task is created, the title, user assignment, description, issue start, and due dates are updated to the Issue Reports. 
 
-13. Once the Issue and the corresponding task is created, The User is navigated to the Issue Submission screen where a success message is displayed.
+13. Once the Issue and the corresponding task are created, the User is taken to the Issue Submission screen where a success message is displayed.
 
 ###  Issue Submission Screen
 
@@ -963,17 +963,17 @@ The following variables are used in the issue submission screen.
 | ----------------- | ------------------------------------------------------------ |
 | gblUserFirstName  | Global variable to store the User's  first name.             |
 | locDueDate        | Local variable to store the Due  date of the Planner task.   |
-| gblRecordTemplate | Global variable to store the  template record which is being created / edited. |
+| gblRecordTemplate | Global variable to store the  template record that is being created / edited. |
 | gblPlannerGroupId | Global variable to store the Team  ID.                       |
 | gblPlannerPlanId  | Global variable to store the  Planner ID.                    |
 | locTaskId         | Local variable to store the ID of  the Planner task.         |
 
 #### Issue submission execution details
 
-1. The user is navigated to the Issue submission screen on selection of the **Submit Issue** button while creating an Issue.
+1. The user is taken to the Issue submission screen on selection of the **Submit Issue** button while creating an Issue.
 
 2. A message stating successful creation of the Issue is displayed with the user’s first name stored in the **gblUserFirstName variable** and due date of the issue stored in the **locDueDate** is displayed to the user.
 
-3. Selecting the **Return to Home** button navigates the user to the “Insights screen” along with clearing the **colDataverseIssueQuestions** and **colDataverseIssueAssignments** collections and sets the **gblRecordTemplate** value to blank.
+3. Selecting the **Return to Home** button takes the user to the “Insights screen” along with clearing the **colDataverseIssueQuestions** and **colDataverseIssueAssignments** collections and sets the **gblRecordTemplate** value to blank.
 
-4. Selecting the **View In Planner** button will navigate to Planner and display the created using the group, plan and task ID’s stored in the **gblPlannerGroupId**, **gblPlannerPlanId** and **locTaskId** variables..
+4. Selecting the **View In Planner** button will take to Planner and display the created using the group, plan, and task IDs stored in the **gblPlannerGroupId**, **gblPlannerPlanId, and **locTaskId** variables.
