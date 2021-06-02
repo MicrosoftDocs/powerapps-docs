@@ -1,11 +1,11 @@
 ---
-title: Understand Boards sample app architecture
+title: Understand Boards (Preview) sample app architecture
 description: Learn about the architecture of the Boards sample app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/30/2021
+ms.date: 06/02/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -14,7 +14,9 @@ contributors:
 
 ---
 
-# Understand Boards sample app architecture
+# Understand Boards (Preview) sample app architecture
+
+[This article is pre-release documentation and is subject to change.]
 
 In this article, you'll learn about the collections and global variables used by
 the [Boards](boards.md) app, and understand how to
@@ -38,6 +40,10 @@ different controls, features, and capabilities of canvas apps.
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](boards.md)
 Boards sample app.
+
+> [!IMPORTANT]
+>-   This is a preview feature.
+>-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Architecture Model
 
