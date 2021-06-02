@@ -1801,6 +1801,8 @@
            href: ./portals/release-updates.md
          - name: Version updates
            items:
+              - name: Version 9.3.6.x
+                href: ./portals/versions/version-9.3.6.x.md
               - name: Version 9.3.4.x
                 href: ./portals/versions/version-9.3.4.x.md
               - name: Version 9.3.3.x
@@ -2152,8 +2154,12 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards (Preview)
-          href: ../teams/boards.md
+        - name: Boards
+          items:
+             - name: Boards (Preview)
+               href: ../teams/boards.md
+             - name: Boards (Preview) sample app architecture
+               href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
             - name: Use Bulletins sample app
