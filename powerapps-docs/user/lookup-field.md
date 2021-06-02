@@ -125,15 +125,20 @@ To use **Advanced lookup** your administrator needs to enable this feature. For 
 
 Once enabed **Advanced lookup** is aviliable on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
-- To use **Advanced lookup**, on any lookup column select the lookup icon (magnifying glass) and then selct  **Advanced lookup**. 
+1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then selct **Advanced lookup**. 
 
 > [!div class="mx-imgBorder"]
 > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
 
-When you select **Advanced lookup** on a lookup, 
+2. The **Advanced lookup** gird opens with a list of rows.
 
 
-
-
+1. **Search**: Enter search text to find the row that you're looking for. if you changes views your search text is still retained. 
+2. **Change view**: Select the current view to select another views to change views.
+3. **Select row**: Select the row and then select **Done**.
+4. **Sort**: Select to sort by acending or decending order. 
+5. **Open row**: Select to open the row. You can edit the row and save your changes the changes will show in the **Advanced lookup** grid.
+6. **Only my records**: Select to only show rows that you own.
+7. **Add new record**: Opens the quick create where you can add a new row for the table. When you save the new row, the **Advanced lookup** grid will refresh and show the newly added row.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
