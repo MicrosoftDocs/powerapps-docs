@@ -123,13 +123,14 @@ When lookup has more rows in a column than can fit in the available display area
 
 To use **Advanced lookup** your administrator needs to enable this feature. For more information, see [Manage behavior settings](power-platform/admin/settings-behavior).
 
-Once enabed **Advanced lookup** is aviliable on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can quickly  
-sort rows and switch between tables or views in a lookup column. 
+Once enabed **Advanced lookup** is aviliable on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
+
+- To use **Advanced lookup**, on any lookup column select the lookup icon (magnifying glass) and then selct  **Advanced lookup**. 
 
 > [!div class="mx-imgBorder"]
 > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
 
-
+When you select **Advanced lookup** on a lookup, 
 
 
 
