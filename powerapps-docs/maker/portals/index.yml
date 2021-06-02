@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 04/22/2021 
+  ms.date: 06/01/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Use the Visual Studio Code extension (Preview)
+            url: vs-code-extension.md
           - text: Add chatbot to a page (Preview)
             url: add-chatbot.md
           - text: Table permissions using portals Studio (Preview)
@@ -32,8 +34,8 @@ landingContent:
             url: configure/entity-permissions-studio-walkthrough.md
        - linkListType: reference
          links:
-          - text: Portals version 9.3.4.x released
-            url: versions/version-9.3.4.x.md
+          - text: Portals version 9.3.6.x released
+            url: versions/version-9.3.6.x.md
           - text: Starter Portal package version 9.2.2103.x released
             url: versions/package-version-9.2.2103.md
 

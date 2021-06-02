@@ -5,7 +5,7 @@ author: mllopis
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: how-to
 ms.component: cds
 ms.date: 05/04/2020
 ms.author: millopis
