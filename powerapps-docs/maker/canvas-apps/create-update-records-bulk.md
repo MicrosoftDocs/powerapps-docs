@@ -1,12 +1,12 @@
 ---
-title: Create or update bulk records in a canvas app | Microsoft Docs
-description: Learn about how to create or update bulk records in canvas apps.
+title: Update or create bulk records in Power Apps canvas app | Microsoft Docs
+description: Learn how to update or create bulk records in canvas apps.
 author: denisem-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 02/17/2021
+ms.reviewer: v-aangie
+ms.date: 6/3/2021
 ms.author: denisem
 search.audienceType:
   - maker
@@ -18,14 +18,26 @@ contributors:
   - gregli-msft
 ---
 
-# How to bulk update records in Power Apps
+# Update or create bulk records in Power Apps canvas app
 
-The following formulas can be used to bulk update records in Power Apps Canvas applications based on the situation in an application:
-- [Patch() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch#modify-or-create-a-set-of-records-in-a-data-source-1) - Use this when the collection matches the data source
+Updating or creating records in bulk allows you to perform actions to many records at once. Here are some scenarios where you would want to bulk *update* records:
+
+- You many photos and want to upload them all at once.
+- You want to submit a time sheet with a week’s data at once.
+
+ You might also want to *create* new records in bulk. For example, when your app has to click many images, you might want to upload them all at once.
+
+This article explains how to update or create bulk records depending on your scenario.
+
+## Formulas to bulk update records
+
+The formulas in this section can be used to bulk update records in Power Apps canvas applications based on the situation in an application.
+
+- [Patch() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch#modify-or-create-a-set-of-records-in-a-data-source-1)&mdash;Use this when the collection matches the data source.
     ```
     Patch( DataSource, Collection )
     ```
-- [ForAll() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-forall) + [nested Patch()](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch) + [Disambiguation Operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) - Use when the data sources have different columns that you need to join.
+- [ForAll() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-forall) + [nested Patch()](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch) + [Disambiguation Operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator)&mdash;Use this when the data sources have different columns that you need to join.
     ```
     ForAll( Collection,
         Patch( DataSource, 
@@ -35,26 +47,33 @@ The following formulas can be used to bulk update records in Power Apps Canvas a
     )
     ```
 
-- [AddColumns()](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-table-shaping) Can be used to provide a lookup reference in the Collection that contains the updates to the DataSource if it does not have fields that easily reference the table. 
+- [AddColumns() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-table-shaping)&mdash;This can be used to provide a lookup reference in the Collection that contains the updates to the DataSource if it doesn't have fields that easily reference the table.
 
-## Example
-Assume you have a checklist of tasks. When you are done with a few tasks you can mark them as complete. You could extend this scenario to a Product Launch checklist, Home Inspection checklist, et cetera.
-- I've created a simple checklist where I can check off tasks related to my blogging or posting on social media. 
-- I'll not get into the details of building the app here. 
-- Below is the excel screenshot containing the Checklist items. My table on the excel is called as `ChecklistItems`. You can find the excel [here](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
-- I'm using Collections to demo this. The approach works for any tabular backend of your choice.
+For a complete list of formulas to update bulk records, download [related files](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
 
-    ![alt text](./media/bulk-update-records-1.png)
+## Example of a checklist
 
-I've imported excel data as static data into my PowerApps application. On the `App.OnStart` property, `Collect()` the excel ChecklistItems data into `ChecklistItemsSource` collection. Throughout the application we will use the `ChecklistItemsSource` as the source data.
+This example uses a checklist of tasks. When you are done with a few tasks, you can mark them as complete. You could extend this scenario to a Product Launch checklist, Home Inspection checklist, or other lists.
+
+The following screenshot shows the checklist items in Microsoft Excel where you can check off tasks related to your blogging or posting on social media. The table in Excel is called  `ChecklistItems`. Here's the [example in Excel](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
+
+The example uses collections to demo this. The approach works for any tabular backend of your choice.
+
+> [!div class="mx-imgBorder"]
+> ![alt text](./media/create-records-update-bulk/bulk-update-records-1.png)
+
+The Excel data is imported as static data into the PowerApps application. On the `App.OnStart` property, `Collect()` the Excel ChecklistItems data into the `ChecklistItemsSource` collection. The `ChecklistItemsSource` collection will be used as the source data throughout the application.
 
 This example uses a 2 screen application:
-- Screen 1: Used to review the checklist items and mark them as complete.
-- Screen 2: Used to create a new checklist item. The new item will be added to `ChecklistItemsSource` collection.
+- **Screen 1**&mdash;Used to review the checklist items and mark them as complete.
+- **Screen 2**&mdash;Used to create a new checklist item. The new item will be added to `ChecklistItemsSource` collection.
 
-    ![Screen1](./media/bulk-update-records-2.jpg) ![Screen2](./media/bulk-update-records-2.jpg)
+> [!div class="mx-imgBorder"]
+> ![Screen1](./media/create-records-update-bulk/bulk-update-records-2.jpg) ![Screen2](./media/create-records-update-bulk/bulk-update-records-3.jpg)
 
-Every time a checklist item is checked, we add it into a collection `CheckedItems` using the below formula on the `OnCheck` event property of the Checkbox control. If the item is already checked and is part of the collection, it is removed. Else the checked item is added. You can toggle the status between Done and Pending, or on the `Oncheck` and `OnUncheck` events as well.
+Every time a checklist item is checked, it's added into a collection called `CheckedItems`. Ir uses the formula below on the `OnCheck` event property of the checkbox control. If the item is already checked and is part of the collection, it's removed. If not, the checked item is added.
+
+You can toggle the status between **Done** and **Pending**, or you can do this on the `Oncheck` and `OnUncheck` events:
 ```
 If( !IsBlank( 
         LookUp( CheckedItems, Id = ThisItem.Id )
@@ -64,26 +83,27 @@ If( !IsBlank(
 )
 ```
 
-## Solutions
+## Create multiple records at once
 
-There are different ways of bulk updating records depending on the scenario. Below are details on creating multiple records at once in canvas apps.
+There are different ways of bulk updating records depending on the scenario. This section explains how to create multiple records at once in canvas apps.
 
-When the user clicks Done in the above scenario, we need to update `ChecklistItemsSource` with changes from CheckedItems collection.
+When the user clicks **Done** in the above example, you need to update `ChecklistItemsSource` with changes from the CheckedItems collection.
 
-### Using Patch:
+### For columns with the same name
 
-If your Source and Destination have the same column names, you can use a simple Patch statement. `ChecklistItemsSource` and the `CheckedItems` collections, have the same column names. Hence you can use the below formula to update the source at once with all the changes.
+If your source and destination have the same column names, you can use a simple Patch statement. For example, `ChecklistItemsSource` and the `CheckedItems` collections have the same column names. This means you can use the formula below to update the source at once with all the changes.
 ```
 Patch( ChecklistItemsSource, CheckedItems )
 ```
-### Using ForAll and Patch:
+### For columns with different names
 
 If the columns in source and destination tables vary, use ForAll with Patch instead.
 
-With `ForAll()`, you must loop through each record using a condition. The condition is a comparison between similar columns (e.g. `Id` column) of the different tables. This comparison becomes complicated when the source table and the destination table have the same column names (e.g. if `ProjectId` was a column found in both `Project` and `PurchaseOrder` tables). Let's look at a few examples on how to achieve this easily.
-<br>
+With `ForAll()`, you must loop through each record using a condition. The condition is a comparison between similar columns (for example, `Id` column) of the different tables. This comparison becomes complicated when the source table and the destination table have the same column names (for example, if `ProjectId` was a column found in both `Project` and `PurchaseOrder` tables).
 
-#### 1. With disambiguation operator:
+Here are alternatives for how to do this:
+
+#### Use with disambiguation operator
 
 To update the `Status` of `CheckedItems` to "Done", when the source and destination table column names are the same, use this formula:
 ```
@@ -94,12 +114,14 @@ ForAll( CheckedItems,
     )
 )
 ```
-For each item in the `CheckedItems` collection, we compare its Id (represented by the disambiguation operator `CheckedItems[@Id])` against the Id column of `ChecklistItemsSource` collection and update each matched record with the Status as "Done". The disambiguation operator is used when two columns belonging to different tables have the same name. If you don't use this disambiguation operator you will observe that only the first record gets updated.
+For each item in the `CheckedItems` collection, the Id (represented by the disambiguation operator `CheckedItems[@Id])` is compared against the Id column of the `ChecklistItemsSource` collection. Then, each matched record is updated with the status as "Done". The disambiguation operator is used when two columns belonging to different tables have the same name. If you don't use this disambiguation operator you'll see that only the first record gets updated.
 
-#### 2. Using an additional label within the gallery
+#### Use an additional label within the gallery
 
 If you don't want to use an additional collection to store the checked items, you can try the following:
-1. Create an additional label within the gallery template, bind it to the Id column and rename the label to IdText.
+1. Create an additional label within the gallery template.
+   1. Bind it to the Id column.
+   1. Rename the label to IdText.
 
 1. Remove the code on the Oncheck of the checkbox control mentioned above.
 
@@ -115,23 +137,26 @@ If you don't want to use an additional collection to store the checked items, yo
           )
       )
       ```
-1. Here, you are directly applying the filter on the Gallery's items to find the checked items, and for each record in the filtered items, we find a match on the ChecklistItemsSource table by comparing the Id with value stored in IdText label. 
-1. Finally, we update the status to "Done".
+Here, you are directly applying the filter on the Gallery's items to find the checked items. For each record in the filtered items, a match is found on the ChecklistItemsSource table by comparing the Id with value stored in IdText label.
 
-The Disambiguation operator cannot be used on the Gallery's items. Hence, we can store a label within the gallery and reference it for comparison.
+The status is updated to "Done".
 
-<!--@Vasavi can we remove this sction or add more detail on what you mean?-->
-#### 3. With AddColumns:
-This is an alternative to using the Disambiguation operator or a label inside gallery.
+The disambiguation operator can't be used on the Gallery's items. Instead, you can store a label within the gallery and reference it for comparison.
 
-While creating a local copy of your data source, you can use `AddColumns()` formula to create a new column with a different label (`NewId`) for the Id column in your source collection. When using ForAll with patch, you compare the NewId column, against the Id column in your source data.
+<!--@Vasavi can we remove this section or add more detail on what you mean?-->
+#### Use an alternative to create a new column with a different label
+
+This is an alternative to using the disambiguation operator or a label inside gallery.
+
+While creating a local copy of your data source, you can use the `AddColumns()` formula to create a new column with a different label (`NewId`) for the Id column in your source collection. When using ForAll with Patch, you compare the NewId column against the Id column in your source data.
 
 ## Bulk create records
-We have already tackled the hard problem of bulk updating records. We do generally see a need to create new records in bulk. For example, when you are app has to click some images and you may want to upload them all at once.
 
-Let's see how this can be achieved with the example of Checklist items above.
+You may want to create new records in bulk if, for example, you want to upload many images all at once.
 
-On the Checklist Create screen, each time you click Add, store the information in `NewChecklistItems` collection. And on Submit, use `ForAll()` with `Patch()` to update the Source collection.
+Here's an example using [Example of a checklist](#example-of-a-checklist).
+
+On the Create Checklist Items screen, each time you select **Add**, the information is stored in the `NewChecklistItems` collection. When you selecct **Submit**, `ForAll()` with `Patch()` are used to update the source collection.
 ```
 ForAll( NewChecklistItems,
     Patch( ChecklistItemsSource,
@@ -144,15 +169,12 @@ ForAll( NewChecklistItems,
     )
 )
 ```
-For each item in the `NewChecklistItems`, we are creating a new record (indicated by `Defaults(ChecklistItemsSource)`) in the `ChecklistItemsSource` collection. The `Id` is set to the `Id` from the `NewChecklistItems` collection. Similarly, `Category`, `Description`, and `Status` values are set.
+For each item in the `NewChecklistItems`, a new record is created (indicated by `Defaults(ChecklistItemsSource)`) in the `ChecklistItemsSource` collection. The `Id` is set to the `Id` from the `NewChecklistItems` collection. Similarly, `Category`, `Description`, and `Status` values are set.
 
-## Summary
 
-In this blog, I'm not writing a lot of details on building the application but just concentrating on the key formulas to bulk update records. You can download all the related files [here](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
-
-### Key points:
+## Key points
 
 - Use `Patch()`, when source and destination columns names are same.
-- Disambiguation operator [@] on the comparison column to differentiate the source and local data column name. Make sure to use this when using `ForAll()` if you run into an issue where only the first record gets updated.
+- Use the disambiguation operator [@] on the comparison column to differentiate the source and local data column name. Make sure to use this when using `ForAll()` if you run into an issue where only the first record gets updated.
 - Store the comparison key in a label control in the gallery to reference the local data.
 - Use `AddColumns()` to rename the Comparison Key column name on your local data.
