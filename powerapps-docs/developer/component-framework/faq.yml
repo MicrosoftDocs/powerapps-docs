@@ -63,6 +63,10 @@ sections:
       - question: How to add commandbar, search to subgrids
         answer: |
           To add commandbar, search to a subgrid for model-driven apps, you need to specify the [cds-data-set-options](manifest-schema-reference/data-set.md).
+          
+      - question: Can I access the form context like I can in model-app event handlers?
+        answer: |
+          Accessing the form context directly in a control is not supported. Instead, a control can be bound to a field and an OnChange event handler can be attached to that field. The control can update the field value, and the OnChange event handler can access the form context. A field not bound to an entity can be used, or a field with submitMode set to "never".
      
 additionalContent: |
   ## See also
