@@ -136,7 +136,7 @@ If you don't want to use an additional collection to store the checked items, yo
             { Status: "Done" }
           )
       )
-      ```
+
 Here, you are directly applying the filter on the Gallery's items to find the checked items. For each record in the filtered items, a match is found on the ChecklistItemsSource table by comparing the Id with value stored in IdText label.
 
 The status is updated to "Done".
