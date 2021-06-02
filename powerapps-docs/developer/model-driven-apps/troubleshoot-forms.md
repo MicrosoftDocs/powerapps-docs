@@ -451,7 +451,6 @@ The screenshot below shows the root cause of the issue. You can see that the cha
 > [!NOTE]
 > If the user has manually made the changes on the form, a call stack will not be provided.
 
-![image](https://user-images.githubusercontent.com/82106269/119713249-5932ee00-be16-11eb-9f65-d680f4c9759e.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
