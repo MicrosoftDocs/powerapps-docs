@@ -48,7 +48,8 @@ Console.WriteLine(c.Values.Count); //This will output 1
   
  When you create a condition that compares a column value to an enumeration, such as a state code, you must use the `ToString` method to convert the value to a string.  
   
-## Example  
+## Example: use the ConditionExpression class
+
  The following code example shows how to use the `ConditionExpression` class.  
   
 ```csharp  
@@ -74,7 +75,8 @@ foreach (var a in result1.Entities)
 Console.WriteLine("---------------------------------------");  
 ```  
   
-## Example  
+## Example: test for inactive state
+
  The following code example shows how to use the `ConditionExpression` class to test for the inactive state.  
   
 ```csharp  
