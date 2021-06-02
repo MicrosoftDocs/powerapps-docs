@@ -95,7 +95,7 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 |Integration feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Power Automate     |   Yes      |  Yes       |
-|Export to Azure data lake    |   No      |  Yes       |
+|Azure Synapse Link for Dataverse    |   No      |  Yes       |
 |Data Export Service     |   No      |  Yes       |
 |Events to Azure Event Hubs     |   No      |  Yes       |
 |Events to Azure Service Bus     |   No      |  Yes       |
