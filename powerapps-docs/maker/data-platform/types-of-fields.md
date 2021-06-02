@@ -23,7 +23,7 @@ search.app:
 
 The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
-Watch this video for a quick overview about column data types in Dataverse:
+Watch this video for a quick overview on how to create a column in Dataverse:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
