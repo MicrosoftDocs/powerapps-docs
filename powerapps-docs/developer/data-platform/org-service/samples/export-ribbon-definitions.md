@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Export ribbon definitions
+# Sample: Export ribbon definitions (Microsoft Dataverse)
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
