@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2021
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -60,10 +60,9 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 ## Open the form
 
-1. Open the **Incidents** list, and then select **Power Apps** > **Customize forms**.
+1. Open the **Incidents** list, and then select **Integrate** -> **Power Apps** -> **Customize forms**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
+    ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
 
     A browser tab opens with the default form in Power Apps Studio.
 

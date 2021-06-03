@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/01/2021
+ms.date: 05/24/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -19,8 +19,33 @@ search.app:
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
 > [!NOTE]
-> For help with performance problems in canvas apps, read the topics under canvas apps [performance and optimization](execution-phases-data-flow.md) section.
+> - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](execution-phases-data-flow.md) section.
+> - If you're having trouble accessing or starting Power Apps, read [troubleshooting startup issues](../../troubleshooting-startup-issues.md) section for help.
 
+## General Troubleshooting
+If you're running into issues using Power Apps, try these common troubleshooting steps first.
+* Check that the browser you're using is up to date. For more information, see [System requirements, limits, and configuration values for canvas apps](limits-and-config.md).
+* Try with your browser's InPrivate, Incognito, or Guest mode.
+* Try with a different supported browser.
+* Disable all browser extensions and add-ons.
+* Try with another device, if possible.
+
+## Known Issues
+
+   
+1. **Problems with canvas app screen sizes** (Apr 27, 2021)
+
+   Starting with PowerApps 3.21032, screens in some apps may be displaying unexpected dimensions or are not visible entirely. Check the affected screens' Height and Width properties and make sure they are set to an appropriate value, such as the default (`Max(App.Height, App.MinScreenHeight)` for Height, `Max(App.Width, App.MinScreenWidth)` for Width). A fix has already been deployed for screens that have a blank Height or Width. If you're still experiencing issues with the size of screens or the controls on them, the app may have been saved or auto-saved into the error state. Such apps can be restored to an earlier version via the portal, and the deployed fix will be applied the next time the app is opened for editing.
+   
+1. **Problems changing dimensions/orientation of SharePoint forms** (Apr 27, 2021)
+
+   We are aware of issues affecting the "Screen size + orientation" settings for custom SharePoint forms. If you're having trouble with these settings, you can use the "Custom" size to work around the issue. First, reset the setting by selecting "Small" size, then toggle Orientation to Portrait and then back to Landscape. Then select "Custom" and enter a desired screen size. For reference, the preset values are Width: 270, Height: 480 for the Small Portrait size, and Width: 720, Height: 480 for Small Landscape size.
+   
+1. **SQL data sources no longer add a "[dbo]" prefix to the data source name** (Apr 27, 2021)
+
+   This was an intentional change as the prefix did not serve any practical purpose. Existing data sources will not be affected, but any newly added SQL data sources will not include the prefix. If you need to update a large number of formulas in one of your apps, the [Power Apps Source File Pack and Unpack Utility](https://powerapps.microsoft.com/en-us/blog/source-code-files-for-canvas-apps/) can be used to do a global search-and-replace.
+   
+   Starting in version 3.21054, we will automatically update broken legacy name references to the new data source name after re-adding the data source.
    
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**

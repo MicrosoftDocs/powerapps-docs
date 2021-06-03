@@ -1,7 +1,7 @@
 ---
 title: "Design model-driven apps by using the app designer | MicrosoftDocs"
 description: Learn how to design model-driven apps
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: powerapps
@@ -25,11 +25,14 @@ search.app:
   - D365CE
 ---
 
-# Design model-driven apps by using the app designer
+# Design model-driven apps using the classic app designer
 
 With Power Apps, model-driven apps are comprised of components such as tables, dashboards, forms, views, charts, and business processes.  
+
+> [!TIP]
+> Use the modern app designer to build your apps. More information: [Create a model-driven app using the app designer](create-model-driven-app.md)
   
- The app designer helps you bring together all these components quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and you can create apps that are specific to your business roles and functions without having to write any code.  
+The app designer helps you bring together all these components quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and you can create apps that are specific to your business roles and functions without having to write any code.  
   
  Each app that you create can have its own site map with the integrated and easy-to-use site map designer.  Just drag and drop areas, groups, and subareas to the canvas. Components that you select in the site map are also added as tables in the app designer.  
   

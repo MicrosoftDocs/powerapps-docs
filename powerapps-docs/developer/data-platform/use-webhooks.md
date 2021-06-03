@@ -1,7 +1,7 @@
 ---
 title: "Use WebHooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to send data about events that occur on the server to a web application using WebHooks." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/21/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps

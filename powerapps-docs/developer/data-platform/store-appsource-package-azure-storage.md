@@ -67,7 +67,7 @@ To upload your package to Azure Blob storage:
 
     ![Set an expiration time](media/appsource-storageaccount-pic7.png)
 
-12. The next page displays information about the generated SAS information. Copy the **URL** value and save it for later. You will need to specify this URL while creating an offer in the Cloud Partner Portal.
+12. The next page displays information about the generated SAS information. Copy the **URL** value and save it for later. You will need to specify this URL while creating an offer in Partner Center.
 
     ![Copying the SAS URL](media/appsource-storageaccount-pic8.png)
 

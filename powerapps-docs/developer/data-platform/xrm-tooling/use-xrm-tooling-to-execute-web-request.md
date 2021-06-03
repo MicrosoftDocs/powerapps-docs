@@ -22,20 +22,20 @@ search.app:
 ---
 # Use XRM tooling to execute a web request against web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 The <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object is used to perform actions on your Dynamics 365 data such as create, update, retrieve or delete data.
 
-You can now use the <!--<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest>--> method to execute a web request against XRM web API.
+You can now use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> method to execute a web request against XRM web API.
 
-The following code sample demonstrates how you can execute a web request using <!--<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest>--> method. 
+The following code sample demonstrates how you can execute a web request using `ExecuteCrmWebRequest` method.
 
 >[!NOTE]
 > This method is only applicable when the authentication type is specified as `OAuth` or `Certificate`.
 
 ## Create a record
 
-The following code sample demonstrates how to create a record using the <!--<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest>--> method. In this example, you will create an account, and then display the ID in the response object.  
+The following code sample demonstrates how to create a record using the `ExecuteCrmWebRequest` method. In this example, you will create an account, and then display the ID in the response object.  
 
 ```csharp
  Dictionary<string, List<string>> ODataHeaders = new Dictionary<string, List<string>>() {
@@ -67,6 +67,5 @@ using (CrmServiceClient svc = new CrmServiceClient(conn))
            }
 }
 ```
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

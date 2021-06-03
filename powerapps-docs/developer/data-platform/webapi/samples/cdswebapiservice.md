@@ -160,7 +160,7 @@ Patch is frequently used to Update or Upsert records.
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert an entity](../update-delete-entities-using-web-api.md#upsert-an-entity)
+- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
 
 ## PatchAsync
 
@@ -210,7 +210,7 @@ Sends a `DELETE` request synchronously.
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
-- [Remove a reference to an entity](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
+- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table-row)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ## DeleteAsync
