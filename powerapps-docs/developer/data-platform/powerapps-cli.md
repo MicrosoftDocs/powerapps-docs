@@ -29,7 +29,7 @@ To get Power Apps CLI, do the following:
 
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
 1. You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which also installs the Power Apps CLI.
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
+1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command (Not Applicable for the Visual Studio Code Extension):
 
     ```CLI
     pac install latest
