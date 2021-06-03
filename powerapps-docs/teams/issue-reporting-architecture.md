@@ -74,19 +74,19 @@ Manage Issues app uses following collections.
 
 | Collection Name                      | Description                                                  | Screen Used                                                  |
 | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| colIcons                             | Used to collect the icons used in the app.                    | OnStart property of the App                                  |
+| colIcons                             | Used to collect the icons used in the app.                   | OnStart property of the App                                  |
 | colUserSettings                      | Used to collect User Settings Dataverse record  if it exists. | OnStart property of the App                                  |
 | colLocalization                      | Used to build a Localization Collection based on the User Language. | OnStart property of the App                                  |
-| colDataverseDataverseIssueCategories | Used to collect Dataverse Issue report  categories.  | OnStart property of the App                                  |
-| colDataverseDataverseIssueTemplates  | Used to collect Dataverse Issue report templates.    | OnStart property of the App                                  |
+| colDataverseDataverseIssueCategories | Used to collect Dataverse Issue report  categories.          | OnStart property of the App                                  |
+| colDataverseDataverseIssueTemplates  | Used to collect Dataverse Issue report templates.            | OnStart property of the App                                  |
 | colPlannerBuckets                    | To collect the list of Planner Buckets in a particular  plan based on the Plan and Team IDs. | OnStart property of the App                                  |
 | colPlannerTasks                      | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team IDs. | OnStart property of the App                                  |
-| colDataverseIssueReports             | Collection to collect Dataverse Issue report categories.      | OnStart property of the App                                  |
-| colStats                             | Collection to collect the stats of the planner tasks.         | OnVisible property of the Insights screen                    |
-| colUserProfiles                      | Used to collect User details from Office 365.                 |                                                              |
+| colDataverseIssueReports             | Collection to collect Dataverse Issue report categories.     | OnStart property of the App                                  |
+| colStats                             | Collection to collect the stats of the planner tasks.        | OnVisible property of the Insights screen                    |
+| colUserProfiles                      | Used to collect User details from Office 365.                | Issue templates screen (Manage issues)       Issue report screen (Issue reporting) |
 | colDataverseIssueAssignments         | Used to store  information about the User to whom Issue has been assigned. | OnSelect property of the Save button while creating a new  Issue template. |
-| colAppTemplateCounting               |    Collection used to count the number of  issues based on their completion status.                                                          |                                                              |
-| colDataverseIssueQuestions           | To collect the questions for a particular issue template.     | OnSelect property of the Save button while creating a new  Issue template |
+| colAppTemplateCounting               | Collection used to count the number of  issues based on their completion status. | Issue Templates Screen (Manage issues)                       |
+| colDataverseIssueQuestions           | To collect the questions for a particular issue template.    | OnSelect property of the Save button while creating a new  Issue template |
 | colQuestionsToDelete                 | To collect the questions to be deleted from the Issue  template. | OnSelect property of the Save button while creating a new  Issue template |
 
 ### Global Variables
