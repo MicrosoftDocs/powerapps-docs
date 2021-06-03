@@ -47,6 +47,9 @@ For example, the following request body posted to the Account table set will cre
 - An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
 - A task is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property Opportunity_Tasks.
 
+> [!IMPORTANT]
+> - **Your need to enable collection-valued properties in your Web API configuration setting before using them. For example: to use opportunity_customer_accounts you need to enable it by adding it to Webapi/account/fields site setting.**
+
 ```json
 {
  "name": "Sample Account",
