@@ -17,9 +17,9 @@ search.app:
 ---
 # Customize table and column mappings
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can map columns between tables that have a relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map tables; see [Map columns](../../maker/data-platform/map-entity-fields.md).
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Behavior in the application
 
@@ -42,7 +42,7 @@ The response received from InitializeFrom request consists of values of mapped c
 > [!NOTE] 
 > To determine if two tables can be mapped, use the following Web API request:<br/>`GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
-For more information see [Create a new record from another table](webapi/create-entity-web-api.md#create-a-new-entity-record-from-another-entity).
+For more information see [Create a new row from another table](webapi/create-entity-web-api.md#create-a-new-table-row-from-another-table).
 
 ### Using Organization Service
 

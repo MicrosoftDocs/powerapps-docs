@@ -21,8 +21,6 @@ search.app:
 
 # Use Postman with the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 There are a number of third-party tools that allow you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API.
@@ -33,6 +31,5 @@ Postman offers many other capabilities beyond those covered in this content. Mor
 
 [Set up a Postman environment](setup-postman-environment.md)<br>
 [Use Postman to perform operations with the Web API](use-postman-perform-operations.md)<br>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

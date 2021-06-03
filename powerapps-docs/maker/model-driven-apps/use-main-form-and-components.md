@@ -7,7 +7,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -54,13 +54,13 @@ Follow the procedures given below to access the form editor.
 > [!NOTE]
 > If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
 
-> [!NOTE]
-> The webclient main form is also compatible with the Customer Service Hub and is available to be edited using the app designer.
+<!-- > [!NOTE]
+> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
 
 
 ### Access the form editor through the default solution
 
-1.  Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 

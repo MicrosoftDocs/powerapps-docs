@@ -1,6 +1,6 @@
 ---
 title: Linking | Microsoft Docs
-description: 
+description: Provides properties and methods to determine which table is linked and to get all the tables linked.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: badd9822-d9f4-4d42-8def-e13f633a3309
 ---
 
-Provides properties and methods to determine which entity is linked and to get all the entities linked.
+Provides properties and methods to determine which table is linked and to get all the tables linked.

@@ -6,7 +6,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -34,6 +34,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 > For a table to be available as a row type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
 
 ## Enable connection roles for a table
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. Expand **Data**, and then select **Tables**. 
 3. Select the table that you want to enable for connection roles, and then on the command bar select **Settings**. 

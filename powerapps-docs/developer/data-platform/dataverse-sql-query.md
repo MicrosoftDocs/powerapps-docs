@@ -16,32 +16,23 @@ search.app:
   - D365CE
 ---
 
-# Use SQL to query data (Preview)
+# Use SQL to query data
 
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
 ## Applications support
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
 
-### Power BI
-
-You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
-
-> [!NOTE]
-> To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
-
-### SQL Server Management Studio
+### SQL Server Management Studio (Preview)
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table](media/ssms-table-expanded.PNG)
 
-## Security and authentication
-
-The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+#### Security and authentication
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
@@ -50,7 +41,7 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
 
-## Example table data queries
+#### Example table data queries
 
 Below are a couple of example queries composed in SSMS. The first image shows a simple query using aliases and result ordering.
 
@@ -68,14 +59,19 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ![Another query using a JOIN](media/ssms-join-query.PNG)
 
+### Power BI
+
+You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
+
+> [!NOTE]
+> To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
+
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
-
-Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
+Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
 The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
-`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
+`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
@@ -87,14 +83,19 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 > group by act.activityid, act.subject
 > ```
 
+### Lookup column type behaviors
+Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a result set.
+
+### Choice column type behaviors
+Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
+>[!TIP]
+> After making changes to labels for a choice column, the table needs to have customizations published. 
+
 ## Limitations
 
 There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
-
-> [!NOTE]
-> Until a service update planned for January 2021 has deployed, using date filters will be slow.
 
 Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
@@ -103,6 +104,9 @@ Queries using the TDS endpoint execute under the service protection API limits.
 ## Troubleshooting connection problems
 
 Below are some know error conditions and how to resolve them.
+
+> [!NOTE]
+> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
 
 ### Authentication
 

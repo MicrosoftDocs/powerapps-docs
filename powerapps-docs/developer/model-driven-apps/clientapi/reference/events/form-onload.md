@@ -1,6 +1,7 @@
 ---
-title: "Form OnLoad Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 12/14/2020
+title: "Form OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Learn how to set the form OnLoad event.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,14 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Form OnLoad Event (Client API reference)
+# Form OnLoad event (Client API reference)
 
-
-The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created, for example by selecting the **Save** button on the main form.   Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
+The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created, for example by selecting the **Save** button on the main form.  Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on columns, and interact with other page elements.
 
 You can determine in what context the `OnLoad` event occurs by using [getEventArgs](../executioncontext/getEventArgs.md). By doing so, you can apply logic conditional on the context. 
 
-Data for related entities on a form, such as data for subgrids and quick view forms are not guaranteed to be available when the `OnLoad` event handler is executed. Logic that depends on related data should use the [Subgrid OnLoad](./subgrid-onload.md) event, quick view form should use the [isLoaded](../formcontext-ui-quickforms/isloaded.md) function, or the appropriate function for determining when the data should be loaded for the particular related data.
+Data for related tables on a form, such as data for subgrids and quick view forms are not guaranteed to be available when the `OnLoad` event handler is executed. Logic that depends on related data should use the [Subgrid OnLoad](./subgrid-onload.md) event, quick view form should use the [isLoaded](../formcontext-ui-quickforms/isloaded.md) function, or the appropriate function for determining when the data should be loaded for the particular related data.
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 Controls and other UI of the form are not guaranteed to be rendered and in the DOM when the `OnLoad` event occurs. Logic in the `OnLoad` event handler cannot prevent the form from loading.
 

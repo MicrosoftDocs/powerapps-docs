@@ -1,13 +1,16 @@
 ---
-title: "Configure and manage category for knowledge articles for a portal | MicrosoftDocs"
-description: "Instructions to create and manage a category for knowledge article."
+title: Configure and manage category for knowledge articles
+description: Learn how to create and manage a category for knowledge article.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Configure and manage category for knowledge articles

@@ -2,7 +2,7 @@
 title: "Tutorial: Update a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The third of three tutorials that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 03/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -40,7 +40,7 @@ This tutorial will describe additional common things you will do with plug-ins. 
  - Create and register a synchronous plug-in
  - Use configuration data in the plug-in
  - Throw an error to show to the user
- - Configure and use a pre-table image in your code
+ - Configure and use a pre-entity image in your code
  - Unregister and assembly, a plug-in, or a step
 
 
@@ -61,6 +61,8 @@ The goal of this tutorial is:
 ## Create a new plug-in class
 
 1. In Visual Studio, add a new class to the **BasicPlugin** project named `ValidateAccountName.cs`
+    > [!NOTE]
+    > When you make a significant change to an assembly, you should update the assembly version. This is particularly important if you intend to update an assembly that is part of a managed solution. The version is part of the fully qualified name of the assembly which is a unique identifier of the assembly. The solution update process may not recognize that the assembly has changed when the fully qualified name of the assembly hasn't changed.
 1. Add the following code to the class and re-build the assembly.
 
 

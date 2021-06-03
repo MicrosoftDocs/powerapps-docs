@@ -1,13 +1,17 @@
 ---
-title: "Configure OAuth 2.0 identity providers in Power Apps portals - such as Microsoft, LinkedIn, Facebook, Google, and Twitter. | MicrosoftDocs"
-description: "Learn how to configure OAuth 2.0 identity providers in Power Apps portals - such as Microsoft, LinkedIn, Facebook, Google, and Twitter."
+title: Configure an OAuth 2.0 provider for portals
+description: Learn how to configure OAuth 2.0 identity providers in Power Apps portals - such as Microsoft, LinkedIn, Facebook, Google, and Twitter.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure an OAuth 2.0 provider for portals

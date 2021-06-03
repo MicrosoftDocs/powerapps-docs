@@ -17,9 +17,9 @@ search.app:
 ---
 # Image columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Certain system tables and all custom tables support entity images. Those tables that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the form data. There can be multiple image columns in a table but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that column to `true`. Each full-sized image column is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image column is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
-Certain system tables and all custom tables support images. Those tables that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the form data. There can be multiple image columns in a table but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that column to `true`. Each full-sized image column is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the table image column is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Thumbnail images and image metadata are stored in Microsoft Dataverse, which includes the information needed to retrieve the full image. Full images are stored in file storage on the Azure blob to reduce data storage consumption.
 
@@ -47,7 +47,7 @@ Attribute Type Name:  `BigIntType`
 ### EntityImage_URL column  
  Attribute Type Name: `StringType`  
   
- An absolute URL to display the table image in a client.  
+ An absolute URL to display the entity image in a client.  
   
  The URL is composed this way:  
   
@@ -215,7 +215,7 @@ After the upload is completed, a thumbnail image is automatically created by the
 
 If your code is using the legacy method, image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. Image data 16MB or greater must be divided into 4 MB or smaller data blocks (chunks) where each block is uploaded in a separate API call until all image data has been received. It is your responsibility to divide the image data into blocks up to 4MB in size and upload them in the correct sequence.
 
- More information on chunking: [File attributes](file-attributes.md).
+ More information on chunking: [File columns](file-attributes.md).
 
 To use the legacy chunking to upload image data greater than 16MB in size, use the following APIs.
 
@@ -274,7 +274,7 @@ In the above request, the next block of data is being uploaded. After all image 
 [File columns](file-attributes.md)  
 [Introduction to tables in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
 [Introduction to table columns in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
-[Sample: Set and retrieve table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images)
+[Sample: Set and retrieve entity images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

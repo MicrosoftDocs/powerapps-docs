@@ -1,7 +1,7 @@
 ---
 title: "RecurringAppointmentMaster table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the RecurringAppointmentMaster table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -38,7 +38,6 @@ The Master appointment of a recurring appointment series.
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Reschedule|<xref href="Microsoft.Dynamics.CRM.Reschedule?text=Reschedule Action" />|<xref:Microsoft.Crm.Sdk.Messages.RescheduleRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1694,7 +1693,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [recurringappointmentmaster_PostRegardings](#BKMK_recurringappointmentmaster_PostRegardings)
 - [recurringappointmentmaster_PostFollows](#BKMK_recurringappointmentmaster_PostFollows)
 - [RecurringAppointmentMaster_SyncErrors](#BKMK_RecurringAppointmentMaster_SyncErrors)
 - [RecurringAppointmentMaster_DuplicateBaseRecord](#BKMK_RecurringAppointmentMaster_DuplicateBaseRecord)
@@ -1710,21 +1708,6 @@ Listed by **SchemaName**.
 - [RecurringAppointmentMaster_ProcessSessions](#BKMK_RecurringAppointmentMaster_ProcessSessions)
 - [RecurringAppointmentMaster_Annotation](#BKMK_RecurringAppointmentMaster_Annotation)
 - [RecurringAppointmentMaster_DuplicateMatchingRecord](#BKMK_RecurringAppointmentMaster_DuplicateMatchingRecord)
-
-
-### <a name="BKMK_recurringappointmentmaster_PostRegardings"></a> recurringappointmentmaster_PostRegardings
-
-Same as postregarding table [recurringappointmentmaster_PostRegardings](postregarding.md#BKMK_recurringappointmentmaster_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|recurringappointmentmaster_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_recurringappointmentmaster_PostFollows"></a> recurringappointmentmaster_PostFollows
@@ -1972,7 +1955,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_recurringappointmentmaster_modifiedonbehalfby](#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby)
 - [user_recurringappointmentmaster](#BKMK_user_recurringappointmentmaster)
 - [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
-- [owner_recurringappointmentmasters](#BKMK_owner_recurringappointmentmasters)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
@@ -2034,10 +2016,6 @@ See systemuser Table [user_recurringappointmentmaster](systemuser.md#BKMK_user_r
 ### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
 
 See knowledgearticle Table [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) One-To-Many relationship.
-
-### <a name="BKMK_owner_recurringappointmentmasters"></a> owner_recurringappointmentmasters
-
-See owner Table [owner_recurringappointmentmasters](owner.md#BKMK_owner_recurringappointmentmasters) One-To-Many relationship.
 
 ### See also
 

@@ -5,7 +5,7 @@ keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 03/15/2021
+ms.date: 05/25/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,9 +17,11 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
+> [!NOTE]
+> Effective May 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).<br/><br/>
+We will soon update the docs to reflect this change.
 
-Power Apps CLI tooling is the first step toward a comprehensive application life-cycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
 
 ## Install Power Apps CLI
 
@@ -54,6 +56,7 @@ This table lists some of the common commands used in the CLI:
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
+|[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
 |[pcf](#pcf)|Commands to work with [Power Apps component framework](../component-framework/overview.md).|
 |[plugin](#plugin)|Command to create a [plug-in](./plug-ins.md) project.|
 |[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
@@ -90,6 +93,17 @@ Command to work with solution packages. It has the following parameters:
 |show| Shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: The path location to the package dll (library) or the zip file.| `pac package show c:\samplepackage.dll`|
 |deploy| Deployes the package dll or the zip file with a package. <br/> It has the following parameters: <br/> - *logFile*:  Path to a log file location where the logs are redirected.  <br/> - *logConsole*: This option is used if you want to direct the logs to the console. <br/> - *package*: The path location to the package dll (library) or a zip file with a package.  <br/> **Note**: You can use both `logFile` and `logConsole` parameters together or use one parameter or the other. | `pac package deploy --logFile c:\samplelogdata --package c:\samplepackage`
 
+### Paportal
+
+Commands to work with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md). It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
+|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p).<br/> - *webSiteId*: Portal website ID to download (alias: -id).<br/> - *overwrite*: (Optional) true - to overwrite existing content, false - to fail if the folder already has website content (alias: -o).|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
 
 ### PCF
 
@@ -99,7 +113,7 @@ Commands to work with [Power Apps component framework](../component-framework/ov
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-|init|Initializes the code component project. It has the following parameters <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset| `pac pcf init --namespace<SampleNameSpace --name SampleComponent --template field`|
+|init|Initializes the code component project. It has the following parameters: <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset| `pac pcf init --namespace SampleNameSpace --name SampleComponent --template field`|
 |push|Pushes the code component to the Dataverse instance with all the latest changes. It has the following parameter: <br/> - *publisher-prefix*: Publisher prefix of the organization.|`pac pcf push --publisher-prefix dev`|
 |version|Updates the component manifest file with the specified patch version. It has the following parameters: <br/> - *patchversion*: Patch version of the code component. `patchversion` will only take value of the third part of the version tuple: `Major.Minor.Patch`.<br/> - *path*: Absolute or relative path of the component manifest file.<br/> - *allmanifests*: Updates the patch version for all the component manifest files. <br/> - *updatetarget*: Updates the specified manifest file. It has two values, build and project.<br/> - *strategy*: Updates patch version for the manifest files using specified strategy values. It has the following values: <br/> - *gittags*: Use git tags to decide if a particular component’s patch version needs to be updated.<br/> *filetracking*: Use .csv file to decide if a particular component’s patch version needs to be updated. <br/> - *manifest*: Increments the patch version by 1 for all the components.|`pac pcf version --patchversion 1.0.0.0 --path c:\Users\Downloads\SampleComponent --allmanifests`  <br/><br/> `pac pcf version --strategy gittags`|
 

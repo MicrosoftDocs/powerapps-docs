@@ -195,13 +195,13 @@ For information about how to set this see the following topics:
 
 
 
-## Table Images
+## Entity images
 
 When you register a step for a plug-in that includes a table as one of the parameters, you have the option to specify that a copy of the table data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
 
 This data provides a comparison point for table data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve a table just to compare the attribute values.
 
-When you define a table image, you specify a table alias value you can use to access the specific image. For example, if you define a pre- table image with the alias '`a`', you can use the following code to access the `name` attribute value.
+When you define an entity image, you specify an entity alias value you can use to access the specific image. For example, if you define a pre-entity image with the alias '`a`', you can use the following code to access the `name` attribute value.
 
 ```csharp
 var oldAccountName = (string)context.PreEntityImages["a"]["name"];
@@ -209,10 +209,8 @@ var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 
 More information:
 
-- [Define table images](register-plug-in.md#define-table-images)
-- [Table images for workflow extensions](workflow/workflow-extensions.md#table-images-for-workflow-extensions)
-
-
+- [Define entity images](register-plug-in.md#define-entity-images)
+- [Entity images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
 
 ### See also
 

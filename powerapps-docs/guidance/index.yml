@@ -53,6 +53,17 @@ landingContent:
             url: planning/discoverability.md
 
   # Card
+  - title: "Ebook: Fusion development approach"
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Introduction to the ebook
+            url: fusion-dev-ebook/index.md
+          - text: What is the fusion development approach?
+            url: fusion-dev-ebook/01-what-is-fusion-dev-approach.md    
+
+
+  # Card
   - title: Related content
     linkLists:
        - linkListType: overview

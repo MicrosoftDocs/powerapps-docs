@@ -1,7 +1,7 @@
 ---
 title: "Fields overview in Power Apps | MicrosoftDocs"
 description: "Learn about columns in Power Apps portal"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 07/25/2018
 ms.reviewer: ""
 ms.service: powerapps

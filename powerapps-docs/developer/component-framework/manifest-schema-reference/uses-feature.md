@@ -1,6 +1,6 @@
 ---
 title: uses-feature | Microsoft Docs
-description: 
+description: Indicates which feature their components want to use.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

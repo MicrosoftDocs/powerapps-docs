@@ -1,6 +1,6 @@
 ---
 title: getPopupsId | Microsoft Docs
-description: 
+description: Gets the currently set popup Id.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

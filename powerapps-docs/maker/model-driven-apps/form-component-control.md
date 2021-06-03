@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "PowerApps"
 author: "Mattp123"
@@ -20,8 +20,6 @@ search.app:
   - D365CE
 ---
 # Edit related table records directly from another table’s main form
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
@@ -101,7 +99,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls isn't supported.
 
-- The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
+- The form that you use with a form component must be included in your app. More information: [Add a component](add-edit-app-components.md#add-a-component).
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 
