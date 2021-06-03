@@ -41,7 +41,7 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
  [Define Ribbon enable rules](define-ribbon-enable-rules.md)
- [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+ [Troubleshoot ribbon issues](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
