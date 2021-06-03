@@ -28,17 +28,17 @@ Microsoft Power Apps CLI is a simple, single-stop developer command-line interfa
 To get Power Apps CLI, do the following:
 
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-
+1. You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which also installs the Power Apps CLI.
 1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
 
     ```CLI
     pac install latest
     ```
- or you can install the [Power Platform Extension for VSCode](https://aka.ms/ppcvscode) 
 
-> [!NOTE]
+
+> [!IMPORTANT]
 > Currently, Power Apps CLI is supported only on Windows 10.
-> Power Platform Extension for VSCode is in Public Preview and runs on both Windows 10 and macOS 
+> Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
 ## Common commands
 
