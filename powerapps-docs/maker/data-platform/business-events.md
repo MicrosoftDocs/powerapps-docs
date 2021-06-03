@@ -40,7 +40,7 @@ Here are some examples:
 Another example where the business events pattern is applied is in the way that Virtual Tables can use Virtual Table events to notify Dataverse when changes occur in the external data sources. Because changes can occur in the external data sources that which Virtual Tables use, Dataverse isn't informed of these changes which may be important.  Virtual Table events use a set of messages called `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted`. When the external data source can send these actions to dataverse and the virtual entity is configured to support them, Dataverse can now be informed of these changes and the Virtual table can participate in all the asynchronous logic that other Detaverse tables can. This is the same business events pattern, except that the messages are standardized and created when you configure the Virtual entity to support them. More information: Virtual Table Events.
 
 
-Dataverse business events also includes concepts from [Dynamics Finance and Operations Business events](dynamics365/fin-ops-core/dev-itpro/business-events/home-page) together with the Dataverse Event Framework to provide a new way to discover events and create automation when these events occur.
+Dataverse business events also includes concepts from [Dynamics Finance and Operations Business events](/dynamics365/fin-ops-core/dev-itpro/business-events/home-page) together with the Dataverse Event Framework to provide a new way to discover events and create automation when these events occur.
 
 - **Event Catalog**:  With so many events available in the system it can be difficult to locate the right one. An event catalog improves event discovery by associating events with a solution and organizing events into categories. A catalog only includes selected, high value events relevant to the solution, so less useful events can be filtered out. Also, adding an event to a catalog is how you can make that event a trigger in the Power Automate Dataverse **When an action is performed** trigger.
 - **'Custom Events'**: In addition to system messages that provide events, you can define custom actions which serve as custom events because Dataverse will process them using its event framework. These events may or may not represent data changes within Dataverse. You can define custom events that describe completed events in external systems that are intended to be called by external applications.  Or you can use custom apis with no plug-in associated with them which solely exist to notify listeners that an event of interest occurred. In both cases, the event is initiated by calling the corresponding Dataverse API.
@@ -105,7 +105,7 @@ Custom process actions can also be cataloged as business events. This is for bac
 However, custom process actions have the following limitations:
 
 - Like any workflow, they can be disabled in the UI. You may not know when someone disables your custom process action an it will suddenly stop working.
-- Until recently, there was no way to prevent synchronous plug-in steps to be registered on them, which means anyone could register synchronous steps that could change the behavior of the custom process action. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
+- Until recently, there was no way to prevent synchronous plug-in steps to be registered on them, which means anyone could register synchronous steps that could change the behavior of the custom process action. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](/reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
 
 For more information about how they are different, see [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
 
@@ -124,7 +124,7 @@ Custom APIs created for external events should align to these principles:
 
 - They should not have any plug-in type specified for the main operation.
 - They should not allow any synchronous step registrations. 
-    - The custom api [Allowed Custom Processing Step Type](developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any asynchronous steps from being applied for this API.
+    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any asynchronous steps from being applied for this API.
 - They should not have any response properties, only request parameters.
     - With no synchronous logic, there is no way to set response properties.
 
@@ -156,11 +156,11 @@ To enable authorized calls to Dataverse from your application there must be an A
 
 As business events becomes a common pattern, there will be multiple ways to enable automation.
 
-The first experience where business events will be exposed is in Power Automate Dataverse connector using the [When an action is performed (preview)](connectors/commondataserviceforapps/#when-an-action-is-performed-(preview)) trigger.
+The first experience where business events will be exposed is in Power Automate Dataverse connector using the [When an action is performed (preview)](/connectors/commondataserviceforapps/#when-an-action-is-performed-(preview)) trigger.
 
 :::image type="content" source="../../developer/data-platform/media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger":::
 
-Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
+Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
 
 ### Expose business events in your application
 
