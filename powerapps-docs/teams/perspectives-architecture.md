@@ -1,5 +1,5 @@
 ---
-title: Understand Perspectives sample app architecture
+title: Understand Perspectives (Preview) sample app architecture
 description: Learn about the architecture of the Perspectives sample app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -12,7 +12,9 @@ contributors:
 ---
 
 
-# Understand Perspectives sample apps architecture
+# Understand Perspectives (Preview) sample apps architecture
+
+[This article is pre-release documentation and is subject to change.]
 
 In this article, you'll learn about the collections and global variables used by the [Perspectives](perspectives.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Perspectives sample apps](perspectives.md).
 
@@ -28,12 +30,16 @@ To understand and use information in this article, you'll need to know about dif
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](perspectives.md) the Perspectives sample app.
 
+> [!IMPORTANT]
+>-   This is a preview feature.
+>-   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
 ## Architecture model 
 
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
 
-![Perspectives sample app data model](media/perspectives-architecture/architecture-model.png "Inspection sample app data model")
+![Perspectives sample app architecture model](media/perspectives-architecture/architecture-model.png "Inspection sample app architecture model")
 
 ### Connectors
 
@@ -55,12 +61,12 @@ The following tables are used in the Perspectives app.
 
 | Table name                                                  | Description                                                                                                                                                                                                             |
 |-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Discussion (MSFT_Discussion)                                | The Discussion table contain Discussion Topics, Response Count and Upvote count for each discussion. This table have relationships with Discussion Response, Discussion Response Upvote, and Discussion Topics tables.  |
-| Discussion Response (MSFT_DiscussionResponse)               | The Discussion Response table contain user response to the discussion and upvote count related to the response. This table has a relationship with Discussion Response Upvote table.                                    |
-| Discussion Response Upvote (MSFT_DiscussionResponseUpvote)  | The Discussion Response Upvote table contain user response upvotes for active discussions.                                                                                                                              |
-| Discussion Topic (MSFT_DiscussionTopic)                     | The Discussion Topic table contains topics of discussion along with cover images, cover icons and cover colors related to the topic.                                                                                    |
+| Discussion (MSFT_Discussion)                                | The Discussion table contains Discussion Topics, Response Count and Upvote count for each discussion. This table has relationships with Discussion Response, Discussion Response Upvote, and Discussion Topics tables.  |
+| Discussion Response (MSFT_DiscussionResponse)               | The Discussion Response table contains user response to the discussion and upvote count related to the response. This table has a relationship with Discussion Response Upvote table.                                    |
+| Discussion Response Upvote (MSFT_DiscussionResponseUpvote)  | The Discussion Response Upvote table contains user response upvotes for active discussions.                                                                                                                              |
+| Discussion Topic (MSFT_DiscussionTopic)                     | The Discussion Topic table contains topics of discussion along with cover images, cover icons, and cover colors related to the topic.                                                                                    |
 | Discussion Upvote (MSFT_DiscussionUpvote)                   | The Discussion Upvote table contains user votes related to discussions and response.                                                                                                                                    |
-| Discussion User Setting (MSFT_DiscussionUserSetting)        | The Discussion User Setting table stores user preferences pertaining to seeing the Power Apps splash screen every time they login to the app.                                                                           |
+| Discussion User Setting (MSFT_DiscussionUserSetting)        | The Discussion User Setting table stores user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app.                                                                           |
 | Discussion App Setting (MSFT_DiscussionAppSetting)          | The Discussion App Setting table stores the original Team ID.                                                                                                                                                           |
 
 ## Collections
@@ -69,8 +75,8 @@ The following collections are used in the Perspectives app.
 
 | Collection name                 | Description                                                                                | Where used                  |
 |---------------------------------|--------------------------------------------------------------------------------------------|-----------------------------|
-| colLocalization                 | Used to build a Localization Collection based on the User Language                         | OnStart property of the App |
-| colUserSettings                 | Used to collect User Settings CDS record if it exists.                                     | OnStart property of the App |
+| colLocalization                 | Used to build a Localization Collection based on the User Language.                         | OnStart property of the App |
+| colUserSettings                 | Used to collect User Settings Dataverse record if it exists.                                     | OnStart property of the App |
 | colStockIcons                   | Collection of stock board cover icons.                                                     |  All                        |
 | colStockImages                  | Collection of stock board cover images.                                                    |  All                        |
 | colTopicCoverColors             | Collection of topic cover colors.                                                          |  All                        |
@@ -78,7 +84,7 @@ The following collections are used in the Perspectives app.
 | colDiscussionResponses          | collection of discussion responses.                                                        | All                         |
 | colMostEngagingDiscussions      | collection of discussion with number of responses.                                         |  All                        |
 | colCharWidth                    | Collection of widths for each character used for auto width labels.                        |  Topics                     |
-| colAppSettings                  | Check app settings to check the team id of the team where the app was originally installed |  All                        |
+| colAppSettings                  | Check app settings to check the team ID of the team where the app was originally installed. |  All                        |
 
 ## Global Variables
 
@@ -86,29 +92,29 @@ The following are the global variables used in the Perspectives app.
 
 | Variable Name                      | Type    | Description                                                                                                               | Screen  |
 |------------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------|---------|
-| gblAppLoaded                       | Boolean | To check whether the App is completely loaded                                                                             | OnStart |
-| gblUserLanguage                    | Text    | To check the logged in User’s Language                                                                                    | OnStart |
-| gblThemeDark                       | Boolean | To check whether the Teams theme is set to Dark                                                                           | OnStart |
-| gblThemeHiCo                       | Boolean | To check whether the Teams theme is set to High Contrast                                                                  | OnStart |
+| gblAppLoaded                       | Boolean | To check whether the App is loaded.                                                                             | OnStart |
+| gblUserLanguage                    | Text    | To check the logged in User’s Language.                                                                                    | OnStart |
+| gblThemeDark                       | Boolean | To check whether the Teams theme is set to Dark.                                                                           | OnStart |
+| gblThemeHiCo                       | Boolean | To check whether the Teams theme is set to High Contrast.                                                                  | OnStart |
 | gblMobileMode                      | Boolean | To set the value to true if the Host client is Android or iOS.                                                            | OnStart |
-| gblIsManager                       | Boolean | global variable to store if the current user is a manager.                                                                | OnStart |
+| gblIsManager                       | Boolean | Global variable to store if the current user is a manager.                                                                | OnStart |
 | gblTeamsTabContext                 | Boolean |                                                                                                                           | OnStart |
 | gblIsHostClientWeb                 | Boolean |                                                                                                                           | OnStart |
-| gblAppSetting_inputMobileOnWeb     | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop                                                     | OnStart |
-| gblAppSetting_inputScaleFontsByCui | Number  | Use this variable for scaling all fonts by a fixed amount                                                                 | OnStart |
-| gblCurrUserEmail                   | Text    | To fetch the current User’s Email ID                                                                                      | OnStart |
-| gblCurrUser                        | Record  | To fetch the current User’s Record                                                                                        | OnStart |
-| gblAppSetting_inputMobile          | Boolean | Variables to Scale fonts for mobile-oriented apps                                                                         | OnStart |
-| gblFirstRun                        | Boolean | Variable to check whether the app is being run for the first time after installation                                      | OnStart |
-| gblRecordUserSettings              | Record  | Variable to use the Oldest Record in case multiple records exist                                                          | OnStart |
-| gblCurrentTeamId                   | Text    | global variable to store the current Team ID global variable to store the current team id.                                | OnStart |
-| gblIsOriginalInstallTeam           | Text    | if the original install Team id equal the current installed Team id. confirm current team same as original install team.  | OnStart |
+| gblAppSetting_inputMobileOnWeb     | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop.                                                     | OnStart |
+| gblAppSetting_inputScaleFontsByCui | Number  | Use this variable for scaling all fonts by a fixed amount.                                                                 | OnStart |
+| gblCurrUserEmail                   | Text    | To fetch the current User’s Email ID.                                                                                      | OnStart |
+| gblCurrUser                        | Record  | To fetch the current User’s Record.                                                                                        | OnStart |
+| gblAppSetting_inputMobile          | Boolean | Variables to Scale fonts for mobile-oriented apps.                                                                         | OnStart |
+| gblFirstRun                        | Boolean | Variable to check whether the app is being run for the first time after installation.                                      | OnStart |
+| gblRecordUserSettings              | Record  | Variable to use the Oldest Record in case multiple records exist.                                                          | OnStart |
+| gblCurrentTeamId                   | Text    | global variable to store the current Team ID global variable to store the current team ID.                                | OnStart |
+| gblIsOriginalInstallTeam           | Text    | if the original install Team id equals the current installed Team ID. confirm current team same as original install team.  | OnStart |
 | gblIsAdmin                         | Boolean | if the current team is same as original team then current user is the team owner.                                         | OnStart |
-| gblAppColors                       | Record  | Variable to set the Color value in the app                                                                                | OnStart |
-| gblAppSizes                        | Record  | Variable to set the Size values in the app                                                                                | OnStart |
-| gblOrginialInstallTeamId           | Text    | global variable to store the current Team ID global variable to store the current team id.                                | OnStart |
-| gblAppStyles                       | Record  | Variable to set the Styling values in the app                                                                             | OnStart |
-| gblDisplayWarning                  | Boolean | Variable to hide and show the Warning message while deleting the inspection                                               | OnStart |
+| gblAppColors                       | Record  | Variable to set the Color value in the app.                                                                                | OnStart |
+| gblAppSizes                        | Record  | Variable to set the Size values in the app.                                                                                | OnStart |
+| gblOrginialInstallTeamId           | Text    | global variable to store the current Team ID global variable to store the current team ID.                                | OnStart |
+| gblAppStyles                       | Record  | Variable to set the Styling values in the app.                                                                             | OnStart |
+| gblDisplayWarning                  | Boolean | Variable to hide and show the Warning message while deleting the inspection.                                               | OnStart |
 
 #### OnStart execution details
 
@@ -119,10 +125,9 @@ The following are the global variables used in the Perspectives app.
 2.  The user’s language is then used to collect localized text used throughout
     the app (for example, label and button text) in **colLocalization**.
 
-3.  User details from User Settings table is collected in **colUserSettings**.
+3.  User details from User Settings table are collected in **colUserSettings**.
     If no records exist, a new user setting record is created. This in turn
-    controls the visibility of the splash dialog. If there are multiple project
-    user settings record exist, the oldest record is selected and stored in the
+    controls the visibility of the splash dialog. If there are multiple project user settings records exist, the oldest record is selected and stored in the
     **gblRecordUserSettings** variable.
 
 ### App OnStart
@@ -138,7 +143,7 @@ The following collections are used when the app starts
 |---------------------|---------------------------------------------------------------------------------------------|
 | colUserSettings     | Collection of the user Settings from Area Inspection User Settings table.                   |
 | colLocalization     | Collection of localized text based on user's language.                                      |
-| colAppSettings      | Check app settings to check the team id of the team where the app was originally installed. |
+| colAppSettings      | Check app settings to check the team ID of the team where the app was originally installed. |
 
 
 
@@ -150,10 +155,10 @@ The following collections are used when the app starts
 | gblAppLoaded                     | Global variable to check if the app has loaded completely.                                                               |
 | gblUserLanguage                  | Global variable to store the user's language.                                                                            |
 | gblRecordUserSettings            | Global variable to store the latest User Settings records for the current user.                                          |
-| gblOriginialInstalledTeamId      | Global variable to store the original installed Team ID.global variable to store the original installation team id.      |
-| gblCurrentTeamId                 | Global variable to store the current Team ID global variable to store the current team id.                               |
-| gblIsOriginialInstallTeam        | If the original install Team id equal the current installed Team id. confirm current team same as original install team. |
-| gblIsAdmin                       | If the current team is same as original team then current user is the team owner.                                        |
+| gblOriginialInstalledTeamId      | Global variable to store the original installed Team ID.global variable to store the original installation team ID.      |
+| gblCurrentTeamId                 | Global variable to store the current Team ID global variable to store the current team ID.                               |
+| gblIsOriginialInstallTeam        | If the original install Team id equals the current installed Team ID. confirm current team same as original install team. |
+| gblIsAdmin                       | If the current team is same as original team, then current user is the team owner.                                        |
 | gblIsManager                     | Global variable to store if the current user is a manager.                                                               |
 | locNavigationTimer               | If the navigation timer has been set to true after the time interval the app settings and sizes will be updated.         |
 | gblAppSetting_inputMobileOnWeb   | Global variable to scale fonts for mobile                                                                                |
@@ -203,7 +208,7 @@ Variables used by topic screen:
 #### Find topic execution details 
 
 1.  On search of discussion topic from search bar app will fetch matching result
-    from dataverse in ascending order
+    from Dataverse in ascending order
 
 2.  On select of discussion topic, **locSelectedTopic** is set to selected
     discussion topic and navigate to ‘Discussion Screen’
@@ -249,7 +254,7 @@ Variables used by Add topic screen:
 #### Edit topic
 
 This section explains collections, global variables, and execution details used
-when edit a topic.
+when editing a topic.
 
 #### Edit topic collections
 
@@ -292,7 +297,7 @@ Variables used by edit topic screen:
     locCustomImageSelected** variables to verify cover image and custom image
     are selected or not.
 
-5.  If the user selects **Delete** button then a dialog appears asking for
+5.  If the user selects **Delete** button then a dialog appears to ask for
     confirmation, the visibility of this dialog is controlled by using
     **locDeleteTopicWarning**.
 
@@ -336,8 +341,7 @@ Variables used by Add discussion screen:
 
 2.  Once the required information is filled the **Save** button gets enabled.
 
-3.  When **Save** button selected, **locSelectedDiscussion** local variable
-    which will be updated with currant discussion fields and Discussion record
+3.  When **Save** button selected, **locSelectedDiscussion** local variable that will be updated with currant discussion fields and Discussion record
     will be created in Dataverse against topic.
 
 ### **Response screen**
@@ -378,48 +382,46 @@ Variables used from response screen:
 1.  When response screen is loaded local variables **locAddResponse** and
     **locEditResponse** are set to false.
 
-2.  When user select **Add Response** button, value of local variable
-    **locAddResponse** is set **True** and Add a response pop up will be opened
+2.  When user selects **Add Response** button, value of local variable
+    **locAddResponse** is set **True** and Add a response pop-up will be opened
 
-3.  **locEditResponse** is local variable which is used to identify whether it
+3.  **locEditResponse** is local variable that is used to identify whether it
     is new response or editing existing response.
 
-4.  Once user added response text in pop up description, **Add** button will be
+4.  Once user added response text in pop-up description, **Add** button will be
     activated.
 
-5.  Once user select the **Add** button response will be added in against
+5.  Once user selects the **Add** button response will be added in against
     discussion
 
 #### Edit response execution details
 
-1.  User can select any discussion from discussion screen. Once discussion is
-    selected from discussion screen it will be navigated to Response screen.
+1.  User can select any discussion from discussion screen. Once discussion is selected from discussion screen, it will be navigated to Response screen.
 
 2.  When response screen is loaded local variables **locAddResponse** and
     **locEditResponse** are set to false.
 
-3.  **locEditResponse** is local variable which is used to identify whether it
+3.  **locEditResponse** is local variable that is used to identify whether it
     is new response or editing existing response
 
 4.  On selecting of edit icon, User can able to edit only his responses.
 
-5.  On selecting of edit icon pop up window will opened with existing repose
+5.  On selecting of edit icon pop-up window will open with existing repose
     text.
 
 6.  Once user updated in response then **Update** button will be activated and
-    response will be updated in Datavese
+    response will be updated in Dataverse.
 
 #### Delete response execution details
 
-1.  User can select any discussion from discussion screen. Once discussion is
-    selected from discussion screen it will be navigated to Response screen.
+1.  User can select any discussion from discussion screen. Once discussion is selected from discussion screen, it will be navigated to Response screen.
 
 2.  When response screen is loaded local variables **locAddResponse** and
     **locEditResponse** are set to false.
 
 3.  On selecting of **Delete** icon, User can able to delete only his responses.
 
-4.  If the user selects **Delete** button then a dialog appears asking for
+4.  If the user selects **Delete** button then a dialog appears to ask for
     confirmation, the visibility of this dialog is controlled by using
     **locDeleteResponse**.
 
