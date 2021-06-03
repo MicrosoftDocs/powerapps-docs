@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/14/2020
+ms.date: 06/03/2021
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -30,8 +30,8 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 
-For example, if you have only three rows in your history, lookup will display those three,
-along with seven of your favorite rows. If you have not pinned any favorites, only the most recently viewed rows will be displayed.
+For example, if three's only three rows in your history, then the lookup will display those three rows,
+along with seven of your favorite rows. If you haven't pinned any rows to favorites, then the most recently viewed rows will be displayed.
 
 ## Types of lookups
 
@@ -121,7 +121,7 @@ When lookup has more rows in a column than can fit in the available display area
 
 ## Advanced lookup
 
-To use **Advanced lookup** your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+To use **Advanced lookup**, your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
@@ -138,7 +138,7 @@ Once enabled **Advanced lookup** is available on any lookup column that's on a q
 
 Legend
 
-1. **Search**: Enter search text to find the row that you're looking for. If you changes views your search text is still retained. 
+1. **Search**: Enter search text to find the row that you're looking for. If your changes views your search text is still retained. 
 2. **Change views**: Select the current view and select another view to change views.
 3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The select row will appear under **Selected record**.
 4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the advanced lookup grid.
