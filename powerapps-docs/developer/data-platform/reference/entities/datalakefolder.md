@@ -1,7 +1,7 @@
 ---
 title: "datalakefolder table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the datalakefolder table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ A folder is a place to store data in Azure Data Lake.
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakefolders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1083,7 +1082,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_datalakefolder_modifiedonbehalfby](#BKMK_lk_datalakefolder_modifiedonbehalfby)
 - [user_datalakefolder](#BKMK_user_datalakefolder)
 - [team_datalakefolder](#BKMK_team_datalakefolder)
-- [owner_datalakefolder](#BKMK_owner_datalakefolder)
 - [business_unit_datalakefolder](#BKMK_business_unit_datalakefolder)
 
 
@@ -1122,12 +1120,6 @@ See systemuser Table [user_datalakefolder](systemuser.md#BKMK_user_datalakefolde
 **Added by**: System Solution Solution
 
 See team Table [team_datalakefolder](team.md#BKMK_team_datalakefolder) One-To-Many relationship.
-
-### <a name="BKMK_owner_datalakefolder"></a> owner_datalakefolder
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_datalakefolder](owner.md#BKMK_owner_datalakefolder) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_datalakefolder"></a> business_unit_datalakefolder
 

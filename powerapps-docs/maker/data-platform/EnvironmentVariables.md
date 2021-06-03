@@ -8,7 +8,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 05/27/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 search.audienceType: 
   - maker
 search.app: 

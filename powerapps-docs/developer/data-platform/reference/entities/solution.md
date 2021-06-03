@@ -1,7 +1,7 @@
 ---
 title: "Solution table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Solution table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ A solution which contains CRM customizations.
 |Delete|DELETE [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |DeleteAndPromote|<xref href="Microsoft.Dynamics.CRM.DeleteAndPromote?text=DeleteAndPromote Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -67,6 +66,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SolutionPackageVersion](#BKMK_SolutionPackageVersion)
 - [SolutionType](#BKMK_SolutionType)
 - [TemplateSuffix](#BKMK_TemplateSuffix)
+- [Thumbprint](#BKMK_Thumbprint)
 - [UniqueName](#BKMK_UniqueName)
 - [Version](#BKMK_Version)
 
@@ -198,6 +198,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|templatesuffix|
+|MaxLength|65|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Thumbprint"></a> Thumbprint
+
+**Added by**: Solutions Framework Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description|thumbprint of the solution signature|
+|DisplayName|Thumbprint|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|False|
+|IsValidForUpdate|False|
+|LogicalName|thumbprint|
 |MaxLength|65|
 |RequiredLevel|None|
 |Type|String|
@@ -806,7 +825,6 @@ Listed by **SchemaName**.
 - [solution_solutioncomponent](#BKMK_solution_solutioncomponent)
 - [solution_parent_solution](#BKMK_solution_parent_solution)
 - [Solution_SyncErrors](#BKMK_Solution_SyncErrors)
-- [FileAttachment_Solution](#BKMK_FileAttachment_Solution)
 - [FK_CanvasApp_Solution](#BKMK_FK_CanvasApp_Solution)
 - [solution_fieldpermission](#BKMK_solution_fieldpermission)
 - [solution_fieldsecurityprofile](#BKMK_solution_fieldsecurityprofile)
@@ -857,21 +875,6 @@ Same as syncerror table [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErr
 |ReferencedEntityNavigationPropertyName|Solution_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_FileAttachment_Solution"></a> FileAttachment_Solution
-
-Same as fileattachment table [FileAttachment_Solution](fileattachment.md#BKMK_FileAttachment_Solution) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|regardingobjectid_fileattachment_solution|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_FK_CanvasApp_Solution"></a> FK_CanvasApp_Solution
@@ -962,7 +965,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_solution](#BKMK_organization_solution)
 - [lk_solutionbase_createdonbehalfby](#BKMK_lk_solutionbase_createdonbehalfby)
 - [publisher_solution](#BKMK_publisher_solution)
-- [fileattachment_solution_fileid](#BKMK_fileattachment_solution_fileid)
 
 
 ### <a name="BKMK_lk_solution_createdby"></a> lk_solution_createdby
@@ -996,10 +998,6 @@ See systemuser Table [lk_solutionbase_createdonbehalfby](systemuser.md#BKMK_lk_s
 ### <a name="BKMK_publisher_solution"></a> publisher_solution
 
 See publisher Table [publisher_solution](publisher.md#BKMK_publisher_solution) One-To-Many relationship.
-
-### <a name="BKMK_fileattachment_solution_fileid"></a> fileattachment_solution_fileid
-
-See fileattachment Table [fileattachment_solution_fileid](fileattachment.md) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships

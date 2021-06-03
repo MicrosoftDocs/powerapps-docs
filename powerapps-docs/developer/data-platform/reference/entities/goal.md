@@ -1,7 +1,7 @@
 ---
 title: "Goal table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Goal table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ Target objective for a user or a team for a specified time period.
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Recalculate|<xref href="Microsoft.Dynamics.CRM.Recalculate?text=Recalculate Action" />|<xref:Microsoft.Crm.Sdk.Messages.RecalculateRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/goals(*goalid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/goals<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -2234,7 +2233,6 @@ Same as principalobjectattributeaccess table [goal_principalobjectattributeacces
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [team_goal](#BKMK_team_goal)
-- [owner_goal](#BKMK_owner_goal)
 - [goalrollupquery_actualint](#BKMK_goalrollupquery_actualint)
 - [goal_rollupquery_actualmoney](#BKMK_goal_rollupquery_actualmoney)
 - [goal_rollupquery_actualdecimal](#BKMK_goal_rollupquery_actualdecimal)
@@ -2261,10 +2259,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 ### <a name="BKMK_team_goal"></a> team_goal
 
 See team Table [team_goal](team.md#BKMK_team_goal) One-To-Many relationship.
-
-### <a name="BKMK_owner_goal"></a> owner_goal
-
-See owner Table [owner_goal](owner.md#BKMK_owner_goal) One-To-Many relationship.
 
 ### <a name="BKMK_goalrollupquery_actualint"></a> goalrollupquery_actualint
 
