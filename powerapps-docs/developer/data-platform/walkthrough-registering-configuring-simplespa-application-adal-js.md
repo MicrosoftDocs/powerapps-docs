@@ -1,8 +1,8 @@
 ---
-title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Microsoft Dataverse) | Microsoft Docs"
-description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS)."
+title: "Walkthrough: Registering and configuring a SimpleSPA application with adal.js (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 08/26/2019
+ms.date: 03/24/2021
 ms.service: powerapps
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
@@ -19,9 +19,7 @@ search.app:
 
 # Walkthrough: Registering and configuring a SPA application with adal.js
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application to Dataverse ](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
+This walkthrough describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single-Page Application to Dataverse ](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
   
 ## Prerequisites  
   
@@ -31,7 +29,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 - An Azure subscription to register your application. A trial account will also work.  
   
-- Visual Studio 2017  
+- Visual Studio 2017 or later
   
 <a name="bkmk_goal"></a>
 
@@ -61,7 +59,7 @@ Finally, you can click on **Logout** button to logout.
 
 ## Create a web application project  
   
-1. Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
+1. Using Visual Studio, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
   
     You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2017.  
   
@@ -373,8 +371,7 @@ If you don't get the results you expect, double-check the values you set while r
 ## See also  
  [Create client applications](connect-dataverse.md)<br />
  [Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
- [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
- [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
-
+ [Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
+ [Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

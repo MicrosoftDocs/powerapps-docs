@@ -1,6 +1,6 @@
 ---
 title: getClient | Microsoft Docs
-description: 
+description: Returns a value to indicate which client the script is executing in.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

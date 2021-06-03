@@ -70,7 +70,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion=*n* | MAXRECURSION number |
 
-More information: [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)
+More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### See also  
  [Building Queries with QueryExpression](build-queries-with-queryexpression.md)   

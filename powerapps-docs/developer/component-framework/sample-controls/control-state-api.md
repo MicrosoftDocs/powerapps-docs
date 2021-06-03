@@ -1,6 +1,6 @@
 ---
 title: Control State API  | Microsoft Docs
-description:
+description: The Power Apps component framework allows you to persist state of component across multiple renderings of the component within the same session.
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -15,6 +15,8 @@ ms.assetid: 4a77bf37-8ea0-4fe3-9fe7-2769387167c3
 # Implementing control state API component
 
 The Power Apps component framework allows you to persist state of component across multiple renderings of the component within the same session. It provides you with the ability to build components that can maintain user state throughout the user's session as the user navigates to and from the component.
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 For example, if your code component is a long list that the user can scroll through, you could leverage the **_SetControlState_** functionality to remember the point in the list the user is looking at when they navigated away from the form. You could then add logic on component initialization to check the stored state and render the component's list at the point where the user was previously reading. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ControlStateAPI).
 
@@ -111,7 +113,7 @@ export class TSControlStateAPI
     }
   }
   /**
-   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -209,7 +211,7 @@ export class TSControlStateAPI
   private onButtonClick(event: Event, selectedColorElement: HTMLDivElement) {
     const eventTarget: Element = event.srcElement as Element;
     if (event.srcElement) {
-      // Get the label and the selected color attributes from the div element that was clicked
+      // Get the label and the selected color columns from the div element that was clicked
       let label: string = event.srcElement.attributes.getNamedItem("value")!
         .value;
       let selectedColor: string = event.srcElement!.attributes.getNamedItem(

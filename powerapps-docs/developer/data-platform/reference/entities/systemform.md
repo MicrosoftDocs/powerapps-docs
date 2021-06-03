@@ -1,22 +1,24 @@
 ---
-title: "SystemForm entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SystemForm table."
-ms.date: 11/14/2020
+title: "SystemForm table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SystemForm table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SystemForm entity reference
+
+# SystemForm table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Organization-owned entity customizations including form layout and dashboards.
 
@@ -26,16 +28,16 @@ Organization-owned entity customizations including form layout and dashboards.
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |CopySystemForm|<xref href="Microsoft.Dynamics.CRM.CopySystemForm?text=CopySystemForm Action" />|<xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/systemforms<br />See [Create](../../webapi/create-entity-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Delete](../../webapi/update-delete-entities-using-web-api.md#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST [*org URI*]/api/data/v9.0/systemforms<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveFilteredForms|<xref href="Microsoft.Dynamics.CRM.RetrieveFilteredForms?text=RetrieveFilteredForms Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveFilteredFormsRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/systemforms<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/systemforms<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Update](../../webapi/update-delete-entities-using-web-api.md#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/systemforms(*formid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +55,9 @@ Organization-owned entity customizations including form layout and dashboards.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AncestorFormId](#BKMK_AncestorFormId)
 - [CanBeDeleted](#BKMK_CanBeDeleted)
@@ -134,7 +136,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### FormActivationState Options
+#### FormActivationState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -185,7 +187,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### FormPresentation Options
+#### FormPresentation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -240,7 +242,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsAIRMerged Options
+#### IsAIRMerged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -276,7 +278,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDefault Options
+#### IsDefault Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -299,7 +301,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDesktopEnabled Options
+#### IsDesktopEnabled Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -322,7 +324,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsTabletEnabled Options
+#### IsTabletEnabled Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -376,7 +378,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Type Options
+#### Type Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -393,6 +395,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |10|InteractionCentricDashboard|
 |11|Card|
 |12|Main - Interactive experience|
+|13|Contextual Dashboard|
 |100|Other|
 |101|MainBackup|
 |102|AppointmentBookBackup|
@@ -434,9 +437,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AncestorFormIdName](#BKMK_AncestorFormIdName)
 - [ComponentState](#BKMK_ComponentState)
@@ -480,7 +483,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -532,7 +535,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -657,7 +660,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_form_ancestor_form"></a> form_ancestor_form
 
-Same as systemform entity [form_ancestor_form](systemform.md#BKMK_form_ancestor_form) Many-To-One relationship.
+Same as systemform table [form_ancestor_form](systemform.md#BKMK_form_ancestor_form) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -672,7 +675,7 @@ Same as systemform entity [form_ancestor_form](systemform.md#BKMK_form_ancestor_
 
 ### <a name="BKMK_SystemForm_AsyncOperations"></a> SystemForm_AsyncOperations
 
-Same as asyncoperation entity [SystemForm_AsyncOperations](asyncoperation.md#BKMK_SystemForm_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [SystemForm_AsyncOperations](asyncoperation.md#BKMK_SystemForm_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -687,7 +690,7 @@ Same as asyncoperation entity [SystemForm_AsyncOperations](asyncoperation.md#BKM
 
 ### <a name="BKMK_processtrigger_systemform"></a> processtrigger_systemform
 
-Same as processtrigger entity [processtrigger_systemform](processtrigger.md#BKMK_processtrigger_systemform) Many-To-One relationship.
+Same as processtrigger table [processtrigger_systemform](processtrigger.md#BKMK_processtrigger_systemform) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -702,7 +705,7 @@ Same as processtrigger entity [processtrigger_systemform](processtrigger.md#BKMK
 
 ### <a name="BKMK_SystemForm_BulkDeleteFailures"></a> SystemForm_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [SystemForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SystemForm_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [SystemForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SystemForm_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -718,7 +721,7 @@ Same as bulkdeletefailure entity [SystemForm_BulkDeleteFailures](bulkdeletefailu
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [form_ancestor_form](#BKMK_form_ancestor_form)
 - [organization_systemforms](#BKMK_organization_systemforms)
@@ -726,16 +729,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_form_ancestor_form"></a> form_ancestor_form
 
-See systemform Entity [form_ancestor_form](systemform.md#BKMK_form_ancestor_form) One-To-Many relationship.
+See systemform Table [form_ancestor_form](systemform.md#BKMK_form_ancestor_form) One-To-Many relationship.
 
 ### <a name="BKMK_organization_systemforms"></a> organization_systemforms
 
-See organization Entity [organization_systemforms](organization.md#BKMK_organization_systemforms) One-To-Many relationship.
+See organization Table [organization_systemforms](organization.md#BKMK_organization_systemforms) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.systemform?text=systemform EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: PopupService | Microsoft Docs
-description: 
+description: Provides properties and methods to create and manage popups.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

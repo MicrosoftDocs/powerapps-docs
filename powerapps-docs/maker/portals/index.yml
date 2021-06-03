@@ -13,11 +13,31 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 03/12/2021 
+  ms.date: 06/01/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+  # Card 
+  - title: What's new
+    linkLists:
+       - linkListType: whats-new
+         links:
+          - text: Use the Visual Studio Code extension (Preview)
+            url: vs-code-extension.md
+          - text: Add chatbot to a page (Preview)
+            url: add-chatbot.md
+          - text: Table permissions using portals Studio (Preview)
+            url: configure/entity-permissions-studio.md
+          - text: "Tutorial: Configure table permissions using portals Studio (Preview)"
+            url: configure/entity-permissions-studio-walkthrough.md
+       - linkListType: reference
+         links:
+          - text: Portals version 9.3.6.x released
+            url: versions/version-9.3.6.x.md
+          - text: Starter Portal package version 9.2.2103.x released
+            url: versions/package-version-9.2.2103.md
 
   # Card 
   - title: Get started
@@ -28,10 +48,6 @@ landingContent:
             url: overview.md
           - text: Portals lifecycle
             url: admin/portal-lifecycle.md
-       - linkListType: whats-new
-         links:
-          - text: Terminology changes in portals
-            url: terminology-changes.md
        - linkListType: learn
          links:
           - text: Get started with Power Apps portals
@@ -66,7 +82,7 @@ landingContent:
             url: /learn/modules/explore-portals-studio/
 
   # Card
-  - title: Administer and manage
+  - title: Administer and Manage
     linkLists:
       - linkListType: concept
         links:
@@ -84,11 +100,11 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Entity forms
+          - text: Basic forms
             url: configure/entity-forms.md
-          - text: Entity lists
+          - text: Lists
             url: configure/entity-lists.md
-          - text: Web forms
+          - text: Advanced forms
             url: configure/web-form-properties.md
 
   # Card
@@ -100,7 +116,7 @@ landingContent:
             url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
-          - text: Assign entity permissions
+          - text: Assign table permissions
             url: configure/assign-entity-permissions.md
           - text: Control web page access
             url: configure/webpage-access-control.md

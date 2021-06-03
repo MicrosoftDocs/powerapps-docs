@@ -1,13 +1,17 @@
 ---
-title: "Understand how to use local authentication, registration, and other settings for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about different site settings for portals, local authentication, and registration process in Power Apps portals."
+title: Local authentication, registration, and other settings
+description: Learn about different site settings for portals, local authentication, and registration process in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Local authentication, registration, and other settings
@@ -26,7 +30,7 @@ The portals feature provides authentication functionality built on the [ASP.NET 
 - Invitation code sign-up for registering prepopulated contact records
 
 > [!NOTE]
-> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact entity currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
+> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact table currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
 
 ## Requirements
 

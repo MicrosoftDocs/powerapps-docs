@@ -71,16 +71,16 @@ Let's look at the code in detail:
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
     }
     ```
-- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** field in the account form so that it gets executed **only** when you change the account name value.
+- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
 
-    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some fields in the account form.
+    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some columns in the account form.
 
     ```JavaScript
-    // Code to run in the attribute OnChange event 
+    // Code to run in the column OnChange event 
     this.attributeOnChange = function (executionContext) {
         var formContext = executionContext.getFormContext();
 
-        // Automatically set some field values if the account name contains "Contoso"
+        // Automatically set some column values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
@@ -169,7 +169,7 @@ This makes the web resource available to be selected under the **Event Handlers*
    ![Form OnLoad](../media/clientapi_walkThrough-img5.png)
 1. In the **Handler Properties** dialog box:   
 
-    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** field. The function name is [Namespace].[Function] from your JavaScript code.
+    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** column. The function name is [Namespace].[Function] from your JavaScript code.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
       ![Form OnLoad 1](../media/clientapi_walkThrough-img6.png)
@@ -179,7 +179,7 @@ This makes the web resource available to be selected under the **Event Handlers*
 
     ![Form OnSave ](../media/clientapi_walkThrough-img7.png)
 
-1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** field. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
+1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** column. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
 
     ![Form OnSave 1](../media/clientapi_walkThrough-img8.png)
 
@@ -190,10 +190,10 @@ This makes the web resource available to be selected under the **Event Handlers*
 
 1. In the **Handler Properties** dialog box:   
 
-    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.attributeOnChange** in the **Function** field.
+    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.attributeOnChange** in the **Function** column.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
-      ![Attribute OnChange](../media/clientapi_walkThrough-img10.png) 
+      ![Column OnChange](../media/clientapi_walkThrough-img10.png "Column OnChange") 
 1. Select **OK** to return to the **Form Properties** dialog box.
 1. Select **OK** in the **Form Properties** dialog box to return to the form editor.
 1. Select **Save** to save the changes to the form.
@@ -214,7 +214,15 @@ That's it! You have completed the steps to configure the account form to use cus
 
     ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
 
-1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
+1. Select `OnLoad` event handler and associate the function you want to achieve.
+
+   ![Configure Form event handlers](../media/configure-events-on-from-handlers.png "Configure Form event handlers")
+
+1. Select `OnSave` event handler and associate the function you want to achieve.
+
+   ![Configure Form on save event handlers](../media/configure-events-on-save-handlers.png "Configure Form on save event handlers")
+
+1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
 
@@ -231,7 +239,7 @@ It is recommended that you refresh your browser for the changes to take effect i
 
       ![Form level notification](../media/clientapi_walkThrough-img11.png)
 
-1. Edit the account name to add "Contoso" in the name and move to the next field by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website**, and **Description** fields with the value specified in the code.
+1. Edit the account name to add "Contoso" in the name and move to the next column by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website**, and **Description** columns with the value specified in the code.
 
       ![Values set automatically](../media/clientapi_walkThrough-img12.png)
 
@@ -263,11 +271,11 @@ var Sdk = window.Sdk || {};
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);
     }
 
-    // Code to run in the attribute OnChange event 
+    // Code to run in the column OnChange event 
     this.attributeOnChange = function (executionContext) {
         var formContext = executionContext.getFormContext();
 
-        // Automatically set some field values if the account name contains "Contoso"
+        // Automatically set some column values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");

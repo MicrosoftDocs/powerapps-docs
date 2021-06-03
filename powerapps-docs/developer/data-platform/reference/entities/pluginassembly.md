@@ -1,22 +1,24 @@
 ---
-title: "PluginAssembly entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PluginAssembly table."
-ms.date: 11/14/2020
+title: "PluginAssembly table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the PluginAssembly table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PluginAssembly entity reference
+
+# PluginAssembly table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Assembly that contains one or more plug-in types.
 
@@ -25,13 +27,13 @@ Assembly that contains one or more plug-in types.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Assembly that contains one or more plug-in types.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AuthType](#BKMK_AuthType)
 - [Content](#BKMK_Content)
@@ -61,6 +63,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsHidden](#BKMK_IsHidden)
 - [IsolationMode](#BKMK_IsolationMode)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
 - [Name](#BKMK_Name)
 - [Password](#BKMK_Password)
 - [Path](#BKMK_Path)
@@ -85,7 +88,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### AuthType Options
+#### AuthType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -196,7 +199,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### IsolationMode Options
+#### IsolationMode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -204,6 +207,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |2|Sandbox|
 |3|External|
 
+
+
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for managedidentity associated with pluginassembly.|
+|DisplayName|ManagedIdentityId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|managedidentityid|
+|RequiredLevel|None|
+|Targets|managedidentity|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -312,7 +331,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### SourceType Options
+#### SourceType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -372,9 +391,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -387,6 +406,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [IsManaged](#BKMK_IsManaged)
 - [IsPasswordSet](#BKMK_IsPasswordSet)
 - [Major](#BKMK_Major)
+- [managedidentityidName](#BKMK_managedidentityidName)
 - [Minor](#BKMK_Minor)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -414,7 +434,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -544,7 +564,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -567,7 +587,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsPasswordSet Options
+#### IsPasswordSet Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -592,6 +612,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_managedidentityidName"></a> managedidentityidName
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|managedidentityidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Minor"></a> Minor
@@ -792,7 +830,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_pluginassembly_plugintype"></a> pluginassembly_plugintype
 
-Same as plugintype entity [pluginassembly_plugintype](plugintype.md#BKMK_pluginassembly_plugintype) Many-To-One relationship.
+Same as plugintype table [pluginassembly_plugintype](plugintype.md#BKMK_pluginassembly_plugintype) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -808,39 +846,44 @@ Same as plugintype entity [pluginassembly_plugintype](plugintype.md#BKMK_plugina
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [modifiedby_pluginassembly](#BKMK_modifiedby_pluginassembly)
 - [createdby_pluginassembly](#BKMK_createdby_pluginassembly)
 - [organization_pluginassembly](#BKMK_organization_pluginassembly)
 - [lk_pluginassembly_modifiedonbehalfby](#BKMK_lk_pluginassembly_modifiedonbehalfby)
 - [lk_pluginassembly_createdonbehalfby](#BKMK_lk_pluginassembly_createdonbehalfby)
+- [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
 
 
 ### <a name="BKMK_modifiedby_pluginassembly"></a> modifiedby_pluginassembly
 
-See systemuser Entity [modifiedby_pluginassembly](systemuser.md#BKMK_modifiedby_pluginassembly) One-To-Many relationship.
+See systemuser Table [modifiedby_pluginassembly](systemuser.md#BKMK_modifiedby_pluginassembly) One-To-Many relationship.
 
 ### <a name="BKMK_createdby_pluginassembly"></a> createdby_pluginassembly
 
-See systemuser Entity [createdby_pluginassembly](systemuser.md#BKMK_createdby_pluginassembly) One-To-Many relationship.
+See systemuser Table [createdby_pluginassembly](systemuser.md#BKMK_createdby_pluginassembly) One-To-Many relationship.
 
 ### <a name="BKMK_organization_pluginassembly"></a> organization_pluginassembly
 
-See organization Entity [organization_pluginassembly](organization.md#BKMK_organization_pluginassembly) One-To-Many relationship.
+See organization Table [organization_pluginassembly](organization.md#BKMK_organization_pluginassembly) One-To-Many relationship.
 
 ### <a name="BKMK_lk_pluginassembly_modifiedonbehalfby"></a> lk_pluginassembly_modifiedonbehalfby
 
-See systemuser Entity [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginassembly_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginassembly_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_pluginassembly_createdonbehalfby"></a> lk_pluginassembly_createdonbehalfby
 
-See systemuser Entity [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See managedidentity Table [managedidentity_PluginAssembly](managedidentity.md#BKMK_managedidentity_PluginAssembly) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.pluginassembly?text=pluginassembly EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

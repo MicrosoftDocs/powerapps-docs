@@ -1,8 +1,8 @@
 ---
-title: "Use OAuth with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to authenticate using OAuth with Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 10/31/2018
+ms.date: 03/23/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,15 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use OAuth with Microsoft Dataverse
+# Use OAuth authentication with Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-[OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After people provide credentials to authenticate, OAuth determines whether they are authorized to access the resources.
+[OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After application users provide credentials to authenticate, OAuth determines whether they are authorized to access the resources.
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL).
 
 > [!NOTE]
 > This topic will introduce common concepts related to connecting to Dataverse using OAuth with the ADAL libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the ADAL libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
@@ -36,11 +34,11 @@ When you connect using OAuth you must first register an application in your Azur
 
 In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an app with the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/quickstart-v1-add-azure-ad-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
-The decisions you will need to make in this step mostly depend on the Application Type choice.
+The decisions you will need to make in this step mostly depend on the Application Type choice (see below).
 
 ### Types of app registration
 
-When you register an app with Azure AD one of the decisions you must make is the Application type. There are two types of applications you can register:
+When you register an app with Azure AD one of the decisions you must make is the application type. There are two types of applications you can register:
 
 |Application type|Description|
 |--|--|
@@ -403,11 +401,10 @@ using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 }
 ```
 
-
 ### See also
 
-[Authentication with Dataverse web services](authentication.md)<br />
-[Authentication with .NET Framework applications](authenticate-dot-net-framework.md)
+[Authentication with Microsoft Dataverse web services](authentication.md)<br />
+[Authenticating .NET Framework applications](authenticate-dot-net-framework.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

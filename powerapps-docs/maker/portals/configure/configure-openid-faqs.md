@@ -1,16 +1,20 @@
 ---
-title: "FAQ about using OpenID Connect providers for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals."
+title: FAQs for using OpenID Connect in portals
+description: Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: dileeps
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# FAQ for using OpenID Connect in portals
+# FAQs for using OpenID Connect in portals
 
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 

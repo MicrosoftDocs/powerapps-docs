@@ -41,7 +41,7 @@ There are two additional ways to create queries to retrieve records from Dataver
 <!-- This doesn't belong here. It should be in model driven app configuration -->
 ## Configuration for Quick find
 
-In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization entity QuickFindRecordLimitEnabled](/powerapps/developer/data-platform/reference/entities/organization#BKMK_QuickFindRecordLimitEnabled) attribute. When this `Boolean` attribute value is `true`, a limit is imposed on quick find queries.
+In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization entity QuickFindRecordLimitEnabled](../reference/entities/organization.md#BKMK_QuickFindRecordLimitEnabled) attribute. When this `Boolean` attribute value is `true`, a limit is imposed on quick find queries.
 
 ## In This Section
 
@@ -51,11 +51,11 @@ In Model-driven apps, there is a Quick Find feature. If a user provides search c
 [Using the ConditionExpression Class](use-conditionexpression-class.md)<br />
 [Using the FilterExpression Class](use-filterexpression-class.md)<br />
 [Use a left outer join in QueryExpression to query for records "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)<br />
-[Testing for a Null Value](/dynamics365/customer-engagement/developer/test-null-value)<br />
+[Testing for a Null Value](test-null-value.md)<br />
 [Page Large Result Sets with Query Expression and FetchXML](page-large-result-sets-with-queryexpression.md)<br />
 [Sample: Retrieve With One-To-Many Relationship](/dynamics365/customer-engagement/developer/org-service/sample-retrieve-with-one-to-many-relationship)<br />
-[Sample: Retrieve Multiple with Query By Attribute](/org-service/samples/retrieve-multiple-querybyattribute-class.md)<br />
-[Sample: Retrieve Multiple with Query Expression](/org-service/samples/retrieve-multiple-queryexpression-class.md)<br />
+[Sample: Retrieve Multiple with Query By Attribute](samples/retrieve-multiple-querybyattribute-class.md)<br />
+[Sample: Retrieve Multiple with Query Expression](samples/retrieve-multiple-queryexpression-class.md)<br />
 [Sample: Use QueryExpression with a paging cookie](/dynamics365/customer-engagement/developer/org-service/sample-use-queryexpression-with-a-paging-cookie)  
   
 ## Reference

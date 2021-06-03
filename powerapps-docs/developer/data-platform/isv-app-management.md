@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
-ms.date: 02/11/2021
+ms.date: 04/11/2021
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -24,11 +24,14 @@ search.app:
 
 # Microsoft Power Platform ISV Studio
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
+
+> [!div class="mx-imgBorder"]
+> ![Studio home page](media/isv-studio-home-page.png "Studio home page")
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!IMPORTANT]
 >
@@ -37,19 +40,22 @@ ISV Studio is designed to become the go-to Power Platform destination for Indepe
 
 ISV Studio supports applications built on the Microsoft Dataverse that are published to and deployed through [AppSource](https://appsource.microsoft.com/). No telemetry will be provided on side loaded solutions not deployed through AppSource.
 
-The applications currently available on the Dataverse includes Power Apps and Dynamics 365 for Sales, Marketing, Service, and Talent.
+The applications currently available on the Dataverse includes Power Apps and Dynamics 365 for Sales, Marketing, Service, and Talent. ISV Studio now provides telemetry features in Dynamics 365 Finance and Operations.
 
-As an end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to support billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
+When end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to support billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
 
 A customer can request that data not be shared with the provider, in which case Microsoft will remove all data from that particular tenant within ISV Studio.
 
 To access the public preview of ISV Studio, navigate your browser to [https://aka.ms/ISVStudio](https://aka.ms/ISVStudio/).
 
-## Pre-requisites
+## Pre-requisites for Microsoft Dataverse
 
-1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
+The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
 
-2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Partner Center for the particular ISV.
+## Pre-requisites for Dynamics 365 Finance and Operations
+
+- For Dynamics 365 Finance and Operations, update the `SolutionID` in the descriptors with the `ProductId` of their offer in Partner Center. The `ProductId` of their offer can be found in the URL in Partner Center.
+- Ask customers to install the latest solution with the above. They need to be on version `10.0.16` or above to see the telemetry feature in ISV Studio. More information: [ISV Studio solutions](/dynamics365/fin-ops-core/dev-itpro/dev-tools/isv-studio-solutions)
 
 ### Admin access to ISV Studio
 
@@ -80,11 +86,11 @@ You can follow the same steps to remove read-only access from a user to ISV Stud
 
 <!--If you do not have permissions to give additional users access to ISV Studio. Please visit our documentation to learn more about user access.  
 If you want additional users to get access to ISV Studio, they can be added as app contributors in Partner Center.  Instructions can be found at
-[Managing users on cloud partner portal](https://docs.microsoft.com/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
+[Managing users on cloud partner portal](/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
-### Feedback
+### How to provide feedback
 
 Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft.com) with any feedback or questions. Your feedback is important for us to shape the experiences moving forward.
 
