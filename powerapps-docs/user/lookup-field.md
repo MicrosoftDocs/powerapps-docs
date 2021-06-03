@@ -121,9 +121,9 @@ When lookup has more rows in a column than can fit in the available display area
 
 ## Advanced lookup
 
-To use **Advanced lookup** your administrator needs to enable this feature. For more information, see [Manage behavior settings](power-platform/admin/settings-behavior).
+To use **Advanced lookup** your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
-Once enabed **Advanced lookup** is aviliable on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
+Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
 1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
 
@@ -142,7 +142,7 @@ Legend
 2. **Change views**: Select the current view and select another view to change views.
 3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The select row will appear under **Selected record**.
 4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the advanced lookup grid.
-5. **Sort**: Select the arrow at the top of any column to sort in acending or decending order. 
+5. **Sort**: Select the arrow at the top of any column to sort in ascending or descending order. 
 6. **Only my records**: Select to only show rows that you own.
 7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
 
@@ -167,7 +167,7 @@ In a **Regarding** lookup, you can switch between tables and their views
 For lookup columns with choices you can select multiple rows from different tables. 
 
 1. Go a lookup column with choices and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
-2. On the advanced lookup grid, you can select mutiple rows. 
+2. On the advanced lookup grid, you can select multiple rows. 
 
    > [!div class="mx-imgBorder"]
    > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for choices")  
@@ -175,7 +175,7 @@ For lookup columns with choices you can select multiple rows from different tabl
 3. Select **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
 
     > [!div class="mx-imgBorder"]
-    > ![Advanced lookup grid for choices](media/choices-lookup-2.png "Advanced lookup grid for choices")  
+    > ![Edit your choices](media/choices-lookup-2.png "Edit your choices")  
    
 4. The selected rows appear in the lookup.
 
