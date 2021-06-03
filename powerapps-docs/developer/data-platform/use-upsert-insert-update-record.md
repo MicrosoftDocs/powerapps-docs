@@ -1,6 +1,6 @@
 ---
-title: "Use Upsert to insert or update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "UpsertRequest(Update or Insert) message helps you simplify various data integration scenarios where you do not know if a record already exists in Microsoft Dataverse. In such cases you won’t know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Upsert to insert or update a row (record) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "UpsertRequest (Update or Insert) message helps you simplify various data integration scenarios where you do not know if a table row (record) already exists in Microsoft Dataverse. In such cases you won’t know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/10/2021
 ms.reviewer: "pehecke"
@@ -15,11 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use Upsert to insert or update a record
+# Use Upsert to insert or update a row (record)
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won’t know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can now reduce this complexity and load data into Dataverse more efficiently by using the new <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> (Update or Insert) message.  
+You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Microsoft Dataverse tables from an external system, for example in a bulk data integration scenario, you may not know if a row (record) already exists in Dataverse. In such cases, you won’t know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can now reduce this complexity and load data into Dataverse more efficiently by using the new <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> (Update or Insert) message. 
+
+[!INCLUDE[cc-terminology](/includes/cc-terminology.md)]
   
 <a name="BKMK_UsingUpsert"></a>   
 
@@ -71,10 +73,10 @@ You can reduce the complexity involved with data integration scenarios by using 
 <a name="BKMK_SampleCode"></a>   
 
 ## Sample code  
- The [Insert or update a record using Upsert](/samples/browse/) sample [ProductUpsertSample.cs](https://code.msdn.microsoft.com/Insert-or-update-a-record-aa160870/sourcecode?fileId=136218&pathId=1243320355) file contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.  
+The [SampleMethod.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/orgsvc/C%23/InsertRecordUsingUpsert/InsertRecordUsingUpsert/SampleMethod.cs) file in the [Insert record using Upsert](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InsertRecordUsingUpsert) sample contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.  
   
 ```csharp
-public void ProcessUpsert(String Filename)
+public static void ProcessUpsert(CrmServiceClient service, String Filename)
 {
     Console.WriteLine("Executing upsert operation.....");
     XmlTextReader tr = new XmlTextReader(Filename);
@@ -95,7 +97,7 @@ public void ProcessUpsert(String Filename)
         productToCreate["sample_name"] = productName;
         productToCreate["sample_category"] = productCategory;
         productToCreate["sample_make"] = productMake;
-        UpsertRequest request = new UpsertRequest()
+        var request = new UpsertRequest()
         {
             Target = productToCreate
         };
@@ -103,7 +105,7 @@ public void ProcessUpsert(String Filename)
         try
         {
             // Execute UpsertRequest and obtain UpsertResponse. 
-            UpsertResponse response = (UpsertResponse)_serviceProxy.Execute(request);
+            var response = (UpsertResponse)service.Execute(request);
             if (response.RecordCreated)
                 Console.WriteLine("New record {0} is created!", productName);
             else
@@ -115,15 +117,7 @@ public void ProcessUpsert(String Filename)
         {
             throw;
         }
-
     }
-    // Prompts to view the sample_product entity records.
-    // If you choose "y", IE will be launched to display the new or updated records.
-    if (PromptForView())
-    {
-        ViewEntityListInBrowser();
-    }
-
 }
 ```
   
