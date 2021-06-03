@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 01/25/2021
+ms.date: 05/27/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -92,6 +92,7 @@ You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.O
 |`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
 |`tag`|A value to include within the `ExecutionContext` `SharedVariables` collection. |Any message that can have a plug-in step registered. More information: [Add a Shared Variable from the Organization Service](#add-a-shared-variable-from-the-organization-service)|
 |`PartitionId`| A unique `String` value used to access non-relational entity data in NoSql tables within a storage partition. Used to improve performance when accessing entity data in Azure heterogenous storage. <p/>More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md) |<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest><br /> <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> |
+|`BypassCustomPluginExecution`|Bypasses custom plug-ins when included in a request sent by someone with the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)|Any request that could include custom plug-ins.|  
   
  The following sample shows how to pass an optional parameter:  
   

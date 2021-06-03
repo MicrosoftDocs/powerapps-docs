@@ -21,10 +21,10 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The names used for types depend on the designer used. [Power Apps(https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. 
+The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
 
-<!-- Watch this video for a quick overview about column types:
-> [!VIDEO link tbd]  -->
+Watch this video for a quick overview on how to create a column in Dataverse:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
 
 The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
@@ -65,7 +65,7 @@ For more descriptions for each type you can add or edit, see the article for the
 
 For more information about how column data types are defined in the API, see [Attribute metadata](../../developer/data-platform/entity-attribute-metadata.md)
 
-## Column Types used by the system
+## Column types used by the system
 
 There are some columns used by the system that you cannot add using the designer.
 

@@ -1,7 +1,7 @@
 ---
 title: "Self-service data prep with dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to use dataflows in Power Apps to prepare your data"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/05/2019
 ms.reviewer: ""
 ms.service: powerapps

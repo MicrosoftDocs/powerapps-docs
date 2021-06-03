@@ -7,6 +7,7 @@ _repo.*/
 
 .openpublishing.buildcore.ps1
 settings.json
+.DS_Store
 
 # Folder config file
 [Dd]esktop.ini

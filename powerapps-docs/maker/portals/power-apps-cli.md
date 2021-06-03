@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2021
+ms.date: 05/27/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -290,6 +290,10 @@ The following sections provides additional details about different properties of
 > [!NOTE]
 > To learn about all commands used in CLI in addition to portals, go to [Common commands in Power Apps CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
 
+## Use the Visual Studio Code extension (Preview)
+
+You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Power Apps CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+
 ## Additional considerations
 
 - An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
@@ -301,4 +305,5 @@ The following sections provides additional details about different properties of
 
 ### See also
 
-[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)

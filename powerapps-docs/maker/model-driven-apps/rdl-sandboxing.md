@@ -7,7 +7,7 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 8ec72014-9f0c-4964-ac67-24419b054e91
