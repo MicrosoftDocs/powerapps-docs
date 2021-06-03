@@ -6,7 +6,7 @@ manager: sunilg
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 05/25/2021
+ms.date: 06/03/2021
 ms.author: jdaly
 search.audienceType: 
   - maker
