@@ -428,3 +428,10 @@ Variables used from response screen:
 
 6.  When the **Delete** button is selected, the current response from Dataverse
     will be deleted.
+
+### See also
+
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
