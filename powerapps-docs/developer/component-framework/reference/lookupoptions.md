@@ -1,6 +1,6 @@
 ---
-title: LookupOptions | Microsoft Docs
-description: 
+title: LookupOptions in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for LookupOptions in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -31,7 +31,7 @@ Whether the lookup allows more than one item to be selected.
 
 ### defaultEntityType
 
-The default entity type.
+The default table type.
 
 **Type**: `string`
 
@@ -43,7 +43,7 @@ The default view to use.
 
 ### entityTypes
 
-The entity types to display.
+The table types to display.
 
 **Type**: `string[]`
 

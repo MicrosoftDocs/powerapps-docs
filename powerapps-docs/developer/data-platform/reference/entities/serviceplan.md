@@ -1,22 +1,24 @@
 ---
-title: "ServicePlan entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ServicePlan table."
-ms.date: 11/14/2020
+title: "ServicePlan table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ServicePlan table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ServicePlan entity reference
+
+# ServicePlan table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Service Plan
 
@@ -27,9 +29,9 @@ Service Plan
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,14 +49,15 @@ Service Plan
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AccessMode](#BKMK_AccessMode)
 - [DisplayName](#BKMK_DisplayName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [MoreInfoUrl](#BKMK_MoreInfoUrl)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ServicePlanId](#BKMK_ServicePlanId)
@@ -74,14 +77,15 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### AccessMode Options
+#### AccessMode Choices/Options
 
 |Value|Label|
 |-----|-----|
 |0|Custom applications|
 |1|First party applications|
 |2|First party and Custom applications|
-|3|All applications|
+|3|No restrictions -For legacy license only, overrides 0,1,2|
+|4|Restricted to ISV applications and will Override all other access modes (including access mode= 3)|
 
 
 
@@ -135,6 +139,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_MoreInfoUrl"></a> MoreInfoUrl
+
+|Property|Value|
+|--------|-----|
+|Description|More Info Url of service plan|
+|DisplayName|More Info Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|moreinfourl|
+|MaxLength|2048|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -145,6 +165,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|300|
 |RequiredLevel|SystemRequired|
@@ -214,9 +235,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -270,7 +291,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -414,7 +435,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -627,7 +648,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [serviceplan_SyncErrors](syncerror.md#BKMK_serviceplan_SyncErrors) Many-To-One relationship.
+Same as syncerror table [serviceplan_SyncErrors](syncerror.md#BKMK_serviceplan_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -644,7 +665,7 @@ Same as syncerror entity [serviceplan_SyncErrors](syncerror.md#BKMK_serviceplan_
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [serviceplan_DuplicateMatchingRecord](duplicaterecord.md#BKMK_serviceplan_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [serviceplan_DuplicateMatchingRecord](duplicaterecord.md#BKMK_serviceplan_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -661,7 +682,7 @@ Same as duplicaterecord entity [serviceplan_DuplicateMatchingRecord](duplicatere
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [serviceplan_DuplicateBaseRecord](duplicaterecord.md#BKMK_serviceplan_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [serviceplan_DuplicateBaseRecord](duplicaterecord.md#BKMK_serviceplan_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -678,7 +699,7 @@ Same as duplicaterecord entity [serviceplan_DuplicateBaseRecord](duplicaterecord
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [serviceplan_AsyncOperations](asyncoperation.md#BKMK_serviceplan_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [serviceplan_AsyncOperations](asyncoperation.md#BKMK_serviceplan_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -695,7 +716,7 @@ Same as asyncoperation entity [serviceplan_AsyncOperations](asyncoperation.md#BK
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [serviceplan_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_serviceplan_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [serviceplan_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_serviceplan_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -712,7 +733,7 @@ Same as mailboxtrackingfolder entity [serviceplan_MailboxTrackingFolders](mailbo
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [serviceplan_ProcessSession](processsession.md#BKMK_serviceplan_ProcessSession) Many-To-One relationship.
+Same as processsession table [serviceplan_ProcessSession](processsession.md#BKMK_serviceplan_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -729,7 +750,7 @@ Same as processsession entity [serviceplan_ProcessSession](processsession.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [serviceplan_BulkDeleteFailures](bulkdeletefailure.md#BKMK_serviceplan_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [serviceplan_BulkDeleteFailures](bulkdeletefailure.md#BKMK_serviceplan_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -746,7 +767,7 @@ Same as bulkdeletefailure entity [serviceplan_BulkDeleteFailures](bulkdeletefail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [serviceplan_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_serviceplan_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [serviceplan_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_serviceplan_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -762,7 +783,7 @@ Same as principalobjectattributeaccess entity [serviceplan_PrincipalObjectAttrib
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_serviceplan_createdby](#BKMK_lk_serviceplan_createdby)
 - [lk_serviceplan_createdonbehalfby](#BKMK_lk_serviceplan_createdonbehalfby)
@@ -774,36 +795,36 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_serviceplan_createdby](systemuser.md#BKMK_lk_serviceplan_createdby) One-To-Many relationship.
+See systemuser Table [lk_serviceplan_createdby](systemuser.md#BKMK_lk_serviceplan_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_serviceplan_createdonbehalfby"></a> lk_serviceplan_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_serviceplan_createdonbehalfby](systemuser.md#BKMK_lk_serviceplan_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_serviceplan_createdonbehalfby](systemuser.md#BKMK_lk_serviceplan_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_serviceplan_modifiedby"></a> lk_serviceplan_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_serviceplan_modifiedby](systemuser.md#BKMK_lk_serviceplan_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_serviceplan_modifiedby](systemuser.md#BKMK_lk_serviceplan_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_serviceplan_modifiedonbehalfby"></a> lk_serviceplan_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_serviceplan_modifiedonbehalfby](systemuser.md#BKMK_lk_serviceplan_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_serviceplan_modifiedonbehalfby](systemuser.md#BKMK_lk_serviceplan_modifiedonbehalfby) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the ServicePlan entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the ServicePlan table is the first table in the relationship. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_serviceplan_appmodule"></a> serviceplan_appmodule
 
 IntersectEntityName: serviceplanappmodules<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -813,7 +834,7 @@ IntersectEntityName: serviceplanappmodules<br />
 |NavigationPropertyName|serviceplan_appmodule_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -825,8 +846,6 @@ IntersectEntityName: serviceplanappmodules<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.serviceplan?text=serviceplan EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

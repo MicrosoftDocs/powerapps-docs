@@ -1,7 +1,7 @@
 ---
 title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 12/20/2019
 ms.reviewer: ""
 ms.service: powerapps

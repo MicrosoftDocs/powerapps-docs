@@ -1,6 +1,6 @@
 ---
 title: Type Group Element | Microsoft Docs
-description: 
+description: The type-group node defines a set of types identified by a single name. This information can be used to identify the data types supported by a specific property.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -21,7 +21,7 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 Model-driven apps and canvas apps (public preview)
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|

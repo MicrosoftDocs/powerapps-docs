@@ -1,22 +1,24 @@
 ---
-title: "BusinessUnitNewsArticle entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the BusinessUnitNewsArticle table."
-ms.date: 11/14/2020
+title: "BusinessUnitNewsArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the BusinessUnitNewsArticle table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# BusinessUnitNewsArticle entity reference
+
+# BusinessUnitNewsArticle table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Announcement associated with an organization.
 
@@ -25,13 +27,13 @@ Announcement associated with an organization.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/businessunitnewsarticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/businessunitnewsarticles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/businessunitnewsarticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/businessunitnewsarticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/businessunitnewsarticles(*businessunitnewsarticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Announcement associated with an organization.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActiveOn](#BKMK_ActiveOn)
 - [ActiveUntil](#BKMK_ActiveUntil)
@@ -125,7 +127,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ArticleTypeCode Options
+#### ArticleTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -226,7 +228,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### ShowOnHomepage Options
+#### ShowOnHomepage Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -270,9 +272,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -564,7 +566,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_BusinessUnitNewsArticle_ProcessSessions"></a> BusinessUnitNewsArticle_ProcessSessions
 
-Same as processsession entity [BusinessUnitNewsArticle_ProcessSessions](processsession.md#BKMK_BusinessUnitNewsArticle_ProcessSessions) Many-To-One relationship.
+Same as processsession table [BusinessUnitNewsArticle_ProcessSessions](processsession.md#BKMK_BusinessUnitNewsArticle_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -579,7 +581,7 @@ Same as processsession entity [BusinessUnitNewsArticle_ProcessSessions](processs
 
 ### <a name="BKMK_BusinessUnitNewsArticle_AsyncOperations"></a> BusinessUnitNewsArticle_AsyncOperations
 
-Same as asyncoperation entity [BusinessUnitNewsArticle_AsyncOperations](asyncoperation.md#BKMK_BusinessUnitNewsArticle_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [BusinessUnitNewsArticle_AsyncOperations](asyncoperation.md#BKMK_BusinessUnitNewsArticle_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -594,7 +596,7 @@ Same as asyncoperation entity [BusinessUnitNewsArticle_AsyncOperations](asyncope
 
 ### <a name="BKMK_BusinessUnitNewsArticle_BulkDeleteFailures"></a> BusinessUnitNewsArticle_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [BusinessUnitNewsArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_BusinessUnitNewsArticle_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [BusinessUnitNewsArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_BusinessUnitNewsArticle_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -610,7 +612,7 @@ Same as bulkdeletefailure entity [BusinessUnitNewsArticle_BulkDeleteFailures](bu
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_businessunitnewsarticle_createdonbehalfby](#BKMK_lk_businessunitnewsarticle_createdonbehalfby)
 - [organization_business_unit_news_articles](#BKMK_organization_business_unit_news_articles)
@@ -621,28 +623,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_businessunitnewsarticle_createdonbehalfby"></a> lk_businessunitnewsarticle_createdonbehalfby
 
-See systemuser Entity [lk_businessunitnewsarticle_createdonbehalfby](systemuser.md#BKMK_lk_businessunitnewsarticle_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_businessunitnewsarticle_createdonbehalfby](systemuser.md#BKMK_lk_businessunitnewsarticle_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_business_unit_news_articles"></a> organization_business_unit_news_articles
 
-See organization Entity [organization_business_unit_news_articles](organization.md#BKMK_organization_business_unit_news_articles) One-To-Many relationship.
+See organization Table [organization_business_unit_news_articles](organization.md#BKMK_organization_business_unit_news_articles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_businessunitnewsarticle_modifiedonbehalfby"></a> lk_businessunitnewsarticle_modifiedonbehalfby
 
-See systemuser Entity [lk_businessunitnewsarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_businessunitnewsarticle_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_businessunitnewsarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_businessunitnewsarticle_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_businessunitnewsarticlebase_createdby"></a> lk_businessunitnewsarticlebase_createdby
 
-See systemuser Entity [lk_businessunitnewsarticlebase_createdby](systemuser.md#BKMK_lk_businessunitnewsarticlebase_createdby) One-To-Many relationship.
+See systemuser Table [lk_businessunitnewsarticlebase_createdby](systemuser.md#BKMK_lk_businessunitnewsarticlebase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_businessunitnewsarticlebase_modifiedby"></a> lk_businessunitnewsarticlebase_modifiedby
 
-See systemuser Entity [lk_businessunitnewsarticlebase_modifiedby](systemuser.md#BKMK_lk_businessunitnewsarticlebase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_businessunitnewsarticlebase_modifiedby](systemuser.md#BKMK_lk_businessunitnewsarticlebase_modifiedby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.businessunitnewsarticle?text=businessunitnewsarticle EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

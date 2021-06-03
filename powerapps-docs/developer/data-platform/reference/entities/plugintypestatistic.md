@@ -1,22 +1,24 @@
 ---
-title: "PluginTypeStatistic entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PluginTypeStatistic table."
-ms.date: 11/14/2020
+title: "PluginTypeStatistic table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the PluginTypeStatistic table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PluginTypeStatistic entity reference
+
+# PluginTypeStatistic table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Plug-in type statistic.
 
@@ -25,10 +27,10 @@ Plug-in type statistic.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/plugintypestatistics(*plugintypestatisticid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypestatistics<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/plugintypestatistics(*plugintypestatisticid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypestatistics<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ Plug-in type statistic.
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AverageExecuteTimeInMilliseconds](#BKMK_AverageExecuteTimeInMilliseconds)
 - [CrashContributionPercent](#BKMK_CrashContributionPercent)
@@ -497,7 +499,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_plugintypestatisticbase_modifiedonbehalfby](#BKMK_lk_plugintypestatisticbase_modifiedonbehalfby)
 - [createdby_plugintypestatistic](#BKMK_createdby_plugintypestatistic)
@@ -509,32 +511,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_plugintypestatisticbase_modifiedonbehalfby"></a> lk_plugintypestatisticbase_modifiedonbehalfby
 
-See systemuser Entity [lk_plugintypestatisticbase_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_plugintypestatisticbase_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_createdby_plugintypestatistic"></a> createdby_plugintypestatistic
 
-See systemuser Entity [createdby_plugintypestatistic](systemuser.md#BKMK_createdby_plugintypestatistic) One-To-Many relationship.
+See systemuser Table [createdby_plugintypestatistic](systemuser.md#BKMK_createdby_plugintypestatistic) One-To-Many relationship.
 
 ### <a name="BKMK_lk_plugintypestatisticbase_createdonbehalfby"></a> lk_plugintypestatisticbase_createdonbehalfby
 
-See systemuser Entity [lk_plugintypestatisticbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_plugintypestatisticbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_plugintypestatistic"></a> organization_plugintypestatistic
 
-See organization Entity [organization_plugintypestatistic](organization.md#BKMK_organization_plugintypestatistic) One-To-Many relationship.
+See organization Table [organization_plugintypestatistic](organization.md#BKMK_organization_plugintypestatistic) One-To-Many relationship.
 
 ### <a name="BKMK_modifiedby_plugintypestatistic"></a> modifiedby_plugintypestatistic
 
-See systemuser Entity [modifiedby_plugintypestatistic](systemuser.md#BKMK_modifiedby_plugintypestatistic) One-To-Many relationship.
+See systemuser Table [modifiedby_plugintypestatistic](systemuser.md#BKMK_modifiedby_plugintypestatistic) One-To-Many relationship.
 
 ### <a name="BKMK_plugintype_plugintypestatistic"></a> plugintype_plugintypestatistic
 
-See plugintype Entity [plugintype_plugintypestatistic](plugintype.md#BKMK_plugintype_plugintypestatistic) One-To-Many relationship.
+See plugintype Table [plugintype_plugintypestatistic](plugintype.md#BKMK_plugintype_plugintypestatistic) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.plugintypestatistic?text=plugintypestatistic EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

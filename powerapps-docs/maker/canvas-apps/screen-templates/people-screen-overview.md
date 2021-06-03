@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/30/2018
+ms.date: 03/29/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -90,7 +90,7 @@ The people screen caches your people selections in the **MyPeople** collection. 
 1. Set the **OnSelect** property of **SendIcon** to this formula:
 
     ```powerapps-dot
-    Office365.SendEmail( 
+    Office365.SendEmailV2( 
         Concat( MyPeople, UserPrincipalName & ";" ), 
         SubjectLine.Text, 
         MessageBody.Text 

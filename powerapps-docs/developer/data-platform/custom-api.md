@@ -77,7 +77,7 @@ A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 ### Invoking Custom APIs from the Organization Service
 
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/powerapps/developer/data-platform/org-service/generate-early-bound-classes) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
 For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
@@ -468,7 +468,7 @@ The following represent questions you may have:
 
 A: While Custom API has an Execute Privilege Name (`ExecutePrivilegeName`) property, there is currently no supported way for you to create a new privilege just for this API. This is planned for a future release. In the meantime, there are two options:
 
-- You can use an existing [Privilege.Name](/powerapps/developer/data-platform/reference/entities/privilege#BKMK_Name) value.
+- You can use an existing [Privilege.Name](./reference/entities/privilege.md#BKMK_Name) value.
 - You can create a custom entity and use one of the privileges created for that entity. For example, create an entity named `new_myaction` and privileges for CRUD operations will be generated for it. For example `prvCreatenew_myaction`. You will need to include this custom entity with the solution that includes the Custom API.
 
 ### Q: Can I activate or deactivate Custom API records?

@@ -1,6 +1,7 @@
 ---
 title: "getEntityMainFormDescriptor (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/09/2020
+description: Includes description and supported parameters for the getEntityMainFormDescriptor method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -21,44 +22,44 @@ search.app:
 
 ## Syntax
 
-`Xrm.Utility.getEntityDefaultMainFormDescriptor(entityName, formId);`
+`Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);`
 
 ## Parameters
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the entity.|
-|formId|String|No|The form ID of the entity.|
+|entityName|String|Yes|The logical name of the table.|
+|formId|String|No|The form ID of the table.|
 ||||
 
 ## Returns
 
 **Type**: Promise
 
-**Description**: Returns a promise containing the default main form descriptor with the following attributes.
+**Description**: Returns a promise containing the default main form descriptor with the following values.
 
-|Attribute Name| Type| Description|
+|Parameter Name| Type| Description|
 |-------------|-------|-----------|
-|Attributes| Array of strings| List of all the attributes on the main form.|
-|EntityLogicalName| String| The logical name of the specified entity.|
-|Id| string| The form ID of the specified entity.|
-|Label| String| The label of the specified entity.|
-|Name| String| The display name of the specified entity.|
-|Sections| String| The sections name of the specified entity.|
-|ShowLabel| Boolean| Indicates whether to show the label of the specified entity or not.|
+|Attributes| Array of strings| List of all the columns on the main form.|
+|EntityLogicalName| String| The logical name of the specified table.|
+|Id| string| The form ID of the specified table.|
+|Label| String| The label of the specified table.|
+|Name| String| The display name of the specified table.|
+|Sections| String| The sections name of the specified table.|
+|ShowLabel| Boolean| Indicates whether to show the label of the specified table or not.|
 |Visible| Boolean| Indicates whether the form is visible or not.|
 ||||
 
 ## Example
 
-The following sample code shows how to get the main form descriptor for a specified entity. 
+The following sample code shows how to get the main form descriptor for a specified table. 
 
 ```javascript
-  // Define the entity and form ID
+  // Define the table and form ID
   var entityName = "account";
   var formId = "8448b78f-8f42-454e-8e2a-f8196b0419af";
 
-  // Get the entity main form descriptor 
+  // Get the main form descriptor 
   Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 ```
 
