@@ -138,9 +138,9 @@ Once enabled **Advanced lookup** is available on any lookup column that's on a q
 
 Legend
 
-1. **Search**: Enter search text to find the row that you're looking for. If your changes views your search text is still retained. 
-2. **Change views**: Select the current view and select another view to change views.
-3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The select row will appear under **Selected record**.
+1. **Search**: Enter search text to find the row that you're looking for. When you changes views the search text is retained. 
+2. **Change views**: Select to change views.
+3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The selected row will appear at the bottom under **Selected record**.
 4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the advanced lookup grid.
 5. **Sort**: Select the arrow at the top of any column to sort in ascending or descending order. 
 6. **Only my records**: Select to only show rows that you own.
@@ -167,12 +167,12 @@ In a **Regarding** lookup, you can switch between tables and their views
 For lookup columns with choices you can select multiple rows from different tables. 
 
 1. Go a lookup column with choices and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
-2. On the advanced lookup grid, you can select multiple rows. 
+2. On the advanced lookup grid, select from multiple rows from different tables.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for choices")  
 
-3. Select **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
+3. Select the **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
 
     > [!div class="mx-imgBorder"]
     > ![Edit your choices](media/choices-lookup-2.png "Edit your choices")  
