@@ -81,7 +81,7 @@ Here are some additional details on when to use either of the options.
 - **In place update**: This is the default setting and recommended only if you want to connect directly to the data in lake and need the current state (not history or incremental changes). The file contains the full data set and can be utilized via Power BI or by copying the entire dataset for ETL (Extract, Transfer, Load) pipelines.
 - **Append only**: Select this option if you aren't directly connecting to data in the lake and want to incrementally copy data to another target using ETL pipelines. This option provides a history of changes to enable AI and ML scenarios.
 
-You can toggle the **Show advanced configuration settings** under **Advanced** in export to data lake to customize your data partition strategy and select options to write to the Azure data lake.
+You can toggle the **Show advanced configuration settings** under **Advanced** in Azure Synapse Link for Dataverse to customize your data partition strategy and select options to write to the Azure data lake.
 
 ![Show advanced configuration](media/export-data-lake-show-advanced-config.png "Show advanced configuration")
 
@@ -125,7 +125,7 @@ In the environment where you want to import your solution, in the Power Apps mak
 
 From the Power Apps maker portal in the environment where you imported the Export to Data Lake configuration, verify that you can see your linked data lake in addition to the tables that you transported from your other environment.
 
-![Imported Export to Data Lake tables](media/imported-export-entities.png "Imported Export to Data Lake tables")
+![Imported Azure Synapse Link for Dataverse tables](media/imported-export-entities.png "Imported Azure Synapse Link for Dataverse tables")
 
 ### See also
 
