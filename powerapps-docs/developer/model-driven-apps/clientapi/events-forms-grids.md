@@ -1,6 +1,7 @@
 ---
 title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
-ms.date: 01/13/2021
+description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
@@ -19,11 +20,13 @@ All client-side code is initiated by events. In model-driven apps, you associate
 
 You can associate event handlers to only some events using the UI. For events that are not available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
 
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+
 ## Add or remove event handler function to event using UI
 
 ### [Legacy](#tab/add-event-handlers-legacy)
 
-Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and fields.
+Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and columns.
 
 ![Event Handler section in Form Properties](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
 
@@ -42,7 +45,7 @@ To add or remove event handler functions to events in the new Unified Interface:
 
     ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
 
-1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
+1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
 

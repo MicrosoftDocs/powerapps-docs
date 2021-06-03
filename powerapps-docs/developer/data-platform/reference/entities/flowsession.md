@@ -1,7 +1,7 @@
 ---
 title: "flowsession table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ Entity to store the information that is generated when a modern flow or UI flow 
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/flowsessions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -74,6 +73,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [flowsessionId](#BKMK_flowsessionId)
 - [Gateway](#BKMK_Gateway)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [MachineGroupId](#BKMK_MachineGroupId)
+- [MachineId](#BKMK_MachineId)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -212,6 +213,34 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_MachineGroupId"></a> MachineGroupId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Flow Machine Group|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|machinegroupid|
+|RequiredLevel|None|
+|Targets|flowmachinegroup|
+|Type|Lookup|
+
+
+### <a name="BKMK_MachineId"></a> MachineId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Flow Machine|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|machineid|
+|RequiredLevel|None|
+|Targets|flowmachine|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -439,6 +468,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [MachineGroupIdName](#BKMK_MachineGroupIdName)
+- [MachineIdName](#BKMK_MachineIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -591,6 +622,38 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_MachineGroupIdName"></a> MachineGroupIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|machinegroupidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_MachineIdName"></a> MachineIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|machineidname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -874,7 +937,6 @@ Listed by **SchemaName**.
 - [flowsession_MailboxTrackingFolders](#BKMK_flowsession_MailboxTrackingFolders)
 - [flowsession_BulkDeleteFailures](#BKMK_flowsession_BulkDeleteFailures)
 - [flowsession_PrincipalObjectAttributeAccesses](#BKMK_flowsession_PrincipalObjectAttributeAccesses)
-- [flowsession_FileAttachments](#BKMK_flowsession_FileAttachments)
 - [flowsession_workflowbinary_FlowSessionId](#BKMK_flowsession_workflowbinary_FlowSessionId)
 
 
@@ -963,23 +1025,6 @@ Same as principalobjectattributeaccess table [flowsession_PrincipalObjectAttribu
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_flowsession_FileAttachments"></a> flowsession_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [flowsession_FileAttachments](fileattachment.md#BKMK_flowsession_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|flowsession_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
 Same as workflowbinary table [flowsession_workflowbinary_FlowSessionId](workflowbinary.md#BKMK_flowsession_workflowbinary_FlowSessionId) Many-To-One relationship.
@@ -1006,11 +1051,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_flowsession_modifiedonbehalfby](#BKMK_lk_flowsession_modifiedonbehalfby)
 - [user_flowsession](#BKMK_user_flowsession)
 - [team_flowsession](#BKMK_team_flowsession)
-- [owner_flowsession](#BKMK_owner_flowsession)
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
-- [FileAttachment_FlowSession_AdditionalContext](#BKMK_FileAttachment_FlowSession_AdditionalContext)
-- [FileAttachment_FlowSession_Outputs](#BKMK_FileAttachment_FlowSession_Outputs)
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
+- [flowmachine_flowsession_MachineId](#BKMK_flowmachine_flowsession_MachineId)
+- [flowmachinegroup_flowsession_MachineGroupId](#BKMK_flowmachinegroup_flowsession_MachineGroupId)
 
 
 ### <a name="BKMK_lk_flowsession_createdby"></a> lk_flowsession_createdby
@@ -1049,35 +1093,25 @@ See systemuser Table [user_flowsession](systemuser.md#BKMK_user_flowsession) One
 
 See team Table [team_flowsession](team.md#BKMK_team_flowsession) One-To-Many relationship.
 
-### <a name="BKMK_owner_flowsession"></a> owner_flowsession
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_flowsession](owner.md#BKMK_owner_flowsession) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_flowsession"></a> business_unit_flowsession
 
 **Added by**: System Solution Solution
 
 See businessunit Table [business_unit_flowsession](businessunit.md#BKMK_business_unit_flowsession) One-To-Many relationship.
 
-### <a name="BKMK_FileAttachment_FlowSession_AdditionalContext"></a> FileAttachment_FlowSession_AdditionalContext
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_FlowSession_AdditionalContext](fileattachment.md) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_FlowSession_Outputs"></a> FileAttachment_FlowSession_Outputs
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_FlowSession_Outputs](fileattachment.md) One-To-Many relationship.
-
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
 **Added by**: System Solution Solution
 
 See workflow Table [regardingobjectid_process](workflow.md#BKMK_regardingobjectid_process) One-To-Many relationship.
+
+### <a name="BKMK_flowmachine_flowsession_MachineId"></a> flowmachine_flowsession_MachineId
+
+See flowmachine Table [flowmachine_flowsession_MachineId](flowmachine.md#BKMK_flowmachine_flowsession_MachineId) One-To-Many relationship.
+
+### <a name="BKMK_flowmachinegroup_flowsession_MachineGroupId"></a> flowmachinegroup_flowsession_MachineGroupId
+
+See flowmachinegroup Table [flowmachinegroup_flowsession_MachineGroupId](flowmachinegroup.md#BKMK_flowmachinegroup_flowsession_MachineGroupId) One-To-Many relationship.
 
 ### See also
 

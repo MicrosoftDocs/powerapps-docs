@@ -1,13 +1,16 @@
 ---
-title: "Create and manage page templates in Power Apps portals | MicrosoftDocs"
-description: "Learn how to create and manage page templates in Power Apps portals."
+title: Create and manage page templates
+description: Learn how to create and manage page templates in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and manage page templates
@@ -46,7 +49,7 @@ Creating a new Page Template is only necessary when creating a brand new .aspx p
 |Rewrite URL   |Path of the physical ASP.NET .aspx page (or other resource, such as .ashx) which will be rendering the content.<br> This field is displayed only if **Rewrite URL** is selected from the **Type** list. |
 |Web Template   |A reference to a web template to that will be used to render this template.<br>This field is displayed only if **Web Template** is selected from the **Type** list.  |
 |Is Default   |If 'Yes' then the template will be the default assigned to the dropdown in the client-side editing tools.   |
-|Entity Name   |The page entity type that this template expects to render. This will be use by the front-side editing system to present only appropriate template choices to content authors.<br>Usually, this will be Web Page (adx_webpage), but may be another portal entity, such as Forum, Forum Thread, Blog, or Blog Post.   |
+|Table Name   |The page table type that this template expects to render. This will be use by the front-side editing system to present only appropriate template choices to content authors.<br>Usually, this will be Web Page (adx_webpage), but may be another portal table, such as Forum, Forum Thread, Blog, or Blog Post.   |
 |Description  |A description of this template, for the benefit of front-side editing users. |
 |||
 

@@ -1,7 +1,7 @@
 ---
 title: "Handle exceptions in your code (Microsoft Dataverse) | Microsoft Docs"
 description: "This article discusses the exceptions that are returned from a Microsoft Dataverse web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/17/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps

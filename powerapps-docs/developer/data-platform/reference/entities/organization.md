@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,6 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -7751,7 +7750,6 @@ Listed by **SchemaName**.
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [organization_kb_articles](#BKMK_organization_kb_articles)
 - [organization_systemforms](#BKMK_organization_systemforms)
-- [organization_similarityrule](#BKMK_organization_similarityrule)
 - [organization_appconfig](#BKMK_organization_appconfig)
 - [organization_connection_roles](#BKMK_organization_connection_roles)
 - [customcontrol_organization](#BKMK_customcontrol_organization)
@@ -7759,7 +7757,6 @@ Listed by **SchemaName**.
 - [organization_calendars](#BKMK_organization_calendars)
 - [organization_publisher](#BKMK_organization_publisher)
 - [organization_queueitems](#BKMK_organization_queueitems)
-- [organization_webwizard](#BKMK_organization_webwizard)
 - [organization_teams](#BKMK_organization_teams)
 - [organization_entitydataprovider](#BKMK_organization_entitydataprovider)
 - [webresource_organization](#BKMK_webresource_organization)
@@ -7797,21 +7794,20 @@ Listed by **SchemaName**.
 - [organization_saved_queries](#BKMK_organization_saved_queries)
 - [organization_tracelog](#BKMK_organization_tracelog)
 - [organization_solution](#BKMK_organization_solution)
-- [organization_complexcontrols](#BKMK_organization_complexcontrols)
 - [organization_solutioncomponentattributeconfiguration](#BKMK_organization_solutioncomponentattributeconfiguration)
 - [organization_solutioncomponentconfiguration](#BKMK_organization_solutioncomponentconfiguration)
 - [organization_solutioncomponentrelationshipconfiguration](#BKMK_organization_solutioncomponentrelationshipconfiguration)
 - [organization_package](#BKMK_organization_package)
+- [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
 - [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
 - [organization_territories](#BKMK_organization_territories)
 - [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
+- [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
-- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
-- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
@@ -8192,21 +8188,6 @@ Same as systemform table [organization_systemforms](systemform.md#BKMK_organizat
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_similarityrule"></a> organization_similarityrule
-
-Same as similarityrule table [organization_similarityrule](similarityrule.md#BKMK_organization_similarityrule) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|similarityrule|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_similarityrule|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_organization_appconfig"></a> organization_appconfig
 
 Same as appconfig table [organization_appconfig](appconfig.md#BKMK_organization_appconfig) Many-To-One relationship.
@@ -8308,21 +8289,6 @@ Same as queueitem table [organization_queueitems](queueitem.md#BKMK_organization
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_queueitems|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_webwizard"></a> organization_webwizard
-
-Same as webwizard table [organization_webwizard](webwizard.md#BKMK_organization_webwizard) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|webwizard|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_webwizard|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -8882,21 +8848,6 @@ Same as solution table [organization_solution](solution.md#BKMK_organization_sol
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_complexcontrols"></a> organization_complexcontrols
-
-Same as complexcontrol table [organization_complexcontrols](complexcontrol.md#BKMK_organization_complexcontrols) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|complexcontrol|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_complexcontrols|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_organization_solutioncomponentattributeconfiguration"></a> organization_solutioncomponentattributeconfiguration
 
 **Added by**: Active Solution Solution
@@ -8963,6 +8914,23 @@ Same as package table [organization_package](package.md#BKMK_organization_packag
 |ReferencedEntityNavigationPropertyName|organization_package|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_relationshipattribute"></a> organization_relationshipattribute
+
+**Added by**: Metadata Extension Solution
+
+Same as relationshipattribute table [organization_relationshipattribute](relationshipattribute.md#BKMK_organization_relationshipattribute) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|relationshipattribute|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_relationshipattribute|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
@@ -9067,6 +9035,23 @@ Same as msdyn_federatedarticleincident table [organization_msdyn_federatedarticl
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_msdyn_kmpersonalizationsetting"></a> organization_msdyn_kmpersonalizationsetting
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_kmpersonalizationsetting table [organization_msdyn_kmpersonalizationsetting](msdyn_kmpersonalizationsetting.md#BKMK_organization_msdyn_kmpersonalizationsetting) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_kmpersonalizationsetting|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_kmpersonalizationsetting|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_catalog"></a> organization_catalog
 
 **Added by**: Active Solution Solution
@@ -9097,40 +9082,6 @@ Same as catalogassignment table [organization_catalogassignment](catalogassignme
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_catalogassignment|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as teammobileofflineprofilemembership table [organization_teammobileofflineprofilemembership](teammobileofflineprofilemembership.md#BKMK_organization_teammobileofflineprofilemembership) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|teammobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_teammobileofflineprofilemembership|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as usermobileofflineprofilemembership table [organization_usermobileofflineprofilemembership](usermobileofflineprofilemembership.md#BKMK_organization_usermobileofflineprofilemembership) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usermobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_usermobileofflineprofilemembership|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

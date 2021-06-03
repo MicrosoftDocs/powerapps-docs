@@ -30,7 +30,7 @@ requests into smaller, more usable segments, which can improve the performance o
 
 Executing a traditional fetch for a given number of the top table records will pull all
 the columns in the select list that meet the filter criteria. Let's say you're
-pulling the top 500 records on an table that has 100 columns and 100,000 rows
+pulling the top 500 records on a table that has 100 columns and 100,000 rows
 that meet the filter criteria. This request can cause issues in two ways:
 
 - The 99,500 rows will pull all columns, even though you only need to populate

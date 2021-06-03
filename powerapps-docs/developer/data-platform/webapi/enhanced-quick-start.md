@@ -1,7 +1,7 @@
 ---
-title: "Enhanced quick Start(Microsoft Dataverse)| Microsoft Docs"
+title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 02/02/2019
 ms.service: powerapps
 ms.suite: ""
@@ -22,8 +22,6 @@ search.app:
   - D365CE
 ---
 # Enhanced quick start
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic.
 
@@ -74,6 +72,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
   </connectionStrings>
 </configuration>
 ```
+
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
 Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Microsoft Dataverse environment.
@@ -418,7 +417,6 @@ In your Visual Studio project perform the following steps:
 
 1. Press F5 to run the sample and you should get the same results as before.
 
-
 ## Troubleshooting
 
 If you have any trouble running this sample, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
@@ -440,7 +438,6 @@ Use the following resources to learn more:
 > [Perform operations using the Web API](perform-operations-web-api.md)<br /><br />
 > [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br />
 > [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
-
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

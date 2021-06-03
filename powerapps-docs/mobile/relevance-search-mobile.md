@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/01/2021
+ms.date: 04/15/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,9 +19,8 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use relevance search for model-driven apps using Power Apps Mobile (preview)
+# Use relevance search for model-driven apps using Power Apps Mobile 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can quickly find the information that you're looking for by using relevance search. The relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 

@@ -238,7 +238,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_attachment_activity_mime_attachments"></a> attachment_activity_mime_attachments
 
-Same as activitymimeattachment table [attachment_activity_mime_attachments](activitymimeattachment.md#BKMK_attachment_activity_mime_attachments) Many-To-One relationship.
+Same as activitymimeattachment table [attachment_activity_mime_attachments](activitymimeattachment.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -253,7 +253,7 @@ Same as activitymimeattachment table [attachment_activity_mime_attachments](acti
 
 ### <a name="BKMK_Attachment_SyncErrors"></a> Attachment_SyncErrors
 
-Same as syncerror table [Attachment_SyncErrors](syncerror.md#BKMK_Attachment_SyncErrors) Many-To-One relationship.
+Same as syncerror table [Attachment_SyncErrors](syncerror.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|

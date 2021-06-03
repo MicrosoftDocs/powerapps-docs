@@ -1,6 +1,7 @@
 ---
 title: "getLearningPathAttributeName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getLearningPathAttributeName method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,7 +21,7 @@ search.app:
 
 [!INCLUDE[./includes/getLearningPathAttributeName-description.md](./includes/getLearningPathAttributeName-description.md)]
 
-An attribute by this name must be added to the UI element that needs to be exposed to Learning Path (guided help). 
+A column by this name must be added to the UI element that needs to be exposed to Learning Path (guided help). 
 
 ## Syntax
 
@@ -30,13 +31,9 @@ An attribute by this name must be added to the UI element that needs to be expos
 
 **Type**: String
 
-**Description**: DOM attribute expected by the Learning Path (guided help) Content Designer.
+**Description**: DOM column expected by the Learning Path (guided help) Content Designer.
 
 ### Related topics
-
-<!-- 
-TODO: File doesn't exist
-[Create your own guided help (Learning Path) for your customers](../../../../customize/create-guided-help-learning-path.md) -->
 
 [Xrm.Utility](../xrm-utility.md)
 
