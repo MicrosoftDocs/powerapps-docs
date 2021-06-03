@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 08/27/2020
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 author: "caburk"
 caps.latest.revision: 57
 ms.author: "caburk"
