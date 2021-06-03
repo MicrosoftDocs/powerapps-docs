@@ -1,8 +1,8 @@
 ---
-title: "Multi-Select Picklist attributes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about multi-select picklist attributes that allow storing multiple option choices in a single attribute." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about choices columns that allow storing multiple choices in a single column." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/25/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,17 +15,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Multi-Select Picklist attributes
+# Choices columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
 
-Customizers can define an attribute that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines an attribute type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this attribute includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options> property that contains the valid options for the attribute. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this attribute are a semi-colon separated string containing the labels of the selected options.
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-With the Web API, this attribute is defined using the <xref href="Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType" />.
+With the Web API, this column is defined using the <xref href="Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType" />.
 
-Just like picklist attributes, there is technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single attribute. Also, a default value cannot be set.
+Just like choices columns, there is technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value cannot be set.
 
-## Setting multi-select picklist values
+## Setting choices values
 
 With the Web API, you set the values by passing a string containing comma separated number values as shown in the following example:
 ### Request
@@ -50,7 +50,8 @@ OData-Version: 4.0
 OData-EntityId: [organization uri]/api/data/v9.0/contacts(0c67748a-b78d-e711-811c-000d3a75bdf1)
 ```
 
-With the Organization service using the assemblies, use the <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> to set values for this attribute as shown in the following C# example:
+With the Organization service using the assemblies, use the <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> to set values for this column as shown in the following C# example:
+
 ```csharp
 OptionSetValueCollection activities = new OptionSetValueCollection();
 activities.Add(new OptionSetValue(1)); //Swimming
@@ -64,18 +65,18 @@ contact["sample_outdooractivities"] = activities;
 _serviceProxy.Create(contact);
 ```
 
-## Query data from multi-select picklists
+## Query data from choices
 
-Two new condition operators have been added to support querying values in multi-select option sets: `ContainValues` and `DoesNotContainValues` or the FetchXml `contain-values` and `not-contain-values` operators. With the Web API there are the equivalent `ContainValues` and `DoesNotContainValues` query functions.
+Two new condition operators have been added to support querying values in choices: `ContainValues` and `DoesNotContainValues` or the FetchXml `contain-values` and `not-contain-values` operators. With the Web API there are the equivalent `ContainValues` and `DoesNotContainValues` query functions.
 
-Other existing condition operators that can be used with this type of attribute include: `Equal`, `NotEqual`, `NotNull`, `Null`, `In` and `NotIn`. 
+Other existing condition operators that can be used with this type of column include: `Equal`, `NotEqual`, `NotNull`, `Null`, `In` and `NotIn`. 
 
 > [!NOTE]
 > The `ContainValues` and `DoesNotContainValues` operators depend on full-text indexing to be applied on the database tables that store the multiple values. There is some latentcy after new records are created and the full-text index takes effect. You may need to wait several seconds after new records are created before filters using these operators can evaluate the values.
 
-The following examples shows the use of `ContainValues` and `not-contain-values` using `FetchXML` against the following data set on a multi-select picklist attribute named `sample_outdooractivities` on the `contact` entity.
+The following examples shows the use of `ContainValues` and `not-contain-values` using `FetchXML` against the following data set on choices column named `sample_outdooractivities` on the `contact` table.
 
-### Multi-select picklist `sample_outdooractivities` options:
+### Choices `sample_outdooractivities` values
 
 |Value|Label|
 |-----|-----|
@@ -89,9 +90,9 @@ The following examples shows the use of `ContainValues` and `not-contain-values`
 |8|Skiing|
 |9|Camping|
 
-### Contact entity values
+### Contact table values
 
-|'fullname' attribute| 'sample_outdooractivities' attribute |
+|'fullname' column| 'sample_outdooractivities' column |
 |--------|-------------------|
 |Wayne Yarborough|1,9|
 |Monte Orton|2|
@@ -285,11 +286,11 @@ foreach (Contact contact in nonHikers.Entities)
 ```
 
 
-## Create a multi-select picklist with code
+## Create choices with code
 
-The easiest way to create a multi-select picklist is to use the attribute editor in the customization tools. More information [Create and edit fields](/dynamics365/customer-engagement/customize/create-edit-fields)
+The easiest way to create choices is to use the column editor in the customization tools. More information [Create and edit columns](/dynamics365/customer-engagement/customize/create-edit-fields)
 
-But if you need to automate creation of this kind of attribute you can use C# code like the following with the organization service which creates a multi-select picklist to allow choices of outdoor activities to the `contact` entity. More information [Create attributes](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata.md#create-attributes)
+But if you need to automate creation of this kind of column you can use C# code like the following with the organization service which creates choices to allow choices of outdoor activities to the `contact` table. More information [Create columns](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata.md#create-attributes)
 
 ```csharp
     private const int _languageCode = 1033; //English
@@ -326,11 +327,12 @@ But if you need to automate creation of this kind of attribute you can use C# co
 ```
 
 ### See also
-[Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)<br />
-[Create an entity using the Web API](webapi/create-entity-web-api.md)<br />
+
+[Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-entity-attributes)<br />
+[Create a table using the Web API](webapi/create-entity-web-api.md)<br />
 [Query Data using the Web API](webapi/query-data-web-api.md)<br />
-[Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
-[Sample: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
+[Work with column definitions](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
+[Sample: Work with column definitions](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
 [Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
 
 

@@ -1,6 +1,6 @@
 ---
 title: Position | Microsoft Docs
-description: 
+description: Provides access to get geographical information from context.device.getCurrentPosition method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -26,7 +26,7 @@ Model-driven apps and canvas apps (public preview)
 
 ### coords
 
-Contains a set of geographic coordinates along with the associated currency as well as a set of other optional attribute such as altitude and speed.
+Contains a set of geographic coordinates along with the associated currency as well as a set of other optional columns such as altitude and speed.
 
 ### timestamp
 

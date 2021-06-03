@@ -31,7 +31,7 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 > [!NOTE]
 > The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. If you attempt this you will get error code  `-2147220989` with the message `Attribute: <attribute name> cannot be set to NULL`.
 > 
-> More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
+> More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
 
 ## Basic update
 
@@ -246,6 +246,10 @@ More information:
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 - [Use an alternate key to create a record](../use-alternate-key-create-record.md)
 
+## Update and delete documents in storage partitions
+
+If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data. More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md)
+
 ## Use Upsert
 
 Typically in data integration scenarios you will need to create or update data in Microsoft Dataverse from other sources. Dataverse may already have records with the same unique identifier, which may be an alternate key. If an entity record exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
@@ -297,7 +301,7 @@ Or you can use the values:
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child records to maintain data integity depending on logic defined for the relationships in the environment. More information: [Entity relationship behavior](../../../maker/data-platform/entity-relationship-behavior.md)
+> Delete operations can initiate cascading operations that may delete child records to maintain data integity depending on logic defined for the relationships in the environment. More information: [Entity relationship behavior](/powerapps/developer/data-platform/org-service/create-edit-entity-relationships#entity-relationship-behavior)
 
 ## Use the DeleteRequest class
 

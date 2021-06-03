@@ -17,13 +17,13 @@ search.app:
 
 # AppSource checker
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can use the AppSource checker to verify whether your app has met certification criteria before you submit it to [AppSource](https://appsource.microsoft.com/). The checker lets you know whether your solution file has errors that need to be corrected and verifies whether AppSource certification criteria have been met. 
 
 In ISV Studio, you can upload either a full [package](/power-platform/alm/package-deployer-tool) or solution(s). You'll be notified whether any issues need to be remediated.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 **To run AppSource checker**
 

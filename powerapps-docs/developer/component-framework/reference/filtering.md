@@ -1,6 +1,6 @@
 ---
 title: Filtering | Microsoft Docs
-description: 
+description: Provides properties and methods for filtering in a data-set.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

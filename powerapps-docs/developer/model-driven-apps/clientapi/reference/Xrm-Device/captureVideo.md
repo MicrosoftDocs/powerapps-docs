@@ -1,6 +1,7 @@
 ---
 title: "captureVideo| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the captureVideo method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -29,12 +30,12 @@ search.app:
 
 | Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|successCallback |Function | Yes|A function to call when Video is returned. A base64 encoded Video object with the following attributes is passed to the function:<br/>- **fileContent**: Contents of the Video file. String <br/>- **fileName**: Name of the Video file. String.<br/>- **fileSize**: Size of the Video file in KB. Number.<br/>- **mimeType**: Video file MIME type. String.|
+|successCallback |Function | Yes|A function to call when Video is returned. A base64 encoded Video object with the following values is passed to the function:<br/>- **fileContent**: Contents of the Video file. String <br/>- **fileName**: Name of the Video file. String.<br/>- **fileSize**: Size of the Video file in KB. Number.<br/>- **mimeType**: Video file MIME type. String.|
 |errorCallback |Function | Yes|A function to call when the operation fails. |
  
 
 ## Return Value
-On success, returns a base64 encoded Video object with the attributes specified earlier.
+On success, returns a base64 encoded Video object with the values specified earlier.
 
 ## Remarks
 This method is supported only for the mobile clients.

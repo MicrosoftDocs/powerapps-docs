@@ -1,13 +1,16 @@
 ---
-title: "Add a Power BI report or dashboard to a web page in a portal | MicrosoftDocs"
-description: "Instructions to add a Power BI report or dashboard to a web page in the portal."
+title: Add a Power BI report or dashboard to a web page in portal
+description: Learn how to add a Power BI report or dashboard to a web page in the portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/17/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add a Power BI report or dashboard to a web page in portal
@@ -60,6 +63,9 @@ For example:
 You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. For more information about powerbi-client JavaScript library, see [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
 
 Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
+
+> [!IMPORTANT]
+> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and can be re-enabled using JavaScript library code.
 
 ```javascript
 $(window).load(function(){

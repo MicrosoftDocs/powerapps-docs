@@ -4,7 +4,9 @@ description: Step-by-step instructions for creating a canvas app based on a samp
 author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: tapanm
 ms.date: 10/16/2020
 ms.author: wimcoor

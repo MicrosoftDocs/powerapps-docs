@@ -1,22 +1,25 @@
 ---
-title: "Create and run advertisements on a portal | MicrosoftDocs"
-description: "Instructions to create text or image-based advertisements and have them run in multiple placements throughout your site."
+title: Create and run advertisements on a portal
+description: Learn how to create text or image-based advertisements and have them run in multiple placements throughout your site.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create and run advertisements on a portal
 
-Create text or image-based ads and have them run in multiple placements throughout your site. Randomize ads or select specific ads for specific placements. You can choose release and expiration dates for time-sensitive, scheduled content. Ads can be hyperlinked to any destination and open in the current window or a new window. Advertisements are displayed in the portal via two entities: The Ad Placement entity and associated Ad entity. Ads can be surfaced in many ways: with pre-made Liquid Templates available within portals via Liquid Templating/example Web Templates, or within the.aspx page via MVC actions.
+Create text or image-based ads and have them run in multiple placements throughout your site. Randomize ads or select specific ads for specific placements. You can choose release and expiration dates for time-sensitive, scheduled content. Ads can be hyperlinked to any destination and open in the current window or a new window. Advertisements are displayed in the portal via two tables: The Ad Placement table and associated Ad table. Ads can be surfaced in many ways: with pre-made Liquid Templates available within portals via Liquid Templating/example Web Templates, or within the.aspx page via MVC actions.
 
 ## Create a new advertisement
 
-Ads represent the specific advertisement or image that will appear on the portal at a given time. The Ad entity will be displayed in the location specified by the ad placement. The ad must be associated with an ad placement to appear on the portal. For this demonstration, the out-of-the-box example Place Holder ad and Sidebar Bottom ad placement will be surfaced in the Company Portal to exhibit basic functionality and to help you gain familiarity before you create more complex ads. Any of the starter sites can be used in place of the Company Portal. However, note that the Liquid Templates used for this demonstration call on the Sidebar Bottom ad placement name.
+Ads represent the specific advertisement or image that will appear on the portal at a given time. The Ad table will be displayed in the location specified by the ad placement. The ad must be associated with an ad placement to appear on the portal. For this demonstration, the out-of-the-box example Place Holder ad and Sidebar Bottom ad placement will be surfaced in the Company Portal to exhibit basic functionality and to help you gain familiarity before you create more complex ads. Any of the starter sites can be used in place of the Company Portal. However, note that the Liquid Templates used for this demonstration call on the Sidebar Bottom ad placement name.
 
 1. Open the [Portal Management app](configure-portal.md).
 
@@ -26,7 +29,7 @@ Ads represent the specific advertisement or image that will appear on the portal
 
 4. Select the **Save** icon in the lower-right corner (or **Save & Close** in the upper-left corner if you have created a new ad).
 
-Within the Ad form, you specify a **Name** to describe the ad, the **Website** where the ad will be displayed, and a **Publishing State**. Optionally you can specify a Web Template and Release/Expiration date. You must provide some sort of data for the ad to be displayed. Use the Ad entity attribute table later in this guide to craft the specifics of your ad.
+Within the Ad form, you specify a **Name** to describe the ad, the **Website** where the ad will be displayed, and a **Publishing State**. Optionally you can specify a Web Template and Release/Expiration date. You must provide some sort of data for the ad to be displayed. Use the Ad table attribute table later in this guide to craft the specifics of your ad.
 
 
 ## Create a new advertisement placements
@@ -75,7 +78,7 @@ OR
 
 ## Attributes
 
-The Ad Entity has the following attributes:
+The Ad Table has the following attributes:
 
 
 |        Name        |                                                                                                                                                                                                                                             Description                                                                                                                                                                                                                                              |
@@ -98,7 +101,7 @@ The Ad Entity has the following attributes:
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[About entity lists](entity-lists.md)  
+[About lists](entity-lists.md)  
 [Create and run advertisements on a portal](create-run-advertisement.md)  
 [Gather feedback by using polls on a portal](gather-feedback-poll.md)  
 [Rate or vote on a webpage on a portal](rate-webpage.md)  

@@ -17,9 +17,9 @@ search.app:
 ---
 # Step 3: Create an AppSource package for your app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 |File|Description|
 |--|--|

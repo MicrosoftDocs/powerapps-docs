@@ -5,9 +5,9 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom:
+ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 03/21/2021
+ms.date: 05/06/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -22,7 +22,7 @@ You can select options in three general areas:
 
 - the header along the top of the page
 
-    ![Header](media/intro-maker-portal/header.png)
+    ![Header for environment selection](media/intro-maker-portal/header.png)
 
 - the navigation bar along the left edge of the page
 

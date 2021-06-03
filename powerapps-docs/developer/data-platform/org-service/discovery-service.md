@@ -1,7 +1,7 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the Discovery Service with the APIs available in the SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 1/16/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps

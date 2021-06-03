@@ -1,6 +1,6 @@
 ---
 title: Manifest Element | Microsoft Docs
-description: 
+description: Manifest is the metadata file that defines a component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

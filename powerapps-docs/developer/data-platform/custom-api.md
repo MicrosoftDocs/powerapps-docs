@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
+ms.date: 03/22/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -68,7 +68,7 @@ See the following topics for detailed information about the columns/attributes y
 
 - [CustomAPI Table Columns](customapi-table-columns.md)
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
-- [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+- [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 
 ## Invoking Custom APIs
@@ -77,7 +77,7 @@ A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 ### Invoking Custom APIs from the Organization Service
 
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/powerapps/developer/data-platform/org-service/generate-early-bound-classes) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
 For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
@@ -468,7 +468,7 @@ The following represent questions you may have:
 
 A: While Custom API has an Execute Privilege Name (`ExecutePrivilegeName`) property, there is currently no supported way for you to create a new privilege just for this API. This is planned for a future release. In the meantime, there are two options:
 
-- You can use an existing [Privilege.Name](/powerapps/developer/data-platform/reference/entities/privilege#BKMK_Name) value.
+- You can use an existing [Privilege.Name](./reference/entities/privilege.md#BKMK_Name) value.
 - You can create a custom entity and use one of the privileges created for that entity. For example, create an entity named `new_myaction` and privileges for CRUD operations will be generated for it. For example `prvCreatenew_myaction`. You will need to include this custom entity with the solution that includes the Custom API.
 
 ### Q: Can I activate or deactivate Custom API records?
@@ -477,7 +477,7 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Yes. Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `false` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `true`. 
+A: Yes. Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`. 
 
 More information: [Private Messages](org-service/use-messages.md#private-messages) and [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 

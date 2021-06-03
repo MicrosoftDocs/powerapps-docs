@@ -1,22 +1,24 @@
 ---
-title: "TransformationParameterMapping entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TransformationParameterMapping table."
-ms.date: 11/14/2020
+title: "TransformationParameterMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the TransformationParameterMapping table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# TransformationParameterMapping entity reference
+
+# TransformationParameterMapping table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 In a data map, defines parameters for a transformation.
 
@@ -25,12 +27,12 @@ In a data map, defines parameters for a transformation.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Create](../../webapi/create-entity-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Delete](../../webapi/update-delete-entities-using-web-api.md#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -48,9 +50,9 @@ In a data map, defines parameters for a transformation.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Data](#BKMK_Data)
 - [DataTypeCode](#BKMK_DataTypeCode)
@@ -90,7 +92,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### DataTypeCode Options
+#### DataTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -161,7 +163,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ParameterTypeCode Options
+#### ParameterTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -199,9 +201,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -238,7 +240,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -368,7 +370,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -564,7 +566,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_LookUpMapping_TransformationParameterMapping"></a> LookUpMapping_TransformationParameterMapping
 
-Same as lookupmapping entity [LookUpMapping_TransformationParameterMapping](lookupmapping.md#BKMK_LookUpMapping_TransformationParameterMapping) Many-To-One relationship.
+Same as lookupmapping table [LookUpMapping_TransformationParameterMapping](lookupmapping.md#BKMK_LookUpMapping_TransformationParameterMapping) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -580,7 +582,7 @@ Same as lookupmapping entity [LookUpMapping_TransformationParameterMapping](look
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [TransformationParameterMapping_TransformationMapping](#BKMK_TransformationParameterMapping_TransformationMapping)
 - [lk_transformationparametermapping_modifiedonbehalfby](#BKMK_lk_transformationparametermapping_modifiedonbehalfby)
@@ -591,28 +593,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_TransformationParameterMapping_TransformationMapping"></a> TransformationParameterMapping_TransformationMapping
 
-See transformationmapping Entity [TransformationParameterMapping_TransformationMapping](transformationmapping.md#BKMK_TransformationParameterMapping_TransformationMapping) One-To-Many relationship.
+See transformationmapping Table [TransformationParameterMapping_TransformationMapping](transformationmapping.md#BKMK_TransformationParameterMapping_TransformationMapping) One-To-Many relationship.
 
 ### <a name="BKMK_lk_transformationparametermapping_modifiedonbehalfby"></a> lk_transformationparametermapping_modifiedonbehalfby
 
-See systemuser Entity [lk_transformationparametermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_transformationparametermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_transformationparametermapping_createdonbehalfby"></a> lk_transformationparametermapping_createdonbehalfby
 
-See systemuser Entity [lk_transformationparametermapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_transformationparametermapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_transformationparametermapping_modifiedby"></a> lk_transformationparametermapping_modifiedby
 
-See systemuser Entity [lk_transformationparametermapping_modifiedby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_transformationparametermapping_modifiedby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_transformationparametermapping_createdby"></a> lk_transformationparametermapping_createdby
 
-See systemuser Entity [lk_transformationparametermapping_createdby](systemuser.md#BKMK_lk_transformationparametermapping_createdby) One-To-Many relationship.
+See systemuser Table [lk_transformationparametermapping_createdby](systemuser.md#BKMK_lk_transformationparametermapping_createdby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.transformationparametermapping?text=transformationparametermapping EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
