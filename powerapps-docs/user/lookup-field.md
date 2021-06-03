@@ -141,9 +141,30 @@ Legend
 1. **Search**: Enter search text to find the row that you're looking for. If you changes views your search text is still retained. 
 2. **Change views**: Select the current view and select another view to change views.
 3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The select row will appear under **Selected record**.
-4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the **Advanced lookup** grid.
+4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the advanced lookup grid.
 5. **Sort**: Select the arrow at the top of any column to sort in acending or decending order. 
 6. **Only my records**: Select to only show rows that you own.
-7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the **Advanced lookup** grid will refresh and show the newly added row.
+7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
+
+
+### Regarding advacned lookup
+
+In a **Regarding** lookup, you can switch between tables and their views
+
+1. In a **Regarding** lookup column, select the lookup icon (magnifying glass) then selct **Advanced lookup**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup for Regarding column](media/regarding-advanced-lookup.png "Advanced lookup for Regarding column")  
+
+2. On the advanced lookup grid, select a table from the list to see rows for the selected table. You can also select the current view to change views.
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid for Regarding column](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
+
+
+
+### 
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
