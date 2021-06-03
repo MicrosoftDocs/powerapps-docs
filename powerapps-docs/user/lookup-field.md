@@ -125,7 +125,7 @@ To use **Advanced lookup** your administrator needs to enable this feature. For 
 
 Once enabed **Advanced lookup** is aviliable on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
-1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then selct **Advanced lookup**. 
+1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
 
    > [!div class="mx-imgBorder"]
    > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
@@ -147,11 +147,11 @@ Legend
 7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
 
 
-### Regarding advacned lookup
+### Regarding advanced lookup
 
 In a **Regarding** lookup, you can switch between tables and their views
 
-1. In a **Regarding** lookup column, select the lookup icon (magnifying glass) then selct **Advanced lookup**. 
+1. In a **Regarding** lookup column, select the lookup icon (magnifying glass) then select **Advanced lookup**. 
 
    > [!div class="mx-imgBorder"]
    > ![Advanced lookup for Regarding column](media/regarding-advanced-lookup.png "Advanced lookup for Regarding column")  
@@ -162,9 +162,24 @@ In a **Regarding** lookup, you can switch between tables and their views
    > ![Advanced lookup grid for Regarding column](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
 
 
+### Choices advanced look
 
-### 
+For lookup columns with choices you can select multiple rows from different tables. 
 
+1. Go a lookup column with choices and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
+2. On the advanced lookup grid, you can select mutiple rows. 
 
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for choices")  
+
+3. Select **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Advanced lookup grid for choices](media/choices-lookup-2.png "Advanced lookup grid for choices")  
+   
+4. The selected rows appear in the lookup.
+
+   > [!div class="mx-imgBorder"]
+   > ![Selected choices appear in the lookup](media/choices-lookup-3.png "Selected choices appear in the lookup")  
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
