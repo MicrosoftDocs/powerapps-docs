@@ -5,7 +5,7 @@ keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 05/25/2021
+ms.date: 06/03/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,7 +28,6 @@ Microsoft Power Apps CLI is a simple, single-stop developer command-line interfa
 To get Power Apps CLI, do the following:
 
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-1. You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which also installs the Power Apps CLI.
 1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
 
     ```CLI
@@ -40,6 +39,13 @@ To get Power Apps CLI, do the following:
 > Currently, Power Apps CLI is supported only on Windows 10.
 > Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
+## Install Power Platform Extension for Visual Studio Code
+
+> [!NOTE]
+> The Power Platform Extension for Visual Studio Code is in pre-release.  We may change it considerably for the final, commercial version. The version of the Power Apsp CLI that is included with the extension and runs within Visual Studio Code may also be a pre-release version but should not interfere with the version you install separately.  
+
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI.  The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build and deploy Power Platform solutions, packages and portals.
+
 ## Common commands
 
 This table lists some of the common commands used in the CLI:
@@ -48,6 +54,7 @@ This table lists some of the common commands used in the CLI:
 |-------|-----------|
 |[admin](#admin)|Commands for environment lifecycle features.|
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
+|[canvas](#canvas)|Commands for working with canvas app source files.  Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
 |[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
@@ -73,6 +80,63 @@ Commands to work with environment lifecycle features. It has the following param
 |list-backups|Lists all available backups. environment. It has the following parameters: <br/> - *url*: Url of the environment for which you want to list backups (alias: -u). <br/> - *environment-id*: ID of the environment for which you want to list backups (alias: -id).|
 |restore|Restores an environment from a given backup. It has the following parameters: <br/> - *source-url*: Url of the source environment to be restored from (alias: -s). <br/> - *target-url*: Url of the target environment to be restored to (alias: -t). <br/> - *selected-backup*: DateTime of the backup in `mm/dd/yyyy hh:mm` format or latest (alias: -sb). <br/> - *name*: Optional name of the restored environment (alias: -n).|
 |copy|Copies a source environment to a destination environment. It has the following parameters: <br/> - *source-url*: Url of the source environment to be copied from (alias: -su). <br/> - *target-url*: Url of the target environment to be copied to (alias: -tu). <br/> - *source-environment-id*: ID of the source environment to be copied from (alias: -si). <br/> - *target-environment-id*: Id of the target environment to be copied to (alias: -ti). <br/> - *name*: Name to be used for the target environment. (alias: -n).  <br/> - *type*: Type of copy. Available values are: None, MinimalCopy, Fullcopy  (alias: -t).|
+
+### Canvas
+
+> [!NOTE]
+> The Canvas command is in pre-release.  It may not be available in the version of the Power Apps CLI that you are using and we may change it for the final, commercial version. 
+
+Commands for working with canvas app source files.  
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+| unpack | Unpack a canvas .msapp file into its source files. Download the .msapp file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.  If no **--sources** is specified, a directory with the same name and location as the .msapp file is used with a "_src" suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an .msapp file from previously unpacked source files. The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.  The source files can be edited and managed with external tools after being unpacked, such as VS Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+
+#### Folder structure
+
+Unpack and pack use the following folder structure:
+
+- **\src** - Control and component files. This contains the sources.
+   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  **This is the place to edit your formulas.**- 
+   - ***CanvasManifest.json*** - A manifest file. This contains information normally present in the header, properties, and publishInfo.
+   - ***\*.json*** - The raw `control.json` file.
+   - ***\EditorState\*.editorstate.json*** - Cached information for Studio to use.
+- **\DataSources** - All the data sources used by the app.
+- **\Connections** - Connection instances saved with the app and used when reloading into the studio. 
+- **\Assets** - Media files embedded in the app.
+- **\pkgs** - A downloaded copy of external references, such as templates, API definition files, and component libraries. These are similar to NuGet/NPM references. 
+- **\other** - All miscellaneous files needed to recreate the .msapp
+   - ***entropy.json*** - Volatile elements (like timestamps) are extracted to this file. This helps reduce noisy differences in other files while ensuring that we can still round trip.
+   - Holds other files from the msapp, such as what is in \references
+
+#### File format
+
+The `.fx.yaml` files use a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](../power-platform/power-fx/yaml-formula-grammar.md) for more details.
+
+#### Merging changes with Power Apps Studio
+
+When merging changes, that are made in two different studio sessions:
+
+- Ensure that all the control names are unique. It is easy for them not to be, as inserting a button in two different sessions can easily result in two `Button1` controls. We recommend to name the controls soon after you create them. The tool doesn't accept two controls with the same name.  
+- For these files, merge them as you normally do:
+   - \src\*.fx.yaml
+- If there are conflicts or errors, you can delete these files:
+   - \src\editorstate\*.json  - These files contain optional information in studio.
+   - \other\entropy.json  
+- For any conflict in these files, it’s ok to accept the latest version: 
+   - \checksum.json
+- If there are any merge conflicts under these paths, it is not safe to merge. Let us know if this happens often and we will work on restructuring the file format to avoid conflicts.
+   - \Connections\*
+   - \DataSources\*
+   - \pkgs\*
+   - CanvasManifest.json
+
+#### Open source
+
+The canvas portion of the Power Apps CLI is open source. Discuss improvements, file issues, and access the code for your own needs through the [GitHub Power Apps Language Tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
 
 ### Package
 
