@@ -92,8 +92,8 @@ Commands for working with canvas app source files.
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-| unpack | Unpack a canvas .msapp file into its source files. Download the .msapp file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.  If no **--sources** is specified, a directory with the same name and location as the .msapp file is used with a "_src" suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
-| pack | Creates an .msapp file from previously unpacked source files. The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.  The source files can be edited and managed with external tools after being unpacked, such as VS Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+| unpack | Unpack a canvas .msapp file into its source files.<br><br> Download the .msapp file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br><br>  If no **--sources** is specified, a directory with the same name and location as the .msapp file is used with a "_src" suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an .msapp file from previously unpacked source files. <br><br>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br><br>  The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
 
 #### Folder structure
 
