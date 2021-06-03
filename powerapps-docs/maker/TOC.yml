@@ -2182,8 +2182,12 @@
           href: ../teams/issue-reporting.md
         - name: Milestones
           href: ../teams/milestones.md
-        - name: Perspectives (Preview)
-          href: ../teams/perspectives.md
+        - name: Perspectives
+          items:
+            - name: Perspectives (Preview)
+              href: ../teams/perspectives.md
+            - name: Understand Perspectives (Preview) sample app architecture
+              href: ../teams/perspectives-architecture.md
         - name: Profile+ (Preview)
           href: ../teams/profile-app.md
         - name: Customize sample apps
