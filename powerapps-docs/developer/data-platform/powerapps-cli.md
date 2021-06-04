@@ -42,9 +42,9 @@ To get Power Apps CLI, do the following:
 ## Install Power Platform Extension for Visual Studio Code
 
 > [!NOTE]
-> The Power Platform Extension for Visual Studio Code is in pre-release.  We may change it considerably for the final, commercial version. The version of the Power Apsp CLI that is included with the extension and runs within Visual Studio Code may also be a pre-release version but should not interfere with the version you install separately.  
+> The Power Platform Extension for Visual Studio Code is in pre-release.  We may change it considerably for the final, commercial version. The version of the Power Apsp CLI that is included with the extension and runs within Visual Studio Code may also be a pre-release version but should not interfere with the version installed separately using the directions above.  
 
-You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI.  The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build and deploy Power Platform solutions, packages and portals.
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code.  The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build and deploy Power Platform solutions, packages and portals.
 
 ## Common commands
 
