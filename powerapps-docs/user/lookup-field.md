@@ -164,8 +164,7 @@ In a **Regarding** lookup, you can switch between tables and their views
 
 ### Party list advanced lookup
 
-For lookup columns that are party list, you can select multiple rows from different tables. An example of party list field is **Call To** field on a phone call activity.
-
+For lookup columns that is a party list, you can select multiple rows from different tables such as the **Call To** field on a phone call activity.
 
 1. Go to a lookup column with party list and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
 2. On the advanced lookup grid, select from multiple rows from different tables.
