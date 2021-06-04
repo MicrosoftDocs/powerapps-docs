@@ -139,18 +139,18 @@ Variables used during app OnStart:
 
 | **Variable name**                | **Description**                                                                           |
 |----------------------------------|-------------------------------------------------------------------------------------------|
-| gblAppLoaded                     | - global variable to check if the app has loaded completely.                              |
-| gblUserLanguage                  | - global variable to store the user's language.                                            |
-| gblThemeDark                     | - global variable to store if Teams is running in dark mode.                              |
-| gblThemeHiCo                     | - global variable to store if Teams is running in contrast mode.                          |
-| gblMobileWidth                   | - global variable to define the width of the app for mobile.                              |
-| gblMobileMode                    | - global variable to store if the app is being accessed from a mobile device.             |
-| gblAppSetting_inputMobileOnWeb   | - global variable to scale fonts for mobile-oriented apps, running in desktop.            |
-| gblAppSetting_inputMobile        | - global variable to scale fonts for mobile-oriented apps.                                |
-| gblAppSetting_inputScaleFontsBy  | - global variable for scaling all fonts by a fixed amount.                                |
-| gblAppContext                    | - global variable to check the context of where the app is running.                       |
-| gblFirstRun                      | - global variable to check whether the app is being run for the first time.               |
-| gblRecordUserSettings            | - global variable to store the latest Project User Settings records for the current user. |
+| gblAppLoaded                     | Global variable to check if the app has loaded completely.                              |
+| gblUserLanguage                  | Global variable to store the user's language.                                            |
+| gblThemeDark                     | Global variable to store if Teams is running in dark mode.                              |
+| gblThemeHiCo                     | Global variable to store if Teams is running in contrast mode.                          |
+| gblMobileWidth                   | Global variable to define the width of the app for mobile.                              |
+| gblMobileMode                    | Global variable to store if the app is being accessed from a mobile device.             |
+| gblAppSetting_inputMobileOnWeb   | Global variable to scale fonts for mobile-oriented apps, running in desktop.            |
+| gblAppSetting_inputMobile        | Global variable to scale fonts for mobile-oriented apps.                                |
+| gblAppSetting_inputScaleFontsBy  | Global variable for scaling all fonts by a fixed amount.                                |
+| gblAppContext                    | Global variable to check the context of where the app is running.                       |
+| gblFirstRun                      | Global variable to check whether the app is being run for the first time.               |
+| gblRecordUserSettings            | Global variable to store the latest Project User Settings records for the current user. |
 
 #### OnStart execution details
 
