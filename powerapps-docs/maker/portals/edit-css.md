@@ -28,7 +28,7 @@ To open a CSS in code editor:
 
     ![Theme](./media/edit-css/themes.png)
 
-3.  Select the required CSS to open it in the code editor.
+3.  Select the desired CSS to open it in the code editor.
 
 4.  Edit the code and save the changes.
 
