@@ -36,17 +36,17 @@ To get Power Apps CLI, do the following:
 
 
 > [!NOTE]
-> Currently, Power Apps CLI is supported only on Windows 10.
-> Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
+> - Currently, Power Apps CLI is supported only on Windows 10.
+> - Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
 ## Install Power Platform Extension for Visual Studio Code
 
 You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
 
 > [!IMPORTANT]
-> Power Platform Extension for Visual Studio Code is in public preview. 
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> Power Apps CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
+> - Power Platform Extension for Visual Studio Code is in public preview. 
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Power Apps CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
 
 ## Common commands
 
@@ -56,7 +56,7 @@ This table lists some of the common commands used in the CLI:
 |-------|-----------|
 |[admin](#admin)|Commands for environment lifecycle features.|
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
-|[canvas](#canvas)|Commands for working with canvas app source files.  Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.|
+|[canvas](#canvas)|Commands for working with canvas app source files.|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
 |[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
@@ -85,24 +85,24 @@ Commands to work with environment lifecycle features. It has the following param
 
 ### Canvas
 
+Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
+
 > [!NOTE]
 > The Canvas commands are in public preview. They may not be available in the version of the Power Apps CLI that you are using currently. 
-
-Commands for working with canvas app source files.  
 
 #### Parameters
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-| unpack | Unpacks the `.msapp`  source file.<br><br> Download the `.msapp` file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br><br>  If the **sources** parameter is not specified, a directory with the same name and location as the `.msapp` file is used with `_src` suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
-| pack | Creates an `.msapp` file from the previously unpacked source files. <br><br>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br><br>  The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+| unpack | Unpacks the `.msapp`  source file.<br/> Download the `.msapp` file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br/>  If the **sources** parameter is not specified, a directory with the same name and location as the `.msapp` file is used with `_src` suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br/>`pac canavs unpack --msapp HelloWorld.msapp`<br/>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an `.msapp` file from the previously unpacked source files. <br/>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br/> The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
 
 #### Folder structure
 
 Unpack and pack use the following folder structure:
 
 - **\src** - Control and component files. This contains the sources.
-   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  **This is the place to edit your formulas.**
+   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  *This is the place to edit your formulas.*
    - ***CanvasManifest.json*** - A manifest file that contains the information normally present in the header, properties, and publishInfo.
    - ***\*.json*** - The raw `control.json` file.
    - ***\EditorState\*.editorstate.json*** - Cached information for studio to use.
@@ -110,9 +110,9 @@ Unpack and pack use the following folder structure:
 - **\Connections** - Connection instances saved with the app and used when reloading into the studio. 
 - **\Assets** - Media files embedded in the app.
 - **\pkgs** - A downloaded copy of external references, such as templates, API definition files, and component libraries. These are similar to NuGet/NPM references. 
-- **\other** - All miscellaneous files needed to recreate the .msapp
+- **\other** - All miscellaneous files needed to recreate the `.msapp`.
    - ***entropy.json*** - Volatile elements (like timestamps) are extracted to this file. This helps reduce noisy differences in other files while ensuring that we can still round trip.
-   - Holds other files from the msapp, such as what is in \references
+   - Holds other files from the msapp, such as what is in \references.
 
 #### File format
 
