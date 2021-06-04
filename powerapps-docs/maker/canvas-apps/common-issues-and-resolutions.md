@@ -201,10 +201,6 @@ If you're running into issues using Power Apps, try these common troubleshooting
   
 ## Power Apps for Windows
 
-1.  **Power Apps per app plans does not support Power Apps for Windows app**
- 
-       Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp). 
-
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
 <br> A pop-up dialog will show the following message in this situation: <br>
   `We can’t connect to the service you need right now. Check your network connection or try again later`
@@ -222,7 +218,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
     
 1. **Camera controls in Power Apps for Windows app**
 
-   Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
+   Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras isn't supported.
    
    
 
