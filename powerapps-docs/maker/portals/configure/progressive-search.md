@@ -85,3 +85,4 @@ With progressive search, you can get more accurate search results.
 [Configure search for additional tables](search-additional-entities.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
