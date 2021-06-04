@@ -35,16 +35,18 @@ To get Power Apps CLI, do the following:
     ```
 
 
-> [!IMPORTANT]
+> [!NOTE]
 > Currently, Power Apps CLI is supported only on Windows 10.
 > Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
 ## Install Power Platform Extension for Visual Studio Code
 
-> [!NOTE]
-> The Power Platform Extension for Visual Studio Code is in pre-release.  We may change it considerably for the final, commercial version. The version of the Power Apsp CLI that is included with the extension and runs within Visual Studio Code may also be a pre-release version but should not interfere with the version installed separately using the directions above.  
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
 
-You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code.  The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build and deploy Power Platform solutions, packages and portals.
+> [!IMPORTANT]
+> Power Platform Extension for Visual Studio Code is in public preview. 
+> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> Power Apps CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
 
 ## Common commands
 
@@ -84,7 +86,7 @@ Commands to work with environment lifecycle features. It has the following param
 ### Canvas
 
 > [!NOTE]
-> The Canvas command is in pre-release.  It may not be available in the version of the Power Apps CLI that you are using and we may change it for the final, commercial version. 
+> The Canvas commands are in public preview. They may not be available in the version of the Power Apps CLI that you are using currently. 
 
 Commands for working with canvas app source files.  
 
@@ -92,18 +94,18 @@ Commands for working with canvas app source files.
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-| unpack | Unpack a canvas .msapp file into its source files.<br><br> Download the .msapp file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br><br>  If no **--sources** is specified, a directory with the same name and location as the .msapp file is used with a "_src" suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
-| pack | Creates an .msapp file from previously unpacked source files. <br><br>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br><br>  The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+| unpack | Unpacks the `.msapp`  source file.<br><br> Download the `.msapp` file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br><br>  If the **sources** parameter is not specified, a directory with the same name and location as the `.msapp` file is used with `_src` suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br><br>`pac canavs unpack --msapp HelloWorld.msapp`<br>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an `.msapp` file from the previously unpacked source files. <br><br>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br><br>  The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
 
 #### Folder structure
 
 Unpack and pack use the following folder structure:
 
 - **\src** - Control and component files. This contains the sources.
-   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  **This is the place to edit your formulas.**- 
-   - ***CanvasManifest.json*** - A manifest file. This contains information normally present in the header, properties, and publishInfo.
+   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  **This is the place to edit your formulas.**
+   - ***CanvasManifest.json*** - A manifest file that contains the information normally present in the header, properties, and publishInfo.
    - ***\*.json*** - The raw `control.json` file.
-   - ***\EditorState\*.editorstate.json*** - Cached information for Studio to use.
+   - ***\EditorState\*.editorstate.json*** - Cached information for studio to use.
 - **\DataSources** - All the data sources used by the app.
 - **\Connections** - Connection instances saved with the app and used when reloading into the studio. 
 - **\Assets** - Media files embedded in the app.
@@ -114,13 +116,13 @@ Unpack and pack use the following folder structure:
 
 #### File format
 
-The `.fx.yaml` files use a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](/power-platform/power-fx/yaml-formula-grammar) for more details.
+The `.fx.yaml` files uses a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](/power-platform/power-fx/yaml-formula-grammar).
 
 #### Merging changes with Power Apps Studio
 
 When merging changes, that are made in two different studio sessions:
 
-- Ensure that all the control names are unique. It is easy for them not to be, as inserting a button in two different sessions can easily result in two `Button1` controls. We recommend to name the controls soon after you create them. The tool doesn't accept two controls with the same name.  
+- Ensure that all the control names are unique. For example, inserting a button in two different sessions can result in two `Button1` controls. We recommend to name the controls soon after you create them. The tool doesn't accept two controls with the same name.  
 - For these files, merge them as you normally do:
    - \src\*.fx.yaml
 - If there are conflicts or errors, you can delete these files:
@@ -136,7 +138,7 @@ When merging changes, that are made in two different studio sessions:
 
 #### Open source
 
-The canvas portion of the Power Apps CLI is open source. Discuss improvements, file issues, and access the code for your own needs through the [GitHub Power Apps Language Tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
+The canvas commands in the Power Apps CLI are open source. Discuss improvements, raise issues, and access the code from [Power Apps language tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
 
 ### Package
 
