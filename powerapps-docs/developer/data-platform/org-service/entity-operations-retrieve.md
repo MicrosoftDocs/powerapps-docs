@@ -62,7 +62,7 @@ Console.WriteLine("account name: {0}", entity["name"]);
 >
 > Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. 
 > More information: 
-> - [Retrieve with related rows](#retrieve-with-related-records)
+> - [Retrieve with related rows](#retrieve-with-related-rows)
 > - [Retrieve with an alternate key](#retrieve-with-an-alternate-key)
 
 ## Retrieve with related rows
