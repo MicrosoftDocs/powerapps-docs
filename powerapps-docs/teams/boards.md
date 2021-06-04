@@ -260,6 +260,7 @@ To add categories:
 
 ### See also
 
+- [Understand Boards (Preview) sample app architecture](boards-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

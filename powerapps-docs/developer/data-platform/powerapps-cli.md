@@ -27,24 +27,18 @@ Microsoft Power Apps CLI is a simple, single-stop developer command-line interfa
 
 To get Power Apps CLI, do the following:
 
-1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 or higher.
-
-1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
-
-1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
-   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/current) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
-
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
+1. You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which also installs the Power Apps CLI.
+1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
 
     ```CLI
     pac install latest
     ```
 
-> [!NOTE]
+
+> [!IMPORTANT]
 > Currently, Power Apps CLI is supported only on Windows 10.
+> Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
 ## Common commands
 
