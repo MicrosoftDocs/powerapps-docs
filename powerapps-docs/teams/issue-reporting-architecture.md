@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2021
+ms.date: 06/03/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -83,9 +83,9 @@ Manage Issues app uses following collections.
 | colPlannerTasks                      | To collect the list of Planner Tasks in a particular plan  based on the Plan and Team IDs. | OnStart property of the App                                  |
 | colDataverseIssueReports             | Collection to collect Dataverse Issue report categories.     | OnStart property of the App                                  |
 | colStats                             | Collection to collect the stats of the planner tasks.        | OnVisible property of the Insights screen                    |
-| colUserProfiles                      | Used to collect User details from Office 365.                | Issue templates screen (Manage issues)       Issue report screen (Issue reporting) |
+| colUserProfiles                      | Used to collect User details from Office 365.                | Issue templates screen |
 | colDataverseIssueAssignments         | Used to store  information about the User to whom Issue has been assigned. | OnSelect property of the Save button while creating a new  Issue template. |
-| colAppTemplateCounting               | Collection used to count the number of  issues based on their completion status. | Issue Templates Screen (Manage issues)                       |
+| colAppTemplateCounting               | Collection used to count the number of  issues based on their completion status. | Issue Templates Screen                       |
 | colDataverseIssueQuestions           | To collect the questions for a particular issue template.    | OnSelect property of the Save button while creating a new  Issue template |
 | colQuestionsToDelete                 | To collect the questions to be deleted from the Issue  template. | OnSelect property of the Save button while creating a new  Issue template |
 
