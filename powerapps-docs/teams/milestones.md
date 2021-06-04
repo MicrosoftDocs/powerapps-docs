@@ -203,6 +203,7 @@ To delete an existing project:
 
 ### See also
 
+- [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
