@@ -161,3 +161,4 @@ The following limitations apply to Power Platform VS Code Extension currently.
 ### See also
 
 [Portals support for Power Apps CLI (Preview)](power-apps-cli.md)
+

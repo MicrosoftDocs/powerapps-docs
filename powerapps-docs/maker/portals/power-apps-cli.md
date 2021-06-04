@@ -307,3 +307,4 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 
 - [Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
 - [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+

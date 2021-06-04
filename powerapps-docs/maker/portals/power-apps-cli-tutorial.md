@@ -159,3 +159,4 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 - [Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
 - [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+
