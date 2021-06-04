@@ -975,8 +975,8 @@ The following variables are used when a team member is added, edited, or removed
 |----------------------------|-----------------------------------------------------------------------------------------------------------|
 | gblProject                 | Global variable to store the selected project.                                                          |
 | locDeleteProject           | Local variable to control the visibility of the deletion warning screen.                                |
-| locProjectToDelete         | Llocal variable to store the project being deleted.                                                      |
-| locTempNewSelectedProject  | Llocal variable to temporarily store the new project to be selected once the current project is deleted. |
+| locProjectToDelete         | Local variable to store the project being deleted.                                                      |
+| locTempNewSelectedProject  | Local variable to temporarily store the new project to be selected once the current project is deleted. |
 
 #### Managing team member execution details
 
