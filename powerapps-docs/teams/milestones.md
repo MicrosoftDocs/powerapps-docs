@@ -8,6 +8,10 @@ ms.custom:
 ms.date: 05/27/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Milestones sample app 

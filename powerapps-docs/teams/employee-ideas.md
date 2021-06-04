@@ -8,6 +8,10 @@ ms.date: 10/15/2020
 author: navjotm
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Employee ideas sample app

@@ -8,6 +8,10 @@ ms.custom:
 ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Inspection sample apps
