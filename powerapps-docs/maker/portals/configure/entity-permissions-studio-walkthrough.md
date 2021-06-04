@@ -282,3 +282,4 @@ This scenario explained how to configure table permissions in a real-world scena
 
 [Assign table permissions](assign-entity-permissions.md) <br>
 [Table permissions using portals Studio](entity-permissions-studio.md)
+
