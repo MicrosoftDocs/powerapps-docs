@@ -2158,7 +2158,7 @@
           items:
              - name: Boards (Preview)
                href: ../teams/boards.md
-             - name: Boards (Preview) sample app architecture
+             - name: Understand Boards (Preview) sample app architecture
                href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
@@ -2185,7 +2185,11 @@
             - name: Issue reporting sample app architecture
               href: ../teams/issue-reporting-architecture.md
         - name: Milestones
-          href: ../teams/milestones.md
+          items:
+             - name: Milestones
+               href: ../teams/milestones.md
+             - name: Understand Milestones sample app architecture
+               href: ../teams/milestones-architecture.md
         - name: Perspectives
           items:
             - name: Perspectives (Preview)
