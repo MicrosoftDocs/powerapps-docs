@@ -114,7 +114,7 @@ Unpack and pack use the following folder structure:
 
 #### File format
 
-The `.fx.yaml` files use a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](../../../power-platform/power-fx/yaml-formula-grammar.md) for more details.
+The `.fx.yaml` files use a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](/power-platform/power-fx/yaml-formula-grammar) for more details.
 
 #### Merging changes with Power Apps Studio
 
