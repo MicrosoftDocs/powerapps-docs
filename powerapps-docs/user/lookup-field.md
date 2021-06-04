@@ -162,15 +162,16 @@ In a **Regarding** lookup, you can switch between tables and their views
    > ![Advanced lookup grid for Regarding column](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
 
 
-### Choices advanced look
+### Party list advanced lookup
 
-For lookup columns with choices you can select multiple rows from different tables. 
+For lookup columns that are party list, you can select multiple rows from different tables. An example of party list field is **Call To** field on a phone call activity.
 
-1. Go a lookup column with choices and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
+
+1. Go to a lookup column with party list and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
 2. On the advanced lookup grid, select from multiple rows from different tables.
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for choices")  
+   > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for party list")  
 
 3. Select the **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
 
