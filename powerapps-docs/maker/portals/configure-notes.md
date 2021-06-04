@@ -254,3 +254,4 @@ To enable attachment on a basic form:
 After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form:
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
+
