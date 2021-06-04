@@ -28,7 +28,7 @@ Microsoft Power Apps CLI is a simple, single-stop developer command-line interfa
 To get Power Apps CLI, do the following:
 
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
+1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
 
     ```CLI
     pac install latest

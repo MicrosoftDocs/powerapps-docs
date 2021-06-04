@@ -11,7 +11,7 @@ ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
   - navjotm
-
+  - tapanm-msft
 ---
 
 # Understand Boards (Preview) sample app architecture
