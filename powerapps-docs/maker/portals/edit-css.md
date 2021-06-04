@@ -24,7 +24,7 @@ To open a CSS in code editor:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
+2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
     ![Theme](./media/edit-css/themes.png)
 
@@ -36,7 +36,7 @@ To upload a new CSS file:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
+2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
 3. Select **Upload custom CSS**.
 
