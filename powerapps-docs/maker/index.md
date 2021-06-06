@@ -66,7 +66,7 @@ Getting started with model-driven apps is simple, and you can begin with these t
 - [Create or edit dashboards](/dynamics365/customer-engagement/customize/create-edit-dashboards)
 - [Add security](/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Add business logic](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
-- [Converging model and canvas using custom page (preview)](model-app-page-overview)
+- [Converging model and canvas using custom page (preview)](model-app-page-overview.md)
 
 ## Portals
 
