@@ -263,7 +263,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
-[Navigating to and from a custom page in your model-driven app (preview)](..\..\..\..\maker\model-driven-apps\navigate-page-examples.md)
+
+[Navigating to and from a custom page in your model-driven app (preview)](../../../../maker/model-driven-apps/navigate-page-examples.md)
 
 
 
