@@ -5,8 +5,8 @@ author: denisem-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: v-aangie
-ms.date: 6/3/2021
+ms.reviewer: tapanm
+ms.date: 6/7/2021
 ms.author: denisem
 search.audienceType:
   - maker
@@ -33,11 +33,11 @@ This article explains how to update or create bulk records depending on your sce
 
 The formulas in this section can be used to bulk update records in Power Apps canvas applications based on the situation in an application.
 
-- [Patch() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch#modify-or-create-a-set-of-records-in-a-data-source-1)&mdash;Use this when the collection matches the data source.
+- [[Patch() function](functions/function-patch.md#modify-or-create-a-set-of-records-in-a-data-source-1)&mdash;Use this when the collection matches the data source.
     ```
     Patch( DataSource, Collection )
     ```
-- [ForAll() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-forall) + [nested Patch()](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-patch) + [Disambiguation Operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator)&mdash;Use this when the data sources have different columns that you need to join.
+- [ForAll() function](functions/function-forall.md) + [nested Patch](functions/function-patch.md) + [disambiguation operator](functions/operators.md)&mdash;Use this when the data sources have different columns that you need to join.
     ```
     ForAll( Collection,
         Patch( DataSource, 
@@ -53,7 +53,7 @@ For a complete list of formulas to update bulk records, download [related files]
 
 ## Example of a checklist
 
-This example uses a checklist of tasks. When you are done with a few tasks, you can mark them as complete. You could extend this scenario to a Product Launch checklist, Home Inspection checklist, or other lists.
+This example uses a checklist of tasks. When you are done with a few tasks, you can mark them as complete. You could extend this scenario to a product launch checklist, home inspection checklist, or other lists.
 
 The following screenshot shows the checklist items in Microsoft Excel where you can check off tasks related to your blogging or posting on social media. The table in Excel is called  `ChecklistItems`. Here's the [example in Excel](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
 
@@ -71,7 +71,7 @@ This example uses a 2 screen application:
 > [!div class="mx-imgBorder"]
 > ![Screen1](./media/create-records-update-bulk/bulk-update-records-2.jpg) ![Screen2](./media/create-records-update-bulk/bulk-update-records-3.jpg)
 
-Every time a checklist item is checked, it's added into a collection called `CheckedItems`. Ir uses the formula below on the `OnCheck` event property of the checkbox control. If the item is already checked and is part of the collection, it's removed. If not, the checked item is added.
+Every time a checklist item is checked, it's added into a collection called `CheckedItems`. It uses the formula below on the `OnCheck` event property of the checkbox control. If the item is already checked and is part of the collection, it's removed. If not, the checked item is added.
 
 You can toggle the status between **Done** and **Pending**, or you can do this on the `Oncheck` and `OnUncheck` events:
 ```
@@ -171,10 +171,3 @@ ForAll( NewChecklistItems,
 ```
 For each item in the `NewChecklistItems`, a new record is created (indicated by `Defaults(ChecklistItemsSource)`) in the `ChecklistItemsSource` collection. The `Id` is set to the `Id` from the `NewChecklistItems` collection. Similarly, `Category`, `Description`, and `Status` values are set.
 
-
-## Key points
-
-- Use `Patch()`, when source and destination columns names are same.
-- Use the disambiguation operator [@] on the comparison column to differentiate the source and local data column name. Make sure to use this when using `ForAll()` if you run into an issue where only the first record gets updated.
-- Store the comparison key in a label control in the gallery to reference the local data.
-- Use `AddColumns()` to rename the Comparison Key column name on your local data.
