@@ -47,7 +47,7 @@ The formulas in this section can be used to bulk update records in Power Apps ca
     )
     ```
 
-- [AddColumns() function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-table-shaping)&mdash;This can be used to provide a lookup reference in the Collection that contains the updates to the DataSource if it doesn't have fields that easily reference the table.
+- [AddColumns() function](functions/function-table-shaping.md)&mdash;This can be used to provide a lookup reference in the Collection that contains the updates to the DataSource if it doesn't have fields that easily reference the table.
 
 For a complete list of formulas to update bulk records, download [related files](https://blogcode.blob.core.windows.net/pablogassets/BulkUpdate_blog/Bulkupdate_blog.zip).
 
