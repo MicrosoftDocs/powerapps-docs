@@ -1,22 +1,24 @@
 ---
-title: "msdyn_federatedarticleincident entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_federatedarticleincident table."
-ms.date: 11/14/2020
+title: "msdyn_federatedarticleincident table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_federatedarticleincident table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_federatedarticleincident entity reference
+
+# msdyn_federatedarticleincident table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
@@ -27,15 +29,15 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_federatedarticleincidents(*msdyn_federatedarticleincidentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +55,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_federatedarticleid](#BKMK_msdyn_federatedarticleid)
@@ -190,7 +192,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -211,7 +213,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -253,9 +255,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -601,7 +603,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [msdyn_federatedarticleincident_SyncErrors](syncerror.md#BKMK_msdyn_federatedarticleincident_SyncErrors) Many-To-One relationship.
+Same as syncerror table [msdyn_federatedarticleincident_SyncErrors](syncerror.md#BKMK_msdyn_federatedarticleincident_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -618,7 +620,7 @@ Same as syncerror entity [msdyn_federatedarticleincident_SyncErrors](syncerror.m
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_federatedarticleincident_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_federatedarticleincident_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_federatedarticleincident_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_federatedarticleincident_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -635,7 +637,7 @@ Same as duplicaterecord entity [msdyn_federatedarticleincident_DuplicateMatching
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_federatedarticleincident_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_federatedarticleincident_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_federatedarticleincident_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_federatedarticleincident_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -652,7 +654,7 @@ Same as duplicaterecord entity [msdyn_federatedarticleincident_DuplicateBaseReco
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [msdyn_federatedarticleincident_AsyncOperations](asyncoperation.md#BKMK_msdyn_federatedarticleincident_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [msdyn_federatedarticleincident_AsyncOperations](asyncoperation.md#BKMK_msdyn_federatedarticleincident_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -669,7 +671,7 @@ Same as asyncoperation entity [msdyn_federatedarticleincident_AsyncOperations](a
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [msdyn_federatedarticleincident_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_federatedarticleincident_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [msdyn_federatedarticleincident_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_federatedarticleincident_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -686,7 +688,7 @@ Same as mailboxtrackingfolder entity [msdyn_federatedarticleincident_MailboxTrac
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [msdyn_federatedarticleincident_ProcessSession](processsession.md#BKMK_msdyn_federatedarticleincident_ProcessSession) Many-To-One relationship.
+Same as processsession table [msdyn_federatedarticleincident_ProcessSession](processsession.md#BKMK_msdyn_federatedarticleincident_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -703,7 +705,7 @@ Same as processsession entity [msdyn_federatedarticleincident_ProcessSession](pr
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [msdyn_federatedarticleincident_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_federatedarticleincident_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [msdyn_federatedarticleincident_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_federatedarticleincident_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -720,7 +722,7 @@ Same as bulkdeletefailure entity [msdyn_federatedarticleincident_BulkDeleteFailu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -736,7 +738,7 @@ Same as principalobjectattributeaccess entity [msdyn_federatedarticleincident_Pr
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_federatedarticleincident_createdby](#BKMK_lk_msdyn_federatedarticleincident_createdby)
 - [lk_msdyn_federatedarticleincident_createdonbehalfby](#BKMK_lk_msdyn_federatedarticleincident_createdonbehalfby)
@@ -750,40 +752,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_federatedarticleincident_createdby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_createdby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_federatedarticleincident_createdby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_federatedarticleincident_createdonbehalfby"></a> lk_msdyn_federatedarticleincident_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_federatedarticleincident_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_federatedarticleincident_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_federatedarticleincident_modifiedby"></a> lk_msdyn_federatedarticleincident_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_federatedarticleincident_modifiedby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_federatedarticleincident_modifiedby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_federatedarticleincident_modifiedonbehalfby"></a> lk_msdyn_federatedarticleincident_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_federatedarticleincident_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_federatedarticleincident_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticleincident_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_msdyn_federatedarticleincident"></a> organization_msdyn_federatedarticleincident
 
 **Added by**: System Solution Solution
 
-See organization Entity [organization_msdyn_federatedarticleincident](organization.md#BKMK_organization_msdyn_federatedarticleincident) One-To-Many relationship.
+See organization Table [organization_msdyn_federatedarticleincident](organization.md#BKMK_organization_msdyn_federatedarticleincident) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId"></a> msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId
 
-See msdyn_federatedarticle Entity [msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId](msdyn_federatedarticle.md#BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId) One-To-Many relationship.
+See msdyn_federatedarticle Table [msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId](msdyn_federatedarticle.md#BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_federatedarticleincident?text=msdyn_federatedarticleincident EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

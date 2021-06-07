@@ -1,22 +1,24 @@
 ---
-title: "QueueItem entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the QueueItem table."
-ms.date: 11/14/2020
+title: "QueueItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the QueueItem table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# QueueItem entity reference
+
+# QueueItem table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 A specific item in a queue, such as a case record or an activity record.
 
@@ -26,18 +28,18 @@ A specific item in a queue, such as a case record or an activity record.
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |AddToQueue|<xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/queueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/queueitems<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |PickFromQueue|<xref href="Microsoft.Dynamics.CRM.PickFromQueue?text=PickFromQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
 |ReleaseToQueue|<xref href="Microsoft.Dynamics.CRM.ReleaseToQueue?text=ReleaseToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
 |RemoveFromQueue|<xref href="Microsoft.Dynamics.CRM.RemoveFromQueue?text=RemoveFromQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/queueitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/queueitems<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RouteTo|<xref href="Microsoft.Dynamics.CRM.RouteTo?text=RouteTo Action" />|<xref:Microsoft.Crm.Sdk.Messages.RouteToRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -55,9 +57,9 @@ A specific item in a queue, such as a case record or an activity record.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [ObjectId](#BKMK_ObjectId)
@@ -231,7 +233,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -268,7 +270,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -367,9 +369,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -660,7 +662,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|objectidname|
-|MaxLength|300|
+|MaxLength|800|
 |RequiredLevel|None|
 |Type|String|
 
@@ -677,7 +679,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ObjectTypeCode Options
+#### ObjectTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -691,7 +693,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |4216|Social Activity|
 |4251|Recurring Appointment|
 |9953|Knowledge Article|
-|10047|Knowledge Article Template|
+|10060|Knowledge Article Template|
 
 
 
@@ -904,7 +906,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_QueueItem_AsyncOperations"></a> QueueItem_AsyncOperations
 
-Same as asyncoperation entity [QueueItem_AsyncOperations](asyncoperation.md#BKMK_QueueItem_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [QueueItem_AsyncOperations](asyncoperation.md#BKMK_QueueItem_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -919,7 +921,7 @@ Same as asyncoperation entity [QueueItem_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_QueueItem_SyncErrors"></a> QueueItem_SyncErrors
 
-Same as syncerror entity [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_SyncErrors) Many-To-One relationship.
+Same as syncerror table [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -934,7 +936,7 @@ Same as syncerror entity [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_Sync
 
 ### <a name="BKMK_QueueItem_BulkDeleteFailures"></a> QueueItem_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [QueueItem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QueueItem_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [QueueItem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QueueItem_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -949,7 +951,7 @@ Same as bulkdeletefailure entity [QueueItem_BulkDeleteFailures](bulkdeletefailur
 
 ### <a name="BKMK_queueitem_principalobjectattributeaccess"></a> queueitem_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess entity [queueitem_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queueitem_principalobjectattributeaccess) Many-To-One relationship.
+Same as principalobjectattributeaccess table [queueitem_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queueitem_principalobjectattributeaccess) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -964,7 +966,7 @@ Same as principalobjectattributeaccess entity [queueitem_principalobjectattribut
 
 ### <a name="BKMK_QueueItem_ProcessSessions"></a> QueueItem_ProcessSessions
 
-Same as processsession entity [QueueItem_ProcessSessions](processsession.md#BKMK_QueueItem_ProcessSessions) Many-To-One relationship.
+Same as processsession table [QueueItem_ProcessSessions](processsession.md#BKMK_QueueItem_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -980,7 +982,7 @@ Same as processsession entity [QueueItem_ProcessSessions](processsession.md#BKMK
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [knowledgearticle_QueueItems](#BKMK_knowledgearticle_QueueItems)
 - [lk_queueitem_createdonbehalfby](#BKMK_lk_queueitem_createdonbehalfby)
@@ -1006,90 +1008,88 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
 
-See knowledgearticle Entity [knowledgearticle_QueueItems](knowledgearticle.md#BKMK_knowledgearticle_QueueItems) One-To-Many relationship.
+See knowledgearticle Table [knowledgearticle_QueueItems](knowledgearticle.md#BKMK_knowledgearticle_QueueItems) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queueitem_createdonbehalfby"></a> lk_queueitem_createdonbehalfby
 
-See systemuser Entity [lk_queueitem_createdonbehalfby](systemuser.md#BKMK_lk_queueitem_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_queueitem_createdonbehalfby](systemuser.md#BKMK_lk_queueitem_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queueitembase_workerid"></a> lk_queueitembase_workerid
 
-See systemuser Entity [lk_queueitembase_workerid](systemuser.md#BKMK_lk_queueitembase_workerid) One-To-Many relationship.
+See systemuser Table [lk_queueitembase_workerid](systemuser.md#BKMK_lk_queueitembase_workerid) One-To-Many relationship.
 
 ### <a name="BKMK_ActivityPointer_QueueItem"></a> ActivityPointer_QueueItem
 
-See activitypointer Entity [ActivityPointer_QueueItem](activitypointer.md#BKMK_ActivityPointer_QueueItem) One-To-Many relationship.
+See activitypointer Table [ActivityPointer_QueueItem](activitypointer.md#BKMK_ActivityPointer_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_queue_entries"></a> queue_entries
 
-See queue Entity [queue_entries](queue.md#BKMK_queue_entries) One-To-Many relationship.
+See queue Table [queue_entries](queue.md#BKMK_queue_entries) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queueitembase_createdby"></a> lk_queueitembase_createdby
 
-See systemuser Entity [lk_queueitembase_createdby](systemuser.md#BKMK_lk_queueitembase_createdby) One-To-Many relationship.
+See systemuser Table [lk_queueitembase_createdby](systemuser.md#BKMK_lk_queueitembase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_queueitems"></a> organization_queueitems
 
-See organization Entity [organization_queueitems](organization.md#BKMK_organization_queueitems) One-To-Many relationship.
+See organization Table [organization_queueitems](organization.md#BKMK_organization_queueitems) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_QueueItem"></a> TransactionCurrency_QueueItem
 
-See transactioncurrency Entity [TransactionCurrency_QueueItem](transactioncurrency.md#BKMK_TransactionCurrency_QueueItem) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_QueueItem](transactioncurrency.md#BKMK_TransactionCurrency_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_Appointment_QueueItem"></a> Appointment_QueueItem
 
-See appointment Entity [Appointment_QueueItem](appointment.md#BKMK_Appointment_QueueItem) One-To-Many relationship.
+See appointment Table [Appointment_QueueItem](appointment.md#BKMK_Appointment_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_Fax_QueueItem"></a> Fax_QueueItem
 
-See fax Entity [Fax_QueueItem](fax.md#BKMK_Fax_QueueItem) One-To-Many relationship.
+See fax Table [Fax_QueueItem](fax.md#BKMK_Fax_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_team_queueitembase_workerid"></a> team_queueitembase_workerid
 
-See team Entity [team_queueitembase_workerid](team.md#BKMK_team_queueitembase_workerid) One-To-Many relationship.
+See team Table [team_queueitembase_workerid](team.md#BKMK_team_queueitembase_workerid) One-To-Many relationship.
 
 ### <a name="BKMK_Email_QueueItem"></a> Email_QueueItem
 
-See email Entity [Email_QueueItem](email.md#BKMK_Email_QueueItem) One-To-Many relationship.
+See email Table [Email_QueueItem](email.md#BKMK_Email_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_SocialActivity_QueueItem"></a> SocialActivity_QueueItem
 
-See socialactivity Entity [SocialActivity_QueueItem](socialactivity.md#BKMK_SocialActivity_QueueItem) One-To-Many relationship.
+See socialactivity Table [SocialActivity_QueueItem](socialactivity.md#BKMK_SocialActivity_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queueitem_modifiedonbehalfby"></a> lk_queueitem_modifiedonbehalfby
 
-See systemuser Entity [lk_queueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_queueitem_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_queueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_queueitem_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_PhoneCall_QueueItem"></a> PhoneCall_QueueItem
 
-See phonecall Entity [PhoneCall_QueueItem](phonecall.md#BKMK_PhoneCall_QueueItem) One-To-Many relationship.
+See phonecall Table [PhoneCall_QueueItem](phonecall.md#BKMK_PhoneCall_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_Task_QueueItem"></a> Task_QueueItem
 
-See task Entity [Task_QueueItem](task.md#BKMK_Task_QueueItem) One-To-Many relationship.
+See task Table [Task_QueueItem](task.md#BKMK_Task_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_RecurringAppointmentMaster_QueueItem"></a> RecurringAppointmentMaster_QueueItem
 
-See recurringappointmentmaster Entity [RecurringAppointmentMaster_QueueItem](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_QueueItem) One-To-Many relationship.
+See recurringappointmentmaster Table [RecurringAppointmentMaster_QueueItem](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_Letter_QueueItem"></a> Letter_QueueItem
 
-See letter Entity [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) One-To-Many relationship.
+See letter Table [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) One-To-Many relationship.
 
 ### <a name="BKMK_lk_queueitembase_modifiedby"></a> lk_queueitembase_modifiedby
 
-See systemuser Entity [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_knowledgearticletemplate_QueueItems"></a> msdyn_knowledgearticletemplate_QueueItems
 
 **Added by**: Knowledge Management Features Solution
 
-See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) One-To-Many relationship.
+See msdyn_knowledgearticletemplate Table [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.queueitem?text=queueitem EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

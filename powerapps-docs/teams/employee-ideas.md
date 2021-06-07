@@ -8,6 +8,10 @@ ms.date: 10/15/2020
 author: navjotm
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Employee ideas sample app
@@ -264,13 +268,9 @@ To delete an idea:
 
 ### See also
 
+- [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins (Preview) sample apps](bulletins.md)
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

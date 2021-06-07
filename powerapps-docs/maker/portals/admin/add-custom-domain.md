@@ -1,13 +1,16 @@
 ---
-title: "Add a custom domain name | MicrosoftDocs"
-description: "Instructions to add a custom domain name."
+title: Add a custom domain name
+description: Learn how to to add a custom domain name to your portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/25/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add a custom domain name
@@ -30,7 +33,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
      > [!NOTE]
      > The SSL certificate must meet all the following requirements:
      > - Signed by a trusted certificate authority.
-     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps&preserve-view=true) as a password-protected PFX file.
+     > - [Exported](/powershell/module/pkiclient/export-pfxcertificate?preserve-view=true&view=win10-ps) as a password-protected PFX file.
      > - Contains private key at least 2048 bits long.
      > - Contains all intermediate certificates in the certificate chain.
      > - Must be SHA2 enabled; SHA1 support is being removed from popular browsers.
@@ -58,7 +61,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
     
 ### See also
 
-[Microsoft Learn: Configure SSL certificates and custom domain names](https://docs.microsoft.com/learn/modules/portals-administration/2-custom-domain)
+[Microsoft Learn: Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

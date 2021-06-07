@@ -1,6 +1,6 @@
 ---
 title: " Increment component| Microsoft Docs" 
-description: "Implementing a increment component" 
+description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing increment component
 
 This sample component shows how to bind data with Power Apps component framework and error handling. This component renders as a textbox with an `Increment` button in the runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox is increased by 1. The increment value can be changed to any number you wish.
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IncrementControl).
 

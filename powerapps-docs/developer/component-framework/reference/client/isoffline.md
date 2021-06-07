@@ -1,6 +1,6 @@
 ---
 title: isOffline | Microsoft Docs
-description: 
+description: Returns the information whether the server is online or offline.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

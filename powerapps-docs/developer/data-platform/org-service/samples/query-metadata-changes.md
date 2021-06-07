@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to retrieve and detect metadata changes using [RetrieveMetadataChangeRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery).
+This sample shows how to retrieve and detect metadata changes using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery).
 
 ## How to run this sample
 
@@ -29,7 +29,7 @@ This sample shows how to retrieve and detect metadata changes using [RetrieveMet
 
 ## What this sample does
 
-The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data  that is needed to retrieve a collection of metadata records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse?view=dynamics-general-ce-9) returns a timestamp value that can be used with this request at a later time to return information about how metadata has changed since the last request.
+The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data  that is needed to retrieve a collection of metadata records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse?view=dynamics-general-ce-9) returns a timestamp value that can be used with this request at a later time to return information about how metadata has changed since the last request.
 
 ## How this sample works
 

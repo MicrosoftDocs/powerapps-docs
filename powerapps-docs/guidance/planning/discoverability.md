@@ -69,7 +69,7 @@ is a good way to showcase your app if it was meant to be used
 by the entire company&mdash;for example, for employee search or company news.
 
 For information about how to use PowerShell scripts with Power Apps to set up Featured
-Apps, see [PowerShell support for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview)
+Apps, see [PowerShell support for Power Apps](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview)
 
 ## QR codes
 
@@ -102,7 +102,7 @@ process.
 
 ![A screenshot of an app embedded in Teams](media/add-app-as-tab.png "A screenshot of an app embedded in Teams")
 
-More information: [Embed an app in Teams](../../maker/canvas-apps/embed-teams-app.md)
+More information: [Embed an app in Teams](../../teams/embed-teams-app.md)
 
 ## Tie-ins to existing web apps and portals
 

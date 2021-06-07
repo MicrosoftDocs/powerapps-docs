@@ -1,13 +1,16 @@
 ---
-title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
-description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
+title: View portal error logs
+description: Learn how to view portal error logs and store them in your Azure Blob storage account.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # View portal error logs
@@ -31,7 +34,7 @@ To enable YSOD, you need to [disable custom errors](#disable-custom-error) on yo
 > [!NOTE]
 > It is advisable to only disable custom errors when you are in the development phase and enable custom errors once you go live.
 
-More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
+More information on custom error: [Displaying a Custom Error Page](/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
 
 ### Disable custom error
 
@@ -107,7 +110,7 @@ After developing and publishing the portal, you still need to be able to access 
 
 3. In the **Enable diagnostic logging** window, enter the following values:
 
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -144,7 +147,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 3. In the Update diagnostic logging configuration window, enter the following values:
    - **Do you want to update the Connection string of the Azure Blob Storage service?**: Allows you to specify whether to update the connection string of the Azure Blob Storage service. By default, it is selected.
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -179,12 +182,12 @@ Another scenario that often occurs while developing a portal is an error generat
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 
 Following are the screens where custom plugin errors will appear: 
-- Entity list 
+- List 
     - Retrieval of records 
-- Entity form 
+- Basic form 
     - Retrieve 
     - Create/Update and so on 
-- Web forms 
+- Advanced forms 
     - Retrieve 
     - Create/Update and so on
 
@@ -192,7 +195,7 @@ If the site setting is not present, then it will be treated as false by default 
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

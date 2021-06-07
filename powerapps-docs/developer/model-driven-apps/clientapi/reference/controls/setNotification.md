@@ -1,6 +1,7 @@
 ---
 title: "setNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the setNotification method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,7 +21,7 @@ Displays an error message for the control to indicate that data isn’t valid. 
 
 ## Control types supported
 
-Standard, lookup, multiselectoptionset and optionset control types.
+Standard, lookup, choices and choice control types.
 
 ## Syntax
 

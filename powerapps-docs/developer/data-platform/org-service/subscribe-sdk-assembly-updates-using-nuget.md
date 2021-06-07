@@ -1,7 +1,7 @@
 ---
 title: "Subscribe to SDK assembly updates using NuGet (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: ".NET SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+description: "Microsoft Dataverse (.NET Framework) SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.custom: intro-internal
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
@@ -15,11 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Subscribe to SDK assembly updates using NuGet
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
-.NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](https://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
+.NET Framework based SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](https://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
   
 <a name="BKMK_GetNuGetPackages"></a>
 
@@ -44,16 +43,17 @@ The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk
 |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool/)|Contains the Plugin Registration Tool required to manage Plugin assemblies,Workflow assemblies,Virtual Entitles, and Service endpoints for Microsoft Dynamics 365.|
 |[Microsoft.CrmSdk.XrmTooling.WpfControls](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.WpfControls/)|Contains the Microsoft.Xrm.Tooling.CrmConnectControl.dll, Microsoft.Xrm.Tooling.Ui.Styles.dll, and Microsoft.Xrm.Tooling.WebResourceUtility.dll assemblies|
 
-## How to install a package in your project  
- For information about installing NuGet  packages into your project, see [Managing NuGet Packages Using the Dialog](https://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog).  
+## How to install a package in your project
 
-## Download Tools from Nuget
+ For information about installing NuGet  packages into your project, see [Managing NuGet packages Using the dialog](https://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog).  
 
-You can download tools used in development from NuGet using the  powershell script found in this topic: [Download tools from NuGet](../download-tools-nuget.md)
+## Download Tools from NuGet
+
+You can download tools used in development from NuGet using the powershell script found in this topic: [Download tools from NuGet](../download-tools-nuget.md)
   
-### See also  
- [NuGet Documentation](/nuget/)   
- [Installing NuGet](https://docs.nuget.org/docs/start-here/installing-nuget)
+### See also
 
+ [NuGet Documentation](/nuget/)  
+ [Installing NuGet](https://docs.nuget.org/docs/start-here/installing-nuget)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

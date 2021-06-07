@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -30,7 +30,7 @@ search.app:
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   
 > [!NOTE]
->  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
+>  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
   
 <a name="BKMK_SysAdminAndSysCustomizer"></a>   
 ## System Administrator and System Customizer security roles  

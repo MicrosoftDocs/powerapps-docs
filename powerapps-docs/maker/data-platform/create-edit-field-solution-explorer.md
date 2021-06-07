@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to Create and edit columns for Dataverse.
+Solution explorer provides one way to create and edit columns for Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit columns for Dataverse](create-edit-fields.md)
@@ -57,7 +57,7 @@ You can select the following views:
 While viewing columns, in the command bar, click **New** which will open the new column form.  Some standard tables or custom tables that are included in a managed solution might not allow you to add new columns.
 
 > [!NOTE]
-> For model-driven apps you can also create a new column from the form editor. In the form editor, below the **Column Explorer** click **New Column** to create a new column. More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
+> For model-driven apps you can also create a new column from the form editor. In the form editor, below the **Column Explorer** click **New Column** to create a new column. More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md)
 
 ![Solution explorer new column form](media/solution-explorer-new-field-form.png)
 
@@ -221,7 +221,7 @@ Once you have configured the column, use one of three commands in the command ba
 While [viewing columns](#view-columns), select the column you want to edit. Some standard columns or custom columns that are included in a managed solution might not allow you to edit them.
 
 > [!NOTE]
-> When editing a form, for any column already added to the form you can double-click the column to display the **Column Properties**. On the **Details** tab, click **Edit**. More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
+> When editing a form, for any column already added to the form you can double-click the column to display the **Column Properties**. On the **Details** tab, click **Edit**. More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md) 
 
 After you make changes to a column, you must publish customizations. 
 

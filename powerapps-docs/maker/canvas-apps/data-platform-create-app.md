@@ -5,9 +5,11 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: quickstart
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
-ms.date: 12/05/2019
+ms.date: 05/24/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -24,7 +26,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](/power-platform/admin/working-with-environments) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
 
 ## Create an app
 
@@ -51,13 +53,17 @@ By default, the gallery shows an email address, a city, and an account name. As 
 ## Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
 
-1. Near the upper-left corner, select the **File** tab.
+1. Near the upper-left corner, select the **File** menu.
 
-1. In the **App settings** page, set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
+1. Select **Settings**.
+
+1. Set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
 
 	![App settings page](./media/data-platform-create-app/app-settings.png)
 
-1. Near the left edge, select **Save** and then, in the lower-left corner, select **Save**.
+1. Close the settings dialog.
+
+1. Near the left edge, select **Save as** and then, in the lower-right corner, select **Save**.
 
 ## Next steps
 In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.

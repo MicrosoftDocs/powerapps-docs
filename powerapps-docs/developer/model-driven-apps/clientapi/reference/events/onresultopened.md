@@ -1,6 +1,7 @@
 ---
-title: "OnResultOpened Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "OnResultOpened event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the OnResultOpened event.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,9 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# OnResultOpened Event (Client API reference)
-
-
+# OnResultOpened event (Client API reference)
 
 This event occurs when a knowledge base article is opened in the knowledge base search control in line or through the pop-out action. Use the [addOnResultOpened](../controls/addOnResultOpened.md) and [removeOnResultOpened](../controls/removeOnResultOpened.md) methods to manage event handlers for this event. 
 

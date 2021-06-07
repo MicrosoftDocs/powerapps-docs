@@ -1,22 +1,24 @@
 ---
-title: "msdyn_solutionhealthruleset entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_solutionhealthruleset table."
-ms.date: 11/14/2020
+title: "msdyn_solutionhealthruleset table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_solutionhealthruleset table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_solutionhealthruleset entity reference
+
+# msdyn_solutionhealthruleset table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Represents a set that owns a number of solution health rules.
 
@@ -27,15 +29,15 @@ Represents a set that owns a number of solution health rules.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrulesets(*msdyn_solutionhealthrulesetid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +55,9 @@ Represents a set that owns a number of solution health rules.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_description](#BKMK_msdyn_description)
@@ -177,7 +179,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -198,7 +200,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -240,9 +242,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -573,7 +575,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [msdyn_solutionhealthruleset_SyncErrors](syncerror.md#BKMK_msdyn_solutionhealthruleset_SyncErrors) Many-To-One relationship.
+Same as syncerror table [msdyn_solutionhealthruleset_SyncErrors](syncerror.md#BKMK_msdyn_solutionhealthruleset_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -590,7 +592,7 @@ Same as syncerror entity [msdyn_solutionhealthruleset_SyncErrors](syncerror.md#B
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_solutionhealthruleset_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleset_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_solutionhealthruleset_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleset_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -607,7 +609,7 @@ Same as duplicaterecord entity [msdyn_solutionhealthruleset_DuplicateMatchingRec
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_solutionhealthruleset_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleset_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_solutionhealthruleset_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleset_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -624,7 +626,7 @@ Same as duplicaterecord entity [msdyn_solutionhealthruleset_DuplicateBaseRecord]
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [msdyn_solutionhealthruleset_AsyncOperations](asyncoperation.md#BKMK_msdyn_solutionhealthruleset_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [msdyn_solutionhealthruleset_AsyncOperations](asyncoperation.md#BKMK_msdyn_solutionhealthruleset_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -641,7 +643,7 @@ Same as asyncoperation entity [msdyn_solutionhealthruleset_AsyncOperations](asyn
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [msdyn_solutionhealthruleset_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_solutionhealthruleset_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [msdyn_solutionhealthruleset_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_solutionhealthruleset_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -658,7 +660,7 @@ Same as mailboxtrackingfolder entity [msdyn_solutionhealthruleset_MailboxTrackin
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [msdyn_solutionhealthruleset_ProcessSession](processsession.md#BKMK_msdyn_solutionhealthruleset_ProcessSession) Many-To-One relationship.
+Same as processsession table [msdyn_solutionhealthruleset_ProcessSession](processsession.md#BKMK_msdyn_solutionhealthruleset_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -675,7 +677,7 @@ Same as processsession entity [msdyn_solutionhealthruleset_ProcessSession](proce
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [msdyn_solutionhealthruleset_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_solutionhealthruleset_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [msdyn_solutionhealthruleset_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_solutionhealthruleset_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -692,7 +694,7 @@ Same as bulkdeletefailure entity [msdyn_solutionhealthruleset_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -707,7 +709,7 @@ Same as principalobjectattributeaccess entity [msdyn_solutionhealthruleset_Princ
 
 ### <a name="BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi"></a> msdyn_msdyn_solutionhealthruleset_msdyn_analysi
 
-Same as msdyn_analysiscomponent entity [msdyn_msdyn_solutionhealthruleset_msdyn_analysi](msdyn_analysiscomponent.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi) Many-To-One relationship.
+Same as msdyn_analysiscomponent table [msdyn_msdyn_solutionhealthruleset_msdyn_analysi](msdyn_analysiscomponent.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_analysi) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -722,7 +724,7 @@ Same as msdyn_analysiscomponent entity [msdyn_msdyn_solutionhealthruleset_msdyn_
 
 ### <a name="BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio"></a> msdyn_msdyn_solutionhealthruleset_msdyn_solutio
 
-Same as msdyn_solutionhealthrule entity [msdyn_msdyn_solutionhealthruleset_msdyn_solutio](msdyn_solutionhealthrule.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio) Many-To-One relationship.
+Same as msdyn_solutionhealthrule table [msdyn_msdyn_solutionhealthruleset_msdyn_solutio](msdyn_solutionhealthrule.md#BKMK_msdyn_msdyn_solutionhealthruleset_msdyn_solutio) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -738,7 +740,7 @@ Same as msdyn_solutionhealthrule entity [msdyn_msdyn_solutionhealthruleset_msdyn
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_solutionhealthruleset_createdby](#BKMK_lk_msdyn_solutionhealthruleset_createdby)
 - [lk_msdyn_solutionhealthruleset_createdonbehalfby](#BKMK_lk_msdyn_solutionhealthruleset_createdonbehalfby)
@@ -751,36 +753,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_solutionhealthruleset_createdby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_createdby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_solutionhealthruleset_createdby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleset_createdonbehalfby"></a> lk_msdyn_solutionhealthruleset_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_solutionhealthruleset_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_solutionhealthruleset_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleset_modifiedby"></a> lk_msdyn_solutionhealthruleset_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_solutionhealthruleset_modifiedby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_solutionhealthruleset_modifiedby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleset_modifiedonbehalfby"></a> lk_msdyn_solutionhealthruleset_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_solutionhealthruleset_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_solutionhealthruleset_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleset_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_msdyn_solutionhealthruleset"></a> organization_msdyn_solutionhealthruleset
 
 **Added by**: System Solution Solution
 
-See organization Entity [organization_msdyn_solutionhealthruleset](organization.md#BKMK_organization_msdyn_solutionhealthruleset) One-To-Many relationship.
+See organization Table [organization_msdyn_solutionhealthruleset](organization.md#BKMK_organization_msdyn_solutionhealthruleset) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthruleset?text=msdyn_solutionhealthruleset EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,22 +1,24 @@
 ---
-title: "botcomponent entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the botcomponent table."
-ms.date: 11/14/2020
+title: "botcomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the botcomponent table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# botcomponent entity reference
+
+# botcomponent table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Holds key authoring components of a Chatbot such a topics, entities, variables, etc.
 
@@ -27,21 +29,21 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/botcomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/botcomponents<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/botcomponents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/botcomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [botcomponentId](#BKMK_botcomponentId)
 - [Category](#BKMK_Category)
@@ -127,7 +129,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
 
-#### ComponentType Options
+#### ComponentType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -139,6 +141,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |5|Trigger|
 |6|Language understanding|
 |7|Language generation|
+|8|Dialog schema|
 
 
 
@@ -237,7 +240,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Language Options
+#### Language Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -371,7 +374,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -392,7 +395,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -434,9 +437,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -496,7 +499,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -640,7 +643,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -952,7 +955,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) Many-To-One relationship.
+Same as syncerror table [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -969,7 +972,7 @@ Same as syncerror entity [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponen
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -986,7 +989,7 @@ Same as asyncoperation entity [botcomponent_AsyncOperations](asyncoperation.md#B
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1003,7 +1006,7 @@ Same as mailboxtrackingfolder entity [botcomponent_MailboxTrackingFolders](mailb
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) Many-To-One relationship.
+Same as processsession table [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1020,7 +1023,7 @@ Same as processsession entity [botcomponent_ProcessSession](processsession.md#BK
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1037,7 +1040,7 @@ Same as bulkdeletefailure entity [botcomponent_BulkDeleteFailures](bulkdeletefai
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1052,7 +1055,7 @@ Same as principalobjectattributeaccess entity [botcomponent_PrincipalObjectAttri
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-Same as botcomponent entity [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) Many-To-One relationship.
+Same as botcomponent table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1068,7 +1071,7 @@ Same as botcomponent entity [botcomponent_parent_botcomponent](botcomponent.md#B
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_botcomponent_createdby](#BKMK_lk_botcomponent_createdby)
 - [lk_botcomponent_createdonbehalfby](#BKMK_lk_botcomponent_createdonbehalfby)
@@ -1084,66 +1087,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) One-To-Many relationship.
+See systemuser Table [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_botcomponent_createdonbehalfby"></a> lk_botcomponent_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_botcomponent_modifiedby"></a> lk_botcomponent_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_botcomponent_modifiedonbehalfby"></a> lk_botcomponent_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_user_botcomponent"></a> user_botcomponent
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [user_botcomponent](systemuser.md#BKMK_user_botcomponent) One-To-Many relationship.
+See systemuser Table [user_botcomponent](systemuser.md#BKMK_user_botcomponent) One-To-Many relationship.
 
 ### <a name="BKMK_team_botcomponent"></a> team_botcomponent
 
 **Added by**: System Solution Solution
 
-See team Entity [team_botcomponent](team.md#BKMK_team_botcomponent) One-To-Many relationship.
+See team Table [team_botcomponent](team.md#BKMK_team_botcomponent) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_botcomponent"></a> business_unit_botcomponent
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) One-To-Many relationship.
+See businessunit Table [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) One-To-Many relationship.
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-See botcomponent Entity [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) One-To-Many relationship.
+See botcomponent Table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the botcomponent entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the botcomponent table is the first table in the relationship. Listed by **SchemaName**.
 
 - [bot_botcomponent](#BKMK_bot_botcomponent)
 - [botcomponent_botcomponent](#BKMK_botcomponent_botcomponent)
+- [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
 
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
 
-See bot Entity [bot_botcomponent](bot.md#BKMK_bot_botcomponent) Many-To-Many Relationship.
+See bot Table [bot_botcomponent](bot.md#BKMK_bot_botcomponent) Many-To-Many Relationship.
 
 ### <a name="BKMK_botcomponent_botcomponent"></a> botcomponent_botcomponent
 
 IntersectEntityName: botcomponent_botcomponent<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -1153,7 +1157,7 @@ IntersectEntityName: botcomponent_botcomponent<br />
 |NavigationPropertyName|botcomponent_botcomponent|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -1163,10 +1167,33 @@ IntersectEntityName: botcomponent_botcomponent<br />
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 
+### <a name="BKMK_botcomponent_environmentvariabledefinition"></a> botcomponent_environmentvariabledefinition
+
+IntersectEntityName: botcomponent_environmentvariabledefinition<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|environmentvariabledefinition|
+|IntersectAttribute|environmentvariabledefinitionid|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
 ### <a name="BKMK_botcomponent_workflow"></a> botcomponent_workflow
 
 IntersectEntityName: botcomponent_workflow<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -1176,7 +1203,7 @@ IntersectEntityName: botcomponent_workflow<br />
 |NavigationPropertyName|botcomponent_workflow|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -1188,8 +1215,5 @@ IntersectEntityName: botcomponent_workflow<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />

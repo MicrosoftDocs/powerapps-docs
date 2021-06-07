@@ -1,5 +1,5 @@
 ---
-title: "Make model-driven app grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
+title: "Make model-driven app views and grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
 description: "Learn how to use the editable grid custom control"
 ms.custom: ""
 ms.date: 04/09/2020
@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -23,15 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Make model-driven app grids (lists) editable using the Editable Grid custom control
+# Make model-driven app views editable using the editable grid control
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the row in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
+By default, users can't enter data directly using the read-only view control for views and sub-grids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
  ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the Editable Grids custom control, users can edit most types of columns, including basic Lookup columns and choices.  
+ When editable grids are enabled through the Editable Grids control, users can edit most types of columns, including basic Lookup columns and choices.  
 
 **Editable grids support:**
   
@@ -144,7 +144,7 @@ Grouping behavior works only on the client side and does not span pages. Group b
 Business Rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
 
 ## Next steps  
- [Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
+ [Use keyboard shortcuts in editable grids](/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
 
 
 

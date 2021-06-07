@@ -1,6 +1,6 @@
 ---
 title: setFilter | Microsoft Docs
-description: 
+description: Sets the top-most filter associated with the data-set.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

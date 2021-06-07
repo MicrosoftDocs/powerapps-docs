@@ -1,6 +1,6 @@
 ---
 title: openUrl | Microsoft Docs
-description: 
+description: Opens a url, including file urls.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -2,7 +2,7 @@
 title: "Understand charts: Underlying data and chart representation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/27/2020
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Understand charts: Underlying data and chart representation
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/understand-charts-underlying-data-chart-representation -->
 
 Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the *category* axis and the y axis is called the *series* axis. The category axis can display numeric as well as non-numeric values whereas the series axis only displays numeric values.  
   
@@ -43,13 +41,15 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 
  The data description XML string defines the data that is displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
   
- You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
+ You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` for the organization-owned or user-owned chart respectively.  
   
  The data description XML string contains the following two elements: `<FetchCollection>` and `<CategoryCollection>`.  
-  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 ### The \<FetchCollection> element 
  
- The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the entity attributes, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Use FetchXML aggregation](../data-platform/use-fetchxml-aggregation.md).  
+ The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the table columns, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Use FetchXML aggregation](../data-platform/use-fetchxml-aggregation.md).  
   
  The FetchXML query enables you to filter your data. Also, filters are applied on charts through views. Therefore, if a filter condition is already specified in the FetchXML query in the `<FetchCollection>` element, and additionally a filter is applied through a view, the chart will display data that is returned after it applies all the filters. For more information about how to use the FetchXML query to filter data, see [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md).  
   
@@ -92,9 +92,9 @@ For more sample data description XML strings, see [Sample Charts](sample-charts.
   
 ## Use the presentation description XML string to specify data representation 
 
-The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
+The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](/dotnet/api/system.web.ui.datavisualization.charting.chart) class in Microsoft Chart Controls. More information: [Chart Controls](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))  
 
-You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.
+You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` for the organization-owned or user-owned chart, respectively.
 
 > [!IMPORTANT]
 > In Unified Interface, only a subset of properties are supported. More information: [Supported methods and properties in Unified Interface](#methods-and-properties-supported-in-unified-interface)
@@ -262,7 +262,7 @@ Represents the legend for the chart image.
 
 ### Series
 
-Stores data points and series attributes.
+Stores data points and series.
 
 **Properties**
 
@@ -322,13 +322,13 @@ Unified Interface supports the following color formats in chart presentation xml
 ### See also  
 
 [Visualizations (Charts)](view-data-with-visualizations-charts.md)   
-[Actions on Visualizations (Charts)](actions-visualizations-charts.md)   
-[Create a Chart](create-visualization-chart.md)   
+[Actions on visualizations (Charts)](actions-visualizations-charts.md)   
+[Create a chart](create-visualization-chart.md)   
 [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md)   
 [FetchXML schema](../data-platform/fetchxml-schema.md)
-[Visualization Data Description Schema](visualization-data-description-schema.md)   
-[Sample Charts](sample-charts.md)   
-[Chart Class (Microsoft Chart Controls)](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx)
+[Visualization data description schema](visualization-data-description-schema.md)   
+[Sample charts](sample-charts.md)   
+[Chart class (Microsoft Chart Controls)](/dotnet/api/system.web.ui.datavisualization.charting.chart)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

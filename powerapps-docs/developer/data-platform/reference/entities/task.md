@@ -1,22 +1,24 @@
 ---
-title: "Task entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Task table."
-ms.date: 11/14/2020
+title: "Task table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Task table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Task entity reference
+
+# Task table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Generic activity representing work needed to be done.
 
@@ -25,20 +27,20 @@ Generic activity representing work needed to be done.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/tasks<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/tasks<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/tasks<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/tasks<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/tasks(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -56,9 +58,9 @@ Generic activity representing work needed to be done.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityAdditionalParams](#BKMK_ActivityAdditionalParams)
 - [ActivityId](#BKMK_ActivityId)
@@ -246,7 +248,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsBilled Options
+#### IsBilled Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -269,7 +271,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsWorkflowCreated Options
+#### IsWorkflowCreated Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -366,7 +368,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### PriorityCode Options
+#### PriorityCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -501,7 +503,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -523,7 +525,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -645,9 +647,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivityTypeCode](#BKMK_ActivityTypeCode)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -830,7 +832,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRegularActivity Options
+#### IsRegularActivity Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1187,7 +1189,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_task_PostFollows"></a> task_PostFollows
 
-Same as postfollow entity [task_PostFollows](postfollow.md#BKMK_task_PostFollows) Many-To-One relationship.
+Same as postfollow table [task_PostFollows](postfollow.md#BKMK_task_PostFollows) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1202,7 +1204,7 @@ Same as postfollow entity [task_PostFollows](postfollow.md#BKMK_task_PostFollows
 
 ### <a name="BKMK_Task_SyncErrors"></a> Task_SyncErrors
 
-Same as syncerror entity [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) Many-To-One relationship.
+Same as syncerror table [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1217,7 +1219,7 @@ Same as syncerror entity [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) Ma
 
 ### <a name="BKMK_Task_QueueItem"></a> Task_QueueItem
 
-Same as queueitem entity [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) Many-To-One relationship.
+Same as queueitem table [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1232,7 +1234,7 @@ Same as queueitem entity [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) Many
 
 ### <a name="BKMK_Task_DuplicateBaseRecord"></a> Task_DuplicateBaseRecord
 
-Same as duplicaterecord entity [Task_DuplicateBaseRecord](duplicaterecord.md#BKMK_Task_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [Task_DuplicateBaseRecord](duplicaterecord.md#BKMK_Task_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1247,7 +1249,7 @@ Same as duplicaterecord entity [Task_DuplicateBaseRecord](duplicaterecord.md#BKM
 
 ### <a name="BKMK_task_connections2"></a> task_connections2
 
-Same as connection entity [task_connections2](connection.md#BKMK_task_connections2) Many-To-One relationship.
+Same as connection table [task_connections2](connection.md#BKMK_task_connections2) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1262,7 +1264,7 @@ Same as connection entity [task_connections2](connection.md#BKMK_task_connection
 
 ### <a name="BKMK_Task_DuplicateMatchingRecord"></a> Task_DuplicateMatchingRecord
 
-Same as duplicaterecord entity [Task_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Task_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [Task_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Task_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1277,7 +1279,7 @@ Same as duplicaterecord entity [Task_DuplicateMatchingRecord](duplicaterecord.md
 
 ### <a name="BKMK_task_activity_parties"></a> task_activity_parties
 
-Same as activityparty entity [task_activity_parties](activityparty.md#BKMK_task_activity_parties) Many-To-One relationship.
+Same as activityparty table [task_activity_parties](activityparty.md#BKMK_task_activity_parties) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1292,7 +1294,7 @@ Same as activityparty entity [task_activity_parties](activityparty.md#BKMK_task_
 
 ### <a name="BKMK_Task_ProcessSessions"></a> Task_ProcessSessions
 
-Same as processsession entity [Task_ProcessSessions](processsession.md#BKMK_Task_ProcessSessions) Many-To-One relationship.
+Same as processsession table [Task_ProcessSessions](processsession.md#BKMK_Task_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1307,7 +1309,7 @@ Same as processsession entity [Task_ProcessSessions](processsession.md#BKMK_Task
 
 ### <a name="BKMK_Task_BulkDeleteFailures"></a> Task_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [Task_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Task_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [Task_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Task_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1322,7 +1324,7 @@ Same as bulkdeletefailure entity [Task_BulkDeleteFailures](bulkdeletefailure.md#
 
 ### <a name="BKMK_task_principalobjectattributeaccess"></a> task_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess entity [task_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_task_principalobjectattributeaccess) Many-To-One relationship.
+Same as principalobjectattributeaccess table [task_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_task_principalobjectattributeaccess) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1337,7 +1339,7 @@ Same as principalobjectattributeaccess entity [task_principalobjectattributeacce
 
 ### <a name="BKMK_task_actioncard"></a> task_actioncard
 
-Same as actioncard entity [task_actioncard](actioncard.md#BKMK_task_actioncard) Many-To-One relationship.
+Same as actioncard table [task_actioncard](actioncard.md#BKMK_task_actioncard) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1352,7 +1354,7 @@ Same as actioncard entity [task_actioncard](actioncard.md#BKMK_task_actioncard) 
 
 ### <a name="BKMK_slakpiinstance_task"></a> slakpiinstance_task
 
-Same as slakpiinstance entity [slakpiinstance_task](slakpiinstance.md#BKMK_slakpiinstance_task) Many-To-One relationship.
+Same as slakpiinstance table [slakpiinstance_task](slakpiinstance.md#BKMK_slakpiinstance_task) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1367,7 +1369,7 @@ Same as slakpiinstance entity [slakpiinstance_task](slakpiinstance.md#BKMK_slakp
 
 ### <a name="BKMK_Task_Annotation"></a> Task_Annotation
 
-Same as annotation entity [Task_Annotation](annotation.md#BKMK_Task_Annotation) Many-To-One relationship.
+Same as annotation table [Task_Annotation](annotation.md#BKMK_Task_Annotation) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1382,7 +1384,7 @@ Same as annotation entity [Task_Annotation](annotation.md#BKMK_Task_Annotation) 
 
 ### <a name="BKMK_task_connections1"></a> task_connections1
 
-Same as connection entity [task_connections1](connection.md#BKMK_task_connections1) Many-To-One relationship.
+Same as connection table [task_connections1](connection.md#BKMK_task_connections1) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1397,7 +1399,7 @@ Same as connection entity [task_connections1](connection.md#BKMK_task_connection
 
 ### <a name="BKMK_Task_AsyncOperations"></a> Task_AsyncOperations
 
-Same as asyncoperation entity [Task_AsyncOperations](asyncoperation.md#BKMK_Task_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [Task_AsyncOperations](asyncoperation.md#BKMK_Task_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1413,7 +1415,7 @@ Same as asyncoperation entity [Task_AsyncOperations](asyncoperation.md#BKMK_Task
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [KnowledgeBaseRecord_Tasks](#BKMK_KnowledgeBaseRecord_Tasks)
 - [business_unit_task_activities](#BKMK_business_unit_task_activities)
@@ -1435,72 +1437,70 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
 
-See knowledgebaserecord Entity [KnowledgeBaseRecord_Tasks](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Tasks) One-To-Many relationship.
+See knowledgebaserecord Table [KnowledgeBaseRecord_Tasks](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Tasks) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_task_activities"></a> business_unit_task_activities
 
-See businessunit Entity [business_unit_task_activities](businessunit.md#BKMK_business_unit_task_activities) One-To-Many relationship.
+See businessunit Table [business_unit_task_activities](businessunit.md#BKMK_business_unit_task_activities) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_Task"></a> TransactionCurrency_Task
 
-See transactioncurrency Entity [TransactionCurrency_Task](transactioncurrency.md#BKMK_TransactionCurrency_Task) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_Task](transactioncurrency.md#BKMK_TransactionCurrency_Task) One-To-Many relationship.
 
 ### <a name="BKMK_lk_task_createdby"></a> lk_task_createdby
 
-See systemuser Entity [lk_task_createdby](systemuser.md#BKMK_lk_task_createdby) One-To-Many relationship.
+See systemuser Table [lk_task_createdby](systemuser.md#BKMK_lk_task_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_user_task"></a> user_task
 
-See systemuser Entity [user_task](systemuser.md#BKMK_user_task) One-To-Many relationship.
+See systemuser Table [user_task](systemuser.md#BKMK_user_task) One-To-Many relationship.
 
 ### <a name="BKMK_KnowledgeArticle_Tasks"></a> KnowledgeArticle_Tasks
 
-See knowledgearticle Entity [KnowledgeArticle_Tasks](knowledgearticle.md#BKMK_KnowledgeArticle_Tasks) One-To-Many relationship.
+See knowledgearticle Table [KnowledgeArticle_Tasks](knowledgearticle.md#BKMK_KnowledgeArticle_Tasks) One-To-Many relationship.
 
 ### <a name="BKMK_team_task"></a> team_task
 
-See team Entity [team_task](team.md#BKMK_team_task) One-To-Many relationship.
+See team Table [team_task](team.md#BKMK_team_task) One-To-Many relationship.
 
 ### <a name="BKMK_lk_task_createdonbehalfby"></a> lk_task_createdonbehalfby
 
-See systemuser Entity [lk_task_createdonbehalfby](systemuser.md#BKMK_lk_task_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_task_createdonbehalfby](systemuser.md#BKMK_lk_task_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_activity_pointer_task"></a> activity_pointer_task
 
-See activitypointer Entity [activity_pointer_task](activitypointer.md#BKMK_activity_pointer_task) One-To-Many relationship.
+See activitypointer Table [activity_pointer_task](activitypointer.md#BKMK_activity_pointer_task) One-To-Many relationship.
 
 ### <a name="BKMK_Account_Tasks"></a> Account_Tasks
 
-See account Entity [Account_Tasks](account.md#BKMK_Account_Tasks) One-To-Many relationship.
+See account Table [Account_Tasks](account.md#BKMK_Account_Tasks) One-To-Many relationship.
 
 ### <a name="BKMK_Contact_Tasks"></a> Contact_Tasks
 
-See contact Entity [Contact_Tasks](contact.md#BKMK_Contact_Tasks) One-To-Many relationship.
+See contact Table [Contact_Tasks](contact.md#BKMK_Contact_Tasks) One-To-Many relationship.
 
 ### <a name="BKMK_lk_task_modifiedby"></a> lk_task_modifiedby
 
-See systemuser Entity [lk_task_modifiedby](systemuser.md#BKMK_lk_task_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_task_modifiedby](systemuser.md#BKMK_lk_task_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_processstage_tasks"></a> processstage_tasks
 
-See processstage Entity [processstage_tasks](processstage.md#BKMK_processstage_tasks) One-To-Many relationship.
+See processstage Table [processstage_tasks](processstage.md#BKMK_processstage_tasks) One-To-Many relationship.
 
 ### <a name="BKMK_sla_task"></a> sla_task
 
-See sla Entity [sla_task](sla.md#BKMK_sla_task) One-To-Many relationship.
+See sla Table [sla_task](sla.md#BKMK_sla_task) One-To-Many relationship.
 
 ### <a name="BKMK_manualsla_task"></a> manualsla_task
 
-See sla Entity [manualsla_task](sla.md#BKMK_manualsla_task) One-To-Many relationship.
+See sla Table [manualsla_task](sla.md#BKMK_manualsla_task) One-To-Many relationship.
 
 ### <a name="BKMK_lk_task_modifiedonbehalfby"></a> lk_task_modifiedonbehalfby
 
-See systemuser Entity [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.task?text=task EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

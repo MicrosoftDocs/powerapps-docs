@@ -1,5 +1,6 @@
 ---
 title: "Work with any type of app | MicrosoftDocs"
+description: Learn how Microsoft Dataverse provides multiple ways to integrate with any type of app, device, system, or service.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
@@ -21,9 +22,7 @@ search.app:
 
 # Work with any type of app 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-Microsoft Dataverse provides multiple ways to integrate in any type of app&&mdash;mobile, web, desktop, device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
+Microsoft Dataverse provides multiple ways to integrate in any type of app (mobile, web, desktop), device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
 works well if solutions are running inside of containers.
 
 In some cases, integration with an app can be achieved by using business logic contained in Dataverse. In other cases, it will involve integration via events, the Dataverse OData API, or using plug-ins.
@@ -32,13 +31,13 @@ In some cases, integration with an app can be achieved by using business logic c
 
 tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
 
-- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule)
+- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](./data-platform-create-business-rule.md)
 
 - **Business process flows**: Guide users to ensure that they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business processes flows overview](/power-automate/business-process-flows-overview)
 
 - **Workflows**: Automate business processes without user interaction. More information: [Classic Dataverse workflows](/power-automate/workflow-processes)
 
-- **Business logic with code**: Supports advanced developer scenarios to extend the app directly through code. More information: [Apply business logic using code](/powerapps/developer/data-platform/apply-business-logic-with-code)
+- **Business logic with code**: Supports advanced developer scenarios to extend the app directly through code. More information: [Apply business logic using code](../../developer/data-platform/apply-business-logic-with-code.md)
 
 ## Integrating with apps by using events
 
@@ -79,7 +78,7 @@ The sequence of events is as follows:
 Service Bus relays the request message data context between Dataverse and the Service Bus solution listener apps. Service Bus also provides data security so that only authorized apps can access the posted Dynamics 365 data. Authorization of Dataverse to post the data
 context to Service Bus, and for listener apps to read it, is managed by Azure shared access signatures.
 
-More information: [Service Bus](https://azure.microsoft.com/services/service-bus/) and [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/)
+More information: [Service Bus](https://azure.microsoft.com/services/service-bus/) and [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)
 
 ## Logic Apps and Power Automate
 
@@ -105,9 +104,9 @@ Dataverse takes an "API first" approach. This means that the service doesn't jus
 
 The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
 
-For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview).
+For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](../../developer/data-platform/webapi/overview.md).
 
-For more information about using the Dataverse Web API with OAuth, see [Use OAuth with Dataverse](/powerapps/developer/data-platform/authenticate-oauth).
+For more information about using the Dataverse Web API with OAuth, see [Use OAuth with Dataverse](../../developer/data-platform/authenticate-oauth.md).
 
 ## Plug-ins
 
@@ -125,7 +124,7 @@ Plug-ins can be synchronous or asynchronous, and perform the following tasks:
 
 Plug-ins are registered at points in the event pipeline, which are illustrated here.
 
-![Plug-in event pipeline](media/plug-in-event-pipeline.png "Plug-in event pipeline")
+<img src = "media/plug-in-event-pipeline.png" alt = "Plug-in event pipeline" width = "335" height = "433" >
 
 Within the event pipeline, the following events can occur: 
 
@@ -150,7 +149,7 @@ Azure Functions provides a serverless code execution option for business and int
 Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
 
 More information:
-[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins)
+[Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -48,7 +48,7 @@ This topic shows you how to create business rules and recommendations to apply f
 -   Create business recommendations based on business intelligence.  
 
 > [!NOTE]
-> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
 > Business rules don’t work with multi-select choices.
   
@@ -74,7 +74,7 @@ This topic shows you how to create business rules and recommendations to apply f
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Table**|All forms and server|  
+    |**Entity**|All forms and server|  
     |**All Forms**|All forms|  
     |Specific form (**Account** form, for example)|Just that form|  
   

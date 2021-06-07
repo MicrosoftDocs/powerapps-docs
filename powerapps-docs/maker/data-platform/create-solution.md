@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 05/19/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: e21a4876-08b4-417a-a644-c577a27c5cf1
 caps.latest.revision: 12
@@ -199,7 +199,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
  > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
 
 ### See also
- [Use solutions](use-solution-explorer.md) <br />
+ [Use solutions](./solutions-overview.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
 
 

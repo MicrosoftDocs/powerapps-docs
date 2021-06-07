@@ -1,6 +1,6 @@
 ---
 title: Paging | Microsoft Docs
-description: 
+description: Provides properties and methods to work with paging.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -31,7 +31,7 @@ Total number of results on the server for the current query.
 
 ### hasNextPage
 
-Whether the result set can be paged backwards.
+Whether the result set can be paged forwards.
 
 **Type**: `boolean`
 

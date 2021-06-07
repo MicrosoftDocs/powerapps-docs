@@ -3,6 +3,7 @@ title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
 ms.date: 03/10/2020
 ms.service: powerapps
+ms.topic: troubleshooting
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
 ms.author: "kabala"
@@ -105,7 +106,7 @@ When the timeline is displayed on more than one column, the filter pane is displ
 
 [Set up timeline control](set-up-timeline-control.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+[Timeline section in the Customer Service Hub app](/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
 

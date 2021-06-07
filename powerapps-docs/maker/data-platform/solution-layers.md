@@ -2,7 +2,7 @@
 title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 08/05/2020
+ms.date: 03/05/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -35,7 +35,7 @@ Managed and unmanaged solutions exist at different levels within a Microsoft Dat
 ## Solution merge behavior
 When you prepare your managed solution for distribution, remember that an environment may have multiple solutions installed or that other solutions may be installed in the future. Construct a solution that follows best practices so that your solution will not interfere with other solutions.
 
-The processes that Dataverse uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations may require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](../../developer/data-platform/understand-managed-solutions-merged.md)
+The processes that Dataverse uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations may require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](/power-platform/alm/how-managed-solutions-merged)
 
 ## View the solution layers for a component
 The see solution layers feature allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. You can access solution layers from the **Solutions** area in Power Apps. 
@@ -71,19 +71,17 @@ There are additional tabs available for specific component solution layers.
 |AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for a choice .   | Added, Updated, Removed, Unchanged        |
 |AttributePicklistValues (optionset attribute)   |  When selected for a choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
-<!--## Remove an unmanaged layer
+### Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
-[!IMPORTANT]
-> Removing active unmanaged customizations can't be reversed or undone. All data associated with the unmanaged customization may be lost.
+> [!WARNING]
+> Removing active unmanaged customizations can't be reversed or undone. All data associated with the unmanaged customization can be lost.
 
 1. Open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
-2. If an unmanaged layer is detected, a message appears indicating the layer. On the left **Properties** pane, select **Remove unmanaged layer**. 
+1. If an unmanaged layer exists, **Unmanaged layer** is displayed in the **Solution** column for the layer.
+1. Select the layer, and then on the command bar, select **Remove unmanaged layer**.
     > [!div class="mx-imgBorder"] 
     > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
-3. Save and publish to fully remove the unmanaged layer.
-
--->
 
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
