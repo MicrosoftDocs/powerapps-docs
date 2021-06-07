@@ -144,7 +144,7 @@ You export the ribbon by including it in a solution and then exporting the solut
 
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 ### See also  
  [Customize the ribbon](customize-commands-ribbon.md)   
