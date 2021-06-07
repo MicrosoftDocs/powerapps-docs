@@ -7,12 +7,15 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.date: 06/07/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mduelae
 ---
 # Common issues and resolutions for Power Apps
 
@@ -209,8 +212,8 @@ If you're running into issues using Power Apps, try these common troubleshooting
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
    When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
 
-1. **Connection.Connected returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
-   While offline, **Connection.Connected** may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
+1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
+   While offline, formula `Connection.Connected` may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
    
 1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (Sep. 24, 2018)
 
@@ -220,7 +223,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras isn't supported.
    
-   
+1. **Improve data source experience and Microsoft Dataverse views setting is not supported on Power Apps for Windows.** More information: [Microsoft Dataverse and the improve data source experience](use-native-cds-connector.md#how-do-i-upgrade)
 
 ## Next steps
 
