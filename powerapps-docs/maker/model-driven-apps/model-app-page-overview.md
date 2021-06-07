@@ -125,3 +125,5 @@ Custom pages will not work on premise since it requires the online service for c
 [Design a custom page for your model-driven app](design-page-for-model-app.md)
 
 [Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
+
+[Using PowerFx in custom page](page-powerfx-in-model-app.md)
