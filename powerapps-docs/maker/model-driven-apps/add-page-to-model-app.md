@@ -100,7 +100,7 @@ Custom pages can be created from two places.  The first is while authoring a mod
 1. Select the custom page with **Page** type and click **Edit**
 
     > [!div class="mx-imgBorder"]
-    > ![Canvas designer new page](media/add-page-to-model-app/solution-explorer-edit-page.png "Canvas designer new page")
+    > ![Solution explorer new page](media/add-page-to-model-app/solution-explorer-edit-page.png "Solution explorer new page")
 
 ## Author custom page content
 

@@ -76,7 +76,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What interactions can the custom page have with the model-driven app?
 
-  Custom pages can be added to the sitemap for direct navigation.  Model pages can open a custom page using the [Open custom page in mode-driven app](open-page-in-model-app.md). Custom pages can navigate to other custom pages or to a model page like form, view, or dashboard with examples in [Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
+  Custom pages can be added to the sitemap for direct navigation using [Add custom page to sitemap](add-page-to-model-app.md#add-existing-custom-page-into-model-driven-app-sitemap).  Model pages can open a custom page using the navigateTo Client API. Custom pages can navigate to other custom pages or to a model page like form, view, or dashboard with PowerFx navigate function. For more information, see [Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
 
 * How is the custom page made responsive?
 
