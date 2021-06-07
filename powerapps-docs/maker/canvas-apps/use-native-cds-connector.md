@@ -1,6 +1,6 @@
 ---
-title: Upgrade to use native Common Data Service connector | Microsoft Docs
-description: Learn about upgrading native Common Data Service connector for improve data source experience.
+title: Microsoft Dataverse and the improve data source experience
+description: Learn about upgrading native Microsoft Dataverse connector for improve data source experience.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -249,7 +249,7 @@ Since a reference can point to different entities, you must be specific. You can
 To fix this issue: 
 
 1. Add the data sources for the entity types that Owner could be; in current example, Users and Teams).
-2. Use additional functions to make your intent clear.
+2. Use more functions to make your intent clear.
 
 There are two new functions you can make use of:
 
