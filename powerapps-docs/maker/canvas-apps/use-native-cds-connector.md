@@ -62,7 +62,7 @@ You may also want to enable the **Explicit Column Selection** feature:
 Check *Retired* section under *Upcoming features*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, option sets and other new features for Microsoft Dataverse** in *General settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-microsoft-Dataverse-views-is-off).
+> If you don't see **Relational data, option sets and other new features for Microsoft Dataverse** in *General settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-microsoft-dataverse-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
