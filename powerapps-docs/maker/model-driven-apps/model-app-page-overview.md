@@ -127,3 +127,7 @@ Custom pages will not work on premise since it requires the online service for c
 [Navigating to and from a custom page in your model-driven app](navigate-page-examples.md)
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
+
+[Add connectors into custom pages](page-data-connector.md)
+
+[Use Monitor to troubleshoot custom page](monitor-page-checker.md)
