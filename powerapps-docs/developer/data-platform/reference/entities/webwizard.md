@@ -615,23 +615,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_webwizard_createdby"></a> lk_webwizard_createdby
 
-See systemuser Table [lk_webwizard_createdby](systemuser.md#BKMK_lk_webwizard_createdby) One-To-Many relationship.
+See systemuser Table [lk_webwizard_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_webwizard_modifiedonbehalfby"></a> lk_webwizard_modifiedonbehalfby
 
-See systemuser Table [lk_webwizard_modifiedonbehalfby](systemuser.md#BKMK_lk_webwizard_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_webwizard_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_organization_webwizard"></a> organization_webwizard
 
-See organization Table [organization_webwizard](organization.md#BKMK_organization_webwizard) One-To-Many relationship.
+See organization Table [organization_webwizard](organization.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_webwizard_createdonbehalfby"></a> lk_webwizard_createdonbehalfby
 
-See systemuser Table [lk_webwizard_createdonbehalfby](systemuser.md#BKMK_lk_webwizard_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_webwizard_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_webwizard_modifiedby"></a> lk_webwizard_modifiedby
 
-See systemuser Table [lk_webwizard_modifiedby](systemuser.md#BKMK_lk_webwizard_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_webwizard_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### See also
 

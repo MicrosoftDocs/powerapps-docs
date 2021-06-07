@@ -1,8 +1,8 @@
 ---
 title: "Use the ConditionExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can use the ConditionExpression class to compare an attribute to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Read how you can use the ConditionExpression class to compare a table column to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/03/2020
+ms.date: 06/01/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,19 +15,20 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use the ConditionExpression class
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare an attribute to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
+In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare a table column to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
   
  The following table lists the properties you can set to create a condition using the `ConditionExpression` class.  
   
 |Property|Description|  
 |--------------|-----------------|  
-|<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.AttributeName>|Specifies the logical name of the attribute in the condition expression.|  
+|<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.AttributeName>|Specifies the logical name of the column in the condition expression.|  
 |<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.Operator>|Specifies the condition operator. This is set by using the <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator> enumeration.|  
-|<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.Values>|Specifies the values of the attribute.|  
+|<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.Values>|Specifies the values of the column.|  
   
  When using the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.AddCondition(Microsoft.Xrm.Sdk.Query.ConditionExpression)> method (or the constructor for <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>), it’s important to understand whether the array is being added as multiple values or as an array.  
   
@@ -45,9 +46,10 @@ Console.WriteLine(c.Values.Count); //This will output 1
   
  In some cases, it is necessary to cast to either `object[]` or `object`, depending on the desired behavior.  
   
- When you create a condition that compares an attribute value to an enumeration, such as a state code, you must use the `ToString` method to convert the value to a string.  
+ When you create a condition that compares a column value to an enumeration, such as a state code, you must use the `ToString` method to convert the value to a string.  
   
-## Example  
+## Example: use the ConditionExpression class
+
  The following code example shows how to use the `ConditionExpression` class.  
   
 ```csharp  
@@ -73,7 +75,8 @@ foreach (var a in result1.Entities)
 Console.WriteLine("---------------------------------------");  
 ```  
   
-## Example  
+## Example: test for inactive state
+
  The following code example shows how to use the `ConditionExpression` class to test for the inactive state.  
   
 ```csharp  
@@ -108,7 +111,7 @@ public ConditionExpression
 ```
 
 By passing in `true` as the value for the `compareColumns` parameter, the `value` is treated as the
-name of the second attribute to compare the values in `attributeName` to. Pass in `false` to treat it
+name of the second column to compare the values in `attributeName` to. Pass in `false` to treat it
 as a literal value instead.
 
 For example:

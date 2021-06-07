@@ -6,7 +6,7 @@ ms.date: 09/09/2020
 ms.service: powerapps
 ms.custom:
   - ""
-ms.topic: article
+ms.topic: troubleshooting
 ms.assetid: caa4e3f2-9700-49b8-87ed-8a68e8878b02
 author: jowells1 # GitHub ID
 ms.author: jowells # MSFT alias of Microsoft employees only

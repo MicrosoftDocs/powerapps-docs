@@ -1,7 +1,7 @@
 ---
 title: "RelationshipAttribute table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the RelationshipAttribute table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -29,7 +29,8 @@ Stores relationship attributes mapping for Multi-predicate relationship
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/relationshipattributes(*relationshipattributeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/relationshipattributes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -42,7 +43,7 @@ Stores relationship attributes mapping for Multi-predicate relationship
 |IsBPFEntity|False|
 |LogicalCollectionName|relationshipattributes|
 |LogicalName|relationshipattribute|
-|OwnershipType|None|
+|OwnershipType|OrganizationOwned|
 |PrimaryIdAttribute|relationshipattributeid|
 |PrimaryNameAttribute|name|
 |SchemaName|RelationshipAttribute|
@@ -160,6 +161,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [IsManaged](#BKMK_IsManaged)
+- [OrganizationId](#BKMK_OrganizationId)
+- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [ReferencedAttributeIdName](#BKMK_ReferencedAttributeIdName)
 - [ReferencingAttributeIdName](#BKMK_ReferencingAttributeIdName)
@@ -231,6 +234,36 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_OrganizationId"></a> OrganizationId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the organization|
+|DisplayName|Organization Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationid|
+|RequiredLevel|None|
+|Targets|organization|
+|Type|Lookup|
+
+
+### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationidname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
@@ -433,6 +466,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [relationship_relationshipattribute](#BKMK_relationship_relationshipattribute)
+- [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 
 
 ### <a name="BKMK_referencingattribute_relationshipattribute"></a> referencingattribute_relationshipattribute
@@ -452,6 +486,12 @@ See attribute Table [referencedattribute_relationshipattribute](attribute.md#BKM
 **Added by**: System Solution Solution
 
 See relationship Table [relationship_relationshipattribute](relationship.md#BKMK_relationship_relationshipattribute) One-To-Many relationship.
+
+### <a name="BKMK_organization_relationshipattribute"></a> organization_relationshipattribute
+
+**Added by**: System Solution Solution
+
+See organization Table [organization_relationshipattribute](organization.md#BKMK_organization_relationshipattribute) One-To-Many relationship.
 
 ### See also
 
