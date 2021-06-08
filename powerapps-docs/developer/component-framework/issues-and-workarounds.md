@@ -34,17 +34,6 @@ Here are some common issues that you might come across while using the Power App
 > [!NOTE]
 > We will be constantly adding common issues and workarounds as we come across during the development process. If you encounter an issue and have a workaround and you think that is helpful, raise the issue [here](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework) or raise a pull request so that we can review and add it to the list.
 
-## Publisher Prefix
-
-If a component is created using the CLI version lower than 0.4.3, you will encounter an error while trying to reimport the solution file into Microsoft Dataverse. 
-
-**Workaround**:
-
-- Delete the solution containing the relevant component from Dataverse. 
-- The component should be removed from the filed or grid if the component is already configured to avoid dependencies.
-- Import the new solution with updates to the component built by the latest CLI version.
-- Newly imported components can now be configured on forms or grids.  
-
 ## Issues while updating existing code components
 
 - If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.
