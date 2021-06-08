@@ -1,7 +1,7 @@
 ---
 title: "Enable Virtual Tables to support Dataverse events (Microsoft Dataverse) | Microsoft Docs"
 description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector When a row is added, modified or deleted trigger."
-ms.date: 05/27/2021
+ms.date: 06/07/2021
 ms.service: powerapps
 ms.topic: "get-started-article"
 applies_to: 
@@ -20,8 +20,8 @@ search.app:
 
 You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
  
-Without any of the configuration described in this topic, virtual entities do not participate in the Event Framework pipeline like other entities. This means you cannot register plug-in steps against Create, Update, and Delete (CUD) events that occur , and although CUD events appear for these entities in the Power Automate Dataverse connector, the events to trigger those flows will do not occur , so flows waiting for those events will never run unless this configuration is applied.
- 
+Without any of the configuration described in this topic, most virtual entities do not participate in the Event Framework pipeline like other entities. This means you cannot register plug-in steps against Create, Update, and Delete (CUD) events that occur, and although CUD events appear for these entities in the Power Automate Dataverse connector, an error is thrown when people try to save a flow that uses them.
+
 This is because virtual entities represent data stored in an external source. Dataverse has access to that data source as a client, but other systems can update that data at any time without passing through the Dataverse event framework.
 
 There are two steps to enable this:
@@ -41,6 +41,9 @@ There are two steps to enable this:
 1. The external system which controls the data must send an authenticated http request to Dataverse using the APIs that were enabled by data in VirtualEntityMetadata. This is typically performed by a call using an authenticated service principal account. More information: [Build web applications using server-to-server (S2S) authentication](../build-web-applications-server-server-s2s-authentication.md) 
 
     But any application or user that can perform a call to Dataverse can send the http request needed to notify Dataverse that the event occurred.
+
+> [!NOTE]
+> Virtual entities using the OData Provider and non relational date sources may allow certain plug-in step registrations, for example only on events outside the transaction. But these events are not available for use with the Power Automate Dataverse connector. There is no change to this behavior. But for more reliable event notification, the approach described in this topic is recommended.
 
 ## How to enable notification APIs for virtual tables
 
@@ -77,6 +80,20 @@ There are two issues you may encounter while doing this:
     1. Then search for the item you just created and add it.
 
 When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table).
+
+#### Set managed properties using the maker portal
+
+If you do not want people who install your managed solution to change the Virtual Entity Metadata behaviors, you should set the managed property to prevent it using the following steps.
+
+1. In your solution, select the Virtual Entity Metadata and click the ellipsis (...) and then select **Managed Properties**.
+
+    :::image type="content" source="../media/virtualentitymetadata-managed-properties.png" alt-text="Navigate to Managed Properties":::
+
+1. In the Managed Properties pane, de-select **Allow Customizations** and press **Done**.
+
+    :::image type="content" source="../media/virtualentitymetadata-managed-properties-pane.png" alt-text="De-select Allow Customizations":::
+
+    This setting will not do anything until the Virtual Entity Metadata record is included in a managed solution.
 
 ### Enable with code
 
@@ -271,6 +288,12 @@ You will find similar actions for `OnExternalDeleted`, and `OnExternalUpdated`:
 
 ```
 
+### View the messages using the plug-in registration tool
+
+When you register a plug-in step using the plug-in registration tool, you will find these messages.
+
+:::image type="content" source="../media/virtualentitymetadata-register-onexternalcreated-step.png" alt-text="Registering a plugin step on the OnExternalCreated message for the new_people entity":::
+
 
 ## Use the messages to notify Dataverse of changes
 
@@ -442,3 +465,7 @@ var service = new CrmServiceClient(conn);
 
 ```
 
+## See Also
+
+[Event framework](../event-framework.md)<br />
+[Get started with virtual tables (entities)](get-started-ve.md)
