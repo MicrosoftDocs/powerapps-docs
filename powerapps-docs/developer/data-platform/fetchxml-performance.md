@@ -151,20 +151,7 @@ mapping='logical' options='OptimizeForUnknown,DisableRowGoal,Recompile'>
 
 ### Supported query options
 
-The following query options are supported.
-
-- OptimizeForUnknown
-- ForceOrder
-- Recompile
-- DisableRowGoal
-- EnableOptimizerHotfixes
-- LoopJoin
-- MergeJoin
-- HashJoin
-- NO_PERFORMANCE_SPOOL
-- ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS
-
-The following FetchXML query hints will be translated into SQL Server query hints.
+The supported FetchXML query hints are listed in the following table. The table also shows the translation of FetchXML query hints into SQL Server query hints.
 
 | FetchXML hint | SQL Server hint |
 | --- | --- |
