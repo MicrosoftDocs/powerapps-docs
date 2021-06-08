@@ -23,7 +23,7 @@ Power Apps component framework uses the concept of implementing String(resx) web
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven apps and canvas apps 
 
 ## Manifest 
 

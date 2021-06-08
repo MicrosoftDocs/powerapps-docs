@@ -26,7 +26,7 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview).
+Model-driven apps and canvas apps.
 
 > [!NOTE]
 > Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation](../reference/index.md) for availability details.
@@ -569,7 +569,7 @@ In this sample component, two property sets are defined in its manifest, `sample
 
 This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, they don't have `allocatedWidth` and `allocatedHeight` values provided. If the `allocatedHeight` is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
 
-## Dataset API methods that aren't supported in canvas apps (public preview)
+## Dataset API methods that aren't supported in canvas apps
 
 **Filter & SortStatus**
 

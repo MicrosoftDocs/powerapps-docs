@@ -24,7 +24,7 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |Enum|Enumerated data type.|
 |FP|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. |
 |Multiple|This column can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this column to a form, you can specify the size of the column.|
-|Choice|This column provides a set of options. Each option has a number value and label. When added to a form, this column displays a control for users to select only one option. |
+|OptionSet|This column provides a set of options. Each option has a number value and label. When added to a form, this column displays a control for users to select only one option. |
 |SingleLine.Email|The text provides a mailto link to open the user's email application.|
 |SingleLine.Phone|In the web application, columns will be click-enabled to initiate calls using either Skype or Lync if a client for either is installed on your computer. The telephony provider choice is at the bottom of the General tab of System Settings.For Dynamics 365 for tablets, Skype is the only available telephony provider.|
 |SingleLine.Text|This option simply displays text.|
@@ -48,6 +48,6 @@ Following `of-type` property values are not supported currently:
 |Lookup.Owner|Allows for a single reference to either a team or a user record. All team or user-owned tables have one of these.|
 |Lookup.PartyList|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They're also used in the Phone and Appointment tables.|
 |Lookup.Regarding|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|
-|Choices|You can customize forms (main, quick create, and quick view) and email templates by adding choices columns. When you add choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.|
+|OptionSet|You can customize forms (main, quick create, and quick view) and email templates by adding choices columns. When you add choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.|
 |Status|A system column that has options that generally correspond to active and inactive status. Some system columns have additional options, but all custom columns have only Active and Inactive status options.|
 |Status Reason|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options.|

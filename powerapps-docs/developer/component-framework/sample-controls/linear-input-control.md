@@ -23,7 +23,7 @@ To implement this component, first you need to define the [Manifest](../manifest
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven apps and canvas apps 
 
 ## Manifest
 

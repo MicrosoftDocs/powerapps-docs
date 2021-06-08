@@ -17,7 +17,7 @@ ms.author: nabuthuk
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
 - Replace a column that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
@@ -26,9 +26,6 @@ Power Apps component framework empowers professional developers and app makers t
 
 
 > [!IMPORTANT]
-> - Power Apps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
-> - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - Power Apps component framework works only on Unified Interface and not on the legacy web client. 
 > - Power Apps component framework doesn't work for on-premises instances. 
 

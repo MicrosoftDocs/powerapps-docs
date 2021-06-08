@@ -25,7 +25,7 @@ For example, if your code component is a long list that the user can scroll thro
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps and canvas apps
 
 ## Manifest
 
