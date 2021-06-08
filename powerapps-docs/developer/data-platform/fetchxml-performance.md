@@ -169,7 +169,7 @@ The supported FetchXML query hints are listed in the following table. The table 
 ### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-[Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver15)
+[Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
