@@ -12,7 +12,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 search.audienceType: 
   - maker
 search.app: 

@@ -4,7 +4,7 @@ description: Step-by-step instructions for creating and configuring a table to u
 ms.custom: intro-internal
 author: Mattp123
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.component: model
 ms.date: 06/16/2020
 ms.author: matp

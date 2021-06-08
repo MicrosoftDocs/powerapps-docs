@@ -1,16 +1,17 @@
 ---
-title: Understand Inspection sample apps architecture | Microsoft Docs
+title: Understand Inspection sample apps architecture
 description: Learn about the architecture of the Inspection sample apps.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2021
+ms.date: 06/02/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - navjotm
+    - joel-lindstrom
 ---
 
 # Understand Inspection sample apps architecture
@@ -47,6 +48,21 @@ The following diagram explains the data model used by the Inspection sample app.
 | Area Inspection Location Type | This table holds the type or category that the area, asset, or item is aligned to. Based on the type of area, asset, or item, the associated checklists are made available for the user to start the inspection. |
 | User Setting | User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they log in to the app. There is one record for each user. |
 | User Setting | Team settings are used to store Team, Channel, and Planner preferences while using the application. |
+
+### Architecture Model
+
+The following diagram shows how users interact with systems and data in the Inspection app.
+
+![Inspection sample app architecture model](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
+
+### Connectors
+
+The following connectors are used in the Issue Reporting app:
+
+- **Microsoft Dataverse** - Used to read and write data in Dataverse.
+- **Office 365 Users** - Used to read Microsoft 365 user profile data.
+- **Location** - Used to capture the user's location for Planner tasks.
+- **Microsoft Planner** - Used to create tasks.
 
 ### Collections
 
