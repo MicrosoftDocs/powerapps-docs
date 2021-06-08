@@ -5,7 +5,7 @@ keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 03/15/2021
+ms.date: 06/03/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,32 +17,36 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and app makers to create code components. 
+> [!NOTE]
+> Effective May 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).<br/><br/>
+We will soon update the docs to reflect this change.
 
-Power Apps CLI tooling is the first step toward a comprehensive application life-cycle management (ALM) story where the enterprise developers and ISVs can create, build, debug, and publish their extensions and customizations quickly and efficiently.  
+Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
 
 ## Install Power Apps CLI
 
 To get Power Apps CLI, do the following:
 
-1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 or higher.
-
-1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
-
-1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
-   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/current) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
-
 1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
+1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
 
     ```CLI
     pac install latest
     ```
 
+
 > [!NOTE]
-> Currently, Power Apps CLI is supported only on Windows 10.
+> - Currently, Power Apps CLI is supported only on Windows 10.
+> - Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
+
+## Install Power Platform Extension for Visual Studio Code
+
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
+
+> [!IMPORTANT]
+> - Power Platform Extension for Visual Studio Code is in public preview. 
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Power Apps CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
 
 ## Common commands
 
@@ -52,8 +56,10 @@ This table lists some of the common commands used in the CLI:
 |-------|-----------|
 |[admin](#admin)|Commands for environment lifecycle features.|
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
+|[canvas](#canvas)|Commands for working with canvas app source files.|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
+|[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
 |[pcf](#pcf)|Commands to work with [Power Apps component framework](../component-framework/overview.md).|
 |[plugin](#plugin)|Command to create a [plug-in](./plug-ins.md) project.|
 |[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](../../maker/data-platform/solutions-overview.md).|
@@ -77,6 +83,63 @@ Commands to work with environment lifecycle features. It has the following param
 |restore|Restores an environment from a given backup. It has the following parameters: <br/> - *source-url*: Url of the source environment to be restored from (alias: -s). <br/> - *target-url*: Url of the target environment to be restored to (alias: -t). <br/> - *selected-backup*: DateTime of the backup in `mm/dd/yyyy hh:mm` format or latest (alias: -sb). <br/> - *name*: Optional name of the restored environment (alias: -n).|
 |copy|Copies a source environment to a destination environment. It has the following parameters: <br/> - *source-url*: Url of the source environment to be copied from (alias: -su). <br/> - *target-url*: Url of the target environment to be copied to (alias: -tu). <br/> - *source-environment-id*: ID of the source environment to be copied from (alias: -si). <br/> - *target-environment-id*: Id of the target environment to be copied to (alias: -ti). <br/> - *name*: Name to be used for the target environment. (alias: -n).  <br/> - *type*: Type of copy. Available values are: None, MinimalCopy, Fullcopy  (alias: -t).|
 
+### Canvas
+
+Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
+
+> [!NOTE]
+> The Canvas commands are in public preview. They may not be available in the version of the Power Apps CLI that you are using currently. 
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+| unpack | Unpacks the `.msapp`  source file.<br/> Download the `.msapp` file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br/>  If the **sources** parameter is not specified, a directory with the same name and location as the `.msapp` file is used with `_src` suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br/>`pac canavs unpack --msapp HelloWorld.msapp`<br/>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an `.msapp` file from the previously unpacked source files. <br/>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br/> The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+
+#### Folder structure
+
+Unpack and pack use the following folder structure:
+
+- **\src** - Control and component files. This contains the sources.
+   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  *This is the place to edit your formulas.*
+   - ***CanvasManifest.json*** - A manifest file that contains the information normally present in the header, properties, and publishInfo.
+   - ***\*.json*** - The raw `control.json` file.
+   - ***\EditorState\*.editorstate.json*** - Cached information for studio to use.
+- **\DataSources** - All the data sources used by the app.
+- **\Connections** - Connection instances saved with the app and used when reloading into the studio. 
+- **\Assets** - Media files embedded in the app.
+- **\pkgs** - A downloaded copy of external references, such as templates, API definition files, and component libraries. These are similar to NuGet/NPM references. 
+- **\other** - All miscellaneous files needed to recreate the `.msapp`.
+   - ***entropy.json*** - Volatile elements (like timestamps) are extracted to this file. This helps reduce noisy differences in other files while ensuring that we can still round trip.
+   - Holds other files from the msapp, such as what is in \references.
+
+#### File format
+
+The `.fx.yaml` files uses a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](/power-platform/power-fx/yaml-formula-grammar).
+
+#### Merging changes with Power Apps Studio
+
+When merging changes, that are made in two different studio sessions:
+
+- Ensure that all the control names are unique. For example, inserting a button in two different sessions can result in two `Button1` controls. We recommend to name the controls soon after you create them. The tool doesn't accept two controls with the same name.  
+- For these files, merge them as you normally do:
+   - \src\*.fx.yaml
+- If there are conflicts or errors, you can delete these files:
+   - \src\editorstate\*.json  - These files contain optional information in studio.
+   - \other\entropy.json  
+- For any conflict in these files, it’s ok to accept the latest version: 
+   - \checksum.json
+- If there are any merge conflicts under these paths, it is not safe to merge. Let us know if this happens often and we will work on restructuring the file format to avoid conflicts.
+   - \Connections\*
+   - \DataSources\*
+   - \pkgs\*
+   - CanvasManifest.json
+
+#### Open source
+
+The canvas commands in the Power Apps CLI are open source. Discuss improvements, raise issues, and access the code from [Power Apps language tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
+
 ### Package
 
 Command to work with solution packages. It has the following parameters:
@@ -90,6 +153,17 @@ Command to work with solution packages. It has the following parameters:
 |show| Shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: The path location to the package dll (library) or the zip file.| `pac package show c:\samplepackage.dll`|
 |deploy| Deployes the package dll or the zip file with a package. <br/> It has the following parameters: <br/> - *logFile*:  Path to a log file location where the logs are redirected.  <br/> - *logConsole*: This option is used if you want to direct the logs to the console. <br/> - *package*: The path location to the package dll (library) or a zip file with a package.  <br/> **Note**: You can use both `logFile` and `logConsole` parameters together or use one parameter or the other. | `pac package deploy --logFile c:\samplelogdata --package c:\samplepackage`
 
+### Paportal
+
+Commands to work with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md). It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
+|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p).<br/> - *webSiteId*: Portal website ID to download (alias: -id).<br/> - *overwrite*: (Optional) true - to overwrite existing content, false - to fail if the folder already has website content (alias: -o).|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
+|upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
 
 ### PCF
 
@@ -99,7 +173,7 @@ Commands to work with [Power Apps component framework](../component-framework/ov
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-|init|Initializes the code component project. It has the following parameters <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset| `pac pcf init --namespace SampleNameSpace --name SampleComponent --template field`|
+|init|Initializes the code component project. It has the following parameters: <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset| `pac pcf init --namespace SampleNameSpace --name SampleComponent --template field`|
 |push|Pushes the code component to the Dataverse instance with all the latest changes. It has the following parameter: <br/> - *publisher-prefix*: Publisher prefix of the organization.|`pac pcf push --publisher-prefix dev`|
 |version|Updates the component manifest file with the specified patch version. It has the following parameters: <br/> - *patchversion*: Patch version of the code component. `patchversion` will only take value of the third part of the version tuple: `Major.Minor.Patch`.<br/> - *path*: Absolute or relative path of the component manifest file.<br/> - *allmanifests*: Updates the patch version for all the component manifest files. <br/> - *updatetarget*: Updates the specified manifest file. It has two values, build and project.<br/> - *strategy*: Updates patch version for the manifest files using specified strategy values. It has the following values: <br/> - *gittags*: Use git tags to decide if a particular component’s patch version needs to be updated.<br/> *filetracking*: Use .csv file to decide if a particular component’s patch version needs to be updated. <br/> - *manifest*: Increments the patch version by 1 for all the components.|`pac pcf version --patchversion 1.0.0.0 --path c:\Users\Downloads\SampleComponent --allmanifests`  <br/><br/> `pac pcf version --strategy gittags`|
 

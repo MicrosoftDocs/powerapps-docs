@@ -3,7 +3,7 @@ title: Restricted tables requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted tables in Microsoft Dataverse that require Dynamics 365 licenses.
 author: KumarVivek
 ms.service: powerapps
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 03/18/2021
 ms.author: kvivek
 search.audienceType: 

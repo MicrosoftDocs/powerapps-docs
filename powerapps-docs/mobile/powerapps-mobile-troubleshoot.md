@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/09/2021
+ms.date: 04/28/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,7 +21,30 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-If you don't find the answer to your issue, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
+If you don't find the answer to your issue, then email us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues) and include your device make and model, session ID, and provide the exact error message that you get.
+
+
+## Unable to sign in on an Android device using Authenticator or Company Portal
+
+There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which causes sign-in to fail with no error message in the Power Apps mobile app.
+
+A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+
+1.	Make sure you have a good internet connection.
+2.	Wait for one minute and then try signing in again.
+
+If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
+
+## Unable to open an app
+
+There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which prevents apps opening in the Power Apps mobile app.
+
+A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+
+1.	Make sure you have a good internet connection.
+2.	Wait for one minute and then try opening the app again.
+
+If you still can't open the app after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
 ## Error: There was a problem signing you in
 
@@ -96,6 +119,9 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
+## Flows created in a solution is not supported on Power Apps mobile
+
+The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
 ### See also  
 

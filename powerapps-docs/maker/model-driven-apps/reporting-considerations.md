@@ -7,7 +7,7 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
   - PowerApps

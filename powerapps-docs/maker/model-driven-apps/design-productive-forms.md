@@ -2,7 +2,7 @@
 title: "Productive main form design in model-driven apps | MicrosoftDocs"
 description: Learn how to design productive main forms for your model-driven apps.
 ms.custom: ""
-ms.date: 04/05/2021
+ms.date: 04/27/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -50,6 +50,8 @@ The following image shows the layout of a Unified Interface application.
 - Form headers also have a mode where you can add more than four fields and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access from the form header. Additional tabs should be used to access information that isn't primary to the task at hand, or to focus the user on data or information that's specific to a given task but isn't primary to the job. Information that's necessary and is primary to working with data should be on the first tab and should never be hidden.
 - The form body is the area on the form that should be used to interact with data of the primary record and any related records that are essential to completing a task. We recommend that you limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs. You should also consider [building forms based on specific business needs and roles](design-considerations-main-forms.md) when designing your application. Also, if some data is rarely used you should consider building another form that can be accessed when a user needs to reference that data or information. This will help ensure a highly performant form and will help the user stay focused on important tasks that need to be completed.
 - The form footer displays the form status and commands for saving and displaying the form in a new pop-out window. Only the form footer width can be customized.
+> [!IMPORTANT]
+> [Form footers will be deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-app-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). We recommend that you plan to remove any controls you have added out of the footer as it will no longer render on model-driven app forms.
 
 ## Example scenario of productive form design
 
@@ -154,7 +156,7 @@ In many scenarios, a user just needs to quickly see information from a related t
 
 There are many times when you need to build an experience that focuses the user on the task at hand without additional distraction that might cause inefficiency. This is especially important when you're working with tables and records that have global components, which are created and automatically added to forms regardless of the task you're trying to build. Although this provides a shareable and easy-to-build infrastructure that drives consistency across an app, it does at times provide unnecessary distraction.
 
-Form display options should be used when you want to lessen the number of actions, focus a user to complete a task, and reduce clutter by removing unnecessary components.Components that can be removed from a form include the command bar, the header body, the form tabs, and the form footer. All these types of options are only available via the client API and manual formxml updates. Manual formxml manipulation can cause issues importing solutions if done incorrectly. Remove global form components carefully when designing your form.
+Form display options should be used when you want to lessen the number of actions, focus a user to complete a task, and reduce clutter by removing unnecessary components. Components that can be removed from a form include the command bar, the header body, the form tabs, and the form footer. All these types of options are only available via the client API and manual formxml updates. Manual formxml manipulation can cause issues importing solutions if done incorrectly. Remove global form components carefully when designing your form.
 
 Also consider that when you hide certain components like the command bar or the tab list, you'll remove navigation that might be necessary to complete a task. Be sure to account for those requirements in your form design by using additional controls created with the Power Apps component framework.
 

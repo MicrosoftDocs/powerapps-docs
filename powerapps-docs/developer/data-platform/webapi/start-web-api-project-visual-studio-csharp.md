@@ -1,7 +1,7 @@
 ---
 title: "Start a Microsoft Dataverse Web API project in Visual Studio (C#) (Dataverse)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/22/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
@@ -20,9 +20,7 @@ search.app:
 ---
 # Start a Microsoft Dataverse Web API project in Visual Studio (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
-This topic demonstrates how to create a new project in Visual Studio 2017 that builds a console application that uses the Dataverse Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
+This topic demonstrates how to create a new project in Visual Studio 2017 (or later) that builds a console application that uses the Dataverse Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
   
 <a name="bkmk_prerequisites"></a>   
 ## Prerequisites  
@@ -89,7 +87,7 @@ install-package System.Net.Http
 4.  Save the file.  
   
 <a name="bkmk_addConnectionCode"></a>
- 
+
 ### Add connection code
 
 This section explains how to add a basic set of settings and instructions to perform these operations.  
@@ -138,6 +136,5 @@ This section explains how to add a basic set of settings and instructions to per
  [Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)   
  [Use the Web API Helper Library (C#)](./enhanced-quick-start.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

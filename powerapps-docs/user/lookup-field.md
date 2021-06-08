@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/14/2020
+ms.date: 06/03/2021
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -30,8 +30,8 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 
-For example, if you have only three rows in your history, lookup will display those three,
-along with seven of your favorite rows. If you have not pinned any favorites, only the most recently viewed rows will be displayed.
+For example, if three's only three rows in your history, then the lookup will display those three rows,
+along with seven of your favorite rows. If you haven't pinned any rows to favorites, then the most recently viewed rows will be displayed.
 
 ## Types of lookups
 
@@ -118,5 +118,68 @@ When lookup has more rows in a column than can fit in the available display area
 
 ![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
 
+
+## Advanced lookup
+
+To use **Advanced lookup**, your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+
+Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
+
+1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup](media/advanced-lookup-control.png "Advanced lookup")  
+
+2. The **Advanced lookup** gird opens with a list of rows.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid](media/advanced-lookup-control-grid.png "Advanced lookup grid")  
+
+Legend
+
+1. **Search**: Enter search text to find the row that you're looking for. When you changes views the search text is retained. 
+2. **Change views**: Select to change views.
+3. **Select row**: Select the radio button to choose a row for the lookup and then select **Done**. The selected row will appear at the bottom under **Selected record**.
+4. **Open row**: Select to open the row and make edits and then save your changes. Any saved changes are reflected in the advanced lookup grid.
+5. **Sort**: Select the arrow at the top of any column to sort in ascending or descending order. 
+6. **Only my records**: Select to only show rows that you own.
+7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
+
+
+### Regarding advanced lookup
+
+In a **Regarding** lookup, you can switch between tables and their views
+
+1. In a **Regarding** lookup column, select the lookup icon (magnifying glass) then select **Advanced lookup**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup for Regarding column](media/regarding-advanced-lookup.png "Advanced lookup for Regarding column")  
+
+2. On the advanced lookup grid, select a table from the list to see rows for the selected table. You can also select the current view to change views.
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid for Regarding column](media/regarding-advanced-lookup-2.png "Advanced lookup grid for Regarding column")  
+
+
+### Party list advanced lookup
+
+For lookup columns that is a party list, you can select multiple rows from different tables such as the **Call To** field on a phone call activity.
+
+1. Go to a lookup column with party list and select the lookup icon (magnifying glass) then select **Advanced lookup**. 
+2. On the advanced lookup grid, select from multiple rows from different tables.
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced lookup grid for choices](media/choices-lookup.png "Advanced lookup grid for party list")  
+
+3. Select the **(number of rows) selected** tab or the link at the bottom to review and edit your choices and then select **Done**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Edit your choices](media/choices-lookup-2.png "Edit your choices")  
+   
+4. The selected rows appear in the lookup.
+
+   > [!div class="mx-imgBorder"]
+   > ![Selected choices appear in the lookup](media/choices-lookup-3.png "Selected choices appear in the lookup")  
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
