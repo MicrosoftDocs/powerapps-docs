@@ -166,6 +166,9 @@ A business rule may not execute because the field referenced in the business rul
 
 *Do business rules react to changes made by an onLoad script?*
 - No, they will execute before an onload script is executed.
+
+*When I update a business rule, is it executed against all existing records?*
+- No. Business rules are run on clients. For example, they run when a form is opened by a user and when a field value changes on that open form. They are not executed inside Dataverse.
  
 ### See also
 
