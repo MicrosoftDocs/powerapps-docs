@@ -901,6 +901,8 @@
             href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Build a multi-language app
+        href: ./canvas-apps/multi-language-apps.md
       - name: Make an app accessible
         items:
           - name: Create an accessible app
