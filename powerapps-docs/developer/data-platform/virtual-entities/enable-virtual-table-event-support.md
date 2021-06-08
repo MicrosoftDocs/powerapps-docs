@@ -26,11 +26,11 @@ This is because virtual entities represent data stored in an external source. Da
 
 There are two steps to enable this:
 
-1. Configuring data in a table called **VirtualEntityMetadata**. When data in this table is configured to enable them, a set of new APIs provide the means for the external system to notify Dataverse when CUD events occur. 
+1. Configuring data in a table called **Virtual Entity Metadata**. When data in this table is configured to enable them, a set of new APIs provide the means for the external system to notify Dataverse when CUD events occur. 
     
-    When there is a VirtualEntityMetadata row associated with the [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata).[Metadataid](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) for a Virtual table, the following three settings can control whether your virtual table can support being notified by an external source.
+    When there is a Virtual Entity Metadata row associated with the [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata).[Metadataid](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) for a Virtual table, the following three settings can control whether your virtual table can support being notified by an external source.
 
-    When individually enabled using the VirtualEntityMetadata `IsOnExternalCreatedEnabled`, `IsOnExternalDeletedEnabled`, and `IsOnExternalUpdatedEnabled` boolean properties, the following bound Actions become available to be called by external services.
+    When individually enabled using the Virtual Entity Metadata `IsOnExternalCreatedEnabled`, `IsOnExternalDeletedEnabled`, and `IsOnExternalUpdatedEnabled` boolean properties, the following bound Actions become available to be called by external services.
 
     |Action/Message|Description|
     |---|---|
@@ -38,7 +38,7 @@ There are two steps to enable this:
     |`OnExternalUpdated`|Contains data about a record that was updated in an external system exposed as a virtual table in Dataverse.|
     |`OnExternalDeleted`|Contains data about a record that was deleted in an external system exposed as a virtual table in Dataverse.|
 
-1. The external system which controls the data must send an authenticated http request to Dataverse using the APIs that were enabled by data in VirtualEntityMetadata. This is typically performed by a call using an authenticated service principal account. More information: [Build web applications using server-to-server (S2S) authentication](../build-web-applications-server-server-s2s-authentication.md) 
+1. The external system which controls the data must send an authenticated http request to Dataverse using the APIs that were enabled by data in Virtual Entity Metadata. This is typically performed by a call using an authenticated service principal account. More information: [Build web applications using server-to-server (S2S) authentication](../build-web-applications-server-server-s2s-authentication.md) 
 
     But any application or user that can perform a call to Dataverse can send the http request needed to notify Dataverse that the event occurred.
 
@@ -97,9 +97,9 @@ If you do not want people who install your managed solution to change the Virtua
 
 ### Enable with code
 
-You may want to automate the creation of VirtualEntityMetadata for your virtual entities.
+You may want to automate the creation of Virtual Entity Metadata for your virtual entities.
 
-The VirtualEntityMetadata table has the following columns that you can set:
+The `VirtualEntityMetadata` table has the following columns that you can set:
 
 |Schema Name<br />Logical Name|Display Name|Type|Description|
 |---|---|---|---|
@@ -113,7 +113,7 @@ The VirtualEntityMetadata table has the following columns that you can set:
 
 When creating these types of solution components, we recommend that you set the **IsCustomizable** managed property to be `false` unless you want to allow people who install your managed solution to be able to change these settings.
 
-We also recommend that you add the **virtualentitymetadata** record to a specific solution when you create it. In both examples below, you will see how the `Solution.UniqueName` is passed with the request that creates the record.
+We also recommend that you add the Virtual Entity Metadata** record to a specific solution when you create it. In both examples below, you will see how the `Solution.UniqueName` is passed with the request that creates the record.
 
 
 #### Using Web API
@@ -141,9 +141,9 @@ HTTP/1.1 200 OK
 }
 ```
 
-Then, create the virtualentitymetadata record while associating it to the `Entity` entitytype using the `MetadataId` retrieved in the first step.
+Then, create the virtual entity metadata record while associating it to the `Entity` entitytype using the `MetadataId` retrieved in the first step.
 
-Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtualentitymetadata record to the solution as it is created. More information: [HTTP headers](/webapi/compose-http-requests-handle-errors#http-headers)
+Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](/webapi/compose-http-requests-handle-errors#http-headers)
 
 **Request**
 
@@ -197,7 +197,7 @@ var entityId = retrieveEntityResponse.EntityMetadata.MetadataId;
 
 **Using early-bound types**
 
-With early-bound types you can use the VirtualEntityMetadata class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
+With early-bound types you can use the `VirtualEntityMetadata` class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
 
 ```csharp
 var virtualEntityMetadata = new VirtualEntityMetadata
@@ -214,7 +214,7 @@ var virtualEntityMetadata = new VirtualEntityMetadata
 
 **Using late-bound types**
 
-There are two ways to instantiate the virtualentitymetadata instance using late-bound types, either is equivalent:
+There are two ways to instantiate the virtual entity metadata instance using late-bound types, either is equivalent:
 
 ```csharp
 var virtualEntityMetadata = new Entity("virtualentitymetadata");
