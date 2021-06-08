@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -49,11 +49,15 @@ You'll probably want to make more changes before you use this app or share it wi
 
 1. Near the upper-left corner, select the **File** menu.
 
-1. Select **Save**. Since this is the first time you're saving this app, you're taken to **Save as**.
+1. Select **Settings**.
+
+1. Set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
 
 1. Set the app name to **AppGen**, and select **Save**.
 
-1. (Optional) Select **Settings** on the left-pane, and then update the app icon, background color, and add description. Select **Save** when done.
+1. Close the settings dialog.
+
+1. Near the left edge, select **Save as** and then, in the lower-right corner, select **Save**.
 
 ## Next steps
 

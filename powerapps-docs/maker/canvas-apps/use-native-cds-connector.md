@@ -1,20 +1,20 @@
 ---
-title: Microsoft Dataverse and the improved data source experience
-description: Learn about upgrading native Microsoft Dataverse connector for improved data source experience.
+title: Microsoft Dataverse and the improve data source experience
+description: Learn about upgrading native Microsoft Dataverse connector for improve data source experience.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Microsoft Dataverse and the improved data source experience
+# Microsoft Dataverse and the improve data source experience
 
 > [!NOTE]
 > Power Apps mobile app on Windows platform supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
@@ -29,7 +29,7 @@ The **Improve data source experience and Microsoft Dataverse views** option has 
 2. Increased reliability.
 3. Access to Dataverse **views** and **File and Image field attributes**.
 
-The **Improve data source experience and Microsoft Dataverse views** option appears in the Advanced settings section:
+The **Improve data source experience and Microsoft Dataverse views** option appears in the general settings section:
 
 ![Improve data source experience and Microsoft Dataverse views](media/use-native-cds-connector/improved-data-source-setting.png)
 
@@ -52,12 +52,12 @@ You may also want to enable the **Explicit Column Selection** feature:
 > - When this feature is *Off*, you'll see the following message. You can ignore this message when using Power Apps mobile app for Windows platform.
 > <br> `This app is using a connector for the Microsoft Dataverse or Dynamics 365 that will not be supported past Oct 1, 2020.`
 
-### *Relational data, choices and other new features for Microsoft Dataverse* is Off:
+### *Relational data, option sets and other new features for Microsoft Dataverse* is Off:
 
-Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
+Check *Retired* section under *Upcoming features*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, choices and other new features for Microsoft Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-microsoft-dataverse-views-is-off).
+> If you don't see **Relational data, option sets and other new features for Microsoft Dataverse** in *General settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-microsoft-dataverse-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
@@ -76,9 +76,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
     
     
-- **Step 2**: Turn **Relational data, choices and other new features for Microsoft Dataverse** and **Use GUID data types instead of strings** features **On**:
+- **Step 2**: Turn **Relational data, option sets and other new features for Microsoft Dataverse** and **Use GUID data types instead of strings** features **On**:
     
-    1. Turn **Relational data, choices and other new features for Microsoft Dataverse** feature *On*.
+    1. Turn **Relational data, option sets and other new features for Microsoft Dataverse** feature *On*.
     1. Turn **Use GUID data types instead of strings** feature *On*.
     1. Wait for the health monitor to finish analyzing your app.
     1. Resolve all formula errors.
@@ -135,7 +135,7 @@ More information: [Detailed Examples](#detailed-examples).
 
 ## Detailed Examples
 
-Converting your app to use the new **Choices** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improved data source experience and Microsoft Dataverse views* feature.
+Converting your app to use the new **Option sets** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improve data source experience and Microsoft Dataverse views* feature.
 
 ### Choices
 
@@ -243,8 +243,8 @@ Since a reference can point to different tables, you must be specific. You can't
 
 To fix this issue: 
 
-1. Add the data sources for the table types that Owner could be; in current example, Users and Teams).
-2. Use additional functions to make your intent clear.
+1. Add the data sources for the entity types that Owner could be; in current example, Users and Teams).
+2. Use more functions to make your intent clear.
 
 There are two new functions you can make use of:
 

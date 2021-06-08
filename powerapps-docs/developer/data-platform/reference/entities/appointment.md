@@ -1,7 +1,7 @@
 ---
 title: "Appointment table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Appointment table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -37,7 +37,6 @@ Commitment representing a time interval with start/end times and duration.
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Reschedule|<xref href="Microsoft.Dynamics.CRM.Reschedule?text=Reschedule Action" />|<xref:Microsoft.Crm.Sdk.Messages.RescheduleRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/appointments(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appointments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1461,7 +1460,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [appointment_PostRegardings](#BKMK_appointment_PostRegardings)
 - [appointment_PostFollows](#BKMK_appointment_PostFollows)
 - [Appointment_DuplicateMatchingRecord](#BKMK_Appointment_DuplicateMatchingRecord)
 - [Appointment_ProcessSessions](#BKMK_Appointment_ProcessSessions)
@@ -1478,21 +1476,6 @@ Listed by **SchemaName**.
 - [appointment_activity_mime_attachment](#BKMK_appointment_activity_mime_attachment)
 - [Appointment_QueueItem](#BKMK_Appointment_QueueItem)
 - [Appointment_BulkDeleteFailures](#BKMK_Appointment_BulkDeleteFailures)
-
-
-### <a name="BKMK_appointment_PostRegardings"></a> appointment_PostRegardings
-
-Same as postregarding table [appointment_PostRegardings](postregarding.md#BKMK_appointment_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|appointment_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_appointment_PostFollows"></a> appointment_PostFollows
@@ -1757,7 +1740,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [recurringappointmentmaster_appointment](#BKMK_recurringappointmentmaster_appointment)
 - [processstage_appointments](#BKMK_processstage_appointments)
 - [activity_pointer_appointment](#BKMK_activity_pointer_appointment)
-- [owner_appointments](#BKMK_owner_appointments)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Appointments"></a> KnowledgeBaseRecord_Appointments
@@ -1827,10 +1809,6 @@ See processstage Table [processstage_appointments](processstage.md#BKMK_processs
 ### <a name="BKMK_activity_pointer_appointment"></a> activity_pointer_appointment
 
 See activitypointer Table [activity_pointer_appointment](activitypointer.md#BKMK_activity_pointer_appointment) One-To-Many relationship.
-
-### <a name="BKMK_owner_appointments"></a> owner_appointments
-
-See owner Table [owner_appointments](owner.md#BKMK_owner_appointments) One-To-Many relationship.
 
 ### See also
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/13/2021
+ms.date: 05/24/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -33,7 +33,7 @@ These functions never create or delete a record. They only relate or unrelate tw
 You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
 > [!NOTE]
-> These functions are part of a preview feature, and their behavior is available only when the **Relational data, choices, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **App settings**, and then select **Advanced settings**. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **Settings**, and then select **Upcoming features**. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ## Syntax
 
@@ -232,11 +232,11 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. In the formula bar, set **Gallery2**'s **Items** property to **Gallery1.Selected.Contacts**.
 
-    ![Configure ContactsGallery for contacts](media/function-relate-unrelate/contacts-gallery.png)
+    ![Configure ContactsGallery - Items property](media/function-relate-unrelate/contacts-gallery.png)
 
 1. On the **Properties** tab, set **Layout** to **Image and title**.
 
-    ![Configure ContactsGallery for gallery layout](media/function-relate-unrelate/contacts-gallery-right.png)
+    ![Configure ContactsGallery - Layout](media/function-relate-unrelate/contacts-gallery-right.png)
 
 1. In **Gallery2**, ensure that the **Label** control is named **Title2**, and then set its **Text** property to **ThisItem.'Full Name'**.
 
