@@ -174,11 +174,12 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 | Message | Web API function,<br/> SDK API class |
 | --- | --- |
 | RetrieveUserPrivilegeByPrivilegeId | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest> |
-| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegeByPrivilegeName>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
+| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
 | RetrieveUserSetOfPrivilegesByIds | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest> |
 | RetrieveUserSetOfPrivilegesByNames | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest> |
 
-## Retrieving privileges by security role
+
+## Retrieve privileges for a security role
 
 You can retrieve privileges by security role. Below is a Web API example showing how this is done.
 
