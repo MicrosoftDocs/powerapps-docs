@@ -4,15 +4,15 @@ description: Learn about installing the Power Apps app in Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 09/22/2020
+ms.custom: intro-internal
+ms.date: 03/26/2021
 ms.author: jshum
 ms.reviewer: 
 ---
 
 # Install the Power Apps personal app in Microsoft Teams
 
-A *personal app* is a Teams application that has a personal scope. Power Apps is by default available for you to select and add to a tab in the Teams channel of your choice. More information: [Personal apps](https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps)
+A *personal app* is a Teams application that has a personal scope. Power Apps is by default available for you to select and add to a tab in the Teams channel of your choice. More information: [Personal apps](/microsoftteams/platform/concepts/design/personal-apps)
 
 1. Open Microsoft Teams, and then select **More added apps** (...).
 
@@ -46,6 +46,14 @@ When you pin Power Apps app, the text of the app icon in the Teams rail changes 
 You can unpin Power Apps app anytime with a **right click** on the Power Apps app from the left rail, and then by selecting **Unpin**.
 
 ![Unpin Power Apps app](media/unpin-power-apps.png "Unpin Power Apps app")
+
+## Pop out app
+
+If you're using [Microsoft Teams desktop app](https://www.microsoft.com/microsoft-teams/download-app), you can use the **Pop up out** option to open Power Apps in a separate window for ease of use.
+
+![Pop out app](media/pop-out-app.png "Pop out app")
+
+This way, you can continue to use Microsoft Teams for day-to-day interactions and still be able to interact with Power Apps separately.
 
 ### Next steps
 

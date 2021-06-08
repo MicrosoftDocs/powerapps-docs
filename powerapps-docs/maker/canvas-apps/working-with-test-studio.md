@@ -15,12 +15,9 @@ search.app:
   - PowerApps
 ---
 
-# Working with Test Studio (experimental)
+# Working with Test Studio
 
 In this quickstart, you'll create tests for a canvas app called Kudos. You can also explore and discover testing concepts and apply them to writing tests for your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available to download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/en-us/blog/powerapps-employee-experience-starter-kit).
-
-> [!NOTE]
-> This feature is still experimental and we recommend you use it to write tests for non-production apps. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Open Test Studio
 
@@ -306,7 +303,7 @@ In this quickstart, you'll create two custom entities in the Dataverse database 
 3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults entity in Dataverse. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
 
     > [!NOTE]
-    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
+    > The following samples require a [Common Data Service connection](/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
     ```powerapps-dot
     //Save to Dataverse

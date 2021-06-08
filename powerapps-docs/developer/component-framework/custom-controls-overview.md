@@ -4,6 +4,7 @@ description: "Use the Power Apps component framework to create code components t
 manager: kvivek
 ms.date: 09/05/2019
 ms.service: "powerapps"
+ms.custom: "intro-internal"
 ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.author: "nabuthuk"
@@ -12,12 +13,14 @@ author: Nkrb
 
 # What are code components
 
-Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"] 
 > ![Code components](media/code-components.gif "Code components")
 
-You add code components by including them in a solution and then import it into Microsoft Dataverse. Once the components are in Dataverse, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+You add code components by including them in a solution and then import it into Microsoft Dataverse. Once the components are in Dataverse, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
@@ -33,12 +36,12 @@ Code components consist of three elements:
 Manifest is the metadata file that defines a component. It is an XML document that describes:
 
 - The name of the component.
-- The kind of data that can be configured, either a field or a data-set.
+- The kind of data that can be configured, either a `field` or a `data-set`.
 - Any properties that can be configured in the application when the component is added.
 - A list of resource files that the component needs. 
 - The name of the TypeScript function in the component implementation library that returns an object that applies the required component interface.
 
-When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
+When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration columns so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
 
 ## Component implementation
 

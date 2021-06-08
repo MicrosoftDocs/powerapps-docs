@@ -38,7 +38,7 @@ Common Data Model provides reference architecture that's intended to streamline 
 
 Common Data Model includes a set of standardized, extensible data schemas that Microsoft and its partners have published. This collection of predefined schemas includes tables, attributes, semantic metadata, and relationships. The schemas represent commonly used concepts and activities, such as **Account** and **Campaign**, to simplify the creation, aggregation, and analysis of data.
 
-The Common Data Model schemas can be used to inform the creation of tables in Dataverse. The resulting tables will<!--Edit okay?--> then be compatible with apps and analytics that target this Common Data Model definition.
+The Common Data Model schemas can be used to inform the creation of tables in Dataverse. The resulting tables will then be compatible with apps and analytics that target this Common Data Model definition.
 
 The following image shows some elements of the standard Common Data Model tables. 
 
@@ -62,7 +62,7 @@ Each of these columns can be associated with one of many data types supported by
 
 ![Create a column](media/entity-field.png "Create a column")
 
-More information: [Types of columns](/powerapps/maker/data-platform/types-of-fields)
+More information: [Types of columns](./types-of-fields.md)
 
 ## Relationships
 
@@ -87,7 +87,7 @@ For more information about creating table relationships, see [Create a relations
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Dataverse data for security and analytical purposes.
 
 Dataverse provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
-changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/data-platform/configure-entities-attributes-auditing).
+changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](../../developer/data-platform/configure-entities-attributes-auditing.md).
 
 Dataverse supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
@@ -104,7 +104,7 @@ Dataverse provides three ways to query rows:
 > [!NOTE]
 > Multi-table quick find is also called *categorized search*.
 
-For more information, see [Compare searches](/powerapps/user/search).
+For more information, see [Compare searches](../../user/search.md).
 
 ### Relevance search
 
@@ -122,7 +122,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for rows](/powerapps/user/relevance-search).
+For more information about relevance search, see [Using relevance search to search for rows](../../user/relevance-search.md).
 
 ### Quick find
 

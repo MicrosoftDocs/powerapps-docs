@@ -1,13 +1,16 @@
 ---
-title: "Add Azure storage web resource to a form | MicrosoftDocs"
-description: "Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage."
+title: Add Azure storage web resource to a form
+description: Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - gitanjalisingh33msft
+    - tapanm-msft
 ---
 
 # Add the Azure Storage web resource to a form
@@ -17,9 +20,9 @@ Attachments uploaded to Azure Storage (instead of directly to Microsoft Datavers
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
-> In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
+> In this example, the form is added to the Lead form for the Lead table. We recommend using caution when editing existing forms.
 
-When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an entity and a placeholder for the attachment.
+When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an table and a placeholder for the attachment.
 
 ![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 
@@ -69,7 +72,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 > - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. Examples - \* or x-ms-meta-\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
 > 
-> [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
+> [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
 If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Dataverse  or Azure Storage.
 

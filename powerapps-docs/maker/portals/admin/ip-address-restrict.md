@@ -1,13 +1,16 @@
 ---
-title: "Restrict access to a portal by using IP address | MicrosoftDocs"
-description: "Instructions to restrict portal access by IP address."
+title: Restrict portal access by IP address
+description: Learn how to restrict portal access by IP address.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Restrict portal access by IP address
@@ -18,7 +21,7 @@ When a request to the portal is generated from any user, their IP address is eva
 
 To add or remove IP addresses, you must be assigned any one of the following roles:
 - Office 365 Global Administrator 
-- Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/library/mt793847.aspx)  
+- Service Administrator. More information: [Use the service admin role to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)  
 - System Administrator of the Microsoft Dataverse environment selected for the portal
 
 ## Add an IP address

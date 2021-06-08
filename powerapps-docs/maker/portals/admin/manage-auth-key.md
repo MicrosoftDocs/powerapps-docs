@@ -1,13 +1,16 @@
 ---
-title: "Manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment. | MicrosoftDocs"
-description: "Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt."
+title: Manage portal authentication key
+description: Learn how to manage the authentication key used by Power Apps portals to connect to Microsoft Dataverse environment, check the key details, notifications and troubleshoot a failed renew attempt.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Manage portal authentication key
@@ -48,7 +51,7 @@ Before the authentication key expires, you'll be notified by emails, Power Apps 
 
 **Email**
 
-Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 

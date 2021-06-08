@@ -1,22 +1,24 @@
 ---
-title: "msdyn_knowledgearticletemplate entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_knowledgearticletemplate table."
-ms.date: 11/14/2020
+title: "msdyn_knowledgearticletemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_knowledgearticletemplate table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_knowledgearticletemplate entity reference
+
+# msdyn_knowledgearticletemplate table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.
 
@@ -27,21 +29,21 @@ Organizational Knowledge Article Template for Internal and external creation of 
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgearticletemplates(*msdyn_knowledgearticletemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ Organizational Knowledge Article Template for Internal and external creation of 
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_Content](#BKMK_msdyn_Content)
@@ -144,7 +146,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### msdyn_isinternal Options
+#### msdyn_isinternal Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -323,7 +325,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -344,7 +346,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -386,9 +388,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -789,7 +791,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [msdyn_knowledgearticletemplate_SyncErrors](syncerror.md#BKMK_msdyn_knowledgearticletemplate_SyncErrors) Many-To-One relationship.
+Same as syncerror table [msdyn_knowledgearticletemplate_SyncErrors](syncerror.md#BKMK_msdyn_knowledgearticletemplate_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -806,7 +808,7 @@ Same as syncerror entity [msdyn_knowledgearticletemplate_SyncErrors](syncerror.m
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_knowledgearticletemplate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -823,7 +825,7 @@ Same as duplicaterecord entity [msdyn_knowledgearticletemplate_DuplicateMatching
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [msdyn_knowledgearticletemplate_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -840,7 +842,7 @@ Same as duplicaterecord entity [msdyn_knowledgearticletemplate_DuplicateBaseReco
 
 **Added by**: System Solution Solution
 
-Same as sharepointdocumentlocation entity [msdyn_knowledgearticletemplate_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations) Many-To-One relationship.
+Same as sharepointdocumentlocation table [msdyn_knowledgearticletemplate_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -857,7 +859,7 @@ Same as sharepointdocumentlocation entity [msdyn_knowledgearticletemplate_ShareP
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [msdyn_knowledgearticletemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgearticletemplate_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [msdyn_knowledgearticletemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgearticletemplate_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -874,7 +876,7 @@ Same as asyncoperation entity [msdyn_knowledgearticletemplate_AsyncOperations](a
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [msdyn_knowledgearticletemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [msdyn_knowledgearticletemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -891,7 +893,7 @@ Same as mailboxtrackingfolder entity [msdyn_knowledgearticletemplate_MailboxTrac
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [msdyn_knowledgearticletemplate_ProcessSession](processsession.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) Many-To-One relationship.
+Same as processsession table [msdyn_knowledgearticletemplate_ProcessSession](processsession.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -908,7 +910,7 @@ Same as processsession entity [msdyn_knowledgearticletemplate_ProcessSession](pr
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [msdyn_knowledgearticletemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [msdyn_knowledgearticletemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -925,7 +927,7 @@ Same as bulkdeletefailure entity [msdyn_knowledgearticletemplate_BulkDeleteFailu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -942,7 +944,7 @@ Same as principalobjectattributeaccess entity [msdyn_knowledgearticletemplate_Pr
 
 **Added by**: System Solution Solution
 
-Same as queueitem entity [msdyn_knowledgearticletemplate_QueueItems](queueitem.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) Many-To-One relationship.
+Same as queueitem table [msdyn_knowledgearticletemplate_QueueItems](queueitem.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -958,7 +960,7 @@ Same as queueitem entity [msdyn_knowledgearticletemplate_QueueItems](queueitem.m
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_knowledgearticletemplate_createdby](#BKMK_lk_msdyn_knowledgearticletemplate_createdby)
 - [lk_msdyn_knowledgearticletemplate_createdonbehalfby](#BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby)
@@ -974,54 +976,52 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_knowledgearticletemplate_createdby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_knowledgearticletemplate_createdby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby"></a> lk_msdyn_knowledgearticletemplate_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_knowledgearticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_knowledgearticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_modifiedby"></a> lk_msdyn_knowledgearticletemplate_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_knowledgearticletemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_knowledgearticletemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby"></a> lk_msdyn_knowledgearticletemplate_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_msdyn_knowledgearticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_msdyn_knowledgearticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_user_msdyn_knowledgearticletemplate"></a> user_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [user_msdyn_knowledgearticletemplate](systemuser.md#BKMK_user_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See systemuser Table [user_msdyn_knowledgearticletemplate](systemuser.md#BKMK_user_msdyn_knowledgearticletemplate) One-To-Many relationship.
 
 ### <a name="BKMK_team_msdyn_knowledgearticletemplate"></a> team_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See team Entity [team_msdyn_knowledgearticletemplate](team.md#BKMK_team_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See team Table [team_msdyn_knowledgearticletemplate](team.md#BKMK_team_msdyn_knowledgearticletemplate) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_knowledgearticletemplate"></a> business_unit_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_msdyn_knowledgearticletemplate](businessunit.md#BKMK_business_unit_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See businessunit Table [business_unit_msdyn_knowledgearticletemplate](businessunit.md#BKMK_business_unit_msdyn_knowledgearticletemplate) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_subject_knowledgearticletemplate_subjectid"></a> msdyn_subject_knowledgearticletemplate_subjectid
 
 **Added by**: System Solution Solution
 
-See subject Entity [msdyn_subject_knowledgearticletemplate_subjectid](subject.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) One-To-Many relationship.
+See subject Table [msdyn_subject_knowledgearticletemplate_subjectid](subject.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_knowledgearticletemplate?text=msdyn_knowledgearticletemplate EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Microsoft Azure Storage is a Microsoft-managed cloud service that provides storage that is highly available, secure, durable, scalable, and redundant. More information: [Introduction to Microsoft Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
+Microsoft Azure Storage is a Microsoft-managed cloud service that provides storage that is highly available, secure, durable, scalable, and redundant. More information: [Introduction to Microsoft Azure Storage](/azure/storage/common/storage-introduction).
 
 To maintain security of your files, all app developers must store their AppSource package file in a Microsoft Azure Blob storage account, and use a Shared Access Signature (SAS) key to share the package file. Your package file is retrieved from your Azure Storage location for certification, and then for AppSource trials.
 
@@ -39,7 +39,7 @@ To upload your package to Azure Blob storage:
     
    ![Create a Storage account](media/appsource-storageaccount-pic1.png)
 
-4. On the **Create storage account** page, specify **Name**, **Resource group**, and **Location** for your storage account. Leave the rest of the fields with the default options. Click **Create**. 
+4. On the **Create storage account** page, specify **Name**, **Resource group**, and **Location** for your storage account. Leave the rest of the columns with the default options. Click **Create**. 
 
    ![Specifying account values](media/appsource-storageaccount-pic2.png)
   
@@ -67,7 +67,7 @@ To upload your package to Azure Blob storage:
 
     ![Set an expiration time](media/appsource-storageaccount-pic7.png)
 
-12. The next page displays information about the generated SAS information. Copy the **URL** value and save it for later. You will need to specify this URL while creating an offer in the Cloud Partner Portal.
+12. The next page displays information about the generated SAS information. Copy the **URL** value and save it for later. You will need to specify this URL while creating an offer in Partner Center.
 
     ![Copying the SAS URL](media/appsource-storageaccount-pic8.png)
 

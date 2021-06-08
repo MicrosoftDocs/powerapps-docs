@@ -1,8 +1,8 @@
 ---
 title: "Use the Microsoft Dataverse Web API (Dataverse)| Microsoft Docs"
-description: "The Microsoft Dataverse Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
-ms.custom: ""
-ms.date: 03/31/2020
+description: "The Microsoft Dataverse Web API implements the OData v4 protocol and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
+ms.custom: intro-internal
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,11 +21,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use the Microsoft Dataverse Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The Web API is one of two web services you can use to work with data and metadata in Dataverse. The other is the [Organization Service](../org-service/overview.md).
+The Web API is one of two web services you can use to work with data, and table and column definitions in Dataverse. The other is the [Organization Service](../org-service/overview.md).
 
 The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
 

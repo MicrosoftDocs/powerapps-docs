@@ -1,6 +1,6 @@
 ---
 title: formatDateYearMonth | Microsoft Docs
-description: 
+description: Returns a formatted string that represents a date in the year month format.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

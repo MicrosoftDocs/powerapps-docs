@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -68,7 +68,7 @@ data from your dataflow must have access to the environment in which you created
 it.
 
 > [!NOTE]
-> Creating dataflows is currently not available with Power Apps Community Plan licenses.
+> Creating dataflows is currently not available with Power Apps Developer Plan licenses.
 
 1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
@@ -132,7 +132,7 @@ table columns as defined by the Common Data Model. Standard tables have a
 known schema defined by the Common Data Model.
 
 For more information about this approach, and about the Common Data Model, see [The Common Data
-Model](/powerapps/common-data-model/overview).
+Model](/common-data-model/).
 
 To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
@@ -223,7 +223,7 @@ The following articles are useful for further information and scenarios when usi
 
 For more information about the Common Data Model:
 
--   [Common Data Model - overview](/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](/common-data-model/)
 
 -   [Learn more about the Common Data Model schema and tables on GitHub](https://github.com/Microsoft/CDM)
 

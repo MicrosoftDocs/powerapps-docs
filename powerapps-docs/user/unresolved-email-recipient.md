@@ -20,7 +20,7 @@ search.app:
 
 # Resolve an unresolved email recipient
 
-An *unresolved email recipient* is one whose email address isn't associated with any table rows in Microsoft Dataverse. By default, you can't send an email to an unresolved email recipient. If you enter an unresolved email recipient address, the email address is deleted as soon as you move the focus out of the **To**, **Cc**, or **Bcc** column. An administrator must enable the unresolved email recipient feature by selecting **Yes** for **Allow messages with unresolved email recipients to be sent** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+An *unresolved email recipient* is one whose email address isn't associated with any table rows in Microsoft Dataverse. By default, you can't send an email to an unresolved email recipient. If you enter an unresolved email recipient address, the email address is deleted as soon as you move the focus out of the **To**, **Cc**, or **Bcc** column. An administrator must enable the unresolved email recipient feature by selecting **Yes** for **Allow messages with unresolved email recipients to be sent** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](/power-platform/admin/system-settings-dialog-box-email-tab)
 
 After the feature is enabled, you can add an unresolved email recipient in the **To**, **Cc**, or **Bcc** column. The entered email address is shown in red. You can then select the email address and associate it with a table row in Dataverse without navigating away from the email form.
 
@@ -58,7 +58,7 @@ If you receive an email that has email addresses that aren't associated with a t
 
 ### See also
 
-[Allow unresolved email recipients](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+[Allow unresolved email recipients](/power-platform/admin/system-settings-dialog-box-email-tab)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: Device | Microsoft Docs
-description: 
+description: Provides methods to use native device capabilities.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

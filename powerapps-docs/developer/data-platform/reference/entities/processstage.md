@@ -1,22 +1,24 @@
 ---
-title: "ProcessStage entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ProcessStage table."
-ms.date: 11/14/2020
+title: "ProcessStage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ProcessStage table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ProcessStage entity reference
+
+# ProcessStage table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Stage associated with a process.
 
@@ -25,13 +27,13 @@ Stage associated with a process.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/processstages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/processstages(*processstageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/processstages(*processstageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST [*org URI*]/api/data/v9.0/processstages<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/processstages(*processstageid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/processstages(*processstageid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveActivePath|<xref href="Microsoft.Dynamics.CRM.RetrieveActivePath?text=RetrieveActivePath Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveActivePathRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processstages<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processstages<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Stage associated with a process.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Connector](#BKMK_Connector)
 - [IsTrigger](#BKMK_IsTrigger)
@@ -67,7 +69,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_Connector"></a> Connector
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -85,7 +87,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_IsTrigger"></a> IsTrigger
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -97,7 +99,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsTrigger Options
+#### IsTrigger Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -110,7 +112,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_OperationId"></a> OperationId
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -128,7 +130,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_OperationKind"></a> OperationKind
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -140,7 +142,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### OperationKind Options
+#### OperationKind Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -174,7 +176,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_OperationType"></a> OperationType
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -186,7 +188,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### OperationType Options
+#### OperationType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -301,7 +303,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### StageCategory Options
+#### StageCategory Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -333,9 +335,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ClientData](#BKMK_ClientData)
 - [OwnerId](#BKMK_OwnerId)
@@ -458,7 +460,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
 
-Same as knowledgearticle entity [processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle) Many-To-One relationship.
+Same as knowledgearticle table [processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -473,7 +475,7 @@ Same as knowledgearticle entity [processstage_knowledgearticle](knowledgearticle
 
 ### <a name="BKMK_processstage_contact"></a> processstage_contact
 
-Same as contact entity [processstage_contact](contact.md#BKMK_processstage_contact) Many-To-One relationship.
+Same as contact table [processstage_contact](contact.md#BKMK_processstage_contact) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -488,7 +490,7 @@ Same as contact entity [processstage_contact](contact.md#BKMK_processstage_conta
 
 ### <a name="BKMK_processstage_teams"></a> processstage_teams
 
-Same as team entity [processstage_teams](team.md#BKMK_processstage_teams) Many-To-One relationship.
+Same as team table [processstage_teams](team.md#BKMK_processstage_teams) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -503,7 +505,7 @@ Same as team entity [processstage_teams](team.md#BKMK_processstage_teams) Many-T
 
 ### <a name="BKMK_ProcessStage_SyncErrors"></a> ProcessStage_SyncErrors
 
-Same as syncerror entity [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors) Many-To-One relationship.
+Same as syncerror table [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -518,7 +520,7 @@ Same as syncerror entity [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStag
 
 ### <a name="BKMK_processstage_recurringappointmentmasters"></a> processstage_recurringappointmentmasters
 
-Same as recurringappointmentmaster entity [processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters) Many-To-One relationship.
+Same as recurringappointmentmaster table [processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -533,7 +535,7 @@ Same as recurringappointmentmaster entity [processstage_recurringappointmentmast
 
 ### <a name="BKMK_processstage_letters"></a> processstage_letters
 
-Same as letter entity [processstage_letters](letter.md#BKMK_processstage_letters) Many-To-One relationship.
+Same as letter table [processstage_letters](letter.md#BKMK_processstage_letters) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -548,7 +550,7 @@ Same as letter entity [processstage_letters](letter.md#BKMK_processstage_letters
 
 ### <a name="BKMK_processstage_faxes"></a> processstage_faxes
 
-Same as fax entity [processstage_faxes](fax.md#BKMK_processstage_faxes) Many-To-One relationship.
+Same as fax table [processstage_faxes](fax.md#BKMK_processstage_faxes) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -563,7 +565,7 @@ Same as fax entity [processstage_faxes](fax.md#BKMK_processstage_faxes) Many-To-
 
 ### <a name="BKMK_processstage_tasks"></a> processstage_tasks
 
-Same as task entity [processstage_tasks](task.md#BKMK_processstage_tasks) Many-To-One relationship.
+Same as task table [processstage_tasks](task.md#BKMK_processstage_tasks) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -578,7 +580,7 @@ Same as task entity [processstage_tasks](task.md#BKMK_processstage_tasks) Many-T
 
 ### <a name="BKMK_processstage_account"></a> processstage_account
 
-Same as account entity [processstage_account](account.md#BKMK_processstage_account) Many-To-One relationship.
+Same as account table [processstage_account](account.md#BKMK_processstage_account) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -593,7 +595,7 @@ Same as account entity [processstage_account](account.md#BKMK_processstage_accou
 
 ### <a name="BKMK_lk_translationprocess_activestageid"></a> lk_translationprocess_activestageid
 
-Same as translationprocess entity [lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid) Many-To-One relationship.
+Same as translationprocess table [lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -608,7 +610,7 @@ Same as translationprocess entity [lk_translationprocess_activestageid](translat
 
 ### <a name="BKMK_processstage_systemusers"></a> processstage_systemusers
 
-Same as systemuser entity [processstage_systemusers](systemuser.md#BKMK_processstage_systemusers) Many-To-One relationship.
+Same as systemuser table [processstage_systemusers](systemuser.md#BKMK_processstage_systemusers) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -623,7 +625,7 @@ Same as systemuser entity [processstage_systemusers](systemuser.md#BKMK_processs
 
 ### <a name="BKMK_lk_newprocess_activestageid"></a> lk_newprocess_activestageid
 
-Same as newprocess entity [lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid) Many-To-One relationship.
+Same as newprocess table [lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -638,7 +640,7 @@ Same as newprocess entity [lk_newprocess_activestageid](newprocess.md#BKMK_lk_ne
 
 ### <a name="BKMK_processstage_emails"></a> processstage_emails
 
-Same as email entity [processstage_emails](email.md#BKMK_processstage_emails) Many-To-One relationship.
+Same as email table [processstage_emails](email.md#BKMK_processstage_emails) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -653,7 +655,7 @@ Same as email entity [processstage_emails](email.md#BKMK_processstage_emails) Ma
 
 ### <a name="BKMK_processstage_appointments"></a> processstage_appointments
 
-Same as appointment entity [processstage_appointments](appointment.md#BKMK_processstage_appointments) Many-To-One relationship.
+Same as appointment table [processstage_appointments](appointment.md#BKMK_processstage_appointments) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -668,7 +670,7 @@ Same as appointment entity [processstage_appointments](appointment.md#BKMK_proce
 
 ### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
 
-Same as phonecall entity [processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls) Many-To-One relationship.
+Same as phonecall table [processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -683,7 +685,7 @@ Same as phonecall entity [processstage_phonecalls](phonecall.md#BKMK_processstag
 
 ### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
 
-Same as expiredprocess entity [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid) Many-To-One relationship.
+Same as expiredprocess table [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -698,9 +700,9 @@ Same as expiredprocess entity [lk_expiredprocess_activestageid](expiredprocess.m
 
 ### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
-Same as processstageparameter entity [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) Many-To-One relationship.
+Same as processstageparameter table [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -716,17 +718,15 @@ Same as processstageparameter entity [processstage_processstageparameter](proces
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_process_processstage"></a> process_processstage
 
-See workflow Entity [process_processstage](workflow.md#BKMK_process_processstage) One-To-Many relationship.
+See workflow Table [process_processstage](workflow.md#BKMK_process_processstage) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.processstage?text=processstage EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

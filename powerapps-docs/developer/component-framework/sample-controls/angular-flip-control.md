@@ -1,6 +1,6 @@
 ---
 title: " Flip component| Microsoft Docs" 
-description: "Implementing a Flip component using Angular JS" 
+description: "This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap." 
 ms.custom: ""
 manager: kvivek
 ms.date: 10/01/2019
@@ -13,6 +13,8 @@ author: Nkrb
 # Implementing Flip component
 
 This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap. The code may not reveal the best practices for the mentioned third-party libraries. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_AngularJSFlipControl).
+
+[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Angular Flip](../media/angular-flip.png "Angular Flip")
@@ -36,16 +38,16 @@ Model-driven apps and canvas apps (public preview)
 </manifest>
 ```
 
-## overview
+## Overview
 
 This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between Power Apps component framework, component model and third-party inner data model in bi-direction.
 
 The flip component sample consists of a label and a button. When you click on the button, the text on the label toggles.
 
-- When the component is loaded, the label shows the text based on the bind attribute value. The `context.parameters.[property_name].attributes` contains the associated metadata.
-- For TwoOptions fields, `context.parameters.[property_name].Options` will include both true and false value option. 
-- Clicking on the Flip button, the label will update value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to Power Apps component framework. 
-- ClientAPI updates the bind attribute value, and the updated value flows to the component label. You can also use `ClientAPI` to update an attribute value to trigger control's [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
+- When the component is loaded, the label shows the text based on the bind column value. The `context.parameters.[property_name].attributes` contains the associated definitions.
+- For Yes/No columns, `context.parameters.[property_name].Options` will include both true and false value. 
+- Selecting on the Flip button, the label will update the value using **notifyOutputEvents** method, [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to Power Apps component framework. 
+- ClientAPI updates the bind column value, and the updated value flows to the component label. You can also use `ClientAPI` to update a column value to trigger control's [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
 
 
 ## Code
@@ -69,9 +71,9 @@ private _controllerId: string;
 private _notifyOutputChanged: () => void;
 // Model of the bind field. Type: Boolean
 private _currentValue: boolean;
-// Option Label Text when Option is True. The Text is from attribute customization. Type: string
+// Option Label Text when Option is True. The Text is from column customization. Type: string
 private _optionTrueLabel: string;
-// Option Label Text when Option is False. The Text is from attribute customization. Type: string
+// Option Label Text when Option is False. The Text is from column customization. Type: string
 private _optionFalseLabel: string;
 
 /**
@@ -90,7 +92,7 @@ constructor() {
  * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
  */
 public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
-    // We need a random integer from 1-100, so that for a form of multiple fields bind to same attribute, we could differentiate
+    // We need a random integer from 1-100, so that for a form of multiple columns bind to same column, we could differentiate
     let randomInt: number = Math.floor(Math.floor(100) * Math.random());
     let _this = this;
 
@@ -99,10 +101,10 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
     this._controllerId = this.createUniqueId(context, "powerApps.angularui.demo", randomInt);
     this._notifyOutputChanged = notifyOutputChanged;
 
-    // Assign Model the value of the bind attribute
+    // Assign Model the value of the bind column
     this._currentValue = context.parameters.flipModel.raw;
 
-    // Initialize the True/False Label texts from the attribute metadata
+    // Initialize the True/False Label texts from the column definitions
     this.initializeOptionsLabel(context);
 
     // Create HTML structure for the control
@@ -125,7 +127,7 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
         // Intialize 'labelModel'. Assign initial option text to the Angular $scope labelModel. It will be revealed in '<pre>{{labelModel}}</pre>'
         $scope.labelModel = _this._currentValue ? _this._optionTrueLabel : _this._optionFalseLabel;
 
-        // Intialize 'flipButtonModel'. Assign bind attribute value to Angular $scope flipButtonModel. The Flip button also bind to this 'flipButtonModel', so when we click, it will flip
+        // Intialize 'flipButtonModel'. Assign bind column value to Angular $scope flipButtonModel. The Flip button also bind to this 'flipButtonModel', so when we click, it will flip
         $scope.flipButtonModel = _this._currentValue ? 1 : 0;
 
         // Watch the click of the flip button
@@ -139,7 +141,7 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
                 $scope.labelModel = _this._optionFalseLabel;
             }
 
-            // Call updateOutputIfNeeded and inform PCF framework that bind attribute value need update
+            // Call updateOutputIfNeeded and inform PCF framework that bind column value need update
             _this.updateOutputIfNeeded($scope.flipButtonModel);
 
         });
@@ -152,18 +154,18 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
 }
 
 /**
- * Get UniqueId so as to avoid id conflict between multiple fields bind to same attribute
+ * Get UniqueId so as to avoid id conflict between multiple columns bind to same column
  * @param context The "Input Properties" containing the parameters, control metadata and interface functions.
  * @param passInString input string as suffix
  * @param randomInt random integer
- * @returns a string of uniqueId includes attribute logicalname + passIn specialized string + random Integer
+ * @returns a string of uniqueId includes column logicalname + passIn specialized string + random Integer
 */
 private createUniqueId(context: ComponentFramework.Context<IInputs>, passInString: string, randomInt: number): string {
     return context.parameters!.flipModel.attributes!.LogicalName + "-" + passInString + randomInt;
 }
 
 /**
- * Initialize Options Label to use the attribute label from Metadata
+ * Initialize Options Label to use the column label from Metadata
  * @param context The "Input Properties" containing the parameters, control metadata and interface functions.
 */
 private initializeOptionsLabel(context: ComponentFramework.Context<IInputs>): void {
@@ -211,11 +213,11 @@ private updateOutputIfNeeded(newValue: boolean): void {
 }
 
 /**
- * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+ * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
  * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
  */
 public updateView(context: ComponentFramework.Context<IInputs>): void {
-    // An attribute value from Control Framework could be updated even after init cycle, clientAPI, post Save response can update the attribute value and the Flip control should reveal the new value.
+    // A column value from Control Framework could be updated even after init cycle, clientAPI, post Save response can update the column value and the Flip control should reveal the new value.
     this.updateFlipButtonModelIfNeeded(context.parameters.flipModel.raw);
 }
 

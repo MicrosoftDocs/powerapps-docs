@@ -1,6 +1,6 @@
 ---
 title: requestRender | Microsoft Docs
-description: 
+description: Requests re-rendering of the component with the updated data.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -17,17 +17,17 @@ search.app:
 ---
 # Next steps: Submit your app on Partner Center
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Your app is ready for submission after completing steps 1-5. 
 
-If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](https://docs.microsoft.com/azure/marketplace/partner-center-portal/offer-creation-checklist) on Partner Center to submit your app.
+If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](/azure/marketplace/partner-center-portal/offer-creation-checklist) on Partner Center to submit your app.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 All apps that are submitted to be listed on AppSource go through a certification process. For information about the checks done in the certification process, see [Appendix: App certification checklist](appendix-app-certification-checklist.md).
 
 ## See also
 
-[Overview of the Commercial Marketplace portal in Partner Center](https://docs.microsoft.com/azure/marketplace/partner-center-portal/commercial-marketplace-overview)  
+[Overview of the Commercial Marketplace portal in Partner Center](/azure/marketplace/partner-center-portal/commercial-marketplace-overview)  
 
 [Publish your app on AppSource](publish-app-appsource.md)
 

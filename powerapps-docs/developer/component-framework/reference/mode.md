@@ -1,6 +1,6 @@
 ---
 title: Mode | Microsoft Docs
-description: 
+description: Provides access to methods to get the information about the current state of the code component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

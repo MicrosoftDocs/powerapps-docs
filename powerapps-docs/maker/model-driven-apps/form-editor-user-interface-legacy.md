@@ -1,6 +1,8 @@
 ---
 title: Overview of the model-driven app form editor user interface for Power Apps | MicrosoftDocs
 description: Know the form editor user interface to edit forms in Power Apps
+ms.custom: intro-internal
+ms.topic: overview
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
@@ -17,6 +19,8 @@ search.app:
   - D365CE
 ---
 # Overview of the model-driven app form editor user interface
+
+This article describes the classic form editor. We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 
@@ -137,8 +141,8 @@ The Insert tab displays the commands in the following table:
 ||**IFRAME**|You can add an IFRAME to a form to integrate content from another website within a form.| 
 ||**Timeline**|Insert a timeline control in the form. This control shows the timeline of activities related to the table on a form.|  
 ||**Navigation Link**|Using this option, you can insert a link into a form navigation.|  
-||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
-||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
+||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
+||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
 ||**Relationship Assistant**|Using this option, you can insert a relationship assistant control in the form.|
 
 >[!Note] 

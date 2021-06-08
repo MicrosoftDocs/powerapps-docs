@@ -1,13 +1,17 @@
 ---
-title: "Configure SAML 2.0 for portals with Azure Active Directory. | MicrosoftDocs"
-description: "Learn how to configure SAML 2.0 for portals with Azure Active Directory."
+title: Configure a SAML 2.0 provider for portals with Azure AD
+description: Learn how to configure SAML 2.0 for portals with Azure Active Directory.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a SAML 2.0 provider for portals with Azure AD
@@ -38,7 +42,7 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 
     > [!NOTE]
     > - The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
-    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
     1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -52,14 +56,14 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 
     1. Enter a name.
 
-    1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](/azure/active-directory/develop/quickstart-register-app)
 
     1. Under **Redirect URI**, select **Web** (if it isn't already selected).
 
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-saml_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure SAML 2.0 provider settings** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring the SAML 2.0 provider. <br> For example, if you enter the **Redirect URI** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-saml_1`, you must use it as-is for the SAML 2.0 configuration in portals.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure SAML 2.0 provider settings** section on the **Configure identity provider** screen (step 6 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring the SAML 2.0 provider. <br> For example, if you enter the **Redirect URI** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-saml_1`, you must use it as-is for the SAML 2.0 configuration in portals.
 
         ![Register application](media/authentication/register-application-saml2.png "Register application")
 

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -28,6 +28,9 @@ search.app:
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
+
+Watch this video for a quick overview about columns:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -42,7 +45,7 @@ There are two designers you can use to create or edit columns:
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/powerapps/maker/data-platform/add-data-power-query).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](./add-data-power-query.md).
 > - A developer can use [Metadata services](/powerapps/developer/data-platform/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 
@@ -74,7 +77,7 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
 
 ## Community tools
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer Tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer Tools](/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

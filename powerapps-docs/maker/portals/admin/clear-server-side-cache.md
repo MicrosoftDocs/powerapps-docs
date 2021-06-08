@@ -1,13 +1,16 @@
 ---
-title: "Clear the server-side cache for a portal"
-description: "Instructions to force the portal to refresh its cache immediately."
+title: Server-side cache in portals
+description: Learn how to force the portal to refresh its cache immediately.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Server-side cache in portals
@@ -15,8 +18,8 @@ ms.reviewer: tapanm
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Microsoft Dataverse is immediately reflected on the portal. Updates from Dataverse  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Dataverse and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
 > [!IMPORTANT]
-> - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Dataverse.
-> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [publish changes](../../data-platform/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many entity changes may adversely affect portal performance.
+> - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration tables cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Dataverse.
+> - Changes to the [configuration tables](#list-of-configuration-tables-refreshed-when-you-clear-config), or [publish changes](../../data-platform/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many table changes may adversely affect portal performance.
 > - The SLA for cache refresh (data transfer between Dataverse and portal) is 15 minutes.
 > - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
@@ -34,19 +37,19 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 
 ![Clear the portal cache](media/clear-server-side-cache/clear-portal-cache.png)
 
-## Configuration entity caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
+## Configuration table caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
 
-[Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
+[Capacity based](/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
 ![Clear portal cache with capacity-based license](media/clear-server-side-cache/clear-config-capacity-license.png)
 
 To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portals, Dynamics 365 portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
-Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
+Portal metadata is stored in tables called *configuration tables*. If you change configuration tables using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
-### List of configuration entities refreshed when you clear config
+### List of configuration tables refreshed when you clear config
 
-Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration entities*:
+Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration tables*:
 
 :::row:::
 :::column:::
@@ -214,7 +217,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
 - [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
-- Capacity-based portals don't have to manually [clear the configuration entity cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
+- Capacity-based portals don't have to manually [clear the configuration table cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]
@@ -227,7 +230,7 @@ Power Apps portals with version 9.2.6.x or later benefit from improved caching f
 **1. Can I change the cache refresh duration from 15 minutes to a lesser duration?** <br>
 No. SLA for cache refresh remains 15 minutes. Any changes from Dataverse will reflect on portals within 15 minutes.
 
-**2. I'm using plugins or workflows to update data in other entities and need these data changes to reflect immediately on my portal.** <br>
+**2. I'm using plugins or workflows to update data in other tables and need these data changes to reflect immediately on my portal.** <br>
 This design approach isn't recommended. Except the primary record where the create or update action is triggered, data reflection from Dataverse to portals is never guaranteed to be immediate.
 
 **3. Is there any difference in caching between capacity-based portals and add-on portals?** <br>

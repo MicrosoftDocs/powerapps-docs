@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -35,7 +35,7 @@ With Many-to-many relationships a Relationship (or Intersect) table stores the d
   
 Creating a Many-to-many relationship requires choosing the two tables that you want to participate in the relationship. For model-driven apps you can decide how you want the respective lists to be available within the navigation for each table. These are the same options used for the primary table in 1:N table relationships. More information:  [Navigation Pane Item for Primary table](create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)
   
-Not all tables can be used with Many-to-many relationships. If the table isn't available to be chosen in the designer, you can’t create a new Many-to-many relationship with this table. More information: [Developer documentation: table relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
+Not all tables can be used with Many-to-many relationships. If the table isn't available to be chosen in the designer, you can’t create a new Many-to-many relationship with this table. More information: [Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
 
 There are two designers you can use to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships:
 
@@ -47,7 +47,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > [!NOTE]
 > You can also create new Many-to-many (N:N) table relationship in your environment using the following:
 > - Import a solution that contains the definition of the relationship. More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. More information: [Developer documentation: Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. More information: [Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -61,8 +61,8 @@ You should use the Power Apps portal to create and edit Many-to-many (N:N) table
 [Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
 [Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
-[Developer documentation: Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
-[Developer documentation: table relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/table-relationship-eligibility)
+[Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
+[Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/table-relationship-eligibility)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
