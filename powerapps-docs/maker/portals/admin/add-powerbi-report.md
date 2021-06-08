@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2021
+ms.date: 06/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -24,7 +24,8 @@ If adding a Power BI report or dashboard created in the new workspace in Power B
 
 > [!NOTE]
 > - If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](/power-bi/service-share-dashboards).
-> - **powerbiembedded** supports Power BI dashboards and reports that connect to Azure Analysis Services using [CustomData](/dax/customdata-function-dax) property in the connection string.
+> - **powerbiembedded** supports Power BI dashboards and reports that connect to Azure Analysis Services. You can also use "customdata" property in liquid code to pass value for [CustomData](/dax/customdata-function-dax) property.
+> - Your portal version must be [9.3.4.x](../versions/version-9.3.4.x.md) or later for this feature to work.
 
 For example: 
 
@@ -46,7 +47,7 @@ For example:
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:<customdata>" %}
 ```
 
-The **customdata** tag can be be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
+The optional **customdata** tag can be be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
 
 Examples:
 - `customdata: {{ object.attribute }}`
