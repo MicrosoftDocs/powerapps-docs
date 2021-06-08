@@ -175,9 +175,8 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 | --- | --- |
 | RetrieveUserPrivilegeByPrivilegeId | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest> |
 | RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
-| RetrieveUserSetOfPrivilegesByIds | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds><!--,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest>--> |
-| RetrieveUserSetOfPrivilegesByNames | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames><!--,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest>--> |
-
+| RetrieveUserSetOfPrivilegesByIds | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds>,<br/>RetrieveUserSetOfPrivilegesByIdsRequest |
+| RetrieveUserSetOfPrivilegesByNames | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames>,<br/>RetrieveUserSetOfPrivilegesByNamesRequest |
 
 ## Retrieve privileges for a security role
 
