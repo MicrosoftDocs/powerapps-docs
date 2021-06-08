@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/07/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -60,7 +60,7 @@ More information: [About admin roles in Microsoft 365](/microsoft-365/admin/add-
 
 ### Portal app owner
 
-A *portal app owner* is a user who owns [portal application registration](/azure/active-directory/develop/quickstart-register-ap) in the [Azure portal](https://portal.azure.com).
+A *portal app owner* is a user who owns [portal application registration](/azure/active-directory/develop/quickstart-register-app) in the [Azure portal](https://portal.azure.com).
 <!--markdownlint-disable MD036-->
 **To add an app owner for the portal app in the Azure portal**
 <!--markdownlint-enable MD036-->
