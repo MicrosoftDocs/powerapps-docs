@@ -6,12 +6,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/27/2021
+ms.date: 06/08/2021
 ms.author: lunune
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Build a multi-language app
@@ -111,7 +113,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
     The formula uses [Set()](functions/function-set.md) function to create a [table](functions/function-table.md) with the labels in different languages as a dictionary. To customize this table as the dictionary for your translations, change the control names such as *Title*, *JobTitle*, *Platform*, *Close*, *Open*, *Cancel*, and so on. You can add, or remove translations for control names depending on your business requirement.
 
-    The table should also have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
+    The table should also have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs, and labels in your app.
 
 1. On the upper-left side of the screen, select the property list drop-down and choose **Labels** property for the component.
 
@@ -143,7 +145,7 @@ Your translation component library is created, saved, and published for use.
 
 ## Use the translation component in your app
 
-Earlier, you created the translation component library for reuse. In this section, you'll create an app that uses the translation component library and demonstrate the language translation based on the selected language.
+Previously, you created the translation component library for reuse. In this section, you'll create an app that uses the translation component library and demonstrate the language translation based on the selected language.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -226,7 +228,7 @@ Earlier, you created the translation component library for reuse. In this sectio
     > [!NOTE]
     > Replace **'Translation component_1'** in this formula to the name of the component in your app, if different.
 
-    Similarly, you can use different labels, and properties, as defined in the component that you created earlier to pass additional property values. For example, in addition to *Title*, and *JobTitle*, you can create additional properties such as *Description*, or *Instructions* in the component library with the translated text. And then, use such properties on the respective labels, as *'Translation component_1'.Labels.Description*, or *'Translation component_1'.Labels.Instructions*.
+    Similarly, you can use different labels, and properties, as defined in the component that you created earlier to pass more property values. For example, in addition to *Title*, and *JobTitle*, you can create more properties such as *Description*, or *Instructions* in the component library with the translated text. And then, use such properties on the respective labels, as *'Translation component_1'.Labels.Description*, or *'Translation component_1'.Labels.Instructions*.
 
 1. Select **File** -> **Save**, update the name for your app, and then select **Save** to save your app. More information: [Save and publish an app](save-publish-app.md)
 
@@ -238,7 +240,7 @@ When the toggle is selected, the language is changed to Portuguese (BR) for the 
 
 ![Translation demo](media/multi-language-apps/translation-demo.png "Translation demo")
 
-With this approach, you can now create your own component having the translations dictionary that fits your business requirement. And then, create additional canvas apps that use the component that gives the business users the ability to use different languages.
+With this approach, you can now create your own component having the translations dictionary that fits your business requirement. And then, create more canvas apps that use the component that gives the business users the ability to use different languages.
 
 ### See also
 
