@@ -181,8 +181,8 @@ Yes if your configuration data is not relational. Environment variables should b
 
 
 ### See also
-[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
-[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins) </BR>
+[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
+[EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
 [Create a flow with Dataverse](/flow/connection-cds)
