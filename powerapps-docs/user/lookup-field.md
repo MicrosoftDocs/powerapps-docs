@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/03/2021
+ms.date: 06/08/2021
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -37,11 +37,11 @@ along with seven of your favorite rows. If you haven't pinned any rows to favori
 
 Lookups are classified into the following: 
 
-- **Simple lookup:** Select a single row in a column from a single table. 
+- **Simple lookup:** Select a single row from a single table.
 
-- **PartyList-type columns:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
+- **PartyList-type lookup:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
   
-- **Regarding-type columns:** Use to select a single row from multiple tables in a lookup. Activities must be enabled for a table to use the Regarding lookup. For more information: [Enable activities for a table](../maker/data-platform/types-of-entities.md#enable-activities-for-a-table)
+- **Regarding-type lookup:** Use to select a single row from multiple tables in a lookup. Activities must be enabled for a table to use the Regarding lookup. For more information: [Enable activities for a table](../maker/data-platform/types-of-entities.md#enable-activities-for-a-table)
 
 
 ## Search in a lookup column 
@@ -83,12 +83,12 @@ When results span multiple row types, you can see how many types of rows there a
   
 ## Create a new row if you don’t find an existing row
 
-If you do not find a row, select **New** in the lookup area to create a new row.
+If you do not find a row, select **New** in the lookup area to create a new row. When the row is created it will show up in the lookup. 
 
 
-### Replace an existing row from a lookup column
+### Replace the selected lookup item
 
-You can replace an existing row while using simple and regarding-type lookups. Search for a row. Then select the row, and replace it with a new row.
+You can replace an existing row while using simple and regarding-type lookups. Search for a row and then select the row to replace it with a new row.
 
 ### Change a view in a lookup column 
 
