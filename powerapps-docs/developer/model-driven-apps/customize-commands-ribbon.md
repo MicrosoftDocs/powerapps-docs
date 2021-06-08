@@ -4,6 +4,7 @@ description: "Microsoft Dataverse displays commands in different ways depending 
 keywords: ""
 ms.date: 04/15/2021
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: article
 ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
 author: Nkrb # GitHub ID
@@ -32,7 +33,7 @@ The articles in this section introduce you to key concepts that you must underst
   
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 
 ## Community tool

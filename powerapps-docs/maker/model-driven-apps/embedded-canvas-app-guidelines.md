@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "troubleshooting"
 author: "RichdiMSFT"
 ms.author: "matp"
 manager: "kvivek"

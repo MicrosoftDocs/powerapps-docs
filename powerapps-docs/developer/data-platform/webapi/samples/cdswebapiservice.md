@@ -210,7 +210,7 @@ Sends a `DELETE` request synchronously.
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
-- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table)
+- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table-row)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ## DeleteAsync
