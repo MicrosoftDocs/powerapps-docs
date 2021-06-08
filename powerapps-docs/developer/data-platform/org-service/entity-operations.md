@@ -176,7 +176,7 @@ More information: [Access formatted values](entity-operations-query-data.md#acce
 
 When you create an entity record (table row) you can also define a set of related entity records to create in the same operation. More information: [Create related table rows in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
 
-When you retrieve an entity record using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> you can set <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related entity records in the results. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-records)
+When you retrieve an entity record using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> you can set <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related entity records in the results. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
 
 If you include related entity records in the results, you can also update values on those related records and include them when you update the entity record. More information: [Update related table rows in one operation](entity-operations-update-delete.md#update-related-entities-in-one-operation)
 

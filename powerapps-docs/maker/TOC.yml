@@ -901,6 +901,8 @@
             href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Build a multi-language app
+        href: ./canvas-apps/multi-language-apps.md
       - name: Make an app accessible
         items:
           - name: Create an accessible app
@@ -2160,7 +2162,7 @@
           items:
              - name: Boards (Preview)
                href: ../teams/boards.md
-             - name: Boards (Preview) sample app architecture
+             - name: Understand Boards (Preview) sample app architecture
                href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
@@ -2181,9 +2183,17 @@
             - name: Understand Inspection sample app architecture
               href: ../teams/inspection-architecture.md
         - name: Issue reporting
-          href: ../teams/issue-reporting.md
+          items:
+            - name: Issue reporting
+              href: ../teams/issue-reporting.md
+            - name: Issue reporting sample app architecture
+              href: ../teams/issue-reporting-architecture.md
         - name: Milestones
-          href: ../teams/milestones.md
+          items:
+             - name: Milestones
+               href: ../teams/milestones.md
+             - name: Understand Milestones sample app architecture
+               href: ../teams/milestones-architecture.md
         - name: Perspectives
           items:
             - name: Perspectives (Preview)
