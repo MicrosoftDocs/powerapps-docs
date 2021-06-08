@@ -21,7 +21,7 @@ This sample component changes the user experience of interacting with address fi
 
 ## Available for 
 
-Model-driven apps and canvas apps 
+Model-driven and canvas apps 
 
 ## Code 
 

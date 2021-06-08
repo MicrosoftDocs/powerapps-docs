@@ -26,7 +26,7 @@ In canvas apps, the parent context always provides the height and width to the c
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

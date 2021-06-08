@@ -19,15 +19,15 @@ ms.assetid: e4673628-28d9-432c-92f4-24d1fcb44e21
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Methods
 
-|Method | Description | 
-| ------------- |-------------|
-|[clearFilter](filtering/clearfilter.md)|[!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]|
-|[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|
-|[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|
+|Method | Description | Available for|
+| ------------- |-------------|--------|
+|[clearFilter](filtering/clearfilter.md)|[!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]|Model-riven and canvas apps|
+|[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|Model-riven and canvas apps|
+|[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|Model-riven and canvas apps|
 
 ### Related topics
 

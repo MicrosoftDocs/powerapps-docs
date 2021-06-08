@@ -24,9 +24,9 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-------|
-|`description-key`|Defines the description of the property.|`string`|Optional|Model-driven apps and canvas apps|
-|`display-name-key`|Defines the name of the property.|`string`|Yes|Model-driven apps and canvas apps|
-|`name`|Name of the grid|`string`|Yes|Model-driven apps and canvas apps|
+|`description-key`|Defines the description of the property.|`string`|Optional|Model-driven and canvas apps|
+|`display-name-key`|Defines the name of the property.|`string`|Yes|Model-driven and canvas apps|
+|`name`|Name of the grid|`string`|Yes|Model-driven and canvas apps|
 |`cds-data-set-options`|Displays the Commandbar, ViewSelector, QuickFind if set to true |`string`|Yes|Model-driven apps|
 
 ## Parent Elements

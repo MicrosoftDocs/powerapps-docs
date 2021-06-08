@@ -17,7 +17,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps and canvas apps
+Model-driven and canvas apps
 
 ## Methods
 

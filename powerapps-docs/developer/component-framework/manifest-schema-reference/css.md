@@ -22,14 +22,14 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 ## Available for
 
-Model-driven apps and canvas apps
+Model-driven and canvas apps
 
 ## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps |
-|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps |
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven and canvas apps |
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven and canvas apps |
 
 ## Parent Elements
 

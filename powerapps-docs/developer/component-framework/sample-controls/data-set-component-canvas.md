@@ -26,7 +26,7 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 
 ## Available for 
 
-Model-driven apps and canvas apps.
+Model-driven and canvas apps.
 
 ## Code
 
@@ -49,15 +49,12 @@ In this sample, the column information is extracted using the  `context.paramete
 
 The `context.parameters.[dataset_property_name].paging` method provides paging functionality. The `Load Next` button is shown if it has next page data. Users can go back to the previous pages using the `Load Prev` button. 
 
-### PropertySets
+### Property sets
 
-In this sample component, two property sets are defined in its manifest, `samplePropertySet` and `samplePropertySet2`. Users can see two empty columns before adding any column fields to the component. These are the property-set columns, which can be used to access columns defined in the corresponding property using the expression input. For a property-set, the corresponding column order will be 0.
+Property-set is used to access individual column values for particular columns in the record. For example, map control can use the longitude and latitude in the data-set to show the location pings in the map. In this sample component, two property sets are defined in the manifest, `samplePropertySet` and `samplePropertySet2`. Users will see two empty columns when the component is added to canvas app before any column names is configured. For a property-set, the corresponding columns are added in the beginning and order will be 0. 
 
 > [!div class="mx-imgBorder"]
 > ![Property Set Configuration](../media/property-set-configuration.png)
-
-> [!div class="mx-imgBorder"]
-> ![Property Set view fields](../media/property-set-view-fields.png)
 
 ### Sizing
 

@@ -19,13 +19,13 @@ ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 
 ## Available for 
 
-Model-driven apps and canvas apps.
+Model-driven and canvas apps.
 
 ## Properties
 
-### addColumn()
+### addColumn
 
-Adds  a column to the columnset
+Adds  a column to the columnset. This is supported only in model-driven apps.
 
 ### Remarks
 
@@ -38,61 +38,61 @@ This method accept two parameters.
 
 ### columns
 
-The set of columns available in this dataset.
+The set of columns available in this dataset. This is supported in both model-driven and canvas apps.
 
 **Type**: [Column](column.md)[]
 
 ### error
 
-Whether an error occurred in data retrieval.
+Whether an error occurred in data retrieval. This is supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
 ### errorMessage
 
-The error message associated with the last encountered error, if applicable.
+The error message associated with the last encountered error, if applicable. This is supported in both model-driven and canvas apps.
 
 **Type**: `string`
 
 ### filtering
 
-The column filtering for the current query.
+The column filtering for the current query. This is supported in both model-driven and canvas apps.
 
 **Type**: [Filtering](filtering.md)
 
 ### linking
 
-Defines the linked table information.
+Defines the linked table information. This is supported only in model-driven  apps.
 
 **Type**: [Linking](linking.md)
 
 ### loading
 
-Indicates whether the dataset is loading or not.
+Indicates whether the dataset is loading or not. This is supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
 ### paging
 
-Pagination status and actions.
+Pagination status and actions. This is supported in both model-driven and canvas apps.
 
 **Type**: [Paging](paging.md)
 
 ### records
 
-Map of IDs to the full record object.
+Map of IDs to the full record object. This is supported in both model-driven and canvas apps.
 
 **Type**: [EntityRecord](entityrecord.md)
 
 ### sortedRecordIds
 
-IDs of the records in the dataset, order by the query response result.
+IDs of the records in the dataset, order by the query response result. This is supported in both model-driven and canvas apps.
 
 **Type**: `string[]`
 
 ### sorting
 
-The sorting status for the current query.
+The sorting status for the current query. This is supported in both model-driven and canvas apps.
 
 **Type**: [SortStatus](sortstatus.md)
 

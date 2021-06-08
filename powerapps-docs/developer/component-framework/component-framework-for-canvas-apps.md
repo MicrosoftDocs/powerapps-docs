@@ -73,15 +73,15 @@ To add code components to a canvas app:
    > [!IMPORTANT]
    > Make sure the solution zip file is already [imported](../../maker/data-platform/import-update-export-solutions.md) into Microsoft Dataverse before you proceed to the next step.
 
-3. In the tree view select **+** icon and then select **Get more components**. 
+3. In the left pane select **+** icon and then select **Get more components**. 
  
     ![Insert components](media/insert-code-components-using-get-more-components.png "Insert components")
 
-4. Select the **Code** tab, add a component from the list, and then select **Import**. 
+4. Select the **Code** tab, select a component from the list, and then select **Import**. 
 
     ![Import sample component](media/insert-component-add-sample-component.png "Import sample component")
 
-5. Click the **+** icon on the left pane and expand the code components tab to add the sample component.
+5. Click the **+** icon on the left pane and expand the code components tab and select to add the sample component.
 
    ![Add sample component](media/add-sample-component-from-list.png "Add sample component")
 

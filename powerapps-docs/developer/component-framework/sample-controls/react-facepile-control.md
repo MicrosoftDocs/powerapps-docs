@@ -22,7 +22,7 @@ This sample shows how to use React to create components using Power Apps compone
 
 ## Available for 
 
-Model-driven apps and canvas apps 
+Model-driven and canvas apps 
 
 ## Code
 

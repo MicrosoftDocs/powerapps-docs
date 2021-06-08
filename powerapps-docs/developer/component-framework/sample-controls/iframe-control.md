@@ -20,7 +20,7 @@ This sample describes how to bind a code component to different columns on the f
 
 ## Available for 
 
-Model-driven apps and canvas apps 
+Model-driven and canvas apps 
 
 ## Code
 

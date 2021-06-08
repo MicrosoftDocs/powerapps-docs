@@ -21,13 +21,11 @@ This sample shows how to use third-party libraries to create components in Power
 
 ## Available for 
 
-Model-driven apps and canvas apps 
+Model-driven and canvas apps 
 
 ## Code
 
 You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_AngularJSFlipControl).
-
-## Overview
 
 This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between Power Apps component framework, component model and third-party inner data model in bi-direction.
 

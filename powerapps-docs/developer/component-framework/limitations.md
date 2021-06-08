@@ -12,7 +12,7 @@ ms.author: "nabuthuk"
 
 # Limitations 
 
-With the release of Power Apps component framework, you can now create your own code components to improve the user experience in model-driven apps and canvas apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the code components. Below are some of the limitations:
+With the release of Power Apps component framework, you can now create your own code components to improve the user experience in Model-driven and canvas apps. Even though you can create your own components, there are some limitations that restrict developers implementing some features in the code components. Below are some of the limitations:
 
 1. Microsoft Dataverse dependent APIs, including WebAPI, are not available for canvas applications yet. For individual API availability in current public preview release,  see [Power Apps component framework API reference](reference/index.md).
 

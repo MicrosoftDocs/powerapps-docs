@@ -20,7 +20,7 @@ Provides access to get geographical information from `context.device.getCurrentP
 
 ## Available for 
 
-Model-driven apps and canvas apps
+Model-driven and canvas apps
 
 ## Properties
 
