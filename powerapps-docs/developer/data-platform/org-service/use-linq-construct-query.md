@@ -1,7 +1,6 @@
 ---
 title: "Use LINQ to construct a query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the .NET Language-Integrated Query (LINQ) query provider to construct a
-Microsoft Dataverse query." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the .NET Language-Integrated Query (LINQ) query provider to construct a Microsoft Dataverse query." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/08/2021
 ms.reviewer: "pehecke"
