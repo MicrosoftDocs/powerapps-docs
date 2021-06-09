@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LinearInputControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl).
 
 
 In this sample, a [type-group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group is used to bind the component property.

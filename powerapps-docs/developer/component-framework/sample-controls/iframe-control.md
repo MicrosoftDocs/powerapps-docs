@@ -3,7 +3,7 @@ title: " IFRAME component| Microsoft Docs"
 description: "This sample describes how to bind a code component to different columns on the form and use the value of these columns as input properties to the component." 
 ms.custom: ""
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -24,7 +24,7 @@ Model-driven and canvas apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IFrameControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/IFrameControl).
 
 > [!NOTE]
 > Power Apps component framework does not yet support composite columns, so you will not be able to bind this component to the out of the box latitude and longitude address columns. You need to bind the code component to a different floating-point field.

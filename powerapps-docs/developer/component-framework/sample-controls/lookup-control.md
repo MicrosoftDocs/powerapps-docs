@@ -27,7 +27,7 @@ Model-driven apps
 
 ## Code 
 
-You can download the complete sample component from [here]()
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LookupSimpleControl)
 
 In the manifest, two properties of type `Lookup.Simple` are defined. When you add this code component to a column in a model-driven app, it must be placed on the column of type `Lookup.Simple`. The first property defined in the manifest is automatically bound to the primary lookup associated with the column. The second property can optionally be bound to other simple lookup available in the application. 
 

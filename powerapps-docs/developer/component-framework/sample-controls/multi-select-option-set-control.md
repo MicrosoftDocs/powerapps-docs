@@ -28,7 +28,7 @@ Model-driven apps
 
 ## Code 
 
-You can download the complete sample component from [here]()
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/MultiSelectOptionSetControl)
 
 In the manifest, a single property of type MultiSelectOptionSet is defined. This property is automatically bound to the OptionSet associated with whatever column the component is placed in the model-driven app.
 

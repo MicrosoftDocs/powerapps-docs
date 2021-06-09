@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,7 +28,7 @@ Model-driven and canvas apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_FormattingAPI).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FormattingAPIControl).
 
 ### Related topics
 

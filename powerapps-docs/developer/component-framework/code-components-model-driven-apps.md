@@ -1,6 +1,6 @@
 ---
-title: Code components for canvas apps  | Microsoft Docs
-description: Learn how to create code components using Power Apps component framework for canvas apps
+title: Code components for model-driven apps  | Microsoft Docs
+description: Learn how to create code components using Power Apps component framework for model-driven apps
 keywords:
 ms.author: nabuthuk
 author: Nkrb

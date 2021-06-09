@@ -26,7 +26,7 @@ Model-driven and canvas apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ReactStandardControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl).
 
 
 > [!IMPORTANT]

@@ -24,7 +24,7 @@ Model-driven apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_WebAPI).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/WebAPIControl).
 
 By default, in the sample, the component is configured to perform the create, retrieve, update actions on the `Account` entity and set the name and revenue fields in the web API examples.
 

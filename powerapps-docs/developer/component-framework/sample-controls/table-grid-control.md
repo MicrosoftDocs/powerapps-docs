@@ -26,7 +26,7 @@ Model-driven apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableGrid).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TableGrid).
 
 Column Header bind to the View :
 

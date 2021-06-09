@@ -3,7 +3,7 @@ title: " Image Upload component| Microsoft Docs"
 description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time." 
 ms.custom: ""
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk"
@@ -27,7 +27,7 @@ Model-driven apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_ImageUploadControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ImageUploadControl).
 
 This sample shows how to create an image picker and showcases the device API and resources API to load the image defined in manifest. Image content is stored in base64 encoding and could be saved and revisited.  
 

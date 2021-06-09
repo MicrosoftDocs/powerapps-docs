@@ -25,7 +25,7 @@ Model-driven and canvas apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/MapControl).
 
 In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  
 

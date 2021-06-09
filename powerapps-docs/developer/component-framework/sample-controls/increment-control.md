@@ -3,7 +3,7 @@ title: " Increment component| Microsoft Docs"
 description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
 ms.custom: ""
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 ## Code 
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_IncrementControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/IncrementControl).
 
 When you click on the button, the value in the text box is increased by 1. The updated value will flow to Power Apps component framework through `notifyOutputChanged` method.
 

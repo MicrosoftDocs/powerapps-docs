@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 02/18/2020
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -30,7 +30,7 @@ Model-driven and canvas apps.
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_PropertySetTableControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/PropertySetTableControl).
 
 > [!NOTE]
 > Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation](../reference/index.md) for availability details.

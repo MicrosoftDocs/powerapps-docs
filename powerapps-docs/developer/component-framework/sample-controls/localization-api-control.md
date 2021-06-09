@@ -26,7 +26,7 @@ Model-driven and canvas apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_LocalizationAPI).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LocalizationAPIControl).
 
 To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control’s manifest file under the [resources](../reference/resources.md) node.  
 

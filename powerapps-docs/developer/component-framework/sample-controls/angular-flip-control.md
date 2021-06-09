@@ -3,7 +3,7 @@ title: " Flip component| Microsoft Docs"
 description: "This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap." 
 ms.custom: ""
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
@@ -25,7 +25,7 @@ Model-driven and canvas apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_AngularJSFlipControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/AngularJSFlipControl).
 
 This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between Power Apps component framework, component model and third-party inner data model in bi-direction.
 

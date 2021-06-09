@@ -5,7 +5,7 @@ keywords:
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 6/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,7 +28,7 @@ Model-driven apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/DataSetGrid).
 
 > [!NOTE]
 > Some of the dataset API methods are still not supported in canvas apps. See, [Dataset component for canvas apps](data-set-component-canvas.md) to learn more about how dataset type components are implemented in canvas apps.

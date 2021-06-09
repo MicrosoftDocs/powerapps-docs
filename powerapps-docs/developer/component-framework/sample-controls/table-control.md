@@ -28,7 +28,7 @@ Model-driven apps
 
 ## Code
 
-You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableControl).
+You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TableControl).
 
 This sample provides examples on how to use methods from the `Client`, `UserSettings`, `Utility`, `Formatting` interfaces.
 
