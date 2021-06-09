@@ -38,6 +38,10 @@ You can download the complete sample component from [here](https://github.com/mi
 
 In this sample, the column information is extracted using the  `context.parameters.[dataset_property_name].columns`. It’s an array type. The ways to access them are the same for both canvas and model-driven apps.
 
+You can define multiple datasets in the manifest. The first dataset in the manifest is as the primary dataset. When configuring the multi dataset component, the primary dataset property always has name `Items`. All non-primary dataset properties will have a `_Items` suffix after the dataset name. 
+
+Certain features in the authoring panel will only apply to the primary dataset properties, such as data source selector, field selector, and view selector. To configure a non-primary dataset property, the maker needs to first import the data source to the app, then set the property value to that secondary data source. Property-set should be used for accessing columns in a non-primary dataset property. 
+
 ### Record binding
 
 - The sorted record Ids information can be extracted using `context.parameters.[dataset_property_name].sortedRecordIds`.

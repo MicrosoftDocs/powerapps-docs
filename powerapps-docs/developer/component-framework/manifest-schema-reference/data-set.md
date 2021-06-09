@@ -20,6 +20,10 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 [!INCLUDE [data-set-description](includes/data-set-description.md)]
 
+You can define multiple datasets in the manifest. The first dataset in the manifest is as the primary dataset. When configuring the multi dataset component, the primary dataset property always has name `Items`. All non-primary dataset properties will have a `_Items` suffix after the dataset name. 
+
+Certain features in the authoring panel will only apply to the primary dataset properties, such as data source selector, field selector, and view selector. To configure a non-primary dataset property, the maker needs to first import the data source to the app, then set the property value to that secondary data source. Property-set should be used for accessing columns in a non-primary dataset property. 
+
 ## Parameters
 
 |Name|Description|Type|Required|Available for|
@@ -34,6 +38,7 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 |Element|Description|
 |--|--|
 |[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
+
 
 ## Example
 
