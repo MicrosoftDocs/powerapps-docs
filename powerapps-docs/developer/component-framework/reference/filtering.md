@@ -25,9 +25,9 @@ Model-driven and canvas apps
 
 |Method | Description | Available for|
 | ------------- |-------------|--------|
-|[clearFilter](filtering/clearfilter.md)|[!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]|Model-riven and canvas apps|
-|[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|Model-riven and canvas apps|
-|[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|Model-riven and canvas apps|
+|[clearFilter](filtering/clearfilter.md)|[!INCLUDE [clearfilter-description](filtering/includes/clearfilter-description.md)]|Model-driven and canvas apps|
+|[getFilter](filtering/getfilter.md)|[!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]|Model-driven and canvas apps|
+|[setFilter](filtering/setfilter.md)|[!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]|Model-driven and canvas apps|
 
 ### Related topics
 

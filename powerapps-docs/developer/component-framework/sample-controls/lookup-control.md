@@ -29,7 +29,7 @@ Model-driven apps
 
 You can download the complete sample component from [here]()
 
-In the manifest, two properties of type `Lookup.Simple` are defined. When you add this code component to a column in a model-driven app, it must be placed on the column of type `Lookup.Simple`. The first property defined in the manifest is automatically bound to the primary lookup associated with the column. The second property can optionally be bound to any other lookup available in the application. 
+In the manifest, two properties of type `Lookup.Simple` are defined. When you add this code component to a column in a model-driven app, it must be placed on the column of type `Lookup.Simple`. The first property defined in the manifest is automatically bound to the primary lookup associated with the column. The second property can optionally be bound to other simple lookup available in the application. 
 
 This code component renders two text columns with associated `Lookup Objects` buttons in the runtime. Each text column displays the name, entityType, and ID associated with the currently selected record to which the lookup property is bound. Selecting the `Lookup Objects` button triggers the lookupObjects API, and a panel opens up that allows the user to select a new record. Once selected, the component's text column will update to display the newly selected record.
 

@@ -70,7 +70,7 @@ The resource interface of `context.resource`
 
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). `updatesProperties` is currently only supported for model-driven apps and always returns empty string for canvas apps.
+An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). `updatesProperties` is currently only supported for model-driven apps and always returns empty string for canvas apps. More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 
