@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,6 +25,7 @@ search.app:
   - D365CE
 ---
 # ModelDrivenFormIntegration control properties and actions
+
 Canvas apps embedded on model-driven forms contain a special control named **ModelDrivenFormIntegration**. This control is responsible for 
 bringing contextual data from the host model-driven form to the embedded canvas app.  
 

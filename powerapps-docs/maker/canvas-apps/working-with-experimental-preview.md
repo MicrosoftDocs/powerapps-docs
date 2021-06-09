@@ -1,5 +1,5 @@
 ---
-title: Understand experimental, preview, and experimental features | Microsoft Docs
+title: Understand experimental, preview, and deprecated features | Microsoft Docs
 description: Test and start to adopt new features.
 author: gregli-msft
 manager: kvivek

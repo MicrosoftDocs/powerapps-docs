@@ -163,11 +163,11 @@ client option of **Web**.
 
 After the code component is added to a field in model-driven app, you can now
 configure portals to use the code component in the basic form. Once you
-configure the code component on an basic form, ensure you configure table
+configure the code component on a basic form, ensure you configure table
 permission to allow **Read** access to **Web Resource** table for the portal
 users before they can see the component on the portal page.
 
-To add code component to an basic form:
+To add code component to a basic form:
 
 1.  Open [Portal
     Management](configure/configure-portal.md)
@@ -201,7 +201,7 @@ users can see the code component on the web page with the basic form.
 To configure Read access on Web Resource table:
 
 1.  Open [Portal
-    Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal)
+    Management](configure/configure-portal.md)
     app.
 
 2.  On the left-pane, select **Table Permission**.

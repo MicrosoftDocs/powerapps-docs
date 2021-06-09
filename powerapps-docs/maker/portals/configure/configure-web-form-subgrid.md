@@ -21,7 +21,7 @@ Adding subgrids to your managed forms on the portal is easy—just add the subgr
 
 ## Add subgrid metadata to your form
 
-To add subgrid metadata to an basic form, go to **Basic Form Metadata** by using either the top drop-down list or the subgrid on the main form of the record that you are working with. More information: [Define basic forms](entity-forms.md).
+To add subgrid metadata to a basic form, go to **Basic Form Metadata** by using either the top drop-down list or the subgrid on the main form of the record that you are working with. More information: [Define basic forms](entity-forms.md).
 
 To add a new record, select **Add New Basic Form Metadata**.
 
