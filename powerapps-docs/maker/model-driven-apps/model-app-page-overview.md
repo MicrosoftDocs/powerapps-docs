@@ -1,5 +1,5 @@
 ---
-title: "How to build a converged app combining model and canvas using the custom page (preview)"
+title: "How to converge model and canvas using the custom page in a model-driven app (preview)"
 description: "" 
 ms.custom: ""
 ms.date: 04/03/2020
@@ -16,7 +16,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# How to build a converged app combining model and canvas using the custom page (preview)
+# How to converge model and canvas using the custom page in a model-driven app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
