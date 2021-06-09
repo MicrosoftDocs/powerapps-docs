@@ -48,7 +48,7 @@ This topic shows you how to create business rules and recommendations to apply f
 -   Create business recommendations based on business intelligence.  
 
 > [!NOTE]
-> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
 > Business rules don’t work with multi-select choices.
   
@@ -74,7 +74,7 @@ This topic shows you how to create business rules and recommendations to apply f
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Table**|All forms and server|  
+    |**Entity**|All forms and server|  
     |**All Forms**|All forms|  
     |Specific form (**Account** form, for example)|Just that form|  
   
@@ -166,6 +166,14 @@ A business rule may also not execute because a column referenced in the business
 
 *How do I troubleshoot a business rule that isn't working?* 
 - See [Is your business rule not firing for a form?](#is-your-business-rule-not-firing-for-a-form) in this topic.
+
+*What do recommendations look like within a form?*
+
+Recommendations show a lightbulb next to the column label.
+- ![Business rule collapsed](media/recommendation-view1.png "Recommendation lightbulb collapsed")  
+
+Select the lightbulb to expand the view and show the recommendation.
+- ![Business rule expanded](media/recommendation-view2.png "Recommendation lightbulb expanded")  
 
 ## See also  
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   

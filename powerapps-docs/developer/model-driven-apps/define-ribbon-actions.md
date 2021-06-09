@@ -23,7 +23,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
   
  A Ribbon control can perform two types actions and may include multiple actions:  
   
-- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a [Script (JScript) web resource](/powerapps/developer/model-driven-apps/script-jscript-web-resources).  
+- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a [Script (JScript) web resource](./script-jscript-web-resources.md).  
   
 - **Open a URL**: The ribbon opens a URL using the value from an Address attribute in the `<Url>` element. Additional parameters can pass information about how what querystring parameters are passed and the mode in which the window opens.  
   

@@ -1,6 +1,7 @@
 ---
 title: "getOptions (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getOptions method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,11 +19,11 @@ search.app:
 
 
 
-Returns an array of option objects representing valid options for an attribute. 
+Returns an array of option objects representing valid options for a column. 
 
-## Attribute types supported
+## Column types supported
 
-OptionSet, MultiSelectOptionSet
+Choice, Choices
 
 ## Syntax
 

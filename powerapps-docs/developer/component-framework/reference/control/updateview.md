@@ -1,5 +1,6 @@
 ---
 title: "updateView| MicrosoftDocs"
+description: This method will be called when any value in the property bag has changed. 
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"

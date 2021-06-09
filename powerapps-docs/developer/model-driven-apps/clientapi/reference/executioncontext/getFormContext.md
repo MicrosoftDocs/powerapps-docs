@@ -1,7 +1,7 @@
 ---
 title: "getFormContext (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getFormContext method that returns a reference to the form or an item on the form depending on where the method was called." 
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -17,8 +17,6 @@ search.app:
 ---
 # getFormContext (Client API reference)
 
-
-
 Returns a reference to the form or an item on the form depending on where the method was called.
 
 ## Syntax
@@ -31,9 +29,11 @@ Returns a reference to the form or an item on the form depending on where the me
 
 **Description**: Returns a reference to the form or an item on the form such as editable grid depending on where the method was called. This method enables you to create common event handlers that can operate either on a form or an item on the form depending on where its called.
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Example
 
-The following sample code demonstrates how you can create a method that sets notification on a form field or editable grid cell depending on where you registered the script ([Field OnChange](../events/attribute-onchange.md) event or editable grid [OnChange](../events/grid-onchange.md) event):
+The following sample code demonstrates how you can create a method that sets notification on a form column or editable grid cell depending on where you registered the script ([Column OnChange](../events/attribute-onchange.md) event or editable grid [OnChange](../events/grid-onchange.md) event):
 
 ```JavaScript
 function commonEventHandler(executionContext) {

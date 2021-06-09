@@ -1,6 +1,6 @@
 ---
 title: WebAPI | Microsoft Docs
-description: 
+description: Provides properties and methods to use Web API to create and manage records.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

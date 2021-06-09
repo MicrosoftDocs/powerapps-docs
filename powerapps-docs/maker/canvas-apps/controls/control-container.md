@@ -1,25 +1,28 @@
 ---
 title: 'Container control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Container control
-author: emcoope-msft
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 05/01/2020
-ms.author: emcoope
+ms.date: 02/12/2021
+ms.author: chmoncay
 ms.reviewer: tapanm-msft
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - chmoncay
+  - tahoon-ms
+  - tapanm-msft
 ---
 # Container control in Power Apps (preview)
 Provides the ability to create hierarchy.
 
 > [!IMPORTANT]
-> This is an experimental feature. Experimental features can radically change or completely disappear at any time.
-> For more information, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+> This is a preview feature. Preview features are stable but might go through minor changes.
+> For more information, read [Understand experimental and preview features in Power Apps](../working-with-experimental-preview.md).
 
 ## Description
  The container can hold a set of controls and has its own properties.

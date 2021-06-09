@@ -1,6 +1,7 @@
 ---
-title: "Xrm.Device| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "getSelectedOption| MicrosoftDocs"
+description: Includes description and supported parameters for the getSelectedOption method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,11 +19,11 @@ search.app:
 
 
 
-Returns the option object or an array of option objects selected in an **optionset** or **multiselectoptionset** attribute respectively. 
+Returns the option object or an array of option objects selected in a **choice** or **choices** column respectively. 
 
-## Attribute types supported
+## Column types supported
 
-optionset, multiselectoptionset
+choice, choices
 
 ## Syntax
 
@@ -30,7 +31,7 @@ optionset, multiselectoptionset
 
 ## Return Value
 
-**Type**: Option object for optionset; array of option objects for multiselectoptionset. 
+**Type**: Option object for choice; array of option objects for choices. 
 
 **Description**: Returns the object with text and value properties.
 

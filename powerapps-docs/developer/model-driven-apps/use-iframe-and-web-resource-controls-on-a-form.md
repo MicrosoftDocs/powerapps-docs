@@ -2,7 +2,7 @@
 title: "Use IFRAME and web resource controls on a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,47 +17,50 @@ search.app:
 ---
 # Use IFRAME and web resource controls on a form
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form -->
-
-
 IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  
 
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying an entity form within an IFrame embedded in another entity form is not supported.  
+ You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a form within an IFrame embedded in another form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 
--   [Web Page (HTML) Web Resources](webpage-html-web-resources.md)  
+- [Web Page (HTML) web resources](webpage-html-web-resources.md)  
 
--   [Image (JPG, PNG, GIF, ICO) Web Resources](image-web-resources.md)  
+- [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)  
 
 
  The following sections describe your options if you want these controls to show more than static content.  
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 <a name="BKMK_IframeSecurity"></a>   
+
 ## Select whether to restrict cross-frame scripting  
- Use the **Restrict cross-frame scripting, where supported** option when you don’t fully trust the content displayed in an IFRAME. When this option is selected, the IFRAME has the attributes set that are listed in the following table.  
+
+ Use the **Restrict cross-frame scripting, where supported** option when you don’t fully trust the content displayed in an IFRAME. When this option is selected, the IFRAME has the parameters set that are listed in the following table.  
 
 
-|        Attribute        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `security="restricted"` |                                                                                                                                                                                                                                                                                                    This attribute is supported only by versions of Internet Explorer no earlier than version 6. The security attribute applies the user security setting Restricted Sites to the source file of the IFRAME. (Zone settings are found on the **Security** tab of the **Internet Options** dialog box.) By default, scripting isn’t enabled in the Restricted Sites zone. By changing the security settings of the zone, various negative results can occur, including allowing scripts to run. For more information, see [security attribute](https://msdn.microsoft.com/library/ie/ms534622.aspx).                                                                                                                                                                                                                                                                                                     |
-|      `sandbox=""`       | For browsers that support this attribute, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This attribute is defined by W3C and is supported by the following browsers:<br /><br /> - Internet Explorer 10, Internet Explorer 11, and Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox attribute see:<br /><br /> -   [How to Safeguard your Site with HTML5 Sandbox](https://msdn.microsoft.com/hh563496)<br />-   [WC3 Sandbox attribute](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](https://msdn.microsoft.com/library/ie/hh673561.aspx) |
+|        Parameter        |        Description      |
+|-------------------------|--------------------------|
+| `security="restricted"` |    This parameter is supported only by versions of Internet Explorer no earlier than version 6. The security parameter applies the user security setting Restricted Sites to the source file of the IFRAME. (Zone settings are found on the **Security** tab of the **Internet Options** dialog box.) By default, scripting isn’t enabled in the Restricted Sites zone. By changing the security settings of the zone, various negative results can occur, including allowing scripts to run. For more information, see [security](https://msdn.microsoft.com/library/ie/ms534622.aspx).                                                                                                                                                                                                                                                                                                     |
+|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Internet Explorer 10, Internet Explorer 11, and Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [WC3 Sandbox parameter](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
 
 <a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>   
 
 ### Enabling IFrame communication across domains  
+
  There are times when you want to enable communication for an IFRAME that contains content on a different domain. `Window.postMessage` is a browser method that provides this capability for versions of Internet Explorer no earlier than Internet Explorer 8. Google Chrome, Mozilla Firefox, and Apple Safari also support it. For more information about using `postMessage`, see the following blog posts:  
 
 -   [Cross domain calls to the parent form](https://blogs.msdn.com/b/devkeydet/archive/2012/02/14/cross-domain-calls-to-the-parent-crm-2011-form.aspx)  
 
--   [Cross-Document Messaging and RPC](https://msdn.microsoft.com/magazine/ff800814.aspx)  
+-   [Cross-Document messaging and RPC](/previous-versions/msdn10/ff800814(v=msdn.10))  
 
 <a name="BKMK_PassContextualInformation"></a>   
 
 ## Pass contextual information about the record  
+
  You can provide contextual information by passing parameters to the URL defined in the control. The page that is displayed in the frame must be able to process parameters passed to it. All the parameters in the following table are passed if the IFRAME or web resource is configured by using the **Pass record object-type code and unique identifier as parameters** option.  
 
  You can specify whether all the parameters in the following table will be passed.  
@@ -65,8 +68,8 @@ IFRAME and web resource controls embed content from another location in pages by
 
 | Parameter  |        Name        |                                 Description                                 |
 |------------|--------------------|-----------------------------------------------------------------------------|
-| `typename` |    Entity Name     |                           The name of the entity.                           |
-|   `type`   |  Entity Type Code  | The integer that uniquely identifies the entity in a specific organization. |
+| `typename` |    Table Name     |                           The name of the table.                           |
+|   `type`   |  Table Type Code  | The integer that uniquely identifies the table in a specific organization. |
 |    `id`    |    Object GUID     |                      A GUID that represents a record.                       |
 | `orgname`  | Organization Name  |                    The unique name of the organization.                     |
 | `userlcid` | User Language Code |    The language code identifier that is being used by the current user.     |
@@ -74,7 +77,7 @@ IFRAME and web resource controls embed content from another location in pages by
  [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
->  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between Microsoft Dataverse organizations.  
+>  We suggest that you use the table name instead of the type code because the table type code for custom tables may be different between Microsoft Dataverse organizations.  
 
 ### Example  
  The following sample shows the URL without parameters.  
@@ -91,17 +94,17 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Read passed parameters  
 
- Passed parameters are typically read in the target .aspx page by using the **HttpRequest.QueryString** property. In an HTML page, the parameters can be accessed by using the **window.location.search** property in JavaScript. For more information, see [HttpRequest.QueryString Property](https://msdn2.microsoft.com/library/system.web.httprequest.querystring.aspx) and [search Property](https://msdn2.microsoft.com/library/ms534620.aspx).  
+ Passed parameters are typically read in the target .aspx page by using the **HttpRequest.QueryString** property. In an HTML page, the parameters can be accessed by using the **window.location.search** property in JavaScript. For more information, see [HttpRequest.QueryString Property](/dotnet/api/system.web.httprequest.querystring) and [search Property](https://msdn2.microsoft.com/library/ms534620.aspx).  
 
 <a name="BKMK_PassFormData"></a>  
 
 ## Pass form data  
 
- Use the [getValue](clientapi/reference/controls/getValue.md) method on the attributes that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Field OnChange Event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete Event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange Event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
+ Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Column OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
 
  If you’re using the data parameter to pass data to a Silverlight web resource, you can use the [getData](clientapi/reference/controls/getData.md) and [setData](clientapi/reference/controls/setData.md) methods to manipulate the value passed via the data parameter. For webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
 
- Avoid using the [OnLoad Event](clientapi/reference/events/form-onload.md). IFRAMES and web resources load asynchronously and the frame may not have finished loading before the `Onload` event script finishes. This can cause the `src` property of the IFRAME or web resource you have changed to be overwritten by the default value of the IFRAME or web resource URL property.  
+ Avoid using the [OnLoad event](clientapi/reference/events/form-onload.md). IFRAMES and web resources load asynchronously and the frame may not have finished loading before the `Onload` event script finishes. This can cause the `src` property of the IFRAME or web resource you have changed to be overwritten by the default value of the IFRAME or web resource URL property.  
 
 <a name="BKMK_ChangeThePage"></a>   
 
@@ -114,13 +117,13 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Example  
 
- The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of an option set field.  
+ The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
 
 ```javascript  
-//Get the value of an option set attribute  
+//Get the value of a choice column  
 var value = Xrm.Page.data.entity.attributes.get("new_pagechooser").getValue();  
 var newTarget = "";  
-//Set the target based on the value of the option set  
+//Set the target based on the value of the choice  
 switch (value) {  
     case 100000001:  
         newTarget = "https://myServer/test/pageOne.aspx";  

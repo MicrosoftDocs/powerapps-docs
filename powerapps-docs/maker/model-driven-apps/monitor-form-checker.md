@@ -7,7 +7,7 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "troubleshooting"
 author: "mspilde"
 ms.author: "mspilde"
 manager: "kvivek"
@@ -25,8 +25,8 @@ When you filter on model-driven app form-related events in Monitor, you can get 
 
 There are many situations that you might encounter where access to the information provided by Monitor will help you better understand why a form behaves a certain way. Many form issues are based on business rules, JavaScript, form events, or client API that admins and makers have set. Monitor can also help identify whether the issue you experience is designed out-of-the-box or is due to a customization. It provides details that can help you answer the following questions:
 
-- [Why aren't rows showing in the related menu of a table?](/developer/model-driven-apps/troubleshoot-forms#related-menurelated-tab)
-- [Why is a control not editable?](/developer/model-driven-apps/troubleshoot-forms#why-a-control-is-disabledenabled-or-visiblehidden)
+- [Why aren't rows showing in the related menu of a table?](../../developer/model-driven-apps/troubleshoot-forms.md#related-menurelated-tab)
+- [Why a control is disabled/enabled or visible/hidden](../../developer/model-driven-apps/troubleshoot-forms.md#why-a-control-is-disabledenabled-or-visiblehidden)
 - Why is a row in a read-only state?
 
 ## Filter Monitor for form-related issues

@@ -1,14 +1,15 @@
 ---
-title: "Power Apps component framework overview | Microsoft Docs"
+title: "Power Apps component framework overview in Microsoft Dataverse| Microsoft Docs"
 description: "Use the Power Apps component framework to create code components to provide enhanced experiences for people to view and work with data in forms, views, and dashboards."
 keywords: "Component Framework, code components, Power Apps controls"
 author: nkrb 
 manager: kvivek
-ms.date: 09/05/2019
+ms.date: 04/01/2021
 ms.service: "powerapps"
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
+  - "intro-internal"
 ms.topic: article
 ms.assetid: 7923e36d-3640-49f7-9f2f-c97358a632db
 ms.author: nabuthuk
@@ -18,9 +19,8 @@ ms.author: nabuthuk
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
-- Replace a field that displays a numeric text value with a `dial` or `slider` code component.
+- Replace a column that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
-
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]
 
@@ -29,16 +29,16 @@ Power Apps component framework empowers professional developers and app makers t
 > - Power Apps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Power Apps component framework works only on Unified Interface and not on the web client. 
+> - Power Apps component framework works only on Unified Interface and not on the legacy web client. 
 > - Power Apps component framework doesn't work for on-premises instances. 
 
 ## How is it different from web resources
 
 Unlike HTML web resources, code components are rendered as a part of the same context, load at the same time as any other components, providing a seamless experience for the users. 
 
-Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
+Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
-Code components can be reused many times across different entities and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
+Code components can be reused many times across different tables and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
 
 ## Advantages 
 
@@ -66,8 +66,8 @@ With the general availability of the framework, code component developers will b
 [What are code components](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
-[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
-[Power Apps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
 
 
 

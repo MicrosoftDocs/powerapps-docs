@@ -1,6 +1,6 @@
 ---
 title: setSelectedRecordIds | Microsoft Docs
-description: 
+description: Set the ids of the selected records.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

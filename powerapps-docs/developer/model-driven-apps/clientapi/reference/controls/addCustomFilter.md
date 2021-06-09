@@ -1,6 +1,7 @@
 ---
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,9 +17,7 @@ search.app:
 ---
 # addCustomFilter (Client API reference)
 
-
-
-Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an “AND” condition.
+Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an `AND` condition.
 
 ## Control types supported
 
@@ -38,7 +37,9 @@ Lookup
     </filter>
     ```
 
-- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that entity type. Otherwise, it applies to all types of entities returned.
+- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that table type. Otherwise, it applies to all types of tables returned.
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Remarks
 

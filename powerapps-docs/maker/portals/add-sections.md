@@ -1,13 +1,16 @@
 ---
-title: Add sections to a page in Power Apps portals using portals Studio. | Microsoft Docs
+title: Add sections
 description: Learn about how to add sections to a page in Power Apps portals using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add sections

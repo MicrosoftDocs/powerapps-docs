@@ -1,13 +1,17 @@
 ---
-title: "Get started with configuring your portal authentication using different identity providers. | MicrosoftDocs"
-description: "Learn how to configure your portal authentication using different identity providers."
+title: Get started with configuring your portal authentication
+description: Learn how to configure your portal authentication using different identity providers.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 12/10/2020
+ms.custom: intro-internal
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 
@@ -180,7 +184,7 @@ If you delete and re-create your portal, users might receive the following error
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+[Microsoft Learn: Authentication and user management in Power Apps portals](/learn/modules/authentication-user-management/)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

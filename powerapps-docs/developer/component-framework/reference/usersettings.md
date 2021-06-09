@@ -1,6 +1,6 @@
 ---
 title: UserSettings | Microsoft Docs
-description: 
+description: Provides information about the current user settings.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

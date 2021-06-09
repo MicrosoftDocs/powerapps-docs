@@ -1,13 +1,16 @@
 ---
-title: "Enable header and footer output caching on a portal | MicrosoftDocs"
-description: "Instructions to enable header and footer output caching on a portal for existing users."
+title: Enable header and footer output caching on a portal
+description: Learn how to enable header and footer output caching on a portal for existing users.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Enable header and footer output caching on a portal

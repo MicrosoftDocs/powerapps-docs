@@ -1,13 +1,16 @@
 ---
-title: "Provision a portal using the older portal add-on | MicrosoftDocs"
-description: "Instructions to provision a portal using the older portal add-on."
+title: Provision a portal using the older portal add-on
+description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 02/08/2021
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Provision a portal using the older portal add-on
@@ -15,7 +18,7 @@ ms.reviewer: tapanm
 If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
 > [!NOTE]
-> - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Microsoft Dataverse environment selected for the portal. You must also have the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.
+> - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Microsoft Dataverse environment selected for the portal. You must also have the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - To learn about the roles required to create add-on portals, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
@@ -159,7 +162,7 @@ The table below summarizes the features associated with each portal option:
 | Web Notifications                      |  *                           | *              |  *                           | *                | *             |
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity                     |     *                         |  *              |     *                         |   *               | *             |
 | Identity Workflows                     | *                            |  *             |     *                         |   *               | *             |
-| Web Forms                              |  *                            | *               |    *                          | *                 | *             |
+| Advanced Forms                              |  *                            | *               |    *                          | *                 | *             |
 | Feedback                               |   *                           |  *              |  *                            | *                 | *             |
 ||
 
@@ -202,7 +205,7 @@ However, you can change the audience and type of portal after it's provisioned b
 
 ### See also
 
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

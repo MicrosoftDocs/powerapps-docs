@@ -1,22 +1,24 @@
 ---
-title: "Category entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Category table."
-ms.date: 11/14/2020
+title: "Category table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Category table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Category entity reference
+
+# Category table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Entity for categorizing records to make it easier for your customers to find them on portals and through search.
 
@@ -25,18 +27,18 @@ Entity for categorizing records to make it easier for your customers to find the
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/categories<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/categories<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/categories<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/categories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/categories(*categoryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,9 +56,9 @@ Entity for categorizing records to make it easier for your customers to find the
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CategoryId](#BKMK_CategoryId)
 - [CategoryNumber](#BKMK_CategoryNumber)
@@ -238,9 +240,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -612,7 +614,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_category_parent_category"></a> category_parent_category
 
-Same as category entity [category_parent_category](category.md#BKMK_category_parent_category) Many-To-One relationship.
+Same as category table [category_parent_category](category.md#BKMK_category_parent_category) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -627,7 +629,7 @@ Same as category entity [category_parent_category](category.md#BKMK_category_par
 
 ### <a name="BKMK_Category_SyncErrors"></a> Category_SyncErrors
 
-Same as syncerror entity [Category_SyncErrors](syncerror.md#BKMK_Category_SyncErrors) Many-To-One relationship.
+Same as syncerror table [Category_SyncErrors](syncerror.md#BKMK_Category_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -643,7 +645,7 @@ Same as syncerror entity [Category_SyncErrors](syncerror.md#BKMK_Category_SyncEr
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [category_parent_category](#BKMK_category_parent_category)
 - [lk_category_createdonbehalfby](#BKMK_lk_category_createdonbehalfby)
@@ -656,46 +658,44 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_category_parent_category"></a> category_parent_category
 
-See category Entity [category_parent_category](category.md#BKMK_category_parent_category) One-To-Many relationship.
+See category Table [category_parent_category](category.md#BKMK_category_parent_category) One-To-Many relationship.
 
 ### <a name="BKMK_lk_category_createdonbehalfby"></a> lk_category_createdonbehalfby
 
-See systemuser Entity [lk_category_createdonbehalfby](systemuser.md#BKMK_lk_category_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_category_createdonbehalfby](systemuser.md#BKMK_lk_category_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_transactioncurrency_category"></a> transactioncurrency_category
 
-See transactioncurrency Entity [transactioncurrency_category](transactioncurrency.md#BKMK_transactioncurrency_category) One-To-Many relationship.
+See transactioncurrency Table [transactioncurrency_category](transactioncurrency.md#BKMK_transactioncurrency_category) One-To-Many relationship.
 
 ### <a name="BKMK_lk_category_createdby"></a> lk_category_createdby
 
-See systemuser Entity [lk_category_createdby](systemuser.md#BKMK_lk_category_createdby) One-To-Many relationship.
+See systemuser Table [lk_category_createdby](systemuser.md#BKMK_lk_category_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_category_modifiedonbehalfby"></a> lk_category_modifiedonbehalfby
 
-See systemuser Entity [lk_category_modifiedonbehalfby](systemuser.md#BKMK_lk_category_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_category_modifiedonbehalfby](systemuser.md#BKMK_lk_category_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_category_modifiedby"></a> lk_category_modifiedby
 
-See systemuser Entity [lk_category_modifiedby](systemuser.md#BKMK_lk_category_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_category_modifiedby](systemuser.md#BKMK_lk_category_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_category"></a> business_unit_category
 
-See businessunit Entity [business_unit_category](businessunit.md#BKMK_business_unit_category) One-To-Many relationship.
+See businessunit Table [business_unit_category](businessunit.md#BKMK_business_unit_category) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the Category entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the Category table is the first table in the relationship. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_knowledgearticle_category"></a> knowledgearticle_category
 
-See knowledgearticle Entity [knowledgearticle_category](knowledgearticle.md#BKMK_knowledgearticle_category) Many-To-Many Relationship.
+See knowledgearticle Table [knowledgearticle_category](knowledgearticle.md#BKMK_knowledgearticle_category) Many-To-Many Relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.category?text=category EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

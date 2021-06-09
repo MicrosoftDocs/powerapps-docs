@@ -1,22 +1,24 @@
 ---
-title: "ApplicationUser entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ApplicationUser table."
-ms.date: 11/14/2020
+title: "ApplicationUser table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ApplicationUser table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ApplicationUser entity reference
+
+# ApplicationUser table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Application User that has non-interactive access to the CDS system
 
@@ -27,15 +29,15 @@ Application User that has non-interactive access to the CDS system
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/applicationusers<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/applicationusers<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/applicationusers<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/applicationusers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +55,9 @@ Application User that has non-interactive access to the CDS system
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ApplicationId](#BKMK_ApplicationId)
 - [ApplicationName](#BKMK_ApplicationName)
@@ -113,7 +115,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ApplicationType Options
+#### ApplicationType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -163,7 +165,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanImpersonateAsSystemUser Options
+#### CanImpersonateAsSystemUser Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -237,7 +239,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -258,7 +260,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -300,9 +302,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
@@ -373,7 +375,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -517,7 +519,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -730,7 +732,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [applicationuser_SyncErrors](syncerror.md#BKMK_applicationuser_SyncErrors) Many-To-One relationship.
+Same as syncerror table [applicationuser_SyncErrors](syncerror.md#BKMK_applicationuser_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -747,7 +749,7 @@ Same as syncerror entity [applicationuser_SyncErrors](syncerror.md#BKMK_applicat
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [applicationuser_DuplicateMatchingRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [applicationuser_DuplicateMatchingRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -764,7 +766,7 @@ Same as duplicaterecord entity [applicationuser_DuplicateMatchingRecord](duplica
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [applicationuser_DuplicateBaseRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [applicationuser_DuplicateBaseRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -781,7 +783,7 @@ Same as duplicaterecord entity [applicationuser_DuplicateBaseRecord](duplicatere
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [applicationuser_AsyncOperations](asyncoperation.md#BKMK_applicationuser_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [applicationuser_AsyncOperations](asyncoperation.md#BKMK_applicationuser_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -798,7 +800,7 @@ Same as asyncoperation entity [applicationuser_AsyncOperations](asyncoperation.m
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [applicationuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_applicationuser_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [applicationuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_applicationuser_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -815,7 +817,7 @@ Same as mailboxtrackingfolder entity [applicationuser_MailboxTrackingFolders](ma
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [applicationuser_ProcessSession](processsession.md#BKMK_applicationuser_ProcessSession) Many-To-One relationship.
+Same as processsession table [applicationuser_ProcessSession](processsession.md#BKMK_applicationuser_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -832,7 +834,7 @@ Same as processsession entity [applicationuser_ProcessSession](processsession.md
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [applicationuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_applicationuser_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [applicationuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_applicationuser_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -849,7 +851,7 @@ Same as bulkdeletefailure entity [applicationuser_BulkDeleteFailures](bulkdelete
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [applicationuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_applicationuser_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [applicationuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_applicationuser_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -865,7 +867,7 @@ Same as principalobjectattributeaccess entity [applicationuser_PrincipalObjectAt
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_applicationuser_createdby](#BKMK_lk_applicationuser_createdby)
 - [lk_applicationuser_createdonbehalfby](#BKMK_lk_applicationuser_createdonbehalfby)
@@ -878,36 +880,36 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_applicationuser_createdby](systemuser.md#BKMK_lk_applicationuser_createdby) One-To-Many relationship.
+See systemuser Table [lk_applicationuser_createdby](systemuser.md#BKMK_lk_applicationuser_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_applicationuser_createdonbehalfby"></a> lk_applicationuser_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_applicationuser_createdonbehalfby](systemuser.md#BKMK_lk_applicationuser_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_applicationuser_createdonbehalfby](systemuser.md#BKMK_lk_applicationuser_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_applicationuser_modifiedby"></a> lk_applicationuser_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_applicationuser_modifiedby](systemuser.md#BKMK_lk_applicationuser_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_applicationuser_modifiedby](systemuser.md#BKMK_lk_applicationuser_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_applicationuser_modifiedonbehalfby"></a> lk_applicationuser_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_applicationuser_modifiedonbehalfby](systemuser.md#BKMK_lk_applicationuser_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_applicationuser_modifiedonbehalfby](systemuser.md#BKMK_lk_applicationuser_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_applicationuser"></a> business_unit_applicationuser
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_applicationuser](businessunit.md#BKMK_business_unit_applicationuser) One-To-Many relationship.
+See businessunit Table [business_unit_applicationuser](businessunit.md#BKMK_business_unit_applicationuser) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the ApplicationUser entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the ApplicationUser table is the first table in the relationship. Listed by **SchemaName**.
 
 - [applicationuserrole](#BKMK_applicationuserrole)
 - [applicationuserprofile](#BKMK_applicationuserprofile)
@@ -916,7 +918,7 @@ Relationship details provided where the ApplicationUser entity is the first enti
 ### <a name="BKMK_applicationuserrole"></a> applicationuserrole
 
 IntersectEntityName: applicationuserrole<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -926,7 +928,7 @@ IntersectEntityName: applicationuserrole<br />
 |NavigationPropertyName|applicationuserrole|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -939,7 +941,7 @@ IntersectEntityName: applicationuserrole<br />
 ### <a name="BKMK_applicationuserprofile"></a> applicationuserprofile
 
 IntersectEntityName: applicationuserprofile<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -949,7 +951,7 @@ IntersectEntityName: applicationuserprofile<br />
 |NavigationPropertyName|applicationuserprofile|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -961,8 +963,5 @@ IntersectEntityName: applicationuserprofile<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.applicationuser?text=applicationuser EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />

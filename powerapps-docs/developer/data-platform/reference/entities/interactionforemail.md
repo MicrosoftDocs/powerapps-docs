@@ -1,22 +1,24 @@
 ---
-title: "InteractionForEmail entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the InteractionForEmail table."
-ms.date: 11/14/2020
+title: "InteractionForEmail table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# InteractionForEmail entity reference
+
+# InteractionForEmail table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
@@ -25,10 +27,10 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Delete|DELETE [*org URI*]/api/data/v9.0/interactionforemails(*interactionforemailid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/interactionforemails<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/interactionforemails(*interactionforemailid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/interactionforemails<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [EmailAddress](#BKMK_EmailAddress)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -268,7 +270,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -289,7 +291,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -345,9 +347,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -584,7 +586,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### InteractionType Options
+#### InteractionType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -818,7 +820,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
 
-Same as activitypointer entity [interactionforemail_ActivityPointers](activitypointer.md#BKMK_interactionforemail_ActivityPointers) Many-To-One relationship.
+Same as activitypointer table [interactionforemail_ActivityPointers](activitypointer.md#BKMK_interactionforemail_ActivityPointers) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -833,7 +835,7 @@ Same as activitypointer entity [interactionforemail_ActivityPointers](activitypo
 
 ### <a name="BKMK_interactionforemail_AsyncOperations"></a> interactionforemail_AsyncOperations
 
-Same as asyncoperation entity [interactionforemail_AsyncOperations](asyncoperation.md#BKMK_interactionforemail_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [interactionforemail_AsyncOperations](asyncoperation.md#BKMK_interactionforemail_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -849,7 +851,7 @@ Same as asyncoperation entity [interactionforemail_AsyncOperations](asyncoperati
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_interactionforemail_createdby](#BKMK_lk_interactionforemail_createdby)
 - [lk_interactionforemail_createdonbehalfby](#BKMK_lk_interactionforemail_createdonbehalfby)
@@ -863,40 +865,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_interactionforemail_createdby"></a> lk_interactionforemail_createdby
 
-See systemuser Entity [lk_interactionforemail_createdby](systemuser.md#BKMK_lk_interactionforemail_createdby) One-To-Many relationship.
+See systemuser Table [lk_interactionforemail_createdby](systemuser.md#BKMK_lk_interactionforemail_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_interactionforemail_createdonbehalfby"></a> lk_interactionforemail_createdonbehalfby
 
-See systemuser Entity [lk_interactionforemail_createdonbehalfby](systemuser.md#BKMK_lk_interactionforemail_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_interactionforemail_createdonbehalfby](systemuser.md#BKMK_lk_interactionforemail_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_interactionforemail_modifiedby"></a> lk_interactionforemail_modifiedby
 
-See systemuser Entity [lk_interactionforemail_modifiedby](systemuser.md#BKMK_lk_interactionforemail_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_interactionforemail_modifiedby](systemuser.md#BKMK_lk_interactionforemail_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_interactionforemail_modifiedonbehalfby"></a> lk_interactionforemail_modifiedonbehalfby
 
-See systemuser Entity [lk_interactionforemail_modifiedonbehalfby](systemuser.md#BKMK_lk_interactionforemail_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_interactionforemail_modifiedonbehalfby](systemuser.md#BKMK_lk_interactionforemail_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_user_interactionforemail"></a> user_interactionforemail
 
-See systemuser Entity [user_interactionforemail](systemuser.md#BKMK_user_interactionforemail) One-To-Many relationship.
+See systemuser Table [user_interactionforemail](systemuser.md#BKMK_user_interactionforemail) One-To-Many relationship.
 
 ### <a name="BKMK_team_interactionforemail"></a> team_interactionforemail
 
-See team Entity [team_interactionforemail](team.md#BKMK_team_interactionforemail) One-To-Many relationship.
+See team Table [team_interactionforemail](team.md#BKMK_team_interactionforemail) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_interactionforemail"></a> business_unit_interactionforemail
 
-See businessunit Entity [business_unit_interactionforemail](businessunit.md#BKMK_business_unit_interactionforemail) One-To-Many relationship.
+See businessunit Table [business_unit_interactionforemail](businessunit.md#BKMK_business_unit_interactionforemail) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_InteractionForEmail"></a> TransactionCurrency_InteractionForEmail
 
-See transactioncurrency Entity [TransactionCurrency_InteractionForEmail](transactioncurrency.md#BKMK_TransactionCurrency_InteractionForEmail) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_InteractionForEmail](transactioncurrency.md#BKMK_TransactionCurrency_InteractionForEmail) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.interactionforemail?text=interactionforemail EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
