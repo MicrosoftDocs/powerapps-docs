@@ -6,7 +6,7 @@ manager: sunilg
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 06/03/2021
+ms.date: 06/08/2021
 ms.author: jdaly
 search.audienceType: 
   - maker
@@ -29,31 +29,40 @@ Automation of business logic and integration with other systems are driven by ev
 
 Microsoft Dataverse has always had a robust event framework to capture system events *within* Dataverse. You have always had the ability to respond to data operations like Create, Update, and Delete of table rows as well as actions where data changes occur within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](../../developer/data-platform/event-framework.md)
 
-Dataverse Business events represents the pattern where custom actions (Custom API or Custom Process actions) are deliberately used to convey data about events that may occur internally *or externally* to Dataverse. Typically a custom action is used to apply some data change. With a business event, the custom action doesn't have to include any logic to change data, it may simply contains data about some event which allows some of the existing mechanisms can use respond to that event.
+Dataverse Business events represents the pattern where custom actions ([Custom API](../../developer/data-platform/custom-api.md) or [Custom Process actions](../../developer/data-platform/workflow-custom-actions.md)) are deliberately used to convey data about events that may occur internally *or externally* to Dataverse. Typically a custom action is used to apply some data change. With a business event, the custom action doesn't have to include any logic to change data, it may simply contains data about some event which allows some of the existing mechanisms can use respond to that event.
 
 Here are some examples:
 
-- Today you may have some logic in a synchronous plug-in code that responds to a certain set of conditions which you then pass into Shared Variables for another asynchronous plug-in to initiate some automation. With a business event, instead of passing those details through the event pipeline shared variables, you could simply call a custom action containing the details of the event in the parameters. Your asynchronous plug-in can then respond to the custom action, or you may choose to use Power Automate instead. Other logic can also be added to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
-- Today you may have some integration built where you extract data from external system periodically and apply changes to data in Dataverse based on the data. Or perhaps you have logic in an external system that performs operations against Dataverse using the Dataverse APIs when certain conditions are true. When you apply the business events pattern, you can send the data about the event to Dataverse using a custom api, then leverage the capabilities of Dataverse or Power Automate to apply your logic, or add additional logic.
-- Today you have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. With business events, you can catalog the table which will expose the `GrantAccess` message to the Power Automate Dataverse **When an action is performed** trigger, providing a new way to perform the automation without having to write code.
+- You may have some logic in a synchronous plug-in code that responds to a certain set of conditions which you then pass into Shared Variables for another asynchronous plug-in to initiate some automation. With a business event, instead of passing those details through the event pipeline shared variables, you could simply call a custom action containing the details of the event in the parameters. Your asynchronous plug-in can then respond to the custom action, or you may choose to use Power Automate instead. Other logic can also be added to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
+- You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. With business events, you can catalog the table which will expose the `GrantAccess` message to the Power Automate Dataverse **When an action is performed** trigger, providing a new way to perform the automation without having to write code.
 
-Another example where the business events pattern is applied is in the way that Virtual Tables can use Virtual Table events to notify Dataverse when changes occur in the external data sources. Because changes can occur in the external data sources that which Virtual Tables use, Dataverse isn't informed of these changes which may be important.  Virtual Table events use a set of messages called `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted`. When the external data source can send these actions to dataverse and the virtual entity is configured to support them, Dataverse can now be informed of these changes and the Virtual table can participate in all the asynchronous logic that other Detaverse tables can. This is the same business events pattern, except that the messages are standardized and created when you configure the Virtual entity to support them. More information: Virtual Table Events.
+Another example where the business events pattern is applied is in the way that Virtual Tables can use Virtual Table events to notify Dataverse when changes occur in the external data sources. Because changes can occur in the external data sources that which Virtual Tables use, Dataverse isn't informed of these changes which may be important.  Virtual Table events use a set of messages called `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted`. When the external data source can send these actions to dataverse and the virtual entity is configured to support them, Dataverse can now be informed of these changes and the Virtual table can participate in all the asynchronous logic that other Detaverse tables can. This is the same business events pattern, except that the messages are standardized and created when you configure the Virtual table to support them. More information: [Enable Virtual Tables to support Dataverse events](../../developer/data-platform/virtual-entities/enable-virtual-table-event-support.md)
 
+## Design principles
+
+When you consider using business events in your solution use the following design principles.
+
+- **Clear intent**: The intent behind creating a business event must be clearly understood. In other words, what is the reason for creating the business event, and how it will be used by the subscriber?
+- **Specific**: The event should be specific so that a subscriber doesn't need to filter whether or not they should respond to it. Do not create generic business events that subscribers may not always respond to.
+- **Lightweight**: The event should contain only that data necessary to describe the event. It should not contain additional data that assumes that the subscriber will need it. If the subscriber requires additional data, the information in the event should provide the context to allow them to retrieve it if necessary.
+- **Not for tranferring data**: If your intent is to transfer data to a recipient and, in effect, realize a data export scenario, you don't have a good use case for business events. In fact, the use of business events for data transfer scenarios is a misuse of the business events.
+
+## Catalogs and Custom events
 
 Dataverse business events also includes concepts from [Dynamics Finance and Operations Business events](/dynamics365/fin-ops-core/dev-itpro/business-events/home-page) together with the Dataverse Event Framework to provide a new way to discover events and create automation when these events occur.
 
 - **Event Catalog**:  With so many events available in the system it can be difficult to locate the right one. An event catalog improves event discovery by associating events with a solution and organizing events into categories. A catalog only includes selected, high value events relevant to the solution, so less useful events can be filtered out. Also, adding an event to a catalog is how you can make that event a trigger in the Power Automate Dataverse **When an action is performed** trigger.
-- **'Custom Events'**: In addition to system messages that provide events, you can define custom actions which serve as custom events because Dataverse will process them using its event framework. These events may or may not represent data changes within Dataverse. You can define custom events that describe completed events in external systems that are intended to be called by external applications.  Or you can use custom apis with no plug-in associated with them which solely exist to notify listeners that an event of interest occurred. In both cases, the event is initiated by calling the corresponding Dataverse API.
+- **Custom Events**: In addition to system messages that provide events, you can define custom actions which serve as custom events because Dataverse will process them using its event framework. These events may or may not represent data changes within Dataverse. You can define custom events that describe completed events in external systems that are intended to be called by external applications.  Or you can use custom apis with no plug-in associated with them which solely exist to notify listeners that an event of interest occurred. In both cases, the event is initiated by calling the corresponding Dataverse API.
 
-## Event Catalog
+### Event Catalog
 
-In order for an action to be available as a business event, it should be cataloged. More information: [Catalog and CatalogAssignment tables (Preview)](../../developer/data-platform/catalog-catalogassignment.md)
+In order for an action to be available as a business event, it should be cataloged. More information: [Catalog and CatalogAssignment tables](../../developer/data-platform/catalog-catalogassignment.md)
 
 A catalog makes it easier for people to discover the business event because they will be grouped by the containing solution and categories defined for that solution. The solution publisher selects which events are most relevant for their solution. This also allows for the event to be used in the Power Automate Dataverse **When an action is performed** trigger.
 
 Solution publishers should provide a catalog that includes the relevant tables containing business data as well as any custom api or custom process actions that represent high-value business events in their solution. If your solution consistes of multiple dependent solutions, catalogs are solution aware. You may define the root catalog in the base solution, then add additional categories and assigned events to the solutions which add them.
 
-A **Catalog** is a hierarchial structure where the top level represents a solution. Then the next level is a **Category**. Relative business events are then attached to a Category.
+A **Catalog** is a hierarchial structure where the top level represents a solution. Then the next level is a **Category**. Relevant business events are then attached to a Category.
 
 For example, the following represents a catalog for a solution called *Contoso Customer Management*:
 
@@ -70,17 +79,17 @@ For example, the following represents a catalog for a solution called *Contoso C
 
 This example uses **Tables** and **Customer Events** as categories but you can use any category grouping that makes sense for your solution.
 
-### Table events
+#### Table events
 
 When a table is assigned to a category, certain operations bound to the table will be included. You can't select each one individually.  If the table supports Create, Update, and Delete operations, these events will be included. Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security events. The owner of any record in the table will be able to share it, change sharing capabilities, or stop sharing the record. Operations related to sharing are exposed as `GrantAccess`, `ModifyAccess`, and `RevokeAccess` events. Additional events may also be included depending on the table.
 
 If the table is a Virtual Table, and it has been configured to support Virtual Table events, the `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted` events will be included.
 
-### Action events
+#### Action events
 
 When you associate a Custom API or Custom Process action to a category, you can subscribe to that specific operation and receive the data that was used for parameters to that action and any data returned by that action.
 
-## Custom Events
+### Custom Events
 
 Use Dataverse Custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. When these APIs are cataloged, they are available as business events.
 
@@ -90,13 +99,15 @@ Not every Custom API can or should be a business event. Custom APIs provide a ge
 
 For example, you may have a custom api that encapsulates a set of operations that represent a business process, like *Reassign*, which will change the ownership of one record to another based on certain criteria. Or *Escalate* that will raise the priority state of a record and create additional associated tasks. When you use a custom api in this manner, you are defining new events that may be of interest to subscribers. *If these operations complete successfully*, asynchronous logic can be triggered on them.
 
+You can create a custom action purely to enable subscribers to respond to it. [External Events](#external-events) describes a specific case where events originate outside of Dataverse, but you can create custom actions as events for use within Dataverse as well using the same settings. If your custom action is intended only for subscribers to respond to, we recommend that the name of your custom action begin with `On`, such as `OnCustomerPurchase` or `OnVendorPaymentPosted` to make it clear that the custom action is intended for subscribers to respond to.
+
 However, if you create a custom api named *GetImage* to delegate some function of a UI element to the server, it is not going to represent a useful business event. Custom API can be used for many different purposes, not all of them are related to operations that represent interesting events for business logic.
 
 This is why business events must be cataloged. The owner of the solution that contains the custom api should only catalog those custom api which represent high value events. You should not try to catalog every custom action that is included in your solution.
 
-Only custom apis that are defined as actions can be cataloged as custom events. More information: [Create and use Custom APIs](../../developer/data-platform/custom-api.md).
+Only custom apis that are defined as *Actions* can be cataloged as custom events. Those defined as *Functions* cannot be cataloged. More information: [Create and use Custom APIs](../../developer/data-platform/custom-api.md).
 
-### Custom Process Actions
+#### Custom Process Actions
 
 The concept of *Custom Action* includes both Custom API and Custom Process actions. They both create a new API, but how they do it is different. For business events, we recommend Custom API.
 
@@ -116,7 +127,7 @@ The Power Platform community has already created tooling to help with this. See 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
-### External Events
+#### External Events
 
 Custom events can represent events that occur in external systems. Events that occur in external systems have already completed. 
 
@@ -128,23 +139,26 @@ Custom APIs created for external events should align to these principles:
 - They should not have any response properties, only request parameters.
     - With no synchronous logic, there is no way to set response properties.
 
-### Examples
+> [!NOTE]
+> These settings are not only for events that occur outside of Dataverse. Custom API can be used with these settings to represent events that occur *within* Dataverse as well.
+
+#### Examples
 
 Let’s compare two external event examples:
 
 #### Scenario A: CustomerPurchase
 
-You have a point-of-sale application and a customer purchase is an important event you want to capture. Perhaps you want to send them an email thanking them for their purchase, and you want to store information on the total amount the customer has spent in Dataverse. You can define a `CustomerPurchase` Custom API within Dataverse. Your point-of-sale application can send information about this event to Dataverse. In Dataverse you want to update a record with the total. Then you want to use Power Automate to send an email thanking them for their purchase.
+You have a point-of-sale application and a customer purchase is an important event you want to capture. Perhaps you want to send them an email thanking them for their purchase, and you want to store information on the total amount the customer has spent in Dataverse. You can define a `OnCustomerPurchase` Custom API within Dataverse. Your point-of-sale application can send information about this event to Dataverse. In Dataverse you want to update a record with the total. Then you want to use Power Automate to send an email thanking them for their purchase.
 
 It may seem to be most efficient to implement the logic to calculate the total and update the record in a main operation of the custom API. But introduction of synchronous logic in this way introduces possibility that the logic could fail and return an error to the point-of-sale application calling it. Because the event has already occurred, there is no need to perform any synchronous logic which might cause the Dataverse call to fail. Instead, depend on Power Automate to include all the logic or include another asynchronous plug-in to update the record in Dataverse.
 
 #### Scenario B: VendorPaymentPosted
 
-You have an ERP application has a `VendorPaymentPosted` event and you simply want to simplify how you centralize your automation logic. You can create a custom api representing this external event and configure the ERP application to call this Dataverse API. When you catalog this custom api as an event, you will be able to use the Dataverse Power Automate connector to use this event as a trigger.
+You have an ERP application has a `OnVendorPaymentPosted` event and you simply want to simplify how you centralize your automation logic. You can create a custom api representing this external event and configure the ERP application to call this Dataverse API. When you catalog this custom api as an event, you will be able to use the Dataverse Power Automate connector to use this event as a trigger.
 
 This example expects nothing to be done in Dataverse except enable asynchronous logic to be to be registered for the event.
 
-### Invoking Custom API from external applications
+#### Invoking Custom API from external applications
 
 The key requirement to use custom API to send business events is that your application must have the ability to make authorized HTTP requests to Dataverse. For authorization, requests originating from other applications will typically use a special Application User account that must be created in the Dataverse environment. Licensed and authenticated Dataverse users can also use applications to send these requests.
 
@@ -162,7 +176,7 @@ The first experience where business events will be exposed is in Power Automate 
 
 Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
 
-### Expose business events in your application
+## Expose business events in your application
 
 As mentioned earlier, your application may use the APIs for business events to send notifications, but developers can also use the data from the [Catalog](../../developer/data-platform/reference/entities/catalog.md) and [Custom API](../../developer/data-platform/reference/entities/customapi.md) dataverse tables to build a data-driven user interface to allow selection of different business events.
 
@@ -171,6 +185,6 @@ These tables can be retrieved to show the hierarchical structure of the catalog,
 
 ## See Also
 
-[Catalog and CatalogAssignment tables (Preview)](../../developer/data-platform/catalog-catalogassignment.md)
+[Catalog and CatalogAssignment tables](../../developer/data-platform/catalog-catalogassignment.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
