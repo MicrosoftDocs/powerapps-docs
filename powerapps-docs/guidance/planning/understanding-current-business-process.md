@@ -45,3 +45,6 @@ In our example scenario, we identified these key contributors:
 
 > [!div class="nextstepaction"]
 > [Next step: Documenting the business process](what-is-task.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

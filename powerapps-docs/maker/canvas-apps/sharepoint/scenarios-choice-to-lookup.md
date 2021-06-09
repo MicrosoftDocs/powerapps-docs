@@ -61,3 +61,6 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

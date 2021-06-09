@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -62,3 +62,6 @@ While [viewing alternate keys](#view-alternate-keys), select the key you want to
 ### See also
 
 [Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

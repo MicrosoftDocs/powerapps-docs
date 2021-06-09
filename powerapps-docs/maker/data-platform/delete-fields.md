@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -43,3 +43,6 @@ If you delete a lookup column, the 1:N table relationship for it will automatica
 ### See also
 
  [Delete a custom table](data-platform-delete-entity.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

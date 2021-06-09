@@ -1,11 +1,11 @@
 ---
-title: "Specify properties for model-driven unified interface apps in Power Apps | MicrosoftDocs"
+title: "Specify properties for model-driven Unified Interface apps in Power Apps | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/03/2019
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -26,7 +26,7 @@ search.app:
   - D365CE
 ---
 
-# Specify properties for model-driven unified interface apps
+# Specify properties for model-driven Unified Interface apps
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -74,7 +74,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
     
     a. Choose the pencil icon next to **Reflow behavior**.
 
-    ![Edit Reflow behaviour](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behaviour")
+    ![Edit Reflow behavior](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Edit Reflow behavior")
 
     b. Select the grid flow type from **Bind to static options** drop down. 
 
@@ -84,7 +84,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
     |**Grid Only**|Restricts the grid to reflow into list even when there is no enough display space.|
     |**List Only**|Displays only as a list even when there is enough space to display as grid.|
     
-     ![Reflow behaviour properties](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Reflow behaviour properties")
+     ![Reflow behavior properties](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Reflow behavior properties")
 
     c. Choose **OK**.
 
@@ -97,3 +97,6 @@ You can display a custom icon instead of a value in a list and establish the log
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

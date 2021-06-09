@@ -143,7 +143,7 @@ If you already know which calendar your users should view, you can simplify the 
 
 ### Show different details about an event
 
-By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) supports.
+By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](/connectors/office365/#calendareventclientreceive) supports.
 
 1. In **CalendarEventsGallery**, set the **Text** property of a new or an existing label to `ThisItem` followed by a period.
 
@@ -330,7 +330,7 @@ This list discusses what each **ClearCollect** operation does:
         )
     );
     ```
-    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
+    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
     > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:
@@ -375,3 +375,6 @@ To finish this exercise:
 * [View the reference documentation for this screen](calendar-screen-reference.md).
 * [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
 * [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

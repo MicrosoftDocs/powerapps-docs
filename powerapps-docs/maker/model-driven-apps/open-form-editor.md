@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -85,3 +85,6 @@ If you create any new solution components in the process of editing the form, fo
 ## Next steps
 
 [Create and design forms](create-design-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

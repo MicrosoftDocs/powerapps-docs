@@ -3,7 +3,7 @@ title: Diagnose model-driven app issues with Monitor for Power Apps | Microsoft 
 description: Learn how to diagnose model-driven app issues using Monitor
 author: hasharaf
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.custom: 
 ms.reviewer: Mattp123
 ms.date: 11/16/2020
@@ -94,3 +94,6 @@ For every page load, the data platform sends all KPI for the loading sequence as
 
 ### See also
 [Use Monitor to troubleshoot model-driven app form behavior](model-driven-apps/monitor-form-checker.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

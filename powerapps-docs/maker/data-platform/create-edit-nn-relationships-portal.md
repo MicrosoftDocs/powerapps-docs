@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -90,3 +90,6 @@ Deleting the Many-to-Many relationship will delete the relationship table create
 
 [Create N:N (many-to-many) table relationships](create-edit-nn-relationships.md)<br />
 [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

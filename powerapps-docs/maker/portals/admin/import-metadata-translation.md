@@ -1,13 +1,16 @@
 ---
-title: "Import metadata translation | MicrosoftDocs"
-description: "Instructions to import metadata translation."
+title: Import metadata translation
+description: Instructions to import metadata translation.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/21/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Import metadata translation
@@ -29,3 +32,6 @@ When you provision a portal, the portal-related solutions are installed on the o
 > - If the latest version of a portal package is available, it isn't updated. The portal solutions are updated in the same version. To upgrade your portal solutions based on the latest available packages, you need to access the Solution Admin center.
 > - If a user has modified any data in Microsoft Dataverse, the existing data will not be overwritten during the update.
 > - If the portal solutions are being installed, the solution update cannot be triggered.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

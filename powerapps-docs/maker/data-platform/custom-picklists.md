@@ -5,7 +5,7 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2018
 ms.author: lanced
 search.audienceType: 
@@ -92,3 +92,6 @@ By default, Choices are created as Global Choices which allows them to be reused
 
 > [!IMPORTANT]
 > Once a choice  is created as local or global, this cannot be changed.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

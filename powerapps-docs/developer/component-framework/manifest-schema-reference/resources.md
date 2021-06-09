@@ -1,6 +1,6 @@
 ---
 title: Resources Element | Microsoft Docs
-description: 
+description: The resources node in the component manifest refers to the resource files that component requires to implement it's visualization.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -52,3 +52,5 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

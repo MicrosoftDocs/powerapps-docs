@@ -11,7 +11,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 03/18/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
 search.audienceType: 
   - maker
@@ -76,3 +76,6 @@ To view IFrame properties, follow these steps.
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

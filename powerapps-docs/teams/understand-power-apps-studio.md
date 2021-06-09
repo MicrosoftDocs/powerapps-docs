@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 06/07/2021
 ms.author: emcoope
 ms.reviewer: tapanm
 ---
@@ -67,7 +67,7 @@ options are relevant to the current session and app-related settings.
 - **Undo** – undo the last action.
 - **Redo** – repeat the last action.
 
-### Cut, copy and paste
+### Cut, copy, and paste
 
 ![Cut, copy and paste](media/studio-cut-copy-paste.png "Cut, copy and paste")
 
@@ -162,12 +162,12 @@ version, and other session details. You can also turn the **Auto save** option *
 
 | Name | Description |
 | - | - |
-| Account | Allows to sign-out from the current session. |
+| Account | Allows to sign out from the current session. |
 | Environment | Shows the current environment name. |
 | Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
 | Power Apps version | Shows the version of Power Apps. |
 | About Power Apps | Additional information and help. |
-| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md?branch=teams-preview#about-tab)
+| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md#about)
 
 > [!NOTE]
 > We recommend that you keep the **Auto save** setting turned **On** and
@@ -309,6 +309,16 @@ select the control, or select **(...)** and then select **Add to canvas**.
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
+#### Classic controls
+
+Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** -> **Advanced settings** -> toggle **Classic controls** to **On** under experimental features.
+
+After you enable classic controls, you'll be able to see and add them from the **Classic** category.
+
+![Classic controls](media/classic-control.png "Classic controls")
+
+For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
+
 ### Data
 
 Add, refresh, or remove data sources from your canvas app. You
@@ -316,7 +326,7 @@ can add one or more
 [connections](../maker/canvas-apps/connections-list.md)
 by using data sources.  
 
-In addition to data stored within tables, there are a number of connectors available to interact with data in popular SaaS, services, and systems.
+In addition to data stored within tables, there are many connectors available to interact with data in popular SaaS, services, and systems.
 
 ![Data](media/studio-data.png "Data")
 
@@ -348,7 +358,7 @@ the table name. You can also expand the *Advanced settings* to update the table'
 
 #### Understand visual editor
 
-Visual editor allows you to work with table rows, columns and data.
+Visual editor allows you to work with table rows, columns, and data.
 
 ![Authoring a table in visual editor](media/studio-table-1.png "Authoring a table in visual editor")
 
@@ -380,7 +390,7 @@ are available when creating a new column using visual editor inside Power Apps S
 - Phone
 - Auto number
 - Number
-- Date
+- Date (Only dates without the user locale (time zone) settings are supported.)
 - Decimal
 - Lookup
 - Choice
@@ -391,7 +401,7 @@ are available when creating a new column using visual editor inside Power Apps S
 
 ###### Advanced options
 
-The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of auto-numbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform/types-of-fields.md)
+The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of autonumbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform/types-of-fields.md)
 
 ##### Show/hide columns
 
@@ -411,7 +421,7 @@ To save changes to a table, select **Save.** When you change a table and try to 
 
 ![Save changes](media/studio-save-table-changes.png "Save changes")
 
-To ensure that changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto-save functionality.
+To ensure that changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto save functionality.
 
 ![Saving changes](media/studio-saving-changes.png "Saving changes")
 
@@ -469,7 +479,7 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 
 ![Media](media/studio-media.png "Media")
 
-If you want to reference additional media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
+If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
 or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
@@ -481,7 +491,7 @@ The canvas shows the currently selected screen from the left pane.
 ## 10 – Properties pane
 
 The properties pane shows properties and options available for the currently
-selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows additional options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations.
+selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations.
 
 ![Properties pane](media/studio-properties-pane.png "Properties pane")
 
@@ -494,10 +504,13 @@ tree view. If the current selection is inside a container, or inside an individu
 
 You can zoom in or zoom out while authoring the canvas app. Select **Ctrl**+**0**
 **Fit to window** to fit the screen size
-based on the current authoring window size. Note that the zoom percentage or screen size you use while
+based on the current authoring window size. The zoom percentage or screen size you use while
 authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
 ### See also
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -77,3 +77,6 @@ The **Product Showcase** tablet layout template was used for the following examp
 ### See also
 
 [Canvas app formula reference](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

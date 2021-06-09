@@ -28,7 +28,7 @@ This class library demonstrates how to:
 - Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
 
-Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code.
+Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code. You can find the CDSWebApiService class library source code and Visual Studio solution at [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples)/cds/webapi/C#/CDSWebApiService.
 
 ## Example
 
@@ -160,7 +160,7 @@ Patch is frequently used to Update or Upsert records.
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert an entity](../update-delete-entities-using-web-api.md#upsert-an-entity)
+- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
 
 ## PatchAsync
 
@@ -210,7 +210,7 @@ Sends a `DELETE` request synchronously.
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
-- [Remove a reference to an entity](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
+- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table-row)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ## DeleteAsync
@@ -338,3 +338,6 @@ The following C# samples use this class:
 - [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
 - [Conditional Operations sample (C#)](cdswebapiservice-conditional-operations.md)
 - [Query Data sample (C#)](cdswebapiservice-query-data.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

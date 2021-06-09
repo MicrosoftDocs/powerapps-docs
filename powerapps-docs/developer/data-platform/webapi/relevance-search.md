@@ -1,6 +1,6 @@
 ---
-title: "Search across entity data using relevance search (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the various ways to find entity data, including search, suggestions, and autocomplete, and even search across entity types using Microsoft Dataverse."
+title: "Search across table data using relevance search (Microsoft Dataverse)| Microsoft Docs"
+description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/13/2020
 ms.service: powerapps
@@ -22,14 +22,14 @@ search.app:
   - D365CE
 ---
 
-# Search across entity data using relevance search
+# Search across table data using relevance search
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Relevance search delivers fast and comprehensive search results across multiple
-entities, in a single list, sorted by relevance. Relevance search must be
+tables, in a single list, sorted by relevance. Relevance search must be
 enabled in your target environment by an administrator before you can use the
-feature. More information: [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search)
+feature. More information: [Using relevance search to search for records](../../../user/relevance-search.md)
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -46,7 +46,7 @@ application UI:
 - **Autocomplete**: Provides autocompletion of input as the user enters text into a
     form field.
 
-The following sections describe how to access the abovementioned search
+The following sections describe how to access the above mentioned search
 capabilities from application code.
 
 ## Search
@@ -65,7 +65,7 @@ The `search` parameter value contains the term to be searched for and has a
 
 A successful search response returns an HTTP status of 200 and consists of:
 
-- value: a list of entities. By default, 50 results are returned. This also
+- value: a list of tables. By default, 50 results are returned. This also
     includes search highlights, which indicate matches to the search parameter
     value contained within the `crmhit` tag of the response.
 
@@ -84,8 +84,8 @@ The following query parameters are supported for relevance search.
 
 #### `entities=[list<string>] (optional)`
 
-The default entity list searches across all relevance search&ndash;configured entities
-and fields. The default list is configured by your administrator when relevance
+The default table list searches across all relevance search&ndash;configured tables
+and columns. The default list is configured by your administrator when relevance
 search is enabled.
 
 #### `facets=[list<string>] (optional)`
@@ -137,13 +137,13 @@ Specifies the number of search results to retrieve. The default is 50, and the m
 
 #### `orderby=[list<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an attribute name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
-For a set of results that contain multiple entity types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `“orderby”: [“@search.score desc", "modifiedon desc”]`
 
-If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
+If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
 #### `searchmode= any | all (optional)`
 
@@ -179,6 +179,11 @@ The Lucene query syntax supports the following functionality:
 | Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
+
+> [!NOTE]
+> Wildcards are used only for word completion in Relevance Search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
+
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
 ### Example: basic search
 
@@ -338,9 +343,9 @@ POST [Organization URI]/api/search/v1.0/query
 ## Suggestions
 
 Suggestions provide a list of matches to the specified search parameter value,
-based on an entity record's primary field. This is different from a regular search
-request because a suggestion search only searches through an entity record's primary field,
-while search requests search through all relevance search&ndash;enabled entity fields.
+based on a table record's primary column. This is different from a regular search
+request because a suggestion search only searches through a record's primary column,
+while search requests search through all relevance search&ndash;enabled table columns.
 
 The minimum syntax of a suggestion search HTTP request is as shown below.
 
@@ -375,17 +380,17 @@ Number of suggestions to retrieve. The default is 5.
 
 #### `orderby=[List<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an attribute name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of an column name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
-For a set of results that contain multiple entity types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `“orderby”: [“@search.score desc", "modifiedon desc”]`
 
-If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
+If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
 #### `entities=[list<string>] (optional)`
 
-The default is searching across all relevance search&ndash;configured entities.
+The default is searching across all relevance search&ndash;configured tables.
 
 #### `filter=[string] (optional)`
 
@@ -444,8 +449,8 @@ POST [Organization URI]/api/search/v1.0/suggest
 
 ## Autocomplete
 
-Provides autocompletion of user input. Autocomplete is based on an entity
-record's primary field.
+Provides autocompletion of user input. Autocomplete is based on a table
+record's primary column.
 
 The minimum syntax of a relevance search HTTP request is as follows.
 
@@ -471,8 +476,8 @@ Fuzzy search to aid with misspellings. The default is **false**.
 
 #### `entities=[list<string>] (optional)`
 
-The default scope is searching across all relevance search&ndash;configured entities
-and fields.
+The default scope is searching across all relevance search&ndash;configured tables
+and columns.
 
 #### `filter=[string] (optional)`
 
@@ -514,7 +519,10 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Microsoft Dataverse](/powerapps/user/search)  
-[Retrieve related entity records with a query](retrieve-related-entities-query.md)  
-[Query Data using the Web API](query-data-web-api.md)
+[Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
+[Compare search options in Microsoft Dataverse](../../../user/search.md)  
+[Retrieve related table records with a query](retrieve-related-entities-query.md)  
+[Query Data using the Web API](query-data-web-api.md)  
+[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

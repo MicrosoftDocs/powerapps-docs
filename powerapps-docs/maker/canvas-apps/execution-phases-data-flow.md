@@ -20,7 +20,7 @@ contributors:
 
 # Understand canvas app execution phases and data call flow
 
-When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
+When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](./connections-list.md#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
 
 In this article, you'll learn about these different phases of execution and how an app connects to data sources.
 
@@ -84,3 +84,6 @@ With the understanding of this high-level concept of how data calls travel, you 
 [Tips and best practices to improve canvas app performance](performance-tips.md) <br>
 [Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

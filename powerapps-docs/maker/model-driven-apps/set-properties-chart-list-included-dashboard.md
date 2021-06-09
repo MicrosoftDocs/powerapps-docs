@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -80,3 +80,6 @@ You can set the following list properties from the **Set Properties** dialog box
  
 ## Next steps  
  [Create or customize dashboards](create-edit-dashboards.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

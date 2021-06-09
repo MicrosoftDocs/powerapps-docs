@@ -93,3 +93,6 @@ In a baseball field, a pitcher throws a phone from the pitcher's mound to a catc
 | **App.ActiveScreen = PlayBall** |Returns a Boolean value that indicates whether **PlayBall** is displayed. |**true** |
 | **App.ActiveScreen.Fill** |Returns the background color for the displayed screen. |**Color.Green** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

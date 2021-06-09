@@ -7,7 +7,7 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
@@ -138,3 +138,5 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 ### See also 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

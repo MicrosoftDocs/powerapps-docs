@@ -1,13 +1,13 @@
 ---
 title: Use the model-driven app main form and its components in Power Apps | Microsoft Docs
-description: Know how to use the main form and its components in the unified interface based apps
+description: Know how to use the main form and its components in Unified Interface apps
 keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -23,13 +23,13 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Forms in the Unified interface based apps provide improved user experience for optimum agent productivity and help maintain context while working on related rows. You can see the forms enlisted in the solution explorer. The form type of the new forms is **Main**.
+Forms in Unified Interface apps provide improved user experience for optimum agent productivity and help maintain context while working on related rows. You can see the forms enlisted in the solution explorer. The form type of the new forms is **Main**.
 
 This topic explains how to edit a main form, and add or change various elements of the form.
 
 ## Open the form editor
 
-To edit a form or to add or change elements, use the form editor. The form editor lets you edit forms for all the Unified interface based apps.
+To edit a form or to add or change elements, use the form editor. The form editor lets you edit forms for all Unified Interface apps.
 
 Follow the procedures given below to access the form editor. 
 
@@ -54,13 +54,13 @@ Follow the procedures given below to access the form editor.
 > [!NOTE]
 > If you have made other changes to the app, publish them using the app level publish option. See [Validate and publish an app using the app designer](validate-app.md) for more information.
 
-> [!NOTE]
-> The webclient main form is also compatible with the Customer Service Hub and is available to be edited using the app designer.
+<!-- > [!NOTE]
+> The web client main form is also compatible with the Customer Service Hub and is available to be edited using the app designer. -->
 
 
 ### Access the form editor through the default solution
 
-1.  Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
@@ -170,3 +170,6 @@ An event handler consists of a reference to a JavaScript web resource and a func
  [Create and design forms](create-design-forms.md)   
  [Create and edit quick create forms](create-edit-quick-view-forms.md)   
  [Create and edit quick view forms](create-edit-quick-view-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

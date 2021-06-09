@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -45,5 +45,8 @@ However, if the user table is included in the app but the team table is not, onl
     > [!div class="mx-imgBorder"] 
     > ![Add the team table to the app](media/add-team-entity-app.png "Add the team table to the app")
 
-3. Select **Save**, and the select **Publish** to make your change available to app users.   
+3. Select **Save**, and then select **Publish** to make your change available to app users.   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

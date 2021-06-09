@@ -1,6 +1,6 @@
 ---
 title: getEntityMetadata | Microsoft Docs
-description: 
+description: Returns the table definitions for the specified table.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -29,8 +29,8 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|entityName|`String`|Yes|The logical name of the entity.|
-|attributes|`String[]`|No|The attributes to get metadata for.|
+|entityName|`String`|Yes|The logical name of the table.|
+|attributes|`String[]`|No|The columns to get metadata for.|
 
 ## Return Value
 
@@ -42,3 +42,5 @@ Type: Promise<[EntityMetadata](../entitymetadata.md)>
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

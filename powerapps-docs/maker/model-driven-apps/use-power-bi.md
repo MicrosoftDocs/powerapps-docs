@@ -7,7 +7,7 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: overview
 author: Mattp123
 ms.author: matp
 manager: kvivek
@@ -32,3 +32,6 @@ The Power BI cloud service works with Microsoft Dataverse apps to provide a self
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

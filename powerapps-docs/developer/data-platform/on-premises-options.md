@@ -1,6 +1,6 @@
 ---
 title: "On-premises deployment options (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about deployment options for an on-premise installation." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -30,3 +30,6 @@ TODO: This page and any links to it will not be published until an on-premises v
 ## Debug a plug-in
 
 This section would include information about debugging a plug-in in an on-premises deployment. It should always have a link back to the relevant section. More information: [Write plug-ins to extend business processes](plug-ins.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

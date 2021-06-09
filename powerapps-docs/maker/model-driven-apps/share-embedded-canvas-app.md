@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,7 +25,8 @@ search.app:
 ---
 
 # Share an embedded canvas app
-This topic explains how to share an embedded canvas app that you have already created.
+
+This article explains what's needed to share an embedded canvas app that you have already created.
 
 After you have created and added an embedded canvas app to a model-driven form you will need to take steps to ensure that all users that have access to the model-driven form also have access to the canvas app and the data that it uses. Please refer to the following guidelines:
 -	Share your embedded canvas app with Everyone in your organization or a security group or specific users. More information: [Share an app](../canvas-apps/share-app.md#share-an-app)
@@ -46,3 +47,6 @@ Embedded canvas apps are also solution aware. By default embedded canvas apps ar
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

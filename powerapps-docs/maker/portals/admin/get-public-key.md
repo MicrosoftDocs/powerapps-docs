@@ -1,13 +1,16 @@
 ---
-title: "Download public key of a portal | MicrosoftDocs"
-description: "Learn how to download public key of a portal."
+title: Download public key of a portal
+description: Learn how to download public key of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Download public key of portal
@@ -30,3 +33,6 @@ Alternately, you can also get the public key by going to the URL: `<portal_base_
 
 > [!NOTE]
 > If the portal is currently being provisioned or the package install is not finished in the organization, an error is displayed if you try to download the public key. You must wait until portal provisioning is complete and the portal is up and running.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

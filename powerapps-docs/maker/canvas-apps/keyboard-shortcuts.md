@@ -137,3 +137,6 @@ The Alt key can also be used *after* a control has been selected to override sna
 
 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

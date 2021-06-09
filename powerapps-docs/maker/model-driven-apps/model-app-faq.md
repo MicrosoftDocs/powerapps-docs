@@ -8,7 +8,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 12/02/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: troubleshooting
 applies_to: 
   - "powerapps"
 search.audienceType: 
@@ -106,3 +106,5 @@ This value specifies the changes in the current layer with respect to the previo
 ### See also
 
 [What are model-driven apps in Power Apps?](model-driven-app-overview.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

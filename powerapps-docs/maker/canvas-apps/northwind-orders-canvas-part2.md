@@ -547,3 +547,6 @@ In the next topic, you'll add another gallery to show the products in each order
 
 > [!div class="nextstepaction"]
 > [Create the detail gallery](northwind-orders-canvas-part3.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

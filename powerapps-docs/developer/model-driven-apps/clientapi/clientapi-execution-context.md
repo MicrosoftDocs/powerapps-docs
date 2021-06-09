@@ -43,3 +43,6 @@ The execution context object provides a number of methods to further work with t
  [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

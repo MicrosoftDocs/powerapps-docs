@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -61,3 +61,6 @@ The `DisplayString` table doesn’t contain the default display strings. The two
 ## See also
 [Edit a table](edit-entities.md)<br />
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: setFilter | Microsoft Docs
-description: 
+description: Sets the top-most filter associated with the data-set.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -37,3 +37,5 @@ Model-driven apps
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -53,3 +53,6 @@ There are four different types of table ownership. When you create a table, the 
 ### See also
 
 [Edit or delete a table](edit-delete-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

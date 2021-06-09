@@ -11,7 +11,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 04/03/2019
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
 search.audienceType: 
   - maker
@@ -119,3 +119,6 @@ More information: [Developer Documentation: Pass contextual information about th
 
 [Create or edit web resources to extend an app](create-edit-web-resources.md)<br />
 [Use the main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

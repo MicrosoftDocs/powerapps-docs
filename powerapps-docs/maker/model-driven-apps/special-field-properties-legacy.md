@@ -11,7 +11,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 search.audienceType: 
   - maker
@@ -72,3 +72,6 @@ search.app:
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

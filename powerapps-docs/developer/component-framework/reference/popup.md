@@ -1,6 +1,6 @@
 ---
 title: Popup | Microsoft Docs
-description: 
+description: Provides access to get all the information about the popup.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -78,3 +78,5 @@ Should be only one `Root` Popup for each set of Popups.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

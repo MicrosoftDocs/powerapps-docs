@@ -54,3 +54,6 @@ If a user typed **14** in a text-input control named **BirthHour**, **50** in a 
 
 **Text(Time(Value(BirthHour.Text), Value(BirthMinute.Text), Value(BirthSecond.Text)), "hh:mm:ss a/p")**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

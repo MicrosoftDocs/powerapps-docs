@@ -1,7 +1,7 @@
 ---
 title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/19/2020
 ms.reviewer: ""
 ms.service: powerapps
@@ -85,7 +85,7 @@ You can create custom public views. You can delete any custom public views you c
 
 ## Places where you can access the view editor to create or edit views
 
-- Power Apps site: To access the view designer, select **Data** > **Tables**, select a table, and then select the **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
+- Power Apps site: To access the view designer, select **Data** > **Tables**, select a table, and then select the **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](./create-edit-views-app-designer.md)
 - App Designer: If you're working in an app, you may want to use the App Designer, which provides a simple and intuitive UI with drag-and-drop capabilities for created views. More information: [Tutorial: Create and edit public or system views by using the app designer](create-edit-views-app-designer.md)
 - Solution explorer: If you're already experienced with Dynamics 365, you may want to use the solution explorer. More information: [Navigate to advanced app making and customization areas](advanced-navigation.md#solution-explorer)
  
@@ -96,8 +96,11 @@ As a system customizer you can customize the views through controls by making gr
 - Editable Grid: Allows users to do rich in-line editing directly from grids and sub-grids whether they're using a web app, tablet, or phone. More information: [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
 - Read Only Grid: Provides users an optimal viewing and interaction experience for any screen size or orientation such as mobiles and tablets by using responsive design principles. More information: [Specify properties for Unified Interface apps](specify-properties-for-unified-interface-apps.md)
 
-## Next steps
+
 
 ## Next steps
 
-[Create or edit views](create-and-edit-views.md)
+[Create or edit views](./create-edit-views-app-designer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

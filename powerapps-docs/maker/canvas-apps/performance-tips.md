@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2020
+ms.date: 03/11/2020
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - yingchin
+  - tapanm-msft
+  - chmoncay
 ---
 # Tips and best practices to improve canvas app performance
 
@@ -24,7 +26,7 @@ In the previous articles, you learned about the [execution phases and data call 
 
 **Don't connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
 
 ## Limit the number of controls
 
@@ -95,9 +97,9 @@ There's an exception: In the previous example, imagine that the only way to disp
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the dataset is large.
 
 > [!TIP]
-> To learn about delegable functions supported by specific connectors, go to the [connector documentation](https://docs.microsoft.com/connectors/).
+> To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
@@ -110,11 +112,11 @@ The use of [non-delegable functions and inappropriate data row limits for non-de
 
 ## Use Delayed Load
 
-Turn on the [experimental feature](working-with-experimental.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
+Turn on the [experimental feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large datasets
 
-Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2,000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, use indexes on columns as described by the data sources such as [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide) or [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
+Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2,000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, use indexes on columns as described by the data sources such as [SQL Server](/sql/relational-databases/sql-server-index-design-guide) or [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
 
 > [!NOTE]
 > For additional information about how large datasets can cause common performance problems on different platforms, read [Large datasets loading slowly on different platforms](common-performance-issue-resolutions.md#large-datasets-loading-slowly-on-different-platforms).
@@ -135,6 +137,13 @@ If you have multiple formulas or rules that reference the value of a **Text inpu
 
 If you reference a user-input value in a rule or a formula by using a `Form.Updates` variable, it iterates over all the form's data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
 
+## Use DelayItemLoading and Loading spinner to improve performance in Gallery
+
+Depending on the configuration, Gallery can take longer to render the visible rows. There are a couple of ways to improve performance.
+
+- Simplify the template. For example, consider reducing the number of controls, references to lookups.
+- Galleries with complex templates can benefit from having **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. This change will improve the perceived experience when render time is longer. **DelayItemLoading** will also defer the rendering of templates which will allow the rest of the screen to render faster as both screen and gallery are not competing for resources.
+
 ## Next steps
 
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
@@ -146,3 +155,6 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
 [Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

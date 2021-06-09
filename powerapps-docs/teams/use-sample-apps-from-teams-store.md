@@ -4,8 +4,8 @@ description: Learn how to use sample apps from Teams store.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 01/29/2021
+ms.custom: intro-internal
+ms.date: 05/24/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -27,23 +27,33 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins (Preview)](bulletins.md) <br> Manager and user apps for company communications.
+      ![Boards (Preview) app](media/app-icons/boards-app-icon.png "Boards (Preview) app") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+   :::column-end:::
+   :::column span="":::
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
    :::column-end:::
    :::column span="":::
       ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
    :::column-end:::
    :::column span="":::
-      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
-             
+:::row-end:::
+:::row:::
+    :::column span="":::
+      ![Perspectives (Preview) app](media/app-icons/perspectives-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+   :::column-end:::
+   :::column span="":::
+      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
+   :::column-end:::
    :::column span="":::
    :::column-end:::
 :::row-end:::
@@ -53,7 +63,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 ## Install the sample app
 
 > [!TIP]
-> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
+> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
 
 1. Select **Apps** at the bottom of the left pane in Teams.
 
@@ -89,7 +99,7 @@ The following tutorial shows how to install the Employee ideas app. You can use 
     ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](https://docs.microsoft.com/power-platform/admin/about-teams-environment)
+    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment)
     > - Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.
@@ -145,11 +155,15 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-- [Bulletins (Preview) sample app](bulletins.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
- 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -8,7 +8,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 01/05/2021
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
@@ -37,3 +37,6 @@ You can activate a deactivated app by selecting the app and then selecting **Act
 ### See also
 
 [Privileges required to view and access apps](app-visibility-privileges.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

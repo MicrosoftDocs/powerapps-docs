@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 08/06/2018
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -67,4 +67,7 @@ When you receive a solution zip file which contains the app that you want to imp
 4. Select **Import**.
 
 ## See also
-[Change the solution publisher prefix](../data-platform/change-solution-publisher-prefix.md)
+[Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

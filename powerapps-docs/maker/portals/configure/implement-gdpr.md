@@ -1,13 +1,16 @@
 ---
-title: "Implement General Data Protection Regulations in Power Apps portals  | MicrosoftDocs"
-description: "Learn how to implement General Data Protection Regulations in Power Apps portals."
+title: Implementing General Data Protection Regulations in your Power Apps portals
+description: Learn how to implement General Data Protection Regulations in Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/18/2019
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Implementing General Data Protection Regulations in your Power Apps portals
@@ -95,3 +98,6 @@ The following field is added in the portal contact record to store the date and 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
