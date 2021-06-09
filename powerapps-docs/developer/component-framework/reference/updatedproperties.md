@@ -21,17 +21,6 @@ Provides information on hat has changed in the `updateView` method. The informat
 
 Model-driven and canvas apps
 
-## Properties
-
-|Property Name|Description|
-|-------------|-----------|
-|Control property name| The control property name as declared in the manifest file.|
-|Parameters|Generic messages specifying that something related to the component has changed.|
-|Dataset|Generic messages specifying that something on the dataset related to the component has changed.|
-|Layout|Control size changed (corresponding wrt to context.mode.allocatedHeight and context.mode.allocatedWidth)|
-|fullscreen_open|Control is in full screen mode (via setFullScreen(true))|
-|fullscreen_close|Full screen mode has been closed (via setFullScreen(false)) |
-
 ## Example
 
 ```typescript

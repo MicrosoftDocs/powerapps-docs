@@ -75,7 +75,7 @@
     - name: Map component
       href: sample-controls/map-control.md
     - name: Choices (Multi select option set) component
-      href: multi-select-option-set-control.md
+      href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
     - name: React Facepile component

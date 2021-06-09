@@ -107,9 +107,6 @@ The column filtering for the current query. This is supported in both model-driv
 |88|DoesNotContainValues|No|Yes|
 
 
-
-
-
 > [!NOTE]
 > Filtering feature is only available to Dataverse data source. 
 

@@ -1,5 +1,5 @@
 ---
-title: Mode | Microsoft Docs
+title: Mode element| Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Manifest element
+# Mode element
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
