@@ -18,9 +18,9 @@ contributors:
 Users can access Power Apps portals with the most recent versions of these popular browsers:
 
 - Microsoft Edge (recommended: [Chromium-based Edge](https://www.microsoft.com/edge))
-- Chrome
-- Firefox
-- Safari
+- Google Chrome
+- Mozilla Firefox
+- Apple Safari
 - Internet Explorer (not recommended)
 
 > [!NOTE]
