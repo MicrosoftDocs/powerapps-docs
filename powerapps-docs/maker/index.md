@@ -51,7 +51,7 @@ Creating a canvas app is easy; with Power Apps, you can find or create your app 
 
 When you create a model-driven app, you can use all of the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
-As part of custom page public preview, a converged app can be created by adding a new page type based on canvas into the model-driven app.  This allows the power and flexibility of a canvas experience within the model-driven app.  Custom pages allow
+As part of custom page public preview, the new page type based on canvas can be added into a new or existing model-driven app.  This allows the power and flexibility of a canvas experience within the model-driven app.  Custom pages allow
 - Full control over page layout 
 - Out of box controls and custom components
 - Power Apps connectors
