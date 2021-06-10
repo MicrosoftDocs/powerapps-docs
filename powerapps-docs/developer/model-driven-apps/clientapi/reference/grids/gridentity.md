@@ -24,7 +24,7 @@ GridEntity is returned by the [GridRowData](gridrowdata.md).[getEntity](gridrowd
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();
 var myRow = myRows.get(arg);
-var gridEntity = myRow.getData().getEntity();
+var gridEntity = myRow.data.entity;
 ```
 
 GridEntity also supports the **columns** collection that provides methods of working with a collection of columns for a table in the editable grid. Each column ([GridAttribute](gridattribute.md)) represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the column. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.

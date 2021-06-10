@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2021
+ms.date: 05/27/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -157,4 +157,5 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ### See also
 
-[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
