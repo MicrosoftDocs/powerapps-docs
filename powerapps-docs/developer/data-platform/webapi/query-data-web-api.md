@@ -77,7 +77,7 @@ OData-Version: 4.0
   
 <a name="bkmk_limits"></a>
 
-## Limits on number of entities returned
+## Limits on number of table rows (entities) returned
 
  Unless you specify a smaller page size, a maximum of 5000 entities will be returned for each request. If there are more entities that match the query filter criteria, a `@odata.nextLink` property will be returned with the results. Use the value of the `@odata.nextLink` property with a new `GET` request to return the next page of entity data.  
   
