@@ -49,6 +49,5 @@ Following `of-type` property values are not supported currently:
 |Lookup.Owner|Allows for a single reference to either a team or a user record. All team or user-owned tables have one of these.|
 |Lookup.PartyList|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They're also used in the Phone and Appointment tables.|
 |Lookup.Regarding|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|
-
 |Status|A system column that has options that generally correspond to active and inactive status. Some system columns have additional options, but all custom columns have only Active and Inactive status options.|
 |Status Reason|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options.|
