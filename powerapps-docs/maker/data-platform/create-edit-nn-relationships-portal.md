@@ -74,7 +74,7 @@ The values for these columns are generated for you based on the tables chosen.
 
 Select **OK** to close the **Many-to-many** panel. The relationship will be created when you save changes to the table. 
 
-Once saved, there nothing that can be changed using [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
+Once saved, there's nothing that can be changed using [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
 
 ## Create a many-to-many relationship with the same table (self-referential relationship)
 
