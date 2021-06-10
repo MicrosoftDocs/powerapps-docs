@@ -1,5 +1,5 @@
 ---
-title: " MultiSelectOptionSet component| Microsoft Docs" 
+title: " Multi Select OptionSet component| Microsoft Docs" 
 description: "This sample demonstrates how to leverage the multi select option set type on properties of field components." 
 ms.custom: ""
 manager: kvivek
@@ -9,7 +9,7 @@ ms.topic: "article"
 ms.author: "nabuthuk" 
 author: Nkrb
 ---
-# Implementing multi select option set component
+# Implementing  choices (multi select option set) component
 
 This sample component demonstrates how to leverage the multi select option set type on properties of `field` components. By binding the code component's primary property to this type, users can create all new types of controls with choices column.
 

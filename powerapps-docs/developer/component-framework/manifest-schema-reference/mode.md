@@ -1,6 +1,6 @@
 ---
 title: Mode element| Microsoft Docs
-description: 
+description: Provides information on methods available for mode element.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: Types  | Microsoft Docs
-description: 
+description: Provides information on methods available for types element.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

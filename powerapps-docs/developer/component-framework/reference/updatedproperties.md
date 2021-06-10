@@ -15,7 +15,7 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 
 # updatedProperties
 
-Provides information on hat has changed in the `updateView` method. The information could be change in the property value, component or browser resize event.
+Provides information on what has changed in the `updateView` method. The information could be change in the property value, component or browser resize event.
 
 ## Available for 
 

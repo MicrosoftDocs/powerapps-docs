@@ -3,7 +3,7 @@ title: "Limitations of Power Apps component framework | MicrosoftDocs"
 description: "Limitations using Power Apps component framework"
 author: nkrb
 manager: kvivek
-ms.date: 12/16/2020
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
