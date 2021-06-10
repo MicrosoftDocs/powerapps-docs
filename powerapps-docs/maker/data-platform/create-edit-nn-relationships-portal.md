@@ -81,7 +81,7 @@ Once saved, there nothing that can be changed using [Power Apps portal](https://
 There may be times when you need to create a many-to-many relationship that references the same table. For example, account records may have multiple parent account records. However, if the self-referential relationship doesn’t have custom labels configured, distinguishing the two related record types that appear in the app won’t be apparent to users. This is because the related records appear twice in the app by using the same table name.
 To create a self-referential relationship, use custom labels.
 1. Create a new custom table. In this example, the table is named *Custom table*.
-2. Open the classic solution explorer, open the custom table, and in the **N:N Relationships** section create a new **Many-to-Many Relationship**. 
+2. Open the classic solution explorer, open the custom table, and in the **N:N Relationships** section create a new **Many-to-Many Relationship**.
 3. Complete the relationship definition as follows. Make sure to add custom labels to both the current and the other table’s relationship:
 
    **Current table** section
