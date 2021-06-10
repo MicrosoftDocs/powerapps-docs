@@ -20,7 +20,7 @@ search.app:
 # Use timeline 
 
 
-Timeline is a control that allows you to view information that is connected to an entity record and occurs over time in a single stream. Some information that can be logged into the timeline are notes and posts in addition to displaying activities such as emails, appointments, phone calls, and tasks.
+Timeline is a control that allows you to view information that is connected to an entity row and occurs over time in a single stream. Some information that can be logged into the timeline are notes and posts in addition to displaying activities such as emails, appointments, phone calls, and tasks.
 
 Timeline allows you to:
 - Access the command bar to perform common actions quickly
@@ -35,29 +35,29 @@ The timeline section on the entity form is intended to centralize access to info
 
 When enabled by your system administrator, you can use the icons that are displayed on the top-right navigation in the timeline for quick access to do the following:
 
-- [Create a timeline record](#create-a-timeline-record)
+- [Create a timeline row](#create-a-timeline-row)
 - [Work with Filters](#work-with-filters)
-- [Work with Records](#work-with-records)
+- [Work with row](#work-with-rows)
 - [Explore more commands](#more-commands)
-- [Search Records](#search-records-on-timeline)
+- [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any records they've followed if those records are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Configure Timeline](customer-service-hub-user-guide-timeline-admin.md).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Configure Timeline](../mkaur/TBD).
 
 > [!Note]
 > The Notes feature is not available from the timeline. 
 
-## Create a timeline record
+## Create a timeline row
 
-When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, as well as make notes and posts and associate them with other records. 
+When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, as well as make notes and posts and associate them with other rows. 
 
 1. Select **Create a timeline record** icon.<BR><BR>
-![Create a timeline record icon](media\timeline-create-a-record-icon1c.png "Use the Create a timeline record feature") 
+![Create a timeline row icon](media\timeline-create-a-record-icon1c.png "Use the Create a timeline row feature") 
 
-2. Select the type of record you want to create from the display options available. <BR><BR>
-![Select type of timeline record](media\timeline-create-a-timeline-record-1f.png "Select the type of timeline record")
+2. Select the type of row you want to create from the display options available. <BR><BR>
+![Select type of timeline row](media\timeline-create-a-timeline-record-1f.png "Select the type of timeline row")
 
-For information on timeline record configuration, [Configure activity record types](customer-service-hub-user-guide-timeline-admin.md#configure-activity-record-types). 
+For information on timeline row configuration, [Configure activity row types](../maker/TBD). 
 
 ## Work with filters
 
@@ -69,12 +69,12 @@ Legend:
 1. The timeline **Filter** ![Filter](media\timeline-filter-icon.png "Filter") icon is located in the top-right navigation on the timeline.
 2. The filter pane displays when the filter icon is selected.
 3. Use the carats to expand or minimize selections.
-4. When enabled by your system administrator, record and activity types are displayed in the filter pane. Record and activity types can be filtered by selecting the corresponding box next to the item.
+4. When enabled by your system administrator, row and activity types are displayed in the filter pane. Row and activity types can be filtered by selecting the corresponding box next to the item.
 5. The ![Clear all filters](media\timeline-clear-all-filters-icon.png "Clear all filters") icon removes and clears all filter selections from the filter pane.
 
-### Filter records on timeline <a name="filter-records"></a>
+### Filter rows on timeline <a name="filter-rows"></a>
 
-Filters are valuable for sorting data. You can easily filter through records and activity types using multiple options to quickly see what matters to you. The filter is available for the activities, notes, posts, and custom entities that are present in timeline.
+Filters are valuable for sorting data. You can easily filter through rows and activity types using multiple options to quickly see what matters to you. The filter is available for the activities, notes, posts, and custom entities that are present in timeline.
 
 ### Filter icon display
 
@@ -87,28 +87,28 @@ The following category and sub-category options are available on the filer menu:
 
 | Category              | Sub-category   |
 |-----------------------|----------------|
-| Record type           |<li>Notes</li><li>Posts</li><li>Activities</li>|
+| Row type           |<li>Notes</li><li>Posts</li><li>Activities</li>|
 |Activity type         |<li>Appointment</li><li>Campaign Activity</li><li>Campaign Response</li><li>Email</li><li>Fax</li><li>Case Resolution</li><li>Letter</li><li>Opportunity Case</li><li>Order Case</li><li>Phone Call</li><li>Quote Close</li><li>Recurring Appointment</li><li>Social Activity</li><li>Task</li><li>Project Service Approval</li><li>Booking Alert</li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite</li><li>Customer Voice survey response</li><li>Custom activities (as configured by your system administrator)</li> |
 |Activity status            |<li>Active</li><li>Overdue</li><li>Closed</li>|               
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
 |Posts by                   |<li>Auto post</li><li>Users</li> |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
 
-## Work with records  
+## Work with rows  
 
-When working with records, you can view key information at a glance or expand records to view more details. When you hover over a record, actions display that you can use.
+When working with rows, you can view key information at a glance or expand rows to view more details. When you hover over a row, actions display that you can use.
 
-### Expand all records
+### Expand all rows
 
-When enabled by your system administrator, you can view timeline records quickly in a collapsed format or expand a record to see more details for ease of use.
+When enabled by your system administrator, you can view timeline rows quickly in a collapsed format or expand a row to see more details for ease of use.
 
-![Expand all records functionality](media\timeline-expand-all-records-1d.png "Expand all records functionality")
+![Expand all rows functionality](media\timeline-expand-all-records-1d.png "Expand all rows functionality")
 
 Legend
-1. The **Expand all records** ![Expand all records](media\timeline-expand-icon.png "Expand all records") icon is used to expand all records listed on the timeline.
-2. The carats in the bottom-right corner of records allow you to expand (^) or minimize (v) display views.
-3. Each record has a list of commands relevant to their record type that displays in the top right corner for ease of use. 
-4. Record backgrounds change to grey when you hover over it, and it becomes transparent again when you move the mouse away.
+1. The **Expand all records** ![Expand all rows](media\timeline-expand-icon.png "Expand all rows") icon is used to expand all rows listed on the timeline.
+2. The carats in the bottom-right corner of rows allow you to expand (^) or minimize (v) display views.
+3. Each row has a list of commands relevant to their row type that displays in the top right corner for ease of use. 
+4. Row backgrounds change to grey when you hover over it, and it becomes transparent again when you move the mouse away.
 
 ## More commands
 
@@ -118,8 +118,8 @@ The **More commands** option contains refresh, sort, and email functionalities.
 
 Legend
 1. The **More commands** ![More commands](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
-2. The **Refresh timeline** command updates record details in the timeline.
-3. The **Sort newer to older** or **Sort older to newer** command is used to sort records.
+2. The **Refresh timeline** command updates row details in the timeline.
+3. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
 4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disables threaded email views.
 
 ## Threaded email views in timeline
@@ -175,35 +175,35 @@ Steps:
 > [!Note]
 > The **emails as conversation** view is based on the user's preference. Personal settings are tied to the user, not the form, which means when you enable the threaded email view, the setting is applied to all of your timeline views. 
 
-## Search records on timeline
+## Search rows on timeline
 
-When enabled by your system administrator, you can easily search for records in the timeline. When you search for a phrase in the timeline, it searches in the title, subject of the record, body, or description fields of the record and displays the record for you.
+When enabled by your system administrator, you can easily search for rows in the timeline. When you search for a phrase in the timeline, it searches in the title, subject of the row, body, or description fields of the row and displays the row for you.
 
 ![Enable threaded email timeline view - option 2](media\timeline-search-records-1a.png "Enable threaded email timeline view - option 2")
 
 Legend
-1. The **Search** bar allows you to quickly find records using keywords or phrases that the search feature will retrieve and display below the search bar.
+1. The **Search** bar allows you to quickly find rows using keywords or phrases that the search feature will retrieve and display below the search bar.
 2. Keywords that are used are highlighted.
 
 ## Work with notes and posts
 
-Notes allow you to record richly formatted information and images for reference, summary, or investigation. You can easily add a mention to another user or a reference to a timeline record. The mention capability is available in timeline only when rich text notes and rich text posts are enabled. 
+Notes allow you to record richly formatted information and images for reference, summary, or investigation. You can easily add a mention to another user or a reference to a timeline row. The mention capability is available in timeline only when rich text notes and rich text posts are enabled. 
 
 When you type the **@** symbol, the results you see are matches with the first name, last name or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](/powerapps/user/profile-cards)
 
-When you type the **#** symbol, the results you see are matches with the account and contact name entity records starting with your search string.
+When you type the **#** symbol, the results you see are matches with the account and contact name entity rows starting with your search string.
 
-### Add a note or post to a record on timeline
+### Add a note or post to a row on timeline
 
-When enabled by your system administrator, you can either add a note or a post to a record on timeline. Each note and post has a maximum size limit of 100,000 characters.
+When enabled by your system administrator, you can either add a note or a post to a row on timeline. Each note and post has a maximum size limit of 100,000 characters.
 
-You can also enter a note and add it to a record, but you can only add one attachment per note. If note is not enabled by your system administrator, you can't add an attachment. 
+You can also enter a note and add it to a row, but you can only add one attachment per note. If note is not enabled by your system administrator, you can't add an attachment. 
 
 **Note display view**
 
 When enabled by your system administrator, the **Note** field is displayed under the **Search** feature on timeline.
 
-![Add a note to a record on timeline](media\timeline-add-a-note-to-a-record.png "Add a note to a record on timeline")
+![Add a note to a row on timeline](media\timeline-add-a-note-to-a-record.png "Add a note to a row on timeline")
 
 > [!NOTE] 
 > You can only add an attachment in a note.
@@ -211,22 +211,22 @@ When enabled by your system administrator, the **Note** field is displayed under
 **Post display view**
 
 When enabled by your system administrator, the **Post** field is also displayed under the **Search** feature on timeline.
-![Add a post to a record on timeline](media\timeline-add-a-post-to-a-record-1.png "Add a post to a record on timeline")
+![Add a post to a row on timeline](media\timeline-add-a-post-to-a-record-1.png "Add a post to a row on timeline")
 
 > [!NOTE] 
 > You can't add an attachment in a post.
 
 ### Access the command bar to perform actions
 
-When you hover your cursor on or expand an activity, post, or note, the command bar appears in the top-right corner of the record with the specific options that support that activity, such as assigning it to others, adding it to a queue, converting it to a case, liking or replying to a post, editing a note, or deleting an activity. However, not all records can perform the same actions. 
+When you hover your cursor on or expand an activity, post, or note, the command bar appears in the top-right corner of the row with the specific options that support that activity, such as assigning it to others, adding it to a queue, converting it to a case, liking or replying to a post, editing a note, or deleting an activity. However, not all rows can perform the same actions. 
 
-**Command actions by record**
+**Command actions by row**
 
 ![Command bar actions in timeline](media\timeline-access-command-bar-actions-1e.png "Command bar actions")
 
 Legend
-1. Only the actions associated with that record are displayed in the top-right command bar displayed in the record. 
-2. Each record displays a different set of associated actions. Not all actions work on all records.
+1. Only the actions associated with that row are displayed in the top-right command bar displayed in the row. 
+2. Each row displays a different set of associated actions. Not all actions work on all rows.
 
 
 The following is an overview of the command bar icons and the actions they support: 
@@ -234,10 +234,10 @@ The following is an overview of the command bar icons and the actions they suppo
 | Icon | Name | Description |
 |-----|------|-------------|
 | ![Assign](media\email-assign-icon.png "Assign icon") |Assign | Lets you assign a task.|
-| ![Close activity](media\email-close-activity-icon.png "Close activity icon")|Close Activity| Lets you close the activity record.|
+| ![Close activity](media\email-close-activity-icon.png "Close activity icon")|Close Activity| Lets you close the activity row.|
 | ![Add to queue](media\email-add-to-queue-icon.png "Add to queue icon") |Add to Queue| Lets you add a task to a queue.|
-| ![Open Record](media\email-open-record-icon.png "Open record icon")|Open Record| Lets you open a record.|
-| ![Delete](media\email-delete-icon.png "Delete icon")|Delete| Lets you delete the record.|
+| ![Open row](media\email-open-record-icon.png "Open row icon")|Open Row| Lets you open a row.|
+| ![Delete](media\email-delete-icon.png "Delete icon")|Delete| Lets you delete the row.|
 | ![Reply](media\email-reply-icon.png "Reply icon")|Reply| Lets you reply to an email. **Note**: This command is only available for Email.|
 | ![Reply all](media\email-reply-all-icon.png "Reply all icon")|Reply All| Lets you reply to all for an email. **Note**: This command is only available on Email.|
 | ![Forward](media\email-forward-icon.png "Forward icon ")|Forward|Lets you forward an email. **Note**: This command is only available on Email.|
@@ -248,13 +248,13 @@ The following is an overview of the default command bars for frequently used act
 
 | Activity | Command bar icons | Notes |
 |-----|------|-------------|
-| Email (draft) |Open Record, Delete | |
-| Email | Reply, Reply All, Forward, Open Record | |
-| Appointment | Assign, Close Activity, Add to Queue, Open Record, Delete | |
-| Appointment (closed) | Assign, Add to Queue, Open Record, Delete | |
-| Task | Assign, Close Activity, Add to Queue, Open Record, Delete | |
-| Task (closed) | Assign, Add to Queue, Open Record, Delete | |
-| Phone Call | Assign, Add to Queue, Open Record, Delete | |
+| Email (draft) |Open Row, Delete | |
+| Email | Reply, Reply All, Forward, Open Row | |
+| Appointment | Assign, Close Activity, Add to Queue, Open Row, Delete | |
+| Appointment (closed) | Assign, Add to Queue, Open Row, Delete | |
+| Task | Assign, Close Activity, Add to Queue, Open Row, Delete | |
+| Task (closed) | Assign, Add to Queue, Open Row, Delete | |
+| Phone Call | Assign, Add to Queue, Open Row, Delete | |
 | Note | Edit, Delete | |
 | Post (user) | Like, Reply, Delete | Only the author of the post has the ability to delete it. The author always has the ability to delete regardless of user privilege. |
 | Auto-post | Like, Reply, Delete | |
@@ -284,8 +284,8 @@ Legend
 
 Legend
 1. Typing the @ sign in the **Note** field will display a flyout menu with a list of users that have been recently used.
-2. If the user record is not displayed, typing the name after the @ sign refreshes the records in the flyout menu using the **Dynamics 365 Quick Find** search engine that's operating in the background.
-3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search records.
+2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
+3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rerowscords.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
 
@@ -316,7 +316,7 @@ When you attach a file to your note, the **Edit note** screen displays, and atta
 
 ## Work with posts
 
-When enabled by your system administrator, you can either add a post to a record or mention to another user or timeline.
+When enabled by your system administrator, you can either add a post to a row or mention to another user or timeline.
 
 ### Add a mention or reference a team member in a post
 
@@ -324,8 +324,8 @@ When enabled by your system administrator, you can either add a post to a record
 
 Legend
 1. Typing the @ sign in the **Post** field will display a flyout menu with a list of users that have been recently used.
-2. If the user record is not displayed, typing the name after the @ sign refreshes the records in the flyout menu using the **Dynamics 365 Quick Find** search engine that's operating in the background.
-3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search records.
+2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
+3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
 
@@ -334,31 +334,31 @@ When you mouse over the profile image, you can view the user's detailed profile 
 > [!NOTE]
 > You can mention only a system user, i.e. a team member within your organization, in a post.
 
-### Add references in a post in timeline records
+### Add references in a post in timeline rows
 
-To add a reference such as links in a post to a timeline record, select the ![**Create a timeline record**](media\timeline-create-a-record-icon.png "Create a timeline record") icon and select **Post**, then follow the steps below:
+To add a reference such as links in a post to a timeline row, select the ![**Create a timeline row**](media\timeline-create-a-record-icon.png "Create a timeline row") icon and select **Post**, then follow the steps below:
 
 ![Add a link](media\timeline-add-link-12a.png "Add a link")
 
 Legend
-1. Links can be added to a record by typing **#** which will display a flyout menu with a list of records recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Dynamics 365 Quick Find** search engine that's operating in the background.
-2. Records displayed can be of any record type, such as accounts, contacts or leads.
-3. The icons beside the record names in the flyout menu indicate the record types, which helps you determine which record to select.  
-4. **Advanced** provides more options when a record cannot be located by allowing the user to  switch to a different view or create a new record.  
+1. Links can be added to a row by typing **#** which will display a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
+2. Rows displayed can be of any row type, such as accounts, contacts or leads.
+3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.  
+4. **Advanced** provides more options when a row cannot be located by allowing the user to  switch to a different view or create a new row.  
 
-### Look up records in posts in timeline
+### Look up rows in posts in timeline
 
-![Lookup Records pane](media\timeline-add-links-to-records-1c.png "Lookup Records pane")
+![Lookup rows pane](media\timeline-add-links-to-records-1c.png "Lookup rows pane")
 
 Legend
-1. The **Lookup Records** pane provides users with options to switch between the **Recent records** and **All records** view to find a record.  
-2. **Change View** to see records from a different view.  
-3. **New Record** allows you to create a new record if you can't find the record you need.
+1. The **Lookup Records** pane provides users with options to switch between the **Recent records** and **All records** view to find a row.  
+2. **Change View** to see rows from a different view.  
+3. **New Record** allows you to create a new row if you can't find the row you need.
 
 For more information on notes and post functionality and configuration, see:
-- [Display options](customer-service-hub-user-guide-timeline-admin.md#display-options)
-- [Record Settings](customer-service-hub-user-guide-timeline-admin.md#record-settings)
-- [Notes on timeline](customer-service-hub-user-guide-timeline-admin.md#notes-on-timeline)
+- [Display options](../maker/TBD#display-options)
+- [Row Settings]((../maker/TBD#row-settings)
+- [Notes on timeline]((../maker/TBD#notes-on-timeline)
 
 ## Use the rich text editor toolbar
 The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes.
