@@ -1,11 +1,11 @@
 ---
 title: "API limits overview (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the limits for Microsoft Dataverse API requests." 
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/05/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "JimDaly" 
 ms.author: "jdaly" 
 manager: "ryjones" 

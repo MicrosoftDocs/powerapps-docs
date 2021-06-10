@@ -11,7 +11,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 03/23/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
 search.audienceType: 
   - maker

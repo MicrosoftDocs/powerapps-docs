@@ -1,7 +1,7 @@
 ---
 title: "EnvironmentVariableDefinition table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,11 +36,10 @@ Contains information about the settable variable: its type, default value, and e
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAllCompositeDataSources|<xref href="Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?text=RetrieveAllCompositeDataSources Function" />||
-|RetrieveCompositeDataSource|<xref href="Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?text=RetrieveCompositeDataSource Function" />||
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveEnvironmentVariables|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?text=RetrieveEnvironmentVariables Function" />||
-|RetrieveEnvironmentVariableValue|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?text=RetrieveEnvironmentVariableValue Function" />||
+|RetrieveAllCompositeDataSources|||
+|RetrieveCompositeDataSource|||
+|RetrieveEnvironmentVariables|||
+|RetrieveEnvironmentVariableValue|||
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1167,7 +1166,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_environmentvariabledefinition_modifiedonbehalfby](#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby)
 - [user_environmentvariabledefinition](#BKMK_user_environmentvariabledefinition)
 - [team_environmentvariabledefinition](#BKMK_team_environmentvariabledefinition)
-- [owner_environmentvariabledefinition](#BKMK_owner_environmentvariabledefinition)
 - [business_unit_environmentvariabledefinition](#BKMK_business_unit_environmentvariabledefinition)
 - [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition)
 
@@ -1208,12 +1206,6 @@ See systemuser Table [user_environmentvariabledefinition](systemuser.md#BKMK_use
 
 See team Table [team_environmentvariabledefinition](team.md#BKMK_team_environmentvariabledefinition) One-To-Many relationship.
 
-### <a name="BKMK_owner_environmentvariabledefinition"></a> owner_environmentvariabledefinition
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_environmentvariabledefinition](owner.md#BKMK_owner_environmentvariabledefinition) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_environmentvariabledefinition"></a> business_unit_environmentvariabledefinition
 
 **Added by**: System Solution Solution
@@ -1223,6 +1215,23 @@ See businessunit Table [business_unit_environmentvariabledefinition](businessuni
 ### <a name="BKMK_envdefinition_envdefinition"></a> envdefinition_envdefinition
 
 See environmentvariabledefinition Table [envdefinition_envdefinition](environmentvariabledefinition.md#BKMK_envdefinition_envdefinition) One-To-Many relationship.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the EnvironmentVariableDefinition table is the first table in the relationship. Listed by **SchemaName**.
+
+- [bot_environmentvariabledefinition](#BKMK_bot_environmentvariabledefinition)
+- [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
+
+
+### <a name="BKMK_bot_environmentvariabledefinition"></a> bot_environmentvariabledefinition
+
+See bot Table [bot_environmentvariabledefinition](bot.md#BKMK_bot_environmentvariabledefinition) Many-To-Many Relationship.
+
+### <a name="BKMK_botcomponent_environmentvariabledefinition"></a> botcomponent_environmentvariabledefinition
+
+See botcomponent Table [botcomponent_environmentvariabledefinition](botcomponent.md#BKMK_botcomponent_environmentvariabledefinition) Many-To-Many Relationship.
 
 ### See also
 

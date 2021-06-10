@@ -1571,7 +1571,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_similarityrule_AsyncOperations"></a> similarityrule_AsyncOperations
 
-Same as asyncoperation table [similarityrule_AsyncOperations](asyncoperation.md#BKMK_similarityrule_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [similarityrule_AsyncOperations](asyncoperation.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1597,19 +1597,19 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_similarityrule_createdonbehalfby"></a> lk_similarityrule_createdonbehalfby
 
-See systemuser Table [lk_similarityrule_createdonbehalfby](systemuser.md#BKMK_lk_similarityrule_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_similarityrule_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_similarityrule_modifiedonbehalfby"></a> lk_similarityrule_modifiedonbehalfby
 
-See systemuser Table [lk_similarityrule_modifiedonbehalfby](systemuser.md#BKMK_lk_similarityrule_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_similarityrule_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_organization_similarityrule"></a> organization_similarityrule
 
-See organization Table [organization_similarityrule](organization.md#BKMK_organization_similarityrule) One-To-Many relationship.
+See organization Table [organization_similarityrule](organization.md) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_SimilarityRule"></a> TransactionCurrency_SimilarityRule
 
-See transactioncurrency Table [TransactionCurrency_SimilarityRule](transactioncurrency.md#BKMK_TransactionCurrency_SimilarityRule) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_SimilarityRule](transactioncurrency.md) One-To-Many relationship.
 
 ### See also
 

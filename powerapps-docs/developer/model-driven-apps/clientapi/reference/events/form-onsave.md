@@ -64,7 +64,7 @@ In this scenario, since there are multiple async processes and both calls return
 
 ### Enable Async OnSave using app setting 
 
-An app setting is a platform component that allows you to override a setting on an app. 
+An app setting is a platform component that allows you to override a setting on an app. App setting should have a unique name and must be in the format `solutionpublisherprefix_appname_settingname`.
 
 To enable the async `OnSave` event handlers for a specific app, add the below XML in the `customization.xml`  file. This should be added in the existing AppModule node in your `customization.xml` file.
 
