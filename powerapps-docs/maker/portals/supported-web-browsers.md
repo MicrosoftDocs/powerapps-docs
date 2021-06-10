@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2021
+ms.date: 06/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
