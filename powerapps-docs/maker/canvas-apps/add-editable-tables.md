@@ -31,8 +31,6 @@ If you want to use this method for hosting everything in the same place, you'll 
 - Gallery&mdash;To display existing items and
 - Text input controls&mdash;To update existing items
 
-The example in the following screenshots show a catalog of product information that is updated with each shipment. The steps will walk you through building an app in Power App to log new items and change item data in line on the same screen, directly to the data source.
-
 ## Step 1: Add a data source
 
 1. Select **View** > **Data sources**.
@@ -41,7 +39,7 @@ The example in the following screenshots show a catalog of product information t
 
    ![Add a data source](./media/add-editable-tables/add-data-source.png "Add a data source or create a new one.")
 
-    To learn how add a connection, see [Add data source](add-data-connection.md#add-data-source).
+    To learn how to add a connection, see [Add data source](add-data-connection.md#add-data-source).
 
 ## Step 2: Set up a form control
 
