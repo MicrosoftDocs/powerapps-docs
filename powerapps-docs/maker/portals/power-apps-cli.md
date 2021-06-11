@@ -74,7 +74,7 @@ configured to enable support for this feature.
 
 ## Install Microsoft Power Platform CLI 
 
-For a step-by-step instructions, please refer to [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#install-power-apps-cli).
+For a step-by-step instructions, please refer to [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#install-microsoft-power-platform-cli).
 
 ## Supported tables
 
