@@ -104,13 +104,6 @@ This topic shows you how to create business rules and recommendations to apply f
     :::column-end:::
     :::row-end:::
 
- <!--    |||  
-    |-|-|  
-    |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|All forms and server|  
-    |**All Forms**|All forms|  
-    |Specific form (**Account** form, for example)|Just that form|  -->
-  
 6. **Add conditions.** To add more conditions to your business rule:  
   
     1.  Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  
