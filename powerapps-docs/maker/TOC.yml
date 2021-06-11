@@ -1717,11 +1717,11 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Power Apps CLI (Preview)
+        - name: Use Microsoft Power Platform CLI (Preview)
           items:
-          - name: Overview of portals support for Power Apps CLI
+          - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
-          - name: "Tutorial: Use Power Apps CLI with portals"
+          - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
           - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
