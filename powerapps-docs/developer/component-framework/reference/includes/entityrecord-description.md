@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 41687f01-4989-4027-95ec-5a2ad8c67c02
 ---
 
-Base interface for data-set record result. Supports value retrieval by column name.
+Base interface for dataset record result. Supports value retrieval by column name.

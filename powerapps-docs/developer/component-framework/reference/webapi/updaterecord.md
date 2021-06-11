@@ -77,9 +77,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
-
-Description: On success, returns a promise object containing the columns specified earlier in the description of the **successCallback** parameter.
+Type: LookupValue[]
 
 
 ### Related topics
