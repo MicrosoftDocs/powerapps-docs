@@ -18,7 +18,7 @@ search.app:
 
 # Import data
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 If you want to import data from external sources into Microsoft Dataverse, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse. You can import data into standard and customized columns of most business and custom tables. You can also include related data, such as notes and attachments.  
   
