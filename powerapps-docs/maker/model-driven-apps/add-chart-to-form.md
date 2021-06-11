@@ -7,12 +7,12 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.author: sumli
+ms.author: matp
 manager: kvivek
 ms.reviewer: matp
 ms.date: 07/27/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
   - maker
