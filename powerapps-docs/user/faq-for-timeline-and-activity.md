@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/23/2020
+ms.date: 06/11/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -18,6 +18,19 @@ search.app:
   - D365CE
 ---
 # Frequently Asked Questions about Activities and the Timeline Wall  
+
+## Why can't I assign or delete an activity from the timeline?	
+
+- If you use the **HideCustomActions** rule to hide buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar are the same as the buttons in the Timeline control; therefore, when a user selects the **Assign** or **Delete** button in the Timeline control, the following error message is displayed:
+
+  **You do not have permission to perform this action. Please contact your system administrator.**	
+
+  To mitigate the issue, show the buttons in the command bar definitions.	
+
+## Why do my users see different activities and records in My activities stream or other dashboard timelines?	
+
+- The **My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user "A" sees records and activities that are owned by "A", and user "B" sees records and activities that are owned by "B".	
+
 
 ## Is a title required when adding a new note?
 
