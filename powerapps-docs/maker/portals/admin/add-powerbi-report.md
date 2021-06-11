@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2021
+ms.date: 06/11/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -25,7 +25,6 @@ If adding a Power BI report or dashboard created in the new workspace in Power B
 > [!NOTE]
 > - If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](/power-bi/service-share-dashboards).
 > - **powerbiembedded** supports Power BI dashboards and reports that connect to Azure Analysis Services. You can also use "customdata" property in liquid code to pass value for [CustomData](/dax/customdata-function-dax) property.
-> - Your portal version must be [9.3.4.x](../versions/version-9.3.4.x.md) or later for this feature to work.
 
 For example: 
 
@@ -37,7 +36,7 @@ To learn about how to get a dashboard path, and ID of the dashboard tile, refer 
 
 ## Using a dashboard or report connecting to Azure Analysis Services
 
-You can add **powerbiembedded** Liquid tag with a dashboard, or report that connects to [Azure Analysis Services](/azure/analysis-services/analysis-services-connect-pbi).
+You can add [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi) with a dashboard, or report that connects to [Azure Analysis Services](/azure/analysis-services/analysis-services-connect-pbi).
 
 To add a dashboard or report connecting to Azure Analysis Services, use [CustomData](/dax/customdata-function-dax) parameter in the connection string.
 
@@ -56,7 +55,8 @@ Examples:
 As the **customdata** tag returns a string, it may be necessary to convert this string to an integer in the [DAX query](/dax/dax-queries).
 
 > [!IMPORTANT]
-> Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](/azure/analysis-services/analysis-services-gateway).
+> - Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](/azure/analysis-services/analysis-services-gateway).
+> - Your portal version must be [9.3.4.x](../versions/version-9.3.4.x.md) or later for this feature to work.
 
 ### Azure Analysis Services and Roles (RLS)
 
