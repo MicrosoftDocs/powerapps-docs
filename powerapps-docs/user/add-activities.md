@@ -20,7 +20,7 @@ search.app:
 # Use timeline 
 
 
-Timeline is a control that allows you to view information that is connected to an entity row and occurs over time in a single stream. Some information that can be logged into the timeline are notes and posts in addition to displaying activities such as emails, appointments, phone calls, and tasks.
+Timeline is a control that allows you to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline are notes and posts in addition to displaying activities such as emails, appointments, phone calls, and tasks.
 
 Timeline allows you to:
 - Access the command bar to perform common actions quickly
@@ -31,7 +31,7 @@ Timeline allows you to:
 
 ## Timeline functionality
 
-The timeline section on the entity form is intended to centralize access to information and streamline effort to accomplish actions. The following is an overview of how the timeline functionality works in each section on the entity form. 
+The timeline section on the table form is intended to centralize access to information and streamline effort to accomplish actions. The following is an overview of how the timeline functionality works in each section on the table form. 
 
 When enabled by your system administrator, you can use the icons that are displayed on the top-right navigation in the timeline for quick access to do the following:
 
@@ -191,7 +191,7 @@ Notes allow you to record richly formatted information and images for reference,
 
 When you type the **@** symbol, the results you see are matches with the first name, last name or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](/powerapps/user/profile-cards)
 
-When you type the **#** symbol, the results you see are matches with the account and contact name entity rows starting with your search string.
+When you type the **#** symbol, the results you see are matches with the account and contact name table rows starting with your search string.
 
 ### Add a note or post to a row on timeline
 
