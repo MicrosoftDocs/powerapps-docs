@@ -35,7 +35,7 @@ To create a component within an app, go to **Tree View**, select the **Component
 
 Selecting **New component** opens an empty canvas. You can add controls as part of the component definition on the canvas. If you edit a component in the canvas, you'll update instances of the same component in other app screens. Apps that reuse an already created component can also receive component updates after you publish component changes.
 
-You can select a component from the list of existing components in the left navigation after you select a screen. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
+You can select a component from the list of existing components in the left pane after you select a screen. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
 
 Components available inside the app are listed under the **Custom** category in a list of components inside the tree view. Components imported from component libraries are listed under the **Library components** category:
 
@@ -72,9 +72,9 @@ In this example, you'll create a menu component that resembles the following gra
 
 ### Create a new component
 
-1. Sign in to [make.powerapps.com](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** and select **Canvas app from blank**. 
+1. Select **Apps** and select **Canvas app from blank**.
 
 1. Provide an app name, select any layout, and then select **Create**.
 
@@ -82,7 +82,7 @@ In this example, you'll create a menu component that resembles the following gra
 
     ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
-1. Select the new component in the left navigation, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
+1. Select the new component in the left pane, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
 
 1. In the right-hand pane, set the component's width as **150** and its height as **250**, and then select **New custom property**. You can also set the height and width to any other value as appropriate.
 
@@ -132,7 +132,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 Next, you'll add the component to a screen and specify a table of strings for the component to show.
 
-1. In the left navigation bar, select the list of screens, and then select the default screen.
+1. In the left pane, select the list of screens, and then select the default screen.
 
     ![Default screen](./media/create-component/default-screen.png "Default screen")
 
@@ -199,7 +199,7 @@ After you enable this feature, you can use the following capabilities to import 
 
 ### Import components from another app
 
-To import one or more components from one app into another, select **Import components** from the **Insert** menu and then use the **Custom** drop-down menu. Or use **Components** in the tree view on the left navigation.
+To import one or more components from one app into another, select **Import components** from the **Insert** menu and then use the **Custom** drop-down menu. Or use **Components** in the tree view on the left pane.
 
 A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
 
@@ -215,7 +215,7 @@ After you create components in an app, other apps can consume the components fro
 
 You can export components to a file and download them for import to another app.
 
-Select the **Export components** option from the **Components** section in the left navigation tree view:
+Select the **Export components** option from the **Components** section in the tree view on the left pane:
 
 ![Export components tree view](./media/create-component/export-components-treeview.png "Export components tree view")
 
@@ -231,7 +231,7 @@ The downloaded component file uses the *.msapp* file name extension.
 
 ### Import components from exported components file
 
-To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left navigation. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
+To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left pane. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
 
 ![Import component file](./media/create-component/import-component-file.png "Import component file")
 
