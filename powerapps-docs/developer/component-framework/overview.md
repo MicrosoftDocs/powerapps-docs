@@ -17,9 +17,9 @@ ms.author: nabuthuk
 
 # Power Apps component framework overview
 
-Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps to provide an enhanced user experience for the users to work with data on forms, views, dashboards, and canvas apps screens. For example:
+Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas applications.   These code components can be used to enhance the user experience for users working with data on forms, views, dashboards, and canvas app screens.  For example:
 
-- Replace a column that displays a numeric text value with a `dial` or `slider` code component.
+- Replace a column on a form that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]

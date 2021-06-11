@@ -13,14 +13,14 @@ author: Nkrb
 
 # What are code components
 
-Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution component, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"] 
 > ![Code components](media/code-components.gif "Code components")
 
-You add code components by including them in a solution and then import it into Microsoft Dataverse. Once the components are in Dataverse, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+Code components can be including into a solution and then installed into a Microsoft Dataverse environment.   Once a code component has been installed, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
@@ -45,7 +45,7 @@ When a user configures a code component, the data in the manifest file filters o
 
 ## Component implementation
 
-Implementing the component is one of the key steps when you are developing code components using Power Apps component framework. Developers can implement a component using TypeScript. Each code component must have a `index.ts` file that includes the definition of a function, which returns an object that implements the methods described in the code component interface. This file is auto-generated via CLI tooling with main stub methods.
+Code components are implemented using TypeScript. Each code component must include an object that implements the methods described in the code component interface. The CLI will auto-generate an `index.ts` file that includes stubbed implementations for these methods. This file is auto-generated via CLI tooling with main stub methods.
 
 The object implements the following methods:
 
@@ -85,7 +85,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 ### User changes data
 
-When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a field component, this would typically be the new value for the component.
+When a user interacts with your components to change data, your component must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a `field` component, this would typically be the new value for the component.
 
 ### App changes data
 
