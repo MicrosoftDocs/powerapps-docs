@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 ---
 
-# Implementing data-set component for canvas apps
+# Implementing dataset component for canvas apps
 
 This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation. 
 

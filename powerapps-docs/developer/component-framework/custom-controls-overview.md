@@ -36,7 +36,7 @@ Code components consist of three elements:
 Manifest is the metadata file that defines a component. It is an XML document that describes:
 
 - The name of the component.
-- The kind of data that can be configured, either a `field` or a `data-set`.
+- The kind of data that can be configured, either a `field` or a `dataset`.
 - Any properties that can be configured in the application when the component is added.
 - A list of resource files that the component needs. 
 - The name of the TypeScript function in the component implementation library that returns an object that applies the required component interface.

@@ -1,6 +1,6 @@
 ---
 title: getFilter | Microsoft Docs
-description: Returns the top-most filter associated with the data-set.
+description: Returns the top-most filter associated with the dataset.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

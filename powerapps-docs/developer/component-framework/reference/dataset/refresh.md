@@ -1,6 +1,6 @@
 ---
 title: refresh | Microsoft Docs
-description: Refreshes the data-set based on filters, sorting, linking, new column.
+description: Refreshes the dataset based on filters, sorting, linking, new column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

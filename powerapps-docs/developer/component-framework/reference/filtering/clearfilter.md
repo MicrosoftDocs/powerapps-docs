@@ -1,6 +1,6 @@
 ---
 title: clearFilter | Microsoft Docs
-description: Clears the filter associated with the data-set.
+description: Clears the filter associated with the dataset.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
