@@ -46,7 +46,7 @@ For example:
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:<customdata>" %}
 ```
 
-The optional **customdata** tag can be be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
+The optional **customdata** tag can be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
 
 Examples:
 - `customdata: {{ object.attribute }}`
@@ -68,13 +68,13 @@ Roles are contained within the Azure Analysis Services database and not in the r
 
 - Providing no roles in the Liquid code.
 
-    If no role is supplied in the Liquid code, the Azure Analysis Services role will be determined by the role(s) that the App has access to, and will filter the results based on the given custom data against the DAX query in the role(s). That is, all available roles will combine their accesses, but will still filter if the provided custom data is relevant. This will most often be the case with Azure Analysis Services reports or single-tile dashboards.
+    If no role is supplied in the Liquid code, the Azure Analysis Services role will be determined by the role(s) that the App has access to, and will filter the results based on the given custom data against the DAX query in the role(s). That is, all available roles will combine their accesses, but will still filter if the provided custom data is relevant. This scenario will most often be the case with Azure Analysis Services reports or single-tile dashboards.
 
 - Providing roles in the Liquid code.
 
-    Azure Analysis Services roles can be provided in the Liquid code, similar to RLS roles. Using these roles may be required when multiple roles are available, but the you want to utilize specific roles for the page. When using any roles in the connection string, specifying Azure Analysis Services role is a must. For example, multi-tile dashboards that use Azure Analysis Services tiles with RLS tiles.
+    Azure Analysis Services roles can be provided in the Liquid code, similar to RLS roles. Using these roles may be required when multiple roles are available, but you want to use specific roles for the page. When using any roles in the connection string, specifying Azure Analysis Services role is a must. For example, multi-tile dashboards that use Azure Analysis Services tiles with RLS tiles.
 
-    This means that there are considerations to be made when using Azure Analysis Services tiles in a dashboard:
+    The following considerations apply when using Azure Analysis Services tiles in a dashboard:
 
     - If an Azure Analysis Services tile is used in a dashboard with other tiles that require roles, the Azure Analysis Services role must be added to the list of roles.
     - Multiple tiles from different Azure Analysis Services sources can be used with their own roles, but the custom data must be the same for each, and multiple custom data values cannot be used in the Liquid code.  The **customdata** tag and the **customdata** parameter for the EffectiveIdentity take only a string value.
