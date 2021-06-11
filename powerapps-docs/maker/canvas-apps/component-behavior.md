@@ -1,16 +1,19 @@
 ---
 title: Behavior formulas for components | Microsoft Docs
 description: Do one or more tasks in canvas app when a component-based action occurs.
-author: yifwang
+author: hemantgaur
 ms.service: powerapps
 ms.topic: article
 ms.date: 04/24/2020
-ms.author: yifwang
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Behavior formulas for components

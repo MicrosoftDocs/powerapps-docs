@@ -1,16 +1,19 @@
 ---
 title: Create a component for canvas apps | Microsoft Docs
 description: Introduction to reusable components for canvas apps
-author: yifwang
+author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 04/24/2020
-ms.author: yifwang
+ms.date: 06/11/2021
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Create a component for canvas apps
@@ -186,7 +189,13 @@ So far, you've created a component and added it to an app. Next, you'll create a
 ## Import and export components
 
 > [!NOTE]
-> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
+> This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
+
+The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
+
+![Enable export and import of components](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
+
+After you enable this feature, you can use the following capabilities to import and export components.
 
 ### Import components from another app
 
