@@ -12,7 +12,7 @@ manager: kvivek
 ms.reviewer: matp
 ms.date: 07/27/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
   - maker
