@@ -20,7 +20,7 @@ ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
