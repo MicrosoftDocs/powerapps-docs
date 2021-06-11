@@ -356,9 +356,9 @@ Legend
 3. **New Record** allows you to create a new row if you can't find the row you need.
 
 For more information on notes and post functionality and configuration, see:
-- [Display options](../maker/TBD#display-options)
-- [Row Settings]((../maker/TBD#row-settings)
-- [Notes on timeline]((../maker/TBD#notes-on-timeline)
+- [Display options-maker topic tbd](../maker/TBD#display-options)
+- [Row Settings-maker topic tbd](../maker/TBD#row-settings)
+- [Notes on timeline-maker topic tbd](../maker/TBD#notes-on-timeline)
 
 ## Use the rich text editor toolbar
 The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes.
