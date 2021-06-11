@@ -42,7 +42,7 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Configure Timeline](../mkaur/TBD).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Configure Timeline - maker topic tbd](../mkaur/TBD).
 
 > [!Note]
 > The Notes feature is not available from the timeline. 
@@ -57,7 +57,7 @@ When enabled by your system administrator, you can use the **Create a timeline r
 2. Select the type of row you want to create from the display options available. <BR><BR>
 ![Select type of timeline row](media\timeline-create-a-timeline-record-1f.png "Select the type of timeline row")
 
-For information on timeline row configuration, [Configure activity row types](../maker/TBD). 
+For information on timeline row configuration, [Configure activity row types- maker topic tbd](../maker/TBD). 
 
 ## Work with filters
 
@@ -189,7 +189,7 @@ Legend
 
 Notes allow you to record richly formatted information and images for reference, summary, or investigation. You can easily add a mention to another user or a reference to a timeline row. The mention capability is available in timeline only when rich text notes and rich text posts are enabled. 
 
-When you type the **@** symbol, the results you see are matches with the first name, last name or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](/powerapps/user/profile-cards)
+When you type the **@** symbol, the results you see are matches with the first name, last name or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](profile-cards.md)
 
 When you type the **#** symbol, the results you see are matches with the account and contact name table rows starting with your search string.
 
