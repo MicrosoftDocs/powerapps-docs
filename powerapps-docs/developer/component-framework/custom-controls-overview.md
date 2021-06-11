@@ -13,14 +13,14 @@ author: Nkrb
 
 # What are code components
 
-Code components are a type of solution component, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"] 
 > ![Code components](media/code-components.gif "Code components")
 
-Code components can be including into a solution and then installed into a Microsoft Dataverse environment.   Once a code component has been installed, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+Code components can be including into a solution and then imported into Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
@@ -39,9 +39,8 @@ Manifest is the metadata file that defines a component. It is an XML document th
 - The kind of data that can be configured, either a `field` or a `dataset`.
 - Any properties that can be configured in the application when the component is added.
 - A list of resource files that the component needs. 
-- The name of the TypeScript function in the component implementation library that returns an object that applies the required component interface.
 
-When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration columns so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
+When a user configures a code component, the data in the manifest file filters the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration columns so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
 
 ## Component implementation
 

@@ -303,6 +303,8 @@
           href: reference/control/init.md
         - name: updateView
           href: reference/control/updateview.md
+      - name: updatedProperties
+        hred: reference/context.md
       - name: UserSettings
         href: reference/usersettings.md
       - name: Utility
