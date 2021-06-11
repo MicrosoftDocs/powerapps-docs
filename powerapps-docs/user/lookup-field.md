@@ -33,6 +33,23 @@ Also, you can create a new row by selecting the **New** button. You must have su
 For example, if three's only three rows in your history, then the lookup will display those three rows,
 along with seven of your favorite rows. If you haven't pinned any rows to favorites, then the most recently viewed rows will be displayed.
 
+
+
+  > [!div class="mx-imgBorder"]
+  > ![How to use lookups](media/lookups-main.png "How to use lookups")
+
+
+Legend
+
+1. **Look for records**: Select the textbox and type your search criteria to look for rows.
+2. **Recent**: Rows that were recently searched.
+3. **New Record**: Create a new row. 
+4. **Types of records**: Select to filter by a table type such as Contact table or Account table. The number infront of **type of records** represents how many table are available to filter from.
+5. **Browse in a lookup column**: To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
+6. **Expand item**: Use the Right and Left Arrow keys on your keyboard to expand collapse each item. 
+7. **Change View**: Select to switch to another view. For more infomation on views, see [](grid-filters#use-search-on-a-grid)
+
+
 ## Types of lookups
 
 Lookups are classified into the following: 
