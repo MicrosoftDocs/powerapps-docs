@@ -71,12 +71,45 @@ This topic shows you how to create business rules and recommendations to apply f
   
 5.  Set the scope, according to the following:  
   
-    |||  
+    :::row:::
+    :::column span="":::
+       **If you select this item...**
+    :::column-end:::
+    :::column span="":::
+       **The scope is set to...**
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **Entity**
+    :::column-end:::
+    :::column span="":::
+       All forms and server
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **All Forms**
+    :::column-end:::
+    :::column span="":::
+       All forms
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       Specific form (**Account** form, for example)
+    :::column-end:::
+    :::column span="":::
+       Just that form
+    :::column-end:::
+    :::row-end:::
+
+ <!--    |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
     |**Entity**|All forms and server|  
     |**All Forms**|All forms|  
-    |Specific form (**Account** form, for example)|Just that form|  
+    |Specific form (**Account** form, for example)|Just that form|  -->
   
 6. **Add conditions.** To add more conditions to your business rule:  
   
