@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -71,13 +71,39 @@ This topic shows you how to create business rules and recommendations to apply f
   
 5.  Set the scope, according to the following:  
   
-    |||  
-    |-|-|  
-    |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|All forms and server|  
-    |**All Forms**|All forms|  
-    |Specific form (**Account** form, for example)|Just that form|  
-  
+    :::row:::
+    :::column span="":::
+       **If you select this item...**
+    :::column-end:::
+    :::column span="":::
+       **The scope is set to...**
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **Entity**
+    :::column-end:::
+    :::column span="":::
+       All forms and server
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **All Forms**
+    :::column-end:::
+    :::column span="":::
+       All forms
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       Specific form (**Account** form, for example)
+    :::column-end:::
+    :::column span="":::
+       Just that form
+    :::column-end:::
+    :::row-end:::
+
 6. **Add conditions.** To add more conditions to your business rule:  
   
     1.  Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  

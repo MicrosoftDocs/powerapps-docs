@@ -125,6 +125,8 @@ To use **Advanced lookup**, your administrator needs to enable this feature. For
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 
+Advanced lookup supports customizations on lookup control through Client APIs such as *addCustomView*, *addCustomFilter*, *addPreSearch* and *removePreSearch*. 
+
 1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
 
    > [!div class="mx-imgBorder"]
