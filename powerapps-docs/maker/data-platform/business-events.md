@@ -29,11 +29,11 @@ Automation of business logic and integration with other systems are driven by ev
 
 Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](../../developer/data-platform/event-framework.md)
 
-Dataverse Business events provides new ways to expose events and compose your business logic to respond to them asynchronously.
+Dataverse Business events provides new ways to expose events and compose your business logic to respond to them asynchronously, such as the Power Automate Dataverse **When an action is performed** trigger.
 
 Here are some examples:
 
-- You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. With business events, you can *catalog* the table which will expose the `GrantAccess` message. This will expose it to the Power Automate Dataverse **When an action is performed** trigger, providing a new way to perform the automation without having to write code.
+- You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. With business events, you can *catalog* the table which will expose the `GrantAccess` message.
 
 - A plug-in developer may have some logic in a synchronous plug-in code that responds to a certain set of conditions which they pass into Shared Variables for another asynchronous plug-in to initiate some automation. With a business event, instead of passing those details through the event pipeline shared variables, you can call a custom action containing the details of the event in the parameters. An asynchronous plug-in can then respond to the custom action, or you may choose to use Power Automate instead. Other logic can also be added to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
 
@@ -72,7 +72,7 @@ For example, the following represents a catalog for a solution called *Contoso C
 
 This example uses **Tables** and **Customer Events** as categories but you can use any category grouping that makes sense for your solution.
 
-Solution publishers should provide a catalog that includes the relevant tables containing business data as well as any custom api or custom process actions that represent high-value business events in their solution. If your solution consists of multiple dependent solutions, you may define the root catalog in the base solution, then add additional categories and assigned events to the dependent solutions which add them.
+If your solution consists of multiple dependent solutions, you may define the root catalog in the base solution, then add additional categories and assigned events to the dependent solutions which add them.
 
 ## Table events
 
@@ -92,7 +92,7 @@ Custom business events can only send notifications when an event is completed. D
 
 For example, you may have a custom api that encapsulates a set of operations that represent a business process, like *Reassign*, which will change the ownership of one record to another based on certain criteria. Or *Escalate* that will raise the priority state of a record and create additional associated tasks. When you use a custom api in this manner, you are defining new events that may be of interest to subscribers. *If these operations complete successfully*, asynchronous logic can be triggered on them.
 
-You can also create a custom action purely to enable subscribers to respond to it. [External Events](#external-events) describes a specific case where events originate outside of Dataverse, but you can create custom actions as events for use within Dataverse as well using the same settings. If your custom action is intended only for subscribers to respond to, we recommend that the name of your custom action begin with `On`, such as `OnCustomerPurchase` or `OnVendorPaymentPosted`.
+You can also create a custom action purely to enable subscribers to respond to it. [External Events](#external-events) describes a specific case where events originate outside of Dataverse, but you can create custom api as events for use within Dataverse as well using the same settings. If your custom action is intended only for subscribers to respond to, we recommend that the name of your custom action begin with `On`, such as `OnCustomerPurchase` or `OnVendorPaymentPosted`.
 
 Custom API can be used for many different purposes, not all of them are related to operations that represent interesting events for business logic. This is why business events must be cataloged. The owner of the solution that contains the custom api should only catalog those custom api which represent high value events. You should not try to catalog every custom action that is included in your solution.
 
@@ -117,7 +117,7 @@ Custom process actions can also be cataloged as business events. This is for bac
 However, custom process actions have the following limitations:
 
 - Like any workflow, they can be disabled in the UI. You may not know when someone disables your custom process action until it suddenly stops working.
-- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](/reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
+- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](/reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
 
 For more information about how they are different, see [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
 
