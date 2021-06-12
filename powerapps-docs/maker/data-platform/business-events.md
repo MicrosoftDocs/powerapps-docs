@@ -55,7 +55,7 @@ To expose a business event it must be cataloged. More information: [Catalog and 
 
 A catalog makes it easier to discover the business event because they are grouped by the containing solution and categories defined for that solution. The solution publisher selects which events are most relevant for their solution.
 
-A **Catalog** is a hierarchial structure where the top level represents a solution. Then the next level is a **Category**. Relevant business events are then attached to a Category.
+A **Catalog** is a hierarchial structure where the top level represents a solution. Then the next level is a **Category**. Relevant tables and events are then assigned to a Category.
 
 For example, the following represents a catalog for a solution called *Contoso Customer Management*:
 
@@ -78,7 +78,7 @@ If your solution consists of multiple dependent solutions, you may define the ro
 
 When a table is assigned to a category, certain operations bound to the table will be included. You can't select each operation individually. If the table supports Create, Update, and Delete operations, these events will be included.
 
-Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security events. The owner of any record in the table will be able to share it, change sharing capabilities, or stop sharing the record. Operations related to sharing are exposed as `GrantAccess`, `ModifyAccess`, and `RevokeAccess` events. Additional events may also be included depending on the table. If the table is a Virtual Table, and it has been configured to support Virtual Table events, the `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted` events will be included.
+Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security events. The owner of any record in the table will be able to share it, change sharing capabilities, or stop sharing the record. Operations related to sharing are exposed as `GrantAccess`, `ModifyAccess`, and `RevokeAccess` events. Additional events may also be included depending on the table. If the table is a Virtual Table, and it has been configured to support Virtual Table events, the `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted` events will be included. More information: [Enable Virtual Tables to support Dataverse events](../../developer/data-platform/virtual-entities/enable-virtual-table-event-support.md)
 
 Add only those tables which contain business data that will be of interest to subscribers. You should not try to include every table.
 
