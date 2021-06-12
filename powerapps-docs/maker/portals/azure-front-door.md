@@ -15,20 +15,15 @@ contributors:
 
 # Set up Azure Front Door with portals
 
-As a portal maker, you can also use Azure Front door
-(<https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/overview>)
-with Power Apps portals to utilize its edge caching and WAF capabilities. In
-this document, we will be covering various steps require to setup Azure Front
-door with Power Apps portals.
+As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-premium/overview) with Power Apps portals to utilize its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to setup Azure Front Door with portals.
 
-Note: Although this document is focused on Azure Front door, similar steps can
-be used for any CDN/WAF provider. However terminology for various components
-might differ.
+> [!NOTE]
+> Although this article is focused on Azure Front Door, similar steps can be used for any CDN/WAF provider. The terminology used by various components might be different.
 
-In order to setup Azure Front door with Power Apps portals, following steps
+In order to setup Azure Front Door with portals, following steps
 needs to be performed: -
 
-1.  Setup Azure front door endpoint and custom domain name which end users of
+1.  Setup Azure Front Door endpoint and custom domain name which end users of
     portal will use.
 
 2.  Configure Portal as Origin server
@@ -39,10 +34,10 @@ needs to be performed: -
 
 5.  Setup Portal to only accept traffic from Front door
 
-Setup Azure Front door endpoint and custom domain name which end users of portal will use.
+Setup Azure Front Door endpoint and custom domain name which end users of portal will use.
 ==========================================================================================
 
-As part of this step, we will be setting up Azure Front door service and also
+As part of this step, we will be setting up Azure Front Door service and also
 enable a custom domain name for this setup.
 
 Pre-req for this step are: -
@@ -55,16 +50,16 @@ Pre-req for this step are: -
     the min requirements specified
     [here](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/add-custom-domain)
 
-4.  Owner access on Power Apps portal in order to setup custom domain name on
+4.  Owner access on portals in order to setup custom domain name on
     portal.
 
 Once all the pre-req’s are done, lets get started with the setup.
 
-1.  Step 1: -\> Go to Azure portal and create a new Azure Front door
+1.  Step 1: -\> Go to Azure portal and create a new Azure Front Door
     (Standard/Premium) resource. If you haven’t used front door before, choose
     the quick create option for setup.
 
-    If you already have an azure front door (standard/premium) resource which
+    If you already have an Azure Front Door (standard/premium) resource which
     you want to use, then skip this step.
 
 ![](media/azure-front-door/dda7dee4ddc73c51e8348d1ef3001ef8.png)
@@ -149,13 +144,13 @@ Once all the pre-req’s are done, lets get started with the setup.
 >   domain name
 
 1.  Setup Custom domain name on AFD and Portal -\> Till now we have been able to
-    successfully setup an Azure front door which serves traffic from the portal
+    successfully setup an Azure Front Door which serves traffic from the portal
     backend.  
-    However, this setup is still using Azure Front door URL, in this step we
+    However, this setup is still using Azure Front Door URL, in this step we
     will setup a custom domain name. There are two parts to this setup: -
 
-    1.  Setup Custom domain name on your Power Apps portal -\> First step here
-        is to setup the custom domain name on your Power Apps portal. This step
+    1.  Setup Custom domain name on your portals -\> First step here
+        is to setup the custom domain name on your portal. This step
         is necessary because if this step is not done, then while serving the
         traffic from custom domain name, browser will reject the cookies set by
         portal server (as the domain would be different). This can lead to
@@ -166,14 +161,14 @@ Once all the pre-req’s are done, lets get started with the setup.
         <https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/add-custom-domain>
 
     2.  Setup Custom domain name on your Front door instance -\> Once you are
-        finished with setting up custom domain on your Power Apps portal, next
+        finished with setting up custom domain on your portal, next
         step is to enable it on front door so it can accept traffic. Following
         steps are to be followed for this: -
 
         1.  Update your dns provider and remove the cname record we created in
             previous step while doing custom domain name setup on portal. Ensure
             that you are only updating cname record, you don’t have to remove
-            hostname setup on your Power Apps portal.
+            hostname setup on your portal.
 
             This is because at dns level we will be pointing cname to azure
             front door url (see subsequent steps) and the only purpose of
@@ -182,7 +177,7 @@ Once all the pre-req’s are done, lets get started with the setup.
             this custom domain name through front door and all the portal
             cookies also have domain setup correctly.
 
-        2.  Setup custom domain name on Azure front door endpoint, following
+        2.  Setup custom domain name on Azure Front Door endpoint, following
             these steps
             <https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-add-custom-domain>
             .
@@ -190,7 +185,7 @@ Once all the pre-req’s are done, lets get started with the setup.
             **Validate Setup -\>** Following things should be validated when the
             setup is complete
 
-2.  Custom domain name is pointing to Azure front door endpoint. This can be
+2.  Custom domain name is pointing to Azure Front Door endpoint. This can be
     validated by doing nslookup and ensuring that a cname entry to Azure front
     door endpoint is returned.  
     If the cname entry is still pointing to portal server, then that needs to be
@@ -198,7 +193,7 @@ Once all the pre-req’s are done, lets get started with the setup.
 
 3.  When you browse to custom domain name, it is displaying Portal pages.
 
-Once these steps are completed, we have a basic Azure front door setup done for
+Once these steps are completed, we have a basic Azure Front Door setup done for
 the Portal. In subsequent steps, we will be updating various settings and rules
 in order to make this setup efficient and handle various use cases
 
@@ -344,7 +339,7 @@ For this setup, we will be doing two important things
     of the type of content portal is serving to be able to come up with
     effective rules.
 
-    For this document, the portal I am using uses dynamic content on all pages
+    For this article, the portal I am using uses dynamic content on all pages
     but it does serve static files, hence this is what I am trying to achieve: -
 
 3.  All static files are cached and served from edge servers.
@@ -372,7 +367,7 @@ For this setup, we will be doing two important things
         2.  Hence, we write a rule to evaluate file extension of the request and
             check for specific file extension types. (Do note that there are
             other ways to write this rule as well like using request url or
-            filename etc, follow front door documentation on what all options
+            filename etc, follow front door articleation on what all options
             are available)
 
 ![](media/azure-front-door/a45d11f6e3845af4de0df64076da6672.png)
@@ -483,9 +478,9 @@ Setup WAF rules to analyze incoming requests.
 =============================================
 
 Next Step in the setup is to configure WAF rules on incoming requests. In this
-document, we will cover only the basic steps and for advanced WAF configuration,
+article, we will cover only the basic steps and for advanced WAF configuration,
 please follow [WAF
-documentation](https://docs.microsoft.com/en-us/azure/web-application-firewall/afds/afds-overview)
+articleation](https://docs.microsoft.com/en-us/azure/web-application-firewall/afds/afds-overview)
 
 Following steps should be followed to finish the WAF setup
 
@@ -519,7 +514,7 @@ Following steps should be followed to finish the WAF setup
 ![Graphical user interface, application Description automatically generated](media/azure-front-door/3425ffa9264f221dabf5999760ccbeb8.png)
 
 1.  Next thing to configure would be ruleset against which every request would
-    be evaluated. In this document, we will only cover Managed ruleset. To do
+    be evaluated. In this article, we will only cover Managed ruleset. To do
     this setup click on “Managed Rules” tab
 
 ![Table Description automatically generated](media/azure-front-door/5f8a0a90206224a9355b4b049c513aa7.png)
@@ -550,12 +545,12 @@ Setup Portal to only accept traffic from Front Door
 ===================================================
 
 One of the last step in this whole setup is to ensure that Portal only accepts
-traffic from Azure front door. To do this, we will need to enable IP address
+traffic from Azure Front Door. To do this, we will need to enable IP address
 restrictions
 <https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/ip-address-restrict>
 on the portal.
 
-To do this we will need to find the IP address range on which Azure front door
+To do this we will need to find the IP address range on which Azure Front Door
 operates, this is described
 [here](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-)
 .
@@ -566,7 +561,7 @@ portals.
 Increase Origin response time
 =============================
 
-By default, Azure front door has an origin response timeout of 60 sec. However,
+By default, Azure Front Door has an origin response timeout of 60 sec. However,
 we recommend increasing this to 240 sec to match Portal request timeout, this
 would be important to ensure long running scenarios like file uploads or export
 to excel works properly.
