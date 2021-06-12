@@ -35,7 +35,7 @@ Here are some examples:
 
 - You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. With business events, you can *catalog* the table which will expose the `GrantAccess` message. This will expose it to the Power Automate Dataverse **When an action is performed** trigger, providing a new way to perform the automation without having to write code.
 
-- A plug-in developer may have some logic in a synchronous plug-in code that responds to a certain set of conditions which you then pass into Shared Variables for another asynchronous plug-in to initiate some automation. With a business event, instead of passing those details through the event pipeline shared variables, you can call a custom action containing the details of the event in the parameters. An asynchronous plug-in can then respond to the custom action, or you may choose to use Power Automate instead. Other logic can also be added to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
+- A plug-in developer may have some logic in a synchronous plug-in code that responds to a certain set of conditions which they pass into Shared Variables for another asynchronous plug-in to initiate some automation. With a business event, instead of passing those details through the event pipeline shared variables, you can call a custom action containing the details of the event in the parameters. An asynchronous plug-in can then respond to the custom action, or you may choose to use Power Automate instead. Other logic can also be added to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
 
 ## Catalogs and Custom events
 
@@ -43,7 +43,7 @@ Dataverse business events includes concepts from [Dynamics Finance and Operation
 
 - **Event Catalog**:  With so many events available in the system it can be difficult to locate the right one. An event catalog improves event discovery by associating events with a solution and organizing events into categories. 
     
-    A catalog only includes selected, high value events relevant to the solution. Less useful events are filtered out. Adding an event to a catalog is how you expose the event. For example, it will make that event a trigger in the Power Automate Dataverse **When an action is performed** trigger.
+    A catalog only includes selected, high value events relevant to the solution. Adding an event to a catalog is how you expose the event.
 
 - **Custom Events**: You can create custom actions to be custom events because Dataverse will process them using its event framework.
 
@@ -88,9 +88,7 @@ The same table can be included in multiple catalogs. For example, if your soluti
 
 Use Dataverse Custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. More information: [Create and use Custom APIs](../../developer/data-platform/custom-api.md).
 
-Using Custom API as business events can only be used to send notifications when an event is completed. Dataverse event framework provides capabilities to include synchronous logic which can cancel an operation or change the output so that you can extend the behavior of the system. Many of the same messages exposed with business events may be extended using synchronous logic in the Dataverse event framework, but business event notifications only occur when these operations complete successfully.
-
-Not every Custom API can or should be a business event. Custom APIs provide a generic way to create new APIs which can be used for many purposes. A custom business event is an operation which contains data that is useful for subscribers, but it may not actually perform any operation on it's own.
+Custom business events can only send notifications when an event is completed. Dataverse event framework provides capabilities to include synchronous logic which can cancel an operation or change the output so that you can extend the behavior of the system. Many of the same messages exposed with business events may be extended using synchronous logic in the Dataverse event framework, but business event notifications only occur when these operations complete successfully.
 
 For example, you may have a custom api that encapsulates a set of operations that represent a business process, like *Reassign*, which will change the ownership of one record to another based on certain criteria. Or *Escalate* that will raise the priority state of a record and create additional associated tasks. When you use a custom api in this manner, you are defining new events that may be of interest to subscribers. *If these operations complete successfully*, asynchronous logic can be triggered on them.
 
