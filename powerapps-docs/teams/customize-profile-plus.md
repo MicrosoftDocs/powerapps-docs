@@ -27,12 +27,12 @@ Once the app is installed you can then customize the app using the following ste
 
 2.  Type **Power Apps** in the search field.
 
-    ![Select Power Apps app](media/customize-profile-plus/store-search.png "Select Power Apps app")
+    ![Search for Power Apps](media/customize-profile-plus/store-search.png "Search for Power Apps")
 
-3.  Select the Power Apps app from the list to open the app. Power Apps will open inside of Microsoft Teams.
-    
-    ![Select Power Apps app](media/customize-profile-plus/power-apps-icon.png "Select Power Apps app")
-    
+3. Select the Power Apps app from the list to open the app. Power Apps will open inside of Microsoft Teams.
+
+   ![Select Power Apps app](media/customize-profile-plus/power-apps-icon.png "Select Power Apps app")
+
 4. Right click on the **Power Apps** logo and select **Pin** to lock the app to the side menu so it is easy to get to in the future.
 
 5. It is recommended that you “pop out” Power Apps so that if you need to navigate somewhere else in Microsoft Teams you won’t lose your app
@@ -117,11 +117,9 @@ If you have data about your employees in another system, you can extend Profile 
 
 If you are looking for a new role, you may want to be notified when a new open position is created. This can be achieved using the following steps:
 
-1.  Create a Power Automate flow triggered when a row is added to the Open
-    Position table.
-
-2.  Add an action to send an email to your inbox with the details of the Open
-    Position.
+1.  Create a Power Automate flow triggered when a row is added to the Open Position table.
+    
+2.  Add an action to send an email to your inbox with the details of the Open Position.
 
 ### Ask people in your organization to complete their profile information
 
@@ -140,12 +138,10 @@ have not completed their profile an email, using the following steps:
 
 When you are done making modifications to the apps, select **Save** to save your changes**.**
 
->   
-
 -   To preview your changes, select the![Preview button](media/customize-profile-plus/preview.png "Preview button") button.
     -   The app will launch in preview mode, where you can test the user experience when running the app
         
-    -   To exit preview mode, press **Escape** on your keyboard or click the **X** in the upper right corner
+    -   To exit preview mode, press **Escape** on your keyboard or select the **X** in the upper right corner
 
 -   To publish your app changes, select the ![Publish to Teams](media/customize-profile-plus/publish-to-teams.png "Publish to Teams") button
     
@@ -155,11 +151,11 @@ When you are done making modifications to the apps, select **Save** to save your
 
 -   To change app settings, such as icon and background color, select **Edit details**
     
--   To publish the app, click **Next**
+-   To publish the app, select **Next**
 
 -   On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by selecting the **+** button
-    
-    ![Add to channel](media/customize-profile-plus/add-to-channel.png "Add to channel")
+
+![Add to channel](media/customize-profile-plus/add-to-channel.png "Add to channel")
     
 -   To complete publishing your changes, select **Save and close**
 
@@ -174,16 +170,13 @@ Before modifying the Profile + app, consider the following items:
 
 - Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations will not be overridden. You will get a new version that has the latest features, but the new version will not be published.
 
-  ![Installing new version](media/customize-profile-plus/profile-install.png "Installing new version")
+![Installing new version](media/customize-profile-plus/profile-install.png "Installing new version")
 
 Figure 1 After upgrading the solution your current app version will still be "live."
 
->   The updated version of the app is available from the version history of the app. Selecting **Details** from the app list will display the versions of
->   the app and allow you to publish the new version.
-
->   ![Select details](media/customize-profile-plus/app-details.png "Select details")
-
->   
+The updated version of the app is available from the version history of the app. Selecting **Details** from the app list will display the versions of
+the app and allow you to publish the new version.
+![Select details](media/customize-profile-plus/app-details.png "Select details")
 
 -   When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Microsoft Teams.
     
