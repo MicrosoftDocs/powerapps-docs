@@ -22,7 +22,7 @@
       href: discovery-service.md
     - name: Use XRM Tooling
       href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
-- name: Entity operations
+- name: Table  operations
   href: entity-operations.md
   items:
   - name: Query Data
@@ -71,7 +71,7 @@
       href: build-queries-with-linq-net-language-integrated-query.md
     - name: Use LINQ to construct a query
       href: use-linq-construct-query.md
-    - name: Use late-bound entity class with a LINQ query
+    - name: Use late-bound Entity class with a LINQ query
       href: use-late-bound-entity-class-linq-query.md
     - name: Order results using table columns with LINQ
       href: order-results-entity-attributes-linq.md
@@ -86,22 +86,22 @@
   items:
   - name: Create extensions for the code generation tool
     href: extend-code-generation-tool.md
-- name: Work with metadata
+- name: Work with table definitions (metadata)
   href: work-with-metadata.md
   items:
   - name: Create custom tables
     href: create-custom-entity.md
-  - name: Work with attribute metadata
+  - name: Work with column definitions
     href: metadata-attributemetadata.md  
-  - name: Insert, update, delete, and order global option set options
+  - name: Insert, update, delete, and order global choices
     href: metadata-global-option-set-options.md
-  - name: Customize option sets
+  - name: Customize choices
     href: metadata-option-sets.md
-  - name: Create and retrieve table row relationships
+  - name: Create and retrieve table relationships
     href: metadata-relationshipmetadata.md
-  - name: Retrieve and detect changes to metadata
+  - name: Retrieve and detect changes to definitions
     href: metadata-retrieve-detect-changes.md
-  - name: Retrieve, update, and delete table rows
+  - name: Retrieve, update, and delete tables
     href: metadata-retrieve-update-delete-entities.md 
   - name: Create a table row to send email activities
     href: create-update-entity-emailed.md

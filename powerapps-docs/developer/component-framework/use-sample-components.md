@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 11/25/2019
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +18,7 @@ All the sample components listed under this section are available to download fr
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
+The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, and a link to the complete sample component.
 
 ## Before you can try the sample components
 
@@ -32,7 +32,7 @@ To try the sample components, you must first:
 Follow the steps below to import and try the sample components in your model-driven or canvas app:
 
 1. Navigate to the folder on your computer where you have downloaded the sample components, and extract the .zip file.  
-1. Open Developer Command Prompt for Visual Studio 2017 or higher and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/TS_IncrementComponent` folder.
+1. Open Developer Command Prompt for Visual Studio 2017 or higher and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/IncrementComponent` folder.
 
    >[!NOTE]
    > You need to go into the specific component folder if you wish to see that particular component in runtime. You can add multiple components into a single solution file during the build process.
