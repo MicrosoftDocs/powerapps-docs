@@ -35,7 +35,7 @@ You must be an owner of the Team in which the app is installed to share the app.
 
 At the time that these instructions were written, Teams apps can only be shared with a single Active Directory group.
 
-### Action required to share an app with colleagues for broad distribution
+## Action required to share an app with colleagues for broad distribution
 
 1.  Share the app with colleagues.
 
@@ -43,7 +43,7 @@ At the time that these instructions were written, Teams apps can only be shared 
 
 Note: apps are installed in a Team in Microsoft Teams. People who develop and extend the app or managers who manage the app settings should use the app in a Team. For people who use the app or users who are not managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the Team.
 
-# Sharing App with Colleagues
+## Sharing App with Colleagues
 
 This process begins by opening the app in the **Power Apps** app. You may have Power Apps pinned to your Teams App Bar.
 
