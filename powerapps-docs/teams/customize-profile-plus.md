@@ -48,7 +48,7 @@ Once the app is installed you can then customize the app using the following ste
 
 10. Select **See all** in the **Profile Plus** tile.
 
-![Select Power Apps app](media/customize-profile-plus/profile-tile.png "Select Power Apps app")
+![Select Profile Plus app](media/customize-profile-plus/profile-tile.png "Select Profile Plus app")
 
 5.  You will now see all of the apps and tables.
 
