@@ -48,11 +48,10 @@ It is recommended that you “pop out” Power Apps so that if you need to navig
 
 10.  Select **See more** in the **Issue Reporting** tile.
 
-    ![Issue Reporting tile](media/customize-issue-reporting/issue-tile.png "Issue Reporting tile")
+![Issue Reporting tile](media/customize-issue-reporting/issue-tile.png "Issue Reporting tile")
     
 11.  You will now see all of the apps, tables, flows, and chatbots in the Team.
 
-    
 
 ## Extend the Issue Reporting data model
 
@@ -169,8 +168,7 @@ Issue Reporting can be used as a starting point for any kind of scenario where a
 
 ### Integrate with other task management system
 
-The Power Platform includes connectors to multiple task scheduling applications, such as Microsoft To-do, Jira, and Trello. Using Power Automate, you can integrate tasks created in Issue Reporting with other task management systems
-than Planner. This app can also be combined with other apps, such as [**Inspection.**](../../../../../Downloads/Docs/aka.ms/teamsinspection)
+The Power Platform includes connectors to multiple task scheduling applications, such as Microsoft To-do, Jira, and Trello. Using Power Automate, you can integrate tasks created in Issue Reporting with other task management systems than Planner. This app can also be combined with other apps, such as [**Inspection.**](https://aka.ms/teamsinspection)
 
 ### Add additional fields to populate when a task is created
 
@@ -180,7 +178,7 @@ Manage issues populates the most common fields used in Planner when creting a ta
 
 When you are done making modifications to the apps, select **Save** to save your changes**.**
 
--   To preview your changes, select the![](media/4e3f450e832033c418a717c40f48f91c.png) button
+-   To preview your changes, select the ![Preview](media/customize-issue-reporting/preview.png "Preview") button
     
     -   The app will launch in preview mode, where you can test the user experience when running the app
         
