@@ -178,7 +178,7 @@ Manage issues populates the most common fields used in Planner when creting a ta
 
 When you are done making modifications to the apps, select **Save** to save your changes**.**
 
--   To preview your changes, select the ![Preview](media/customize-issue-reporting/preview.png "Preview") button
+-   To preview your changes, select the ![Preview button](media/customize-issue-reporting/preview.png "Preview button") button
     
     -   The app will launch in preview mode, where you can test the user experience when running the app
         
