@@ -35,7 +35,7 @@ You must be an owner of the Team in which the app is installed to share the app.
 
 At the time of writing Issue Reporting can only shared with a single Active Directory group.
 
-### Action required to share an app with colleagues for broad distribution
+## Action required to share an app with colleagues for broad distribution
 
 1.  Share the app with colleagues
 
@@ -44,7 +44,7 @@ At the time of writing Issue Reporting can only shared with a single Active Dire
 > [!NOTE]
 > Apps are installed in a Team in Microsoft Teams. People who develop and extend the app or managers who create or manage the issue forms should use the app in a Team. For people who log issues or users who are not managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the Team.
 
-# Sharing App with Colleagues
+## Sharing App with Colleagues
 
 This process begins by opening the app in the **Power Apps** app. You may have Power Apps pinned to your Teams App Bar.
 
@@ -77,7 +77,7 @@ This process begins by opening the app in the **Power Apps** app. You may have P
     
 9.  Select **Save**
 
-## Granting Permissions to the tables
+## Managing table permissions
 
 Understanding and assigning permissions to tables are vital to ensure proper security of your shared data. Here are the four permissions available for use.
 
@@ -97,7 +97,7 @@ Understanding and assigning permissions to tables are vital to ensure proper sec
 
     ![Private table permission](media/issue-reporting-broad-distribution/private.png "Private table permission")
 
-## Granting Permissions to the tables
+## Granting permissions to the tables
 
 By default, all of the table permissions for colleagues not in the Team are set to **none.** If you leave it that way, colleagues that you share the app with
 will not be able to use the app, as they won’t have permission to the tables in the app. Follow these steps to set permissions for the tables in the app for
