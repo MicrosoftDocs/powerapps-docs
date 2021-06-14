@@ -64,59 +64,28 @@ To setup Azure Front Door endpoint:
 
     ![Quick create Azure Front Door and settings](media/azure-front-door/quick-create.png "Quick create Azure Front Door and settings")
 
-    1.  Resource setup -\> These are related to resource organizations and are
-        same as any other azure resource.
+1. Select, or fill in the appropriate details.
 
-        1.  Subscription -\> Select the subscription in which front door would
-            be created
+    | Option | Description |
+    | - | - |
+    | **Project details** | Settings related to the resource organizations, similar to any other Azure resource.
+    | Subscription |Select the subscription where the Front Door will be created.  |
+    | Resource group | Select the resource group for the Front Door. You can also create a new resource group. |
+    | Resource group location | Location of the resource group. |
+    | **Profile details** | Configuration for the Front Door. |
+    | Name | Name of the Front Door resource. |
+    | Tier | Select a tier for the Front Door. For this tutorial, we've selected Premium tier that allows access to Microsoft managed rule set and bot prevention rule set for WAF. |
+    | **Endpoint settings** | Settings for the Azure Front Door endpoint. |
+    | Endpoint name | Enter a name for your front door requests. This is the actual URL that will serve the traffic for end users. Later, we'll setup a custom domain name pointing to this URL. |
+    | Origin type | Select **Custom** as the origin type. |
+    | Origin host name | Hostname of your Power Apps portal. <br> Format: `YourPortalName.powerappsportals.com` or `YourPortalName.microsoftcrmportals.com` without `https://` at the beginning. <br> For example, `contoso.powerappsportals.com` |
+    | Private link | Don't enable the private link service. |
+    | Caching | Enable caching. Caching uses the edge caching capabilities for static content. <br> Caching is discussed more during the routing rules setup later in this article to ensure only static content is cached. |
+    | Query string caching behavior | Select **Use Query String**. This will ensure that if a page has dynamic content based on query string, it's taking query string into account. |
+    | Compression | Enable compression. |
+    | WAF policy | Create a new WAF policy, or use an existing one. <br> WAF policy is discussed more later in this article. For more information about WAF policy, go to [Create WAF policy](/azure/web-application-firewall/afds/waf-front-door-create-portal). |
 
-        2.  Resource group -\> Select the resource group of which front door
-            resource would be part of. If none exist, then you can create a new
-            one
-
-        3.  Resource group location -\> Location of Resource group, this is the
-            place where all the metadata of front door would be stored in.
-
-    2.  Front door configurations
-
-        1.  Name -\> Name of the front door resource
-
-        2.  Tier -\> You can select either standard or premium based on what
-            suits your scenario. For this setup I will use premium tier since
-            that comes with access to Microsoft managed rule set as well as bot
-            prevention rule set for WAF.
-
-    3.  Endpoint configuration
-
-        1.  Endpoint name -\> Provide the name of the endpoint for your front
-            door requests. This is the actual URL which will be serving traffic
-            for end users. In subsequent steps, we will setup a custom domain
-            name pointing to this URL.
-
-        2.  Origin type -\> Select Custom as origin type
-
-        3.  Origin hostname -\> Hostname of your PowerApps portal. This should
-            be just the hostname in format xxxx.powerappsportals.com (or
-            xxx.microsoftcrmportals.com) and should not have ”https://” appended
-            in the beginning.
-
-        4.  Private link -\> Leave it unchecked.
-
-        5.  Caching -\> Enable caching as we do want to use the edge caching
-            capabilities for static content. We will cover this again during
-            routing rules setup to ensure only static content is cached.
-
-        6.  Query String caching behavior -\> Select “Use Query String”, this
-            will ensure that if a page has dynamic content based on query
-            string, it is taking query string into account.
-
-        7.  Compression -\> Enable compression
-
-        8.  WAF policy -\> Create a new WAF policy or use an existing one. Setup
-            for this would be covered later.
-
->   After providing all the information described above, click on review+create
->   and follow on screen instructions to finish the setup.
+1. Select **Review + Create** and complete the setup.
 
 **Validate Setup -\>**
 
