@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/11/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -52,7 +52,7 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 Enabling the Power BI Embedded service allows you to embed dashboards and reports created in the new workspace of Power BI. The dashboards and reports are embedded on webpages in a portal by using the powerbi Liquid tag.
 
-**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces).
+**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you've created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces).
 
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
@@ -77,11 +77,11 @@ Enabling the Power BI Embedded service allows you to embed dashboards and report
 
 4. Select **Enable**. While Power BI Embedded service is being enabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is enabled.
 
-You must now create a security group, and add it to your Power BI account. For more information, see [Create security group and add to Power BI account](#create-security-group-and-add-to-power-bi-account).
+After enabling the Power BI Embedded service, you must create a security group, and add it to your Power BI account. For more information, see [Create security group and add to Power BI account](#create-security-group-and-add-to-power-bi-account).
 
 ### Create security group and add to Power BI account
 
-After enabling the Power BI Embedded service integration, you must create a security group in Azure Active Directory, add a member to it, and then add the security group in Power BI through the Power BI admin portal. This allows the dashboards and reports created in new Power BI workspaces to be displayed in the portal.
+After enabling the Power BI Embedded service integration, you must create a security group in Azure Active Directory, add a member to it, and then add the security group in Power BI through the Power BI admin portal. This configuration allows the dashboards and reports created in new Power BI workspaces to be displayed in the portal.
 
 > [!NOTE]
 > You must sign in with the same Global administrator account that you used to enable the Power BI Embedded service.
@@ -189,21 +189,26 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 5. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
 
-## Limitations
+## Considerations and limitations
 
 - Power Apps portals doesn't support [Azure Analysis Services live connections](/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You can use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
-- Power Apps portals doesn't support guest users for Power BI dashboards and reports. The following message is displayed when a guest user tries to sign-in to Power BI on the portal page: <br> `Selected user account does not exist in tenant '[Tenant Name]' and cannot access the application '[App ID]' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
+- Power Apps portals doesn't support guest users for Power BI dashboards and reports. The following message is displayed when a guest user tries to sign in to Power BI on the portal page: <br> `Selected user account does not exist in tenant '[Tenant Name]' and cannot access the application '[App ID]' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
+- Portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later support the following capabilities:
+    - Dashboards and report from Azure Analysis Services using [live connections](/azure/analysis-services/analysis-services-connect-pbi).
+    - Dashboards with [role-based security](/power-bi/admin/service-admin-rls).
+    - Dashboard with different data sources having different role-based security.
+    - Single tile with role-based security.
 - For more information about Power BI Embedded service limitations, see [Considerations and limitations](/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 ### Rendering Power BI report on my portal page fails with the following error:
 
 *A configuration error occurred while rendering your report.*
 
-This can happen due to multiple reasons such as:
+This problem can happen because of multiple reasons such as:
 
 - Your [Power BI Embedded configuration](#enable-power-bi-embedded-service) is incorrect.
 - [Row-level security](/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](../add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](../liquid/portals-entity-tags.md#powerbi).
-- **Embed content in apps** in Power BI [Developer Settings](/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
+- **Embed content in apps** in Power BI [Developer Settings](/power-bi/admin/service-admin-portal#developer-settings) isn't enabled.
 
 ## Privacy notice  
 
