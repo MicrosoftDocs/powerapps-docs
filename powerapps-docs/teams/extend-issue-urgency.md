@@ -206,12 +206,11 @@ in your flow.
     and then we will reference it in an expression.
     
 18.  In the Dynamic content panel for the Priority field, select **Expression** and enter the following expression:
-     
-    ```PowerFX
-    if(equals(triggerBody()['Createatask_Priority'],1),1,5)
-    ```
-    
-    This means that if urgent value from the Power App task is 1 (urgent), set the priority to 1 (urgent), otherwise set it to 5 (not urgent).
+```PowerFX
+if(equals(triggerBody()['Createatask_Priority'],1),1,5)
+```
+
+This means that if urgent value from the Power App task is 1 (urgent), set the priority to 1 (urgent), otherwise set it to 5 (not urgent).
 
 19. Add a Planner **Update task details** step.
 
@@ -273,15 +272,15 @@ in your flow.
     
     ![Part of the formula to delete](media/extend-issue-urgency/formula-delete.png "Part of the formula to delete")
     
-28.  Copy the modified formula from your backup copy and replace the contents of the OnSelect property of the **Submit issue** button with the modified
-    formula.
+28.  Copy the modified formula from your backup copy and replace the contents of the OnSelect property of the **Submit issue** button with the modified formula.
     
 29.  Near the bottom of the formula locate the **Navigate** expression. Paste the
     following directly before the Navigate expression:
 
-    ```
-    Set(gblPlannerTask,CreatePlannerTask.Run(gblPlannerGroupId,gblPlannerPlanId,locNewTask.appTitle,locPlannerBucketForTask,locNewTask.appStart,locNewTask.appDue,locNewTask.appAssignments,Checkbox1.Checked,locNewTask.appDescription,gblRecordCategory.'Issue Report Category',gblRecordTemplate.'Issue Report Template'));
-    ```
+```
+Set(gblPlannerTask,CreatePlannerTask.Run(gblPlannerGroupId,gblPlannerPlanId,locNewTask.appTitle,locPlannerBucketForTask,locNewTask.appStart,locNewTask.appDue,locNewTask.appAssignments,Checkbox1.Checked,locNewTask.appDescription,gblRecordCategory.'Issue Report Category',gblRecordTemplate.'Issue Report Template'));
+```
+
 > NOTE 
 > The CreatePlannerTask.Run() formula triggers the Create Planner Task flow, and the values in the parenthesis are the values passed to the parameters in the flow created when we added the **Ask in PowerApps** value.
 >
