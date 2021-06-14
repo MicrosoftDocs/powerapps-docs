@@ -30,7 +30,7 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 
-For example, if three's only three rows in your history, then the lookup will display those three rows,
+For example, if there's only three rows in your history, then the lookup will display those three rows,
 along with seven of your favorite rows. If you haven't pinned any rows to favorites, then the most recently viewed rows will be displayed.
 
 
