@@ -139,7 +139,6 @@ Virtual tables have these restrictions.
 - By default, virtual tables contain only a Name and Id column.  No other system managed columns, such as Status or Created On/Modified On are supported.
 - Virtual tables don't support custom columns with the Currency, Image, or Customer data types.
 - Virtual tables don't support auditing.  
-- Charts and dashboards are not supported for virtual entities.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
 - Dashboard and Charts are not supported for virtual tables.
