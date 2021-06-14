@@ -166,7 +166,7 @@
 - name: Integrate data using code
   items:
   - name: Business Events (preview)
-    href: ../business-events.md
+    href: ../../data-platform/business-events.md
   - name: Import data
     href: import-data.md 
     items:
