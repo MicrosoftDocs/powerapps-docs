@@ -18,7 +18,7 @@ search.app:
 
 # Appendix: Add licensing information to your solution
 
-This article is related to the license management capability that Microsoft provides for ISVs to manage and enforce licenses for their products. More information: [Third-party app license management through Microsoft](https://docs.microsoft.com/azure/marketplace/third-party-license) 
+This article is related to the license management capability that Microsoft provides for ISVs to manage and enforce licenses for their products. More information: [Third-party app license management through Microsoft](/azure/marketplace/third-party-license) 
 
 This article outlines how to add licensing information to a Microsoft Dataverse solution, package it, and upload the solution zip file to Microsoft AppSource.  More information: [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
