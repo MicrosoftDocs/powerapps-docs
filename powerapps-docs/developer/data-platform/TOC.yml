@@ -165,6 +165,8 @@
     href: best-practices/business-logic/index.md
 - name: Integrate data using code
   items:
+  - name: Business Events (preview)
+    href: ./data-platform/business-events.md
   - name: Import data
     href: import-data.md 
     items:
