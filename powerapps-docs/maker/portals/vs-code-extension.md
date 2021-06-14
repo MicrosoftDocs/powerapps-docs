@@ -1,6 +1,6 @@
 ---
 title: Use the Visual Studio Code extension (Preview)
-description: Learn about how to use the Visual Studio Code extension for portals and integrate with Power Apps CLI for CI/CD.
+description: Learn about how to use the Visual Studio Code extension for portals and integrate with Microsoft Power Platform CLI for CI/CD.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -42,7 +42,7 @@ VS Code, and use the built-in Liquid language
 [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) enabling
 help with code completion, assistance, and hinting while customizing portals
 interface using VS Code. Using the VS Code extension, you can also configure portals through the [portals
-support for Power Apps CLI](power-apps-cli.md).
+support for Microsoft Power Platform CLI](power-apps-cli.md).
 
 ![Animation that explains how to install and set Power Platform VS Code Extension with file icon theme](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform VS Code Extension with file icon theme")
 
@@ -54,7 +54,7 @@ Before using VS Code extension for Power Apps portals, you must:
     [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
 -   Configure your environment and system for Power Apps portals CI/CD support
-    using CLI. More information: [Portals support for Power Apps CLI (Preview)](power-apps-cli.md)
+    using CLI. More information: [Portals support for Microsoft Power Platform CLI (Preview)](power-apps-cli.md)
 
 ## Install VS Code extension
 
@@ -82,10 +82,10 @@ To install VS code extension:
 ## Download portals content
 
 To authenticate against a Microsoft Dataverse environment, and to download
-portals content, refer to the tutorial [Use Power Apps CLI with portals - download portals content](power-apps-cli-tutorial.md#step-3-download-portals-content).
+portals content, refer to the tutorial [Use Microsoft Power Platform CLI with portals - download portals content](power-apps-cli-tutorial.md#step-3-download-portals-content).
 
 > [!TIP]
-> The Power Platform VS Code Extension automatically enables using Power Apps CLI commands from within VS Code through [Visual Studio Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+> The Power Platform VS Code Extension automatically enables using Microsoft Power Platform CLI commands from within VS Code through [Visual Studio Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
 ## Snippet support
 
@@ -160,4 +160,4 @@ The following limitations apply to Power Platform VS Code Extension currently.
 
 ### See also
 
-[Portals support for Power Apps CLI (Preview)](power-apps-cli.md)
+[Portals support for Microsoft Power Platform CLI (Preview)](power-apps-cli.md)
