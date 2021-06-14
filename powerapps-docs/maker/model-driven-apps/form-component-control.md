@@ -63,6 +63,9 @@ In this example, the **Contact** standard main form is configured for the form c
 
 This section describes form component behavior when used in a model-driven app.
 
+### Record selection
+In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message "Source record not selected". One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
+
 ### Column validation
 
 All columns, both in the main form and in the form component controls, must be valid for data to be sent to Microsoft Dataverse. This is true for both column validation errors, missing required columns, and so on.
