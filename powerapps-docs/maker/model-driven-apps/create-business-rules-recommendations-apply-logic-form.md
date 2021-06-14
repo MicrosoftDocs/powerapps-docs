@@ -164,6 +164,9 @@ This section describes common issues that may occur when you use business rules.
 ### Full Name column and Address column not supported with Unified Interface apps
 Actions or conditions that use a composite column like the **Full Name** (fullname) column or an **Address** column aren't supported in apps based on Unified Interface.  Alternatively, you can use actions or conditions with the constituent columns. For example, for the **Full Name** column, you can use actions or conditions on the  **First Name** (firstname) and **Last Name** (lastname) columns. 
 
+### Business rules don't execute for some users
+Make sure that users have a security role that includes, at a minimum, user scope read privileges on the Process table. By default, the Basic User security role has this privilege.
+
 ### Business rules don't fire on editable grid on a dashboard
 Entity scoped business rules will not fire on an editable grid when the editable grid is configured on a dashboard page.
 
