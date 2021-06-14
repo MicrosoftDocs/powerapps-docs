@@ -46,9 +46,9 @@ Watch this video for a quick overview about how to create a table in Dataverse f
        > Each Dataverse for Teams environment is assigned a prefix when it's created, such as **cr628**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
     - **Display name** (Primary name column): Every table contains a primary name column, which is used by lookup fields when establishing relationships with other tables. Typically the primary name column stores the name or primary description of the data stored in the entity.
     - **Name** (Primary name column): This column is pre-populated based on the primary name column name you enter. It includes the prefix. You cannot change this after the table is saved.
-     - **More settings**: This area provides additional settings that are available. More information: [Create a custom table](../maker/data-platform/data-platform-create-entity.md).
+    - **More settings**: This area provides additional settings that are available. More information: [Create a custom table](../maker/data-platform/data-platform-create-entity.md).
      
-     <img src = "media/create-table4.png" alt = "Column details" width = "350" height = "586">
+      <img src = "media/create-table4.png" alt = "Column details" width = "350" height = "586">
 
 5. Select **Done**.
 
