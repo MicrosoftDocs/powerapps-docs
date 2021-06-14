@@ -20,57 +20,49 @@ As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-prem
 > [!NOTE]
 > Although this article is focused on Azure Front Door, similar steps can be used for any CDN/WAF provider. The terminology used by various components might be different.
 
-In order to setup Azure Front Door with portals, following steps
-needs to be performed: -
+Follow these steps so setup Azure Front Door with portals:
 
-1.  Setup Azure Front Door endpoint and custom domain name which end users of
-    portal will use.
+1. [Setup Azure Front Door endpoint and custom domain name that the portal end users will use](#setup-azure-front-door-endpoint-and-custom-domain-name).
 
-2.  Configure Portal as Origin server
+1. Configure your portal as the Origin.
 
-3.  Setup Routing rules to cache static requests.
+1. Setup routing rules to cache static requests.
 
-4.  Setup WAF rules to analyze incoming requests.
+1. Setup WAF rules to analyze incoming requests.
 
-5.  Setup Portal to only accept traffic from Front door
+1. Setup portal to only accept traffic from Azure Front Door.
 
-Setup Azure Front Door endpoint and custom domain name which end users of portal will use.
-==========================================================================================
+## Setup Azure Front Door endpoint and custom domain name
 
-As part of this step, we will be setting up Azure Front Door service and also
-enable a custom domain name for this setup.
+In this section, you'll learn about how to setup Azure Front Door service and enable a custom domain name for this setup.
 
-Pre-req for this step are: -
+### Prerequisites
 
-1.  An Azure subscription with ability to create new services in it.
+- An Azure subscription with the access to create new services.
 
-2.  Custom domain name and access to DNS provider for custom domain name setup.
+- Custom domain name and access to the DNS provider for custom domain name setup.
 
-3.  SSL certificate which will be used for custom domain name. This should meet
-    the min requirements specified
-    [here](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/add-custom-domain)
+- SSL certificate that will be used for custom domain name. The certificate must meet the [minimum requirements](admin/add-custom-domain.md) for portals.
 
-4.  Owner access on portals in order to setup custom domain name on
-    portal.
+- [Owner access](admin/portal-admin-roles.md#portal-owner) on portals in order to setup custom domain name.
 
-Once all the pre-req’s are done, lets get started with the setup.
+### Setup Azure Front Door endpoint
 
-1.  Step 1: -\> Go to Azure portal and create a new Azure Front Door
-    (Standard/Premium) resource. If you haven’t used front door before, choose
-    the quick create option for setup.
+To setup Azure Front Door endpoint:
 
-    If you already have an Azure Front Door (standard/premium) resource which
-    you want to use, then skip this step.
+1. Sign in to [Azure portal](https://portal.azure.com), and create a new Azure Front Door (Standard or Premium) resource. For more information, see [Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/standard-premium/create-front-door-portal)
 
-![](media/azure-front-door/dda7dee4ddc73c51e8348d1ef3001ef8.png)
+    ![Create Azure Front Door resource](media/azure-front-door/create-azure-front-door.png "Create Azure Front Door resource")
 
->   Graphical user interface, application Description automatically generated
+    > [!NOTE]
+    > Skip this step if you've already created Azure Front Door resource.
 
-1.  Quick create of Front door setup - \>As part of quick create setup, there
-    are a bunch of settings which we will do here. Most of these front door
-    settings can be changed later on in subsequent steps.
+1. Select **Quick create**, and configure Azure Front Door resource.
 
-    ![Graphical user interface, application Description automatically generated](media/azure-front-door/e2a45da9b127b81382b1aee950b57e22.png)
+    > [!TIP]
+    > Most of the Azure Front Door settings can be changed later.
+
+    ![Quick create Azure Front Door and settings](media/azure-front-door/quick-create.png "Quick create Azure Front Door and settings")
 
     1.  Resource setup -\> These are related to resource organizations and are
         same as any other azure resource.
