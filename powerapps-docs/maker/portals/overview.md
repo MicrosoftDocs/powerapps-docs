@@ -21,9 +21,9 @@ Power Apps makers can now create a powerful new type of experience: external-fac
 
 These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Makers can reuse page designs through templates, add forms and views to display key data from Dataverse, and publish to users.
 
-## Power Apps portals, Dynamics 365 portals, and add-on portals
+## Power Apps portals, Dynamics 365 Portals, and add-on portals
 
-After the launch of Power Apps portals on October 1, 2019, all Dynamics 365 portals are now referred to as **Power Apps portals**.
+After the launch of Power Apps portals on October 1, 2019, all Dynamics 365 Portals are now referred to as **Power Apps portals**.
 
 One of the major changes introduced to portals after October 1, 2019 is the licensing model. Before this, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. As of October 1, 2019, portals are [licensed based on usage](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing), or capacity. All previously existing portals must become part of a transition period based on current customer contract, after which they're required to be converted to a new licensing model.
 
