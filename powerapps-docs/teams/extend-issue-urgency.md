@@ -269,8 +269,8 @@ This means that if urgent value from the Power App task is 1 (urgent), set the p
 
 27.  In your backup copy of the original OnSelect formula, we now want to remove the section that creates the planner task since it now is handled by flow.
     First, remove this section:
-    
-    ![Part of the formula to delete](media/extend-issue-urgency/formula-delete.png "Part of the formula to delete")
+
+![Part of the formula to delete](media/extend-issue-urgency/formula-delete.png "Part of the formula to delete")
     
 28.  Copy the modified formula from your backup copy and replace the contents of the OnSelect property of the **Submit issue** button with the modified formula.
     
