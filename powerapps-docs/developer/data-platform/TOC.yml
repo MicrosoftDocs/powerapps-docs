@@ -159,14 +159,14 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Business Events (preview)
+    href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
   - name: Best Practices
     href: best-practices/business-logic/index.md
 - name: Integrate data using code
   items:
-  - name: Business Events (preview)
-    href: ../../maker/data-platform/business-events.md
   - name: Import data
     href: import-data.md 
     items:
