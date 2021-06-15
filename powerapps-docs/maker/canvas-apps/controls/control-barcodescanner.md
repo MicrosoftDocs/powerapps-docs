@@ -27,6 +27,8 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ## Key properties
 
+**BarcodeType** - The barcode type to scan. Supported types: Codabar, Code39, Code128, EAN, I2of5, UPC **Default: UPC**
+
 **Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses for scanning barcodes.
 
 ## Additional properties
