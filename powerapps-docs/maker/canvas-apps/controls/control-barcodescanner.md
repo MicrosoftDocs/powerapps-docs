@@ -71,7 +71,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ### Add barcode scanner control
 
-1. Add a **barcode scanner** control, name it **Mybarcode scanner**
+1. Add a **barcode scanner** control, name it "Mybarcode scanner".
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
