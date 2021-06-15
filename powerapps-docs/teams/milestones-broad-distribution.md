@@ -138,7 +138,7 @@ The following is recommended table permissions:
 | Project Work Item Priority | Colleagues outside of the team should not be able to modify work item priority, so we should give them reference privileges on the Project Work Item Priority table.                                                            |
 | Project Work Item Status   | Colleagues outside of the team should be able to associate statuses with work items, but not modify the status options. So we should give them reference privilege on Project Work Item Status table.                           |
 
-# Accessing shared apps
+## Accessing shared apps
 
 So now that you have shared Milestones with colleagues outside of your team, here is how they will acquire the app.
 
