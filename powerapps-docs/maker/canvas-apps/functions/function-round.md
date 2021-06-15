@@ -51,7 +51,7 @@ If you pass a single number, the return value is the rounded version of that num
 
 **Int**( *Number* )<br>**Trunc**( *Number* )
 
-* *Number* - Required. The number to round to an integer (whole number without a decimal).
+* *Number* - Required. The number to round to an integer.
 
 ## Examples
 
