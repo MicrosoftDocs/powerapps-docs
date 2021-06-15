@@ -138,7 +138,7 @@ For steps to change the site marker to point to the correct **Page Not Found** w
 Enabling a portal web page for page tracking can lead to performance issues in your portal. 
 
 > [!IMPORTANT]
-> Starting with portals version [9.3.4.x](../versions/version-9.3.4.x.md), this functionality has been retired. Initial deprecation announcement: [Dynamics 365 Portals: Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/)
+> This functionality has been retired for portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later. For more information, see the deprecation announcement published earlier: [Dynamics 365 Portals - Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/).
 
 The portal checker tool will list all the web pages (both root and content page) which are enabled for page tracking. These pages should be disabled by following these steps:
 
@@ -156,7 +156,7 @@ It's important to understand that if you're on Dynamics 365 Portals solution ver
 Enabling a portal web file for page tracking can lead to performance issues in your portal. 
 
 > [!IMPORTANT]
-> Starting with portals version [9.3.4.x](../versions/version-9.3.4.x.md), this functionality has been retired. Initial deprecation announcement: [Dynamics 365 Portals: Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/)
+> This functionality has been retired for portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later. For more information, see the deprecation announcement published earlier: [Dynamics 365 Portals - Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/).
 
 The portal checker tool will list all the web files that are enabled for page tracking. These files should be disabled by following these steps:
 
@@ -172,7 +172,7 @@ You can also go to each file listed in portal checker result and set the value o
 Enabling a portal login tracking can lead to performance issues in your portal. 
 
 > [!IMPORTANT]
-> Starting with portals version [9.3.4.x](../versions/version-9.3.4.x.md), this functionality has been retired. Initial deprecation announcement: [Dynamics 365 Portals: Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/)
+> This functionality has been retired for portals with version [9.3.4.x](../versions/version-9.3.4.x.md) or later. For more information, see the deprecation announcement published earlier: [Dynamics 365 Portals - Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/).
 
 The portal checker tool will check if login tracking is enabled for your portal and will show a failed check if it's enabled. Login tracking should be disabled by following these steps:
 
