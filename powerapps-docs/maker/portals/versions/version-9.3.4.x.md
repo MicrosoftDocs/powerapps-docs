@@ -59,7 +59,7 @@ Portal host Version 9.3.4.2  resolves the following issues:
 
 - When trying to load a pick-list control with null value on entity list, an error is shown on the portal.
 
-- Web page tracking, web file tracking, and login tracking functionality is retired. More information: [Important changes and deprecations](important-changes-deprecations.md)
+- Web page tracking, web file tracking, and login tracking functionality is retired. More information: [Important changes and deprecations](../important-changes-deprecations.md#tracking-for-web-page-web-file-and-login)
 
 This release also contains performance, security fixes and improves overall reliability of Power Apps portals.
 
