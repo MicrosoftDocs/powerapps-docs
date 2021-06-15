@@ -74,7 +74,7 @@ Following the steps below will change the default label and text box column of t
   
 ## Add code component to a table
 
-To add a code component like data-set component or simple table component to a grid or view, follow the steps below:
+To add a code component like dataset component or simple table component to a grid or view, follow the steps below:
 
   - Navigate to **Settings > Customizations** and click on **Customize the System**.
   - Click on the arrow next to **Entities** tab a select the table you want to add the code component. 

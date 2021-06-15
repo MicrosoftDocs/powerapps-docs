@@ -433,7 +433,7 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Power Apps CLI
+    - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
   - name: Community Tools
     href: community-tools.md

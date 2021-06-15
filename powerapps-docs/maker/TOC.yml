@@ -1717,11 +1717,11 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Power Apps CLI (Preview)
+        - name: Use Microsoft Power Platform CLI (Preview)
           items:
-          - name: Overview of portals support for Power Apps CLI
+          - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
-          - name: "Tutorial: Use Power Apps CLI with portals"
+          - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
           - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
@@ -1793,6 +1793,8 @@
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and depecations
       href: ./portals/important-portal-changes-coming.md
+    - name: Supported web browsers
+      href: ./portals/supported-web-browsers.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
@@ -2045,6 +2047,8 @@
       href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
+  - name: Business Events (preview)
+    href: ./data-platform/business-events.md
   - name: Translate customized table and column text
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
@@ -2070,7 +2074,7 @@
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security-cds.md
+    href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
