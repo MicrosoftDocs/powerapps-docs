@@ -54,7 +54,7 @@ Once the app is installed you can then customize the app using the following ste
 
 12. You will now see all of the apps, tables, flows, and chatbots in the Team.
 
-![Inspection Objects](media/customize-inspections/inspection-objects-details.png "Inspection Objects")
+![Inspection Objects](media/customize-inspections/inspection-app-details.png "Inspection Objects")
 
 ## Extend the Inspection data model
 
