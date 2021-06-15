@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
-author: "mspilde"
+author: "aorth"
 ms.author: "mspilde"
 manager: "kvivek"
 tags: 
