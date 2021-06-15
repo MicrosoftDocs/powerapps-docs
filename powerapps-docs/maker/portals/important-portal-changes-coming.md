@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2021
+ms.date: 06/15/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -24,7 +24,7 @@ Makers, developers and IT professionals can use this information to prepare for 
 
 ## SameSite mode changes
 
-Makers can mark **SameSite** mode as **Strict** for all portal cookies where applicable.  
+Starting with portals version [9.3.6.x](versions/version-9.3.6.x.md), makers can mark **SameSite** mode as **Strict** for all portal cookies where applicable.  
 
 With this change, we're adding a new website setting to control the **SameSite** mode for all cookies, configurable at specific cookie level.
 
@@ -33,7 +33,7 @@ With this change, we're adding a new website setting to control the **SameSite**
 | HTTP/SameSite/Default | Global, for all cookies. | None <br> Lax <br> Strict |
 | HTTP/SameSite/{CookieName} | Specific cookie. | None <br> Lax <br> Strict |
 
-All newly provisioned portals will have **SameSite** default to the value of **Strict**. Existing portals will default to **None**.
+Default value for all existing and newly provisioned portals is **None**.
 
 To learn how to configure site settings for portals, go to [Configure site settings for portals](configure/configure-site-settings.md)
 
