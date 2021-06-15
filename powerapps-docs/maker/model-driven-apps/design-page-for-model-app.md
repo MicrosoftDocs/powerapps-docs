@@ -49,7 +49,7 @@ Custom page authoring will start with a subset of controls supported and will be
   |Icon|Media|
   |Image|Media|
   |Edit Form|Input|
-  |View Form|Input|
+  |Display Form|Input|
   
   > [!Note]
   > Controls with “1” are the new control version used by canvas apps in Teams; these controls are from the [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
