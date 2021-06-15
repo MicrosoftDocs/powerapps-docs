@@ -1,6 +1,6 @@
 ---
-title: Use Monitor to troubleshoot custom page behavior in a model-driven app
-description: "Monitor can help you debug and diagnose problems, which help you build faster, more reliable apps."
+title: "Use Monitor to troubleshoot custom page behavior in a model-driven app"
+description: "Monitor can help you debug and diagnose problems with custom pages"
 ms.custom: ""
 ms.date: 08/11/2020
 ms.reviewer: "matp"
