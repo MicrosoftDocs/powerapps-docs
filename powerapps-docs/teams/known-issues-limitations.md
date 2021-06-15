@@ -1,19 +1,17 @@
 ---
-title: Known issues and limitations for Project Oakdale | Microsoft Docs
+title: Known issues and limitations for Dataverse for Teams | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
-author: tapanm-msft
+author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 01/07/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-This article provides details about the known issues and limitations when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the preview release.
+This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment).
 
 ## Additional components
 
@@ -23,33 +21,26 @@ The following components aren't supported:
 - AI Builder
 - Custom connectors
 
-## Build hub
-
-Selecting **Play** for apps in build hub launches the application in an external browser window, and may not work.
-
-Use one of the following options to play an app:
-
-- Edit the app and play using the Studio.
-- Publish the app in Teams and play from the pinned tab.
-
 ## Component library
 
 [Component library](../maker/canvas-apps/component-library.md) isn't supported.
 
+## Controls
+
+To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).
+
 ## Government Community Cloud (GCC)
 
-Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
 
 ## Hidden membership groups
 
-Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive one of the following errors when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
+Dataverse for Teams doesn't support [hidden membership groups](/graph/api/resources/group?preserve-view=true&view=graph-rest-1.0#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
-| Action | Error |
-| - | - |
-| [Create your first app](create-first-app.md#get-started-with-creating-your-first-app) | `Something went wrong` <br> `The request failed with error: '{"errorCode":"BadRequest"}'. The tracking Id is 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'` |
-| [Install a sample app](use-sample-apps-from-teams-store.md#install-the-sample-app) | `Something went wrong. Please try again later.` <br> `We couldn't save your tab settings. Please try again.` |
+`Existing limits on this team` <br>
+`You're unable to continue due to an administrative setting on this team. You can try again with another team.`
 
-The group may have hidden membership enabled by your administrator. Try using a different Teams team that has hidden membership not enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Dataverse for Teams on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
 
 ## Localization
 
@@ -59,23 +50,11 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 
 There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
 
-## Sharing
-
-You can't share apps or data outside of a team currently.
-
-![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
-
 ## Studio
 
 ### Classic controls
 
-Enabling classic controls requires a refresh of Power Apps Studio.  
-
-### Combo box
-
-The combo box control currently only supports up to 25 items in the dropdown.
-
-![Combo box](media/combo-box.png "Combo box")
+Enabling [classic controls](understand-power-apps-studio.md#classic-controls) requires a refresh of Power Apps Studio.  
 
 ### Canvas components
 
@@ -83,24 +62,16 @@ You may see red errors while using the modern controls in canvas components. The
 
 ![Canvas components](media/canvas-components.png "Canvas components")
 
-### Controls
-
-The following controls aren't supported:
-
-- [Forms Pro survey (preview)](/forms-pro/embed-survey-powerapps)
-- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
-- [Video control](../maker/canvas-apps/controls/control-audio-video.md)
-
 ### New connections
 
-Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
+Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](/microsoftteams/get-clients#web-client) to add these connectors.
 
-### Studio and Visual Editor synchronization
+### Studio and visual editor synchronization
 
 Power Apps Studio doesn't reflect the changes to tables after:
 
 1. Renaming tables.
-1. Adding relationships within the inline [Visual editor](understand-power-apps-studio.md#visual-editor).
+1. Adding relationships within the inline [visual editor](understand-power-apps-studio.md#visual-editor).
 
 To see the new changes, refresh Power Apps Studio.
 
@@ -108,9 +79,9 @@ To see the new changes, refresh Power Apps Studio.
 
 It's currently not possible to change your Studio version.
 
-### Visual Editor
+### Visual editor
 
-Currency, Duration, Language, Ticker, and Timezone fields can't be added using Visual Editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
+Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
 
 ## Theme
 
@@ -123,3 +94,6 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 -	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 
 -	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agents apps.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

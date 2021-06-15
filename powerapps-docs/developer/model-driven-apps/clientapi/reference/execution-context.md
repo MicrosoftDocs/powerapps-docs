@@ -1,6 +1,7 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the executionContext method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "conceptual"
 applies_to: 
@@ -26,7 +27,7 @@ The execution context object provides the following methods.
 |Method |Description |
 |---|---|
 |[getDepth](executioncontext/getDepth.md)|Returns a value that indicates the order in which this handler is executed.|
-|[getEventArgs](executioncontext/getEventArgs.md)|Returns an object with methods to manage the **OnSave** event.|
+|[getEventArgs](executioncontext/getEventArgs.md)|Returns an object with methods to manage this handler.|
 |[getEventSource](executioncontext/getEventSource.md)|Returns a reference to the object that the event occurred on.|
 |[getFormContext](executioncontext/getFormContext.md)|Returns a reference to the form or an item on the form depending on where the method was called.|
 |[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
@@ -40,3 +41,6 @@ The execution context object provides the following methods.
 
 [Understand Client API object model](../understand-clientapi-object-model.md) 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

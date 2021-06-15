@@ -1,6 +1,6 @@
 ---
 title: getBarcodeValue | Microsoft Docs
-description: 
+description: Invokes the device camera to scan the barcode information, such as product number.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Return Value
 
@@ -39,3 +39,5 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 [Device](../device.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

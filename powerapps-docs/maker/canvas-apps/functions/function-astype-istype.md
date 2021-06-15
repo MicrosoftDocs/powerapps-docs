@@ -25,7 +25,7 @@ Read [Understand record references and polymorphic lookups](../working-with-refe
 
 A lookup field usually refers to records in a particular entity. Because the entity type is well established, you can access the fields of the lookup by using a simple dot notation. For example, **First( Accounts ).'Primary Contact'.'Full Name'** walks from the **Accounts** entity to the **Primary Contact** record in the **Contacts** entity and extracts the **Full Name** field.
 
-Common Data Service also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples.
+Microsoft Dataverse also supports polymorphic lookup fields, which can refer to records from a set of entities, as in these examples.
 
 | Lookup field | Can refer to |
 |--------------|--------------|
@@ -142,3 +142,6 @@ If the record reference is *blank*, **IsType** returns FALSE, and **AsType** ret
     - "Contact: " and then the **Full Name** field from the **Contacts** entity if the **Company Name** field refers to a contact.
 
     Your results might differ from those in this topic because it uses sample data that was modified to show additional types of results.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -24,7 +24,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the Common Data Service, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
+[Generate an app](data-platform-create-app.md) from the Microsoft Dataverse, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
 
 ## Show and hide cards
 
@@ -123,3 +123,6 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

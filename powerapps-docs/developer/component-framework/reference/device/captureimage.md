@@ -1,6 +1,6 @@
 ---
 title: CaptureImage | Microsoft Docs
-description: 
+description: Invokes the device camera to capture the image.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -55,3 +55,5 @@ The `options` parameter object has the following properties:
 [Device](../device.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

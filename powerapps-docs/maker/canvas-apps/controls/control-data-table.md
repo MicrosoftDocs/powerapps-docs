@@ -27,7 +27,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 * A single row is always selected in a **Data table** control.
 * Link a **Data table** control to a connected or local data source.
 * Adjust column widths in a **Data table** control while you run the app, though your changes aren't saved.
-* A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Common Data Service. You can then show or hide these fields and others as necessary.
+* A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Microsoft Dataverse. You can then show or hide these fields and others as necessary.
 * Customize column width and heading text.
 * Show hyperlinks in a **Data table** control.
 * Copy and paste a **Data table** control.
@@ -97,7 +97,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 4. In the right pane, click or tap the down arrow to the right of the **No data source selected** text, and then click or tap **Add a data source**.
    
     ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
-5. In the list of connections, click or tap the connection for your Common Data Service database.
+5. In the list of connections, click or tap the connection for your Dataverse database.
    
     ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
@@ -157,3 +157,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
 ### Screen reader support
 * **NoDataText** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

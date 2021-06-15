@@ -1,18 +1,21 @@
 ---
-title: "Render the entity list associated with the current page in a portal | MicrosoftDocs"
-description: "Sample code to render the entity list associated with the current page in a portal."
+title: Render the list associated with the current page
+description: Sample code to render the list associated with the current page in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/04/2020
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
-# Render the entity list associated with the current page
+# Render the list associated with the current page
 
-Render the Entity List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Power Apps Common Data Service entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
+Render the List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Dataverse entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
@@ -240,3 +243,6 @@ Render the Entity List associated with the current page as a paginated sortable 
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -21,7 +21,7 @@ You can retrieve and store data three different ways.
 
         **New data** If your app is creating data that doesn't already exist anywhere, such
         as in situations where the existing business process was done using paper, we recommend storing
-        the data either in Common Data Service or a SharePoint custom list. 
+        the data either in Microsoft Dataverse or a SharePoint custom list. 
         
         We'll discuss this topic in [Data modeling: Designing your data structure](data-modeling.md).
     :::column-end:::
@@ -38,7 +38,7 @@ You can retrieve and store data three different ways.
 
         **Make a copy of the data** In situations where original data should never be
         modified or overwritten, you can copy the data to another data store such as
-        Common Data Service. This ensures that the data in the original system won't be
+        Dataverse. This ensures that the data in the original system won't be
         changed, yet your app can work with it. This scenario is common when
         working with data in accounting and revenue-related systems.
 
@@ -56,18 +56,18 @@ and sources&mdash;such as SharePoint, SQL Server, or Office 365&mdash;and direct
 retrieve data from them or save data to them. More information: [Overview of canvas-app connectors for Power Apps](../../maker/canvas-apps/connections-list.md)
 
 - **Using a dataflow**: Dataflow is a feature in Power Apps where you can extract, transform, and load
-data from another system to Common Data Service or Azure Data Lake storage.
+data from another system to Dataverse or Azure Data Lake storage.
 Unlike a connector, it fetches data in a scheduled batch. Instead of just
 retrieving the data as-is from the data source, you can use Power Query
 Online to manipulate, cleanse, and transform data before you store it to the
-target storage. More information: [Self-service data prep with dataflows](../../maker/common-data-service/self-service-data-prep-with-dataflows.md)
+target storage. More information: [Self-service data prep with dataflows](../../maker/data-platform/self-service-data-prep-with-dataflows.md)
 
 The method you choose depends on your use cases and how data needs to be handled. The following table lists some items to use for comparison.
 
 |   Item to compare     | Connectors                                   | Dataflow                                           |
 |-----------------------|----------------------------------------------|----------------------------------------------------|
 | Freshness of data     | Real-time                                    | Static or snapshot                                 |
-| Direction             | Bidirectional                                | One direction (from origin to Common Data Service) |
+| Direction             | Bidirectional                                | One direction (from origin to Dataverse) |
 | Modify existing data? | Yes                                          | No                                                 |
 | Use cases             | Production order, Timesheet, Sales quotation | Customer master, Past invoices, Employee list      |
 
@@ -96,3 +96,6 @@ needs:
 
 > [!div class="nextstepaction"]
 > [Next step: Working with enterprise systems](enterprise-systems.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -282,7 +282,7 @@ You can set the Power BI report URL for the **Dashboard** mobile app so that fro
 
 1.  Save the record.
 
-## View Common Data Service dashboards
+## View Microsoft Dataverse dashboards
 
 Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
 
@@ -353,7 +353,7 @@ To manage dashboards:
     > When you select **View records**, you'll see the view of the entity split between chart and the records. Any change to filters for records on the right-side reflects with automatic updates to the chart on left-side of the screen.
 
 For more information about editing an existing dashboard and updating properties
-of charts, read [edit an existing dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#edit-an-existing-dashboard).
+of charts, read [edit an existing dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#edit-an-existing-dashboard).
 
 ### Create new dashboards
 
@@ -362,7 +362,7 @@ You can also create your own dashboards and customize to suite your needs. To cr
 > [!div class="mx-imgBorder"]
 > ![Create new dashboards](media/select-new-dynamics-dashboard.png)
 
-For more information about creating a new dashboard, read [create new dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#create-a-new-dashboard).
+For more information about creating a new dashboard, read [create new dashboard](../../maker/model-driven-apps/create-edit-dashboards.md#create-a-new-dashboard).
 
 ## View Power BI dashboard
 
@@ -384,7 +384,7 @@ Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI 
 You can use the filters on the right side to filter data for COVID locations, facilities, regions and hospital systems.
 
 > [!NOTE]
-> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
+> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
 
 #### System at a glance page 
 
@@ -406,7 +406,7 @@ The page displays a summarized view of the following:
 
 > [!NOTE]
 > - Selecting the title in any of the summarized area takes you to the respective details page for the area. 
-> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
+> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](/power-bi/consumer/end-user-reports)
 > - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 >    - Black: Data is refreshed less than 20 hours ago
 >    - Gray: Data is refreshed 20 - 24 hours ago
@@ -654,3 +654,6 @@ After downloading the data as CSV files from the **Download Data for CDC** app, 
 ## Next step
 
 [Use the Hospital Emergency Response mobile app](use.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

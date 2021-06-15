@@ -17,12 +17,12 @@ search.app:
 ---
 # Use grid filters 
 
-Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
+Grids in Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
 Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find. 
 
 > [!IMPORTANT]
-> In the Unified Interface grids  don't prepopulate column filters based on the current view definition.
+> In Unified Interface, grids don't prepopulate column filters based on the current view definition.
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
@@ -36,7 +36,7 @@ When you filter data on a grid, the main grid page remembers the filter, sort or
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
 
-The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
+The page jump bar uses the first sorted column. If no change has been made to the sort order, the jump bar uses the primary column.
 
    > [!div class="mx-imgBorder"]
    > ![Select a filter on the jump bar](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
@@ -46,17 +46,17 @@ When you select the hierarchy icon, you navigate to the hierarchy view.
    > [!div class="mx-imgBorder"]
    > ![Hierarchy icon](media/grid-row-hierarchy-icon.png "Hierarchy icon")
 
-You can also open primary field and lookup fields in a new tab or window.
+You can also open primary column and lookup columns in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
   
   
-## Lookup field column
+## Lookup column 
 
-When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
+When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
 
-The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the entity being looked up and will include all records with no filter.
+The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
@@ -115,15 +115,18 @@ The system searches for data in the **My Active Contacts** view and displays sea
 
 ## Use the quick-find search experience
 
-To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
+To switch back to the old quick-find search experience that uses a table's quick-find view definition to perform searches, you'll need admin permissions.
 
 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
 
 2. Go to **Settings** > **Administration** > **System Settings**.
 
-3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of a table for searching on grids and sub-grids**.
 
 
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

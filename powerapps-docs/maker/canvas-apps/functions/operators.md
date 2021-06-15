@@ -257,7 +257,7 @@ Here are some example column names you might encounter in a table, and how they 
 Double quotes are used to [designate text strings](data-types.md#embedded-text).  
 
 ## Display names and logical names
-Some data sources such as SharePoint and Common Data Service have two different names to refer to the same table or column of data:
+Some data sources such as SharePoint and Microsoft Dataverse have two different names to refer to the same table or column of data:
 
 * **Logical name** - A name that is guaranteed to be unique, does not change after being created, usually does not allow spaces or other special characters, and is not localized into different languages.  As a result, the name can be cryptic.  These names are used by professional developers.  For example, **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
 
@@ -265,7 +265,7 @@ Some data sources such as SharePoint and Common Data Service have two different 
  
 Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an entity in Common Data Service.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
+For example, imagine you have added a **Custom Field** to an entity in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
@@ -288,7 +288,7 @@ Although it is not suggested, we could also use the logical name for this field.
 Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names to switch into new display names, for example, if a display name changes or a maker in a different language edits the app.
 
 > [!NOTE] 
-> Logical names are not translated when moving an app between environments.  For Common Data Service system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+> Logical names are not translated when moving an app between environments.  For Dataverse system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
 
 ## Name disambiguation
 Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
@@ -296,7 +296,7 @@ Since display names are not unique, the same display name may appear more than o
 > [!div class="mx-imgBorder"]  
 > ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
 
-Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Common Data Service items. 
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Dataverse items. 
 
 ## Disambiguation operator
 
@@ -307,3 +307,6 @@ Some functions create [record scopes](../working-with-tables.md#record-scope) fo
 
 For more information and examples, see [record scopes](../working-with-tables.md#record-scope).
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

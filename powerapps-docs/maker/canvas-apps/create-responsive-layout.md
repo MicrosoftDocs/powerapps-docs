@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 04/22/2020
+ms.date: 05/24/2021
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -18,7 +18,7 @@ search.app:
 
 Before you build a canvas app in Power Apps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
 
-After you make that choice, you can make a few more choices if you select **File** > **App settings** > **Screen size + orientation**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
+After you make that choice, you can make a few more choices if you select **File** > **Settings** > **Display**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
 
 Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 
@@ -44,7 +44,7 @@ To make your app's layouts respond to changes in the screen dimensions, you'll w
 
 These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device or browser window in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
+The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Display** pane of **Settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
 
 As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. In that case, the user must scroll to view all of the screen's content.
 
@@ -115,27 +115,27 @@ You can use these formula patterns for expressing common layout relationships be
 |  | **Width** | `Parent.Width - (N * 2)` |  |
 | **C** fills height of parent, with a margin of *N* | **Y** | `N` | ![Example of C filling height of parent](media/create-responsive-layout/c2.png) |
 |  | **Height** | `Parent.Height - (N * 2)` |  |
-| **C** aligned with right edge of parent, with margin of *N* | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c3.png) |
-| **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
+| **C** aligned with right edge of parent, with margin of *N* | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with right edge of parent](media/create-responsive-layout/c3.png) |
+| **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with bottom edge of parent](media/create-responsive-layout/c4.png) |
 | **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-layout/c5.png) |
 | **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-layout/c6.png) |
 
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-layout/d1.png) |
+| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of horizonal aligned pattern](media/create-responsive-layout/d1.png) |
 |  | **Width**    | `D.Width` |  |
-| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of pattern](media/create-responsive-layout/d2.png) |
+| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of vertical aligned pattern](media/create-responsive-layout/d2.png) |
 |  | **Height** | `D.Height` |  |
-| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of pattern](media/create-responsive-layout/d3.png) |
-| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-layout/d4.png) |
-| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-layout/d5.png) |
-| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-layout/d6.png) |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
-| **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-layout/d8.png) |
-| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
+| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of right edge aligned pattern](media/create-responsive-layout/d3.png) |
+| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of bottom edge aligned pattern](media/create-responsive-layout/d4.png) |
+| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of centered horizontally pattern](media/create-responsive-layout/d5.png) |
+| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of centered vertically pattern](media/create-responsive-layout/d6.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width + N` | ![Example of positioned to the right pattern](media/create-responsive-layout/d7.png) |
+| **C** positioned below **D** with a gap of *N*             | **Y** | `D.Y + D.Height + N` | ![Example of positioned below pattern](media/create-responsive-layout/d8.png) |
+| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of filling space between D and right edge pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |
-| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-layout/d10.png) |
-| | **Height** | ```Parent.Height - D.Y```
+| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of filling space between D and bottom of the edge pattern](media/create-responsive-layout/d10.png) |
+| | **Height** | ```Parent.Height - C.Y```
 
 ## Hierarchical layout
 
@@ -149,7 +149,7 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ### Container control
 
-You can use an experimental feature, the **Container** control, as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
+You can use an experimental feature, the **Layout container** control, as a parent control. To turn this feature on, select **File** > **Settings** > **Upcoming features** > **Preview**, and select **Layout containers** to turn the feature on.
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the **Container** control, containing a **Label** control and two **Icon** controls:
 
@@ -167,6 +167,10 @@ Set the properties for these controls to these values:
 For the **Header** control, `Parent` refers to the screen. For the others, `Parent` refers to the **Header** control.
 
 Having written these formulas, you can adjust the size or position of the **Header** control by changing the formulas for its properties. The sizes and positions of the child controls will automatically adjust accordingly.
+
+## Auto-layout container controls
+
+You can use an experimental feature, the **Auto-layout** container controls to automatically lay out the child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components. More information: [Auto-layout container controls](build-responsive-apps.md#auto-layout-containers)
 
 ### Components
 
@@ -260,3 +264,6 @@ You can also specify fewer breakpoints. For example, your app might need only th
 The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, and then open it on devices or in browser windows of various sizes and orientations.
 
 If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you'll overwrite those expressions or formulas if you later drag the control to a different location or resize the control by dragging its border.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

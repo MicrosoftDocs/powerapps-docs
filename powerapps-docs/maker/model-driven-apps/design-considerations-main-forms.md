@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -63,3 +63,6 @@ Main forms are the primary user interface where people view and interact with th
  [Create and edit quick create forms](create-edit-quick-create-forms.md)   
 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

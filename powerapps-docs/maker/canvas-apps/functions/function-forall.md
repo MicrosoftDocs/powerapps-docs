@@ -20,7 +20,7 @@ Calculates values and performs actions for all the [records](../working-with-tab
 
 ## Description
 
-The **ForAll** function evaluates a formula for all the records if a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use the [**With** function](function-with.md) to evaluate the formula for a single record.  
+The **ForAll** function evaluates a formula for all the records in a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use the [**With** function](function-with.md) to evaluate the formula for a single record.  
 
 Use the [**Sequence** function](function-sequence.md) with the **ForAll** function to iterate based on a count.
 
@@ -216,3 +216,6 @@ Again, the **ForAll** function can't be delegated at this time.  If our **Produc
 
 Note that we are not capturing the result of the **ForAll**.  The **Collect** function calls made from within it will return the **NewOrder** data source for all the records, which could add up to numerous data if we were capturing it.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

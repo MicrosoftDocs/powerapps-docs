@@ -1,6 +1,6 @@
 ---
 title: setFullScreen | Microsoft Docs
-description: 
+description: Make the component full screen.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -26,7 +26,7 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Parameters
 
@@ -40,3 +40,6 @@ Model-driven apps
 [Mode](../mode.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

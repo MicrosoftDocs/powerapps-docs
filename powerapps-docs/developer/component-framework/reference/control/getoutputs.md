@@ -1,5 +1,6 @@
 ---
 title: "getOutputs | MicrosoftDocs"
+description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -15,7 +16,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -23,8 +24,8 @@ Model-driven apps and canvas apps (public preview)
 
 ## Remarks
 
-The output will contain a value for each property marked as `input-output` or `bound` in the manifest.
-For example, if the manifest has a property `value` that is an `input-output`, and you want to set that to the local variable `myvalue` you should return:
+The output will contain a value for each property with a usage as `bound` in the manifest.
+For example, if the manifest has a property named `value` that has usage as `bound`, and you want to set that to the local variable `myvalue` then you should return:
 
 ```TypeScript
 {
@@ -49,3 +50,6 @@ public getOutputs(): IOutputs
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

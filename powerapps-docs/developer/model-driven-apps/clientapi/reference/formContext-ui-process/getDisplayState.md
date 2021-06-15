@@ -1,6 +1,7 @@
 ---
 title: "getDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getDisplayState method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +29,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: Returns "expanded" or "collapsed" on the web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
+**Description**: Returns "expanded" or "collapsed" on the legacy web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
 
 ### Related topics
 
@@ -38,3 +39,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

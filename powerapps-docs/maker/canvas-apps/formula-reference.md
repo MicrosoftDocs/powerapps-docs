@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/17/2020
+ms.date: 03/23/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,6 +15,10 @@ search.app:
   - PowerApps
 ---
 # Formula reference for Power Apps
+
+> [!NOTE]
+> Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)?
+
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
@@ -72,6 +76,8 @@ Other elements include:
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
+
+**[ClearData](functions/function-savedata-loaddata.md)** – Clears a collection or all collections from an app host such as a local device.
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
@@ -211,7 +217,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -301,7 +307,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to an app host such as a local device.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -317,7 +323,7 @@ Other elements include:
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
 
-**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
+**[SetProperty](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -402,3 +408,6 @@ Other elements include:
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

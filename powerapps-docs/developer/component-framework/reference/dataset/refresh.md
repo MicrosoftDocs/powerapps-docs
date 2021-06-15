@@ -1,6 +1,6 @@
 ---
 title: refresh | Microsoft Docs
-description: 
+description: Refreshes the dataset based on filters, sorting, linking, new column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -30,3 +30,5 @@ Model-driven apps
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

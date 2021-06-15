@@ -1,13 +1,16 @@
 ---
-title: Create and manage webpages | Microsoft Docs
+title: Create and manage webpages
 description: Instructions to create and manage webpages in portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 05/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create and manage webpages
@@ -41,14 +44,13 @@ A webpage is a document that is identified by a unique URL in a website. It is o
         > [!div class=mx-imgBorder]
         > ![webpage properties](media/webpage-props.png "Webpage properties")
 
-The webpages you create are added and their hierarchy are displayed in the **Pages** pane. To view the **Pages** pane, select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view the this pane, select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 Let's say you have created a few webpages for your portal. The page hierarchy looks as follows:
 
-> [!div class=mx-imgBorder]
-> ![pages pane](media/pages-pane.png "Pages pane")  
+![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
@@ -65,7 +67,7 @@ If you are working with a portal created in an environment containing customer e
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+2.  Select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 
@@ -76,8 +78,6 @@ If you are working with a portal created in an environment containing customer e
     - **Show in default menu**: Show the page in the sitemap through default menu.
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
-
-    - **Set as home page**: Set the page as the home page. The URL of the new home page is set to the root of the website and URL of the old page is updated accordingly.
 
     - **Move up**: Move the page up in hierarchy.
 
@@ -95,3 +95,14 @@ If you are working with a portal created in an environment containing customer e
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
+## Next steps
+
+[Customize webpages](compose-page.md)
+
+### See also
+
+[Work with templates](work-with-templates.md) <br>
+[Work with themes](theme-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

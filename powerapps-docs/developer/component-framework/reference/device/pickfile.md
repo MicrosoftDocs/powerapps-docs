@@ -1,6 +1,6 @@
 ---
 title: PickFile | Microsoft Docs
-description: 
+description: Opens a dialog box to select files from your computer (web client) or mobile device (mobile client).
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -53,3 +53,5 @@ The `options` parameter object has the following properties:
 [Device](../device.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

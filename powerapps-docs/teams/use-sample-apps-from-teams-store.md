@@ -1,47 +1,75 @@
 ---
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 09/24/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.custom: intro-internal
+ms.date: 05/24/2021
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Use sample apps from the Microsoft Teams store
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Sample apps that were created by using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install it to get started. In this article, you'll learn about one such sample app that helps manage campaigns and ideas. Sample apps created with Power Apps and published to the Teams store can consist of multiple components such as apps, flows, and tables.
 
 In this tutorial, you'll learn how to search for a sample app in the Teams store and add it to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the app just as you use other features such as **Post**, **Files**, or **Wiki**.
 
-![Employee Ideas sample app](media/sample-app.png "Employee Ideas sample app")
+![Employee ideas sample app](media/sample-app.png "Employee ideas sample app")
 
 > [!IMPORTANT]
-> Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
+> Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 
 ## Available sample apps
 
 Several sample apps are available from the Teams store that you can add to your Teams channels and use for different purposes.
 
-| Name | Description |
-| - | - |
-| [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
-| [Inspection](inspection.md) | Manager and user apps for area inspections. |
-| [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+:::row:::
+   :::column span="":::
+      ![Boards (Preview) app](media/app-icons/boards-app-icon.png "Boards (Preview) app") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+   :::column-end:::
+   :::column span="":::
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
+   :::column-end:::
+   :::column span="":::
+      ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
+   :::column-end:::
+   :::column span="":::
+      ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
+   :::column-end:::
+   :::column span="":::
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) <br> App to keep track of projects, and initiatives.
+   :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="":::
+      ![Perspectives (Preview) app](media/app-icons/perspectives-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+   :::column-end:::
+   :::column span="":::
+      ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
 
-The following tutorial shows how to install the Employee Ideas app.
+The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
 ## Install the sample app
 
+> [!TIP]
+> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
+
 1. Select **Apps** at the bottom of the left pane in Teams.
 
-1. Search for **Employee Ideas**.
+1. Search for **Employee ideas**.
 
-    ![Employee Ideas app search](media/sample-app-9.png "Employee Ideas app search")
+    ![Employee ideas app search](media/sample-app-9.png "Employee ideas app search")
 
 1. Select the app.
 
@@ -71,18 +99,18 @@ The following tutorial shows how to install the Employee Ideas app.
     ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment.md)
+    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment)
     > - Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
-1. After the app is installed, you'll see a tab named **Employee Ideas** added to the team channel that you selected earlier.
+1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.
 
-    ![New Employee Ideas tab](media/sample-app-6.png "New Employee Ideas tab")
+    ![New Employee ideas tab](media/sample-app-6.png "New Employee ideas tab")
 
 Similarly, you can find other apps in the Teams store and add them to your team channel.
 
 ## Run the sample app
 
-To run the installed app, select the **Employee Ideas** tab from the team channel.
+To run the installed app, select the **Employee ideas** tab from the team channel.
 
 ### Step 1 - Allow connections
 
@@ -103,11 +131,11 @@ Select the channel (in this example, the channel is populated automatically), an
 
 ### Step 3 - Use the app
 
-The **Employee Ideas** app is now open and ready for your use.
+The **Employee ideas** app is now open and ready for your use.
 
 ![Select app from available list](media/sample-app-12.png "Select app from available list")
 
-For more details about using the **Employee Ideas** app, go to [Employee Ideas](employee-ideas.md).
+For more details about using the **Employee ideas** app, go to [Employee ideas](employee-ideas.md).
 
 ## Edit the sample app
 
@@ -115,10 +143,27 @@ You can further customize and edit the components of an installed Power Apps app
 
 ## Report installation errors
 
-If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
+If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about).
+
+## Sample app updates
+
+Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps.md#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
+
+## Sample apps FAQs
+
+For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sample-apps-faqs.md).
 
 ### See also
 
-[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
-[Inspection sample apps](inspection.md)  
-[Issue Reporting sample apps](issue-reporting.md)
+- [Boards (Preview) sample app](boards.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
+- [Perspectives (Preview) sample app](perspectives.md)
+- [Profile+ (Preview) sample app](profile-app.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

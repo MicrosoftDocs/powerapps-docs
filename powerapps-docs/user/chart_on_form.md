@@ -1,6 +1,6 @@
 ---
-title: "View charts on a form page or in a record in model-driven apps| MicrosoftDocs"
-description: View charts on form page or in a record
+title: "View charts on a form page or in a row in model-driven apps| MicrosoftDocs"
+description: View charts on form page or in a row
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -17,11 +17,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# View charts on a page or in a record 
+# View charts on a page or in a row 
 
-You can view charts on a page that has a list of records. You can also open a record and view a chart in the record. 
+You can view charts on a page that has a list of rows. You can also open a row and view a chart in the row. 
 
-Only an administrator can add charts to a record. For information, go to [Add a chart to a form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-chart-to-form).
+Only an administrator can add charts to a row. For information, go to [Add a chart to a form](../maker/model-driven-apps/add-chart-to-form.md).
 
 ## View charts on a page
 
@@ -56,7 +56,7 @@ Use the **More Commands** button ![More commands button.](media/more_command_but
 
 ## Grid filter on charts
 
-Grid home page provides multiple filter options for a user to filter the grid data such as quick find, advanced find, grid column filter, and jump bar. For more information, go to [How to use grid filters](https://docs.microsoft.com/powerapps/user/grid-filters).
+Grid home page provides multiple filter options for a user to filter the grid data such as quick find, advanced find, grid column filter, and jump bar. For more information, go to [How to use grid filters](./grid-filters.md).
 
 When a chart is shown together with grid, the grid filter option that you select will filter both chart and grid. 
 
@@ -64,10 +64,10 @@ When a chart is shown together with grid, the grid filter option that you select
 
 Legend:
 
-1. **Sort**: Sorts records. Use **Filter by** to filter both grid and chart data based on the filter criteria.
-2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, go to [See the current view definition](https://docs.microsoft.com/powerapps/user/grid-filters-advanced#see-the-current-view-definition).
+1. **Sort**: Sorts rows. Use **Filter by** to filter both grid and chart data based on the filter criteria.
+2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, go to [See the current view definition](./grid-filters-advanced.md#see-the-current-view-definition).
 3. **Search this view**: Search for data in the view you're in.
-4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
+4. **Jump bar**: The page jump bar uses the first sorted column. If no change has been made to the sort order, the jump bar uses the primary column.
 
 ### Drill-down in the chart data
 
@@ -75,6 +75,9 @@ You can drill down into a segment on a chart and filter the data for that segmen
 
 ![Drill down into a chart](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
 
-For more information on how to use the drill-down feature, go to [Drill-down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+For more information on how to use the drill-down feature, go to [Drill-down in a chart](./track-your-progress-with-dashboard-and-charts.md#drill-down-in-a-chart).
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

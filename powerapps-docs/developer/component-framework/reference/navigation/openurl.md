@@ -1,6 +1,6 @@
 ---
 title: openUrl | Microsoft Docs
-description: 
+description: Opens a url, including file urls.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -20,7 +20,7 @@ ms.assetid: 590078f3-c604-4bd0-ac74-9cf6d8806802
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -39,3 +39,5 @@ Model-driven apps
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -42,6 +42,9 @@ Provides properties and methods to use Web API to create and manage records and 
 
 ### Related topics
 
-[Use the Common Data Service Web API](../../../common-data-service/webapi/overview.md)
+[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

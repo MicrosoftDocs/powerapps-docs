@@ -17,7 +17,7 @@ search.app:
 
 # Create a summary form in a canvas app
 
-Follow step-by-step instructions to create a summary form in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Common Data Service. For best results, explore these topics in this sequence:
+Follow step-by-step instructions to create a summary form in a canvas app for managing fictitious data in the Northwind Traders database. This topic is part of a series that explains how to build a business app on relational data in Microsoft Dataverse. For best results, explore these topics in this sequence:
 
 1. [Create an order gallery](northwind-orders-canvas-part1.md).
 2. Create a summary form (**this topic**).
@@ -231,7 +231,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Replace a data card
 
-**Order number** is an identifier that Common Data Service assigns automatically when you create a record. This field has a [**Text input**](controls/control-text-input.md) control by default, but you'll replace it with a label so that the user can't edit this field.
+**Order number** is an identifier that Dataverse assigns automatically when you create a record. This field has a [**Text input**](controls/control-text-input.md) control by default, but you'll replace it with a label so that the user can't edit this field.
 
 1. Select the form, select **Edit fields** in the **Properties** tab near the right edge, and then select the **Order number** field:
 
@@ -547,3 +547,6 @@ In the next topic, you'll add another gallery to show the products in each order
 
 > [!div class="nextstepaction"]
 > [Create the detail gallery](northwind-orders-canvas-part3.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

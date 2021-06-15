@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Client scripting in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 10/19/2020
 ms.service: powerapps
 ms.topic: "article"
 applies_to: 
@@ -17,7 +17,7 @@ search.app:
 ---
 # Best practices: Client scripting in model-driven apps
 
-These are some of the best practice tips you could consider while writing your JavaScript code for model-driven apps.
+The following are some of the tips you could consider while writing your JavaScript code for model-driven apps.
 
 ## Define unique JavaScript function names
 
@@ -26,35 +26,32 @@ When you write functions that will be used in JavaScript libraries, your functio
 - **Unique function prefix**: Define each of your functions using the standard syntax with a consistent name that includes a unique naming convention, as shown in the following example.
     ```JavaScript
     function MyUniqueName_performMyAction()
-    {
-        // Code to perform your action.
-    }
+     {
+    // Code to perform your action.
+       }
     ```
-- **Namespaced library names**: Associate each of your functions with a JavaScript object to create a kind of namespace to use when you call your functions as shown in the following example.
+- **Namespaced library names**:  As a best practice, you should always create namespaced JavaScript libraries to avoid having your functions overridden by functions in another library. More information: [Write you first JavaScript](walkthrough-write-your-first-client-script.md)
     ```JavaScript
-    //If the MyUniqueName namespace object isn’t defined, create it.
-    if (typeof (MyUniqueName) == "undefined")
-       { MyUniqueName = {}; }
-       // Create Namespace container for functions in this library;
-       MyUniqueName.MyFunctions = {
-         performMyAction: function(){
-         // Code to perform your action.
-         //Call another function in your library
-         this.anotherAction();
-       },
-       anotherAction: function(){
-         // Code in another function
-      }
-    };
+    var Sdk = window.Sdk || {};
+    (function () {
+    this.formOnLoad = function () {
+      // Code to perform your actions.
+       }
+    this.attributeOnChange = function () {
+    // Code to perform your actions.
+      } 
+     this.formOnSave = function () {
+    // Display an alert dialog
+    }
+    }). call(Sdk);
     ```
 
     Then when you use your function you can specify the full name. The following example shows this.
 
     ```JavaScript
-    MyUniqueName.MyFunctions.performMyAction();
+    Sdk.attributeOnChange();
     ```
 
-    If you call a function within another function you can use the this keyword as a shortcut to the object that contains both functions. However, if your function is being used as an event handler, the this keyword will refer to the object that the event is occurring on.
 
 ## Avoid using unsupported methods
 
@@ -73,4 +70,7 @@ If you decide to use the remaining capabilities of jQuery that are useful with m
 
 ## Write your code for multiple browsers
 
-Model-driven apps support multiple browsers. You should make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
+Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

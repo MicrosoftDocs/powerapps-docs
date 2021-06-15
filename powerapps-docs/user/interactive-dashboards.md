@@ -21,16 +21,16 @@ search.app:
 
 Use interactive dashboards to filter and view your app data. Charts on an interactive dashboard serve as a simple filtering source. You can select different data points on a chart to filter data based on the filter criteria. 
 
-Interactive dashboards are system dashboards that only an admin can create. To learn more about how to create and configure interactive dashboards, go to [Create and configure model-driven app interactive experience dashboards](https://docs.microsoft.com/powerapps/maker/model-driven-apps/configure-interactive-experience-dashboards).
+Interactive dashboards are system dashboards that only an admin can create. To learn more about how to create and configure interactive dashboards, go to [Create and configure model-driven app interactive experience dashboards](../maker/model-driven-apps/configure-interactive-experience-dashboards.md).
 
-Interactive dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or entity-specific dashboards. The multi-stream dashboards display data in real time over multiple data streams. 
+Interactive dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or table-specific dashboards. The multi-stream dashboards display data in real time over multiple data streams. 
 
 
 > [!div class="mx-imgBorder"]
 > ![Multi-stream interactive dashboard.](media/interactive_dashboard.png "Multi-stream interactive dashboard") 
 
 
-The single-stream dashboards display real-time data over one stream based on an entity view. Visual filters are already applied. The tiles are positioned on the right side of the dashboards and are always shown.
+The single-stream dashboards display real-time data over one stream based on a table view. Visual filters are already applied. The tiles are positioned on the right side of the dashboards and are always shown.
 
 > [!div class="mx-imgBorder"]
 > ![Single-stream interactive dashboard.](media/single_stream.png "Single-stream interactive dashboard") 
@@ -70,3 +70,6 @@ The single-stream dashboards display real-time data over one stream based on an 
 
    > [!div class="mx-imgBorder"]
    > ![Clear filters.](media/clear_filter.png "Clear filters")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -63,3 +63,6 @@ For these examples, values in the **Percentage** column of the **Scores** data s
 | **Validate( Scores, EditRecord, Gallery.Updates )** |Checks whether values in all columns are valid for the **Scores** data source. In this example, the value in the **Percentage** column is **10**. |*blank* |
 | **Validate( Scores, EditRecord, Gallery.Updates )** | Checks whether values in all columns are valid for the **Scores** data source. In this example, the value in the **Percentage** column is **120**. |"Values must be between 0 and 100." |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

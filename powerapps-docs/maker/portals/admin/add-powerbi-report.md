@@ -1,23 +1,30 @@
 ---
-title: "Add a Power BI report or dashboard to a web page in a portal | MicrosoftDocs"
-description: "Instructions to add a Power BI report or dashboard to a web page in the portal."
+title: Add a Power BI report or dashboard to a web page in portal
+description: Learn how to add a Power BI report or dashboard to a web page in the portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/03/2020
+ms.date: 06/11/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add a Power BI report or dashboard to a web page in portal
+
+> [!TIP]
+> This article explains how to add a Power BI report or dashboard using *powerbi* Liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md).
 
 You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. Use the `powerbi` tag in the **Copy** field on a web page or in the **Source** field on a web template.
 
 If adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
 
-> [!TIP]
-> This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi).
+> [!NOTE]
+> - If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](/power-bi/service-share-dashboards).
+> - **powerbiembedded** supports Power BI dashboards and reports that connect to Azure Analysis Services. You can also use "customdata" property in liquid code to pass value for [CustomData](/dax/customdata-function-dax) property.
 
 For example: 
 
@@ -25,8 +32,52 @@ For example:
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01" %}
 ```
 
-> [!NOTE]
-> If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](https://docs.microsoft.com/power-bi/service-share-dashboards).
+To learn about how to get a dashboard path, and ID of the dashboard tile, refer to the sections later in this article.
+
+## Using a dashboard or report connecting to Azure Analysis Services
+
+You can add [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi) with a dashboard, or report that connects to [Azure Analysis Services](/azure/analysis-services/analysis-services-connect-pbi).
+
+To add a dashboard or report connecting to Azure Analysis Services, use [CustomData](/dax/customdata-function-dax) parameter in the connection string.
+
+For example:
+
+```
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/<GroupID>/reports/<ReportID>" roles:"<roles associated with report>" customdata:<customdata>" %}
+```
+
+The optional **customdata** tag can be configured as a string, or generated dynamically based on an object's attribute, using a period ("."), or square brackets ("[]") to separate between the object and the attribute, in between two pairs of curly brackets.
+
+Examples:
+- `customdata: {{ object.attribute }}`
+- `customdata: {{ object[attribute] }}`
+
+As the **customdata** tag returns a string, it may be necessary to convert this string to an integer in the [DAX query](/dax/dax-queries).
+
+> [!IMPORTANT]
+> - Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](/azure/analysis-services/analysis-services-gateway).
+> - Your portal version must be [9.3.4.x](../versions/version-9.3.4.x.md) or later for this feature to work.
+
+### Azure Analysis Services and Roles (RLS)
+
+The **roles** tag is optional for Azure Analysis Services based reports and dashboards. When not used, role defaults to the role the app is assigned to in Azure Analysis Services.
+
+However, this tag may become necessary to specify a certain role (or roles) among several available roles, and might still be required when using Row-Level security.
+
+Roles are contained within the Azure Analysis Services database and not in the report itself, unlike other Power BI report types.
+
+- Providing no roles in the Liquid code.
+
+    If no role is supplied in the Liquid code, the Azure Analysis Services role will be determined by the role(s) that the App has access to, and will filter the results based on the given custom data against the DAX query in the role(s). That is, all available roles will combine their accesses, but will still filter if the provided custom data is relevant. This scenario will most often be the case with Azure Analysis Services reports or single-tile dashboards.
+
+- Providing roles in the Liquid code.
+
+    Azure Analysis Services roles can be provided in the Liquid code, similar to RLS roles. Using these roles may be required when multiple roles are available, but you want to use specific roles for the page. When using any roles in the connection string, specifying Azure Analysis Services role is a must. For example, multi-tile dashboards that use Azure Analysis Services tiles with RLS tiles.
+
+    The following considerations apply when using Azure Analysis Services tiles in a dashboard:
+
+    - If an Azure Analysis Services tile is used in a dashboard with other tiles that require roles, the Azure Analysis Services role must be added to the list of roles.
+    - Multiple tiles from different Azure Analysis Services sources can be used with their own roles, but the custom data must be the same for each, and multiple custom data values cannot be used in the Liquid code.  The **customdata** tag and the **customdata** parameter for the EffectiveIdentity take only a string value.
 
 ## Get the path of a dashboard or report
 
@@ -61,8 +112,11 @@ You can use [powerbi-client JavaScript library](https://github.com/microsoft/Pow
 
 Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
 
+> [!IMPORTANT]
+> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and can be re-enabled using JavaScript library code.
+
 ```javascript
-$(function(){
+$(window).load(function(){
     var embedContainer = $(".powerbi")[0];
     var report = powerbi.get(embedContainer);
     report.on("loaded", function(){
@@ -168,6 +222,9 @@ More information: [Handling events](https://github.com/Microsoft/PowerBI-JavaScr
 
 ### See also
 
-- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
+- [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
 - [Set up Power BI integration](set-up-power-bi-integration.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,7 @@
 ---
 title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
-ms.date: 02/25/2020
+description: Provides container for useful methods.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -14,8 +15,6 @@ search.app:
 ---
 # Xrm.Utility (Client API reference)
 
-
-
 Provides a container for useful methods.
 
 ## Methods 
@@ -25,6 +24,7 @@ Provides a container for useful methods.
 |[closeProgressIndicator](xrm-utility/closeProgressIndicator.md) |[!INCLUDE[./xrm-utility/includes/closeProgressIndicator-description.md](./xrm-utility/includes/closeProgressIndicator-description.md)]|
 |[getAllowedStatusTransitions](xrm-utility/getAllowedStatusTransitions.md) |[!INCLUDE[./xrm-utility/includes/getAllowedStatusTransitions-description.md](./xrm-utility/includes/getAllowedStatusTransitions-description.md)]|
 |[getEntityMetadata](xrm-utility/getEntityMetadata.md) |[!INCLUDE[./xrm-utility/includes/getEntityMetadata-description.md](./xrm-utility/includes/getEntityMetadata-description.md)]|
+|[getEntityMainFormDescriptor](xrm-utility/getEntityMainFormDescriptor.md)|[!INCLUDE[./xrm-utility/includes/getEntityMainFormDescriptor-description.md](./xrm-utility/includes/getEntityMainFormDescriptor-description.md)]
 |[getGlobalContext](xrm-utility/getGlobalContext.md) |[!INCLUDE[./xrm-utility/includes/getGlobalContext-description.md](./xrm-utility/includes/getGlobalContext-description.md)]|
 |[getLearningPathAttributeName](xrm-utility/getLearningPathAttributeName.md) |[!INCLUDE[./xrm-utility/includes/getLearningPathAttributeName-description.md](./xrm-utility/includes/getLearningPathAttributeName-description.md)]|
 |[getPageContext](xrm-utility/getPageContext.md) |[!INCLUDE[./xrm-utility/includes/getPageContext-description.md](./xrm-utility/includes/getPageContext-description.md)]|
@@ -34,19 +34,21 @@ Provides a container for useful methods.
 |[refreshParentGrid](xrm-utility/refreshParentGrid.md) |[!INCLUDE[./xrm-utility/includes/refreshParentGrid-description.md](./xrm-utility/includes/refreshParentGrid-description.md)]|
 |[showProgressIndicator](xrm-utility/showProgressIndicator.md) |[!INCLUDE[./xrm-utility/includes/showProgressIndicator-description.md](./xrm-utility/includes/showProgressIndicator-description.md)]|
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+
 ## Deprecated methods
 
 The following table lists the new methods you should use instead of the deprecated methods in the **Xrm.Utility** namespace. These methods were deprecated in v9.0.
 
 |Deprecated Method | New method to be used | 
 | ------------- |-------------|
-|[alertDialog](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_alertDialog)|Xrm.Navigation.[openAlertDialog](Xrm-Navigation/openAlertDialog.md)|
-|[confirmDialog](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_confirmDialog)|Xrm.Navigation.[openConfirmDialog](Xrm-Navigation/openConfirmDialog.md)|
-|[getBarcodeValue](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_getBarcodeValue)|Xrm.Device.[getBarcodeValue](Xrm-Device/getBarcodeValue.md)|
-|[getCurrentPosition](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_getCurrentPosition)|Xrm.Device.[getCurrentPosition](Xrm-Device/getCurrentPosition.md)|
-|[openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_OpenEntityForm)|Xrm.Navigation.[openForm](Xrm-Navigation/openForm.md)|
-|[openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_openQuickCreate)|Xrm.Navigation.[openForm](Xrm-Navigation/openForm.md)|
-|[openWebResource](https://msdn.microsoft.com/library/jj602956.aspx#BKMK_OpenWebResource)|Xrm.Navigation.[openWebResource](Xrm-Navigation/openWebResource.md)|
+|[alertDialog](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_alertDialog)|Xrm.Navigation.[openAlertDialog](Xrm-Navigation/openAlertDialog.md)|
+|[confirmDialog](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_confirmDialog)|Xrm.Navigation.[openConfirmDialog](Xrm-Navigation/openConfirmDialog.md)|
+|[getBarcodeValue](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_getBarcodeValue)|Xrm.Device.[getBarcodeValue](Xrm-Device/getBarcodeValue.md)|
+|[getCurrentPosition](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_getCurrentPosition)|Xrm.Device.[getCurrentPosition](Xrm-Device/getCurrentPosition.md)|
+|[openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_OpenEntityForm)|Xrm.Navigation.[openForm](Xrm-Navigation/openForm.md)|
+|[openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_openQuickCreate)|Xrm.Navigation.[openForm](Xrm-Navigation/openForm.md)|
+|[openWebResource](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_OpenWebResource)|Xrm.Navigation.[openWebResource](Xrm-Navigation/openWebResource.md)|
 
 
 ### Related topics
@@ -59,3 +61,6 @@ The following table lists the new methods you should use instead of the deprecat
 
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

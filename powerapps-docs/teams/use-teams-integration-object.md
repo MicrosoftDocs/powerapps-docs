@@ -1,18 +1,16 @@
 ---
 title: Use Teams integration object | Microsoft Docs
 description: Learn how to use the Teams integration object when creating apps using Power Apps inside Teams.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/25/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Microsoft Teams integration object
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can use the Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. The availability of a *Teams integration object* can be validated by checking the presence of **Teams** control from the tree view.
 
@@ -21,11 +19,11 @@ You can use the Teams integration object to easily find and access the Teams int
 There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
 
 > [!NOTE]
-> To further integrate with Teams, you can use the [Microsoft Teams connector](https://docs.microsoft.com/connectors/teams/) with actions such as post a message, create a Teams meeting, list channels, and more.
+> To further integrate with Teams, you can use the [Microsoft Teams connector](/connectors/teams/) with actions such as post a message, create a Teams meeting, list channels, and more.
 
 ## Get the Teams theme
 
-Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar. More information: [UI components: Colors](/microsoftteams/platform/concepts/design/components/color)
+Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar.
 
 To retrieve a theme name, use the following formula.
 
@@ -86,9 +84,12 @@ Considering the Teams channel name as *General*, you can use the following formu
 
 ![Filtered items](media/teams-filtered-items.png "Filtered items")
 
-For more information about the Teams client SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). For more information about using context from Teams, go to [Use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+For more information about the Teams client SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). For more information about using context from Teams, go to [Use context from teams](./embed-teams-app.md#use-context-from-teams).
 
 ### See also
 
 [Manage your apps](manage-your-apps.md)  
 [Understand Power Apps Studio](understand-power-apps-studio.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

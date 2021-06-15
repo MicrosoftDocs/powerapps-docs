@@ -93,15 +93,15 @@ Use the *LaunchTarget* argument to specify the target browser window in which to
 
 | LaunchTarget&nbsp;enum | Description | 
 | --- | --- | 
-| **Blank** | The webpage or app is opened in a new window or tab. |
-| **Self** | The webpage or app replaces the current window or tab. |
+| **New** | The webpage or app is opened in a new window or tab. |
+| **Replace** | The webpage or app replaces the current window or tab. |
 | *name* | Instead of an enum value, use your own text string to *name* the window or tab.  *Self* is an internal only name that is only used by the **Launch** function. It has no impact on nor will it match the title of the window that your users see.  If a window or tab with the given *name* already exists, its contents will be replaced. Otherwise, a new window or tab will be created.  *name* can't begin with the underscore character "_". |
 
-**Blank** is the default enum when running in a web browser with **Self** and *name* as available options. In a mobile player, **Blank** is the default for webpages with *name* as an available option; while the current canvas app will always be replaced by another canvas app.
+**New** is the default enum when running in a web browser with **Replace** and *name* as available options. In a mobile player, **New** is the default for webpages with *name* as an available option; while the current canvas app will always be replaced by another canvas app.
 
 > [!NOTE]
-> - Using a *LaunchTarget* with any value other than **Blank** in embedded scenarios (for example, Power BI or SharePoint) is not supported and may result in unexpected behavior. In the future, this behavior may change, or may cause an error.
-> - *LaunchTarget* enum names are in transition. You may use **Blank** and **Self** currently, though these names will change in the future. **Self** will go through an intermediate change to **'Self'** as a new **Self** keyword is introduced. To avoid this conflict, the expected names may be **New** and **Replace**. Your app will automatically update when these changes occur. Your formulas won't need an update manually.
+> - Using a *LaunchTarget* with any value other than **New** in embedded scenarios (for example, Power BI or SharePoint) is not supported and may result in unexpected behavior. In the future, this behavior may change, or may cause an error.
+<!-- *LaunchTarget* enum names are in transition. You may use **Blank** and **Self** currently, though these names will change in the future. **Self** will go through an intermediate change to **'Self'** as a new **Self** keyword is introduced. To avoid this conflict, the expected names may be **New** and **Replace**. Your app will automatically update when these changes occur. Your formulas won't need an update manually.-->
 
 ### Security zones
 
@@ -254,3 +254,6 @@ The **Product Showcase** tablet layout template was used for the following examp
 ### See also
 
 [Canvas app formula reference](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

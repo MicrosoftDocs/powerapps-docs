@@ -57,7 +57,6 @@ The Office 365 Users connection has been created and added to your app. Now, it'
    `Office365Users.MyProfile().TelephoneNumber`  
    `Office365Users.MyProfile().UserPrincipalName`  
    `Office365Users.MyProfile().AccountEnabled`  
-   `Office365Users.MyProfile().BusinessPhones`
 
 The label shows the information that you entered about the current user.
 
@@ -113,7 +112,7 @@ The label shows the information that you entered about the current user.
 The label shows the information that you entered about the user you specified or that user's manager.
 
 > [!NOTE]
-> If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
+> If you're developing an app based on an entity in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
 
 For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
@@ -139,7 +138,7 @@ If you create a contact and select that contact in the browse screen of the app,
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
 2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
 
-    `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
+    `Office365Users.SearchUserV2({searchTerm: SearchTerm.Text})`
 
     The gallery shows users whose name contains the search text you entered.
 
@@ -316,3 +315,6 @@ Search for users: Retrieves search results of user profiles.
 ### See also
 * See all the [available connections](../connections-list.md).
 * Learn how to [add connections](../add-manage-connections.md) to your apps.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

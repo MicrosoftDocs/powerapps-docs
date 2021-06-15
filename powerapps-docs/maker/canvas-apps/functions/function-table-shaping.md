@@ -43,7 +43,7 @@ Use the **RenameColumns** function to rename one or more columns of a table by p
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
-For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Common Data Service, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
+For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Microsoft Dataverse, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
 
 The arguments to these functions support delegation. For example, a **Filter** function used as an argument to pull in related records searches through all listings, even if the **'[dbo].[AllListings]'** data source contains a million rows:
 
@@ -133,3 +133,6 @@ Let's try some of the examples from earlier in this topic.
 	As this graphic shows, the second formula returned a new table with the added column. The **ClearCollect** function captured the new table in the **FirstExample** collection, adding something to the original table as it flowed through the function without modifying the source:
 
 	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

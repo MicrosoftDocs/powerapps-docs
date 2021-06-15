@@ -5,9 +5,11 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: tapanm
-ms.date: 04/23/2020
+ms.date: 06/14/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -56,7 +58,7 @@ For more information about how to customize your formula for custom updates, see
 
 ## Popular connectors
 
-This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](https://docs.microsoft.com/connectors/connector-reference/).
+This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](/connectors/connector-reference/).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
@@ -64,8 +66,8 @@ This table has links to more information about our most popular connectors. For 
 | ![Dynamics AX](./media/connections-list/dynamics-ax.png) |[**Dynamics AX**](connections/connection-dynamicsax.md)|&nbsp; |![Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md)|
 | ![Microsoft Translator](./media/connections-list/microsoft-translator.png) |[**Microsoft Translator**](connections/connection-microsoft-translator.md)|&nbsp; | ![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](connections/connection-office365-outlook.md)|
 | ![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](connections/connection-office365-users.md)  |&nbsp; | ![Oracle](./media/connections-list/oracle-icon.png) |[**Oracle**](connections/connection-oracledb.md)|
-| ![Power BI](./media/connections-list/powerbi.png) |[**Power BI**](connections/connection-powerbi.md) |&nbsp; | ![SharePoint](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |
-| ![SQL Server](./media/connections-list/sql.png) |[**SQL Server**](connections/connection-azure-sqldatabase.md) |&nbsp; | ![Twitter](./media/connections-list/twitter.png) |[**Twitter**](connections/connection-twitter.md) |
+| ![Power BI](./media/connections-list/powerbi.png) |[**Power BI**](connections/connection-powerbi.md) |&nbsp; | ![SharePoint logo](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |
+| ![SQL Server](./media/connections-list/sql.png) |[**SQL Server**](connections/connection-azure-sqldatabase.md) |&nbsp; | ![Twitter logo](./media/connections-list/twitter.png) |[**Twitter**](connections/connection-twitter.md) |
 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive and OneDrive for Business
 
@@ -91,8 +93,14 @@ This type of connection is also secure.  For example Twitter uses this type of a
 
 ### SQL User name and password authentication
 
-This type of connection is not very secure because it does not rely on end-user authentication. **It should only be used in cases where you can safely assume that everyone who has access to this connection can see and use all of the data to which the connection provides access.**  You cannot reliably lock down portions of the data accessible within the connection. For instance, if the connection allows access to a single table, you cannot rely on a userID to filter only to only see data for that specific user within that table.  You need to use a more secure type of connection to do that.  In SQL Server, this type of connection is called **SQL Server Authentication**.   Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection.  For instance if you have a read-only database that is available to everyone in the company.  Reference data (e.g., corporate calendar) is a good candidate for this kind of connection.**
+This type of connection is not very secure because it does not rely on end-user authentication. **It should only be used in cases where you can safely assume that everyone who has access to this connection can see and use all of the data to which the connection provides access.**  You cannot reliably lock down portions of the data accessible within the connection. For instance, if the connection allows access to a single table, you cannot rely on a userID to filter only to only see data for that specific user within that table.  You need to use a more secure type of connection to do that.  In SQL Server, this type of connection is called **SQL Server Authentication**.   Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.**
 
 ### Windows Authentication
 
 This type of connection is not very secure because it doesn't rely on end-user authentication. Use Windows authentication when you need to connect to a data source that is **on-premises**. An example of this type of connection is to an on-premises server that has a SQL Server. The connection must go through a gateway. Since it goes through a gateway, the connector has access to all of the data on that data source. As a result, any information that you can access with the Windows credentials you supply are available to the connector. And once the application is published, the connection is also published and available to your users.  This means that your end users can also create applications using this same connection and access the data on that machine. Connections to the data source are also **Implicitly Shared** with users that the app is shared with. This type of connection may be valid when your data source only lives on an on-premises server and the data on that source is freely shareable.
+
+## Data sources in solutions
+
+Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

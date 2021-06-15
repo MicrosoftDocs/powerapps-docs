@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 02/05/2019
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -52,3 +52,6 @@ App properties define important details about the app, like its title or URL. Yo
   
 ## Next steps  
  [Create or edit an app](create-edit-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

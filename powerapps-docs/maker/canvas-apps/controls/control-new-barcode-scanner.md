@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2020
+ms.date: 01/07/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
@@ -97,3 +97,10 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 |AZTEC|✔|✔|
 
 **NOTE:** PDF_417 and AZTEC aren't supported in Auto mode
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

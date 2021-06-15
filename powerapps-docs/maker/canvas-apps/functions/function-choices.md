@@ -32,7 +32,7 @@ At this time, you can't [delegate](../delegation-overview.md) **Choices**. If th
 
 Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, use the formula **Gallery.Selected.SLA** to reference the SLA for the selected account. However, this reference has passed through a control, so it can't be passed to the **Columns** function - you must still use **Accounts.SLA**.
 
-At this time, you can use lookup columns only with SharePoint and Common Data Service.
+At this time, you can use lookup columns only with SharePoint and Microsoft Dataverse.
 
 ## Syntax
 **Choices**( *column-reference* )
@@ -43,17 +43,17 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 #### Choices for a lookup
 
-1. [Create a database](../../../administrator/create-database.md) in Common Data Service, and select the **Include sample apps and data** box.
+1. [Create a database](/power-platform/admin/create-database) in Dataverse, and select the **Include sample apps and data** box.
 
     Many entities, such as **Accounts**, are created.
 
     **Note**: Entity names are singular on make.powerapps.com and plural in Power Apps Studio.
 
-    ![A partial list of the fields from the Account entity in Common Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account entity in Dataverse for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
     The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
 
-    ![A partial list of the fields from the Contact entity in the Common Data Service](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact entity in the Dataverse](media/function-choices/entity-contact.png)
 
     For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
@@ -97,3 +97,6 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 1. In the middle of the **Data table** control, select the link that starts **Choose the fields...**, and then select the check boxes for the field or fields that you want to show (for example, **firstname** and **lastname**).
 
      ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: getFormFactor | Microsoft Docs
-description: 
+description: Returns information about the kind of device the user is using.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 0ad24866-08c3-4584-8964-decff50e716e
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Return Value
 
@@ -42,3 +42,5 @@ Type: `Number`
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

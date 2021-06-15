@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 08/10/2020
+ms.date: 04/21/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -15,25 +15,25 @@ search.app:
   - PowerApps
 ---
 # Attachments control in Power Apps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service entity.
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse entity.
 
 ## Limitations
 The attachment control has these limitations:
-1. Attachments are supported with SharePoint lists and Common Data Service entities.
+1. Attachments are supported with SharePoint lists and Dataverse entities.
 
-1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Common Data Service form.
+1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. You can upload files only if they're 10 MB or smaller.  
+1. You can upload files only if they're 50 MB or smaller.  
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Common Data Service entity.
+An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse entity.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 10 MB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
 
 **OnAddFile** – How the app responds when the user adds a new file attachment.
 
@@ -63,6 +63,8 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
+
+**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
@@ -116,3 +118,6 @@ The following properties must be present:
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

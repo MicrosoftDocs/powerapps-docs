@@ -142,9 +142,12 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 * [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/blog/support-for-lookups/)
 * [Performance, Refresh button, ForAll, and multiple field lookups](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
-* [Generate an app by using a Common Data Service database](data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
+* [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
+* [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
 
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

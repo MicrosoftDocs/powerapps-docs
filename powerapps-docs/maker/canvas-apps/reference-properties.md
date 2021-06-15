@@ -1,6 +1,6 @@
 ---
-title: Find a property | Microsoft Docs
-description: Find a property by control, by category, or alphabetically.
+title: Controls and properties in Power Apps | Microsoft Docs
+description: List of controls within Power Apps and their collection of common properties.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -54,7 +54,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Edit form](controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
-**[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
+**[Entity form](./controls/control-form-detail.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Microsoft Dataverse.
 
 **[Export](controls/control-export-import.md)** – Export data for use elsewhere in Power Apps.
 
@@ -545,3 +545,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### Z
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](controls/control-pdf-viewer.md)** controls.
+
+### See also
+
+[Limitations of controls in Power Apps](control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,18 +1,16 @@
 ---
 title: Understand Power Apps Studio | Microsoft Docs
 description: Learn the components inside Power Apps Studio.
-author: tapanm-msft
+author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.date: 06/07/2021
+ms.author: emcoope
+ms.reviewer: tapanm
 ---
 
 # Understand Power Apps Studio
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
@@ -21,7 +19,7 @@ builder called Power Apps Studio. You can use Power Apps Studio to design, build
 
 ![Power Apps Studio](media/studio-power-apps.png "Power Apps Studio")
 
-1. [Build hub](#1---build-hub) – select different tabs in the Power Apps app.
+1. [Build hub](#1---build-hub) – select different pages in the Power Apps app.
 
 1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings in a Power Apps Studio session.
 
@@ -69,7 +67,7 @@ options are relevant to the current session and app-related settings.
 - **Undo** – undo the last action.
 - **Redo** – repeat the last action.
 
-### Cut, copy and paste
+### Cut, copy, and paste
 
 ![Cut, copy and paste](media/studio-cut-copy-paste.png "Cut, copy and paste")
 
@@ -132,7 +130,7 @@ More information: [Change screen size and orientation](../maker/canvas-apps/set-
 Allows you to configure advanced settings for the app.
 
 - **Data row limit for non-delegable views** - Set the delegable data row limit. More information: [Understand delegation in canvas apps](../maker/canvas-apps/delegation-overview.md)
-- **Improve data source experience and Common Data Service views** - Use the improved data source experience when working with Common Data Service. More information: [Common Data Service and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
+- **Improve data source experience and Dataverse views** - Use the improved data source experience when working with Dataverse. More information: [Dataverse and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
 - **Preview, experimental and deprecated features** - Features that are in preview or experimental phases, or deprecated. More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
 
 ### Power Automate
@@ -164,12 +162,12 @@ version, and other session details. You can also turn the **Auto save** option *
 
 | Name | Description |
 | - | - |
-| Account | Allows to sign-out from the current session. |
+| Account | Allows to sign out from the current session. |
 | Environment | Shows the current environment name. |
 | Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
 | Power Apps version | Shows the version of Power Apps. |
 | About Power Apps | Additional information and help. |
-| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md?branch=teams-preview#about-tab)
+| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md#about)
 
 > [!NOTE]
 > We recommend that you keep the **Auto save** setting turned **On** and
@@ -252,7 +250,7 @@ The Power Apps app in Teams is described in detail in [Overview of the Power App
 
 ## 7 – App authoring menu
 
-On the left pane in Power Apps Studio, you switch between options such as **Insert**, **Data Sources**, **Media**, and **Advanced tools**.
+On the left pane in Power Apps Studio, you switch between options such as **Insert**, **Data Sources**, and **Media**.
 
 ![App authoring menu](media/studio-app-1.png "App authoring menu")
 
@@ -260,7 +258,7 @@ You can also select the expand button to expand the list to include names instea
 
 ## 8 – App authoring options
 
-The options for working with canvas apps change depending on the selection on the left pane, such as **Tree view**, **Insert**, **Data sources**, **Media**, or **Advanced tools**.
+The options for working with canvas apps change depending on the selection on the left pane, such as **Tree view**, **Insert**, **Data sources**, or **Media**.
 
 ![App authoring options](media/studio-app-2.png "App authoring options")
 
@@ -293,7 +291,7 @@ To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
 
 > [!TIP]
-> Project Oakdale provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
+> Dataverse for Teams provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
 
 #### Popular controls
 | **Name**      | **Description**                                                                                      |
@@ -311,6 +309,16 @@ select the control, or select **(...)** and then select **Add to canvas**.
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
+#### Classic controls
+
+Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** -> **Advanced settings** -> toggle **Classic controls** to **On** under experimental features.
+
+After you enable classic controls, you'll be able to see and add them from the **Classic** category.
+
+![Classic controls](media/classic-control.png "Classic controls")
+
+For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
+
 ### Data
 
 Add, refresh, or remove data sources from your canvas app. You
@@ -318,13 +326,13 @@ can add one or more
 [connections](../maker/canvas-apps/connections-list.md)
 by using data sources.  
 
-In addition to data stored within tables, there are a number of connectors available to interact with data in popular SaaS, services, and systems.
+In addition to data stored within tables, there are many connectors available to interact with data in popular SaaS, services, and systems.
 
 ![Data](media/studio-data.png "Data")
 
 ![Add data - select data source](media/studio-add-1.png "Add data - select data source")
 
-Select **Create new table** to create a new table in the Project Oakdale
+Select **Create new table** to create a new table in the Dataverse for Teams
 environment.
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
@@ -336,23 +344,23 @@ More information: [List of all Power Apps connectors](/connectors/connector-refe
 
 ### Visual editor
 
-When you select **Create new table** and enter a name for the new table, you open Visual Editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
+When you select **Create new table** and enter a name for the new table, you open visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
-![Visual Editor](media/studio-table-designer.png "Visual Editor")
+![Visual editor](media/studio-table-designer.png "Visual editor")
 
-To get started with Visual Editor, select **Create a table** and enter
+To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 ![Create table](media/studio-create-table.png "Create table")
 
 > [!NOTE]
-> You can use Visual Editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
+> You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
 
-#### Understand Visual Editor
+#### Understand visual editor
 
-Visual Editor allows you to work with table rows, columns and data.
+Visual editor allows you to work with table rows, columns, and data.
 
-![Authoring a table in Visual Editor](media/studio-table-1.png "Authoring a table in Visual Editor")
+![Authoring a table in visual editor](media/studio-table-1.png "Authoring a table in visual editor")
 
 ##### Table name
 
@@ -369,12 +377,12 @@ Select **Add row** to add a new row to the table.
 ##### Add columns
 
 Select **Add columns** to add new columns of the available column types
-supported by Visual Editor.
+supported by visual editor.
 
 ###### Supported column types
 
 Visual editor supports specific data types as columns. The following options
-are available when creating a new column using Visual Editor inside Power Apps Studio:
+are available when creating a new column using visual editor inside Power Apps Studio:
 
 - Text
 - Email
@@ -382,18 +390,18 @@ are available when creating a new column using Visual Editor inside Power Apps S
 - Phone
 - Auto number
 - Number
-- Date
+- Date (Only dates without the user locale (time zone) settings are supported.)
 - Decimal
 - Lookup
 - Choice
 - Yes/No
 
 > [!IMPORTANT]
-> To add columns of types that aren't supported by Visual Editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
+> To add columns of types that aren't supported by visual editor, such as file or image, [create a table](create-table.md) by using the solution explorer instead.
 
 ###### Advanced options
 
-The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of auto-numbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/common-data-service/types-of-fields.md)
+The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of autonumbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform/types-of-fields.md)
 
 ##### Show/hide columns
 
@@ -413,7 +421,7 @@ To save changes to a table, select **Save.** When you change a table and try to 
 
 ![Save changes](media/studio-save-table-changes.png "Save changes")
 
-To ensure that changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto-save functionality.
+To ensure that changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto save functionality.
 
 ![Saving changes](media/studio-saving-changes.png "Saving changes")
 
@@ -424,7 +432,7 @@ available data sources in **Data** on the left pane.
 
 ##### Visual editor view
 
-Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change Visual Editor layout.
+Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change visual editor layout.
 
 ##### Row count
 
@@ -454,14 +462,14 @@ Select the drop-down menu next to the column heading to view column-related opti
 
 After you add rows and columns, and add data, you can close the table and use it as
 the data source in your app. To edit content in the table, you can use
-the app controls or go back to Visual Editor.
+the app controls or go back to visual editor.
 
 To edit the table, select the table data source, and then select **Edit data** to
-open the table in Visual Editor.
+open the table in visual editor.
 
 ![Edit table data](media/studio-edit-2.png "Edit table data")
 
-After you close Visual Editor, the data source is automatically refreshed
+After you close visual editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
 to manually refresh Power Apps Studio to reflect the data in the controls you added on the canvas.
 
@@ -471,19 +479,10 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 
 ![Media](media/studio-media.png "Media")
 
-If you want to reference additional media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
+If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
 or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
-
-### Advanced tools
-
-Go to **Advanced tools** to work with the canvas app Monitor and the Test Studio. Canvas app Monitor is useful when debugging a canvas app or when diagnosing a problem with the app&mdash;such as investigating performance degradation or a time delay when the app is used. With Test Studio, you can
-develop and reuse tests specific to individual apps based on scenarios. These tests can be useful when automating canvas app testing during application lifecycle management (ALM) scenarios, such as releasing a new version of the app.
-
-![Advanced tools](media/studio-advanced-tools.png "Advanced tools")
-
-More information: [Debugging an app with canvas app Monitor](../maker/canvas-apps/monitor.md) and [Test Studio](../maker/canvas-apps/test-studio.md)
 
 ## 9 – Canvas/screen
 
@@ -492,7 +491,7 @@ The canvas shows the currently selected screen from the left pane.
 ## 10 – Properties pane
 
 The properties pane shows properties and options available for the currently
-selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows additional options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations.
+selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations.
 
 ![Properties pane](media/studio-properties-pane.png "Properties pane")
 
@@ -505,10 +504,13 @@ tree view. If the current selection is inside a container, or inside an individu
 
 You can zoom in or zoom out while authoring the canvas app. Select **Ctrl**+**0**
 **Fit to window** to fit the screen size
-based on the current authoring window size. Note that the zoom percentage or screen size you use while
+based on the current authoring window size. The zoom percentage or screen size you use while
 authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
 ### See also
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

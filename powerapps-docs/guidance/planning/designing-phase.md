@@ -52,3 +52,6 @@ This is where you'll consider things like:
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying tasks to be done in the app](app-tasks.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

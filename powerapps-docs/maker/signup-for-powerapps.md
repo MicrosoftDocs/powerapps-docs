@@ -4,8 +4,10 @@ description: Sign up for a free license that includes all Power Apps capabilitie
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
-ms.date: 07/20/2020
+ms.custom: 
+  - canvas
+  - intro-internal
+ms.date: 03/23/2020
 ms.author: alaug
 ms.reviewer: kvivek
 ---
@@ -14,27 +16,27 @@ ms.reviewer: kvivek
 You can explore all Power Apps capabilities for free by signing up for a Power Apps trial plan that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
-- Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
+- Create and run canvas apps that connect to Microsoft Dataverse and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
 - Create and run model-driven apps.
 - Create automated workflows with Power Automate.
-- Create and manage environments and Common Data Service databases.
+- Create and manage environments and Dataverse databases.
 
 If you have a Power Apps license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
-> - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/self-service-purchase-faq?view=o365-worldwide).
+> - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
 ## Identify your current license
 
-To find out which license or licenses you already have, try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
+To find out which license or licenses you already have:
 
-- If you can't sign in, you don't have any Power Apps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to Power Apps.
+1. Try to [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com, or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
 
-- If you can sign in, select the gear icon near the upper-right corner, and then select **Plans**.
+2. Select the gear icon near the upper-right corner, and then select **Plan(s)**.
 
     ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
 
@@ -89,8 +91,11 @@ Power Apps trial licenses are only available in the Azure commercial cloud. Powe
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Common Data Service will remain as it is, and any app or flow that uses Common Data Service will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Common Data Service), you'll be prompted to purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Dataverse will remain as it is, and any app or flow that uses Dataverse will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Dataverse), you'll be prompted to purchase a plan.
 
 ### More questions?
 
 Try the Power Apps [community](https://community.powerapps.com).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

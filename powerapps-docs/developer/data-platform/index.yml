@@ -1,0 +1,163 @@
+### YamlMime:Landing
+
+title: Microsoft Dataverse developer documentation
+summary: Learn how to write applications and web pages that can access Dataverse business data, extend the functionality of the platform through plug-ins and workflow, or interface your business data to external systems.
+
+metadata:
+  title: Dataverse developer documentation
+  description: Provides access to highlighted areas within the Dataverse developer documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: phecke
+  ms.author: pehecke
+  ms.date: 03/28/2021 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: "Developers: Get started"
+            url: get-started-developers.md
+          - text: "Developers: Understand terminology"
+            url: understand-terminology.md
+       - linkListType: learn
+         links:
+          - text: Introduction to Dataverse for developers
+            url: /learn/modules/intro-cds-developers-power-platform/
+         
+          
+  # Card
+  - title: Work with data
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Work with data using code
+            url: work-with-data.md
+          - text: Types and operations (Web API)
+            url: ./webapi/web-api-types-operations.md
+          - text: Entity operations (Organization service)
+            url: ./org-service/entity-operations.md
+          - text: Use FetchXML to query data
+            url: ./use-fetchxml-construct-query.md
+          - text: Use SQL to query data
+            url: ./dataverse-sql-query.md
+
+  # Card
+  - title: Integrate external data
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure integration
+            url: ./azure-integration.md
+          - text: Webhooks
+            url: ./use-webhooks.md
+          - text: Synchronize data with external system
+            url: ./data-synchronization.md
+          - text: Import data
+            url: ./import-data.md
+          - text: Data Export Service
+            url: ./data-export-service.md
+      
+
+  # Card
+  - title: Apply business logic
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Event framework
+            url: ./event-framework.md
+      - linkListType: overview
+        links:
+          - text: Plug-ins
+            url: ./plug-ins.md
+          - text: Workflow extensions
+            url: ./workflow/workflow-extensions.md
+      - linkListType: tutorial
+        links:
+          - text: Write and register a plug-in
+            url: ./tutorial-write-plug-in.md
+  
+  # Card
+  - title: Deploy and publish
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Solution concepts
+            url: ./introduction-solutions.md
+          - text: ALM for developers
+            url: /power-platform/alm/alm-for-developers
+      - linkListType: sample
+        links:
+          - text: Work with solutions using the SDK APIs
+            url: /power-platform/alm/solution-api
+      - linkListType: how-to-guide
+        links:
+          - text: Publish your app on AppSource
+            url: ./publish-app-appsource.md
+
+    # Card
+  - title: Create client applications
+    linkLists: 
+       - linkListType: overview
+         links:
+          - text: Authentication and the web services
+            url: authentication.md
+          - text: Build web applications using Server-to-Server (S2S) authentication
+            url: build-web-applications-server-server-s2s-authentication.md
+          - text: Use OAuth with CORS to connect an SPA
+            url: ./oauth-cross-origin-resource-sharing-connect-single-page-application.md
+          - text: Build Windows client applications using the XRM tools
+            url: xrm-tooling/build-windows-client-applications-xrm-tools.md
+       - linkListType: tutorial
+         links:  
+          - text: Register an app with Azure Active Directory
+            url: walkthrough-register-app-azure-active-directory.md
+
+  # Card
+  - title: Tools and resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: View the developer resources page
+            url: ./view-download-developer-resources.md
+          - text: Developer tools
+            url: ./developer-tools.md
+          - text: Microsoft Power Platform CLI
+            url: ./powerapps-cli.md
+          - text: Community tools
+            url: ./community-tools.md
+  
+  # Card
+  - title: Table and API reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Table reference
+            url: reference/about-entity-reference.md
+          - text: SDK API class libraries
+            url: /dotnet/api/?view=dynamics-general-ce-9
+          - text: Web API
+            url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
+          - text: XRM Tooling API Reference
+            url: /dotnet/api/?view=dynamics-xrmtooling-ce-9
+
+
+  # Card
+  - title: Related resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Canvas apps Developer Guide
+            url: ../../maker/canvas-apps/dev-enterprise-intro.md
+          - text: Model-driven apps Developer Guide
+            url: ../model-driven-apps/index.yml
+          - text: Power Apps component framework
+            url: ../component-framework/overview.md

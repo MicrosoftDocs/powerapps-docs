@@ -1,1 +1,1 @@
-Common Data Service Web Services
+Microsoft Dataverse Web Services

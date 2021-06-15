@@ -4,7 +4,8 @@ description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
 ms.date: 03/25/2020
-ms.author: v-lshann
+ms.service: powerapps
+ms.author: margoc
 ---
 # Learning catalog for Power Apps
 
@@ -102,3 +103,6 @@ Find the right online training, in-person workshops, and events for your role as
     :::column-end:::
 :::row-end:::
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

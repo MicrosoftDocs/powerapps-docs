@@ -1,6 +1,7 @@
 ---
 title: "getViewPortHeight (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getViewPortHeight method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -41,3 +42,6 @@ The viewport is the area of the page containing form data. It corresponds to the
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

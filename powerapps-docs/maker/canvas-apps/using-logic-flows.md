@@ -38,7 +38,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 1. Near the bottom of the page that appears, select **Search hundreds of connections and triggers**.
 
-1. In the search box, type **PowerApps**, and then select the **PowerApps** icon.
+1. In the search box, type **Power Apps**, and then select the **Power Apps** icon.
 
     ![Create a Power Apps trigger](./media/using-logic-flows/set-trigger.png)
     
@@ -99,3 +99,6 @@ You can use Power Automate to create logic that performs one or more tasks when 
 1. While holding down the Alt key, select the **[Button](controls/control-button.md)** control.
 
     A SharePoint item is created in the list that you specified with the text that you specified as the title. If the list was open when the flow ran, you might need to refresh your browser window to show the changes.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

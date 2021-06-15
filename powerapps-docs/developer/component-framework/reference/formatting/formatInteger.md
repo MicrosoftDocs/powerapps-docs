@@ -1,6 +1,6 @@
 ---
 title: formatInteger | Microsoft Docs
-description: 
+description: Returns a formatted string represents a given integer value.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Parameters
 
@@ -41,3 +41,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

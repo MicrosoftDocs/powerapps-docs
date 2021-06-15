@@ -50,7 +50,7 @@ Notice that the **Label1** control is selected, showing its **[Text](controls/pr
 
 The formula for **Label1** has been automatically recalculated, showing the new value.
 
-In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
+In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look familiar from Excel:
 
 `If( Value(Label1.Text) < 0, Red, Black )`
 
@@ -294,7 +294,7 @@ Let's recreate our adding machine by using a collection:
 
     **PaperTape**
 
-    In the right-hand pane, select the **Value** column to show it.
+    In the right-hand pane, select **Edit fields** and then select **Add field**, select **Value** column and then select **Add** to show it.
 
     ![Data table that shows the values added to the collection](media/working-with-variables/papertape-4.png)
 
@@ -320,3 +320,6 @@ Let's recreate our adding machine by using a collection:
 
 > [!NOTE]
 > **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

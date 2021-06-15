@@ -1,6 +1,6 @@
 ---
 title: "Use Power Automate to automate processes in model-driven apps| MicrosoftDocs"
-ms.custom: ""
+description: How to sse Power Automate to automate processes
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -19,15 +19,15 @@ search.app:
 ---
 # Use Power Automate to automate processes
 
-Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a flow on one or more records. 
+Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a flow on one or more rows. 
 
-Also, you can open Power Automate from your app to view, edit, or create new flows.  More information: [Get started with Power Automate](https://docs.microsoft.com/flow/getting-started)
+Also, you can open Power Automate from your app to view, edit, or create new flows.  More information: [Get started with Power Automate](/flow/getting-started)
 
 ## Manage your flows 
 Connect with Power Automate from your app to manage your flows.
   
 > [!NOTE]
-> To manage and run Power Automate from your app, Power Automate must be enabled in System Settings for you organization. More information:  [Flows in your organization](https://docs.microsoft.com/flow/organization-q-and-a) 
+> To manage and run Power Automate from your app, Power Automate must be enabled in System Settings for you organization. More information:  [Flows in your organization](/flow/organization-q-and-a) 
   
 1. On the command bar, select **Flow**.  
   
@@ -42,8 +42,11 @@ Connect with Power Automate from your app to manage your flows.
   
    -   Select **Login to flow** to connect with Power Automate and display available flows for you to run. This only appears if you aren’t currently signed in to Power Automate.   
 
-    For information about creating a flow, see [Get started with Power Automate](https://docs.microsoft.com/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
+    For information about creating a flow, see [Get started with Power Automate](../maker/canvas-apps/using-logic-flows.md#create-a-flow)  
     
  
     
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

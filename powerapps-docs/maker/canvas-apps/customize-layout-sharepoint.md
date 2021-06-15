@@ -41,7 +41,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service.
+[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Microsoft Dataverse.
 
 ## Open the generated app
 
@@ -148,3 +148,6 @@ In this tutorial, you've customized the gallery and made other changes to the de
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
