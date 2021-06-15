@@ -18,7 +18,7 @@ search.app:
 
 # Catalog and CatalogAssignment tables
 
-Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. More information: [Microsoft Dataverse business events](../../maker/data-platform/business-events.md)
+Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. More information: [Microsoft Dataverse business events](business-events.md)
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
 
@@ -500,7 +500,7 @@ For example:
 
 ### See also  
 
-[Microsoft Dataverse business events (preview)](../../maker/data-platform/business-events.md)<br />
+[Microsoft Dataverse business events (preview)](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
 [Create entities using the Organization Service](org-service/entity-operations-create.md)<br />

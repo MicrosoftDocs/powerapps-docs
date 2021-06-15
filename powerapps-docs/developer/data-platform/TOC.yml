@@ -159,6 +159,8 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Business Events (preview)
+    href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
   - name: Best Practices
