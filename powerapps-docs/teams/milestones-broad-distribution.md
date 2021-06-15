@@ -71,7 +71,7 @@ colleagues**.
 
 ![Sharing with colleagues](media/milestones-broad-distribution/colleague-can-use.png "Sharing with colleagues")
 
-# Granting Permissions to the tables
+## Understanding table permissions
 
 Understanding and assigning permissions to tables are vital to ensure proper security of your shared data. Here are the four permissions available for use.
 
