@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2020
+ms.date: 06/15/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
@@ -26,6 +26,8 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 > The web barcode scanner control is only supported on Microsoft Edge, Chrome, Firefox, and Opera browsers. All other browsers will show a warning that some features of the app won't work.
 
 ## Key properties
+
+**BarcodeType** - The barcode type to scan. Supported types: Codabar, Code39, Code128, EAN, I2of5, UPC. **Default: UPC**
 
 **Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses for scanning barcodes.
 
@@ -69,7 +71,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ### Add barcode scanner control
 
-1. Add a **barcode scanner** control, name it **Mybarcode scanner**
+1. Add a **barcode scanner** control, name it "Mybarcode scanner".
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 

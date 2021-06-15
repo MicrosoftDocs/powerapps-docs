@@ -1,8 +1,8 @@
 ---
-title: "Linq Query Examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Browse code samples of LINQ queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/09/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # LINQ query examples using OrganizationServiceContext with Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This topic contains many code samples of LINQ queries.  
   
@@ -202,8 +203,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="JoinUsingEntityFields"></a>   
-## Join using entity fields  
+<a name="JoinUsingEntityFields"></a>
+
+## Join using table column fields
+
  The following sample shows how to retrieve information about accounts from a list  
   
 ```csharp
@@ -272,7 +275,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
- The following sample shows how to retrieve a list of contacts where the FamilyStatusCode is 3. This corresponds to the **Marital Status** option of **Divorced**.  
+ The following sample shows how to retrieve a list of contacts where the FamilyStatusCode is 3. This corresponds to the **Marital Status** choice of **Divorced**.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -589,9 +592,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingFirstAndSingleOperators"></a>   
-## Use the First and Single operators  
- The following sample shows how to retrieve only the first contact record returned and retrieve only one contact record that matches the criterion.  
+<a name="BKMK_UsingFirstAndSingleOperators"></a>
+
+## Use the First and Single operators
+
+ The following sample shows how to retrieve only the first contact row returned and retrieve only one contact row that matches the criterion.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -608,9 +613,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_RetrievingFormattedValues"></a>   
-## Retrieving formatted values  
- The following sample shows how to retrieve the label for an optionset option, in this case the value for the current record status.  
+<a name="BKMK_RetrievingFormattedValues"></a>
+
+## Retrieving formatted values
+
+ The following sample shows how to retrieve the label for a choices option, in this case the value for the current row.
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -629,7 +636,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 <a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>   
 ## Use the Skip and Take operators without paging 
 
- The following sample shows how to retrieve just two records after skipping two records where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
+ The following sample shows how to retrieve just two rows after skipping two rows where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -674,8 +681,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>   
-## Use a self-join with a condition on the linked entity  
+<a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>
+
+## Use a self-join with a condition on the linked table row
+
  The following sample shows how to retrieve the names of two accounts where one account is the parent account of the other.  
   
 ```csharp
@@ -755,7 +764,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
- The following sample shows how to retrieve just the first 10 records.  
+ The following sample shows how to retrieve just the first 10 rows.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -779,9 +788,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_RetrievingRelatedEntityColumns"></a>   
-## Retrieve related entity columns for 1 to N relationships  
- The following sample shows how to retrieve columns from related account and contact records.  
+<a name="BKMK_RetrievingRelatedEntityColumns"></a>
+
+## Retrieve related table row columns for 1 to N relationships  
+
+ The following sample shows how to retrieve columns from related account and contact rows.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -799,8 +810,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>   
-## Use .value to retrieve the value of an attribute  
+<a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>
+
+## Use .value to retrieve the value of a column (attribute)
+
  The following sample shows usage of Value to access the value of an attribute.  
   
 ```csharp
@@ -857,8 +870,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingTheGetAttributeValueMethod"></a>   
-## Use the GetAttributeValue method  
+<a name="BKMK_UsingTheGetAttributeValueMethod"></a>
+
+## Use the GetAttributeValue method
+
  The following sample shows how to use the <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method.  
   
 ```csharp
@@ -999,9 +1014,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="BKMK_UseLoadProperty"></a>   
-## Use LoadProperty to retrieve related records  
- The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related records.  
+<a name="BKMK_UseLoadProperty"></a>
+
+## Use LoadProperty to retrieve related rows
+
+ The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related rows.  
   
 ```csharp
 Contact benAndrews = svcContext.ContactSet.Where(c => c.FullName == "Ben Andrews").FirstOrDefault();

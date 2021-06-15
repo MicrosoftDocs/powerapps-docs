@@ -1,6 +1,6 @@
 ---
 title: formatLanguage | Microsoft Docs
-description: Returns a formatted string that represents the datetime value after being formatted.
+description: Returns a formatted string that represents a given language.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 859ca133-92db-49d5-a68f-a2f47d8daa83
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps 
 
 ## Parameters
 

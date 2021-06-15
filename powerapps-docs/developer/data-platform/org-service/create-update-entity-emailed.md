@@ -1,8 +1,8 @@
 ---
-title: "Create and update an entity to send email activities to records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about creating an entity that contains an email address you can use to send email activities to records for that entity." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create and update a table to send email activities to rows (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about creating a table that contains an email address column you can use to send email activities to rows for that table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/05/2019
+ms.date: 06/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,15 +15,16 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and update an entity to send email activities to records
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Create and update a table to send email activities to rows
 
-You can create an entity that contains an email address you can use to send email activities to records for that entity.  
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+You can create a table definition that contains an email address you can use to send email activities to rows for that table.  
   
- The following sample code creates a custom entity and sets the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivityParty> property to `true`. It also creates a <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> attribute using <xref:Microsoft.Xrm.Sdk.Metadata.StringFormatName>.`Email` to provide an email address to use.  
+ The following sample code creates a custom table and sets the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivityParty> property to `true`. It also creates a <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column (attribute) using <xref:Microsoft.Xrm.Sdk.Metadata.StringFormatName>.`Email` to provide an email address to use.  
   
- Even if you add other <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> attributes formatted as an email address, only the first one specified is used.  
+ Even if you add other <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> columns formatted as an email address, only the first one specified is used.  
 
 ```csharp
 // Create the custom entity.
@@ -111,8 +112,7 @@ Console.WriteLine("A second email attribute has been added to the emailable enti
 
 ### See Also
 
-[Create entities using the Organization Service](entity-operations-create.md)  
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)
-
+[Create table rows using the Organization service](entity-operations-create.md)  
+[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
