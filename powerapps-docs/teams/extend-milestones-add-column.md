@@ -1,4 +1,3 @@
-
 ---
 title: Add a new column to Milestones sample app to track work items
 description: Learn how to add a new column to the Milestones Power Apps template for Microsoft Teams.
