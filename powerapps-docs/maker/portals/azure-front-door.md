@@ -23,13 +23,9 @@ As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-prem
 Follow these steps so setup Azure Front Door with portals:
 
 1. [Setup Azure Front Door endpoint and custom domain name that the portal end users will use](#setup-azure-front-door-endpoint-and-custom-domain-name).
-
 1. Configure your portal as the Origin.
-
 1. Setup routing rules to cache static requests.
-
 1. Setup WAF rules to analyze incoming requests.
-
 1. Setup portal to only accept traffic from Azure Front Door.
 
 ## Setup Azure Front Door endpoint and custom domain name
@@ -98,7 +94,9 @@ To setup Azure Front Door endpoint:
 
 ### Setup custom domain name
 
-So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using Azure Front Door URL. To setup a custom domain with Azure Front Door, you must do the following two tasks.
+So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using Azure Front Door URL.
+
+To setup a custom domain with Azure Front Door:
 
 1. Setup custom domain name on your portal.
 
@@ -120,29 +118,17 @@ So far, Azure Front Door endpoint has been setup to serve traffic from the Power
 
     1. Browsing to the custom domain name shows your portal page.
 
-Once these steps are completed, we have a basic Azure Front Door setup done for
-the Portal. In subsequent steps, we will be updating various settings and rules
-in order to make this setup efficient and handle various use cases
+After following these steps, you'll have a basic Azure Front Door endpoint setup completed for the portal. In the next steps, you'll update various settings and rules to make this configuration more efficient and better at handling different use cases.
 
-Configure Portal as Origin server 
-==================================
+## Configure portal as origin server
 
-Once the basic setup is done, next steps is to optimize the origin server
-settings in order to ensure that everything is setup correctly.
+The next steps is to optimize the origin server settings to ensure that the setup works correctly. To do this setup, start at the **Endpoint Manager** tab in Front Door configurations on Azure portal to update the origin group settings.
 
-To do this setup, we will start at “Endpoint Manager” tab in front door
-configurations on Azure Portal and work on Origin group settings
+![Endpoint manager](media/azure-front-door/endpoint-manager.png "Endpoint manager")
 
-![Graphical user interface, application Description automatically generated](media/azure-front-door/0ff85032976c8c913519d22e058dfe39.png)
+During quick create setup earlier, you've entered endpoint details that automatically created the configuration with the name **default-origin-group(associated)** (this name may vary depending on the locale settings). For this step, you'll modify the settings for this **default-origin-group**. The following image shows how the settings for this step looks like when you open it for the first time.
 
-During quick create setup in previous steps, we had provided some endpoint
-details which are automatically created with the name
-“default-origin-group(associated)” (could differ for different languages). For
-this step, we will modify the settings for this “default-origin-group”. This is
-how the settings for this step looks like when you will open it for the first
-time.
-
-![Graphical user interface, text, application, email Description automatically generated](media/azure-front-door/e25dca942f303cd29763e2ed266469ac.png)
+![Origin group as seen for the first time](media/azure-front-door/origin-group-initial.png "Origin group as seen for the first time")
 
 1.  Origins
 
