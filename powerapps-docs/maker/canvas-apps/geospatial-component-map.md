@@ -185,10 +185,10 @@ The following table lists the output properties available.
 
 
 
-| Property | Description |
-| -- | -- |
-| CenterLocation | Center location of the map. |
-| OnMapClick | The last clicked location on the map. |
+| Property | Description | Type |
+| -- | -- | -- |
+| CenterLocation | Center location of the map. | Not Applicable |
+| OnMapClick | The last clicked location on the map. | Not Applicable |
 | Selected | The selected pin on the map. | Record |
 | SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
 | GeocodedItems | The geocoded locations of the pins on the map. | Table |
