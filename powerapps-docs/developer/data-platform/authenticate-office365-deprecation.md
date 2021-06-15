@@ -20,6 +20,8 @@ search.app:
 
 Use of the WS-Trust authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service).
 
+Additionally, the WS-Trust protocol does not support modern forms of Multi-Factor Authentication and Conditional access controls to customer data.
+
 This change impacts custom client applications that use “Office365” authentication and the
 [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) or
 [Microsoft.Xrm.Tooling.Connector.CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient)
