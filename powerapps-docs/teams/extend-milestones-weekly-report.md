@@ -5,7 +5,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/15/2021
-author: joel.lindstrom
+author: joel-lindstrom
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -80,13 +80,12 @@ To complete this lesson, we would need the ability to login into Microsoft Teams
 ![Create an HTML table](media/extend-milestones-weekly-report/create-html-table.png "Create an HTML table")
 
 12.  Send an email (v2).
+- To – Created by Primary Email from the List Projects step.
 
-    - To – Created by Primary Email from the List Projects step.
-
-    - Subject – Project Work Item Status for [Name] (Name from the List Projects
+- Subject – Project Work Item Status for [Name] (Name from the List Projects
     step).
 
-    - Body – Output from the Create HTML table step.
+- Body – Output from the Create HTML table step.
 
 ![Send email step](media/extend-milestones-weekly-report/send-email.png "Send email step")
 
