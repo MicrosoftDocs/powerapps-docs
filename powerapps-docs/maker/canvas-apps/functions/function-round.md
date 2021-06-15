@@ -37,7 +37,7 @@ The **Int** and **Trunc** functions round a number to an integer (whole number w
 * **Int** rounds down to the nearest integer.  
 * **Trunc** truncates the number to just the integer portion by removing any decimal portion.  
 
-The difference between **Int** and **Trunc** is in handling of negative numbers.  For example, for an argument of `-4.3`, **Int** will return the integer further away from zero, `-5`, while **Trunc** will return the integer closer to zero, `-4`.   **Int** returns values that are unique amongst the five rounding functions, while **Trunc** returns the same values as **RoundDown** with 0 decimal places.
+The difference between **Int** and **Trunc** is in the handling of negative numbers.  For example, for an argument of `-4.3`, **Int** will return the integer further away from zero, `-5`, while **Trunc** will return the integer closer to zero, `-4`.   **Int** returns values that are unique amongst the five rounding functions, while **Trunc** returns the same values as **RoundDown** with 0 decimal places.
 
 Use **Trunc** to extract the decimal portion of a number by subtracting from the original, for example `X - Trunc(X)`.  
 
@@ -55,23 +55,27 @@ If you pass a single number, the return value is the rounded version of that num
 
 ## Examples
 
-| X  | Round( X, 0 ) | RoundUp( X, 0 ) | RoundDown( X, 0 ) | Int( X ) | Trunc( X ) |
+| `X`  | `Round( X, 0 )` | `RoundUp( X, 0 )` | `RoundDown( X, 0 )` | `Int( X )` | `Trunc( X )` |
 |:----:|:-----:|:-----:|:------:|:----:|:-----:|
 | 8.9 | 9 | 9 | 8 | 8 | 8 |
 | -8.9 | -9 | -9 | -8 | -9 | -8 |
+| 8.5 | 9 | 9 | 8 | 8 | 8 |
+| -8.5 | -9 | -9 | -8 | -9 | -8 |
 | 8.1 | 8 | 9 | 8 | 8 | 8 |
 | -8.1 | -8 | -9 | -8 | -9 | -8 |
 
-| X | Round( X, 2 ) | RoundUp( X, 2 ) | RoundDown( X, 2 ) | Round( X, -2 ) | RoundUp( X, -2 ) | RoundDown( X, -2 ) |
-|:----:|:----:|:------------:|:----------:|:-------:|:-------:|:-------:|
-| 430.123 | 430.12 | 430.13 | 430.12 | 400 | 500 | 400 |
-| 450.125 | 450.13 | 450.13 | 450.12 | 500 | 500 | 400 |
-| 479.128 | 479.13 | 479.13 | 479.12 | 500 | 500 | 400 |
+| `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | 
+|:----:|:----:|:------------:|:----------:|
+| 430.123 | 430.12 | 430.13 | 430.12 | 
+| 450.125 | 450.13 | 450.13 | 450.12 | 
+| 479.128 | 479.13 | 479.13 | 479.12 |
 
-| X | Round( X, -2 ) | RoundUp( X, -2 ) | RoundDown( X, -2 ) |
+| `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` |
 |:----:|:----:|:------------:|:----------:|
 | 430.123 | 400 | 500 | 400 |
-| 450.125 | 500 | 500 | 400 |
+| 449.942 | 400 | 500 | 400 |
+| 450.000 | 500 | 500 | 400 |
+| 450.124 | 500 | 500 | 400 |
 | 479.128 | 500 | 500 | 400 |
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
