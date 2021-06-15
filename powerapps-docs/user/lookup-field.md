@@ -46,8 +46,8 @@ Legend
 3. **New Record**: Create a new row. 
 4. **Types of records**: Select to filter by a table type such as Contact table or Account table. The number in front of **type of records** represents how many table are available to filter from.
 5. **Browse in a lookup column**: To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
-6. **Expand item**: Use the Right and Left arrow keys on your keyboard to expand collapse each item. For more information on keyboard shortcuts, see [Use keyboard shortcuts in Power Apps](keyboard-shortcuts).
-7. **Change View**: Select to switch to another view. For more information on views, see [Use grid filters](grid-filters#use-search-on-a-grid).
+6. **Expand item**: Use the Right and Left arrow keys on your keyboard to expand collapse each item. For more information on keyboard shortcuts, see [Use keyboard shortcuts in Power Apps](keyboard-shortcuts.md).
+7. **Change View**: Select to switch to another view. For more information on views, see [Use grid filters](grid-filters.md#use-search-on-a-grid).
 
 
 ## Types of lookups
