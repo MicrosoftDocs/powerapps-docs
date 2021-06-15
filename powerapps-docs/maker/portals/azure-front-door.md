@@ -116,12 +116,9 @@ So far, Azure Front Door endpoint has been setup to serve traffic from the Power
 
 1. Check the following to validate the setup:
 
-    1. Custom domain name is pointing to the Azure Front Door endpoint. This can be validated by doing nslookup and ensuring that a cname entry to Azure front
-    door endpoint is returned.  
-    If the cname entry is still pointing to portal server, then that needs to be
-    corrected.
+    1. Custom domain name is pointing to the Azure Front Door endpoint. Use [nslookup](/windows-server/administration/windows-commands/nslookup) to verify that a CNAME entry to the Azure Front Door endpoint returns correctly. If the CNAME entry is still pointing to portals, then that needs to be corrected.
 
-    1. When you browse to custom domain name, it is displaying Portal pages.
+    1. Browsing to the custom domain name shows your portal page.
 
 Once these steps are completed, we have a basic Azure Front Door setup done for
 the Portal. In subsequent steps, we will be updating various settings and rules
