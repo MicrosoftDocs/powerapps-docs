@@ -24,7 +24,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[Image](properties-visual.md)** – The name or URL of the image that appears in an image, audio, or microphone control. 
 
 > [!NOTE]
-> Use HTTPS for all external images to ensure compatibility with modern browsers.  The server that hosts the image must not require authentication.
+> Use HTTPS for all external images to ensure compatibility with modern browsers.  Ensure server that hosts the image must not require authentication.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
