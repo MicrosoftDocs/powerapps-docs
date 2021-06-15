@@ -136,7 +136,7 @@ Custom APIs created for external events should align to these principles:
 
 - They should not have any plug-in type specified for the main operation.
 - They should not allow any synchronous step registrations. 
-    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any asynchronous steps from being applied for this API.
+    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any synchronous steps from being applied for this API.
 - They should not have any response properties, only request parameters.
     - With no synchronous logic, there is no way to set response properties.
 
