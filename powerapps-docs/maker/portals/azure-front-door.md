@@ -98,39 +98,21 @@ To setup Azure Front Door endpoint:
 
 ### Setup custom domain name
 
-1.  Setup Custom domain name on AFD and Portal -\> Till now we have been able to
-    successfully setup an Azure Front Door which serves traffic from the portal
-    backend.  
-    However, this setup is still using Azure Front Door URL, in this step we
-    will setup a custom domain name. There are two parts to this setup: -
+So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using Azure Front Door URL. To setup a custom domain with Azure Front Door, you must do the following two tasks.
 
-    1.  Setup Custom domain name on your portals -\> First step here
-        is to setup the custom domain name on your portal. This step
-        is necessary because if this step is not done, then while serving the
-        traffic from custom domain name, browser will reject the cookies set by
-        portal server (as the domain would be different). This can lead to
-        multiple issues like captcha check failures, scaling issues etc.
+1. Setup custom domain name on your portal.
 
-        In order to do this setup, follow the standard custom domain name setup
-        doc described here
-        <https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/add-custom-domain>
+    Web browsers reject cookies set by Power Apps portals when you use Azure Front Door endpoint URL that is different from the URL of your portal. Hence, setup a custom domain name for both your portal and the Azure Front Door endpoint to problems such as captcha check failures, or scaling problems.
 
-    2.  Setup Custom domain name on your Front door instance -\> Once you are
-        finished with setting up custom domain on your portal, next
-        step is to enable it on front door so it can accept traffic. Following
-        steps are to be followed for this: -
+    To learn about how to setup custom domain name for your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
 
-        1.  Update your dns provider and remove the cname record we created in
-            previous step while doing custom domain name setup on portal. Ensure
-            that you are only updating cname record, you don’t have to remove
-            hostname setup on your portal.
+1. Setup custom domain name on your Azure Front Door resource.
 
-            This is because at dns level we will be pointing cname to azure
-            front door url (see subsequent steps) and the only purpose of
-            previous step was to ensure that custom host name is present on the
-            portal server. This ensures that portal server can serve traffic to
-            this custom domain name through front door and all the portal
-            cookies also have domain setup correctly.
+    After you've finished setting up custom domain name on your portal, enable it on the Azure Front Door resource so it can accept the traffic. For more information, see [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
+
+    1. Update your DNS provider and remove the CNAME record created earlier. Ensure that you only update the CNAME; no need to remove the origin host name.
+
+        This is because at dns level we will be pointing cname to azure front door url (see subsequent steps) and the only purpose of previous step was to ensure that custom host name is present on the portal server. This ensures that portal server can serve traffic to this custom domain name through front door and all the portal cookies also have domain setup correctly.
 
         2.  Setup custom domain name on Azure Front Door endpoint, following
             these steps
