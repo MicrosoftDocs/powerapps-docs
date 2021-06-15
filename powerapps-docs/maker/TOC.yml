@@ -1792,7 +1792,7 @@
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and depecations
-      href: ./portals/important-portal-changes-coming.md
+      href: ./portals/important-changes-deprecations.md
     - name: Supported web browsers
       href: ./portals/supported-web-browsers.md
     - name: Known issues

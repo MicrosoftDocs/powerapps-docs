@@ -37,6 +37,14 @@ Default value for all existing and newly provisioned portals is **None**.
 
 To learn how to configure site settings for portals, go to [Configure site settings for portals](configure/configure-site-settings.md)
 
+## Tracking for web page, web file, and login
+
+Starting with portals version [9.3.4.x](versions/version-9.3.4.x.md), the following functionality has been retired:
+
+- [Web page tracking](admin/portal-checker-analysis.md#web-page-tracking-enabled)
+- [Web file tracking](admin/portal-checker-analysis.md#web-file-tracking-enabled)
+- [Login tracking](admin/portal-checker-analysis.md#login-tracking-enabled)
+
 ### See also
 
 [Important changes (deprecations) coming in Power Apps, Power Automate, and customer engagement apps](/power-platform/important-changes-coming)
