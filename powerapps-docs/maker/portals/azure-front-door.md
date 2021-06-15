@@ -110,25 +110,18 @@ So far, Azure Front Door endpoint has been setup to serve traffic from the Power
 
     After you've finished setting up custom domain name on your portal, enable it on the Azure Front Door resource so it can accept the traffic. For more information, see [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
-    1. Update your DNS provider and remove the CNAME record created earlier. Ensure that you only update the CNAME; no need to remove the origin host name.
+    1. Update your DNS provider and remove the CNAME record created earlier during the custom domain setup for portals. Only CNAME needs to be updated, don't remove the origin host name. DNS will point CNAME to Azure Front Door endpoint. The only purpose of adding CNAME was to ensure that custom host name is present on portals. This presence ensures that portals can serve traffic to this custom domain name through Front Door, and all the portal cookies also have domain setup correctly.
 
-        This is because at dns level we will be pointing cname to azure front door url (see subsequent steps) and the only purpose of previous step was to ensure that custom host name is present on the portal server. This ensures that portal server can serve traffic to this custom domain name through front door and all the portal cookies also have domain setup correctly.
+    1. Setup custom domain name on Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain)
 
-        2.  Setup custom domain name on Azure Front Door endpoint, following
-            these steps
-            <https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-add-custom-domain>
-            .
+1. Check the following to validate the setup:
 
-            **Validate Setup -\>** Following things should be validated when the
-            setup is complete
-
-2.  Custom domain name is pointing to Azure Front Door endpoint. This can be
-    validated by doing nslookup and ensuring that a cname entry to Azure front
+    1. Custom domain name is pointing to the Azure Front Door endpoint. This can be validated by doing nslookup and ensuring that a cname entry to Azure front
     door endpoint is returned.  
     If the cname entry is still pointing to portal server, then that needs to be
     corrected.
 
-3.  When you browse to custom domain name, it is displaying Portal pages.
+    1. When you browse to custom domain name, it is displaying Portal pages.
 
 Once these steps are completed, we have a basic Azure Front Door setup done for
 the Portal. In subsequent steps, we will be updating various settings and rules
