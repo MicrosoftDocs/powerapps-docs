@@ -87,22 +87,16 @@ To setup Azure Front Door endpoint:
 
 1. Select **Review + Create** and complete the setup.
 
-**Validate Setup -\>**
+1. Validate the setup.
 
->   Once the setup is finished, after 5-10 mins, you should be able to browse to
->   the endpoint url (which we had setup above in format xxxx.yyy.azurefd.net)
->   and will notice that it is showing content coming from your Power Apps
->   portal
+    Once the setup is finished (5-10 minutes), browse to the endpoint URL (for example, `contoso.example.azurefd.net`) and verify that it shows the content from your Power Apps portal.
 
-![](media/azure-front-door/102610a21c40e86cfff2ec92e5e52536.png)
+    ![Browse the endpoint](media/azure-front-door/browse-endpoint.png "Browse the endpoint")
 
->   A screenshot of a video game Description automatically generated with medium
->   confidence
+    > [!TIP]
+    > If you see a "404 Not Found" response, try again after some time as the setup might not have finished.
 
->   However, in case during browsing, a generic page with http response as 404
->   is shown, then the setup is still ongoing and retry after sometime. Once you
->   are able to validate setup, move to the next step of setting up Custom
->   domain name
+### Setup custom domain name
 
 1.  Setup Custom domain name on AFD and Portal -\> Till now we have been able to
     successfully setup an Azure Front Door which serves traffic from the portal
