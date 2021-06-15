@@ -74,7 +74,7 @@ You can also search for an app by typing one or more characters in the search ba
 
 From the **Home** page, you can create apps, portals, chatbots and AI models:
 
-- [Get staerted with canvas apps](/powerapps/maker/canvas-apps/)
+- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
 - [Get started with portals](/powerapps/maker/portals/)
 - [Get started with chatbots](/powerapps/chatbots)
