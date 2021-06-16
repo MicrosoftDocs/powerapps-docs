@@ -23,7 +23,7 @@ As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-prem
 Follow these steps so setup Azure Front Door with portals:
 
 1. [Setup Azure Front Door endpoint and custom domain name that the portal end users will use](#setup-azure-front-door-endpoint-and-custom-domain-name).
-1. Configure your portal as the Origin.
+1. [Configure your portal as the Origin](#configure-portal-as-origin-server).
 1. Setup routing rules to cache static requests.
 1. Setup WAF rules to analyze incoming requests.
 1. Setup portal to only accept traffic from Azure Front Door.
@@ -72,7 +72,7 @@ To setup Azure Front Door endpoint:
     | Name | Name of the Front Door resource. |
     | Tier | Select a tier for the Front Door. For this tutorial, we've selected Premium tier that allows access to Microsoft managed rule set and bot prevention rule set for WAF. |
     | **Endpoint settings** | Settings for the Azure Front Door endpoint. |
-    | Endpoint name | Enter a name for your front door requests. This is the actual URL that will serve the traffic for end users. Later, we'll setup a custom domain name pointing to this URL. |
+    | Endpoint name | Enter a name for your Front Door requests. This is the actual URL that will serve the traffic for end users. Later, we'll setup a custom domain name pointing to this URL. |
     | Origin type | Select **Custom** as the origin type. |
     | Origin host name | Hostname of your Power Apps portal. <br> Format: `YourPortalName.powerappsportals.com` or `YourPortalName.microsoftcrmportals.com` without `https://` at the beginning. <br> For example, `contoso.powerappsportals.com` |
     | Private link | Don't enable the private link service. |
@@ -94,7 +94,7 @@ To setup Azure Front Door endpoint:
 
 ### Setup custom domain name
 
-So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using Azure Front Door URL.
+So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using the Front Door URL.
 
 To setup a custom domain with Azure Front Door:
 
@@ -108,7 +108,7 @@ To setup a custom domain with Azure Front Door:
 
     After you've finished setting up custom domain name on your portal, enable it on the Azure Front Door resource so it can accept the traffic. For more information, see [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
-    1. Update your DNS provider and remove the CNAME record created earlier during the custom domain setup for portals. Only CNAME needs to be updated, don't remove the origin host name. DNS will point CNAME to Azure Front Door endpoint. The only purpose of adding CNAME was to ensure that custom host name is present on portals. This presence ensures that portals can serve traffic to this custom domain name through Front Door, and all the portal cookies also have domain setup correctly.
+    1. Update your DNS provider and remove the CNAME record created earlier during the custom domain setup for portals. Only CNAME needs to be updated, don't remove the origin host name. DNS will point CNAME to Azure Front Door endpoint. The only purpose of adding CNAME was to ensure that custom host name is present on portals. This presence ensures that portals can serve traffic to this custom domain name through the Front Door, and all the portal cookies also have domain setup correctly.
 
     1. Setup custom domain name on Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain)
 
@@ -130,7 +130,7 @@ During quick create setup earlier, you've entered endpoint details that automati
 
 ![Origin group as seen for the first time](media/azure-front-door/origin-group-initial.png "Origin group as seen for the first time")
 
-Origins in Front Door represent the backend service that the Front Door edge servers connect to in order to serve the content to end users. You can have multiple origins added to Front Door in order to get content from multiple backend services.
+Origins in Azure Front Door represent the backend service that the Azure Front Door edge servers connect to in order to serve the content to end users. You can have multiple origins added to your Front Door in order to get content from multiple backend services.
 
 > [!TIP]
 > Power Apps portals provides high availability at its service layer, hence a single origin server is sufficient when setting up origins for portals.
@@ -147,7 +147,7 @@ Use the following settings when configuring origin for portals:
 | - | - |
 | Origin type | Custom |
 | Origin host name | Your portal host name. For example, `contoso.powerappsportals.com` |
-| Origin host header | Should be left empty, or use your custom domain name. This configuration is to ensure that Front Door sends the origin header as either a custom domain name, or just pass through whatever user provided while making the request. |
+| Origin host header | Should be left empty, or use your custom domain name. This configuration is to ensure that the Front Door sends the origin header as either a custom domain name, or just pass through whatever user provided while making the request. |
 | HTTP port | 80 |
 | HTTPS port | 443 |
 | Priority | 1 |
@@ -166,17 +166,11 @@ Validate the origin group configuration so it looks like the following image.
 
 ![Validate origin configuration](media/azure-front-door/origin-configuration-validate.png "Validate origin configuration")
 
-Setup Routing rules to cache static requests.
-=============================================
+## Setup routing rules to cache static requests
 
-After Step 1 and 2 are done, we come to a very important step which determines
-how we can use the edge caching capabilities of front door to be able to improve
-scalability of the portal.
+Routes determine how we use the edge caching capabilities of Azure Front Door to improve the scalability of a portal. It's also an important step to ensure that we're not caching dynamic content served by the portal that can lead to unintended data access.
 
-It is also an important step to ensure that we are not caching dynamic content
-served by portal which can lead to unintended data access.
-
-![Graphical user interface, application Description automatically generated](media/azure-front-door/0ff85032976c8c913519d22e058dfe39.png)
+![Configure routes](media/azure-front-door/configure-routes.png "Configure routes")
 
 For this setup, we will be doing two important things
 
