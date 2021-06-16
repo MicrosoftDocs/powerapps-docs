@@ -20,8 +20,6 @@ manage, and review Inspections. The three apps are – Inspections, Manage Inspe
 In this topic we will learn how to customize inspection steps in the user app e.g. removing the ability to add pictures to checklist steps. This is important
 because just deleting the particular control can cause issues with responsiveness and the look and feel of the app can get affected.
 
->[!NOTE] Before starting this topic, please review **How to customize Inspections** (insert link).
-
 ## Prerequisites
 
 To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Inspections Power Apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsInspection.
@@ -106,7 +104,7 @@ To complete this lesson, we would need the ability to login into Microsoft Teams
 1.  For this scenario (assuming all the changes made above were undone), we will have to set the Visible property of the Photo option label and icon to false and then move the Note option and the Task Options to the left. 
 2.  To hide the Photo option, we will select grpPhoto from the tree view and set Visible = false.
 
-![Hide Photo Option](media/customize-inspection-steps/set-grpphoto-visible-false.png "Hide Photo Option")
+![Photo visibility set to False](media/customize-inspection-steps/set-grpphoto-visible-false.png "Photo visibility set to False")
 
 3. The Note option needs to move to the left in place of the Photo option – for this copy the X property of the Photo Icon and paste it in the X property of the Note icon (Notice that the label also moves along with the icon – this is because the Note label’s X property is dependent on the Note icon’s X
    property and changes accordingly thus leaving no empty spaces – the Task option also reacts similarly) 
