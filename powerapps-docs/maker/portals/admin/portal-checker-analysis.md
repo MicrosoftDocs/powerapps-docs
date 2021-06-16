@@ -115,7 +115,7 @@ Apart from each table being enabled for change tracking, organizations on a whol
 4. Select **On** from the **Portal State** list.
 5. Select **Update**.
 
-### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or webpage.
+### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
 
 You may see a *Page Not Found* error message that appears different from the default error page content on the **Page Not Found** site marker and webpage.
 
@@ -135,7 +135,7 @@ For steps to check site marker configuration and ensure it points to the correct
 
 For steps to change the site marker to point to the correct **Page Not Found** webpage, go to [The Page Not Found site marker is pointing to a deactivated webpage](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
 
-## Webpage tracking enabled
+## Web page tracking enabled
 
 Enabling a portal webpage for page tracking can lead to performance issues in your portal. This functionality is deprecated since January 2018 release of Dynamics 365 Portals. More information: [Dynamics 365 Portals: Deprecated Features](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/)
 
@@ -255,7 +255,7 @@ This issue occurs when the **Home** site marker is available but isn't pointing 
 3.    Find the **Home** site marker record.
 4.    Update the **Page** field to point to an active homepage of your portal.
 
-## The Home site marker is pointing to a deactivated webpage
+## The Home site marker is pointing to a deactivated web page
 
 This issue occurs when the **Home** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
@@ -293,7 +293,7 @@ This issue occurs when the **Profile** site marker is available but isn't pointi
 3.    Find the **Profile** site marker record.
 4.    Update the **Page** field to point to an active profile page of your portal.
 
-## The Profile site marker is pointing to a deactivated webpage
+## The Profile site marker is pointing to a deactivated web page
 
 This issue occurs when the **Profile** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
@@ -351,7 +351,7 @@ This issue occurs when the **Access Denied** site marker is available but isn't 
 3.    Find the **Access Denied** site marker record.
 4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
-## The Access Denied site marker is pointing to a deactivated webpage
+## The Access Denied site marker is pointing to a deactivated web page
 
 This issue occurs when the **Access Denied** site marker is available, but is pointing to a deactivated webpage (root or content page can be deactivated). To fix this issue:
 
