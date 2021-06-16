@@ -2200,8 +2200,12 @@
               href: ../teams/perspectives.md
             - name: Understand Perspectives (Preview) sample app architecture
               href: ../teams/perspectives-architecture.md
-        - name: Profile+ (Preview)
-          href: ../teams/profile-app.md
+        - name: Perspectives
+          items:
+            - name: Profile+ (Preview)
+              href: ../teams/profile-app.md
+            - name: Understand Profile+ (Preview) sample app architecture
+              href: ../teams/profile-plus-architecture.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
