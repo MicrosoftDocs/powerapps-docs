@@ -1310,6 +1310,9 @@
       href: ./model-driven-apps/use-customizable-help.md
   - name: Use performance insights
     href: ./common/performance-insights-overview.md
+    items:
+    - name: Understand performance insights
+      href: ./common/performance-insights-categories.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
