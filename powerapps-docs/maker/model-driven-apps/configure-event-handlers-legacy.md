@@ -6,7 +6,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 02/22/2021
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType: 
   - maker
