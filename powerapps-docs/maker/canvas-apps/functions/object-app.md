@@ -92,7 +92,7 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
 
 > [!NOTE]
-> App object has two more additional properties `OnMessage` and `BackEnabled` which are experimental properties and will go away from the app object in future. We recommend not to use this properties in your production environment.
+> App object has two more additional properties `OnMessage` and `BackEnabled` which are experimental properties and will go away from the app object in future. We recommend not to use these properties in your production environment.
 
 ### Example
 
