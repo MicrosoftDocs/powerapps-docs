@@ -130,44 +130,26 @@ During quick create setup earlier, you've entered endpoint details that automati
 
 ![Origin group as seen for the first time](media/azure-front-door/origin-group-initial.png "Origin group as seen for the first time")
 
-1.  Origins
+Origins in Front Door represent the backend service that the Front Door edge servers connect to in order to serve the content to end users. You can have multiple origins added to Front Door in order to get content from multiple backend services.
 
-    1.  Origins in front door represent the backend service which front door
-        edge servers connect to in order to serve the content to end users.
+> [!TIP]
+> Power Apps portals provides high availability at its service layer, hence a single origin server is sufficient when setting up origins for portals.
 
-    2.  You can have multiple origins added to front door in order to get
-        content from multiple backend services.
+The single origin for portals should point to the hostname of your portal (setup earlier during quick setup). If you didn’t follow quick setup steps, you can add a new origin pointing to your portal hostname. 
 
-    3.  In this setup, however we will keep it to a single origin since Portal
-        service itself provides high availability at its service layer.
+Use the following settings when configuring origin for portals:
 
-        1.  This single origin should be pointing to the hostname of your portal
-            which we had setup earlier during quick setup.
-
-        2.  If you didn’t follow quick setup steps, you can add a new origin
-            pointing to your portal hostname. Following settings should be used
-            while configuring origin
-
-            1.  Origin type -\> Custom
-
-            2.  Hostname -\> your portal hostname
-
-            3.  Origin Host header -\> Should be left empty or use your custom
-                domain name. This is to ensure that front door send the origin
-                header as either custom domain name or just pass through
-                whatever user provided while making the request.
-
-            4.  Http port -\> 80
-
-            5.  https port -\> 443
-
-            6.  Priority -\> 1
-
-            7.  Weight -\> 1000
-
-            8.  Private Link -\> Disabled
-
-            9.  Status -\> Check “Enable this origin”
+| Option | Configuration type or value |
+| - | - |
+| Origin type | Custom |
+| Origin host name | Your portal host name. For example, `contoso.powerappsportals.com` |
+| Origin host header | Should be left empty, or use your custom domain name. This configuration is to ensure that Front Door sends the origin header as either a custom domain name, or just pass through whatever user provided while making the request. |
+| HTTP port | 80 |
+| HTTPS port | 443 |
+| Priority | 1 |
+| Weight | 1000 |
+| Private link | Disabled |
+| Status | Check "Enable this origin" |
 
 ![Graphical user interface, application Description automatically generated](media/azure-front-door/c545683ab8295ea28e188cb945ac6571.png)
 
