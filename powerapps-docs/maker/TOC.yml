@@ -901,6 +901,8 @@
             href: ./canvas-apps/northwind-orders-canvas-part3.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Build a multi-language app
+        href: ./canvas-apps/multi-language-apps.md
       - name: Make an app accessible
         items:
           - name: Create an accessible app
@@ -1715,11 +1717,11 @@
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
             href: ./portals/component-framework-tutorial.md            
-        - name: Use Power Apps CLI (Preview)
+        - name: Use Microsoft Power Platform CLI (Preview)
           items:
-          - name: Overview of portals support for Power Apps CLI
+          - name: Overview of portals support for Microsoft Power Platform CLI 
             href: ./portals/power-apps-cli.md
-          - name: "Tutorial: Use Power Apps CLI with portals"
+          - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
           - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
@@ -1789,6 +1791,8 @@
           href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
+    - name: Supported web browsers
+      href: ./portals/supported-web-browsers.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
@@ -2066,7 +2070,7 @@
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
-    href: /power-platform/admin/wp-security-cds.md
+    href: /power-platform/admin/wp-security-cds
   - name: Privileges for customization
     href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
