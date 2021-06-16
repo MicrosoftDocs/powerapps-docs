@@ -90,6 +90,10 @@ Use **ConfirmExitMessage** to provide a custom message in the confirmation dialo
 
 In a browser, the confirmation dialog box might appear with a generic message from the browser.
 
+
+> [!NOTE]
+> App object has two more additional properties `OnMessage` and `BackEnabled` which are experimental properties and will go away from the app object in future. We recommend not to use this properties in your production environment.
+
 ### Example
 
 1. Create an app that contains two form controls, **AccountForm** and **ContactForm**.
