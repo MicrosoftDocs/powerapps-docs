@@ -1,7 +1,7 @@
 ---
 title: "Add the calendar control to tables in model-driven apps | MicrosoftDocs"
 description: "Learn how to add the calendar control to tables in model-driven apps."
-ms.date: 05/11/2020
+ms.date: 06/15/2021
 ms.service: powerapps
 ms.topic: how-to
 author: sbmjais
@@ -29,7 +29,10 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 3.  Select **Customize the System**.
 
-4.  Under **Components** in the solution explorer, expand **Tables**, and then select an table. For example, **Activity**.
+4.  Under **Components** in the solution explorer, expand **Tables**, and then select a table. For example, **Activity**.
+
+    > [!IMPORTANT]
+    > For **Description** and **Regarding** columns to be displayed in the Calendar Control v2, the table where the Calendar Control V2 is configured must be created as an activity table. More information: [Activity tables](../data-platform/types-of-entities.md#activity-tables)
 
 5.  On the **Controls** tab, select **Add Control**.
 
