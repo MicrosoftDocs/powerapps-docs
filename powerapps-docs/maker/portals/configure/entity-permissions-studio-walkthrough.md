@@ -1,11 +1,11 @@
 ---
-title: Tutorial - configure table permissions using portals Studio (Preview)
+title: Tutorial - configure table permissions using portals Studio
 description: This article walks through a scenario with step-by-step example about how to configure security by using table permissions for a portal using Power Apps portals Studio.
 author: ckwan-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/27/2021
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
@@ -13,17 +13,11 @@ contributors:
     - ckwan-ms
 ---
 
-# Tutorial: Configure table permissions using portals Studio (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Tutorial: Configure table permissions using portals Studio
 
 In the previous article, you learned about how to configure security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step tutorial.
 
 The goal of using this scenario is to show how to use portals Studio to configure table permissions with real-world case study. The scenario showcases using each [access type available in portals Studio](entity-permissions-studio.md#available-access-types-in-studio) to match the real-world scenario with a business requirement with the relevant Microsoft Dataverse tables, and table relationships.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -67,12 +61,13 @@ Contoso has the following relationships configured between tables in Dataverse.
 
 Contoso has the following customizations configured for this scenario.
 
-- Web pages have table permissions enabled. More information: [Manage page permissions](webpage-access-control.md)
+- Lists on web pages have table permissions enabled. More information: [Configure lists](entity-lists.md)
 - Web pages have [lists](entity-lists.md) configured with the tables, views, and the ability to create/view/edit/delete records as appropriate.
-    - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission.
-    - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions.
-    - To show [all car dealerships](#view-all-car-dealerships), the web page has list with a view from the **Dealerships** table having View, Create, Edit, and Delete records permissions.
+    - To show [all car listings to all authenticated users](#view-all-car-listings), the web page has list with a view from the **Car listings** table with only View record permission. Access type: [Global access](assign-entity-permissions.md#global-access-type).
+    - To show, update, and delete [owned car listings](#view-update-and-delete-owned-car-listings), the web page has list with a view from the **Car listings** table having View, Create, Edit, and Delete records permissions. Access type: [Contact access](assign-entity-permissions.md#contact-access-type).
+    - To show [all car dealerships](#view-all-car-dealerships), the web page has list with a view from the **Dealerships** table having View, Create, Edit, and Delete records permissions. Access type: [Account access](assign-entity-permissions.md#account-access-type).
     - To show [car listings for an associated dealership](#view-car-listings-for-associated-dealership), the web page has a list with a view from the **Dealerships** table. This list can be used to view the dealership details, with view having subgrid that shows the car listings associated to the selected dealership with View, Create, Edit, and delete records permissions.
+- Default [profile page](#change-profile-details) to allow sales staff to change their contact details. Access type: [Self access](assign-entity-permissions.md#self-access-type).
 
 ## View all car listings
 
@@ -233,6 +228,42 @@ To configure table permissions for sales staff to view associated dealership's c
 
 1. Select **Save**.
 
+## Change profile details
+
+Contoso uses the default profile page available with the portal template to allow sales staff to update their contact details.
+
+![Contoso Limited - sales staff able to change their own profile information](media/entity-permissions-studio-walkthrough/self-access.png "Contoso Limited - sales staff able to change their own profile information")
+
+To configure table permissions for sales staff to view associated dealership's car listings:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select **Settings** (:::image type="icon" source="media/entity-permissions-studio/settings.png":::) on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Enter table permission name as "Staff contact details".
+
+1. Select **Contact** table.
+
+1. Select **Self access** as the access type.
+
+1. Select **Read**, and **Write** privileges.
+
+1. Select **Add roles**.
+
+1. From the list of available roles, select **Authenticated Users**.
+
+    ![Contoso Limited - self access](media/entity-permissions-studio-walkthrough/contoso-ltd-self-access.png "Contoso Limited - self access")
+
+1. Select **Save**.
+
 ## Summary
 
 Now that you have all the table permissions configured, this is how the permissions look like inside portals Studio.
@@ -243,6 +274,7 @@ Now that you have all the table permissions configured, this is how the permissi
 - **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access** access type.
 - **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
 - **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
+- **Staff contact details** - This table permission allows sales staff the ability to change their profile information (their own Contact record).
 
 This scenario explained how to configure table permissions in a real-world scenario to achieve business goals. You can now use the learnings from this tutorial to configure table permissions for your portal to meet your business requirements.
 

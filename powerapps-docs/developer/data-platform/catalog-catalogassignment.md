@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 04/01/2021
+ms.date: 06/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,11 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Catalog and CatalogAssignment tables (Preview)
+# Catalog and CatalogAssignment tables
 
-[This article is pre-release documentation and is subject to change.]
-
-Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. 
+Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. More information: [Microsoft Dataverse business events](business-events.md)
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
 
@@ -254,7 +252,7 @@ You can create catalogs and catalog assignment records using either the Web API 
 
 The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: `ContosoCustomerManagement`. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
 
-See the [Create a record using the Web API](webapi/create-entity-web-api.md) sections: [Basic Create](webapi/create-entity-web-api.md#basic-create) and [Associate entity records on create](webapi/create-entity-web-api.md#associate-entity-records-on-create) for more information.
+See the [Create a record using the Web API](webapi/create-entity-web-api.md) sections: [Basic Create](webapi/create-entity-web-api.md#basic-create) and [Associate table rows on create](webapi/create-entity-web-api.md#associate-table-rows-on-create) for more information.
 
 #### Create the root catalog
 
@@ -502,6 +500,7 @@ For example:
 
 ### See also  
 
+[Microsoft Dataverse business events (preview)](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
 [Create entities using the Organization Service](org-service/entity-operations-create.md)<br />

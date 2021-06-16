@@ -22,7 +22,7 @@
       href: discovery-service.md
     - name: Use XRM Tooling
       href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
-- name: Entity operations
+- name: Table  operations
   href: entity-operations.md
   items:
   - name: Query Data
@@ -41,19 +41,19 @@
         href: use-the-columnset-class.md
       - name: Page large result sets with QueryExpression
         href: page-large-result-sets-with-queryexpression.md
-      - name: Use a left outer join in QueryExpression to query for records "not in"
+      - name: Use a left outer join in QueryExpression to query for rows "not in"
         href: use-left-outer-join-queryexpression-query-records-not-in.md
     - name: Use the QueryByAttribute class
       href: use-querybyattribute-class.md
-  - name: Create entities
+  - name: Create table rows
     href: entity-operations-create.md
-  - name: Retrieve an entity
+  - name: Retrieve a table row
     href: entity-operations-retrieve.md
-  - name: Update and Delete entities
+  - name: Update and delete table rows
     href: entity-operations-update-delete.md
-  - name: Associate and disassociate entities
+  - name: Associate and disassociate table rows
     href: entity-operations-associate-disassociate.md
-  - name: Access entity data faster using partitions
+  - name: Access table data faster using partitions
     href: azure-storage-partitioning-sdk.md
 - name: Use messages
   href: use-messages.md
@@ -71,9 +71,9 @@
       href: build-queries-with-linq-net-language-integrated-query.md
     - name: Use LINQ to construct a query
       href: use-linq-construct-query.md
-    - name: Use late-bound entity class with a LINQ query
+    - name: Use late-bound Entity class with a LINQ query
       href: use-late-bound-entity-class-linq-query.md
-    - name: Order results using entity attributes with LINQ
+    - name: Order results using table columns with LINQ
       href: order-results-entity-attributes-linq.md
     - name: Page large result sets with LINQ
       href: page-large-result-sets-linq.md
@@ -86,24 +86,24 @@
   items:
   - name: Create extensions for the code generation tool
     href: extend-code-generation-tool.md
-- name: Work with metadata
+- name: Work with table definitions (metadata)
   href: work-with-metadata.md
   items:
-  - name: Create custom entity
+  - name: Create custom tables
     href: create-custom-entity.md
-  - name: Work with attribute metadata
+  - name: Work with column definitions
     href: metadata-attributemetadata.md  
-  - name: Insert, update, delete, and order global option set options
+  - name: Insert, update, delete, and order global choices
     href: metadata-global-option-set-options.md
-  - name: Customize option sets
+  - name: Customize choices
     href: metadata-option-sets.md
-  - name: Create and retrieve entity relationships
+  - name: Create and retrieve table relationships
     href: metadata-relationshipmetadata.md
-  - name: Retrieve and detect changes to metadata
+  - name: Retrieve and detect changes to definitions
     href: metadata-retrieve-detect-changes.md
-  - name: Retrieve, update, and delete entities
+  - name: Retrieve, update, and delete tables
     href: metadata-retrieve-update-delete-entities.md 
-  - name: Create an entity to send email activities
+  - name: Create a table row to send email activities
     href: create-update-entity-emailed.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and Organization service

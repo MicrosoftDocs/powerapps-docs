@@ -1,7 +1,7 @@
 ---
 title: "PostComment table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PostComment table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ A comment on an activity feed post.
 |Create|POST [*org URI*]/api/data/v9.0/postcomments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postcomments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -55,11 +54,31 @@ A comment on an activity feed post.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [LargeText](#BKMK_LargeText)
 - [PostCommentId](#BKMK_PostCommentId)
 - [PostId](#BKMK_PostId)
 - [Text](#BKMK_Text)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_LargeText"></a> LargeText
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the text of a post comment.|
+|DisplayName|Text|
+|Format|Email|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|largetext|
+|MaxLength|1073741823|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
 
 
 ### <a name="BKMK_PostCommentId"></a> PostCommentId
@@ -103,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|text|
-|MaxLength|4000|
+|MaxLength|1000|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -305,9 +324,32 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|postidname|
-|MaxLength|4000|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+<a name="onetomany"></a>
+
+## One-To-Many Relationships
+
+Listed by **SchemaName**.
+
+
+### <a name="BKMK_post_comment_activity_file_attachment"></a> post_comment_activity_file_attachment
+
+**Added by**: Activities Patch Solution
+
+Same as activityfileattachment table [post_comment_activity_file_attachment](activityfileattachment.md#BKMK_post_comment_activity_file_attachment) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|activityfileattachment|
+|ReferencingAttribute|parentid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|post_comment_activity_file_attachment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

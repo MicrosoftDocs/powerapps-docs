@@ -15,8 +15,6 @@ contributors:
 
 # Dataverse entity tags
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
 ## chart
@@ -235,7 +233,7 @@ Provide **only one** of id, name, or key to select the List to load.
 
 **id**
 
-Loads an list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
+Loads a list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
 
 ```
 {% entitylist id:936DA01F-9ABD-4d9d-80C7-02AF85C822A8 %}
@@ -257,7 +255,7 @@ Loaded list {{ entitylist.adx_name }}.
 
 **name**
 
-Loads an list by name.
+Loads a list by name.
 
 ```
 {% entitylist name:My List %}
@@ -269,7 +267,7 @@ Loaded list {{ entitylist.adx_name }}.
 
 **key**
 
-Loads an list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the list will be loaded by ID. Otherwise, it will be loaded by name.
+Loads a list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the list will be loaded by ID. Otherwise, it will be loaded by name.
 
 ```
 <!-- key_variable can hold an ID or name -->

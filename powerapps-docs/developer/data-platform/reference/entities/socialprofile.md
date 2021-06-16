@@ -1,7 +1,7 @@
 ---
 title: "SocialProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SocialProfile table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ This entity is used to store social profile information of its associated accoun
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/socialprofiles(*socialprofileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/socialprofiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -896,7 +895,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_SocialProfile_createdonbehalfby](#BKMK_lk_SocialProfile_createdonbehalfby)
 - [socialProfile_owning_user](#BKMK_socialProfile_owning_user)
 - [lk_SocialProfile_modifiedonbehalfby](#BKMK_lk_SocialProfile_modifiedonbehalfby)
-- [owner_SocialProfile](#BKMK_owner_SocialProfile)
 - [Socialprofile_customer_accounts](#BKMK_Socialprofile_customer_accounts)
 
 
@@ -923,10 +921,6 @@ See systemuser Table [socialProfile_owning_user](systemuser.md#BKMK_socialProfil
 ### <a name="BKMK_lk_SocialProfile_modifiedonbehalfby"></a> lk_SocialProfile_modifiedonbehalfby
 
 See systemuser Table [lk_SocialProfile_modifiedonbehalfby](systemuser.md#BKMK_lk_SocialProfile_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_SocialProfile"></a> owner_SocialProfile
-
-See owner Table [owner_SocialProfile](owner.md#BKMK_owner_SocialProfile) One-To-Many relationship.
 
 ### <a name="BKMK_Socialprofile_customer_accounts"></a> Socialprofile_customer_accounts
 

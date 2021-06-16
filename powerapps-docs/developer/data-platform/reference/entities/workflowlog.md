@@ -1,7 +1,7 @@
 ---
 title: "WorkflowLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the WorkflowLog table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Log used to track process execution.
 |Create|POST [*org URI*]/api/data/v9.0/workflowlogs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -850,27 +849,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|systemuser|
 |Type|Lookup|
 
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_workflowlog_FileAttachments"></a> workflowlog_FileAttachments
-
-Same as fileattachment table [workflowlog_FileAttachments](fileattachment.md#BKMK_workflowlog_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workflowlog_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -890,8 +868,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_translationprocess_workflowlogs](#BKMK_lk_translationprocess_workflowlogs)
 - [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
 - [lk_workflowlog_modifiedonbehalfby](#BKMK_lk_workflowlog_modifiedonbehalfby)
-- [FileAttachment_WorkflowLog_Inputs](#BKMK_FileAttachment_WorkflowLog_Inputs)
-- [FileAttachment_WorkflowLog_Outputs](#BKMK_FileAttachment_WorkflowLog_Outputs)
 
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
@@ -945,14 +921,6 @@ See expiredprocess Table [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
 See systemuser Table [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_WorkflowLog_Inputs"></a> FileAttachment_WorkflowLog_Inputs
-
-See fileattachment Table [FileAttachment_WorkflowLog_Inputs](fileattachment.md) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_WorkflowLog_Outputs"></a> FileAttachment_WorkflowLog_Outputs
-
-See fileattachment Table [FileAttachment_WorkflowLog_Outputs](fileattachment.md) One-To-Many relationship.
 
 ### See also
 
