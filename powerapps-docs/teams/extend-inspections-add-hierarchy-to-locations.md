@@ -21,8 +21,6 @@ By default the Inspection app is designed for a single store. But what if you pe
 
 In this topic we will learn how to update the app to add a hierarchy of stores so that inspections can be performed for different stores.
 
-> [!NOTE] Before starting this topic, please review [How to customize Inspections](customize-inspections.md)
-
 ## Prerequisites
 
 To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Inspections Power Apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsInspection.
