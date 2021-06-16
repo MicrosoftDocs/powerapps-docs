@@ -116,7 +116,7 @@ To share an app for broad distribution, follow these steps:
 
 4.  Select **Share with colleagues**.
 
-![Share with colleagues button](media/how-templates-were-built/share--with-colleagues.png "Share with colleagues button")
+![Share with colleagues button](media/how-templates-were-built/share-with-colleagues.png "Share with colleagues button")
 
 5.  In the **Enter or select a security group** field enter a security group or Team with which you want to share access to your app.
 
@@ -129,7 +129,7 @@ To share an app for broad distribution, follow these steps:
 Users will now be able to find your app in the Teams store in the **Built for[company name]** section.
 
 >NOTE 
->You will need to set table permissions for the Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [You can now share Dataverse for Teams apps beyond a team \|Microsoft Power Apps](https://powerapps.microsoft.com/en-us/blog/you-can-now-share-dataverse-for-teams-apps-beyond-a-team/).
+>You will need to set table permissions for the Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [You can now share Dataverse for Teams apps beyond a team \|Microsoft Power Apps](https://powerapps.microsoft.com/blog/you-can-now-share-dataverse-for-teams-apps-beyond-a-team/).
 
 >NOTE
->This document highlights some of the approaches taken when designing the Teams template apps. For additional resources on bet practices for building Power Apps, please refer to [Guidance](https://docs.microsoft.com/en-us/powerapps/guidance/planning/introduction) section of the Power Apps docs.
+>This document highlights some of the approaches taken when designing the Teams template apps. For additional resources on bet practices for building Power Apps, please refer to [Guidance](https://docs.microsoft.com/powerapps/guidance/planning/introduction) section of the Power Apps docs.
