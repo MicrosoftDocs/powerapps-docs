@@ -1,6 +1,6 @@
 ---
 title: Int, Round, RoundDown, RoundUp, and Trunc functions | Microsoft Docs
-description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in Power Apps
+description: Reference information, including syntax, for the Int, Round, RoundDown, RoundUp, and Trunc functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -57,12 +57,12 @@ If you pass a single number, the return value is the rounded version of that num
 
 | `X`  | `Round( X, 0 )` | `RoundUp( X, 0 )` | `RoundDown( X, 0 )` | `Int( X )` | `Trunc( X )` |
 |:----:|:-----:|:-----:|:------:|:----:|:-----:|
-| 8.9 | 9 | 9 | 8 | 8 | 8 |
-| -8.9 | -9 | -9 | -8 | -9 | -8 |
-| 8.5 | 9 | 9 | 8 | 8 | 8 |
-| -8.5 | -9 | -9 | -8 | -9 | -8 |
-| 8.1 | 8 | 9 | 8 | 8 | 8 |
-| -8.1 | -8 | -9 | -8 | -9 | -8 |
+| 7.9  | 8  | 8  | 7  | 7  | 7  |
+| -7.9 | -8 | -8 | -7 | -8 | -7 |
+| 7.5  | 8  | 8  | 7  | 7  | 7  |
+| -7.5 | -8 | -8 | -7 | -8 | -7 |
+| 7.1  | 7  | 8  | 7  | 7  | 7  |
+| -7.1 | -7 | -8 | -7 | -8 | -7 |
 
 | `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | 
 |:----:|:----:|:------------:|:----------:|
