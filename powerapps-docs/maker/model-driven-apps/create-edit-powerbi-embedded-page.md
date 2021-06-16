@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 09/24/2020
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 ms.author: "aorth"
 manager: "kvivek"
 author: "adrianorth"

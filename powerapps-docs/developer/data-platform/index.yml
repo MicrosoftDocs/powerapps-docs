@@ -130,7 +130,7 @@ landingContent:
             url: ./view-download-developer-resources.md
           - text: Developer tools
             url: ./developer-tools.md
-          - text: Microsoft Power Apps CLI
+          - text: Microsoft Power Platform CLI
             url: ./powerapps-cli.md
           - text: Community tools
             url: ./community-tools.md
