@@ -5,18 +5,18 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 06/16/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - navjotm
+    - joel-lindstrom
 ---
 
 # Understand Profile + sample apps architecture
 
-In this article, you'll learn about the collections and global variables used by the [Profile +](profile-app.md) app, and understand how to use them
-effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Profile + sample apps](profile-app.md).
+In this article, you'll learn about the collections and global variables used by the [Profile +](profile-app.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Profile + sample apps](profile-app.md).
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ The following connectors are used in the Issue Reporting app:
 
 -   **Location** - Used to capture the user's location for Planner tasks.
 
--   **Microsoft Planner** - Used to create tasks
+-   **Microsoft Planner** - Used to create tasks.
 
 ## Data Model
 
@@ -59,46 +59,46 @@ The following connectors are used in the Issue Reporting app:
 
 | Table name                | Description                                                                                                                                                                                                                                                                     |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Open Positions            | A table to store Open Positions. Details such as name, Manager Email, Description and Link to Apply whom was it created or modified are stored under the Open entity.                                                                                                           |
-| Expertise Tag             | An Expertise tags stores expertise records that are available to users to add to their profile.  Details such as name, the expertise tag unique id to which it is associated to and the date when the expertise was created on, modified on are stored under Expertise entity.  |
+| Open Positions            | A table to store Open Positions. Details such as name, Manager Email, Description, and Link to Apply whom was it created or modified are stored under the Open entity.                                                                                                           |
+| Expertise Tag             | An Expertise tag stores expertise records that are available to users to add to their profile.  Details such as name, the expertise tag unique ID to which it is associated to and the date when the expertise was created on, modified on are stored under Expertise entity.  |
 | Project Tag               | A Project tags stores projects records that are available to users to add to their profile. Details such as the name, Project tag.                                                                                                                                              |
 | Person Position           | Table to store people’s profile. Details such as intro, LinkedIn URL, Goal are stored under Person Position Entity.                                                                                                                                                             |
-| Profile Plus User Setting | Table to store if a user has logged into the app or not and if they want others to send them requests Details such as Name, Created By, Created On, Email is stored under User Settings Entity.                                                                                 |
+| Profile Plus User Setting | Table to store if a user has logged into the app or not and if they want others to send them requests details such as Name, Created By, Created On, Email is stored under User Settings Entity.                                                                                 |
 
 ## Collections
 
 | Collection Name                     | Description                                                  | Screen Used                                                  |
 | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | colLocalization                     | Used to build a localization collection based on the user language. | OnStart property of the App                                  |
-| colOldExpertise                     | Collection of expertise tags which were previously added by the user. | Onselect Property of the Save My Profile button on the Profile Screen |
-| colOpenPositions                    | Collection of all open positions.                            | Onselect Property of the Add Open Positions on the Profile Screen |
+| colOldExpertise                     | Collection of expertise tags that were previously added by the user. | OnSelect Property of the Save My Profile button on the Profile Screen |
+| colOpenPositions                    | Collection of all open positions.                            | OnSelect Property of the Add Open Positions on the Profile Screen |
 | colFilteredProfiles                 | Collection of profiles returned by the selected filter.      | items property of galFilteredResults on the Profile Screen   |
-| colFilteredProfileEmails            | Collection of emails of filtered profiles, used to populate colFilteredProfiles. | Onselect property of the Apply button on the Profile Screen  |
-| colFilteredProfileEmailsByExpertise | Collection of profile emails that have the selected expertise. | Onselect property of the Apply button on the Profile Screen  |
-| colFilteredProfileEmailsByProject   | Collection of profile emails that have the selected project. | Onselect property of the Apply button on the Profile Screen  |
-| colNewExpertise                     | Collection of new expertise tags which are  added by the user. | Onselect Property of the Save My Profile Button on the Profile Screen |
+| colFilteredProfileEmails            | Collection of emails of filtered profiles, used to populate colFilteredProfiles. | OnSelect property of the Apply button on the Profile Screen  |
+| colFilteredProfileEmailsByExpertise | Collection of profile emails that have the selected expertise. | OnSelect property of the Apply button on the Profile Screen  |
+| colFilteredProfileEmailsByProject   | Collection of profile emails that have the selected project. | OnSelect property of the Apply button on the Profile Screen  |
+| colNewExpertise                     | Collection of new expertise tags that are  added by the user. | OnSelect Property of the Save My Profile Button on the Profile Screen |
 | colFilteredUsers                    | Collection of filtered Users                                 |                                                              |
-| colOldProjects                      | Collection of projects which were previously added by the user | Onselect Property of the Save My Profile Button on the Profile Screen |
-| colNewProjects                      | Collection of new projects which are added by the user.      | OnSelect Property of the Save button on the Profile screen   |
-| colDeletedOpenPositions             | Positions being deleted by the user.                         | Onselect Property of the Save My Profile button on the Profile Screen |
+| colOldProjects                      | Collection of projects that were previously added by the user | OnSelect Property of the Save My Profile Button on the Profile Screen |
+| colNewProjects                      | Collection of new projects that are added by the user.      | OnSelect Property of the Save button on the Profile screen   |
+| colDeletedOpenPositions             | Positions being deleted by the user.                         | OnSelect Property of the Save My Profile button on the Profile Screen |
 | colDirectReports                    | collection of direct reports of the selected user profile.   | OnSelect property of the Search Results button on the Profile Screen |
 | colUserSettings                     | Collection of User Settings.                                 | OnSelect Property of the Save button on the Settings screen  |
 | colCharWidth                        | Collection of width of characters.                           | OnStart property of the app                                  |
-| colTeamMembers                      | collection of team members associated with  on the user who logged in. | Onselect property of the Apply team member button on the Team Screen |
+| colTeamMembers                      | collection of team members associated with  on the user who logged in. | OnSelect property of the Apply team member button on the Team Screen |
 | colSelectedTeamMembers              | collection of selected team members.                         | OnSelect Property of the Start Team Members button           |
-| colFilteredMembersEmailsByExpertise | Collection of team members filtered by expertise.            | Onselect property of the Apply team member button on the Team Screen |
-| colFilteredMembersEmailsByProject   | Collection of team members filtered with projects.           | Onselect property of the Apply team member button on the Team Screen |
-| colFilteredMembersEmails            | Collection of Team members filtered emails                   | Onselect property of the Apply team member button on the Team Screen |
-| colFilteredMembers                  | collection of filtered members                               | Onselect property of the Apply team member button on the Team Screen |
+| colFilteredMembersEmailsByExpertise | Collection of team members filtered by expertise.            | OnSelect property of the Apply team member button on the Team Screen |
+| colFilteredMembersEmailsByProject   | Collection of team members filtered with projects.           | OnSelect property of the Apply team member button on the Team Screen |
+| colFilteredMembersEmails            | Collection of Team members filtered emails                   | OnSelect property of the Apply team member button on the Team Screen |
+| colFilteredMembers                  | collection of filtered members                               | OnSelect property of the Apply team member button on the Team Screen |
 | colSelectedProfiles                 | Collection of selected profiles.                             |                                                              |
 
 ## Global Variables
 
 | Variable Name                   | Type    | Description                                                  |
 | ------------------------------- | ------- | ------------------------------------------------------------ |
-| gblAppLoaded                    | Boolean | To check whether the app is completely loaded.               |
+| gblAppLoaded                    | Boolean | To check whether the app is loaded.               |
 | gblUserLanguage                 | Text    | To check the logged in user’s language.                      |
-| gblHasProfileLoaded             | Table   | Used to store character width for diff fonts, weights, sizes etc. |
+| gblHasProfileLoaded             | Table   | Used to store character width for different fonts, weights, and sizes. |
 | gblThemeDark                    | Boolean | To check whether the Teams theme is set to dark.             |
 | gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to high contrast.    |
 | gblMobileMode                   | Boolean | Variable to check whether the app is running on mobile.      |
@@ -110,9 +110,9 @@ The following connectors are used in the Issue Reporting app:
 | gblAppColors                    | Record  | Variable to set the color value in the app.                  |
 | gblAppSizes                     | Record  | Variable to set the color value in the app.                  |
 | gblAppStyles                    | Record  | Variable to set the styling values in the app.               |
-| gblProject                      | Record  | Variable to store a project record which is in context.      |
+| gblProject                      | Record  | Variable to store a project record that is in context.      |
 | gblIsTeamsContext               | Boolean | Variable to check context of group of teams.                 |
-| gblHasTeamLoaded                | Boolean | Variable to check the team has completely loaded.            |
+| gblHasTeamLoaded                | Boolean | Variable to check the team has loaded.            |
 
 ### App OnStart
 
@@ -135,17 +135,17 @@ This section explains the collections, variables, and execution details used on 
 | gblThemeDark                     | Global variable to store if Teams is running in dark mode.                  |
 | gblThemeHiCo                     | Global variable to store if Teams is running in contrast mode.              |
 | gblMobileMode                    | Global variable to store if the app is being accessed from a mobile device. |
-| gblAppSetting_inputMobileOnWeb   | Global variable to scale fonts for mobile                                   |
-| gblAppSetting_inputMobile        | Global variable to scale fonts for mobile                                   |
+| gblAppSetting_inputMobileOnWeb   | Global variable to scale fonts for mobile.                                   |
+| gblAppSetting_inputMobile        | Global variable to scale fonts for mobile.                                   |
 | gblAppSetting_inputScaleFontsBy  | Global variable for scaling all fonts by a fixed amount.                    |
-| gblCurrUserEmail                 | Global variable to store the current user email address                     |
+| gblCurrUserEmail                 | Global variable to store the current user email address.                     |
 
 ##### OnStart execution details
 
 1.  When a user accesses the app, **gblAppLoaded** is set to false. The user profile loading **gblHasProfileLoaded** is set to false. The user’s language
     code is stored in **gblUserLanguage**, with English - US being the default one.
     
-2.  The user’s language is then used to collect localized text used throughout the app (e.g. label and button text) in **colLocalization**.
+2.  The user’s language is then used to collect localized text used throughout the app (for example, label and button text) in **colLocalization**.
     
 3.  The label’s auto width is calculated and stored in **colCharsWidth**
 
@@ -156,11 +156,11 @@ This section explains the collections, variables, and execution details used on 
 
 This section explains the collections, variables, and execution details used when navigating to the profile and team screens.
 
-##### Profile screen navigation collections
+#### Profile screen navigation collections
 
 No collections are used when navigating to the profile screen.
 
-##### Profile screen navigation variables
+#### Profile screen navigation variables
 
 The following variables are used when navigating to the profile screen.
 
@@ -202,7 +202,7 @@ The following execution details are used when displaying the welcome dialog.
 
 1.  The first screen will show only once when any user opens the app for the first time to show the detailed view about the app and once the user selects **Continue** the second screen will be shown on how the app has been created and two options are available.
     
-2.  Don’t show this again once you check this the user settings will be updated to not show this pop up and if the user doesn’t select the check box and
+2.  Don’t show this again once you check the user settings will be updated to not show this pop up and if the user doesn’t select the check box and
     select **Got it** then this pop up will be shown each time
 
 #### Displaying the Organization structure
@@ -226,22 +226,22 @@ The following variables are used when displaying the organization structure.
 | Variable name                 | Description                                                                             |
 |-------------------------------|-----------------------------------------------------------------------------------------|
 | locSelectedProfilesEmail      | Local variable to store the selected profile email.                                     |
-| locScreenReaderAnnouncedText  | Local variable to start the announcement of screen reader                               |
-| locShowConnectOptions         | Local variable to show the connections available for the user to connect with           |
-| locSelectedPerson             | Local variable to store the user profile                                                |
-| locFilterProfile              | Local variable to store the profiles filter                                             |
-| locFilterApplied              | Local variable to store the profiles filter                                             |
-| locProjectFilterChanged       | Local variable to store the project changed in the filter                               |
-| locExpertiseFilterChanged     | Local variable to store the expertise changed in the filter                             |
-| locProjectFilterSelected      | Local variable to store the project selected in the filter                              |
-| locExpertiseFilterSelected    | Local variable to store the expertise selected in the filter                            |
-| locProfileForViewing          | Local variable to store the profile selected for viewing                                |
-| locViewProfile                | Local variable to store the profile                                                     |
-| locViewProfileDetails         | Local variable to store the profile details                                             |
-| locViewingSearchResult        | Local variable to show the matching results after the search                            |
-| locSetFocusTimerStart         | Local variable to set the focus timer start based on a control                          |
-| locSetFocusControlTarget      | Local variable to save the control                                                      |
-| locSelectedPersonManager      | Local variable to store the manager of the user profile                                 |
+| locScreenReaderAnnouncedText  | Local variable to start the announcement of screen reader.                               |
+| locShowConnectOptions         | Local variable to show the connections available for the user to connect with.           |
+| locSelectedPerson             | Local variable to store the user profile.                                                |
+| locFilterProfile              | Local variable to store the profile filter.                                             |
+| locFilterApplied              | Local variable to store the profile filter.                                             |
+| locProjectFilterChanged       | Local variable to store the project changed in the filter.                               |
+| locExpertiseFilterChanged     | Local variable to store the expertise changed in the filter.                             |
+| locProjectFilterSelected      | Local variable to store the project selected in the filter.                              |
+| locExpertiseFilterSelected    | Local variable to store the expertise selected in the filter.                            |
+| locProfileForViewing          | Local variable to store the profile selected for viewing.                                |
+| locViewProfile                | Local variable to store the profile.                                                     |
+| locViewProfileDetails         | Local variable to store the profile details.                                             |
+| locViewingSearchResult        | Local variable to show the matching results after the search.                            |
+| locSetFocusTimerStart         | Local variable to set the focus timer start based on a control.                          |
+| locSetFocusControlTarget      | Local variable to save the control.                                                      |
+| locSelectedPersonManager      | Local variable to store the manager of the user profile.                                 |
 | locSelectedPersonProfile      | Local variable to store the user email address.                                         |
 | locSelectedPersonHasManager   | Local variable to store as true if the user has manager else false.                     |
 |  locShowFirstRun              | Local variable to indicate of the current run of the app is the first run for the user. |
@@ -263,7 +263,7 @@ The following variables are used when displaying the organization structure.
 
 3.  Selecting a profile photo card it will set the selected profile in **locSelectedPerson** and show the selected profile.
     
-4.  The user profile will show the department and the place the user lives which is stored in **locViewProfileDetails**
+4.  The user profile will show the department and the place the user lives that are stored in **locViewProfileDetails**
     
 5.  The current and existing projects will be stored in **galSelectedPersonCurrentProjects,** the expertise’s of the user/selected
     profile is stored in **galSelectedPersonExpertise.**
@@ -271,7 +271,7 @@ The following variables are used when displaying the organization structure.
 6.  Selecting the edit icon will show the editmyprofile screen where the user can update their goals, interests and about the employees this functionality
     will work only for the current user profile not for other selected profiles
     
-7.  The profile screen will show the direct reports of the user and the employee reports too which is shown in **galDirectReports**.
+7.  The profile screen will show the direct reports of the user and the employee reports which are shown in **galDirectReports**.
 
 #### View Profile
 
@@ -291,7 +291,7 @@ The following variables are used when viewing profiles.
 
 | **Variable name**             | **Description**                                               |
 |-------------------------------|---------------------------------------------------------------|
-| locProfileForViewing          | Local variable to store the profile selected for viewing      |
+| locProfileForViewing          | Local variable to store the profile selected for viewing.      |
 | locViewingSearchResult        | Local variable to show the matching results after the search. |
 | locViewProfileDetails         | Local variable to store the profile details.                  |
 | locScreenReaderAnnouncedText  | Local variable to start the announcement of screen reader.    |
@@ -316,9 +316,9 @@ The following collections are used when filtering profiles.
 | **Collection name**                  | **Description**                                                                 |
 |--------------------------------------|---------------------------------------------------------------------------------|
 | colFilteredProfiles                  | Collection of filtered profile.                                                 |
-| colFilteredProfileEmailsByProject    | Collection of profile emails that have the selected project                     |
-| colFilteredProfileEmailsByExpertise  | Collection of profile emails that have the selected expertise                   |
-| colFilteredProfileEmails             | Collection of emails of filtered profiles, used to populate colFilteredProfiles |
+| colFilteredProfileEmailsByProject    | Collection of profile emails that have the selected project.                     |
+| colFilteredProfileEmailsByExpertise  | Collection of profile emails that have the selected expertise.                   |
+| colFilteredProfileEmails             | Collection of emails of filtered profiles, used to populate. colFilteredProfiles |
 | colLocalization                      | Collection of localized text based on user's language.                          |
 
 ##### Profile filtering variables
@@ -337,13 +337,13 @@ The following variables are used when filtering profiles.
 
 ##### Filtering profile execution details
 
-There are 3 options available:
+There are three options available:
 
--   Filter by project which shows the list of users who have worked in the project.
+-   Filter by project that shows the list of users who have worked in the project.
     
--   Filter by expertise which shows the list of users who have the same expertise.
+-   Filter by expertise that shows the list of users who have the same expertise.
     
--   Filter by project and expertise which shows the list of users who had worked in the project and filter the data with the expertise.
+-   Filter by project and expertise that shows the list of users who had worked in the project and filter the data with the expertise.
 
 #### Edit My Profile
 
@@ -358,11 +358,11 @@ The following collections are used when editing a profile.
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | colOpenPositions         | Collection of all work items for the selected project.                                                                             |
 | colLocalization          | Collection of widths for each character used for auto width labels.                                                                |
-| colNewProjects           | Collection of new projects which are going to be added by the user and the new projects which are going to be created by user.     |
-| colOldProjects           | Collection of projects which are previously added by the user.                                                                     |
-| colNewExpertise          | Collection of new expertise's which are going to be added by the user and the new expertise which are going to be created by user. |
-| colOldExpertise          | Collection of expertise's which are previously added by the user.                                                                  |
-| colDeletedOpenPositions  | Positions which are going to be deleted by the user will be stored.                                                                |
+| colNewProjects           | Collection of new projects that are going to be added by the user and the new projects that are going to be created by user.     |
+| colOldProjects           | Collection of projects that are previously added by the user.                                                                     |
+| colNewExpertise          | Collection of new expertise that are going to be added by the user and the new expertise that are going to be created by user. |
+| colOldExpertise          | Collection of expertise that are previously added by the user.                                                                  |
+| colDeletedOpenPositions  | Positions that are going to be deleted by the user will be stored.                                                                |
 | colDirectReports         | Collection of direct reporters of the selected user profile.                                                                       |
 ##### Profile editing variables
 
@@ -389,9 +389,9 @@ The following variables are used when editing a profile.
 Editing or updating the details of the current user to change or update the projects/expertise, goals and interests in **galOpenPositions** ,
 **colOldProjects , colOldExpertise.**
 
--   Updating the intro text, intro video url and linkedin url will be updated to person positons entity.
+-   Updating the intro text, intro video url and linked url will be updated to person positions entity.
     
-    -   Updating the Goals, Interests which are going to updated in the person positions entity.
+    -   Updating the Goals, Interests that are going to be updated in the person positions entity.
 
 #### View Open Position
 
@@ -413,11 +413,11 @@ The following variables are used when an open position is viewed.
 |---------------------------|------------------------------------------------------------------------------------------------------------|
 | gblAppStyles              | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
 | locSelectedPersonProfile  | Local variable to control visibility of work item filter dialog.                                           |
-| locViewOpenPosition       | Local variable to control the data of the open positions                                                   |
+| locViewOpenPosition       | Local variable to control the data of the open positions.                                                   |
 
 ##### Open position execution details
 
-Select the open position and the open positions will be visible which are created by the user which are stored in **locViewOpenPosition.**
+Select the open position and the open positions will be visible that are created by the user stored in **locViewOpenPosition.**
 
 ### Team Screen
 
@@ -429,7 +429,7 @@ This section explains the collections, variables, and execution details used on 
 
 1.  The first screen will show only once when any user opens the app for the first time to show the detailed view about the app and once the user selects **Continue** the second screen will be shown on how the app has been created and two options are available.
     
-2.  Don’t show this again once you check this the user settings will be updated to not show this pop up and if the user doesn’t select the check box and
+2.  Don’t show this again once you check the user settings will be updated to not show this pop up and if the user doesn’t select the check box and
     select **Got it** then this pop up will be shown each time
 
 #### Team Members
@@ -445,7 +445,7 @@ The following collections are used when viewing team members.
 |-------------------------|---------------------------------------------------------------------------------------------------------|
 | colLocalization         | Collection of localized text based on user's language.                                                  |
 | colSelectedTeamMembers  | Collection of selected team members who are selected.                                                   |
-| colFilteredMembers      | Collection to store the filtered members which were selected by filtering the name of the team members. |
+| colFilteredMembers      | Collection to store the filtered members that were selected by filtering the name of the team members. |
 | colTeamMembers          | Collection of team members based on the user who logged in.                                             |
 
 ##### Team member variables
@@ -467,7 +467,7 @@ The following variables are used when viewing team members.
 | locViewTeamMemberDetails      | Local variable to store the team members details.                                                          |
 | locSetFocusTimerStart         | Local variable to set the focus timer start based on a control.                                            |
 | locSetFocusControlTarget      | Local variable to save the control.                                                                        |
-| locDefaultProfileId           | Local variable to store the logged in user profile id.                                                     |
+| locDefaultProfileId           | Local variable to store the logged in user profile ID.                                                     |
 | gblAppStyles                  | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
 | gblHasProfileLoaded           | Local variable to control the user profile loading.                                                        |
 
@@ -478,7 +478,7 @@ The following variables are used when viewing team members.
 2.  User can select any team member profile and investigate the details of the profile
     
 3.  User can **Select people to connect with** option to select multiple team members and option to choose to **Start a chat** or **Schedule a meeting**
-    which are showed through the gallery item **galTeamMembers**
+    which are shown through the gallery item **galTeamMembers**
     
 4.  User can find the team member by entering the name of the team member in **txtFindTeamMembers** which will filter the data and store the data in
     **colFilteredMembers**
@@ -514,11 +514,11 @@ when team members are filtered
 
 >   There are 3 options available:
 
--   Filter by project which shows the list of members who had or working in the project mentioned.
+-   Filter by project that shows the list of members who had or working in the project mentioned.
     
--   Filter by expertise which shows the list of members who have the expertise mentioned.
+-   Filter by expertise that shows the list of members who have the expertise mentioned.
     
--   Filter by project and expertise which shows the list of members who had worked in the project and filter the data with the expertise mentioned.
+-   Filter by project and expertise that shows the list of members who had worked in the project and filter the data with the expertise mentioned.
 
 #### View Team Members
 
@@ -544,7 +544,7 @@ The following variables are used when team members are viewed.
 | locScreenReaderAnnouncedText  | Local variable to start the announcement of screen reader.                                                 |
 | gblHasProfileLoaded           | Local variable to control the user profile loading.                                                        |
 | locNavFromTeam                | Local variable to store the Boolean value to navigate from team.                                           |
-| locDefaultProfileId           | Local variable to store the logged in user profile id.                                                     |
+| locDefaultProfileId           | Local variable to store the logged in user profile ID.                                                     |
 | locTeamMemberForViewing       | Local variable to control the team member for viewing the profile.                                         |
 | gblCurrUserEmail              | Global variable to store the current user email.                                                           |
 | gblAppStyles                  | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
@@ -554,7 +554,7 @@ The following variables are used when team members are viewed.
 -   The View Team Member is part of the **Team Screen** which displays the selected user’s profile, the view profile shows the About, Goals, Interests
     of the selected profile.
     
--   By selecting profile of the team member the screen will navigate to profile screen which will setup the value as true in **locNavFromTeam**
+-   By selecting profile of the team member the screen will navigate to profile screen that will setup the value as true in **locNavFromTeam**
 
 ### About Screen
 
@@ -629,3 +629,10 @@ The following variable is used in the Admin screen.
 ##### Admin screen execution details
 
 Admin Screen has toggles to change the user language and settings of Dark Mode or High Contrast.
+
+### See also
+
+- [Profile+ (Preview) sample app](profile-app.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
