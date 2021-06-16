@@ -21,7 +21,7 @@ By default the Inspection app is designed for a single store. But what if you pe
 
 In this topic we will learn how to update the app to add a hierarchy of stores so that inspections can be performed for different stores.
 
-> [!NOTE] Before starting this topic, please review **How to customize Inspections** (insert link).
+> [!NOTE] Before starting this topic, please review [How to customize Inspections](customize-inspections.md)
 
 ## Prerequisites
 
