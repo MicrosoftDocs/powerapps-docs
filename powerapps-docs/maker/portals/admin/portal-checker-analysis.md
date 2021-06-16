@@ -133,7 +133,7 @@ For steps to create a site marker for **Page Not Found**, go to [An active Page 
 
 For steps to check site marker configuration and ensure it points to the correct webpage, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
 
-For steps to change the site marker to point to the correct **Page Not Found** webpage, go to [The Page Not Found site marker is pointing to a deactivated webpage](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
+For steps to change the site marker to point to the correct **Page Not Found** webpage, go to [The Page Not Found site marker is pointing to a deactivated webpage](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-webpage).
 
 ## Web page tracking enabled
 
