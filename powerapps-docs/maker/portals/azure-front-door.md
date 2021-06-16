@@ -137,6 +137,10 @@ Origins in Front Door represent the backend service that the Front Door edge ser
 
 The single origin for portals should point to the hostname of your portal (setup earlier during quick setup). If you didn’t follow quick setup steps, you can add a new origin pointing to your portal hostname. 
 
+Here's an example of the origin configuration:
+
+![Origin configuration](media/azure-front-door/origin-configuration.png "Origin configuration")
+
 Use the following settings when configuring origin for portals:
 
 | Option | Configuration type or value |
@@ -151,24 +155,16 @@ Use the following settings when configuring origin for portals:
 | Private link | Disabled |
 | Status | Check "Enable this origin" |
 
-![Graphical user interface, application Description automatically generated](media/azure-front-door/c545683ab8295ea28e188cb945ac6571.png)
+After you've configured origin and go back to the origin group, update the settings for health probes and load balancing options.
 
-1.  Health probes
+| Option | Configuration type or value |
+| - | - |
+| Health probes | Health probes are a mechanism to ensure that the origin service is up and running, and to make the traffic routing decisions depending on the probe results. In this case, we don’t require health probes; and hence, turned it off. |
+| Load balancing | Since we have a single origin setup and health probe is turned off, this setting won't play any role in this setup. |
 
-    1.  Health probes are a mechanism to ensure that origin service is up and
-        running and take traffic routing decisions on the basis of it.
+Validate the origin group configuration so it looks like the following image.
 
-    2.  In this case we don’t require this and hence it will be turned off.
-
-2.  Load Balancing
-
-    1.  Since we have a single origin setup and health probe is turned off, this
-        setting will not play any role in this setup as well.
-
-Validate Setup -\> After the changes are done, this is how your settings should
-look like
-
-![Graphical user interface, text, application, email Description automatically generated](media/azure-front-door/b2340cde3e2994c27eb694c38a0b7c0f.png)
+![Validate origin configuration](media/azure-front-door/origin-configuration-validate.png "Validate origin configuration")
 
 Setup Routing rules to cache static requests.
 =============================================
