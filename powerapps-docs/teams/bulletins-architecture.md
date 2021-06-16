@@ -30,7 +30,7 @@ To understand and use information in this article, you'll need to know about dif
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](bulletins.md) Bulletins sample app.
 
-## Architecture Model
+## Architecture model
 
 The following diagram illustrates the way that users and systems interact with data in the Bulletins solution
 

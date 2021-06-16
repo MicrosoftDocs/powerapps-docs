@@ -33,7 +33,7 @@ The articles in this section introduce you to key concepts that you must underst
   
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 
 ## Community tool

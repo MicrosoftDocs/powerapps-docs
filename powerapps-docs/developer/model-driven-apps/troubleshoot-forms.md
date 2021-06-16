@@ -433,5 +433,24 @@ See the examples below to understand the reasons for filtering. Based on the exp
 > [!div class="mx-imgBorder"]
 > ![Table not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
 
+## Unexpected unsaved changes error
+
+When working on forms, you get the *unsaved changes* error on the form footer, when you navigate from the current form, or when the form is getting saved without any changes. 
+
+**Resolution**:
+
+The *unsaved changes* error appears when a change is made on the form and when the changes were not saved. If you haven't made any changes manually, they could be coming from a JavaScript, plug-in, or from a business rule. You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` event that helps to find the source of the changes. You can filter by OperationType `UnsavedChanges`.
+
+The `all attributes modified` section includes a quick summary of the columns that are causing the unsaved changes error along with their values. The `unsaved changes` section shows what happened to the columns in detail. For every column, a list of controls are provided that could be causing a change. The value change is also displayed (previousValue, newValue), as well as a call stack.
+
+The screenshot below shows the root cause of the issue. You can see that the change has come from the `OnLoad` script.
+
+> [!div class="mx-imgBorder"]
+> ![Unsaved changes error](media/unsaved-changes-error.png "Unsaved changes error")
+
+> [!NOTE]
+> If the user has manually made the changes on the form, a call stack will not be provided.
+
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

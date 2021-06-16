@@ -19,7 +19,7 @@ Interface for `context.parameters.<property_key>`
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Properties
 
