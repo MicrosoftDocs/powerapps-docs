@@ -5,13 +5,14 @@ author: evanmlew
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/25/2021
+ms.date: 06/16/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
   - evanmlew
   - tapanm-msft
   - gathapar
+  - alaug
 ---
 
 # Power Apps Developer Plan
