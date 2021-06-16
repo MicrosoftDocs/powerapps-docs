@@ -159,16 +159,15 @@ the website <https://www.urldecoder.org/>.
 
 19.  Select the action Post adaptive card in a chat or channel (Preview)
 
-    -  Post as = User
+-  Post as = User
 
-    -  Post in = Channel
+-  Post in = Channel
 
-    -  Team = {the team in which your app is installed}
+-  Team = {the team in which your app is installed}
 
-    -  Channel = General
+-  Channel = General
 
-    -  Adaptive Card =
-
+-  Adaptive Card =
 
 ```
    {
