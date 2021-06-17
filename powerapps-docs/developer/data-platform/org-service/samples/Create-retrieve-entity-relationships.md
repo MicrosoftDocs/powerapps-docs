@@ -2,7 +2,7 @@
 title: "Sample: Create and retrieve table relationships  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create and retrieve table relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 60/17/2021
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"

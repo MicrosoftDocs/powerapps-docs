@@ -1,5 +1,5 @@
 ---
-title: " Sample: Create, retrieve, update, and delete dashboards(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create, retrieve, update, and delete dashboards(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned dashboards." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Create, retrieve, update, and delete a chart
+# Sample: Create, retrieve, update, and delete a dashboard
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
