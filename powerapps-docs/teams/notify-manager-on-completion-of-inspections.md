@@ -1,5 +1,6 @@
+---
 title: Notify Manager on completion of Inspection
-description: Learn about the changes that would be required to notify the manager on completion of an inspection
+description: Learn about the changes that would be required to notify the manager on completion of an inspection.
 author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
@@ -8,9 +9,8 @@ ms.date: 06/15/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
-
 - v-ljoel
-
+---
 # Inspections App – Notify manager on completion of Inspection
 
 The Inspections Power Apps template allows users to create and perform inspections in the app. There are three apps, one per persona to perform,
@@ -64,7 +64,7 @@ Next, we will add a responsible person column to the location table so we can de
 
 6. The Responsible User column gets created.
 
-> [!NOTE] Users must log in to the app one time before they become able to be selected from the user table.
+> NOTE: Users must log in to the app one time before they become able to be selected from the user table.
 
 7. On the Build tab under Installed apps, select Manage Inspections.
 
@@ -140,7 +140,7 @@ Now that we have added the responsible user to the location, we will now display
 
 ![Update patch with Responsible User definition](media/notify-manager-on-completion-of-inspections/update-patch-with-responsible-user-definition.png "Update patch with Responsible User definition")
 
-![Update patch with Responsible User definition](media/notify-manager-on-completion-of-inspections/update-second-patch-with-responsible-user-definition.png "Update patch with Responsible User definition")
+![Update second patch with Responsible User definition](media/notify-manager-on-completion-of-inspections/update-second-patch-with-responsible-user-definition.png "Update second patch with Responsible User definition")
 
 21. Thus, whenever a location is created or updated, the Responsible User value will also be captured and saved on the Location record.
 
@@ -218,8 +218,7 @@ Email').mail
 
 ```
 
-9. Copy the old Continue button formula back from the notepad from Step 3 of the [preview section](#_Add_a_Flow) above/before the flow formula used in
-   the last step.
+9. Copy the old Continue button formula back from the notepad from Step 3 of the Add a Flow to send an Email to the Manager section above/before the flow formula used in the last step.
 
 10. Save the app.
 
@@ -245,7 +244,7 @@ Email').mail
 
 3. Select a User and confirm that the user has a Manager assigned.
 
-> [!NOTE] If you are working on your organization’s environment, then you would most likely not need this step. But if working from a trial environment, it is better to create another trial user and add that user as the manager to the Responsible user.
+> NOTE: If you are working on your organization’s environment, then you would most likely not need this step. But if working from a trial environment, it is better to create another trial user and add that user as the manager to the Responsible user.
 
 ## Test the app
 
