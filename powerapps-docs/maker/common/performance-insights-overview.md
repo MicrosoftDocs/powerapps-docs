@@ -100,7 +100,7 @@ The following table summarizes what areas and categories the performance insight
       Overview 
    :::column-end:::
    :::column span="":::
-      It provides an overall summary of the performance of a selected app. You can see the performance of app briefly. 
+      It provides an overall summary of the performance of a selected app. You can see the performance of app briefly. More information: [Overall performance](performance-insights-categories.md#overall-performance)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -111,7 +111,7 @@ The following table summarizes what areas and categories the performance insight
       Minimum system requirements  
    :::column-end:::
    :::column span="":::
-      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not.
+      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not. 
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -122,7 +122,7 @@ The following table summarizes what areas and categories the performance insight
       Browser type
    :::column-end:::
    :::column span="":::
-      The performance will vary depending on browser type. This insight indicates whether users run a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers.
+      The performance will vary depending on browser type. This insight indicates whether users run a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers. More information: [Browser type](performance-insights-categories.md#browser-type)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -133,7 +133,7 @@ The following table summarizes what areas and categories the performance insight
       Browser version
    :::column-end:::
    :::column span="":::
-      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended.
+      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended. MOre information: [Browser version](performance-insights-categories.md#browser-version)
    :::column-end:::
 :::row-end:::
 :::row:::
