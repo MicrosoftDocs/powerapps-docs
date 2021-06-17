@@ -124,7 +124,7 @@ After following these steps, you'll have a basic Azure Front Door endpoint setup
 
 The next steps is to optimize the origin server settings to ensure that the setup works correctly. To do this setup, start at the **Endpoint Manager** tab in Front Door configurations on Azure portal to update the origin group settings.
 
-![Endpoint manager](media/azure-front-door/endpoint-manager.png "Endpoint manager")
+![Endpoint Manager](media/azure-front-door/endpoint-manager.png "Endpoint Manager")
 
 During quick create setup earlier, you've entered endpoint details that automatically created the configuration with the name **default-origin-group(associated)** (this name may vary depending on the locale settings). For this step, you'll modify the settings for this **default-origin-group**. The following image shows how the settings for this step looks like when you open it for the first time.
 
@@ -172,21 +172,29 @@ Routes determine how we use the edge caching capabilities of Azure Front Door to
 
 ![Configure routes](media/azure-front-door/configure-routes.png "Configure routes")
 
-For this setup, we will be doing two important things
+For rules setup, we'll need to do the following:
 
-1.  Setup Routes configuration
+1. [Setup routes configuration](#setup-routes-configuration).
+1. [Associate rule set with a route](#associate-rule-set-with-a-route).
 
-    1.  To do this, in endpoint manager, go to Routes -\> click on default
-        route. “Default-route” is created by default during quick setup
-        experience.
+And then, [validate the rules and route configuration](#validate-rules-and-route-configuration).
 
-    2.  This is how the default settings looks like
+### Setup routes configuration
 
-![Graphical user interface, text, application, email Description automatically generated](media/azure-front-door/a5fdc1b34fd12ba18a1adaa5b49e49f0.png)
+To setup route configuration, open Endpoint Manager > select **Routes** > select default route. The **Default-route** is created during the quick setup experience.
+
+![Route configuration](media/azure-front-door/route-configuration.png "Route configuration")
+
+Update the route configuration as below.
+
+| Option | Configuration |
+| - | - |
+| Domains | This should be pointing to domain name used while setting up the custom domain name earlier. |
+| Patterns to match | 
 
 1.  As part of this step, following settings should be reviewed and updated
 
-    1.  Domains -\> This should be pointing to the Custom domain name setup in
+    1.  Domains -\>  in
         Step \#1
 
     2.  Patterns to Match - \> This should be set to /\* (default value) as all
@@ -299,6 +307,8 @@ For this setup, we will be doing two important things
 
 ![](media/azure-front-door/7536a3f07ff83254032eec97e859e578.png)
 
+### Associate rule set with a route
+
 Now, once you have created a rule set, next step is to associate it with a
 route. To do that,
 
@@ -317,6 +327,8 @@ route. To do that,
     single ruleset. Once done click associate.
 
 ![Graphical user interface, text, application, email Description automatically generated](media/azure-front-door/0d0591af79b6b0394f16dba6fd0b1b09.png)
+
+### Validate rules and route configuration
 
 **Validation Steps: -** There are few important things we need to validate after
 this step
