@@ -31,7 +31,7 @@ Benefits of using the Get Connected app:
 -   Find new connections by skills
 
 > Note
-> Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample  apps**](use-sample-apps-from-teams-storeye#step-1---allow-connections)
+> Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample  apps**](use-sample-apps-from-teams-store#step-1---allow-connections).
 > This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7),  the app automatically updates to match the selected theme. More information:   [**Get the Teams theme using the Teams integration  object**](use-teams-integration-object.md#get-the-teams-theme)
 
 > Important
