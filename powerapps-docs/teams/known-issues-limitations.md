@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/07/2021
+ms.date: 06/07/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -19,7 +19,9 @@ The following components aren't supported:
 
 - Model-driven apps
 - AI Builder
-- Custom connectors
+
+>[NOTE]
+>Custom connectors are supported if the app or flow is running in the context of Microsoft Teams AND the custom connector points at an APIM endpoint in Azure, then it's permitted. 
 
 ## Component library
 
