@@ -2202,10 +2202,14 @@
               href: ../teams/perspectives-architecture.md
         - name: Profile+
           items:
-            - name: Profile+ (Preview)
+            - name: Use the default Profile+ (Preview) sample app 
               href: ../teams/profile-app.md
-            - name: Understand Profile+ (Preview) sample app architecture
-              href: ../teams/profile-plus-architecture.md
+            - name: Deploy the Profile+ (Preview) app broadly in your organization
+              href: ../teams/profile-plus-org-specific.md
+            - name: Customize Profile+ app
+              items:
+                - name: Understand Profile+ (Preview) sample app architecture
+                  href: ../teams/profile-plus-architecture.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
