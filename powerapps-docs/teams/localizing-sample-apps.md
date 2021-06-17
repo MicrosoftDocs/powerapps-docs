@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2021
 author: joel-lindstrom
-ms.author: v-jlindstrom
+ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
   - navjotm
@@ -258,7 +258,7 @@ For now, we will set the text to “Welcome to the app” until it is ready for 
 6. Now for the third column – LocalizedText, translate the text “Welcome to the app” in the 8 different languages *(***en-US** *= English,* **de-DE** *>   German,* **es-ES** *= Spanish,* **fr-FR** *= French,* **it-IT** *= Italian,* **ja-JP** *= Japanese,* **nl-NL** *= Dutch,* **pt-BR** *= Portuguese)*
 1.  Update the spreadsheet with all the translated text as shown below:
 
-    ![Display all connectors](media/localizing-sample-apps/localization-file.png "Display all connectors")
+    ![Component localization file](media/localizing-sample-apps/localization-file.png "Component localization file")
     
 2.  Save the spreadsheet.
 
