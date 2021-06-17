@@ -20,6 +20,8 @@ search.app:
 ---
 # Understanding insights
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Performance insights distributes insights into the following categories: 
 - [Overall performance](#overall-performance)
 - [Client environment](#client-environment)

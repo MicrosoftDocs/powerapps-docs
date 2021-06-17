@@ -20,6 +20,8 @@ search.app:
 ---
 # What are performance insights?
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or Dynamics 365 customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## How to access 
@@ -57,20 +59,6 @@ Performance insights provide a prioritized list of recommendations to help maker
 
 The performance insights grid has these columns.
 
-|Column1  |Column2  |
-|---------|---------|
-|Row1     |         |
-|Row2     |         |
-|Row3     |         |
-|Row4     |         |
-|Row5     |         |
-|Row6     |         |
-|Row7     |         |
-|Row8     |         |
-|Row9     |         |
-|Row10     |         |
-
-
 | Column | Description  |
 |---------|---------|
 | Severity | An insight can be categorized as Informational, Warning or Critical. Severity is determined by the performance page load time as well as the number of end-users impacted by an event. |
@@ -98,7 +86,7 @@ The following table summarizes what areas and categories the performance insight
       Area
    :::column-end:::
    :::column span="":::
-      Logical insight category 
+      Insight category
    :::column-end:::
    :::column span="":::
       Description
@@ -134,6 +122,116 @@ The following table summarizes what areas and categories the performance insight
       Browser type
    :::column-end:::
    :::column span="":::
-      The performance would vary depending on browser type. This insight indicates whether users use a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers. 
+      The performance will vary depending on browser type. This insight indicates whether users run a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Client environment  
+   :::column-end:::
+   :::column span="":::
+      Browser version
+   :::column-end:::
+   :::column span="":::
+      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Client environment  
+   :::column-end:::
+   :::column span="":::
+      HTTP protocol 
+   :::column-end:::
+   :::column span="":::
+      Power Apps supports the HTTP/2 protocol. Apps generally perform better with the HTTP/2 protocol compared to HTTP/1.1. One of the major limitations of HTTP/1.1 is the limited concurrent connections to the same domain, which might cause apps to run slow.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Network  
+   :::column-end:::
+   :::column span="":::
+      Network performance
+   :::column-end:::
+   :::column span="":::
+      Network latency, throughput and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Usage pattern  
+   :::column-end:::
+   :::column span="":::
+      Page load type.
+   :::column-end:::
+   :::column span="":::
+      Page load type can affect app performance. Warm (cached) page loads are generally faster than cold (not cached) page loads since resources load out of the cache.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Page performance  
+   :::column-end:::
+   :::column span="":::
+      Slow dashboard
+   :::column-end:::
+   :::column span="":::
+      One of the reasons why a dashboard might be slow to load is an associated query of a chart or a tile that is performing poorly. If the query executes over a large set of data, it could cause a slow response back. Apart from checking the number of chart controls and tiles on the dashboard, we recommend checking associated queries for both charts or tiles.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Customization  
+   :::column-end:::
+   :::column span="":::
+      XHR call type  
+   :::column-end:::
+   :::column span="":::
+      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XHR call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Customization  
+   :::column-end:::
+   :::column span="":::
+      Deprecated controls 
+   :::column-end:::
+   :::column span="":::
+     Some controls like the flip switch and calendar V1 controls are deprecated. Makers should always use modern controls.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Customization  
+   :::column-end:::
+   :::column span="":::
+      Sandbox performance  
+   :::column-end:::
+   :::column span="":::
+      Makers can build their own plug-in. Depending on implemented patterns, there are many aspects to check to confirm the plug-in methods perform well, such as timeout events. This insight checks the plug-in’s timeout to see whether it was caused by the timeout of the external endpoint calls the maker implemented or not.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Customization  
+   :::column-end:::
+   :::column span="":::
+      Saved query
+   :::column-end:::
+   :::column span="":::
+      While building a solution, a maker can build, and reuse a saved query. If the saved query has been created improperly, it could make the query run slow. Consequently, any forms or views using the problematic saved query might suffer from slow performance.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Configuration  
+   :::column-end:::
+   :::column span="":::
+      Plugin trace log setting
+   :::column-end:::
+   :::column span="":::
+      Administrators can enable plug-in trace logs for a Dataverse environment from **None** to **All**. It is beneficial to check the plug-in trace logs in the development phase. However, for production environments, we recommend setting the feature to either **Exception** or **None** to minimize intensive logging activity that can degrade app performance.
    :::column-end:::
 :::row-end:::
