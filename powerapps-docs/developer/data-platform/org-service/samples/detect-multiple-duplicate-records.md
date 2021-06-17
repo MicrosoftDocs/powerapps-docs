@@ -29,7 +29,7 @@ This sample shows how to detect and log multiple duplicate records for a specifi
 
 The `BulkDetectDuplicatesRequest` message is intended to be used in a scenario that contains data that is needed to submit an asynchronous system job that detects and logs multiple duplicate records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DetectMultipleDuplicateRecords).
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How this sample works
 
