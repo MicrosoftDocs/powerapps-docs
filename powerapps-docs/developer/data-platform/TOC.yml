@@ -219,7 +219,6 @@
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-
     - name: "Tutorial: Update a service endpoint imported from a solution"
       href: walkthrough-update-service-endpoint-imported-solution.md
   - name: Use Web Hooks
@@ -395,7 +394,7 @@
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    - name: Use Microsoft 365 (WS-Trust)
+    - name: Use Office365 (WS-Trust)
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md
