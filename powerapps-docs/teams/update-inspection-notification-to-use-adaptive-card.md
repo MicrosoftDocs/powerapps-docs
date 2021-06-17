@@ -20,7 +20,7 @@ The reason you would want to do this is to make notifications more interactive. 
 
 ## Prerequisites
 
-You must have installed and configured [the Inspection sample apps]<https://docs.microsoft.com/powerapps/teams/inspection#inspection-app> as well as proper permissions to edit the app in Teams.
+You must have installed and configured [the Inspection sample apps](inspection.md) as well as proper permissions to edit the app in Teams.
 
 ## Create the Power Automate Flow to generate the adaptive card
 
@@ -58,7 +58,7 @@ create a variable in the Power Apps trigger to allow passing data from the app t
 For the Review Inspections Link action, we will the link to the tab the app is in. Open the Review Inspections app in the Teams channel, and select the button in the upper right corner to pop out the app to its own window. From there you can copy the direct URL to the app. Navigate back to the Power Automate studio. Right-click on the Value field area in the Review Inspection Link action and Paste the link.
 
 > NOTE: you can make the hyperlink deep link to a specific record using the instructions here:
-> [Instructions for deep linking] <https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links>.
+> <https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links>.
 
 Add a **Post adaptive card in a chat or channel** action. Set the **Post as** value to *User* and the **Post in** value to *Channel*. In the **Team** and **Channel** fields, select the Team and Channel that you would like to post the adaptive card to.
 
