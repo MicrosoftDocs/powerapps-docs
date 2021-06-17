@@ -27,6 +27,8 @@ This sample shows how to create and update a record and related records in one c
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateRecordsWithRelatedRecords).
 
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]

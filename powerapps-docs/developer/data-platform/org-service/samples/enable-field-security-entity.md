@@ -21,7 +21,7 @@ search.app:
 
 This sample shows how to enable field security for a table.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
 

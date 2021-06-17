@@ -24,7 +24,7 @@ This sample shows how to write out all the attribute metadata to an `XML` file. 
 
 The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\EntityPrivileges.xml`. You can open this file in **Office Excel** to see a tabular report. 
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 

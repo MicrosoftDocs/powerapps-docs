@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Sample: Import files as web resources 
+# Import files as web resources 
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
