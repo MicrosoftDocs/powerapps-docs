@@ -1,5 +1,5 @@
 ---
-title: Extend Profile+ (Preview) app with additional org-specific data
+title: Extend Profile+ app (Preview) with additional org-specific data
 description: Learn how to extend Profile + to include additional information from your company.
 author: Joel-lindstrom
 ms.service: powerapps
@@ -13,15 +13,15 @@ contributors:
   - tapanm-msft
   - Joel-lindstrom
 ---
-# Extend Profile+ (Preview) app with additional org-specific data
+# Extend Profile+ app (Preview) with additional org-specific data
+
+[This article is pre-release documentation and is subject to change.]
 
 Profile+ solution helps you quickly look up colleagues, understand org structure and roles, and learn about open positions. You can update your profile right from within Microsoft Teams and express your personality by adding an introduction and even a video. You can add additional information that will help colleagues to know you better – such as your current projects, areas of expertise, goals, and interests. The ability to filter by project and expertise creates new opportunities for like-minded people to find one another and connect.
 
 But what if you want to add data from another source that has additional information about the people in your organization? For example, you might have data in your accounting or HR system, and you can easily bring this data into the Profile + app.
 
 In this article, we'll learn how to capture data from a different data source and display in the app. Power Apps can connect to hundreds of different data sources using out of the box connectors. In this tutorial, we'll pull data from a SharePoint list containing information about your employees, and display in the Profile+ app. This source could be any system that has employee data, such as your HR system or training database.
-
-[This article is pre-release documentation and is subject to change.]
 
 ## Prerequisites
 

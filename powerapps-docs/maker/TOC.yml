@@ -2160,11 +2160,11 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards
+        - name: Boards (Preview)
           items:
-             - name: Boards (Preview)
+             - name: Boards
                href: ../teams/boards.md
-             - name: Understand Boards (Preview) sample app architecture
+             - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
@@ -2196,11 +2196,11 @@
                href: ../teams/milestones.md
              - name: Understand Milestones sample app architecture
                href: ../teams/milestones-architecture.md
-        - name: Perspectives
+        - name: Perspectives (Preview)
           items:
-            - name: Perspectives (Preview)
+            - name: Perspectives
               href: ../teams/perspectives.md
-            - name: Understand Perspectives (Preview) sample app architecture
+            - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
         - name: Profile+ (Preview)
           items:
