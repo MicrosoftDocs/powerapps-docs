@@ -276,7 +276,7 @@ Other elements include:
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
-**[ReadNFC](Functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+**[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
