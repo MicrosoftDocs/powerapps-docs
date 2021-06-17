@@ -1,5 +1,5 @@
 ---
-title: Deploy the Profile+ (Preview) app broadly in your organization
+title: Extend Profile+ (Preview) app with additional org-specific data
 description: Learn how to extend Profile + to include additional information from your company.
 author: Joel-lindstrom
 ms.service: powerapps
@@ -13,7 +13,7 @@ contributors:
   - tapanm-msft
   - Joel-lindstrom
 ---
-# Deploy the Profile+ (Preview) app broadly in your organization
+# Extend Profile+ (Preview) app with additional org-specific data
 
 Profile+ solution helps you quickly look up colleagues, understand org structure and roles, and learn about open positions. You can update your profile right from within Microsoft Teams and express your personality by adding an introduction and even a video. You can add additional information that will help colleagues to know you better – such as your current projects, areas of expertise, goals, and interests. The ability to filter by project and expertise creates new opportunities for like-minded people to find one another and connect.
 
@@ -21,9 +21,15 @@ But what if you want to add data from another source that has additional informa
 
 In this article, we'll learn how to capture data from a different data source and display in the app. Power Apps can connect to hundreds of different data sources using out of the box connectors. In this tutorial, we'll pull data from a SharePoint list containing information about your employees, and display in the Profile+ app. This source could be any system that has employee data, such as your HR system or training database.
 
+[This article is pre-release documentation and is subject to change.]
+
 ## Prerequisites
 
 To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the Profile+ sample app for Microsoft Teams installed. This app can be installed from https://aka.ms/TeamsProfilePlus.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Log in into the Profile + app
 
