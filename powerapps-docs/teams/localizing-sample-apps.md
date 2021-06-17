@@ -18,7 +18,7 @@ The Power App template apps for Microsoft Teams have been localized to support e
 
 Say, for example, that you use the Russian language. Russian is not a language included in the standard localization; however, you can still use the app in Russian, if you add that language and localize the app labels.
 
-This topic covers the approach used for localization of the Power Apps templates for Microsoft Teams, and how to extend it to add support for another language (such as Russian). In this example we will use the Milestones app (aka.ms/teamsmilestones), but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
+This topic covers the approach used for localization of the Power Apps templates for Microsoft Teams, and how to extend it to add support for another language (such as Russian). In this example we will use the Milestones app (aka.ms/TeamsMilestones), but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
 ## Prerequisites
 
