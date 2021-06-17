@@ -5,9 +5,13 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2021
+ms.date: 06/17/2021
 ms.author: mabolan
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
+  - matthewbolanos
+  - msftman
 ---
 # Known issues and limitations
 
