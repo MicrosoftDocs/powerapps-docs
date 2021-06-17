@@ -83,3 +83,57 @@ The performance insights grid has these columns.
 | Data | Evidence data to support the findings in the insight section. |
 | Insight ID | Identifier for a specific insight category. |
 
+## What aspects does it check? 
+
+Performance of a model-driven app could be affected by multiple factors. Horizontally, the app could be affected by client environment, network, usage pattern, customizations, and configurations. Vertically, Web server or back-end SQL Server could cause impact on the client side.  
+
+Therefore, it is beneficial to identify what may cause slowness of page loads or operations. The performance insight engine analyzes collected telemetry data and corresponds it with the categories.
+
+In some scenarios, there could be an obvious reason for performance issues. In other cases, there may be several reasons identified from the categories that could explain the slowness.
+
+The following table summarizes what areas and categories the performance insights engine checks.
+
+:::row:::
+   :::column span="":::
+      Area
+   :::column-end:::
+   :::column span="":::
+      Logical insight category 
+   :::column-end:::
+   :::column span="":::
+      Description
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Overall performance 
+   :::column-end:::
+   :::column span="":::
+      Overview 
+   :::column-end:::
+   :::column span="":::
+      It provides an overall summary of the performance of a selected app. You can see the performance of app briefly. 
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Client environment  
+   :::column-end:::
+   :::column span="":::
+      Minimum system requirements  
+   :::column-end:::
+   :::column span="":::
+      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Client environment  
+   :::column-end:::
+   :::column span="":::
+      Browser type
+   :::column-end:::
+   :::column span="":::
+      The performance would vary depending on browser type. This insight indicates whether users use a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers. 
+   :::column-end:::
+:::row-end:::
