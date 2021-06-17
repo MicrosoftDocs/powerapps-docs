@@ -159,6 +159,8 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Business Events (preview)
+    href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
   - name: Best Practices
@@ -433,7 +435,7 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Power Apps CLI
+    - name: Microsoft Power Platform CLI 
       href: powerapps-cli.md
   - name: Community Tools
     href: community-tools.md
