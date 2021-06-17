@@ -56,9 +56,25 @@ Certain web browser types can impact the performance of your app. Using unsuppor
 
 #### How to improve 
 
-If you have users on old browsers such as Internet Explorer, switch to a modern Chromium based browser, such as and therefore, we recommend that users run a modern browser, such as Microsoft Edge or Google Chrome.
+If you have users on old browsers such as Internet Explorer, switch to a modern Chromium based browser. We recommend that users run a modern browser, such as [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL&r=1) or Google Chrome.
+
+> [!NOTE]
+> Some legacy applications leveraging NPAPI will only work on Internet Explorer. 
+
+### Browser version 
+
+Insight ID: Perf.Environment.Client.Browser.Version 
+
+#### Description 
+
+This insight checks how many users are using your app from an old version of a browser. Even if users are on modern browsers, and not on non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
+
+#### How to improve 
+
+Users should regularly update the browser to the latest version. Enterprise customers can apply a group policy to be on a specific version. As Unified Service Desk (USD) also uses the default browser setting of the machine, it also requires checking the default browser type and version. 
 
 ## Usage pattern
+
 
 ## Page performance
 
