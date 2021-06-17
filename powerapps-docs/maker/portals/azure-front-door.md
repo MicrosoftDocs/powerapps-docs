@@ -218,77 +218,56 @@ To configure this rule set:
 
 1. Go to **Rule set** tab and add a new rule set.
 
-![Graphical user interface, application, Word Description automatically generated](media/azure-front-door/3ffd45954284cc16c4596eb38aeba5c9.png)
+    ![Configure rule set](media/azure-front-door/rule-set.png "Configure rule set")
 
-1.  Give ruleset a name and save it
+1. Enter a rule set name and save it.
 
-![Graphical user interface, application Description automatically generated](media/azure-front-door/5e64cc7ee0b3c40bfa56761bbc0b1410.png)
+    ![Create a new rule set](media/azure-front-door/create-rule-set.png "Create a new rule set")
 
-1.  Now lets start with rule setup, starting with the first requirement
+Now, lets configure the rule set based on the business requirement, with the following configuration to meet the requirements for the scenario mentioned earlier.
 
-    1.  All static files are cached and served from edge servers -\>
+#### Requirement: All static files are cached, and served from the edge servers
 
-        1.  In my portal all the static files have one of the following
-            extensions css, png, jpg, js, svg, woff or ico.
+The portal in this scenario has static files with file name extensions of css, png, jpg, js, svg, woff or ico. Hence, a rule is required to evaluate file extension of the request, and check for specific file extension types.
 
-        2.  Hence, we write a rule to evaluate file extension of the request and
-            check for specific file extension types. (Do note that there are
-            other ways to write this rule as well like using request url or
-            filename etc, follow front door articleation on what all options
-            are available)
+> [!NOTE]
+> There are other ways to write this rule, such as using the request URL, or file name. For more information about the Azure Front Door rules matching conditions, see [Azure Front Door Rules Engine match conditions](/azure/frontdoor/front-door-rules-engine-match-conditions).
 
-![](media/azure-front-door/a45d11f6e3845af4de0df64076da6672.png)
+![Example rule set for file extensions](media/azure-front-door/file-extensions-rule-set.png "Example rule set for file extensions")
 
-1.  Now in the action configuration, we want to override the cache header set by
-    portal server, so that these files are cached a little longer on the
-    browser. By default portal will set the caching expiration to 1 day, but in
-    this setup we will override it to 7 days. To do this, we setup an action
-    looking like this where Action type is “Cache expiration” and “Cache
-    behavior” is set to override
+In the action configuration, override the cache header set by portals, so that these files are cached a little longer on the browser. By default, portals will set the caching expiration to one day. But in this scenario, we'll override it to seven days. To do this, we setup an action looking like the following image where the action type is **Cache expiration**, and **Cache behavior** is set to "override".
 
-![](media/azure-front-door/92a706e834e2bad6f0c57da73213661d.png)
+![Example cache expiration action](media/azure-front-door/cache-expiration-action.png "Example cache expiration action")
 
-1.  In the end, full rule will look like this
+At the end, the complete rule looks like the following image:
 
-![A picture containing application Description automatically generated](media/azure-front-door/7a581880374112d5438bd4b60a7f9ab2.png)
+![Final file extension rule](media/azure-front-door/final-file-rule.png "Final file extension rule")
 
-1.  None of the page content is cached -\>
+#### Requirement: None of the page content is cached
 
-    1.  In general, portal setup ensures that if a page has a form embedded in
-        it which means it is serving content specific to a record, it will have
-        “Cache-control” header value set to “private” which ensures that front
-        door will not cache that request. However, this method doesn’t take into
-        account scenarios where you are using liquid templates to embed user
-        specific content on the pages like displaying a specific record to a set
-        of users. Hence, we will be adding an explicit rule to ensure no portal
-        page is cached.
+In general, portal setup ensures that if a page has a form embedded in it (which means it is serving content specific to a record), it'll have “Cache-control” header value set to “private” which ensures that Front Door won't cache that request.
 
-    2.  First step is setting up the condition, condition is actually pretty
-        straightforward, we are basically doing an inverse check of what we did
-        in first rule and check that request doesn’t have a file extension
-        pointing to the file types we want to cache
+However, this method doesn’t take into account the scenarios where you're using liquid templates to embed user-specific content on the pages like displaying a specific record to a set of users. Hence, we'll add an explicit rule to ensure no portal page is cached.
 
-![](media/azure-front-door/9a70b40469cb0fbdc27c3db345433cce.png)
+The first step is setting up the condition. The condition does an inverse check of what we did in the first rule, and check that request doesn’t have a file name extension pointing to the file types we want to cache.
 
-1.  In action condition, similar to previous rule, we will write an action for
-    “Cache expiration”. However, this time, we will set the behavior to “Bypass
-    cache”. This will ensure that any request fulfilling this rule is not
-    cached.
+![Condition for caching](media/azure-front-door/caching-condition.png "Condition for caching")
 
-![](media/azure-front-door/1c304d0c46e59b35759790b7544a20d5.png)
+In the action condition, similar to previous rule, we'll write an action for “Cache expiration”. However, this time, we'll set the behavior to “Bypass cache”. This will ensure that any request fulfilling this rule isn't cached.
 
-1.  This is how the full rule would look like
+![Cache expiration configuration](media/azure-front-door/cache-expiration.png "Cache expiration configuration")
 
-![](media/azure-front-door/7536a3f07ff83254032eec97e859e578.png)
+The complete rule would look like the following image:
+
+![Complete rule for page content cache](media/azure-front-door/no-page-content-cache-rule.png "Complete rule for page content cache")
 
 ### Associate rule set with a route
 
-Now, once you have created a rule set, next step is to associate it with a
-route. To do that,
+After you've created a rule set, the next step is to associate it with a route.
 
-1.  click on Associate a route action after selecting the rule set
+1. Select **Associate a route** action after selecting the rule set.
 
-![Graphical user interface, text, application, chat or text message Description automatically generated](media/azure-front-door/e20f0dadcefc9f9066d10148561c19db.png)
+    ![Select to associate a route on a rule set](media/azure-front-door/select-associate-route.png "Select to associate a route on a rule set")
 
 1.  In the dialog, select endpoint name and available route. There could be
     multiple routes available, so set the one which we had configured
