@@ -1,6 +1,6 @@
 ---
-title: "Use Microsoft 365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Microsoft 365 authentication."
+title: "Use Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
 ms.date: 03/23/2021
 ms.reviewer: "pehecke"
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Use Microsoft 365 authentication with Microsoft Dataverse
+# Use Office365 authentication with Microsoft Dataverse
 
 Use of the WS-Trust authentication security protocol when connecting to Microsoft Dataverse is no longer recommended and has been deprecated; see the [announcement](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service).
 
@@ -54,8 +54,7 @@ using (OrganizationServiceProxy organizationServiceProxy =
 ## What should I do to fix my application code if affected?
 
 There are very straight forward ways to modify your application’s code to use
-the recommended connection interface for authentication with Common Data
-Service.
+the recommended connection interface for authentication with Dataverse.
 
 - If your code uses an [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) instance:
 
@@ -79,7 +78,7 @@ Service.
     Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
     RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;LoginPrompt=Auto"`
 
-        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Microsoft 365 behavior worked.
+        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
 
         The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (AAD) for applications running in your tenant.<p/>
 
