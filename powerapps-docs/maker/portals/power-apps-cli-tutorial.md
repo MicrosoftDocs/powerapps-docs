@@ -1,11 +1,11 @@
 ---
-title: Tutorial - Use Power Apps CLI with portals
-description: A tutorial with examples about how to use Power Apps CLI with Power Apps portals for CI/CD .
+title: Tutorial - Use Microsoft Power Platform CLI with portals
+description: A tutorial with examples about how to use Microsoft Power Platform CLI with Power Apps portals for CI/CD .
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2021
+ms.date: 05/27/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -13,15 +13,15 @@ contributors:
     - tapanm-msft
 ---
 
-# Tutorial: Use Power Apps CLI with portals
+# Tutorial: Use Microsoft Power Platform CLI with portals
 
 [This article is pre-release documentation and is subject to change.]
 
-In this tutorial example, you’ll see how to get started with Power Apps CLI
+In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI
 to update sample portals configuration.
 
 > [!NOTE]
-> This tutorial focuses on the required Power Apps CLI commands for
+> This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Apps
 CLI, read [common
 commands](../../developer/data-platform/powerapps-cli.md#common-commands).
@@ -32,7 +32,7 @@ commands](../../developer/data-platform/powerapps-cli.md#common-commands).
 
 ## Download and install Visual Studio Code
 
-To connect to Power Apps portals, and to use Power Apps CLI commands, use
+To connect to Power Apps portals, and to use Microsoft Power Platform CLI commands, use
 [Visual Studio Code](https://code.visualstudio.com/docs) and the [integrated
 terminal](https://code.visualstudio.com/docs/editor/integrated-terminal). The
 integrated terminal makes it easy to connect to the Dataverse environment and to
@@ -43,7 +43,7 @@ PowerShell instead.
 
 Before you connect, list, download or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
-information about authentication using Power Apps CLI, go to [Power Apps CLI –
+information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
 Auth](../../developer/data-platform/powerapps-cli.md#auth).
 
 To authenticate, open Windows PowerShell, and run the following command using
@@ -57,7 +57,7 @@ your Dataverse environment URL.
 
 Follow the prompts of authentication to sign into the environment.
 
-![Example of how to authenticate to a Dataverse environment using Power Apps CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Power Apps CLI")
+![Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI")
 
 ## Step 2: List available portals
 
@@ -153,8 +153,9 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Power Apps CLI](power-apps-cli-tutorial.md)
+[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
 
 ### See also
 
-[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
+- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)

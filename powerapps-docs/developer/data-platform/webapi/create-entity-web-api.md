@@ -73,7 +73,7 @@ To create a new entity record you must identify the valid property names and typ
 
 ## Create with data returned
 
-You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
+You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get this result, you must use the `return=representation` preference in the request headers.
 
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
@@ -348,3 +348,4 @@ More information: [Access documents faster using storage partitions](azure-stora
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

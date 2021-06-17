@@ -1,11 +1,11 @@
 ---
-title: Table permissions using portals Studio (Preview)
+title: Table permissions using portals Studio
 description: Learn how to add security by using table permissions for a portal using Power Apps portals Studio.
 author: ckwan-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 05/27/2021
 ms.author: ckwan
 ms.reviewer: tapanm
 contributors:
@@ -13,15 +13,9 @@ contributors:
     - ckwan-ms
 ---
 
-# Table permissions using portals Studio (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Table permissions using portals Studio
 
 In the previous article, you learned about how to configure security in portals by using table permissions configuration from the Portal Management app. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Available access types in Studio
 
@@ -43,7 +37,7 @@ In this section, you'll learn about how to create, view, edit, and deactivate/ac
 
 To create a table permission using portals Studio:
 
-1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -87,7 +81,7 @@ To create a table permission using portals Studio:
 
 To view table permissions using portals Studio:
 
-1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -117,7 +111,7 @@ To view table permissions using portals Studio:
 
 To edit a table permission using portals Studio:
 
-1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -145,7 +139,7 @@ When a table permission is deleted, it also deletes all associated child permiss
 
 To deactivate/activate or delete a table permission using portals Studio:
 
-1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 
@@ -167,7 +161,7 @@ To deactivate/activate or delete a table permission using portals Studio:
 
 To add a child permission to an existing table permission using portals Studio:
 
-1. Sign in to [Power Apps preview](https://make.preview.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** on the left-pane.
 

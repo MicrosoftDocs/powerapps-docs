@@ -593,7 +593,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ImportLog_ImportData"></a> ImportLog_ImportData
 
-Same as importlog table [ImportLog_ImportData](importlog.md#BKMK_ImportLog_ImportData) Many-To-One relationship.
+Same as importlog table [ImportLog_ImportData](importlog.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -608,7 +608,7 @@ Same as importlog table [ImportLog_ImportData](importlog.md#BKMK_ImportLog_Impor
 
 ### <a name="BKMK_ImportData_AsyncOperations"></a> ImportData_AsyncOperations
 
-Same as asyncoperation table [ImportData_AsyncOperations](asyncoperation.md#BKMK_ImportData_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [ImportData_AsyncOperations](asyncoperation.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -623,7 +623,7 @@ Same as asyncoperation table [ImportData_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_ImportData_BulkDeleteFailures"></a> ImportData_BulkDeleteFailures
 
-Same as bulkdeletefailure table [ImportData_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportData_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [ImportData_BulkDeleteFailures](bulkdeletefailure.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -654,39 +654,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importdatabase_modifiedby"></a> lk_importdatabase_modifiedby
 
-See systemuser Table [lk_importdatabase_modifiedby](systemuser.md#BKMK_lk_importdatabase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_importdatabase_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_BusinessUnit_ImportData"></a> BusinessUnit_ImportData
 
-See businessunit Table [BusinessUnit_ImportData](businessunit.md#BKMK_BusinessUnit_ImportData) One-To-Many relationship.
+See businessunit Table [BusinessUnit_ImportData](businessunit.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importdata_modifiedonbehalfby"></a> lk_importdata_modifiedonbehalfby
 
-See systemuser Table [lk_importdata_modifiedonbehalfby](systemuser.md#BKMK_lk_importdata_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_importdata_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importdatabase_createdby"></a> lk_importdatabase_createdby
 
-See systemuser Table [lk_importdatabase_createdby](systemuser.md#BKMK_lk_importdatabase_createdby) One-To-Many relationship.
+See systemuser Table [lk_importdatabase_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importdata_createdonbehalfby"></a> lk_importdata_createdonbehalfby
 
-See systemuser Table [lk_importdata_createdonbehalfby](systemuser.md#BKMK_lk_importdata_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_importdata_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_team_ImportData"></a> team_ImportData
 
-See team Table [team_ImportData](team.md#BKMK_team_ImportData) One-To-Many relationship.
+See team Table [team_ImportData](team.md) One-To-Many relationship.
 
 ### <a name="BKMK_SystemUser_ImportData"></a> SystemUser_ImportData
 
-See systemuser Table [SystemUser_ImportData](systemuser.md#BKMK_SystemUser_ImportData) One-To-Many relationship.
+See systemuser Table [SystemUser_ImportData](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_owner_importdatas"></a> owner_importdatas
 
-See owner Table [owner_importdatas](owner.md#BKMK_owner_importdatas) One-To-Many relationship.
+See owner Table [owner_importdatas](owner.md) One-To-Many relationship.
 
 ### <a name="BKMK_ImportFile_ImportData"></a> ImportFile_ImportData
 
-See importfile Table [ImportFile_ImportData](importfile.md#BKMK_ImportFile_ImportData) One-To-Many relationship.
+See importfile Table [ImportFile_ImportData](importfile.md) One-To-Many relationship.
 
 ### See also
 

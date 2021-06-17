@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "msftman"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 ms.author: "deonhe"
@@ -16,9 +16,6 @@ search.audienceType:
   - flowmaker
   - enduser
 ---
-
-
-<!-- Be sure to update the publication date. -->
 
 # Create a custom process action
 

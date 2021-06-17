@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -68,7 +68,7 @@ data from your dataflow must have access to the environment in which you created
 it.
 
 > [!NOTE]
-> Creating dataflows is currently not available with Power Apps Community Plan licenses.
+> Creating dataflows is currently not available with Power Apps Developer Plan licenses.
 
 1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
