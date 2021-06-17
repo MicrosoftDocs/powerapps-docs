@@ -16,7 +16,7 @@ ms.topic: "article"
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
+The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Microsoft Power Platform CLI. 
 
 > [!NOTE]            
 > Resources created by the community are not supported by Microsoft. If you have questions or issues with community resources, contact the publisher of the resource. Before using these resources, you must ensure that these community resources meet the Power Apps component framework guidelines and should only be used for reference purpose. 
@@ -76,7 +76,7 @@ The following is the list of blogs created by Power Apps community.
 
 ## Tools
 
-The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
+The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using Microsoft Power Platform CLI.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

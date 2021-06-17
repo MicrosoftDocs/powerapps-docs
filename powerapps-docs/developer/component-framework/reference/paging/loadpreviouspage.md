@@ -19,8 +19,8 @@ ms.assetid: 93cecfc6-bdce-421f-a410-07d95ea77c37
 
 ## Available for 
 
-Model-driven apps
-
+Model-driven and canvas apps
+ 
 ## Syntax
 
 `loadPreviousPage()`

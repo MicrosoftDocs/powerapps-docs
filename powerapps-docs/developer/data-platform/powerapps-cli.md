@@ -1,11 +1,11 @@
 ---
-title: Power Apps CLI | Microsoft Docs
-description: "Install Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
-keywords: Power Apps CLI, code components, component framework, CLI
+title: Microsoft Power Platform CLI | Microsoft Docs
+description: "Install Microsoft Power Platform CLI to create, debug, and deploy code components using Power Apps component framework."
+keywords: Microsoft Power Platform CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 05/25/2021
+ms.date: 06/14/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,38 +13,39 @@ ms.topic: "article"
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
-# What is Microsoft Power Apps CLI? 
+# What is Microsoft Power Platform CLI? 
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!NOTE]
-> Effective May 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).<br/><br/>
-We will soon update the docs to reflect this change.
+> [!NOTE] 
+> Effective June 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
+Microsoft Power Platform CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
 
-## Install Power Apps CLI
+## Install Microsoft Power Platform CLI
 
-To get Power Apps CLI, do the following:
+To get Microsoft Power Platform CLI, do the following:
 
-1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 or higher.
-
-1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
-
-1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
-   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
-   - Option 2: Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/current) and then install [Visual Studio Code](https://code.visualstudio.com/Download).
-
-1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command:
+1. Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
 
     ```CLI
     pac install latest
     ```
 
+
 > [!NOTE]
-> Currently, Power Apps CLI is supported only on Windows 10.
+> - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
+> - Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
+
+## Install Power Platform Extension for Visual Studio Code
+
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs Microsoft Power Platform CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
+
+> [!IMPORTANT]
+> - Power Platform Extension for Visual Studio Code is in public preview. 
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Microsoft Power Platform CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
 
 ## Common commands
 
@@ -54,6 +55,7 @@ This table lists some of the common commands used in the CLI:
 |-------|-----------|
 |[admin](#admin)|Commands for environment lifecycle features.|
 |[auth](#auth)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
+|[canvas](#canvas)|Commands for working with canvas app source files.|
 |[org](#org)|Commands for working with Dataverse environment.|
 |[package](#package)|Commands for working with [Solution Packages](/power-platform/alm/package-deployer-tool).|
 |[paportal](#paportal)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
@@ -79,6 +81,63 @@ Commands to work with environment lifecycle features. It has the following param
 |list-backups|Lists all available backups. environment. It has the following parameters: <br/> - *url*: Url of the environment for which you want to list backups (alias: -u). <br/> - *environment-id*: ID of the environment for which you want to list backups (alias: -id).|
 |restore|Restores an environment from a given backup. It has the following parameters: <br/> - *source-url*: Url of the source environment to be restored from (alias: -s). <br/> - *target-url*: Url of the target environment to be restored to (alias: -t). <br/> - *selected-backup*: DateTime of the backup in `mm/dd/yyyy hh:mm` format or latest (alias: -sb). <br/> - *name*: Optional name of the restored environment (alias: -n).|
 |copy|Copies a source environment to a destination environment. It has the following parameters: <br/> - *source-url*: Url of the source environment to be copied from (alias: -su). <br/> - *target-url*: Url of the target environment to be copied to (alias: -tu). <br/> - *source-environment-id*: ID of the source environment to be copied from (alias: -si). <br/> - *target-environment-id*: Id of the target environment to be copied to (alias: -ti). <br/> - *name*: Name to be used for the target environment. (alias: -n).  <br/> - *type*: Type of copy. Available values are: None, MinimalCopy, Fullcopy  (alias: -t).|
+
+### Canvas
+
+Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
+
+> [!NOTE]
+> The Canvas commands are in public preview. They may not be available in the version of Microsoft Power Platform CLI that you are using currently. 
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+| unpack | Unpacks the `.msapp`  source file.<br/> Download the `.msapp` file from Power Apps Studio by navigating to **File** > **Save as** > **This computer**.<br/>  If the **sources** parameter is not specified, a directory with the same name and location as the `.msapp` file is used with `_src` suffix.  | `pac canvas unpack --msapp HelloWorld.msapp --sources MyHelloWorldFiles`<br/>`pac canavs unpack --msapp HelloWorld.msapp`<br/>*unpacks to default* `HelloWorld_src` *directory* |
+| pack | Creates an `.msapp` file from the previously unpacked source files. <br/>The result can be opened in Power Apps Studio by navigating to **File** > **Open** > **Browse**.<br/> The source files can be edited and managed with external tools after being unpacked, such as Visual Studio Code and GitHub. | `pac canvas pack --sources MyHelloWorldFiles --msapp HelloWorld.msapp` |
+
+#### Folder structure
+
+Unpack and pack use the following folder structure:
+
+- **\src** - Control and component files. This contains the sources.
+   - ***\*.fx.yaml*** - The formulas extracted from the `control.json` file.  *This is the place to edit your formulas.*
+   - ***CanvasManifest.json*** - A manifest file that contains the information normally present in the header, properties, and publishInfo.
+   - ***\*.json*** - The raw `control.json` file.
+   - ***\EditorState\*.editorstate.json*** - Cached information for studio to use.
+- **\DataSources** - All the data sources used by the app.
+- **\Connections** - Connection instances saved with the app and used when reloading into the studio. 
+- **\Assets** - Media files embedded in the app.
+- **\pkgs** - A downloaded copy of external references, such as templates, API definition files, and component libraries. These are similar to NuGet/NPM references. 
+- **\other** - All miscellaneous files needed to recreate the `.msapp`.
+   - ***entropy.json*** - Volatile elements (like timestamps) are extracted to this file. This helps reduce noisy differences in other files while ensuring that we can still round trip.
+   - Holds other files from the msapp, such as what is in \references.
+
+#### File format
+
+The `.fx.yaml` files uses a subset of [YAML](https://yaml.org/spec/1.2/spec.html). Similar to Excel, all the expressions should begin with an `=` sign. More information: [Power Fx YAML Formula Grammar](/power-platform/power-fx/yaml-formula-grammar).
+
+#### Merging changes with Power Apps Studio
+
+When merging changes, that are made in two different studio sessions:
+
+- Ensure that all the control names are unique. For example, inserting a button in two different sessions can result in two `Button1` controls. We recommend to name the controls soon after you create them. The tool doesn't accept two controls with the same name.  
+- For these files, merge them as you normally do:
+   - \src\*.fx.yaml
+- If there are conflicts or errors, you can delete these files:
+   - \src\editorstate\*.json  - These files contain optional information in studio.
+   - \other\entropy.json  
+- For any conflict in these files, it’s ok to accept the latest version: 
+   - \checksum.json
+- If there are any merge conflicts under these paths, it is not safe to merge. Let us know if this happens often and we will work on restructuring the file format to avoid conflicts.
+   - \Connections\*
+   - \DataSources\*
+   - \pkgs\*
+   - CanvasManifest.json
+
+#### Open source
+
+The canvas commands in Microsoft Power Platform CLI are open source. Discuss improvements, raise issues, and access the code from [Power Apps language tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
 
 ### Package
 
@@ -129,7 +188,7 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 |init|Initializes the solution project.  It has the following parameters:<br/>  - *publisher-name*: Publisher name of the organization. <br/>  - *publisher-prefix*: Publisher prefix of the organization.|`pac solution init --publisher-name developer --publisher-prefix dev`  |
 |add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
 |clone|Creates a solution project based up on the existing solution project. It has the following parameters:<br/> -*name*: The name of the solution to be exported.<br/> -*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported. <br/> It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
-|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). |`pac solution import --path c:\Users\Documents\Solution.zip `|
+|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). <br/> - *convert-to-managed*: convert the solution as managed upon import|`pac solution import --path c:\Users\Documents\Solution.zip `|
 |export|Exports a Dataverse solution from an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
 |list|List all Solutions from a Dataverse environment. It requires that you are connected to an environment [Auth commands](#auth). This command has no parameters:|`pac solution list`  |
 
@@ -181,13 +240,13 @@ Manages to create a [plug-in](./plug-ins.md) project.
 |-------------|-----------|--------|
 |init|Initializes a directory with a new plugin class library.|`pac plugin init`|
 
-## Uninstall Power Apps CLI
+## Uninstall Microsoft Power Platform CLI 
 
-To uninstall the Power Apps CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
 
 If you are a **Private Preview** participant and have an older version of CLI, follow these steps:
 
-1. To find out where the Power Apps CLI is installed, open a command prompt and type `where pac`.
+1. To find out where Microsoft Power Platform CLI is installed, open a command prompt and type `where pac`.
 
 1. Delete the PowerAppsCLI folder.
 

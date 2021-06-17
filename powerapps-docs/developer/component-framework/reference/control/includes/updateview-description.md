@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 5054e324-d95b-4378-9ab5-73fc8919e90c
 ---
 
-This method will be called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, component metadata values such as label, visible, etc.
+This method will be called when any value in the property bag has changed. This includes field values, datasets, global values such as container height and width, offline status, component metadata values such as label, visible, etc.

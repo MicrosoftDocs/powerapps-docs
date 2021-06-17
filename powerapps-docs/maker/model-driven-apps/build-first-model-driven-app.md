@@ -5,7 +5,7 @@ documentationcenter: ''
 ms.custom: intro-internal
 author: Mattp123
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: get-started-article
 ms.component: model
 ms.date: 04/14/2021
 ms.author: matp
