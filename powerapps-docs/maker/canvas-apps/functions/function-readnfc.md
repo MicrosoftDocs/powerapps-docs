@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 06/01/2021
+ms.date: 06/16/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -18,7 +18,7 @@ search.app:
 Reads a Near Field Communication (NFC) tag.
 
 ## Description
-Use **ReadNFC** to read an NFC tag that is in close proximity to your device.  When invoked, the screen will display directions for scanning an NFC tag, and will only return after a tag has been scanned or a timeout expires.  
+Use **ReadNFC** to read an NFC tag that is in close proximity to your device.  When invoked, the screen will display instructions for scanning an NFC tag, and will only return after a tag has been scanned or a timeout expires.  
 
 **ReadNFC** returns a record of information about the tag that has been read.  The record contains:
 
