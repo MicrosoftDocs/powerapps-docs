@@ -20,8 +20,10 @@ The following components aren't supported:
 - Model-driven apps
 - AI Builder
 
->[NOTE]
->Custom connectors are supported if the app or flow is running in the context of Microsoft Teams AND the custom connector points at an APIM endpoint in Azure, then it's permitted. 
+> [!NOTE]
+> Custom connectors are supported only if both of these conditions are met:
+> - The app or flow is running in the context of Microsoft Teams.
+> - And, the custom connector points at an APIM endpoint in Azure. 
 
 ## Component library
 
