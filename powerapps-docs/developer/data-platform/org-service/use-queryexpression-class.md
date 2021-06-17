@@ -57,7 +57,7 @@ Console.WriteLine("---------------------------------------");
 
 ## Use SQL hints in a query
 
-The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property named <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.QueryHints>. By setting this property to one of the supported string values shown below, you can provide a hint for generated SQL text which affects the query's execution.
+The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property named <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.QueryHints>. By setting this property to a comma-separated list of the supported string values shown below, you can provide a hint for generated SQL text which affects the query's execution.
 
 |QueryHint value | SQL Query Option and Hint |
 |---------|---------|
@@ -70,7 +70,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |MergeJoin | Merge Join |
 |HashJoin | Hash Join |
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
-|MaxRecursion | MAXRECURSION number |
+|MaxRecursion=*n* | MAXRECURSION number |
 
 More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
@@ -83,3 +83,4 @@ More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transa
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
