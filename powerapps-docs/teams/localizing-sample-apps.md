@@ -1,6 +1,6 @@
 ---
 title: Localization of Power Apps template app for Microsoft Teams
-description: Learn how to add additional localizations to the template Power Apps for Microsoft Teams.
+description: Learn how to add extra localizations to the template Power Apps for Microsoft Teams.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -22,13 +22,13 @@ This topic covers the approach used for localization of the Power Apps templates
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to create Power Apps within Microsoft Teams which is available as part of select Microsoft 365 subscriptions.
+To complete this lesson, we would need the ability to create Power Apps within Microsoft Teams, which is available as part of select Microsoft 365 subscriptions.
 
 ## Understanding localization in Power Apps
 
 In canvas Power Apps, text labels and other visual text components can be localized by loading a static Excel data source to your app containing the localized value for each text string in each language. For more information about this process, see [Language function - Power Apps \| MicrosoftDocs](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-language).
 
-For example, Milestones app contains an Excel data source called StaticLocalizationsjon with 3 columns: OOBTextID, LanguageTag, and LocalizedText. 
+For example, Milestones app contains an Excel data source called StaticLocalizationsjon with three columns: OOBTextID, LanguageTag, and LocalizedText. 
 
 -   **OOBTextID** is the identifier of the text that is to be localized.
 
@@ -122,7 +122,7 @@ In our example, we will show how we can add localized text for the text on the f
 2.  Save the Excel.
 
 > NOTE 
-> Since the Excel already exists as a data source in the data sources list for the app, we will have to remove the excel from the list of data sources and then re-add it as shown above
+> Since the Excel already exists as a data source in the data sources list for the app, we will have to remove the excel from the list of data sources and then readd it as shown above
 
 3.  Update the app OnStart gblUserLanguage to include the language that you
     added to the Excel file. In the example below we have added Russian:
@@ -243,7 +243,7 @@ For now, we will set the text to “Welcome to the app” until it is ready for 
 
 4.  Open the excel to add rows for this text:
 
-5. Create 8 rows in the Excel with OOBTextID value lblLoadingText_Welcome_locText and LanguageTag for the 8 rows:
+5. Create eight rows in the Excel with OOBTextID value lblLoadingText_Welcome_locText and LanguageTag for the 8 rows:
 
 | en-US |
 |-------|
@@ -268,9 +268,9 @@ For now, we will set the text to “Welcome to the app” until it is ready for 
 
 ![Remove staticLocalizations](media/localizing-sample-apps/static-localization-remove.png "Display all connectors")
 
-5.  This will cause some errors in the app but only for a minute since we will re-add the updated excel in our next step
+5.  Removing the table will cause some errors in the app but only for a minute since we will re-add the updated excel in our next step
 
-6.  Re-add the spreadsheet as a connector and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
+6.  Readd the spreadsheet as a connector and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
 
 7.  Select the label with the text “Welcome to the app”
 
@@ -316,6 +316,6 @@ For now, we will set the text to “Welcome to the app” until it is ready for 
    )
    ```
 
-9. To test the localization of the label we just created, lets change the language of our user in Microsoft Teams to one of the languages that is in our localization excel spreadsheet. You can change your Microsoft Teams language by selecting your photo in the upper right corner and selecting settings.
+9. To test the localization of the label we created, lets change the language of our user in Microsoft Teams to one of the languages that is in our localization excel spreadsheet. You can change your Microsoft Teams language by selecting your photo in the upper right corner and selecting settings.
 
 10. Select Milestones to open the app and the **Welcome to the app** label has been localized to the language that was selected in the previous step. You can verify the same by going to the specific Team channel where the app was installed and playing the published app.
