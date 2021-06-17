@@ -1,5 +1,5 @@
 ---
-title: Localization of Power Apps template app for Microsoft tEams
+title: Localization of Power Apps template app for Microsoft Teams
 description: Learn how to add additional localizations to the template Power Apps for Microsoft Teams.
 ms.service: powerapps
 ms.topic: conceptual
@@ -67,7 +67,7 @@ For example, Milestones app contains an Excel data source called StaticLocalizat
 
 ## Tip: How to use Excel as a static data source in Power Apps
 
-Static data is data loaded into a Power App from Excel. This data is not editable in the app. If you want to add a static data source to your Power app, perform the following steps
+Static data is data loaded into a Power App from Excel. This data is not editable in the app. If you want to add a static data source to your Power App, perform the following steps
 
 1.  In Microsoft Teams, right mouse click on the Power Apps icon and pop out the app.
 
