@@ -269,33 +269,22 @@ After you've created a rule set, the next step is to associate it with a route.
 
     ![Select to associate a route on a rule set](media/azure-front-door/select-associate-route.png "Select to associate a route on a rule set")
 
-1.  In the dialog, select endpoint name and available route. There could be
-    multiple routes available, so set the one which we had configured
-    previously.
+1. Select the endpoint name and available route. There could be multiple routes available, so set the one configured earlier.
 
-![Graphical user interface, text, application Description automatically generated](media/azure-front-door/47684e5f0e1f5ebb0ed2f9970964bf98.png)
+    ![Associate a route](media/azure-front-door/associate-route.png "Associate a route")
 
-1.  Setup rule set orders -\> If there multiple rule sets, then decide the order
-    in which they should be evaluated. In this setup, we have only created a
-    single ruleset. Once done click associate.
+1. If there are multiple rule sets, then configure the order in which they should be evaluated. This scenario has only one rule set. Select **Done** to finish.
 
-![Graphical user interface, text, application, email Description automatically generated](media/azure-front-door/0d0591af79b6b0394f16dba6fd0b1b09.png)
+    ![Change the order of rule sets](media/azure-front-door/change-rule-set-order.png "Change the order of rule sets")
 
 ### Validate rules and route configuration
 
-**Validation Steps: -** There are few important things we need to validate after
-this step
+1. Ensure that all the traffic is served only through HTTPS, and all the HTTP calls are redirected to HTTPS. To verify, enter the domain name in a browser, and ensure the URL changes to HTTPS automatically while rendering the content.
 
-1.  Ensuring that all the traffic is served on https only and all http calls are
-    redirected to https
+1. Ensure that caching rules are evaluated, and working as expected.
 
-    1.  To do this, in the browser type in domain name} .
-
-    2.  Ensure that when the content is rendered, the URL is changed to https
-        automatically.
-
-2.  Ensure that caching rules are evaluated properly and are working - \> Do
-    note that rule changes can take upto 10 mins to reflect.
+    > [!NOTE]
+    > Rule changes might take up to 10 minutes to reflect.
 
     1.  To do this we will need to analyze network trace in browser developer
         toolbar to ensure right caching headers are set on different type of
