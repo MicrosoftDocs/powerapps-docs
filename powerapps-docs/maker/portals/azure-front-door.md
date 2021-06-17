@@ -189,60 +189,34 @@ Update the route configuration as below.
 
 | Option | Configuration |
 | - | - |
-| Domains | This should be pointing to domain name used while setting up the custom domain name earlier. |
-| Patterns to match | 
+| **Domains** | |
+| Domains | Domain name used while setting up the custom domain name earlier. |
+| Patterns to match | Set to /\* (default value) as all the portal requests would be sent to same origin in our setup. |
+| Accepted protocols | Set to HTTPS only to ensure that all the traffic served is secure. |
+| Redirect | Enable to redirect all traffic to use HTTPS. |
+| **Origin group** | |
+| Origin group | Set to the origin group defined earlier. |
+| Origin path | Keep empty. |
+| Forwarding protocol | Set to either **HTTPS only**, or **Match incoming request**. |
+| **Caching** | |
+| Caching | Enable caching if you want to utilize edge caching. |
+| Query string caching behavior | Set to **Use Query String** to ensure the dynamic content based on query string can be served. |
+| Compression | Enable compression to optimize content delivery. |
 
-1.  As part of this step, following settings should be reviewed and updated
+### Setup rule set
 
-    1.  Domains -\>  in
-        Step \#1
+Rule set governs how the content should be cached. This step is very important as it governs how the content would be cached by the edge servers to improve scaling for the portal. However, incorrectly configured rules set can lead to caching of dynamic content which should differ from user to user.
 
-    2.  Patterns to Match - \> This should be set to /\* (default value) as all
-        the portal requests would be sent to same origin in our setup.
+To setup the rule set correctly, it becomes important to understand the type of content your portal is serving. This understanding helps you configure the rule set with effective rules.
 
-    3.  Accepted protocols -\> This should be set to https only to ensure that
-        all the traffic served is through https
+For this article, the portal in context uses dynamic content on all pages, and also serves static files, hence this is what this portal's scenario is trying to achieve:
 
-    4.  Redirect -\> This should be enabled
+1. All static files are cached, and served from the edge servers.
+1. None of the page content is cached.
 
-    5.  Origin group
+To configure this rule set:
 
-        1.  Origin group should be set to the origin group defined in Step \#1 (
-
-        2.  Forwarding protocol can be set to either https only or to “Match
-            incoming request”
-
-    6.  Caching
-
-        1.  Caching should be enabled if you want to utilize edge caching. If
-            you don’t, then this should be disabled
-
-        2.  Query String caching behavior should be set to “Use Query string” to
-            ensure that dynamic content based on query string can be served
-
-        3.  Compression should be enabled to optimize for content delivery.
-
-2.  Setup Rule set which will govern how the content should be cached -\> This
-    is a very important step as this governs how the content would be cached by
-    edge servers which improves scaling for the portal. However, if not setup
-    correctly, this can lead to caching of dynamic content which should differ
-    from user to user.
-
-    In order to set this up correctly, most important thing is an understanding
-    of the type of content portal is serving to be able to come up with
-    effective rules.
-
-    For this article, the portal I am using uses dynamic content on all pages
-    but it does serve static files, hence this is what I am trying to achieve: -
-
-3.  All static files are cached and served from edge servers.
-
-4.  None of the page content is cached
-
->   This is how the rule configuration will look like: -
-
-1.  To setup routing rules, you will need to go to “Rule Set” tab and add a new
-    rule set.
+1. Go to **Rule set** tab and add a new rule set.
 
 ![Graphical user interface, application, Word Description automatically generated](media/azure-front-door/3ffd45954284cc16c4596eb38aeba5c9.png)
 
