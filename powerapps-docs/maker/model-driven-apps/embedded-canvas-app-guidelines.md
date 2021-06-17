@@ -63,7 +63,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 
 ## Saving data in an embedded canvas app
 - A save event made from a model-driven app, such as selecting the Save button on the main form command bar, doesn’t save changes made in the embedded canvas app. 
-- To save changes made in an embedded canvas app, use the Dataverse connector.
+- To save changes made in an embedded canvas app, use the [Dataverse connector](/connectors/commondataserviceforapps/).
 - The ModelDrivenFormIntegration control OnDataRefresh action should only be used to refresh data within the embedded canvas app. We don’t recommend that you use the OnDataRefresh action to save changes within the embedded canvas app. 
 
 ## Known issues and limitations with embedded canvas apps
