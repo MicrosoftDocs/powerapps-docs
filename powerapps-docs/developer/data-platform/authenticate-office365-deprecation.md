@@ -80,7 +80,7 @@ the recommended connection interface for authentication with Dataverse.
 
         This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
 
-        The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (AAD) for applications running in your tenant.<p/>
+        The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (Azure AD) for applications running in your tenant.<p/>
 
     - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of Office365 to OAuth and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
 
