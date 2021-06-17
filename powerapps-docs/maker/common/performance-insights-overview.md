@@ -20,15 +20,15 @@ search.app:
 ---
 # What are performance insights?
 
-Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps standalone model-driven or Dynamics 365 customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or Dynamics 365 customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## How to access 
 
 1. Go to [make.powerapps.com](https://make.powerapps.com). 
-1. On the left navigation pane, select **Apps**, and then select a model-driven app in the app list.
-1. Use the ... context menu or command bar to select **Performance**.
+1. On the left navigation pane, select **Apps**, and then select a model-driven app.
+1. Use the **...** context menu or command bar to select **Performance**.
 
-If you want to switch the environment in which your app is deployed, you can switch environments in the top right corner of the page using the **Environment** selector. Additionally, you can navigate to performance insights from a model-driven app’s context menu from the **Solutions** area. 
+If you want to switch the environment where your app is deployed, you can select environments in the top right corner of the page using the **Environment** selector. Alternatively, you can navigate to performance insights from a model-driven app’s context menu from the **Solutions** area. 
 
 > [!IMPORTANT]
 > Since recommendations are generated using telemetry data, we recommend that you view performance insights from an environment where the app will be used, such as a production environment.
@@ -37,5 +37,49 @@ If you want to switch the environment in which your app is deployed, you can swi
 
 Performance insights are generated based on collected telemetry data of your model-driven app every 24 hours. When end-users use an app, key telemetry data recorded by the Power Apps platform is stored. The performance insights engine leverages this data and analyzes it to generate insights and recommendations related to performance enhancements.  
 
-Performance insights are available for all model-driven apps in your selected environment, provided there is recorded telemetry data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the drop down.
+Performance insights are available for all model-driven apps in your selected environment, provided there is recorded telemetry data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the list on the **Performance** tab.
+
+:::image type="content" source="media/performance-insight-select-date.png" alt-text="Select a date to view performance insight data":::
+
+The performance insights engine generates insights over a 24-hour period on a selected date in the universal time coordinated (UTC) time zone. Insights for the previous day, from 00:00 to 23:59 UTC, are generated around 02:00 to 05:00 UTC on a given day. Therefore, insights and recommendations for usage telemetry data recorded the previous day will be available in the morning in the UTC time zone. Time of availability will vary based on your local time zone and its difference from UTC.
+
+For example, insights for the 24-hour period that spans June 8 from 00:00 to 23:59 UTC are generated between 02:00 to 05:00 UTC on June 9. Therefore, insights and recommendations for telemetry data recorded on June 8 UTC will be available the morning of June 9 UTC.
+
+Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the impact of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds, and we recommended to address those first.
+
+Insights are generated for several categories from different areas including client environment, customizations, page performance and network. For example, if several users are using the app on an older version of a non-recommended browser, performance will be slower in general. Hence, makers will see an insight related to browser type and version in the insight grid.
+
+Performance insights provide a prioritized list of recommendations to help makers improve the performance of model-driven apps. You can select each row in the grid to view detailed information for each category.
+
+:::image type="content" source="media/performance-insights-example.png" alt-text="Example of performance insights":::
+
+## Explanation of performance insights
+
+The performance insights grid has these columns.
+
+|Column1  |Column2  |
+|---------|---------|
+|Row1     |         |
+|Row2     |         |
+|Row3     |         |
+|Row4     |         |
+|Row5     |         |
+|Row6     |         |
+|Row7     |         |
+|Row8     |         |
+|Row9     |         |
+|Row10     |         |
+
+
+| Column | Description  |
+|---------|---------|
+| Severity | An insight can be categorized as Informational, Warning or Critical. Severity is determined by the performance page load time as well as the number of end-users impacted by an event. |
+| Area |  This area defines the aspects of analyzing telemetry data by the engine of Performance Insights. Includes client environment, network and usage patterns. |
+| Category | The theme under which the specific insight falls. Categories are grouped under Areas. |
+| Motivation | Gives an overview of why a particular insight could be impacting the overall performance of your app. |
+| Insight | Details the findings related to a specific category and outlines the performance impact. |
+| Recommendation | Outlines the actions you can take. |
+| How to improve | Links to the documentation for a specific category, which could contain further information or external resources to help you mitigate your issue and improve performance. |
+| Data | Evidence data to support the findings in the insight section. |
+| Insight ID | Identifier for a specific insight category. |
 
