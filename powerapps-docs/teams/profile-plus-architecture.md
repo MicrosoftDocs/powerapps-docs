@@ -16,9 +16,9 @@ contributors:
 
 # Understand Profile+ (Preview) sample apps architecture
 
-In this article, you'll learn about the collections and global variables used by the [Profile +](profile-app.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Profile + sample apps](profile-app.md).
-
 [This article is pre-release documentation and is subject to change.]
+
+In this article, you'll learn about the collections and global variables used by the [Profile +](profile-app.md) app, and understand how to use them effectively. If you want to learn more about how to install, and use the Inspection sample app instead, go to [Profile + sample apps](profile-app.md).
 
 ## Prerequisites
 
