@@ -73,7 +73,7 @@ records are created, the email will be sent whenever a bulletin is added.
 
 11. Look for and select the Action – Send an email (V2) (Office 365 Outlook).
 
-12. In the To field enter the email address you would like to send notifications to. For example, if you want all people in a team to be notified, you could create an email with the address for the team channel. To find this email address, click the three dots by the team channel and select **Get email
+12. In the To field enter the email address you would like to send notifications to. For example, if you want all people in a team to be notified, you could create an email with the address for the team channel. To find this email address, select the three dots by the team channel and select **Get email
     address.** 
 
 ![Get Team Channel's email address](media/new-bulletin-alert/get-email-address.png "Get Team Channel's email address")
@@ -95,7 +95,7 @@ A new Bulletin board {select Title from dynamic content} ({select Subtitle from 
 
 1.  Log in Microsoft Teams and navigate to Team where the Bulletins app is installed.
     
-2.  Click on the Manage Bulletins tab on the top.
+2.  Select the Manage Bulletins tab on the top.
 
 3.  Navigate to the Bulletins tab.
 
