@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/7/2021
+ms.date: 6/18/2021
 ms.author: denisem
 search.audienceType:
   - maker
