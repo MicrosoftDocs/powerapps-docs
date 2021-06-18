@@ -1,8 +1,8 @@
 ---
-title: "Use late-bound entity class with a LINQ query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use late-bound Entity class with a LINQ query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,15 +15,16 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use late-bound entity class with a LINQ query
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Use late-bound Entity class with a LINQ query
+
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Query (LINQ) queries. Late binding uses the attribute logical name, and is resolved at runtime.  
   
 <a name="usinglatebindingjoin"></a>   
 
-## Using late binding in a join clause  
+## Using late binding in a JOIN clause  
 
  The following examples show how to use late binding in the `join` clause of a LINQ query.  
   
@@ -46,6 +47,7 @@ In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Q
  }
 }
  ```
+
  Retrieve Contact, Account and Lead data where the Lead was the originating Lead and the Contact’s last name is not “Parker”  
   
  ```csharp
@@ -65,9 +67,10 @@ In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Q
  }
 }
  ```
-<a name="Usinglatebindingleft"></a>   
 
-## Using late binding in a left join  
+<a name="Usinglatebindingleft"></a>
+
+## Using late binding in a left JOIN  
 
  The following example shows how to retrieve a list of Contact and Account information using a left join. A left join is designed to return parents with and without children from two sources. There is a correlation between parent and child, but no child may actually exist.  
   
@@ -88,7 +91,8 @@ In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Q
  }
 }
  ```
-<a name="contains"></a>   
+
+<a name="contains"></a>
 
 ## Using late binding and the Contains method  
 
@@ -110,9 +114,10 @@ In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Q
  }
 }
  ```
- <a name="notequals"></a>   
 
-## Using late binding and not equals operator  
+ <a name="notequals"></a>
+
+## Using late binding and NOT Equals operator  
 
  The following example shows use of the not equals operator.  
   
@@ -135,7 +140,7 @@ using (OrganizationServiceContext orgSvcContext = new OrganizationServiceContext
 }
 ```
 
- <a name="getattribute"></a>   
+ <a name="getattribute"></a>
 
 ## Using the GetAttributeValue method  
 
@@ -158,10 +163,10 @@ using (OrganizationServiceContext orgSvcContext = new OrganizationServiceContext
 }
 ```
   
-### See also  
- [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
- [Order Results Using Entity Attributes with LINQ](order-results-entity-attributes-linq.md)   
- <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.CreateQuery``1>
+### See also
 
+ [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
+ [Order results using table columns with LINQ](order-results-entity-attributes-linq.md)   
+<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.CreateQuery%60%601>
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -19,7 +19,7 @@ ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Properties
 
