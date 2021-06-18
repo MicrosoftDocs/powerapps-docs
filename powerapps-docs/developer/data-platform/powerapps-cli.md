@@ -1,11 +1,11 @@
 ---
-title: Power Apps CLI | Microsoft Docs
-description: "Install Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
-keywords: Power Apps CLI, code components, component framework, CLI
+title: Microsoft Power Platform CLI | Microsoft Docs
+description: "Install Microsoft Power Platform CLI to create, debug, and deploy code components using Power Apps component framework."
+keywords: Microsoft Power Platform CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 06/03/2021
+ms.date: 06/14/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,22 +13,21 @@ ms.topic: "article"
 ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
-# What is Microsoft Power Apps CLI? 
+# What is Microsoft Power Platform CLI? 
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!NOTE]
-> Effective May 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).<br/><br/>
-We will soon update the docs to reflect this change.
+> [!NOTE] 
+> Effective June 2021, *Microsoft Power Apps CLI* is rebranded to *Microsoft Power Platform CLI*. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/).
 
-Microsoft Power Apps CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
+Microsoft Power Platform CLI is a simple, single-stop developer command-line interface that empowers developers and ISV to perform various operations in Microsoft Power Platform related to environment lifecycle features, authenticate and work with Dataverse environments, solution packages, portals, code components, and so on.  
 
-## Install Power Apps CLI
+## Install Microsoft Power Platform CLI
 
-To get Power Apps CLI, do the following:
+To get Microsoft Power Platform CLI, do the following:
 
-1. Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
-1. To take advantage of all the latest capabilities, update the Power Apps CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
+1. Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version using this command (not applicable for Visual Studio Code Extension):
 
     ```CLI
     pac install latest
@@ -36,17 +35,17 @@ To get Power Apps CLI, do the following:
 
 
 > [!NOTE]
-> - Currently, Power Apps CLI is supported only on Windows 10.
+> - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
 > - Power Platform Extension for Visual Studio Code is in public preview and works on both Windows 10 and macOS. 
 
 ## Install Power Platform Extension for Visual Studio Code
 
-You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs the Power Apps CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
+You can also install the [Power Platform Extension for Visual Studio Code](https://aka.ms/ppcvscode) which installs Microsoft Power Platform CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Power Platform environments and allows the developer to create, build packages, deploy solutions, and portals.
 
 > [!IMPORTANT]
 > - Power Platform Extension for Visual Studio Code is in public preview. 
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Power Apps CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
+> - Microsoft Power Platform CLI version that is included with this extension may also be a public preview version. We recommend you to install the latest version using the steps mentioned above.
 
 ## Common commands
 
@@ -88,7 +87,7 @@ Commands to work with environment lifecycle features. It has the following param
 Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
 
 > [!NOTE]
-> The Canvas commands are in public preview. They may not be available in the version of the Power Apps CLI that you are using currently. 
+> The Canvas commands are in public preview. They may not be available in the version of Microsoft Power Platform CLI that you are using currently. 
 
 #### Parameters
 
@@ -138,7 +137,7 @@ When merging changes, that are made in two different studio sessions:
 
 #### Open source
 
-The canvas commands in the Power Apps CLI are open source. Discuss improvements, raise issues, and access the code from [Power Apps language tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
+The canvas commands in Microsoft Power Platform CLI are open source. Discuss improvements, raise issues, and access the code from [Power Apps language tooling repository](https://github.com/microsoft/PowerApps-Language-Tooling).
 
 ### Package
 
@@ -189,7 +188,7 @@ Commands for working with [Dataverse solution projects](../../maker/data-platfor
 |init|Initializes the solution project.  It has the following parameters:<br/>  - *publisher-name*: Publisher name of the organization. <br/>  - *publisher-prefix*: Publisher prefix of the organization.|`pac solution init --publisher-name developer --publisher-prefix dev`  |
 |add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
 |clone|Creates a solution project based up on the existing solution project. It has the following parameters:<br/> -*name*: The name of the solution to be exported.<br/> -*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported. <br/> It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
-|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). |`pac solution import --path c:\Users\Documents\Solution.zip `|
+|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). <br/> - *convert-to-managed*: convert the solution as managed upon import|`pac solution import --path c:\Users\Documents\Solution.zip `|
 |export|Exports a Dataverse solution from an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
 |list|List all Solutions from a Dataverse environment. It requires that you are connected to an environment [Auth commands](#auth). This command has no parameters:|`pac solution list`  |
 
@@ -241,13 +240,13 @@ Manages to create a [plug-in](./plug-ins.md) project.
 |-------------|-----------|--------|
 |init|Initializes a directory with a new plugin class library.|`pac plugin init`|
 
-## Uninstall Power Apps CLI
+## Uninstall Microsoft Power Platform CLI 
 
-To uninstall the Power Apps CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
 
 If you are a **Private Preview** participant and have an older version of CLI, follow these steps:
 
-1. To find out where the Power Apps CLI is installed, open a command prompt and type `where pac`.
+1. To find out where Microsoft Power Platform CLI is installed, open a command prompt and type `where pac`.
 
 1. Delete the PowerAppsCLI folder.
 

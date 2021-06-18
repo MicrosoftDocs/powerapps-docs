@@ -8,7 +8,7 @@ reviewer: Mattp123
 manager: kvivek
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: overview
 ms.component: model
 ms.date: 08/04/2020
 ms.author: caburk
