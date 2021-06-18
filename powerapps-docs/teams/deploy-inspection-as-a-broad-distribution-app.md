@@ -47,7 +47,7 @@ At the time of this recording, you can only share the app with a single Active D
 
 > NOTE: apps are installed inside of a tab in a Teams channel. People who develop and extend the app or managers who create or manage the inspection forms should use the app in a Team. For people who complete inspections or users who are not managers, sharing the app with colleagues outside of the team will enable them to use the app without having to be a member of the Team.
 
-# Sharing App with Colleagues
+## Sharing App with Colleagues
 
 This process begins by opening the app in the **Power Apps** app. You may have Power Apps pinned to your Teams App Bar.
 
@@ -85,27 +85,27 @@ This process begins by opening the app in the **Power Apps** app. You may have P
 
 10. Select **Save**.
 
-# Granting Permissions to the tables
+## Granting Permissions to the tables
 
 Understanding and assigning permissions to tables are vital to ensure proper security of your shared data. Here are the four permissions available for use.
 
 -   Full Access – Allows end users to see and edit all records in the table.
 
-    ![Full access](media/deploy-inspection-as-a-broad-distribution-app/full-access.png "Full access")
+    ![Full access feature](media/deploy-inspection-as-a-broad-distribution-app/full-access.png "Full access feature")
 
 -   Collaborate – Allows end users to see all records, but they can only edit their own records.
     
-    ![Collaborate](media/deploy-inspection-as-a-broad-distribution-app/collaborate.png "Collaborate")
+    ![Collaborate feature](media/deploy-inspection-as-a-broad-distribution-app/collaborate.png "Collaborate feature")
     
 -   Reference – Provides a read-only view of data for end users.
 
-    ![Reference](media/deploy-inspection-as-a-broad-distribution-app/reference.png "Reference")
+    ![Reference feature](media/deploy-inspection-as-a-broad-distribution-app/reference.png "Reference feature")
 
 -   Private – Allows end users to only view and edit their own data.
 
-    ![Private](media/deploy-inspection-as-a-broad-distribution-app/private.png "Private")
+    ![Private feature](media/deploy-inspection-as-a-broad-distribution-app/private.png "Private feature")
 
-## Granting Permissions to the tables
+### Granting Permissions to the tables
 
 By default, all of the table permissions for colleagues not in the Team are set to **none.** If you leave it that way, colleagues that you share the app with
 will not be able to use the app, as they won’t have permission to the tables in the app. Follow these steps to set permissions for the tables in the app for
@@ -162,7 +162,7 @@ can make it easier for your colleagues to find the app by renaming it.
     
 4.  Save and publish the app.
 
-# Accessing shared apps
+## Accessing shared apps
 
 So now that you have shared Inspection with colleagues outside of your team, here is how they will acquire the app.
 
