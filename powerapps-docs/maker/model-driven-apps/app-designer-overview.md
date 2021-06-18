@@ -2,11 +2,11 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 04/30/2021
+ms.date: 06/17/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -45,7 +45,7 @@ The app designer interface has the following areas:
 3. Panes - The left navigation pane consists of the following areas: 
 
    - **Pages**. Displays the components for you app. From the page area you can choose the forms, views, and dashboards you want to add or remove for each table.
-   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation.
+   - **Navigation**. Displays a site map view of your app that is formed using areas, groups, and subareas. Add or remove groups and subareas to structure your app's navigation. Within the navigation area, you can hide or show the **Home**, **Recent**, and **Pinned** buttons. You can also allow groups to be collapsible within the site map.
    - **Data**. Provides a view of all available data that’s currently included in your app or is available to add from your Dataverse environment. 
 
 4. Property pane – Displays properties of the selected component, and also allows you to make changes.
