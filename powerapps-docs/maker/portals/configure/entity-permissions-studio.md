@@ -195,7 +195,7 @@ To view, edit, deactivate/activate, or delete child permissions using portals St
 
 ## Additional considerations
 
-The confirguration of table permissions is subject to the following additional considerations and rules:
+The configuration of table permissions is subject to the following additional considerations and rules:
 
 ### Parent table permission missing a web role associated to its child
 
