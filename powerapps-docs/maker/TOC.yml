@@ -1425,10 +1425,16 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with basic forms
-              href: ./portals/configure/entity-forms.md
             - name: Work with lists
               href: ./portals/configure/entity-lists.md
+            - name: Work with basic forms
+              items:
+                - name: Work with basic forms
+                  href: ./portals/configure/entity-forms.md
+                - name: Configure basic form metadata
+                  href: ./portals/configure/configure-basic-form-metadata.md
+                - name: Configure basic form subgrid
+                  href: ./portals/configure/configure-basic-form-subgrid.md
             - name: Work with advanced forms
               items:
                 - name: Define advanced form properties
