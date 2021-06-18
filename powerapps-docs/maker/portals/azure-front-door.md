@@ -281,23 +281,23 @@ After you've created a rule set, the next step is to associate it with a route.
 
 1. Ensure that all the traffic is served only through HTTPS, and all the HTTP calls are redirected to HTTPS. To verify, enter the domain name in a browser, and ensure the URL changes to HTTPS automatically while rendering the content.
 
-1. Ensure that caching rules are evaluated, and working as expected.
+1. Ensure that caching rules are evaluated, and working as expected using the following steps:
 
     > [!NOTE]
     > Rule changes might take up to 10 minutes to reflect.
 
-    1.  To do this we will need to analyze network trace in browser developer
+    1. To do this we will need to analyze network trace in browser developer
         toolbar to ensure right caching headers are set on different type of
         content.
 
-    2.  To do this open a new browser tab -\> open developer toolbar -\>
+    2. To do this open a new browser tab -\> open developer toolbar -\>
         navigate to portal url in this tab (ensure that it is done after opening
         developer toolbar).
 
-    3.  Now, in developer toolbar, go to network tab which should show all
+    3. Now, in developer toolbar, go to network tab which should show all
         network requests.
 
-    4.  Select the request for any css file from the list of request, and
+    4. Select the request for any css file from the list of request, and
         analyze the request details. In the “Response headers” section, ensure
         that a header called “x-cache” is present. This ensures that the request
         is served through edge servers and can be cached.
