@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: fbda8959-44a7-46a8-9630-6208bd789c52
 ---
 
-The data-set node in the component manifest represents a specific, configurable representation of a set of table records. 
+The dataset node in the component manifest represents a specific, configurable representation of a set of table records. 
