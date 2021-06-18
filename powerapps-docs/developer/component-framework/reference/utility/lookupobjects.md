@@ -33,7 +33,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: LookupValue[]
+Type: Promise<LookupValue[]>
 
 
 ### Related topics
