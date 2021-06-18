@@ -18,13 +18,13 @@ The Bulletins Power App Template for Microsoft Teams provides a central location
 
 The Bulletins app solution consists of two apps:
 
-[**Manage bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#manage-bulletins-app)
+[**Manage bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app)
 
 -   Manager experience for managing **Bulletins** app.
 
 -   Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
-[**Bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#bulletins-app)
+[**Bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
 
 -   Central location for all company communication such as memos, broadcasts, and news.
     
@@ -67,7 +67,7 @@ records are created, the email will be sent whenever a bulletin is added.
 
    - Scope = Organization
 
-![](media/new-bulletin-alert/bulletin-alert-flow-trigger.png)
+![Select trigger for the alert flow](media/new-bulletin-alert/bulletin-alert-flow-trigger.png "Select trigger for the alert flow")
 
 10. Select +New step.
 
