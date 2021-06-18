@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/17/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -568,7 +568,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <script>
         //Add the contact data in json object
         var contactList = [
-            {% for table in contactList.results.entities %}
+            {% for entity in contactList.results.entities %}
         {
             id: "{{entity.contactid}}",
                 fullname: "{{entity.fullname}}",
