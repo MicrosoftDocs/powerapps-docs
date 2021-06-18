@@ -1,6 +1,6 @@
 ---
-title: Configure Advanced form subgrids for portals
-description: Learn how to add and configure advanced form subgrids for a portal.
+title: Configure Basic form subgrids for portals
+description: Learn how to add and configure basic form subgrids for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,9 @@ contributors:
     - sandhangitmsft
 ---
 
-# Configure Advanced form subgrids for portals
+# Configure Basic form subgrids for portals
 
-Advanced form subgrids are configured in an identical fashion to basic form subgrids: first, create a metadata record for the Advanced form step that has a subgrid, and then add configuration metadata.
+Basic form subgrids are configured in an identical fashion to basic form subgrids: first, create a metadata record for the Basic form step that has a subgrid, and then add configuration metadata.
 
 Adding subgrids to your managed forms on the portal is easy—just add the subgrid to the form that you are managing by using the out-of-the-box form designer, and you’re done. The grid will use the view that is specified in Microsoft Dataverse form designer, show only related records if that option was chosen, optionally show a search bar, and even respect [table permissions for portals](assign-entity-permissions.md). It doesn't get any simpler to display a read-only list of records. To enable actions for the grid— Create, Update, Delete, and so on—you must configure those actions by using metadata configuration.
 
@@ -272,11 +272,5 @@ Enabling a **Disassociate action** allows a user to remove the link between the 
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Advanced Form properties for portals](web-form-properties.md)  
-[Advanced Form steps for portals](web-form-steps.md)  
-[Advanced Forms metadata for portals](configure-web-form-metadata.md)  
-[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

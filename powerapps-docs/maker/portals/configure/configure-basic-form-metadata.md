@@ -1,6 +1,6 @@
 ---
-title: Configure advanced form metadata for portals
-description: Learn how to add and configure advanced form metadata for a portal.
+title: Configure basic form metadata for portals
+description: Learn how to add and configure basic form metadata for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,26 +13,26 @@ contributors:
     - sandhangitmsft
 ---
 
-# Configure advanced form metadata for portals
+# Configure basic form metadata for portals
 
-The Advanced Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
+The Basic Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 ## Add a new record
 
-1. On the Advanced Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
+1. On the Basic Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
 
-2. Select **New Advanced Form Metadata**.
+2. Select **New Basic Form Metadata**.
 
-## Advanced form metadata properties
+## Basic form metadata properties
 
 The following attributes provide additional styling and capabilities for elements on a form.
 
 | Name          | Description                                                                                                                                                                                                                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Advanced Form Step | The Advanced Form Step associated with the Advanced Form Metadata record.                                                                                                                                                                                                                                                                                      |
+| Basic Form Step | The Basic Form Step associated with the Basic Form Metadata record.                                                                                                                                                                                                                                                                                      |
 | Type          | Available options are:<ul><li>Attribute</li><li>Section</li><li>Tab</li></ul>Selecting Attribute as the Type value displays the appropriate options for modifying fields on the current form rendered for the related step. Selecting Section as the Type value displays the options available for modifying a section on the form. Selecting Tab as the Type value displays the options available for modifying a tab on a form.  |
 
-## Advanced form metadata type = Attribute
+## Basic form metadata type = Attribute
 
 The following properties are displayed when the Type selected is 'Attribute'.
 
@@ -112,7 +112,7 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the table. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Advanced Form metadata type = Section
+## Basic Form metadata type = Section
 
 The following properties are displayed when the Type selected equals 'Section'.
 
@@ -122,7 +122,7 @@ The following properties are displayed when the Type selected equals 'Section'.
 | Section Name |                                                                                           The name of the section on the table's form to be modified.                                                                                            |
 |    Label     | Replaces the default label assigned to the section on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Advanced Form metadata type = Tab
+## Basic Form metadata type = Tab
 
 The following properties are displayed when the Type selected equals 'Tab'
 
@@ -136,11 +136,5 @@ The following properties are displayed when the Type selected equals 'Tab'
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Advanced Form properties for portals](web-form-properties.md)  
-[Advanced Form steps for portals](web-form-steps.md)  
-[Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
