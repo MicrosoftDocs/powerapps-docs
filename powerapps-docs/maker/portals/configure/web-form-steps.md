@@ -34,11 +34,11 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
 
-After an advanced form step is used within a form, it can't be added to the same form again. The following message appears if you try to add an advanced form step that's already referenced within the Advanced Form:
+After an advanced form step is used within a form, it can't be added to the Advanced Form again. If you try to reuse advanced form steps, the following message appears:
 
 "The step \<advanced form step name\> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again."
 
-When that happens, ensure you use a different advanced form step that's not referenced by the relevant Advanced Form already.
+When that happens, ensure you use don't reuse advanced form steps within the Advanced Form.
 
 ### See also
 
