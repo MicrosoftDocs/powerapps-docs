@@ -18,11 +18,11 @@ contributors:
 The Advanced Form Step provides the flow logic of the form's user experience such as steps and conditional branching. It also provided details about the rendering of a form and additional behavior.
 
 > [!NOTE]
-> Advanced Forms persists the history of the steps a user has visited in an object on a Advanced Form Session table. If a Advanced Form's steps have been modified, previously created history data could now be stale. Anytime steps are changed, it is recommended that you delete all Advanced Form Session records to eliminate miss match between sequence of steps logged in history and the current sequence.
+> Advanced Forms persists the history of the steps a user has visited in an object on an Advanced Form Session table. If an Advanced Form's steps have been modified, previously created history data could now be stale. Anytime steps are changed, it is recommended that you delete all Advanced Form Session records to eliminate miss match between sequence of steps logged in history and the current sequence.
 
 Each Advanced Form will be presented on the portal has one or more steps. These steps share some common properties, outlined below. Each Step contains a pointer (a lookup) to the next step, except for terminal steps. Terminal steps don't have a next time, and are thus the last step of the Advanced Form (because of conditional branching, there can be multiple terminal steps).
 
-![Steps to create a advanced form](../media/web-form-creation-steps.png "Steps to create a advanced form")  
+![Steps to create an advanced form](../media/web-form-creation-steps.png "Steps to create an advanced form")  
 
 | Name     | Description                                    |
 |----------|------------------------------------------------|
@@ -34,11 +34,10 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
 
-After an advanced form step is used within a form, it can't be added to the Advanced Form again. If you try to reuse advanced form steps, the following message appears:
-
-"The step \<advanced form step name\> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again."
-
-When that happens, ensure you use don't reuse advanced form steps within the Advanced Form.
+> [!NOTE]
+> Advanced form steps can't be reused. If you try to use advanced form step again, you'll see the following message:
+> <br> `The step <advanced form step name> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again.`
+> <br> When that happens, ensure you use don't reuse advanced form steps in an Advanced Form.
 
 ### See also
 
