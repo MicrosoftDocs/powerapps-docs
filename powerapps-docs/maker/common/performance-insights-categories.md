@@ -75,6 +75,37 @@ This insight checks how many users are using your app from an old version of a b
 
 Users should regularly update the browser to the latest version. Enterprise customers can apply a group policy to be on a specific version. As Unified Service Desk (USD) also uses the default browser setting of the machine, it also requires checking the default browser type and version. 
 
+### Minimum system requirements 
+
+Insight ID: Perf.Environment.Device.MimimumRequirements 
+
+#### Description 
+
+This insight checks whether the user’s environment meets minimum system requirements. You can check the [web application requirements](/en-us/power-platform/admin/web-application-requirements) to see what are the minimum system requirements depending on the app type.  
+
+In general, some activities like rendering, scripting, and downloading contents happen on the client side. Meeting the minimum system requirements is necessary for such activities.  
+
+#### How to improve 
+
+Users should use the hardware that meets or exceeds the minimum system requirements for Power Apps.  
+
+### HTTP protocol
+
+Insight ID: Perf.Environment.Client.Browser.HttpProtocol 
+ 
+#### Description 
+
+Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 protocol for XHR requests onto Power Apps, it might cause slow performance due to the concurrent limitation of requests with the HTTP/1.1 protocol. 
+
+#### How to improve
+
+If this insight identified some users who are using the HTTP/1.1 protocol, we strongly recommend that these user’s client should support the HTTP/2 protocol.  
+
+Several configurations and network infrastructure can block the HTTP/2 protocol, such as a VPN network, proxy server, or device internet option settings.  
+
+Users can simply check out what protocol has been used from a dev tool of a browser. As you can see the figure below, network calls happened over HTTP/2
+
+
 ## Usage pattern
 
 
