@@ -19,7 +19,7 @@ The Basic Form Metadata contains additional behavior modification logic to augme
 
 ## Add a new record
 
-1. On the Basic Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
+1. On the Basic Form that has fields that you would like to modify, go to **Related** > **Metadata** 
 
 2. Select **New Basic Form Metadata**.
 
@@ -29,8 +29,8 @@ The following attributes provide additional styling and capabilities for element
 
 | Name          | Description                                                                                                                                                                                                                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Basic Form Step | The Basic Form Step associated with the Basic Form Metadata record.                                                                                                                                                                                                                                                                                      |
-| Type          | Available options are:<ul><li>Attribute</li><li>Section</li><li>Tab</li></ul>Selecting Attribute as the Type value displays the appropriate options for modifying fields on the current form rendered for the related step. Selecting Section as the Type value displays the options available for modifying a section on the form. Selecting Tab as the Type value displays the options available for modifying a tab on a form.  |
+| Basic Form | The Basic Form associated with the Basic Form Metadata record.                                                                                                                                                                                                                                                                                      |
+| Type          | Available options are:<ul><li>Attribute </li><li>Notes</li><li>Section</li><li>Subgrid</li><li>Tab</li><li>Timeline</li></ul> Each type represents appropriate options for the selection. |
 
 ## Basic form metadata type = Attribute
 
@@ -112,6 +112,10 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the table. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
+## Basic Form metadata type = Notes
+
+See [Configure notes as attachments for basic and advanced forms](../configure-notes.md)
+
 ## Basic Form metadata type = Section
 
 The following properties are displayed when the Type selected equals 'Section'.
@@ -122,6 +126,10 @@ The following properties are displayed when the Type selected equals 'Section'.
 | Section Name |                                                                                           The name of the section on the table's form to be modified.                                                                                            |
 |    Label     | Replaces the default label assigned to the section on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
+## Basic Form metadata type = Subgrid
+
+See [Configure basic form subgrid](configure-basic-form-subgrid.md)
+
 ## Basic Form metadata type = Tab
 
 The following properties are displayed when the Type selected equals 'Tab'
@@ -131,6 +139,21 @@ The following properties are displayed when the Type selected equals 'Tab'
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tab Name |                                                                                           The name of the tab on the table's form to be modified.                                                                                            |
 |  Label   | Replaces the default label assigned to the tab on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
+
+## Basic Form metadata type = Timeline
+
+The following properties are displayed when the Type selected equals 'Timeline'.
+
+| Name                  | Description                                                                                                                                                  |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Basic settings**    |                                                                                                                                                              |
+| Create Enabled        | Enables the ability to add new notes to the table.                                                                                                          |
+| Create Dialog Options | Whether to display the attached file.                                 |
+|File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
+|Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
+|Accept Extension Type(s) | Allows you to specify a list of extension types. |
+|Restrict MIME Types | Select whether to allow or restrict MIME types.|
+|Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. |
 
 ### See also
 
