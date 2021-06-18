@@ -276,6 +276,8 @@ Other elements include:
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
+**[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
 **[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
