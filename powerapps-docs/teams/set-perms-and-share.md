@@ -18,13 +18,10 @@ To share an app:
 
 1. Assign the correct permissions for the tables in your app for the **Colleagues with access** role.
 
-1. Select a security group you would like to assign to the **Colleagues with
+2. Select a security group you would like to assign to the **Colleagues with
 access** role.
-
-    > [!IMPORTANT]
-    > The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
-
-1. Choose which apps the **Colleagues with access** role should have access to.
+    
+3. Choose which apps the **Colleagues with access** role should have access to.
 
 Once you’re done sharing your apps, they’ll appear in the [Built for your
 colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
@@ -89,7 +86,8 @@ ready to share the app with an existing security group.
 > [!NOTE]
 > - You can share an app to a single security group.
 > - If you want to share the app to a Microsoft 365 group, it must be [security enabled](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups).
-> - You can only share apps to security groups with less than 1000 members.
+> - The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
+> - Your Power Apps administrator may have applied the limit to the maximum size of the security group. By default, this limit is 10,000 members.
 
 To share an app:
 

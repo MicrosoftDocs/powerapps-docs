@@ -2,7 +2,7 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 04/02/2021
+ms.date: 06/17/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -60,6 +60,11 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 2. In the **Column Properties** dialog, select the **Controls** tab.
 3. In the list of controls select the default control and then select the **Web** option.
 4. Select **OK**.
+
+## Saving data in an embedded canvas app
+- A save event made from a model-driven app, such as selecting the Save button on the main form command bar, doesn’t save changes made in the embedded canvas app. 
+- To save changes made in an embedded canvas app, use the [Dataverse connector](/connectors/commondataserviceforapps/).
+- The ModelDrivenFormIntegration control OnDataRefresh action should only be used to refresh data within the embedded canvas app. We don’t recommend that you use the OnDataRefresh action to save changes within the embedded canvas app. 
 
 ## Known issues and limitations with embedded canvas apps
 
