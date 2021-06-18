@@ -759,6 +759,8 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Rand
             href: ./canvas-apps/functions/function-rand.md
+          - name: ReadNFC
+            href: ./canvas-apps/functions/function-readnfc.md
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
           - name: Relate
@@ -1757,7 +1759,7 @@
               href: ./portals/customer-engagement-apps/display-file-attachments-knowledge-article.md
         - name: Create an opportunity
           href: ./portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
-        - name: Work with communitites
+        - name: Work with communities
           items:
             - name: Engage with communities
               href: ./portals/customer-engagement-apps/engage-with-communities.md
@@ -2047,8 +2049,6 @@
       href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
-  - name: Business Events (preview)
-    href: ./data-platform/business-events.md
   - name: Translate customized table and column text
     href: ./data-platform/export-customized-entity-field-text-translation.md
   - name: Import translated table and column text
@@ -2162,11 +2162,11 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards
+        - name: Boards (Preview)
           items:
-             - name: Boards (Preview)
+             - name: Boards
                href: ../teams/boards.md
-             - name: Understand Boards (Preview) sample app architecture
+             - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
@@ -2198,14 +2198,22 @@
                href: ../teams/milestones.md
              - name: Understand Milestones sample app architecture
                href: ../teams/milestones-architecture.md
-        - name: Perspectives
+        - name: Perspectives (Preview)
           items:
-            - name: Perspectives (Preview)
+            - name: Perspectives
               href: ../teams/perspectives.md
-            - name: Understand Perspectives (Preview) sample app architecture
+            - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
         - name: Profile+ (Preview)
-          href: ../teams/profile-app.md
+          items:
+            - name: Use the Profile+ sample app 
+              href: ../teams/profile-app.md
+            - name: Customize Profile+ app
+              items:
+                - name: Understand Profile+ sample app architecture
+                  href: ../teams/profile-plus-architecture.md
+                - name: Extend Profile+ app with additional org-specific data
+                  href: ../teams/profile-plus-org-specific.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps

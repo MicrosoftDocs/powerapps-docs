@@ -71,6 +71,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |HashJoin | Hash Join |
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion | MAXRECURSION number |
+|ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS | ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS |
 
 More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
