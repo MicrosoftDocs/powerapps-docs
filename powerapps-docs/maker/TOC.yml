@@ -2214,7 +2214,9 @@
               items:
                 - name: Understand Profile+ sample app architecture
                   href: ../teams/profile-plus-architecture.md
-                - name: Extend Profile+ app with additional org-specific data
+                - name: Customize Profile+ sample app
+                  href: ../teams/customize-profile-plus.md
+                - name: Extend Profile+ sample app with additional org-specific data
                   href: ../teams/profile-plus-org-specific.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
