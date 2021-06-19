@@ -51,7 +51,7 @@ The second list is **Project Details**, which tracks details for all approved pr
 | PMAssigned |Single line of text |Project manager |
 
 ## Step 2: Create and review the lists
-To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have the Excel files from the [download package](./media/sharepoint-scenario-setup/PowerAppsAndSharePointLists_TutorialPackage.zip).
+To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have [downloaded](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) the sample Excel file.
 
 > [!NOTE]
 > Use Internet Explorer for this step.
@@ -93,7 +93,7 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 2. Select the cells in the grid.
    
     ![List with all columns](./media/sharepoint-scenario-setup/01-01-07-empty-grid.png)
-3. Open the project-requests.xlsx workbook and select all the data (not the headings).
+3. Open the [downloaded workbook](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) and select all the data (not the headings).
    
     ![Project Requests Excel table](./media/sharepoint-scenario-setup/01-01-08-excel-table.png)
 4. Copy the data and paste it into the grid in SharePoint, then click or tap **Done**.
