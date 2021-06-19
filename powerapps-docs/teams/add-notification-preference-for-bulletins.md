@@ -18,11 +18,11 @@ The Bulletins Power Apps template for Microsoft Teams provides a central locatio
 
 The Bulletins app solution consists of two apps:
 
-[**Manage bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#manage-bulletins-app)Manager experience for managing **Bulletins** app.
+[**Manage bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app)Manager experience for managing **Bulletins** app.
 
 -   Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
-[**Bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#bulletins-app)
+[**Bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
 
 -   Central location for all company communication such as memos, broadcasts, and news.
     
