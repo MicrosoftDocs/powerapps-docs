@@ -5,7 +5,7 @@ author: NHelgren
 manager: annbe
 ms.service: powerapps
 ms.topic: article
-ms.date: 03/25/2021
+ms.date: 06/08/2021
 ms.author: nhelgren
 ms.reviewer: "pehecke"
 search.audienceType: 
@@ -114,9 +114,62 @@ This is most beneficial when:
 </fetch>
 ```
 
+## FetchXML support for query hints
+
+Microsoft SQL Server supports a number of query hints to optimize queries. The FetchXML language
+supports query hints and can pass these query options to SQL Server.
+
+> [!IMPORTANT]
+> The query hints feature is recommended to be used only by
+> developers who fully understand how FetchXML is translated to SQL. This is to
+> ensure that developers using this feature avoid inadvertent performance
+> regression.
+
+### Syntax
+
+```xml
+<fetch version='1.0' aggregate='true' output-format='xml - platform'
+mapping='logical' options='OptimizeForUnknown,DisableRowGoal,Recompile'>
+
+  <entity name='account'>
+
+    <attribute name='accountid' aggregate='countcolumn' alias='countAll'/>
+    <filter type='and'>
+      <condition attribute='statecode' operator='eq' value='0' />
+    </filter>
+
+    <filter type='or'>
+      <condition attribute='name' operator='like' value='%Test%' />
+      <condition attribute='accountnumber' operator='like' value='%Test%' />
+      <condition attribute='emailaddress1' operator='like' value='%Test%' />
+      <condition attribute='telephone1' operator='like' value='%Test%' />
+    </filter>
+
+  </entity>
+</fetch>
+```
+
+### Supported query options
+
+The supported FetchXML query hints are listed in the following table. The table also shows the translation of FetchXML query hints into SQL Server query hints.
+
+| FetchXML hint | SQL Server hint |
+| --- | --- |
+|OptimizeForUnknown | Optimize for unknown |
+|ForceOrder | Force Order |
+|Recompile | recompile |
+|DisableRowGoal | DISABLE_OPTIMIZER_ROWGOAL |
+|EnableOptimizerHotfixes | ENABLE_QUERY_OPTIMIZER_HOTFIXES' |
+|LoopJoin | Loop Join |
+|MergeJoin | Merge Join |
+|HashJoin | Hash Join |
+|NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
+|ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS | ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS |
+
 ### See also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
+[Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

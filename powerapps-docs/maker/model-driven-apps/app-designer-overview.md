@@ -2,11 +2,11 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 04/30/2021
+ms.date: 06/17/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

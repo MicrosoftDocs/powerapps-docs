@@ -1,6 +1,6 @@
 ---
-title: Find a property | Microsoft Docs
-description: Find a property by control, by category, or alphabetically.
+title: Controls and properties in Power Apps | Microsoft Docs
+description: List of controls within Power Apps and their collection of common properties.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
