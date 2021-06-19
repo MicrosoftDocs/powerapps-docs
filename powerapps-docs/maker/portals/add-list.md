@@ -52,8 +52,6 @@ To add list component:
 
     - **Delete record**: Allows a user to delete a record.
 
-    - **Empty list message**: Message to be displayed when there are no records to be displayed.
-
     - **Number of records per page**: Enter the number of the records to display on a page.
 
     - **Enable search in list**: Allows a user to search records in the list.
