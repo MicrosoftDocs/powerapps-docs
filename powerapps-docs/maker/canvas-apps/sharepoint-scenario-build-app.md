@@ -20,9 +20,6 @@ search.app:
 
 In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
-> [!TIP]
-> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
-
 ## Quick review of Power Apps Studio
 Power Apps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
 

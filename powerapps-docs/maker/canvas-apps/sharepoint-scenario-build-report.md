@@ -20,9 +20,6 @@ search.app:
 
 In this task, we'll create a Power BI report based on the two SharePoint lists. We'll bring the list data into Power BI Desktop and clean it up a little, do some basic data modeling, and create a set of visuals that tell us something about the data.
 
-> [!TIP]
-> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this report: project-analysis.pbix.
-
 ## Quick review of Power BI Desktop
 Before we dive into report creation, let's review Power BI Desktop. This is a powerful tool, with a lot of features, so we will focus on an overview of the areas that you will use in this task. There are three main work areas or *views* in Power BI Desktop: **Report** view, **Data** view, and **Relationships** view. Power BI Desktop also includes **Query Editor**, which opens in a separate window.
 
