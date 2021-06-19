@@ -19,9 +19,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-enable-duplicate-detection-and-retrieve-duplicates -->
-
 This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EnableDuplicateDetection).
+
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
@@ -29,7 +29,7 @@ This sample shows how to enable duplicate detection and retrieve duplicate recor
 
 ## What this sample does
 
-The `IsDuplicateDetectionEnabled` property is intended to be used in a scenario to enable duplicate detection rule for an organization and also for an entity.
+The `IsDuplicateDetectionEnabled` property is intended to be used in a scenario to enable duplicate detection rule for an organization and also for a table.
 
 ## How this sample works
 
@@ -48,7 +48,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

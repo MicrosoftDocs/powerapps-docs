@@ -24,6 +24,8 @@ This sample shows how to assign a security role to a team by using the [AssignRe
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssociateSecurityRoleToTeam)
 
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
@@ -48,7 +50,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

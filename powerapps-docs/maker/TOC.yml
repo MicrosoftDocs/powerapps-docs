@@ -521,6 +521,8 @@
           href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
+        - name: Create or update bulk records
+          href: ./canvas-apps/create-update-records-bulk.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1793,6 +1795,8 @@
           href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
+    - name: Important upcoming changes and depecations
+      href: ./portals/important-changes-deprecations.md
     - name: Supported web browsers
       href: ./portals/supported-web-browsers.md
     - name: Known issues
