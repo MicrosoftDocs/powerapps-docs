@@ -54,11 +54,11 @@ The second list is **Project Details**, which tracks details for all approved pr
 To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have [downloaded](https://download.microsoft.com/download/d/f/6/df6682e2-c625-47f2-9627-b78a86217cd8/project-requests.xlsx) the sample Excel file.
 
 > [!NOTE]
-> Use Internet Explorer for this step.
+> Use Microsoft Edge for this step.
 
 ### Create the lists
 
-1. In Internet Explorer, in your SharePoint site, click or tap **New**, then **List**.
+1. In Microsoft Edge, in your SharePoint site, click or tap **New**, then **List**.
    
     ![Create new SharePoint list](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
 
