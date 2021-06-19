@@ -43,7 +43,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy. J
 
     ![Type as Note](media/configure-notes/type-notes.png)
 
-1. The notes configuration settings are displayed. Most of the settings are collapsed by default. You can expand a section to see additional settings.
+1. The notes configuration settings are displayed. Most of the settings are collapsed by default. You can expand a section to see more settings.
 
     ![Notes options](media/configure-notes/notes-options.png)
 
@@ -231,7 +231,7 @@ To enable attachment on a basic form:
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
-1. Select **Additional Settings** for the form. Configure the additional settings as per the fields explained in the sectipn below.
+1. Select **Additional Settings** for the form. Configure the additional settings as per the fields explained in the section below.
 
     ![Additional settings - attach file](media/configure-notes/additional-settings.png)
 
@@ -245,7 +245,7 @@ To enable attachment on a basic form:
 | Label | Specify a label for the attachment option.
 | Attach File Storage Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>
 | Accept MIME Types | Specify a list of accepted MIME types.
-| Accept File Types | Specify a list of accepted file types. This is only available when using the **Portal Comments** option for **Attach File Save Option**. 
+| Accept File Types | Specify a list of accepted file types. This option is only available when using the **Portal Comments** option for **Attach File Save Option**. 
 
 ### Attach a file option
 
