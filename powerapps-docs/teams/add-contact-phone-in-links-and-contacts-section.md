@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/020/2021
+ms.date: 06/20/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -18,13 +18,13 @@ The Bulletins Power Apps sample app for Microsoft Teams provides a central locat
 
 The Bulletins app solution consists of two apps:
 
-[**Manage bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#manage-bulletins-app)
+[**Manage bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app)
 
 -   Manager experience for managing **Bulletins** app.
 
 -   Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
-[**Bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#bulletins-app)
+[**Bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
 
 -   Central location for all company communication such as memos, broadcasts, and news.
 
@@ -47,11 +47,11 @@ To complete this lesson, we would need the ability to login into Microsoft Teams
 ## Add a Call image media file 
 
 1.  Download the call image to your local desktop.
-2.  Click on the Power Apps button from the left navigation menu in Teams.
+2.  Select the Power Apps button from the left navigation menu in Teams.
 3.  Go to the Build tab and select Installed apps.
 4.  Open the Bulletins app.
 5.  Select Media from the left navigation menu.
-6.  Click on Upload below the Search box and upload the image downloaded above.
+6.  Select Upload below the Search box and upload the image downloaded above.
 7.  The icon gets added to the media list.
 
 ## Add the Call Icon to the contact card
@@ -92,20 +92,20 @@ To complete this lesson, we would need the ability to login into Microsoft Teams
 ## Test the app
 
 1.  Login into Teams and navigate to Team where the Bulletins app is installed.
-2.  Click on the Bulletins tab on the top.
+2.  Select  the Bulletins tab on the top.
 3.  The Bulletins app opens.
-4.  Click on the Links and Contacts tab on the top ribbon.
+4.  Select the Links and Contacts tab on the top ribbon.
 5.  Verify that the Call icon shows on the Contact card.
 
 ![Call icon on contact card](media/add-contact-phone-in-links-and-contacts-section/call-icon-on-contact-card.png "Call icon on contact card")
 
-6. If you do not have a Contact from your organization that exists in the list of contacts already, you can add one by clicking on the Add contact button on the top right.
+6. If you do not have a Contact from your organization that exists in the list of contacts already, you can add one by selecting the Add contact button on the top right.
 7. Select the Office contact from the Select a contact dropdown and enter a Description and hit the Save button on the top right.
-8. Click on the Back icon to go to the Links and contacts screen.
+8. Select the Back icon to go to the Links and contacts screen.
 9. The contact just added shows up on this screen.
-10. Click on the newly added Call image button to call the contact.
+10. Select the newly added Call image button to call the contact.
 11. A popup opens asking to start a call.
-12. Click on Start call to call the contact.
+12. Select Start call to call the contact.
 13. The call gets connected and you are able to call the contact from the Manage Bulletins app using Teams.
 14. Repeats steps 1-13 for the Manage Bulletins app
 
