@@ -1,5 +1,5 @@
 ---
-title: Power Apps Ideas
+title: Power Apps Ideas (Preview)
 description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
 author: norliu
 ms.service: powerapps
@@ -17,10 +17,16 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas
+# Power Apps Ideas (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 [Power Fx](/power-platform/power-fx/overview) is a powerful, low-code language to help makers stitch app components together. However, sometimes it's not easy to write a formula. It takes time to learn and effort to tune. Power Apps Ideas are created to help customers ease the formula authoring experience by using the power of AI models. It can
 now be used to transform natural language to a Power Fx formula.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 For example, instead of figuring out how to write the following formula:
 
