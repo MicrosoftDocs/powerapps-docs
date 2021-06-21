@@ -1,6 +1,6 @@
 ---
-title: 'Slider control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the slider control
+title: Slider control in Power Apps
+description: Learn about the details, properties and examples of the Slider control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

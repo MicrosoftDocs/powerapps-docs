@@ -1,6 +1,6 @@
 ---
-title: Trace function | Microsoft Docs
-description: Reference information, including syntax, for the Trace function in Power Apps Test Studio
+title: Trace function in Power Apps Test Studio
+description: Reference information including syntax and examples for the Trace function in Power Apps Test Studio. 
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,13 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 12/19/2018
-ms.author: aheneay
+ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Trace function 
+# Trace function in Power Apps Test Studio
 
 When used with Test Studio, Trace is an optional expression that can be used to provide additional information in your test results from the **OnTestCaseComplete** event. Trace event messages, as well as any messages for both passed and failed assertions, are contained in a Traces table in the TestCaseResult record. The Traces table has two properties, Message and Timestamp. 
 

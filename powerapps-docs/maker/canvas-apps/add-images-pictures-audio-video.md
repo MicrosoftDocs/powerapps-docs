@@ -1,6 +1,6 @@
 ---
-title: Embed multimedia files into a canvas app and upload | Microsoft Docs
-description: Show multimedia files in a canvas app, and upload them to a data source
+title: Using multimedia files in canvas apps
+description: Show multimedia files in a canvas app, and upload them to a data source.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Using multimedia files in Power Apps
+# Using multimedia files in canvas apps
 
 You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Stream](/stream/), [Azure Media Services](/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
 

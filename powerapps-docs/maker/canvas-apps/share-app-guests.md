@@ -1,6 +1,6 @@
 ---
-title: Share canvas apps with guests | Microsoft Docs
-description: Share your canvas app with guest users 
+title: Share a canvas app with guest users
+description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
@@ -184,8 +184,8 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | Capsule CRM                                       | No                                                                     |
 | Cloud PKI Management                              | No                                                                     |
 | Cognito Forms                                     | No                                                                     |
-| Commmon Data Service                               | Yes*                                                                     |
-| Common Data Service (Legacy)                      | No                                                                     |
+| Microsoft Dataverse                               | Yes*                                                                     |
+| Microsoft Dataverse (Legacy)                      | No                                                                     |
 | D&B Optimizer                                     | No                                                                     |
 | Derdack SIGNL4                                    | No                                                                     |
 | Disqus                                            | No                                                                     |
@@ -257,7 +257,7 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
 | Word Online (Business)                            | No                                                                     |
 
-\* When using the Common Data Service connector, ensure that the guest user is licensed from the same tenant where you have Dataverse located.
+\* When using the Microsoft Dataverse as the data source, ensure that the guest user is licensed from the same tenant where you have Dataverse data located.
 
 ### See also
 
