@@ -24,7 +24,7 @@ To complete this lesson you must first perform the following prerequisites:
     
 2.  Delete the sample idea data. The reason we need to do this is because our data extract captures the user who created the idea, and sample data is
     created by a system account, which may cause an error in the flow (since the user won’t exist in your Active Directory). To delete ideas, see [Use
-    Employee Ideas app from teams store - Power Apps \| Microsoft docs](https://docs.microsoft.com/en-us/powerapps/teams/employee-ideas#:~:text=To%20delete%20an%20idea%3A%201%20Select%20the%20Employee,checkbox%20I%20understand%20to%20confirm.%207%20Select%20Delete.).
+    Employee Ideas app from teams store - Power Apps \| Microsoft docs](https://docs.microsoft.com/powerapps/teams/employee-ideas#:~:text=To%20delete%20an%20idea%3A%201%20Select%20the%20Employee,checkbox%20I%20understand%20to%20confirm.%207%20Select%20Delete.).
     
 3.  Create some ideas, and have colleagues vote for them. This will ensure that the data extract returns data.
 
@@ -233,7 +233,7 @@ Your flow should now look like this:
 
 ![Complete flow](media/export-employee-ideas-for-reporting/complete-flow-screenshot.png "Complete flow")
 
->   Note: flow checker may give you a warning recommending that you use an Odata query on the list rows step. Using an Odata query will be advantageous if you have many idea records or want to filter ideas to a subset, such as ideas associated with open campaigns. This warning is not an error, and can be safely ignored. Click the X in the upper right corner to close the flow checker.
+>   Note: flow checker may give you a warning recommending that you use an Odata query on the list rows step. Using an Odata query will be advantageous if you have many idea records or want to filter ideas to a subset, such as ideas associated with open campaigns. This warning is not an error, and can be safely ignored. Select the X in the upper right corner to close the flow checker.
 
 ![Flow checker showing warnings](media/export-employee-ideas-for-reporting/flow-checker-showing-warnings.png "Flow checker showing warnings")
 
