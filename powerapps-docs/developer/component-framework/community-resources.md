@@ -76,7 +76,10 @@ The following is the list of blogs created by Power Apps community.
 
 ## Tools
 
-The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool that enables you to build code components with ease where you do not need to write the CLI commands but still use the [Power Platform CLI](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli) under the hood. Most of the commands are consolidated, making it easier to build controls. It has two versions; [one version](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is for XrmToolBox and another is a Visual Studio Code [extension](https://marketplace.visualstudio.com/items?itemName=danish-naglekar.pcf-builder); both of them are called **PCF Builder**.
+The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool that enables you to build code components with ease where you do not need to write the CLI commands but still use the [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli) under the hood. Most of the commands are consolidated, making it easier to build components. 
+It has two versions:
+1. https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/ is for XrmToolBox.
+2. [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=danish-naglekar.pcf-builder) both of them are called **PCF Builder**.
 
 [PCF Builder for XrmToolBox](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) provides a graphical user interface that lets you create code components in visual manner using Microsoft Power Platform CLI.
 
