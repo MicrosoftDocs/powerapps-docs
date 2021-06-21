@@ -53,7 +53,7 @@ From the main screen, you can see a summary of the steps to build the How to app
 
 ![Get started in Power Apps](media/how-to/start-screen.png "Get started in Power Apps")
 
-Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selectng **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app and see what the final experience will be when they finish the app.
+Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selectng **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
 ![The finished asset checkout app](media/how-to/final-app.png "The finished asset checkout app")
 
@@ -61,7 +61,7 @@ In the asset checkout app, selecting an item will take you to a screen where you
 
 ![Checkout screen](media/how-to/checkout.png "Checkout screen")
 
-In the top left corner, you can select the icon for checkout items which are available in your account.
+In the top left corner, you can select the icon for checkout items, which are available in your account.
 
 ## Start your maker journey in How to
 
@@ -71,7 +71,7 @@ How to is a self-contained lesson in how to build a Power app--all of the instru
 
 2. Search for **Power Apps.** Select the Power Apps app.
 
-3. Right click on the Power Apps button and select **Pop out app**. This will launch the Power apps app in a new window, so if you need to go somewhere else in Microsoft Teams, you won't lose your place.
+3. Right click on the Power Apps button and select **Pop out app**, which will launch the Power apps app in a new window, so if you need to go somewhere else in Microsoft Teams, you won't lose your place.
 
 4. Select the Build tab
 
@@ -90,7 +90,7 @@ How to is a self-contained lesson in how to build a Power app--all of the instru
 
 
 ## Understanding the Overview screen
-The overview screen is your guide to your maker journey. From the overview screen you can see where you are in the process. To start a step, hold your keyboard alt key and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
+The overview screen is your guide to your maker journey. From the overview screen, you can see where you are in the process. To start a step, hold your keyboard alt key and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
 
 When done, return to the Overview screen and select the button on the current step's tile to complete the step and move to the next lesson.
 
@@ -113,11 +113,11 @@ So if you have started to go through the lessons in How to, and you decide you w
 
 ## Learn to work with Data Model
 
-In this step we will add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
+In this step, we will add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
 
 For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md).
 
-3. Create the following tables and columns:
+Create the following tables and columns:
 
 ### Item Type
 | Column name      | Date type | Value |
