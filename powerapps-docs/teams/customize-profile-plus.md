@@ -138,7 +138,7 @@ When you're done making modifications to the apps, select **Save** to save your 
 - A dialog will open confirming that you want to publish.
 - To change app settings, such as icon and background color, select **Edit details**.
 - To publish the app, select **Next**.
-- On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by selecting the **+** button
+- On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by selecting the **+** button.
     ![Add to channel](media/customize-profile-plus/add-to-channel.png "Add to channel")
 - To complete publishing your changes, select **Save and close**.
 
