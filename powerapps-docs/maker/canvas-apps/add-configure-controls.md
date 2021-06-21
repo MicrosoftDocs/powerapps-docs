@@ -1,5 +1,5 @@
 ---
-title: Add and configure a canvas-app control | Microsoft Docs
+title: Add and configure controls in canvas apps
 description: Step-by-step instructions for adding and configuring canvas-app controls directly, from the toolbar, in the Properties tab, or in the formula bar.
 author: tapanm-msft
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add and configure a canvas-app control in Power Apps
+# Add and configure controls in canvas apps
 
 Add a variety of UI elements to your canvas app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
@@ -43,7 +43,7 @@ The new screen is named **Screen2** and appears in the left navigation pane. Thi
 
 To demonstrate how this list works, select **Label** on the **Insert** tab. The new control appears under **Screen2** in the hierarchical list.
 
-![Screen2 in list](./media/add-configure-controls/add-label.png)
+![Insert label](./media/add-configure-controls/add-label.png)
 
 In the screen, a box with six handles surrounds the label by default. That type of box surrounds whichever control is selected. If you select the screen by clicking or tapping in it (but outside the label), the box disappears from the label. To select the label again, you can click or tap in it, or you can click or tap its name in the hierarchical list of controls.
 
@@ -79,7 +79,7 @@ To move a control, select it, hover over its center so that the four-headed arro
 
 To resize a control, select it, hover over any handle in the selection box so that the two-headed arrow appears, and then drag the handle.
 
-![Move control](./media/add-configure-controls/resize-control.png)
+![Drag control](./media/add-configure-controls/resize-control.png)
 
 > [!NOTE]
 > As this topic describes later, you can also move and resize a control by modifying any combination of its **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, **[Height](controls/properties-size-location.md)**, and **[Width](controls/properties-size-location.md)** properties in the formula bar.

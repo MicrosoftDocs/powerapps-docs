@@ -1,5 +1,5 @@
 ---
-title: Working with Test Studio for testing canvas apps | Microsoft Docs
+title: Working with Test Studio
 description: Describes how to use Test Studio with example for testing canvas apps.
 author: aengusheaney
 manager: kvivek
@@ -292,7 +292,7 @@ The **TestSuiteResult** record contains the following properties:
 - *TestsPassed* – the number of test cases that completed successfully in the suite.
 - *TestsFailed* - the number of test cases that failed in the suite.
 
-In this quickstart, you'll create two custom entities in the Dataverse database to store the test results by customizing the **OnTestCaseComplete** and **OnTestSuiteComplete** properties:
+In this quickstart, you'll create two custom tables in the Dataverse database to store the test results by customizing the **OnTestCaseComplete** and **OnTestSuiteComplete** properties:
 
 1. Select **Test** in the left pane or **View** on the suite header.
 
@@ -300,10 +300,10 @@ In this quickstart, you'll create two custom entities in the Dataverse database 
 
 2. Select the **OnTestCaseComplete** action.
 
-3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults entity in Dataverse. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
+3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults table in Dataverse. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
 
     > [!NOTE]
-    > The following samples require a [Common Data Service connection](/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
+    > The following samples connect to Microsoft Dataverse. You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
     ```powerapps-dot
     //Save to Dataverse
@@ -327,7 +327,7 @@ In this quickstart, you'll create two custom entities in the Dataverse database 
 
 4. Select the **OnTestSuiteComplete** action.
 
-5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults entity in Dataverse. 
+5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults table in Dataverse. 
 
     ```powerapps-dot
     //Save to Dataverse

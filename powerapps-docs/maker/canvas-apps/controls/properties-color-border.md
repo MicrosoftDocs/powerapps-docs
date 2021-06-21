@@ -1,6 +1,6 @@
 ---
-title: Color and border properties | Microsoft Docs
-description: Reference information about properties such as BorderColor, HoverBorderColor, and PressedBorderColor
+title: Color and border properties in Power Apps
+description: Reference information about the color and border properties in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
