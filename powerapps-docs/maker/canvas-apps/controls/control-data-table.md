@@ -1,12 +1,12 @@
 ---
-title: 'Data table control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Data table control
+title: Data table control in Power Apps
+description: Learn about the details, properties and examples of the data table control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/16/2020
+ms.date: 05/11/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -37,7 +37,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 * Add a **Data table** control in a form control.
 * Change the height of all rows.
 * Show images in a **Data table** control.
-* Show fields from related entities.
+* Show fields from related tables.
 * Use built-in functionality to filter and sort data by column heading.
 * Add a **Data table** control in a **Gallery** control.
 * Edit data in the **Data table** control.
@@ -94,15 +94,9 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
    
     A **Data table** control is added to the screen.
 3. Rename the **Data table** control **SalesOrderTable**, and resize it so that it covers the whole screen.
-4. In the right pane, click or tap the down arrow to the right of the **No data source selected** text, and then click or tap **Add a data source**.
+4. In the right pane, select **Data sources**, and select **Sales orders**. If the table isn't listed, search for the table, and connect to Microsoft Dataverse.
    
-    ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
-5. In the list of connections, click or tap the connection for your Dataverse database.
-   
-    ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
-6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
-   
-    ![Select the Sales order entity](./media/control-data-table/choose-so-data-table.png)
+    ![Select the Sales order table](./media/control-data-table/choose-so-data-table.png)
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    

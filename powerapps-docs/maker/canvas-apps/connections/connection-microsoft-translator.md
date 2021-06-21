@@ -1,6 +1,6 @@
 ---
-title: Overview of the Microsoft Translator connection | Microsoft Docs
-description: See how to connect to Microsoft Translator, step through some examples, and see all the functions
+title: Connect to Microsoft Translator from Power Apps
+description: See how to connect to Microsoft Translator, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to Microsoft Translator from Power Apps
+
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
 
 Add the Microsoft Translator connector to display translated text in a **Label** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another label, you can display the translated text.

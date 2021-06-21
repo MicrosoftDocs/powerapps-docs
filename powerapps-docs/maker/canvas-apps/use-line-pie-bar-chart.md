@@ -1,6 +1,6 @@
 ---
-title: Create a chart in a canvas app | Microsoft Docs
-description: In Power Apps, show categories of data as line charts, pie charts, or bar charts in a canvas app
+title: Show data in a line, pie, or bar chart in canvas apps
+description: Learn about how to show categories of data as line charts, pie charts, or bar charts in a canvas app.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show data in a line, pie, or bar chart in Power Apps
+# Show data in a line, pie, or bar chart in canvas apps
 
 Use line charts, pie charts, and bar charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
 
@@ -23,7 +23,7 @@ Use line charts, pie charts, and bar charts to display your data in a canvas app
 
 For example, your data should look similar to the following:
 
-![][9]
+![Data example][9]
 
 You can create and use these charts within Power Apps. Let's get started.
 
@@ -39,7 +39,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
 1. On the **Insert** tab, select **Controls**, and then select **Import**:  
 
-    ![][11]  
+    ![Insert controls][11]  
 
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
 
@@ -53,7 +53,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     The ProductRevenue collection is listed with the chart data you imported:
 
-    ![][1]  
+    ![File - collections][1]  
 
    > [!NOTE]
    > The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
@@ -68,15 +68,15 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
 3. In the pie-chart control, select the middle of the pie chart:   
 
-    ![][10]
+    ![Pie chart control][10]
 
 4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
 
-    ![][2]  
+    ![Items property][2]  
 
     The pie chart shows the revenue data from 2014.
 
-    ![][3]  
+    ![Pie chart updated][3]  
 
 ## Add a bar chart to display your data
 Now, let's use this ProductRevenue collection in a bar chart:
@@ -87,23 +87,23 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
-    ![][12]  
+    ![Items property to ProductRevenue][12]  
 
     The column chart shows the revenue data from 2012:
 
-    ![][4]  
+    ![Column updated][4]  
 
 4. In the column chart, select the center square:
 
-    ![][5]
+    ![Select center square][5]
 
 5. On the **Chart** tab, select **Number of Series**, and then enter **3** in the formula bar:
 
-    ![][6]  
+    ![Select number of series and enter 3][6]  
 
     The column chart shows revenue data for each product over three years:
 
-    ![][7]  
+    ![Updated chart][7]  
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png
 [2]: ./media/use-line-pie-bar-chart/itemsexpression.png
