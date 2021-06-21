@@ -1,17 +1,19 @@
 ---
-title: How to customize the Profile+ sample app (Preview)
+title: Customize the Profile+ sample app (Preview)
 description: Learn how to customize the Profile+ app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/12/2021
+ms.date: 06/21/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
   - navjotm
+  - joel-lindstrom
+  - tapanm-msft
 ---
-# How to customize the Profile+ sample app (Preview)
+# Customize the Profile+ sample app (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -20,6 +22,10 @@ The Profile+ Power App template for Microsoft Teams is designed to be a complete
 Before you can customize the app, you must install it. You can get the app at <https://aka.ms/TeamsProfilePlus>.
 
 Once the app is installed, you can then customize the app using the following steps:
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Open the app in Microsoft Teams
 
