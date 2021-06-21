@@ -1,6 +1,6 @@
 ---
-title: Create and update a collection in a canvas app | Microsoft Docs
-description: Create a collection in a canvas app, add items to the collection, and remove one or all items from it
+title: Create and update a collection in a canvas app
+description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -82,7 +82,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. Close the **Data** pane, select the gallery, and then set the **Layout** field to **Title and subtitle**.
 
-    ![Set the gallery's Items property, and change the fields that it shows](./media/create-update-collection/change-layout.png)
+    ![Change layout of the gallery](./media/create-update-collection/change-layout.png)
 
     Your screen resembles this example:
 

@@ -1,6 +1,6 @@
 ---
-title: Create a component library for canvas apps | Microsoft Docs
-description: Library of reusable components for canvas apps
+title: Component library
+description: Learn about working with a library of reusable components for canvas apps.
 author: yifwang
 ms.service: powerapps
 ms.topic: article

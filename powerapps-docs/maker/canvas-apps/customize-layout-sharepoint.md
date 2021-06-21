@@ -1,6 +1,6 @@
 ---
-title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
-description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in Power Apps.
+title: "Tutorial: Customize a gallery in Power Apps"
+description: Learn about how to customize data that appears in gallery and other elements of canvas apps generated automatically.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -24,7 +24,7 @@ For example, the gallery for this tutorial matches this graphic by default. The 
 
 However, your users might be more interested in the account name more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the key data for your organization. In addition, you'll change the title of the default screen to differentiate it from the other screens in the app.
 
-![Final gallery](./media/customize-layout-sharepoint/gallery-after.png)
+![Gallery after changes](./media/customize-layout-sharepoint/gallery-after.png)
 
 You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
 
@@ -41,7 +41,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Microsoft Dataverse.
+[Generate an app](data-platform-create-app.md) from the **Accounts** table of Microsoft Dataverse.
 
 ## Open the generated app
 
@@ -79,7 +79,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 1. Select the gallery as the previous section describes.
 
-    ![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
+    ![Gallery highlighted](./media/customize-layout-sharepoint/select-gallery-title.png)
 
 1. Near the upper-left corner, confirm that the property list shows **Items**.
 
@@ -134,7 +134,7 @@ If your users might have neither touch screens nor mouse wheels, configure the g
 
 1. Select the gallery as the first procedure describes.
 
-    ![Select gallery](./media/customize-layout-sharepoint/select-gallery-sorted.png)
+    ![Gallery highlighted for scrollbar](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
 1. Set the gallery's **Show scrollbar** property to **true**.
 
