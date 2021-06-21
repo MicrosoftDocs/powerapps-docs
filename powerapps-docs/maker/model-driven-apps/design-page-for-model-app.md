@@ -31,7 +31,7 @@ Custom page authoring will start with a subset of controls supported and will be
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
-  |Custom control|Custom|Power Apps Component Framework supported canvas control|
+  |Custom control|Custom|See [Power Apps Component Framework supported canvas control](../../developer/component-framework/overview.md)|
   |Label<sup>1</sup>|Display||
   |Text Box<sup>1</sup>|Input||
   |Date Picker<sup>1</sup>|Input|
@@ -53,6 +53,9 @@ Custom page authoring will start with a subset of controls supported and will be
   
   > [!Note]
   > Controls with “1” are the new control version used by canvas apps in Teams; these controls are from the [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
+
+More examples of custom components is available in  
+[Custom component samples](../../developer/component-framework/use-sample-components.md).
 
 ## Enable responsive layout with Container control
 
