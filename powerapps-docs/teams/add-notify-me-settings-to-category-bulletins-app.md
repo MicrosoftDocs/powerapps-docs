@@ -1,5 +1,4 @@
 ---
-
 title: How to add "notify me" settings to category in Bulletins app
 description: Learn about how to customize the Bulletins app to add "notify me" settings to category
 author: sbahl10
@@ -11,8 +10,7 @@ ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
 
-    - v-ljoel
-
+   - v-ljoel
 ---
 
 # Bulletins App – Add "notify me" settings to category
@@ -21,13 +19,13 @@ The Bulletins Power App Template for Microsoft Teams provides a central location
 
 The Bulletins app solution consists of two apps:
 
-[**Manage bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#manage-bulletins-app)
+[**Manage bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app)
 
 -   Manager experience for managing **Bulletins** app.
 
 -   Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
-[**Bulletins app**](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#bulletins-app)
+[**Bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
 
 -   Central location for all company communication such as memos, broadcasts, and news.
     
@@ -153,9 +151,9 @@ To get started, let’s add a table to store the notification settings.
 
 8.  Save the flow.
 
-![Add notify me settings to category](media/add-notify-me-settings-to-category/flow-trigger-and-get-category-step.png "Add notify me settings to category")
+![Flow trigger and Get Category step](media/add-notify-me-settings-to-category/flow-trigger-and-get-category-step.png "Flow trigger and Get Category step")
 
-![](media/add-notify-me-settings-to-category/filter-bulletins-by-category-step.png)
+![Filter bulletins by category step](media/add-notify-me-settings-to-category/filter-bulletins-by-category-step.png "Filter bulletins by category step")
 
 ![Send email step for each category](media/add-notify-me-settings-to-category/send-email-step-for-each-category.png "Send email step for each category")
 
@@ -171,7 +169,7 @@ To get started, let’s add a table to store the notification settings.
     
 5.  Select the Turn on notifications toggle to turn notifications on for the particular categories.
 
-![Add notify me settings to category](media/add-notify-me-settings-to-category/bulletins-turn-on-notifications.png "Add notify me settings to category")
+![Bulletins turn on notifications](media/add-notify-me-settings-to-category/bulletins-turn-on-notifications.png "Bulletins turn on notifications")
 
 6. Now, select the Manage Bulletins tab on the top.
 
