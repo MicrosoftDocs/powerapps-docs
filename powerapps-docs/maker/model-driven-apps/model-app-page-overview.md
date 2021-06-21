@@ -72,7 +72,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What data can the custom page use?
 
-  A custom page can currently use Dataverse (Common Data Service) and will soon be able to use Power Apps connectors to retrieve data.
+  A custom page can use Dataverse (Common Data Service) and some of the most common connectors for Power Apps.  The list of verified connectors is tracked in [Add connectors into custom pages](page-data-connector.md).
 
 * What interactions can the custom page have with the model-driven app?
 
@@ -86,35 +86,24 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
   Each custom page is a separate component in the solution which allows one maker to edit a custom page at a time.  Most custom pages will have a single screen.  Instead of multiple screens, they will use the custom page's navigation functions to move to another custom page or model page.  When a custom page has multiple screens, it is still a single solution component so only one maker can be working on the contained set of screens.
 
-  * What licenses are allowed to use a custom page and does a custom page impact app counts?
+* What licenses are allowed to use a custom page and does a custom page impact app counts?
 
   The custom page uses a special canvas type which allows us to manage it differently.  The custom page is considered part of the model-driven app infrastructure and can only be used within a model-driven app.  So it follows the license for the model-driven app.  Also custom pages do not count toward the app limits because we treat them as a page instead of an app.
 
 * Do custom pages need to be shared like standalone canvas apps?
 
-  The custom page is aligned with the model page sharing which relies on the model-driven app sharing without sharing individual pages.  The one exception is if the root app infrastructure is disabled and then each custom page needs to be shared.  All new environments will use root app infrastructure.
+  The custom page is aligned with the model page sharing which relies on the model-driven app sharing without sharing individual pages for end users.  Makers may need to share the custom page to allow editing.
 
 ## Known limitations
-Custom pages have the following limitations.
+As a public preview feature, custom pages some known limitations.  Below are the most common and the full list is in [Custom Page Known Issues](model-app-page-issues.md).
 
 * Supports the most common canvas controls and custom pro-dev components. For more information on what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
-
-* Custom page data access is limited to Dataverse and will Power Apps connector data is coming soon
 
 * Canvas component library or canvas component control support is coming soon
 
 * Native player support (for example, iOS, Android) is coming soon for online-only. Offline support will be coming in 2022
 
-* Layout or control support for Right to Left (RTL) is coming before GA
-
-* Ability to get the current users settings including Locale, Language is coming before GA
-
 * Custom pages require third-party cookie to be enabled which is required by the canvas runtime
-
-* Custom pages use a canvas hosting session that can timeout after 8 hours where the Unified Interface session has a longer timeout.  When this happens an error message bar will appear prompting the user to refresh the browser
-
-  > [!div class="mx-imgBorder"]
-  > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
 
 Custom pages will not work on premise since it requires the online service for canvas apps. Custom pages also will notwork with IE 11 because it depends on capabilities not available in that browser.
 
@@ -131,3 +120,5 @@ Custom pages will not work on premise since it requires the online service for c
 [Add connectors into custom pages](page-data-connector.md)
 
 [Use Monitor to troubleshoot custom page](monitor-page-checker.md)
+
+[Model-driven app custom page known issues](model-app-page-issues.md)

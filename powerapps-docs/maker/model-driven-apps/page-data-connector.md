@@ -20,13 +20,32 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of Power Apps connectors within a custom page.
+This topic outlines the use of Power Apps connectors within a custom page.  The most common connectors are being verified and status is available in this page.  This page also includes any known issues for connectors in custom pages. 
+
+The publishing a model-driven app with custom pages will consolidate all of the connections within the app. This allows for a single consent prompt for all of the connectors used at the start of the app.
+
+## Verified connectors for custom pages
+
+| Connector | Status | Notes |
+| -- | -- | -- |
+| [Office 365 Users](../canvas-apps/connections/connection-office365-users.md) | Verified |
+| [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
+| [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
+| [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Partial | Verified AAD Not-shared and Sql Auth Shared | 
+| [Teams](https://docs.microsoft.com/connectors/teams/) | Verified |
+| [Custom connector](../canvas-apps/register-custom-api.md) | In progress |
+| [Excel Online](../canvas-apps/connections/connection-excel.md) | Partial | Verified the new Excel Online connector |
 
 ## Upcoming changes to connectors for custom pages
 
 * User prompt for consent
-* Support for bypassing Microsoft connectors
-* Support for custom connectors 
+* Cross environment Dataverse connection
+* SQL Server with Windows Auth Shared and Not Shared
+
+## Known issues
+
+* No support to enable bypassing Microsoft connectors
+* Error when Flow is used in custom connector
 
 ## Related topics
 
@@ -35,3 +54,7 @@ This topic outlines the use of Power Apps connectors within a custom page.
 [Add a custom page to your model-driven app](add-page-to-model-app.md)
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
+
+[Overview of Power Apps connectors](../canvas-apps/connections-list.md)
+
+[Add data connection in canvas designer](../canvas-apps/add-data-connection.md)
