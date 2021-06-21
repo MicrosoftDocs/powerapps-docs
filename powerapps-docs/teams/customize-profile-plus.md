@@ -81,7 +81,7 @@ Before modifying the fields, you need to first decide where the fields you want 
 
 ## Profile+ Screens
 
-From the list of apps, chatbots, flows, and tables, select the **Profile+**app.
+From the list of apps, chatbots, flows, and tables, select the Profile+ app.
 
 ![Select Profile+ app](media/customize-profile-plus/select-app.png "Select Profile+ app")
 
