@@ -1,6 +1,6 @@
 ---
-title: Meeting Capture sample template | Microsoft Docs
-description: Learn about the Meeting Capture sample template in Power Apps with setup, overview, and deep dives into how the app was built.
+title: Set up and learn about the Meeting Capture sample template in Power Apps
+description: Learn about how to setup and use the Meeting Capture sample app template in Power Apps.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps

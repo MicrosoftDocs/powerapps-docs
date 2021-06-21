@@ -1,6 +1,6 @@
 ---
-title: Create a component for canvas apps | Microsoft Docs
-description: Introduction to reusable components for canvas apps
+title: Create a component for canvas apps
+description: Learn about how to create reusable components for canvas apps.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -135,7 +135,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. On the **Insert** tab, open the **Components** menu, and then select **MenuComponent**.
 
-    ![Insert](./media/create-component/insert.png "Insert")
+    ![Insert component](./media/create-component/insert.png "Insert component")
 
     The new component is named **MenuComponent_1** by default.
 

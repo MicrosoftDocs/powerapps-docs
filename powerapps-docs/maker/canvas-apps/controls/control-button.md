@@ -1,6 +1,6 @@
 ---
-title: 'Button control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Button control
+title: Button control in Power Apps
+description: Learn about the details, properties and examples of the button control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference

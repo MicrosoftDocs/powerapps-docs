@@ -1,6 +1,6 @@
 ---
-title: IfError and IsError functions in Power Apps | Microsoft Docs
-description: Reference information, including syntax and examples, for the IfError and IsError functions in Power Apps
+title: IfError and IsError functions in Power Apps
+description: Reference information including syntax and examples for the IfError and IsError functions in Power Apps. 
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

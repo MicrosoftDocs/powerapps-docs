@@ -1,6 +1,6 @@
 ---
-title: Create a flow to manage project approvals | Microsoft Docs
-description: In this task we'll create a flow that drives the process of approving projects.
+title: Create a flow to manage project approvals
+description: Learn about how to create a flow that drives the process of approving projects.
 author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps
@@ -50,7 +50,7 @@ By default, this branch sends an approval email to the requestor. We'll also upd
     ![Edit email settings](./media/sharepoint-scenario-approval-flow/03-01-07-yes-email.png)
 2. By default, an email is sent to the person who created the list item, with the subject line and message body that you see. You can update these if you like.
    
-    ![Default email settings](./media/sharepoint-scenario-approval-flow/03-01-07a-yes-email-defaults.png)
+    ![Change default email settings](./media/sharepoint-scenario-approval-flow/03-01-07a-yes-email-defaults.png)
 3. Click or tap **Add an Action**.
    
     ![Add an action](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
@@ -70,7 +70,7 @@ By default, this branch sends an approval email to the requestor. We'll also upd
     ![List title dynamic content](./media/sharepoint-scenario-approval-flow/03-00-05-list-title.png)
 8. In the **Approved** box, enter "Yes". This part of the flow should now look like the following image.
    
-    ![List update](./media/sharepoint-scenario-approval-flow/03-01-08-yes-update-complete.png)
+    ![Approved](./media/sharepoint-scenario-approval-flow/03-01-08-yes-update-complete.png)
 9. Click or tap **Add an Action** again. This time we'll add an item to the **Project Details** list for the project that was approved.
    
     ![Add an action](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
@@ -95,7 +95,7 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
 
 1. In the **If no** branch, click or tap **Inform item creator of rejection**, then **Edit** to see the default options for the email sent to the requestor.
    
-    ![Edit email settings](./media/sharepoint-scenario-approval-flow/03-01-12-no-email.png)
+    ![Edit default options for email](./media/sharepoint-scenario-approval-flow/03-01-12-no-email.png)
 2. By default, an email is sent to the person who created the list item, with the subject line and message body that you see. You can update these if you like.
    
     ![Default email settings](./media/sharepoint-scenario-approval-flow/03-01-13-no-email-defaults.png)
@@ -116,7 +116,7 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
     ![List title dynamic content](./media/sharepoint-scenario-approval-flow/03-00-05-list-title.png)
 8. In the **Approved** box, enter "No". This part of the flow should now look like the following image.
    
-    ![List update](./media/sharepoint-scenario-approval-flow/03-01-08-no-update-complete.png)
+    ![Approved - No](./media/sharepoint-scenario-approval-flow/03-01-08-no-update-complete.png)
 9. At the top right of the screen, click or tap **Create flow**.
    
     The flow is now complete, and it should look like the following image if you collapse the boxes.

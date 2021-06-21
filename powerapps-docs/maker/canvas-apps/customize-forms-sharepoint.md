@@ -1,6 +1,6 @@
 ---
-title: Customize a form in a canvas app | Microsoft Docs
-description: In Power Apps, specify which data to show in a canvas-app form, in which order to show them, and in which controls.
+title: Customize forms in canvas apps
+description: Learn about how to specify which data to show in a canvas app form, in which order to show them, and in which controls.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Customize a canvas-app form in Power Apps
+# Customize forms in canvas apps
 
 In a canvas app, customize a **Display form** control and an **Edit form** control so that they show the data that matters most and in the most intuitive order to help users easily understand and update the data.
 
@@ -43,7 +43,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 1. Hide a field, such as **Description**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
+    > ![Hide description](./media/customize-forms-sharepoint/hide-fields.png)
 
 1. Show a field by selecting **Add field**, typing or pasting the first few letters of the field's name in the search box, selecting the field's check box, and then selecting **Add**.
 
