@@ -91,7 +91,7 @@ Now that Profile+ is open in Power Apps in Microsoft Teams, select the **Tree Vi
 
 From the Tree View, you can see the screens included in the app. Selecting the arrow to the left of a screen will expand the contents of the screen, giving you access to the components of the screen&mdash;including galleries, buttons, text labels, and text input controls.
 
-The following are the screens in Profile+:
+The Profile+ app consists of the following screens.
 
 | **Screen**             | **Description**                                                                                                                                                                      |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
