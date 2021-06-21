@@ -194,7 +194,7 @@ When you are done making modifications to the apps, select **Save** to save your
 
 ![Close button on top right corner](media/customize-employee-ideas/top-right-corner-x.png "Close button on top right corner")
 
--   To publish your app changes, select the ![](media/customize-employee-ideas/publish-to-teams.png) button.
+-   To publish your app changes, select the ![Publish to Teams](media/customize-employee-ideas/publish-to-teams.png "Publish to Teams") button.
     
 -   Publishing the app makes your changes visible to users of the app.
 
