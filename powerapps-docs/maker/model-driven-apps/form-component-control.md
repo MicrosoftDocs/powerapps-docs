@@ -110,6 +110,8 @@ Note the following limitations when you add the form component control to a tabl
 
 - For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
 
+- Form component controls are not supported in bulk edit dialogs. They will not appear in the form in the bulk edit dialog by default and any changes made to related table records with them will not be saved.
+
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
