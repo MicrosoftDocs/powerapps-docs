@@ -26,7 +26,7 @@ now be used to transform natural language to a Power Fx formula.
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 For example, instead of figuring out how to write the following formula:
 
