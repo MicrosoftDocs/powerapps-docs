@@ -141,8 +141,7 @@ When you're done making modifications to the apps, select **Save** to save your 
 Before modifying the Profile+ app, consider the following items:
 
 - Where are my table customizations? <br>
-    Added columns and tables go to **Built by this team** section in Power Apps. You can also add
-    new tables in the **See all** area.
+    Added columns and tables go to **Built by this team** section in Power Apps. You can also add new tables in the **See all** area.
     ![Built by this team](media/customize-profile-plus/built-by-this-team.png "Built by this team")
 - Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations won't be overridden. You'll get a new version that has the latest features, but the new version won't be published.
     ![Installing new version](media/customize-profile-plus/profile-install.png "Installing new version")
