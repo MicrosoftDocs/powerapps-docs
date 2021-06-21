@@ -1,6 +1,6 @@
 ---
-title: Generate a canvas app to handle project requests | Microsoft Docs
-description: In this task, we'll generate a basic canvas app with three screens directly from a SharePoint list.
+title: Generate a canvas app to handle project requests
+description: Learn about how to generate a basic canvas app with three screens directly from a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -23,9 +23,6 @@ contributors:
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 Now that the SharePoint lists are in place, we can build and customize our first app. Power Apps is integrated with SharePoint, so it's easy to generate a basic *three screen app* directly from a list. This app allows you to view summary and detailed information for each list item, update existing list items, and create new list items. If you create an app directly from a list, the app appears as a *view* for that list. You can then run that app in a browser, as well as on a mobile phone.
-
-> [!TIP]
-> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-requests-app.msapp.
 
 ## Step 1: Generate an app from a SharePoint list
 

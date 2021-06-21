@@ -1,6 +1,6 @@
 ---
-title: Char function | Microsoft Docs
-description: Reference information for the Char function in Power Apps, including syntax and examples
+title: Char function in Power Apps
+description: Reference information including syntax and examples for the Char function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

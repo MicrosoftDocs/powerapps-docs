@@ -1,6 +1,6 @@
 ---
-title: 'Vertical container: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Vertical container control
+title: Vertical container control in Power Apps
+description: Learn about the details, properties and examples of the Vertical container control in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Vertical container control 
+# Vertical container control in Power Apps
 
 Vertical container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 

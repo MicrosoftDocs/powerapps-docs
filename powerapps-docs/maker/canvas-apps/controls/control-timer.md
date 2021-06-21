@@ -1,6 +1,6 @@
 ---
-title: 'Timer control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the timer control
+title: Timer control in Power Apps
+description: Learn about the details, properties and examples of the Timer control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
