@@ -1,4 +1,3 @@
-
 ---
 title: Enter and resolve address in maps
 description: Use the address input component in your apps to let users search for and find addresses.
