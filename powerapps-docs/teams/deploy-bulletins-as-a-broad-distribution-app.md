@@ -40,7 +40,7 @@ You can only share the app with a single Active Directory group.
 
 2.  Grant security permissions to the tables used in the app.
 
-# Sharing App with Colleagues
+## Sharing App with Colleagues
 
 This process begins by opening the app in the **Power Apps** app. You may have Power Apps pinned to your Teams App Bar.
 
@@ -79,7 +79,7 @@ This process begins by opening the app in the **Power Apps** app. You may have P
 
 10. Select **Save**
 
-# Granting Permissions to the tables
+## Granting Permissions to the tables
 
 Understanding and assigning permissions to tables are vital to ensure proper security of your shared data. Here are the four permissions available for use.
 
@@ -99,7 +99,7 @@ Understanding and assigning permissions to tables are vital to ensure proper sec
 
     ![Private Bulletins app](media/deploy-inspection-as-a-broad-distribution-app/private-bulletins-app.png "Private Bulletins app")
 
-## Granting Permissions to the tables
+### Granting Permissions to the tables
 
 By default, all of the table permissions for colleagues not in the Team are set
 to **none.** If you leave it that way, colleagues that you share the app with
@@ -159,7 +159,7 @@ can make it easier for your colleagues to find the app by renaming it.
     
 4.  Save and publish the app.
 
-# Accessing shared apps
+## Accessing shared apps
 
 So now that you have shared Bulletins with colleagues outside of your team, here is how they will acquire the app.
 
