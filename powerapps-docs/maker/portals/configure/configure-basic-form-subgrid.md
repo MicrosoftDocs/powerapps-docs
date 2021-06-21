@@ -1,15 +1,16 @@
 ---
 title: Configure Basic form subgrids for portals
 description: Learn how to add and configure basic form subgrids for a portal.
-author: sandhangitmsft
+author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
-ms.author: sandhan
+ms.date: 06/21/2021
+ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
+    - GitanjaliSingh33msft
     - sandhangitmsft
 ---
 
