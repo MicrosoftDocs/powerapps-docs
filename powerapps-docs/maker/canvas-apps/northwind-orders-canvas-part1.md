@@ -1,13 +1,13 @@
 ---
-title: Create an order gallery in a canvas app | Microsoft Docs
-description: Create an order gallery in a canvas app to manage data for Northwind Traders
+title: Create an order gallery in a canvas app
+description: Learn about how to create an order gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/06/2019
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType:
   - maker
@@ -49,25 +49,13 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 ## Add the data
 
-1. On the **View** tab, select **Data sources**:
+1. On the left-pane, select **Data** > **Add data** > search for, and select **Orders** table.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
+    ![Select View, Data sources, Add data source](media/northwind-orders-canvas-part1/datasource-01.png)
 
-1. Type **orders** into the search box:
+    The **Orders** table contains many fields of various types:
 
-    > [!div class="mx-imgBorder"]
-    > ![List of connections](media/northwind-orders-canvas-part1/datasource-02.png)
-
-1. Select the **Orders** data source to use in your app:
-
-    > [!div class="mx-imgBorder"]
-    > ![List of entities](media/northwind-orders-canvas-part1/datasource-03.png)
-
-    The **Orders** entity contains many fields of various types:
-
-    > [!div class="mx-imgBorder"]
-    > ![List of fields in the Orders entity](media/northwind-orders-canvas-part1/datasource-05.png)
+    ![List of fields in the Orders table](media/northwind-orders-canvas-part1/datasource-05.png)
 
     Each field has a **Display name** and a **Name**, which is sometimes called the logical name. Both names refer to the same thing. In general, you'll use the display name when you build an app, but some cases require the more cryptic **Name**, as noted in a procedure.
 
@@ -82,10 +70,6 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
 
 	The control will be placed on the canvas and a fly out dialog will appear asking which data source to connect to.  
 
-
-    > [!div class="mx-imgBorder"]
-    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02.png)
-
 1. We could connect it directly to **Orders** here, but instead we'd like to control the sort order of the gallery.  Ignore the fly out dialog and in the formula bar set the gallery's **Items** property to this formula:
 
     ```powerapps-dot
@@ -95,7 +79,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     The [**Sort**](functions/function-sort.md) function orders the list so that the newest order (which has the highest order number) appears first.
 
     > [!div class="mx-imgBorder"]
-    > ![Set Items property of the gallery](media/northwind-orders-canvas-part1/orders-02b.png)
+    > ![Sort orders in the gallery](media/northwind-orders-canvas-part1/orders-02b.png)
 
 1. After a few moments the Result View will appear below the formula bar.  Pull down on the arrow at the left to see the result of our formula.  Scroll to the right to see the **Order Number** column and ensure it is sorted the way want (highest to lowest).  
 
@@ -112,12 +96,12 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Select a layout](media/northwind-orders-canvas-part1/orders-04.png)
 
-    Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** entity, which you'll change next. The gallery's template is replicated vertically for each record in the entity.
+    Two [**Label**](controls/control-text-box.md) controls are added in the gallery's template. By default, these controls show two columns of the **Orders** table, which you'll change next. The gallery's template is replicated vertically for each record in the table.
 
 1. Select **Edit** (next to **Fields**) in the **Properties** tab near the right edge.
 
     > [!div class="mx-imgBorder"]
-    > ![Select a layout](media/northwind-orders-canvas-part1/orders-04b.png)
+    > ![Select edit to update fields](media/northwind-orders-canvas-part1/orders-04b.png)
 
 1. In the **Data** pane, select **Title1** (or select the upper label in the gallery's template).
 
@@ -130,7 +114,7 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Set title label's Text property](media/northwind-orders-canvas-part1/orders-06.png)
 
-    The order number appears at the top of each gallery item. In the gallery template, **ThisItem** grants access to all fields in the **Order** entity.
+    The order number appears at the top of each gallery item. In the gallery template, **ThisItem** grants access to all fields in the **Order** table.
 
 1. In the **Data** pane, select **Subtitle1** (or select the lower label in the gallery's template):
 
@@ -146,14 +130,13 @@ Follow step-by-step instructions to create an order gallery in a canvas app for 
     > [!div class="mx-imgBorder"]
     > ![Set subtitle label's Text property](media/northwind-orders-canvas-part1/orders-08.png)
 
-    After you enter this formula, it may show a red squiggly error for a moment. The error should clear if you select anything outside the formula bar and then return the cursor to the formula bar. If the error persists or you don't see a value, select the **View** tab, select **Data sources**, and then refresh the **Orders** entity by selecting the ellipsis (...) to the right of the data-source name.
+    After you enter this formula, it may show a red squiggly error for a moment. The error should clear if you select anything outside the formula bar and then return the cursor to the formula bar. If the error persists or you don't see a value, select the **View** tab, select **Data sources**, and then refresh the **Orders** table by selecting the ellipsis (...) to the right of the data-source name.
 
-    When you specify **ThisItem.Customer**, you're leveraging a many-to-one relationship between the **Orders** and **Customers** entities and retrieving the customer record that's associated with each order. From the customer record, you're extracting data in the **Company** column for display.
+    When you specify **ThisItem.Customer**, you're leveraging a many-to-one relationship between the **Orders** and **Customers** tables and retrieving the customer record that's associated with each order. From the customer record, you're extracting data in the **Company** column for display.
 
-    You can show all the relationships from the **Orders** entity to other entities, including the **Customer** entity:
+    You can show all the relationships from the **Orders** table to other tables, including the **Customer** table:
 
-    > [!div class="mx-imgBorder"]
-    > ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
+    ![List of relationships](media/northwind-orders-canvas-part1/orders-09.png)
 
 1. Close the **Data** pane by selecting the close icon (x) in its upper-right corner.
 
@@ -190,10 +173,9 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Set the Text property](media/northwind-orders-canvas-part1/status-05.png)
 
-    In the **Orders** entity, the **Order Status** field holds a value from the **Orders Status** option set. An option set is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can specify only those options that are in the set. The **Orders Status** option set is also global, not local, so you can use it in other entities:
+    In the **Orders** table, the **Order Status** field holds a value from the **Orders Status** choice. A choice is similar to an enumeration in other programming tools. Each set of options is defined in the database, so users can specify only those options that are in the set. The **Orders Status** choice is also global, not local, so you can use it in other tables:
 
-    > [!div class="mx-imgBorder"]
-    > ![Orders Status option set](media/northwind-orders-canvas-part1/status-06.png)
+    ![Orders Status choice](media/northwind-orders-canvas-part1/status-06.png)
 
     Each option in a set has a name that appears if you show it in a label. These names can be localized, and the app recognizes the same option whether an English user selects **Apple**, a French user selects **Pomme**, or a Spanish user selects **Manzana**. For this reason, you can't create a formula that relies on a hard-coded string for an option, as this topic demonstrates later.
 
@@ -232,7 +214,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
 1. On the **Insert** tab, select **Label** to add another label:
 
     > [!div class="mx-imgBorder"]
-    > ![Add a label](media/northwind-orders-canvas-part1/aggregate-02.png)
+    > ![Add another label](media/northwind-orders-canvas-part1/aggregate-02.png)
 
 1. Move the new label so that it appears under the status label:
 
@@ -248,7 +230,7 @@ In this procedure, you'll add space in the gallery for a label and configure it 
     > [!div class="mx-imgBorder"]
     > ![Formula for calculating an order's total cost](media/northwind-orders-canvas-part1/aggregate-04.png)
 
-    In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** entity that are associated with each record in the **Order** entity through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship to show and edit the line items in the lower-right area of the screen.
+    In this formula, the [**Sum**](functions/function-aggregates.md)  function adds up the records in the **Order Details** table that are associated with each record in the **Order** table through a one-to-many relationship. These line items make up each order, and you'll use the same one-to-many relationship to show and edit the line items in the lower-right area of the screen.
 
     This formula shows a blue underline and a [delegation warning](delegation-overview.md) because Dataverse doesn't support delegation of complex aggregate functions (for example, the sum of a multiplication). You can ignore this information because no order in this example will contain more than 500 line items. If necessary for a different app, you can increase that limit in **App settings**.
 

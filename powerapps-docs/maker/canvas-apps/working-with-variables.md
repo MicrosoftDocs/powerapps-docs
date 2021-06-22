@@ -1,6 +1,6 @@
 ---
-title: Understand variables in canvas apps | Microsoft Docs
-description: Reference information about working with state, context variables, and collections in canvas apps
+title: Understand variables in canvas apps
+description: Reference information about working with state, context variables, and collections in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app variables in Power Apps
+# Understand variables in canvas apps
 
 If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** Power Apps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 
@@ -208,7 +208,7 @@ Let's rebuild our adding machine by using a context variable:
 
     The first time that the user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** runs, **RunningTotal** is set to the value **RunningTotal + TextInput1**.
 
-    ![OnSelect property of the Add button](media/working-with-variables/context-variable-1.png)
+    ![OnSelect property of the Add button with updatecontext](media/working-with-variables/context-variable-1.png)
 
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
@@ -216,7 +216,7 @@ Let's rebuild our adding machine by using a context variable:
 
     Again, **[UpdateContext](functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
 
-    ![OnSelect property of the Clear button](media/working-with-variables/context-variable-2.png)
+    ![OnSelect property of the Clear button updatecontext](media/working-with-variables/context-variable-2.png)
 
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
 
@@ -270,13 +270,13 @@ Let's recreate our adding machine by using a collection:
 
     When this formula runs, it adds the new value to the end of the collection. Because we're adding a single value, **Collect** automatically places it in a single-column table, and the column's name is **Value**, which you'll use later.
 
-    ![OnSelect property of the Add button](media/working-with-variables/papertape-1.png)
+    ![OnSelect property of the Add button with collect](media/working-with-variables/papertape-1.png)
 
 4. To clear the paper tape when the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
     **Clear( PaperTape )**
 
-    ![OnSelect property of the Clear button](media/working-with-variables/papertape-2.png)
+    ![OnSelect property of the Clear button clear](media/working-with-variables/papertape-2.png)
 
 5. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:
 

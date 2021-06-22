@@ -1,5 +1,5 @@
 ---
-title: Organize controls in accessible canvas apps | Microsoft Docs
+title: Organize controls in accessible canvas apps
 description: Learn about organizing controls for accessibility in canvas apps.
 author: tahoon-ms
 ms.service: powerapps

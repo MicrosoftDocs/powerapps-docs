@@ -1,5 +1,5 @@
 ---
-title: Common issues and resolutions for Power Apps | Microsoft Docs
+title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 manager: kvivek
@@ -103,7 +103,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Data Table control**
 
-    If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the entity.
+    If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the table.
 
 
 1. **"Empty" gallery when opening an app**
@@ -126,9 +126,9 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](./controls/control-new-barcode-scanner.md).
 
-1. **Changing a Title field in an entity**
+1. **Changing a Title field in a table**
 
-    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../data-platform/data-platform-entity-lookup.md).
+    If you change the Title field for a table that other tables reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between tables](../data-platform/data-platform-entity-lookup.md).
 
 1. **Apps that connect to on-premises SharePoint**
 

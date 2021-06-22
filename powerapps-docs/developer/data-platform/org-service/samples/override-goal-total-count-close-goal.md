@@ -46,7 +46,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the version of the org.
 2. Retrieves the sales manager user created manually in **Microsoft 365**.
 3. Creates a `PhoneCall` record and supporting account record for the sample.
-4. Creates ActivityPartys for the phone calls "From" field.
+4. Creates ActivityPartys for the phone calls "From" column.
 5. Creates an open phone call.
 6. Closes the first phone call and creates a second one.
 7. Closes the second phone call.
@@ -54,7 +54,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. Creates Metric, and setting the Metric type to `count` and also setting `IsAmount` to false.
-2. The `RollupFields` creates a rollup field which targets completed (received) phone calls.
+2. The `RollupFields` creates a rollup column which targets completed (received) phone calls.
 3. The `GoalRollupQuery` creates the goal rollup queries, locating the incoming and outgoing closed phone calls. 
 4. Creates a goal to track the open incoming phone calls.
 5. The `RecalculateRequest` calculates the rollup for goals. 
@@ -63,7 +63,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

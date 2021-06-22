@@ -1,6 +1,6 @@
 ---
-title: Connectors overview for canvas apps | Microsoft Docs
-description: Overview of all the available connections that you can use to build canvas apps
+title: Overview of connectors for canvas apps
+description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Overview of canvas-app connectors for Power Apps
+# Overview of connectors for canvas apps
+
 Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
@@ -62,7 +63,7 @@ This table has links to more information about our most popular connectors. For 
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
-| ![Dataverse](./media/connections-list/cdm.png) |[**Common Data Service**](connections/connection-common-data-service.md) |&nbsp; |![Cloud storage](./media/connections-list/onedrive.png) |[**Cloud storage**](connections/cloud-storage-blob-connections.md) ** |
+| ![Microsoft Dataverse](./media/connections-list/cdm.png) |[**Microsoft Dataverse**](connections/connection-common-data-service.md) |&nbsp; |![Cloud storage](./media/connections-list/onedrive.png) |[**Cloud storage**](connections/cloud-storage-blob-connections.md) ** |
 | ![Dynamics AX](./media/connections-list/dynamics-ax.png) |[**Dynamics AX**](connections/connection-dynamicsax.md)|&nbsp; |![Microsoft Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md)|
 | ![Microsoft Translator](./media/connections-list/microsoft-translator.png) |[**Microsoft Translator**](connections/connection-microsoft-translator.md)|&nbsp; | ![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](connections/connection-office365-outlook.md)|
 | ![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](connections/connection-office365-users.md)  |&nbsp; | ![Oracle](./media/connections-list/oracle-icon.png) |[**Oracle**](connections/connection-oracledb.md)|

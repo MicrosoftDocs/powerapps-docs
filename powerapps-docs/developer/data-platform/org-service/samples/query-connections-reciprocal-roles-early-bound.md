@@ -19,8 +19,6 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-reciprocal-roles-early-bound -->
-
 This sample shows how to create matching roles and then find a matching role for a particular role. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueryByReciprocalRole).
 
 ## How to run this sample
@@ -40,7 +38,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole`creates the primary connection role instance.
-4. The `ConnectionRoleObjectTypeCode` creates a connection role object type code record for account and contact entity.
+4. The `ConnectionRoleObjectTypeCode` creates a connection role object type code record for account and contact table.
 5. The `AssociateRequest` associates the connection roles.
 
 ### Demonstrate
@@ -49,7 +47,7 @@ The `QueryExpression` retrieves all connection roles that have this role listed 
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

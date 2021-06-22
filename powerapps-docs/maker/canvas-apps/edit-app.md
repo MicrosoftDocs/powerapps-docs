@@ -1,5 +1,5 @@
 ---
-title: Edit a canvas app | Microsoft Docs
+title: Edit a canvas app
 description: Step-by-step instructions for editing canvas apps and session-locking scenarios in Power Apps.
 author: emcoope-msft
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Edit a canvas app in Power Apps
+# Edit a canvas app
 
 Edit any canvas app that you created, or for which you have **Co-owner** permission. You can edit an app in Power Apps Studio. 
 
