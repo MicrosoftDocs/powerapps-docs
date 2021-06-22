@@ -73,7 +73,7 @@ This insight checks how many users are using your app from an old version of a b
 
 #### How to improve 
 
-Users should regularly update the browser to the latest version. Enterprise customers can apply a group policy to be on a specific version. As Unified Service Desk (USD) also uses the default browser setting of the machine, it also requires checking the default browser type and version. 
+Users should regularly update the browser to the latest version. Enterprise customers can apply a group policy to be on a specific version. As Unified Service Desk (USD) also uses the default browser setting of the computer, it also requires checking the default browser type and version. 
 
 ### Minimum system requirements 
 
@@ -108,10 +108,12 @@ Users can check what protocol has been used from a development tool included wit
 :::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
-- Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and Use **TLS 1.2** options aren't enabled.
-- VPN and proxy: Although the Internet Option is set to use HTTP2 and TLS 1.2, the browser might fall back when a VPN or Proxy doesn’t support the more recent protocols.
+- Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and **Use TLS 1.2** options aren't enabled.
+- VPN and proxy: Although the Windows Internet Option is set to use HTTP2 and TLS 1.2, the browser might fall back when a VPN or Proxy doesn’t support the more recent protocols.
 
 ## Usage pattern
+
+This category analyzes the state of page loads. Warm page loads retrieve the page directly from data that is cached locally, while cold page loads load from the server.
 
 ### Page load type
 
@@ -127,7 +129,6 @@ Warm page loads are faster than cold page loads since necessary resources load o
 #### How to improve
 
 To experience warm page loads for faster performance, minimize opening new tabs or browser windows. Try to keep activities within a single tab instead of opening new tabs or browser windows. We also recommend not to run the browser in InPrivate or incognito mode.
-
 
 ## Page performance
 
@@ -258,3 +259,7 @@ Poor network configuration will affect app performance.
 #### How to improve
 
 If there are many users on the network and the performance is poor, we recommend the users switch to a better performing network.
+
+### See also
+
+[What are performance insights?](performance-insights-overview.md)
