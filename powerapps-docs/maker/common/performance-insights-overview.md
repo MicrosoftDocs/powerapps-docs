@@ -235,3 +235,7 @@ The following table summarizes what areas and categories the performance insight
       Administrators can enable plug-in trace logs for a Dataverse environment from **None** to **All**. It is beneficial to check the plug-in trace logs in the development phase. However, for production environments, we recommend setting the feature to either **Exception** or **None** to minimize intensive logging activity that can degrade app performance. More information: [Plug-in trace log setting](performance-insights-categories.md#plug-in-trace-log-setting)
    :::column-end:::
 :::row-end:::
+
+### See also
+
+[Understanding insights](performance-insights-categories.md)
