@@ -103,7 +103,9 @@ If this insight identified some users who are using the HTTP/1.1 protocol, we st
 
 Several configurations and network infrastructure can block the HTTP/2 protocol, such as a VPN network, proxy server, or device internet option settings.  
 
-Users can simply check out what protocol has been used from a dev tool of a browser. As you can see the figure below, network calls happened over HTTP/2
+Users can simply check what protocol has been used from a development tool included with the browser. In the figure below, network calls occured over HTTP/2.
+
+:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
 
 
 ## Usage pattern
