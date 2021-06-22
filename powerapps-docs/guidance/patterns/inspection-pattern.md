@@ -53,7 +53,7 @@ In a typical inspection scenario:
 
 ## Template: Inspection solution for Microsoft Teams
 
-The Inspection solution for Microsoft Teams is a general inspection app that can be used to inspect anything from a location—such as a retail store or manufacturing plant—to assets and equipment, such as vehicles and machines. The solution includes an app for performing inspections as well as an app for configuring and managing inspections.
+The Inspection solution for Microsoft Teams is a general inspection app that can be used to inspect anything from a location (such as a retail store or manufacturing plant) to assets and equipment (such as vehicles and machines). The solution includes an app for performing inspections as well as an app for configuring and managing inspections.
 
 ![Screenshot of the Inspection app for Microsoft Teams](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
 
