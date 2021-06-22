@@ -37,7 +37,7 @@ There are currently two ways to add the Excel table as a data source in your app
 > [!NOTE]
 > When you add Excel as a data source, it may create a column called **\_PowerAppsId_**, with a unique ID for each row of your Excel table. This column helps Power Apps know which rows to change. If you already have a unique identifier for each row, you may identify it for Power Apps as part of this process.
 
-### Method 1 - Start from Data with old connector
+### Method 1 - Start from Data
 
 > [!IMPORTANT]
 > If you choose this method, you'll use an older version of the connector.
@@ -50,7 +50,13 @@ When you're finished, you'll have an application and in the Data Source window, 
 
 ![OneDrive connector for Excel file](./media/connection-excel/onedrive-connector.png "OneDrive connector for Excel file")
 
-### Method 2 - Add new data source with new connector
+#### Start from Data with new connector
+
+If you want a **Start from Data** app but with the newer version of the connector, use the basic **Start from Data** process to create the application. Then, drop the OneDrive Excel data source, and then readd the Excel data source using the new connector. Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
+
+![Using Start from Data with new connector](./media/connection-excel/excel-data-source-with-app.png "Using Start from Data with new connector")
+
+### Method 2 - Add new data source
 
 > [!IMPORTANT]
 > If you choose this method, you'll use updated version of the connector.
@@ -72,12 +78,6 @@ The Excel Online (Business) connector allows you to choose from more locations t
 Once you've selected your Excel file, and then table within it, you'll have added a new Excel data source to your application. You can verify the use of the newer version of the connector with the presence of an Excel icon, as opposed to a OneDrive icon for older connector version.
 
 ![Updated connector version using Excel icon instead of older OneDrive icon](./media/connection-excel/excel-data-source.png "Updated connector version using Excel icon instead of older OneDrive icon")
-
-### Method 3 - Start from Data with new connector
-
-If you want a **Start from Data** app but with the newer version of the connector, use the basic **Start from Data** process to create the application. Then, drop the OneDrive Excel data source, and then readd the Excel data source using the new connector. Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
-
-![Using Start from Data with new connector](./media/connection-excel/excel-data-source-with-app.png "Using Start from Data with new connector")
 
 ## Other connectors
 
