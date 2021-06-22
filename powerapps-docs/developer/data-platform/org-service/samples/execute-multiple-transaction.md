@@ -45,11 +45,11 @@ Checks for the current version of the org.
 
 1. The `ExecuteTransactionRequest` method creates the `ExecuteTransactionRequest` object.
 2. The `OrganizationRequestCollection` method creates an empty organization request collection.
-3. The `CreateRequest` method is added for each entity to the request collection.
+3. The `CreateRequest` method is added for each table to the request collection.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

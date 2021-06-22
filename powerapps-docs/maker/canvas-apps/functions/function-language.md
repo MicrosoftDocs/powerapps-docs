@@ -1,6 +1,6 @@
 ---
-title: Language function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Language function in Power Apps
+title: Language function in Power Apps
+description: Reference information including syntax and examples for the Language function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -59,7 +59,7 @@ A simple approach to localization is to create an Excel spreadsheet mapping an a
 
 1. Create the following table in Excel: 
    
-    ![](media/function-language/loc-table.png)
+    ![Localization table](media/function-language/loc-table.png)
    
     The entry with *blank* for the **Language** column will be used as the default if there is no specific text string found for a given language. This entry must appear after all other entries for a given **TextID**.
    

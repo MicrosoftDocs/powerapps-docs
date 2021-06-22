@@ -1,6 +1,6 @@
 ---
-title: Analyze app telemetry using Application Insights | Microsoft Docs
-description: How to analyze app telemetry using Application Insights
+title: Analyze telemetry of a canvas app using Application Insights
+description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
 author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 ---
 
-# Analyze app telemetry using Application Insights
+# Analyze telemetry of a canvas app using Application Insights
 
 You can connect your app with [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. 
 

@@ -1,6 +1,6 @@
 ---
-title: 'Add picture control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Add picture control
+title: Add picture control in canvas apps
+description: Information, including properties and examples, about the Add picture control.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add picture control in Power Apps
+# Add picture control in canvas apps
+
 Takes a photo or loads images from the local device.
 
 ## Description
