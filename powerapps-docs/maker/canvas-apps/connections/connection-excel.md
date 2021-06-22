@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/22/2021
+ms.date: 06/23/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -35,7 +35,8 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 There are currently two ways to add the Excel table as a data source in your application. These two different approaches each uses a slightly different version of the connector.
 
 > [!NOTE]
-> When you add Excel as a data source, it may create a column called **\_PowerAppsId_**, with a unique ID for each row of your Excel table. This column helps Power Apps know which rows to change. If you already have a unique identifier for each row, you may identify it for Power Apps as part of this process.
+> - When you add Excel as a data source, it may create a column called **\_PowerAppsId_**, with a unique ID for each row of your Excel table. This column helps Power Apps know which rows to change. If you already have a unique identifier for each row, you may identify it for Power Apps as part of this process.
+> - This article explains different methods to start creating an app using Excel, and how the different methods use different versions of the connector. However, for a detailed step-by-step instructions to create an app using Excel, see [Create a canvas app from scratch based on Excel data](get-started-create-from-blank.md).
 
 ### Method 1 - Start from Data
 
