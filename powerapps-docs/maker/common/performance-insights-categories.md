@@ -201,7 +201,7 @@ Using outdated controls can cause performance, reliability, and accessibility is
 
 Notice that there are few significant design changes between the deprecated version and the new controls.
 
-For more information about the deprecated controls, go to [Model-driven app controls deprecation](https://docs.microsoft.com/en-us/power-platform/important-changes-coming#model-driven-app-controls-deprecation).
+For more information about the deprecated controls, go to [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation).
 
 ### Sandbox performance - Dominant plug-ins
 

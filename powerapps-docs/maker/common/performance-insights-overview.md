@@ -111,7 +111,7 @@ The following table summarizes what areas and categories the performance insight
       Minimum system requirements  
    :::column-end:::
    :::column span="":::
-      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not. 
+      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not. More information: [Minimum system requirements](performance-insights-categories.md#minimum-system-requirements)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -144,7 +144,7 @@ The following table summarizes what areas and categories the performance insight
       HTTP protocol 
    :::column-end:::
    :::column span="":::
-      Power Apps supports the HTTP/2 protocol. Apps generally perform better with the HTTP/2 protocol compared to HTTP/1.1. One of the major limitations of HTTP/1.1 is the limited concurrent connections to the same domain, which might cause apps to run slow.
+      Power Apps supports the HTTP/2 protocol. Apps generally perform better with the HTTP/2 protocol compared to HTTP/1.1. One of the major limitations of HTTP/1.1 is the limited concurrent connections to the same domain, which might cause apps to run slow. More information: [HTTP protocol](performance-insights-categories.md#http-protocol)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -155,7 +155,7 @@ The following table summarizes what areas and categories the performance insight
       Network performance
    :::column-end:::
    :::column span="":::
-      Network latency, throughput and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading.
+      Network latency, throughput and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading. More information: [Network performance](performance-insights-categories.md#network-performance)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -166,7 +166,7 @@ The following table summarizes what areas and categories the performance insight
       Page load type.
    :::column-end:::
    :::column span="":::
-      Page load type can affect app performance. Warm (cached) page loads are generally faster than cold (not cached) page loads since resources load out of the cache.
+      Page load type can affect app performance. Warm (cached) page loads are generally faster than cold (not cached) page loads since resources load out of the cache. More information: [Page load type](performance-insights-categories.md#page-load-type)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -177,7 +177,7 @@ The following table summarizes what areas and categories the performance insight
       Slow dashboard
    :::column-end:::
    :::column span="":::
-      One of the reasons why a dashboard might be slow to load is an associated query of a chart or a tile that is performing poorly. If the query executes over a large set of data, it could cause a slow response back. Apart from checking the number of chart controls and tiles on the dashboard, we recommend checking associated queries for both charts or tiles.
+      One of the reasons why a dashboard might be slow to load is an associated query of a chart or a tile that is performing poorly. If the query executes over a large set of data, it could cause a slow response back. Apart from checking the number of chart controls and tiles on the dashboard, we recommend checking associated queries for both charts or tiles. More information: [Slow dashboards](performance-insights-categories.md#slow-dashboards)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -188,7 +188,7 @@ The following table summarizes what areas and categories the performance insight
       XHR call type  
    :::column-end:::
    :::column span="":::
-      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XHR call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous.
+      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XHR call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous. More information: [XML HTTP Request (XHR) call type](performance-insights-categories.md#xml-http-request-xhr-call-type)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -196,10 +196,10 @@ The following table summarizes what areas and categories the performance insight
       Customization  
    :::column-end:::
    :::column span="":::
-      Deprecated controls 
+      Deprecated controls
    :::column-end:::
    :::column span="":::
-     Some controls like the flip switch and calendar V1 controls are deprecated. Makers should always use modern controls.
+     Some controls like the flip switch and calendar V1 controls are deprecated. Makers should always use modern controls. More information: [Deprecated controls](performance-insights-categories.md#deprecated-controls)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -210,7 +210,7 @@ The following table summarizes what areas and categories the performance insight
       Sandbox performance  
    :::column-end:::
    :::column span="":::
-      Makers can build their own plug-in. Depending on implemented patterns, there are many aspects to check to confirm the plug-in methods perform well, such as timeout events. This insight checks the plug-in’s timeout to see whether it was caused by the timeout of the external endpoint calls the maker implemented or not.
+      Makers can build their own plug-in. Depending on implemented patterns, there are many aspects to check to confirm the plug-in methods perform well, such as timeout events. This insight checks the plug-in’s timeout to see whether it was caused by the timeout of the external endpoint calls the maker implemented or not. More information: [Sandbox performance - Dominant plug-ins](performance-insights-categories.md#sandbox-performance---dominant-plug-ins)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -232,6 +232,6 @@ The following table summarizes what areas and categories the performance insight
       Plugin trace log setting
    :::column-end:::
    :::column span="":::
-      Administrators can enable plug-in trace logs for a Dataverse environment from **None** to **All**. It is beneficial to check the plug-in trace logs in the development phase. However, for production environments, we recommend setting the feature to either **Exception** or **None** to minimize intensive logging activity that can degrade app performance.
+      Administrators can enable plug-in trace logs for a Dataverse environment from **None** to **All**. It is beneficial to check the plug-in trace logs in the development phase. However, for production environments, we recommend setting the feature to either **Exception** or **None** to minimize intensive logging activity that can degrade app performance. More information: [Plug-in trace log setting](performance-insights-categories.md#plug-in-trace-log-setting)
    :::column-end:::
 :::row-end:::
