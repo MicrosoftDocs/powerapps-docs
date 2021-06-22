@@ -1,6 +1,6 @@
 ---
-title: Understand SharePoint forms integration | Microsoft Docs
-description: Understand how custom forms work with SharePoint
+title: Understand SharePoint forms integration
+description: Learn about integration of SharePoint forms with Power Apps, and how to customize those forms.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps

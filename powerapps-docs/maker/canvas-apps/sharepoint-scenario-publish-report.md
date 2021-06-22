@@ -1,6 +1,6 @@
 ---
-title: Publish the Power BI project report and create a dashboard | Microsoft Docs
-description: In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report.
+title: Publish the Power BI project report and create a dashboard
+description: Learn about how to publish our dataset and report to the Power BI service; and then create a dashboard based on the report.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -67,7 +67,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 
 1. Click or tap the chart on the upper left, then click or tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
    
-    ![Pin chart](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
+    ![Select Pin chart](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
 2. Enter a name for the dashboard you want to pin to, then click or tap **Pin**.
    
     ![Pin chart to new dashboard](./media/sharepoint-scenario-publish-report/06-01-13-pin-new.png)

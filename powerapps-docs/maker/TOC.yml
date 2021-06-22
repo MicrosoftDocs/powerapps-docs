@@ -521,6 +521,8 @@
           href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
+        - name: Create or update bulk records
+          href: ./canvas-apps/create-update-records-bulk.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1793,6 +1795,8 @@
           href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
+    - name: Important upcoming changes and depecations
+      href: ./portals/important-changes-deprecations.md
     - name: Supported web browsers
       href: ./portals/supported-web-browsers.md
     - name: Known issues
@@ -2160,11 +2164,11 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards
+        - name: Boards (Preview)
           items:
-             - name: Boards (Preview)
+             - name: Boards
                href: ../teams/boards.md
-             - name: Understand Boards (Preview) sample app architecture
+             - name: Understand Boards sample app architecture
                href: ../teams/boards-architecture.md
         - name: Bulletins
           items:
@@ -2196,18 +2200,24 @@
                href: ../teams/milestones.md
              - name: Understand Milestones sample app architecture
                href: ../teams/milestones-architecture.md
-        - name: Perspectives
+        - name: Perspectives (Preview)
           items:
-            - name: Perspectives (Preview)
+            - name: Perspectives
               href: ../teams/perspectives.md
-            - name: Understand Perspectives (Preview) sample app architecture
+            - name: Understand Perspectives sample app architecture
               href: ../teams/perspectives-architecture.md
-        - name: Profile+
+        - name: Profile+ (Preview)
           items:
-            - name: Profile+ (Preview)
+            - name: Use the Profile+ sample app 
               href: ../teams/profile-app.md
-            - name: Understand Profile+ (Preview) sample app architecture
-              href: ../teams/profile-plus-architecture.md
+            - name: Customize Profile+ app
+              items:
+                - name: Understand Profile+ sample app architecture
+                  href: ../teams/profile-plus-architecture.md
+                - name: Extend Profile+ sample app with additional org-specific data
+                  href: ../teams/profile-plus-org-specific.md
+                - name: Customize Profile+ sample app
+                  href: ../teams/customize-profile-plus.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps

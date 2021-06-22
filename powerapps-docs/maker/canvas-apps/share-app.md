@@ -1,12 +1,12 @@
 ---
-title: Share a canvas app with your organization | Microsoft Docs
-description: Share your canvas app by giving other users in your organization the permissions to run or modify it.
+title: Share a canvas app with your organization
+description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/05/2021
+ms.date: 05/13/2021
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -70,11 +70,11 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If your app connects to data for which users need access permissions, specify security roles as appropriate.
 
-    For example, your app might connect to an entity in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that entity.
+    For example, your app might connect to a table in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that table.
 
     ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png "Assign a security role")
 
-    For more information about managing security for an entity, go to [Manage entity permissions](#manage-entity-permissions).
+    For more information about managing security for a table, go to [Manage table permissions](#manage-table-permissions).
 
     If your app uses connections to other data sources&mdash;such as an Excel file hosted on OneDrive for Business&mdash;ensure that you share these data sources with the users you shared the app with.
 
@@ -139,12 +139,12 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 > Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Azure AD.
 
 After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
-<a name="manage-entity-permissions"></a>
+<a name="manage-table-permissions"></a>
 <a name="dataverse"></a>
 
-## Manage entity permissions for Dataverse
+## Manage table permissions for Dataverse
 
-If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
+If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the table or tables used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
 
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Azure AD, but not to Microsoft 365 groups.

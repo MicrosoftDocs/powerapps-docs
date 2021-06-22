@@ -1,5 +1,5 @@
 ---
-title: Overview of the Excel connection | Microsoft Docs
+title: Connect to Excel from Power Apps
 description: Display and update data in Excel by storing the workbook in a cloud-storage account and then connecting to the data from your app.
 author: lancedMicrosoft
 manager: kvivek
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to Excel from Power Apps
+
 ![Excel](./media/connection-excel/excelicon.png)
 
 Excel is *kind of* a connection which when added to Power Apps become a data source.

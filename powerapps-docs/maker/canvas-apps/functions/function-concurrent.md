@@ -1,6 +1,6 @@
 ---
-title: Concurrent function | Microsoft Docs
-description: Reference information, including syntax, for the Concurrent function in Power Apps
+title: Concurrent function in Power Apps
+description: Reference information including syntax and examples for the Concurrent function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
