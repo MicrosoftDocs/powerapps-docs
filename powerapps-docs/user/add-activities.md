@@ -299,7 +299,8 @@ When you mouse over the profile image, you can view the user's detailed profile 
 When enabled by your system administrator, you can add an attachment, such as a file, to a note in timeline to share with users.
 
 > [!NOTE]
-> The list of allowed attachments is configured by your system administrator.
+> - The list of allowed attachments is configured by your system administrator.
+> - On iOS and Android you can only select and attach a picture or video.
 
 Select the paperclip ![paperclip](media\timelilne-paperclip-icon.png "paperclip icon") icon to attach a file to a note. 
 
