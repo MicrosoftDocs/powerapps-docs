@@ -1,6 +1,6 @@
 ---
-title: Core properties | Microsoft Docs
-description: Reference information about the Disabled, Visible, and ReadOnly properties
+title: Core properties in Power Apps
+description: Reference information about the core properties in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

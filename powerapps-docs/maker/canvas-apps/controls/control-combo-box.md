@@ -1,6 +1,6 @@
 ---
-title: 'Combo box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the combo box control
+title: Combo box control in Power Apps
+description: Learn about the details, properties and examples of the combo box control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

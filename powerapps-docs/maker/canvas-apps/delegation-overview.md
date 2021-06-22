@@ -1,6 +1,6 @@
 ---
-title: Understand delegation in a canvas app | Microsoft Docs
-description: Use delegation to process large data sets efficiently in a canvas app.
+title: Understand delegation in a canvas app
+description: Learn about how to use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -32,9 +32,10 @@ Where this becomes complicated, and the reason this article exists, is because n
 ## Delegable data sources
 Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-- [Common Data Service](/connectors/commondataservice/) 
-- [SharePoint](/connectors/sharepointonline/) 
-- [SQL Server](/connectors/sql/) 
+- [Power Apps delegable functions and operations for Microsoft Dataverse](connections/connection-common-data-service.md#power-apps-delegable-functions-and-operations-for-dataverse) 
+- [Power Apps delegable functions and operations for SharePoint](/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint) 
+- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-delegable-functions-and-operations-for-sql-server) 
+- [Power Apps delegable functions and operations for Salesforce](/connectors/salesforce/#power-apps-delegable-functions-and-operations-for-salesforce) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.
 

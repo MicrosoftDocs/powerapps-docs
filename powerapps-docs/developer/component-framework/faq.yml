@@ -5,7 +5,7 @@ metadata:
   author: ghurlman
   ms.service: powerapps
   ms.search.keywords: 
-  ms.date: 06/03/2021
+  ms.date: 06/08/2021
   ms.author: grhurl
   ms.reviewer: nabuthuk
 title: Power Apps component framework FAQs
@@ -17,10 +17,11 @@ sections:
         answer: |
           Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
           Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
-          > [!NOTE]
-          > - A new solution must be created every time if you wish to have a major version bump. Incrementing the major version number (e.g., 1.0 to 2.0) is not supported as an upgrade.
-          > - Only three version sections are supported (i.e., MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
-
+          ```XML
+          <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
+            version="1.0.1" 
+             display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+          ```
       - question: What are the things to be considered from a performance perspective?
         answer: |
           1. If you wish to access a large chunk of data items, implement [filtering](reference/filtering.md) and [paging](reference/paging.md) methods to limit how much data should be loaded.
@@ -39,14 +40,10 @@ sections:
           1. Pass the collection into the JSON function.
           2. Pass the string representation of the collection data that is returned from the JSON function into one of the component's string properties.
           3. Use [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) in the component code to convert it back into a JavaScript Object.         
-      
-      - question: How can I define multiple components in a single manifest file?
-        answer: |
-          This is not supported at this time. Currently, you can only call dialog boxes using the [Navigation](reference/navigation.md) method in model-driven apps.
 
-      - question: How can I call other components from within another component?
+      - question: Can I call other components from within another component?
         answer: |
-          This is not supported natively by the framework. You can use one of many third-party libraries to enable this functionality in your components.
+          This is not currently supported.
 
       - question: Can I bundle font resources?
         answer: |
@@ -60,7 +57,7 @@ sections:
         answer: |
           Currently, code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
 
-      - question: How to add commandbar, search to subgrids
+      - question: Can I add commandbar, search to subgrids
         answer: |
           To add commandbar, search to a subgrid for model-driven apps, you need to specify the [cds-data-set-options](manifest-schema-reference/data-set.md).
           

@@ -61,7 +61,6 @@ If you already have the Microsoft Authenticator app installed and you're having 
 5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
 
-
 ## Error: Your device configuration is preventing sign in
 
 If you get this error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
@@ -108,6 +107,10 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 **iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](../mobile/run-powerapps-on-mobile.md#use-siri-shortcuts-to-add-a-shortcut-to-the-home-screen-ios-14-or-later).
 
 **iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](../mobile/run-powerapps-on-mobile.md#use-safari-to-add-a-shortcut-ios-13-or-earlier)
+
+## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
+
+If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again. 
 
 ## App list is empty
 
