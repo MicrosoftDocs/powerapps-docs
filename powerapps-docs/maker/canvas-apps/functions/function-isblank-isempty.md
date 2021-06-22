@@ -38,10 +38,10 @@ The **IsBlank** function tests for a *blank* value or an empty string.  The test
 
 When enbling error handling for existing apps, consider replacing **IsBlank** with [**IsBlankOrError**](function-iferror.md#isblankorerror) to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
 
-The return value for **IsBlank** is a Boolean **true** or **false**.
+The return value for **IsBlank** is a boolean **true** or **false**.
 
 ## Coalesce
-The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank* or an empty string.  Use this function to replace a *blank* value or empty string with a different value but leave non-*blank* and non-empty string values unchanged.  If all of the arguments are *blank* or empty strings then the function returns *blank*, making **Coalesce** a good way to convert empty strings to *blank* values.  
+The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank* or an empty string.  Use this function to replace a *blank* value or empty string with a different value but leave non-*blank* and non-empty string values unchanged.  If all the arguments are *blank* or empty strings then the function returns *blank*, making **Coalesce** a good way to convert empty strings to *blank* values.  
 
 `Coalesce( value1, value2 )` is the more concise equivalent of `If( Not IsBlank( value1 ), value1, Not IsBlank( value2 ), value2 )` and doesn't require **value1** and **value2** to be evaluated twice.  The [**If** function](function-if.md) returns *blank* if there is no "else" formula as is the case here.
 
