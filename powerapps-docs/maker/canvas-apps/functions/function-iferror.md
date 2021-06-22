@@ -137,9 +137,9 @@ Using **IsError** will prevent any further processing of the error.
 
 ## IsBlankOrError
 
-The **IsBlankOrError** function tests for eitehr a blank value or an error value and is the equivalent of `Or( IsBlank( X ), IsError( X ) )`. 
+The **IsBlankOrError** function tests for either a blank value or an error value and is the equivalent of `Or( IsBlank( X ), IsError( X ) )`. 
 
-When enbling error handling for existing apps, consider replacing **IsBlank** with **IsBlankOrError** to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
+When enabling error handling for existing apps, consider replacing **IsBlank** with **IsBlankOrError** to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
 
 The return value is a boolean *true* or *false*.
 
@@ -176,7 +176,7 @@ Using **IsBlankOrError** will prevent any further processing of the error.
 | **IsError( 1 )** | The argument isn't an error.  | *false* | 
 | **IsError( Blank() )** | The argument is a blank, but not an error. | *false* |
 | **IsError( 1/0 )** | The argument is an error.  | *true* | 
-| **If( IsError( 1/0 ), Notify( "There was an internal problem" ) )** | The argument to **IsError** returns an error value (because of division by zero). This funciton returns *true*, which causes the **If** to display a message to the user with the **Notify** function. The return value of **If** is the return value of **Notify**, coerced to the same type as the first argument to **If** (a boolean). | *true* |
+| **If( IsError( 1/0 ), Notify( "There was an internal problem" ) )** | The argument to **IsError** returns an error value (because of division by zero). This function returns *true*, which causes the **If** to display a message to the user with the **Notify** function. The return value of **If** is the return value of **Notify**, coerced to the same type as the first argument to **If** (a boolean). | *true* |
 
 ### Simple IsBlankOrError
 
