@@ -91,8 +91,8 @@ Rounding to two decimal places to the left of the decimal separator (100).
 
 Rounding a single-column table of values.
 
-| `X` | `Int( X )` | `Round( X, 2 )` | `Trunc( X, [ 0, 1, 2 ] )` |
+| `X` | `Int( X )` | `Round( X, 2 )` | `Trunc( X, [ 0, 1, 2 ] )` | `RoundUp( X, [ 2 ] )` |
 |:----:|:----:|:------------:|:----------:|
-| [ 123.456, <br>987.593, <br>542.639 ] | [ 123, <br>987, <br>542 ] | [ 123.46, <br>987.59, <br>542.64 ] | [ 123, <br>987.5, <br>542.63 ] |
+| [ 123.456, <br>987.593, <br>542.639 ] | [ 123, <br>987, <br>542 ] | [ 123.46, <br>987.59, <br>542.64 ] | [ 123, <br>987.5, <br>542.63 ] | [ 123.46, <br>988, <br>543 ] |
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
