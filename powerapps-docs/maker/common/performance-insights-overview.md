@@ -47,7 +47,7 @@ The performance insights engine generates insights over a 24-hour period on a se
 
 For example, insights for the 24-hour period that spans June 8 from 00:00 to 23:59 UTC are generated between 02:00 to 05:00 UTC on June 9. Therefore, insights and recommendations for user data recorded on June 8 UTC will be available the morning of June 9 UTC.
 
-Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the affect of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds, and we recommend you address those first.
+Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the affect of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds and we recommend you address those first.
 
 Insights are generated for several categories from different areas including client environment, customizations, page performance, and network. For example, if several users are using the app on an older version of a non-recommended browser, performance will be slower in general. Hence, makers will see an insight related to browser type and version in the insight grid.
 

@@ -52,7 +52,7 @@ When users experience a Power Apps app on their devices, several factors can aff
 
 Insight ID: Perf.Environment.Client.Browser.Type 
 
-#### Description 
+#### Motivation 
 
 Certain web browser types can impact the performance of your app. Using unsupported or non-modern browsers can lead to slow performance. This insight provides the performance implications of different browsers, especially non-recommended browsers. For example, [Power Apps has deprecated it's support of Internet Explorer](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated). 
 
@@ -67,7 +67,7 @@ If you have users on old browsers such as Internet Explorer, switch to a modern 
 
 Insight ID: Perf.Environment.Client.Browser.Version 
 
-#### Description 
+#### Motivation 
 
 This insight checks how many users are using your app from an old version of a browser. Even if users are on modern browsers, and not on non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
 
@@ -79,7 +79,7 @@ Users should regularly update the browser to the latest version. Enterprise cust
 
 Insight ID: Perf.Environment.Device.MimimumRequirements 
 
-#### Description 
+#### Motivation 
 
 This insight checks whether the user’s environment meets minimum system requirements. You can check the [web application requirements](/en-us/power-platform/admin/web-application-requirements) to see what are the minimum system requirements depending on the app type.  
 
@@ -93,7 +93,7 @@ Users should use the hardware that meets or exceeds the minimum system requireme
 
 Insight ID: Perf.Environment.Client.Browser.HttpProtocol 
  
-#### Description 
+#### Motivation 
 
 Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 protocol for XMLHttpRequest (XHR) requests onto Power Apps, it might cause slow performance due to the concurrent limitation of requests with the HTTP/1.1 protocol. 
 
@@ -117,7 +117,7 @@ If the network protocol trace indicates HTTP/1.1, it might be because of the fol
 
 Insight ID: Perf.Performance.PageLoadType
 
-#### Description
+#### Motivation
 
 Warm page loads are faster than cold page loads since necessary resources load out of local caches.
 
@@ -139,7 +139,7 @@ In this section, you can see several insights related to page performance.
 
 Insight ID: Perf.ModelDriven.Page.Dashboard.SlowSQLQuery
 
-#### Description
+#### Motivation
 
 Slow SQL queries or using too many charts and tiles can cause poor performance in dashboards. This insight points to the dashboards that are affected by slow SQL queries. When this insight is recorded, the **Details** pane includes the dashboard ID for each dashboard included in the insight.
 
@@ -175,7 +175,7 @@ Synchronous XMLHttpRequest calls can cause severe performance issues for end use
 
 This insight reveals whether there are synchronous methods and indicates the related performance. 
 
-#### Description
+#### Motivation
 
 Synchronous XHR calls will block the browser from performing more work as the browser must wait for the synchronous call to complete causing the page to slow down or freeze completely.
 
@@ -189,7 +189,7 @@ Insight ID:  Perf.Customization.Controls.Deprecated
 
 Some older controls for model-driven apps like Flip Switch, Calendar Control (V1), Linear Slider, Radial Knob, Arc Knob, Linear Gauge; along with the Website Preview control, MultiSelectPicklistControl (V1), and the Flip Label are deprecated. Some of these controls can be replaced with the new controls, which are more in line with the modern web and mobile in mind. More information: [New Model Driven Apps controls, deprecation of old controls](https://powerapps.microsoft.com/blog/new-model-driven-apps-controls-deprecation-of-old-controls/)
 
-#### Description
+#### Motivation
 
 Using outdated controls can cause performance, reliability, and accessibility issues. Moreover, some of the limitations in these deprecated controls have been resolved with the new controls. For example, the Toggle control and Calendar Control (V2) use [Microsoft Fluent UI](https://developer.microsoft.com/fluentui).s
 
@@ -209,7 +209,7 @@ Insight ID: Perf.Sandbox.Performance.Plug-ins.Dominant
 
 This insight will help us identify the dominant plug-in, or in other words, the one that's most used. It will also indicate if any of the dominantly used plug-ins performed slow with a plugin execution time greater than 100 milliseconds in the 95th percentile. This insight will list up to three dominant plug-ins.
 
-#### Description
+#### Motivation
 
 Slow dominant plug-ins affect performance. These plug-ins should be investigated first.
 
@@ -234,7 +234,7 @@ Makers can debug their plug-ins through plug-in trace logs. The Dataverse admins
 
 :::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings":::
 
-#### Description
+#### Motivation
 
 The plug-in trace log should be set to **All** only when you're debugging or tweaking the plug-in.  High volume of trace logging can cause I/O overhead with SQL Server. Moreover, deletion of the plug-in trace log might cause blocks or waits with SQL Server.
 
@@ -251,7 +251,7 @@ To change the setting, go to **Settings** > **Administration** > **System Settin
 Network latency and throughput are important factors that affect end user’s experience.
 Users with high latency and low throughput will more likely experience slow performance while accessing Unified Interface. This insight tells us how many users are on a poor performing network and what their performance was like.
 
-#### Description
+#### Motivation
 
 Poor network configuration will affect app performance.
 
