@@ -31,10 +31,10 @@ The publishing a model-driven app with custom pages will consolidate all of the 
 | [Office 365 Users](../canvas-apps/connections/connection-office365-users.md) | Verified |
 | [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
-| [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Partial | Verified AAD Not-shared and Sql Auth Shared | 
+| [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, Sql Server Auth, Windows Auth, and Windows Auth non-shared | 
 | [Teams](https://docs.microsoft.com/connectors/teams/) | Verified |
-| [Custom connector](../canvas-apps/register-custom-api.md) | In progress |
-| [Excel Online](../canvas-apps/connections/connection-excel.md) | Partial | Verified the new Excel Online connector |
+| [Custom connector](../canvas-apps/register-custom-api.md) | Partial | Verified with non auth
+| [Excel Online](../canvas-apps/connections/connection-excel.md) | Partial | Verified the new Excel Online connector and Excel stored in a single online file |
 
 ## Upcoming changes to connectors for custom pages
 
@@ -46,6 +46,7 @@ The publishing a model-driven app with custom pages will consolidate all of the 
 
 * No support to enable bypassing Microsoft connectors
 * Error when Flow is used in custom connector
+* Excel connectors can only be used with a single source (e.g. OneDrive, Google Drive, Dropbox) across custom pages in a single model-driven app.  The new Excel Online connector does not have this limitation.
 
 ## Related topics
 
