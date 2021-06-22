@@ -160,7 +160,7 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-3. In the **Manage Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these to the **Selected Workspaces** list. You can also remove currently used workspaces by moving them back to **Available orkspaces**.
+3. In the **Manage Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these to the **Selected Workspaces** list. You can also remove currently used workspaces by moving them back to **Available Workspaces**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Manage Power BI Embedded service integration")
