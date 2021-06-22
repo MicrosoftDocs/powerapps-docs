@@ -24,24 +24,24 @@ The **Round**, **RoundDown**, and **RoundUp** functions round a number to the sp
 * **RoundDown** always rounds down to the previous lower number, towards zero.
 * **RoundUp** always rounds up to the next higher number, away from zero.
 
-The number of decimal places can be:
-
-| Decimal places | Description |
-|-----|-----|
-| Greater than 0 | The number is rounded to the right of the decimal separator.  | 
-| 0 |  The number is rounded to the nearest integer. |
-| Less than 0 | The number is rounded to the left of the decimal separator.  |
-
 The **Int** and **Trunc** functions round a number to an integer (whole number without a decimal): 
 
 * **Int** rounds down to the nearest integer.  
 * **Trunc** truncates the number to just the integer portion by removing any decimal portion.  
 
-The difference between **Int** and **Trunc** is in the handling of negative numbers.  For example, for an argument of `-4.3`, **Int** will return the integer further away from zero, `-5`, while **Trunc** will return the integer closer to zero, `-4`.   **Int** returns values that are unique amongst the five rounding functions, while **Trunc** returns the same values as **RoundDown** with 0 decimal places.
+The difference between **Int** and **Trunc** is in the handling of negative numbers.  For example, for an argument of `-4.3`, **Int** will return the integer further away from zero, `-5`, while **Trunc** will return the integer closer to zero, `-4`.   **Int** returns values that are unique amongst the five rounding functions, while **Trunc** returns the same values as **RoundDown**.
 
-Use **Trunc** to extract the decimal portion of a number by subtracting from the original, for example `X - Trunc(X)`.  
+Use **Trunc** to extract the decimal portion of a number by subtracting it from the original, for example `X - Trunc(X)`.  
 
-If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
+For all but **Int**, the number of decimal places can be specified:
+
+| Decimal places | Description |
+|-----|-----|
+| Greater than 0 | The number is rounded to the right of the decimal separator.  For example, `Round( 12.37, 1 )` returns 12.4. | 
+| 0 |  The number is rounded to the nearest integer. For example, `Round( 12.37, 0 )` returns 12. |
+| Less than 0 | The number is rounded to the left of the decimal separator.  For example, `Round( 12.37, -1 )` returns 10. | 
+
+These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
 
 ## Syntax
 **Round**( *Number*, *DecimalPlaces* )<br>**RoundDown**( *Number*, *DecimalPlaces* )<br>**RoundUp**( *Number*, *DecimalPlaces* )
@@ -72,8 +72,8 @@ If you pass a single number, the return value is the rounded version of that num
 | `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | `Trunc( X, 2 )` |
 |:----:|:----:|:------------:|:----------:|:-------:|
 | 430.123 | 430.12 | 430.13 | 430.12 | 430.12 |
-| 450.125 | 450.13 | 450.13 | 450.12 | 430.12 |
-| 479.128 | 479.13 | 479.13 | 479.12 | 430.12 |
+| 430.125 | 430.13 | 430.13 | 430.12 | 430.12 |
+| 430.128 | 430.13 | 430.13 | 430.12 | 430.12 |
 
 | `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` | `Trunc( X, -2 )` |
 |:----:|:----:|:------------:|:----------:|:-------:|
