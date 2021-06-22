@@ -41,7 +41,7 @@ For all but **Int**, the number of decimal places can be specified:
 | 0 |  The number is rounded to the nearest integer. For example, `Round( 12.37, 0 )` returns 12. |
 | Less than 0 | The number is rounded to the left of the decimal separator.  For example, `Round( 12.37, -1 )` returns 10. | 
 
-These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
+These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers.  The *DecimalPlaces* paraemter can be a single value or a single-column table.  If the single-column table has less values that the *Number*, zero is used for the remaining values.  Use [**ShowColumns**](function-table-shaping.md) and other table shaping functions to extract a single-column table from a larger table.  
 
 ## Syntax
 **Round**( *Number*, *DecimalPlaces* )<br>**RoundDown**( *Number*, *DecimalPlaces* )<br>**RoundUp**( *Number*, *DecimalPlaces* )
