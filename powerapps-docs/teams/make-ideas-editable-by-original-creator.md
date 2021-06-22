@@ -18,9 +18,9 @@ The Employee Ideas Power Apps sample app for Microsoft Teams provides a platform
 
 The Employee Ideas app solution consists of two apps:
 
-1.  [Ideas app](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#manage-bulletins-app) 
+1.  [Ideas app](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app) 
     
-2.  [Manage Ideas app](https://docs.microsoft.com/en-us/powerapps/teams/bulletins#bulletins-app)
+2.  [Manage Ideas app](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
 
 With the Ideas app, Managers can setup campaigns, users can submit ideas, view other users’ ideas, and also vote for ideas that they like the best. The
 experience can be customized by the admin or managers by editing campaigns, specifying justification questions that need to be answered by people submitting the ideas and also specify date threshold between which the campaign would be open for submitting ideas. The app also includes insights about who is submitting the greatest number of ideas and the most popular ideas during the week.
