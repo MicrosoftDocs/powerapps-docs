@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/23/2021
+ms.date: 06/22/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
