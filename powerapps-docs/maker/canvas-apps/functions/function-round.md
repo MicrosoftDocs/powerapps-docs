@@ -47,11 +47,16 @@ If you pass a single number, the return value is the rounded version of that num
 **Round**( *Number*, *DecimalPlaces* )<br>**RoundDown**( *Number*, *DecimalPlaces* )<br>**RoundUp**( *Number*, *DecimalPlaces* )
 
 * *Number* - Required. The number to round.
-* *DecimalPlaces* - Required.  The number of places to the right of the decimal point to round to.  Use 0 to round to a whole number.  Use a negative number to round to the left of the decimal place.
+* *DecimalPlaces* - Required.  Number of decimal places to round to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.
 
-**Int**( *Number* )<br>**Trunc**( *Number* )
+**Int**( *Number* )
 
-* *Number* - Required. The number to round to an integer.
+* *Number* - Required. The number to round to an integer, away from zero.
+
+**Trunc**( *Number* [, *DecimalPlaces* ] )
+
+* *Number* - Required. The number to truncate to an integer, toward zero.
+* *DecimalPlaces* - Optional. Number of decimal places to truncate to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.  Default is zero.
 
 ## Examples
 
@@ -64,18 +69,18 @@ If you pass a single number, the return value is the rounded version of that num
 | 7.1  | 7  | 8  | 7  | 7  | 7  |
 | -7.1 | -7 | -8 | -7 | -8 | -7 |
 
-| `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | 
-|:----:|:----:|:------------:|:----------:|
-| 430.123 | 430.12 | 430.13 | 430.12 | 
-| 450.125 | 450.13 | 450.13 | 450.12 | 
-| 479.128 | 479.13 | 479.13 | 479.12 |
+| `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | `Trunc( X, 2 )` |
+|:----:|:----:|:------------:|:----------:|:-------:|
+| 430.123 | 430.12 | 430.13 | 430.12 | 430.12 |
+| 450.125 | 450.13 | 450.13 | 450.12 | 430.12 |
+| 479.128 | 479.13 | 479.13 | 479.12 | 430.12 |
 
-| `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` |
-|:----:|:----:|:------------:|:----------:|
-| 430.123 | 400 | 500 | 400 |
-| 449.942 | 400 | 500 | 400 |
-| 450.000 | 500 | 500 | 400 |
-| 450.124 | 500 | 500 | 400 |
-| 479.128 | 500 | 500 | 400 |
+| `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` | `Trunc( X, -2 )` |
+|:----:|:----:|:------------:|:----------:|:-------:|
+| 430.123 | 400 | 500 | 400 | 400 |
+| 449.942 | 400 | 500 | 400 | 400 |
+| 450.000 | 500 | 500 | 400 | 400 |
+| 450.124 | 500 | 500 | 400 | 400 |
+| 479.128 | 500 | 500 | 400 | 400 |
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
