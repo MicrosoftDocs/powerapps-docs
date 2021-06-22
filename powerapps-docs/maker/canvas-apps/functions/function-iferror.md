@@ -141,7 +141,7 @@ The **IsBlankOrError** function tests for eitehr a blank value or an error value
 
 When enbling error handling for existing apps, consider replacing **IsBlank** with **IsBlankOrError** to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
 
-The return value is a Boolean *true* or *false*.
+The return value is a boolean *true* or *false*.
 
 Using **IsBlankOrError** will prevent any further processing of the error.
 
