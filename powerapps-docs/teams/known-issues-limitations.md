@@ -64,6 +64,10 @@ There is no enforcement of user-created required table fields. Rows that have em
 
 Enabling [classic controls](understand-power-apps-studio.md#classic-controls) requires a refresh of Power Apps Studio.  
 
+### Fluent UI date picker control
+
+The Fluent UI date picker control does not yet support format string.  If you need to support special formatting, you'll need to enable classic controls and use the classic Date Picker.
+
 ### Canvas components
 
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
