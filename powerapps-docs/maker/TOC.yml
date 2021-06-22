@@ -675,6 +675,8 @@
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
+          - name: IsBlankOrError
+            href: ./canvas-apps/functions/function-iferror.md            
           - name: IsEmpty
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsError
@@ -1425,10 +1427,16 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with basic forms
-              href: ./portals/configure/entity-forms.md
             - name: Work with lists
               href: ./portals/configure/entity-lists.md
+            - name: Work with basic forms
+              items:
+                - name: Work with basic forms
+                  href: ./portals/configure/entity-forms.md
+                - name: Configure basic form metadata
+                  href: ./portals/configure/configure-basic-form-metadata.md
+                - name: Configure basic form subgrid
+                  href: ./portals/configure/configure-basic-form-subgrid.md
             - name: Work with advanced forms
               items:
                 - name: Define advanced form properties
@@ -1795,7 +1803,7 @@
           href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
-    - name: Important upcoming changes and depecations
+    - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
     - name: Supported web browsers
       href: ./portals/supported-web-browsers.md
