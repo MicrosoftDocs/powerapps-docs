@@ -1,5 +1,5 @@
 ---
-title: Add a Power BI component to a webpage
+title: Add Power BI
 description: Learn how to add a Power BI component to a Power Apps portals webpage. Get familiar with considerations regarding Power BI access types.
 author: neerajnandwana-msft
 ms.service: powerapps
