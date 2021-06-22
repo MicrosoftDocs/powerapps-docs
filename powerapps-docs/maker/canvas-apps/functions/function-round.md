@@ -17,12 +17,22 @@ search.app:
 # Int, Round, RoundDown, RoundUp, and Trunc functions in Power Apps
 Rounds a number.
 
-## Description
+## Round, RoundDown, and RoundUp
 The **Round**, **RoundDown**, and **RoundUp** functions round a number to the specified number of decimal places:
 
 * **Round** rounds up if the next digit is a 5 or higher. Otherwise, this function rounds down.
 * **RoundDown** always rounds down to the previous lower number, towards zero.
 * **RoundUp** always rounds up to the next higher number, away from zero.
+
+The number of decimal places can be specified for these functions:
+
+| Decimal places | Description | Example |
+|-----|-----|-----|
+| Greater than 0 | The number is rounded to the right of the decimal separator. | `Round( 12.37, 1 )` returns 12.4. | 
+| 0 |  The number is rounded to the nearest integer. | `Round( 12.37, 0 )` returns 12. |
+| Less than 0 | The number is rounded to the left of the decimal separator. | `Round( 12.37, -1 )` returns 10. | 
+
+## Int and Trunc
 
 The **Int** and **Trunc** functions round a number to an integer (whole number without a decimal): 
 
@@ -33,14 +43,9 @@ The difference between **Int** and **Trunc** is in the handling of negative numb
 
 Use **Trunc** to extract the decimal portion of a number by subtracting it from the original, for example `X - Trunc(X)`.  
 
-For all but **Int**, the number of decimal places can be specified:
+Decimal places cannot be specified with **Trunc** as it can with Microsoft Excel.  Use **RoundDown** instead when this is needed.
 
-| Decimal places | Description | Example |
-|-----|-----|-----|
-| Greater than 0 | The number is rounded to the right of the decimal separator. | `Round( 12.37, 1 )` returns 12.4. | 
-| 0 |  The number is rounded to the nearest integer. | `Round( 12.37, 0 )` returns 12. |
-| Less than 0 | The number is rounded to the left of the decimal separator. | `Round( 12.37, -1 )` returns 10. | 
-
+## Single-column tables
 These functions support single-column tables.  If you pass a single number, the return value is the rounded version of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of rounded numbers.  The *DecimalPlaces* paraemter can be a single value or a single-column table.  If the single-column table has less values that the *Number*, zero is used for the remaining values.  Use [**ShowColumns**](function-table-shaping.md) and other table shaping functions to extract a single-column table from a larger table.  
 
 ## Syntax
@@ -49,14 +54,9 @@ These functions support single-column tables.  If you pass a single number, the 
 * *Number* - Required. The number to round.
 * *DecimalPlaces* - Required.  Number of decimal places to round to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.
 
-**Int**( *Number* )
+**Int**( *Number* )<br>**Trunc**( *Number* )
 
-* *Number* - Required. The number to round to an integer, away from zero.
-
-**Trunc**( *Number* [, *DecimalPlaces* ] )
-
-* *Number* - Required. The number to truncate to an integer, toward zero.
-* *DecimalPlaces* - Optional. Number of decimal places to truncate to.  Use a positive value to indicate decimal places right of the decimal separator, a negative value to the left, and zero for a whole number.  Default is zero.
+* *Number* - Required. The number to be rounded to an integer.
 
 ## Examples
 
@@ -73,25 +73,25 @@ Rounding to a whole number.
 
 Rounding to two decimal places to the right of the decimal separator (0.01).
 
-| `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | `Trunc( X, 2 )` |
-|:----:|:----:|:------------:|:----------:|:-------:|
-| 430.123 | 430.12 | 430.13 | 430.12 | 430.12 |
-| 430.125 | 430.13 | 430.13 | 430.12 | 430.12 |
-| 430.128 | 430.13 | 430.13 | 430.12 | 430.12 |
+| `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | 
+|:----:|:----:|:------------:|:----------:|
+| 430.123 | 430.12 | 430.13 | 430.12 |
+| 430.125 | 430.13 | 430.13 | 430.12 |
+| 430.128 | 430.13 | 430.13 | 430.12 |
 
 Rounding to two decimal places to the left of the decimal separator (100).
 
-| `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` | `Trunc( X, -2 )` |
-|:----:|:----:|:------------:|:----------:|:-------:|
-| 430.123 | 400 | 500 | 400 | 400 |
-| 449.942 | 400 | 500 | 400 | 400 |
-| 450.000 | 500 | 500 | 400 | 400 |
-| 450.124 | 500 | 500 | 400 | 400 |
-| 479.128 | 500 | 500 | 400 | 400 |
+| `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` |
+|:----:|:----:|:------------:|:----------:|
+| 430.123 | 400 | 500 | 400 |
+| 449.942 | 400 | 500 | 400 |
+| 450.000 | 500 | 500 | 400 |
+| 450.124 | 500 | 500 | 400 |
+| 479.128 | 500 | 500 | 400 |
 
 Rounding a single-column table of values.
 
-| `X` | `Int( X )` | `Round( X, 2 )` | `Trunc( X, [ 0, 1, 2 ] )` | `RoundUp( X, [ 2 ] )` |
+| `X` | `Int( X )` | `Round( X, 2 )` | `RoundDown( X, [ 0, 1, 2 ] )` | `RoundUp( X, [ 2 ] )` |
 |:----:|:----:|:------------:|:----------:|:--------:|
 | [ 123.456, <br>987.593, <br>542.639 ] | [ 123, <br>987, <br>542 ] | [ 123.46, <br>987.59, <br>542.64 ] | [ 123, <br>987.5, <br>542.63 ] | [ 123.46, <br>988, <br>543 ] |
 
