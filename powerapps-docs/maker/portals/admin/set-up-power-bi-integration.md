@@ -66,7 +66,7 @@ Enabling the Power BI Embedded service allows you to embed dashboards and report
     > [!div class=mx-imgBorder]
     > ![Enable Power BI Embedded service](../media/enable-powerbi-embedded-button.png "Enable Power BI Embedded service")
 
-3. In the **Enable Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these to the **Selected Workspaces** list.
+3. In the **Enable Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these workspaces to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
     > ![Select Power BI workspaces](../media/enable-powerbi-embedded-window.png "Select Power BI workspaces")
@@ -160,7 +160,7 @@ Customizers can now use the [powerbi Liquid tag](../liquid/portals-entity-tags.m
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service](../media/manage-powerbi-embedded-button.png "Manage Power BI Embedded service")
 
-3. In the **Manage Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these to the **Selected Workspaces** list. You can also remove currently used workspaces by moving them back to **Available Workspaces**.
+3. In the **Manage Power BI Embedded service integration** window, select the available workspaces from which you want dashboards and reports to be displayed in your portal. Move these workspaces to the **Selected Workspaces** list. You can also remove currently used workspaces by moving them back to **Available Workspaces**.
 
     > [!div class=mx-imgBorder]
     > ![Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Manage Power BI Embedded service integration")

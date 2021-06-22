@@ -1,6 +1,6 @@
 ---
 title: Add Power BI
-description: Learn how to add a Power BI component to a Power Apps portals webpage. Get familiar with considerations regarding Power BI access types.
+description: Learn how to add a Power BI component to a Power Apps portals webpage. Get familiar with considerations about Power BI access types.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -66,7 +66,7 @@ To add a Power BI component to a webpage:
         ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
     
         - You can enter multiple roles separated by a comma (for example, `role_1,role_2`). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls). <br>
-        - This is only available for the access type **Embed for your customers**.
+        - This option is only available for the access type **Embed for your customers**.
 
     1. **Apply filter**: Allows the user to load the report with pre-filtered values. The user can provide a filter condition in the field. 
         
@@ -74,14 +74,14 @@ To add a Power BI component to a webpage:
 
         - The filter parameter must be without the `?filter=''` prefix. For example, `Table/Field eq 'value'`.
         <br> For more information, go to [filter parameter details](/power-bi/service-url-filters).
-        - This is only available for **Reports** with access types **Embed for your customers** and **Embed for your organization**.
+        - This option is only available for **Reports** with access types **Embed for your customers** and **Embed for your organization**.
 
     1. **Embed code URL**: Enter the embed code URL.
     
         ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
 
         - To learn how to create and manage embed codes, go to [Publish to web from Power BI](/power-bi/service-publish-to-web)
-        - This is only available for the access type **Publish to web**.
+        - This option is only available for the access type **Publish to web**.
 
 ### Power BI access type considerations
 
@@ -94,7 +94,7 @@ The following list explains Power BI access types in brief and lists access type
 
         ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
     
-        When this happens, ensure you [disable](../portals/admin/set-up-power-bi-integration.md#disable-power-bi-visualization) and then [enable](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization) Power BI visualization again.
+        When this message appears, ensure you [disable](../portals/admin/set-up-power-bi-integration.md#disable-power-bi-visualization) and then [enable](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization) Power BI visualization again.
     - If you add Power BI with **Embed for your customers** on a portal page that's available **anonymously**, anyone can view the dashboard. To secure this page, read [webpage access control in Power Apps portals](../portals/configure/webpage-access-control.md).
 
 - **Embed for your organization**:
@@ -102,7 +102,7 @@ The following list explains Power BI access types in brief and lists access type
     - Shows the list of workspaces shared with a logged-in user.
     - Uses Azure Active Directory authentication.
 
-- **Publish to web**: Anyone on the internet can view your published report or visual. This requires no authentication and includes viewing detail-level data that your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Don't publish confidential or sensitive information. Refer to your organization's policies before publishing.
+- **Publish to web**: Anyone on the internet can view your published report or visual. This option requires no authentication and includes viewing detail-level data that your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Don't publish confidential or sensitive information. Refer to your organization's policies before publishing.
 
 ### General Power BI considerations
 
@@ -116,7 +116,7 @@ The following list explains Power BI access types in brief and lists access type
 
 ### Power BI performance and optimization considerations
 
-Embedding multiple Power BI workspaces may need additional considerations. Refer to the following resources for Power BI Embedded troubleshooting, optimization, and best practices:
+Embedding multiple Power BI workspaces may need extra considerations. Refer to the following resources for Power BI Embedded troubleshooting, optimization, and best practices:
 
 - [Troubleshooting Power BI Embedded application content rendering](/power-bi/developer/embedded/embedded-troubleshoot#content-rendering)
 - [Power BI Embedded performance best practices](/power-bi/developer/embedded/embedded-performance-best-practices)
