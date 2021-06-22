@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Performance insights is a self-service tool for enterprise app makers that analyzes runtime telemetry data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or Dynamics 365 customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Performance insights are a self-service tool for enterprise app makers that analyzes runtime user data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## How to access 
 
@@ -30,26 +30,26 @@ Performance insights is a self-service tool for enterprise app makers that analy
 1. On the left navigation pane, select **Apps**, and then select a model-driven app.
 1. Use the **...** context menu or command bar to select **Performance**.
 
-If you want to switch the environment where your app is deployed, you can select environments in the top right corner of the page using the **Environment** selector. Alternatively, you can navigate to performance insights from a model-driven app’s context menu from the **Solutions** area. 
+If you want to switch the environment where your app is deployed, you can select environments in the top-right corner of the page using the **Environment** selector. Alternatively, you can navigate to performance insights from a model-driven app’s context menu from the **Solutions** area. 
 
 > [!IMPORTANT]
-> Since recommendations are generated using telemetry data, we recommend that you view performance insights from an environment where the app will be used, such as a production environment.
+> Since recommendations are generated using user data, we recommend that you view performance insights from an environment where the app will be used, such as a production environment.
 
 ## How insights are generated
 
-Performance insights are generated based on collected telemetry data of your model-driven app every 24 hours. When end-users use an app, key telemetry data recorded by the Power Apps platform is stored. The performance insights engine leverages this data and analyzes it to generate insights and recommendations related to performance enhancements.  
+Performance insights are generated based on collected user data of your model-driven app every 24 hours. When end-users use an app, key user data recorded by the Power Apps platform is stored. The performance insights engine uses this data and analyzes it to generate insights and recommendations related to performance enhancements.  
 
-Performance insights are available for all model-driven apps in your selected environment, provided there is recorded telemetry data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the list on the **Performance** tab.
+Performance insights are available for all model-driven apps in your selected environment, provided there is recorded user data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the list on the **Performance** tab.
 
 :::image type="content" source="media/performance-insight-select-date.png" alt-text="Select a date to view performance insight data":::
 
-The performance insights engine generates insights over a 24-hour period on a selected date in the universal time coordinated (UTC) time zone. Insights for the previous day, from 00:00 to 23:59 UTC, are generated around 02:00 to 05:00 UTC on a given day. Therefore, insights and recommendations for usage telemetry data recorded the previous day will be available in the morning in the UTC time zone. Time of availability will vary based on your local time zone and its difference from UTC.
+The performance insights engine generates insights over a 24-hour period on a selected date in the universal time coordinated (UTC) time zone. Insights for the previous day, from 00:00 to 23:59 UTC, are generated around 02:00 to 05:00 UTC on a given day. Therefore, insights and recommendations for usage user data recorded the previous day will be available in the morning in the UTC time zone. Time of availability will vary based on your local time zone and its difference from UTC.
 
-For example, insights for the 24-hour period that spans June 8 from 00:00 to 23:59 UTC are generated between 02:00 to 05:00 UTC on June 9. Therefore, insights and recommendations for telemetry data recorded on June 8 UTC will be available the morning of June 9 UTC.
+For example, insights for the 24-hour period that spans June 8 from 00:00 to 23:59 UTC are generated between 02:00 to 05:00 UTC on June 9. Therefore, insights and recommendations for user data recorded on June 8 UTC will be available the morning of June 9 UTC.
 
-Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the impact of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds, and we recommended to address those first.
+Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the affect of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds, and we recommend you address those first.
 
-Insights are generated for several categories from different areas including client environment, customizations, page performance and network. For example, if several users are using the app on an older version of a non-recommended browser, performance will be slower in general. Hence, makers will see an insight related to browser type and version in the insight grid.
+Insights are generated for several categories from different areas including client environment, customizations, page performance, and network. For example, if several users are using the app on an older version of a non-recommended browser, performance will be slower in general. Hence, makers will see an insight related to browser type and version in the insight grid.
 
 Performance insights provide a prioritized list of recommendations to help makers improve the performance of model-driven apps. You can select each row in the grid to view detailed information for each category.
 
@@ -61,8 +61,8 @@ The performance insights grid has these columns.
 
 | Column | Description  |
 |---------|---------|
-| Severity | An insight can be categorized as Informational, Warning or Critical. Severity is determined by the performance page load time as well as the number of end-users impacted by an event. |
-| Area |  This area defines the aspects of analyzing telemetry data by the engine of Performance Insights. Includes client environment, network and usage patterns. |
+| Severity | An insight can be categorized as **Informational**, **Warning**, or **Critical**. Severity is determined by the performance page load time and the number of end-users impacted by an event. |
+| Area |  This area defines the aspects of analyzing user data by the engine of Performance Insights. Includes client environment, network, and usage patterns. |
 | Category | The theme under which the specific insight falls. Categories are grouped under Areas. |
 | Motivation | Gives an overview of why a particular insight could be impacting the overall performance of your app. |
 | Insight | Details the findings related to a specific category and outlines the performance impact. |
@@ -73,9 +73,9 @@ The performance insights grid has these columns.
 
 ## What aspects does it check? 
 
-Performance of a model-driven app could be affected by multiple factors. Horizontally, the app could be affected by client environment, network, usage pattern, customizations, and configurations. Vertically, Web server or back-end SQL Server could cause impact on the client side.  
+Performance of a model-driven app could be affected by multiple factors. Horizontally, the app could be affected by client environment, network, usage pattern, customizations, and configurations. Vertically, web server or back-end SQL Server could affect performance on the client side.  
 
-Therefore, it is beneficial to identify what may cause slowness of page loads or operations. The performance insight engine analyzes collected telemetry data and corresponds it with the categories.
+Therefore, it is beneficial to identify what may cause slowness of page loads or operations. The performance insight engine analyzes collected user data and corresponds it with the categories.
 
 In some scenarios, there could be an obvious reason for performance issues. In other cases, there may be several reasons identified from the categories that could explain the slowness.
 
@@ -111,7 +111,7 @@ The following table summarizes what areas and categories the performance insight
       Minimum system requirements  
    :::column-end:::
    :::column span="":::
-      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if telemetry collected and others not. More information: [Minimum system requirements](performance-insights-categories.md#minimum-system-requirements)
+      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if user collected and others not. More information: [Minimum system requirements](performance-insights-categories.md#minimum-system-requirements)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -133,7 +133,7 @@ The following table summarizes what areas and categories the performance insight
       Browser version
    :::column-end:::
    :::column span="":::
-      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended. MOre information: [Browser version](performance-insights-categories.md#browser-version)
+      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended. More information: [Browser version](performance-insights-categories.md#browser-version)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -155,7 +155,7 @@ The following table summarizes what areas and categories the performance insight
       Network performance
    :::column-end:::
    :::column span="":::
-      Network latency, throughput and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading. More information: [Network performance](performance-insights-categories.md#network-performance)
+      Network latency, throughput, and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading. More information: [Network performance](performance-insights-categories.md#network-performance)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -166,7 +166,7 @@ The following table summarizes what areas and categories the performance insight
       Page load type.
    :::column-end:::
    :::column span="":::
-      Page load type can affect app performance. Warm (cached) page loads are generally faster than cold (not cached) page loads since resources load out of the cache. More information: [Page load type](performance-insights-categories.md#page-load-type)
+      Page load type can affect app performance. Warm (cached) page loads are faster than cold (not cached) page loads since resources load out of the cache. More information: [Page load type](performance-insights-categories.md#page-load-type)
    :::column-end:::
 :::row-end:::
 :::row:::

@@ -58,7 +58,7 @@ Certain web browser types can impact the performance of your app. Using unsuppor
 
 #### How to improve 
 
-If you have users on old browsers such as Internet Explorer, switch to a modern Chromium based browser. We recommend that users run a modern browser, such as [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL&r=1) or Google Chrome.
+If you have users on old browsers such as Internet Explorer, switch to a modern Chromium-based browser. We recommend that users run a modern browser, such as [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL&r=1) or Google Chrome.
 
 > [!NOTE]
 > Some legacy applications leveraging NPAPI will only work on Internet Explorer. 
@@ -99,17 +99,17 @@ Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 
 
 #### How to improve
 
-If this insight identified some users who are using the HTTP/1.1 protocol, we strongly recommend that these user’s client should support the HTTP/2 protocol.  
+If this insight identified some users who are using the HTTP/1.1 protocol, we strongly recommend that these user’s client support the HTTP/2 protocol.  
 
 Several configurations and network infrastructure can block the HTTP/2 protocol, such as a VPN network, proxy server, or device internet option settings.  
 
-Users can simply check what protocol has been used from a development tool included with the browser. In the figure below, network calls occurred over HTTP/2.
+Users can check what protocol has been used from a development tool included with the browser. In the figure below, network calls occurred over HTTP/2.
 
 :::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
 - Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and Use **TLS 1.2** options aren't enabled.
-- VPN and proxy: Although the Internet Option is set to use HTTP2 and TLS 1.2, the browser might fallback when a VPN or Proxy doesn’t support the more recent protocols.
+- VPN and proxy: Although the Internet Option is set to use HTTP2 and TLS 1.2, the browser might fall back when a VPN or Proxy doesn’t support the more recent protocols.
 
 ## Usage pattern
 
@@ -119,7 +119,7 @@ Insight ID: Perf.Performance.PageLoadType
 
 #### Description
 
-Warm page loads are generally faster than cold page loads since necessary resources load out of local caches.
+Warm page loads are faster than cold page loads since necessary resources load out of local caches.
 
 > [!NOTE]
 > When a user opens a form from new tab or new tab in a browser, it is considered a cold page load. When a user opens other forms in the app within the active tab of a browser, it is considered a warm page load.
@@ -133,7 +133,7 @@ To experience warm page loads for faster performance, minimize opening new tabs 
 
 Many first party model-driven apps consist of a dashboard, views (EntityList), and form when it comes to page type. By default, users load a dashboard, although app makers and administrators can change this. If a dashboard contains many charts and tiles, it might cause the dashboard to load slowly. Similarly, if EntityList and forms get customized to add many columns and display many records, it can also cause the page to load slow. Hence, checking the performance per page and per table can be beneficial because page load performance can have different root causes.
 
-In this section you can see several insights related to page performance.
+In this section, you can see several insights related to page performance.
 
 ### Slow dashboards
 
@@ -165,7 +165,7 @@ Makers can do many different customizations with model-driven apps, such as:
 
 From a performance perspective, all of these customizations might cause poor app response in situations where the customization doesn't follow best practices and recommendations. Makers can run Solution Checker to validate their customizations during the development phase.
 
-The following insights also provide analytic results out of runtime telemetry data of your customization.
+The following insights also provide analytic results out of runtime user data of your customization.
 
 ### XML HTTP Request (XHR) call type
 
@@ -187,7 +187,7 @@ We recommend that you change the top methods mentioned in the **Data Section** o
 
 Insight ID:  Perf.Customization.Controls.Deprecated
 
-Some older controls for model-driven apps like Flip Switch, Calendar Control (V1), Linear Slider, Radial Knob, Arc Knob, Linear Gauge; along with the Website Preview control, MultiSelectPicklistControl (V1), and the Flip Label are deprecated. Some of these controls can be replaced with the new controls which are more in line with the modern web and mobile in mind. More information: [New Model Driven Apps controls, deprecation of old controls](https://powerapps.microsoft.com/blog/new-model-driven-apps-controls-deprecation-of-old-controls/)
+Some older controls for model-driven apps like Flip Switch, Calendar Control (V1), Linear Slider, Radial Knob, Arc Knob, Linear Gauge; along with the Website Preview control, MultiSelectPicklistControl (V1), and the Flip Label are deprecated. Some of these controls can be replaced with the new controls, which are more in line with the modern web and mobile in mind. More information: [New Model Driven Apps controls, deprecation of old controls](https://powerapps.microsoft.com/blog/new-model-driven-apps-controls-deprecation-of-old-controls/)
 
 #### Description
 
@@ -207,7 +207,7 @@ For more information about the deprecated controls, go to [Model-driven app cont
 
 Insight ID: Perf.Sandbox.Performance.Plug-ins.Dominant
 
-This insight will help us identify the dominant plug-in, or in other words, the one that's most used. It will also indicate if any of the dominantly used plug-ins performed slow with a plugin execution time greater then 100 milliseconds in the 95th percentile. This insight will list up to 3 dominant plug-ins.
+This insight will help us identify the dominant plug-in, or in other words, the one that's most used. It will also indicate if any of the dominantly used plug-ins performed slow with a plugin execution time greater than 100 milliseconds in the 95th percentile. This insight will list up to three dominant plug-ins.
 
 #### Description
 
@@ -218,7 +218,7 @@ Slow dominant plug-ins affect performance. These plug-ins should be investigated
 Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are described here:
 
 - Associated SQL queries performed slow, hence the plug-in execution time increased.
-- Follow the single responsibility principle for your plug-in and don’t make transactions with big transaction boundaries.
+- Follow the single responsibility principle for your plug-in and don’t make transactions with significant transaction boundaries.
 - Plug-in might be making some external calls, which are slow.
 - Plug-in logic isn't optimized for multi-threading environments. Check your code.
 
@@ -236,20 +236,20 @@ Makers can debug their plug-ins through plug-in trace logs. The Dataverse admins
 
 #### Description
 
-The plug-in trace log should be set to **All** only when you're debugging or tweaking the plug-in.  High volume of trace logging can cause I/O overhead with SQL Server. Moreover, deletion of tge plug-in trace log might cause blocks or waits with SQL Server.
+The plug-in trace log should be set to **All** only when you're debugging or tweaking the plug-in.  High volume of trace logging can cause I/O overhead with SQL Server. Moreover, deletion of the plug-in trace log might cause blocks or waits with SQL Server.
 
 #### How to improve
 
 In your production instance if this setting is **All** and the volume of logs generated by your plugin is high, then consider changing it to Exception. 
 
-To change the setting go to to **Settings** > **Administration** > **System Settings** > **Customization** tab> . More information: [Logging and tracing](/powerapps/developer/data-platform/logging-tracing)
+To change the setting, go to **Settings** > **Administration** > **System Settings** > **Customization** tab. More information: [Logging and tracing](/powerapps/developer/data-platform/logging-tracing)
 
 ## Network
 
 ### Network performance
 
-Network latency and throughput are very important factors that affect end user’s experience.
-Users with high latency and low throughput will more likely experience slow performance while accessing UCI. This insight tells us how many users are on a poor performing network and what their performance was like.
+Network latency and throughput are important factors that affect end user’s experience.
+Users with high latency and low throughput will more likely experience slow performance while accessing Unified Interface. This insight tells us how many users are on a poor performing network and what their performance was like.
 
 #### Description
 
