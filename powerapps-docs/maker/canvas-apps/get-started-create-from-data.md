@@ -32,7 +32,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 > [!IMPORTANT]
 > - You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md).
-> - The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - Connect to Excel from Power Apps](connections/connection-excel.md).
+> - The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
 ## Create the app
 
