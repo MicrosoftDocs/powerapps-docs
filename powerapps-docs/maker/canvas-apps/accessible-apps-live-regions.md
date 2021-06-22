@@ -1,5 +1,5 @@
 ---
-title: Announce dynamic changes with live regions in canvas apps | Microsoft Docs
+title: Announce dynamic changes with live regions for canvas apps
 description: How to use live regions to notify screen readers of dynamic changes in canvas apps
 author: tahoon-ms
 ms.service: powerapps

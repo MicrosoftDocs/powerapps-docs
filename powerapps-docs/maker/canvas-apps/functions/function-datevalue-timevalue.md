@@ -1,6 +1,6 @@
 ---
-title: DateValue, TimeValue, and DateTimeValue functions | Microsoft Docs
-description: Reference information, syntax and examples for the DateValue, TimeValue, and DateTimeValue functions in Power Apps
+title: DateValue, TimeValue, and DateTimeValue functions in Power Apps
+description: Reference information including syntax and examples for the DateValue, TimeValue, and DateTimeValue functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

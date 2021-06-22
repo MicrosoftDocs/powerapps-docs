@@ -40,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole` creates a connection role.
-4. The `ConnectionRoleObjectType` creates a connection role object type code record for account entity. 
+4. The `ConnectionRoleObjectType` creates a connection role object type code record for account table. 
 5. Creates few account and contact records for use in the connection.
 
 ### Demonstrate
@@ -49,7 +49,7 @@ The `QueryExpression` retrieves all the connections associated with the contact 
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

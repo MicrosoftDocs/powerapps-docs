@@ -1,6 +1,6 @@
 ---
-title: 'Display form and Edit form controls: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Display form and Edit form controls
+title: Edit form and Display form controls in Power Apps
+description: Learn about the details, properties and examples of the Edit form and Display form controls in Power Apps.
 author: aneesmsft
 manager: kvivek
 ms.service: powerapps
@@ -27,7 +27,7 @@ If you add a **[Gallery](control-gallery.md)** control, you can configure it to 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
 
-You can also set a form's **Item** property by using a **Drop down** control, as [Show, edit, or add a record](../add-form.md) describes, or a function such as **Lookup** or **First**. For example, you can set the **Item** property to either of these formulas to show the Fabrikam entry in the **Accounts** entity in Microsoft Dataverse:
+You can also set a form's **Item** property by using a **Drop down** control, as [Show, edit, or add a record](../add-form.md) describes, or a function such as **Lookup** or **First**. For example, you can set the **Item** property to either of these formulas to show the Fabrikam entry in the **Accounts** table in Microsoft Dataverse:
 
 ```First(Accounts)```
 

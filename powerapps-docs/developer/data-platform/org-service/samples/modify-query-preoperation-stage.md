@@ -21,9 +21,9 @@ search.app:
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 
-Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and entities that should not be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page may not match the expected paging sizes.
+Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and tables that should not be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page may not match the expected paging sizes.
 
-The approach described by this sample is different. Rather than filter entities after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed. 
+The approach described by this sample is different. Rather than filter tables after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed. 
 
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.
@@ -34,7 +34,7 @@ You can download the sample from [here](https://github.com/Microsoft/PowerApps-S
 
 1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\cds\orgsvc\C#\RetrieveMultipleAccountPreOperation.
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (RetrieveMultipleAccountPreOperation.dll).
-1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` entity. 
+1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` table. 
 1. Using an app or write code to retrieve accounts to trigger the plug-in. See [Code to test this sample](#code-to-test-this-sample) below for an example.
 1. When you are done testing, unregister the assembly and step.
 
@@ -55,9 +55,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### FetchExpression
 
 1. Parse the <xref:Microsoft.Xrm.Sdk.Query.FetchExpression.Query> value containing the FetchXml into an <xref:System.Xml.Linq.XDocument>.
-1. Verify that the `entity` element `attribute` attribute specifies the `account` entity.
-1. Examine all the `filter` elements in the query for conditions that test the `statecode` attribute.
-1. Remove any existing conditions based on that attribute.
+1. Verify that the `entity` element `attribute` specifies the `account` table.
+1. Examine all the `filter` elements in the query for conditions that test the `statecode` column.
+1. Remove any existing conditions based on that column.
 1. Add a new `filter` to the Query that requires that only accounts where the `statecode` is not equal to 1 (Inactive) will be returned.
 1. Set the modified query to the <xref:Microsoft.Xrm.Sdk.Query.FetchExpression.Query> value
 
@@ -112,7 +112,7 @@ if (fetchExpressionQuery != null)
 
 ### QueryExpression
 
-1. Verify that the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName> is the `account` entity.
+1. Verify that the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName> is the `account` table.
 1. Loop through the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> collection
 1. Use the recursive `RemoveAttributeConditions` method to look for any <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> instances that test the statecode attribute and remove them.
 1. Add a new <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> collection that requires that only accounts where the `statecode` is not equal to 1 (Inactive) will be returned.

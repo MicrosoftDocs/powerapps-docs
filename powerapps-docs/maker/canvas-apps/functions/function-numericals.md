@@ -1,6 +1,6 @@
 ---
-title: Abs, Exp, Ln, Power, and Sqrt functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Abs, Sqrt, and other functions in Power Apps
+title: Abs, Exp, Ln, Power, and Sqrt functions in Power Apps
+description: Reference information including syntax and examples for the Abs, Exp, Ln, Power, and Sqrt functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -60,14 +60,14 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 ### Single-column table
 The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains this data:
 
-![](media/function-numericals/values.png)
+![Table example](media/function-numericals/values.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. | ![](media/function-numericals/values-abs.png) |
-| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. | ![](media/function-numericals/values-exp.png) |
-| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. | ![](media/function-numericals/values-ln.png) |
-| **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![](media/function-numericals/values-sqrt.png) |
+| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. | ![Abs](media/function-numericals/values-abs.png) |
+| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. | ![Exp](media/function-numericals/values-exp.png) |
+| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. | ![Ln](media/function-numericals/values-ln.png) |
+| **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![Sqrt](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example
 1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.
