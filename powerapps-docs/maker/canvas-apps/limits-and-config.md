@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 06/22/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -118,10 +118,10 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.dynamics.com | https | Dataverse |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
