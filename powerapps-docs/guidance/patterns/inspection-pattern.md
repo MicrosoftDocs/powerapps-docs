@@ -5,15 +5,13 @@ author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 06/21/2021
 ms.author: kathyos
 ms.reviewer: kathyos
 
 ---
 
 # Pattern: Inspection
-
-<!--![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")-->
 
 There are a variety of reasons why organizations need to perform inspections,
 and Microsoft Power Platform provides a no-code or low-code solution for enabling
@@ -59,7 +57,7 @@ The Inspection solution for Microsoft Teams is a general inspection app that can
 
 ![Screenshot of the Inspection app for Microsoft Teams](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
 
-Learn more about the solution:  [video](https://aka.ms/TeamsInspectionVideo) |  [documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
+Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
 
 ## Template: Hospital Emergency Response sample solution
 
@@ -85,7 +83,7 @@ The main components of the Hospital Emergency Response solution are:
 - **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
     view important data and metrics to help make decisions efficiently.
 
-Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](../../sample-apps/emergency-response/overview.md) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
+Learn more about the solution: [Video](https://youtu.be/Dg-i3F9G01I) | [Documentation](../../sample-apps/emergency-response/overview.md) | [Blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
 
 ## How customers are using the inspection pattern
 
