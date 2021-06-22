@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2021
+ms.date: 06/22/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributor:
@@ -30,6 +30,7 @@ Portal host Version 9.3.6.5 resolves the following issues:
 - Custom plugin error doesn't show when the error occurs on a referenced table. For example, when uploading a file to annotation table on a basic form.
 - Code components - Sometimes when the value of a control is changed, updated value isn't shown on the form.
 - Advanced form - Configuration to set a target for **New** button in lookup dialog points to active advanced form instead of basic form; and doesn't work when set. This change will also require the portal package/solution version to be upgraded to 9.2.2103 or later.
+- Advanced form - Added check for use of only unique advanced form steps in an Advanced Form.
 - Power BI integration - Azure AD guest users aren't able to access embedded Power BI components.
 - Captcha control - No alternative text is available for captcha image, leading to screen readers being unable to inform users about using shortcut for playing audio. After this release, the captcha image will have an alternative text that will inform users to use keyboard shortcut to play the audio describing image.
 - Accessibility - Sorting dropdown on search page isn't visible at 400% zoom.
