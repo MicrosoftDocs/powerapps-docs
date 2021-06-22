@@ -95,7 +95,7 @@ Insight ID: Perf.Environment.Client.Browser.HttpProtocol
  
 #### Description 
 
-Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 protocol for XHR requests onto Power Apps, it might cause slow performance due to the concurrent limitation of requests with the HTTP/1.1 protocol. 
+Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 protocol for XMLHttpRequest (XHR) requests onto Power Apps, it might cause slow performance due to the concurrent limitation of requests with the HTTP/1.1 protocol. 
 
 #### How to improve
 

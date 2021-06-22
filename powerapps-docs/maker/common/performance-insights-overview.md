@@ -188,7 +188,7 @@ The following table summarizes what areas and categories the performance insight
       XHR call type  
    :::column-end:::
    :::column span="":::
-      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XHR call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous. More information: [XML HTTP Request (XHR) call type](performance-insights-categories.md#xml-http-request-xhr-call-type)
+      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XMLHttpRequest (XHR) call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous. More information: [XML HTTP Request (XHR) call type](performance-insights-categories.md#xml-http-request-xhr-call-type)
    :::column-end:::
 :::row-end:::
 :::row:::
