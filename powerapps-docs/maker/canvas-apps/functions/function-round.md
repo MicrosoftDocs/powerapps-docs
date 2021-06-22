@@ -60,6 +60,8 @@ These functions support single-column tables.  If you pass a single number, the 
 
 ## Examples
 
+Rounding to a whole number.
+
 | `X`  | `Round( X, 0 )` | `RoundUp( X, 0 )` | `RoundDown( X, 0 )` | `Int( X )` | `Trunc( X )` |
 |:----:|:-----:|:-----:|:------:|:----:|:-----:|
 | 7.9  | 8  | 8  | 7  | 7  | 7  |
@@ -69,11 +71,15 @@ These functions support single-column tables.  If you pass a single number, the 
 | 7.1  | 7  | 8  | 7  | 7  | 7  |
 | -7.1 | -7 | -8 | -7 | -8 | -7 |
 
+Rounding to two decimal places to the right of the decimal separator (0.01).
+
 | `X` | `Round( X, 2 )` | `RoundUp( X, 2 )` | `RoundDown( X, 2 )` | `Trunc( X, 2 )` |
 |:----:|:----:|:------------:|:----------:|:-------:|
 | 430.123 | 430.12 | 430.13 | 430.12 | 430.12 |
 | 430.125 | 430.13 | 430.13 | 430.12 | 430.12 |
 | 430.128 | 430.13 | 430.13 | 430.12 | 430.12 |
+
+Rounding to two decimal places to the left of the decimal separator (100).
 
 | `X` | `Round( X, -2 )` | `RoundUp( X, -2 )` | `RoundDown( X, -2 )` | `Trunc( X, -2 )` |
 |:----:|:----:|:------------:|:----------:|:-------:|
@@ -82,5 +88,11 @@ These functions support single-column tables.  If you pass a single number, the 
 | 450.000 | 500 | 500 | 400 | 400 |
 | 450.124 | 500 | 500 | 400 | 400 |
 | 479.128 | 500 | 500 | 400 | 400 |
+
+Rounding a single-column table of values.
+
+| `X` | `Int( X )` | `Round( X, 2 )` | `Trunc( X, [ 0, 1, 2 ] )` |
+|:----:|:----:|:------------:|:----------:|
+| [ 123.456, <br>987.593, <br>542.639 ] | [ 123, <br>987, <br>542 ] | [ 123.46, <br>987.59, <br>542.64 ] | [ 123, <br>987.6, <br>542.64 ] |
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
