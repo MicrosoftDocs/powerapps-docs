@@ -36,7 +36,7 @@ The **Blank** function returns a *blank* value. Use this to store a NULL value i
 ## IsBlank
 The **IsBlank** function tests for a *blank* value or an empty string.  The test includes empty strings to ease app creation since some data sources and controls use an empty string when there is no value present.  To test specifically for a *blank* value use `if( Value = Blank(), ...` instead of **IsBlank**.
 
-When enbling error handling for existing apps, consider replacing **IsBlank** with [**IsBlankOrError**](function-iferror.md#IsBlankOrError) to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
+When enbling error handling for existing apps, consider replacing **IsBlank** with [**IsBlankOrError**](function-iferror.md#isblankorerror) to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
 
 The return value for **IsBlank** is a Boolean **true** or **false**.
 
