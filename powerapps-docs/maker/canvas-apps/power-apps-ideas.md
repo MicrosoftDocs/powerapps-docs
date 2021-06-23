@@ -68,6 +68,14 @@ You can follow steps mentioned in [Create a canvas app from Microsoft Dataverse]
 
 1. When you select any suggested idea for a formula, the formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected idea formula, or change.
 
+## Best practices
+
+To get the best results, here's some tips that you can follow when writing the plain English query in the Ideas pane.
+
+- Enter complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions it needs to meet.
+- Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, understand data types better.
+- Double quote the text string you want to filter or search for. This will help the model recognize the target string better and provide a more accurate formula suggestion.
+
 ## Limitations
 
 During this public preview, Power Apps Ideas has the following limitations:
