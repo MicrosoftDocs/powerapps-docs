@@ -26,7 +26,7 @@ The app addresses the following personas:
     
 - **User**: View organization hierarchy, and biographical information about the people in their organization. Also, find open positions that they may want to apply for.
 
-Profile+ is installed in a Microsoft Teams team, but it’s designed to be used primarily by the people outside of the team. Since there's no app administration required, only those users who develop or customize the app need to be members of the team. Everybody else can use the app outside of the team.
+Profile+ app is installed in a Microsoft Teams team, but it’s designed to be used primarily by the people outside of the team. Since there's no app administration required, only those users who develop or customize the app need to be members of the team. Everybody else can use the app outside of the team.
 
 In this article, you'll learn how to allow everyone in your organization to view profiles in Profile+ app. Also, update their biographical information, and publish open positions for people outside of the Teams team. And then, share the Profile+ app with them.
 
@@ -75,7 +75,7 @@ This process begins by opening the app in the **Power Apps**. You may have Power
 
 1. Enter the Azure AD security group, or a different team with which you would like to share access to the app.
 
-1. Set the **On/Off** toggle to **On** for Profile+.
+1. Set the **On/Off** toggle to **On** for Profile+ app.
 
     ![Toggle share to on](media/profile-plus-broad-distribution/share-with-colleagues-2.png "Toggle share to on")
 
@@ -122,13 +122,13 @@ The following table lists recommended table permissions:
 | ------------------------ | ------------------------------------------------------------ |
 | Expertise Tag            | Since colleagues outside of the team should be able to create new expertise tags, give them **Collaborate** permissions on the **Expertise Tag** table. |
 | Open Position            | Since colleagues outside of the team should be able to read all open positions, create and edit open positions that they own, give them **Collaborate** permission on the **Open Position** table. |
-| Person Position          | **Person Position** is the primary table for Profile+. Since colleagues outside of the team will need to read other people’s profiles, and editing their own, give them **Collaborate** permission on the **Person Position** table. |
+| Person Position          | **Person Position** is the primary table for Profile+ app. Since colleagues outside of the team will need to read other people’s profiles, and editing their own, give them **Collaborate** permission on the **Person Position** table. |
 | ProfilePlus User Setting | Colleagues outside of the team should be able to create, read, and edit their own user setting record, but not see or edit other users’ setting record. Give the **Private** permission on the **Profile+ User Setting** table. |
 | Project Tag              | Since colleagues outside of the team should be able to create new project tags and read all project tags, give them **Collaborate** permission on the **Project Tab** table. |
 
 ### Rename the app
 
-In a large organization, you might have multiple people sharing the same template app with colleagues. If multiple departments are using Profile+, you can make it easier for your colleagues to find the app by renaming it.
+In a large organization, you might have multiple people sharing the same template app with colleagues. If multiple departments are using Profile+ app, you can make it easier for your colleagues to find the app by renaming it.
 
 1. Open **Profile+** app in Microsoft Teams.
 
@@ -154,7 +154,7 @@ The colleagues that the Profile+ app is shared with, can acquire the app using t
 
 1. After adding the app to the Teams app menu, select the icon for the app to open it full screen in Teams.
 
-1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Profile+ button on the app menu, and then select **Pin**.
+1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Profile+ app button on the app menu, and then select **Pin**.
 
     ![Pin Profile+](media/profile-plus-broad-distribution/pin.png "Pin Profile+")
 
