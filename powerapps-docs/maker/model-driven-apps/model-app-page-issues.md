@@ -22,6 +22,8 @@ search.app:
 
 The custom page is a new page type within model-driven app which brings in the power of canvas.  Below are the known issues to be aware of.
 
+* When a custom page is modified (e.g. saved and published), the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published.  A publish through app designer, model-driven app publish or **Publish All** will update all custom pages in the model-driven app. 
+
 * When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
 
 * Deleting a model-driven app with a custom page from the make.powerapps.com Apps list fails with an error.  The work around is to delete from the solution explorer list.
@@ -35,7 +37,7 @@ The custom page is a new page type within model-driven app which brings in the p
   > [!div class="mx-imgBorder"]
   > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
 
-* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages as well as the sitemap. See more on [Managing dependencies](https://docs.microsoft.com/power-platform/alm/removing-dependencies)
+* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages as well as the sitemap. See more on [Managing dependencies](/power-platform/alm/removing-dependencies)
 
 * Under some cases, loading a custom page when there is a change can take longer and no page loading spinner is shown.
 
