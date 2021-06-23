@@ -22,6 +22,8 @@ search.app:
 
 The custom page is a new page type within model-driven app which brings in the power of canvas.  Below are the known issues to be aware of.
 
+* When a custom page is modified (e.g. saved and published), the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published.  A publish through app designer, model-driven app publish or **Publish All** will update all custom pages in the model-driven app. 
+
 * When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
 
 * Deleting a model-driven app with a custom page from the make.powerapps.com Apps list fails with an error.  The work around is to delete from the solution explorer list.
