@@ -19,10 +19,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-create-reciprocal-connection-role-early-bound -->
+This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ReciprocalConnection).
 
-This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ReciprocalConnection
-).
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
@@ -48,11 +47,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Perform initial request and cache the results, including the `DataToken`
 1. Update the records created in [Setup](#setup)
 1. Perform a second request, this time passing the `DataVersion` with the `DataToken` value retrieved from the initial request.
-1. Show the entity changes returned by the second request
+1. Show the table changes returned by the second request
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

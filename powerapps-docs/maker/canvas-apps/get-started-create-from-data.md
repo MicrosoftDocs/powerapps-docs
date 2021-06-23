@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from Excel | Microsoft Docs
-description: Use Power Apps to automatically create a canvas app using an Excel file stored in a cloud-storage account
+title: Create a canvas app with data from an Excel file
+description: Learn about how to use Power Apps to automatically create a canvas app using data stored in an Excel file in a cloud-storage account.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,16 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/06/2021
+ms.date: 06/22/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
-# Create a canvas app from Excel in Power Apps
+# Create a canvas app with data from an Excel file
 
 In this topic, you'll create your first canvas app in Power Apps using data from an Excel table. You'll select an Excel file, create an app, and then run the app that you create. Every created app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
 
@@ -29,7 +31,8 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
-> You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
+> - You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md).
+> - The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
 ## Create the app
 

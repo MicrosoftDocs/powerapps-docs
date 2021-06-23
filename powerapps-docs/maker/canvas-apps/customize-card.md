@@ -1,6 +1,6 @@
 ---
-title: Customize a card in a canvas app | Microsoft Docs
-description: Change the default control that appears in a card on a Details or Edit form in a canvas app
+title: Customize a card in a canvas app
+description: Change the default control that appears in a card on a Details or Edit form in a canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps

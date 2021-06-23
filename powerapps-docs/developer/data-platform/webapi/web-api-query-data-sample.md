@@ -1,8 +1,8 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This group of samples shows how to query data using the Web API. These are implemented using Client-side JavaScript and C#"
+description: "These code samples shows how to query data using the Web API. These samples are implemented using client-side JavaScript and C#."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Query Data Sample
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This group of  samples demonstrate how to query data using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:
 
@@ -45,8 +46,8 @@ This sample is divided into the following principal sections, containing Web API
 |[Setting precedence](#bkmk_prededence)|[Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators)|
 |[Ordering results](#bkmk_orderresults)|[Order results](query-data-web-api.md#bkmk_order)<br /><br /> [Filter results](query-data-web-api.md#bkmk_filter)|
 |[Parameter alias](#bkmk_parameteralias)|[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
-|[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of entities returned](query-data-web-api.md#bkmk_limits)|
-|[Expanding results](#bkmk_expandresults)|[Retrieve related entities by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)|
+|[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
+|[Expanding results](#bkmk_expandresults)|[Retrieve related rows by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)|
 |[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType/><br /><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType/>|
 <!-- TODO:
 |[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)| -->
@@ -57,7 +58,7 @@ The following sections contain a brief discussion of the Dataverse Web API opera
 
 ## Sample data
 
-To ensure the queries in this sample work properly, a standard set of sample records is created by this sample. These sample records will be deleted unless the user chooses to not delete them. This is the data the sample will be querying. You may get different results depending on any existing data in your environment.  
+To ensure the queries in this sample work properly, a standard set of sample rows is created by this sample. These sample rows will be deleted unless the user chooses to not delete them. This is the data the sample will be querying. You may get different results depending on any existing data in your environment.  
   
 The data is added using *deep insert* in a single `POST` request and matches the following structure:  
   
@@ -156,10 +157,10 @@ The data is added using *deep insert* in a single `POST` request and matches the
 ```  
   
 <a name="bkmk_selectproperties"></a>
-   
+
 ## Selecting specific properties
   
-Always construct  queries using the `$select` query option, otherwise the server will return all properties of each entity which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information:[Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
+Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information:[Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
   
 In this example, we are requesting for a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   
@@ -513,7 +514,7 @@ Contacts that were created within the last 1hr:
 ```  
   
 <a name="bkmk_operators"></a>
- 
+
 ## Using operators
 
 Use the [Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine our results. In this example, we are requesting a list of all contacts with `fullname` containing `(sample)` and annual income greater than `55000`.  
@@ -993,7 +994,7 @@ Contacts list using parameterized aliases:
 
 ## Limit results
 
-Returning more data than you need is bad for performance. The server will return a maximum of 5000 entities per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of entities from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of entities return per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Limits on number of entities returned](query-data-web-api.md#bkmk_limits).  
+Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Limits on number of rows returned](query-data-web-api.md#bkmk_limits).  
   
 <a name="bkmk_topResults"></a>
  
@@ -1093,7 +1094,7 @@ Contacts top 5 results:
 
 ### Result count
 
-You can get just the count of records from a collection-valued property or a count of matched entities in a filter. Getting a count tells us the number of possible entities in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information:[Retrieve a count of entities](query-data-web-api.md#bkmk_retrieveCount).  
+You can get just the count of rows from a collection-valued property or a count of matched table rows in a filter. Getting a count tells us the number of possible rows in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information:[Retrieve a count of table rows](query-data-web-api.md#bkmk_retrieveCount).  
   
  **HTTP Request**  
   
@@ -1201,7 +1202,7 @@ Manager or Senior:
 
 ### Pagination
 
-To retrieve a sequential subset of results for a query that returns a large number of entities, use the `odata.maxpagesize` instead of `$top`. More information:[Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
+To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information:[Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
   
 In this example, we ask for a `$count` and we set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but we are only retrieving 4 at a time. We also use the count and the max page size to figured out how many total pages there are. The result of the first page is returned in this request.  
   
@@ -1371,11 +1372,11 @@ Page 2 of 3:
 
 ## Expanding results
 
-To retrieve information on associated entities, use the `$expand` query option on navigation properties. More information:[Retrieve related entities by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated).  
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information:[Retrieve related rows by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated).  
   
 ### Expand on single-valued navigation property
 
-A Single-valued navigation property represents a many-to-one relationships. In our sample data, the account has a relationship with a contact via the `primarycontactid` attribute. In this relationship, the account can only have one primary contact.  Using the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />, we can create a query to get information about the account and expanded information about its primary contact.  
+A Single-valued navigation property represents a many-to-one relationships. In our sample data, the account has a relationship with a contact via the `primarycontactid` column (attribute). In this relationship, the account can only have one primary contact.  Using the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />, we can create a query to get information about the account and expanded information about its primary contact.  
   
  **HTTP Request**  
   
@@ -1426,9 +1427,9 @@ Account 'Contoso, Ltd. (sample)' has the following primary contact person:
   
 ### Expand on partner property
 
-Each navigation property has a corresponding “partner” property. Once an association is made, we can retrieve information through this association. Which attribute we use depends on the base entity that the query is against. For example, in the previous operation, we created a query against the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> and we wanted to get additional information about its primary contact. We did that via the `primarycontactid` attribute. If we look up the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />, under the [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/account?view=dynamics-ce-odata-9#Single-valued_navigation_properties) section, we can see that the partner property that corresponds to `primarycontactid` is  `account_primary_contact` collection-valued navigation property found on the <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />.  
+Each navigation property has a corresponding “partner” property. Once an association is made, we can retrieve information through this association. Which column we use depends on the base table that the query is against. For example, in the previous operation, we created a query against the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> and we wanted to get additional information about its primary contact. We did that via the `primarycontactid` column (attribute). If we look up the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />, under the [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/account#Single-valued_navigation_properties) section, we can see that the partner property that corresponds to `primarycontactid` is  `account_primary_contact` collection-valued navigation property found on the <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />.  
   
-Writing a query against a contact, you can expand on the `account_primary_contact` attribute to get information about accounts where this contact is the primary contact. In the sample data, `Yvonne McKay (sample)` is the primary contact person for only one account. However, she can potentially be assigned to other accounts as primary contact. Because the `account_primary_contact` property has a many-to-one relationship the result is returned as an array of account entities.  
+Writing a query against a contact, you can expand on the `account_primary_contact` column to get information about accounts where this contact is the primary contact. In the sample data, `Yvonne McKay (sample)` is the primary contact person for only one account. However, she can potentially be assigned to other accounts as primary contact. Because the `account_primary_contact` property has a many-to-one relationship the result is returned as an array of account rows.  
   
  **HTTP Request**  
   
@@ -1479,7 +1480,7 @@ Contact 'Yvonne McKay (sample)' is the primary contact for the following account
   
 ### Expand on collection-valued navigation property
 
-Collection-valued navigation properties support one-to-many or many-to-many relationships. For example, in our sample data, the account has a relationship with many contacts via the `contact_customer_accounts` attribute.  
+Collection-valued navigation properties support one-to-many or many-to-many relationships. For example, in our sample data, the account has a relationship with many contacts via the `contact_customer_accounts` column (attribute).  
   
 Using the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />, we can create a query to get information about the account and expand information about its contacts. In this case, the `Contoso, Ltd. (sample)` is associated to nine other contacts via the `contact_customer_accounts` collection-valued navigation property.  
   
@@ -1971,7 +1972,7 @@ Contacts Fetched by fullname containing '(sample)':
   
 ### FetchXML pagination
 
-The way FetchXML handles paging is different than how query filter handles it. In FetchXML, you can specify a `count` attribute that will indicate how many results to return per page. In the same request, you use the `page` attribute to specify the page number you want. This operation will make a request for page 3 from the previous FetchXML sample. Based on our sample data, we should have ten contacts in our result. Breaking each page down to only four entities per page, we should have three pages. Page 3 should contain only two entities. If we then ask for page 4, the system will return zero results.  
+The way FetchXML handles paging is different than how query filter handles it. In FetchXML, you can specify a `count` column that will indicate how many results to return per page. In the same request, you use the `page` column to specify the page number you want. This operation will make a request for page 3 from the previous FetchXML sample. Based on our sample data, we should have ten contacts in our result. Breaking each page down to only four contacts per page, we should have three pages. Page 3 should contain only two contacts. If we then ask for page 4, the system will return zero results.  
   
 ```xml  
 <fetch mapping="logical"  

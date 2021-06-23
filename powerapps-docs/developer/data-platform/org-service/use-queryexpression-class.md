@@ -1,8 +1,8 @@
 ---
 title: "Use the QueryExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use the QueryExpression class to build complex queries for use with the IOrganizationService.QueryBase) method or the RetrieveMultipleRequest message" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Use the QueryExpression class to build complex queries for use with the IOrganizationService.QueryBase method or the RetrieveMultipleRequest message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/17/2020
+ms.date: 06/01/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,13 +15,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use the QueryExpression class
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to build complex queries for use with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> message. You can set query parameters to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> by using the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>, <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> classes.  
   
- The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class lets you create complex queries. The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class is designed to be a simple way to search for entities where attributes match specified values.  
+ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class lets you create complex queries. The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class is designed to be a simple way to search for table rows where columns match specified values.  
   
 <a name="record_count"></a>   
 ## Record count  
@@ -52,7 +53,8 @@ foreach (var a in result1.Entities)
     Console.WriteLine("Name: " + a.Attributes["firstname"] + " " + a.Attributes["lastname"]);  
 }  
 Console.WriteLine("---------------------------------------");  
-```  
+```
+
 ## Use SQL hints in a query
 
 The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property named <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.QueryHints>. By setting this property to one of the supported string values shown below, you can provide a hint for generated SQL text which affects the query's execution.
@@ -69,15 +71,16 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |HashJoin | Hash Join |
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion | MAXRECURSION number |
+|ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS | ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS |
 
 More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
-### See also  
+### See also
+
  [Building Queries with QueryExpression](build-queries-with-queryexpression.md)   
  [Use the ColumnSet Class](use-the-columnset-class.md)   
  [Using the ConditionExpression Class](use-conditionexpression-class.md)   
  [Using the FilterExpression Class](use-filterexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

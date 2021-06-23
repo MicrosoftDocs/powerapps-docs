@@ -1,6 +1,6 @@
 ---
-title: Overview of the Dynamics 365 connection | Microsoft Docs
-description: Create an app for managing data in Dynamics 365
+title: Connect to Dynamics 365 from Power Apps
+description: Learn about how to create an app for managing data in Dynamics 365.
 author: JimDaly
 manager: kvivek
 ms.service: powerapps
@@ -21,7 +21,7 @@ If you want to connect to Dynamics 365 Business Central, Dynamics 365 Customer I
 > [!IMPORTANT]
 > The Dynamics 365 connector is deprecated. For more information, see [Dynamics 365 connector deprecation announcement](/power-platform/important-changes-coming#dynamics-365-connector-is-deprecated).
 >
-> - Use the [Common Data Service connector](connection-common-data-service.md) when connecting to the Microsoft Dataverse used for Microsoft Dynamics 365 Sales, Microsoft Dynamics 365 Customer Service, Microsoft Dynamics 365 Field Service, Microsoft Dynamics 365 Marketing, and Microsoft Dynamics 365 Project Service Automation. 
+> - Use the [Microsoft Dataverse connector](connection-common-data-service.md) when connecting to the Microsoft Dataverse used for Microsoft Dynamics 365 Sales, Microsoft Dynamics 365 Customer Service, Microsoft Dynamics 365 Field Service, Microsoft Dynamics 365 Marketing, and Microsoft Dynamics 365 Project Service Automation. 
 > - To convert your app that uses the deprecated Dynamics 365 connector, go to [Converting canvas apps with the Dynamics 365 connector](../use-native-cds-connector.md#converting-canvas-apps-with-the-dynamics-365-connector).
 
 ## See also

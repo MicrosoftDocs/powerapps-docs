@@ -18,14 +18,14 @@ If you are a Power Apps component framework Private Preview participant for mode
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-A few changes are required to use the new Power Apps CLI tooling with your existing Power Apps component framework code components.
+A few changes are required to use the new Microsoft Power Platform CLI tooling with your existing Power Apps component framework code components.
 
 > [!NOTE]
-> This topic is applicable only for updating code components for model-driven apps because the Power Apps CLI tooling is not available at the time of private preview for the model-driven apps.  
+> This topic is applicable only for updating code components for model-driven apps because Microsoft Power Platform CLI tooling is not available at the time of private preview for the model-driven apps.  
 
 ## Creating an empty project
 
-Use Power Apps CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
+Use Microsoft Power Platform CLI to create a new empty project for your code component. More information: [Create components using tooling](create-custom-controls-using-pcf.md)
 
 Once the project is created, migrate your code component source to the new project:
 
@@ -124,7 +124,7 @@ The build tools expect the component source to be exported using standard ES6 mo
 
 ## Using generated manifest typing file
 
-Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. The Power Apps CLI tooling now automatically generates this file upon build. 
+Legacy projects require manually creating and editing an `inputsOutputs.d.ts` typing file, which is typically located under the `private_typing` subfolder. Microsoft Power Platform CLI tooling now automatically generates this file upon build. 
 
 Code-gen ensures that `type` definitions used in the component source code stay in sync with `types` defined in the component manifest file.
 

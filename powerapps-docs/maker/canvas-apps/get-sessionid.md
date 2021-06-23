@@ -1,6 +1,6 @@
 ---
-title: Get a session ID or a canvas-app ID | Microsoft Docs
-description: How to get a session ID or a canvas-app ID for troubleshooting in Power Apps
+title: Get a session ID or a canvas-app ID
+description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
