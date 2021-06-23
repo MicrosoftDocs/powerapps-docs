@@ -37,7 +37,7 @@ With this change, we're adding a new website setting to control the **SameSite**
 Default value for all existing and newly provisioned portals is **None**.
 
 > [!IMPORTANT]
-> October 2021 onwards, all newly provisioned portals will have **Strict** as the Default value instead of **None**.
+> Starting October 2021, all newly provisioned portals will have **Strict** as the Default value instead of **None**.
 
 To learn how to configure site settings for portals, go to [Configure site settings for portals](configure/configure-site-settings.md)
 
