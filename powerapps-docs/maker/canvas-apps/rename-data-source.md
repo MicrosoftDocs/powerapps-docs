@@ -32,7 +32,7 @@ between action-based and tabular data sources.
 
 Action-based data sources use the data source, or the service name in the formula. Tabular data sources use the name of the table instead.
 
-For example, [Azure DevOps](https://docs.microsoft.com/connectors/visualstudioteamservices/) is action-based connector, while [Excel](https://docs.microsoft.com/connectors/excel/) is tabular data source.
+For example, [Azure DevOps](/connectors/visualstudioteamservices) is action-based connector, while [Excel](/connectors/excel) is tabular data source.
 
 For example, when you reference an Azure DevOps instance, the formula uses
 Azure DevOps as the data source name
