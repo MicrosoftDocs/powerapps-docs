@@ -1,8 +1,8 @@
 ---
-title: " Dump entity priviliges to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to dump entity priviliges to a file." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Dump table privileges to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to dump table privileges to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/20/2019
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Dump Entity privileges information to a file
+# Dump table privileges information to a file
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -24,13 +24,15 @@ This sample shows how to write out all the attribute metadata to an `XML` file. 
 
 The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\EntityPrivileges.xml`. You can open this file in **Office Excel** to see a tabular report. 
 
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
 
-The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the entities.
+The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the tables.
 
 ## How this sample works
 

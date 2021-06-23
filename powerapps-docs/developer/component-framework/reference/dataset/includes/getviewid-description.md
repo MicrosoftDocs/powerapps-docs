@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: df189d10-3fce-48a4-a79b-f1c3b041deb4
 ---
 
-Returns the Id of view used by data-set parameter.
+Returns the Id of view used by dataset parameter.

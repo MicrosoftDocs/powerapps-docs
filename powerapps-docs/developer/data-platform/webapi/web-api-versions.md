@@ -2,7 +2,7 @@
 title: "Microsoft Dataverse Web API versions (Dataverse)| Microsoft Docs"
 description: "Read how versioning of Microsoft Dataverse Web API works. Dataverse Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.custom: ""
-ms.date: 07/25/2019
+ms.date: 06/14/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -27,8 +27,17 @@ Beginning with the v9.0 release of Dynamics 365, the Web API supports version sp
 This is different from the behavior for in the v8.*x* releases. In the previous releases new capabilities were available to any version of the service depending on the update applied to the environment.  After an upgrade to v8.2, the v8.0, and v8.1 services were all identical. This was possible because all the changes were additive. Nothing was removed or introduced breaking changes. As a result, the specific version referenced in the service URL for the v8.*x* wasn't actually important.  
   
 Going forward the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This will allow for improvements to be applied on an on-going basis. This topic will record any version specific differences and any limitations where the Web API hasn't yet achieved parity with the organization service.  
+
+> [!NOTE]
+> While the v9.x releases can support specific differences, there have been no breaking changes added to v9.0, v9.1, or v9.2 releases. Each of these releases are have identical Web API behaviors.
+>
+> Differences in API behavior is driven more by the solutions installed in the system rather than version of the product. However, if we need to make a fundamental change that is not backward compatible, it will be included in a new version number.
+>
+> **Guidance**: Use the version number that was current when your code was written. Do not automatically use a newer version without looking for documented differences here and testing. Do not assume a newer version wll be fully backward compatible.
   
 ## Web API version specific differences
+
+The differences below refer to changes in the v8.2 and v9.0 versions of the Web API.
 
 <a name="BKMK_fetchresponse"></a>
 

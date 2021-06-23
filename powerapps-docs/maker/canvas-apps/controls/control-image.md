@@ -1,6 +1,6 @@
 ---
-title: 'Image control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Image control
+title: Image control in Power Apps
+description: Learn about the details, properties and examples of the image control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -21,10 +21,11 @@ A control that shows an image from, for example, a local file or a data source.
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
 ## Key properties
-**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control. 
+**[Image](properties-visual.md)** – The name or the URL of the image that appears in an image, audio, or microphone control. 
 
 > [!NOTE]
-> Use HTTPS for all external images to ensure compatibility with modern browsers.
+> - Use HTTPS for all external images to ensure compatibility with modern browsers.
+> - External images must be accessible anonymously (without any authentication).
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
