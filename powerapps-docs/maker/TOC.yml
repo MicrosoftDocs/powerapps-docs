@@ -2218,6 +2218,8 @@
           items:
             - name: Use the Profile+ sample app 
               href: ../teams/profile-app.md
+            - name: Deploy the Profile+ app broadly in your organization
+              href: ../teams/deploy-profile-plus-broad-distribution.md
             - name: Customize Profile+ app
               items:
                 - name: Understand Profile+ sample app architecture
