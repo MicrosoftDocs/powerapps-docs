@@ -33,20 +33,24 @@ The publishing a model-driven app with custom pages will consolidate all of the 
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
 | [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, Sql Server Auth, Windows Auth, and Windows Auth non-shared | 
 | [Teams](https://docs.microsoft.com/connectors/teams/) | Verified |
-| [Custom connector](../canvas-apps/register-custom-api.md) | Partial | Verified with non auth
-| [Excel Online](../canvas-apps/connections/connection-excel.md) | Partial | Verified the new Excel Online connector and Excel stored in only one of either OneDrive, Box, Dropbox, or Google Drive for a model-driven app |
+| [Custom connector](../canvas-apps/register-custom-api.md) | Partial | Verified with non-auth
+| [Excel Online for Business](../canvas-apps/connections/connection-excel.md) | Verified |  |
+| [Excel via file share](../canvas-apps/connections/connection-excel.md) | Partial | Verified Excel stored in only one of either OneDrive, Box, Dropbox, or Google Drive for a model-driven app |
+
+Note: connectors on the supported list expected to work with on prem gateway
 
 ## Upcoming changes to connectors for custom pages
 
-* User prompt for consent
-* Cross environment Dataverse connection
-* SQL Server with Windows Auth Shared and Not Shared
+* Power Automate
+* Environment variable support for connections
+* Connection References support for shared connections
 
 ## Known issues
 
 * No support to enable bypassing Microsoft connectors
 * Error when Flow is used in custom connector
 * Unable to use Excel stored in two or more of OneDrive, Box, Dropbox, or Google Drive within a single model-driven app.  The new Excel Online connector does not have this limitation.
+* Missing consent prompt for the cross environment Dataverse connection
 
 ## Related topics
 
