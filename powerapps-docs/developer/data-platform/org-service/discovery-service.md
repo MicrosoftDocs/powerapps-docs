@@ -25,8 +25,8 @@ search.app:
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
-# Regional Discovery Services are No Longer Avaialble.
-## To access Global Discovery functionality with our SDK going fowarded, Please see [here](/powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md)
+ - Regional Discovery Services are no longer avaialble.
+ - To access Global Discovery functionality with the SDK going fowarded, see [here](/powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md)
 
 ## Globla Discovery Service Endpoints:
 [!INCLUDE [global-discovery-services](../../../includes/global-discovery-services.md)]
