@@ -1,12 +1,12 @@
 ---
-title: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items | Microsoft Docs
+title: Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
 description: This article explains how to create an app with SharePoint form functionality from scratch.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2020
+ms.date: 05/13/2021
 ms.author: emcoope
 search.audienceType: 
   - maker

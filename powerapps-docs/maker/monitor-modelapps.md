@@ -1,5 +1,5 @@
 ---
-title: Diagnose model-driven app issues with Monitor for Power Apps | Microsoft Docs
+title: Debug a model-driven app with Monitor
 description: Learn how to diagnose model-driven app issues using Monitor
 author: hasharaf
 ms.service: powerapps

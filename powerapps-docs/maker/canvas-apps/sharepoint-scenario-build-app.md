@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app to manage projects | Microsoft Docs
-description: In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details.
+title: Create a canvas app to manage projects
+description: Learn about how to build a canvas app from scratch allowing users to assign a manager to projects and to update project details.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -137,7 +137,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 
 3. Resize the button to accommodate the text.
    
-    ![Update button text](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
+    ![Resize button](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
 4. Insert another button with the following properties:
    
    * **OnSelect** property = **Navigate(ViewProjects, Fade)**.
@@ -236,7 +236,7 @@ In this step, we'll use a gallery to display all projects that have been approve
 
    * **Title**
      
-     ![Gallery fields](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
+     ![Gallery](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
 
 5. Resize labels in the gallery as appropriate, and remove the arrow from the first gallery item (we don't need to navigate anywhere from this gallery).
    
@@ -313,7 +313,7 @@ In this step, we'll change properties for the gallery on the **ViewProjects** sc
    
     The gallery now has the right layout, with the default sample text.
    
-    ![Gallery with default text](./media/sharepoint-scenario-build-app/04-04-04b-gallery-default.png)
+    ![Gallery with right layout](./media/sharepoint-scenario-build-app/04-04-04b-gallery-default.png)
 
 5. Select the refresh button ![Refresh icon](./media/sharepoint-scenario-build-app/icon-refresh.png), and set its **OnSelect** property to **Refresh('Project Details')**.
 
@@ -458,7 +458,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
 
 1. Click or tap ![Back icon](./media/sharepoint-scenario-build-app/icon-back.png) to go back to the first screen, then click or tap **Update Details**.
    
-   ![App intro screen](./media/sharepoint-scenario-build-app/04-07-08-intro-screen.png)
+   ![Update details](./media/sharepoint-scenario-build-app/04-07-08-intro-screen.png)
 
 2. On the **View Projects** screen, enter "New" in the search box.
    

@@ -1,5 +1,5 @@
 ---
-title: Common canvas apps performance issues and resolutions | Microsoft Docs
+title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
 ms.service: powerapps
@@ -176,7 +176,7 @@ Ensure that all on-premises data gateway nodes are healthy and configured with a
 
 #### Location of the on-premises data gateway
 
-A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data entity schema to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
+A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data table schema to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
 
 In an enterprise environment, having a scalable data gateway cluster is recommended when heavy data requests are expected. Check how many connections are established between the data gateway nodes and the SQL instance.
 
@@ -230,14 +230,14 @@ In the real world, though, apps are designed to meet certain business requiremen
 
 ## Performance considerations for using Dataverse as the data source
 
-When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Dataverse environment, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow with the Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-the-common-data-service-connector-for-dataverse-environments)
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow when connecting to Microsoft Dataverse](execution-phases-data-flow.md#data-call-flow-with-microsoft-dataverse)
 
 > [!TIP]
-> When custom entities are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](/power-platform/admin/database-security), and [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+> When custom tables are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](/power-platform/admin/database-security), and [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN** client-side instead of server-side.
 
-Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join tables and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ## Performance considerations for the Excel connector
 

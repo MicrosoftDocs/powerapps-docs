@@ -1,6 +1,6 @@
 ---
-title: 'Barcode scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode scanner control
+title: Barcode scanner control in Power Apps
+description: Learn about the details, properties and examples of the Barcode scanner control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Barcode scanner control for canvas apps
+# Barcode scanner control in Power Apps
 
 Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
 
