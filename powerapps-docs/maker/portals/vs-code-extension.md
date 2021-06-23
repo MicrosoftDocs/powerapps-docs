@@ -22,10 +22,10 @@ contributors:
 Visual Studio Code (VS Code) is a lightweight but powerful source code editor that runs on your desktop and is available for Windows, macOS, and Linux. It
 comes with built-in support for JavaScript, TypeScript, and Node.js and has a
 rich ecosystem of extensions for other languages (such as C++, C\#, Java,
-Python, PHP, Go) and runtimes (such as .NET and Unity). More information: [Get
-started with VS Code](https://code.visualstudio.com/docs/getstarted/introvideos)
+Python, PHP, and Go) and runtimes (such as .NET and Unity). For more information, see [Get
+started with VS Code](https://code.visualstudio.com/docs/getstarted/introvideos).
 
-VS Code allows extending the capability through
+VS Code allows you to extend your capability through
 [extensions](https://code.visualstudio.com/docs/introvideos/extend). VS Code
 extensions can add more features to the overall experience. With the release of
 this feature, you can now use the VS Code extension to work with Power Apps
@@ -37,7 +37,7 @@ portals.
 
 ### VS Code extension for portals
 
-The VS Code extension **Power Platform VS Code Extension** adds the capability to configure portals using
+The **Power Platform VS Code Extension** adds the capability to configure portals using
 VS Code, and use the built-in Liquid language
 [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) enabling
 help with code completion, assistance, and hinting while customizing portals
@@ -48,7 +48,7 @@ support for Microsoft Power Platform CLI](power-apps-cli.md).
 
 ## Prerequisites
 
-Before using VS Code extension for Power Apps portals, you must:
+Before using the VS Code extension for Power Apps portals, you must:
 
 -   Download, install, and configure Visual Studio Code. More information:
     [Download Visual Studio Code](https://code.visualstudio.com/Download)
@@ -58,10 +58,10 @@ Before using VS Code extension for Power Apps portals, you must:
 
 ## Install VS Code extension
 
-After you install Visual Studio Code, you need to install the extension for
-Power Apps portals plugin for VS Code. 
+After you install Visual Studio Code, you need to install the extension for the
+Power Apps portals plug-in for VS Code. 
 
-To install VS code extension:
+To install the VS Code extension:
 
 1.  Open Visual Studio Code.
 
@@ -71,7 +71,7 @@ To install VS code extension:
 
 3.  Select ![Settings icon](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
 
-4.  Search for, and select **Power Platform VS Code Extension**.
+4.  Search for and select **Power Platform VS Code Extension**.
 
     ![Select Power Platform VS Code Extension](media/vs-code-extension/vs-code-extension.png "Select Power Platform VS Code Extension")
 
@@ -91,10 +91,9 @@ portals content, refer to the tutorial [Use Microsoft Power Platform CLI with po
 
 When customizing downloaded content using VS Code, you can now use IntelliSense
 for Power Apps portals
-[liquid](liquid/liquid-tags.md)
-tags.
+[Liquid tags](liquid/liquid-tags.md).
 
-![Snippet with an example of entity liquid tag completion.](media/vs-code-extension/liquid-tag-completion.png "Snippet with an example of entity liquid tag completio")
+![Snippet with an example of entity liquid tag completion.](media/vs-code-extension/liquid-tag-completion.png "Snippet with an example of entity Liquid tag completio")
 
 ## File icons
 
@@ -103,44 +102,44 @@ files and folders inside the downloaded portals content.
 
 ![List of files in a starter portal with portals-specific file icon theme.](media/vs-code-extension/file-icons.png "List of files in a starter portal with portals-specific file icon theme")
 
-VS Code uses default [file icon
+VS Code uses the default [file icon
 theme](https://code.visualstudio.com/docs/getstarted/themes#_file-icon-themes)
-that by default doesn’t show portals-specific icons. To view file icons specific
-to portals, you’ll have to update the VS Code instance to use the
+which doesn’t show portals-specific icons. To view file icons specific
+to your portals, you’ll have to update the VS Code instance to use the
 portals-specific file icon theme.
 
-To enable portals-specific file-icon theme:
+To enable a portals-specific file-icon theme:
 
 1.  Open VS Code.
 
 2.  Go to **File** > **Preferences** > **File Icon Theme**
 
-3.  Select the theme for Power Apps portals icons.
+3.  Select the theme for Power Apps Portals Icons.
 
-    ![Select the theme for Power Apps portals icons.](media/vs-code-extension/select-theme-icons.png "Select the theme for Power Apps portals icons")
+    ![Select the theme for Power Apps portals icons.](media/vs-code-extension/select-theme-icons.png "Select the theme for Power Apps Portals Icons")
 
 ## Live preview
 
-VS Code extension enables a live preview option to view the portals content page
-inside the Visual Studio Code interface as preview during the development
+The VS Code extension enables a live preview option to view the portals content page
+inside the Visual Studio Code interface during the development
 experience.
 
 To see the preview, select ![Preview button](media/vs-code-extension/preview-symbol.png "Preview button") from the top-right when having an HTML file open in edit mode.
 
 ![Page preview](media/vs-code-extension/page-preview.png "Page preview")
 
-The preview pane opens on the right side of the page being edited using VS Code.
+The preview pane opens on the right side of the page being edited.
 
 ![A screen with file list, open file in VS Code editor, and a preview on the right-side.](media/vs-code-extension/preview-studio.png "A screen with file list, open file in VS Code editor, and a preview on the right-side")
 
-Preview feature requires that the other files also open in the same VS Code
+The preview feature requires that the other files are also open in the same VS Code
 session that make up the HTML markup for the preview to show. For example, if
 only the HTML file is opened without the folder structure opened using VS Code,
 you’ll see the following message.
 
 ![Running the contributed command: 'microsoft-powerapps-portals.preview-show' failed.](media/vs-code-extension/preview-failed.png "Error - Running the contributed command: 'microsoft-powerapps-portals.preview-show' failed")
 
-When this problem occurs, open the folder using **File > Open folder** in VS Code and
+When this problem occurs, open the folder using **File > Open folder** and
 select the downloaded portal content folder to open before you try to preview
 again.
 
@@ -153,10 +152,10 @@ being edited, and the relevant autocomplete elements through IntelliSense.
 
 ## Limitations
 
-The following limitations apply to Power Platform VS Code Extension currently.
+The following limitations currently apply to the Power Platform VS Code Extension:
 
-- [Snippet support](#snippet-support), and [autocomplete](#autocomplete) features only support limited functionality.
-- [Live preview](#live-preview) doesn't support custom themes, and liquid objects.
+- [Snippet support](#snippet-support) and [autocomplete](#autocomplete) features only support limited functionality.
+- [Live preview](#live-preview) doesn't support custom themes or Liquid objects.
 
 ### See also
 
