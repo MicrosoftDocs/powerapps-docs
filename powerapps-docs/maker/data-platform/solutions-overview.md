@@ -106,7 +106,7 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 > You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
 `"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
-## Additional privileges required for some Power Platform components
+## Additional privileges required
 
 Some components may require certain Dataverse privileges for users to run the component when the component is imported into the environment from a  solution.
 
