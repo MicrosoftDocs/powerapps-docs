@@ -127,7 +127,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 1. Load your code component into a browser session using either:
 
    1. The test harness using `npm start watch`. 
-   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#Debugging-after-deploying-into-Microsoft-Dataverse-using-Fiddler) below.
+   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) below.
 
 2. Select `Ctrl` + `Shift` + `I` to open the developer tools.
 

@@ -20,6 +20,8 @@
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
+  - name: Code components ALM
+    href: code-components-alm.md
   - name: How-to guides
     items:
     - name: Create and build a code component 

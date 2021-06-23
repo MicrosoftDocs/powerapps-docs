@@ -51,7 +51,7 @@ When your code component is ready for testing inside a model-driven app, canvas 
 
 When building `pcfproj` projects, the generated JavaScript depends on the command used to build and the `PcfBuildMode` in the `pcfproj` file.
 
-You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler]) 
+You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) 
 
 The following table shows which commands result in development vs. release builds:
 
