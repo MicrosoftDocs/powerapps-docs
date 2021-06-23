@@ -1,6 +1,6 @@
 ---
-title: Meeting-screen template | Microsoft Docs
-description: Understand how the meeting-screen template for canvas apps works, and extend the screen for your own use cases
+title: Meeting-screen template for canvas apps
+description: Understand how the meeting-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the meeting-screen template for canvas apps
+# Meeting-screen template for canvas apps
 
 In a canvas app, add a meeting screen that lets users create and send meeting requests from their Office 365 Outlook accounts. Users can search for attendees in their org and add external email addresses. If your tenant has meeting rooms built into Outlook, users can select a location as well.
 

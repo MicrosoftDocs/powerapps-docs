@@ -1,6 +1,6 @@
 ---
-title: Add and manage connections from canvas apps | Microsoft Docs
-description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business
+title: Manage connections in canvas apps
+description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Manage canvas-app connections in Power Apps
+# Manage connections in canvas apps
+
 In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), create a connection to one or more data sources, delete a connection, or update its credentials.
 
 Your canvas app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
@@ -35,7 +36,7 @@ Your next step after this article is to display and manage data from the data so
 ## Background on data connections
 Most Power Apps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connections**.
 
-The commonest type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+The most common type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and notifications.
 
@@ -57,13 +58,13 @@ In addition to creating and managing connections in [powerapps.com](https://make
     ![Connections Manage](./media/add-manage-connections/open-connections.png)
 3. Select **New connection**.
    
-    ![Connections Add](./media/add-manage-connections/add-connection.png)
+    ![New connection](./media/add-manage-connections/add-connection.png)
 4. Select a connector in the list that appears, and then follow the prompts.
    
-   ![Connections Add](./media/add-manage-connections/choose-connection.png)
+   ![Select a connector](./media/add-manage-connections/choose-connection.png)
 5. Select the **Create** button.
    
-   ![Connections Add](./media/add-manage-connections/create-connection.png)
+   ![Select Create](./media/add-manage-connections/create-connection.png)
 6. Follow the prompts. Some connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. Others such as **Microsoft Translator**, do not.
    
    For example, these connectors require additional information before you can use them.

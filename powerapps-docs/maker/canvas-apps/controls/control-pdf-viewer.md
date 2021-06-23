@@ -1,6 +1,6 @@
 ---
-title: 'PDF viewer control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the PDF viewer control
+title: PDF viewer control (experimental) in Power Apps
+description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

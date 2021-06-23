@@ -1,5 +1,5 @@
 ---
-title: Learn about how to use the Expense Report sample app to create an app. | Microsoft Docs
+title: Set up and learn about the Expense Report sample app in Power Apps
 description: Use the Expense Report sample app to create a canvas app, and preview the app features before you customize for business requirements.
 author: norliu
 ms.service: powerapps
