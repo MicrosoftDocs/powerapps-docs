@@ -37,7 +37,7 @@ The custom page is a new page type within model-driven app which brings in the p
   > [!div class="mx-imgBorder"]
   > ![Custom page session timeout app message bar error](media/model-app-page-overview/page-session-timeout-app-message-error.png "Custom page session timeout app message bar error")
 
-* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages as well as the sitemap. See more on [Managing dependencies](https://docs.microsoft.com/power-platform/alm/removing-dependencies)
+* Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages as well as the sitemap. See more on [Managing dependencies](/power-platform/alm/removing-dependencies)
 
 * Under some cases, loading a custom page when there is a change can take longer and no page loading spinner is shown.
 
