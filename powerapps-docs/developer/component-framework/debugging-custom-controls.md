@@ -18,7 +18,7 @@ This article shows how to debug your code components using the test harness and 
 
 - [Debugging using the browser test harness](#debugging-using-the-browser-test-harness)
 - [Using browser developer tools to debug your code component](#using-browser-developer-tools-to-debug-your-code-component)
-- [Debugging after deploying to Microsoft Dataverse using Fiddler](#debugging-after-deployment-into-microsoft-dataverse-using-fiddler)
+- [Debugging after deploying to Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler)
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -103,7 +103,7 @@ Whilst the test harness is suitable for testing simple code components, the foll
 5. Model-driven apps specifics such as field level security, read-only behavior, dataset selection API, and integration with the model-driven apps command bar.
 6. Other context APIs such as [Navigation](reference/navigation.md) and [Utility](reference/utility.md) methods.
 
-To test these scenarios, you will need to first deploy your code component and test using the technique described in [Debugging after deploying to Dataverse using Fiddler](#debugging-after-deployment-into-microsoft-dataverse-using-fiddler)
+To test these scenarios, you will need to first deploy your code component and test using the technique described in [Debugging after deploying to Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler)
 
 ## Using browser developer tools to debug your code component
 
@@ -127,7 +127,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 1. Load your code component into a browser session using either:
 
    1. The test harness using `npm start watch`. 
-   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#Debugging-after-deployment-into-Microsoft-Dataverse-using-Fiddler) below.
+   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#Debugging-after-deploying-into-Microsoft-Dataverse-using-Fiddler) below.
 
 2. Select `Ctrl` + `Shift` + `I` to open the developer tools.
 
@@ -180,7 +180,7 @@ To fully test the logic inside the context of a model-driven app, canvas app, or
 
 To debug your code component using Fiddler:
 
-1. First ensure your component is deployed and configured in Microsoft Dataverse. Ideally, you should only publish production builds of code components into Microsoft Dataverse. For larger code components, publishing a development build may result in the error [Web Resource Size Is Too Large](issues-and-workarounds.md#Web-resource-size-is-too-large). Since we are going to redirect the code component's `bundle.js` to a locally built version, you can update your `.pcfproj` file to always build in production mode when using `pac pcf push` by setting the property `PcfBuildMode` to production. 
+1. First ensure your component is deployed and configured in Microsoft Dataverse. Ideally, you should only publish production builds of code components into Microsoft Dataverse. For larger code components, publishing a development build may result in the error [Web resource size is too large](issues-and-workarounds.md#web-resource-size-is-too-large). Since we are going to redirect the code component's `bundle.js` to a locally built version, you can update your `.pcfproj` file to always build in production mode when using `pac pcf push` by setting the property `PcfBuildMode` to production. 
 
      ```XML
      <PropertyGroup>

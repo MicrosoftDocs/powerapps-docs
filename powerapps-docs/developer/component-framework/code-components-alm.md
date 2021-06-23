@@ -24,7 +24,7 @@ This article describes how to manage specific aspects of the lifecycle managemen
 
 4. [Automated testing of code components](#automated-testing-of-code-components)
 
-5. [Canvas apps ALM considerations](#canvas-app-alm-considerations)
+5. [Canvas apps ALM considerations](#canvas-apps-alm-considerations)
 
 ## Development and debugging ALM considerations
 
@@ -51,7 +51,7 @@ When your code component is ready for testing inside a model-driven app, canvas 
 
 When building `pcfproj` projects, the generated JavaScript depends on the command used to build and the `PcfBuildMode` in the `pcfproj` file.
 
-You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deployment-into-microsoft-dataverse-using-fiddler]) 
+You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler]) 
 
 The following table shows which commands result in development vs. release builds:
 
@@ -124,7 +124,7 @@ Additionally, when a solution is built, any association solution zip files would
 
 ## Using Solution Packager with code components
 
-In addition to source controlling the `pcfproj` and `cdsproj`, **[Solution Packager](https://docs.microsoft.com/en-us/power-platform/alm/solution-packager-tool)** may be used to incrementally unpack a solution into its respective parts as a series of XML files that can be committed into source control. This has the advantage of creating a complete picture of your metadata in the human-readable format so that you can track changes using **Pull Requests** or similar. Each time when a change is made to the environment's solution metadata, Solution Packager is used to unpack and the changes can be viewed as a change set. 
+In addition to source controlling the `pcfproj` and `cdsproj`, **[Solution Packager](/power-platform/alm/solution-packager-tool)** may be used to incrementally unpack a solution into its respective parts as a series of XML files that can be committed into source control. This has the advantage of creating a complete picture of your metadata in the human-readable format so that you can track changes using **Pull Requests** or similar. Each time when a change is made to the environment's solution metadata, Solution Packager is used to unpack and the changes can be viewed as a change set. 
 
 > [!NOTE]
 > At this time, SolutionPackager differs from using `pac solution clone` in that it can be used incrementally to export changes from a Dataverse solution.
@@ -162,7 +162,7 @@ The only files that are required are the `*.data.xml` files since they contain m
 
 More information: [SolutionPackager command-line arguments](/power-platform/alm/solution-packager-tool#solutionpackager-command-line-arguments) .
 
-# Code component solution strategies
+## Code component solution strategies
 
 Code components are deployed to downstream environments using Dataverse solutions. Once deployed to your development environment they can be deployed in the same way as other solution components. More information: [Solution concepts - Power Platform](/power-platform/alm/solution-concepts-alm)
 
@@ -302,7 +302,7 @@ If you are using **AzureDevOps**, you can set your build pipeline versioning usi
 
 **TODO:** Are there any recommendations on automated testing? Should we recommend EasyRepo for MDAs. What about canvas apps?
 
-https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/test-studio
+https://docs.microsoft.com/powerapps/maker/canvas-apps/test-studio
 
 ## Canvas apps ALM considerations
 
