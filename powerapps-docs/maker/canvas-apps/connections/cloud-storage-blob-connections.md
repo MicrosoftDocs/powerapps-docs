@@ -1,5 +1,5 @@
 ---
-title: Overview of the cloud-storage connection | Microsoft Docs
+title: Connect to cloud-storage from Power Apps
 description: See how to connect to a cloud-storage account, and display Excel data in your app
 author: lancedMicrosoft
 manager: kvivek
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to cloud-storage from Power Apps
+
 Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
 [Box](/connectors/box/) | [Dropbox](/connectors/dropbox/) | [Google Drive](/connectors/googledrive/) | [OneDrive](/connectors/onedrive/) | [OneDrive for Business](/connectors/onedriveforbusiness/) |

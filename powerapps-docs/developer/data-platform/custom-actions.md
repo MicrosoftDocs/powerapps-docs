@@ -2,7 +2,7 @@
 title: "Create your own messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about creating your own custom Microsoft Dataverse messages to be executed from your applications, and how these custom messages differ from using the Custom API feature." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/28/2021
+ms.date: 06/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"

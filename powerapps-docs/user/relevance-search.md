@@ -250,7 +250,7 @@ However, searching for **evaluation + -agreed** will match all rows that contain
 
 ### Wildcards
 
-Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*winery** will show results for all records associated with a keyword that ends with **winery**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
 
 ![Example of results for a search that uses a wildcard](media/wild-card.png "Example of results for a search that uses a wildcard")  
 

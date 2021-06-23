@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/15/2021
+ms.date: 06/15/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributor:
@@ -58,6 +58,8 @@ Portal host version 9.3.4.2 resolves the following issues:
 - Resolve case option in Entity List action options doesn’t work properly.
 
 - When trying to load a pick-list control with null value on an Entity List, an error is shown on the portal.
+
+- Webpage tracking, web file tracking, and login tracking functionality is retired. More information: [Important changes and deprecations](../important-changes-deprecations.md#tracking-for-web-page-web-file-and-login)
 
 This release also contains performance updates, security fixes, and improves the overall reliability of Power Apps portals.
 

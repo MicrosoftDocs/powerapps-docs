@@ -1,6 +1,6 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the Discovery Service with the APIs available in the SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the Discovery Service with the APIs available in the Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
 ms.date: 1/16/2020
 ms.reviewer: "pehecke"
@@ -15,18 +15,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use the Discovery Service with the SDK Assemblies
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Use the Discovery Service with the SDK Assemblies
 
 > [!IMPORTANT]
 > Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
-> 
+>
 > For information on how to transition to use the *global* Discovery Service, see [Modify your code to use global Discovery Service](../webapi/discovery-orgsdk-to-webapi.md).
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
-To access the Discovery Service using the SDK assembly APIs, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly in your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace.
+To access the Discovery Service using SDK assembly APIs, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly in your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace.
 
 The <xref:Microsoft.Xrm.Sdk.WebServiceClient.DiscoveryWebProxyClient> implements the <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface.
 
@@ -69,7 +68,7 @@ namespace DiscoveryServiceSample
     class Program
     {
         //These sample application registration values are available for all online instances.
-        // this sample requires ADAL.net 5.2 + 
+        // this sample requires ADAL.net 5.2 or later
         public static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
 
         static OrganizationDetailCollection GetOrganizationDetails(DiscoveryWebProxyClient svc)
@@ -167,6 +166,5 @@ Endpoints:
 
 [Discovery Services](../discovery-service.md)<br />
 [Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

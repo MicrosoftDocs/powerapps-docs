@@ -1,6 +1,6 @@
 ---
-title: 'Gallery control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Gallery control
+title: Gallery control in Power Apps
+description: Learn about the details, properties and examples of the gallery control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Gallery control in canvas apps
+# Gallery control in Power Apps
 
 A control that contains other controls and shows a set of data.
 

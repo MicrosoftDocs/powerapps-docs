@@ -1,6 +1,6 @@
 ---
-title: 'Shape controls and icon controls: reference | Microsoft Docs'
-description: Information, including properties and examples, about shape controls and icon controls
+title: Shape and Icon controls in Power Apps
+description: Learn about the details, properties and examples of the Shape and Icon controls in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Shape controls and Icon controls in Power Apps
+# Shape and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
 
 ## Description

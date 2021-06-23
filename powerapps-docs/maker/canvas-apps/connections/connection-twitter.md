@@ -1,6 +1,6 @@
 ---
-title: Overview of the Twitter connection | Microsoft Docs
-description: See how to connect to Twitter, step through some examples, and see all the functions
+title: Connect to Twitter from Power Apps
+description: See how to connect to Twitter, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to Twitter from Power Apps
+
 ![Twitter](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
@@ -32,7 +33,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Twitter**:  
 
-    ![Connect to Twitter](./media/connection-twitter/addconnection.png)
+    ![Add connection](./media/connection-twitter/addconnection.png)
 
     ![Connect to Twitter](./media/connection-twitter/add-twitter.png)
 4. Select **Connect**, enter your Twitter sign in credentials, and then select **Authorize app**.
