@@ -1,5 +1,5 @@
 ---
-title: Updates to Power Apps portals versions before 9.3.3.x
+title: Power Apps portals versions before 9.3.3.x
 description: Learn about the updates to Power Apps portals versions before 9.3.3.x, previously known as Dynamics 365 Portals.
 author: dileepsinghmicrosoft
 ms.service: powerapps
