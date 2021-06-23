@@ -1,6 +1,6 @@
 ---
 title: Portals support for Power Apps CLI (Preview)
-description: Learn about how to work with Power Apps CLI for CI/CD improvements of a portal.
+description: Learn how to work with Power Apps CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -22,9 +22,9 @@ developer command-line interface that empowers developers and app makers to
 create code components.
 
 Power Apps CLI tooling is the first step toward a comprehensive application
-life-cycle management (ALM) story where the enterprise developers and ISVs can
+lifecycle management (ALM) story where enterprise developers and ISVs can
 create, build, debug, and publish their extensions and customizations quickly
-and efficiently. More information: [What is Microsoft Power Apps
+and efficiently. For more information, see [What is Microsoft Power Apps
 CLI?](../../developer/data-platform/powerapps-cli.md)
 
 With this feature, Microsoft Power Apps portals
@@ -40,32 +40,32 @@ using Power Apps CLI.
 ### Why use Power Apps CLI for portals development?
 
 With portals support for Power Apps CLI, you can now use offline-like capability
-for portals customization by making changes to the portals content. And once all
+for portals customization by making changes to the portals content. Once all
 customizations or changes are saved, upload them to the portal. When you
 download portals content using Power Apps CLI, the content is structured in JSON
 and HTML formats making it easy to customize, enabling a pro-development
 experience.
 
-Here's a list of features and capabilities that portals benefits from with the
+Here's a list of features and capabilities that benefit portals with the
 support for Power Apps CLI:
 
 #### Ease of use
 
--   Support for download/upload of portal data to/from local file system.
+-   Support for download/upload of portal data to/from the local file system
 
--   Build on existing Power Apps CLI tool.
+-   Build on existing Power Apps CLI tool
 
-#### Lifecycle Management (ALM)
+#### Application lifecycle management (ALM)
 
--   Track changes to portal configuration within an org.
+-   Track changes to portal configuration within an organization
 
--   Move configuration files across organizations, or tenants.
+-   Move configuration files across organizations or tenants
 
 #### Pro-dev and enterprise support
 
--   Helps integrate seamlessly with any source control tools, such as “git”.
+-   Helps integrate seamlessly with any source control tools, such as “git”
 
--   Easily setup CI/CD pipelines.
+-   Easily setup CI/CD pipelines
 
 ## Prerequisites
 
@@ -74,12 +74,12 @@ configured to enable support for this feature.
 
 ## Install Power Apps CLI
 
-For a step-by-step instructions, please refer to [Install Power Apps
+For step-by-step instructions, please refer to [Install Power Apps
 CLI](../../developer/data-platform/powerapps-cli.md#install-power-apps-cli).
 
 ## Supported tables
 
-Portals support for Power Apps CLI is limited to the tables listed below.
+Portals support for Power Apps CLI is limited to the tables listed below:
 
 :::row:::
    :::column span="":::
@@ -267,24 +267,23 @@ Power Apps CLI.
 
 To learn about installing Power Apps CLI, go to [Install Power Apps CLI](../../developer/data-platform/powerapps-cli.md).
 
-After installing Power Apps CLI, open a command-prompt and run *pac* to verify that the output contains “paportal” - the command for
+After installing Power Apps CLI, open a command prompt and run *pac* to verify that the output contains “*paportal”* - the command for
     Power Apps portals.
 
 ![Confirm paportal command in Power Apps CLI](media/power-apps-cli/confirm-paportal.png "Confirm paportal command in Power Apps CLI")
 
 ## Power Apps CLI commands for portals
 
-Power Apps CLI command for portals is “*paportal”*.
+The Power Apps CLI command for portals is “*paportal”*.
 
-The following sections provides additional details about different properties of
-“*paportal”* command.
+The following sections provides additional details about different properties of the “*paportal”* command.
 
 #### Parameters
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
 |list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
-|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p).<br/> - *webSiteId*: Portal website ID to download (alias: -id).<br/> - *overwrite*: (Optional) true - to overwrite existing content, false - to fail if the folder already has website content (alias: -o).|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
+|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p)<br/> - *webSiteId*: Portal website ID to download (alias: -id)<br/> - *overwrite*: (Optional) true - to overwrite existing content; false - to fail if the folder already has website content (alias: -o)|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
 |upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
 
 > [!NOTE]
@@ -292,12 +291,12 @@ The following sections provides additional details about different properties of
 
 ## Use the Visual Studio Code extension (Preview)
 
-You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Power Apps CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Power Apps CLI using VS Code Integrated Terminal. For more information, see [Use the Visual Studio Code extension (Preview)](vs-code-extension.md).
 
 ## Additional considerations
 
-- An error is reported if your file path exceeds the maximum path length limitation. More information: [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation)
-- For duplicate records such as a duplicate web page name, Power Apps CLI creates two different folders&mdash;one with the name of the web page, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
+- An error is reported if your file path exceeds the maximum path length limitation. For more information, see [Maximum path length limitation in Windows](\windows\win32\fileio\maximum-file-path-limitation).
+- For duplicate records such as a duplicate webpage name, Power Apps CLI creates two different folders&mdash;one with the name of the webpage, and the other with the same name prefixed with a hash code. For example, "My-page" and "My-page-**hash-code**".
 
 ## Next steps
 
