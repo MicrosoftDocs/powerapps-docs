@@ -1,8 +1,8 @@
 ---
-title: " Create, retrieve, update, and delete charts(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Sample: Create, retrieve, update, and delete charts(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned visualizations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/20/2019
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
@@ -29,6 +29,8 @@ This sample shows how to create, retrieve, update, and delete an user-owned visu
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart).
 
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
@@ -44,20 +46,20 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `CreateRequiredRecords` method creates entity records that is required for the sample.
+1. The `CreateRequiredRecords` method creates records that is required for the sample.
 
 ### Demonstrate
 
 1. The `presentationXml` method sets the presentation XML string. 
 2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization entity instance.
+3. The `newUserOwnedVisualization` method creates the visualization table instance.
 4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
 5. The `newDataXml` method updates the name and the data description string.
 
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

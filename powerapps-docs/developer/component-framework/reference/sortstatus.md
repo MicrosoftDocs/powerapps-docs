@@ -1,6 +1,6 @@
 ---
 title: SortStatus | Microsoft Docs
-description: Current sort status of a data-set column.
+description: Current sort status of a dataset column.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,8 +1,8 @@
 ---
-title: "Customize option sets (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to work with global and local option sets in code." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to work with global and local choices (option sets) in code." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,25 +15,26 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Customize option sets
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Customize choices
 
-Typically, you use *global* option sets to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* options sets which are defined only for a specific attribute, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+Typically, you use *global* choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.  
   
-When you define a global option set by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>, 
+When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>, 
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the 
-new `OptionMetadata` instance. When you define an option, it will contain an option value prefix specific to the 
-context of the publisher set for the solution that the option set is created in. 
-This prefix helps reduce the chance of creating duplicate option sets for a managed solution, 
-and in any option sets that are defined in organizations where your managed solution is installed. For more information, 
-see  [Merge option set options](/power-platform/alm/how-managed-solutions-merged).  
+new `OptionMetadata` instance. When you define a choice, it will contain a choice value prefix specific to the 
+context of the publisher set for the solution that the choice is created in. 
+This prefix helps reduce the chance of creating duplicate choices for a managed solution, 
+and in any choices that are defined in organizations where your managed solution is installed. For more information, 
+see  [Merge choice options](/power-platform/alm/how-managed-solutions-merged).  
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithOptionSets).
+You can download the code sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithOptionSets).
 
-## Messages Request Classes  
+## Message request classes  
 
-Use the following message request classes to work with global option sets
+Use the following message request classes to work with global choices.
 
 - <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>
 - <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>
@@ -41,7 +42,7 @@ Use the following message request classes to work with global option sets
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest>  
 - <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionSetRequest> 
 
-Use the following message request classes with both global and local option sets.
+Use the following message request classes with both global and local choices.
 
 - <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>
 - <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>
@@ -52,10 +53,9 @@ Use the following message request classes with both global and local option sets
 
 <a name="BKMK_RetrieveAGlobalOptionSet"></a>
 
-## Retrieve a global option set  
+## Retrieve a global choice  
 
- The following sample shows how to retrieve a global option set by name using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest> message:  
-  
+ The following code sample shows how to retrieve a global choice by name using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest> message:  
 
 ```csharp
 // Use the RetrieveOptionSetRequest message to retrieve  
@@ -83,13 +83,12 @@ OptionMetadata[] optionList =
     retrievedOptionSetMetadata.Options.ToArray();
 ```
 
-  
 <a name="BKMK_CreateGlobalOptionSet"></a>  
- 
-## Create a global option set
+
+## Create a global choice
   
-Use the <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest> message to create a new global option set. Set the 
- <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadataBase.IsGlobal> property to `true` to indicate that the option set is global. The following code example creates a global option set called “Example Option Set”:  
+Use the <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest> message to create a new global choice. Set the 
+ <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadataBase.IsGlobal> property to `true` to indicate that the choice is global. The following code example creates a global choice called “Example Option Set”:  
   
 ```csharp
 // Define the request object and pass to the service.
@@ -117,12 +116,11 @@ CreateOptionSetResponse optionsResp =
     (CreateOptionSetResponse)svc.Execute(createOptionSetRequest);
 ```
 
-  
 <a name="BKMK_CreatePicklistWithGlobalOptionSet"></a>  
- 
-## Create a picklist that uses a global option set  
 
- The following sample shows how to create a picklist attribute that uses a global option set by using 
+## Create a choice that uses a global choice  
+
+ The following sample shows how to create a choice column that uses a global choice by using 
  <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>:  
   
 
@@ -153,12 +151,11 @@ CreateAttributeRequest createRequest = new CreateAttributeRequest
 svc.Execute(createRequest);
 ```
 
-  
 <a name="BKMK_UpdateGlobalOptionSet"></a>
 
-## Update a global option set 
+## Update a global choice
 
-The following sample shows how to update the label for a global option set by using 
+The following code sample shows how to update the label for a global choice by using 
  <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionSetRequest>:  
   
 
@@ -182,15 +179,13 @@ PublishXmlRequest pxReq1 = new PublishXmlRequest { ParameterXml = String.Format(
 svc.Execute(pxReq1);
 ```
 
-  
 <a name="BKMK_OrderingOptions"></a> 
   
 ## Ordering options  
 
-The following sample shows how the options in a global option set can be ordered by using 
+The following code sample shows how the options in a global choice can be ordered by using 
  <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>:  
   
-
 ```csharp
 // Change the order of the original option's list.
 // Use the OrderBy (OrderByDescending) linq function to sort options in  
@@ -223,16 +218,14 @@ ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optio
 };
 svc.Execute(pxReq4);
 ```
-
   
 <a name="BKMK_RetrieveAllGlobalOptionSets"></a>  
- 
-## Retrieve all global option sets  
 
-The following sample shows how to retrieve all global option sets by using 
+## Retrieve all global choices  
+
+The following code sample shows how to retrieve all global choices by using 
  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllOptionSetsRequest>:  
   
-
 ```csharp
 // Use RetrieveAllOptionSetsRequest to retrieve all global option sets.
 // Create the request.
@@ -259,13 +252,11 @@ if (retrieveAllOptionSetsResponse.OptionSetMetadata.Count() > 0)
 }
 ```
 
-  
 <a name="BKMK_DeleteAGlobalOptionSet"></a>
 
-## Delete a global option set
+## Delete a global choice
 
- The following sample shows how to check whether a global option set is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (For Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):  
-  
+ The following code sample shows how to check whether a global choice is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (for the Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):  
 
 ```csharp
 // Create the request to see which components have a dependency on the
@@ -306,10 +297,8 @@ DeleteOptionSetRequest deleteRequest = new DeleteOptionSetRequest
 svc.Execute(deleteRequest);
 ```
 
-  
 ### See also
 
-[Create and update option sets using the Web API](../webapi/create-update-optionsets.md)
-
+[Create and update choices using the Web API](../webapi/create-update-optionsets.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

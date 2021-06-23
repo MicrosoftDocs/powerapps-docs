@@ -1,6 +1,6 @@
 ---
-title: Keyboard shortcuts for canvas apps | Microsoft Docs
-description: Keyboard shortcuts for canvas apps
+title: Keyboard shortcuts for canvas apps
+description: Learn about different keyboard shortcuts for different operations in canvas apps.
 author: adrianorth
 manager: kvivek
 ms.service: powerapps

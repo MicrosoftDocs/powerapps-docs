@@ -1,6 +1,6 @@
 ---
-title: Concat and Concatenate functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Concat and Concatenate functions in Power Apps
+title: Concat and Concatenate functions in Power Apps
+description: Reference information including syntax and examples for the Concat and Concatenate functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -111,7 +111,7 @@ For these examples, add a blank, vertical gallery, set its **Items** property to
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Split( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), ", " )** | Splits the text string with the separator **", "**. The string ends with a comma and space, so the last row in the result is an empty string.  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "[^\s,]+" ).FullMatch** | Splits the text string based on characters that aren't spaces or commas. This formula removes the extra comma and space at the end of the string. | ![Table](media/function-concatenate/matchall.png)
+| **Split( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), ", " )** | Splits the text string with the separator **", "**. The string ends with a comma and space, so the last row in the result is an empty string.  | ![Table with last row empty](media/function-concatenate/split.png) |
+| **MatchAll( Concat(&nbsp;Products,&nbsp;Name&nbsp;&&nbsp;",&nbsp;"&nbsp;), "[^\s,]+" ).FullMatch** | Splits the text string based on characters that aren't spaces or commas. This formula removes the extra comma and space at the end of the string. | ![Table with only 3 rows](media/function-concatenate/matchall.png)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
