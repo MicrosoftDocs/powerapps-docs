@@ -33,7 +33,7 @@ search.app:
 
 ### See also
 
-[Global Discovery Service Sample]((https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService))<br />
+[Global Discovery Service Sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService)<br />
 [Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
