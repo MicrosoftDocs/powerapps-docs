@@ -77,7 +77,7 @@
         href: ../user/deactivate-activate-account-contact.md 
     - name: Work with activities
       items:
-      - name: Add activities to the timeline
+      - name: Use timeline
         href: ../user/add-activities.md
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md
