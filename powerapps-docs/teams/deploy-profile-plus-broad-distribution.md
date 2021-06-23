@@ -1,6 +1,6 @@
 ---
 title: How to deploy Profile+ sample app as a broad distribution app (Preview)
-description: Learn how to share Profile + with colleagues that aren't members of the team where the app is installed.
+description: Learn how to share Profile+ with colleagues that aren't members of the team where the app is installed.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
@@ -26,7 +26,7 @@ The app addresses the following personas:
     
 - **User**: View organization hierarchy, and biographical information about the people in their organization. Also, find open positions that they may want to apply for.
 
-Profile + is installed in a Microsoft Teams team, but it’s designed to be used primarily by the people outside of the team. Since there's no app administration required, only those users who develop or customize the app need to be members of the team. Everybody else can use the app outside of the team.
+Profile+ is installed in a Microsoft Teams team, but it’s designed to be used primarily by the people outside of the team. Since there's no app administration required, only those users who develop or customize the app need to be members of the team. Everybody else can use the app outside of the team.
 
 In this article, you'll learn how to allow everyone in your organization to view profiles in Profile+ app. Also, update their biographical information, and publish open positions for people outside of the Teams team. And then, share the Profile+ app with them.
 
@@ -130,7 +130,7 @@ The following table lists recommended table permissions:
 
 In a large organization, you might have multiple people sharing the same template app with colleagues. If multiple departments are using Profile+, you can make it easier for your colleagues to find the app by renaming it.
 
-1. Open **Profile +** in Microsoft Teams.
+1. Open **Profile+** app in Microsoft Teams.
 
 1. In the upper right corner, select the app name.
 
@@ -156,7 +156,7 @@ The colleagues that the Profile+ app is shared with, can acquire the app using t
 
 1. If you want to make the app always appear in the app menu so you can easily find it, right-click on the Profile+ button on the app menu, and then select **Pin**.
 
-    ![Pin Profile +](media/profile-plus-broad-distribution/pin.png "Pin Profile +")
+    ![Pin Profile+](media/profile-plus-broad-distribution/pin.png "Pin Profile+")
 
 1. If you prefer to add the app to another team, select the drop-down next to the **Add** button, and then select **Add to a team**.
 
