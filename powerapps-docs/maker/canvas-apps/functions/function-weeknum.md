@@ -23,9 +23,9 @@ Returns the week number of a specific date.
 Use the **WeekNum** and **ISOWeekNum** functions to determine the week number of a date.
 
 These functions differ in how they determine the first week of the year (week 1):
-- **WeekNum** - The week containing January 1 is the first week of the year.  The result from this function can range from 1 to 54.
+- **WeekNum** uses the week containing January 1 as the first week of the year.  The result from this function can range from 1 to 54.
 
-- **ISOWeekNum** - The week containing the first Thursday of the year is the first week of the year. This follows the [ISO 8601 date and time standard definition](https://en.wikipedia.org/wiki/ISO_week_date) for week numbering.  The result from this function can range from 1 to 53.  It is possible that 52 or 53 may be returned for the first days of January since the date belongs to the last week of the previous year.
+- **ISOWeekNum** uses the week containing the first Thursday of the year as the first week of the year. This follows the [ISO 8601 date and time standard definition](https://en.wikipedia.org/wiki/ISO_week_date) for week numbering.  The result from this function can range from 1 to 53.  It is possible that 52 or 53 may be returned for the first days of January since the dates could belong to the last week of the previous year.
 
 Use the second parameter to **WeekNum** to specify which day begins a week.  You can provide either an Excel code number or use the StartOfWeek enumeration:
 
