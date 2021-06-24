@@ -17,7 +17,7 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Dataverse connector enables calling Custom APIs actions in Power Automate.
+Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. Dataverse connector enables calling Custom APIs actions in Power Automate.
 
 Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
 
