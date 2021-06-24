@@ -41,6 +41,8 @@ The custom page is a new page type within model-driven app which brings in the p
 
 * Under some cases, loading a custom page when there is a change can take longer and no page loading spinner is shown.
 
+* When a custom page with code component is opened for editing, a security dialog is shown.  On this dialog, clicking on **Go back** button does not navigate back to parent context.  User can close the browser tab to leave the canvas designer.  
+
 ## Related topics
 
 [Model-driven app custom page overview](model-app-page-overview.md)
