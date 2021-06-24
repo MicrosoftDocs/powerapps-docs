@@ -19,13 +19,13 @@ contributors:
 
 # Use Microsoft SQL Server securely with Power Apps
 
-There are different ways to [connect](../connections-list.md#security-and-types-of-authentication) and authenticate to Microsoft SQL Server with Power Apps. This article outlines concepts that can be helpful in making a choice about how to
+There are different ways to [connect](../connections-list.md#security-and-types-of-authentication) and authenticate to SQL Server with Power Apps. This article outlines concepts that can be helpful in making a choice about how to
 connect to SQL Server with a security approach that matches requirements for your app.
 
 > [!IMPORTANT]
 > This article also applies to other relational databases such as Oracle.
 
-## Deployment security - Explicit and Implicit connections
+## Difference between explicit and implicit connections
 
 A connection to SQL Server is created whenever you create an app using Power Apps connecting to SQL Server. When such apps are published and shared with others, both the app and the connection are deployed to those users. In other words, the app and the connection&mdash;both are visible to users the apps is shared with.
 
@@ -33,32 +33,24 @@ The authentication method used for such connections can be **explicit** or **imp
 
 - An **explicitly shared connection** means that the end user of the application must authenticate to SQL Server with
 their own explicit credentials. Usually this happens behind the scenes as part of Azure Active Directory or Windows authentication handshake. The user doesn’t even notice it happen.
-- An **implicitly shared connection** means that the user implicitly uses the
-credentials of the Power App author. Meaning, the credentials the author used to
-connect and authenticate to the data source when authoring the application. The
-end user’s credentials are **not** used to authenticate. Each time the end user
-runs the app, they are using the credentials the author created the app with.
+- An **implicitly shared connection** means that the user implicitly uses the credentials of the account that the app maker used to connect and authenticate to the data source during while creating the app. The end user’s credentials are **not** used to authenticate. Each time the end user runs the app, they're using the credentials the author created the app with.
 
-Below are the four types of connection authentication used with Microsoft SQL
-Server:
+The following four connection authentication types can be used with SQL Server for Power Apps:
 
 | Authentication Type                 | Power Apps connection method |
 |-------------------------------------|------------------------------|
 | Azure AD Integrated                 | Explicit                     |
-| Microsoft SQL Server Authentication | Implicit                     |
+| SQL Server Authentication | Implicit                     |
 | Windows Authentication              | Implicit                     |
 | Windows Authentication (non-shared) | Explicit                     |
 
-Implicit connection sharing risks
----------------------------------
+## Implicit connection sharing risks
 
-Since both a Power App and its connections are deployed to end users, it means
-that **end users can author new applications based on those connections**. For
-instance, let’s say you create a Power App and as part of the Power App you
-filter out data you don’t want users to see. It’s there in the database but you
-are relying on the filter you authored to ensure that end users won’t see
-certain data. When your app is deployed, an end user can use the connection
-deployed with your Power App and create a new Power App. In that new Power App,
+Since both the app and its connections are deployed to end users, it means that **end users can author new applications based on those connections**.
+
+For example, consider that you create an app that filtered out the data you don’t want users to see. The filtered out data is present in the database; but you're relying on the filter you configured to ensure that the end users won’t see certain data.
+
+In this example, end users can use the connection deployed with your app and create a new Power App once you deploy the app. In that new Power App,
 they can see the data you filtered out in your application. Once an implicitly
 shared connection is deployed to end users none of the restrictions you may have
 put in the Power App (filters, read-only access, etc.) will hold. The users will
@@ -127,8 +119,7 @@ knows that a specific user name and password is used. Any client side filtering,
 for instance, can be bypassed with a new application using the same user name
 and password.
 
-To securely filter data on the server side use built-in security features in
-Microsoft SQL Server such as [row level
+To securely filter data on the server side use built-in security features in SQL Server such as [row level
 security](https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-ver15)
 for rows and the
 [deny](https://docs.microsoft.com/en-us/sql/t-sql/statements/deny-object-permissions-transact-sql?view=sql-server-ver15)
