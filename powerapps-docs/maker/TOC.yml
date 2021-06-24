@@ -2206,6 +2206,8 @@
           items:
              - name: Milestones
                href: ../teams/milestones.md
+             - name: Deploy the Milestones app broadly in your organization
+               href: ../teams/milestones-broad-distribution.md
              - name: Customize Milestones app
                items:
                  - name: Understand Milestones sample app architecture

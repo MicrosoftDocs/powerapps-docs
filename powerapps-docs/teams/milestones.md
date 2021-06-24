@@ -201,6 +201,7 @@ To delete an existing project:
 
 ### See also
 
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
 - [Customize Milestones sample app](customize-milestones.md)
 - [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
