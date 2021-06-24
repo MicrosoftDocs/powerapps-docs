@@ -105,6 +105,17 @@ Fundraiser provides employees the opportunity to donate time and money towards c
 
 #### Solution components included in this app
 
+|Display name | Name  | Component type  |
+|---------|---------|---------|
+|Fundraiser Donations   | Fundraiser Donations    |  Interactive Dashboard       |
+|Donation     |  sample_donation     | Table     |
+|Donation Icon    |  sample_DonationIcon       | Web resource     |
+|Donations Icon    | sample_DonationsIcon        | Web resource     |
+|Fundraiser     |  sample_fundraiser       | Table        |
+|Fundraiser     |  sample_Fundraiser       | Site map     |
+|Fundraiser     |  sample_Fundraiser       | Model-driven app     |
+|Fundraiser App Icon     |  sample_FundraiserApp       | Web resource     |
+|Fundraiser Icon   | sample_FundraiserIcon        | Web resource    |
 
 ## Customize a sample app
 
