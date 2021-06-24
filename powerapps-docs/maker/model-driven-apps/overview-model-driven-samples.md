@@ -41,8 +41,8 @@ To install the sample apps and data, create a trial environment and database, an
 
 This option installs the sample apps and data into your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 
-## Model-driven sample apps available
-After you provision an environment with a database that include ssample apps, the following apps are available in the environment.
+## Sample apps available
+After you provision an environment with a database that include sample apps, the following model-driven apps are available in the environment.
 - [Asset Checkout](#asset-checkout)
 - [Innovation Challenge](#innovation-challenge)
 - [Fundraiser](#fundraiser)
