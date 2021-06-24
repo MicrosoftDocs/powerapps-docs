@@ -49,6 +49,7 @@ After you provision an environment with a database that include sample apps, the
 
 ### Asset Checkout
 Asset Checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
+
 ![Asset checkout sample app](media/overview-model-driven-samples/asset-checkout.png)
 
 #### Solution components included in this sample app
@@ -69,10 +70,10 @@ Asset Checkout provides self-service capabilities to reserve the tools and equip
 ### Innovation Challenge
 
 Start a companywide innovation challenge. Ideas are submitted, reviewed, voted on, and the best ideas get funded for new projects.
+
 ![Innovation Challenge sample app](media/overview-model-driven-samples/innovation-challenge.png)
 
 #### Solution components included in this app
-
 
 |Display name | Name  | Component type |
 |---------|---------|---------|
