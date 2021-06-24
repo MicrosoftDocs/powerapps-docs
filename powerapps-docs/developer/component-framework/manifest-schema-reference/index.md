@@ -1,6 +1,6 @@
 ---
 title: Power Apps component framework manifest schema reference | Microsoft Docs
-description: This section contains reference documentation for manifest schema generated using the Power Apps CLI.
+description: This section contains reference documentation for manifest schema generated using Microsoft Power Platform CLI.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -16,7 +16,7 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 
 # Manifest schema reference
 
-This section contains reference documentation for manifest schema generated using the Power Apps CLI.
+This section contains reference documentation for manifest schema generated using Microsoft Power Platform CLI.
 
 > [!IMPORTANT]
 > The **Available for** tab shows which elements are supported by model-driven and canvas apps. It is recommended to check the **Available for** section for each individual property whether it is supported or not. For example, the **code** element is supported for both model-driven and canvas apps, but **html** and **img** properties in **code** elements doesn't support canvas apps. 
