@@ -34,7 +34,7 @@ For example, instead of figuring out how to write the following formula:
 Sort(Search('Contacts', TextSearchBox1.Text, "fullname"), 'Created On', Descending)
 ```
 
-You can type in `search Contacts with 'Full Name' in TextSearchBox1 and sort results by 'Created On' latest on top”`.
+You can type in `search Contacts with 'Full Name' in TextSearchBox1 and sort results by 'Created On' latest on top`.
 
 ![Power Apps Ideas demo](media/power-apps-ideas/power-apps-ideas-demo.gif "Animation that shows how Power Apps Ideas work")
 
