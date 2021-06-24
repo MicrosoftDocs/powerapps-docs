@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: lknibb
+author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
