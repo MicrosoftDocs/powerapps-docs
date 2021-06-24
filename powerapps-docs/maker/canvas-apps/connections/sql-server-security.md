@@ -76,11 +76,11 @@ Use services such as Azure Active Directory instead of relying on the filters de
 
 The following illustrations explain how the security patterns within the apps differ between client-side and server-side security models.
 
-![Chart Description automatically generated with medium confidence](media/sql-server-security/ba4d1b3991f6a3eb22d6d5b06b9c15c6.png)
+![Client-side security pattern in an app](media/sql-server-security/client-security.png "Client-side security pattern in an app")
 
 In a client security app pattern, [1] the user only authenticates to the application on the client side. Then [2] the application requests information of the service, and [3] the service returns the information solely based on the data request.
 
-![Diagram Description automatically generated](media/sql-server-security/5308dab450f3d52d1141e2bfe8e88963.png)
+![Server-side security pattern in an app](media/sql-server-security/server-security.png "Server-side security pattern in an app")
 
 In a server-side security pattern, [1] the user first authenticates to the service so the user is known to the service. Then, [2] when a call is made from the application, the service [3] uses the known identity of the current user to filter the data appropriately and [4] returns the data.
 
