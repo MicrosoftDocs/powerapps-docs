@@ -36,7 +36,7 @@ To create a new team, select the Teams tab and then select **Join** or create a 
 
 The new team gets created and is listed under the Teams tab
 
-![Create a new Team](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-1.gif)
+![Create a new Team](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-1.gif "Create a new Team")
 
 ## Create a Power App in Teams
 
@@ -46,7 +46,7 @@ To create a Power Apps app in teams, we need to open the Power Apps studio in Te
 
 1. Select Power Apps from the list of apps and pin it to the left navigation and then select it to open it
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-2.gif)
+![Pin Power Apps in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-2.gif "Pin Power Apps in Microsoft Teams") 
 
 2.  Select **Start now** to create the first app
 
@@ -58,62 +58,60 @@ To create a Power Apps app in teams, we need to open the Power Apps studio in Te
 
 6.  Open the app and notice it gets created in the tablet layout/form factor by default
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-3.png)
-
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-4.png)
+![Tablet layout](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-3.png "Tablet layout")
 
 7. Enter a name for the app **Persistent session example** app and select **Save**
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-5.png)
+![Save a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-5.png "Save a Power App in Teams")
 
 8. The app gets created with a gallery
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-6.png)
+![App is created with a gallery](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-6.png "App is created with a gallery")
 
-9. Click on the Create new table button to create a new table and add data to it
+9. Select the** Create new table** button to create a new table and add data to it
 
 10. Add a Table name – Accounts and select Create
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-7.png)
+![Add a table name](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-7.png "Add a table name")
 
 11. Add columns – Phone (data type – Phone) and City (data type – Text)
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-8.png)
+![Add columns](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-8.png "Add columns")
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-9.png)
+![Add phone and city columns](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-9.png "Add phone and city columns")
 
 12. Then add Data to the three columns
 
 13. Repeat to add at least 5 records
 
-14. Click on Close
+14. Select ** Close**
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-10.png)
+![Select close](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-10.png "Select close")
 
 15. The accounts table gets added as a data table
 
 16. Select the **Tree View** -\> Select **BrowseGallery1** -\> Select **Accounts** as the Data source
 
-![Create a Power App in Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-11.png)
+![Select Accounts as data source](media/enable-consistent-experience-across-sessions-load-data-save-data/create-a-new-team-11.png "Select Accounts as data source")
 
 ## Publish the Power App in Microsoft Teams
 
-1.  Click on the Publish to Teams button on the top right corner
+1.  Select the Publish to Teams button on the top right corner
 
-![Publish the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-1.png)
+![Select  the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-1.png)
 
 2.  Select the Next button in the dialog box
 
-![Publish the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-2.png)
+![Select the Next button](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-2.png "Select the Next button")
 
 3.  Select the + to add the app to the General channel
 
-![Publish the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-3.png)
-![Publish the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-4.png)
+![Add app to channel](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-3.png "Add app to channel")
+![Select the channel](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-4.png "Select the channel")
 
 4.  Now, navigate to the Persistent Session Example team and notice the Persistent session example app shows up on the top as a tab
 
-![Publish the Power App in Microsoft Teams](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-5.png)
+![Navigate to Team](media/enable-consistent-experience-across-sessions-load-data-save-data/publish-the-power-app-in-microsoft-teams-5.png "Navigate to Team")
 
 
 
@@ -121,7 +119,7 @@ To create a Power Apps app in teams, we need to open the Power Apps studio in Te
 
 1.  Open the Persistent session example app from the Persistent Session Example team
 
-![Testing the issue](media/enable-consistent-experience-across-sessions-load-data-save-data/testing-the-issue-1.png)
+![Open the app](media/enable-consistent-experience-across-sessions-load-data-save-data/testing-the-issue-1.png "Open the app")
 
 2.  Select **New Record** to create a new Account record in the app
 
@@ -143,7 +141,7 @@ To resolve the above issue, we will use **SaveData** and **LoadData** functions 
 NewForm(EditForm1);
 UpdateContext({newMode: true})
 ```
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-1.png)
+![OnSelect formula](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-1.png "OnSelect formula")
 
 2.  Next, we will add data from individual input controls to a collection and then we will save data to a local file from that collection.  Select the text input box – in our example it will be the DataCardValue1 of the Name_DataCard1 on EditForm1 for the Name field – enter the following formula in the OnChange property of the input field:
 
@@ -157,7 +155,7 @@ SaveData(colAccount,"colAccount").
 
 By doing this we are adding the data to a local cache so that if the user leaves the app, their data will not be lost.
 
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-2.png)
+![Make a collection](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-2.png "Make a collection")
 
 Similarly enter the following code in the OnChange property for:
 
@@ -183,13 +181,13 @@ Go to the App – OnStart property and add the following formula
 LoadData(colAccount,"colAccount", true)
 ```
 
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-3.png)
+![App OnStart](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-3.png "App OnStart")
 
 4.  Next, we need to update the Default property of the data fields so that when the page loads once we come back to the app, if data exists in the collection, it should show the data from the collection by default.
 
-Select the field i.e., the DataCard and update the Default property of the data card to the following formula
+Select the field DataCard and update the Default property of the data card to the following formula
 
-For Name field i.e., Name_DataCard1:
+For Name field enter **Name_DataCard1:**
 
 ```
 If(
@@ -204,7 +202,7 @@ If(
     If(newMode, Blank(), ThisItem.Name)
 )
 ```
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-4.png)
+![Update default property](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-4.png "Update default property")
 
 Similarly, enter the following in the Default property formula for Phone (Phone_DataCard1):
 
@@ -251,7 +249,7 @@ UpdateContext({editMode: false, newMode: false});
 Clear(colAccount);
 SaveData(colAccount, "colAccount");
 ```
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-5.png)
+![Submit OnSelect](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-5.png "Submit OnSelect")
 
 Select the Cancel button and enter the following formula
 
@@ -262,7 +260,7 @@ Clear(colAccount);
 SaveData(colAccount, "colAccount");
 ```
 
-![Use Save Data and Load Data functions](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-6.png)
+![Cancel formula](media/enable-consistent-experience-across-sessions-load-data-save-data/use-save-data-and-load-data-functions-6.png "Cancel formula")
 
 6.  Publish the apps after making all the above changes by selecting the Publish to Teams button on the top right
 
