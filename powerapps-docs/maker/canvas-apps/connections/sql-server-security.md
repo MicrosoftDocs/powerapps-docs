@@ -1,5 +1,5 @@
 ---
-title: Using Microsoft SQL Server securely with Power Apps
+title: Use Microsoft SQL Server securely with Power Apps
 description: Understand how to use SQL Server securely with Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
@@ -17,36 +17,23 @@ contributors:
   - lancedMicrosoft
 ---
 
->   Using Microsoft SQL Server securely with Power Apps
+# Use Microsoft SQL Server securely with Power Apps
 
->   Microsoft Power Apps is a low-code development environment that supports
->   connections to external data – including Microsoft SQL Server. While Power
->   Apps connects natively to Dataverse with built-in security, there are
->   different ways to
->   [connect](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list#security-and-types-of-authentication)
->   and authenticate to Microsoft SQL Server with Power Apps. This article
->   outlines concepts that can be helpful in making a choice about how to
->   connect to SQL Server with a security approach that matches requirements for
->   your Power App application. The content here is applicable to other
->   relational databases as well.
+There are different ways to [connect](../connections-list.md#security-and-types-of-authentication) and authenticate to Microsoft SQL Server with Power Apps. This article outlines concepts that can be helpful in making a choice about how to
+connect to SQL Server with a security approach that matches requirements for your app.
 
-Deployment security
-===================
+> [!IMPORTANT]
+> This article also applies to other relational databases such as Oracle.
 
-Explicit and Implicit connections
----------------------------------
+## Deployment security - Explicit and Implicit connections
 
-When a Power App application that connects to SQL Server is created, a
-connection is also created. When the author publishes and shares their
-application, both the Power App and the connection are deployed to specific end
-users. Both the Power App application and the connection are visible to end
-users. The authentication method used for the connection can be either
-**explicit** or **implicit**. Informally, we say that the connection is either
-shared explicitly or implicitly. An **explicitly shared connection** means that
-the end user of the application must authenticate to Microsoft SQL Server with
-their own explicit credentials. Usually this happens behind the scenes as an
-Azure AD or Windows handshake. The user doesn’t even notice it happen. An
-**implicitly shared connection** means that the user implicitly uses the
+A connection to SQL Server is created whenever you create an app using Power Apps connecting to SQL Server. When such apps are published and shared with others, both the app and the connection are deployed to those users. In other words, the app and the connection&mdash;both are visible to users the apps is shared with.
+
+The authentication method used for such connections can be **explicit** or **implicit**. We can also say such connection is shared explicitly or implicitly.
+
+- An **explicitly shared connection** means that the end user of the application must authenticate to SQL Server with
+their own explicit credentials. Usually this happens behind the scenes as part of Azure Active Directory or Windows authentication handshake. The user doesn’t even notice it happen.
+- An **implicitly shared connection** means that the user implicitly uses the
 credentials of the Power App author. Meaning, the credentials the author used to
 connect and authenticate to the data source when authoring the application. The
 end user’s credentials are **not** used to authenticate. Each time the end user
