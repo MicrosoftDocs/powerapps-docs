@@ -1,6 +1,6 @@
 ---
-title: 'Microphone control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Microphone control
+title: Microphone control in Power Apps
+description: Learn about the details, properties and examples of the Microphone control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

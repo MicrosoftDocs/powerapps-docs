@@ -208,135 +208,117 @@ POST [Organization URI]/api/search/v1.0/query
 
 ```json
 {
-    "value": [
-        {
-            "@search.score": 0.4547767,
-            "@search.highlights": {
-                "emailaddress1": [
-                    "{crmhit}maria{/crmhit}@contoso.com"
-                ],
-                "firstname": [
-                    "{crmhit}Maria{/crmhit}"
-                ],
-                "fullname": [
-                    "{crmhit}Maria{/crmhit} Sullivan"
-                ]
-            },
-            "@search.entityname": "contact",
-            "@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
-            "key": "5d3d6f6b-a721-4108-ad95-fe25eebbc277contact2",
-            "ownerid": "bb2500d1-5e6d-4953-8389-bfedf57e3857",
-            "owneridname": "Corey Gray",
-            "@search.ownerid.logicalname": "systemuser",
-            "owningbusinessunit": "e854b0d3-3441-418d-854f-b7d11bb17f1b",
-            "owningbusinessunitname": "",
-            "@search.owningbusinessunit.logicalname": "businessunit",
-            "sharedtoprincipalid": [],
-            "@search.objecttypecode": 2,
-            "fullname": "Maria Sullivan",
-            "versionnumber": 1622564,
-            "statecode@stringcollection": [
-                "Active"
-            ],
-            "statecode": 0,
-            "statuscode@stringcollection": [
-                "Active"
-            ],
-            "statuscode": 1,
-            "entityimage_url": **null**,
-            "lastsyncdate": "/Date(1602289865930)/",
-            "createdon": "10/9/2020 5:27 PM",
-            "modifiedon": "10/9/2020 5:27 PM",
-            "documentbody": **null**,
-            "body": **null**,
-            "filebody": **null**,
-            "emailaddress1": "maria@contoso.com",
-            "address1_city": **“Seattle”**,
-            "address1_telephone1": **“206-400-0200”**,
-            "parentcustomerid": **null**,
-            "parentcustomeridname": **null**,
-            "telephone1": **“206-400-0300”**
-        }
-    ],
-    "facets": {
-        "account.primarycontactid": [],
-        "ownerid": [
-            {
-                "Type": "Value",
-                "Value": "31ca7d4b-701c-4ea9-8714-a89a5172106e",
-                "OptionalValue": "Corey Gray",
-                "Count": 1
-            }
-        ],
-        "@search.entityname": [
-            {
-                "Type": "Value",
-                "Value": "contact",
-                "Count": 1
-            }
-        ],
-        "modifiedon": [
-            {
-                "Type": "Range",
-                "To": "4/27/2019 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/27/2019 12:00 AM",
-                "To": "3/27/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "3/27/2020 12:00 AM",
-                "To": "4/20/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/20/2020 12:00 AM",
-                "To": "4/27/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/27/2020 12:00 AM",
-                "Count": 1
-            }
-        ],
-        "createdon": [
-            {
-                "Type": "Range",
-                "To": "4/27/2019 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/27/2019 12:00 AM",
-                "To": "3/27/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "3/27/2020 12:00 AM",
-                "To": "4/20/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/20/2020 12:00 AM",
-                "To": "4/27/2020 12:00 AM",
-                "Count": 0
-            },
-            {
-                "Type": "Range",
-                "From": "4/27/2020 12:00 AM",
-                "Count": 1
-            }
-        ]
-    },
-    "totalrecordcount": -1
+    "value": [
+        {
+            "@search.score": 0.4547767,
+            "@search.highlights": {
+                "emailaddress1": [
+                    "{crmhit}maria{/crmhit}@contoso.com"
+                ],
+                "firstname": [
+                    "{crmhit}Maria{/crmhit}"
+                ],
+                "fullname": [
+                    "{crmhit}Maria{/crmhit} Sullivan"
+                ]
+            },
+            "@search.entityname": "contact",
+            "@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
+            "ownerid": "bb2500d1-5e6d-4953-8389-bfedf57e3857",
+            "owneridname": "Corey Gray",
+            "@search.ownerid.logicalname": "systemuser",
+            "@search.objecttypecode": 2,
+            "fullname": "Maria Sullivan",
+            "entityimage_url": **null**,
+            "createdon": "10/9/2020 5:27 PM",
+            "modifiedon": "10/9/2020 5:27 PM",
+            "emailaddress1": "maria@contoso.com",
+            "address1_city": **“Seattle”**,
+            "address1_telephone1": **“206-400-0200”**,
+            "parentcustomerid": **null**,
+            "parentcustomeridname": **null**,
+            "telephone1": **“206-400-0300”**
+        }
+    ],
+    "facets": {
+        "account.primarycontactid": [],
+        "ownerid": [
+            {
+                "Type": "Value",
+                "Value": "31ca7d4b-701c-4ea9-8714-a89a5172106e",
+                "OptionalValue": "Corey Gray",
+                "Count": 1
+            }
+        ],
+        "@search.entityname": [
+            {
+                "Type": "Value",
+                "Value": "contact",
+                "Count": 1
+            }
+        ],
+        "modifiedon": [
+            {
+                "Type": "Range",
+                "To": "4/27/2019 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/27/2019 12:00 AM",
+                "To": "3/27/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "3/27/2020 12:00 AM",
+                "To": "4/20/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/20/2020 12:00 AM",
+                "To": "4/27/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/27/2020 12:00 AM",
+                "Count": 1
+            }
+        ],
+        "createdon": [
+            {
+                "Type": "Range",
+                "To": "4/27/2019 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/27/2019 12:00 AM",
+                "To": "3/27/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "3/27/2020 12:00 AM",
+                "To": "4/20/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/20/2020 12:00 AM",
+                "To": "4/27/2020 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "4/27/2020 12:00 AM",
+                "Count": 1
+            }
+        ]
+    },
+    "totalrecordcount": -1
 }
 ```
 
