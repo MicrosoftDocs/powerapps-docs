@@ -1,8 +1,8 @@
 ---
 title: "Sample dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml attribute for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample dashboards
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/sample-dashboards -->
+This topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the `SystemForm.FormXml`  for an organization-owned dashboard or `UserForm.FormXml` for a user-owned dashboard.  
 
-This topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the `SystemForm.FormXml` attribute for an organization-owned dashboard or `UserForm.FormXml` for a user-owned dashboard.  
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   
 <a name="Sample1"></a>   
 ## Dashboard with charts and grids  
@@ -27,7 +27,8 @@ This topic contains sample dashboards along with the respective FormXML strings.
   
  ![Sample dashboard](media/dashboard-sample.png "Sample dashboard: Microsoft Dynamics 365 Overview")  
   
-### FormXML  
+### FormXML
+  
  The following sample shows the FormXML for this dashboard.  
   
 ```xml  
@@ -206,7 +207,7 @@ This topic contains sample dashboards along with the respective FormXML strings.
 ```  
   
 ### See also  
- [Dashboards](analyze-data-with-dashboards.md)   
+[Dashboards](analyze-data-with-dashboards.md)   
  
 
 

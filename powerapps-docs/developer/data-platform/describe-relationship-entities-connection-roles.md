@@ -1,8 +1,8 @@
 ---
-title: "Describe a relationship between entities with connection roles (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describing a relationship between entities using create connection roles and connection role categories." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Describe a relationship between tables with connection roles (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describing a relationship between tables using create connection roles and connection role categories." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Describe a relationship between entities with connection roles
+# Describe a relationship between tables with connection roles
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -43,25 +43,25 @@ You can describe the relationship between records through the roles that you ass
 ## Create Connection Roles  
  To create a connection role you must specify the following information:  
   
-- Use the `ConnectionRole.Name` attribute to specify a role name.  
+- Use the `ConnectionRole.Name` to specify a role name.  
   
-- Use the `ConnectionRole.Description` attribute to add a role description.  
+- Use the `ConnectionRole.Description` to add a role description.  
   
-- Use the `ConnectionRole.Category` attribute to specify a role category. The possible values for this attribute are defined in the `connectionrole_category` global option set.  
+- Use the `ConnectionRole.Category`  to specify a role category. The possible values for this are defined in the `connectionrole_category` choices.  
   
-- When you create a connection role, you can specify an entity type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular entity type, then you can apply a connection role to all Microsoft Dataverse entities. To specify the entity type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode` attribute. To link the connection role to a particular entity type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId` attribute. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all Dataverse entities.  
+- When you create a connection role, you can specify a table type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular table type, then you can apply a connection role to all Microsoft Dataverse tables. To specify the table type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode`. To link the connection role to a particular table type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId`. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all Dataverse tables.  
   
   > [!TIP]
-  >  To find the connection roles for an account entity, in the query, specify all roles that are linked to the account entity (Entity Type Code = 1) or to all entities (Entity Type Code = 0).  
+  >  To find the connection roles for an account, in the query, specify all roles that are linked to the account (Entity Type Code = 1) or to all tables (Entity Type Code = 0).  
   
 ## Associate and Disassociate Connection Roles  
  To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*> method. To disassociate the roles, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method. For more information about the `Associate` message and the `Disassociate` message, see [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities).  
   
 ### See also  
- [Connection Entities](connection-entities.md)   
- [Sample Code for Connection Entities](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
+ [Connection tables](connection-entities.md)   
+ [Sample Code for Connection tables](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
  [Sample: Create Reciprocal Connection Role (Early Bound)](/dynamics365/customer-engagement/developer/sample-create-reciprocal-connection-role-early-bound)   
- [Connection Entity](/reference/entities/connection.md)
+ [Connection table](/reference/entities/connection.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

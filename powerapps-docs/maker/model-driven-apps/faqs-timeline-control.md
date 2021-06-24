@@ -3,6 +3,7 @@ title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
 description: "FAQs for timeline control (section) in Power Apps"
 ms.date: 03/10/2020
 ms.service: powerapps
+ms.topic: troubleshooting
 author: "kabala123"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
 ms.author: "kabala"

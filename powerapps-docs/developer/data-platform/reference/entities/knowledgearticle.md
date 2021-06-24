@@ -1,22 +1,24 @@
 ---
-title: "KnowledgeArticle entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the KnowledgeArticle table."
-ms.date: 11/14/2020
+title: "KnowledgeArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# KnowledgeArticle entity reference
+
+# KnowledgeArticle table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Organizational knowledge for internal and external use.
 
@@ -25,23 +27,23 @@ Organizational knowledge for internal and external use.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateKnowledgeArticleTranslation|<xref href="Microsoft.Dynamics.CRM.CreateKnowledgeArticleTranslation?text=CreateKnowledgeArticleTranslation Action" />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleTranslationRequest>|
 |CreateKnowledgeArticleVersion|<xref href="Microsoft.Dynamics.CRM.CreateKnowledgeArticleVersion?text=CreateKnowledgeArticleVersion Action" />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleVersionRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |FullTextSearchKnowledgeArticle|<xref href="Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle?text=FullTextSearchKnowledgeArticle Action" />|<xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ Organizational knowledge for internal and external use.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ArticlePublicNumber](#BKMK_ArticlePublicNumber)
 - [Content](#BKMK_Content)
@@ -80,6 +82,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [LanguageLocaleId](#BKMK_LanguageLocaleId)
 - [MajorVersionNumber](#BKMK_MajorVersionNumber)
 - [MinorVersionNumber](#BKMK_MinorVersionNumber)
+- [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
+- [msdyn_isingestedarticle](#BKMK_msdyn_isingestedarticle)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -214,7 +218,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ExpiredReviewOptions Options
+#### ExpiredReviewOptions Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -253,7 +257,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsInternal Options
+#### IsInternal Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -276,7 +280,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsLatestVersion Options
+#### IsLatestVersion Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -299,7 +303,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsPrimary Options
+#### IsPrimary Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -323,7 +327,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRootArticle Options
+#### IsRootArticle Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -408,6 +412,49 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Ingested article URL|
+|DisplayName|Ingested Article URL|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_ingestedarticleurl|
+|MaxLength|2048|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_isingestedarticle"></a> msdyn_isingestedarticle
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Value is true for all Ingested articles|
+|DisplayName|Is Ingested Article|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_isingestedarticle|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_isingestedarticle Choices/Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -552,7 +599,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### ReadyForReview Options
+#### ReadyForReview Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -575,7 +622,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Review Options
+#### Review Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -626,7 +673,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### SetCategoryAssociations Options
+#### SetCategoryAssociations Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -663,7 +710,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -689,7 +736,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -798,7 +845,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### UpdateContent Options
+#### UpdateContent Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -826,9 +873,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -1496,11 +1543,12 @@ Listed by **SchemaName**.
 - [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid)
 - [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
 - [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
+- [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
 
-Same as connection entity [knowledgearticle_connections1](connection.md#BKMK_knowledgearticle_connections1) Many-To-One relationship.
+Same as connection table [knowledgearticle_connections1](connection.md#BKMK_knowledgearticle_connections1) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1515,7 +1563,7 @@ Same as connection entity [knowledgearticle_connections1](connection.md#BKMK_kno
 
 ### <a name="BKMK_knowledgearticle_connections2"></a> knowledgearticle_connections2
 
-Same as connection entity [knowledgearticle_connections2](connection.md#BKMK_knowledgearticle_connections2) Many-To-One relationship.
+Same as connection table [knowledgearticle_connections2](connection.md#BKMK_knowledgearticle_connections2) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1530,7 +1578,7 @@ Same as connection entity [knowledgearticle_connections2](connection.md#BKMK_kno
 
 ### <a name="BKMK_knowledgearticle_DuplicateMatchingRecord"></a> knowledgearticle_DuplicateMatchingRecord
 
-Same as duplicaterecord entity [knowledgearticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateMatchingRecord) Many-To-One relationship.
+Same as duplicaterecord table [knowledgearticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateMatchingRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1545,7 +1593,7 @@ Same as duplicaterecord entity [knowledgearticle_DuplicateMatchingRecord](duplic
 
 ### <a name="BKMK_knowledgearticle_DuplicateBaseRecord"></a> knowledgearticle_DuplicateBaseRecord
 
-Same as duplicaterecord entity [knowledgearticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateBaseRecord) Many-To-One relationship.
+Same as duplicaterecord table [knowledgearticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_knowledgearticle_DuplicateBaseRecord) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1560,7 +1608,7 @@ Same as duplicaterecord entity [knowledgearticle_DuplicateBaseRecord](duplicater
 
 ### <a name="BKMK_knowledgearticle_SharePointDocumentLocations"></a> knowledgearticle_SharePointDocumentLocations
 
-Same as sharepointdocumentlocation entity [knowledgearticle_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_knowledgearticle_SharePointDocumentLocations) Many-To-One relationship.
+Same as sharepointdocumentlocation table [knowledgearticle_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_knowledgearticle_SharePointDocumentLocations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1575,7 +1623,7 @@ Same as sharepointdocumentlocation entity [knowledgearticle_SharePointDocumentLo
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
 
-Same as queueitem entity [knowledgearticle_QueueItems](queueitem.md#BKMK_knowledgearticle_QueueItems) Many-To-One relationship.
+Same as queueitem table [knowledgearticle_QueueItems](queueitem.md#BKMK_knowledgearticle_QueueItems) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1590,7 +1638,7 @@ Same as queueitem entity [knowledgearticle_QueueItems](queueitem.md#BKMK_knowled
 
 ### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
 
-Same as annotation entity [knowledgearticle_Annotations](annotation.md#BKMK_knowledgearticle_Annotations) Many-To-One relationship.
+Same as annotation table [knowledgearticle_Annotations](annotation.md#BKMK_knowledgearticle_Annotations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1605,7 +1653,7 @@ Same as annotation entity [knowledgearticle_Annotations](annotation.md#BKMK_know
 
 ### <a name="BKMK_knowledgearticle_Teams"></a> knowledgearticle_Teams
 
-Same as team entity [knowledgearticle_Teams](team.md#BKMK_knowledgearticle_Teams) Many-To-One relationship.
+Same as team table [knowledgearticle_Teams](team.md#BKMK_knowledgearticle_Teams) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1620,7 +1668,7 @@ Same as team entity [knowledgearticle_Teams](team.md#BKMK_knowledgearticle_Teams
 
 ### <a name="BKMK_knowledgearticle_AsyncOperations"></a> knowledgearticle_AsyncOperations
 
-Same as asyncoperation entity [knowledgearticle_AsyncOperations](asyncoperation.md#BKMK_knowledgearticle_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [knowledgearticle_AsyncOperations](asyncoperation.md#BKMK_knowledgearticle_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1635,7 +1683,7 @@ Same as asyncoperation entity [knowledgearticle_AsyncOperations](asyncoperation.
 
 ### <a name="BKMK_knowledgearticle_ProcessSession"></a> knowledgearticle_ProcessSession
 
-Same as processsession entity [knowledgearticle_ProcessSession](processsession.md#BKMK_knowledgearticle_ProcessSession) Many-To-One relationship.
+Same as processsession table [knowledgearticle_ProcessSession](processsession.md#BKMK_knowledgearticle_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1650,7 +1698,7 @@ Same as processsession entity [knowledgearticle_ProcessSession](processsession.m
 
 ### <a name="BKMK_knowledgearticle_BulkDeleteFailures"></a> knowledgearticle_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [knowledgearticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_knowledgearticle_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [knowledgearticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_knowledgearticle_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1665,7 +1713,7 @@ Same as bulkdeletefailure entity [knowledgearticle_BulkDeleteFailures](bulkdelet
 
 ### <a name="BKMK_knowledgearticle_PrincipalObjectAttributeAccess"></a> knowledgearticle_PrincipalObjectAttributeAccess
 
-Same as principalobjectattributeaccess entity [knowledgearticle_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_knowledgearticle_PrincipalObjectAttributeAccess) Many-To-One relationship.
+Same as principalobjectattributeaccess table [knowledgearticle_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_knowledgearticle_PrincipalObjectAttributeAccess) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1680,7 +1728,7 @@ Same as principalobjectattributeaccess entity [knowledgearticle_PrincipalObjectA
 
 ### <a name="BKMK_KnowledgeArticle_SocialActivities"></a> KnowledgeArticle_SocialActivities
 
-Same as socialactivity entity [KnowledgeArticle_SocialActivities](socialactivity.md#BKMK_KnowledgeArticle_SocialActivities) Many-To-One relationship.
+Same as socialactivity table [KnowledgeArticle_SocialActivities](socialactivity.md#BKMK_KnowledgeArticle_SocialActivities) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1695,7 +1743,7 @@ Same as socialactivity entity [KnowledgeArticle_SocialActivities](socialactivity
 
 ### <a name="BKMK_KnowledgeArticle_Letters"></a> KnowledgeArticle_Letters
 
-Same as letter entity [KnowledgeArticle_Letters](letter.md#BKMK_KnowledgeArticle_Letters) Many-To-One relationship.
+Same as letter table [KnowledgeArticle_Letters](letter.md#BKMK_KnowledgeArticle_Letters) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1710,7 +1758,7 @@ Same as letter entity [KnowledgeArticle_Letters](letter.md#BKMK_KnowledgeArticle
 
 ### <a name="BKMK_KnowledgeArticle_Tasks"></a> KnowledgeArticle_Tasks
 
-Same as task entity [KnowledgeArticle_Tasks](task.md#BKMK_KnowledgeArticle_Tasks) Many-To-One relationship.
+Same as task table [KnowledgeArticle_Tasks](task.md#BKMK_KnowledgeArticle_Tasks) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1725,7 +1773,7 @@ Same as task entity [KnowledgeArticle_Tasks](task.md#BKMK_KnowledgeArticle_Tasks
 
 ### <a name="BKMK_knowledgearticle_views"></a> knowledgearticle_views
 
-Same as knowledgearticleviews entity [knowledgearticle_views](knowledgearticleviews.md#BKMK_knowledgearticle_views) Many-To-One relationship.
+Same as knowledgearticleviews table [knowledgearticle_views](knowledgearticleviews.md#BKMK_knowledgearticle_views) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1740,7 +1788,7 @@ Same as knowledgearticleviews entity [knowledgearticle_views](knowledgearticlevi
 
 ### <a name="BKMK_KnowledgeArticle_Faxes"></a> KnowledgeArticle_Faxes
 
-Same as fax entity [KnowledgeArticle_Faxes](fax.md#BKMK_KnowledgeArticle_Faxes) Many-To-One relationship.
+Same as fax table [KnowledgeArticle_Faxes](fax.md#BKMK_KnowledgeArticle_Faxes) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1755,7 +1803,7 @@ Same as fax entity [KnowledgeArticle_Faxes](fax.md#BKMK_KnowledgeArticle_Faxes) 
 
 ### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
 
-Same as expiredprocess entity [lk_expiredprocess_knowledgearticleid](expiredprocess.md#BKMK_lk_expiredprocess_knowledgearticleid) Many-To-One relationship.
+Same as expiredprocess table [lk_expiredprocess_knowledgearticleid](expiredprocess.md#BKMK_lk_expiredprocess_knowledgearticleid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1770,7 +1818,7 @@ Same as expiredprocess entity [lk_expiredprocess_knowledgearticleid](expiredproc
 
 ### <a name="BKMK_KnowledgeArticle_Appointments"></a> KnowledgeArticle_Appointments
 
-Same as appointment entity [KnowledgeArticle_Appointments](appointment.md#BKMK_KnowledgeArticle_Appointments) Many-To-One relationship.
+Same as appointment table [KnowledgeArticle_Appointments](appointment.md#BKMK_KnowledgeArticle_Appointments) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1785,7 +1833,7 @@ Same as appointment entity [KnowledgeArticle_Appointments](appointment.md#BKMK_K
 
 ### <a name="BKMK_lk_newprocess_knowledgearticleid"></a> lk_newprocess_knowledgearticleid
 
-Same as newprocess entity [lk_newprocess_knowledgearticleid](newprocess.md#BKMK_lk_newprocess_knowledgearticleid) Many-To-One relationship.
+Same as newprocess table [lk_newprocess_knowledgearticleid](newprocess.md#BKMK_lk_newprocess_knowledgearticleid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1800,7 +1848,7 @@ Same as newprocess entity [lk_newprocess_knowledgearticleid](newprocess.md#BKMK_
 
 ### <a name="BKMK_knowledgearticle_rootarticle_id"></a> knowledgearticle_rootarticle_id
 
-Same as knowledgearticle entity [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) Many-To-One relationship.
+Same as knowledgearticle table [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1815,7 +1863,7 @@ Same as knowledgearticle entity [knowledgearticle_rootarticle_id](knowledgeartic
 
 ### <a name="BKMK_lk_translationprocess_knowledgearticleid"></a> lk_translationprocess_knowledgearticleid
 
-Same as translationprocess entity [lk_translationprocess_knowledgearticleid](translationprocess.md#BKMK_lk_translationprocess_knowledgearticleid) Many-To-One relationship.
+Same as translationprocess table [lk_translationprocess_knowledgearticleid](translationprocess.md#BKMK_lk_translationprocess_knowledgearticleid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1830,7 +1878,7 @@ Same as translationprocess entity [lk_translationprocess_knowledgearticleid](tra
 
 ### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
 
-Same as recurringappointmentmaster entity [KnowledgeArticle_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) Many-To-One relationship.
+Same as recurringappointmentmaster table [KnowledgeArticle_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1845,7 +1893,7 @@ Same as recurringappointmentmaster entity [KnowledgeArticle_RecurringAppointment
 
 ### <a name="BKMK_KnowledgeArticle_ActivityPointers"></a> KnowledgeArticle_ActivityPointers
 
-Same as activitypointer entity [KnowledgeArticle_ActivityPointers](activitypointer.md#BKMK_KnowledgeArticle_ActivityPointers) Many-To-One relationship.
+Same as activitypointer table [KnowledgeArticle_ActivityPointers](activitypointer.md#BKMK_KnowledgeArticle_ActivityPointers) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1860,7 +1908,7 @@ Same as activitypointer entity [KnowledgeArticle_ActivityPointers](activitypoint
 
 ### <a name="BKMK_KnowledgeArticle_SyncErrors"></a> KnowledgeArticle_SyncErrors
 
-Same as syncerror entity [KnowledgeArticle_SyncErrors](syncerror.md#BKMK_KnowledgeArticle_SyncErrors) Many-To-One relationship.
+Same as syncerror table [KnowledgeArticle_SyncErrors](syncerror.md#BKMK_KnowledgeArticle_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1875,7 +1923,7 @@ Same as syncerror entity [KnowledgeArticle_SyncErrors](syncerror.md#BKMK_Knowled
 
 ### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
 
-Same as feedback entity [KnowledgeArticle_Feedback](feedback.md#BKMK_KnowledgeArticle_Feedback) Many-To-One relationship.
+Same as feedback table [KnowledgeArticle_Feedback](feedback.md#BKMK_KnowledgeArticle_Feedback) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1890,7 +1938,7 @@ Same as feedback entity [KnowledgeArticle_Feedback](feedback.md#BKMK_KnowledgeAr
 
 ### <a name="BKMK_knowledgearticle_previousarticle_contentid"></a> knowledgearticle_previousarticle_contentid
 
-Same as knowledgearticle entity [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) Many-To-One relationship.
+Same as knowledgearticle table [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1905,7 +1953,7 @@ Same as knowledgearticle entity [knowledgearticle_previousarticle_contentid](kno
 
 ### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
 
-Same as postfollow entity [knowledgearticle_PostFollows](postfollow.md#BKMK_knowledgearticle_PostFollows) Many-To-One relationship.
+Same as postfollow table [knowledgearticle_PostFollows](postfollow.md#BKMK_knowledgearticle_PostFollows) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1920,7 +1968,7 @@ Same as postfollow entity [knowledgearticle_PostFollows](postfollow.md#BKMK_know
 
 ### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
 
-Same as activityparty entity [knowledgearticle_activity_parties](activityparty.md#BKMK_knowledgearticle_activity_parties) Many-To-One relationship.
+Same as activityparty table [knowledgearticle_activity_parties](activityparty.md#BKMK_knowledgearticle_activity_parties) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1935,7 +1983,7 @@ Same as activityparty entity [knowledgearticle_activity_parties](activityparty.m
 
 ### <a name="BKMK_knowledgearticle_parentarticle_contentid"></a> knowledgearticle_parentarticle_contentid
 
-Same as knowledgearticle entity [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) Many-To-One relationship.
+Same as knowledgearticle table [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1950,7 +1998,7 @@ Same as knowledgearticle entity [knowledgearticle_parentarticle_contentid](knowl
 
 ### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
 
-Same as phonecall entity [KnowledgeArticle_Phonecalls](phonecall.md#BKMK_KnowledgeArticle_Phonecalls) Many-To-One relationship.
+Same as phonecall table [KnowledgeArticle_Phonecalls](phonecall.md#BKMK_KnowledgeArticle_Phonecalls) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1965,7 +2013,7 @@ Same as phonecall entity [KnowledgeArticle_Phonecalls](phonecall.md#BKMK_Knowled
 
 ### <a name="BKMK_KnowledgeArticle_Emails"></a> KnowledgeArticle_Emails
 
-Same as email entity [KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Emails) Many-To-One relationship.
+Same as email table [KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Emails) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1977,11 +2025,28 @@ Same as email entity [KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Em
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
+
+**Added by**: Knowledge Management Patch Solution
+
+Same as feedback table [msdyn_knowledgearticle_feedback_context](feedback.md#BKMK_msdyn_knowledgearticle_feedback_context) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|feedback|
+|ReferencingAttribute|msdyn_contextobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_feedback_context|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_knowledgearticle_createdby](#BKMK_lk_knowledgearticle_createdby)
 - [lk_knowledgearticle_createdonbehalfby](#BKMK_lk_knowledgearticle_createdonbehalfby)
@@ -2002,74 +2067,74 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_knowledgearticle_createdby"></a> lk_knowledgearticle_createdby
 
-See systemuser Entity [lk_knowledgearticle_createdby](systemuser.md#BKMK_lk_knowledgearticle_createdby) One-To-Many relationship.
+See systemuser Table [lk_knowledgearticle_createdby](systemuser.md#BKMK_lk_knowledgearticle_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_knowledgearticle_createdonbehalfby"></a> lk_knowledgearticle_createdonbehalfby
 
-See systemuser Entity [lk_knowledgearticle_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_knowledgearticle_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_knowledgearticle_modifiedby"></a> lk_knowledgearticle_modifiedby
 
-See systemuser Entity [lk_knowledgearticle_modifiedby](systemuser.md#BKMK_lk_knowledgearticle_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_knowledgearticle_modifiedby](systemuser.md#BKMK_lk_knowledgearticle_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_knowledgearticle_modifiedonbehalfby"></a> lk_knowledgearticle_modifiedonbehalfby
 
-See systemuser Entity [lk_knowledgearticle_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_knowledgearticle_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticle_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_user_knowledgearticle"></a> user_knowledgearticle
 
-See systemuser Entity [user_knowledgearticle](systemuser.md#BKMK_user_knowledgearticle) One-To-Many relationship.
+See systemuser Table [user_knowledgearticle](systemuser.md#BKMK_user_knowledgearticle) One-To-Many relationship.
 
 ### <a name="BKMK_team_knowledgearticle"></a> team_knowledgearticle
 
-See team Entity [team_knowledgearticle](team.md#BKMK_team_knowledgearticle) One-To-Many relationship.
+See team Table [team_knowledgearticle](team.md#BKMK_team_knowledgearticle) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_knowledgearticle"></a> business_unit_knowledgearticle
 
-See businessunit Entity [business_unit_knowledgearticle](businessunit.md#BKMK_business_unit_knowledgearticle) One-To-Many relationship.
+See businessunit Table [business_unit_knowledgearticle](businessunit.md#BKMK_business_unit_knowledgearticle) One-To-Many relationship.
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
 
-See processstage Entity [processstage_knowledgearticle](processstage.md#BKMK_processstage_knowledgearticle) One-To-Many relationship.
+See processstage Table [processstage_knowledgearticle](processstage.md#BKMK_processstage_knowledgearticle) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_languagelocaleid"></a> knowledgearticle_languagelocaleid
 
-See languagelocale Entity [knowledgearticle_languagelocaleid](languagelocale.md#BKMK_knowledgearticle_languagelocaleid) One-To-Many relationship.
+See languagelocale Table [knowledgearticle_languagelocaleid](languagelocale.md#BKMK_knowledgearticle_languagelocaleid) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_primaryauthorid"></a> knowledgearticle_primaryauthorid
 
-See systemuser Entity [knowledgearticle_primaryauthorid](systemuser.md#BKMK_knowledgearticle_primaryauthorid) One-To-Many relationship.
+See systemuser Table [knowledgearticle_primaryauthorid](systemuser.md#BKMK_knowledgearticle_primaryauthorid) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_parentarticle_contentid"></a> knowledgearticle_parentarticle_contentid
 
-See knowledgearticle Entity [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) One-To-Many relationship.
+See knowledgearticle Table [knowledgearticle_parentarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_parentarticle_contentid) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_previousarticle_contentid"></a> knowledgearticle_previousarticle_contentid
 
-See knowledgearticle Entity [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) One-To-Many relationship.
+See knowledgearticle Table [knowledgearticle_previousarticle_contentid](knowledgearticle.md#BKMK_knowledgearticle_previousarticle_contentid) One-To-Many relationship.
 
 ### <a name="BKMK_subject_knowledgearticles"></a> subject_knowledgearticles
 
-See subject Entity [subject_knowledgearticles](subject.md#BKMK_subject_knowledgearticles) One-To-Many relationship.
+See subject Table [subject_knowledgearticles](subject.md#BKMK_subject_knowledgearticles) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_rootarticle_id"></a> knowledgearticle_rootarticle_id
 
-See knowledgearticle Entity [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) One-To-Many relationship.
+See knowledgearticle Table [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearticle_rootarticle_id) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
 
-See transactioncurrency Entity [TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_TransactionCurrency_knowledgearticle) One-To-Many relationship.
+See transactioncurrency Table [TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_TransactionCurrency_knowledgearticle) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the KnowledgeArticle entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the KnowledgeArticle table is the first table in the relationship. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_knowledgearticle_category"></a> knowledgearticle_category
 
 IntersectEntityName: knowledgearticlescategories<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -2079,7 +2144,7 @@ IntersectEntityName: knowledgearticlescategories<br />
 |NavigationPropertyName|knowledgearticle_category|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -2091,8 +2156,6 @@ IntersectEntityName: knowledgearticlescategories<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.knowledgearticle?text=knowledgearticle EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

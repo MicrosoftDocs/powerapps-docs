@@ -1,5 +1,5 @@
 ---
-title: Functions, signals, and enumerations | Microsoft Docs
+title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
 manager: kvivek
@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/17/2020
+ms.date: 03/23/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -53,7 +53,7 @@ Other elements include:
 
 **[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
-**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific table type.
 
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
@@ -76,6 +76,8 @@ Other elements include:
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
+
+**[ClearData](functions/function-savedata-loaddata.md)** – Clears a collection or all collections from an app host such as a local device.
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
@@ -185,6 +187,8 @@ Other elements include:
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
+**[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
+
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
 **[IsError](functions/function-iferror.md)** – Checks for an error.
@@ -195,7 +199,7 @@ Other elements include:
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -215,7 +219,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -274,9 +278,11 @@ Other elements include:
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
+**[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
+**[Relate](functions/function-relate-unrelate.md)** – Relates records of two tables through a one-to-many or many-to-many relationship.
 
 **[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
@@ -305,7 +311,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to an app host such as a local device.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -377,7 +383,7 @@ Other elements include:
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two entities from a one-to-many or many-to-many relationship.
+**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two tables from a one-to-many or many-to-many relationship.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 

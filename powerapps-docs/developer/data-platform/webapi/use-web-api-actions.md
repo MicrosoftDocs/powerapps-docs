@@ -1,8 +1,8 @@
 ---
 title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
-descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
+description: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
 ms.custom: ""
-ms.date: 11/21/2020
+ms.date: 05/04/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +21,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use Web API actions
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use.
 
@@ -42,7 +43,7 @@ Actions are defined in [CSDL metadata document](web-api-types-operations.md#bkmk
 
 The <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /> corresponds to the <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest> using the organization service. Use this action to set the state of an opportunity to Won and create an <xref href="Microsoft.Dynamics.CRM.opportunityclose?text=opportunityclose EntityType" /> to record the event. This action doesn’t include a return value. If it succeeds, the operation is complete.
 
-The `OpportunityClose` parameter requires a JSON representation of the opportunityclose entity to create in the operation. This entity must be related to the opportunity issuing the opportunityid single-valued navigation property. In the JSON this is set using the `@odata.bind` annotation as explained in [Associate entities on create](create-entity-web-api.md#bkmk_associateOnCreate).
+The `OpportunityClose` parameter requires a JSON representation of the opportunityclose entity to create in the operation. This entity must be related to the opportunity issuing the opportunityid single-valued navigation property. In the JSON this is set using the `@odata.bind` annotation as explained in [Associate tables on create](create-entity-web-api.md#bkmk_associateOnCreate).
 
 The `Status` parameter must be set to the status to for the opportunity when it is closed. You can find the default value for this in the <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType" /> statuscode property. The **Won** option has a value of 3. You may ask yourself, why is it necessary to set this value when there is only one status reason option that represents **Won**? The reason is because you may define custom status options to represent a win, such as **Big Win** or **Small Win**, so the value could potentially be different from 3 in that situation.
 
@@ -84,7 +85,7 @@ In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when an 
 
 When invoking a bound function, you must include the full name of the function including the `Microsoft.Dynamics.CRM` namespace. If you do not include the full name, you will get the following error: `Status Code:400 Request message has unresolved parameters`.
 
-### Actions bound to an entity
+### Actions bound to a table
 
 As an example of an action bound to an entity, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> represented in the CSDL:
 
@@ -138,7 +139,7 @@ OData-Version: 4.0
 }
 ```
 
-### Actions bound to an entity collection
+### Actions bound to a table collection
 
 It is less common to find actions bound to an entity collection. The following are some you may find:
 
@@ -273,7 +274,7 @@ OData-Version: 4.0
 
 <a name="bkmk_specifyentityparametertype"></a>
 
-## Specify entity parameter type
+## Specify table type parameter
 
 When an action requires an entity as a parameter and the type of entity is ambiguous, you must use the `@odata.type` property to specify the type of entity. The value of this property is the fully qualified name of the entity, which follows this pattern:
 `Microsoft.Dynamics.CRM.`+*\<entity logical name>*.
@@ -300,14 +301,13 @@ If you do not specify the type of entity in this situation, you can get the foll
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
-[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-
+[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

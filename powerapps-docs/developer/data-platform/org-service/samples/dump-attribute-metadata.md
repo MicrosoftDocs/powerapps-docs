@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to write out all the attribute metadata to an `XML` file. It uses the [RetrieveAllEntitiesRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpAttributeInfo).
+This sample shows how to write out all the attribute metadata to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpAttributeInfo).
 
 The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttributeDesc.xml`. You can open this file in **Office Excel** to see a tabular report. 
 
@@ -30,7 +30,7 @@ The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttr
 
 ## What this sample does
 
-The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the entities.
+The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the tables.
 
 ## How this sample works
 

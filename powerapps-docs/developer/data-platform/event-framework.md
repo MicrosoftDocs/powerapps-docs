@@ -1,6 +1,6 @@
 ---
 title: " Event Framework (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about the event framework and how it relates to the database transaction." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/21/2021
 ms.reviewer: "pehecke"
@@ -15,40 +15,42 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Event Framework
+# Event framework
 
-The capability to extend the default behavior of Microsoft Dataverse depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 
+The capability to extend the default behavior of Microsoft Dataverse depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events.
 
-As a developer, you will use the *Plug-in registration tool* to configure plug-ins, Azure integrations, virtual table data providers, and Web Hooks to respond to events that are provided by the event framework. When events occur and an extension is registered to respond to them, contextual information about the data involved in the operation is passed to the extension. Depending on how the registration for the event is configured, the extension can modify the data passed into it, intiate some automated process to be applied immediately, or define that an action is added to a queue to be performed later.
+All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework.
+
+As a developer, you will use the *Plug-in Registration tool* to configure plug-ins, Azure integrations, virtual table data providers, and Web Hooks to respond to events that are provided by the event framework. When events occur and an extension is registered to respond to them, contextual information about the data involved in the operation is passed to the extension. Depending on how the registration for the event is configured, the extension can modify the data passed into it, initiate some automated process to be applied immediately, or define that an action is added to a queue to be performed later.
 
 To leverage the event framework for your custom extensions you must understand:
 
  - What events are available
  - How the event is processed
- - What kind of data is available to your extension when the event occurs
+ - What kind of data is available to your custom extension when the event occurs
  - What time and resource constraints apply
  - How to monitor performance
 
 ## Available events
 
-As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Dataverse platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with entities. There are also specialized messages for more complex operations. Custom actions add new messages.
+As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Dataverse platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with tables. There are also specialized messages for more complex operations, and custom actions add new messages.
 
-When you use the Plug-in registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
+When you use the Plug-in Registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 
 ![Dialog to register a step](media/register-new-step-plug-in.png)
 
 A step provides the information about which message the extensions should respond to as well as a number of other configuration choices. Use the **Message** field to choose the message your extension will respond to.
 
-Generally, you can expect to find a message for most of the **Request* classes in the <xref:Microsoft.Crm.Sdk.Messages> or <xref:Microsoft.Xrm.Sdk.Messages> namespaces, but you will also find messages for any custom actions that have been created in the organization. Any operations involving table definitions (entity metadata) are not available.
+Generally, you can expect to find a message for most of the **Request* classes in the <xref:Microsoft.Crm.Sdk.Messages> or <xref:Microsoft.Xrm.Sdk.Messages> namespaces, but you will also find messages for any custom actions that have been created in the organization. Any operations involving table definitions are not available.
 
 Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) tables. The Plug-in registration tool will filter this information to only show valid messages.
 
 To verify if a message and table combination supports execution of plug-ins using a database query, you can use the following Web API query:
 
 ```
-{{webapiurl}}sdkmessages?$select=name
+[Organization URI]/api/data/v9.1/sdkmessages?$select=name
 &$filter=isprivate eq false 
 and (name ne 'SetStateDynamicEntity' 
 and name ne 'RemoveRelated' 
@@ -62,7 +64,7 @@ $filter=iscustomprocessingstepallowed eq true and isvisible eq true)
 ```
 
 > [!TIP]
-> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Dataverse](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-data-platform/)
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and tables eligible for plug-ins using the Dataverse](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-data-platform/)
 
 
 You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](https://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
@@ -96,11 +98,11 @@ You can also use the following FetchXML to retrieve this information. The [Fetch
 > The `Execute` message is available, but you should not register extensions for it since it is called by every operation.
 
 > [!NOTE]
-> There are certain cases where plug-ins and workflows that are registed for the Update event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
+> There are certain cases where plug-ins and workflows that are registered for the Update event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
 
 ## Event execution pipeline
 
-When you register a step using the Plug-in registration tool you must also choose the **Event Pipeline Stage of Execution**.  Each message is processed in a series of 4 stages as described in the following table:
+When you register a step using the Plug-in Registration tool you must also choose the **Event Pipeline Stage of Execution**.  Each message is processed in a series of 4 stages as described in the following table:
 
 |Name|Description|
 |--|--|
@@ -118,11 +120,11 @@ The stage you should choose depends on the purpose of the extension. You don't n
 
 Multiple extensions can be registered for the same message and stage. Within the step registration the **Execution Order** value determines the order in which multiple extensions should be processed for a given stage.
 
-Information about registered steps is stored in the [SdkMessageProcessingStep Table/Entity](reference/entities/sdkmessageprocessingstep.md).
+Information about registered steps is stored in the [SdkMessageProcessingStep table](reference/entities/sdkmessageprocessingstep.md).
 
 ## Event context
 
-If your extension is a Plug-in, it will receive a parameter that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface. This class provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plugin is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext> which provides information about any operation within another Plug-in that triggered the current operation.
+If your extension is a plug-in, it will receive a parameter that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface. This class provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plug-in is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>, which provides information about any operation within another plug-in that triggered the current operation.
 
 If your extension is an an Azure Service bus endpoint, Azure EventHub topic, or a Web hook, the data that will be posted to the registered endpoint will be in form of a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> which implements both <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>
 

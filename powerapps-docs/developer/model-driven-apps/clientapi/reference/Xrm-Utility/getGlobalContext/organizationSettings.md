@@ -1,6 +1,7 @@
 ---
 title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/06/2020
+description: Includes description and supported parameters for the getGlobalContext.organizationSettings method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -26,7 +27,7 @@ The **organizationSettings** object provides following properties.
 
 ## attributes
 
-Returns attributes and their values as `key:value` pairs that are available for the organization entity. Additional values will be available as attributes if they are specified as attribute dependencies in the web resource dependency list. The `key` will be the attribute logical name.
+Returns columns and their values as `key:value` pairs that are available for the organization table. Additional values will be available as columns if they are specified as column dependencies in the web resource dependency list. The `key` will be the column logical name.
 
 ### Syntax
 
@@ -36,7 +37,7 @@ Returns attributes and their values as `key:value` pairs that are available for 
 
 **Type**: Object
 
-**Description**: An object with attributes and their values.
+**Description**: An object with columns and their values.
 
 ## baseCurrencyId 
 
@@ -56,7 +57,7 @@ Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to ac
 
 ## baseCurrency 
 
-Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization. This method is supported only on Unified Interface.
+Returns a lookup object containing the ID, name, and table type of the base currency for the current organization. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -127,6 +128,34 @@ Returns the ID of the current organization.
 **Type**: String
 
 **Description**: Id of the current organization.
+
+## isTrialOrganization
+
+Returns a boolean indicating whether the organization is a trial organization.
+
+### Syntax
+
+`organizationSettings.isTrialOrganization`
+
+### Return Value
+
+**Type**: Boolean
+
+**Description**: **true** if the organization is a trial organization; **false** otherwise.
+
+## organizationExpiryDate
+
+Returns the expiry date of the current organization if it is a trial organization.
+
+### Syntax
+
+`organizationSettings.organizationExpiryDate`
+
+### Return Value
+
+**Type**: Date
+
+**Description**: Returns a `Date` object with the organization's expiry date if it is a trial organization. Returns NULL if the organization is not a trial organization.
 
 ## uniqueName 
 

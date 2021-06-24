@@ -39,8 +39,8 @@ There is a different set of URLs to access Power Apps US Government environments
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
-- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
-- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+- [Power Apps for US Government](/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](/power-bi/service-govus-overview)
 
 ## Step 1: Download the deployment package
 
@@ -73,18 +73,18 @@ More information:
 
 - [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
 
-- [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
+- [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin)
 
 After you have purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Dataverse environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2.  Create a Dataverse environment with the database. More information: [Create and manage environments](/power-platform/admin/create-environment)
 
     > [!IMPORTANT] 
     > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
 
-3.	Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+3.	Create appropriate users in your environment. More information: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 After you have created your environment, you can access it using the following URL: https://[myenv].crm.dynamics.com, where [myenv] is the name of your environment. Make a note of this environment URL.
 
@@ -237,7 +237,7 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-Detailed information about using the template app from the AppSource is available here: [Connect to the Regional Emergency Response Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-regional-emergency-response)
+Detailed information about using the template app from the AppSource is available here: [Connect to the Regional Emergency Response Dashboard](/power-bi/connect-data/service-connect-to-regional-emergency-response)
 
 ### Option B: Publish using the .pbit file in the deployment package
 
@@ -247,7 +247,7 @@ This section provides information on how you can use the **Regional Emergency Re
 
 -   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
 
--   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
+-   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces)
 
 -   Install Power BI Desktop from the Microsoft Store: <https://aka.ms/pbidesktop>
 
@@ -318,7 +318,7 @@ This section provides information on how you can use the **Regional Emergency Re
       > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
 
       > [!NOTE]
-      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](/power-bi/refresh-data#data-refresh)
       >- We recommend setting the data to refresh every 30 mins.
 
 15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
@@ -338,12 +338,12 @@ This section provides information on how you can use the **Regional Emergency Re
 
     2. On the **Navigation** tab, specify the location where you will publish it.
 
-    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
+    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
 
         > [!div class="mx-imgBorder"]
         > ![Install this app automatically](media/select-install-apps-automatically.png)
 
-18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](/power-bi/service-create-distribute-apps#publish-your-app).
 
 
 ## Step 6: Embed Power BI report in portal
@@ -354,16 +354,16 @@ In this step, we will embed the Power BI report (published in the previous step)
 
 - You must have Global Admin role to perform this step.
 
-- Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](https://docs.microsoft.com/powerapps/maker/portals/admin/admin-overview).
+- Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](../../maker/portals/admin/admin-overview.md).
 
   > [!div class="mx-imgBorder"] 
   > ![Power Apps Portals admin center](media/deploy-admin-center.png "Power Apps Portals admin center")
 
 For step-by-step instructions, see the following in Power Apps portals docs:
 
--   [Enable Power BI visualization](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization)
+-   [Enable Power BI visualization](../../maker/portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization)
 
--   [Enable Power BI embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service)
+-   [Enable Power BI embedded service](../../maker/portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service)
 
 ### The process
 
@@ -418,7 +418,7 @@ Now, we will restart the portal for the changes to take effect.
 5.  Select **Restart** in the confirmation message to restart the portal.
 
   > [!NOTE]
-  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](https://docs.microsoft.com/powerapps/maker/portals/admin/add-custom-domain) in portals docs.
+  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](../../maker/portals/admin/add-custom-domain.md) in portals docs.
 
 ## Step 7: Add a custom title and logo for your portal
 
@@ -541,11 +541,11 @@ Server-side synchronization enables you to sync emails in Dataverse with Microso
 
 For detailed steps on setting server-side sync; see the following resources:
 
--   [Set up server-side sync](https://docs.microsoft.com/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
+-   [Set up server-side sync](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
 
--   [Connect to Exchange Online](https://docs.microsoft.com/power-platform/admin/connect-exchange-online)
+-   [Connect to Exchange Online](/power-platform/admin/connect-exchange-online)
 
--   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/power-platform/admin/connect-exchange-server-on-premises)
+-   [Connect to Exchange Server (on-premises)](/power-platform/admin/connect-exchange-server-on-premises)
 
     > [!WARNING]
     > Make sure this user is not configured for server-side sync on any other Dataverse or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
@@ -797,7 +797,7 @@ In this step, we will authorize the connection information for the flows that he
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
 > [!IMPORTANT]
-> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
+> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles).
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 

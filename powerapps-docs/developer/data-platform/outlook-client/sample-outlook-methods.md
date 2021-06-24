@@ -6,7 +6,7 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "sriharibs" # GitHub ID
+author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](https://msdn.microsoft.com/library/gg309513.aspx).
+This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](/previous-versions/dynamicscrm-2016/developers-guide/gg309513(v=crm.8)).
 
 ## Prerequisites
 

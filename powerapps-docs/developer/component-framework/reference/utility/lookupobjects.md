@@ -1,6 +1,6 @@
 ---
 title: lookupObjects | Microsoft Docs
-description: 
+description: Opens a lookup dialog allowing the user to select one or more items.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -29,11 +29,11 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|lookupOptions|`UtilityApi.LookupOptions`|Yes|Defines the options for opening the lookup dialog. The LookupOptions has the following attributes:<br/>- **allowMultiSelect**: `Boolean`. Indicates whether the lookup allows more than one item to be selected.<br/>- **defaultEntityType**: `String`. The default entity type to use.<br/>- **defaultViewId**: `String`. The default view to use.<br/>- **entityTypes**: `String[]`. The entity types to display.<br/>- **viewIds**: `String[]`. The views to be available in the view picker. Only System views are supported (not user views).|
+|lookupOptions|`UtilityApi.LookupOptions`|Yes|Defines the options for opening the lookup dialog. The LookupOptions has the following elements:<br/>- **allowMultiSelect**: `Boolean`. Indicates whether the lookup allows more than one item to be selected.<br/>- **defaultEntityType**: `String`. The default table type to use.<br/>- **defaultViewId**: `String`. The default view to use.<br/>- **entityTypes**: `String[]`. The table types to display.<br/>- **viewIds**: `String[]`. The views to be available in the view picker. Only System views are supported (not user views).|
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)[]>
+Type: LookupValue[]
 
 
 ### Related topics

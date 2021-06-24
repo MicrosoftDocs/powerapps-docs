@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message. 
+This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message. 
 
 This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
 
@@ -37,7 +37,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 
 ## What this sample does
 
-The [IOrganizationService.Associate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
+The [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 
@@ -55,7 +55,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

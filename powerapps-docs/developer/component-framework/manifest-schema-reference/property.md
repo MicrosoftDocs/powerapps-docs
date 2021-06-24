@@ -1,6 +1,6 @@
 ---
 title: Property Element | Microsoft Docs
-description:
+description: The property node defines a specific, configurable piece of data that the component expects from the Microsoft Dataverse.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,24 +19,24 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Properties
 
-|Name |Description |Type |Required |
-|------|------|------|-------|
-|name |Name of the property |string |Yes |
-|display-name-key |Used in the customization screens as localized strings that describes the name of the property. |string |Yes |
-|of-type| Defines the data type of the property| See [Remarks](#remarks)|Optional|
-|usage |The usage attribute identifies if the property is meant to represent an entity attribute that the component can change (bound) or read-only values (input)|bound or input |Yes |
-|required |Whether the property is required or not |boolean |Optional |
-|of-type-group |Name of the type-group as defined in manifest| string |Optional |
-|description-key |Used in the customization screens as localized strings that describes the description of the property. |string |Optional |
-|default-value |The default configuration value provided to the component. In model-driven apps, this attribute is only allowed on inputs since the bound parameters expect to have a field associated. |string |Optional |
+|Name |Description |Type |Required | Available for|
+|------|------|------|-------|------------|
+|name |Name of the property |string |Yes |Model-driven and canvas apps|
+|display-name-key |Used in the customization screens as localized strings that describes the name of the property. |string |Yes |Model-driven apps|
+|of-type| Defines the data type of the property| See [Remarks](#remarks)|Optional|Model-driven and canvas apps|
+|usage |The usage property identifies if the property is meant to represent a column that the component can change (bound) or read-only values (input)|bound or input |Yes|Model-driven apps|
+|required |Whether the property is required or not |boolean |Optional |Model-driven apps|
+|of-type-group |Name of the type-group as defined in manifest| string |Optional |Model-driven apps|
+|description-key |Used in the customization screens as localized strings that describes the description of the property. |string |Optional |Model-driven and canvas apps|
+|default-value |The default configuration value provided to the component. In model-driven apps, this property is only allowed on inputs since the bound parameters expect to have a column associated. |string |Optional |Model-driven apps|
 
 ### Remarks
 
-The `of-type` attribute value must be one of the following:
+The `of-type` property value must be one of the following:
 
 [!INCLUDE [type-table](includes/type-table.md)]
 

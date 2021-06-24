@@ -11,8 +11,6 @@ ms.reviewer: matp
 ---
 #  Move customizations between environments
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Microsoft Dataverse for Teams provides a simplified way to transport customizations between Dataverse for Teams environments. Additionally, customizations can also be moved between Dataverse and Dataverse for Teams environments.
 
 ## Export customizations from Dataverse for Teams

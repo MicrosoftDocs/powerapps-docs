@@ -1,6 +1,6 @@
 ---
 title: CaptureImageOptions | Microsoft Docs
-description: 
+description: Returns the current location using the device geo location capability. This method is supported only for the mobile clients.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -23,7 +23,7 @@ ms.assetid: 98f341b4-1d5d-4ad2-849d-5ea1d7e143b0
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Return Value
 

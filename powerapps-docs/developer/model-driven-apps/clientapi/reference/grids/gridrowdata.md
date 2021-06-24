@@ -1,6 +1,7 @@
 ---
 title: "GridRowData (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the GridRowData method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -20,12 +21,12 @@ search.app:
 
 GridRowData is returned by the [GridRow](gridrow.md).[getData](gridrow/getData.md) method.
 
-GridRowData also provides methods for retrieving information specific to a record displayed in an editable grid row, including a collection of all the attributes included in the row. Attribute data is limited to the columns presented by the editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
+GridRowData also provides methods for retrieving information specific to a record displayed in an editable grid row, including a collection of all the columns included in the row. Column data is limited to the columns presented by the editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
 
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();
 var myRow = myRows.get(arg);
-var gridRowData = myRow.getData();
+var gridRowData = myRow.data;
 ```
 
 ## Properties

@@ -41,7 +41,7 @@ Watch a quick overview of the Hospital Emergency Response solution.
 
 Contact your local Microsoft account representative for questions related to licensing.
 
-See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+See also: [Licensing overview for Power Platform](/power-platform/admin/pricing-billing-skus)
 
 ## Start here
 

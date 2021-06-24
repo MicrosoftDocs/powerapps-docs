@@ -1,8 +1,8 @@
 ---
 title: "Import Data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "If you want to import data into Microsoft Dataverse, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to import external data into Microsoft Dataverse. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,44 +15,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Import data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-<!--
-Was Mike Carter
-
-
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/import-data
-
-
-
-This should be the generic high-level content to support either web api or org service
-
-Should there be a separate topic for organization service and Web API?
-All these functions & actions exist:
-
-RetrieveParsedDataImportFile Function
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrieveparseddataimportfile?view=dynamics-ce-odata-9
-GetDistinctValuesImportFile Function
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/getdistinctvaluesimportfile?view=dynamics-ce-odata-9
-ParseImport Function
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/parseimport?view=dynamics-ce-odata-9
-TransformImport Action
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/transformimport?view=dynamics-ce-odata-9
-ImportRecordsImport Action
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/importrecordsimport?view=dynamics-ce-odata-9
-ExportMappingsImportMap Action
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/exportmappingsimportmap?view=dynamics-ce-odata-9
-ImportMappingsImportMap Action
-https://docs.microsoft.com/dynamics365/customer-engagement/web-api/importmappingsimportmap?view=dynamics-ce-odata-9
-
-Or should the core general content simply include both?
-
--->
-If you want to import data into Microsoft Dataverse, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse. You can import data into standard and customized attributes of most business and custom entities. You can also include related data, such as notes and attachments.  
+If you want to import data from external sources into Microsoft Dataverse, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Dataverse. You can import data into standard and customized columns of most business and custom tables. You can also include related data, such as notes and attachments.  
   
-Dataverse includes a web application tool called Import Data Wizard. You use this tool to import data records from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
+Dataverse includes a web application tool called Import Data Wizard. You use this tool to import data rows from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
   
  For more information about the Import Data Wizard, see Dataverse Help.  
   
@@ -70,7 +40,7 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
   
 - Add `LookupMap`XML tags in the data map to indicate that the data lookup will be initiated and performed on a source file that is used in the import.  
   
-- Add custom `OwnerMetadata`XML tags in the data map to match the user records in the source file with the records of the user (system user) in Dataverse.  
+- Add custom `OwnerMetadata`XML tags in the data map to match the user rows in the source file with the rows of the user (system user) in Dataverse.  
   
 - Use optional validation checks.  
   
@@ -93,12 +63,12 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
   
 - Upload the transformed data into the target Dataverse server.  
   
-  You can import data from one source file or several source files. A source file can contain data for one entity type or multiple entity types.  
+  You can import data from one source file or several source files. A source file can contain data for one table type or multiple table types.  
   
   Parsing, transforming, and uploading of data is done by the asynchronous jobs that run in the background.  
   
 > [!NOTE]
->  By default, all custom entities are enabled for import. To determine if a business entity is enabled for import, see the entity metadata for the specific entity. If an entity is enabled for import, the entity metadata property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business entities. <!--[!INCLUDE[metadata_browser](../includes/metadata-browser.md)]-->  
+>  By default, all custom tables are enabled for import. To determine if a business table is enabled for import, see the metadata for the specific table. If the table is enabled for import, the definition property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business tables. <!--[!INCLUDE[metadata_browser](../includes/metadata-browser.md)]-->  
 
 
 ### See Also
@@ -108,9 +78,8 @@ Dataverse includes a web application tool called Import Data Wizard. You use thi
 [Add transformation mappings for import](add-transformation-mappings-import.md)<br />
 [Configure data import](configure-data-import.md)<br />
 [Run data import](run-data-import.md)<br />
-[Data import entities](data-import-entities.md)<br />
+[Data import tables](data-import-entities.md)<br />
 [Sample: Export and import a data map](org-service/samples/export-import-data-map.md)<br />
 [Sample: Import data using complex data map](org-service/samples/import-data-complex-data-map.md)<br />
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

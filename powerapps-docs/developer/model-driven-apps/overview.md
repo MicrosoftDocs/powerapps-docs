@@ -7,6 +7,7 @@ manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na

@@ -1,6 +1,7 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
-ms.date: 08/12/2019
+description: A control represents an HTML element present on the form.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
@@ -15,9 +16,10 @@ search.app:
 ---
 # Controls (Client API reference)
 
-A control represents an HTML element present on the form. Some controls are bound to a specific attribute, whereas others may represent unbound controls such as an IFRAME, Web resource, or a sub grid that has been added to the form. 
+A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others may represent unbound controls such as an IFRAME, web resource, or a subgrid that has been added to the form. 
 
-The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding attribute. You access controls using one of the following collections: 
+The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. You access controls using one of the following collections: 
+
 - **formContext.ui.controls**
 - **formContext.ui Section.controls**
 - **formContext.data.entity** **Attribute.controls**
@@ -26,7 +28,9 @@ The **formContext**.[getControl](controls/getControl.md) method is a shortcut me
 
 Controls are categorized by type. You can determine the type of a control by using the [getControlType](controls/getControlType.md) method. Certain control methods are only available for specific types of controls.
 
-This topic provides information about the methods available per control type. 
+This article provides information about the methods available per control type. 
+
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## standard control type
 
@@ -194,9 +198,9 @@ These are the methods available for a lookup control.
 </tr>
 </table>
 
-## multiselectoptionset and optionset control types
+## choices and choice control types
 
-Both multi-select option set and option set controls have the same set of methods available.
+Both choices and choice controls have the same set of methods available.
 
 <table>
 <tr>
@@ -312,7 +316,7 @@ These are the methods available for the timer control.
 </tr>
 </table>
 
-## webresource control type
+## web resource control type
 
 A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
 
@@ -329,7 +333,7 @@ The Sliverlight web resource has these additional methods:
 </table>
 
 > [!TIP]
-> If you want to modify all the controls bound to an attribute on a form, use the controls collection inside the attribute type. For example, to add notification to each control bound to the `name` attribute, you can do the following:
+> If you want to modify all the controls bound to a column on a form, use the controls collection inside the column type. For example, to add notification to each control bound to the `name` column, you can do the following:
  >  ```JavaScript
  >   const notification = { messages: ['Sample Notification on Name Controls'], notificationLevel: 'RECOMMENDATION', uniqueId: 'my_unique_id'};
  >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
@@ -338,7 +342,7 @@ The Sliverlight web resource has these additional methods:
 
 ### Related topics
 
-[Attributes](attributes.md)
+[Columns](attributes.md)
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

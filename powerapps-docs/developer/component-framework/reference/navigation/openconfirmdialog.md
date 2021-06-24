@@ -1,6 +1,6 @@
 ---
 title: openConfirmDialog | Microsoft Docs
-description: 
+description: Displays a confirmation dialog box containing a message and two buttons.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

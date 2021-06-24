@@ -1,8 +1,8 @@
 ---
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
-description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
+description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
 ms.custom: ""
-ms.date: 01/04/2020
+ms.date: 05/07/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,9 +24,32 @@ search.app:
 
 # Retrieve and execute predefined queries
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
-Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+> [!NOTE]
+> Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with `null` values. When the value is `null`, the property will not be included in the results.
+
+When a query is returned using OData syntax, a record will include a property with a `null` value like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountnumber": null,
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
+When retrieved using a pre-defined query or with FetchXml, the same record will not include the `accountnumber` property because it is `null`, like so:
+
+```json
+{
+    "@odata.etag": "W/\"46849433\"",
+    "name": "Contoso, Ltd. (sample)",
+    "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+}
+```
+
 
 <a name="bkmk_predefinedQueries"></a>
 
@@ -36,8 +59,8 @@ Dataverse allows you to define, save, and execute two types of queries as listed
 
 |Query type|Description|
 |----------------|-----------------|
-|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information: [Customize entity views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information: [UserQuery (saved view) entity](../saved-queries.md)|
+|**Saved Query**|System-defined views for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType />. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType />. More information: [UserQuery (saved view) table](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -51,7 +74,7 @@ You can then use the `savedqueryid` value and pass it as the value to the savedQ
 GET [Organization URI]/api/data/v9.0/accounts?savedQuery=00000000-0000-0000-00aa-000010001002
 ```
 
-Use the same approach to get the userqueryid and pass it as the value to the `userQuery` parameter to the entity set that matches the corresponding `returnedtypecode` of the saved query.
+Use the same approach to get the `userqueryid` and pass it as the value to the `userQuery` parameter to the entity set that matches the corresponding `returnedtypecode` of the saved query.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?userQuery=121c6fd8-1975-e511-80d4-00155d2a68d1
@@ -78,6 +101,7 @@ You can pass URL encoded FetchXML as a query to the entity set corresponding to 
    <entity name='account'>
       <attribute name='accountid'/>
       <attribute name='name'/>
+      <attribute name='accountnumber'/>      
 </entity>
 </fetch>
 ```
@@ -85,7 +109,7 @@ You can pass URL encoded FetchXML as a query to the entity set corresponding to 
 The URL encoded value of this FetchXML is as shown here.
 
 ```text
-%3Cfetch%20mapping='logical'%3E%3Centity%20name='account'%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='name'/%3E%3C/entity%3E%3C/fetch%3E
+%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E
 ```
 
 Most programming languages include a function to URL encode a string. For example, in JavaScript you use the [encodeURI](https://www.ecma-international.org/ecma-262/5.1/) function. You should URL encode any request that you send to any RESTful web service. If you paste a URL into the address bar of your browser it should URL encode the address automatically. The following example shows a GET request using the FetchXML shown previously using the entity set path for accounts.
@@ -93,7 +117,7 @@ Most programming languages include a function to URL encode a string. For exampl
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping='logical'%3E%3Centity%20name='account'%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='name'/%3E%3C/entity%3E%3C/fetch%3E HTTP/1.1
+GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -109,7 +133,7 @@ OData-Version: 4.0
 {  
   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,name)","value":[  
     {  
-      "@odata.etag":"W/\"506678\"","accountid":"89390c24-9c72-e511-80d4-00155d2a68d1","name":"Fourth Coffee (sample)"  
+      "@odata.etag":"W/\"506678\"","accountid":"89390c24-9c72-e511-80d4-00155d2a68d1","name":"Fourth Coffee (sample)", "accountnumber":"1234",
     },{  
       "@odata.etag":"W/\"502172\"","accountid":"8b390c24-9c72-e511-80d4-00155d2a68d1","name":"Litware, Inc. (sample)"  
     },{  
@@ -135,6 +159,9 @@ OData-Version: 4.0
 }  
 ```
 
+> [!NOTE]
+> Properties with null values will not be included in results returned using FetchXml. In the example above, only the first record returned has an `accountnumber` value.
+
 <a name="bkmk_WebAPIFetchPaging"></a>
 
 ### Paging with FetchXML
@@ -159,7 +186,7 @@ A paging cookie must be requested as an annotation. Set the `odata.include-annot
 
 <a name="bkmk_FetchXMLwithinBatch"></a>
 
-### Use FetchXML within a Batch request
+### Use FetchXML within a batch request
 
 The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
@@ -232,15 +259,14 @@ OData-Version: 4.0
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

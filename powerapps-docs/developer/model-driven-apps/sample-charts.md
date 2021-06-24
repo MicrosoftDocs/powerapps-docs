@@ -2,7 +2,7 @@
 title: "Sample charts (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic contains sample charts along with the respective data description and presentation XML strings." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/04/2021
+ms.date: 04/14/2021
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,15 +19,17 @@ search.app:
 
 This article contains sample charts along with the respective data description and presentation XML strings. You can specify the:  
   
--   *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
+-  *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` for the organization-owned or user-owned chart respectively.  
   
--   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` attribute for the organization-owned or user-owned chart respectively.  
+-   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` for the organization-owned or user-owned chart respectively.  
   
 <a name="ColumnChart"></a>   
 
 ## Column chart  
 
-The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` entity to change it to a column chart.  
+The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` table to change it to a column chart.  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
 > ![Sample column chart: Accounts by Industry](media/charts-account-by-industry.png "Sample column chart: Accounts by Industry")  
@@ -90,7 +92,7 @@ The following is the contents of the presentation description XML string for thi
 
 ## Bar chart  
 
- The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
+ The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample bar chart: Top 10 Customers](media/charts-top-customers.png "Sample bar chart: Top 10 Customers")  
@@ -215,7 +217,7 @@ The following is the contents of the presentation description XML for this chart
 
 ## Line chart  
 
-The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` entity. 
+The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` table. 
 
 > [!div class="mx-imgBorder"]
 > ![Sample line chart: Lead Generation Rate](media/lead-generation-rate-chart.png "Sample line chart: Lead Generation Rate")
@@ -276,7 +278,7 @@ The following is the contents of the presentation description XML string for thi
  
 ## Pie chart  
 
-The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` entity.  
+The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample pie chart: Leads by Rating](media/leads-by-source-chart.png "Sample pie chart: Leads by Rating")  
@@ -333,7 +335,7 @@ The following is the contents of the presentation description XML string for thi
  
 ## Funnel chart  
 
-The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
+The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample funnel chart: Sales Pipeline](media/charts-sales-pipeline-chart.png "Sample funnel chart: Sales Pipeline")  
@@ -608,7 +610,7 @@ A comparison chart has two `groupby` clauses in the data description XML.
   
 ### See also  
 
- [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
+ [Data visualization and analytics](customize-visualizations-dashboards.md)   
  [Visualization data description schema](visualization-data-description-schema.md)   
  [Create a chart](create-visualization-chart.md)   
  [View data with visualizations (charts)](view-data-with-visualizations-charts.md)   

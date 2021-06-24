@@ -1,8 +1,8 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: ""
-ms.date: 09/15/2020
+ms.custom: intro-internal
+ms.date: 06/22/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -48,29 +48,8 @@ Power Apps provides you the following default [unmanaged](/power-platform/alm/so
 
 However, we recommend that you create a solution to manage your customizations. More information: [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations) in the Power Platform ALM guide.
 
-<!--  
-<a name="BKMK_HowSolutionsAreApplied"></a>   
-
-### How solutions are applied  
-All solutions are evaluated as layers to determine what your app will actually do. The following diagram shows how managed and unmanaged solutions are evaluated and how changes in them will appear in your environment.  
-  
-![Solution layering](media/solution-layering.png "Solution layering")  
-  
-Starting from the bottom and working up to top:  
-  
-**System Solution**  
-The system solution is like a managed solution that every environment has. The system solution is the definition of all the out-of-the box components in the system.  
-  
-**Managed Solutions**  
-Managed solutions can modify the system solution components and add new components. If multiple managed solutions are installed, the first one installed is below the managed solution installed later. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the general rule is "Last one wins." If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solution, the default behavior defined within the system solution is applied.  
-  
-**Unmanaged Customizations**  
-Unmanaged customizations are any change you have made to your environment through an unmanaged solution. The system solution defines what you can or can't customize by using managed properties. Publishers of managed solutions have the same ability to limit your ability to customize solution components that they add in their solution. You can customize any of the solution components that do not have managed properties that prevent you from customizing them.  
-  
-**Application Behavior**  
-The application or runtime behavior is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied. --> 
-
 ## Managed properties
+
 You can control which of your managed solution components are customizable by using managed properties. We recommend that you set managed properties so that your managed components can’t be modified. This helps protect your solution from modifications that may cause it to break after it's imported into another environment, such as test or production. 
 
 More information: [Managed properties in the Power Platform](/power-platform/alm/managed-properties-alm)
@@ -127,6 +106,18 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 > You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
 `"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
+## Additional privileges required
+
+Some components may require certain Dataverse privileges for users to run the component when the component is imported into the environment from a  solution.
+
+### Flows
+
+To use or run a flow from a canvas app that is included in a solution, you must be assigned a Dataverse security role with the following minimum permissions:
+
+- Read privilege on the **Solution** table.
+- Read privilege on the **Process** table.
+
+More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 ## Known limitations
 
@@ -135,12 +126,15 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
+- The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
 - You can’t add an instant flow into a solution when the following are true:
    - The flow was created outside of a solution.
    - The flow trigger is set to manual.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
+- [Copy and paste of flow actions](/business-applications-release-notes/april19/microsoft-flow/copy-paste-actions) is currently not supported when creating flows in a solution.
 
 For details about customizing the individual components in a solution, see the following topics:  
   

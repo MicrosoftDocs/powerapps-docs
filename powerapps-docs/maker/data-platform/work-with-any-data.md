@@ -38,7 +38,7 @@ Common Data Model provides reference architecture that's intended to streamline 
 
 Common Data Model includes a set of standardized, extensible data schemas that Microsoft and its partners have published. This collection of predefined schemas includes tables, attributes, semantic metadata, and relationships. The schemas represent commonly used concepts and activities, such as **Account** and **Campaign**, to simplify the creation, aggregation, and analysis of data.
 
-The Common Data Model schemas can be used to inform the creation of tables in Dataverse. The resulting tables will<!--Edit okay?--> then be compatible with apps and analytics that target this Common Data Model definition.
+The Common Data Model schemas can be used to inform the creation of tables in Dataverse. The resulting tables will then be compatible with apps and analytics that target this Common Data Model definition.
 
 The following image shows some elements of the standard Common Data Model tables. 
 

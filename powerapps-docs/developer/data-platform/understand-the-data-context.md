@@ -1,8 +1,8 @@
 ---
 title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about the data that is passed to your plug-ins when it is executed." 
+description: "Learn about the data that is passed to your plug-in when it is executed." 
 ms.custom: ""
-ms.date: 09/08/2020
+ms.date: 03/12/2021
 ms.reviewer: pehecke
 ms.service: powerapps
 ms.topic: "article"
@@ -18,13 +18,13 @@ search.app:
 
 # Understand the execution context
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and the plug-in's execution environment.
+The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and your custom code's execution environment. The following sections describe the data that is passed to your plug-in or custom workflow activity.
 
 ## For plug-ins
 
-With Plug-ins you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
+With plug-ins you can access this data in your code by setting a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface:
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -32,7 +32,9 @@ IPluginExecutionContext context = (IPluginExecutionContext)
     serviceProvider.GetService(typeof(IPluginExecutionContext));
 ```
 
-This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plugin is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext> See [ParentContext](#parentcontext)
+This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plug-in is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.
+
+More information: [ParentContext](#parentcontext)
 
 ## For Custom Workflow Activities
 
@@ -46,7 +48,7 @@ protected override void Execute(CodeActivityContext context)
 ...
 ```
 
-This <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> provides some information about the workflow that the plug-in is running within.
+This <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> provides some information about the workflow that the custom workflow activity is running within.
 
 |Property  |Description  |
 |---------|---------|
@@ -67,23 +69,23 @@ If you do choose to take a dependency on values found in the `ParentContext`, yo
 
 The rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> classes implement.
 
-For plug-ins all the properties of this class provide useful information you may need to access in your code. 
+For plug-ins, all the properties of this execution context class provide useful information you may need to access in your code.
 
 > [!NOTE]
-> For custom workflow activities these properties are generally not used.
+> For custom workflow activities, these properties are generally not used.
 
 Two of the most important are the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties.
 
 Other frequently used properties are <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables>, <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages>, and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages>.
 
 > [!TIP]
-> A good way to visualize the data that is passed into the execution context is to install the plug-in profiler solution that is available as part of the plug-in registration tool. The profiler will capture the context information as well as information that allows for replaying event locally so you can debug. Within the plugin registration tool, you can download an xml document with all the data from the event that triggered the workflow. More information: [View Plug-in Profile data](debug-plug-in.md#view-plug-in-profile-data)
+> A good way to visualize the data that is passed into the execution context is to install the Plug-in Profiler solution that is available as part of the Plug-in Registration tool. The profiler will capture the context information as well as information that allows for replaying event locally so you can debug. Within the Plug-in Registration tool, you can download an XML document with all the data from the event that triggered the workflow. More information: [View plug-in profile data](debug-plug-in.md#view-plug-in-profile-data)
 
 ## ParameterCollections
 
 All the properties of the execution context are read-only. But the `InputParameters`, `OutputParameters`, and `SharedVariables` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can manipulate the values of the items in these collections to change the behavior of the operation, depending on the stage in the event execution pipeline your plug-in is registered for.
 
-The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair%602> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
+The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
 
 ```csharp
 var entity = (Entity)context.InputParameters["Target"];
@@ -193,13 +195,13 @@ For information about how to set this see the following topics:
 
 
 
-## Entity Images
+## Entity images
 
-When you register a step for a plug-in that includes an entity as one of the parameters, you have the option to specify that a copy of the entity data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
+When you register a step for a plug-in that includes a table as one of the parameters, you have the option to specify that a copy of the table data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
 
-This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values.
+This data provides a comparison point for table data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve a table just to compare the attribute values.
 
-When you define an entity image, you specify an entity alias value you can use to access the specific image. For example, if you define a pre entity image with the alias '`a`', you can use the following code to access the `name` attribute value.
+When you define an entity image, you specify an entity alias value you can use to access the specific image. For example, if you define a pre-entity image with the alias '`a`', you can use the following code to access the `name` attribute value.
 
 ```csharp
 var oldAccountName = (string)context.PreEntityImages["a"]["name"];
@@ -208,9 +210,7 @@ var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 More information:
 
 - [Define entity images](register-plug-in.md#define-entity-images)
-- [Entity Images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
-
-
+- [Entity images for workflow extensions](workflow/workflow-extensions.md#entity-images-for-workflow-extensions)
 
 ### See also
 

@@ -1,6 +1,6 @@
 ---
-title: Tips to improve canvas app performance | Microsoft Docs
-description: Follow the best practices in this topic to boost the performance of canvas apps that you create in Power Apps. 
+title: Tips and best practices to improve performance of canvas apps
+description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
   - chmoncay
 ---
-# Tips and best practices to improve canvas app performance
+# Tips and best practices to improve performance of canvas apps
 
 In the previous articles, you learned about the [execution phases and data call flow](execution-phases-data-flow.md), [common sources of slow performance](slow-performance-sources.md), and [common performance issues and resolutions](common-performance-issue-resolutions.md) in canvas apps. You can also benefit by following the tips and best practices in this article to boost the performance of apps that you create.
 
@@ -99,7 +99,7 @@ Where possible, use functions that delegate data processing to the data source i
 > [!TIP]
 > To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|

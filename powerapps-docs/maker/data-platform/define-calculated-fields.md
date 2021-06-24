@@ -2,12 +2,12 @@
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
 ms.custom: ""
-ms.date: 05/25/2018
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -23,24 +23,23 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Define calculated columns to automate manual calculations
+# Define calculated columns to automate calculations
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use calculated columns to automate manual calculations used in your business processes. 
+Use calculated columns to automate otherwise manual calculations used in your business processes.
 
-For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
+For example, a salesperson may want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   
 - Calculated columns use the columns from the current table or related parent tables.  
 - The expression support is available on the current table and the related parent table columns in the **Condition** sections and the **Action** sections. The built-in functions include:  
- **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  
+ **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  More information: [Functions syntax](#functions-syntax) 
 - A rich conditional support provides branching and multiple conditions. The logical operations include **AND** and **OR** operators.  
 - The visual editing capabilities include modern user interface and intellisense in the **ACTION** section. 
-- A seamless integration of the calculated columns with the forms, views, charts, and reports is available in real time.  
+- A seamless integration of the calculated columns with the forms, views, charts, and reports are available in real time.  
 - You can configure calculated columns to use custom controls.  
-  
   
 ## Scenarios
   
@@ -54,38 +53,42 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 > [!IMPORTANT]
 >  To create a calculated column you must have the Write privilege on the [Field Security Profile table](../../developer/data-platform/reference/entities/fieldsecurityprofile.md). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
 
+## Column types that support calculations
+
+- Text
+- Choice  
+- Yes/No  
+- Whole Number  
+- Decimal Number  
+- Currency  
+- Date Time
+
 ## Create a calculated column
 
-Use the column editor to specify a calculated column. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit columns](create-edit-fields.md)
-  
-1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
-1. Select the table you want and choose **Columns**. Choose **Add Field**.  
-1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**. 
-1. If the data type is one of types that support calculated columns, you can make the column a calculated column by selecting **Add** > **Calculation**.
+1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
+1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
+1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
     ![Make column calculated](media/make-field-calculated-maker.png)
 
-    These are the types of columns that support calculations:
-    - Text
-    - Choice  
-    - Yes/No  
-    - Whole Number  
-    - Decimal Number  
-    - Currency  
-    - Date Time
+1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
+1. On the **Columns** tab, open the column that you saved in the previous step.
+1. On the column properties pane, select **Open calculation**.
 
-1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
-1. This will open the calculated column definition editor, where the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
+   <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
+
+1. In the calculated column definition editor, notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form](media/empty-field-calculation.png)
-- In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
-- In the **Action** section, you provide the formula for the calculated column.  
+   1. In the **Condition** section, select **Add condition** to specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators. When you're finished specifying the condition, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
+   1. After you've specified the condition, in the **Action** section, select **Add action** to provide the formula for the calculated column. When you're finished specifying the action, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
   
-> [!NOTE]
->  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
->   
->  Note that column level security will be ignored on the related table, so if there is sensitive data in the accessed column we suggest securing your calculated column as well.  
-
+   > [!NOTE]
+   >  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
+   >   
+   >  Note that column level security will be ignored on the related table, so if there is sensitive data in the accessed column we suggest securing your calculated column as well.  
+1. In the calculated column definition editor, select **Save and Close**.
 
 <a name="BusinessScenarios"></a> 
   
@@ -97,7 +100,7 @@ Let’s take a look at calculated column examples in more detail.
 
 In this example, we are using the columns of the opportunity table to calculate the weighted revenue based on the opportunity’s probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
 
-In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step-by-step how to define the **Weighted Revenue** calculated column.  
+In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step by step how to define the **Weighted Revenue** calculated column.  
   
 #### Set the condition on the opportunities:
   
@@ -111,7 +114,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 ![Weighted revenue to est. revenue in Dynamics 365](media/calculated-field-open-opportunity.png)  
   
-### Follow-up date of opportunity 
+### Follow up date of opportunity 
  
 In this example, we are using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
 
@@ -123,7 +126,7 @@ In the **ACTION**, we provide two formulas:
  - To follow up in one week on the immediate opportunity
  - To follow up in one month if the opportunity is not likely to happen right away. 
 
-The following screenshots show step-by-step how to define the **Follow-up date** calculated column.  
+The following screenshots show step by step how to define the **Follow-up date** calculated column.  
   
 #### Set the two conditions on the originating lead:
   

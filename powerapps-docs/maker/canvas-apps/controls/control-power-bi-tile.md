@@ -1,6 +1,6 @@
 ---
-title: 'Power BI tile control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Power BI tile control
+title: Power BI tile control in Power Apps
+description: Learn about the details, properties and examples of the Power BI tile control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -58,6 +58,7 @@ The parameter will filter a value in the dataset of the report where the tile or
 - Only the `eq` operator is supported.
 - Field type must be string.
 - Filtering is only available on pinned visualization tiles. It's not supported for pinned reports.
+- R and Python script visuals cannot be filtered.
 
 You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 

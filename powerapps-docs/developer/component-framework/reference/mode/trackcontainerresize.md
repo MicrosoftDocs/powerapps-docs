@@ -1,6 +1,6 @@
 ---
 title: TrackContainerResize | Microsoft Docs
-description: 
+description: Determines the container sizing if the component needs to react.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -24,9 +24,12 @@ If the parent context hosting the component provides a limit on the height in mo
 
 In canvas apps, the parent context always provides the height and width to the component by nature of the drag-and-drop editor.
 
+> [!NOTE]
+> tractContainerResize should be called first before the `allocatedHeight` and `allocatedWidth` methods.
+
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

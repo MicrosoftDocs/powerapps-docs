@@ -1,16 +1,19 @@
 ---
-title: "Manage forum access permissions | MicrosoftDocs"
-description: "Learn about control flow tags available in portal"
+title: Manage forum access permissions
+description: Learn about managing forum access permissions in portals.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
-# Manage forum access permissions 
+# Manage forum access permissions
 
 Forum Access Permission is a security rule that can be assigned to a particular forum and web role that can restrict particular users from viewing the forum or granting particular users the ability to moderate a forum within the webpages. To create, edit, or delete forum access permissions:
 

@@ -31,8 +31,6 @@ With relevance search, the search box is always available at the top of every pa
 
 Your administrator must turn on the new relevance search experience for your organization. When relevance search is turned on, you'll see a search box in the header that resembles the search experience you're familiar with. After it's enabled, it will be available across all model-driven apps in your organization. More information: [Configure relevance search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)
 
-> [!NOTE]
-> If you opt in to early access for 2021 release wave 1 updates and relevance search is enabled, the new relevance search experience will be turned on for all users. Users won't have the option to use categorized search anymore. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates)
 
 ## See recent rows and searches
 
@@ -52,7 +50,7 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-an-artifact-table-dashboard-or-business-process-flow).
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
@@ -60,7 +58,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-With [early access for 2021 release wave 1](/power-platform/admin/opt-in-early-access-updates), suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
+Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
 
 
 ![Suggested results that appear when you enter a search query](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
@@ -252,7 +250,7 @@ However, searching for **evaluation + -agreed** will match all rows that contain
 
 ### Wildcards
 
-Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*winery** will show results for all records associated with a keyword that ends with **winery**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
 
 ![Example of results for a search that uses a wildcard](media/wild-card.png "Example of results for a search that uses a wildcard")  
 
@@ -262,11 +260,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 ![Example of results for a search that uses an exact match](media/exact-match.png "Example of results for a search that uses an exact match")  
 
-## Quick actions (Preview)
-
- [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
-This section lists new features that can be used by opting in to early access. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates)
+## Quick actions
 
 The new relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
@@ -280,7 +274,8 @@ Quick actions are small set of commands specific to a table. You can see quick a
 | Task     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
 | Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
 | Email     |     Cancel, Set Regarding, Email a link  |
-| Any custom table     |     Assign, Share, Email a link  |
+
+For more information on how to configure quick actions, see [Configure Relevance Search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ### Quick actions and suggested results
 
@@ -329,6 +324,17 @@ If your organization has turned on both search options (old relevance search and
 
     > [!div class="mx-imgBorder"]
     > ![Relevance search box](media/relevance-search-box.png "Relevance search box")
+    > 
+
+## Use keyboard shortcuts
+
+The following keyboard shortcuts apply to grids. For more information, see:
+
+- [Navigation](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#navigation) 
+- [Editing](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#editing)
+- [Selection](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#selection)
+
+
 
 ### See also
 

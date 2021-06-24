@@ -1,6 +1,6 @@
 ---
 title: getLinkedEntities | Microsoft Docs
-description: 
+description: Returns all the linked tables information.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

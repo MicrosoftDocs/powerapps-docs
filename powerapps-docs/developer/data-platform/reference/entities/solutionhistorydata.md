@@ -1,22 +1,24 @@
 ---
-title: "SolutionHistoryData entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SolutionHistoryData table."
-ms.date: 11/14/2020
+title: "SolutionHistoryData table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SolutionHistoryData table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SolutionHistoryData entity reference
+
+# SolutionHistoryData table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 solution history data
 
@@ -25,9 +27,9 @@ solution history data
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutionhistories<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutionhistories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -45,9 +47,9 @@ solution history data
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityId](#BKMK_ActivityId)
 - [CorrelationId](#BKMK_CorrelationId)
@@ -174,7 +176,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -197,7 +199,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsMicrosoftPublisher Options
+#### IsMicrosoftPublisher Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -220,7 +222,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsOverwriteCustomizations Options
+#### IsOverwriteCustomizations Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -243,7 +245,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPatch Options
+#### IsPatch Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -266,7 +268,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Operation Options
+#### Operation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -427,7 +429,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Status Options
+#### Status Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -448,7 +450,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### SubOperation Options
+#### SubOperation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -463,8 +465,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.solutionhistorydata?text=solutionhistorydata EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

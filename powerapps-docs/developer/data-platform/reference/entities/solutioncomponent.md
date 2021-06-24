@@ -1,24 +1,26 @@
 ---
-title: "SolutionComponent entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SolutionComponent table."
-ms.date: 11/14/2020
+title: "SolutionComponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SolutionComponent table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SolutionComponent entity reference
+
+# SolutionComponent table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-A component of a CRM solution.
+A component of a Dataverse solution.
 
 
 ## Messages
@@ -28,11 +30,11 @@ A component of a CRM solution.
 |AddSolutionComponent|<xref href="Microsoft.Dynamics.CRM.AddSolutionComponent?text=AddSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest>|
 |IsComponentCustomizable|<xref href="Microsoft.Dynamics.CRM.IsComponentCustomizable?text=IsComponentCustomizable Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsComponentCustomizableRequest>|
 |RemoveSolutionComponent|<xref href="Microsoft.Dynamics.CRM.RemoveSolutionComponent?text=RemoveSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutioncomponents<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutioncomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |UpdateSolutionComponent|<xref href="Microsoft.Dynamics.CRM.UpdateSolutionComponent?text=UpdateSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.UpdateSolutionComponentRequest>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -50,9 +52,9 @@ A component of a CRM solution.
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentType](#BKMK_ComponentType)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -87,7 +89,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentType Options
+#### ComponentType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -271,7 +273,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsMetadata Options
+#### IsMetadata Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -382,7 +384,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### RootComponentBehavior Options
+#### RootComponentBehavior Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -471,7 +473,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_solutioncomponent_parent_solutioncomponent"></a> solutioncomponent_parent_solutioncomponent
 
-Same as solutioncomponent entity [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) Many-To-One relationship.
+Same as solutioncomponent table [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -487,7 +489,7 @@ Same as solutioncomponent entity [solutioncomponent_parent_solutioncomponent](so
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_solutioncomponentbase_modifiedonbehalfby](#BKMK_lk_solutioncomponentbase_modifiedonbehalfby)
 - [solutioncomponent_parent_solutioncomponent](#BKMK_solutioncomponent_parent_solutioncomponent)
@@ -497,24 +499,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_solutioncomponentbase_modifiedonbehalfby"></a> lk_solutioncomponentbase_modifiedonbehalfby
 
-See systemuser Entity [lk_solutioncomponentbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_solutioncomponentbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_solutioncomponent_parent_solutioncomponent"></a> solutioncomponent_parent_solutioncomponent
 
-See solutioncomponent Entity [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) One-To-Many relationship.
+See solutioncomponent Table [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) One-To-Many relationship.
 
 ### <a name="BKMK_lk_solutioncomponentbase_createdonbehalfby"></a> lk_solutioncomponentbase_createdonbehalfby
 
-See systemuser Entity [lk_solutioncomponentbase_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_solutioncomponentbase_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
 
-See solution Entity [solution_solutioncomponent](solution.md#BKMK_solution_solutioncomponent) One-To-Many relationship.
+See solution Table [solution_solutioncomponent](solution.md#BKMK_solution_solutioncomponent) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.solutioncomponent?text=solutioncomponent EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,13 +1,16 @@
 ---
-title: "Manage knowledge articles using content access levels for portals | MicrosoftDocs"
-description: "Instructions to manage knowledge articles by using content access levels in a portal."
+title: Manage knowledge articles by using content access levels
+description: Learn how to manage knowledge articles by using content access levels in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage knowledge articles by using content access levels
@@ -40,7 +43,7 @@ If you want to add content access level in a knowledge article from the Customer
 
     ![Open app designer](media/csh-app-designer.png "Open app designer")
 
-2. Under **Entity View**, select the **Forms** tile for the **Knowledge Article** entity.
+2. Under **Table View**, select the **Forms** tile for the **Knowledge Article** entity.
 
 3. In the **Components** pane, select **Portal Knowledge Article for Interactive experience**.
 

@@ -2,7 +2,7 @@
 title: "Sample: Import files as web resources(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The sample provides a simplified example of importing files as web resources." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -19,19 +19,19 @@ search.app:
 
 When you develop a large number of files to use as Web resources you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven apps and then imported.  
   
- This sample provides a simplified example of this process.  
+This sample provides a simplified example of this process.  
  
- Download the sample: [Import files as web resources](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources). 
+Download the sample: [Import files as web resources](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources). 
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Prerequisites
+
 [!INCLUDE[sdk-prerequisite](../../includes/sdk-prerequisite.md)]
   
 ## Requirements  
 
-
-<!-- TODO: This should be written so that the connection helper code is not required. [!INCLUDE[sdk_SeeConnectionHelper](../../includes/sdk-seeconnectionhelper.md)] -->
-  
- The sample code included in the SDK download package includes the following files required by this sample:  
+The sample code included in the SDK download package includes the following files required by this sample:  
   
  **ImportJob.xml**  
  This file provides data about the Web Resource records that will be created. For each file it contains the following data:  
@@ -158,8 +158,8 @@ foreach (var webResource in webResources)
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
 ### See also  
- [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br/>
- [Web Resources](web-resources.md)
+ [Web resource table reference](../data-platform/reference/entities/webresource.md)<br/>
+ [Web resources](web-resources.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

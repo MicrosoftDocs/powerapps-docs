@@ -1,13 +1,16 @@
 ---
-title: "Render a website header and primary navigation bar in a portal | MicrosoftDocs"
-description: "Instructions and sample code to render a website header and primary navigation bar on a portal."
+title: Render a website header and primary navigation bar
+description: Learn about and sample code to render a website header and primary navigation bar on a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Render a website header and primary navigation bar
@@ -191,7 +194,7 @@ Render a website header and primary navigation bar, using portals settings, snip
 
 [Create a custom page template by using Liquid and a web template page template](create-custom-template.md)  
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
 

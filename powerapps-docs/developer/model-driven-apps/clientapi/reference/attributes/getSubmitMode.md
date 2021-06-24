@@ -1,6 +1,7 @@
 ---
 title: "getSubmitMode (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getSubmitMode method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,9 +19,9 @@ search.app:
 
 
 
-Returns a string indicating when data from the attribute will be submitted when the record is saved. 
+Returns a string indicating when data from the column will be submitted when the record is saved. 
 
-## Attribute types supported
+## Column types supported
 
 All
 

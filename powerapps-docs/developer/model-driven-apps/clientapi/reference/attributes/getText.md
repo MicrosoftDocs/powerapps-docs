@@ -1,6 +1,7 @@
 ---
 title: "getText (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 1/10/2019
+description: Includes description and supported parameters for the getText method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,11 +19,11 @@ search.app:
 
 
 
-Returns a string value of the text for the currently selected option for an **optionset** or **multiselectoptionset** attribute. 
+Returns a string value of the text for the currently selected option for a **choice** or **choices** column. 
 
-## Attribute types supported
+## Column types supported
 
-optionset, multiselectoptionset
+choice, choices
 
 ## Syntax
 

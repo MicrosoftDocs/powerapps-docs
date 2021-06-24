@@ -1,22 +1,24 @@
 ---
-title: "PostComment entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PostComment table."
-ms.date: 11/14/2020
+title: "PostComment table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the PostComment table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PostComment entity reference
+
+# PostComment table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 A comment on an activity feed post.
 
@@ -25,12 +27,12 @@ A comment on an activity feed post.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/postcomments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postcomments<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST [*org URI*]/api/data/v9.0/postcomments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postcomments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -48,15 +50,35 @@ A comment on an activity feed post.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [LargeText](#BKMK_LargeText)
 - [PostCommentId](#BKMK_PostCommentId)
 - [PostId](#BKMK_PostId)
 - [Text](#BKMK_Text)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_LargeText"></a> LargeText
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the text of a post comment.|
+|DisplayName|Text|
+|Format|Email|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|largetext|
+|MaxLength|1073741823|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
 
 
 ### <a name="BKMK_PostCommentId"></a> PostCommentId
@@ -138,9 +160,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -306,11 +328,34 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|String|
 
+<a name="onetomany"></a>
+
+## One-To-Many Relationships
+
+Listed by **SchemaName**.
+
+
+### <a name="BKMK_post_comment_activity_file_attachment"></a> post_comment_activity_file_attachment
+
+**Added by**: Activities Patch Solution
+
+Same as activityfileattachment table [post_comment_activity_file_attachment](activityfileattachment.md#BKMK_post_comment_activity_file_attachment) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|activityfileattachment|
+|ReferencingAttribute|parentid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|post_comment_activity_file_attachment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_postcomment_createdby](#BKMK_lk_postcomment_createdby)
 - [organization_PostComment](#BKMK_organization_PostComment)
@@ -320,24 +365,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_postcomment_createdby"></a> lk_postcomment_createdby
 
-See systemuser Entity [lk_postcomment_createdby](systemuser.md#BKMK_lk_postcomment_createdby) One-To-Many relationship.
+See systemuser Table [lk_postcomment_createdby](systemuser.md#BKMK_lk_postcomment_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_PostComment"></a> organization_PostComment
 
-See organization Entity [organization_PostComment](organization.md#BKMK_organization_PostComment) One-To-Many relationship.
+See organization Table [organization_PostComment](organization.md#BKMK_organization_PostComment) One-To-Many relationship.
 
 ### <a name="BKMK_lk_postcomment_createdonbehalfby"></a> lk_postcomment_createdonbehalfby
 
-See systemuser Entity [lk_postcomment_createdonbehalfby](systemuser.md#BKMK_lk_postcomment_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_postcomment_createdonbehalfby](systemuser.md#BKMK_lk_postcomment_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_Post_Comments"></a> Post_Comments
 
-See post Entity [Post_Comments](post.md#BKMK_Post_Comments) One-To-Many relationship.
+See post Table [Post_Comments](post.md#BKMK_Post_Comments) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.postcomment?text=postcomment EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

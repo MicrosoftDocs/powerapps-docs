@@ -1,13 +1,16 @@
 ---
-title: "Power Apps portals lifecycle - different stages of a portal. | MicrosoftDocs"
-description: "Information about the Power Apps portals lifecycle and converting it from trial to production."
+title: Power Apps portals lifecycle
+description: Information about the Power Apps portals lifecycle and converting it from trial to production.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Power Apps portals lifecycle

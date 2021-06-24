@@ -1,6 +1,7 @@
 ---
 title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
-ms.date: 02/25/2020
+description: Provides container for useful methods.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -13,8 +14,6 @@ search.app:
   - D365CE
 ---
 # Xrm.Utility (Client API reference)
-
-
 
 Provides a container for useful methods.
 
@@ -34,6 +33,8 @@ Provides a container for useful methods.
 |[lookupObjects](xrm-utility/lookupObjects.md) |[!INCLUDE[./xrm-utility/includes/lookupObjects-description.md](./xrm-utility/includes/lookupObjects-description.md)]|
 |[refreshParentGrid](xrm-utility/refreshParentGrid.md) |[!INCLUDE[./xrm-utility/includes/refreshParentGrid-description.md](./xrm-utility/includes/refreshParentGrid-description.md)]|
 |[showProgressIndicator](xrm-utility/showProgressIndicator.md) |[!INCLUDE[./xrm-utility/includes/showProgressIndicator-description.md](./xrm-utility/includes/showProgressIndicator-description.md)]|
+
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Deprecated methods
 

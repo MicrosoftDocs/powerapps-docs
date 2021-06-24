@@ -1,6 +1,7 @@
 ---
 title: "addOnLookupTagClick (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/24/2020
+description: Includes description and supported parameters for the addOnLookupTagClick method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -23,6 +24,8 @@ Lookup
 ## Syntax
 
 `formContext.getControl(arg).addOnLookupTagClick(myFunction);`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 

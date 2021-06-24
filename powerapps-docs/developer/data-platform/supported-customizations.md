@@ -1,8 +1,8 @@
 ---
-title: "Supported Customizations for Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can customize Microsoft Dataverse by using tools that are available in Power Apps or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 01/25/2019
+title: "Supported customizations for Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.custom: intro-internal
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,21 +16,13 @@ search.app:
   - D365CE
 ---
 
-<!-- This is the portion of the old topic that applies to Microsoft Dataverse
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
- -->
+# Supported customizations for Dataverse
 
-
-# Supported Customizations for Dataverse
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-You can customize Dataverse by using tools that are available in Power Apps or that are described in the official documentation. These customizations are supported and can be upgraded.
+You can customize Microsoft Dataverse by using tools that are available in Power Apps or that are described in the developer documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Dataverse. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
-
+Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com are supported, but might not be upgradable.
 
 ## Customizations using Power Apps
 
@@ -56,7 +48,7 @@ The documentation on this site for developers, technical articles, and sample co
 
 ### Dataverse web services
 
-Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Entity attributes may also change in future versions.
+Use of the web services are fully supported. This includes: Web API, SDK API, Organization service, Discovery service, and the Organization Data service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Table columns may also change in future versions.
 
 ### Solution file
 
@@ -86,7 +78,7 @@ The ability to create custom business logic using the plug-in mechanism describe
 
 The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. Custom workflow activities can only be registered and executed in the sandbox (isolation). More information: [Workflow extensions](workflow/workflow-extensions.md)
 
-## Support for .NET Framework Versions
+## Support for .NET Framework versions
 
 The following describes the support considerations for custom code written the Microsoft .NET Framework 4.6.2.
 
@@ -117,9 +109,9 @@ The following is a list of unsupported action types that are frequently asked ab
     - Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll
     - Microsoft.Xrm.Tooling.WebResourceUtility.dll
 
-- The use of application programming interfaces (APIs) other than the documented APIs in the web services: Web API, Organization Service, Deployment Service, Discovery Service, Organization Data Service.
+- The use of application programming interfaces (APIs) other than the documented APIs in the web services: SDK API, Web API, Organization service, Deployment service, Discovery service, Organization Data service.
 
-- Plugin and Workflow Assemblies must contain all the necessary logic within the respective dll. Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
+- Plug-in and workflow assemblies must contain all the necessary logic within the respective DLL. Plugins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 
 - Creating a plug-in assembly for a standard Dataverse assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
 
@@ -132,10 +124,5 @@ The following is a list of unsupported action types that are frequently asked ab
 ### See also
 
 [Supported customizations for model-driven apps](../model-driven-apps/supported-customizations.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

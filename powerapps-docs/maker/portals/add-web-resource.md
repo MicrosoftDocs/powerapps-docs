@@ -1,13 +1,16 @@
 ---
-title: "Add Azure storage web resource to a form | MicrosoftDocs"
-description: "Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage."
+title: Add Azure storage web resource to a form
+description: Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - gitanjalisingh33msft
+    - tapanm-msft
 ---
 
 # Add the Azure Storage web resource to a form
@@ -17,9 +20,9 @@ Attachments uploaded to Azure Storage (instead of directly to Microsoft Datavers
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
-> In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
+> In this example, the form is added to the Lead form for the Lead table. We recommend using caution when editing existing forms.
 
-When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an entity and a placeholder for the attachment.
+When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an table and a placeholder for the attachment.
 
 ![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 

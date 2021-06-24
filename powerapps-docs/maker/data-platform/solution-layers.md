@@ -2,7 +2,7 @@
 title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 08/05/2020
+ms.date: 03/05/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -71,19 +71,17 @@ There are additional tabs available for specific component solution layers.
 |AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for a choice .   | Added, Updated, Removed, Unchanged        |
 |AttributePicklistValues (optionset attribute)   |  When selected for a choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
-<!--## Remove an unmanaged layer
+### Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
-[!IMPORTANT]
-> Removing active unmanaged customizations can't be reversed or undone. All data associated with the unmanaged customization may be lost.
+> [!WARNING]
+> Removing active unmanaged customizations can't be reversed or undone. All data associated with the unmanaged customization can be lost.
 
 1. Open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
-2. If an unmanaged layer is detected, a message appears indicating the layer. On the left **Properties** pane, select **Remove unmanaged layer**. 
+1. If an unmanaged layer exists, **Unmanaged layer** is displayed in the **Solution** column for the layer.
+1. Select the layer, and then on the command bar, select **Remove unmanaged layer**.
     > [!div class="mx-imgBorder"] 
     > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
-3. Save and publish to fully remove the unmanaged layer.
-
--->
 
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />

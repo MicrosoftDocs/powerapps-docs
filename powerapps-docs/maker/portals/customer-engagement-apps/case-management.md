@@ -1,13 +1,16 @@
 ---
-title: "Manage cases in a portal | MicrosoftDocs"
-description: "Learn how to manage cases in a portal."
+title: Manage cases in portals
+description: Learn how to manage cases in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage cases in portals

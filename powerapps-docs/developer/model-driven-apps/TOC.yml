@@ -6,17 +6,17 @@
   href: supported-customizations.md
 - name: Design app interface using code
   items:
-  - name: Customize entity forms
+  - name: Customize forms
     href: customize-entity-forms.md
     items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Customize entity views
+  - name: Customize views
     href: customize-entity-views.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
-    - name: Set field values using parameters passed to a form
+    - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md
@@ -81,7 +81,7 @@
     - name: Client-side events
       href: clientapi/reference/events.md
       items:
-      - name: Attribute OnChange event
+      - name: Column OnChange event
         href: clientapi/reference/events/attribute-onchange.md
       - name: Form OnLoad event
         href: clientapi/reference/events/form-onload.md
@@ -164,6 +164,8 @@
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
         href: clientapi/reference/save-event-arguments/preventDefault.md
+      - name: preventDefaultOnError
+        href: clientapi/reference/save-event-arguments/preventDefaultOnError.md
     - name: Attributes
       href: clientapi/reference/attributes.md
       items:
@@ -238,6 +240,8 @@
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
         href: clientapi/reference/controls/addOnLookupTagClick.md
+      - name: addOnPostSave
+        href: clientapi/reference/controls/addOnPostSave.md
       - name: addOnPostSearch
         href: clientapi/reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -302,6 +306,8 @@
         href: clientapi/reference/controls/refresh.md
       - name: removeOnLookupTagClick
         href: clientapi/reference/controls/removeOnLookupTagClick.md
+      - name: removeOnPostSave
+        href: clientapi/reference/controls/removeOnPostSave.md
       - name: removeOnPostSearch
         href: clientapi/reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened

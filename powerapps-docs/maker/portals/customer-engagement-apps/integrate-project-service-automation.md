@@ -1,13 +1,16 @@
 ---
-title: "Integrate Dynamics 365 Project Service Automation with a portal | MicrosoftDocs"
-description: "Instructions to integrate Project Service Automation with a portal."
+title: Integrate Project Service Automation
+description: Learn how to integrate Project Service Automation with a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Integrate Project Service Automation

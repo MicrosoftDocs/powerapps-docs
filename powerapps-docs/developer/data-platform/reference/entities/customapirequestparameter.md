@@ -1,22 +1,24 @@
 ---
-title: "CustomAPIRequestParameter entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CustomAPIRequestParameter table."
-ms.date: 11/14/2020
+title: "CustomAPIRequestParameter table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the CustomAPIRequestParameter table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# CustomAPIRequestParameter entity reference
+
+# CustomAPIRequestParameter table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Entity that defines a request parameter for a custom API
 
@@ -27,21 +29,21 @@ Entity that defines a request parameter for a custom API
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/customapirequestparameters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/customapirequestparameters<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customapirequestparameters<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customapirequestparameters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/customapirequestparameters(*customapirequestparameterid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ Entity that defines a request parameter for a custom API
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CustomAPIId](#BKMK_CustomAPIId)
 - [CustomAPIRequestParameterId](#BKMK_CustomAPIRequestParameterId)
@@ -123,7 +125,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|description|
-|MaxLength|100|
+|MaxLength|300|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -191,7 +193,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsOptional Options
+#### IsOptional Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -295,7 +297,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -316,7 +318,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -354,7 +356,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Type Options
+#### Type Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -369,6 +371,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |8|Money|
 |9|Picklist|
 |10|String|
+|11|StringArray|
+|12|Guid|
 
 
 
@@ -406,9 +410,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -468,7 +472,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -628,7 +632,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -923,7 +927,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [customapirequestparameter_SyncErrors](syncerror.md#BKMK_customapirequestparameter_SyncErrors) Many-To-One relationship.
+Same as syncerror table [customapirequestparameter_SyncErrors](syncerror.md#BKMK_customapirequestparameter_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -940,7 +944,7 @@ Same as syncerror entity [customapirequestparameter_SyncErrors](syncerror.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [customapirequestparameter_AsyncOperations](asyncoperation.md#BKMK_customapirequestparameter_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [customapirequestparameter_AsyncOperations](asyncoperation.md#BKMK_customapirequestparameter_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -957,7 +961,7 @@ Same as asyncoperation entity [customapirequestparameter_AsyncOperations](asynco
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [customapirequestparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_customapirequestparameter_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [customapirequestparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_customapirequestparameter_MailboxTrackingFolders) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -974,7 +978,7 @@ Same as mailboxtrackingfolder entity [customapirequestparameter_MailboxTrackingF
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [customapirequestparameter_ProcessSession](processsession.md#BKMK_customapirequestparameter_ProcessSession) Many-To-One relationship.
+Same as processsession table [customapirequestparameter_ProcessSession](processsession.md#BKMK_customapirequestparameter_ProcessSession) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -991,7 +995,7 @@ Same as processsession entity [customapirequestparameter_ProcessSession](process
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [customapirequestparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_customapirequestparameter_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [customapirequestparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_customapirequestparameter_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1008,7 +1012,7 @@ Same as bulkdeletefailure entity [customapirequestparameter_BulkDeleteFailures](
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [customapirequestparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_customapirequestparameter_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [customapirequestparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_customapirequestparameter_PrincipalObjectAttributeAccesses) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1024,7 +1028,7 @@ Same as principalobjectattributeaccess entity [customapirequestparameter_Princip
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_customapirequestparameter_createdby](#BKMK_lk_customapirequestparameter_createdby)
 - [lk_customapirequestparameter_createdonbehalfby](#BKMK_lk_customapirequestparameter_createdonbehalfby)
@@ -1040,52 +1044,49 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_customapirequestparameter_createdby](systemuser.md#BKMK_lk_customapirequestparameter_createdby) One-To-Many relationship.
+See systemuser Table [lk_customapirequestparameter_createdby](systemuser.md#BKMK_lk_customapirequestparameter_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_customapirequestparameter_createdonbehalfby"></a> lk_customapirequestparameter_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_customapirequestparameter_createdonbehalfby](systemuser.md#BKMK_lk_customapirequestparameter_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_customapirequestparameter_createdonbehalfby](systemuser.md#BKMK_lk_customapirequestparameter_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_customapirequestparameter_modifiedby"></a> lk_customapirequestparameter_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_customapirequestparameter_modifiedby](systemuser.md#BKMK_lk_customapirequestparameter_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_customapirequestparameter_modifiedby](systemuser.md#BKMK_lk_customapirequestparameter_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_customapirequestparameter_modifiedonbehalfby"></a> lk_customapirequestparameter_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_customapirequestparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_customapirequestparameter_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_customapirequestparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_customapirequestparameter_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_user_customapirequestparameter"></a> user_customapirequestparameter
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [user_customapirequestparameter](systemuser.md#BKMK_user_customapirequestparameter) One-To-Many relationship.
+See systemuser Table [user_customapirequestparameter](systemuser.md#BKMK_user_customapirequestparameter) One-To-Many relationship.
 
 ### <a name="BKMK_team_customapirequestparameter"></a> team_customapirequestparameter
 
 **Added by**: System Solution Solution
 
-See team Entity [team_customapirequestparameter](team.md#BKMK_team_customapirequestparameter) One-To-Many relationship.
+See team Table [team_customapirequestparameter](team.md#BKMK_team_customapirequestparameter) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_customapirequestparameter"></a> business_unit_customapirequestparameter
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_customapirequestparameter](businessunit.md#BKMK_business_unit_customapirequestparameter) One-To-Many relationship.
+See businessunit Table [business_unit_customapirequestparameter](businessunit.md#BKMK_business_unit_customapirequestparameter) One-To-Many relationship.
 
 ### <a name="BKMK_customapi_customapirequestparameter"></a> customapi_customapirequestparameter
 
-See customapi Entity [customapi_customapirequestparameter](customapi.md#BKMK_customapi_customapirequestparameter) One-To-Many relationship.
+See customapi Table [customapi_customapirequestparameter](customapi.md#BKMK_customapi_customapirequestparameter) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.customapirequestparameter?text=customapirequestparameter EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />

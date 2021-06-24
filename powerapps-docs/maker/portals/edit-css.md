@@ -1,16 +1,19 @@
 ---
-title: Edit CSS in a portal | Microsoft Docs
-description: Instructions on editing CSS in a portal.
+title: Edit CSS for themes
+description: Learn how to edit CSS for customizing themes in portals.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
-# Edit CSS for themes in Power Apps portal
+# Edit CSS for themes
 
 Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
@@ -21,11 +24,11 @@ To open a CSS in code editor:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
+2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
     ![Theme](./media/edit-css/themes.png)
 
-3.  Select the required CSS to open it in the code editor.
+3.  Select the desired CSS to open it in the code editor.
 
 4.  Edit the code and save the changes.
 
@@ -33,7 +36,7 @@ To upload a new CSS file:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
+2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
 3. Select **Upload custom CSS**.
 
@@ -58,8 +61,13 @@ The standard way to create a custom version of Bootstrap is [through the officia
 When you download a customized version of Bootstrap, it contains the following directory structure.
 
 ```
-css/ |-- bootstrap.min.css img/
-|-- glyphicons-halflings-white.png |-- glyphicons-halflings.png js/ |-- bootstrap.min.js
+css/
+    |-- bootstrap.min.css 
+img/
+    |-- glyphicons-halflings-white.png 
+    |-- glyphicons-halflings.png 
+js/ 
+    |-- bootstrap.min.js
 ```
 
 Or, depending on the customizer application used, it might only contain bootstrap.min.css. Regardless, bootstrap.min.css is the file that contains your customizations. The other files are the same for all custom versions of Bootstrap and are already included in your portal.

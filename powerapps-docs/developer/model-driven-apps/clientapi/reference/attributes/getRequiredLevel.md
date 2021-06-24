@@ -1,6 +1,7 @@
 ---
 title: "getRequiredLevel (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getRequiredLevel method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,9 +19,9 @@ search.app:
 
 
 
-Returns a string value indicating whether a value for the attribute is required or recommended. 
+Returns a string value indicating whether a value for the column is required or recommended. 
 
-## Attribute types supported
+## Column types supported
 
 All
 

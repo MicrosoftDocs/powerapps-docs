@@ -1,18 +1,20 @@
 ---
-title: Use Bulletins apps from teams store | Microsoft Docs
+title: Bulletins sample app
 description: Learn how to use the Bulletins apps from Teams store.
 author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/07/2021
+ms.date: 05/24/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
-# Bulletins sample app (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Bulletins sample app
 
 In this tutorial, you'll learn about configuring, and using the **Bulletins** sample app.
 
@@ -40,10 +42,6 @@ The Bulletins app solution consists of two apps.
 > [!NOTE]
 > - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
 > - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -458,13 +456,9 @@ To view links, and contacts:
 
 ### See also
 
+- [Understand Bulletins sample app architecture](bulletins-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

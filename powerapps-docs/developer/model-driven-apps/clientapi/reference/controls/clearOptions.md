@@ -1,6 +1,7 @@
 ---
 title: "clearOptions (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the clearOptions method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,17 +17,17 @@ search.app:
 ---
 # clearOptions (Client API reference)
 
-
-
 Clears all options from a control. 
 
 ## Control types supported
 
-OptionSet, MultiSelectOptionSet
+Choice, Choices
 
 ## Syntax
 
 `formContext.getControl(arg).clearOptions();`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ### Related topics
 

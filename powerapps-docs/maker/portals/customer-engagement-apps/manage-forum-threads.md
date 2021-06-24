@@ -1,13 +1,16 @@
 ---
-title: "Manage forum threads in a portal | MicrosoftDocs"
-description: "Instructions to manage forum threads in a portal."
+title: Manage forum threads
+description: Learn how to manage forum threads in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage forum threads

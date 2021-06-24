@@ -15,8 +15,6 @@ search.app:
 ---
 # Find the apps, templates, and information you need
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Power Apps unified search helps you quickly discover apps, templates, and external web content. From a single entry point you can find:
 
 |Item  |Content type  |

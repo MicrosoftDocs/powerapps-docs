@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -50,6 +50,9 @@ After you create customized table and column text in your unmanaged solution, yo
     > ![Translated text in Excel file](media/translated-entity-label-text.png)
 
 9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and column text](import-translated-entity-field-text.md).
+
+> [!NOTE]
+> Not all content can be translated using this tool. This includes labels for sitemap areas, groups, and subareas. To translate these labels, [use the **More Titles** property in the sitemap designer](../model-driven-apps/create-site-map-app.md#add-an-area-to-the-site-map).
 
 ## Community tools
 

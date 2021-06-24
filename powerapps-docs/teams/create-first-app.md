@@ -4,19 +4,33 @@ description: Learn how to create your first app in Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 12/18/2020
+ms.custom: intro-internal
+ms.date: 05/13/2021
 ms.author: jshum
-ms.reviewer: 
+ms.reviewer: tapanm-msft
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 
 # Create your first app in Microsoft Teams
 
-You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams.
+You can create, edit, and delete [canvas apps](../maker/canvas-apps/getting-started.md) in Teams. If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
-If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+Creating an app in Microsoft Teams is a quick and easy 3-step process.
 
-## Get started with creating your first app
+1. [Create your app](#create-your-app)
+1. [Create your first table](#create-your-first-table)
+1. [Customize and publish your app](#customize-and-publish-your-app)
+
+![Create your first app in 3 steps](media/create-your-first-app.png "Create your first app in 3 steps")
+
+Watch this video to learn how to create your first app.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEmEP]
+
+Now let's go through each step in detail.
+
+## Create your app
 
 After installing the Power Apps app from the Teams store:
 
@@ -31,76 +45,20 @@ After installing the Power Apps app from the Teams store:
     
     ![Power Apps](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. Select the team that will be responsible for customizing and maintaining the app. You will have an opportunity to share the app to other teams once you’re done building the app.
+1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Set permission and share apps with colleagues](set-perms-and-share.md)
 
-    ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
+    ![Select a team to create the app](media/select-a-team-for-this-app.png "Select a team to create the app")
 
     If this is the first app being created in the selected team, a new Dataverse for Teams environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
-    ![Creating the first app in a team](media/create-app-3.png "Creating the first app in a team")
+    ![Creating the first app in a team](media/select-a-team-for-this-app-environment.png "Creating the first app in a team")
 
-1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app.
+1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app with an email and a Teams notification.
 
     ![First app in a team](media/create-app-4.png "First app in a team")
 
-> [!NOTE]
-> Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
-
-## Creating an app in a team with a Microsoft 365 Group
-
-When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
-
-`The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
-
-To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
-
-### Enabling security for teams with same names
-
-Team names aren't always unique. It's possible for more than one
-team in Teams to share the same display name. For example, there might be
-more than one team with the name "Inspection" in a tenant. However, the
-Microsoft 365 Group associated with each team has a different *ObjectId* in
-Azure Active Directory (Azure AD), even when the team names are the same. The *ObjectId* in
-Azure AD for a Microsoft 365 Group is the same as the *GroupId* in
-Teams for the associated team.
-
-To find the **GroupId** (ObjectID in Azure AD) of a team:
-
-1. Go to the team in Teams.
-
-1. Select any channel in the team.
-
-1. Select **More options** (...) from the upper-right corner, and then select **Get link to channel**.
-
-    ![Get link to the channel](media/get-channel-link.png "Get link to the channel")
-
-1. Copy the *GroupID* from the link.
-
-    ![Group ID](media/group-id.png "Group ID")
-
-    You can also copy the channel link by selecting **Copy**, and then pasting it into a text editor
-to get the *GroupID* value.
-
-    `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
-
-1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
-[Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
-to enable security for the team's Microsoft 365 Group.
-
-## Continue creating your first app
-
-After your Dataverse for Teams environment has been created, you can go to the [build hub](overview-of-the-power-apps-app.md#build-hub) and continue creating your first app.
-
-> [!NOTE]
-> If you wait in Teams for the environment to be created, you're automatically taken to the Power Apps Studio and a new app. In this situation, skip this step and go to [create your first table](#create-your-first-table).
-
-1. Select the **Build** tab to view the environment created for your team.
-
-    ![Build tab](media/build-tab-env.png "Build tab")
-
-1. Select **New** > **App** to get started building your first app. This action opens
-Power Apps Studio, where you're prompted to name your app. 
+    > [!NOTE]
+    > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 1. Enter an app name, and then select **Save**.
 
@@ -109,7 +67,7 @@ Power Apps Studio, where you're prompted to name your app.
     > [!TIP]
     > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
 
-### Create your first table
+## Create your first table
 
 Data for apps built in Teams lives in Dataverse for Teams environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data.
 
@@ -207,7 +165,7 @@ To paste the data from clipboard into the table:
 
 Changes to the table are automatically saved. However, check for errors, and fix them before you close the visual editor.
 
-### Update the app template
+## Customize and publish your app
 
 After you close the table, the app template that was added to the app screen by default is automatically refreshed to use the new table.
 
@@ -218,7 +176,7 @@ After you close the table, the app template that was added to the app screen by 
 
 Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
 
-#### Manually connect data to the app
+### Manually connect data to the app
 
 The gallery and the edit form components on the screen automatically refresh with the data only for the first data source. If you add additional data sources, such as a new table, or if you reopened the app, you'll have to manually connect the data to the template gallery and form.
 
@@ -254,7 +212,7 @@ To manually connect to the new data:
 
 1. Repeat the earlier step to fix any additional formula errors.
 
-#### Update background color for the selected gallery record
+### Update background color for the selected gallery record
 
 The gallery shows records created earlier. However, the background color needs to change for a record when selected from the gallery to show the selection.
 
@@ -276,7 +234,7 @@ To update the selected item background color:
 
     ![Update TemplateFill property](media/templatefill-property.png "Update TemplateFill property")
 
-#### Update fields on the form
+### Update fields on the form
 
 The template shows two fields inside the form by default. To add more fields to the form:
 
@@ -308,7 +266,7 @@ Adding, removing, and reordering fields automatically updates the form.
 
 ![Updated form](media/form-updated.png "Updated form")
 
-#### Update fields in the gallery
+### Update fields in the gallery
 
 The gallery on the default app template might need updates to reflect the fields from the table you created.
 
@@ -330,7 +288,7 @@ The gallery is updated with the selected changes.
 
 ![Updated gallery](media/gallery-fields-updated.png "Updated gallery")
 
-#### Update the app title
+### Update the app title
 
 To update the app title:
 
@@ -365,28 +323,55 @@ Now that you've created your first app with data, you can save your changes and 
     - To edit a record, select the record from the left pane, and edit the values.
     - To close the preview, select **Close** or the **Esc** key.
 
-## Add your app to a Teams channel as a tab
+### Publish and add app to Teams channel
 
-To use the app as a tab in your Teams channel, you'll need to save the app,
-publish it, and then add it to your team's channel.
-
-1. Go to your team in Teams.
-
-1. Select the channel that you want to pin the app to, and then select +.
-
-    ![Pin your app](media/pin-app.png "Pin your app")
-
-1. Select **Power Apps**.
-
-    ![Power Apps app in Teams](media/power-apps-app.png "Power Apps app in Teams")
-
-1. Select **Add**.
-
-1. Select your app from the list (in this example, **Sample app**), and then select **Save** to add the app as a tab.
+Select **Publish to Teams** to publish the app so others in your team can use the app, and add the app to Teams channel. More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 
 Now that you've created your first app from a blank table, let's go through the
 Power Apps interface, Studio, controls and how to create additional apps in
 detail.
+
+## Additional considerations for Microsoft 365 Group
+
+When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
+
+`The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
+
+To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](/microsoftteams/office-365-groups)
+
+### Enabling security for teams with same names
+
+Team names aren't always unique. It's possible for more than one
+team in Teams to share the same display name. For example, there might be
+more than one team with the name "Inspection" in a tenant. However, the
+Microsoft 365 Group associated with each team has a different *ObjectId* in
+Azure Active Directory (Azure AD), even when the team names are the same. The *ObjectId* in
+Azure AD for a Microsoft 365 Group is the same as the *GroupId* in
+Teams for the associated team.
+
+To find the **GroupId** (ObjectID in Azure AD) of a team:
+
+1. Go to the team in Teams.
+
+1. Select any channel in the team.
+
+1. Select **More options** (...) from the upper-right corner, and then select **Get link to channel**.
+
+    ![Get link to the channel](media/get-channel-link.png "Get link to the channel")
+
+1. Copy the *GroupID* from the link.
+
+    ![Group ID](media/group-id.png "Group ID")
+
+    You can also copy the channel link by selecting **Copy**, and then pasting it into a text editor
+to get the *GroupID* value.
+
+    `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
+
+1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
+[Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
+to enable security for the team's Microsoft 365 Group.
 
 ## Next steps
 

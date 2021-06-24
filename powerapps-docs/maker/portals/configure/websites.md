@@ -1,18 +1,21 @@
 ---
-title: "Manage websites in portals | MicrosoftDocs"
-description: "Learn how to manage websites in portals."
+title: Manage websites
+description: Learn how to manage websites in portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/30/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Manage websites
 
-A website is the core entity of portals application. A portal application selects a single Website record, and this determines what portal entities such as [web pages](web-page.md), [web files](web-files.md), [web roles](create-web-roles.md), and [content snippets](customize-content-snippets.md) are applicable to this application.
+A website is the core table of portals application. A portal application selects a single Website record, and this determines what portal tables such as [web pages](web-page.md), [web files](web-files.md), [web roles](create-web-roles.md), and [content snippets](customize-content-snippets.md) are applicable to this application.
 
 With a website providing an application scope, multiple distinct portal applications can be connected to a single organization.
 
@@ -25,7 +28,7 @@ However, it is also possible to control this by domain name or website bindings.
 Websites are created when you create a new portal. However, advanced website management can be performed from the Portal Management app. 
 
 > [!WARNING]
-> When you delete a website record, data related to the website record in portal metadata entities, such as webpages and web links, is also deleted. This is generally the desired behavior, as it means an entire website and all its related data can be removed from an organization in a single operation.
+> When you delete a website record, data related to the website record in portal metadata tables, such as webpages and web links, is also deleted. This is generally the desired behavior, as it means an entire website and all its related data can be removed from an organization in a single operation.
 
 1. Open the [Portal Management app](configure-portal.md).
 

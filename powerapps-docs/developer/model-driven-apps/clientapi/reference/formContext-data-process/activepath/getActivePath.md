@@ -1,6 +1,7 @@
 ---
 title: "getActivePath (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Gets a collection of stages currently in the active path with methods to interact with the stages displayed in the business process flow control.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,8 +17,6 @@ search.app:
 ---
 # getActivePath (Client API reference)
 
-
-
 [!INCLUDE[./includes/getActivePath-description.md](./includes/getActivePath-description.md)]
 
 The active path represents stages currently rendered in the process control based on the branching rules and current data in the record.
@@ -25,6 +24,8 @@ The active path represents stages currently rendered in the process control base
 ## Syntax
 
 `var stageCollection = formContext.data.process.getActivePath();`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 
@@ -60,13 +61,13 @@ var Sdk = window.Sdk || {};
         var activePathCollection = formContext.data.process.getActivePath();
         activePathCollection.forEach(function (stage, n) {
             Sdk.writeToConsole("Stage Index: " + n);
-            Sdk.writeToConsole("Entity: " + stage.getEntityName());
+            Sdk.writeToConsole("Table: " + stage.getEntityName());
             Sdk.writeToConsole("StageId: " + stage.getId());
             Sdk.writeToConsole("Status: " + stage.getStatus());
             var stageSteps = stage.getSteps();
             stageSteps.forEach(function (step, i) {
                 Sdk.writeToConsole("    Step Name: " + step.getName());
-                Sdk.writeToConsole("    Step Attribute: " + step.getAttribute());
+                Sdk.writeToConsole("    Step Column: " + step.getAttribute());
                 Sdk.writeToConsole("    Step Required: " + step.isRequired());
                 Sdk.writeToConsole("    ---------------------------------------")
             })
@@ -76,106 +77,106 @@ var Sdk = window.Sdk || {};
 }).call(Sdk);
 ```
 
-When the sample runs in the browser, you can use the developer tools of the browser to view the text written to the console. For example, when this sample is run in the Opportunity entity form with the Opportunity Sales Process, the following is written to the console:
+When the sample runs in the browser, you can use the developer tools of the browser to view the text written to the console. For example, when this sample is run in the Opportunity  form with the Opportunity Sales Process, the following is written to the console:
 
 ```
 Stage Index: 0
-Entity: opportunity
+Table: opportunity
 StageId: 6b9ce798-221a-4260-90b2-2a95ed51a5bc
 Status: active
     Step Name: Identify Contact
-    Step Attribute: parentcontactid
+    Step Column: parentcontactid
     Step Required: false
     ---------------------------------------
     Step Name: Identify Account
-    Step Attribute: parentaccountid
+    Step Column: parentaccountid
     Step Required: false
     ---------------------------------------
     Step Name: Purchase Timeframe
-    Step Attribute: purchasetimeframe
+    Step Column: purchasetimeframe
     Step Required: false
     ---------------------------------------
     Step Name: Estimated Budget
-    Step Attribute: budgetamount
+    Step Column: budgetamount
     Step Required: false
     ---------------------------------------
     Step Name: Purchase Process
-    Step Attribute: purchaseprocess
+    Step Column: purchaseprocess
     Step Required: false
     ---------------------------------------
     Step Name: Identify Decision Maker
-    Step Attribute: decisionmaker
+    Step Column: decisionmaker
     Step Required: false
     ---------------------------------------
     Step Name: Capture Summary
-    Step Attribute: description
+    Step Column: description
     Step Required: false
     ---------------------------------------
 ---------------------------------------
 Stage Index: 1
-Entity: opportunity
+Table: opportunity
 StageId: 650e06b4-789b-46c1-822b-0da76bedb1ed
 Status: inactive
     Step Name: Customer Need
-    Step Attribute: customerneed
+    Step Column: customerneed
     Step Required: false
     ---------------------------------------
     Step Name: Proposed Solution
-    Step Attribute: proposedsolution
+    Step Column: proposedsolution
     Step Required: false
     ---------------------------------------
     Step Name: Identify Stakeholders
-    Step Attribute: identifycustomercontacts
+    Step Column: identifycustomercontacts
     Step Required: false
     ---------------------------------------
     Step Name: Identify Competitors
-    Step Attribute: identifycompetitors
+    Step Column: identifycompetitors
     Step Required: false
     ---------------------------------------
 ---------------------------------------
 Stage Index: 2
-Entity: opportunity
+Table: opportunity
 StageId: d3ca8878-8d7b-47b9-852d-fcd838790cfd
 Status: inactive
     Step Name: Identify Sales Team
-    Step Attribute: identifypursuitteam
+    Step Column: identifypursuitteam
     Step Required: false
     ---------------------------------------
     Step Name: Develop Proposal
-    Step Attribute: developproposal
+    Step Column: developproposal
     Step Required: false
     ---------------------------------------
     Step Name: Complete Internal Review
-    Step Attribute: completeinternalreview
+    Step Column: completeinternalreview
     Step Required: false
     ---------------------------------------
     Step Name: Present Proposal
-    Step Attribute: presentproposal
+    Step Column: presentproposal
     Step Required: false
     ---------------------------------------
 ---------------------------------------
 Stage Index: 3
-Entity: opportunity
+Table: opportunity
 StageId: bb7e830a-61bd-441b-b1fd-6bb104ffa027
 Status: inactive
     Step Name: Complete Final Proposal
-    Step Attribute: completefinalproposal
+    Step Column: completefinalproposal
     Step Required: false
     ---------------------------------------
     Step Name: Present Final Proposal
-    Step Attribute: presentfinalproposal
+    Step Column: presentfinalproposal
     Step Required: false
     ---------------------------------------
     Step Name: Confirm Decision Date
-    Step Attribute: finaldecisiondate
+    Step Column: finaldecisiondate
     Step Required: false
     ---------------------------------------
     Step Name: Send Thank You
-    Step Attribute: sendthankyounote
+    Step Column: sendthankyounote
     Step Required: false
     ---------------------------------------
     Step Name: File De-brief
-    Step Attribute: filedebrief
+    Step Column: filedebrief
     Step Required: false
     ---------------------------------------
 ---------------------------------------

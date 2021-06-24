@@ -1,8 +1,8 @@
 ---
 title: "Work with Quick Find’s search item limit (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: " " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn about the record limit of a Quick Search and how to avoid hitting the limit." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/18/2020
+ms.date: 03/25/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,18 +18,17 @@ search.app:
 
 # Work with Quick Find’s search item limit
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Quick Find provides an easy way to configure the default search experience
-across Dynamics 365 Customer Engagement or Microsoft Dataverse entities. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
-query indicating:
+across Dynamics 365 Customer Engagement or Microsoft Dataverse tables. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a query indicating:
 
 *The number of records for this search exceeds the Quick Search record limit.*
 
 This error occurs because the query received too many results and has been stopped to prevent the data service's resource consumption from causing potential outages. This article will explain how the 10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
 
 > [!NOTE]
-> A Quick Find is a FetchXML query that contains one of these filter attributes: `isquickfindquery`, `isquickfindfields`.
+> A Quick Find is a FetchXML query that contains one of these filter columns: `isquickfindquery`, `isquickfindfields`.
 
 ## How the search item limit is calculated
 
@@ -72,19 +71,18 @@ better as a standard query than a Quick Find.
 
 ## Avoiding the search limit exception
 
-When writing and executing Quick Find queries in Dynamics 365 Customer ENgagement or Dataverse, use the following tips to avoid the 10k search limit:
+When writing and executing Quick Find queries in Dynamics 365 Customer Engagement or Dataverse, use the following tips to avoid the 10k search limit:
 
 ### Best practices when querying
 
 The following best practices should be observed when querying data.
 
 - Avoid adding unnecessary fields into the Quick Find query view
-- Keep queries as precise as possible avoiding generic queries and
-    unnecessary wild cards
+- Keep queries as precise as possible avoiding generic queries and unnecessary wild cards
 
 ### Specific exception querying
 
-If you have a specific need to have a query exceed this limit on a temporary basis, edit the FetchXML query to include setting the `overridequickfindrecordlimitenabled` attribute equal to 0 within the filter XML element. Use of this attribute will disable the 10k limit for the specific Quick Find query.
+If you have a specific need to have a query exceed this limit on a temporary basis, edit the FetchXML query to include setting the `overridequickfindrecordlimitenabled` column equal to 0 within the filter XML element. Use of this column will disable the 10k limit for the specific Quick Find query.
 
 ### Organizational override
 
@@ -93,6 +91,5 @@ In extreme cases where a business organization query regularly returns more than
 ### See Also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

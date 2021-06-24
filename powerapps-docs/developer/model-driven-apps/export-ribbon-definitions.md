@@ -2,7 +2,7 @@
 title: "Export ribbon definitions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about exporting the ribbon definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/30/2020
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -21,7 +21,9 @@ To effectively define changes to the default RibbonXml, you must be able to refe
   
 ## Access the ribbon definitions for your organization  
 
-If the Ribbon for your organization has been modified, you should export the current definitions if you intend to work with the customized ribbon elements. To do this, use the [Export Ribbon xml](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions) sample.  
+If the Ribbon for your organization has been modified, you should export the current definitions if you intend to work with the customized ribbon elements. To do this, use the [Export ribbon xml](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions) sample.  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   
 ## Access the default ribbon data  
 
@@ -29,15 +31,15 @@ If the Ribbon for your organization has been modified, you should export the cur
   
  The applicationRibbon.xml file contains the definition of the core application ribbons.  
   
- The remaining files contain the definitions used by entities that have ribbon definitions that differ from the entity template. Each file is named according to the name of the entity: logical entity name + Ribbon.xml.  
+ The remaining files contain the definitions used by tables that have ribbon definitions that differ from the table template. Each file is named according to the name of the table: logical table name + Ribbon.xml.  
   
- These files represent the output of two messages using the [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md):  
+ These files represent the output of two messages using the [Sample: Export ribbon definitions](sample-export-ribbon-definitions.md):  
   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest>  
- This message retrieves the core application ribbons including the entity template.  
+ This message retrieves the core application ribbons including the table template.  
   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>  
- This message retrieves the ribbon definition used for a specific entity.  
+ This message retrieves the ribbon definition used for a specific table.  
   
 ### Decompress the ribbon data  
 
@@ -83,14 +85,14 @@ System.String applicationRibbonPath = Path.GetFullPath(exportFolder + "\\applica
 File.WriteAllBytes(applicationRibbonPath, unzipRibbon(appribResp.CompressedApplicationRibbonXml)); 
 ```
   
-### Retrieve entity ribbons  
+### Retrieve table ribbons  
 
- To retrieve the ribbon definition for entities, you can just include the name of the entity as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
+ To retrieve the ribbon definition for tables, you can just include the name of the table as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
   
- To retrieve the ribbon definitions for all entities that support the ribbon, you need a list of those system entities that have ribbon definitions that vary from the entity ribbon template. The following sample shows an array of all the system entities that have ribbon definitions.  
+ To retrieve the ribbon definitions for all tables that support the ribbon, you need a list of those system tables that have ribbon definitions that vary from the table ribbon template. The following sample shows an array of all the system tables that have ribbon definitions.  
 
  ```C# 
- //This array contains all of the system entities that use the ribbon.
+ //This array contains all of the system tables that use the ribbon.
 public System.String[] entitiesWithRibbons = {"account",
 "activitymimeattachment",
 "activitypointer",
@@ -172,10 +174,10 @@ public System.String[] entitiesWithRibbons = {"account",
 "userquery"};
  ```
   
-The following sample shows how to retrieve the ribbon definitions for a set of entities. 
+The following sample shows how to retrieve the ribbon definitions for a set of tables. 
 
 ```csharp
-//Retrieve system Entity Ribbons
+//Retrieve system table Ribbons
 var entRibReq = new RetrieveEntityRibbonRequest() { RibbonLocationFilter = RibbonLocationFilters.All };
 foreach (System.String entityName in entitiesWithRibbons)
 {
@@ -188,10 +190,11 @@ foreach (System.String entityName in entitiesWithRibbons)
  Console.WriteLine(entityRibbonPath);
 } 
 ``` 
-Any custom entities also support ribbon customizations. To get a list of custom entities, use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest> and retrieve the names of custom entities. The following sample shows how to retrieve ribbon definitions for all custom entities.  
+
+Any custom tables also support ribbon customizations. To get a list of custom tables, use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest> and retrieve the names of custom tables. The following sample shows how to retrieve ribbon definitions for all custom tables.  
 
 ```csharp 
-//Check for custom entities
+//Check for custom tables
  var raer = new RetrieveAllEntitiesRequest() { EntityFilters = EntityFilters.Entity };
  var resp = (RetrieveAllEntitiesResponse)service.Execute(raer);
  foreach (EntityMetadata em in resp.EntityMetadata)
@@ -210,12 +213,12 @@ Any custom entities also support ribbon customizations. To get a list of custom 
 
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 ### See also  
- [Customize the Ribbon](customize-commands-ribbon.md)   
+ [Customize the ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)   
- [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)
+ [Export, prepare to edit, and import the ribbon](export-prepare-edit-import-ribbon.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

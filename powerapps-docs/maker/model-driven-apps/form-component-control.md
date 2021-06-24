@@ -2,12 +2,12 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 12/14/2020
+ms.date: 06/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "PowerApps"
 author: "Mattp123"
@@ -20,8 +20,6 @@ search.app:
   - D365CE
 ---
 # Edit related table records directly from another table’s main form
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
@@ -65,6 +63,9 @@ In this example, the **Contact** standard main form is configured for the form c
 
 This section describes form component behavior when used in a model-driven app.
 
+### Record selection
+In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
+
 ### Column validation
 
 All columns, both in the main form and in the form component controls, must be valid for data to be sent to Microsoft Dataverse. This is true for both column validation errors, missing required columns, and so on.
@@ -101,7 +102,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls isn't supported.
 
-- The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
+- The form that you use with a form component must be included in your app. More information: [Add a component](add-edit-app-components.md#add-a-component).
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 

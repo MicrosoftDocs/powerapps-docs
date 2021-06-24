@@ -1,6 +1,6 @@
 ---
 title: reset | Microsoft Docs
-description: 
+description: Reload the results from the server, and reset to page 1.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: 3556c2d7-5ef7-4f5d-b694-006fb5c75130
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

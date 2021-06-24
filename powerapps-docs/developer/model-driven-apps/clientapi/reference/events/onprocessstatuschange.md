@@ -1,6 +1,7 @@
 ---
-title: "OnProcessStatusChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "OnProcessStatusChange event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the onProcessStatusChange event.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,9 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# OnProcessStatusChange Event (Client API reference)
-
-
+# OnProcessStatusChange event (Client API reference)
 
 This event occurs when the status of a process instance changes. 
 

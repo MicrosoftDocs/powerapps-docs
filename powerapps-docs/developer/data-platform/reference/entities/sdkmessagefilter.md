@@ -1,22 +1,24 @@
 ---
-title: "SdkMessageFilter entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SdkMessageFilter table."
-ms.date: 11/14/2020
+title: "SdkMessageFilter table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SdkMessageFilter table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SdkMessageFilter entity reference
+
+# SdkMessageFilter table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Filter that defines which SDK messages are valid for each type of entity.
 
@@ -25,10 +27,10 @@ Filter that defines which SDK messages are valid for each type of entity.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessagefilters(*sdkmessagefilterid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessagefilters<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessagefilters(*sdkmessagefilterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessagefilters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ Filter that defines which SDK messages are valid for each type of entity.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Availability](#BKMK_Availability)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
@@ -104,7 +106,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsCustomProcessingStepAllowed Options
+#### IsCustomProcessingStepAllowed Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -180,9 +182,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -224,7 +226,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -354,7 +356,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -377,7 +379,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsVisible Options
+#### IsVisible Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -616,7 +618,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### WorkflowSdkStepEnabled Options
+#### WorkflowSdkStepEnabled Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -635,7 +637,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_sdkmessagefilterid_sdkmessageprocessingstep"></a> sdkmessagefilterid_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep entity [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) Many-To-One relationship.
+Same as sdkmessageprocessingstep table [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -651,7 +653,7 @@ Same as sdkmessageprocessingstep entity [sdkmessagefilterid_sdkmessageprocessing
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [createdby_sdkmessagefilter](#BKMK_createdby_sdkmessagefilter)
 - [modifiedby_sdkmessagefilter](#BKMK_modifiedby_sdkmessagefilter)
@@ -663,32 +665,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_createdby_sdkmessagefilter"></a> createdby_sdkmessagefilter
 
-See systemuser Entity [createdby_sdkmessagefilter](systemuser.md#BKMK_createdby_sdkmessagefilter) One-To-Many relationship.
+See systemuser Table [createdby_sdkmessagefilter](systemuser.md#BKMK_createdby_sdkmessagefilter) One-To-Many relationship.
 
 ### <a name="BKMK_modifiedby_sdkmessagefilter"></a> modifiedby_sdkmessagefilter
 
-See systemuser Entity [modifiedby_sdkmessagefilter](systemuser.md#BKMK_modifiedby_sdkmessagefilter) One-To-Many relationship.
+See systemuser Table [modifiedby_sdkmessagefilter](systemuser.md#BKMK_modifiedby_sdkmessagefilter) One-To-Many relationship.
 
 ### <a name="BKMK_sdkmessageid_sdkmessagefilter"></a> sdkmessageid_sdkmessagefilter
 
-See sdkmessage Entity [sdkmessageid_sdkmessagefilter](sdkmessage.md#BKMK_sdkmessageid_sdkmessagefilter) One-To-Many relationship.
+See sdkmessage Table [sdkmessageid_sdkmessagefilter](sdkmessage.md#BKMK_sdkmessageid_sdkmessagefilter) One-To-Many relationship.
 
 ### <a name="BKMK_lk_sdkmessagefilter_createdonbehalfby"></a> lk_sdkmessagefilter_createdonbehalfby
 
-See systemuser Entity [lk_sdkmessagefilter_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessagefilter_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_sdkmessagefilter_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessagefilter_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_sdkmessagefilter"></a> organization_sdkmessagefilter
 
-See organization Entity [organization_sdkmessagefilter](organization.md#BKMK_organization_sdkmessagefilter) One-To-Many relationship.
+See organization Table [organization_sdkmessagefilter](organization.md#BKMK_organization_sdkmessagefilter) One-To-Many relationship.
 
 ### <a name="BKMK_lk_sdkmessagefilter_modifiedonbehalfby"></a> lk_sdkmessagefilter_modifiedonbehalfby
 
-See systemuser Entity [lk_sdkmessagefilter_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessagefilter_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_sdkmessagefilter_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessagefilter_modifiedonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sdkmessagefilter?text=sdkmessagefilter EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

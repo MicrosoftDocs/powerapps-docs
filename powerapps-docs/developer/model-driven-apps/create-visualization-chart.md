@@ -19,8 +19,10 @@ search.app:
 
 # Create a visualization (chart)
 
-To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md) entity to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
-  
+To create a visualization programmatically, you must create a record for the [SavedQueryVisualization table](../data-platform/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization table](../data-platform/reference/entities/userqueryvisualization.md) to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 <a name="Before"></a>   
 
 ## Before you create a visualization  
@@ -32,21 +34,21 @@ To create a visualization programmatically, you must create a record for the [Sa
     > [!NOTE]
     >  Organization-owned visualizations can only be created by those users who have the System Administrator or System Customizer role.  
   
-- **Associated Entity**: Visualizations are attached to entities. More information: [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported entity by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) attribute.  
+- **Associated Table**: Visualizations are attached to tables. More information: [Tables supported for visualizations](view-data-with-visualizations-charts.md). You can attach a chart to a supported table by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../data-platform/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) parameter.  
   
 <a name="CreateChart"></a>   
 
 ## Create a chart visualization  
 
- Charts require you to specify the underlying data for the charts and how the charts will look in the form of *data description* and *presentation description* XML strings. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md) and [Sample Charts](sample-charts.md).  
+ Charts require you to specify the underlying data for the charts and how the charts will look in the form of *data description* and *presentation description* XML strings. More information: [Specifying chart data](understand-charts-underlying-data-chart-representation.md) and [Sample Charts](sample-charts.md).  
   
- For a complete sample on how to create an organization-owned chart, see [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart). 
+ For a complete sample on how to create an organization-owned chart, see [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart). 
   
 ### Create a multi-series chart  
 
- Multi-series charts map multiple series (vertical) axis values to a single category (horizontal) axis value. The only difference from a single series chart is that these charts have multiple `<measurecollection>` and corresponding `<series>` elements specified in the XML strings. Each `<measurecollection>` element contains a child element called `<measure>` that defines a series (vertical) axis value for the same category (horizontal) value. More information: [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md).  
+ Multi-series charts map multiple series (vertical) axis values to a single category (horizontal) axis value. The only difference from a single series chart is that these charts have multiple `<measurecollection>` and corresponding `<series>` elements specified in the XML strings. Each `<measurecollection>` element contains a child element called `<measure>` that defines a series (vertical) axis value for the same category (horizontal) value. More information: [Understanding Charts: Underlying data and chart representation](understand-charts-underlying-data-chart-representation.md).  
   
- For a sample multi-series chart and the corresponding data description and presentation descriptions XML strings, see [Multi-Series Chart](sample-charts.md#multi-series-chart).
+ For a sample multi-series chart and the corresponding data description and presentation descriptions XML strings, see [Multi-Series chart](sample-charts.md#multi-series-chart).
   
 <a name="CreateWRVisualization"></a>   
 
@@ -55,7 +57,7 @@ To create a visualization programmatically, you must create a record for the [Sa
  Visualizations containing web resources don’t require you to specify the data description and presentation description XML strings. The following sample demonstrates how to create an organization-owned visualization containing a web resource by using the SDK.  
   
 ```csharp  
-SavedQueryVisualization newWebResourceVisualization = new SavedQueryVisualization()  
+var newWebResourceVisualization = new SavedQueryVisualization()  
 {  
    Name = "Sample Dashboard Visualization",  
    Description = "Sample organization-owned visualization",  
@@ -78,7 +80,7 @@ If you want to create a web resource visualization by using the Microsoft Datave
 </visualization>  
 ```  
   
-For example, to create a *Sample Visualization* that displays an existing Web resource called *new_TestWebResource*, and the visualization should be attached to the *account* entity, the XML should look like.  
+For example, to create a *Sample Visualization* that displays an existing Web resource called *new_TestWebResource*, and the visualization should be attached to the *account* table, the XML should look like.  
   
 ```xml  
 <visualization>  
@@ -93,11 +95,11 @@ For example, to create a *Sample Visualization* that displays an existing Web re
 ### See also
  
  [Charts](view-data-with-visualizations-charts.md)   
- [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)   
- [Actions on Chart](actions-visualizations-charts.md)   
- [Sample Charts](sample-charts.md)   
- [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
- [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
+ [Specifying chart data](understand-charts-underlying-data-chart-representation.md)   
+ [Actions on chart](actions-visualizations-charts.md)   
+ [Sample charts](sample-charts.md)   
+ [Data visualization and analytics](customize-visualizations-dashboards.md)   
+ [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

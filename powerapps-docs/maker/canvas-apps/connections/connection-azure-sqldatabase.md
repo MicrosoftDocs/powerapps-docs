@@ -1,12 +1,12 @@
 ---
-title: Overview of the SQL Server connection | Microsoft Docs
+title: Connect to SQL Server from Power Apps
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 12/18/2020
+ms.date: 04/28/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -18,6 +18,9 @@ search.app:
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 
 Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
+
+> [!NOTE] 
+> Newly created SQL data sources are no longer prefixed with "[dbo]" as they have been in previous versions of Power Apps. See the [common issues and resolutions](../common-issues-and-resolutions.md) page for more information.
 
 ## Prerequisites
 

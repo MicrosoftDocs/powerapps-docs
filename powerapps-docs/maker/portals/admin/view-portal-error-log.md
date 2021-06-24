@@ -1,13 +1,16 @@
 ---
-title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
-description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
+title: View portal error logs
+description: Learn how to view portal error logs and store them in your Azure Blob storage account.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # View portal error logs
@@ -179,12 +182,12 @@ Another scenario that often occurs while developing a portal is an error generat
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 
 Following are the screens where custom plugin errors will appear: 
-- Entity list 
+- List 
     - Retrieval of records 
-- Entity form 
+- Basic form 
     - Retrieve 
     - Create/Update and so on 
-- Web forms 
+- Advanced forms 
     - Retrieve 
     - Create/Update and so on
 

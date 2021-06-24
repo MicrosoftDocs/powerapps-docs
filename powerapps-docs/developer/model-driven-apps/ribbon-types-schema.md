@@ -2,7 +2,7 @@
 title: "Ribbon types schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The following is the schema definition for the ribbon types portion of an import/export customization file. It is included from the Ribbon Core Schema." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,15 +17,14 @@ search.app:
 ---
 # Ribbon types schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-types-schema -->
-
-The following is the schema definition for the ribbon types portion of an import/export customization file. Ribbon types schema is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema  in the `Schemas\9.0.0.2090\RibbonTypes.xsd` folder when you download the Schemas zip file.
+The following is the schema definition for the ribbon types portion of an import/export customization file. Ribbon types schema is included from the [Ribbon core schema](ribbon-core-schema.md). You can find schema  in the `Schemas\9.0.0.2090\RibbonTypes.xsd` folder when you download the Schemas zip file.
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and Distribute Extensions with Solutions](../data-platform/introduction-solutions.md).
+For more information, see [Package and distribute Eetensions with solutions](../data-platform/introduction-solutions.md).
 
-  
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+ 
 ## Schema  
   
 ```xml  
@@ -861,9 +860,9 @@ For more information, see [Package and Distribute Extensions with Solutions](../
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbon Core Schema](ribbon-core-schema.md)   
- [Ribbon WSS Schema](ribbon-wss-schema.md)   
- [Customization XML Reference](customization-xml-reference.md)
+ [Ribbon core schema](ribbon-core-schema.md)   
+ [Ribbon WSS schema](ribbon-wss-schema.md)   
+ [Customization XML reference](customization-xml-reference.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

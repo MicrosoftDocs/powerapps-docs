@@ -1,6 +1,6 @@
 ---
 title: CaptureVideo | Microsoft Docs
-description: 
+description: Invokes the device camera to record video.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

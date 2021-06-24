@@ -1,13 +1,13 @@
 ---
 title: "Type of model-driven app forms in Power Apps | MicrosoftDocs"
 description: "Understand the different types of forms"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

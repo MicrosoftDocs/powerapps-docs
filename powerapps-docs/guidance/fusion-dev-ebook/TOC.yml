@@ -1,0 +1,25 @@
+- name: "Ebook: Fusion development approach"
+  href: index.md
+  items:
+  - name: Foreword
+    href: foreword.md
+  - name: Prerequisites and setup
+    href: prereqs-setup.md
+  - name: "Chapter 1: What is fusion development approach?"
+    href: 01-what-is-fusion-dev-approach.md
+  - name: "Chapter 2: Sample scenario"
+    href: 02-intro-sample-scenario.md
+  - name: "Chapter 3: Building a low-code prototype"
+    href: 03-building-low-code-prototype.md
+  - name: "Chapter 4: Using Dataverse as data source"
+    href: 04-using-dataverse-as-data-source.md
+  - name: "Chapter 5: Creating and publishing a Web API in Azure"
+    href: 05-creating-publishing-web-api-in-azure.md
+  - name: "Chapter 6: Using the Web API in the app"
+    href: 06-using-web-api-in-app.md
+  - name: "Chapter 7: Adding functionality to the app"
+    href: 07-adding-functionality-to-app.md
+  - name: "Chapter 8: Protecting and deploying the app"
+    href: 08-protecting-deploying-app.md
+  - name: Conclusion
+    href: conclusion.md

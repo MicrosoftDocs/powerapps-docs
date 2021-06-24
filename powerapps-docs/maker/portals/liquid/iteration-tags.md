@@ -1,13 +1,16 @@
 ---
-title: "Use iteration tags for a portal | MicrosoftDocs"
-description: "Learn about iteration tags available in portal"
+title: Iteration tags
+description: Learn about iteration tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Iteration tags

@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 02/19/2021
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,9 @@ ms.topic: "article"
 
 # Common issues and workarounds
 
-Here are some common issues that you might come across while using the Power Apps component framework and Power Apps CLI.
+Here are some common issues that you might come across while using the Power Apps component framework and Microsoft Power Platform CLI.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Msbuild error MSB4036
 
@@ -31,17 +33,6 @@ Here are some common issues that you might come across while using the Power App
 
 > [!NOTE]
 > We will be constantly adding common issues and workarounds as we come across during the development process. If you encounter an issue and have a workaround and you think that is helpful, raise the issue [here](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework) or raise a pull request so that we can review and add it to the list.
-
-## Publisher Prefix
-
-If a component is created using the CLI version lower than 0.4.3, you will encounter an error while trying to reimport the solution file into Microsoft Dataverse. 
-
-**Workaround**:
-
-- Delete the solution containing the relevant component from Dataverse. 
-- The component should be removed from the filed or grid if the component is already configured to avoid dependencies.
-- Import the new solution with updates to the component built by the latest CLI version.
-- Newly imported components can now be configured on forms or grids.  
 
 ## Issues while updating existing code components
 

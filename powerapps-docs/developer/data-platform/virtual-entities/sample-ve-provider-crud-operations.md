@@ -2,7 +2,7 @@
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
 ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 04/09/2021
 ms.reviewer: "nabuthuk"
 ms.service: powerapps
 ms.suite: ""
@@ -20,6 +20,8 @@ search.app:
 ---
 
 # Sample: Custom virtual table provider with CRUD operations
+
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This sample shows how to implement a custom data provider to create a virtual table that supports create, retrieve, update, and delete operations. For each of these operations, you implement a generic plug-in, register them using the Plugin Registration Tool, and enable virtual table data sources to create the virtual table.
 
@@ -350,7 +352,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
     2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**. 
 
-    3. In the **Data Source Entity** option, select **Create New Data Source**. Enter the details. Make sure that the data source is part of the solution you created or selected.
+    3. In the **Data Source Table (Entity)** option, select **Create New Data Source**. Enter the details. Make sure that the data source is part of the solution you created or selected.
 
         > [!NOTE]
         > The data source table in Dataverse holds the configuration data for a data source record to be passed to the provider plug-ins.
@@ -369,7 +371,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
 ## Step 3: Creating a virtual table in Dataverse environment
 
-1. Create a new virtual table data source by navigating to **Setting** > **Administration** > **Virtual Entity Data Sources**.
+1. Create a new virtual table data source by navigating to **Setting** > **Administration** > **Virtual Table (Entity) Data Sources**.
 
 2. Select **New** and then select the data provider you created in the previous step from the drop-down.
 
@@ -377,7 +379,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
 4. You are now ready to create the virtual table that represents the external data source. To do this, go to **Settings** > **Customize the System**.
 
-5. In the left navigation pane of solution explorer, Select **Entities**, and then select **New**.
+5. In the left navigation pane of solution explorer, Select **Tables (Entities)**, and then select **New**.
 
 6. Enter the following details:
 
@@ -404,7 +406,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 11. Update the **External Name** column to match the column name in your external data source. In this example, the external column name is **TicketID**.
 
     > [!div class="mx-imgBorder"]
-    > ![Create new entity](../media/custom-ve-create-new-entity.png "Create new entity")
+    > ![Create new table](../media/custom-ve-create-new-entity.png "Create new table")
 
 12. Select **Save and Close**.
 
@@ -447,5 +449,5 @@ Application users can perform read, create, update, delete operations using the 
 
 [Getting started with virtual tables](./get-started-ve.md)<br/>
 [API considerations for virtual tables](./api-considerations-ve.md)<br/>
-[Custom virtual entity data providers](./custom-ve-data-providers.md)<br/>
+[Custom virtual table data providers](./custom-ve-data-providers.md)<br/>
 [Virtual table walkthrough using OData v4 Data Provider](../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md)

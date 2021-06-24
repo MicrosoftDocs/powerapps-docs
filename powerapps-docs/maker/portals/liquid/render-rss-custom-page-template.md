@@ -1,21 +1,25 @@
 ---
-title: "Render an RSS feed using custom page template for a portal | MicrosoftDocs"
-description: "Instructions to create a custom page template and use it to render an RSS feed."
+title: Create a custom page template to render an RSS feed
+description: Learn how to create a custom page template and use it to render an RSS feed.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Create a custom page template to render an RSS feed
+
 In this example, we'll create a custom page template to render an [RSS feed](https://en.wikipedia.org/wiki/RSS) of news articles, using Liquid and a Web Template Page Template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
 
 ## Step 1: Create a new Power Apps view
 
-First, we'll create a new Power Apps view that we'll use to load the data for our feed. In this example, we'll make it a view on Web Pages, and use this entity to store our articles. We can use this view to configure the sorting and filtering of results, and include as columns the entity attributes that we want available in our Liquid template.
+First, we'll create a new Power Apps view that we'll use to load the data for our feed. In this example, we'll make it a view on Web Pages, and use this table to store our articles. We can use this view to configure the sorting and filtering of results, and include as columns the table attributes that we want available in our Liquid template.
 
 ![Edit a page template](../media/edit-page-template.png "Edit a page template")  
 
@@ -66,7 +70,7 @@ In this example, we've seen how we can combine Liquid, Web Templates, Power Apps
 ### See also
 
 [Create a custom page template by using Liquid and a web template page template](create-custom-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 

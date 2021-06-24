@@ -1,18 +1,19 @@
 ---
-title: "Use Power Apps entity tags for a portal | MicrosoftDocs"
-description: "Learn about Power Apps entity tags available in portal."
+title: Dataverse entity tags
+description: Learn about Power Apps entity tags available in portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/28/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Dataverse entity tags
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
@@ -34,7 +35,7 @@ Visualization ID of the chart. You can get this by exporting the chart.
 
 **viewid**
 
-ID of the entity when opened in view editor. 
+ID of the table when opened in view editor. 
 
 ## powerbi
 
@@ -171,7 +172,7 @@ certain classes on the containing element, as demonstrated here.
 
 ### Parameters
 
-The first parameter provided to editable is the editable object. For example, this may be a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This may be the name of an entity attribute, or a snippet name, for example.
+The first parameter provided to editable is the editable object. For example, this may be a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This may be the name of a table attribute, or a snippet name, for example.
 
 After these initial parameters, the tag supports a number of optional named parameters.
 
@@ -205,39 +206,39 @@ A string value indicating the type of editing interface to be presented, for edi
 
 ## entitylist
 
-Loads a given entity list, by name or ID. The properties of the entity list can then be accessed using an [entitylist object](liquid-objects.md#entitylist) that will be available within the tag block. To render the actual result records of the entity list, use the [entityview](#entityview) tag within the block.  
+Loads a given list, by name or ID. The properties of the list can then be accessed using an [entitylist object](liquid-objects.md#entitylist) that will be available within the tag block. To render the actual result records of the list, use the [entityview](#entityview) tag within the block.  
 
-If the entity list is loaded successfully, the content within the block will be rendered. If the entity list is not found, the block content will not be rendered.
+If the list is loaded successfully, the content within the block will be rendered. If the list is not found, the block content will not be rendered.
 
 ```
-{% entitylist name:My Entity List %}
+{% entitylist name:My List %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
 By default, the entitylist object will be given the variable name entitylist. Optionally, a different variable name can be provided.
 
 ```
-{% entitylist my_list = name:My Entity List %}
+{% entitylist my_list = name:My List %}
 
-Loaded entity list {{ my_list.adx_name }}.
+Loaded list {{ my_list.adx_name }}.
 
 {% endentitylist %}
 ```
 
 ### Parameters
 
-Provide **only one** of id, name, or key to select the Entity List to load.
+Provide **only one** of id, name, or key to select the List to load.
 
 **id**
 
-Loads an entity list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
+Loads a list by [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier) ID. id must be a string that can be parsed as a GUID.  
 
 ```
 {% entitylist id:936DA01F-9ABD-4d9d-80C7-02AF85C822A8 %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
@@ -247,45 +248,45 @@ Generally, literal GUID strings will not be used. Instead, id will be specified 
 ```
 {% entitylist id:page.adx_entitylist.id %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
 
 **name**
 
-Loads an entity list by name.
+Loads a list by name.
 
 ```
-{% entitylist name:My Entity List %}
+{% entitylist name:My List %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
 
 **key**
 
-Loads an entity list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the entity list will be loaded by ID. Otherwise, it will be loaded by name.
+Loads a list by ID **or** name. If the provided key value can be parsed as a [GUID](https://en.wikipedia.org/wiki/Globally_unique_identifier), the list will be loaded by ID. Otherwise, it will be loaded by name.
 
 ```
 <!-- key_variable can hold an ID or name -->
 
 {% entitylist key:key_variable %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
 
 **language\_code**
 
-A Power Apps integer language code to select the entity list localized labels to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
+A Power Apps integer language code to select the list localized labels to be loaded. If no language\_code is provided, the default language of the portal application Power Apps connection will be used.
 
 ```
-{% entitylist name:"My Entity List", language_code:1033 %}
+{% entitylist name:"My List", language_code:1033 %}
 
-Loaded entity list {{ entitylist.adx_name }}.
+Loaded list {{ entitylist.adx_name }}.
 
 {% endentitylist %}
 ```
@@ -314,14 +315,14 @@ Loaded entity view with {{ my_view.total_records }} total records.
 {% endentityview %}
 ```
 
-If entityview is nested within an entitylist block, it will inherit its default configuration (result page size, filter options, etc.) from the entity list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
+If entityview is nested within an entitylist block, it will inherit its default configuration (result page size, filter options, etc.) from the list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
 
 ```
 {% entitylist id:page.adx_entitylist.id %}
 
 {% entityview %}
 
-Loaded default view of the entity list associated with the current page, with {{ entityview.total_records }} total records.
+Loaded default view of the list associated with the current page, with {{ entityview.total_records }} total records.
 
 {% endentityview %}
 
@@ -402,7 +403,7 @@ Loaded entity view with {{ entityview.total_records }} total records.
 
 **metafilter**
 
-Specifies the Entity List metadata filter expression by which to filter view results. This parameter is only valid when entityview is used in combination with entitylist. In most cases, this parameter is set based on a [request](liquid-objects.md#request).  
+Specifies the List metadata filter expression by which to filter view results. This parameter is only valid when entityview is used in combination with entitylist. In most cases, this parameter is set based on a [request](liquid-objects.md#request).  
 
 ```
 {% entitylist id:page.adx_entitylist.id %}
@@ -464,7 +465,7 @@ Loaded page {{ entityview.page }} of entity view with {{ entityview.total_record
 
 **page\_size**
 
-Specifies the number of results to load for the current result page. If no value is provided for this parameter, and entityview is used within an [entitylist](#entitylist) block, the entity list page size will be used. If not within an entitylist block, a default value of 10 will be used.
+Specifies the number of results to load for the current result page. If no value is provided for this parameter, and entityview is used within an [entitylist](#entitylist) block, the list page size will be used. If not within an entitylist block, a default value of 10 will be used.
 
 This parameter must be passed either an integer value, or a string that can be parsed as an integer. If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as an integer, the default page size will be used.
 
@@ -509,7 +510,7 @@ Loaded entity view with {{ entityview.total_records }} total matching records.
 
 **enable\_entity\_permissions**
 
-Specifies whether to apply entity permission filtering on view results. This parameter is set to false by default. If entityview is used within an entitylist block, the value of this parameter will be inherited from the entity list configuration.
+Specifies whether to apply table permission filtering on view results. This parameter is set to false by default. If entityview is used within an entitylist block, the value of this parameter will be inherited from the list configuration.
 
 This parameter must be passed either an [boolean](liquid-types.md#boolean) value, or a string that can be parsed as a Boolean (true, false). If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as a Boolean, the default of false will be used.  
 
@@ -569,6 +570,13 @@ Performs a query against the portal search index. The matching results can then 
 {% endif %}
 
 {% endsearchindex %}
+
+<style>
+
+    .highlight {background-color: #FFFCAC;}
+
+</style>
+
 ```
 
 By default, the search index object will be given the variable name searchindex. Optionally, a different variable name can be provided.
@@ -677,33 +685,33 @@ The size of the result page to be returned. If not provided, a default size of 1
 
 ## entityform
 
-Fully renders a Power Apps-configured entity forms, by name or ID.  
+Fully renders a Power Apps-configured basic forms, by name or ID.  
 
 > [!Note]
 > The entityform tag is only available for use in content rendered inside a <em>[web template](store-content-web-templates.md)–</em>based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.       
 
-`{% entityform name: 'My Entity Form' %}`
+`{% entityform name: 'My Basic Form' %}`
 
 ### Parameters
 
 **name**
 
-The name of the Entity Form you wish to load.
+The name of the Basic Form you wish to load.
 
-`{% entityform name:My Entity Form %}`
+`{% entityform name:My Basic Form %}`
 
 ## webform
 
-Fully renders a Power Apps-configured web form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
-`{% webform name: 'My Web Form' %}`
+Fully renders a Power Apps-configured advanced form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.                
+`{% webform name: 'My Advanced Form' %}`
 
 ### Parameters
 
 **name**
 
-The name of the Web Form you wish to load.
+The name of the Advanced Form you wish to load.
 
-`{% webform name:My Web Form %}`
+`{% webform name:My Advanced Form %}`
 
 
 ### See also

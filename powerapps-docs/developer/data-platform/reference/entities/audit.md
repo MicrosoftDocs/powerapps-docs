@@ -1,22 +1,24 @@
 ---
-title: "Audit entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Audit table."
-ms.date: 11/14/2020
+title: "Audit table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Audit table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Audit entity reference
+
+# Audit table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Track changes to records for analysis, record keeping, and compliance.
 
@@ -27,14 +29,14 @@ Track changes to records for analysis, record keeping, and compliance.
 |-|-|-|
 |DeleteAuditData|<xref href="Microsoft.Dynamics.CRM.DeleteAuditData?text=DeleteAuditData Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
 |DeleteRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?text=DeleteRecordChangeHistory Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveAttributeChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
 |RetrieveAuditDetails|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
 |RetrieveAuditPartitionList|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?text=RetrieveAuditPartitionList Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/audits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/audits<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -52,9 +54,9 @@ Track changes to records for analysis, record keeping, and compliance.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -109,9 +111,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [Action](#BKMK_Action)
 - [AttributeMask](#BKMK_AttributeMask)
@@ -141,7 +143,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
 
-#### Action Options
+#### Action Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -367,7 +369,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Operation Options
+#### Operation Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -424,7 +426,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_audit_userid](#BKMK_lk_audit_userid)
 - [lk_audit_callinguserid](#BKMK_lk_audit_callinguserid)
@@ -432,16 +434,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_audit_userid"></a> lk_audit_userid
 
-See systemuser Entity [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) One-To-Many relationship.
+See systemuser Table [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) One-To-Many relationship.
 
 ### <a name="BKMK_lk_audit_callinguserid"></a> lk_audit_callinguserid
 
-See systemuser Entity [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) One-To-Many relationship.
+See systemuser Table [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.audit?text=audit EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

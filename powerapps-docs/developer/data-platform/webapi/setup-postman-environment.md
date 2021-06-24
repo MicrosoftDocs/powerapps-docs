@@ -21,8 +21,6 @@ search.app:
 
 # Set up a Postman environment
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 You can use Postman to connect to your Microsoft Dataverse instance and to compose Web API requests, send them, and view responses. Managing authentication challenges many people. This topic describes how to configure a Postman environment to work for your Dataverse environments.
 
 You can use a Postman environment to save a set of variables that you use to connect. These values can be accessed within Postman by using this syntax: `{{name}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
@@ -37,9 +35,9 @@ You can use a Postman environment to save a set of variables that you use to con
 ## Connect with your Dataverse environment
 
 This environment uses a client ID for an application that is registered for all Dataverse environments. 
- 
+
 You can use the `clientid` and `callback` values supplied in these instructions.  However, when building your own application, you should register your own Azure Active Directory (Azure AD) application.
- 
+
 To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 Use these steps to create a Postman environment that you can use to connect with your Dataverse instance:
@@ -63,9 +61,9 @@ Use these steps to create a Postman environment that you can use to connect with
     > [!NOTE]
     > For [relevance search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
-    ![Create a new Postman environment to connect with Online instance](media/postman-add-online-env.png "Create a new Postman   environment to connect with Online instance")
+    ![Create a new Postman environment to connect with Online instance](media/postman-add-online-env.png "Create a new Postman environment to connect with Online instance")
 
-2. Replace the instance URL placeholder value with the URL of your Dataverse instance, and select **Add** to save the environment.
+2. Replace the instance URL placeholder value with the URL of your Dataverse environment, and select **Add** to save the environment.
 
 3. Close the **Manage environments** dialog box.  
 
@@ -106,6 +104,5 @@ Create a new Web API request to test the connection with your Dataverse instance
 
 [Use Postman to perform operations](use-postman-perform-operations.md)<br>
 [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

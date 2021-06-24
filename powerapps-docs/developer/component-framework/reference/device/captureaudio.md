@@ -1,6 +1,6 @@
 ---
 title: CaptureAudio | Microsoft Docs
-description: 
+description: Invokes the device microphone to record audio.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

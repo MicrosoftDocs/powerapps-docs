@@ -1,18 +1,22 @@
 ---
-title: Customize a SharePoint list form | Microsoft Docs
-description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
+title: Customize a SharePoint list or library form by using Power Apps
+description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/09/2020
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - Steven-Jia
+  - tapanm-msft
+  - navjotm
+  - emcoope-msft
 ---
 # Customize a SharePoint list or library form by using Power Apps
 
@@ -40,7 +44,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 
 ## Open the form
 
-1. In the command bar, select **Power Apps**, and then select **Customize form**.
+1. In the command bar, select **Integrate** -> **Power Apps** -> **Customize forms**.
 
     Power Apps Studio opens in the same browser tab.
 
@@ -164,7 +168,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** Yes.
 
-1. Open your list, select **Power Apps** on the command bar, and then select **Customize forms**.
+1. Open your list, select **Integrate** -> **Power Apps** -> **Customize forms**.
 
 1. In Power Apps Studio, select **File**, and then select **See all versions**. The **Versions** page opens in a new browser tab.
 

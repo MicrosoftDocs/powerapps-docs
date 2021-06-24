@@ -2,7 +2,7 @@
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
-ms.date: 05/27/2020
+ms.date: 05/20/2021
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -21,7 +21,12 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The names used for types depend on the designer used. [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
+The names used for types depend on the designer used. [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier.
+
+Watch this video for a quick overview on how to create a column in Dataverse:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
+
+The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
 |--|--|--|
@@ -60,7 +65,7 @@ For more descriptions for each type you can add or edit, see the article for the
 
 For more information about how column data types are defined in the API, see [Attribute metadata](../../developer/data-platform/entity-attribute-metadata.md)
 
-## Column Types used by the system
+## Column types used by the system
 
 There are some columns used by the system that you cannot add using the designer.
 
@@ -73,7 +78,13 @@ There are some columns used by the system that you cannot add using the designer
 |**Status**|A system column that has options that generally correspond to active and inactive status. Some system attributes have additional options, but all custom attributes have only **Active** and **Inactive** status options.  |
 |**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each row.|
 
-  
+## Text columns
+
+Text columns can contain text characters. This column type has several format options that will change the presentation of the text.
+
+Watch this video for a quick overview about text columns:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7j0]
+
 ## Choices
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
@@ -104,6 +115,9 @@ You can use global choices that are defined in your organization to configure va
 ## Using the right type of number
 
 When choosing the correct type of number column to use, the choice to use a **Whole Number** or **Currency** type should be straightforward. The choice between using **Floating Point** or **Decimal** numbers requires more thought.  
+
+Watch this video to help you decide what number column type to use:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEmPd]
   
 Decimal numbers are stored in the database exactly as specified. Floating point numbers store an extremely close approximation of the value. Why choose extremely close approximation when you can have the exact value? The answer is that you get different system performance.  
   
@@ -223,14 +237,14 @@ App users can now select the image to display on the form. When an app user open
 > [!IMPORTANT]
 > If the row is a new row that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
-### Change the image for a row
-Once a table form has an image column, app users can change the image for a given row. 
+### Change the image for a record
+Once a table form has an image column, app users can change the image for a given record. 
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
    > ![Default table image](../data-platform/media/default-entity-image-on-form.png "Default table image")
 
-2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the row. 
+2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the record. 
    > [!div class="mx-imgBorder"] 
    > ![Changed image saved to a row](../data-platform/media/custom-entity-icon-record.png "Changed image saved to a row")
 

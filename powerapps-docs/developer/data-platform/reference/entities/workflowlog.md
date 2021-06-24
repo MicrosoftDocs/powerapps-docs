@@ -1,22 +1,24 @@
 ---
-title: "WorkflowLog entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WorkflowLog table."
-ms.date: 11/14/2020
+title: "WorkflowLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the WorkflowLog table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# WorkflowLog entity reference
+
+# WorkflowLog table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](../../../../maker/data-platform/data-platform-intro.md).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Log used to track process execution.
 
@@ -25,13 +27,13 @@ Log used to track process execution.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/workflowlogs<br />See [Create](../../webapi/create-entity-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Delete](../../webapi/update-delete-entities-using-web-api.md#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Retrieve](../../webapi/retrieve-entity-using-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowlogs<br />See [Query Data](../../webapi/query-data-web-api.md)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Update](../../webapi/update-delete-entities-using-web-api.md#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/workflowlogs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Log used to track process execution.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityName](#BKMK_ActivityName)
 - [AsyncOperationId](#BKMK_AsyncOperationId)
@@ -187,7 +189,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_ErrorText"></a> ErrorText
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -221,7 +223,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_IterationCount"></a> IterationCount
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -328,7 +330,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionCount"></a> RepetitionCount
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -346,7 +348,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionId"></a> RepetitionId
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -407,7 +409,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Status Options
+#### Status Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -451,9 +453,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AsyncOperationIdName](#BKMK_AsyncOperationIdName)
 - [ChildWorkflowInstanceIdName](#BKMK_ChildWorkflowInstanceIdName)
@@ -851,7 +853,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [business_unit_workflowlogs](#BKMK_business_unit_workflowlogs)
 - [lk_workflowlog_createdby](#BKMK_lk_workflowlog_createdby)
@@ -870,60 +872,58 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
 
-See businessunit Entity [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) One-To-Many relationship.
+See businessunit Table [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_createdby"></a> lk_workflowlog_createdby
 
-See systemuser Entity [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) One-To-Many relationship.
+See systemuser Table [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_processsession"></a> lk_workflowlog_processsession
 
-See processsession Entity [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) One-To-Many relationship.
+See processsession Table [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_processsession_childworkflow"></a> lk_workflowlog_processsession_childworkflow
 
-See processsession Entity [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) One-To-Many relationship.
+See processsession Table [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperation_childworkflow"></a> lk_workflowlog_asyncoperation_childworkflow
 
-See asyncoperation Entity [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) One-To-Many relationship.
+See asyncoperation Table [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperations"></a> lk_workflowlog_asyncoperations
 
-See asyncoperation Entity [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) One-To-Many relationship.
+See asyncoperation Table [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_modifiedby"></a> lk_workflowlog_modifiedby
 
-See systemuser Entity [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_newprocess_workflowlogs"></a> lk_newprocess_workflowlogs
 
-See newprocess Entity [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) One-To-Many relationship.
+See newprocess Table [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) One-To-Many relationship.
 
 ### <a name="BKMK_team_workflowlog"></a> team_workflowlog
 
-See team Entity [team_workflowlog](team.md#BKMK_team_workflowlog) One-To-Many relationship.
+See team Table [team_workflowlog](team.md#BKMK_team_workflowlog) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_createdonbehalfby"></a> lk_workflowlog_createdonbehalfby
 
-See systemuser Entity [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_translationprocess_workflowlogs"></a> lk_translationprocess_workflowlogs
 
-See translationprocess Entity [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) One-To-Many relationship.
+See translationprocess Table [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) One-To-Many relationship.
 
 ### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
 
-See expiredprocess Entity [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) One-To-Many relationship.
+See expiredprocess Table [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) One-To-Many relationship.
 
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
-See systemuser Entity [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.workflowlog?text=workflowlog EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
-ms.date: 12/03/2020
+ms.date: 04/26/2021
 ms.author: matp
 search.audienceType: 
   - maker
@@ -53,6 +53,9 @@ To use Power BI with Dataverse, you need the following items:
    * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
 
    Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
+
+   > [!IMPORTANT]
+   > To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*.
 
 1. The **Navigator** displays all tables available for your environment, such as the account and contact tables. Select the **account** table to see a preview of your data in the right pane. Select **Load**.
 

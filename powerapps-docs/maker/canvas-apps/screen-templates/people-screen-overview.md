@@ -1,13 +1,13 @@
 ---
-title: People-screen template | Microsoft Docs
-description: Understand how the people-screen template for canvas apps works and how to extend the screen for your own use cases
+title: People-screen template in canvas apps
+description: Understand how the people-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/30/2018
+ms.date: 03/29/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the people-screen template for canvas apps
+# People-screen template in canvas apps
 
 In a canvas app, add a people screen that lets users search for people within their organizations. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
 
@@ -90,7 +90,7 @@ The people screen caches your people selections in the **MyPeople** collection. 
 1. Set the **OnSelect** property of **SendIcon** to this formula:
 
     ```powerapps-dot
-    Office365.SendEmail( 
+    Office365.SendEmailV2( 
         Concat( MyPeople, UserPrincipalName & ";" ), 
         SubjectLine.Text, 
         MessageBody.Text 

@@ -1,8 +1,8 @@
 ---
 title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to add custom workflow activities to the workflow designer." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/16/2019
+ms.date: 03/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,17 +16,16 @@ search.app:
 ---
 # Workflow extensions
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can extend the options available within the designer for workflows used in Microsoft Dataverse. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called *workflow assemblies* or *workflow activities*.
+You can extend the options available within the workflow designer used in Microsoft Dataverse. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called *workflow assemblies* or *workflow activities*.
 
-You can use these custom extensions within the designer used for workflows, custom actions, and dialogs (deprecated).
+You can use these custom extensions within the workflow designer, custom actions, and dialogs (deprecated).
 
 > [!IMPORTANT]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../../maker/data-platform/processes.md)
-> 
+>
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
-
 
 ## When to create a workflow extension
 
@@ -66,13 +65,11 @@ If you have Dynamics 365 Sales or Service solutions, you can find other command 
 |ResolveIncident|ResolveQuote|Revise|
 |UnlockInvoicePricing|UnlockSalesOrderPricing|
 
-More information: 
+More information:
 
 - [Configure workflow stages and steps](/flow/configure-workflow-steps)
 - [Use Dataverse dialogs for guided processes](/flow/use-cds-for-apps-dialogs)
 - [Create a custom action](/flow/create-actions)
-
-
 
 ## Technology used
 
@@ -93,12 +90,12 @@ These are general steps used to create a custom workflow activity using Visual S
 
     This package includes the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) package.
 
-1. (Optional) If you wish to use early bound entity classes, include them in the project.
+1. (Optional) If you wish to use early bound table classes, include them in the project.
 
-    More information: 
+    More information:
 
     - [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
-    - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md) 
+    - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
 
 1. Add a public class. The name of the class should correspond with the action to be performed by the activity.
 1. Add the following using directives
@@ -119,18 +116,18 @@ These are general steps used to create a custom workflow activity using Visual S
 
 1. Sign your assembly
 1. Build your assembly.
-1. Register your assembly using the Plug-in Registration tool and set the `Name` and `WorkflowActivityGroupName` properties to define the text that will be visible in the  process designer.
+1. Register your assembly using the Plug-in Registration tool and set the `Name` and `WorkflowActivityGroupName` properties to define the text that will be visible in the workflow designer.
 
     More information: [Register your assembly](#register-your-assembly)
 
-1. Test your workflow activity by invoking it from within a Workflow, dialog, or action processes
+1. Test your workflow activity by invoking it from within a workflow, dialog, or action processes
 1. (Recommended) Add your workflow activity to a solution.
 
 ## Add parameters
 
 When you define parameters for your class you must define them as [InArgument\<T>](/dotnet/api/system.activities.inargument-1), [OutArgument\<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument\<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
-When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
+When your custom workflow activity uses input or output parameters you must add appropriate .NET attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
 You can use the following types of properties as input or output parameters:
 
@@ -164,7 +161,6 @@ A single property in your class can be both an input and output parameter by inc
 public InOutArgument<int> IntParameter { get; set; }
 ```
 
-
 ### Required values
 
 If you want to make an input parameter required when using the workflow activity in a process you must use the `[RequiredArgument]` attribute.
@@ -195,7 +191,7 @@ The format for the default value depends on the type of property. Examples are i
 
 ### EntityReference parameters
 
-When you define a property for an <xref:Microsoft.Xrm.Sdk.EntityReference> parameter you must use the `ReferenceTarget` attribute. This establishes which type of attribute is permitted. For example:
+When you define a property for an <xref:Microsoft.Xrm.Sdk.EntityReference> parameter you must use the `ReferenceTarget` attribute. This establishes which type of table is permitted. For example:
 
 ```csharp
 [Input("EntityReference input")]
@@ -206,7 +202,7 @@ public InOutArgument<EntityReference> AccountReference { get; set; }
 
 ### OptionSetValue parameters
 
-When you define a property for an <xref:Microsoft.Xrm.Sdk.OptionSetValue> parameter you must use the `AttributeTarget` attribute. This attribute defines which entity and attribute contains the valid set of values for the parameter. For example:
+When you define a property for an <xref:Microsoft.Xrm.Sdk.OptionSetValue> parameter you must use the `AttributeTarget` attribute. This attribute defines which table and column contains the valid set of values for the parameter. For example:
 
 ```csharp
 [Input("Account IndustryCode value")]
@@ -253,7 +249,7 @@ namespace SampleWorkflowActivity
 
 ### Get Contextual information
 
-When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension\<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> Interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> Interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
+When your code requires contextual information you can access this using the [CodeActivityContext.GetExtension\<T> method](/dotnet/api/system.activities.activitycontext.getextension) with the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext> interface. This object is derived from the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface which provides access to many read-only properties that describe the context of the operation. The `IWorkflowContext` provides similar contextual information specific to the executing workflow that is using your workflow assembly.
 
 Use the following code in your `Execute` function to access the `IWorkflowContext`:
 
@@ -261,14 +257,13 @@ Use the following code in your `Execute` function to access the `IWorkflowContex
 protected override void Execute(CodeActivityContext context)
 {
  IWorkflowContext workflowContext = context.GetExtension<IWorkflowContext>();
-
 ...
 ```
 
 > [!IMPORTANT]
 > You should not include any logic dependencies based on the context information. When your custom workflow activity is used in a workflow, all the relevant input parameters should be set within the designer. The output value or behavior of the custom activity should always be determined solely by the input parameters so that there are no hidden factors that change the behavior. When someone uses the custom activity in the designer, the behavior should always be predictable.
 
-### Use the Organization Service
+### Use the Organization service
 
 When you need to perform data operations using the Organization service you can access this using the [CodeActivityContext.GetExtension\<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
 Use the following code in your `Execute` function to get access to the Organization service:
@@ -281,19 +276,18 @@ protected override void Execute(CodeActivityContext context)
 
  // Use the context service to create an instance of IOrganizationService.             
  IOrganizationService service = serviceFactory.CreateOrganizationService(workflowContext.InitiatingUserId);
-
 ...
 ```
 
 ## Register your assembly
 
-You will use the Plug-in Registration Tool (PRT) to register assemblies containing custom workflow activities. This is the same tool you use to register plug-ins. For both plug-ins and custom workflow activities, you must register the assembly which will upload it to the environment. However, you do not register steps for custom workflow activities.
+You will use the Plug-in Registration tool (PRT) to register assemblies containing custom workflow activities. This is the same tool you use to register plug-ins. For both plug-ins and custom workflow activities, you must register the assembly which will upload it to the environment. However, you do not register steps for custom workflow activities.
 
 For custom workflow activities you must specify the following properties to control what is displayed in the workflow process designer.
 
 |Field|Description|
 |--|--|
-|`Description`|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType Entity that stores this information.|
+|`Description`|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType table that stores this information.|
 |`FriendlyName`|User friendly name for the plug-in.|
 |`Name`|The name of the menu represented|
 |`WorkflowActivityGroupName`|The name of the submenu added to the main menu in the Dataverse process designer.|
@@ -305,7 +299,7 @@ For custom workflow activities you must specify the following properties to cont
 
 ## Debug Workflow Activities
 
-With custom workflow activities deployed to Dataverse you can capture profiles to replay for local debugging and use the tracing service to write information to an entity. 
+With custom workflow activities deployed to Dataverse you can capture profiles to replay for local debugging and use the tracing service to write information to a table.
 
 The following example shows using the tracing service to write the following message: `Add your message.`
 
@@ -317,13 +311,12 @@ ITracingService tracingService = executionContext.GetExtension<ITracingService>(
 
 //Use the tracing service
 tracingService.Trace("{0} {1} {2}.","Add","your","message");
-
 ...
 ```
 
 More information:
- - [Debug Workflow Activities](debug-workflow-activites.md)
- - [Use Tracing](../debug-plug-in.md#use-tracing)
+ - [Debug workflow activities](debug-workflow-activites.md)
+ - [Use tracing](../debug-plug-in.md#use-tracing)
  - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
 ## Add to Solution
@@ -337,7 +330,6 @@ You will need to maintain the code for your custom workflow activities. Because 
 When you register an assembly containing custom workflow activities the version of the assembly is included. This information is extracted using reflection from the assembly. You can control the version number using the `AssemblyInfo.cs` file in your Visual Studio project.
 
 You will find a section at the bottom that looks like this:
-
 
 ```
 // Version information for an assembly consists of the following four values:
@@ -363,7 +355,7 @@ When you make changes to fix bugs or re-factor code that do not make significant
 #### To update an assembly:
 
 1. Change only the **Build Number** and **Revision values** in your `AssemblyInfo.cs` `AssemblyVersion` attribute. For example, change from `1.0.0.0` to `1.0.10.5`.
-1. Use the Plug-in registration tool to Update the assembly. More information: [Update an assembly](../register-plug-in.md#update-an-assembly)
+1. Use the Plug-in Registration tool to update the assembly. More information: [Update an assembly](../register-plug-in.md#update-an-assembly)
 
 #### Upgrade a custom workflow activity assembly:
 
@@ -373,14 +365,14 @@ If you make changes that include significant changes to public classes or method
 
 1. Make sure the new assembly has the same `Name`, `PublicKeyToken`, and `Culture` as the existing assembly.
 1. Change the **Major Version** and/or **Minor Version** values in your `AssemblyInfo.cs` `AssemblyVersion` attribute. For example, change from `1.0.0.0` to `2.0.0.0`.
-1. Use the Plug-in registration tool to Register the assembly as a new assembly. More information: [Register an assembly](../register-plug-in.md#register-an-assembly)
+1. Use the Plug-in Registration tool to register the assembly as a new assembly. More information: [Register an assembly](../register-plug-in.md#register-an-assembly)
 1. For each process using the custom workflow activity, you must deactivate the process and edit the steps which use the custom workflow activity.
 
     You will find a **Version** selector in the process designer that you can use to choose which version of the assembly should be used.
 
-    ![workflow set version](media/workflow-set-version.png)
+    ![Workflow set version](media/workflow-set-version.png)
 
-When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to Unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
+When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
 
 ## Performance Guidance
 
@@ -388,14 +380,14 @@ Performance considerations for your workflow extensions are the same as for ordi
 
 Unlike an ordinary plug-in, with workflow extensions you do not have the opportunity to explicitly register your code for a specific step. This means you don't control whether the code in your workflow extension will run synchronously or asynchronously. Particular care must be considered for code that runs synchronously because it will directly impact the application user's experience.
 
-As re-usable components, workflow extensions can be added to any workflow or custom action. The workflow may be configured as a *real-time* workflow, which means it will run synchronously. Custom actions are always synchronous, but they do not participate in a transaction unless they have **Enable rollback** set.
+As re-usable components, workflow extensions can be added to any workflow or custom action. The workflow may be configured as a *real-time* workflow, which means it will run synchronously. Custom actions are always synchronous, but they do not participate in a database transaction unless they have **Enable rollback** set.
 
 > [!IMPORTANT]
 > When your workflow extension is used in a synchronous workflow or a custom action the time spent running the code directly impacts the user's experience. For this reason, workflow extensions should require no more than two seconds to complete when used synchronously. If your extension requires more time than this, you should document this and discourage use of the extension in synchronous workflows or custom actions.
 
 You should also be aware that in a synchronous workflow or a custom action that participates in the transaction, any error thrown by your workflow extension will cause the entire transaction to rollback, which is a very expensive operation that can impact performance.
 
-You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowMode> property to determine if the plug-in is running synchronously.
+You can use the value in the <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext.WorkflowMode> property to determine if the workflow is running synchronously.
 
 ## Real-time workflow stages
 
@@ -416,10 +408,9 @@ If your workflow extension depends on data passed in the execution context, the 
 > [!NOTE]
 > We don't recommend including logic dependencies based on the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. Workflow extensions should depend on the configured [input and output parameters](#input-and-output-parameters) so that the person using the workflow extension can understand the expected behavior without having anything hidden from them.
 
-## Entity Images for workflow extensions
+## Entity images for workflow extensions
 
-There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. For  workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity Images](../understand-the-data-context.md#entity-images)
-
+There is no way to configure entity images for workflow extensions since you only register the assembly and the workflow activity runs in the context of the workflow. Workflow extensions entity images are available using the key values `PreBusinessEntity` and `PostBusinessEntity` respectively for the pre and post entity images. More information: [Entity images](../understand-the-data-context.md#entity-images)
 
 ### See also
 
@@ -428,6 +419,5 @@ There is no way to configure entity images for workflow extensions since you onl
 [Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
 [Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
 [Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

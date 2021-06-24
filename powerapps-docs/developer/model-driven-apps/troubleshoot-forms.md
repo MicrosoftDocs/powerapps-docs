@@ -2,7 +2,7 @@
 title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/12/2020
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -82,7 +82,7 @@ When you're troubleshooting issues caused by form handlers, disable the form han
 
 - **&flags=DisableFormHandlers=\<event name\>_\<event index\>**: Disables the form handlers by specifying the event name and the event index value. For example, **DisableFormHandlers=true_0** disables the form handler at index 0. **DisableFormHandlers=onload_2** flag disables the form handler at index 2 of the [OnLoad](./clientapi/reference/events/form-onload.md) event.
 
-- **&flags=DisableFormHandlers=\<event name\>\<starting index\>\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](./clientapi/reference/events/form-onload.md) handlers at indexes from 2 through 5.
+- **&flags=DisableFormHandlers=\<event name\>_\<starting index\>_\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](./clientapi/reference/events/form-onload.md) handlers at indexes from 2 through 5.
 
 ## Disabling form libraries
 
@@ -131,7 +131,7 @@ If you're troubleshooting an issue caused by a business process flow, disable th
 
 Some common issues that can cause unexpected behavior when a model-driven app form is loaded are:
 
-- Fields or controls don't have the values you expect.
+- Columns or controls don't have the values you expect.
 
 - Controls aren't disabled or aren't enabled.
 
@@ -139,7 +139,7 @@ Some common issues that can cause unexpected behavior when a model-driven app fo
 
 These behaviors occur after the form is opened&mdash;for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](./clientapi/reference/events/form-onload.md) scripts that run synchronously or asynchronously to change the field or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
+There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](./clientapi/reference/events/form-onload.md) scripts that run synchronously or asynchronously to change the column or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
 
 If the form loads normally after you disable the form handler, there's an issue with the script that's blocking or causing an error when the form is loading.
 
@@ -153,7 +153,9 @@ The most common cause of intermittent or random form errors is using unsupported
 
 - They might occur once on a computer, and the same error might occur again after you clear the browser cache.
 
-- [formContext.getControl](./clientapi/reference/controls/getcontrol.md) or [formContext.getControl(arg).getAttribute()](./clientapi/reference/controls/getattribute.md) randomly returns null for a valid control or attribute.
+- [formContext.getControl](./clientapi/reference/controls/getcontrol.md) or [formContext.getControl(arg).getAttribute()](./clientapi/reference/controls/getattribute.md) randomly returns null for a valid control or column.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 There are many ways to write unsupported Client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script is executed before the form is fully ready to be accessed via the Client API. This can depend on many factors:
 
@@ -272,9 +274,9 @@ This issue occurs if a business rule or custom script used to work in the legacy
 
 **Resolution**:
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in the legacy web client, but in the Unified Interface, the composite control is divided into parts and is stored differently. For example, if the field `fullname` is part of the business rule or custom script in the legacy web client, the fields `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
+An example of a common issue where this can happen is when a composite control is included in a script that exists in the legacy web client, but in the Unified Interface, the composite control is divided into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script in the legacy web client, the columns `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
 
-You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the fields that can be used in the business rule or custom script instead.
+You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to see more details, including the composite control that's causing the problem and the columns that can be used in the business rule or custom script instead.
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
@@ -285,14 +287,14 @@ There are many reasons why a related menu item doesn't appear on the **Related**
 
 **Resolution**:
 
-In the following example, a related entity `role` (security role) doesn't appear in the `team` form because the `role` entity isn't available in Unified Interface.
+In the following example, a related table `role` (security role) doesn't appear in the `team` form because the `role` table isn't available in Unified Interface.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
 
 In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `RelatedMenu` operation provides all the details that are causing the issue.
 
-There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example includes details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related entity.
+There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example includes details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related table.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu details](media/related-menu-error-details.png "Related menu details")
@@ -316,16 +318,16 @@ There are many possible reasons why a control might be disabled or hidden when t
 A control can be disabled by using the following list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled, you must change the input to the rule used for the result or to a rule earlier in the list.
 
 - If the flags `DisableWebResourceControls=true` or `DisableFormControl=<control name>` are passed and the control is affected by these flags, the control will be disabled.
-- If the owning entity is read-only in Unified Interface in entity metadata, the control is disabled.
-- If the entity isn't available in offline mode, the control is disabled.
+- If the owning table is read-only in Unified Interface in table definitions, the control is disabled.
+- If the table isn't available in offline mode, the control is disabled.
 - If the current user doesn't have write permissions on the record, the control is disabled.
-- If the attribute metadata has `IsValidforCreate` set to false, the control is disabled.
-- If the attribute metadata has `IsValidforUpdate` set to false, the control is disabled.
-- If the current user doesn't have `Assign to` privilege, the owner attribute is disabled.
-- If the user doesn't have write permissions on the attribute defined by field-level security, the control is disabled.
+- If the column definitions has `IsValidforCreate` set to false, the control is disabled.
+- If the column definitions has `IsValidforUpdate` set to false, the control is disabled.
+- If the current user doesn't have `Assign to` privilege, the owner column is disabled.
+- If the user doesn't have write permissions on the column defined by field-level security, the control is disabled.
 - If the control is disabled or enabled by the Client API script, the control disabled state will honor that setting.
 - If the control is disabled in the form designer, the control is disabled.
-- If the user doesn't have `Assign To` privilege for the lookup control's entity, or `Assign` privilege on the current record's entity, the lookup control is disabled
+- If the user doesn't have `Assign To` privilege for the lookup control's table, or `Assign` privilege on the current record's table, the lookup control is disabled
 
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
@@ -348,7 +350,7 @@ If there are multiple updates happening to a control's value, there will be an `
 > [!div class="mx-imgBorder"]
 > ![Control value before](media/control-default-value-after.png "Control value before")
 
-There are scenarios where fields are populated based on a relationship field mapping, in which case the event will show that.
+There are scenarios where columns are populated based on a relationship column mapping, in which case the event will show that.
 
 > [!div class="mx-imgBorder"]
 > ![Control value after](media/control-default-value-update-sequence.png "Control value after")
@@ -359,7 +361,7 @@ Verify where the value is coming from and take an action based on the below tabl
 |--|--|
 | Client API script | Contact the script owner. |
 | Default value | Check the control's configuration. |
-| Relationship field mapping | Check the relationship configuration and update the field mapping. |
+| Relationship column mapping | Check the relationship configuration and update the column mapping. |
 | Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
 
 
@@ -387,6 +389,68 @@ The `XrmNavigation` operation in [Monitor](../../maker/model-driven-apps/monitor
 
 > [!div class="mx-imgBorder"]
 > ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md)")
+
+## Opening another form instead of a quick create form?
+
+When opening a quick create form from a lookup or a grid, another form may open (edit or main form) instead of quick create form. There are few reasons why this can happen:
+
+- The main form dialog force flag is being set.
+- Quick create form is not available.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `FormType` event that includes all the reasons why a quick create form was not opened.
+
+> [!div class="mx-imgBorder"]
+> ![Table not enabled for quick create](media/troubleshoot-forms-entity-not-eabled-for-quick-create.png "Table not enabled for quick create")
+
+
+## Table doesn't appear in the quick create menu flyout?
+
+When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
+
+- There is no quick create form available for the table.
+- Table is not enabled for quick create form.
+- Table is not enabled for the new Unified Interface.
+- Table is read-only in Unified Interface.
+- Table's mobile client visibility cannot be modified.
+- Table is not part of the app module.
+- User does not have a create privilege on the table.
+- The create privilege is not supported for the table.
+
+**Resolution**:
+
+- You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `QuickCreateMenu` event that includes all the tables and reasons why they are filtered from the quick create menu flyout.
+
+See the examples below to understand the reasons for filtering. Based on the explanations, contact the responsible party or make changes accordingly.
+
+> [!div class="mx-imgBorder"]
+> ![Table not enabled for Unified Client](media/troubleshoot-forms-entity-unified-client.png "Table not enabled for Unified Client")
+
+> [!div class="mx-imgBorder"]
+> ![Table not available for quick create](media/troubleshoot-forms-entity-not-available-for-quick-create.png "Table not available for quick create")
+
+> [!div class="mx-imgBorder"]
+> ![Table not part of app module](media/troubleshoot-forms-entity-not-part-of-app.png "Table not part of app module")
+
+## Unexpected unsaved changes error
+
+When working on forms, you get the *unsaved changes* error on the form footer, when you navigate from the current form, or when the form is getting saved without any changes. 
+
+**Resolution**:
+
+The *unsaved changes* error appears when a change is made on the form and when the changes were not saved. If you haven't made any changes manually, they could be coming from a JavaScript, plug-in, or from a business rule. You can use [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) to view the `UnsavedChanges` event that helps to find the source of the changes. You can filter by OperationType `UnsavedChanges`.
+
+The `all attributes modified` section includes a quick summary of the columns that are causing the unsaved changes error along with their values. The `unsaved changes` section shows what happened to the columns in detail. For every column, a list of controls are provided that could be causing a change. The value change is also displayed (previousValue, newValue), as well as a call stack.
+
+The screenshot below shows the root cause of the issue. You can see that the change has come from the `OnLoad` script.
+
+> [!div class="mx-imgBorder"]
+> ![Unsaved changes error](media/unsaved-changes-error.png "Unsaved changes error")
+
+> [!NOTE]
+> If the user has manually made the changes on the form, a call stack will not be provided.
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

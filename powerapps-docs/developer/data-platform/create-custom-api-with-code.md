@@ -37,7 +37,7 @@ The tables in [Create and use Custom APIs](custom-api.md) describe all the prope
 
 ## Create a Custom API using the Web API
 
-This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related entity records in one operation](webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation)
+This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
 This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `3926874e-387b-4045-94b2-a5cafe44b06f`.
 

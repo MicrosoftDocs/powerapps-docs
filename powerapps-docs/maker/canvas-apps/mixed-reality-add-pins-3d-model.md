@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 9/24/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,8 @@ search.app:
   - PowerApps
 ---
 
-# Add pins to 3D models in Power Apps (Preview)
+# Add pins to 3D models in Power Apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can add pins (shown as circular markers) to specific points on 3D models that you display with the [View in 3D](mixed-reality-component-view-3d.md) component. 
 
@@ -30,17 +29,6 @@ This topic will guide you through creating a test app with a 3D model that you c
 - Create a collection to allow users of the app to create their own pins.
 
 
-## Prerequisites
-
-- Create a blank canvas app ready for editing.
-  - Go to [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-       
-       ![Create a blank phone layout app](./media/augmented/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
-       
-- [Enable the mixed-reality features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
-- Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
-
-
 ## Insert and connect pins to a 3D model
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert a 3D model and connect a list of pins.
@@ -51,7 +39,9 @@ First, insert a 3D model:
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, go to [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
+    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D component into the app.":::
+
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see how to [define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
 > [!NOTE]
 > This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
@@ -124,9 +114,9 @@ X Point | 0.00 | 0.72 | -0.20
 
 1. Set the following properties:
 
-    - **PinsX** as `TestData.'X Pins'`
-    - **PinsY** as `TestData.'Y Pins'`
-    - **PinsZ** as `TestData.'Z Pins'`
+    - **PinsX** as "X Pins"
+    - **PinsY** as "Y Pins"
+    - **PinsZ** as "Z Pins"
 
 1. The 3D component will now show each row in the table as a pin.
 
@@ -200,9 +190,9 @@ You can [create a collection](create-update-collection.md) within the app so use
 
 1. Set the following properties:
 
-    - **PinsX** as `PinsCollection.X`
-    - **PinsY** as `PinsCollection.Y`
-    - **PinsZ** as `PinsCollection.Z`
+    - **PinsX** as "X"
+    - **PinsY** as "Y"
+    - **PinsZ** as "Z"
 
 Now when a user enters coordinates into each of the fields and a label, and selects the **Add pin** button, the coordinates will be converted into a pin and placed on the model.
 

@@ -2,7 +2,7 @@
 title: "Sample: Export ribbon definitions  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbonRequest and RetrieveEntityRibbonRequest messages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -25,7 +25,7 @@ This sample shows how to export ribbon definitions. It uses the [RetrieveApplica
 
 ## What this sample does
 
-The `RetrieveApplicationRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the data that defines the content and behavior of the application ribbon. The `RetrieveEntityRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve ribbon definitions for an entity.
+The `RetrieveApplicationRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the data that defines the content and behavior of the application ribbon. The `RetrieveEntityRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve ribbon definitions for a table.
 
 ## How this sample works
 
@@ -38,7 +38,7 @@ Checks for the current version of the org.
 ### Demonstrate
 
 1. The `RetrieveApplicationRibbonRequest` method retrieves the application ribbon.
-2. The `RetrieveEntityRibbonRequest` method retrieves the system entity ribbons
+2. The `RetrieveEntityRibbonRequest` method retrieves the system table ribbons
 
 ### Clean up
 
@@ -47,7 +47,7 @@ No clean up is required for this sample
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass Parameters to a URL By Using the Ribbon](pass-parameters-url-by-using-ribbon.md)   
+ [Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)   
  [Ribbon core schema](ribbon-core-schema.md)
  [Ribbon types schema](ribbon-types-schema.md)
  [Ribbon WSS schema](ribbon-wss-schema.md)

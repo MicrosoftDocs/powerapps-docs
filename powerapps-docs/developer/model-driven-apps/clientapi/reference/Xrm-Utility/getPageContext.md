@@ -1,6 +1,7 @@
 ---
 title: "getPageContext (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/25/2020
+description: Includes description and supported parameters for the getPageContext method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 author: "Nkrb"
@@ -27,16 +28,16 @@ search.app:
 
 ## Returns
 
-The method returns an object with the `input` property. The `input` property is an object with the following attributes depending on whether you are currently on the *entity form* or *entity list*:
+The method returns an object with the `input` property. The `input` property is an object with the following values depending on whether you are currently on the *entity form* or *entity list*:
 
 ### Entity form
 
 |Name |Type |Description|
 |--|--|--|
 |pageType|String|The current page type. The value returned is "entityrecord".|
-|entityName|String|Logical name of the entity currently displayed.|
-|entityId|String|ID of the entity record currently displayed in the form.|
-|createFromEntity|Lookup|The parent record that provides default values based on mapped attribute values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
+|entityName|String|Logical name of the table currently displayed.|
+|entityId|String|ID of the table record currently displayed in the form.|
+|createFromEntity|Lookup|The parent record that provides default values based on mapped column values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
 |formId|String|ID of the currently displayed form.|
 
 
@@ -45,7 +46,7 @@ The method returns an object with the `input` property. The `input` property is 
 |Name |Type |Description|
 |--|--|--|
 |pageType|String|The current page type. The value returned is "entitylist".|
-|entityName|String|Logical name of the entity currently displayed.|
+|entityName|String|Logical name of the table currently displayed.|
 |viewId|String|ID of the view currently displayed.|
 |viewType|String|Type of the view currently displayed. Possible values are "savedquery" or "userquery".|
 

@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 5f75dde9-2842-4be0-8b9b-c2f1ef33e3c8
 ---
 
-Deletes an entity record.
+Deletes a table record.

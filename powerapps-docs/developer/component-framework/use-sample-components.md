@@ -1,11 +1,11 @@
 ---
-title: How to use the sample components? (Power Apps Component Framework) | Microsoft Docs
+title: How to use the sample components that are built using Power Apps component framework in Microsoft Dataverse | Microsoft Docs
 description: Provides information on how you can use the sample components created using Power Apps Component Framework in your model-driven and canvas apps
 keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 11/25/2019
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,21 +16,23 @@ ms.topic: "article"
 
 All the sample components listed under this section are available to download from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) so that you can try them out in your model-driven or canvas apps.
 
-The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
+The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, and a link to the complete sample component.
 
 ## Before you can try the sample components
 
 To try the sample components, you must first:
 
 - [Download](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) the sample components so that you have a local copy.
-- Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
+- Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
 ## Try the sample components
 
 Follow the steps below to import and try the sample components in your model-driven or canvas app:
 
 1. Navigate to the folder on your computer where you have downloaded the sample components, and extract the .zip file.  
-1. Open Developer Command Prompt for Visual Studio 2017 or higher and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/TS_IncrementComponent` folder.
+1. Open Developer Command Prompt for Visual Studio 2017 or higher and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/IncrementComponent` folder.
 
    >[!NOTE]
    > You need to go into the specific component folder if you wish to see that particular component in runtime. You can add multiple components into a single solution file during the build process.
@@ -54,7 +56,7 @@ Follow the steps below to import and try the sample components in your model-dri
      msbuild /t:restore
     ```
 1. Again, run the command `msbuild`.
-1. The generated solution zip file will be available at `Solution\bin\debug` folder. Manually [import the solution](../../maker/data-platform/import-update-export-solutions.md) into your Microsoft Dataverse environment using the web portal once the zip file is ready. Alternatively, to import the solution using Power Apps CLI commands, see the [Connecting to your environment](./import-custom-controls.md#connecting-to-your-environment) and [Deployment](./import-custom-controls.md#deploying-code-components) sections.
+1. The generated solution zip file will be available at `Solution\bin\debug` folder. Manually [import the solution](../../maker/data-platform/import-update-export-solutions.md) into your Microsoft Dataverse environment using the web portal once the zip file is ready. Alternatively, to import the solution using Microsoft Power Platform CLI commands, see the [Connecting to your environment](./import-custom-controls.md#connecting-to-your-environment) and [Deployment](./import-custom-controls.md#deploying-code-components) sections.
 1. Finally, to add code components to your model-driven and canvas apps, see [Add components to model-driven apps](./add-custom-controls-to-a-field-or-entity.md) and [Add components to canvas apps](./component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
 
 

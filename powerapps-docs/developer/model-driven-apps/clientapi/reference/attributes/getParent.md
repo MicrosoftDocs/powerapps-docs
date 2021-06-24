@@ -1,6 +1,7 @@
 ---
 title: "getParent (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Returns the formContext.data.entity object that is the parent to all the columns.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,17 +17,17 @@ search.app:
 ---
 # getParent (Client API reference)
 
+Returns the `formContext.data.entity` object that is the parent to all the columns. 
 
-
-Returns the `formContext.data.entity` object that is the parent to all attributes. 
-
-## Attribute types supported
+## Column types supported
 
 All
 
 ## Syntax
 
 `formContext.getAttribute(arg).getParent()`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Return Value
 

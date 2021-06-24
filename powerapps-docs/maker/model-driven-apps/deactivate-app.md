@@ -8,7 +8,7 @@ ms.reviewer: matp
 manager: kvivek
 ms.date: 01/05/2021
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 

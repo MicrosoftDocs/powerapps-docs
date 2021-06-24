@@ -1,8 +1,8 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to register a plug-in to apply custom business logic to Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/19/2019
+ms.date: 06/17/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,36 +18,34 @@ search.app:
 
 # Register a plug-in
 
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The process of writing, registering, and debugging a plug-in is:
 
-1. Create a .NET Framework Class library project in Visual Studio
+1. Create a .NET Framework class library project in Visual Studio
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
 1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
 1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
     1. Get references to services you need
-    1. Add your business logic
+    1. Add your custom business logic
 1. Sign & build the assembly
 1. Test the assembly
-    1. **Register the assembly in a test environment**
-    1. **Add your registered assembly and steps to an unmanaged solution**
+    1. Register the assembly in a test environment
+    1. Add your registered assembly and steps to an unmanaged solution
     1. Test the behavior of the assembly
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
 
-Content in this topic describes the steps **in bold** above and supports the following tutorials:
+This topic describes how to register a plug-in assembly and step, and add them to a solution. Additional information can be found in these tutorials:
 
 - [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+## Plug-in Registration tool (PRT)
 
-## Plugin registration tool (PRT)
-
-You will use the Plugin Registration Tool (PRT) to register your plug-in assemblies and steps.
+You will use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
 
 PRT is one of the tools available for download from NuGet. Follow the instructions in [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
@@ -60,7 +58,7 @@ Registering an assembly is the process of uploading the assembly to the Datavers
 > [!NOTE]
 > You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. Dataverse is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
 
-When an assembly is uploaded it is stored in the `PluginAssembly` entity. Most of the properties are set using reflection of the imported entity. The base64 encoded bytes of the assembly is stored in the `Content` attribute. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** attribute value.
+When an assembly is uploaded it is stored in the `PluginAssembly` table. Most of the properties are set using reflection of the imported table. The base64 encoded bytes of the assembly is stored in the `Content` column. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** value.
 
 ### View registered assemblies
 
@@ -69,8 +67,8 @@ You can view information about registered assemblies in the application solution
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 > [!NOTE]
-> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Serices Default Solution**). To view the **Default Solution**, select **All solutions** under **Solutions** and then change the view to **All Solutions - Internal**.
-> 
+> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Services Default Solution**). To view the **Default Solution**, select **All solutions** under **Solutions** and then change the view to **All Solutions - Internal**.
+>
 > For more information about solutions, see [Introduction to solutions](introduction-solutions.md)
 
 ![All Solutions internal](media/all-solutions-internal-view.png)
@@ -158,13 +156,13 @@ When you register a step, there are many options available to you which depend o
 |Field|Description|
 |--|--|
 |**Message**|PRT will auto-complete available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
-|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core entity messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the entities that support this message.|
+|**Primary Entity**|PRT will auto-complete valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
-|**Filtering Attributes**|With the `Update` message, when you set the **Primary Entity**, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included in the update. This is a best practice for performance. |
+|**Filtering Attributes**|With the `Update` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonate a user](impersonate-a-user.md) |
-|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. If all plug-ins for the same stage, entity, and message have the same value, the [SdkMessageProcessingStep.SdkMessageFilterId](/dynamics365/customer-engagement/developer/entities/sdkmessageprocessingstep#BKMK_SdkMessageFilterId) value will determine the order in which they are executed.|
+|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. If all plug-ins for the same stage, table, and message have the same value, the [SdkMessageProcessingStep.SdkMessageFilterId](/dynamics365/customer-engagement/developer/entities/sdkmessageprocessingstep#BKMK_SdkMessageFilterId) value will determine the order in which they are executed.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
 ### Event Pipeline Stage of execution
@@ -188,13 +186,13 @@ There are two modes of execution asynchronous, and synchronous.
 |**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job which will execute after the operation completes.|
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. The entire operation will wait until they complete.|
 
-Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)       
+Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
 
 ### Special step registration scenarios
-There are certain scenarios where step registration for a message and entity combination is not obvious. This is the result of how the system is designed internally where there is a special relationship between entities or operations. The information below identifies these cases and provides step registration guidance.
+There are certain scenarios where a step registration and table combination is not obvious. This is the result of how the system is designed internally where there is a special relationship between tables or operations. The information below identifies these cases and provides step registration guidance.
 
 - There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/8c969ed391d6fc8e423bde15c65db1f60f5fab2f/powerapps-docs/developer/data-platform/special-update-operation-behavior.md)
-- Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** entity instances.
+- Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** table instances.
 
 ### Deployment
 
@@ -207,15 +205,18 @@ There are certain scenarios where step registration for a message and entity com
 
 ### Set configuration data
 
-The **Unsecure Configuration** and **Secure Configuration** fields allow you to specify configuration data to pass to the plug-in for a specific step.
+The **Unsecure Configuration** and **Secure Configuration** fields in the PRT allow you to specify configuration data to pass to the plug-in for a specific step.
+
+> [!NOTE]
+> Secure Configuration data is not included with the step registration when you export a solution.
 
 You can write your plug-in to accept string values in the constructor to use this data to control how the plug-in should work for the step. More information: [Pass configuration data to your plug-in](write-plug-in.md#pass-configuration-data-to-your-plug-in)
 
 ### Define entity images
 
-Within your plug-in, you may want to reference primary entity property values that were not included in an operation. For example, in an `Update` operation you might want to know what a value was before it was changed, but the execution context doesn't provide this information, it only includes the changed value. 
+Within your plug-in, you may want to reference primary table property values that were not included in an operation. For example, in an `Update` operation you might want to know what a value was before it was changed, but the execution context doesn't provide this information, it only includes the changed value.
 
-If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the organization service to retrieve the current value of the property, but this is not a good practice for performance. A better practice is to define a pre entity image with your plug-in step registration. This will capture a 'snapshot' of the entity with the fields you are interested in as they existed before the operation that you can use to compare with the changed values. 
+If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this is not a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you are interested in as they existed before the operation that you can use to compare with the changed values.
 
 #### Messages that support entity images
 
@@ -223,29 +224,29 @@ In Dataverse, only the following messages support entity images:
 
 |Message|Request Class Property| Description|
 |--|--|--|
-|`Assign`|`Target`|The assigned entity.|
-|`Create`|`Target`|The created entity.|
-|`Delete`|`Target`|The deleted entity.|
+|`Assign`|`Target`|The assigned table.|
+|`Create`|`Target`|The created table.|
+|`Delete`|`Target`|The deleted table.|
 |`DeliverIncoming`|`EmailId`|The delivered email ID.|
 |`DeliverPromote`|`EmailId`|The delivered email ID.|
-|`Merge`|`Target` or `SubordinateId`|	The parent entity, into which the data from the child entity is being merged or the child entity that is being merged into the parent entity.|
+|`Merge`|`Target` or `SubordinateId`|The parent table, into which the data from the child table is being merged or the child table that is being merged into the parent table.|
 |`Route`|`Target`|The item being routed.|
 |`Send`|`FaxId`, `EmailId`, or `TemplateId` |The item being sent.|
-|`SetState`|`EntityMoniker`|The entity for which the state is set.|
-|`Update`|`Target`|The updated entity.|
+|`SetState`|`EntityMoniker`|The table for which the state is set.|
+|`Update`|`Target`|The updated table.|
 
 
 #### Types of entity images
 
-There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the entity looks like before the operation and after the operation. When you configure an entity image, you will define an *entity alias* value that will be the key value you will use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
+There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the table looks like before the operation and after the operation. When you configure an entity image, you will define an *table alias* value that will be the key value you will use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
 
 #### Availability of images
 
 When you configure an entity image it is important that you recognize that the type of entity images available depend on the stage of the registered step and the type of operation. For example:
 
-- You cannot have a **Pre Image** for the `Create` message because the entity doesn't exist yet.
-- You cannot have a **Post Image** for the `Delete` message because the entity won't exist anymore.
-- You can only have a **Post Image** for steps registered in the **PostOperation** stage of the execution pipeline because there is no way to know what the entity properties will be until the transaction is completed.
+- You cannot have a **Pre Image** for the `Create` message because the table doesn't exist yet.
+- You cannot have a **Post Image** for the `Delete` message because the table won't exist anymore.
+- You can only have a **Post Image** for steps registered in the **PostOperation** stage of the execution pipeline because there is no way to know what the table properties will be until the transaction is completed.
 - For an `Update` operation that is registered in the **PostOperation** stage you can have both a **Pre Image** AND a **Post Image**.
 
 
@@ -261,7 +262,7 @@ The procedure to add a step to a solution is similar to adding an assembly. You 
 
 ![Missing required component dialog](media/missing-required-component.png)
 
-If you encounter this, you should usually select **OK** to bring the assembly in with the unmanaged solution. The only time you would not select this is if your solution is designed to be installed in an environement where another solution containing the assembly is already installed.
+If you encounter this, you should usually select **OK** to bring the assembly in with the unmanaged solution. The only time you would not select this is if your solution is designed to be installed in an environment where another solution containing the assembly is already installed.
 
 Similarly, you should note that removing the assembly from the solution will not remove any steps that depend on it.
 
@@ -292,7 +293,7 @@ You can unregister or disable plug-in components.
 
 The PRT provides commands to unregister assemblies, types, steps, and images. See the [Unregister assembly, plug-in, and step](tutorial-update-plug-in.md#unregister-assembly-plug-in-and-step) instructions in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the procedure.
 
-These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) entities.
+These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) tables.
 
 You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
 

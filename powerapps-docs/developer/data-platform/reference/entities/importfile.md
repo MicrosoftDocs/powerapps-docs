@@ -1,22 +1,24 @@
 ---
-title: "ImportFile entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ImportFile table."
-ms.date: 11/14/2020
+title: "ImportFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ImportFile table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ImportFile entity reference
+
+# ImportFile table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 File name of file used for import.
 
@@ -25,22 +27,22 @@ File name of file used for import.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/importfiles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/importfiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GetDistinctValuesImportFile|<xref href="Microsoft.Dynamics.CRM.GetDistinctValuesImportFile?text=GetDistinctValuesImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetDistinctValuesImportFileRequest>|
 |GetHeaderColumnsImportFile|<xref href="Microsoft.Dynamics.CRM.GetHeaderColumnsImportFile?text=GetHeaderColumnsImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetHeaderColumnsImportFileRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importfiles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveParsedDataImportFile|<xref href="Microsoft.Dynamics.CRM.RetrieveParsedDataImportFile?text=RetrieveParsedDataImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveParsedDataImportFileRequest>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -58,9 +60,9 @@ File name of file used for import.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Content](#BKMK_Content)
 - [DataDelimiterCode](#BKMK_DataDelimiterCode)
@@ -119,7 +121,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### DataDelimiterCode Options
+#### DataDelimiterCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -141,7 +143,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### EnableDuplicateDetection Options
+#### EnableDuplicateDetection Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -177,7 +179,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### FieldDelimiterCode Options
+#### FieldDelimiterCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -200,7 +202,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### FileTypeCode Options
+#### FileTypeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -265,7 +267,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFirstRowHeader Options
+#### IsFirstRowHeader Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -331,7 +333,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ProcessCode Options
+#### ProcessCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -446,7 +448,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -466,7 +468,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -523,7 +525,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### UpsertModeCode Options
+#### UpsertModeCode Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -545,7 +547,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UseSystemMap Options
+#### UseSystemMap Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -573,9 +575,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AdditionalHeaderRow](#BKMK_AdditionalHeaderRow)
 - [CompletedOn](#BKMK_CompletedOn)
@@ -1072,7 +1074,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ProcessingStatus Options
+#### ProcessingStatus Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -1167,7 +1169,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ImportFile_BulkDeleteFailures"></a> ImportFile_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [ImportFile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportFile_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [ImportFile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportFile_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1182,7 +1184,7 @@ Same as bulkdeletefailure entity [ImportFile_BulkDeleteFailures](bulkdeletefailu
 
 ### <a name="BKMK_ImportLog_ImportFile"></a> ImportLog_ImportFile
 
-Same as importlog entity [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_ImportFile) Many-To-One relationship.
+Same as importlog table [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_ImportFile) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1197,7 +1199,7 @@ Same as importlog entity [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_Impo
 
 ### <a name="BKMK_ImportFile_AsyncOperations"></a> ImportFile_AsyncOperations
 
-Same as asyncoperation entity [ImportFile_AsyncOperations](asyncoperation.md#BKMK_ImportFile_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [ImportFile_AsyncOperations](asyncoperation.md#BKMK_ImportFile_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -1213,7 +1215,7 @@ Same as asyncoperation entity [ImportFile_AsyncOperations](asyncoperation.md#BKM
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_importfilebase_createdby](#BKMK_lk_importfilebase_createdby)
 - [lk_importfilebase_createdonbehalfby](#BKMK_lk_importfilebase_createdonbehalfby)
@@ -1230,52 +1232,50 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importfilebase_createdby"></a> lk_importfilebase_createdby
 
-See systemuser Entity [lk_importfilebase_createdby](systemuser.md#BKMK_lk_importfilebase_createdby) One-To-Many relationship.
+See systemuser Table [lk_importfilebase_createdby](systemuser.md#BKMK_lk_importfilebase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importfilebase_createdonbehalfby"></a> lk_importfilebase_createdonbehalfby
 
-See systemuser Entity [lk_importfilebase_createdonbehalfby](systemuser.md#BKMK_lk_importfilebase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_importfilebase_createdonbehalfby](systemuser.md#BKMK_lk_importfilebase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_team_ImportFiles"></a> team_ImportFiles
 
-See team Entity [team_ImportFiles](team.md#BKMK_team_ImportFiles) One-To-Many relationship.
+See team Table [team_ImportFiles](team.md#BKMK_team_ImportFiles) One-To-Many relationship.
 
 ### <a name="BKMK_ImportFile_Team"></a> ImportFile_Team
 
-See team Entity [ImportFile_Team](team.md#BKMK_ImportFile_Team) One-To-Many relationship.
+See team Table [ImportFile_Team](team.md#BKMK_ImportFile_Team) One-To-Many relationship.
 
 ### <a name="BKMK_ImportFile_SystemUser"></a> ImportFile_SystemUser
 
-See systemuser Entity [ImportFile_SystemUser](systemuser.md#BKMK_ImportFile_SystemUser) One-To-Many relationship.
+See systemuser Table [ImportFile_SystemUser](systemuser.md#BKMK_ImportFile_SystemUser) One-To-Many relationship.
 
 ### <a name="BKMK_SystemUser_ImportFiles"></a> SystemUser_ImportFiles
 
-See systemuser Entity [SystemUser_ImportFiles](systemuser.md#BKMK_SystemUser_ImportFiles) One-To-Many relationship.
+See systemuser Table [SystemUser_ImportFiles](systemuser.md#BKMK_SystemUser_ImportFiles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importfilebase_modifiedonbehalfby"></a> lk_importfilebase_modifiedonbehalfby
 
-See systemuser Entity [lk_importfilebase_modifiedonbehalfby](systemuser.md#BKMK_lk_importfilebase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_importfilebase_modifiedonbehalfby](systemuser.md#BKMK_lk_importfilebase_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_Import_ImportFile"></a> Import_ImportFile
 
-See import Entity [Import_ImportFile](import.md#BKMK_Import_ImportFile) One-To-Many relationship.
+See import Table [Import_ImportFile](import.md#BKMK_Import_ImportFile) One-To-Many relationship.
 
 ### <a name="BKMK_ImportMap_ImportFile"></a> ImportMap_ImportFile
 
-See importmap Entity [ImportMap_ImportFile](importmap.md#BKMK_ImportMap_ImportFile) One-To-Many relationship.
+See importmap Table [ImportMap_ImportFile](importmap.md#BKMK_ImportMap_ImportFile) One-To-Many relationship.
 
 ### <a name="BKMK_lk_importfilebase_modifiedby"></a> lk_importfilebase_modifiedby
 
-See systemuser Entity [lk_importfilebase_modifiedby](systemuser.md#BKMK_lk_importfilebase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_importfilebase_modifiedby](systemuser.md#BKMK_lk_importfilebase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_BusinessUnit_ImportFiles"></a> BusinessUnit_ImportFiles
 
-See businessunit Entity [BusinessUnit_ImportFiles](businessunit.md#BKMK_BusinessUnit_ImportFiles) One-To-Many relationship.
+See businessunit Table [BusinessUnit_ImportFiles](businessunit.md#BKMK_BusinessUnit_ImportFiles) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importfile?text=importfile EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,8 +1,8 @@
 ---
-title: "Web API Basic Operations Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This group of sample demonstrates how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. These are implemented using Client-side JavaScript and C#"
+title: "Web API basic operations sample (Microsoft Dataverse)| Microsoft Docs"
+description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. The samples are coded using client-side JavaScript and also C#."
 ms.custom: ""
-ms.date: 03/22/2019
+ms.date: 06/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,18 +21,19 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Basic Operations Sample
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API.  
+This collection of sample code snippets demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API.  
   
 -   [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)  
   
- This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
+ This topic describes a common set of operations implemented by each sample snippet in this group. This topic describes the HTTP requests and responses and text output that each sample will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   
 <a name="bkmk_demonstrates"></a>  
- 
+
 ## Demonstrates  
 
 This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
@@ -40,19 +41,19 @@ This sample is divided into the following sections, containing Dataverse Web API
 |Code section|Associated conceptual topics|  
 |------------------|----------------------------------|  
 |[Section 1: Basic create and update operations](#bkmk_section1)|[Basic create](create-entity-web-api.md#bkmk_basicCreate) <br /> [Create with data returned](create-entity-web-api.md#bkmk_createWithDataReturned) <br /> [Basic update](update-delete-entities-using-web-api.md#bkmk_update) <br /> [Update with data returned](update-delete-entities-using-web-api.md#bkmk_updateWithDataReturned)|  
-|[Section 2: Create with association](#bkmk_section2)|[Associate entities on create](associate-disassociate-entities-using-web-api.md#bkmk_Associateentitiesoncreate)|  
-|[Section 3: Create related entities (deep insert)](#bkmk_section3)|[Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated)|  
-|[Section 4: Associate and disassociate existing entities](#bkmk_section4)|[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)|  
-|[Section 5: Delete entities (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
+|[Section 2: Create with association](#bkmk_section2)|[Associate table rows on create](associate-disassociate-entities-using-web-api.md#bkmk_Associaterowsoncreate)|  
+|[Section 3: Create related table rows (deep insert)](#bkmk_section3)|[Create related table rows in one operation](create-entity-web-api.md#bkmk_CreateRelated)|  
+|[Section 4: Associate and disassociate existing table rows](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
+|[Section 5: Delete table rows (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
   
 > [!NOTE]
->  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the ID of the record assigned by your Dataverse server.  
+>  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   
 <a name="bkmk_section1"></a>
    
-## Section 1: Basic create and update operations 
- 
-This section creates a single contact then performs a series of updates upon that instance. Note that the response header [OData-EntityId](https://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793637) contains the URL to this newly created record (entity instance), which parenthetically includes the unique ID for this record.  
+## Section 1: Basic create and update operations
+
+This section creates a single contact then performs a series of updates upon that instance. Note that the response header [OData-EntityId](https://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793637) contains the URL to this newly created row, which parenthetically includes the unique ID for this record.  
   
 1.  Create a new contact, named  Peter Cambel.  
   
@@ -77,9 +78,9 @@ OData-Version: 4.0
 OData-EntityId: https://[Organization URI]/api/data/v9.0/contacts(60f77a42-5f0e-e611-80e0-00155da84c03)  
 ```  
   
-**Console output**  
+**Console output**
   
-```  
+```
 Contact 'Peter Cambel' created.  
 ```  
   
@@ -116,13 +117,13 @@ Contact 'Peter Cambel' updated with job title and annual income.
   
      Note that the response, in addition to the requested values and typical headers, also automatically returns the following types of additional information:  
   
-    -   The primary ID for the current entity type, here `contactid`.  
+    -   The primary ID for the current table type, here `contactid`.  
   
     -   An *ETag* value, denoted by the `@odata.etag` key, which identifies the specific version of the resource requested. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md).  
   
     -   The metadata context, denoted by the  `@odata.context` key, provides a way to compare query results to determine if they came from the same query.  
   
-    -   A `_transactioncurrencyid_value` that indicates the local currency of the monetary  transaction.  
+    -   A `_transactioncurrencyid_value` that indicates the local currency of the monetary transaction.  
   
  **Request** 
   
@@ -163,7 +164,7 @@ Contact 'Peter Cambel' retrieved:
 > [!IMPORTANT]
 >  You should always use selection and filtering in retrieval operations to optimize performance. For more information, see [Query Data using the Web API](query-data-web-api.md).  
   
-4.  Update the contact entity instance by supplying new values to these same properties.  
+4.  Update the contact instance by supplying new values to these same properties.  
   
 **Request** 
   
@@ -399,7 +400,7 @@ OData-Version: 4.0
   
  **Console output**  
   
- ```    
+ ```
  Account 'Contoso Inc' has primary contact 'Peter Cambel':  
      Job title: Senior Developer  
      Income: 95000    
@@ -407,9 +408,9 @@ OData-Version: 4.0
   
 <a name="bkmk_section3"></a>  
  
-## Section 3: Create related entities (deep insert)  
+## Section 3: Create related table rows (deep insert)  
 
-This section demonstrates how to create an entity instance and related entity instances, in a single POST request. Using this method, all instances are newly created; there are no existing instances to associate with. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is [atomic](https://msdn.microsoft.com/library/aa719484\(v=vs.71\).aspx), where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created.  
+This section demonstrates how to create a table row and related row, in a single POST request. Using this method, all rows are newly created; there are no existing rows to associate with. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is [atomic](https://msdn.microsoft.com/library/aa719484\(v=vs.71\).aspx), where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created.  
   
 This section creates an account, its primary contact, and a set of tasks for that contact in one request.  
   
@@ -580,7 +581,7 @@ Subject: Conduct training
    
 ## Section 4: Associate and disassociate existing entities  
 
-This section demonstrates how to associate and disassociate existing entity instances. Forming an association requires the use of a reference URI and relationship object, which are then sent in a POST request. Disassociating requires sending a DELETE request to the reference URI for that association.  First a one-to-many association is formed between a contact and an account.  Then a many-to-many association is formed between a competitor and one or more opportunities.  
+This section demonstrates how to associate and disassociate existing table rows. Forming an association requires the use of a reference URI and relationship object, which are then sent in a POST request. Disassociating requires sending a DELETE request to the reference URI for that association.  First a one-to-many association is formed between a contact and an account.  Then a many-to-many association is formed between a competitor and one or more opportunities.  
   
 1.  Add Peter Cambel as a contact to the account Fourth Coffee using the `contact_customer_accounts` collection-valued navigation property. Note the use of the special key `@odata.id` to specify the associated record.  
   
@@ -812,12 +813,12 @@ Opportunity 'River rafting adventure' disassociated from competitor 'Adventure W
   
 <a name="bkmk_section5"></a> 
   
-## Section 5: Delete entities (sample cleanup) 
+## Section 5: Delete table rows
  
 <!-- TODO:
 This section demonstrates how to delete entity instances. The corresponding message is a straightforward DELETE request that uses the URI of the entity instance to be deleted.  If the target entity has a parent-child relationship with other entities, then deleting the parent will, by default, automatically cascade delete child instances. For example, in this sample, tasks have contact as their parent. For more information, see [Entity relationship behavior](../entity-relationship-behavior.md).   -->
   
-1.  Each element of the collection of entity URLs is deleted.  The first is a contact record for Peter Cambel.  
+1.  Each element of the collection of row URLs is deleted.  The first is a contact record for Peter Cambel.  
   
 **Request** 
   
@@ -858,11 +859,10 @@ DELETE https://[Organization URI]/api/data/v9.0/opportunities(7cf77a42-5f0e-e611
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-table rows-using-web-api.md)<br />
 [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

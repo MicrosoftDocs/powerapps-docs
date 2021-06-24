@@ -1,22 +1,24 @@
 ---
-title: "InvalidDependency entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the InvalidDependency table."
-ms.date: 11/14/2020
+title: "InvalidDependency table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the InvalidDependency table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# InvalidDependency entity reference
+
+# InvalidDependency table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 An invalid dependency in the CRM system.
 
@@ -25,10 +27,10 @@ An invalid dependency in the CRM system.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/invaliddependencies(*invaliddependencyid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/invaliddependencies<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/invaliddependencies(*invaliddependencyid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/invaliddependencies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ An invalid dependency in the CRM system.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 
 ### <a name="BKMK_MissingComponentId"></a> MissingComponentId
@@ -66,9 +68,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ExistingComponentId](#BKMK_ExistingComponentId)
 - [ExistingComponentType](#BKMK_ExistingComponentType)
@@ -105,7 +107,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### ExistingComponentType Options
+#### ExistingComponentType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -214,7 +216,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ExistingDependencyType Options
+#### ExistingDependencyType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -250,7 +252,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsExistingNodeRequiredComponent Options
+#### IsExistingNodeRequiredComponent Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -305,7 +307,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### MissingComponentType Options
+#### MissingComponentType Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -405,8 +407,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.invaliddependency?text=invaliddependency EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,13 +1,13 @@
 ---
-title: Understand experimental, preview, and experimental features | Microsoft Docs
-description: Test and start to adopt new features.
+title: Understand experimental, preview, and deprecated features in Power Apps
+description: Learn about experimental, preview, and deprecated features.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/04/2020
+ms.date: 05/24/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -46,6 +46,9 @@ This table may help you decide when you should jump in:
 | **Shipped** for&nbsp;new&nbsp;apps | All new apps have this feature turned on and it cannot be turned off.  For existing apps where the feature is turned off, the feature will continue to show as a Preview feature until it is turned on.  If turned on and the switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was enabled. | Yes. |
 | **Shipped** for&nbsp;all&nbsp;apps | All apps have this feature and it cannot be disabled. | Yes. | 
 
+> [!NOTE]
+> Features listed as **Retired** are planned to be replaced, or removed soon. Consider using alternatives, and review the timelines as listed in the feature [details](#controlling-which-features-are-enabled).
+
 ## Documentation
 
 Where can you find information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
@@ -57,7 +60,7 @@ Experimental features are different.  They are works in progress, and we don't c
 
 ## Controlling which features are enabled
 
-Experimental and preview features are listed in the app's **Advanced settings**.  From within the app, select the **File** menu, select **Settings**, and then select **Advanced settings**. Scroll down to the **Preview features** and **Experimental features** sections:
+Experimental and preview features are listed in the app's **Settings** > **Upcoming features**.  From within the app, select the **File** menu, select **Settings**, and then select **Upcoming features**. Select **Preview**, **Experimental**, or **Retired** features using the available tabs.
 
 ![Advanced settings for canvas app](media/working-with-experimental/advanced-settings.png "Advanced settings for canvas app")
 

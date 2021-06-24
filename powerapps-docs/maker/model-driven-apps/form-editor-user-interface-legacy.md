@@ -1,6 +1,8 @@
 ---
 title: Overview of the model-driven app form editor user interface for Power Apps | MicrosoftDocs
 description: Know the form editor user interface to edit forms in Power Apps
+ms.custom: intro-internal
+ms.topic: overview
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
@@ -17,6 +19,8 @@ search.app:
   - D365CE
 ---
 # Overview of the model-driven app form editor user interface
+
+This article describes the classic form editor. We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 

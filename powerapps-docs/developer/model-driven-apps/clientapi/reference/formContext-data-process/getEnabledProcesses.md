@@ -1,6 +1,7 @@
 ---
 title: "getEnabledProcesses (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Asynchronously retrieves the business process flows enables for a table that the current user can switch to.
+ms.date: 04/15/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,13 +17,13 @@ search.app:
 ---
 # getEnabledProcesses (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEnabledProcesses-description.md](./includes/getEnabledProcesses-description.md)]
 
 ## Syntax
 
 `formContext.data.process.getEnabledProcesses(callbackFunction(enabledProcesses));`
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 
@@ -32,7 +33,7 @@ search.app:
 
 ## Example
 
-The **Sdk.formOnLoad** function in the example uses the **formContext.data.process.getEnabledProcesses** method to asynchronously retrieve information about business process flows that are enabled for the entity. The sample passes an anonymous function as the first parameter. This function is executed asynchronously when the data is returned and the data is passed as the parameter to the anonymous function.
+The **Sdk.formOnLoad** function in the example uses the **formContext.data.process.getEnabledProcesses** method to asynchronously retrieve information about business process flows that are enabled for the table. The sample passes an anonymous function as the first parameter. This function is executed asynchronously when the data is returned and the data is passed as the parameter to the anonymous function.
 
 The information about enabled business process flow is provided as a dictionary object where the Id of the process is the name of the property and the name of the business process flow is the value of the property. The sample code processes this information and sets the values in a global **Sdk.enabledProcesses** array to be accessed by logic that executes later. The sample also loops through the values in the **Sdk.enabledProcesses** array, and uses the **Sdk.writeToConsole** function to write information about the retrieved business process flows to the console.
 
@@ -68,10 +69,10 @@ var Sdk = window.Sdk || {};
 
             //Write the values of the Sdk.enabledProcesses array to the console
             if (Sdk.enabledProcesses.length < 0) {
-                Sdk.writeToConsole("There are no enabled business process flows for this entity.");
+                Sdk.writeToConsole("There are no enabled business process flows for this table.");
             }
             else {
-                Sdk.writeToConsole("These are the enabled business process flows for this entity:");
+                Sdk.writeToConsole("These are the enabled business process flows for this table:");
                 for (var i = 0; i < Sdk.enabledProcesses.length; i++) {
                     var enabledProcess = Sdk.enabledProcesses[i];
                     Sdk.writeToConsole("id: " + enabledProcess.id + " name: " + enabledProcess.name)
@@ -86,11 +87,11 @@ var Sdk = window.Sdk || {};
 }).call(Sdk);
 ```
 
-When you run this sample with the browser developer tools open, the following is an example of the output written to the console for an entity with multiple business process flows enabled.
+When you run this sample with the browser developer tools open, the following is an example of the output written to the console for a table with multiple business process flows enabled.
 
 ```
 Enabled business processes flows retrieved and added to Sdk.enabledProcesses array.
-These are the enabled business process flows for this entity:
+These are the enabled business process flows for this table:
 id: 7994be68-899e-4a40-8d18-f5c3b6940188 name: Sample Lead Process
 id: 919e14d1-6489-4852-abd0-a63a6ecaac5d name: Lead to Opportunity Sales Process
 ```

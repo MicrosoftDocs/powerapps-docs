@@ -454,7 +454,7 @@ Before you begin review of available dashboards, get familiar with general repor
 
 - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area.
 
-- You can also do other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports).
+- You can also do other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](/power-bi/consumer/end-user-reports).
 
 - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 

@@ -1,7 +1,7 @@
 ---
 title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Information about getEntityReference parameter.
-ms.date: 02/01/2021
+description: Includes description and supported parameters for the getEntityReference method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -17,7 +17,7 @@ search.app:
 ---
 # getEntityReference (Client API reference)
 
-Use this method to know information about an entity being saved/updated. It returns entity ID, and entity name if success.
+Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.
 
 ## Syntax
 

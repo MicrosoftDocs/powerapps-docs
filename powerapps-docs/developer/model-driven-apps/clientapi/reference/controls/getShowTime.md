@@ -1,6 +1,7 @@
 ---
 title: "getShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getShowTime method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -16,13 +17,11 @@ search.app:
 ---
 # getShowTime (Client API reference)
 
-
-
 Get whether a date control shows the time portion of the date. 
 
 ## Control types supported
 
-standard control for **datetime** attributes.
+standard control for **datetime** columns.
 
 ## Syntax
 

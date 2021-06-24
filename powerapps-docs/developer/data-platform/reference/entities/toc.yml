@@ -1,4 +1,4 @@
-- name: "About entity reference"
+- name: "About Table/Entity Reference"
   href: ../about-entity-reference.md
 - name: Account
   href: account.md
@@ -8,6 +8,8 @@
   href: actioncard.md
 - name: ActionCardUserState
   href: actioncarduserstate.md
+- name: activityfileattachment
+  href: activityfileattachment.md
 - name: ActivityMimeAttachment
   href: activitymimeattachment.md
 - name: ActivityParty
@@ -30,10 +32,14 @@
   href: appmodule.md
 - name: AppModuleComponent
   href: appmodulecomponent.md
+- name: appnotification
+  href: appnotification.md
 - name: Appointment
   href: appointment.md
 - name: AsyncOperation
   href: asyncoperation.md
+- name: Attribute
+  href: attribute.md
 - name: AttributeImageConfig
   href: attributeimageconfig.md
 - name: Audit
@@ -116,12 +122,20 @@
   href: email.md
 - name: EmailServerProfile
   href: emailserverprofile.md
+- name: Entity
+  href: entity.md
 - name: EntityAnalyticsConfig
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
+- name: EntityDataSource
+  href: entitydatasource.md
 - name: EntityImageConfig
   href: entityimageconfig.md
+- name: EntityKey
+  href: entitykey.md
+- name: EntityRelationship
+  href: entityrelationship.md
 - name: EnvironmentVariableDefinition
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
@@ -142,6 +156,10 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowmachine
+  href: flowmachine.md
+- name: flowmachinegroup
+  href: flowmachinegroup.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -170,6 +188,8 @@
   href: kbarticlecomment.md
 - name: KbArticleTemplate
   href: kbarticletemplate.md
+- name: KeyVaultReference
+  href: keyvaultreference.md
 - name: KnowledgeArticle
   href: knowledgearticle.md
 - name: KnowledgeArticleViews
@@ -188,6 +208,8 @@
   href: mailboxtrackingfolder.md
 - name: MailMergeTemplate
   href: mailmergetemplate.md
+- name: ManagedIdentity
+  href: managedidentity.md
 - name: Metric
   href: metric.md
 - name: MobileOfflineProfile
@@ -246,20 +268,32 @@
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_kalanguagesetting
+  href: msdyn_kalanguagesetting.md
 - name: msdyn_kmfederatedsearchconfig
   href: msdyn_kmfederatedsearchconfig.md
+- name: msdyn_kmpersonalizationsetting
+  href: msdyn_kmpersonalizationsetting.md
 - name: msdyn_knowledgearticleimage
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
+- name: msdyn_knowledgepersonalfilter
+  href: msdyn_knowledgepersonalfilter.md
+- name: msdyn_knowledgesearchfilter
+  href: msdyn_knowledgesearchfilter.md
 - name: msdyn_knowledgesearchinsight
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pminferredtask
+  href: msdyn_pminferredtask.md
+- name: msdyn_pmrecording
+  href: msdyn_pmrecording.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
@@ -290,6 +324,10 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncsubscription
+  href: organizationdatasyncsubscription.md
+- name: organizationdatasyncsubscriptionentity
+  href: organizationdatasyncsubscriptionentity.md
 - name: OwnerMapping
   href: ownermapping.md
 - name: package
@@ -348,6 +386,10 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: Relationship
+  href: relationship.md
+- name: RelationshipAttribute
+  href: relationshipattribute.md
 - name: Report
   href: report.md
 - name: ReportCategory
