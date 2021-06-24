@@ -163,6 +163,7 @@ Currently, Teams apps can only be shared with a single Azure Active Directory gr
 
 ### See also
 
+- [Customize Milestones sample app](customize-milestones.md)
 - [Use Milestones apps from teams store](milestones.md)
 - [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
