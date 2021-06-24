@@ -152,7 +152,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 ## Feedback link
 
-On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
 
 Currently there is no option to disable the feedback question prompt.
 
@@ -258,7 +258,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 ## Quick actions
 
-The new relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
+The relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
 Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
