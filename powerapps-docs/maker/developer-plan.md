@@ -63,7 +63,7 @@ may need to select your developer environment in the top right of the screen. It
 If you're a Visual Studio Dev Essentials user, the Power Apps Developer Plan is included in your benefits. Visit [My
 benefits](https://my.visualstudio.com/benefits), and select the Power Apps tile to sign up for the Power Apps Developer Plan.
 
-![Power Apps Developer Plan in Visual Studio](media/developer-plan/power-apps-plan.png "Power Apps Developer Plan in Visual Studio")
+![Power Apps Developer Plan in Visual Studio](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
 
 ## Which features are included in the Power Apps Developer Plan?
 
