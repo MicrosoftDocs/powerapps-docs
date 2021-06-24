@@ -48,7 +48,7 @@ After you provision an environment with a database that include sample apps, the
 - [Fundraiser](#fundraiser)
 
 ### Asset Checkout
-Asset checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
+Asset Checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
 ![Asset checkout sample app](media/overview-model-driven-samples/asset-checkout.png)
 
 #### Solution components included in this sample app
