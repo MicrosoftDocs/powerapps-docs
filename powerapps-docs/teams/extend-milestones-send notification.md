@@ -47,20 +47,20 @@ To complete this exercise, we would need the ability to log in into Teams that w
     ```powerapps-dot
     If(
     
-    locEditWorkItem,
+        locEditWorkItem,
     
-    //adding code to call a flow when status changes
+        //adding code to call a flow when status changes
     
-    If(
+            If(
     
-    locSelectedWorkItem.'Work Item Status'.'Project Work Item Status' \<\>
-    cmbAddWorkItemStatus.Selected.'Project Work Item Status',
+                locSelectedWorkItem.'Work Item Status'.'Project Work Item Status' \<\>
+                cmbAddWorkItemStatus.Selected.'Project Work Item Status',
     
-    true //your flow call will come here
+        true //your flow call will come here
     
-    );
-    
+    ); 
     ```
+    <!--- needs review (above code has 2 opening brackets, only 1 closing) --->
 
 1. Copy the entire code from the **OnSelect** property of the **Done** button, and paste it in a text editor for use later.
 
@@ -112,7 +112,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
     - Type - "String"
 
-    - Value = <!--- needs review --->
+    - Value = <!--- needs review - what's the value? --->
 
 1. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
 
@@ -155,69 +155,65 @@ To complete this exercise, we would need the ability to log in into Teams that w
     - Adaptive Card = <!--- needs review --->
 
     ```
-       {
-       
-       "type": "AdaptiveCard",
-       
-       "body": [
-       
-       {
-       
-       "type": "TextBlock",
-       
-       "size": "large",
-       
-       "weight": "Bolder",
-       
-       "text": "Status Update for
-       @{outputs('Get_Work_Item_record')?['body/msft_name']}",
-       
-       "wrap": true
-       
-       },
-       
-       {
-       
-       "type": "TextBlock",
-       
-       "text": "Status for Work Item
-       '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
-       @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
-       
-       "wrap": true
-       
-       }
-       
-       ],
-       
-       "actions": [
-       
-       {
-       
-       "type": "Action.OpenUrl",
-       
-       "title": "View @{variables('varCardTitle')}",
-       
-       "url":
-       "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
-       
-       }
-       
-       ],
-       
-       "\$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
-       
-       "version": "1.2"
-       
-       }
-       
+    {
+                "type": "AdaptiveCard",
+                "body": [
+                {
+           
+                       "type": "TextBlock",
+           
+           "size": "large",
+           
+           "weight": "Bolder",
+           
+           "text": "Status Update for
+           @{outputs('Get_Work_Item_record')?['body/msft_name']}",
+           
+           "wrap": true
+           
+           },
+           
+           {
+           
+           "type": "TextBlock",
+           
+           "text": "Status for Work Item
+           '@{outputs('Get_Work_Item_record')?['body/msft_name']}' has been updated to
+           @{outputs('Get_Work_Item_Status_record')?['body/msft_name']}",
+           
+           "wrap": true
+           
+           }
+           
+           ],
+           
+           "actions": [
+           
+           {
+           
+           "type": "Action.OpenUrl",
+           
+           "title": "View @{variables('varCardTitle')}",
+           
+           "url":
+           "[https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@{outputs('Compose](https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=@%7boutputs('Compose)')}"
+           
+           }
+           
+           ],
+           
+           "\$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>",
+           
+           "version": "1.2"
+           
+           }
     ```
 
 1. Save the flow.
 
 ## Trigger the flow from the Power Apps
 
-1. After the flow is saved, go back to the Teams editor, and open the app in Power Apps.
+1. After the flow is saved, go back to the Teams, and open the app in Power Apps.
 
 1. In the tree view, select the **Add/Edit Work Item** screen.
 
@@ -229,7 +225,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. In the first If condition that was added on the top, replace “true” with the run function used to trigger the flow trigger. See example below.
 
-    ```
+    ```powerapps-dot
     If(
     
     locEditWorkItem,
@@ -259,7 +255,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
 1. The Loading page formula needs to be updated to include the Work Item number, so we need to Update the **OnTimerEnd** property to the following:
 
-    ```
+    ```powerapps-dot
     If(
     
     gblAppLoaded,// && !IsBlankOrError(gblAppStyles),
