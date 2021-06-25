@@ -19,7 +19,7 @@ You can use the **View in MR** component in your app to let users see how a part
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
-You can also take photos and [upload them to OneDrive](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-take-upload-photos).
+You can also take photos and [upload them to OneDrive](https://docs.microsoft.com/powerapps/maker/canvas-apps/mixed-reality-take-upload-photos).
 
 In this topic, we will build a screen in an app that will allow a user to select 3D models from a gallery and view them using the **View in MR** component.
 
