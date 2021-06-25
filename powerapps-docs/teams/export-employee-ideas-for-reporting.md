@@ -184,32 +184,22 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
     
     - Add the following filter to the Fetch XML Query field.
  
-
-        <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true"\>
-        
-        \<entity name="systemuser"\>
-        
-        \<attribute name="fullname" /\>
-        
-        \<attribute name="systemuserid" /\>
-        
-        \<link-entity name="msft_employeeidea_systemuser_vote" from="systemuserid" to="systemuserid" visible="false" intersect="true"\>
-        
-        \<link-entity name="msft_employeeidea" from="msft_employeeideaid" to="msft_employeeideaid" alias="aa"\>
-    
-        \<filter type="and"\>
-        
-        \<condition attribute="msft_employeeideaid" operator="eq" value="@{items('Update_Vote_Detail')?['msft_employeeideaid']}" /\>
-        
-        \</filter\>
-        
-        \</link-entity\>
-    
-        \</link-entity\>
-    
-        \</entity\>
-    
-        \</fetch\>
+```xml  
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true"\>
+   <entity name="systemuser"\>  
+      <attribute name="fullname" /\>
+      <attribute name="systemuserid" /\>
+      <link-entity name="msft_employeeidea_systemuser_vote" from="systemuserid" to="systemuserid" visible="false" intersect="true"\>
+      <link-entity name="msft_employeeidea" from="msft_employeeideaid" to="msft_employeeideaid" alias="aa"\>
+      <filter type="and"\>
+            <condition attribute="msft_employeeideaid" operator="eq" value="@{items('Update_Vote_Detail')?['msft_employeeideaid']}" /\
+          </filter\>    
+      </link-entity\>
+   </link-entity\>
+   </entity\>
+</fetch>  
+  
+```  
   
     
 > [!div class="mx-imgBorder"]
