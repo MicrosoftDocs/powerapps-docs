@@ -121,11 +121,11 @@ The following changes are required to add the Effort field/column on the Add/Edi
     
 20.  Select the Done button, and add the following to both the Patch functions 'Effort: cmbAddWorkItemEffort.Selected.Value,' right after the description formula 'Description: txtAddWorkItemDesc.Text,'.
 
-    ![Update description formula](media/extend-milestones-add-column/description-field.png "Update description formula")
+![Update description formula](media/extend-milestones-add-column/description-field.png "Update description formula")
 
-    The screen will appear as shown below with the newly added column
+The screen will appear as shown below with the newly added column
 
-    ![The updated screen](media/extend-milestones-add-column/effort-on-form.png "The updated screen")
+![The updated screen](media/extend-milestones-add-column/effort-on-form.png "The updated screen")
 
 ### Adding the new field to the Mobile Work Item Details screen
 
@@ -192,7 +192,7 @@ Now that we've added the field, we'll add it to the mobile screen.
 
 28.  The updated screen is as shown below.
 
-    ![Mobile work item details screen](media/extend-milestones-add-column/mobile-workitem-detail-screen.png "Mobile work item details screen")
+![Mobile work item details screen](media/extend-milestones-add-column/mobile-workitem-detail-screen.png "Mobile work item details screen")
 
 1.  Similar to the above scenario, we need to add the Effort field to the New Work Item details screen.
 
@@ -249,7 +249,7 @@ Now that we've added the field, we'll add it to the mobile screen.
 
 24.  The updated screen with the Effort field is as shown below.
 
-    ![Updated mobile screen](media/extend-milestones-add-column/effort-on-form-mobile.png "Updated mobile screen")
+![Updated mobile screen](media/extend-milestones-add-column/effort-on-form-mobile.png "Updated mobile screen")
 
 ## Optional: Add the new field to the work item list on the home page
 
