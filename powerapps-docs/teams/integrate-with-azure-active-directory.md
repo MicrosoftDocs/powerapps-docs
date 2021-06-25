@@ -141,7 +141,7 @@ If(
 )
 ```
 
-NOTE: the GUID highlighted in red should be replaced with the GUID you copied in step #9 of [Create a new Azure Group](#_Create_a_new) section
+NOTE: the GUID highlighted in red should be replaced with the GUID you copied in step #9 of [Create a new Azure Group](#create_a_new_azure_group) section
 
 23. Select the three dots next to App and select Run OnStart
 
