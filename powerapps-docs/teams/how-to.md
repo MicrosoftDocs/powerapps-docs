@@ -772,7 +772,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | btnCheckoutBackToHome                   | Text         | "Return to home"      |
     | btnCheckoutBackToHome                   | Button Type  | Standard              |
 
-1. 
+1. --> needs review <--
 
     | **Control**           | **Property** | **Value**                                                                                         |   |
     |-----------------------|--------------|---------------------------------------------------------------------------------------------------|---|
@@ -856,7 +856,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | lblItemCount_MyCheckouts                | Text         | CountRows(ThisItem.Items.Item) & " items"            |
     | lblItemCount_MyCheckouts                | Font Size    | 10.5                                                 |
 
-1. 
+1. --> needs review <--
 
     | **Control**    | **Property**      | **Value**                  |
     |----------------|-------------------|----------------------------|
@@ -956,7 +956,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | btnMyCheckouts_Return          | Width        | 96                                                                                                                                                                          |
     | btnMyCheckouts_Return          | OnSelect     | Patch('Item Checkouts',ThisItem,{'Checkout Status':'Checkout Statuses'.Returned});UpdateContext({locSelectedItemForReturn:ThisItem.Item,locShowReturnConfirmation: true }); |
 
-1. 
+1. --> needs review <--
 
     | **Control**              | **Property**  | **Value** |
     |--------------------------|---------------|-----------|
@@ -1095,7 +1095,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | btnReturnBackToHome                   | Text         | "Return to home"    |
     | btnReturnBackToHome                   | Button Type  | Standard            |
 
-1. 
+1. --> needs review <--
 
     | **Control**              | **Property** | **Value**                                                                                                |   |
     |--------------------------|--------------|----------------------------------------------------------------------------------------------------------|---|
