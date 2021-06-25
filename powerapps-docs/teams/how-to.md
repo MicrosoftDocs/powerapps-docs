@@ -132,6 +132,7 @@ Create the following tables and columns:
 | Item Type   | Lookup         | Related table = Item Type |
 
 ### Item Checkout
+
 | Column name       | Date type   | Value                               |
 | ----------------- | ----------- | ----------------------------------- |
 | Name              | Auto number |                                     |
