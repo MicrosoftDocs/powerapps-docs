@@ -192,4 +192,4 @@ Once we have the personas defined, relate these personas to the team role to whi
 
 For more details on recommended table permissions for the Power App templates for Microsoft Teams, see the following topics:
 
--   [Deploy Profile + as broad distibution app](deploy-profile-plus-broad-distribution)
+-   [Deploy Profile + as broad distibution app](deploy-profile-plus-broad-distribution.md)
