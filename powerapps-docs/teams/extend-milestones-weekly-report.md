@@ -56,34 +56,35 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
 
 1. List rows – renamed to List Work Items.
 
-    - Table Name – Project Work Items
+    - Table Name – "Project Work Items"
 
-    - Filter Rows – \_msft_project_id_value eq @{items('Apply_to_each_2')?['msft_projectid']}
+    - Filter Rows – "\_msft_project_id_value eq @{items('Apply_to_each_2')?['msft_projectid']}"
 
-    - Expand Query – msft_WorkItemStatus_id(\$select=msft_name)
+    - Expand Query – "msft_WorkItemStatus_id(\$select=msft_name)"
 
 > [!NOTE]
 > As soon as we select the Project ID in the Filter Rows field, the flow would put the List Work Items step into an Apply to Each container in which we would add more steps that would be needed.
 
 1. Create HTML table – renamed to Create HTML table – Work Items.
 
-    - From – the value from the previous step –  `@{outputs('List_Work_Items')?['body/value']}`
+    - From – the value from the previous step –  "@{outputs('List_Work_Items')?['body/value']}"
 
-    - Columns – Custom
+    - Columns – "Custom"
 
     - Add the columns to the table:
 
-    - Header – WorkItemName \| Value – Name from the List Work Items step.
-
-    - Header – WorkItemStatus \| Value – Work Item Status from the List Work Items step.
+        | Header | Value |
+        | - | - |
+        | WorkItemName | Name from the List Work Items step |
+        | WorkItemStatus | Work Item Status from the List Work Items step |
 
     ![Create an HTML table](media/extend-milestones-weekly-report/create-html-table.png "Create an HTML table")
 
 1. Send an email (v2).
 
-    - To: Created by Primary Email from the List Projects step.
+    - To: "Created by Primary Email from the List Projects step."
 
-    - Subject: Project Work Item Status for [Name](Name from the List Projects step).
+    - Subject: "Project Work Item Status for [Name](Name from the List Projects step)."
 
     - Body: Output from the Create HTML table step.
 
