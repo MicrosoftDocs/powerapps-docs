@@ -1,6 +1,8 @@
 ---
-title: How to sample app (Preview)
-description: Learn how to use the How to sample app and learn how to be a Power Apps maker.
+
+
+title: How to sample app
+description: Learn how to use the How to app and learn how to be a Power Apps maker.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,119 +15,139 @@ contributors:
 
 # How to sample app (Preview)
 
-The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
+The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution..
 
 Benefits of using the How-to app:
 
-- Understand the basics of Power Apps.
-- Learn how to build apps in Teams.
-- Share the asset checkout app you build with colleagues in Teams.
-- Become a Maker
+-   Understand the basics of Power Apps.
 
-> [!NOTE]
-> - Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample apps**](use-sample-apps-from-teams-store.md#step-1---allow-connections)
-> - This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information:  [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
+-   Learn how to build apps in Microsoft Teams.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so  that customers can get early access and provide feedback.
+-   Share the asset checkout app you build with colleagues in Microsoft Teams.
+
+-   Become a Maker
+
+>   Note
+
+>   Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample
+>   apps**](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+
+>   This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information:
+>   [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
+
+>   Important
+
+>   This is a preview feature.
+
+>   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so
+>   that customers can get early access and provide feedback.
 
 ## Prerequisites
 
 Before using this app:
 
-1. Install the How to app.
+1.  Install the How to app.
 
-1. Set up the app for the first use.
+2.  Set up the app for the first use.
 
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
 ## Building an Asset management app
 
-In the How to app, we'll build an asset management app to enable users to checkout assets from the library and return it when they're done. The instructions are included in the app, and makers who open the app in the Power Apps app in Teams will see the instructions in the studio.
+In the How to app, we will build an asset management app to enable users to checkout assets from the library and return it when they are done. The
+instructions are included in the app, and makers who open the app inside of the Power Apps app in Microsoft Teams will see the instructions in the studio.
 
-This article includes the steps from the app for makers who prefer to read them outside of the app. For example, when you have two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
+This article includes the steps from the app for makers who prefer to read them outside of the app--mayber you have two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
 
 From the main screen, you can see a summary of the steps to build the How to app and have the ability to preview the app.
 
-![Get started in Power Apps](media/how-to/start-screen.png "Get started in Power Apps")
+![](media/how-to/start-screen.png)
 
-Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selecting **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
+Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selectng **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
-![The finished asset checkout app](media/how-to/final-app.png "The finished asset checkout app")
+![](media/how-to/final-app.png)
 
 In the asset checkout app, selecting an item will take you to a screen where you can check out the item.
 
-![Checkout screen](media/how-to/checkout.png "Checkout screen")
+![](media/how-to/checkout.png)
 
-In the top-left corner, you can select the icon for checkout items, which are available in your account.
+In the top left corner, you can select the icon for checkout items, which are available in your account.
 
 ## Start your maker journey in How to
 
-How to is a self-contained lesson in how to build apps&mdash;all of the instructions are included in the app. To start learning, open the app using Power Apps app in Teams:
+How to is a self-contained lesson in how to build a Power app--all of the instructions are included in the app. To start learning, open How to in the
+Power Apps app in Microsoft Teams:
 
-1. In Teams, select **...** (ellipsis) on the left pane.
+1.  In Microsoft Teams, selec tthe elipses on the left app menu.
 
-1. Search for **Power Apps**.
+2.  Search for **Power Apps.** Select the Power Apps app.
 
-1. Select the Power Apps app.
+3.  Right click on the Power Apps button and select **Pop out app**, which will launch the Power apps app in a new window, so if you need to go somewhere else in Microsoft Teams, you won't lose your place.
+    
+4.  Select the Build tab
 
-1. Right-click on the Power Apps button, and select **Pop out app**. Power Apps app launches in a new window making it easier for you to work on Teams and Power Apps.
+5.  Select the team with How to installed.
 
-1. Select the Build tab.
+6.  Select **Installed apps**.
 
-1. Select the team where How to app is installed.
+7.  In the How to tile, select the **How to** app. The app will open in the Power Apps app.
+    
+    ![](media/how-to/how-to-tile.png)
+    
+8.  From the Tree view, select **Overview screen**.
 
-1. Select **Installed apps**.
+    ![](media/how-to/overview-screen.png)
 
-1. In the How to tile, select the **How to** app. The app will open in Power Apps.
+## Understanding the Overview screen
 
-   ![Open How to app](media/how-to/how-to-tile.png "Open How to app")
+The overview screen is your guide to your maker journey. From the overview screen, you can see where you are in the process. To start a step, hold your
+keyboard alt key and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
 
-1. From the Tree view, select **Overview screen**.
+When done, return to the Overview screen and select the button on the current step's tile to complete the step and move to the next lesson.
 
-   ![The overview screen](media/how-to/overview-screen.png "The overview screen")
+## Resetting your progress in How to
 
-## Understand the overview screen
+So if you have started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
 
-The overview screen is your guide to your maker journey. From the overview screen, you can see where you are in the process. To start a step, hold your keyboard **Alt** key, and select the **Start** button. This will take you to the relevant screen, from which you'll see the instructions to complete the step.
+1.  Open the Power Apps app in Microsoft Teams (right click and pop out app).
 
-When done, return to the overview screen, and select the button on the current step's tile to complete the step and move to the next lesson.
+2.  Select the **Build** tab,
 
-## Reset your progress in How to
+3.  Select the Team in which the How to app is installed.
 
-So if you've started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
+4.  Select the **Installed apps** tab.
 
-1. Open the Power Apps app in Teams (right-click and pop out app).
-1. Select the **Build** tab.
-1. Select the Team in which the How to app is installed.
-1. Select the **Installed apps** tab.
-1. In the How to tile, select **See all**.
-1. Select **Tables**.
-1. Select **Item Checkout App Stages**.
-1. Select **Edit data**.
-1. Select the rows in the table.
-1. Select **Delete record(s)**.
+5.  In the How to tile, select **See all**.
+
+6.  Select **Tables**.
+
+7.  Select **Item Checkout App Stages**.
+
+8.  Select **Edit data**.
+
+9.  Select the rows in the table.
+
+10. Select **Delete record(s)**.
 
 ## Learn to work with Data Model
 
-In this step, we'll add three tables. Creating the table names as item types, items, and item checkouts. Tables are created to store the data.
+In this step, we will add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
 
-For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md).
+For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md)
 
 Create the following tables and columns:
 
 ### Item Type
 
 | Column name      | Date type | Value |
-| ---------------- | --------- | ----- |
+|------------------|-----------|-------|
 | Checkout Admin   | Text      |       |
 | Checkout Address | Text      |       |
 
 ### Item
 
 | Column name | Date type      | Value                     |
-| ----------- | -------------- | ------------------------- |
+|-------------|----------------|---------------------------|
 | Quantity    | Whole number   |                           |
 | Description | Multiline text |                           |
 | Image       | Image          |                           |
@@ -134,7 +156,7 @@ Create the following tables and columns:
 ### Item Checkout
 
 | Column name       | Date type   | Value                               |
-| ----------------- | ----------- | ----------------------------------- |
+|-------------------|-------------|-------------------------------------|
 | Name              | Auto number |                                     |
 | Item              | Lookup      | Related table = Item                |
 | Checkout Reason   | Choice      | Remote work, New project assignment |
@@ -144,562 +166,958 @@ Create the following tables and columns:
 
 ## Sample Data
 
-In this step, we need to add data to the tables that we created earlier. This data will be the items and item types for the asset checkout process. For example, if you'll be using this app to manage the items such as mice and keyboards,  you can define item types like computers, phones, or desks which people can check out.
+In this step we need to add data to the tables which we created earlier. This data will be the items and item types for the asset checkout process. For
+example, if you will be using this app to manage the items such as mice and keyboards, you can define item types like computers, phones, or desks which people can check out.
 
-We'll use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
+We will use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
 
-1. Open the Power Apps app in Teams.
-1. Select the **Build** tab.
-1. Select the Team in which the How to app is installed.
-1. Select the **Installed apps** tab.
-1. In the How to tile, select **See all**.
-1. Select **Tables**.
-1. Select **Item Checkout App Stages**.
-1. Select **Edit data**.
+1.  Open the Power Apps app in Microsoft Teams.
 
-> [!NOTE]
-> The table editable grid cannot import photos.
+2.  Select the **Build** tab.
+
+3.  Select the Team in which the How to app is installed.
+
+4.  Select the **Installed apps** tab.
+
+5.  In the How to tile, select **See all**.
+
+6.  Select **Tables**.
+
+7.  Select **Item Checkout App Stages**.
+
+8.  Select **Edit data**.
+
+>   Note: The table editable grid cannot import photos.
 
 The sample data screen includes a gallery that allows you to select items that were created in the previous step and associate images with them.
 
-## UI components
+## UI Components
 
-In this step, we're going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
+In this step we are going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps](use-the-fluent-ui-controls.md).
+To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps app in Microsoft Teams - Power Apps \| Microsoft Docs](use-the-fluent-ui-controls.md).
 
-## Building Asset screen
+## Building Asset Screen
 
-In this step, we're going to create your first screen that displays the items available to be checked out. This screen displays a list of assets available to be checked out. This screen will be the primary screen of the application, from where the users will find items and select them to check them out.
+In this step we are going to create your first screen that displays the items available to be checked out. This screen displays a list of assets available to
+be checked out--this will be the primary screen of the application, from which users will find items and select them to check them out.
 
 Follow these steps to start creating your app.
 
-| **Control**                                   | **Property**                     | **Value**                                                                                                                               | 
-|-----------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| parent container                              | Name                             | conParent_Items                                                                                                                         |   
-| 1st child container                           | Name                             | conItemTypes                                                                                                                            |   
-| 2nd child container                           | Name                             | conItems                                                                                                                                |   
-| conItemTypes                                  | Gap                              | 20                                                                                                                                      |   
-| conItemTypes                                  | Vertical Overflow                | LayoutOverflow.Scroll                                                                                                                   |
-| conItemTypes                                  | Minimum Width                    | 300                                                                                                                                     |   
-| conItemTypes                                  | Padding Top                      | 20                                                                                                                                      |   
-| conItemTypes                                  | Padding Bottom                   | 20                                                                                                                                      |   
-| conItemTypes                                  | Fill                             | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White)                                                                        |   
-| Add New Horizontal container to conItemTypes  | Name                             | conItemTypesHeader                                                                                                                      |   
-| conItemTypesHeader                            | Padding Right                    | 10                                                                                                                                      |   
-| conItemTypesHeader                            | Minimum Height                   | 0                                                                                                                                       |   
-| conItemTypesHeader                            | Height                           | 32                                                                                                                                      |   
-| conItemTypesHeader                            | Padding Left                     | 20                                                                                                                                      |   
-| Add a label to conItemTypesHeader             | Name                             | lblAllAssetsHeader                                                                                                                      |   
-| lblAllAssetsHeader                            | Font                             | Segoe UI                                                                                                                                |   
-| lblAllAssetsHeader                            | Font weight                      | Bold                                                                                                                                    |   
-| lblAllAssetsHeader                            | Height                           | 32                                                                                                                                      |   
-| lblAllAssetsHeader                            | Flexible Width                   | true                                                                                                                                    |   
-| lblAllAssetsHeader                            | X                                | 20                                                                                                                                      |   
-| lblAllAssetsHeader                            | Text                             | "All assets"                                                                                                                            |   
-| Add an image to conItemTypesHeader            | Name                             | imgCheckout                                                                                                                             |   
-| imgCheckout                                   | Height                           | 32                                                                                                                                      |   
-| imgCheckout                                   | Width                            | 32                                                                                                                                      |   
-| imgCheckout                                   | Image                            | If(gblThemeDark\|\|gblThemeHiCo,Checkout\_Dark,Checkout)                                                                                |   
-| Add a blank vertical gallery to conItemTypes  | Name                             | galItemTypes                                                                                                                            |   
-| galItemTypes                                  | Items                            | Item Types                                                                                                                              |   
-| galItemTypes                                  | Min Height                       | 0                                                                                                                                       |   
-| galItemTypes                                  | Fill Portions                    | 19                                                                                                                                      |   
-| galItemTypes                                  | Template Size                    | 70                                                                                                                                      |   
-| galItemTypes                                  | Template Padding                 | 0                                                                                                                                       |   
-| galItemTypes                                  | OnSelect                         | UpdateContext( { locSelectedItemType: ThisItem, locShowItems: true } )                                                                  |  
-| galItemTypes                                  | Template Fill                    | If(  !('Items Screen'.Size = ScreenSize.Small),  If(  ThisItem.IsSelected,  ColorValue("\#E2E2F6"),  Transparent  ),   Transparent )    |   
-| Add a label to galItemTypes                   | Name                             | lblName                                                                                                                                 |   
-| lblName                                       | Width                            | Parent.Width                                                                                                                            |   
-| lblName                                       | Height                           | 32                                                                                                                                      |   
-| lblName                                       | X                                | 20                                                                                                                                      |   
-| lblName                                       | y                                | 5                                                                                                                                       |   
-| lblName                                       | Text                             | ThisItem.Name                                                                                                                           |   
-| lblName                                       | Font weight                      | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)                                                                           |   
-| lblName                                       | Font Size                        | 10.5                                                                                                                                    |   
-| Add a label to galItemTypes                   | Name                             | lblItemCount                                                                                                                            |   
-| lblItemCount                                  | Width                            | Parent.Width                                                                                                                            |   
-| lblItemCount                                  | Height                           | 32                                                                                                                                      |   
-| lblItemCount                                  | X                                | 20                                                                                                                                      |   
-| lblItemCount                                  | y                                | lblName.Y + lblName.Height                                                                                                              |   
-| lblItemCount                                  | Text                             | CountRows(ThisItem.Items.Item) & " items"                                                                                               |
-| lblItemCount                                  | Font Size                        | 10.5                                                                                                                                    |
-| conItems                                      | Gap                              | 20                                                                                                                                      |
-| conItems                                      | Padding Top                      | 20                                                                                                                                      |
-| conItems                                      | Padding Left                     | 20                                                                                                                                      |
-| conItems                                      | Padding Right                    | 20                                                                                                                                      |
-| conItems                                      | Vertical Overflow                | Overflow.Scroll                                                                                                                         |   
-| Add a label to conItems                       | Name                             | lblRelatedItemsHeader                                                                                                                   |   
-| lblRelatedItemsHeader                         | Text                             | CountRows(locSelectedItemType.Items.Item) & " items available"                                                                          |   
-| lblRelatedItemsHeader                         | Align in Container               | AlignInContainer.Stretch                                                                                                                |   
-| lblRelatedItemsHeader                         | Font weight                      | FontWeight.Semibold                                                                                                                     |   
-| lblRelatedItemsHeader                         | Font Size                        | 15                                                                                                                                      |   
-| lblRelatedItemsHeader                         | X                                | 707\*1                                                                                                                                  |   
-| lblRelatedItemsHeader                         | Y                                | 265\*1                                                                                                                                  |   
-| Add a blank vertical gallery to conItems      | Name                             | galItems                                                                                                                                |   
-| galItems                                      | Items                            | locSelectedItemType.Items                                                                                                               |
-| galItems                                      | TemplateSize                     | 130                                                                                                                                     |   
-| Add a button to galItems                      | Name                             | btnItemsBackground                                                                                                                      |   
-| btnItemsBackground                            | X                                | 5                                                                                                                                       |   
-| btnItemsBackground                            | y                                | 0                                                                                                                                       |   
-| btnItemsBackground                            | Fill                             | White                                                                                                                                   |   
-| btnItemsBackground                            | Height                           | Parent.TemplateHeight - 20                                                                                                              |
-| btnItemsBackground                            | Width                            | Parent.TemplateWidth - Self.X\*2                                                                                                        |
-| Add an image to galItems                      | Name                             | imgItem                                                                                                                                 |   
-| imgItem                                       | X                                | 5                                                                                                                                       |   
-| imgItem                                       | Y                                | 0                                                                                                                                       |   
-| imgItem                                       | Width                            | 125                                                                                                                                     |   
-| imgItem                                       | Height                           | 110                                                                                                                                     |   
-| imgItem                                       | ImagePosition                    | ImagePosition.Fill                                                                                                                      |
-| imgItem                                       | Image                            | ThisItem.Image.Full                                                                                                                     |
-| Add a label to galItems                       | Name                             | lblItemName                                                                                                                             |   
-| lblItemName                                   | Y                                | imgItem.Y + 5                                                                                                                           |
-| lblItemName                                   | X                                | imgItem.X + imgItem.Width +20                                                                                                           |
-| lblItemName                                   | Text                             | ThisItem.Name                                                                                                                           |
-| lblItemName                                   | Width                            | btnItemsBackground.Width - Self.X                                                                                                       |
-| lblItemName                                   | Font Size                        | 10.5                                                                                                                                    |   
-| lblItemName                                   | FontWeight                       | FontWeight.Semibold                                                                                                                     |
-| Add a label to galItems                       | Name                             | lblItemQuantity                                                                                                                         |   
-| lblItemQuantity                               | X                                | lblItemName.X                                                                                                                           |
-| lblItemQuantity                               | Y                                | lblItemName.Y + lblItemName.Height                                                                                                      |
-| lblItemQuantity                               | Text                             | ThisItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=ThisItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available" |
-| lblItemQuantity                               | Vertical align                   | Bottom                                                                                                                                  |   
-| lblItemQuantity                               | Width                            | btnItemsBackground.Width - Self.X                                                                                                       |
-| lblItemQuantity                               | Font Size                        | 10.5                                                                                                                                    |   
-| Add a label to galItems                       | Name                             | lblItemDesc                                                                                                                             |   
-| lblItemDesc                                   | X                                | lblItemName.X                                                                                                                           |
-| lblItemDesc                                   | Y                                | lblItemQuantity.Y + lblItemQuantity.Height                                                                                              |
-| lblItemDesc                                   | Text                             | ThisItem.Description                                                                                                                    |
-| lblItemDesc                                   | Vertical align                   | Bottom                                                                                                                                  |   
-| lblItemDesc                                   | Width                            | btnItemsBackground.Width - Self.X                                                                                                       |
-| lblItemDesc                                   | Wrap                             | false                                                                                                                                   |   
-| Add a button to galItems                      | Name                             | btnItemsForeground                                                                                                                      |   
-| btnItemsForeground                            | HoverFill                        |  RGBA(  128,  128,  128,  .06  )                                                                                                        |
-| btnItemsForeground                            | All other Fill except Hover Fill | Transparent                                                                                                                             |   
-| btnItemsForeground                            | X                                | btnItemsBackground.X                                                                                                                    |
-| btnItemsForeground                            | Y                                | btnItemsBackground.Y                                                                                                                    |
-| btnItemsForeground                            | Width                            | btnItemsBackground.Width                                                                                                                |
-| conItems                                      | Fill Portions                    | 3                                                                                                                                       |   
-| conItemTypes                                  | Fill Portions                    | 1                                                                                                                                       |   
-| galItems                                      | OnSelect                         | Navigate('Checkout Screen',ScreenTransition.Fade,{locSelectedItem:ThisItem})                                                            |
-| imgCheckout                                   | OnSelect                         | Navigate('My Checkouts Screen',ScreenTransition.Fade)                                                                                   |
+1.  The horizontal container **conItemTypes** will be used to contain a header label and a gallery of item types. Set its properties as shown below:
 
-## Building Checkout Screen 
+| **Property**      | **Value**                                                         |
+|-------------------|-------------------------------------------------------------------|
+| Name              | conItemTypes                                                      |
+| Gap               | 20                                                                |
+| Vertical Overflow | LayoutOverflow.Scroll                                             |
+| Minimum Width     | 300                                                               |
+| Padding Top       | 20                                                                |
+| Padding Bottom    | 20                                                                |
+| Fill              | If(gblThemeDark,ColorValue("\#141414"), gblThemeHiCo,Black,White) |
+
+2. Add New Horizontal container to conItemTypes - **conItemTypesHeader**. It will contain a header label and an image.
+
+| **Property**   | **Value**          |
+|----------------|--------------------|
+| Name           | conItemTypesHeader |
+| Padding Right  | 10                 |
+| Minimum Height | 0                  |
+| Height         | 32                 |
+| Padding Left   | 20                 |
+
+3. Add a label to conItemTypesHeader - **lblAllAssetsHeader**. It's a header label for the screen.
+
+| **Property**   | **Value**          |
+|----------------|--------------------|
+| Name           | lblAllAssetsHeader |
+| Font           | Segoe UI           |
+| Font weight    | Bold               |
+| Height         | 32                 |
+| Flexible Width | true               |
+| X              | 20                 |
+| Text           | "All assets"       |
+
+4. Add an image to conItemTypesHeader - **imgCheckout**. It will be used to navigate users to their existing checkouts.
+
+| **Property** | **Value**                                               |
+|--------------|---------------------------------------------------------|
+| Name         | imgCheckout                                             |
+| Height       | 32                                                      |
+| Width        | 32                                                      |
+| Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
+
+5. Add a blank vertical gallery to conItemTypes – **galItemTypes**. Its a gallery of item types. Clicking on an item type will display its related items.
+
+| **Property**     | **Value**                                                                                                                    |
+|------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Name             | galItemTypes                                                                                                                 |
+| Items            | Item Types                                                                                                                   |
+| Min Height       | 0                                                                                                                            |
+| Fill Portions    | 19                                                                                                                           |
+| Template Size    | 70                                                                                                                           |
+| Template Padding | 0                                                                                                                            |
+| OnSelect         | UpdateContext( { locSelectedItemType: ThisItem, locShowItems: true } )                                                       |
+| Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
+
+6. Add a label to galItemTypes – **lblName**. It's a label to display the item type name.
+
+| **Property** | **Value**                                                     |
+|--------------|---------------------------------------------------------------|
+| Name         | lblName                                                       |
+| Width        | Parent.Width                                                  |
+| Height       | 32                                                            |
+| X            | 20                                                            |
+| y            | 5                                                             |
+| Text         | ThisItem.Name                                                 |
+| Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+| Font Size    | 10.5                                                          |
+
+7. Add a label to galItemTypes – **lblItemCount**. It's a label to display the count of items belonging to a particular item type.
+
+| **Property** | **Value**                                 |
+|--------------|-------------------------------------------|
+| Name         | lblItemCount                              |
+| Width        | Parent.Width                              |
+| Height       | 32                                        |
+| X            | 20                                        |
+| y            | lblName.Y + lblName.Height                |
+| Text         | CountRows(ThisItem.Items.Item) & " items" |
+| Font Size    | 10.5                                      |
+
+8. The horizontal container **conItems** will be used to contain a header label and a gallery of items for the select item type. Set its properties as shown below:
+
+| **Property**      | **Value**       |
+|-------------------|-----------------|
+| Name              | conItems        |
+| Gap               | 20              |
+| Padding Top       | 20              |
+| Padding Left      | 20              |
+| Padding Right     | 20              |
+| Vertical Overflow | Overflow.Scroll |
+
+9. Add a label to conItems – **lblRelatedItemsHeader**. It's a label to display the count of items related to the selected item type.
+
+| **Property**       | **Value**                                                    |
+| ------------------ | ------------------------------------------------------------ |
+| Name               | lblRelatedItemsHeader                                        |
+| Text               | CountRows(locSelectedItemType.Items.Item) & " items available" |
+| Align in Container | AlignInContainer.Stretch                                     |
+| Font weight        | FontWeight.Semibold                                          |
+| Font Size          | 15                                                           |
+| X                  | 707\*1                                                       |
+| Y                  | 265\*1                                                       |
+
+10. Add a blank vertical gallery to conItems – **galItems**. This is the gallery that will display items that belong to the selected item type.
+
+| **Property** | **Value**                 |
+| ------------ | ------------------------- |
+| Name         | galItems                  |
+| Items        | locSelectedItemType.Items |
+| TemplateSize | 130                       |
+
+11. Add a button to galItems – **btnItemsBackground**. This is to add a white background for each item.
+
+| **Property** | **Value**                        |
+| ------------ | -------------------------------- |
+| Name         | btnItemsBackground               |
+| X            | 5                                |
+| y            | 0                                |
+| Fill         | White                            |
+| Height       | Parent.TemplateHeight - 20       |
+| Width        | Parent.TemplateWidth - Self.X\*2 |
+
+12. Add an image to galItems – **imgItem**. This is to display the item's image or logo.
+
+| **Control**              | **Property**  | **Value**           |
+|--------------------------|---------------|---------------------|
+| Add an image to galItems | Name          | imgItem             |
+| imgItem                  | X             | 5                   |
+| imgItem                  | Y             | 0                   |
+| imgItem                  | Width         | 125                 |
+| imgItem                  | Height        | 110                 |
+| imgItem                  | ImagePosition | ImagePosition.Fill  |
+| imgItem                  | Image         | ThisItem.Image.Full |
+
+13. Add a label to galItems – **lblItemName**. This is to display the item's name.
+
+| **Property** | **Value**                         |
+| ------------ | --------------------------------- |
+| Name         | lblItemName                       |
+| Y            | imgItem.Y + 5                     |
+| X            | imgItem.X + imgItem.Width +20     |
+| Text         | ThisItem.Name                     |
+| Width        | btnItemsBackground.Width - Self.X |
+| Font Size    | 10.5                              |
+| FontWeight   | FontWeight.Semibold               |
+
+14. Add a label to galItems – **lblItemQuantity**. This is to display the count of an item available for checkout.
+
+| **Property**   | **Value**                                                    |
+| -------------- | ------------------------------------------------------------ |
+| Name           | lblItemQuantity                                              |
+| X              | lblItemName.X                                                |
+| Y              | lblItemName.Y + lblItemName.Height                           |
+| Text           | ThisItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=ThisItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available" |
+| Vertical align | Bottom                                                       |
+| Width          | btnItemsBackground.Width - Self.X                            |
+| Font Size      | 10.5                                                         |
+
+15. Add a label to galItems - **lblItemDesc**. This is to display the item's description.
+
+| **Property**   | **Value**                                  |
+| -------------- | ------------------------------------------ |
+| Name           | lblItemDesc                                |
+| X              | lblItemName.X                              |
+| Y              | lblItemQuantity.Y + lblItemQuantity.Height |
+| Text           | ThisItem.Description                       |
+| Vertical align | Bottom                                     |
+| Width          | btnItemsBackground.Width - Self.X          |
+| Wrap           | false                                      |
+
+16. Add a button to galItems – **btnItemsForeground**. This is basically an overlay button to make the entire row clickable.
+
+| **Value**                  | **Property**                     |
+| -------------------------- | -------------------------------- |
+| btnItemsForeground         | Name                             |
+| RGBA( 128, 128, 128, .06 ) | HoverFill                        |
+| Transparent                | All other Fill except Hover Fill |
+| btnItemsBackground.X       | X                                |
+| btnItemsBackground.Y       | Y                                |
+| btnItemsBackground.Width   | Width                            |
+
+Now set the Fill Portions property for the controls conItems and conItemTypes as shown below - item types covers 25% of the screen and the remaining 75% is covered by the list of items
+
+| **Control**  | **Property**  | **Value** |
+| ------------ | ------------- | --------- |
+| conItems     | Fill Portions | 3         |
+| conItemTypes | Fill Portions | 1         |
+
+## Building Checkout Screen
 
 In this step we are going to create the second screen, the Item checkout screen. This screen displays the details of the item to be checked out and quantity available.
 
 From this screen the user provides details of the reason for checkout, duration, and other details and launches the checkout process.
 
-| **Control**                                           | **Property**         | **Value**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |   
-|-------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Checkout Screen                                       | OnVisible            | UpdateContext({locShowCheckoutConfirmation: false})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| parent container                                      | Name                 | conParent_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| 1st child container                                   | Name                 | conItemTypes_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| 2nd child container                                   | Name                 | conCheckout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| conItemTypes_Checkout                                 | Gap                  | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conItemTypes_Checkout                                 | Vertical Overflow    | LayoutOverflow.Scroll                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| conItemTypes_Checkout                                 | Minimum Width        | 300                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| conItemTypes_Checkout                                 | Padding Top          | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conItemTypes_Checkout                                 | Padding Bottom       | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conItemTypes_Checkout                                 | Fill                 | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White)                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| Add a Horizontal container to conItemTypes_Checkout   | Name                 | conItemTypesHeader_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| conItemTypesHeader_Checkout                           | Padding Left         | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conItemTypesHeader_Checkout                           | Padding Right        | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conItemTypesHeader_Checkout                           | Minimum Height       | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| conItemTypesHeader_Checkout                           | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a label to conItemTypesHeader_Checkout            | Name                 | lblAllAssetsHeader_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| lblAllAssetsHeader_Checkout                           | Font                 | Segoe UI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblAllAssetsHeader_Checkout                           | Font Weight          | Bold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblAllAssetsHeader_Checkout                           | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblAllAssetsHeader_Checkout                           | Flexible Width       | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblAllAssetsHeader_Checkout                           | Text                 | "All assets"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| lblAllAssetsHeader_Checkout                           | Font Size            | 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblAllAssetsHeader_Checkout                           | Minimum Width        | 150                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| Add an image to conItemTypesHeader_Checkout           | Name                 | imgCheckout_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| imgCheckout_Checkout                                  | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| imgCheckout_Checkout                                  | Weight               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| imgCheckout_Checkout                                  | Image                | If(gblThemeDark\|\|gblThemeHiCo,Checkout\_Dark,Checkout)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| Add a blank vertical gallery to conItemTypes_Checkout | Name                 | galItemTypes_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| galItemTypes_Checkout                                 | Items                | Item Types                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |   
-| galItemTypes_Checkout                                 | Minimum Height       | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| galItemTypes_Checkout                                 | Fill Portions        | 19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| galItemTypes_Checkout                                 | Template Size        | 70                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| galItemTypes_Checkout                                 | Template Padding     | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-|                                                       | Template Fill        | If(  ThisItem.IsSelected,  ColorValue("\#E2E2F6"),  Transparent  )                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a label to galItemTypes_Checkout                  | Name                 | lblIName_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| lblIName_Checkout                                     | Width                | Parent.Width                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| lblIName_Checkout                                     | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblIName_Checkout                                     | X                    | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblIName_Checkout                                     | Y                    | 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| lblIName_Checkout                                     | Text                 | ThisItem.Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |   
-| lblIName_Checkout                                     | Font weight          | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |   
-| Add a label to galItemTypes_Checkout                  | Name                 | lblItemCount_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| lblItemCount_Checkout                                 | Width                | Parent.Width                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| lblItemCount_Checkout                                 | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblItemCount_Checkout                                 | X                    | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblItemCount_Checkout                                 | Y                    | lblIName_Checkout.Y + lblIName_Checkout.Height                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |   
-| lblItemCount_Checkout                                 | Text                 | CountRows(ThisItem.Items.Item) & " items"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |   
-| conCheckout                                           | Gap                  | 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckout                                           | Padding Top          | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckout                                           | Padding Left         | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckout                                           | Padding Right        | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckout                                           | Vertical Overflow    | Overflow.Scroll                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |   
-| conCheckout                                           | Visible              | !locShowCheckoutConfirmation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| Add a label to conCheckout                            | Name                 | lblCheckoutHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| lblCheckoutHeader                                     | Text                 | "Checkout"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |   
-| lblCheckoutHeader                                     | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblCheckoutHeader                                     | AlignInContainer     | AlignInContainer.Stretch                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblCheckoutHeader                                     | Font Size            | 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblCheckoutHeader                                     | Font Weight          | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| Add an image to conCheckout                           | Name                 | imgItem_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| imgItem_Checkout                                      | Image                | locSelectedItem.Image.Full                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |   
-| imgItem_Checkout                                      | Width                | 375                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| imgItem_Checkout                                      | Height               | 300                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| imgItem_Checkout                                      | Border Radius        | 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| Add a label to conCheckout                            | Name                 | lblItemName_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblItemName_Checkout                                  | Text                 | locSelectedItem.Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblItemName_Checkout                                  | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a label to conCheckout                            | Name                 | lblItemQuantity_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblItemQuantity_Checkout                              | Text                 | locSelectedItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=locSelectedItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available"                                                                                                                                                                                                                                                                                                                                                                                    |   
-| lblItemQuantity_Checkout                              | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a label to conCheckout                            | Name                 | lblItemDesc_Checkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblItemDesc_Checkout                                  | Text                 | locSelectedItem.Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| lblItemDesc_Checkout                                  | Height               | 59                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a label to conCheckout                            | Name                 | lblCheckoutOptionsHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblCheckoutOptionsHeader                              | Text                 | "How do you want to get the item?"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblCheckoutOptionsHeader                              | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a Radio Group to conCheckout                      | Name                 |  rdoCheckoutOptions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-|  rdoCheckoutOptions                                   | Items                | Choices('Checkout Options')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-|  rdoCheckoutOptions                                   | Height               | 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-|  rdoCheckoutOptions                                   | Fields               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| Add a label to conCheckout                            | Name                 | lblCheckoutDurationHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |   
-| lblCheckoutDurationHeader                             | Text                 | "How long do you want to keep the item?"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblCheckoutDurationHeader                             | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a Combo Box to conCheckout                        | Name                 | drpCheckoutDurationHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |   
-| drpCheckoutDurationHeader                             | Items                | Choices('Checkout Durations')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |   
-| drpCheckoutDurationHeader                             | Fields               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| Add a label to conCheckout                            | Name                 | lblCheckoutReasonHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| lblCheckoutReasonHeader                               | Text                 | "Reason for checking out the item"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblCheckoutReasonHeader                               | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| Add a Combo Box to conCheckout                        | Name                 | drpCheckoutReasonHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| drpCheckoutReasonHeader                               | Items                | Choices('Checkout Reasons')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| drpCheckoutReasonHeader                               | Fields               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| Add a label to conCheckout                            | Name                 | lblPickupAddressHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblPickupAddressHeader                                | Text                 | "Pickup address"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| lblPickupAddressHeader                                | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblPickupAddressHeader                                | Visible              | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Pickup                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Add a label to conCheckout                            | Name                 | lblPickupAddress                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| lblPickupAddress                                      | Text                 | LookUp('Item Types','Item Type'=locSelectedItem.'Item Type'.'Item Type').'Checkout Address'                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| lblPickupAddress                                      | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| lblPickupAddress                                      | Visible              | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Pickup                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| lblPickupAddress                                      | DisplayMode          | Disabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| Add a label to conCheckout                            | Name                 | lblDeliveryAddressHeader                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblDeliveryAddressHeader                              | Text                 | "Delivery address"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblDeliveryAddressHeader                              | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblDeliveryAddressHeader                              | Visible              | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Add a Text Box to conCheckout                         | Name                 | txtDeliveryAddress                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblPickupAddress                                      | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| lblPickupAddress                                      | Visible              | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| lblPickupAddress                                      | Value                | "Enter address here"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| Add a Horizontal container to conCheckout             | Name                 | conCheckoutActions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutActions                                    | LayoutJustifyContent | LayoutJustifyContent.End                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| conCheckoutActions                                    | LayoutAlignItems     | LayoutAlignItems                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| conCheckoutActions                                    | Gap                  | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutActions                                    | Width                | 500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| conCheckoutActions                                    | Fill Portions        | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| conCheckoutActions                                    | Minimum Height       | 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| Add a button to conCheckoutActions                    | Name                 | btnCancelCheckout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| btnCancelCheckout                                     | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| btnCancelCheckout                                     | Width                | 110                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| btnCancelCheckout                                     | Button Type          | Standard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| btnCancelCheckout                                     | Font weight          | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| Add a button to conCheckoutActions                    | Name                 | btnSaveCheckout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |   
-| btnCancelCheckout                                     | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| btnCancelCheckout                                     | Width                | 110                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| btnCancelCheckout                                     | Button Type          | Primary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| btnCancelCheckout                                     | Font weight          | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| btnCancelCheckout                                     | OnSelect             | Patch(  'Item Checkouts',  Defaults('Item Checkouts'),  {  Item: locSelectedItem,  Name: CountRows('Item Checkouts')+1000,  'Checkout Status': 'Checkout Statuses'.Active,  'Checkout Duration': drpCheckoutDurationHeader.Selected.Value,  'Checkout Option': rdoCheckoutOptions.Selected.Value,  'Checkout Reason': drpCheckoutReasonHeader.Selected.Value,  'Delivery Address': If(  rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery,  txtDeliveryAddress  )  } ); UpdateContext({locShowCheckoutConfirmation: true}) |
-| Add a Vertical Container to conParent_MyCheckouts     | Name                 | conCheckoutConfirmation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| conCheckoutConfirmation                               | Gap                  | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutConfirmation                               | Padding Left         | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutConfirmation                               | Padding Top          | 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutConfirmation                               | Padding Right        | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| conCheckoutConfirmation                               | Fill Portions        | 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   
-| conCheckoutConfirmation                               | Visible              | locShowCheckoutConfirmation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   
-| Add an image to conCheckoutConfirmation               | Name                 | imgCheckoutConfirmation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| imgCheckoutConfirmation                               | Width                | 200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| imgCheckoutConfirmation                               | Height               | 200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| imgCheckoutConfirmation                               | ImagePosition        | ImagePosition.Fill                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| imgCheckoutConfirmation                               | Image                | confirmation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| Add a label to conCheckoutConfirmation                | Name                 | lblCheckoutInfoMessage                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutInfoMessage                                | X                    | 707\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutInfoMessage                                | Y                    | 225\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutInfoMessage                                | Text                 | You're all set! &If(rdoCheckoutOptions.Selected.Value='Checkout Options'.Delivery,"The "&locSelectedItem.Name&" will be delivered to "&txtDeliveryAddress&".","You can pickup the "&locSelectedItem.Name&" from "&locSelectedItem.'Item Type'.'Checkout Address'&".")                                                                                                                                                                                                                                                                    |   
-| lblCheckoutInfoMessage                                | Width                | 300\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutInfoMessage                                | Height               | 44                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| lblCheckoutInfoMessage                                | Font                 | Segoe UI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblCheckoutInfoMessage                                | Font Size            | 10.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblCheckoutInfoMessage                                | Alignment            | Align.Center                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| Add a label to conCheckoutConfirmation                | Name                 | lblCheckoutHelpMessage                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutHelpMessage                                | X                    | 707\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutHelpMessage                                | Y                    | 225\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutHelpMessage                                | Text                 | "For cancellation and help, please contact:"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   
-| lblCheckoutHelpMessage                                | Width                | 400\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| lblCheckoutHelpMessage                                | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| lblCheckoutHelpMessage                                | Font                 | Segoe UI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   
-| lblCheckoutHelpMessage                                | Font Size            | 10.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| lblCheckoutHelpMessage                                | Vertical align       | VerticalAlign.Bottom                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   
-| Add a vertical blank gallery conCheckoutConfirmation  | Name                 | galCheckoutAdminContact                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   
-| galCheckoutAdminContact                               | TemplateSize         | 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| galCheckoutAdminContact                               | Height               | 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| galCheckoutAdminContact                               | Fill                 | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White)                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |   
-| galCheckoutAdminContact                               | Width                | 400                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| galCheckoutAdminContact                               | ShowScrollbar        | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   
-| galCheckoutAdminContact                               | Items                | [1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   
-| Add an image to galCheckoutAdminContact               | Name                 | imgCheckoutAdmin_Photo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   
-| imgCheckoutAdmin_Photo                                | X                    | 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| imgCheckoutAdmin_Photo                                | Y                    | (Parent.TemplateHeight - Self.Height) / 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| imgCheckoutAdmin_Photo                                | Width                | 64                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |   
-| imgCheckoutAdmin_Photo                                | Height               | 64                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| imgCheckoutAdmin_Photo                                | Image                | If(  !IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'),  Office365Users.UserPhotoV2(locSelectedItem.'Item Type'.'Checkout Admin') )                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Add a label to galCheckoutAdminContact                | Name                 | lblCheckoutAdmin_DisplayName                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| lblCheckoutAdmin_DisplayName                          | X                    | imgCheckoutAdmin_Photo.X + imgCheckoutAdmin_Photo.Width + 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| lblCheckoutAdmin_DisplayName                          | Y                    | imgCheckoutAdmin_Photo.Y                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| lblCheckoutAdmin_DisplayName                          | Text                 | If(!IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').displayName)                                                                                                                                                                                                                                                                                                                                                                                        |
-| lblCheckoutAdmin_DisplayName                          | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| lblCheckoutAdmin_DisplayName                          | Width                | Parent.Width - Self.X - 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| lblCheckoutAdmin_DisplayName                          | Font                 | Segoe UI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| lblCheckoutAdmin_DisplayName                          | Font Size            | 10.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| lblCheckoutAdmin_DisplayName                          | Font Weight          | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| lblCheckoutAdmin_DisplayName                          | VerticalAlign        | VerticalAlign.Top                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Add a label to galCheckoutAdminContact                | Name                 | lblCheckoutAdmin_JobTitle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| lblCheckoutAdmin_JobTitle                             | X                    | imgCheckoutAdmin_Photo.X + imgCheckoutAdmin_Photo.Width + 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| lblCheckoutAdmin_JobTitle                             | Y                    | lblCheckoutAdmin_DisplayName.Y+lblCheckoutAdmin_DisplayName.Height                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| lblCheckoutAdmin_JobTitle                             | Text                 | If(!IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').jobTitle)                                                                                                                                                                                                                                                                                                                                                                                           |
-| lblCheckoutAdmin_JobTitle                             | Height               | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| lblCheckoutAdmin_JobTitle                             | Width                | Parent.Width - Self.X - 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| lblCheckoutAdmin_JobTitle                             | Font                 | Segoe UI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| lblCheckoutAdmin_JobTitle                             | Font Size            | 10.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| lblCheckoutAdmin_JobTitle                             | Font Weight          | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| lblCheckoutAdmin_JobTitle                             | VerticalAlign        | VerticalAlign.Top                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Add an image to galCheckoutAdminContact               | Name                 | imgCheckoutAdmin_Chat                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| imgCheckoutAdmin_Chat                                 | X                    | Parent.Width - Self.Width - 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| imgCheckoutAdmin_Chat                                 | Y                    | (Parent.TemplateHeight - Self.Height)/2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| imgCheckoutAdmin_Chat                                 | Width                | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| imgCheckoutAdmin_Chat                                 | Height               | 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| imgCheckoutAdmin_Chat                                 | PaddingTop           | 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckoutAdmin_Chat                                 | paddingBottom        | 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckoutAdmin_Chat                                 | PaddingLeft          | 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckoutAdmin_Chat                                 | PaddingRight         | 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckoutAdmin_Chat                                 | ImagePosition        | ImagePosition.Fit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckoutAdmin_Chat                                 | Image                | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Add a button to conCheckoutConfirmation               | Name                 | btnCheckoutBackToHome                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| btnCheckoutBackToHome                                 | X                    | 40                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| btnCheckoutBackToHome                                 | Y                    | 105                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| btnCheckoutBackToHome                                 | Width                | 160                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| btnCheckoutBackToHome                                 | Font Size            | 10.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| btnCheckoutBackToHome                                 | Font Weight          |  Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| btnCheckoutBackToHome                                 | Text                 | "Return to home"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| btnCheckoutBackToHome                                 | Button Type          |  Standard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| galItemTypes_Checkout                                 | OnSelect             | Navigate('Items Screen',ScreenTransition.Fade,{locSelectedItemType:ThisItem,locShowItems: true })                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| imgCheckout_Checkout                                  | OnSelect             | Navigate('My Checkouts Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| btnCancelCheckout                                     | OnSelect             | Navigate('Items Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| btnCheckoutBackToHome                                 | OnSelect             | Navigate('Items Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Control**           | **Property**      | **Value**                                                        |
+|-----------------------|-------------------|------------------------------------------------------------------|
+| Checkout Screen       | OnVisible         | UpdateContext({locShowCheckoutConfirmation: false})              |
+| parent container      | Name              | conParent_Checkout                                               |
+| 1st child container   | Name              | conItemTypes_Checkout                                            |
+| 2nd child container   | Name              | conCheckout                                                      |
+| conItemTypes_Checkout | Gap               | 20                                                               |
+| conItemTypes_Checkout | Vertical Overflow | LayoutOverflow.Scroll                                            |
+| conItemTypes_Checkout | Minimum Width     | 300                                                              |
+| conItemTypes_Checkout | Padding Top       | 20                                                               |
+| conItemTypes_Checkout | Padding Bottom    | 20                                                               |
+| conItemTypes_Checkout | Fill              | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
 
-## Building My checkout screen
+1.  Add a Horizontal container to conItemTypes_Checkout -
+    conItemTypesHeader_Checkout
 
-In this step, we're going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they've checked out and select to return the item.
+| **Control**                                         | **Property**   | **Value**                   |
+|-----------------------------------------------------|----------------|-----------------------------|
+| Add a Horizontal container to conItemTypes_Checkout | Name           | conItemTypesHeader_Checkout |
+| conItemTypesHeader_Checkout                         | Padding Left   | 20                          |
+| conItemTypesHeader_Checkout                         | Padding Right  | 20                          |
+| conItemTypesHeader_Checkout                         | Minimum Height | 0                           |
+| conItemTypesHeader_Checkout                         | Height         | 32                          |
 
-| **Control**                                               | **Property**                     | **Value**                                                                                                                                                                                                                                                                                 |
-|-----------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| My Checkouts Screen                                       | OnVisible                        | UpdateContext({locShowReturnConfirmation: false})                                                                                                                                                                                                                                         |
-| parent container                                          | Name                             | conParent_MyCheckouts                                                                                                                                                                                                                                                                     |
-| 1st child container                                       | Name                             | conItemTypes_MyCheckouts                                                                                                                                                                                                                                                                  |
-| 2nd child container                                       | Name                             | conMyCheckouts                                                                                                                                                                                                                                                                            |
-| conItemTypes_MyCheckouts                                  | Gap                              | 20                                                                                                                                                                                                                                                                                        |
-| conItemTypes_MyCheckouts                                  | Vertical Overflow                | LayoutOverflow.Scroll                                                                                                                                                                                                                                                                     |
-| conItemTypes_MyCheckouts                                  | Minimum Width                    | 300                                                                                                                                                                                                                                                                                       |
-| conItemTypes_MyCheckouts                                  | Padding Top                      | 20                                                                                                                                                                                                                                                                                        |
-| conItemTypes_MyCheckouts                                  | Padding Bottom                   | 20                                                                                                                                                                                                                                                                                        |
-| conItemTypes_MyCheckouts                                  | Fill                             | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White)                                                                                                                                                                                                                          |
-| Add New Horizontal container to conItemTypes_MyCheckouts  | Name                             | conItemTypesHeader_MyCheckouts                                                                                                                                                                                                                                                            |
-| conItemTypesHeader_MyCheckouts                            | Padding Right                    | 10                                                                                                                                                                                                                                                                                        |
-| conItemTypesHeader_MyCheckouts                            | Minimum Height                   | 0                                                                                                                                                                                                                                                                                         |
-| conItemTypesHeader_MyCheckouts                            | Height                           | 32                                                                                                                                                                                                                                                                                        |
-| conItemTypesHeader_MyCheckouts                            | Padding Left                     | 20                                                                                                                                                                                                                                                                                        |
-| Add a label to conItemTypesHeader_MyCheckouts             | Name                             | lblAllAssetsHeader_MyCheckouts                                                                                                                                                                                                                                                            |
-| lblAllAssetsHeader_MyCheckouts                            | Font                             | Segoe UI                                                                                                                                                                                                                                                                                  |
-| lblAllAssetsHeader_MyCheckouts                            | Font weight                      | Bold                                                                                                                                                                                                                                                                                      |
-| lblAllAssetsHeader_MyCheckouts                            | Height                           | 32                                                                                                                                                                                                                                                                                        |
-| lblAllAssetsHeader_MyCheckouts                            | Flexible Height                  | false                                                                                                                                                                                                                                                                                     |
-| lblAllAssetsHeader_MyCheckouts                            | AlignInContainer                 | AlignInContainer.Stretch                                                                                                                                                                                                                                                                  |
-| lblAllAssetsHeader_MyCheckouts                            | Text                             | "All assets"                                                                                                                                                                                                                                                                              |
-| Add a blank vertical gallery to conItemTypes_MyCheckouts  | Name                             | galItemTypes_MyCheckouts                                                                                                                                                                                                                                                                  |
-| galItemTypes_MyCheckouts                                  | Items                            | Item Types                                                                                                                                                                                                                                                                                |
-| galItemTypes_MyCheckouts                                  | Fill Portions                    | 19                                                                                                                                                                                                                                                                                        |
-| galItemTypes_MyCheckouts                                  | Template Size                    | 70                                                                                                                                                                                                                                                                                        |
-| galItemTypes_MyCheckouts                                  | Template Padding                 | 0                                                                                                                                                                                                                                                                                         |
-| galItemTypes_MyCheckouts                                  | Template Fill                    | If(  !('Items Screen'.Size = ScreenSize.Small),  If(  ThisItem.IsSelected,  ColorValue("\#E2E2F6"),  Transparent  ),   Transparent )                                                                                                                                                      |
-| Add a label to galItemTypes_MyCheckouts                   | Name                             | lblIName_MyCheckouts                                                                                                                                                                                                                                                                      |
-| lblIName_MyCheckouts                                      | Width                            | Parent.Width                                                                                                                                                                                                                                                                              |
-| lblIName_MyCheckouts                                      | Height                           | 32                                                                                                                                                                                                                                                                                        |
-| lblIName_MyCheckouts                                      | X                                | 20                                                                                                                                                                                                                                                                                        |
-| lblIName_MyCheckouts                                      | Y                                | 5                                                                                                                                                                                                                                                                                         |
-| lblIName_MyCheckouts                                      | Text                             | Thisitem.Name                                                                                                                                                                                                                                                                             |
-| lblIName_MyCheckouts                                      | Font weight                      | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)                                                                                                                                                                                                                             |
-| lblIName_MyCheckouts                                      | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| Add a label to galItemTypes_MyCheckouts                   | Name                             | lblItemCount_MyCheckouts                                                                                                                                                                                                                                                                  |
-| lblItemCount_MyCheckouts                                  | Width                            | Parent.Width                                                                                                                                                                                                                                                                              |
-| lblItemCount_MyCheckouts                                  | Height                           | 32                                                                                                                                                                                                                                                                                        |
-| lblItemCount_MyCheckouts                                  | X                                | 20                                                                                                                                                                                                                                                                                        |
-| lblItemCount_MyCheckouts                                  | y                                | lblIName_MyCheckouts.Y + lblIName_MyCheckouts.Height                                                                                                                                                                                                                                      |
-| lblItemCount_MyCheckouts                                  | Text                             | CountRows(ThisItem.Items.Item) & " items"                                                                                                                                                                                                                                                 |
-| lblItemCount_MyCheckouts                                  | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| conMyCheckouts                                            | Gap                              | 20                                                                                                                                                                                                                                                                                        |
-| conMyCheckouts                                            | Padding Top                      | 20                                                                                                                                                                                                                                                                                        |
-| conMyCheckouts                                            | Padding Left                     | 20                                                                                                                                                                                                                                                                                        |
-| conMyCheckouts                                            | Padding Right                    | 20                                                                                                                                                                                                                                                                                        |
-| conMyCheckouts                                            | Vertical Overflow                | Overflow.Scroll                                                                                                                                                                                                                                                                           |
-| conMyCheckouts                                            | Visible                          | !locShowReturnConfirmation                                                                                                                                                                                                                                                                |
-| Add a label to conMyCheckouts                             | Name                             | lblMyCheckoutsHeader                                                                                                                                                                                                                                                                      |
-| lblMyCheckoutsHeader                                      | Text                             | "My checkouts"                                                                                                                                                                                                                                                                            |
-| lblMyCheckoutsHeader                                      | Align in Container               | AlignInContainer.Stretch                                                                                                                                                                                                                                                                  |
-| lblMyCheckoutsHeader                                      | Font weight                      | FontWeight.Semibold                                                                                                                                                                                                                                                                       |
-| lblMyCheckoutsHeader                                      | Font Size                        | 15                                                                                                                                                                                                                                                                                        |
-| lblMyCheckoutsHeader                                      | X                                | 707\*1                                                                                                                                                                                                                                                                                    |
-| lblMyCheckoutsHeader                                      | Y                                | 265\*1                                                                                                                                                                                                                                                                                    |
-| Add a blank vertical gallery to conMyCheckouts            | Name                             | galMyCheckouts                                                                                                                                                                                                                                                                            |
-| galMyCheckouts                                            | Items                            | Sort(Filter('Item Checkouts','Created By'.User=gblCurrUser.User,'Checkout Status'='Checkout Statuses'.Active),'Created On',Ascending)                                                                                                                                                     |
-| galMyCheckouts                                            | TemplateSize                     | 130                                                                                                                                                                                                                                                                                       |
-| Add a button to galMyCheckouts                            | Name                             | btnMyCheckouts_Background                                                                                                                                                                                                                                                                 |
-| btnMyCheckouts_Background                                 | X                                | 5                                                                                                                                                                                                                                                                                         |
-| btnMyCheckouts_Background                                 | y                                | 0                                                                                                                                                                                                                                                                                         |
-| btnMyCheckouts_Background                                 | Fill                             | White                                                                                                                                                                                                                                                                                     |
-| btnMyCheckouts_Background                                 | Height                           | Parent.TemplateHeight - 20                                                                                                                                                                                                                                                                |
-| btnMyCheckouts_Background                                 | Width                            | Parent.TemplateWidth - Self.X\*2                                                                                                                                                                                                                                                          |
-| Add an image to galMyCheckouts                            | Name                             | imgMyCheckouts_Item                                                                                                                                                                                                                                                                       |
-| imgMyCheckouts_Item                                       | X                                | 5                                                                                                                                                                                                                                                                                         |
-| imgMyCheckouts_Item                                       | Y                                | 0                                                                                                                                                                                                                                                                                         |
-| imgMyCheckouts_Item                                       | Width                            | 125                                                                                                                                                                                                                                                                                       |
-| imgMyCheckouts_Item                                       | Height                           | 110                                                                                                                                                                                                                                                                                       |
-| imgMyCheckouts_Item                                       | ImagePosition                    | ImagePosition.Fill                                                                                                                                                                                                                                                                        |
-| imgMyCheckouts_Item                                       | Image                            | ThisItem.Item.Image.Full                                                                                                                                                                                                                                                                  |
-| Add a label to galMyCheckouts                             | Name                             | lblIMyCheckouts_ItemName                                                                                                                                                                                                                                                                  |
-| lblIMyCheckouts_ItemName                                  | Y                                | imgMyCheckouts_Item.Y + 5                                                                                                                                                                                                                                                                 |
-| lblIMyCheckouts_ItemName                                  | X                                | imgMyCheckouts_Item.X + imgMyCheckouts_Item.Width +20                                                                                                                                                                                                                                     |
-| lblIMyCheckouts_ItemName                                  | Text                             | ThisItem.Name                                                                                                                                                                                                                                                                             |
-| lblIMyCheckouts_ItemName                                  | Width                            | btnMyCheckouts_Background.Width - Self.X                                                                                                                                                                                                                                                  |
-| lblIMyCheckouts_ItemName                                  | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| lblIMyCheckouts_ItemName                                  | FontWeight                       | FontWeight.Semibold                                                                                                                                                                                                                                                                       |
-| Add a label to galMyCheckouts                             | Name                             | lblMyCheckouts_DueDate                                                                                                                                                                                                                                                                    |
-| lblMyCheckouts_DueDate                                    | X                                | lblIMyCheckouts_ItemName.X                                                                                                                                                                                                                                                                |
-| lblMyCheckouts_DueDate                                    | Y                                | lblIMyCheckouts_ItemName.Y + lblIMyCheckouts_ItemName.Height                                                                                                                                                                                                                              |
-| lblMyCheckouts_DueDate                                    | Text                             | With({varDays:DateDiff(Today(),Switch(ThisItem.'Checkout Duration','Checkout Durations'.'7 days',DateAdd(ThisItem.'Created On',7,Days),'Checkout Durations'.'30 days',DateAdd(ThisItem.'Created On',30,Days)))},If(varDays\<0,"Overdue by "&0-varDays&" days","Due in "&varDays&" days")) |
-| lblMyCheckouts_DueDate                                    | Vertical align                   | Bottom                                                                                                                                                                                                                                                                                    |
-| lblMyCheckouts_DueDate                                    | Width                            | btnMyCheckouts_Background.Width - Self.X                                                                                                                                                                                                                                                  |
-| lblMyCheckouts_DueDate                                    | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| Add a button to galMyCheckouts                            | Name                             | btnCheckoutsForeground                                                                                                                                                                                                                                                                    |
-| btnCheckoutsForeground                                    | HoverFill                        |  RGBA(  128,  128,  128,  .06  )                                                                                                                                                                                                                                                          |
-| btnCheckoutsForeground                                    | All other Fill except Hover Fill | Transparent                                                                                                                                                                                                                                                                               |
-| btnCheckoutsForeground                                    | X                                | btnMyCheckouts_Background.X                                                                                                                                                                                                                                                               |
-| btnCheckoutsForeground                                    | Y                                | btnMyCheckouts_Background.Y                                                                                                                                                                                                                                                               |
-| btnCheckoutsForeground                                    | Width                            | btnMyCheckouts_Background.Width                                                                                                                                                                                                                                                           |
-| Add a button to galMyCheckouts                            | Name                             | btnMyCheckouts_Return                                                                                                                                                                                                                                                                     |
-| btnMyCheckouts_Return                                     | Text                             | "Return"                                                                                                                                                                                                                                                                                  |
-| btnMyCheckouts_Return                                     | X                                | lblIMyCheckouts_ItemName.X + 20                                                                                                                                                                                                                                                           |
-| btnMyCheckouts_Return                                     | Y                                | lblMyCheckouts_DueDate.Y + lblMyCheckouts_DueDate.Height                                                                                                                                                                                                                                  |
-| btnMyCheckouts_Return                                     | Width                            | 96                                                                                                                                                                                                                                                                                        |
-| btnMyCheckouts_Return                                     | OnSelect                         | Patch('Item Checkouts',ThisItem,{'Checkout Status':'Checkout Statuses'.Returned});UpdateContext({locSelectedItemForReturn:ThisItem.Item,locShowReturnConfirmation: true });                                                                                                               |
-| conMyCheckouts                                            | Fill Portions                    | 3                                                                                                                                                                                                                                                                                         |
-| conItemTypes_MyCheckouts                                  | Fill Portions                    | 1                                                                                                                                                                                                                                                                                         |
-| Add a Vertical Container to conParent_MyCheckouts         | Name                             | conReturnConfirmation                                                                                                                                                                                                                                                                     |
-| conReturnConfirmation                                     | Gap                              | 20                                                                                                                                                                                                                                                                                        |
-| conReturnConfirmation                                     | Padding Left                     | 20                                                                                                                                                                                                                                                                                        |
-| conReturnConfirmation                                     | Padding Top                      | 80                                                                                                                                                                                                                                                                                        |
-| conReturnConfirmation                                     | Padding Right                    | 20                                                                                                                                                                                                                                                                                        |
-| conReturnConfirmation                                     | Fill Portions                    | 3                                                                                                                                                                                                                                                                                         |
-| conReturnConfirmation                                     | Visible                          | locShowReturnConfirmation                                                                                                                                                                                                                                                                 |
-| Add an image to conReturnConfirmation                     | Name                             | imgReturnConfirmation                                                                                                                                                                                                                                                                     |
-| imgReturnConfirmation                                     | Width                            | 200                                                                                                                                                                                                                                                                                       |
-| imgReturnConfirmation                                     | Height                           | 200                                                                                                                                                                                                                                                                                       |
-| imgReturnConfirmation                                     | ImagePosition                    | ImagePosition.Fill                                                                                                                                                                                                                                                                        |
-| imgReturnConfirmation                                     | Image                            | confirmation                                                                                                                                                                                                                                                                              |
-| Add a label to conReturnConfirmation                      | Name                             | lblReturnInfoMessage                                                                                                                                                                                                                                                                      |
-| lblReturnInfoMessage                                      | X                                | 707\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnInfoMessage                                      | Y                                | 225\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnInfoMessage                                      | Text                             | "You're all set! Please return the "&locSelectedItemForReturn.Name&" to "&LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Address'&"."                                                                                                                             |
-| lblReturnInfoMessage                                      | Width                            | 300\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnInfoMessage                                      | Height                           | 44                                                                                                                                                                                                                                                                                        |
-| lblReturnInfoMessage                                      | Font                             | Segoe UI                                                                                                                                                                                                                                                                                  |
-| lblReturnInfoMessage                                      | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| lblReturnInfoMessage                                      | Alignment                        | Align.Center                                                                                                                                                                                                                                                                              |
-| Add a label to conReturnConfirmation                      | Name                             | lblReturnHelpMessage                                                                                                                                                                                                                                                                      |
-| lblReturnHelpMessage                                      | X                                | 707\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnHelpMessage                                      | Y                                | 225\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnHelpMessage                                      | Text                             | "For cancellation and help, please contact:"                                                                                                                                                                                                                                              |
-| lblReturnHelpMessage                                      | Width                            | 400\*1                                                                                                                                                                                                                                                                                    |
-| lblReturnHelpMessage                                      | Height                           | 32\*1                                                                                                                                                                                                                                                                                     |
-| lblReturnHelpMessage                                      | Font                             | Segoe UI                                                                                                                                                                                                                                                                                  |
-| lblReturnHelpMessage                                      | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| lblReturnHelpMessage                                      | Vertical align                   | VerticalAlign.Bottom                                                                                                                                                                                                                                                                      |
-| Add a vertical blank gallery conReturnConfirmation        | Name                             | galReturnAdminContact                                                                                                                                                                                                                                                                     |
-| galReturnAdminContact                                     | TemplateSize                     | 100                                                                                                                                                                                                                                                                                       |
-| galReturnAdminContact                                     | Height                           | 100                                                                                                                                                                                                                                                                                       |
-| galReturnAdminContact                                     | Fill                             | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White)                                                                                                                                                                                                                          |
-| galReturnAdminContact                                     | Width                            | 400                                                                                                                                                                                                                                                                                       |
-| galReturnAdminContact                                     | ShowScrollbar                    | false                                                                                                                                                                                                                                                                                     |
-| galReturnAdminContact                                     | Items                            | [1]                                                                                                                                                                                                                                                                                       |
-| Add an image to galReturnAdminContact                     | Name                             | imgReturnAdmin_Photo                                                                                                                                                                                                                                                                      |
-| imgReturnAdmin_Photo                                      | X                                | 10                                                                                                                                                                                                                                                                                        |
-| imgReturnAdmin_Photo                                      | Y                                | (Parent.TemplateHeight - Self.Height) / 2                                                                                                                                                                                                                                                 |
-| imgReturnAdmin_Photo                                      | Width                            | 64                                                                                                                                                                                                                                                                                        |
-| imgReturnAdmin_Photo                                      | Height                           | 64                                                                                                                                                                                                                                                                                        |
-| imgReturnAdmin_Photo                                      | Image                            | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserPhotoV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'))                                                                                     |
-| Add a label to galReturnAdminContact                      | Name                             |  lblReturnAdmin_DisplayName                                                                                                                                                                                                                                                               |
-|  lblReturnAdmin_DisplayName                               | X                                | imgReturnAdmin_Photo.X + imgReturnAdmin_Photo.Width + 10                                                                                                                                                                                                                                  |
-|  lblReturnAdmin_DisplayName                               | Y                                | imgReturnAdmin_Photo.Y                                                                                                                                                                                                                                                                    |
-|  lblReturnAdmin_DisplayName                               | Text                             | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin').displayName)                                                                       |
-|  lblReturnAdmin_DisplayName                               | Height                           | 32\*1                                                                                                                                                                                                                                                                                     |
-|  lblReturnAdmin_DisplayName                               | Width                            | Parent.Width - Self.X - 80                                                                                                                                                                                                                                                                |
-|  lblReturnAdmin_DisplayName                               | Font                             | Segoe UI                                                                                                                                                                                                                                                                                  |
-|  lblReturnAdmin_DisplayName                               | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-|  lblReturnAdmin_DisplayName                               | Font Weight                      | Semibold                                                                                                                                                                                                                                                                                  |
-|  lblReturnAdmin_DisplayName                               | VerticalAlign                    | VerticalAlign.Top                                                                                                                                                                                                                                                                         |
-| Add a label to galReturnAdminContact                      | Name                             | lblReturnAdmin_JobTitle                                                                                                                                                                                                                                                                   |
-| lblReturnAdmin_JobTitle                                   | X                                | imgReturnAdmin_Photo.X + imgReturnAdmin_Photo.Width + 10                                                                                                                                                                                                                                  |
-| lblReturnAdmin_JobTitle                                   | Y                                | lblReturnAdmin_DisplayName.Y + lblReturnAdmin_DisplayName.Height                                                                                                                                                                                                                          |
-| lblReturnAdmin_JobTitle                                   | Text                             | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin').jobTitle)                                                                          |
-| lblReturnAdmin_JobTitle                                   | Height                           | 32\*1                                                                                                                                                                                                                                                                                     |
-| lblReturnAdmin_JobTitle                                   | Width                            | Parent.Width - Self.X - 80                                                                                                                                                                                                                                                                |
-| lblReturnAdmin_JobTitle                                   | Font                             | Segoe UI                                                                                                                                                                                                                                                                                  |
-| lblReturnAdmin_JobTitle                                   | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| lblReturnAdmin_JobTitle                                   | Font Weight                      | Semibold                                                                                                                                                                                                                                                                                  |
-| lblReturnAdmin_JobTitle                                   | VerticalAlign                    | VerticalAlign.Top                                                                                                                                                                                                                                                                         |
-| Add an image to galReturnAdminContact                     | Name                             | imgReturnAdmin_Chat                                                                                                                                                                                                                                                                       |
-| imgReturnAdmin_Chat                                       | X                                | Parent.Width - Self.Width - 20                                                                                                                                                                                                                                                            |
-| imgReturnAdmin_Chat                                       | Y                                | (Parent.TemplateHeight - Self.Height)/2                                                                                                                                                                                                                                                   |
-| imgReturnAdmin_Chat                                       | Width                            | 32                                                                                                                                                                                                                                                                                        |
-| imgReturnAdmin_Chat                                       | Height                           | 32                                                                                                                                                                                                                                                                                        |
-| imgReturnAdmin_Chat                                       | PaddingTop                       | 4                                                                                                                                                                                                                                                                                         |
-| imgReturnAdmin_Chat                                       | paddingBottom                    | 4                                                                                                                                                                                                                                                                                         |
-| imgReturnAdmin_Chat                                       | PaddingLeft                      | 4                                                                                                                                                                                                                                                                                         |
-| imgReturnAdmin_Chat                                       | PaddingRight                     | 4                                                                                                                                                                                                                                                                                         |
-| imgReturnAdmin_Chat                                       | ImagePosition                    | ImagePosition.Fit                                                                                                                                                                                                                                                                         |
-| imgReturnAdmin_Chat                                       | Image                            | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat)                                                                                                                                                                                                                                            |
-| Add a button to conReturnConfirmation                     | Name                             | btnReturnBackToHome                                                                                                                                                                                                                                                                       |
-| btnReturnBackToHome                                       | X                                | 40                                                                                                                                                                                                                                                                                        |
-| btnReturnBackToHome                                       | Y                                | 105                                                                                                                                                                                                                                                                                       |
-| btnReturnBackToHome                                       | Width                            | 160                                                                                                                                                                                                                                                                                       |
-| btnReturnBackToHome                                       | Font Size                        | 10.5                                                                                                                                                                                                                                                                                      |
-| btnReturnBackToHome                                       | Font Weight                      |  Semibold                                                                                                                                                                                                                                                                                 |
-| btnReturnBackToHome                                       | Text                             | "Return to home"                                                                                                                                                                                                                                                                          |
-| btnReturnBackToHome                                       | Button Type                      |  Standard                                                                                                                                                                                                                                                                                 |
-| galItemTypes_MyCheckouts                                  | OnSelect                         | Navigate( 'Items Screen', ScreenTransition.Fade, { locSelectedItemType: ThisItem, locShowItems: true } )                                                                                                                                                                                  |
-| btnReturnBackToHome                                       | OnSelect                         | Navigate('Items Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                            |
+1.  Add a label to conItemTypesHeader_Checkout - lblAllAssetsHeader_Checkout
+
+| **Control**                                | **Property**   | **Value**                   |
+|--------------------------------------------|----------------|-----------------------------|
+| Add a label to conItemTypesHeader_Checkout | Name           | lblAllAssetsHeader_Checkout |
+| lblAllAssetsHeader_Checkout                | Font           | Segoe UI                    |
+| lblAllAssetsHeader_Checkout                | Font Weight    | Bold                        |
+| lblAllAssetsHeader_Checkout                | Height         | 32                          |
+| lblAllAssetsHeader_Checkout                | Flexible Width | true                        |
+| lblAllAssetsHeader_Checkout                | Text           | "All assets"                |
+| lblAllAssetsHeader_Checkout                | Font Size      | 15                          |
+| lblAllAssetsHeader_Checkout                | Minimum Width  | 150                         |
+
+1.  Add an image to conItemTypesHeader_Checkout - imgCheckout_Checkout
+
+| **Control**                                 | **Property** | **Value**                                               |
+|---------------------------------------------|--------------|---------------------------------------------------------|
+| Add an image to conItemTypesHeader_Checkout | Name         | imgCheckout_Checkout                                    |
+| imgCheckout_Checkout                        | Height       | 32                                                      |
+| imgCheckout_Checkout                        | Weight       | 32                                                      |
+| imgCheckout_Checkout                        | Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
+
+1.  Add a blank vertical gallery to conItemTypes_Checkout -
+    galItemTypes_Checkout
+
+| **Control**                                           | **Property**     | **Value**                                                      |
+|-------------------------------------------------------|------------------|----------------------------------------------------------------|
+| Add a blank vertical gallery to conItemTypes_Checkout | Name             | galItemTypes_Checkout                                          |
+| galItemTypes_Checkout                                 | Items            | Item Types                                                     |
+| galItemTypes_Checkout                                 | Minimum Height   | 0                                                              |
+| galItemTypes_Checkout                                 | Fill Portions    | 19                                                             |
+| galItemTypes_Checkout                                 | Template Size    | 70                                                             |
+| galItemTypes_Checkout                                 | Template Padding | 0                                                              |
+|                                                       | Template Fill    | If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ) |
+
+1.  Add a label to galItemTypes_Checkout - lblIName_Checkout
+
+| **Control**                          | **Property** | **Value**                                                     |
+|--------------------------------------|--------------|---------------------------------------------------------------|
+| Add a label to galItemTypes_Checkout | Name         | lblIName_Checkout                                             |
+| lblIName_Checkout                    | Width        | Parent.Width                                                  |
+| lblIName_Checkout                    | Height       | 32                                                            |
+| lblIName_Checkout                    | X            | 20                                                            |
+| lblIName_Checkout                    | Y            | 5                                                             |
+| lblIName_Checkout                    | Text         | ThisItem.Name                                                 |
+| lblIName_Checkout                    | Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+
+1.  Add a label to galItemTypes_Checkout - lblItemCount_Checkout
+
+| **Control**                          | **Property** | **Value**                                      |
+|--------------------------------------|--------------|------------------------------------------------|
+| Add a label to galItemTypes_Checkout | Name         | lblItemCount_Checkout                          |
+| lblItemCount_Checkout                | Width        | Parent.Width                                   |
+| lblItemCount_Checkout                | Height       | 32                                             |
+| lblItemCount_Checkout                | X            | 20                                             |
+| lblItemCount_Checkout                | Y            | lblIName_Checkout.Y + lblIName_Checkout.Height |
+| lblItemCount_Checkout                | Text         | CountRows(ThisItem.Items.Item) & " items"      |
+
+1.  conCheckout
+
+| **Control** | **Property**      | **Value**                    |
+|-------------|-------------------|------------------------------|
+| conCheckout | Gap               | 10                           |
+| conCheckout | Padding Top       | 20                           |
+| conCheckout | Padding Left      | 20                           |
+| conCheckout | Padding Right     | 20                           |
+| conCheckout | Vertical Overflow | Overflow.Scroll              |
+| conCheckout | Visible           | !locShowCheckoutConfirmation |
+
+1.  Add a label to conCheckout - lblCheckoutHeader
+
+| **Control**                | **Property**     | **Value**                |
+|----------------------------|------------------|--------------------------|
+| Add a label to conCheckout | Name             | lblCheckoutHeader        |
+| lblCheckoutHeader          | Text             | "Checkout"               |
+| lblCheckoutHeader          | Height           | 32                       |
+| lblCheckoutHeader          | AlignInContainer | AlignInContainer.Stretch |
+| lblCheckoutHeader          | Font Size        | 15                       |
+| lblCheckoutHeader          | Font Weight      | Semibold                 |
+
+1.  Add an image to conCheckout - imgItem_Checkout
+
+| **Control**                 | **Property**  | **Value**                  |
+|-----------------------------|---------------|----------------------------|
+| Add an image to conCheckout | Name          | imgItem_Checkout           |
+| imgItem_Checkout            | Image         | locSelectedItem.Image.Full |
+| imgItem_Checkout            | Width         | 375                        |
+| imgItem_Checkout            | Height        | 300                        |
+| imgItem_Checkout            | Border Radius | 8                          |
+
+1.  Add a label to conCheckout - lblItemName_Checkout
+
+| **Control**                | **Property** | **Value**            |
+|----------------------------|--------------|----------------------|
+| Add a label to conCheckout | Name         | lblItemName_Checkout |
+| lblItemName_Checkout       | Text         | locSelectedItem.Name |
+| lblItemName_Checkout       | Height       | 32                   |
+
+1.  Add a label to conCheckout - lblItemQuantity_Checkout
+
+| **Control**                | **Property** | **Value**                                                                                                                                             |
+|----------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to conCheckout | Name         | lblItemQuantity_Checkout                                                                                                                              |
+| lblItemQuantity_Checkout   | Text         | locSelectedItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=locSelectedItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available" |
+| lblItemQuantity_Checkout   | Height       | 32                                                                                                                                                    |
+
+1.  Add a label to conCheckout - lblItemDesc_Checkout
+
+| **Control**                | **Property** | **Value**                   |
+|----------------------------|--------------|-----------------------------|
+| Add a label to conCheckout | Name         | lblItemDesc_Checkout        |
+| lblItemDesc_Checkout       | Text         | locSelectedItem.Description |
+| lblItemDesc_Checkout       | Height       | 59                          |
+
+1.  Add a label to conCheckout – lblCheckoutOptionsHeader
+
+| **Control**                | **Property** | **Value**                          |
+|----------------------------|--------------|------------------------------------|
+| Add a label to conCheckout | Name         | lblCheckoutOptionsHeader           |
+| lblCheckoutOptionsHeader   | Text         | "How do you want to get the item?" |
+| lblCheckoutOptionsHeader   | Height       | 32                                 |
+
+1.  Add a Radio Group to conCheckout - rdoCheckoutOptions
+
+| **Control**                      | **Property** | **Value**                   |
+|----------------------------------|--------------|-----------------------------|
+| Add a Radio Group to conCheckout | Name         | rdoCheckoutOptions          |
+| rdoCheckoutOptions               | Items        | Choices('Checkout Options') |
+| rdoCheckoutOptions               | Height       | 50                          |
+| rdoCheckoutOptions               | Fields       | Value                       |
+
+1.  Add a label to conCheckout – lblCheckoutDurationHeader
+
+| **Control**                | **Property** | **Value**                                |
+|----------------------------|--------------|------------------------------------------|
+| Add a label to conCheckout | Name         | lblCheckoutDurationHeader                |
+| lblCheckoutDurationHeader  | Text         | "How long do you want to keep the item?" |
+| lblCheckoutDurationHeader  | Height       | 32                                       |
+
+1.  Add a Combo Box to conCheckout – drpCheckoutDurationHeader
+
+| **Control**                    | **Property** | **Value**                     |
+|--------------------------------|--------------|-------------------------------|
+| Add a Combo Box to conCheckout | Name         | drpCheckoutDurationHeader     |
+| drpCheckoutDurationHeader      | Items        | Choices('Checkout Durations') |
+| drpCheckoutDurationHeader      | Fields       | Value                         |
+
+Add a label to conCheckout – lblCheckoutReasonHeader
+
+| **Control**                | **Property** | **Value**                          |
+|----------------------------|--------------|------------------------------------|
+| Add a label to conCheckout | Name         | lblCheckoutReasonHeader            |
+| lblCheckoutReasonHeader    | Text         | "Reason for checking out the item" |
+| lblCheckoutReasonHeader    | Height       | 32                                 |
+
+Add a Combo Box to conCheckout – drpCheckoutReasonHeader
+
+| **Control**                    | **Property** | **Value**                   |
+|--------------------------------|--------------|-----------------------------|
+| Add a Combo Box to conCheckout | Name         | drpCheckoutReasonHeader     |
+| drpCheckoutReasonHeader        | Items        | Choices('Checkout Reasons') |
+| drpCheckoutReasonHeader        | Fields       | Value                       |
+
+Add a label to conCheckout – lblPickupAddressHeader
+
+| **Control**                | **Property** | **Value**                                                     |
+|----------------------------|--------------|---------------------------------------------------------------|
+| Add a label to conCheckout | Name         | lblPickupAddressHeader                                        |
+| lblPickupAddressHeader     | Text         | "Pickup address"                                              |
+| lblPickupAddressHeader     | Height       | 32                                                            |
+| lblPickupAddressHeader     | Visible      | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Pickup |
+
+Add a label to conCheckout – lblPickupAddress
+
+| **Control**                | **Property** | **Value**                                                                                   |
+|----------------------------|--------------|---------------------------------------------------------------------------------------------|
+| Add a label to conCheckout | Name         | lblPickupAddress                                                                            |
+| lblPickupAddress           | Text         | LookUp('Item Types','Item Type'=locSelectedItem.'Item Type'.'Item Type').'Checkout Address' |
+| lblPickupAddress           | Height       | 32\*1                                                                                       |
+| lblPickupAddress           | Visible      | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Pickup                               |
+| lblPickupAddress           | DisplayMode  | Disabled                                                                                    |
+
+Add a label to conCheckout – lblDeliveryAddressHeader
+
+| **Control**                | **Property** | **Value**                                                       |
+|----------------------------|--------------|-----------------------------------------------------------------|
+| Add a label to conCheckout | Name         | lblDeliveryAddressHeader                                        |
+| lblDeliveryAddressHeader   | Text         | "Delivery address"                                              |
+| lblDeliveryAddressHeader   | Height       | 32                                                              |
+| lblDeliveryAddressHeader   | Visible      | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery |
+
+Add a Text Box to conCheckout – txtDeliveryAddress
+
+| **Control**                   | **Property** | **Value**                                                       |
+|-------------------------------|--------------|-----------------------------------------------------------------|
+| Add a Text Box to conCheckout | Name         | txtDeliveryAddress                                              |
+| lblPickupAddress              | Height       | 32\*1                                                           |
+| lblPickupAddress              | Visible      | rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery |
+| lblPickupAddress              | Value        | "Enter address here"                                            |
+
+Add a Horizontal container to conCheckout – conCheckoutActions
+
+| **Control**                               | **Property**         | **Value**                |
+|-------------------------------------------|----------------------|--------------------------|
+| Add a Horizontal container to conCheckout | Name                 | conCheckoutActions       |
+| conCheckoutActions                        | LayoutJustifyContent | LayoutJustifyContent.End |
+| conCheckoutActions                        | LayoutAlignItems     | LayoutAlignItems         |
+| conCheckoutActions                        | Gap                  | 20                       |
+| conCheckoutActions                        | Width                | 500                      |
+| conCheckoutActions                        | Fill Portions        | 1                        |
+| conCheckoutActions                        | Minimum Height       | 100                      |
+
+Add a button to conCheckoutActions – btnCancelCheckout
+
+| **Control**                        | **Property** | **Value**         |
+|------------------------------------|--------------|-------------------|
+| Add a button to conCheckoutActions | Name         | btnCancelCheckout |
+| btnCancelCheckout                  | Height       | 32\*1             |
+| btnCancelCheckout                  | Width        | 110               |
+| btnCancelCheckout                  | Button Type  | Standard          |
+| btnCancelCheckout                  | Font weight  | Semibold          |
+
+Add a button to conCheckoutActions – btnSaveCheckout
+
+| **Control**                        | **Property** | **Value**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a button to conCheckoutActions | Name         | btnSaveCheckout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| btnCancelCheckout                  | Height       | 32\*1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| btnCancelCheckout                  | Width        | 110                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| btnCancelCheckout                  | Button Type  | Primary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| btnCancelCheckout                  | Font weight  | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| btnCancelCheckout                  | OnSelect     | Patch( 'Item Checkouts', Defaults('Item Checkouts'), { Item: locSelectedItem, Name: CountRows('Item Checkouts')+1000, 'Checkout Status': 'Checkout Statuses'.Active, 'Checkout Duration': drpCheckoutDurationHeader.Selected.Value, 'Checkout Option': rdoCheckoutOptions.Selected.Value, 'Checkout Reason': drpCheckoutReasonHeader.Selected.Value, 'Delivery Address': If( rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery, txtDeliveryAddress ) } ); UpdateContext({locShowCheckoutConfirmation: true}) |
+
+Add a Vertical Container to conParent_MyCheckouts – conCheckoutConfirmation
+
+| **Control**                                       | **Property**  | **Value**                   |
+|---------------------------------------------------|---------------|-----------------------------|
+| Add a Vertical Container to conParent_MyCheckouts | Name          | conCheckoutConfirmation     |
+| conCheckoutConfirmation                           | Gap           | 20                          |
+| conCheckoutConfirmation                           | Padding Left  | 20                          |
+| conCheckoutConfirmation                           | Padding Top   | 80                          |
+| conCheckoutConfirmation                           | Padding Right | 20                          |
+| conCheckoutConfirmation                           | Fill Portions | 3                           |
+| conCheckoutConfirmation                           | Visible       | locShowCheckoutConfirmation |
+
+Add an image to conCheckoutConfirmation – imgCheckoutConfirmation
+
+| **Control**                             | **Property**  | **Value**               |
+|-----------------------------------------|---------------|-------------------------|
+| Add an image to conCheckoutConfirmation | Name          | imgCheckoutConfirmation |
+| imgCheckoutConfirmation                 | Width         | 200                     |
+| imgCheckoutConfirmation                 | Height        | 200                     |
+| imgCheckoutConfirmation                 | ImagePosition | ImagePosition.Fill      |
+| imgCheckoutConfirmation                 | Image         | confirmation            |
+
+Add a label to conCheckoutConfirmation – lblCheckoutInfoMessage
+
+| **Control**                            | **Property** | **Value**                                                                                                                                                                                                                                                              |
+|----------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to conCheckoutConfirmation | Name         | lblCheckoutInfoMessage                                                                                                                                                                                                                                                 |
+| lblCheckoutInfoMessage                 | X            | 707\*1                                                                                                                                                                                                                                                                 |
+| lblCheckoutInfoMessage                 | Y            | 225\*1                                                                                                                                                                                                                                                                 |
+| lblCheckoutInfoMessage                 | Text         | You're all set! \&If(rdoCheckoutOptions.Selected.Value='Checkout Options'.Delivery,"The "&locSelectedItem.Name&" will be delivered to "&txtDeliveryAddress&".","You can pickup the "&locSelectedItem.Name&" from "&locSelectedItem.'Item Type'.'Checkout Address'&".") |
+| lblCheckoutInfoMessage                 | Width        | 300\*1                                                                                                                                                                                                                                                                 |
+| lblCheckoutInfoMessage                 | Height       | 44                                                                                                                                                                                                                                                                     |
+| lblCheckoutInfoMessage                 | Font         | Segoe UI                                                                                                                                                                                                                                                               |
+| lblCheckoutInfoMessage                 | Font Size    | 10.5                                                                                                                                                                                                                                                                   |
+| lblCheckoutInfoMessage                 | Alignment    | Align.Center                                                                                                                                                                                                                                                           |
+
+Add a label to conCheckoutConfirmation – lblCheckoutHelpMessage
+
+| **Control**                            | **Property**   | **Value**                                    |
+|----------------------------------------|----------------|----------------------------------------------|
+| Add a label to conCheckoutConfirmation | Name           | lblCheckoutHelpMessage                       |
+| lblCheckoutHelpMessage                 | X              | 707\*1                                       |
+| lblCheckoutHelpMessage                 | Y              | 225\*1                                       |
+| lblCheckoutHelpMessage                 | Text           | "For cancellation and help, please contact:" |
+| lblCheckoutHelpMessage                 | Width          | 400\*1                                       |
+| lblCheckoutHelpMessage                 | Height         | 32\*1                                        |
+| lblCheckoutHelpMessage                 | Font           | Segoe UI                                     |
+| lblCheckoutHelpMessage                 | Font Size      | 10.5                                         |
+| lblCheckoutHelpMessage                 | Vertical align | VerticalAlign.Bottom                         |
+
+Add a vertical blank gallery conCheckoutConfirmation – galCheckoutAdminContact
+
+| **Control**                                          | **Property**  | **Value**                                                        |
+|------------------------------------------------------|---------------|------------------------------------------------------------------|
+| Add a vertical blank gallery conCheckoutConfirmation | Name          | galCheckoutAdminContact                                          |
+| galCheckoutAdminContact                              | TemplateSize  | 100                                                              |
+| galCheckoutAdminContact                              | Height        | 100                                                              |
+| galCheckoutAdminContact                              | Fill          | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+| galCheckoutAdminContact                              | Width         | 400                                                              |
+| galCheckoutAdminContact                              | ShowScrollbar | false                                                            |
+| galCheckoutAdminContact                              | Items         | [1]                                                              |
+
+Add an image to galCheckoutAdminContact - imgCheckoutAdmin_Photo
+
+| **Control**                             | **Property** | **Value**                                                                                                                              |
+|-----------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Add an image to galCheckoutAdminContact | Name         | imgCheckoutAdmin_Photo                                                                                                                 |
+| imgCheckoutAdmin_Photo                  | X            | 10                                                                                                                                     |
+| imgCheckoutAdmin_Photo                  | Y            | (Parent.TemplateHeight - Self.Height) / 2                                                                                              |
+| imgCheckoutAdmin_Photo                  | Width        | 64                                                                                                                                     |
+| imgCheckoutAdmin_Photo                  | Height       | 64                                                                                                                                     |
+| imgCheckoutAdmin_Photo                  | Image        | If( !IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'), Office365Users.UserPhotoV2(locSelectedItem.'Item Type'.'Checkout Admin') ) |
+
+Add a label to galCheckoutAdminContact - lblCheckoutAdmin_DisplayName
+
+| **Control**                            | **Property**  | **Value**                                                                                                                                         |
+|----------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to galCheckoutAdminContact | Name          | lblCheckoutAdmin_DisplayName                                                                                                                      |
+| lblCheckoutAdmin_DisplayName           | X             | imgCheckoutAdmin_Photo.X + imgCheckoutAdmin_Photo.Width + 10                                                                                      |
+| lblCheckoutAdmin_DisplayName           | Y             | imgCheckoutAdmin_Photo.Y                                                                                                                          |
+| lblCheckoutAdmin_DisplayName           | Text          | If(!IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').displayName) |
+| lblCheckoutAdmin_DisplayName           | Height        | 32\*1                                                                                                                                             |
+| lblCheckoutAdmin_DisplayName           | Width         | Parent.Width - Self.X - 80                                                                                                                        |
+| lblCheckoutAdmin_DisplayName           | Font          | Segoe UI                                                                                                                                          |
+| lblCheckoutAdmin_DisplayName           | Font Size     | 10.5                                                                                                                                              |
+| lblCheckoutAdmin_DisplayName           | Font Weight   | Semibold                                                                                                                                          |
+| lblCheckoutAdmin_DisplayName           | VerticalAlign | VerticalAlign.Top                                                                                                                                 |
+
+Add a label to galCheckoutAdminContact - lblCheckoutAdmin_JobTitle
+
+| **Control**                            | **Property**  | **Value**                                                                                                                                      |
+|----------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to galCheckoutAdminContact | Name          | lblCheckoutAdmin_JobTitle                                                                                                                      |
+| lblCheckoutAdmin_JobTitle              | X             | imgCheckoutAdmin_Photo.X + imgCheckoutAdmin_Photo.Width + 10                                                                                   |
+| lblCheckoutAdmin_JobTitle              | Y             | lblCheckoutAdmin_DisplayName.Y+lblCheckoutAdmin_DisplayName.Height                                                                             |
+| lblCheckoutAdmin_JobTitle              | Text          | If(!IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(locSelectedItem.'Item Type'.'Checkout Admin').jobTitle) |
+| lblCheckoutAdmin_JobTitle              | Height        | 32\*1                                                                                                                                          |
+| lblCheckoutAdmin_JobTitle              | Width         | Parent.Width - Self.X - 80                                                                                                                     |
+| lblCheckoutAdmin_JobTitle              | Font          | Segoe UI                                                                                                                                       |
+| lblCheckoutAdmin_JobTitle              | Font Size     | 10.5                                                                                                                                           |
+| lblCheckoutAdmin_JobTitle              | Font Weight   | Semibold                                                                                                                                       |
+| lblCheckoutAdmin_JobTitle              | VerticalAlign | VerticalAlign.Top                                                                                                                              |
+
+Add an image to galCheckoutAdminContact - imgCheckoutAdmin_Chat
+
+| **Control**                             | **Property**  | **Value**                                      |
+|-----------------------------------------|---------------|------------------------------------------------|
+| Add an image to galCheckoutAdminContact | Name          | imgCheckoutAdmin_Chat                          |
+| imgCheckoutAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                 |
+| imgCheckoutAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2        |
+| imgCheckoutAdmin_Chat                   | Width         | 32                                             |
+| imgCheckoutAdmin_Chat                   | Height        | 32                                             |
+| imgCheckoutAdmin_Chat                   | PaddingTop    | 4                                              |
+| imgCheckoutAdmin_Chat                   | paddingBottom | 4                                              |
+| imgCheckoutAdmin_Chat                   | PaddingLeft   | 4                                              |
+| imgCheckoutAdmin_Chat                   | PaddingRight  | 4                                              |
+| imgCheckoutAdmin_Chat                   | ImagePosition | ImagePosition.Fit                              |
+| imgCheckoutAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat) |
+
+Add a button to conCheckoutConfirmation – btnCheckoutBackToHome
+
+| **Control**                             | **Property** | **Value**             |
+|-----------------------------------------|--------------|-----------------------|
+| Add a button to conCheckoutConfirmation | Name         | btnCheckoutBackToHome |
+| btnCheckoutBackToHome                   | X            | 40                    |
+| btnCheckoutBackToHome                   | Y            | 105                   |
+| btnCheckoutBackToHome                   | Width        | 160                   |
+| btnCheckoutBackToHome                   | Font Size    | 10.5                  |
+| btnCheckoutBackToHome                   | Font Weight  | Semibold              |
+| btnCheckoutBackToHome                   | Text         | "Return to home"      |
+| btnCheckoutBackToHome                   | Button Type  | Standard              |
+
+| **Control**           | **Property** | **Value**                                                                                         |   |
+|-----------------------|--------------|---------------------------------------------------------------------------------------------------|---|
+| galItemTypes_Checkout | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade,{locSelectedItemType:ThisItem,locShowItems: true }) |   |
+| imgCheckout_Checkout  | OnSelect     | Navigate('My Checkouts Screen',ScreenTransition.Fade)                                             |   |
+| btnCancelCheckout     | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                    |   |
+| btnCheckoutBackToHome | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                    |   |
+
+## Building My checkout Screen
+
+In this step we are going to build the final screen of the app, the My checkout
+screen. From this screen, a user can view the items that they have checked out
+and select to return the item.
+
+| **Control**              | **Property**      | **Value**                                                        |
+|--------------------------|-------------------|------------------------------------------------------------------|
+| My Checkouts Screen      | OnVisible         | UpdateContext({locShowReturnConfirmation: false})                |
+| parent container         | Name              | conParent_MyCheckouts                                            |
+| 1st child container      | Name              | conItemTypes_MyCheckouts                                         |
+| 2nd child container      | Name              | conMyCheckouts                                                   |
+| conItemTypes_MyCheckouts | Gap               | 20                                                               |
+| conItemTypes_MyCheckouts | Vertical Overflow | LayoutOverflow.Scroll                                            |
+| conItemTypes_MyCheckouts | Minimum Width     | 300                                                              |
+| conItemTypes_MyCheckouts | Padding Top       | 20                                                               |
+| conItemTypes_MyCheckouts | Padding Bottom    | 20                                                               |
+| conItemTypes_MyCheckouts | Fill              | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+
+Add New Horizontal container to conItemTypes_MyCheckouts -
+conItemTypesHeader_MyCheckouts
+
+| **Control**                                              | **Property**   | **Value**                      |
+|----------------------------------------------------------|----------------|--------------------------------|
+| Add New Horizontal container to conItemTypes_MyCheckouts | Name           | conItemTypesHeader_MyCheckouts |
+| conItemTypesHeader_MyCheckouts                           | Padding Right  | 10                             |
+| conItemTypesHeader_MyCheckouts                           | Minimum Height | 0                              |
+| conItemTypesHeader_MyCheckouts                           | Height         | 32                             |
+| conItemTypesHeader_MyCheckouts                           | Padding Left   | 20                             |
+
+Add a label to conItemTypesHeader_MyCheckouts - lblAllAssetsHeader_MyCheckouts
+
+| **Control**                                   | **Property**     | **Value**                      |
+|-----------------------------------------------|------------------|--------------------------------|
+| Add a label to conItemTypesHeader_MyCheckouts | Name             | lblAllAssetsHeader_MyCheckouts |
+| lblAllAssetsHeader_MyCheckouts                | Font             | Segoe UI                       |
+| lblAllAssetsHeader_MyCheckouts                | Font weight      | Bold                           |
+| lblAllAssetsHeader_MyCheckouts                | Height           | 32                             |
+| lblAllAssetsHeader_MyCheckouts                | Flexible Height  | false                          |
+| lblAllAssetsHeader_MyCheckouts                | AlignInContainer | AlignInContainer.Stretch       |
+| lblAllAssetsHeader_MyCheckouts                | Text             | "All assets"                   |
+
+Add a blank vertical gallery to conItemTypes_MyCheckouts -
+galItemTypes_MyCheckouts
+
+| **Control**                                              | **Property**     | **Value**                                                                                                                    |
+|----------------------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Add a blank vertical gallery to conItemTypes_MyCheckouts | Name             | galItemTypes_MyCheckouts                                                                                                     |
+| galItemTypes_MyCheckouts                                 | Items            | Item Types                                                                                                                   |
+| galItemTypes_MyCheckouts                                 | Fill Portions    | 19                                                                                                                           |
+| galItemTypes_MyCheckouts                                 | Template Size    | 70                                                                                                                           |
+| galItemTypes_MyCheckouts                                 | Template Padding | 0                                                                                                                            |
+| galItemTypes_MyCheckouts                                 | Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
+
+Add a label to galItemTypes_MyCheckouts - lblIName_MyCheckouts
+
+| **Control**                             | **Property** | **Value**                                                     |
+|-----------------------------------------|--------------|---------------------------------------------------------------|
+| Add a label to galItemTypes_MyCheckouts | Name         | lblIName_MyCheckouts                                          |
+| lblIName_MyCheckouts                    | Width        | Parent.Width                                                  |
+| lblIName_MyCheckouts                    | Height       | 32                                                            |
+| lblIName_MyCheckouts                    | X            | 20                                                            |
+| lblIName_MyCheckouts                    | Y            | 5                                                             |
+| lblIName_MyCheckouts                    | Text         | Thisitem.Name                                                 |
+| lblIName_MyCheckouts                    | Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+| lblIName_MyCheckouts                    | Font Size    | 10.5                                                          |
+
+Add a label to galItemTypes_MyCheckouts - lblItemCount_MyCheckouts
+
+| **Control**                             | **Property** | **Value**                                            |
+|-----------------------------------------|--------------|------------------------------------------------------|
+| Add a label to galItemTypes_MyCheckouts | Name         | lblItemCount_MyCheckouts                             |
+| lblItemCount_MyCheckouts                | Width        | Parent.Width                                         |
+| lblItemCount_MyCheckouts                | Height       | 32                                                   |
+| lblItemCount_MyCheckouts                | X            | 20                                                   |
+| lblItemCount_MyCheckouts                | y            | lblIName_MyCheckouts.Y + lblIName_MyCheckouts.Height |
+| lblItemCount_MyCheckouts                | Text         | CountRows(ThisItem.Items.Item) & " items"            |
+| lblItemCount_MyCheckouts                | Font Size    | 10.5                                                 |
+
+| **Control**    | **Property**      | **Value**                  |
+|----------------|-------------------|----------------------------|
+| conMyCheckouts | Gap               | 20                         |
+| conMyCheckouts | Padding Top       | 20                         |
+| conMyCheckouts | Padding Left      | 20                         |
+| conMyCheckouts | Padding Right     | 20                         |
+| conMyCheckouts | Vertical Overflow | Overflow.Scroll            |
+| conMyCheckouts | Visible           | !locShowReturnConfirmation |
+
+Add a label to conMyCheckouts – lblMyCheckoutsHeader
+
+| **Control**                   | **Property**       | **Value**                |
+|-------------------------------|--------------------|--------------------------|
+| Add a label to conMyCheckouts | Name               | lblMyCheckoutsHeader     |
+| lblMyCheckoutsHeader          | Text               | "My checkouts"           |
+| lblMyCheckoutsHeader          | Align in Container | AlignInContainer.Stretch |
+| lblMyCheckoutsHeader          | Font weight        | FontWeight.Semibold      |
+| lblMyCheckoutsHeader          | Font Size          | 15                       |
+| lblMyCheckoutsHeader          | X                  | 707\*1                   |
+| lblMyCheckoutsHeader          | Y                  | 265\*1                   |
+
+Add a blank vertical gallery to conMyCheckouts - galMyCheckouts
+
+| **Control**                                    | **Property** | **Value**                                                                                                                             |
+|------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Add a blank vertical gallery to conMyCheckouts | Name         | galMyCheckouts                                                                                                                        |
+| galMyCheckouts                                 | Items        | Sort(Filter('Item Checkouts','Created By'.User=gblCurrUser.User,'Checkout Status'='Checkout Statuses'.Active),'Created On',Ascending) |
+| galMyCheckouts                                 | TemplateSize | 130                                                                                                                                   |
+
+Add a button to galMyCheckouts - btnMyCheckouts_Background
+
+| **Control**                    | **Property** | **Value**                        |
+|--------------------------------|--------------|----------------------------------|
+| Add a button to galMyCheckouts | Name         | btnMyCheckouts_Background        |
+| btnMyCheckouts_Background      | X            | 5                                |
+| btnMyCheckouts_Background      | y            | 0                                |
+| btnMyCheckouts_Background      | Fill         | White                            |
+| btnMyCheckouts_Background      | Height       | Parent.TemplateHeight - 20       |
+| btnMyCheckouts_Background      | Width        | Parent.TemplateWidth - Self.X\*2 |
+
+Add an image to galMyCheckouts - imgMyCheckouts_Item
+
+| **Control**                    | **Property**  | **Value**                |
+|--------------------------------|---------------|--------------------------|
+| Add an image to galMyCheckouts | Name          | imgMyCheckouts_Item      |
+| imgMyCheckouts_Item            | X             | 5                        |
+| imgMyCheckouts_Item            | Y             | 0                        |
+| imgMyCheckouts_Item            | Width         | 125                      |
+| imgMyCheckouts_Item            | Height        | 110                      |
+| imgMyCheckouts_Item            | ImagePosition | ImagePosition.Fill       |
+| imgMyCheckouts_Item            | Image         | ThisItem.Item.Image.Full |
+
+Add a label to galMyCheckouts - lblIMyCheckouts_ItemName
+
+| **Control**                   | **Property** | **Value**                                             |
+|-------------------------------|--------------|-------------------------------------------------------|
+| Add a label to galMyCheckouts | Name         | lblIMyCheckouts_ItemName                              |
+| lblIMyCheckouts_ItemName      | Y            | imgMyCheckouts_Item.Y + 5                             |
+| lblIMyCheckouts_ItemName      | X            | imgMyCheckouts_Item.X + imgMyCheckouts_Item.Width +20 |
+| lblIMyCheckouts_ItemName      | Text         | ThisItem.Name                                         |
+| lblIMyCheckouts_ItemName      | Width        | btnMyCheckouts_Background.Width - Self.X              |
+| lblIMyCheckouts_ItemName      | Font Size    | 10.5                                                  |
+| lblIMyCheckouts_ItemName      | FontWeight   | FontWeight.Semibold                                   |
+
+Add a label to galMyCheckouts - lblMyCheckouts_DueDate
+
+| **Control**                   | **Property**   | **Value**                                                                                                                                                                                                                                                                                 |
+|-------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to galMyCheckouts | Name           | lblMyCheckouts_DueDate                                                                                                                                                                                                                                                                    |
+| lblMyCheckouts_DueDate        | X              | lblIMyCheckouts_ItemName.X                                                                                                                                                                                                                                                                |
+| lblMyCheckouts_DueDate        | Y              | lblIMyCheckouts_ItemName.Y + lblIMyCheckouts_ItemName.Height                                                                                                                                                                                                                              |
+| lblMyCheckouts_DueDate        | Text           | With({varDays:DateDiff(Today(),Switch(ThisItem.'Checkout Duration','Checkout Durations'.'7 days',DateAdd(ThisItem.'Created On',7,Days),'Checkout Durations'.'30 days',DateAdd(ThisItem.'Created On',30,Days)))},If(varDays\<0,"Overdue by "&0-varDays&" days","Due in "&varDays&" days")) |
+| lblMyCheckouts_DueDate        | Vertical align | Bottom                                                                                                                                                                                                                                                                                    |
+| lblMyCheckouts_DueDate        | Width          | btnMyCheckouts_Background.Width - Self.X                                                                                                                                                                                                                                                  |
+| lblMyCheckouts_DueDate        | Font Size      | 10.5                                                                                                                                                                                                                                                                                      |
+
+Add a button to galMyCheckouts – btnCheckoutsForeground
+
+| **Control**                    | **Property**                     | **Value**                       |
+|--------------------------------|----------------------------------|---------------------------------|
+| Add a button to galMyCheckouts | Name                             | btnCheckoutsForeground          |
+| btnCheckoutsForeground         | HoverFill                        | RGBA( 128, 128, 128, .06 )      |
+| btnCheckoutsForeground         | All other Fill except Hover Fill | Transparent                     |
+| btnCheckoutsForeground         | X                                | btnMyCheckouts_Background.X     |
+| btnCheckoutsForeground         | Y                                | btnMyCheckouts_Background.Y     |
+| btnCheckoutsForeground         | Width                            | btnMyCheckouts_Background.Width |
+
+Add a button to galMyCheckouts - btnMyCheckouts_Return
+
+| **Control**                    | **Property** | **Value**                                                                                                                                                                   |
+|--------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a button to galMyCheckouts | Name         | btnMyCheckouts_Return                                                                                                                                                       |
+| btnMyCheckouts_Return          | Text         | "Return"                                                                                                                                                                    |
+| btnMyCheckouts_Return          | X            | lblIMyCheckouts_ItemName.X + 20                                                                                                                                             |
+| btnMyCheckouts_Return          | Y            | lblMyCheckouts_DueDate.Y + lblMyCheckouts_DueDate.Height                                                                                                                    |
+| btnMyCheckouts_Return          | Width        | 96                                                                                                                                                                          |
+| btnMyCheckouts_Return          | OnSelect     | Patch('Item Checkouts',ThisItem,{'Checkout Status':'Checkout Statuses'.Returned});UpdateContext({locSelectedItemForReturn:ThisItem.Item,locShowReturnConfirmation: true }); |
+
+| **Control**              | **Property**  | **Value** |
+|--------------------------|---------------|-----------|
+| conMyCheckouts           | Fill Portions | 3         |
+| conItemTypes_MyCheckouts | Fill Portions | 1         |
+
+Add a Vertical Container to conParent_MyCheckouts – conReturnConfirmation
+
+| **Control**                                       | **Property**  | **Value**                 |
+|---------------------------------------------------|---------------|---------------------------|
+| Add a Vertical Container to conParent_MyCheckouts | Name          | conReturnConfirmation     |
+| conReturnConfirmation                             | Gap           | 20                        |
+| conReturnConfirmation                             | Padding Left  | 20                        |
+| conReturnConfirmation                             | Padding Top   | 80                        |
+| conReturnConfirmation                             | Padding Right | 20                        |
+| conReturnConfirmation                             | Fill Portions | 3                         |
+| conReturnConfirmation                             | Visible       | locShowReturnConfirmation |
+
+Add an image to conReturnConfirmation – imgReturnConfirmation
+
+| **Control**                           | **Property**  | **Value**             |
+|---------------------------------------|---------------|-----------------------|
+| Add an image to conReturnConfirmation | Name          | imgReturnConfirmation |
+| imgReturnConfirmation                 | Width         | 200                   |
+| imgReturnConfirmation                 | Height        | 200                   |
+| imgReturnConfirmation                 | ImagePosition | ImagePosition.Fill    |
+| imgReturnConfirmation                 | Image         | confirmation          |
+
+Add a label to conReturnConfirmation - lblReturnInfoMessage
+
+| **Control**                          | **Property** | **Value**                                                                                                                                                     |
+|--------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to conReturnConfirmation | Name         | lblReturnInfoMessage                                                                                                                                          |
+| lblReturnInfoMessage                 | X            | 707\*1                                                                                                                                                        |
+| lblReturnInfoMessage                 | Y            | 225\*1                                                                                                                                                        |
+| lblReturnInfoMessage                 | Text         | "You're all set! Please return the "&locSelectedItemForReturn.Name&" to "&LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Address'&"." |
+| lblReturnInfoMessage                 | Width        | 300\*1                                                                                                                                                        |
+| lblReturnInfoMessage                 | Height       | 44                                                                                                                                                            |
+| lblReturnInfoMessage                 | Font         | Segoe UI                                                                                                                                                      |
+| lblReturnInfoMessage                 | Font Size    | 10.5                                                                                                                                                          |
+| lblReturnInfoMessage                 | Alignment    | Align.Center                                                                                                                                                  |
+
+Add a label to conReturnConfirmation – lblReturnHelpMessage
+
+| **Control**                          | **Property**   | **Value**                                    |
+|--------------------------------------|----------------|----------------------------------------------|
+| Add a label to conReturnConfirmation | Name           | lblReturnHelpMessage                         |
+| lblReturnHelpMessage                 | X              | 707\*1                                       |
+| lblReturnHelpMessage                 | Y              | 225\*1                                       |
+| lblReturnHelpMessage                 | Text           | "For cancellation and help, please contact:" |
+| lblReturnHelpMessage                 | Width          | 400\*1                                       |
+| lblReturnHelpMessage                 | Height         | 32\*1                                        |
+| lblReturnHelpMessage                 | Font           | Segoe UI                                     |
+| lblReturnHelpMessage                 | Font Size      | 10.5                                         |
+| lblReturnHelpMessage                 | Vertical align | VerticalAlign.Bottom                         |
+
+Add a vertical blank gallery conReturnConfirmation – galReturnAdminContact
+
+| **Control**                                        | **Property**  | **Value**                                                        |
+|----------------------------------------------------|---------------|------------------------------------------------------------------|
+| Add a vertical blank gallery conReturnConfirmation | Name          | galReturnAdminContact                                            |
+| galReturnAdminContact                              | TemplateSize  | 100                                                              |
+| galReturnAdminContact                              | Height        | 100                                                              |
+| galReturnAdminContact                              | Fill          | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+| galReturnAdminContact                              | Width         | 400                                                              |
+| galReturnAdminContact                              | ShowScrollbar | false                                                            |
+| galReturnAdminContact                              | Items         | [1]                                                              |
+
+Add an image to galReturnAdminContact - imgReturnAdmin_Photo
+
+| **Control**                           | **Property** | **Value**                                                                                                                                                                                             |
+|---------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add an image to galReturnAdminContact | Name         | imgReturnAdmin_Photo                                                                                                                                                                                  |
+| imgReturnAdmin_Photo                  | X            | 10                                                                                                                                                                                                    |
+| imgReturnAdmin_Photo                  | Y            | (Parent.TemplateHeight - Self.Height) / 2                                                                                                                                                             |
+| imgReturnAdmin_Photo                  | Width        | 64                                                                                                                                                                                                    |
+| imgReturnAdmin_Photo                  | Height       | 64                                                                                                                                                                                                    |
+| imgReturnAdmin_Photo                  | Image        | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserPhotoV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin')) |
+
+Add a label to galReturnAdminContact - lblReturnAdmin_DisplayName
+
+| **Control**                          | **Property**  | **Value**                                                                                                                                                                                                           |
+|--------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to galReturnAdminContact | Name          | lblReturnAdmin_DisplayName                                                                                                                                                                                          |
+| lblReturnAdmin_DisplayName           | X             | imgReturnAdmin_Photo.X + imgReturnAdmin_Photo.Width + 10                                                                                                                                                            |
+| lblReturnAdmin_DisplayName           | Y             | imgReturnAdmin_Photo.Y                                                                                                                                                                                              |
+| lblReturnAdmin_DisplayName           | Text          | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin').displayName) |
+| lblReturnAdmin_DisplayName           | Height        | 32\*1                                                                                                                                                                                                               |
+| lblReturnAdmin_DisplayName           | Width         | Parent.Width - Self.X - 80                                                                                                                                                                                          |
+| lblReturnAdmin_DisplayName           | Font          | Segoe UI                                                                                                                                                                                                            |
+| lblReturnAdmin_DisplayName           | Font Size     | 10.5                                                                                                                                                                                                                |
+| lblReturnAdmin_DisplayName           | Font Weight   | Semibold                                                                                                                                                                                                            |
+| lblReturnAdmin_DisplayName           | VerticalAlign | VerticalAlign.Top                                                                                                                                                                                                   |
+
+Add a label to galReturnAdminContact - lblReturnAdmin_JobTitle
+
+| **Control**                          | **Property**  | **Value**                                                                                                                                                                                                        |
+|--------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Add a label to galReturnAdminContact | Name          | lblReturnAdmin_JobTitle                                                                                                                                                                                          |
+| lblReturnAdmin_JobTitle              | X             | imgReturnAdmin_Photo.X + imgReturnAdmin_Photo.Width + 10                                                                                                                                                         |
+| lblReturnAdmin_JobTitle              | Y             | lblReturnAdmin_DisplayName.Y + lblReturnAdmin_DisplayName.Height                                                                                                                                                 |
+| lblReturnAdmin_JobTitle              | Text          | If(!IsBlank(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin'),Office365Users.UserProfileV2(LookUp(Items,Item=locSelectedItemForReturn.Item).'Item Type'.'Checkout Admin').jobTitle) |
+| lblReturnAdmin_JobTitle              | Height        | 32\*1                                                                                                                                                                                                            |
+| lblReturnAdmin_JobTitle              | Width         | Parent.Width - Self.X - 80                                                                                                                                                                                       |
+| lblReturnAdmin_JobTitle              | Font          | Segoe UI                                                                                                                                                                                                         |
+| lblReturnAdmin_JobTitle              | Font Size     | 10.5                                                                                                                                                                                                             |
+| lblReturnAdmin_JobTitle              | Font Weight   | Semibold                                                                                                                                                                                                         |
+| lblReturnAdmin_JobTitle              | VerticalAlign | VerticalAlign.Top                                                                                                                                                                                                |
+
+Add an image to galReturnAdminContact - imgReturnAdmin_Chat
+
+| **Control**                           | **Property**  | **Value**                                      |
+|---------------------------------------|---------------|------------------------------------------------|
+| Add an image to galReturnAdminContact | Name          | imgReturnAdmin_Chat                            |
+| imgReturnAdmin_Chat                   | X             | Parent.Width - Self.Width - 20                 |
+| imgReturnAdmin_Chat                   | Y             | (Parent.TemplateHeight - Self.Height)/2        |
+| imgReturnAdmin_Chat                   | Width         | 32                                             |
+| imgReturnAdmin_Chat                   | Height        | 32                                             |
+| imgReturnAdmin_Chat                   | PaddingTop    | 4                                              |
+| imgReturnAdmin_Chat                   | paddingBottom | 4                                              |
+| imgReturnAdmin_Chat                   | PaddingLeft   | 4                                              |
+| imgReturnAdmin_Chat                   | PaddingRight  | 4                                              |
+| imgReturnAdmin_Chat                   | ImagePosition | ImagePosition.Fit                              |
+| imgReturnAdmin_Chat                   | Image         | If(gblThemeDark\|\|gblThemeHiCo,ChatDark,Chat) |
+
+Add a button to conReturnConfirmation - btnReturnBackToHome
+
+| **Control**                           | **Property** | **Value**           |
+|---------------------------------------|--------------|---------------------|
+| Add a button to conReturnConfirmation | Name         | btnReturnBackToHome |
+| btnReturnBackToHome                   | X            | 40                  |
+| btnReturnBackToHome                   | Y            | 105                 |
+| btnReturnBackToHome                   | Width        | 160                 |
+| btnReturnBackToHome                   | Font Size    | 10.5                |
+| btnReturnBackToHome                   | Font Weight  | Semibold            |
+| btnReturnBackToHome                   | Text         | "Return to home"    |
+| btnReturnBackToHome                   | Button Type  | Standard            |
+
+| **Control**              | **Property** | **Value**                                                                                                |   |
+|--------------------------|--------------|----------------------------------------------------------------------------------------------------------|---|
+| galItemTypes_MyCheckouts | OnSelect     | Navigate( 'Items Screen', ScreenTransition.Fade, { locSelectedItemType: ThisItem, locShowItems: true } ) |   |
+| btnReturnBackToHome      | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                           |   |
 
 ## Building connect screen
 
-In this step, we're going to organize the screens you designed for your app and connect the three screens that we've created in the previous steps.
+In this step we are going to organize the screens you designed for your app and
+connect the three screens that we have created in the previous steps.
 
 Update the following expressions to connect the screens in this app.
 
@@ -716,21 +1134,22 @@ Update the following expressions to connect the screens in this app.
 
 ## Publish the app to Teams
 
-Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. However, once you finish making changes, you must explicitly publish them to make them available to everyone the app is shared with.
-    
-For detailed steps on how to publish your app to Teams, see [Publish your app in Teams](publish-and-share-apps.md).
+In this step we are going to publish the app to Teams.
+
+1.  Whenever you save changes to a canvas app, you automatically publish them
+    only for yourself and anyone else who has permissions to edit the app.
+
+2.  When you finish making changes, you must explicitly publish them to make
+    them available to everyone the app is shared with.
+
+3.  For detailed steps on how to publish your app to Teams, see [Publish your
+    app in Teams](publish-and-share-apps.md).
 
 ## Share your app with colleagues
 
-In this step, we are going to share the app with colleagues and its underlying data with other colleagues within your company who are not members of the Team in which the app is installed.
+In this step we are going to share the app with colleagues and its underlying
+data with other colleagues within your company who are not members of the Team
+in which the app is installed.
 
-For more information on how to share an app, see [Set permission and share apps with colleagues](set-perms-and-share.md).
-
-### See also
-
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
-
+For more details on how to share an app, see [Set permission and share apps with
+colleagues](set-perms-and-share.md).
