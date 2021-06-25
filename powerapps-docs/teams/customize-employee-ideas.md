@@ -158,7 +158,7 @@ The following are the screens in the Manage Ideas app:
 | Mobile Idea Screen             | This screen is used on mobile to enter an idea.                                                                                                                                      |
 | Mobile Success Screen          | This screen is displayed when an idea is submitted.                                                                                                                                  |
 
-## Common customization scenarios:
+## Common customization scenarios
 
 In this section we discuss common customization/extension scenarios for Employee Ideas, and where you would make these changes
 
@@ -198,8 +198,8 @@ Sometimes users may submit the same idea more than once. In this case, you might
 
 4. A dialog will open confirming that you want to publish.
 
-  - To publish the app, select **Next**.
-  - To change app settings, such as icon and background color, select **Edit details**.
+    - To publish the app, select **Next**.
+    - To change app settings, such as icon and background color, select **Edit details**.
   
     > [!div class="mx-imgBorder"] 
     > ![Confirm publishing to Teams](media/customize-employee-ideas/confirm-publishing-to-teams-manage-ideas-app.png "Confirm publishing to Teams")
@@ -215,30 +215,30 @@ Sometimes users may submit the same idea more than once. In this case, you might
 
 Before modifying the Employee ideas app, consider the following items:
 
-- Where are my table customizations? Columns and tables added by you will go to **built by this team** section of the Power Apps app. You can also add new tables in the **See all** area.
+Where are my table customizations? Columns and tables added by you will go to **built by this team** section of the Power Apps app. You can also add new tables in the **See all** area.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Built by the team](media/customize-employee-ideas/built-by-the-team-tab.png "Built by the team")
+> [!div class="mx-imgBorder"] 
+> ![Built by the team](media/customize-employee-ideas/built-by-the-team-tab.png "Built by the team")
 
-- Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations will not be overridden. You will get a new version that has the latest features, but the new version will not be published.
+Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations will not be overridden. You will get a new version that has the latest features, but the new version will not be published.
     
 For example, if you make changes to the Ideas app, then you install the latest version from the Teams store, your urgent field will still be visible in the app after the upgrade.
     
-   > [!div class="mx-imgBorder"] 
-   > ![Add Employee Ideas to a team](media/customize-employee-ideas/add-employee-ideas-app-to-a-team.png)
+> [!div class="mx-imgBorder"] 
+> ![Add Employee Ideas to a team](media/customize-employee-ideas/add-employee-ideas-app-to-a-team.png)
 
-Figure 1 After upgrading the solution your current app version will still be **live**.
+After upgrading the solution your current app version will still be **live**.
 
-- The updated version of the app is available from the version history of the app. Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
+The updated version of the app is available from the version history of the app. Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Ideas app details](media/customize-employee-ideas/ideas-app-details.png "Ideas app details")
+> [!div class="mx-imgBorder"] 
+> ![Ideas app details](media/customize-employee-ideas/ideas-app-details.png "Ideas app details")
 
-   > [!div class="mx-imgBorder"] 
-   > ![Versions list](media/customize-employee-ideas/versions-list-employee-ideas.png "Versions list")
+The new version is installed, but is not live. You can publish the new version if you want to overwrite your changes.
 
-Figure 2 The new version is installed, but is not live. You can publish the new version if you want to overwrite your changes.
+> [!div class="mx-imgBorder"] 
+> ![Versions list](media/customize-employee-ideas/versions-list-employee-ideas.png "Versions list")
 
-- When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Microsoft Teams.
+When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Microsoft Teams.
     
-- The app theming has been developed to support dark and high contrast mode in Microsoft Teams. Changing the fill color of screens may break dark and high contrast modes.
+The app theming has been developed to support dark and high contrast mode in Microsoft Teams. Changing the fill color of screens may break dark and high contrast modes.
