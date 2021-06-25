@@ -118,7 +118,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
     Your URL will look similar to the following example:
 
-    <https://teams.microsoft.com/l/entity/GUID/_djb2_msteams_prefix_956529380?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3AGUID%40thread.tacv2%22%7D&groupId=GUID&tenantId=GUID>
+    `https://teams.microsoft.com/l/entity/GUID/_djb2_msteams_prefix_956529380?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3AGUID%40thread.tacv2%22%7D&groupId=GUID&tenantId=GUID`
 
 1. To continue, copy the part of the URL that comes after **context=**, and use a URL decoder such as <https://www.urldecoder.org/> to decode the URL.
 
