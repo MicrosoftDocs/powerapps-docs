@@ -42,7 +42,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 ## Building an Asset management app
 
-In the How to app, we'll build an asset management app to enable users to checkout assets from the library and return it when they are done. The instructions are included in the app, and makers who open the app inside of the Power Apps app in Teams will see the instructions in the studio.
+In the How to app, we'll build an asset management app to enable users to checkout assets from the library and return it when they're done. The instructions are included in the app, and makers who open the app in the Power Apps app in Teams will see the instructions in the studio.
 
 This article includes the steps from the app for makers who prefer to read them outside of the app. For example, when you have two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
 
@@ -50,7 +50,7 @@ From the main screen, you can see a summary of the steps to build the How to app
 
 ![Get started in Power Apps](media/how-to/start-screen.png "Get started in Power Apps")
 
-Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selectng **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
+Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selecting **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
 ![The finished asset checkout app](media/how-to/final-app.png "The finished asset checkout app")
 
@@ -58,13 +58,13 @@ In the asset checkout app, selecting an item will take you to a screen where you
 
 ![Checkout screen](media/how-to/checkout.png "Checkout screen")
 
-In the top left corner, you can select the icon for checkout items, which are available in your account.
+In the top-left corner, you can select the icon for checkout items, which are available in your account.
 
 ## Start your maker journey in How to
 
 How to is a self-contained lesson in how to build apps&mdash;all of the instructions are included in the app. To start learning, open the app using Power Apps app in Teams:
 
-1. In Teams, selec **...** (ellipsis) on the left pane.
+1. In Teams, select **...** (ellipsis) on the left pane.
 
 1. Search for **Power Apps**.
 
@@ -96,7 +96,7 @@ When done, return to the overview screen, and select the button on the current s
 
 So if you've started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
 
-1. Open the Power Apps app in Teams (right click and pop out app).
+1. Open the Power Apps app in Teams (right-click and pop out app).
 1. Select the **Build** tab.
 1. Select the Team in which the How to app is installed.
 1. Select the **Installed apps** tab.
@@ -109,7 +109,7 @@ So if you've started to go through the lessons in How to, and you decide you wou
 
 ## Learn to work with Data Model
 
-In this step, we'll add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
+In this step, we'll add three tables. Creating the table names as item types, items, and item checkouts. Tables are created to store the data.
 
 For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md).
 
@@ -142,37 +142,35 @@ Create the following tables and columns:
 | Checkout Duration | Choice      | 7 days, 30 days                     |
 | Checkout Status   | Choice      | Active, Returned                    |
 
+## Sample Data
 
-## Sample Data 
+In this step, we need to add data to the tables that we created earlier. This data will be the items and item types for the asset checkout process. For example, if you'll be using this app to manage the items such as mice and keyboards,  you can define item types like computers, phones, or desks which people can check out.
 
-In this step we need to add data to the tables which we created earlier. This data will be the items and item types for the asset checkout process. For example, if you will be using this app to manage the items such as mice and keyboards,  you can define item types like computers, phones, or desks which people can check out.
+We'll use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
 
-We will use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
 1. Open the Power Apps app in Teams.
-2. Select the **Build** tab.
-3. Select the Team in which the How to app is installed.
-4. Select the **Installed apps** tab.
-5. In the How to tile, select **See all**.
-6. Select **Tables**.
-7. Select **Item Checkout App Stages**.
-8. Select **Edit data**.
+1. Select the **Build** tab.
+1. Select the Team in which the How to app is installed.
+1. Select the **Installed apps** tab.
+1. In the How to tile, select **See all**.
+1. Select **Tables**.
+1. Select **Item Checkout App Stages**.
+1. Select **Edit data**.
 
-> Note:
+> [!NOTE]
 > The table editable grid cannot import photos.
 
 The sample data screen includes a gallery that allows you to select items that were created in the previous step and associate images with them.
 
+## UI components
 
-## UI Components
+In this step, we're going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-In this step we are going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
+To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps](use-the-fluent-ui-controls.md).
 
-To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps app in Teams - Power Apps \| Microsoft
-Docs](use-the-fluent-ui-controls.md).
+## Building Asset screen
 
-## Building Asset Screen
-
-In this step we are going to create your first screen that displays the items available to be checked out. This screen displays a list of assets available to be checked out--this will be the primary screen of the application, from which users will find items and select them to check them out.
+In this step, we're going to create your first screen that displays the items available to be checked out. This screen displays a list of assets available to be checked out. This screen will be the primary screen of the application, from where the users will find items and select them to check them out.
 
 Follow these steps to start creating your app.
 
@@ -508,9 +506,9 @@ From this screen the user provides details of the reason for checkout, duration,
 | btnCancelCheckout                                     | OnSelect             | Navigate('Items Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |   |
 | btnCheckoutBackToHome                                 | OnSelect             | Navigate('Items Screen',ScreenTransition.Fade)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |   |
 
-## Building My checkout Screen 
+## Building My checkout screen
 
-In this step we are going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they have checked out and select to return the item.
+In this step, we're going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they've checked out and select to return the item.
 
 | **Control**                                               | **Property**                     | **Value**                                                                                                                                                                                                                                                                                 |   |
 |-----------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
@@ -701,7 +699,7 @@ In this step we are going to build the final screen of the app, the My checkout 
 
 ## Building connect screen
 
-In this step we are going to organize the screens you designed for your app and connect the three screens that we have created in the previous steps.
+In this step, we're going to organize the screens you designed for your app and connect the three screens that we've created in the previous steps.
 
 Update the following expressions to connect the screens in this app.
 
@@ -718,18 +716,21 @@ Update the following expressions to connect the screens in this app.
 
 ## Publish the app to Teams
 
-In this step we are going to publish the app to Teams.
-
-2.  Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app.
+Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. However, once you finish making changes, you must explicitly publish them to make them available to everyone the app is shared with.
     
-3.  When you finish making changes, you must explicitly publish them to make them available to everyone the app is shared with.
-    
-3.  For detailed steps on how to publish your app to Teams, see [Publish your app in Teams](publish-and-share-apps.md).
+For detailed steps on how to publish your app to Teams, see [Publish your app in Teams](publish-and-share-apps.md).
 
 ## Share your app with colleagues
 
-In this step we are going to share the app with colleagues and its underlying data with other colleagues within your company who are not members of the Team in which the app is installed.
+In this step, we are going to share the app with colleagues and its underlying data with other colleagues within your company who are not members of the Team in which the app is installed.
 
-For more details on how to share an app, see [Set permission and share apps with
-colleagues](set-perms-and-share.md).
+For more information on how to share an app, see [Set permission and share apps with colleagues](set-perms-and-share.md).
+
+### See also
+
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
 
