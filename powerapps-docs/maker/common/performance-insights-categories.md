@@ -70,7 +70,7 @@ Insight ID: Perf.Environment.Client.Browser.Version
 
 #### Motivation 
 
-This insight checks how many users are using your app from an old version of a browser. Even if users are on modern browsers, and not on non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
+This insight checks how many users are using your app from an old version of a browser. Even when users run modern browsers, and not non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
 
 #### How to improve 
 
@@ -114,7 +114,7 @@ If the network protocol trace indicates HTTP/1.1, it might be because of the fol
 
 ## Usage pattern
 
-This category analyzes the type of page loads. Warm page load renders the page with leveraging caches and existing DOM objects, while cold page load renders the page fresh with downloading resources if required. Although End-users will not distinguish the type of page loads, this insight will analyze what type of loads happens in the client side to provide recommendations. 
+This category analyzes the type of page loads. A warm page load renders the page using caches and existing DOM objects, while a cold page load renders the page fresh by downloading resources when required. Although users will not distinguish the type of page load, this insight analyzes and provides recommendations depending on what type of page loads occur on the client. 
 
 ### Page load type
 
