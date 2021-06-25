@@ -203,7 +203,7 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
   
     
 > [!div class="mx-imgBorder"]
-> ![List voters flow step](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
+>![List voters flow step](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
     
 13. We now are going to update the excel workbook vote table with the votes by idea. Add an apply to each step inside the apply to each created in step 10. For the output field select the value from the list rows step created in step 12.
     
