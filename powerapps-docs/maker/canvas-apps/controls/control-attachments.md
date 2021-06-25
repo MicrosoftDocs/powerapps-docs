@@ -1,6 +1,6 @@
 ---
-title: 'Attachments control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Attachments control
+title: Attachments control in Power Apps
+description: Learn about the details, properties and examples of the attachments control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -15,18 +15,20 @@ search.app:
   - PowerApps
 ---
 # Attachments control in Power Apps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse entity.
+
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse table.
 
 ## Limitations
+
 The attachment control has these limitations:
-1. Attachments are supported with SharePoint lists and Dataverse entities.
+1. Attachments are supported with SharePoint lists and Dataverse tables.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
 1. You can upload files only if they're 50 MB or smaller.  
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse entity.
+An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse table.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.

@@ -5,15 +5,13 @@ author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 06/21/2021
 ms.author: kathyos
 ms.reviewer: kathyos
 
 ---
 
 # Pattern: Inspection
-
-<!--![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")-->
 
 There are a variety of reasons why organizations need to perform inspections,
 and Microsoft Power Platform provides a no-code or low-code solution for enabling
@@ -52,6 +50,40 @@ In a typical inspection scenario:
     - For example, you might see that a vehicle has failed its inspection and
         decide to take it out of service. Or the centralized report might show that daily
         maintenance standards need to be improved in a particular location.
+
+## Template: Inspection solution for Microsoft Teams
+
+The Inspection solution for Microsoft Teams is a general inspection app that can be used to inspect anything from a location (such as a retail store or manufacturing plant) to assets and equipment (such as vehicles and machines). The solution includes an app for performing inspections as well as an app for configuring and managing inspections.
+
+![Screenshot of the Inspection app for Microsoft Teams](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
+
+Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
+
+## Template: Hospital Emergency Response sample solution
+
+The Hospital Emergency Response sample solution provides a set of capabilities
+for healthcare organizations to collect data for situational awareness of
+available beds and supplies, COVID-19&ndash;related patients, staffing, and pending
+discharges. This solution implements the inspection pattern by collecting an
+inventory of available hospital beds and supplies. It also uses dashboards to
+summarize key data and insights for users to make informed decisions, resulting
+in efficient deployment and usage of resources.
+
+![Screenshots of the Hospital Emergency Response app](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
+
+The main components of the Hospital Emergency Response solution are:
+
+- **Mobile app for frontline staff**: Frontline staff, such as nurses and
+    medical practitioners, can use the mobile app to quickly view and enter
+    information as required.
+
+- **Web app for hospital admins**: Hospital admins can use this app to add and
+    manage system data required for the solution to work.
+
+- **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
+    view important data and metrics to help make decisions efficiently.
+
+Learn more about the solution: [Video](https://youtu.be/Dg-i3F9G01I) | [Documentation](../../sample-apps/emergency-response/overview.md) | [Blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
 
 ## How customers are using the inspection pattern
 
@@ -125,34 +157,6 @@ as oral reading goals and comprehension goals.
 
 ![Screenshots of the Tacoma Public Schools DRA2 app](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
 
-### Hospital Emergency Response sample solution
-
-The Hospital Emergency Response sample solution provides a set of capabilities
-for healthcare organizations to collect data for situational awareness of
-available beds and supplies, COVID-19&ndash;related patients, staffing, and pending
-discharges. This solution implements the inspection pattern by collecting an
-inventory of available hospital beds and supplies. It also uses dashboards to
-summarize key data and insights for users to make informed decisions, resulting
-in efficient deployment and usage of resources.
-
-![Screenshots of the Hospital Emergency Response app](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
-
-The main components of the Hospital Emergency Response solution are:
-
-- **Mobile app for frontline staff**: Frontline staff, such as nurses and
-    medical practitioners, can use the mobile app to quickly view and enter
-    information as required.
-
-- **Web app for hospital admins**: Hospital admins can use this app to add and
-    manage system data required for the solution to work.
-
-- **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
-    view important data and metrics to help make decisions efficiently.
-
-
-
-Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](../../sample-apps/emergency-response/overview.md) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
-
 ### Additional stories
 
 - [Pinnacle Group – Helpdesk employee leads transition from paper to digital](https://powerapps.microsoft.com/blog/pinnacle-group/)
@@ -164,4 +168,3 @@ Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [document
 
 - [App sample gallery: Audit](https://powerusers.microsoft.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=forum-board:AppFeedbackGallery&q=audit)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]

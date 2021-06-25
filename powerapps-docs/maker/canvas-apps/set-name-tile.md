@@ -1,6 +1,6 @@
 ---
-title: Change app name and icon for a canvas app | Microsoft Docs
-description: Step-by-step instructions for changing settings, such the app name and the icon, of a canvas app in Power Apps
+title: Change app name and icon for canvas apps
+description: Step-by-step instructions for changing settings, such the app name and the icon, of a canvas app in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Change app name and icon for a canvas app in Power Apps
+# Change app name and icon for canvas apps
+
 Customize a canvas app by changing its name and icon.
 
 ## Prerequisites

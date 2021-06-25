@@ -18,7 +18,7 @@ search.app:
 
 # Interactive map component 
 
-Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
+Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of objects from a data source, or by inputting new physical locations.
 
 Pan, tilt, zoom, and drag to center your map view. As you zoom out, the markers will optionally cluster to represent dense groups of data. 
 
@@ -185,10 +185,10 @@ The following table lists the output properties available.
 
 
 
-| Property | Description |
-| -- | -- |
-| CenterLocation | Center location of the map. |
-| OnMapClick | The last clicked location on the map. |
+| Property | Description | Type |
+| -- | -- | -- |
+| CenterLocation | Center location of the map. | Not Applicable |
+| OnMapClick | The last clicked location on the map. | Not Applicable |
 | Selected | The selected pin on the map. | Record |
 | SelectedItems | The selected pin or pins of the selected cluster on the map. | Table |
 | GeocodedItems | The geocoded locations of the pins on the map. | Table |

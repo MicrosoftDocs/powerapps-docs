@@ -1,6 +1,6 @@
 ---
-title: 'Power BI tile control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Power BI tile control
+title: Power BI tile control in Power Apps
+description: Learn about the details, properties and examples of the Power BI tile control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

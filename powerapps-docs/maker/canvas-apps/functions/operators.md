@@ -1,6 +1,6 @@
 ---
-title: Operators and Identifiers | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators and identifiers in Power Apps
+title: Operators and Identifiers in Power Apps
+description: Reference information including syntax and examples for the Operators and Identifiers in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -79,7 +79,7 @@ A few controls and functions apply formulas to individual records of a table.  T
 
 ### ThisItem operator
 
-For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
+For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** table included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
 
 ```powerapps-dot
 Employees
@@ -265,10 +265,10 @@ Some data sources such as SharePoint and Microsoft Dataverse have two different 
  
 Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an entity in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
+For example, imagine you have added a **Custom Field** to a table in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
+> ![Accounts table with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
 
 When authoring a reference to a field of Accounts, the suggestion will be made to use **'Custom Field'** since this is the display name.  Note that the single quotes must be used because this name has a space in it:
 
@@ -288,15 +288,15 @@ Although it is not suggested, we could also use the logical name for this field.
 Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names to switch into new display names, for example, if a display name changes or a maker in a different language edits the app.
 
 > [!NOTE] 
-> Logical names are not translated when moving an app between environments.  For Dataverse system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+> Logical names are not translated when moving an app between environments.  For Dataverse system table and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
 
 ## Name disambiguation
-Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
+Since display names are not unique, the same display name may appear more than once in the same table.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
 
 > [!div class="mx-imgBorder"]  
 > ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
 
-Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Dataverse items. 
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of table, choices, and other Dataverse items. 
 
 ## Disambiguation operator
 
