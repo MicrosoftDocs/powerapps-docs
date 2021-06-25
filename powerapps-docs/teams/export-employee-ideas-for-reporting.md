@@ -233,15 +233,15 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
 
 ### Test the flow
 
-1. Finally, test the flow to make sure that it works.
+Test the flow to make sure that it works.
 
-2. In the upper right corner, select **Test**.
+1. In the upper right corner, select **Test**.
 
-3. Select **Manually** and select **Test**.
+2. Select **Manually** and select **Test**.
 
    > [!div class="mx-imgBorder"]
    > ![Test the flow manually](media/export-employee-ideas-for-reporting/test-flow-manually.png "Test the flow manually")
 
-4. Select **Run flow**.
+3. Select **Run flow**.
 
-5. Once the flow runs, open your OneDrive folder where the Spreadsheet is stored and verify  that your inspection data is there.
+4. Once the flow runs, open your OneDrive folder where the Spreadsheet is stored and verify  that your inspection data is there.
