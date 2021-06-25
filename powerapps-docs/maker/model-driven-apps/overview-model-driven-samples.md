@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: overview
 ms.component: model
-ms.date: 08/04/2020
+ms.date: 06/24/2021
 ms.author: caburk
 search.audienceType: 
   - maker
@@ -40,6 +40,83 @@ To install the sample apps and data, create a trial environment and database, an
 <img src = "media/overview-model-driven-samples/create-database1.png" alt = "Deploy sample apps and data setting when creating a Dataverse database" width = "400" height = "680"> <br />
 
 This option installs the sample apps and data into your database. Sample apps are for educational and demonstration purposes. We don't recommend installing sample apps in production databases. More information: [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
+
+## Sample apps available
+After you provision an environment with a database that include sample apps, the following model-driven apps are available in the environment.
+- [Asset Checkout](#asset-checkout)
+- [Innovation Challenge](#innovation-challenge)
+- [Fundraiser](#fundraiser)
+
+### Asset Checkout
+Asset Checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
+
+![Asset checkout sample app](media/overview-model-driven-samples/asset-checkout.png)
+
+#### Solution components included in this sample app
+
+|Display name  |Name  |Component type  |
+|---------|---------|---------|
+|Asset Checkout   | msdyn_AssetCheckout   | Model-driven app        |
+|Asset Checkout   | msdyn_AssetCheckout   | Site map        |
+|Asset Checkout App Image   | msdyn_AssetCheckoutApp    | Web resource      |
+|Product   | sample_product    | Table    |
+|Product Icon  | sample_product_icon    | Web resource    |
+|Reservation   | sample_reservation    |  Table    |
+|Reservation Icon  | sample_reservation_icon     | Web resource    |
+|Review   | sample_review    | Table     |
+|Review Icon | sample_review_icon    |  Web resource       |
+|Set Rating Category based on Rating   | Set Rating Category based on Rating     | Process    |
+
+### Innovation Challenge
+
+Start a companywide innovation challenge. Ideas are submitted, reviewed, voted on, and the best ideas get funded for new projects.
+
+![Innovation Challenge sample app](media/overview-model-driven-samples/innovation-challenge.png)
+
+#### Solution components included in this app
+
+|Display name | Name  | Component type |
+|---------|---------|---------|
+|Activate Challenge if Launch Challenge = Complete  | Activate Challenge if Launch Challenge = Complete    | Process    |
+|Challenge Management Process  | Challenge Management Process    | Process    |
+|Contact   | Contact    | Table    |
+|Idea to Project Business Process  | Idea to Project Business Process   | Process   |
+|Innovation Challenge  | Innovation Challenge  | Dashboard    |
+|Project Start < Project End  | Project Start < Project End  | Process   |
+|Challenge  | sample_challenge   | Table   |
+|Challenge 32x32  | sample_Challenge32    | Web resource     |
+|Challenge Management Process  | sample_challengemanagementprocess   | Table    |
+|Idea  | sample_idea    | Table    |
+|Idea  | sample_Idea   | Web resource    |
+|Idea32   | sample_Idea32    | Web resource    |
+|Innovation Challenge  | sample_InnovationHub    | Model-driven app    |
+|Innovation Hub  |  sample_InnovationHub    | Web resource    |
+|Innovation Hub   | sample_InnovationHub    | Site map   |
+|Team Project     | sample_teamproject        | Table       |
+|Team Project     | sample_TeamProject        | Web resource        |
+|Team Project 32     | sample_TeamProject32   | Web resource     |
+|Set Status Reason = Closed     | Set Status Reason = Closed    | Process    |
+|User  | systemuser    | Table     |
+
+### Fundraiser
+
+Fundraiser provides employees the opportunity to donate time and money towards causes they're passionate about. Start a fundraiser for your favorite cause, set goals, and track performance towards goals.
+
+![Fundrasier sample app](media/overview-model-driven-samples/fundraiser.png)
+
+#### Solution components included in this app
+
+|Display name | Name  | Component type  |
+|---------|---------|---------|
+|Fundraiser Donations   | Fundraiser Donations    |  Interactive Dashboard       |
+|Donation     |  sample_donation     | Table     |
+|Donation Icon    |  sample_DonationIcon       | Web resource     |
+|Donations Icon    | sample_DonationsIcon        | Web resource     |
+|Fundraiser     |  sample_fundraiser       | Table        |
+|Fundraiser     |  sample_Fundraiser       | Site map     |
+|Fundraiser     |  sample_Fundraiser       | Model-driven app     |
+|Fundraiser App Icon     |  sample_FundraiserApp       | Web resource     |
+|Fundraiser Icon   | sample_FundraiserIcon        | Web resource    |
 
 ## Customize a sample app
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/17/2020
+ms.date: 06/24/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -35,7 +35,7 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 ||
 
 > [!NOTE]
-> Advanced form steps can't be reused. If you try to use advanced form step again, you'll see the following message:
+> Advanced form steps can't be reused for all step type configurations except when using "Next step if Condition fails" option in step type "Condition". If you try to use advanced form step again, you'll see the following message:
 > <br> `The step <advanced form step name> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again.`
 > <br> When that happens, ensure you use don't reuse advanced form steps in an Advanced Form.
 

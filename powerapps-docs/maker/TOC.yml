@@ -2206,8 +2206,16 @@
           items:
              - name: Milestones
                href: ../teams/milestones.md
-             - name: Understand Milestones sample app architecture
-               href: ../teams/milestones-architecture.md
+             - name: Deploy the Milestones app broadly in your organization
+               href: ../teams/milestones-broad-distribution.md
+             - name: Customize Milestones app
+               items:
+                 - name: Understand Milestones sample app architecture
+                   href: ../teams/milestones-architecture.md
+                 - name: Customize Milestones sample app
+                   href: ../teams/customize-milestones.md
+                 - name: Add a new column to Milestones sample app to track work items
+                   href: ../teams/extend-milestones-add-column.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives
