@@ -43,6 +43,8 @@ The custom page is a new page type within model-driven app which brings in the p
 
 * When a custom page with code component is opened for editing, a security dialog is shown.  On this dialog, clicking on **Go back** button does not navigate back to parent context.  User can close the browser tab to leave the canvas designer.  
 
+* When a user is prompted for consent with connectors and clicks "Don't allow" the custom page will render but without data.  The user does not get notified that data retrieval is skipped.
+
 ## Related topics
 
 [Model-driven app custom page overview](model-app-page-overview.md)
