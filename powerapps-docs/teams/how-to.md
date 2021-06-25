@@ -176,215 +176,214 @@ We'll use the table editable grid to populate the sample data in the app. To use
 > [!NOTE]
 > The table editable grid cannot import photos.
 
-The sample data screen includes a gallery that allows you to select items that were created in the previous step and associate images with them.
+The sample data screen includes a gallery that allows you to select items that were created in the previous step, and associate images with them.
 
-## UI Components
+## UI components
 
-In this step we are going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
+In this step, we're going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps app in Teams - Power Apps \| Microsoft Docs](use-the-fluent-ui-controls.md).
+To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent) and [Use the Fluent UI controls for Power Apps Teams](use-the-fluent-ui-controls.md).
 
-## Building Asset Screen
+## Building asset screen
 
-In this step we are going to create your first screen that displays the items available to be checked out. This screen displays a list of assets available to
-be checked out--this will be the primary screen of the application, from which users will find items and select them to check them out.
+In this step, we're going to create your first screen that displays the items available to be checked out. This will be the primary screen of the application, from where the users will find items, and select them to check them out.
 
 Follow these steps to start creating your app.
 
-1.  The horizontal container **conItemTypes** will be used to contain a header label and a gallery of item types. Set its properties as shown below:
+1. The horizontal container **conItemTypes** will be used to contain a header label and a gallery of item types. Set its properties as shown below:
 
-| **Property**      | **Value**                                                         |
-|-------------------|-------------------------------------------------------------------|
-| Name              | conItemTypes                                                      |
-| Gap               | 20                                                                |
-| Vertical Overflow | LayoutOverflow.Scroll                                             |
-| Minimum Width     | 300                                                               |
-| Padding Top       | 20                                                                |
-| Padding Bottom    | 20                                                                |
-| Fill              | If(gblThemeDark,ColorValue("\#141414"), gblThemeHiCo,Black,White) |
+    | **Property**      | **Value**                                                         |
+    |-------------------|-------------------------------------------------------------------|
+    | Name              | conItemTypes                                                      |
+    | Gap               | 20                                                                |
+    | Vertical Overflow | LayoutOverflow.Scroll                                             |
+    | Minimum Width     | 300                                                               |
+    | Padding Top       | 20                                                                |
+    | Padding Bottom    | 20                                                                |
+    | Fill              | If(gblThemeDark,ColorValue("\#141414"), gblThemeHiCo,Black,White) |
 
-2. Add New Horizontal container to conItemTypes - **conItemTypesHeader**. It will contain a header label and an image.
+1. Add New Horizontal container to conItemTypes - **conItemTypesHeader**. It will contain a header label and an image.
 
-| **Property**   | **Value**          |
-|----------------|--------------------|
-| Name           | conItemTypesHeader |
-| Padding Right  | 10                 |
-| Minimum Height | 0                  |
-| Height         | 32                 |
-| Padding Left   | 20                 |
+    | **Property**   | **Value**          |
+    |----------------|--------------------|
+    | Name           | conItemTypesHeader |
+    | Padding Right  | 10                 |
+    | Minimum Height | 0                  |
+    | Height         | 32                 |
+    | Padding Left   | 20                 |
 
-3. Add a label to conItemTypesHeader - **lblAllAssetsHeader**. It's a header label for the screen.
+1. Add a label to conItemTypesHeader - **lblAllAssetsHeader**. It's a header label for the screen.
 
-| **Property**   | **Value**          |
-|----------------|--------------------|
-| Name           | lblAllAssetsHeader |
-| Font           | Segoe UI           |
-| Font weight    | Bold               |
-| Height         | 32                 |
-| Flexible Width | true               |
-| X              | 20                 |
-| Text           | "All assets"       |
+    | **Property**   | **Value**          |
+    |----------------|--------------------|
+    | Name           | lblAllAssetsHeader |
+    | Font           | Segoe UI           |
+    | Font weight    | Bold               |
+    | Height         | 32                 |
+    | Flexible Width | true               |
+    | X              | 20                 |
+    | Text           | "All assets"       |
 
-4. Add an image to conItemTypesHeader - **imgCheckout**. It will be used to navigate users to their existing checkouts.
+1. Add an image to conItemTypesHeader - **imgCheckout**. It will be used to navigate users to their existing checkouts.
 
-| **Property** | **Value**                                               |
-|--------------|---------------------------------------------------------|
-| Name         | imgCheckout                                             |
-| Height       | 32                                                      |
-| Width        | 32                                                      |
-| Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
+    | **Property** | **Value**                                               |
+    |--------------|---------------------------------------------------------|
+    | Name         | imgCheckout                                             |
+    | Height       | 32                                                      |
+    | Width        | 32                                                      |
+    | Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
 
-5. Add a blank vertical gallery to conItemTypes – **galItemTypes**. Its a gallery of item types. Clicking on an item type will display its related items.
+1. Add a blank vertical gallery to conItemTypes – **galItemTypes**. Its a gallery of item types. Selecting an item type will display its related items.
 
-| **Property**     | **Value**                                                                                                                    |
-|------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Name             | galItemTypes                                                                                                                 |
-| Items            | Item Types                                                                                                                   |
-| Min Height       | 0                                                                                                                            |
-| Fill Portions    | 19                                                                                                                           |
-| Template Size    | 70                                                                                                                           |
-| Template Padding | 0                                                                                                                            |
-| OnSelect         | UpdateContext( { locSelectedItemType: ThisItem, locShowItems: true } )                                                       |
-| Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
+    | **Property**     | **Value**                                                                                                                    |
+    |------------------|------------------------------------------------------------------------------------------------------------------------------|
+    | Name             | galItemTypes                                                                                                                 |
+    | Items            | Item Types                                                                                                                   |
+    | Min Height       | 0                                                                                                                            |
+    | Fill Portions    | 19                                                                                                                           |
+    | Template Size    | 70                                                                                                                           |
+    | Template Padding | 0                                                                                                                            |
+    | OnSelect         | UpdateContext( { locSelectedItemType: ThisItem, locShowItems: true } )                                                       |
+    | Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
 
-6. Add a label to galItemTypes – **lblName**. It's a label to display the item type name.
+1. Add a label to galItemTypes – **lblName**. It's a label to display the item type name.
 
-| **Property** | **Value**                                                     |
-|--------------|---------------------------------------------------------------|
-| Name         | lblName                                                       |
-| Width        | Parent.Width                                                  |
-| Height       | 32                                                            |
-| X            | 20                                                            |
-| y            | 5                                                             |
-| Text         | ThisItem.Name                                                 |
-| Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
-| Font Size    | 10.5                                                          |
+    | **Property** | **Value**                                                     |
+    |--------------|---------------------------------------------------------------|
+    | Name         | lblName                                                       |
+    | Width        | Parent.Width                                                  |
+    | Height       | 32                                                            |
+    | X            | 20                                                            |
+    | y            | 5                                                             |
+    | Text         | ThisItem.Name                                                 |
+    | Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+    | Font Size    | 10.5                                                          |
 
-7. Add a label to galItemTypes – **lblItemCount**. It's a label to display the count of items belonging to a particular item type.
+1. Add a label to galItemTypes – **lblItemCount**. It's a label to display the count of items belonging to a particular item type.
 
-| **Property** | **Value**                                 |
-|--------------|-------------------------------------------|
-| Name         | lblItemCount                              |
-| Width        | Parent.Width                              |
-| Height       | 32                                        |
-| X            | 20                                        |
-| y            | lblName.Y + lblName.Height                |
-| Text         | CountRows(ThisItem.Items.Item) & " items" |
-| Font Size    | 10.5                                      |
+    | **Property** | **Value**                                 |
+    |--------------|-------------------------------------------|
+    | Name         | lblItemCount                              |
+    | Width        | Parent.Width                              |
+    | Height       | 32                                        |
+    | X            | 20                                        |
+    | y            | lblName.Y + lblName.Height                |
+    | Text         | CountRows(ThisItem.Items.Item) & " items" |
+    | Font Size    | 10.5                                      |
 
-8. The horizontal container **conItems** will be used to contain a header label and a gallery of items for the select item type. Set its properties as shown below:
+1. The horizontal container **conItems** will be used to contain a header label and a gallery of items for the select item type. Set its properties as shown below:
 
-| **Property**      | **Value**       |
-|-------------------|-----------------|
-| Name              | conItems        |
-| Gap               | 20              |
-| Padding Top       | 20              |
-| Padding Left      | 20              |
-| Padding Right     | 20              |
-| Vertical Overflow | Overflow.Scroll |
+    | **Property**      | **Value**       |
+    |-------------------|-----------------|
+    | Name              | conItems        |
+    | Gap               | 20              |
+    | Padding Top       | 20              |
+    | Padding Left      | 20              |
+    | Padding Right     | 20              |
+    | Vertical Overflow | Overflow.Scroll |
 
-9. Add a label to conItems – **lblRelatedItemsHeader**. It's a label to display the count of items related to the selected item type.
+1. Add a label to conItems – **lblRelatedItemsHeader**. It's a label to display the count of items related to the selected item type.
 
-| **Property**       | **Value**                                                    |
-| ------------------ | ------------------------------------------------------------ |
-| Name               | lblRelatedItemsHeader                                        |
-| Text               | CountRows(locSelectedItemType.Items.Item) & " items available" |
-| Align in Container | AlignInContainer.Stretch                                     |
-| Font weight        | FontWeight.Semibold                                          |
-| Font Size          | 15                                                           |
-| X                  | 707\*1                                                       |
-| Y                  | 265\*1                                                       |
+    | **Property**       | **Value**                                                    |
+    | ------------------ | ------------------------------------------------------------ |
+    | Name               | lblRelatedItemsHeader                                        |
+    | Text               | CountRows(locSelectedItemType.Items.Item) & " items available" |
+    | Align in Container | AlignInContainer.Stretch                                     |
+    | Font weight        | FontWeight.Semibold                                          |
+    | Font Size          | 15                                                           |
+    | X                  | 707\*1                                                       |
+    | Y                  | 265\*1                                                       |
 
-10. Add a blank vertical gallery to conItems – **galItems**. This is the gallery that will display items that belong to the selected item type.
+1. Add a blank vertical gallery to conItems – **galItems**. This is the gallery that will display items that belong to the selected item type.
 
-| **Property** | **Value**                 |
-| ------------ | ------------------------- |
-| Name         | galItems                  |
-| Items        | locSelectedItemType.Items |
-| TemplateSize | 130                       |
+    | **Property** | **Value**                 |
+    | ------------ | ------------------------- |
+    | Name         | galItems                  |
+    | Items        | locSelectedItemType.Items |
+    | TemplateSize | 130                       |
 
-11. Add a button to galItems – **btnItemsBackground**. This is to add a white background for each item.
+1. Add a button to galItems – **btnItemsBackground**. This is to add a white background for each item.
 
-| **Property** | **Value**                        |
-| ------------ | -------------------------------- |
-| Name         | btnItemsBackground               |
-| X            | 5                                |
-| y            | 0                                |
-| Fill         | White                            |
-| Height       | Parent.TemplateHeight - 20       |
-| Width        | Parent.TemplateWidth - Self.X\*2 |
+    | **Property** | **Value**                        |
+    | ------------ | -------------------------------- |
+    | Name         | btnItemsBackground               |
+    | X            | 5                                |
+    | y            | 0                                |
+    | Fill         | White                            |
+    | Height       | Parent.TemplateHeight - 20       |
+    | Width        | Parent.TemplateWidth - Self.X\*2 |
 
-12. Add an image to galItems – **imgItem**. This is to display the item's image or logo.
+1. Add an image to galItems – **imgItem**. This is to display the item's image or logo.
 
-| **Control**              | **Property**  | **Value**           |
-|--------------------------|---------------|---------------------|
-| Add an image to galItems | Name          | imgItem             |
-| imgItem                  | X             | 5                   |
-| imgItem                  | Y             | 0                   |
-| imgItem                  | Width         | 125                 |
-| imgItem                  | Height        | 110                 |
-| imgItem                  | ImagePosition | ImagePosition.Fill  |
-| imgItem                  | Image         | ThisItem.Image.Full |
+    | **Control**              | **Property**  | **Value**           |
+    |--------------------------|---------------|---------------------|
+    | Add an image to galItems | Name          | imgItem             |
+    | imgItem                  | X             | 5                   |
+    | imgItem                  | Y             | 0                   |
+    | imgItem                  | Width         | 125                 |
+    | imgItem                  | Height        | 110                 |
+    | imgItem                  | ImagePosition | ImagePosition.Fill  |
+    | imgItem                  | Image         | ThisItem.Image.Full |
 
-13. Add a label to galItems – **lblItemName**. This is to display the item's name.
+1. Add a label to galItems – **lblItemName**. This is to display the item's name.
 
-| **Property** | **Value**                         |
-| ------------ | --------------------------------- |
-| Name         | lblItemName                       |
-| Y            | imgItem.Y + 5                     |
-| X            | imgItem.X + imgItem.Width +20     |
-| Text         | ThisItem.Name                     |
-| Width        | btnItemsBackground.Width - Self.X |
-| Font Size    | 10.5                              |
-| FontWeight   | FontWeight.Semibold               |
+    | **Property** | **Value**                         |
+    | ------------ | --------------------------------- |
+    | Name         | lblItemName                       |
+    | Y            | imgItem.Y + 5                     |
+    | X            | imgItem.X + imgItem.Width +20     |
+    | Text         | ThisItem.Name                     |
+    | Width        | btnItemsBackground.Width - Self.X |
+    | Font Size    | 10.5                              |
+    | FontWeight   | FontWeight.Semibold               |
 
-14. Add a label to galItems – **lblItemQuantity**. This is to display the count of an item available for checkout.
+1. Add a label to galItems – **lblItemQuantity**. This is to display the count of an item available for checkout.
 
-| **Property**   | **Value**                                                    |
-| -------------- | ------------------------------------------------------------ |
-| Name           | lblItemQuantity                                              |
-| X              | lblItemName.X                                                |
-| Y              | lblItemName.Y + lblItemName.Height                           |
-| Text           | ThisItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=ThisItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available" |
-| Vertical align | Bottom                                                       |
-| Width          | btnItemsBackground.Width - Self.X                            |
-| Font Size      | 10.5                                                         |
+    | **Property**   | **Value**                                                    |
+    | -------------- | ------------------------------------------------------------ |
+    | Name           | lblItemQuantity                                              |
+    | X              | lblItemName.X                                                |
+    | Y              | lblItemName.Y + lblItemName.Height                           |
+    | Text           | ThisItem.Quantity-CountRows(Filter('Item Checkouts',Item.Item=ThisItem.Item,'Checkout Status'='Checkout Statuses'.Active))&" available" |
+    | Vertical align | Bottom                                                       |
+    | Width          | btnItemsBackground.Width - Self.X                            |
+    | Font Size      | 10.5                                                         |
 
-15. Add a label to galItems - **lblItemDesc**. This is to display the item's description.
+1. Add a label to galItems - **lblItemDesc**. This is to display the item's description.
 
-| **Property**   | **Value**                                  |
-| -------------- | ------------------------------------------ |
-| Name           | lblItemDesc                                |
-| X              | lblItemName.X                              |
-| Y              | lblItemQuantity.Y + lblItemQuantity.Height |
-| Text           | ThisItem.Description                       |
-| Vertical align | Bottom                                     |
-| Width          | btnItemsBackground.Width - Self.X          |
-| Wrap           | false                                      |
+    | **Property**   | **Value**                                  |
+    | -------------- | ------------------------------------------ |
+    | Name           | lblItemDesc                                |
+    | X              | lblItemName.X                              |
+    | Y              | lblItemQuantity.Y + lblItemQuantity.Height |
+    | Text           | ThisItem.Description                       |
+    | Vertical align | Bottom                                     |
+    | Width          | btnItemsBackground.Width - Self.X          |
+    | Wrap           | false                                      |
 
-16. Add a button to galItems – **btnItemsForeground**. This is basically an overlay button to make the entire row clickable.
+1. Add a button to galItems – **btnItemsForeground**. This is an overlay button to make the entire row selectable.
 
-| **Value**                  | **Property**                     |
-| -------------------------- | -------------------------------- |
-| btnItemsForeground         | Name                             |
-| RGBA( 128, 128, 128, .06 ) | HoverFill                        |
-| Transparent                | All other Fill except Hover Fill |
-| btnItemsBackground.X       | X                                |
-| btnItemsBackground.Y       | Y                                |
-| btnItemsBackground.Width   | Width                            |
+    | **Value**                  | **Property**                     |
+    | -------------------------- | -------------------------------- |
+    | btnItemsForeground         | Name                             |
+    | RGBA( 128, 128, 128, .06 ) | HoverFill                        |
+    | Transparent                | All other Fill except Hover Fill |
+    | btnItemsBackground.X       | X                                |
+    | btnItemsBackground.Y       | Y                                |
+    | btnItemsBackground.Width   | Width                            |
 
-Now set the Fill Portions property for the controls conItems and conItemTypes as shown below - item types covers 25% of the screen and the remaining 75% is covered by the list of items
+Now set the Fill Portions property for the controls conItems and conItemTypes as shown below - item types covers 25% of the screen and the remaining 75% is covered by the list of items.
 
 | **Control**  | **Property**  | **Value** |
 | ------------ | ------------- | --------- |
 | conItems     | Fill Portions | 3         |
 | conItemTypes | Fill Portions | 1         |
 
-## Building Checkout Screen
+## Building checkout screen
 
-In this step we are going to create the second screen, the Item checkout screen. This screen displays the details of the item to be checked out and quantity available.
+In this step, we're going to create the second screen, the item checkout screen. This screen displays the details of the item to be checked out and quantity available.
 
-From this screen the user provides details of the reason for checkout, duration, and other details and launches the checkout process.
+From this screen, the user provides details of the reason for checkout, duration, and other details and launches the checkout process.
 
 | **Control**           | **Property**      | **Value**                                                        |
 |-----------------------|-------------------|------------------------------------------------------------------|
@@ -399,96 +398,94 @@ From this screen the user provides details of the reason for checkout, duration,
 | conItemTypes_Checkout | Padding Bottom    | 20                                                               |
 | conItemTypes_Checkout | Fill              | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
 
-1.  Add a Horizontal container to conItemTypes_Checkout -
-    conItemTypesHeader_Checkout
+1. Add a Horizontal container to conItemTypes_Checkout control - conItemTypesHeader_Checkout.
 
-| **Control**                                         | **Property**   | **Value**                   |
-|-----------------------------------------------------|----------------|-----------------------------|
-| Add a Horizontal container to conItemTypes_Checkout | Name           | conItemTypesHeader_Checkout |
-| conItemTypesHeader_Checkout                         | Padding Left   | 20                          |
-| conItemTypesHeader_Checkout                         | Padding Right  | 20                          |
-| conItemTypesHeader_Checkout                         | Minimum Height | 0                           |
-| conItemTypesHeader_Checkout                         | Height         | 32                          |
+    | **Control**                                         | **Property**   | **Value**                   |
+    |-----------------------------------------------------|----------------|-----------------------------|
+    | Add a Horizontal container to conItemTypes_Checkout | Name           | conItemTypesHeader_Checkout |
+    | conItemTypesHeader_Checkout                         | Padding Left   | 20                          |
+    | conItemTypesHeader_Checkout                         | Padding Right  | 20                          |
+    | conItemTypesHeader_Checkout                         | Minimum Height | 0                           |
+    | conItemTypesHeader_Checkout                         | Height         | 32                          |
 
-1.  Add a label to conItemTypesHeader_Checkout - lblAllAssetsHeader_Checkout
+1. Add a label to conItemTypesHeader_Checkout control - lblAllAssetsHeader_Checkout.
 
-| **Control**                                | **Property**   | **Value**                   |
-|--------------------------------------------|----------------|-----------------------------|
-| Add a label to conItemTypesHeader_Checkout | Name           | lblAllAssetsHeader_Checkout |
-| lblAllAssetsHeader_Checkout                | Font           | Segoe UI                    |
-| lblAllAssetsHeader_Checkout                | Font Weight    | Bold                        |
-| lblAllAssetsHeader_Checkout                | Height         | 32                          |
-| lblAllAssetsHeader_Checkout                | Flexible Width | true                        |
-| lblAllAssetsHeader_Checkout                | Text           | "All assets"                |
-| lblAllAssetsHeader_Checkout                | Font Size      | 15                          |
-| lblAllAssetsHeader_Checkout                | Minimum Width  | 150                         |
+    | **Control**                                | **Property**   | **Value**                   |
+    |--------------------------------------------|----------------|-----------------------------|
+    | Add a label to conItemTypesHeader_Checkout | Name           | lblAllAssetsHeader_Checkout |
+    | lblAllAssetsHeader_Checkout                | Font           | Segoe UI                    |
+    | lblAllAssetsHeader_Checkout                | Font Weight    | Bold                        |
+    | lblAllAssetsHeader_Checkout                | Height         | 32                          |
+    | lblAllAssetsHeader_Checkout                | Flexible Width | true                        |
+    | lblAllAssetsHeader_Checkout                | Text           | "All assets"                |
+    | lblAllAssetsHeader_Checkout                | Font Size      | 15                          |
+    | lblAllAssetsHeader_Checkout                | Minimum Width  | 150                         |
 
-1.  Add an image to conItemTypesHeader_Checkout - imgCheckout_Checkout
+1. Add an image to conItemTypesHeader_Checkout control - imgCheckout_Checkout.
 
-| **Control**                                 | **Property** | **Value**                                               |
-|---------------------------------------------|--------------|---------------------------------------------------------|
-| Add an image to conItemTypesHeader_Checkout | Name         | imgCheckout_Checkout                                    |
-| imgCheckout_Checkout                        | Height       | 32                                                      |
-| imgCheckout_Checkout                        | Weight       | 32                                                      |
-| imgCheckout_Checkout                        | Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
+    | **Control**                                 | **Property** | **Value**                                               |
+    |---------------------------------------------|--------------|---------------------------------------------------------|
+    | Add an image to conItemTypesHeader_Checkout | Name         | imgCheckout_Checkout                                    |
+    | imgCheckout_Checkout                        | Height       | 32                                                      |
+    | imgCheckout_Checkout                        | Weight       | 32                                                      |
+    | imgCheckout_Checkout                        | Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
 
-1.  Add a blank vertical gallery to conItemTypes_Checkout -
-    galItemTypes_Checkout
+1. Add a blank vertical gallery to conItemTypes_Checkout control - galItemTypes_Checkout.
 
-| **Control**                                           | **Property**     | **Value**                                                      |
-|-------------------------------------------------------|------------------|----------------------------------------------------------------|
-| Add a blank vertical gallery to conItemTypes_Checkout | Name             | galItemTypes_Checkout                                          |
-| galItemTypes_Checkout                                 | Items            | Item Types                                                     |
-| galItemTypes_Checkout                                 | Minimum Height   | 0                                                              |
-| galItemTypes_Checkout                                 | Fill Portions    | 19                                                             |
-| galItemTypes_Checkout                                 | Template Size    | 70                                                             |
-| galItemTypes_Checkout                                 | Template Padding | 0                                                              |
-|                                                       | Template Fill    | If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ) |
+    | **Control**                                           | **Property**     | **Value**                                                      |
+    |-------------------------------------------------------|------------------|----------------------------------------------------------------|
+    | Add a blank vertical gallery to conItemTypes_Checkout | Name             | galItemTypes_Checkout                                          |
+    | galItemTypes_Checkout                                 | Items            | Item Types                                                     |
+    | galItemTypes_Checkout                                 | Minimum Height   | 0                                                              |
+    | galItemTypes_Checkout                                 | Fill Portions    | 19                                                             |
+    | galItemTypes_Checkout                                 | Template Size    | 70                                                             |
+    | galItemTypes_Checkout                                 | Template Padding | 0                                                              |
+    |                                                       | Template Fill    | If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ) |
 
-1.  Add a label to galItemTypes_Checkout - lblIName_Checkout
+1. Add a label to galItemTypes_Checkout control - lblIName_Checkout.
 
-| **Control**                          | **Property** | **Value**                                                     |
-|--------------------------------------|--------------|---------------------------------------------------------------|
-| Add a label to galItemTypes_Checkout | Name         | lblIName_Checkout                                             |
-| lblIName_Checkout                    | Width        | Parent.Width                                                  |
-| lblIName_Checkout                    | Height       | 32                                                            |
-| lblIName_Checkout                    | X            | 20                                                            |
-| lblIName_Checkout                    | Y            | 5                                                             |
-| lblIName_Checkout                    | Text         | ThisItem.Name                                                 |
-| lblIName_Checkout                    | Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+    | **Control**                          | **Property** | **Value**                                                     |
+    |--------------------------------------|--------------|---------------------------------------------------------------|
+    | Add a label to galItemTypes_Checkout | Name         | lblIName_Checkout                                             |
+    | lblIName_Checkout                    | Width        | Parent.Width                                                  |
+    | lblIName_Checkout                    | Height       | 32                                                            |
+    | lblIName_Checkout                    | X            | 20                                                            |
+    | lblIName_Checkout                    | Y            | 5                                                             |
+    | lblIName_Checkout                    | Text         | ThisItem.Name                                                 |
+    | lblIName_Checkout                    | Font weight  | If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal) |
+    
+1. Add a label to galItemTypes_Checkout control - lblItemCount_Checkout.
 
-1.  Add a label to galItemTypes_Checkout - lblItemCount_Checkout
+    | **Control**                          | **Property** | **Value**                                      |
+    |--------------------------------------|--------------|------------------------------------------------|
+    | Add a label to galItemTypes_Checkout | Name         | lblItemCount_Checkout                          |
+    | lblItemCount_Checkout                | Width        | Parent.Width                                   |
+    | lblItemCount_Checkout                | Height       | 32                                             |
+    | lblItemCount_Checkout                | X            | 20                                             |
+    | lblItemCount_Checkout                | Y            | lblIName_Checkout.Y + lblIName_Checkout.Height |
+    | lblItemCount_Checkout                | Text         | CountRows(ThisItem.Items.Item) & " items"      |
 
-| **Control**                          | **Property** | **Value**                                      |
-|--------------------------------------|--------------|------------------------------------------------|
-| Add a label to galItemTypes_Checkout | Name         | lblItemCount_Checkout                          |
-| lblItemCount_Checkout                | Width        | Parent.Width                                   |
-| lblItemCount_Checkout                | Height       | 32                                             |
-| lblItemCount_Checkout                | X            | 20                                             |
-| lblItemCount_Checkout                | Y            | lblIName_Checkout.Y + lblIName_Checkout.Height |
-| lblItemCount_Checkout                | Text         | CountRows(ThisItem.Items.Item) & " items"      |
+1. conCheckout
 
-1.  conCheckout
+    | **Control** | **Property**      | **Value**                    |
+    |-------------|-------------------|------------------------------|
+    | conCheckout | Gap               | 10                           |
+    | conCheckout | Padding Top       | 20                           |
+    | conCheckout | Padding Left      | 20                           |
+    | conCheckout | Padding Right     | 20                           |
+    | conCheckout | Vertical Overflow | Overflow.Scroll              |
+    | conCheckout | Visible           | !locShowCheckoutConfirmation |
 
-| **Control** | **Property**      | **Value**                    |
-|-------------|-------------------|------------------------------|
-| conCheckout | Gap               | 10                           |
-| conCheckout | Padding Top       | 20                           |
-| conCheckout | Padding Left      | 20                           |
-| conCheckout | Padding Right     | 20                           |
-| conCheckout | Vertical Overflow | Overflow.Scroll              |
-| conCheckout | Visible           | !locShowCheckoutConfirmation |
+1. Add a label to conCheckout control - lblCheckoutHeader.
 
-1.  Add a label to conCheckout - lblCheckoutHeader
-
-| **Control**                | **Property**     | **Value**                |
-|----------------------------|------------------|--------------------------|
-| Add a label to conCheckout | Name             | lblCheckoutHeader        |
-| lblCheckoutHeader          | Text             | "Checkout"               |
-| lblCheckoutHeader          | Height           | 32                       |
-| lblCheckoutHeader          | AlignInContainer | AlignInContainer.Stretch |
-| lblCheckoutHeader          | Font Size        | 15                       |
-| lblCheckoutHeader          | Font Weight      | Semibold                 |
+    | **Control**                | **Property**     | **Value**                |
+    |----------------------------|------------------|--------------------------|
+    | Add a label to conCheckout | Name             | lblCheckoutHeader        |
+    | lblCheckoutHeader          | Text             | "Checkout"               |
+    | lblCheckoutHeader          | Height           | 32                       |
+    | lblCheckoutHeader          | AlignInContainer | AlignInContainer.Stretch |
+    | lblCheckoutHeader          | Font Size        | 15                       |
+    | lblCheckoutHeader          | Font Weight      | Semibold                 |
 
 1.  Add an image to conCheckout - imgItem_Checkout
 
