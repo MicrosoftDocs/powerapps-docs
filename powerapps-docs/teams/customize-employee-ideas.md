@@ -22,25 +22,29 @@ Once the app is installed you can then customize the app using the following ste
 
 ## Opening Power Apps app in Microsoft Teams
 
-1.  In Microsoft Teams, select the **…** button from the left menu.
+1. In Microsoft Teams, select the **…** button from the left menu.
 
-2.  Type **Power Apps** in the search field.
+2. Type **Power Apps** in the search field.
 
-![Search Power Apps](media/customize-employee-ideas/search-power-apps.png "Search Power Apps")
+   > [!div class="mx-imgBorder"] 
+   > ![Search Power Apps](media/customize-employee-ideas/search-power-apps.png "Search Power Apps")
 
-3.  Select the Power Apps app from the list to open the app. Power Apps will open inside of teams
+3. Select the Power Apps app from the list to open the app. Power Apps will open inside of teams
     
 4. Right click on the **Power Apps** logo and select **Pin** to lock the app to the side menu so it is easy to get to in the future.
 
-![Power apps icon](media/customize-employee-ideas/power-apps-icon.png "Power apps icon")
+   > [!div class="mx-imgBorder"] 
+   > ![Power apps icon](media/customize-employee-ideas/power-apps-icon.png "Power apps icon")
 
 5. It is recommended that you “pop out” Power Apps so that if you need to navigate somewhere else in Microsoft Teams you won’t lose your app configuration. To pop out the Power Apps app, right mouse click on the Power Apps logo and select **Pop out app**.
 
-![Pop out app](media/customize-employee-ideas/pop-out-app.png "Pop out app")
+   > [!div class="mx-imgBorder"] 
+   > ![Pop out app](media/customize-employee-ideas/pop-out-app.png "Pop out app")
 
 6. Now that you have loaded the Power Apps app, select **Build**.
 
-![Build tab](media/customize-employee-ideas/build-tab.png "Build tab")
+   > [!div class="mx-imgBorder"] 
+   > ![Build tab](media/customize-employee-ideas/build-tab.png "Build tab")
 
 7. This screen will show all the teams that have Power Apps installed in them.
 
@@ -50,13 +54,15 @@ Once the app is installed you can then customize the app using the following ste
 
 10. Employee Ideas solution includes two apps: **Ideas** for users to create and vote on ideas, and **Manage ideas** for managers to use to create campaigns and analyze idea vote history and create or modify idea justification questions.
 
-5.  Select **See all** in the **Employee Ideas** tile.
+11. Select **See all** in the **Employee Ideas** tile.
 
-![See all option on the Employee App ideas tile](media/customize-employee-ideas/see-all-option-employee-ideas-tile.png "See all option on the Employee App ideas tile")
+    > [!div class="mx-imgBorder"] 
+    > ![See all option on the Employee App ideas tile](media/customize-employee-ideas/see-all-option-employee-ideas-tile.png "See all option on the Employee App ideas tile")
 
 12. You will now see all of the apps, tables, flows, and chatbots in the Team.
 
-![List of all objects in the solution](media/customize-employee-ideas/employee-ideas-app-objects-in-the-solution.png "List of all objects in the solution")
+    > [!div class="mx-imgBorder"] 
+    > ![List of all objects in the solution](media/customize-employee-ideas/employee-ideas-app-objects-in-the-solution.png "List of all objects in the solution")
 
 ## Extend the Ideas data model
 
@@ -94,11 +100,13 @@ Each idea has an image file, and these images are stored in the Employee Idea Im
 
 From the list of apps, chatbots, flows, and tables, select the **Ideas** app.
 
-![Select Ideas app from the list of objects](media/customize-employee-ideas/select-ideas-app-from-list-of-objects.png "Select Ideas app from the list of objects")
+> [!div class="mx-imgBorder"] 
+> ![Select Ideas app from the list of objects](media/customize-employee-ideas/select-ideas-app-from-list-of-objects.png "Select Ideas app from the list of objects")
 
 Now that Ideas is open in Power Apps in Microsoft Teams, select the **Tree View**  
 
-![Ideas app tree view](media/customize-employee-ideas/ideas-app-tree-view.png "Ideas app tree view")
+> [!div class="mx-imgBorder"] 
+> ![Ideas app tree view](media/customize-employee-ideas/ideas-app-tree-view.png "Ideas app tree view")
 
 From the Tree View you can see the screens included in the app. Selecting the arrow to the left of a screen will expand the contents of the screen, giving you access to the components of the screen, including galleries, buttons, text labels, and text input controls.
 
@@ -128,21 +136,20 @@ The following are the screens in Ideas:
 
 Now let’s look at the screens in the **Manage Ideas** app:
 
-1.  In the Power Apps app, select the **Build** tab.
+1. In the Power Apps app, select the **Build** tab.
+2. Select the team in which you installed the Employee ideas app.
+3. Select **Installed apps.** This will show all apps installed in the Team.
+4. Select **Manage ideas** in the **Employee Ideas** tile.
 
-2.  Select the team in which you installed the Employee ideas app.
+   > [!div class="mx-imgBorder"] 
+   > ![Select Manage Ideas app from Employee Ideas tile](media/customize-employee-ideas/select-manage-ideas-from-employee-ideas-tile.png "Select Manage Ideas app from Employee Ideas tile")
 
-3.  Select **Installed apps.** This will show all apps installed in the Team.
+5. Manage ideas will open in the designer.
 
-4.  Select **Manage ideas** in the **Employee Ideas** tile.
+6. Select the **Tree view** and review the screens in the Manage Ideas app.
 
-    ![Select Manage Ideas app from Employee Ideas tile](media/customize-employee-ideas/select-manage-ideas-from-employee-ideas-tile.png "Select Manage Ideas app from Employee Ideas tile")
-
-5.  Manage ideas will open in the designer.
-
-6.  Select the **Tree view** and review the screens in the Manage Ideas app.
-
-![Manage Ideas app tree view](media/customize-employee-ideas/manage-ideas-app-tree-view.png "Manage Ideas app tree view")
+   > [!div class="mx-imgBorder"] 
+   > ![Manage Ideas app tree view](media/customize-employee-ideas/manage-ideas-app-tree-view.png "Manage Ideas app tree view")
 
 The following are the screens in the Manage Ideas app:
 
@@ -182,61 +189,64 @@ Sometimes users may submit the same idea more than once. In this case, you might
 
 ## Publish changes
 
-When you are done making modifications to the apps, select **Save** to save your changes**.**
+1. When you are done making modifications to the apps, select **Save**.
 
-![Save the app](media/customize-employee-ideas/save-changes.png "Save the app")
+   > [!div class="mx-imgBorder"] 
+   > ![Save the app](media/customize-employee-ideas/save-changes.png "Save the app")
 
--   To preview your changes, select the ![Preview changes](media/customize-employee-ideas/preview.png "Preview changes") button.
+2. To preview your changes, select **Preview**.
+
+    - The app will launch in preview mode, where you can test the user experience when running the app.
+    - To exit preview mode, press **Escape** on your keyboard or select the **X** in the upper right corner.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Close button on top right corner](media/customize-employee-ideas/top-right-corner-x.png "Close button on top right corner")
+
+3. To publish your app changes, select the **Publish to Teams**. Publishing the app makes your changes visible to users of the app.
+
+4. A dialog will open confirming that you want to publish.
+
+  - To publish the app, select **Next**.
+  - To change app settings, such as icon and background color, select **Edit details**.
+  
+    > [!div class="mx-imgBorder"] 
+    > ![Confirm publishing to Teams](media/customize-employee-ideas/confirm-publishing-to-teams-manage-ideas-app.png "Confirm publishing to Teams")
+
+5. On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by selecting the **+** button.
     
-    -   The app will launch in preview mode, where you can test the user experience when running the app.
-        
-    -   To exit preview mode, press **Escape** on your keyboard or select the **X** in the upper right corner.
-
-![Close button on top right corner](media/customize-employee-ideas/top-right-corner-x.png "Close button on top right corner")
-
--   To publish your app changes, select the ![Publish to Teams](media/customize-employee-ideas/publish-to-teams.png "Publish to Teams") button.
+    > [!div class="mx-imgBorder"] 
+   > ![Add to channel](media/customize-employee-ideas/add-to-channel.png "Add to channel")
     
--   Publishing the app makes your changes visible to users of the app.
-
--   A dialog will open confirming that you want to publish.
-
-    ![Confirm publishing to Teams](media/customize-employee-ideas/confirm-publishing-to-teams-manage-ideas-app.png "Confirm publishing to Teams")
-
--   To change app settings, such as icon and background color, select **Edit details**.
-    
--   To publish the app, select **Next**.
-
--   On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by pressing the **+** button.
-    
-    ![Add to channel](media/customize-employee-ideas/add-to-channel.png "Add to channel")
-    
--   To complete publishing your changes, select**Save and close**.
+6. To publish your changes, select **Save and close**.
 
 ## Customization considerations
 
 Before modifying the Employee ideas app, consider the following items:
 
--   Where are my table customizations? Columns and tables added by you will go to **built by this team** section of the Power Apps app. You can also add
-    new tables in the **See all** area.
+- Where are my table customizations? Columns and tables added by you will go to **built by this team** section of the Power Apps app. You can also add new tables in the **See all** area.
 
-![Built by the team](media/customize-employee-ideas/built-by-the-team-tab.png "Built by the team")
+  > [!div class="mx-imgBorder"] 
+  > ![Built by the team](media/customize-employee-ideas/built-by-the-team-tab.png "Built by the team")
 
--   Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations will not be overridden. You will get a new version that has the latest features, but the new version will not be published.
+- Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations will not be overridden. You will get a new version that has the latest features, but the new version will not be published.
     
-    For example, if you make changes to the Ideas app, then you install the latest version from the Teams store, your urgent field will still be visible in the app after the upgrade.
+For example, if you make changes to the Ideas app, then you install the latest version from the Teams store, your urgent field will still be visible in the app after the upgrade.
     
-    ![Add Employee Ideas to a team](media/customize-employee-ideas/add-employee-ideas-app-to-a-team.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Add Employee Ideas to a team](media/customize-employee-ideas/add-employee-ideas-app-to-a-team.png)
 
-Figure 1 After upgrading the solution your current app version will still be "live."
+Figure 1 After upgrading the solution your current app version will still be **live**.
 
 - The updated version of the app is available from the version history of the app. Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
 
->   ![Ideas app details](media/customize-employee-ideas/ideas-app-details.png "Ideas app details")
+   > [!div class="mx-imgBorder"] 
+   > ![Ideas app details](media/customize-employee-ideas/ideas-app-details.png "Ideas app details")
 
->   ![Versions list](media/customize-employee-ideas/versions-list-employee-ideas.png "Versions list")
+   > [!div class="mx-imgBorder"] 
+   > ![Versions list](media/customize-employee-ideas/versions-list-employee-ideas.png "Versions list")
 
 Figure 2 The new version is installed, but is not live. You can publish the new version if you want to overwrite your changes.
 
--   When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Microsoft Teams.
+- When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Microsoft Teams.
     
--   The app theming has been developed to support dark and high contrast mode in Microsoft Teams. Changing the fill color of screens may break dark and high contrast modes.
+- The app theming has been developed to support dark and high contrast mode in Microsoft Teams. Changing the fill color of screens may break dark and high contrast modes.
