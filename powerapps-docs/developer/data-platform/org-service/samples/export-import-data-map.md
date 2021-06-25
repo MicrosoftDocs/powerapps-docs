@@ -42,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 ### See Also
@@ -53,7 +53,7 @@ Display an option to delete the sample data that is created in [Setup](#setup). 
 [Add transformation mappings for import](../../add-transformation-mappings-import.md)<br />
 [Configure data import](../../configure-data-import.md)<br />
 [Run data import](../../run-data-import.md)<br />
-[Data import entities](../../data-import-entities.md)<br />
+[Data import tables](../../data-import-entities.md)<br />
 [Sample: Import data using complex data map](import-data-complex-data-map.md)<br />
 
 

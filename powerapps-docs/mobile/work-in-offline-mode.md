@@ -1,7 +1,7 @@
 ---
 title: Work offline on your mobile device using the Power Apps mobile app | Microsoft Docs
 description: Work offline on your mobile device using the Power Apps mobile app
-author: mduelae
+author: mustlaz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart

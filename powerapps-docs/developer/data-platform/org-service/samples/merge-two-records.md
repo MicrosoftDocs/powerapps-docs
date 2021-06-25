@@ -28,7 +28,7 @@ This sample shows how to merge two record. You can download the sample from [her
 
 ## What this sample does
 
-The `MergeRequest` message is intended to be used in a scenario where it contains the data that’s needed to merge the information from two entity records of the same type.
+The `MergeRequest` message is intended to be used in a scenario where it contains the data that’s needed to merge the information from two table records of the same type.
 
 ## How this sample works
 
@@ -37,17 +37,17 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates any entity records that this sample requires.
+2. The `CreateRequiredRecords` method creates records that this sample requires.
 
 ### Demonstrate
 
 1. The `MergeRequest` method creates the request. 
-2. The `Account` message creates another account to hold new data to merge into the entity.
+2. The `Account` message creates another account to hold new data to merge into the table.
 
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: 'Pie chart control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Pie chart control
+title: Pie chart control in Power Apps
+description: Learn about the details, properties and examples of the Pie chart control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

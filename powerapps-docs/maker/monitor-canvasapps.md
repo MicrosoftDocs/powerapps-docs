@@ -1,5 +1,5 @@
 ---
-title: Canvas app debugging with Monitor | Microsoft Docs
+title: Debugging canvas apps with Monitor
 description: Learn about debugging canvas apps by using Monitor.
 author: hasharaf
 ms.service: powerapps

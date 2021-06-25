@@ -61,8 +61,13 @@ The standard way to create a custom version of Bootstrap is [through the officia
 When you download a customized version of Bootstrap, it contains the following directory structure.
 
 ```
-css/ |-- bootstrap.min.css img/
-|-- glyphicons-halflings-white.png |-- glyphicons-halflings.png js/ |-- bootstrap.min.js
+css/
+    |-- bootstrap.min.css 
+img/
+    |-- glyphicons-halflings-white.png 
+    |-- glyphicons-halflings.png 
+js/ 
+    |-- bootstrap.min.js
 ```
 
 Or, depending on the customizer application used, it might only contain bootstrap.min.css. Regardless, bootstrap.min.css is the file that contains your customizations. The other files are the same for all custom versions of Bootstrap and are already included in your portal.
