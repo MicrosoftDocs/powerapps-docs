@@ -22,12 +22,12 @@ search.app:
 
 This topic outlines the use of Power Apps connectors within a custom page.  The most common connectors are being verified and status is available in this page.  This page also includes any known issues for connectors in custom pages. 
 
-The publishing a model-driven app with custom pages will consolidate all of the connections within the app. This allows for a single consent prompt for all of the connectors used at the start of the app.
+Publishing a model-driven app with custom pages will consolidate all of the connections within the app. This connector consolidation allows for a single consent prompt for all of the connectors at the start of the app.
 
 ## Verified connectors for custom pages
 
 | Connector | Status | Notes |
-| -- | -- | -- |
+|--|--|--|
 | [Office 365 Users](../canvas-apps/connections/connection-office365-users.md) | Verified |
 | [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
@@ -37,7 +37,7 @@ The publishing a model-driven app with custom pages will consolidate all of the 
 | [Excel Online for Business](../canvas-apps/connections/connection-excel.md) | Verified |  |
 | [Excel via file share](../canvas-apps/connections/connection-excel.md) | Partial | Verified Excel stored in only one of either OneDrive, Box, Dropbox, or Google Drive for a model-driven app |
 
-Note: connectors on the supported list expected to work with on prem gateway
+Note: connectors on the supported list expected to work with on-prem gateway
 
 ## Upcoming changes to connectors for custom pages
 
@@ -49,7 +49,7 @@ Note: connectors on the supported list expected to work with on prem gateway
 
 * No support to enable bypassing Microsoft connectors
 * Error when Flow is used in custom connector
-* Unable to use Excel stored in two or more of OneDrive, Box, Dropbox, or Google Drive within a single model-driven app.  The new Excel Online connector does not have this limitation.
+* Unable to use Excel stored in two or more of OneDrive, Box, Dropbox, or Google Drive within a single model-driven app.  The new Excel Online connector doesn't have this limitation.
 * Missing consent prompt for the cross environment Dataverse connection
 
 ## Related topics
