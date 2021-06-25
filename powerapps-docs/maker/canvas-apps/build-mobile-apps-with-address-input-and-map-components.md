@@ -142,20 +142,19 @@ In this lesson we will start with creating an app and then create a Header Compo
 
 11.  Click on Edit fields to add more fields to the form and select the following
     address fields:
-    
-    1.  Address 1: Street 1
-    
-    2.  Address 1: City
-    
-    3.  Address 1: State
-    
-    4.  Address 1: Zip/Postal Code
-    
-    5.  Address 1: Country/Region
-    
-    6.  Address 1: Latitude
-    
-    7.  Address 1: Longitude
+- Address 1: Street 1
+  
+- Address 1: City
+  
+- Address 1: State
+  
+- Address 1: Zip/Postal Code
+  
+- Address 1: Country/Region
+  
+- Address 1: Latitude
+  
+- Address 1: Longitude
 
 ![Address properties](media/build-mobile-apps-with-address-input-and-map-components/build-a-canvas-app-10.png)
 
@@ -195,17 +194,14 @@ below
 | Language             | The language the address suggestions are returned in – we left it as the defaulted English (United States) option                                                                                                              |
 | Country set          | Comma-separated list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. For example, **US, FR, KW – we set it as US in our example**                                                     |
 
-### 
-
 ### Output properties
 
 The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience.
 
 The following table lists the output properties available.
 
-| **OUTPUT PROPERTIES**       |                                                                                                                                                                                         |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Property**                | **Description**                                                                                                                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | UserInput                   | Text the user has typed in the input box.                                                                                                                                               |
 | SelectedLatitude            | Latitude of the user-selected address in the input field.                                                                                                                               |
 | SelectedLongitude           | Longitude of the user-selected address in the input field.                                                                                                                              |
@@ -348,8 +344,6 @@ Below is a list of all the input and output properties available for the Map com
 | OnShapeEdited                           | How the app responds when a shape on the map is edited.                                                                                                                                                                                               |
 | OnShapeDeleted                          | How the app responds when a shape on the map is deleted.                                                                                                                                                                                              |
 
-### 
-
 ### Output properties
 
 The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience.
@@ -397,7 +391,7 @@ Some of the properties of the pin can be customized per location pin are as foll
 
     NOTE: For a list of icons, please refer the following link:
 
-    https://docs.microsoft.com/en-us/azure/azure-maps/how-to-use-image-templates-web-sdk\#list-of-image-templates
+    https://docs.microsoft.com/azure/azure-maps/how-to-use-image-templates-web-sdk\#list-of-image-templates
 
 ```
 ClearCollect(
