@@ -1,8 +1,8 @@
 ---
-title: "Web API Data operations Samples (Microsoft Dataverse) | Microsoft Docs"
-description: "The Microsoft Dataverse SDK provides a matrix of samples demonstrating how to use the Web API in a number of different ways. Find here the C# and JavaScript implementations of Basic Operations, Query Data, Conditional Operations and Functions and Actions sample"
+title: "Web API data operation samples (Microsoft Dataverse) | Microsoft Docs"
+description: "See C# and JavaScript sample code that demonstrates how to use the Microsoft Dataverse Web API for basic table row operations, data query, conditional operations, and functions and actions."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/14/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,17 +20,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web API Data operations Samples
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Web API data operations samples
 
-You can use the Microsoft Dataverse Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+You can use the Microsoft Dataverse Web API with a wide variety of programming languages or libraries. This guide provides a number of code samples demonstrating how to use the Web API in different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
 
 <!-- TODO:
 > [!NOTE]
 > With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon.   -->
   
-## Web API Sample Matrix
+## Web API samples list
 
 The following table describes the Dataverse Web API samples and their language-specific implementations.  
   
@@ -41,23 +42,21 @@ The following table describes the Dataverse Web API samples and their language-s
 |[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
 |[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|   
 |[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  -->
-  
- The following tables categorize the sample topics by the groups of operations demonstrated and by implementation issues.  
+|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  -->  
   
 ### Groups of operations
- 
+
 The following table classifies the samples by demonstrated operation groups.  
   
 |Group|Description|  
 |-----------|-----------------|  
-|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|How to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations.<br /><br /> More information: <br /><br /> -   [Create an entity using the Web API](create-entity-web-api.md)<br />-   [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />-   [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />-   [Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)|  
-|[Web API Query Data Sample](web-api-query-data-sample.md)|How to perform basic query requests.<br /><br /> More information: <br /><br /> -   [Query Data using the Web API](query-data-web-api.md)<br />-   [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)|  
-|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|How to perform certain categories of operations that are conditionally based upon the version of the entity record contained on the  server and/or currently maintained by the client. More information:[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)|  
-|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|How to use bound/unbound functions and actions, including custom actions.<br /><br /> More information: <br /><br /> -   [Use Web API functions](use-web-api-functions.md)<br />-   [Use Web API actions](use-web-api-actions.md)|  
+|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|How to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations.<p/> More information: <br/>-   [Create a table row using the Web API](create-entity-web-api.md)<br />-   [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />-   [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />-   [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
+|[Web API Query Data Sample](web-api-query-data-sample.md)|How to perform basic query requests.<p/> More information: <br /> -   [Query Data using the Web API](query-data-web-api.md)<br />-   [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)|  
+|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|How to perform certain categories of operations that are conditionally based upon the version of the table row contained on the  server and/or currently maintained by the client. <p/>More information:<br/>-   [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)|  
+|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|How to use bound/unbound functions and actions, including custom actions.<p/>More information: <br/>-   [Use Web API functions](use-web-api-functions.md)<br />-   [Use Web API actions](use-web-api-actions.md)|  
   
 ### Language or library
- 
+
 The following table lists the topics that cover the common language- or library-specific implementation issues.  
   
 |Language or library|Description|  
@@ -73,6 +72,5 @@ The following table lists the topics that cover the common language- or library-
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />
 [Web API Functions and Actions Sample](web-api-functions-actions-sample.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

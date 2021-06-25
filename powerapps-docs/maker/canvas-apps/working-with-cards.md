@@ -1,6 +1,6 @@
 ---
-title: Understand data cards | Microsoft Docs
-description: In Power Apps, use form cards to collect and display information from a data source.
+title: Understand data cards in canvas apps
+description: Learn about how to use cards to collect and display information from a data source in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand data cards in Power Apps
+# Understand data cards in canvas apps
 
 **[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls in canvas apps. The form represents the entire record, and each card represents a single field of that record.
 

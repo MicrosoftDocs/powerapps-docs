@@ -1,6 +1,6 @@
 ---
-title: Crisis communication sample app | Microsoft Docs
-description: Learn about the Crisis communication sample app in Power Apps.
+title: Set up and learn about the Crisis Communication sample app in Power Apps
+description: Learn about how to setup, use and work with the Crisis communication sample app in Power Apps.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -815,7 +815,7 @@ If you see any connection errors after updating the connection information, you 
 1. Ensure the **Credentials** type is set to **Organizational account**,
 and use the credentials to access the SharePoint list.
 
-    ![Edit permissions](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
+    ![Edit permissions - credentials set to organizational count](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
 
 Select **Close & Apply** to update the report to pull data from your SharePoint list.
 

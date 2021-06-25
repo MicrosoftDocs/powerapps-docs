@@ -1,6 +1,6 @@
 ---
-title: Notify function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Notify function in Power Apps
+title: Notify function in Power Apps
+description: Reference information including syntax and examples for the Notify function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -18,9 +18,13 @@ search.app:
 Displays a banner message to the user.
 
 ## Description
+
 The **Notify** function displays a banner message to the user at the top of the screen, overlaying what is currently displayed.  The notification will remain until the user dismisses it, another notification replaces it, or the timeout expires which defaults to 10 seconds.
 
 An appropriate color and icon are used depending on the type of the message.   The type is specified by the second argument to the function:
+
+> [!NOTE]
+> The character limit for **Notify** function is 500 characters. 
 
 | NotificationType Argument | Description |
 | --- | --- |

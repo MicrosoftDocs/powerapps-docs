@@ -27,7 +27,7 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Boards (Preview) app](media/app-icons/boards-app-icon.png "Boards (Preview) app") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+      ![Boards app (Preview)](media/app-icons/boards-app-icon.png "Boards app (Preview)") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
    :::column-end:::
    :::column span="":::
       ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
@@ -49,7 +49,7 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
     :::column span="":::
-      ![Perspectives (Preview) app](media/app-icons/perspectives-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+      ![Perspectives app (Preview)](media/app-icons/perspectives-app-icon.png "Perspectives app (Preview)") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
    :::column-end:::
    :::column span="":::
       ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.

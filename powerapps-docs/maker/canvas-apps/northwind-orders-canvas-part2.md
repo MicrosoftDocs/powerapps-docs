@@ -1,6 +1,6 @@
 ---
-title: Create a summary form in a canvas app | Microsoft Docs
-description: Create an summary form in a canvas app to manage data for Northwind Traders
+title: Create a summary form in a canvas app
+description: Learn about how to create an summary form in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -96,9 +96,6 @@ In this section, you'll add controls to show a summary of any order that the use
 
 1. Select the **Orders** data source.
 
-    > [!div class="mx-imgBorder"]
-    > ![Set the DataSource property of the Edit form control](media/northwind-orders-canvas-part2/form-04.png)
-
 ## Add and arrange fields
 
 1. In the **Properties** tab near the right edge, select **Edit fields** to open the **Fields** pane.
@@ -109,7 +106,7 @@ In this section, you'll add controls to show a summary of any order that the use
 1. If the **Fields** pane is not empty, remove the fields that have already been inserted.  
 
     > [!div class="mx-imgBorder"]
-    > ![Open the Fields pane](media/northwind-orders-canvas-part2/form-06a.png)
+    > ![Open the Fields pane option](media/northwind-orders-canvas-part2/form-06a.png)
 
 1. After the fields list is empty, select **Add field**, and then select the check boxes for the **Customer** and **Employee** fields.
 
@@ -125,10 +122,10 @@ In this section, you'll add controls to show a summary of any order that the use
     - **Paid Date**
 
     > [!div class="mx-imgBorder"]
-    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06c.png)
+    > ![Add five more fields to the Edit form control part 1](media/northwind-orders-canvas-part2/form-06c.png)
 
     > [!div class="mx-imgBorder"]
-    > ![Add five more fields to the Edit form control](media/northwind-orders-canvas-part2/form-06d.png)
+    > ![Add five more fields to the Edit form control part 2](media/northwind-orders-canvas-part2/form-06d.png)
 
 1. At the bottom of the **Fields** pane, select **Add**, and then close the **Fields** pane.
 
@@ -187,12 +184,12 @@ In this example, you don't need the time portions of the date fields because tha
     All selected controls disappear from the form:
 
     > [!div class="mx-imgBorder"]
-    > ![Set Visible property to false.](media/northwind-orders-canvas-part2/form-10.png)
+    > ![Set Visible property to false for the control.](media/northwind-orders-canvas-part2/form-10.png)
 
 1. Resize the [**Date picker**](controls/control-date-picker.md) control to show the complete date:
 
     > [!div class="mx-imgBorder"]
-    > ![Resize the Date picker control](media/northwind-orders-canvas-part2/form-11.png)
+    > ![Resize the Date picker.](media/northwind-orders-canvas-part2/form-11.png)
 
     Next, you'll repeat the last few steps for the **Paid Date** field.
 
@@ -262,7 +259,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Use a many-to-one relationship
 
-The **Orders** entity has a many-to-one relationship with the **Employees** entity: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the [**Combo box**](controls/control-combo-box.md) control, its **Selected** property provides that employee's entire record from the **Employees** entity. As a result, you can configure an [**Image**](controls/control-image.md) control to show the picture of whatever employee the user selects in the combo box.
+The **Orders** table has a many-to-one relationship with the **Employees** table: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the [**Combo box**](controls/control-combo-box.md) control, its **Selected** property provides that employee's entire record from the **Employees** table. As a result, you can configure an [**Image**](controls/control-image.md) control to show the picture of whatever employee the user selects in the combo box.
 
 1. Select the **Employee** data card:
 
@@ -532,7 +529,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
 To recap, you added a form in which the user can show and edit a summary of each order, and you used these elements:
 
-- A form that shows data from the **Orders** entity: **Form1.DataSource =** `Orders`
+- A form that shows data from the **Orders** table: **Form1.DataSource =** `Orders`
 - A connection between the form and the order gallery: **Form1.Item =** `Gallery1.Selected`
 - An alternate control for the **Order number** field: **View text**
 - A many-to-one relationship to show the employee's picture in the **Employee** data card: `DataCardValue1.Selected.Picture`
