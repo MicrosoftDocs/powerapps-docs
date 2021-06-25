@@ -60,7 +60,6 @@ To complete this exercise, we would need the ability to log in into Teams that w
     
     ); 
     ```
-    <!--- needs review (above code has 2 opening brackets, only 1 closing) --->
 
 1. Copy the entire code from the **OnSelect** property of the **Done** button, and paste it in a text editor for use later.
 
