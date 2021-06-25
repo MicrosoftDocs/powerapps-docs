@@ -2196,6 +2196,10 @@
               href: ../teams/employee-ideas.md
             - name: Understand Employee ideas sample app architecture
               href: ../teams/employee-ideas-architecture.md
+        - name: How to (Preview)
+          items:
+             - name: How to
+               href: ../teams/how-to.md
         - name: Inspection
           items:
             - name: Use Inspection sample app
