@@ -2224,6 +2224,8 @@
                    href: ../teams/extend-milestones-add-column.md
                  - name: Send a weekly report on project status from the Milestones sample app
                    href: ../teams/extend-milestones-weekly-report.md
+                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
+                   href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives

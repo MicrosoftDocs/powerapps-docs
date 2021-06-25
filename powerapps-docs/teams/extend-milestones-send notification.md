@@ -4,50 +4,47 @@ description: Learn how to send an adaptive card when a work item status is updat
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2021
+ms.date: 06/25/2021
 author: joel-lindstrom	
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
+  - joel-linkstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Send notification to the Team when work item status is updated in the Milestones sample app
 
-The Milestones Template Power App for Microsoft teams allows users to track progress of completion of work items in projects across milestones. While the app allows work items to be updated and maintained, there is currently no standard notifications about work item updates to the team.
+The Milestones sample app for Microsoft teams allows users to track progress of completion of work items in projects across milestones. While the app allows work items to be updated and maintained, there is currently no standard notifications about work item updates to the team.
 
-In this topic we will learn how to create a Power Automate flow to send an adaptive card notification to the Team (in which the app is installed) when work item status changes.
+In this article, we'll learn how to create a Power Automate flow to send an adaptive card notification to the Team (in which the app is installed) when work item status changes.
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Milestones power apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsInspection.
+To complete this exercise, we would need the ability to login into Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Milestones power apps template for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
 
 ## Log in into the Milestones app
 
-1.  Select the Power Apps icon on the left and go to the Build tab.
+1. Select the Power Apps icon on the left and go to the Build tab.
 
-2.  Select the Team in which the Milestones app is installed from the left app  menu.
+1. Select the Team in which the Milestones app is installed from the left app  menu.
 
-3.  Select Installed Apps and select on Milestones to open the app.
+1. Select **Installed apps** and select on Milestones to open the app. The Milestones app opens.
 
-4.  The Milestones app opens
+## Add condition to call the Power Automate flow
 
-## Add condition to call the Power Automate Flow
+1. From the tree view in the left pane, select the **Projects** screen.
 
-1.  From the tree view in the left navigation menu, select the Projects screen.
+1. On the screen, press down the **Alt** key, and select to open any one project. The Add/Edit Work Item screen opens.
 
-2.  On the screen, press down the Alt key and select to open any one project.
+1. Select the **Done** button.
 
-3.  The Add/Edit Work Item screen opens.
+1. Select the **OnSelect** property of the done button.
 
-4.  Select the **Done** button.
+1. On selecting the **Done** button, along with the other updates that run in the  background, we also want to trigger a flow that would send out an adaptive card update to the Team if the status of the work item is updated. To do this change, add the following to the top of the OnSelect formula:
 
-5.  Select the **OnSelect** property of the done button.
-
-6.  On selecting the Done button, along with the other updates that run in the  background, we also want to trigger a Flow that would send out an adaptive card update to the Team if the status of the work item is updated.
-
-7.  To do this, add the following to the top of the OnSelect formula:
-
-```
+```powerapps-dot
 If(
 
 locEditWorkItem,
@@ -65,109 +62,97 @@ true //your flow call will come here
 
 ```
 
+1. Copy the entire code from the **OnSelect** property of the **Done** button, and paste it in a text editor for use later.
 
+1. Select **...** (ellipsis) next to **Settings** on the top ribbon, and select **Power Automate**.
 
-1.  Now copy the entire code from the OnSelect property of the done button and paste it in a notepad file or something and keep it handy.
-    
-2.  Select the three dots next to Settings on the top ribbon and select Power Automate.
-    
-3.  The Data pop-up opens with the option to Create a new flow.
+1. The **Data** pop-up opens with the option to **Create a new flow**.
 
-4.  Select the Create a new flow button.
+1. Select the **Create a new flow** button. A browser window opens with the new Power Automate flow screen.
 
-5.  A browser window opens with the new Power Automate flow screen.
+1. Update the name of the flow to – "Send Adaptive card notification when the status of the work order changes".
 
-6.  Update the name of the flow to – Send Adaptive card notification when the status of the work order changes.
-    
-7.  Select the trigger Power Apps from the list of triggers.
+1. Select the option to trigger Power Apps from the list of triggers. The new flow gets created and the Power Apps step is loaded on the screen.
 
-8.  The new flow gets created and the Power Apps step is loaded on the screen.
+## Create the Power Automate flow
 
-## Create the Power Automate Flow
+1. After following the steps in the previous section, select the **+New** step button.
 
-1. After following the steps in the previous section, select the +New step button.
+1. Select the action **Get a row by ID**, and select Table Name as **Project Work Items**.
 
-2. Select the action Get a row by ID and select Table Name = Project Work Items.
+1. Under Row ID, open the dynamic content and select the **Ask in Power Apps** option.
 
-3. Under Row ID open the dynamic content and select the Ask in Power Apps option.
+1. Rename the step to "Get Work Item record".
 
-   Rename the step to Get Work Item record
+1. Select the **+Next** step button again, and select the action **Get a row by ID**, and select Table Name as **Work Item Statuses**.
 
-4. Select the +Next step button again and select the action Get a row by ID and select Table Name = Work Item Statuses.
+1. Under Row ID open the dynamic content, select **Work Item Status (Value)**.
 
-5. Under Row ID open the dynamic content, select Work Item Status (Value).
+1. Rename the step to Get Work Item Status record.
 
-   Rename the step to Get Work Item Status record.
+1. Add another step by selecting **+New** step.
 
-6. Add another step by selecting +New step.
+1. Add the action Initialize variable.
 
-7. Add the action Initialize variable.
+    - Rename step to Initialize variable - "Card Title"
 
-   -  Rename step to Initialize variable - Card Title
+    - Name - "varCardTitle"
 
-   -  Name = varCardTitle
+    - Type - "String"
 
-   -  Type = String
+    - Value = Status update for Work Item {*and then select dynamic content Name of the Work item added in step 3*}
 
-   -  Value = Status update for Work Item {*and then select dynamic content Name of the Work item added in step 3*}
+1. Add another step by selecting **+New** step.
 
-8. Add another step by selecting +New step.
+1. Add the action Initialize variable.
 
-9. Add the action Initialize variable.
+    - Rename step to Initialize variable - Review Link
 
-   -  Rename step to Initialize variable - Review Link
+    - Name - "varReviewWorkItemLink"
 
-   -  Name = varReviewWorkItemLink
+    - Type - "String"
 
-   -  Type = String
+    - Value = <!--- needs review --->
 
-   -  Value =
+1. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
 
-10. For the Review Work Item Link action, we will use the link to the app. To find this link, navigate to the Team where the Milestones app resides and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting the ellipses (…) in the upper right corner.
+    Your URL will look similar to the following example:
 
-Your URL will look something like the following:
+    <https://teams.microsoft.com/l/entity/GUID/_djb2_msteams_prefix_956529380?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3AGUID%40thread.tacv2%22%7D&groupId=GUID&tenantId=GUID>
 
-<https://teams.microsoft.com/l/entity/040880f4-0c68-4c38-8821-d5efd2b6ddbe/_djb2_msteams_prefix_956529380?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A3rvarXpr4mdb-wAGEyVY4ceX23ZADh3pZUqloQ9DRKo1%40thread.tacv2%22%7D&groupId=2b601b33-9b7f-4ca6-8f78-bdd12f5d0d26&tenantId=e85feadf-11e7-47bb-a160-43b98dcc96f1>
+1. To continue, copy the part of the URL that comes after **context=**, and use a URL decoder such as <https://www.urldecoder.org/> to decode the URL.
 
-11. To continue, copy the part of the URL that comes after **context=** and go to
-the website <https://www.urldecoder.org/>.
+1. Copy that decoded text and go back to the Power Automate flow.
 
-12. Paste the copied text in the box highlighted below and hit **Decode**.
+1. Add a new step to the flow to initialize a variable.
 
-13. The decoded text appears in the textbox below the **Decode** button.
+1. Rename the step to **Initialize variable – Review Work Item Link**.
 
-14. Copy that text and go back to the Power Automate Flow.
+    - Name - "varReviewWorkItemLink"
 
-15. Add a new step to the flow to initialize a variable.
+    - Type - "String"
 
-16. Rename the step to **Initialize variable – Review Work Item Link**
+    - Value - {paste the text copied from the decoded url above}
 
-- Name = varReviewWorkItemLink
-
-- Type = String
-
-- Value = *{paste the text copied from the url above}*
-
-17. Add a new step with the action Compose and in the Inputs field paste the
-    following
+1. Add a new step with the action **Compose**, and in the **Inputs** field, paste the following snippet.
 
     ```
     replace(replace(replace(variables('varReviewIdeasLink'),'{','%7B'),'"','%22'),'}','%7D')
     ```
 
-18. Add another step by selecting **+New step**.
+1. Add another step by selecting **+New step**.
 
-19.  Select the action Post adaptive card in a chat or channel (Preview)
+1. Select the action Post adaptive card in a chat or channel (Preview).
 
--  Post as = User
+    - Post as = User
 
--  Post in = Channel
+    - Post in = Channel
 
--  Team = {the team in which your app is installed}
+    - Team = {the team in which your app is installed}
 
--  Channel = General
+    - Channel = General
 
--  Adaptive Card =
+    - Adaptive Card = <!--- needs review --->
 
 ```
    {
@@ -228,21 +213,21 @@ the website <https://www.urldecoder.org/>.
    
 ```
 
-   Save the flow.
+1. Save the flow.
 
-## Trigger the flow from the Power App
+## Trigger the flow from the Power Apps
 
-1.  After the flow is saved, go back to the Teams editor, and open the power app.
+1. After the flow is saved, go back to the Teams editor, and open the app in Power Apps.
 
-2.  In the tree view, select the Add/Edit Work Item screen.
+1. In the tree view, select the **Add/Edit Work Item** screen.
 
-3.  Select the Update button.
+1. Select the **Update** button.
 
-4.  Update the OnSelect property to make sure the flow is triggered.
+1. Update the **OnSelect** property to make sure the flow is triggered.
 
-5.  Copy the formula from wherever you had pasted it earlier into the OnSelect property.
-    
-6.  In the first If condition that was added on the top, replace “true” with the run function used to trigger the flow trigger--see example below.
+1. Copy the formula from wherever you had pasted it earlier into the **OnSelect** property.
+
+1. In the first If condition that was added on the top, replace “true” with the run function used to trigger the flow trigger. See example below.
 
 ```
 If(
@@ -262,19 +247,17 @@ SendAdaptivecardnotificationwhenthestatusoftheworkorderchanges.Run(locSelectedWo
 //end code
 ```
 
-
-
 ## Update the Loading screen
 
-1.  From the tree view, select the Loading Screen.
+1. From the tree view, select the **Loading Screen**.
 
-2.  Expand the loading screen and then **conLoading_HiddenHelper** under it.
+1. Expand the loading screen and then **conLoading_HiddenHelper** under it.
 
-3.  Select the timer **tmrLoadingDelay** and select the **OnTimerEnd** property.
+1. Select the timer **tmrLoadingDelay** and select the **OnTimerEnd** property.
 
-4.  If the app is opened via the adaptive card link, it should directly open the work item record that was updated, which means that we would need a way to check if a work item id is being passed to the app.
-    
-5.  The Loading page formula needs to be updated to include the Work Item number, so we need to Update the **OnTimerEnd** property to the following:
+1. If the app is opened via the adaptive card link, it should directly open the work item record that was updated, which means that we would need a way to check if a work item id is being passed to the app.
+
+1. The Loading page formula needs to be updated to include the Work Item number, so we need to Update the **OnTimerEnd** property to the following:
 
 ```
 If(
@@ -947,18 +930,25 @@ locShowPowerAppsPrompt: gblRecordUserSettings.'Display Splash (Power Apps)' =
 )
 ```
 
+## Publish the Milestones app
 
+All the changes to the Milestones app are completed. The app can now be published by selecting the Publish to Teams button on the top right.
 
-## Publish the Milestones App
+## Test the Power Automate flow
 
-1.  All the changes to the Milestones app are completed.
+1. Go to Teams and open the Milestones app.
 
-2.  The app can now be published by selecting the Publish to Teams button on the top right.
+1. Open an existing work item and update the Status to a different value.
 
-## Test the Power Automate Flow
+1. An Adaptive Card notification is received on the Teams channel where the app is installed.
 
-1.  Navigate to Teams and open the Milestones app.
+### See also
 
-2.  Open an existing work item and update the Status to a different value.
-    
-3.  An Adaptive Card notification is received on the Teams channel where the app is installed.
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
+- [Customize Milestones sample app](customize-milestones.md)
+- [Understand Milestones sample app architecture](milestones-architecture.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
