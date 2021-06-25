@@ -1,137 +1,124 @@
 ---
-
-
-title: How to sample app
+title: How to sample app (Preview)
 description: Learn how to use the How to app and learn how to be a Power Apps maker.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/21/2021
+ms.date: 06/25/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
+  - navjotm
+  - joel-lindstrom
+  - tapanm-msft
 ---
 
 # How to sample app (Preview)
 
-The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution..
+The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
 
 Benefits of using the How-to app:
 
--   Understand the basics of Power Apps.
+- Understand the basics of Power Apps.
+- Learn how to build apps in Teams.
+- Share the asset checkout app you build with colleagues in Teams.
+- Become a Maker
 
--   Learn how to build apps in Microsoft Teams.
+> [!NOTE]
+> Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample apps**](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information: [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
 
--   Share the asset checkout app you build with colleagues in Microsoft Teams.
-
--   Become a Maker
-
->   Note
-
->   Before you can use this app, you may be asked for your permissions to use the connection. More information: [**Allow connections in sample
->   apps**](use-sample-apps-from-teams-store.md#step-1---allow-connections)
-
->   This app is available in three different Teams themes: Default, Dark and High contrast. When you [**change the theme in Teams**](https://support.microsoft.com/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) the app automatically updates to match the selected theme. More information:
->   [**Get the Teams theme using the Teams integration object**](use-teams-integration-object.md#get-the-teams-theme)
-
->   Important
-
->   This is a preview feature.
-
->   Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so
->   that customers can get early access and provide feedback.
+> [!IMPORTANT]
+> This is a preview feature.
+> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
 Before using this app:
 
-1.  Install the How to app.
-
-2.  Set up the app for the first use.
+1. Install the How to app.
+1. Set up the app for the first use.
 
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
 ## Building an Asset management app
 
-In the How to app, we will build an asset management app to enable users to checkout assets from the library and return it when they are done. The
-instructions are included in the app, and makers who open the app inside of the Power Apps app in Microsoft Teams will see the instructions in the studio.
+In the How to app, we'll build an asset management app to enable users to checkout assets from the library and return it when they are done. The instructions are included in the app, and makers who open the app inside of the Power Apps app in Teams will see the instructions in the studio.
 
-This article includes the steps from the app for makers who prefer to read them outside of the app--mayber you have two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
+This article includes the steps from the app for makers who prefer to read them outside of the app. For example, you've two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
 
 From the main screen, you can see a summary of the steps to build the How to app and have the ability to preview the app.
 
-![](media/how-to/start-screen.png)
+![How to app start screen](media/how-to/start-screen.png "How to app start screen")
 
-Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selectng **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
+Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selecting **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
-![](media/how-to/final-app.png)
+![How to app - final app example](media/how-to/final-app.png "How to app - final app example")
 
 In the asset checkout app, selecting an item will take you to a screen where you can check out the item.
 
-![](media/how-to/checkout.png)
+![Example of checkout](media/how-to/checkout.png "Example of checkout")
 
 In the top left corner, you can select the icon for checkout items, which are available in your account.
 
 ## Start your maker journey in How to
 
-How to is a self-contained lesson in how to build a Power app--all of the instructions are included in the app. To start learning, open How to in the
-Power Apps app in Microsoft Teams:
+How to is a self-contained lesson in how to build a Power app. All of the instructions are included in the app. To start learning, open How to app using Power Apps app in Teams:
 
-1.  In Microsoft Teams, selec tthe elipses on the left app menu.
+1. In Teams, select **...** (ellipsis) from the left pane.
 
-2.  Search for **Power Apps.** Select the Power Apps app.
+1. Search for **Power Apps** and select the Power Apps app.
 
-3.  Right click on the Power Apps button and select **Pop out app**, which will launch the Power apps app in a new window, so if you need to go somewhere else in Microsoft Teams, you won't lose your place.
-    
-4.  Select the Build tab
+1. Right-click on the Power Apps button, and select **Pop out app** to launch the Power apps app in a new window to make it easier to use.
 
-5.  Select the team with How to installed.
+1. Select the Build tab.
 
-6.  Select **Installed apps**.
+1. Select the team with How to installed.
 
-7.  In the How to tile, select the **How to** app. The app will open in the Power Apps app.
-    
-    ![](media/how-to/how-to-tile.png)
-    
-8.  From the Tree view, select **Overview screen**.
+1. Select **Installed apps**.
 
-    ![](media/how-to/overview-screen.png)
+1. In the How to tile, select the **How to** app. The app will open in the Power Apps app.
 
-## Understanding the Overview screen
+    ![How to app tile](media/how-to/how-to-tile.png "How to app tile")
 
-The overview screen is your guide to your maker journey. From the overview screen, you can see where you are in the process. To start a step, hold your
-keyboard alt key and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
+1. From the Tree view, select **Overview screen**.
 
-When done, return to the Overview screen and select the button on the current step's tile to complete the step and move to the next lesson.
+    ![How to app - overview screen](media/how-to/overview-screen.png "How to app - overview screen")
+
+## Understanding the overview screen
+
+The overview screen is your guide to your maker journey. From the overview screen, you can see where you're in the process. To start a step, hold your keyboard **Alt** key, and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
+
+When done, return to the overview screen and select the button on the current step's tile to complete the step and move to the next lesson.
 
 ## Resetting your progress in How to
 
 So if you have started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
 
-1.  Open the Power Apps app in Microsoft Teams (right click and pop out app).
+1. Right-click on Power Apps app in Teams, and select **Pop out**.
 
-2.  Select the **Build** tab,
+1. Select the **Build** tab.
 
-3.  Select the Team in which the How to app is installed.
+1. Select the Team in which the How to app is installed.
 
-4.  Select the **Installed apps** tab.
+1. Select the **Installed apps** tab.
 
-5.  In the How to tile, select **See all**.
+1. In the How to tile, select **See all**.
 
-6.  Select **Tables**.
+1. Select **Tables**.
 
-7.  Select **Item Checkout App Stages**.
+1. Select **Item Checkout App Stages**.
 
-8.  Select **Edit data**.
+1. Select **Edit data**.
 
-9.  Select the rows in the table.
+1. Select the rows in the table.
 
-10. Select **Delete record(s)**.
+1. Select **Delete record(s)**.
 
 ## Learn to work with Data Model
 
-In this step, we will add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
+In this step, we'll add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
 
 For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md)
 
@@ -166,28 +153,28 @@ Create the following tables and columns:
 
 ## Sample Data
 
-In this step we need to add data to the tables which we created earlier. This data will be the items and item types for the asset checkout process. For
-example, if you will be using this app to manage the items such as mice and keyboards, you can define item types like computers, phones, or desks which people can check out.
+In this step, we need to add data to the tables which we created earlier. This data will be the items and item types for the asset checkout process. For example, if you're using this app to manage the items such as mice and keyboards, you can define item types like computers, phones, or desks which people can check out.
 
-We will use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
+We'll use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
 
-1.  Open the Power Apps app in Microsoft Teams.
+1. Open the Power Apps app in Teams.
 
-2.  Select the **Build** tab.
+1. Select the **Build** tab.
 
-3.  Select the Team in which the How to app is installed.
+1. Select the Team in which the How to app is installed.
 
-4.  Select the **Installed apps** tab.
+1. Select the **Installed apps** tab.
 
-5.  In the How to tile, select **See all**.
+1. In the How to tile, select **See all**.
 
-6.  Select **Tables**.
+1. Select **Tables**.
 
-7.  Select **Item Checkout App Stages**.
+1. Select **Item Checkout App Stages**.
 
-8.  Select **Edit data**.
+1. Select **Edit data**.
 
->   Note: The table editable grid cannot import photos.
+> [!NOTE]
+> The table editable grid cannot import photos.
 
 The sample data screen includes a gallery that allows you to select items that were created in the previous step and associate images with them.
 
@@ -195,7 +182,7 @@ The sample data screen includes a gallery that allows you to select items that w
 
 In this step we are going to learn about the pre-built controls such as buttons, for building the apps. This app is built on Fluid UI framework. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps app in Microsoft Teams - Power Apps \| Microsoft Docs](use-the-fluent-ui-controls.md).
+To know more about Fluid UI framework and controls, go to [Fluent UI framework](https://www.microsoft.com/design/fluent/#/) and [Use the Fluent UI controls in Power Apps app in Teams - Power Apps \| Microsoft Docs](use-the-fluent-ui-controls.md).
 
 ## Building Asset Screen
 
