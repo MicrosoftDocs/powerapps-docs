@@ -12,7 +12,7 @@ author: Nkrb
 
 # Debug code components
 
-This article provides information on how to debug your code component logic whilst it is being developed. Writing unit tests for your code is considered good practice so that the logic can be tested independently from the Power Apps component framework runtime. 
+This article provides information on how to debug your code component logic while it is being developed. Writing unit tests for your code is considered good practice so that the logic can be tested independently from the Power Apps component framework runtime. 
 
 This article shows how to debug your code components using the test harness and after deploying to Microsoft Dataverse:
 
@@ -24,7 +24,7 @@ This article shows how to debug your code components using the test harness and 
 
 ## Debugging using the browser test harness
 
-Whilst you are implementing the code component logic, using `npm start` or `npm start watch` builds the code component and open the local test harness in a new browser window. This test harness is part of Microsoft Power Platform CLI and hence is the same irrespective of if you plan to use your code component in model-driven apps, canvas apps, or portals.  More information: [Create your first component](implementing-controls-using-typescript.md).
+While you are implementing the code component logic, using `npm start` or `npm start watch` builds the code component and open the local test harness in a new browser window. This test harness is part of Microsoft Power Platform CLI and hence is the same irrespective of if you plan to use your code component in model-driven apps, canvas apps, or portals.  More information: [Create your first component](implementing-controls-using-typescript.md).
 
 > [!NOTE]
 > Before you can use `npm start` you need to install the required node modules using `npm install`.
@@ -79,12 +79,12 @@ As the image above shows, the browser window opens to display four areas. The co
    > [!div class="mx-imgBorder"]
    > ![Data Inputs](media/data-inputs.png "Data Inputs")
 
-- For *dataset* type components, you can load a CSV file with test data for each  [data-set](manifest-schema-reference\data-set.md) element. You manually create or export in .csv format directly from your environment. After loading a CSV file, bind each  [property-set](manifest-schema-reference\property-set.md) defined in the `ControlManifest.Input.xml` to a column in the CSV file. This is done by picking the column for each property as shown below:
+- For *dataset* type components, you can load a CSV file with test data for each  [data-set](manifest-schema-reference\data-set.md) element. You manually create or export in .csv format directly from your environment. After loading a CSV file, you can bind each [property-set](manifest-schema-reference\property-set.md) defined in the `ControlManifest.Input.xml` to a column in the CSV file. This is done by picking the column for each property as shown below:
 
    > [!div class="mx-imgBorder"]
    > ![test harness 3](media/test-harness-3.png "test harness 3")
 
-- If you do not have any properties defined in the `ControlManifest.Input.xml` file, then all the columns get automatically loaded into the test harness. For each column in the source CSV you can then assign the data type to be used provided to the code component as shown below:
+- If you do not have any properties defined in the `ControlManifest.Input.xml` file, then all the columns get automatically loaded into the test harness. For each column in the source CSV, you can then assign the data type to be used provided to the code component as shown below:
 
    > [!div class="mx-imgBorder"]
    > ![Test harness 5](media/test-harness-5.png "Test harness 5")
@@ -94,12 +94,12 @@ As the image above shows, the browser window opens to display four areas. The co
 
 ### Common limitations when using the test harness
 
-Whilst the test harness is suitable for testing simple code components, the following scenarios may mean that the test harness cannot be used to test a more complex code component:
+While the test harness is suitable for testing simple code components, the following scenarios may mean that the test harness cannot be used to test a more complex code component:
 
 1. The [updatedProperties](reference\updatedproperties.md) array is not populated when properties are changed via the test harness **Data Inputs** section.
 2. Using features listed in the `feature-usage` section of the `ControlManifest.Input.xml`. For example, calling the `context.WebApi.*` methods will throw an exception from within the test harness.
 3. Use of the [paging](reference/paging.md), [sorting](reference/sortstatus.md), and [filtering](reference/filtering.md) APIs on datasets will throw an exception from within the test harness.
-4. Use of complex datatype bindings that provide additional metadata such as choices and lookups. For choice columns, the test harness will give you 3 simple choices with minimal metadata.
+4. Use of complex datatype bindings that provide additional metadata such as choices and lookups. For choice columns, the test harness will give you three simple choices with minimal metadata.
 5. Model-driven apps specifics such as field level security, read-only behavior, dataset selection API, and integration with the model-driven apps command bar.
 6. Other context APIs such as [Navigation](reference/navigation.md) and [Utility](reference/utility.md) methods.
 
@@ -109,9 +109,9 @@ To test these scenarios, you will need to first deploy your code component and t
 
 Modern browsers have a built-in set of developer tools that allow you to inspect the HTML, CSS, and JavaScript loaded on the current page. You can access these developer tools using the keyboard shortcut `Ctrl`+`Shift`+`I`. Using the `F12` key is also a common keyboard shortcut to open the developer tools however this will not work inside Power Apps Studio due to it being already used for the **Download App** keyboard shortcut.
 
-### Bundling using webpack
+### Bundling using web pack
 
-When writing code components using TypeScript, your code will likely look very different from the JavaScript that is emitted into the bundled code component output.  When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running `pac pcf init`) uses webpack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder will also contain any other resources (e.g. `html`/`css`) that are referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
+When writing code components using TypeScript, your code will likely look different from the JavaScript that is emitted into the bundled code component output.  When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running `pac pcf init`) uses web pack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder will also contain any other resources (for example, `html`/`css`) that are referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
 
 When you use modern TypeScript language features such as import/export or async/await that are not supported by the targeted browsers, the build process will transpile the TypeScript into JavaScript without using these language features. The source maps that are output as part of the development build, provide the information to the developer tools so that breakpoint locations in your TypeScript can be mapped to the corresponding line of JavaScript. Equally, when an exception occurs or you step through the code, you can see the original TypeScript line rather than the underlying transpiled JavaScript.
 
@@ -127,7 +127,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 1. Load your code component into a browser session using either:
 
    1. The test harness using `npm start watch`. 
-   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) below.
+   2. A local development build of your code component loaded into a model-driven, canvas app, or portal browser session. You do not need to deploy a development build of your code component to Dataverse server, but instead, you can use Fiddler AutoResponders as described in [Debugging after deployment into Microsoft Dataverse using Fiddler](#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) below.
 
 2. Select `Ctrl` + `Shift` + `I` to open the developer tools.
 
@@ -152,7 +152,7 @@ This section describes how to debug your code component inside the Microsoft Edg
    > [!div class="mx-imgBorder"]
    > ![Developer Tools 2](media/developer-tools-2.png "Developer Tools 2")
 
-10. You can also inspect the HTML elements and CSS created by the component using the **Elements** tab. If you have a specific set of interactions that you are interested in (root container element), you can place a breakpoint on the HTML Dom element using the **Context Menu** (whilst the root element is selected) > **Break on** > **subtree modifications**
+10. You can also inspect the HTML elements and CSS created by the component using the **Elements** tab. If you have a specific set of interactions that you are interested in (root container element), you can place a breakpoint on the HTML Dom element using the **Context Menu** (while the root element is selected) > **Break on** > **subtree modifications**
 
     > [!div class="mx-imgBorder"]
     > ![Developer Tools 3](media/developer-tools-3.png "Developer Tools 3")
@@ -172,11 +172,11 @@ Currently, by default, code components are configured to transpile into ES5 Java
 ```
 
 > [!NOTE]
-> At this time source maps are generated from TypeScript transpiled output for each TypeScript file rather than from the source. If ES5 is targeted, then your source maps will be harder to read due to the ES6 language features (such as classes) being removed. Until support for ES6 is added, even if you need to output ES5, you can update your `tsconfig.json` to target ES6 whilst developing so that the source maps are closer to the original TypeScript. If you need to output ES5, remember to set it back before building your code component for production deployment.
+> At this time source maps are generated from TypeScript transpiled output for each TypeScript file rather than from the source. If ES5 is targeted, then your source maps will be harder to read due to the ES6 language features (such as classes) being removed. Until support for ES6 is added, even if you need to output ES5, you can update your `tsconfig.json` to target ES6 while developing so that the source maps are closer to the original TypeScript. If you need to output ES5, remember to set it back before building your code component for production deployment.
 
 ## Debugging after deploying into Microsoft Dataverse using Fiddler
 
-To fully test the logic inside the context of a model-driven app, canvas app, or portal you can first deploy and configure your code component to Microsoft Dataverse and then use [Fiddler](https://www.telerik.com/download/fiddler)'s auto-responder feature to load a development build of your code component (built locally) into the browser without having to continuously deploy changes as you debug your code. This also allows you to debug against a non-development downstream environment without having to first deploy a development build.
+To fully test the logic inside the context of a model-driven app, canvas app, or portal you can first deploy and configure your code component to Microsoft Dataverse and then use [Fiddler](https://www.telerik.com/download/fiddler)'s AutoResponder feature to load a development build of your code component (built locally) into the browser without having to continuously deploy changes as you debug your code. This also allows you to debug against a non-development downstream environment without having to first deploy a development build.
 
 To debug your code component using Fiddler:
 
@@ -260,9 +260,9 @@ To debug your code component using Fiddler:
     > [!div class="mx-imgBorder"]
     > ![Empty cache and hard refresh](media/refresh-reload.png "Empty cache and hard refresh")
 
-13. Once you have your code component loaded from your local machine, you can make changes to the code (whilst `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's autoresponder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
+13. Once you have your code component loaded from your local machine, you can make changes to the code (while `npm start watch` is running) and refresh the browser to load the newly built versions. Fiddler's AutoResponder will automatically add a cache-control header so that it will not be cached by the browser so a simple refresh will reload the resources without having to clear the cache each time.
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>

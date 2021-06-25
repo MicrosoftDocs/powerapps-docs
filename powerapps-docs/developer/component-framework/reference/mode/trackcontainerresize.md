@@ -28,12 +28,12 @@ The following table shows the values of `allocatedWidth` and `allocatedHeight` i
 | ------------------------------- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Model-driven and canvas apps | `init`           | -1                                                           | -1                                                           |
 | Model-driven apps               | `updateView`     | **-1** if `trackContainerResize(false)` or <br />**width in pixels** if `trackContainerResize(true)`<br />The width will change as the browser window is resized and the form adjusts to the space available. | -1                                                           |
-| Canvas apps                     | `updateView`     | Set by the app maker.<br />Can change dynamically if the width is set to a Power FX formula. | Set by the app maker<br />Can change dynamically if the Width is set to a Power FX formula. |
+| Canvas apps                     | `updateView`     | Set by the app maker.<br />Can change dynamically if the width is set to a Power FX formula. | Set by the app maker.<br/> Can change dynamically if the width is set to a Power FX formula. |
 
 > [!NOTE] 
-> In the test harness (started using `npm start`), the `allocatedHeight` and `allocatedWidth` will be returned as strings rather than numbers. When no value is provided, they will return an empty string rather than -1 or undefined. Additionally, once a width or height has been set, it cannot be unset without refreshing the browser, instead a blank value will be interpreted as a size of 1.
+> In the test harness (started using `npm start`), the `allocatedHeight` and `allocatedWidth` will be returned as strings rather than numbers. When no value is provided, they will return an empty string rather than -1 or undefined. Additionally, once the width or height is set, you cannot undo the changes without refreshing the browser, instead a blank value will be interpreted as a size of 1.
 
-In general, model-driven apps do not constrain the height and width of a component, so tracking the container size is not normally necessary. Instead, the code components can grow to use either 100% of the space for grid components, or to a specific height required by the contents when rendering a field component. In canvas apps, however, the parent context always provides the height and width to the component by nature of the drag-and-drop editor.
+In general, model-driven apps do not constrain the height and width of a component, so tracking the container size is not necessary. Instead, the code components can grow to use either 100% of the space for grid components, or to a specific height required by the contents when rendering a `field` component. In canvas apps, however, the parent context always provides the height and width to the component by nature of the drag-and-drop editor.
 
 The following table shows the strategies that you can use to control the height and width of your controls HTML contents:
 
@@ -49,7 +49,7 @@ If the  of `allocatedWidth` and `allocatedHeight` change after the first `update
 
 ## Available for 
 
-Model-driven apps, Canvas apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -59,10 +59,10 @@ Model-driven apps, Canvas apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|value|`Boolean`|Yes|`True` if controls needs to track container size, component will get allocatedWidth or allocatedHeight.|
+|value|`Boolean`|Yes|`True` if controls need to track container size, component will get allocatedWidth or allocatedHeight.|
 
 
-### Related topics
+### Related articles
 
 [Mode](../mode.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -28,10 +28,10 @@ This article describes how to manage specific aspects of the lifecycle managemen
 
 ## Development and debugging ALM considerations
 
-When developing code components, you would following the steps mentioned below:
+When developing code components, you would be following the steps mentioned below:
 
 1. Create code component project (`pcfproj`) from a template using `pac pcf init`. More information: [Create and build a code component](create-custom-controls-using-pcf.md).
-2. Implement code component logic. More information: [Component implementation library](control-implementation-library.md).
+2. Implement code component logic. More information: [Component implementation](control-implementation-library.md).
 3. Debug the code component using the local test harness. More information: [Debug code components](debugging-custom-controls.md) for information on debugging techniques and best practices.
 4. Create a solution project (`cdsproj`) and add the code component project as a reference. More information: [Package a code component](import-custom-controls.md).
 5. Build the code component in **release** mode for distribution and deployment. 
@@ -76,11 +76,11 @@ More information: [Package a code component](import-custom-controls.md#package-a
 
 ## Building .cdsproj solution projects
 
-When building a solution project (`.cdsproj`) you have an option to generate the output as unmanaged or managed solution. 
+When building a solution project (`.cdsproj`), you have an option to generate the output as unmanaged or managed solution. 
 
 The following table shows which command and configuration results in development vs. release builds.
 
-| Build command used on used `cdsproj` | `SolutionPackageType` | Output                                              |
+| Build command used on  `cdsproj` | `SolutionPackageType` | Output                                              |
 | ------------------------------------ | --------------------- | --------------------------------------------------- |
 | `msbuild`                            | Managed               | **Development** build inside **Managed** Solution   |
 | `msbuild /p:configuration=Release`   | Managed               | **Release** build inside **Managed** Solution       |
@@ -88,7 +88,7 @@ The following table shows which command and configuration results in development
 | `msbuild /p:configuration=Release`   | Unmanaged             | **Release** build inside **Unmanaged** Solution     |
 
 
-The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac solution init,` but initially commented out. Simply un-comment the section and set to **Managed**, **Unmanaged** or **Both**
+The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac solution init,` but initially commented out. Uncomment the section and set to **Managed**, **Unmanaged** or **Both**
 
 ```xml
  <!-- Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both) -->
@@ -118,7 +118,7 @@ When developing code components, it is recommended that you use a source code co
 /obj
 ```
 
-Since the `/out` folders is excluded, the resulting `bundle.js` file (and related resources) built will not be added to source control. When your code components are built manually or as part of an automated build pipeline, the `bundle.js` would be built using the latest code to ensure that all changes are included. 
+Since the `/out` folder is excluded, the resulting `bundle.js` file (and related resources) built will not be added to source control. When your code components are built manually or as part of an automated build pipeline, the `bundle.js` would be built using the latest code to ensure that all changes are included. 
 
 Additionally, when a solution is built, any association solution zip files would not be committed to source control - instead, the output would be published as binary release artifacts.
 
@@ -129,7 +129,7 @@ In addition to source controlling the `pcfproj` and `cdsproj`, **[Solution Packa
 > [!NOTE]
 > At this time, SolutionPackager differs from using `pac solution clone` in that it can be used incrementally to export changes from a Dataverse solution.
 
-If you are combining code components with other solution elements like tables, model-driven, and canvas apps you would normally not need the `cdsproj` project build, but instead, you would move the built artifacts from the `pcfproj` into the solution package folder before re-packing it for import.
+If you are combining code components with other solution elements like tables, model-driven, and canvas apps you would normally not need the `cdsproj` project build, but instead, you would move the built artifacts from the `pcfproj` into the solution package folder before repacking it for import.
 
 Once a solution that contains a code component is unpacked using `SolutionPackager /action: Extract`, it will look similar to:
 
@@ -158,7 +158,7 @@ You can see under the `Controls` folder, there are subfolders for each code comp
 
 When committing this folder structure to the source control, you would exclude the files marked with an asterix (*) above, because they will be output when the `pcfproj` project is built for the corresponding component.
 
-The only files that are required are the `*.data.xml` files since they contain metadata that describes the resources required by the packaging process. After each code component is built, the files in the `out` folder are copied over into the respective control folder in the Solution Packager folders. Once the build outputs have been added, the package folders contain all the data required to re-pack into a Dataverse solution using `SolutionPackager /action: Pack`.
+The only files that are required are the `*.data.xml` files since they contain metadata that describes the resources required by the packaging process. After each code component is built, the files in the `out` folder are copied over into the respective control folder in the Solution Packager folders. Once the build outputs have been added, the package folders contain all the data required to repack into a Dataverse solution using `SolutionPackager /action: Pack`.
 
 More information: [SolutionPackager command-line arguments](/power-platform/alm/solution-packager-tool#solutionpackager-command-line-arguments) .
 
@@ -169,7 +169,7 @@ Code components are deployed to downstream environments using Dataverse solution
 There are two strategies for deploying code components inside solutions:
 
 1. **Segmented Solutions** - A solution project is created using `pac solution init` and then using `pac solution add-reference` to add one or more code components. This solution can then be exported and imported into downstream environments and other segmented solutions will take a dependency on the code component solution such that it must be deployed into that environment first. This is referred to a solution segmenting because the overall functionality is split between different solution segments and layers, with inter-dependencies being tracked by the solution framework. If using this approach, you will likely need multiple development environments - one for each segmented solution. More information: [Use segmented solutions in Power Apps](/power-platform/alm/segmented-solutions-alm)
-2. **Single Solution** - A single solution is created inside a Dataverse environment and then code components are added along with other solution components (such as tables, model-driven, or canvas apps) that in turn reference those code components. This solution can be exported and imported into downstream environments without any inter-solution dependencies. With this approach, code and environment branching becomes important so that you can deploy an update to one part of the solution without taking changes that are being made in another area. More information: [Branch and merging strategy with Microsoft Power Platform](/power-platform/alm/basics-alm#branching-and-merging-strategy)
+2. **Single Solution** - A single solution is created inside a Dataverse environment and then code components are added along with other solution components (such as tables, model-driven, or canvas apps) that in turn reference those code components. This solution can be exported and imported into downstream environments without any inter-solution dependencies. With this approach, code and environment branching become important so that you can deploy an update to one part of the solution without taking changes that are being made in another area. More information: [Branch and merging strategy with Microsoft Power Platform](/power-platform/alm/basics-alm#branching-and-merging-strategy)
 
 Reasons for adopting a segmented solution approach over a mixed single solution approach might be:
 
@@ -184,7 +184,7 @@ The following diagram shows an overview of the solution lifecycle for these two 
 
 The diagram describes the following points:
 
-1. **Push using PAC CLI** - When the code component is ready for testing inside Dataverse, `pac pcf push` is used to deploy to a development environment. This creates an unmanaged solution named **PowerAppsTools_namespace**, where *namespace* is the namespace prefix of the solution provider you want to use to deploy your code component under. The solution provider must already exists in the target environment must have the same as the namespace prefix you want to use for downstream environments. After deployment, you can add your code component to model-driven or canvas apps for testing. 
+1. **Push using PAC CLI** - When the code component is ready for testing inside Dataverse, `pac pcf push` is used to deploy to a development environment. This creates an unmanaged solution named **PowerAppsTools_namespace**, where *namespace* is the namespace prefix of the solution provider you want to use to deploy your code component under. The solution provider should already exists in the target environment must have the same as the namespace prefix you want to use for downstream environments. After deployment, you can add your code component to model-driven or canvas apps for testing. 
 
    > [!NOTE]
    > As describe above, it is important to configure the code component `cdsproj` for production build so that you deploy the code optimized for production rather than development.
@@ -224,12 +224,12 @@ Some of the advantages using automated build pipelines are:
 - **Versioning consistency** - when the build pipeline automatically sets the version of your code component and the solution you can have confidence that when a new build is created, it is versioned consistently relative to previous versions. This facilitates tracking of features, bug fixes, and deployments.
 - **Maintainable** - since everything that is needed to build your solution is contained from inside source control, you can always create new branches and development environments by checking out the code. When you are ready to deploy an update, Pull Requests can be merged into downstream branches. More information: [Branch and merging strategy with Microsoft Power Platform](/power-platform/alm/basics-alm#branching-and-merging-strategy).
 
-As described above, there are two approaches to solution management of code components, a segmented solution projects, or a single mixed solution containing other artifacts such as model-driven apps, canvas apps, and tables to which the code components are added to.
+As described above, there are two approaches to solution management of code components, a segmented solution projects, or a single mixed solution containing other artifacts such as model-driven apps, canvas apps, and tables to which the code components are added.
 
-If you are using the segmented code component solution project then you can build the project inside a **Azure DevOps Pipeline** (using [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools)) or **GitHub Pipeline** (using [GitHub Actions for Microsoft Power Platform](/power-platform/alm/devops-github-available-actions)). Each code component `pcfproj` folder is added to source control (excluding the `generated`, `out` and `node_modules` folders), A `cdsproj` project is created and each code component is referenced using `pac solution add-reference` before also adding to source control. The pipeline would then perform the following:
+If you are using the segmented code component solution project, then you can build the project inside a **Azure DevOps Pipeline** (using [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools)) or **GitHub Pipeline** (using [GitHub Actions for Microsoft Power Platform](/power-platform/alm/devops-github-available-actions)). Each code component `pcfproj` folder is added to source control (excluding the `generated`, `out` and `node_modules` folders), a `cdsproj` project is created and each code component is referenced using `pac solution add-reference` before also adding to source control. The pipeline would then perform the following:
 
 1. Update the solution version in the `Solution.xml` file to match the version of your build. The solution version is held in the `ImportExportXml`/`Version` attribute. See below for details on versioning strategies.
-2. Update the code component version in the `ControlManifest.Input.xml` file. The version is stored in the `manifest`/`control`/`version` attribute. This should be done for all of the `pcfproj` projects that are build built.
+2. Update the code component version in the `ControlManifest.Input.xml` file. The version is stored in the `manifest`/`control`/`version` attribute. This should be done for all of the `pcfproj` projects that are built.
 3. Run a `MSBuild` task with the argument`/restore /p:configuration=Release` using a wildcard `*.cdsproj`. This will build all of the `cdsproj` projects and their referenced `pcfproj` projects. 
 4. Collect the built solution zip into the pipeline release artifacts. This solution will contain all code components included as references in the `cdsproj`.
 
@@ -244,14 +244,14 @@ If you are using a mixed solution that contains other components in addition to 
 6. Package the solution using the Power Platform Build Tools `PowerPlatformPackSolution` task
 7. Collect the built solution zip into the pipeline release artifacts.
 
-It is recommended that you commit your unpacked solution metadata to source control in it's unmanaged form to allow the creation of a development environment at any later stage. If only managed solution metadata was committed it would make it hard to create new development environments. You have two options to do this:
+It is recommended that you commit your unpacked solution metadata to source control in it's unmanaged form to allow the creation of a development environment at any later stage. If only managed solution metadata was committed, it would make it hard to create new development environments. You have two options to do this:
 
 1. Commit both managed and unmanaged using the `/packagetype:Both` option of Solution Packager. This allows packing in either manager or unmanaged mode but has the disadvantage of duplication inside source code such that changes will often appear in multiple xml files - both the managed and unmanaged version.
 2. Only commit unmanaged to source control (resulting in cleaner change sets), and then inside the build pipeline import the packaged solution into a build environment so that it can then be exported as managed to convert it into a managed deployment artifact. 
 
 ## Versioning and deploying updates
 
-When deploying and updating your code components it is important to have a consistent versioning strategy so that you can:
+When deploying and updating your code components, it is important to have a consistent versioning strategy so that you can:
 
 1. Track which version is deployed against the features/fixes it contains.
 2. Ensure canvas apps can detect that they need to update to the latest version.
@@ -271,7 +271,7 @@ When deploying an update to a code component, the version in the `ControlManifes
 
 `pac pcf version --strategy manifest`
 
-Alternatively, to specify an exact value for the patch part (e.g. as part of an automated build pipeline) use:
+Alternatively, to specify an exact value for the patch part (for example, as part of an automated build pipeline) use:
 
 `pac pcf version --patchversion <PATCH VERSION>`
 
@@ -279,15 +279,15 @@ More information: [pac pcf version](/powerapps/developer/data-platform/powerapps
 
 ## When to increment the MAJOR and MINOR version
 
-Under most circumstances is recommended that the Major and Minor version of the code component's version are kept in sync with the Dataverse solution it is distributed using. For example:
+It is recommended that the Major and Minor version of the code component's version are kept in sync with the Dataverse solution it is distributed using. For example:
 
 1. Your deployed code component version is `1.0.0` and your solution version is `1.0.0.0`.
 2. You make a small update to your code component and increment the patch version on the code component to `1.0.1` using `pac pcf version --strategy manifest`.
-3. When packaging the code component for deployment, the solution version in `Solution.xml` is updated to be 1.0.0.1 - or the version is simply incremented automatically by manually exporting the solution.
-4. You make significant changes to your solution such that you want to increment the major and minor version to 1.1.0.0
-5. In this case, the code component version should be also updated to be 1.1.0
+3. When packaging the code component for deployment, the solution version in `Solution.xml` is updated to be 1.0.0.1 - or the version is incremented automatically by manually exporting the solution.
+4. You make significant changes to your solution such that you want to increment the major and minor version to 1.1.0.0.
+5. In this case, the code component version can be updated to be 1.1.0.
 
-Note that [Dataverse solutions has 4 parts](/powerapps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates) and it can be thought of as the following structure:`MAJOR.MINOR.BUILD.REVISION`.
+[Dataverse solutions has four parts](/powerapps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates) and it can be thought of as the following structure:`MAJOR.MINOR.BUILD.REVISION`.
 
 If you are using **AzureDevOps**, you can set your build pipeline versioning using the `Build` and `Rev` environment variables ([Run (build) number - Azure Pipelines](/azure/devops/pipelines/process/run-number?view=azure-devops&tabs=yaml)) and use PowerShell script similar to the approach described in the article [Use PowerShell scripts to customize pipelines](/azure/devops/pipelines/scripts/powershell?view=azure-devops&tabs=yaml#example-powershell-script-version-assemblies).
 
@@ -306,19 +306,19 @@ https://docs.microsoft.com/powerapps/maker/canvas-apps/test-studio
 
 ## Canvas apps ALM considerations
 
-Consuming code components in canvas apps is somewhat different from model-driven apps that the code component must be explicitly added to the app using **Get more components** located on the **Insert** panel. Once a code component is added to the canvas app it is included as the content inside the app definition. To update to a new version of a code component after it is deployed (and the control version incremented), the app maker must first open the app in maker studio and select **Update** when prompted on the **Update code components** dialog. The app must be then saved and published for the new version to be used when the app is played by users.
+Consuming code components in canvas apps is different from model-driven apps that the code component must be explicitly added to the app using **Get more components** located on the **Insert** panel. Once a code component is added to the canvas app, it is included as the content inside the app definition. To update to a new version of a code component after it is deployed (and the control version incremented), the app maker must first open the app in maker studio and select **Update** when prompted on the **Update code components** dialog. The app must be then saved and published for the new version to be used when the app is played by users.
 
 > [!div class="mx-imgBorder"]
 > ![Update code components](media//upgrade-code-component.png "Update code components")
 
 If the app is not updated or **Skip** is used, the app will continue to use the older version of the code component even though it does not exist in the environment since it has been overwritten by the newer version. 
 
-Since the app contains a copy of the code component, is therefore possible to have different versions of the code components running side-by-side in a single environment from inside different canvas apps, however, you cannot have different versions of a code component running side-by-side in the same app. It is recommended that app makers are encouraged to update their apps to the latest version of code components when a new version is deployed.
+Since the app contains a copy of the code component, is therefore possible to have different versions of the code components running side by side in a single environment from inside different canvas apps, however, you cannot have different versions of a code component running side by side in the same app. It is recommended that app makers are encouraged to update their apps to the latest version of code components when a new version is deployed.
 
 > [!NOTE]
 > Although at this time you can import a canvas app without the matching code component being deployed to that environment, it is recommended that you always ensure that the apps are updated to use the latest version of the code components and that the same version is deployed to that environment first or as part of the same solution.
 
-### Related topics
+### Related articles
 
 [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
