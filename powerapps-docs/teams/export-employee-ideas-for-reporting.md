@@ -14,7 +14,7 @@ contributors:
 
 # Export Ideas data for reporting
 
-In this topic, we cover how to export your ideas data from your Teams database to another location so you can archive and report on it.
+This topic covers how to export your ideas data from your Teams database to another location so you can archive and report on it.
 
 ## Prerequisites
 
