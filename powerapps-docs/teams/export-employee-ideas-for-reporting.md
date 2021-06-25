@@ -209,19 +209,17 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
     
 14. Inside the nested apply to each step added in step 13, add an Office 365 Users **Get user profile (V2)** step. Select the Created by Primary Email from the list voters step User (UPN) field.
     
-15. Add an Excel add row into table step
+15. Follow these steps to, add an Excel add row into table step.
 
-    - Select Location, document library, file, and table for your vote summary table.
+    1. Select Location, document library, file, and table for your vote summary table.
         
-    - For **Idea** field, select Title from the list rows step added in step 9.
+    2. For **Idea** field, select Title from the list rows step added in step 9.
         
-    - For **Employee** field, select the Display Name from the Get user profile step created in step 14
+    3. For **Employee** field, select the Display Name from the Get user profile step created in step 14
         
-    - Set the **Department** field to the following formula
+    4. Set the **Department** field to the following formula: if(not(empty(outputs('Get_user_profile_(V2)\_2')?['body/department'])),outputs('Get_user_profile_(V2)_2')?['body/department'])
 
-if(not(empty(outputs('Get_user_profile_(V2)\_2')?['body/department'])),outputs('Get_user_profile_(V2)_2')?['body/department'])
-
-16. Save your flow. Your flow should now look like this:
+16. Save the flow. Your flow should look like this:
 
     > [!div class="mx-imgBorder"]
     > ![Complete flow](media/export-employee-ideas-for-reporting/complete-flow-screenshot.png "Complete flow")
