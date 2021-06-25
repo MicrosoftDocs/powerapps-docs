@@ -14,11 +14,11 @@ contributors:
 
 # How to customize the Ideas app
 
-The Employee Ideas Power App template for Microsoft Teams is designed to be a complete app experience but allow makers to easily extend it for their own purposes. In this guide we will go over how to customize the Employee Ideas app in Power Apps in Microsoft Teams.
+The Employee Ideas Power App template for Microsoft Teams is designed to be a complete app experience but allow makers to easily extend it for their own purposes. In this topic, covers how to customize the Employee Ideas app in Power Apps in Microsoft Teams.
 
 Before you can customize the app, you must install it from the Teams store. You can get the app at <https://aka.ms/TeamsEmployeeIdeas> .
 
-Once the app is installed you can then customize the app using the following steps.
+Once the app is installed, follow the steps in this topics to customize the app.
 
 ## Opening Power Apps app in Microsoft Teams
 
