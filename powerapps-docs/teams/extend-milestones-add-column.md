@@ -186,9 +186,9 @@ Now that we've added the field, we'll add it to the mobile screen.
     
 26. Set Text property to locMobileSelectedWorkItem.Effort.
 
-27.  Select the Done button to add the following step in the Patch function ```Effort: cmbAddWorkItemEffort.Selected.Value```.
+27.  Select the Done button to add the following step in the Patch function `Effort: cmbAddWorkItemEffort.Selected.Value`.
 
-    ![Patching effort value](media/extend-milestones-add-column/cmb-add-work-item-effort.png "Patching effort value")
+![Patching effort value](media/extend-milestones-add-column/cmb-add-work-item-effort.png "Patching effort value")
 
 28.  The updated screen is as shown below.
 
