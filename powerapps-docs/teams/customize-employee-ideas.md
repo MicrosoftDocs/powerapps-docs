@@ -72,29 +72,21 @@ If you are modifying or adding any fields to your app, you will want to first up
 
 Before modifying the fields, you need to first decide where the fields you want to add should go. What are the users doing when they should see or interact with these fields?
 
--   **Employee Idea**
-Employee ideas refer to ideas and suggestions submitted by employees and colleagues for improvements to the organization. Details such as the name, description, and dates for the idea are stored in this table. Ideas are related to Users via a many to many relationship to relate the votes to the ideas and limit users to only being able to vote for an idea one time. Ideas can only be related to a single campaign.
+- **Employee Idea**: Employee ideas refer to ideas and suggestions submitted by employees and colleagues for improvements to the organization. Details such as the name, description, and dates for the idea are stored in this table. Ideas are related to Users via a many to many relationship to relate the votes to the ideas and limit users to only being able to vote for an idea one time. Ideas can only be related to a single campaign.
 
--   **Employee Idea Campaign**
-Campaigns are the theme for ideas and used to group related activities. Details such as name and description are stored in the Campaign table. Campaigns can have multiple Ideas related to them.
+- **Employee Idea Campaign**: Campaigns are the theme for ideas and used to group related activities. Details such as name and description are stored in the Campaign table. Campaigns can have multiple Ideas related to them.
 
--   **Employee Idea Question**
-Employee Idea Questions provide the questions asked when an idea is submitted. Multiple questions can be related to a campaign, and all ideas submitted for the campaign will display the questions related to the Campaign.
+- **Employee Idea Question**: Employee Idea Questions provide the questions asked when an idea is submitted. Multiple questions can be related to a campaign, and all ideas submitted for the campaign will display the questions related to the Campaign.
 
--   **Employee Idea Response**
-Employee Idea Responses store the responses to the questions asked on the idea submission form.
+- **Employee Idea Response**: Employee Idea Responses store the responses to the questions asked on the idea submission form.
 
--   **Employee Idea Settings**
-Settings are used to store configurations for the app, including the Team and Channel Ids where notifications are posted when a Campaign or Idea are submitted.
+- **Employee Idea Settings**: Settings are used to store configurations for the app, including the Team and Channel Ids where notifications are posted when a Campaign or Idea are submitted.
 
--   **Employee Idea User Setting**
-User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user.
+- **Employee Idea User Setting**: User settings are used to store user preferences pertaining to seeing the Power Apps splash screen every time they login to the app. There is one record for each user.
 
--   **Employee Idea File**
-When users submit ideas, they can add one or more file to the idea with additional details. These files are stored in the Employee Idea File table.
+- **Employee Idea File**: When users submit ideas, they can add one or more file to the idea with additional details. These files are stored in the Employee Idea File table.
 
--   **Employee Idea Image**
-Each idea has an image file, and these images are stored in the Employee Idea Image table.
+- **Employee Idea Image**: Each idea has an image file, and these images are stored in the Employee Idea Image table.
 
 ## Ideas Screens
 
