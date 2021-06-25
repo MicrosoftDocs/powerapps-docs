@@ -1,6 +1,6 @@
 ---
-title: People-screen template | Microsoft Docs
-description: Understand how the people-screen template for canvas apps works and how to extend the screen for your own use cases
+title: People-screen template in canvas apps
+description: Understand how the people-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the people-screen template for canvas apps
+# People-screen template in canvas apps
 
 In a canvas app, add a people screen that lets users search for people within their organizations. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
 

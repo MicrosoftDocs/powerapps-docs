@@ -1,6 +1,6 @@
 ---
-title: Create a dependent drop-down list in a canvas app | Microsoft Docs
-description: In Power Apps, create a drop-down list that filters another drop-down list in a canvas app.
+title: Create a dependent drop-down list in a canvas app
+description: Learn about how to create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -199,7 +199,7 @@ This symptom is likely due to using a **LookUp** column in SharePoint or a **Cho
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Microsoft Dataverse.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with choices in Microsoft Dataverse.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, Power Apps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.
 

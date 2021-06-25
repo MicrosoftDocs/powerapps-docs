@@ -1,6 +1,6 @@
 ---
-title: 'Audio and Video controls: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Audio and Video controls
+title: Audio and Video controls in Power Apps
+description: Learn about the details, properties and examples of the audio and video controls in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps

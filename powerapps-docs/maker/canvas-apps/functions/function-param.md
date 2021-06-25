@@ -1,6 +1,6 @@
 ---
-title: Launch and Param functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Launch and Param functions in canvas apps
+title: Launch and Param functions in Power Apps
+description: Reference information including syntax and examples for the Launch and Param functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

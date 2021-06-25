@@ -1,6 +1,6 @@
 ---
-title: 'Check Box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Check Box control
+title: Check box control in Power Apps
+description: Learn about the details, properties and examples of the check box control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
