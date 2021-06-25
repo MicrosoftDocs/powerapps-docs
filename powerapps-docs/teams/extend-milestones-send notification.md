@@ -111,7 +111,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
     - Type - "String"
 
-    - Value = <!--- needs review - what's the value? --->
+    - Do not populate a value in this step--in the next step we will add the value
 
 1. For the **Review Work Item Link** action, we'll use the link to the app. To find this link, open the team where the Milestones app is installed, and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting **...** (ellipses) in the upper right corner.
 
@@ -151,7 +151,7 @@ To complete this exercise, we would need the ability to log in into Teams that w
 
     - Channel = General
 
-    - Adaptive Card = <!--- needs review --->
+    - Adaptive Card = (JSON below)
 
     ```
     {
