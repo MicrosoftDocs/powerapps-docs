@@ -111,7 +111,7 @@ NOTE: The format to launch a call via a deep-link is:
 [https://teams.microsoft.com/l/call/0/0?users=\<user1\>,\<user2](https://teams.microsoft.com/l/call/0/0?users=%3cuser1%3e,%3cuser2)\>
 ```
 
-For more information, see: [https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links\#generate-a-deep-link-to-a-call](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links#generate-a-deep-link-to-a-call)
+For more information, see: [https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links\#generate-a-deep-link-to-a-call](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links#generate-a-deep-link-to-a-call)
 
 1.  Add a 2nd button with the following properties
 
