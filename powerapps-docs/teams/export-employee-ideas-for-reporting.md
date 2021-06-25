@@ -225,11 +225,11 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
     > ![Complete flow](media/export-employee-ideas-for-reporting/complete-flow-screenshot.png "Complete flow")
 
 
-> [!NOTE]
-> Flow checker may give you a warning recommending that you use an Odata query on the list rows step. Using an Odata query will be advantageous if you have many idea records or want to filter ideas to a subset, such as ideas associated with open campaigns. This warning is not an error, and can be safely ignored. Select the X in the upper right corner to close the flow checker.
+    > [!NOTE]
+    > Flow checker may give you a warning recommending that you use an Odata query on the list rows step. Using an Odata query will be advantageous if you have many idea records or want to filter ideas to a subset, such as ideas associated with open campaigns. This warning is not an error, and can be safely ignored. Select the X in the upper right corner to close the flow checker.
 
-> [!div class="mx-imgBorder"]
-> ![Flow checker showing warnings](media/export-employee-ideas-for-reporting/flow-checker-showing-warnings.png "Flow checker showing warnings")
+    > [!div class="mx-imgBorder"]
+    > ![Flow checker showing warnings](media/export-employee-ideas-for-reporting/flow-checker-showing-warnings.png "Flow checker showing warnings")
 
 ### Test the flow
 
