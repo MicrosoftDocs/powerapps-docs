@@ -183,10 +183,9 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
     - Select **Users** for table name.
     
     - Add the following filter to the Fetch XML Query field.
+ 
 
-```xml  
-
-<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true"\>
+        <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true"\>
         
         \<entity name="systemuser"\>
         
@@ -211,8 +210,7 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
         \</entity\>
     
         \</fetch\>
-    
- ```  
+  
     
 > [!div class="mx-imgBorder"]
 > ![List voters flow step](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
