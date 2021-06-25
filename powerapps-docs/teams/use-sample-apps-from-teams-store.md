@@ -57,8 +57,6 @@ Several sample apps are available from the Teams store that you can add to your 
    :::column span="":::
       ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
    :::column-end:::
-   :::column span="":::
-   :::column-end:::
 :::row-end:::
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
