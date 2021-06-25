@@ -2216,6 +2216,8 @@
                    href: ../teams/customize-milestones.md
                  - name: Add a new column to Milestones sample app to track work items
                    href: ../teams/extend-milestones-add-column.md
+                 - name: Send a weekly report on project status from the Milestones sample app
+                   href: ../teams/extend-milestones-weekly-report.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives
