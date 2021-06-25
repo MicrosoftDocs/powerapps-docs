@@ -22,7 +22,7 @@ For example, in the Profile + template Power App for Microsoft Teams, when you s
 
 You might also want to use this capability for your apps—for example, if you are building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the salesperson about the opportunity.
 
-In this way, Power Apps in Teams can leverage deep integration with other Teams capabilities to make apps collaborative.
+In this way, Power Apps in Teams can use deep integration with other Teams capabilities to make apps collaborative.
 
 In this topic we will learn how we can integrate Power Apps with Teams to facilitate conversations.
 
@@ -30,9 +30,9 @@ In this topic we will learn how we can integrate Power Apps with Teams to facili
 
 To complete this lesson, we would need the ability to create apps within Microsoft Teams which will be available as part of select Microsoft 365 subscriptions.
 
-## Login into Microsoft Teams
+## Log in into Microsoft Teams
 
-Login into Microsoft teams using either the Desktop app or the web app
+Log in into Microsoft teams using either the Desktop app or the web app
 
 ## Create a new Team
 
@@ -40,7 +40,7 @@ In this section we will create a new Microsoft Teams team and then create an app
 
 1.  To create a new team, select the Teams tab and then select **Join or create a team** on the left bottom of the screen -\> then select **Create Team** -\> **From Scratch** -\> **Public** and give the team a name – **Calls and Meetings Integration** for our example and select Create
     
-2.  The next pop up that shows up is the is the Add members to the Team – if you have any members in your organization you would like to add to the team for testing purposes, select and add them here and select the Add button
+2.  The next pop up that shows up is the Add members to the Team – if you have any members in your organization you would like to add to the team for testing purposes, select and add them here and select the Add button
     
 3.  The member gets added to the team
 
