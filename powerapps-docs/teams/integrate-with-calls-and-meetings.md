@@ -26,9 +26,9 @@ In this topic we will learn how we can integrate Power Apps with Teams to make c
 
 To complete this lesson, we would need the ability to create apps within Microsoft Teams which will be available as part of select Microsoft 365 subscriptions.
 
-## Login into Microsoft Teams
+## Log in into Microsoft Teams
 
-Login into Microsoft teams using either the Desktop app or the web app
+Log in into Microsoft teams using either the Desktop app or the web app
 
 ## Create a new Team
 
@@ -111,7 +111,7 @@ NOTE: The format to launch a call via a deep-link is:
 [https://teams.microsoft.com/l/call/0/0?users=\<user1\>,\<user2](https://teams.microsoft.com/l/call/0/0?users=%3cuser1%3e,%3cuser2)\>
 ```
 
-For more information, see: [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links\#generate-a-deep-link-to-a-call](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links#generate-a-deep-link-to-a-call)
+For more information, see: [https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/deep-links\#generate-a-deep-link-to-a-call](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links#generate-a-deep-link-to-a-call)
 
 1.  Add a 2nd button with the following properties
 
@@ -143,7 +143,7 @@ If(
 
 (NOTE: If the user is accessing Teams via a web browser, this will launch the meeting window the user is accessing Teams via the Teams desktop/mobile app, then it launches the meeting window in the Teams app itself because of msteams://)
 
-3.  Add a 3nd button with the following properties
+3.  Add a third button with the following properties
 
 | Property | Value               |
 |----------|---------------------|
@@ -209,8 +209,6 @@ If(
 6.  The call button launches a new call
 
 7.  The meeting button creates a meeting invitation with the selected person
-
-## 
 
 ## See chat, call, and meeting integration in action
 
