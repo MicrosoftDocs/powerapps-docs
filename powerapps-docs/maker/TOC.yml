@@ -77,7 +77,7 @@
         href: ../user/deactivate-activate-account-contact.md 
     - name: Work with activities
       items:
-      - name: Add activities to the timeline
+      - name: Use timeline
         href: ../user/add-activities.md
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md
@@ -675,6 +675,8 @@
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
+          - name: IsBlankOrError
+            href: ./canvas-apps/functions/function-iferror.md            
           - name: IsEmpty
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsError
@@ -1312,6 +1314,12 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
+  - name: Use performance insights
+    items:
+    - name: Performance insights overview
+      href: ./common/performance-insights-overview.md
+    - name: Understand performance insights
+      href: ./common/performance-insights-categories.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
@@ -1425,10 +1433,16 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Work with forms and lists in portals
           items:
-            - name: Work with basic forms
-              href: ./portals/configure/entity-forms.md
             - name: Work with lists
               href: ./portals/configure/entity-lists.md
+            - name: Work with basic forms
+              items:
+                - name: Work with basic forms
+                  href: ./portals/configure/entity-forms.md
+                - name: Configure basic form metadata
+                  href: ./portals/configure/configure-basic-form-metadata.md
+                - name: Configure basic form subgrid
+                  href: ./portals/configure/configure-basic-form-subgrid.md
             - name: Work with advanced forms
               items:
                 - name: Define advanced form properties
@@ -1795,7 +1809,7 @@
           href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
-    - name: Important upcoming changes and depecations
+    - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
     - name: Supported web browsers
       href: ./portals/supported-web-browsers.md
@@ -2198,8 +2212,20 @@
           items:
              - name: Milestones
                href: ../teams/milestones.md
-             - name: Understand Milestones sample app architecture
-               href: ../teams/milestones-architecture.md
+             - name: Deploy the Milestones app broadly in your organization
+               href: ../teams/milestones-broad-distribution.md
+             - name: Customize Milestones app
+               items:
+                 - name: Understand Milestones sample app architecture
+                   href: ../teams/milestones-architecture.md
+                 - name: Customize Milestones sample app
+                   href: ../teams/customize-milestones.md
+                 - name: Add a new column to Milestones sample app to track work items
+                   href: ../teams/extend-milestones-add-column.md
+                 - name: Send a weekly report on project status from the Milestones sample app
+                   href: ../teams/extend-milestones-weekly-report.md
+                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
+                   href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives
@@ -2210,12 +2236,16 @@
           items:
             - name: Use the Profile+ sample app 
               href: ../teams/profile-app.md
+            - name: Deploy the Profile+ app broadly in your organization
+              href: ../teams/deploy-profile-plus-broad-distribution.md
             - name: Customize Profile+ app
               items:
                 - name: Understand Profile+ sample app architecture
                   href: ../teams/profile-plus-architecture.md
-                - name: Extend Profile+ app with additional org-specific data
+                - name: Extend Profile+ sample app with additional org-specific data
                   href: ../teams/profile-plus-org-specific.md
+                - name: Customize Profile+ sample app
+                  href: ../teams/customize-profile-plus.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
