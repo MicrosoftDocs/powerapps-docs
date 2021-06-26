@@ -9,12 +9,14 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/06/2021
+ms.date: 06/22/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Create a canvas app with data from an Excel file
 
@@ -29,7 +31,8 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
-> You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
+> - You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md).
+> - The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
 ## Create the app
 
