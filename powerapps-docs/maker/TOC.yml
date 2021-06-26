@@ -2194,8 +2194,12 @@
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
-            - name: Understand Employee ideas sample app architecture
-              href: ../teams/employee-ideas-architecture.md
+            - name: Customize Employee ideas app
+              items:
+                - name: Understand Employee ideas sample app architecture
+                  href: ../teams/employee-ideas-architecture.md
+                - name: Customize Employee ideas app
+                  href: ../teams/customize-employee-ideas.md
         - name: Inspection
           items:
             - name: Use Inspection sample app
