@@ -5,26 +5,29 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2021
+ms.date: 06/25/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
-    - v-ljoel
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
+  - sbahl10
 ---
 
 # Export Ideas data for reporting
 
-This topic covers how to export your ideas data from your Teams database to another location so you can archive and report on it.
+This article covers how to export your ideas data from your Microsoft Teams database to another location so you can archive and report on it.
 
 ## Prerequisites
 
-To complete this lesson you must first perform the following prerequisites:
+To complete this lesson, you must first perform the following prerequisites:
 
 1. Install the Employee Ideas template app from [https://aka.ms/teamsemployeeideas](https://aka.ms/teamsemployeeideas).
     
-2. Delete the sample idea data. The reason we need to do this is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won’t exist in your Active Directory). To delete ideas, see [Employee ideas sample app](/teams/employee-ideas.md).
+2. Delete the sample idea data. The reason is because our data extract captures the user who created the idea, and sample data is created by a system account, which may cause an error in the flow (since the user won’t exist in your Active Directory). To delete ideas, see [Employee ideas sample app](/teams/employee-ideas.md).
     
-3. Create some ideas, and have colleagues vote for them. This will ensure that the data extract returns data.
+3. Create some ideas, and have colleagues vote for them. Adding ideas will ensure that the data extract returns data.
 
 ## Working with Idea data
 
@@ -42,16 +45,16 @@ Some reasons to export data:
 
 - Archive data to free capacity in your Team database.
 
-In this topic we walk through an option to extract the data for Ideas to a SharePoint list. You could use a similar approach to move data to SQL server,
+In this article, we walk through an option to extract the data for Ideas to a SharePoint list. You could use a similar approach to move data to SQL server,
 Excel, or a non-Microsoft data connection.
 
 ## Delete the sample data
 
-You will want to delete the sample data from the employee ideas solution before completing this step. Sample data is created and owned by a system account, and will not resolve to users in your organization.
+You'll want to delete the sample data from the employee ideas solution before completing this step. Sample data is created and owned by a system account, and won't resolve to users in your organization.
 
 ### Create an Excel file
 
-First we will create an Excel spreadsheet to which our ideas data will be exported.
+First we'll create an Excel spreadsheet to which our ideas data will be exported.
 
 1. On the first tab of the spreadsheet, add the following columns: 
 
@@ -93,11 +96,11 @@ First we will create an Excel spreadsheet to which our ideas data will be export
 
 5. Format these columns as a table.
 
-6. Save the spreadsheet to a folder in Microsoft OneDrive. In our example we will call the folder **Ideas Extract**.
+6. Save the spreadsheet to a folder in Microsoft OneDrive. In our example, we will call the folder **Ideas Extract**.
 
 ## Create a Power Automate flow to extract data
 
-Now that you have created the spreadsheet to which you will extract the data, create a Power Automate flow.
+Now that you've created the spreadsheet to which you'll extract the data, create a Power Automate flow.
 
 1. Navigate to Power Automate.
 
@@ -117,9 +120,9 @@ Now that you have created the spreadsheet to which you will extract the data, cr
 
 ### Create a flow
 
-Next, create a flow to copy ideas to the newly created Sharepoint list. We will have the flow run as a scheduled job, delete the data from the SharePoint list, then copy the data from Ideas to the list. This will ensure that we always have up-to-date data.
+Next, create a flow to copy ideas to the newly created SharePoint list. We'll have the flow run as a scheduled job, delete the data from the SharePoint list, then copy the data from Ideas to the list to ensure that we always have up-to-date data.
 
-1. In Microsoft Teams, right click on Power Apps and select **Pop out app** to open Power Apps in a new window.
+1. In Microsoft Teams, right-click on Power Apps and select **Pop out app** to open Power Apps in a new window.
     
 2. For the flow trigger, select **Recurrence** and **1** for interval and **Day** for frequency.
 
@@ -130,12 +133,12 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
     
 4. Add an **Apply to each** action.
 
-5. Inside the apply to each step add a Dataverse **Get row** action. Rename it to **Get campaign.** Set the **Row ID** to the Campaign value from the List ideas step.
+5. Inside the apply to each step, add a Dataverse **Get row** action. Rename it to **Get campaign.** Set the **Row ID** to the Campaign value from the List ideas step.
     
     > [!div class="mx-imgBorder"]
     > ![List ideas and get campaign steps](media/export-employee-ideas-for-reporting/list-ideas-and-get-campaign-steps.png "List ideas and get campaign steps")
 
-6. In the Apply to each action, select **Add an action** and select the O365 Users **Get user profile (V2)** action. Set **User (UPN)** to Created By Primary Email.
+6. In the Apply to each action, select **Add an action**, and select the O365 Users **Get user profile (V2)** action. Set **User (UPN)** to Created By Primary Email.
     
    > [!div class="mx-imgBorder"]
    > ![Get user record of the creator of the idea record](media/export-employee-ideas-for-reporting/get-user-record-from-created-by-of-the-idea.png "Get user record of the creator of the idea record")
@@ -178,7 +181,7 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
 
 11. In the **Select an output from previous steps** field add the value of the list rows step added in step 10.
     
-12. Now we are going to get the users who have voted for ideas. Add a **List Rows** step inside the **Update Vote detail** scope.
+12. Now we're going to get the users who have voted for ideas. Add a **List Rows** step inside the **Update Vote detail** scope.
     
     - Select **Users** for table name.
     
@@ -205,7 +208,7 @@ Next, create a flow to copy ideas to the newly created Sharepoint list. We will 
 > [!div class="mx-imgBorder"]
 >![List voters flow step](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
     
-13. We now are going to update the excel workbook vote table with the votes by idea. Add an apply to each step inside the apply to each created in step 10. For the output field select the value from the list rows step created in step 12.
+13. We now are going to update the excel workbook vote table with the votes by idea. Add an apply to each step inside the apply to each created in step 10. For the output field, select the value from the list rows step created in step 12.
     
 14. Inside the nested apply to each step added in step 13, add an Office 365 Users **Get user profile (V2)** step. Select the Created by Primary Email from the list voters step User (UPN) field.
     
@@ -245,3 +248,13 @@ Test the flow to make sure that it works.
 3. Select **Run flow**.
 
 4. Once the flow runs, open your OneDrive folder where the Spreadsheet is stored and verify  that your inspection data is there.
+
+### See also
+
+- [Export Employee ideas for reporting](export-employee-ideas-for-reporting.md)
+- [Understand Employee ideas app architecture](employee-ideas-architecture.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Teams store](use-sample-apps-from-Teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
