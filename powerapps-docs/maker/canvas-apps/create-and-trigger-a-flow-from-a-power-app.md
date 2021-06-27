@@ -234,7 +234,7 @@ Navigate(Screen1);
 
 ![fill in the two parameters for the To email address](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-2.png)
 
-# Test the app
+## Test the app
 
 1.  Run the app in Preview mode – In this test, we will create a new account by entering details like account name, phone number, city, and email address on the New Account page. On saving the new account details, we will be prompted to send an email to the customer where we can update the verbiage of the email and then select Yes to send the email. This will trigger the flow and email will be sent to the email address on the account.
 
