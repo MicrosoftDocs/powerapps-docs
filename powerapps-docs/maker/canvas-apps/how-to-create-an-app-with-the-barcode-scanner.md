@@ -68,7 +68,7 @@ Collect(
 
 5.  On the **Properties** tab of the right-hand pane, set **X** property to 180 and the **Y** property to 1005.
 
-!X and y properties[](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-4.png "")
+![X and y properties](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-4.png "")
 
 ## Add gallery
 
