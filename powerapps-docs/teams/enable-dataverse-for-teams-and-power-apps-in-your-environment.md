@@ -49,7 +49,7 @@ The first way to provision Dataverse for Teams in your Teams environment is to c
 
 2.  Give your app a name and select **save**.
 
-3.  Create your data tables. For more information see [Create a table in Teams - Power Apps \| Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/teams/create-table).
+3.  Create your data tables. For more information see [Create a table in Teams - Power Apps \| Microsoft Docs](https://docs.microsoft.com/powerapps/teams/create-table).
 
 4.  Create your app by adding screens, connections, and controls. For more information see [Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness - Power Apps \ Microsoft Docs](https://docs.microsoft.com/powerapps/teams/tutorial-buildapp-retrieve-videos).
 
