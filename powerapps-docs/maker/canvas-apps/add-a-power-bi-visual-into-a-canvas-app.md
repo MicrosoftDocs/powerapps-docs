@@ -1,3 +1,4 @@
+---
 title: Add a Power BI visual into a canvas app
 description: Example exercie showing how to add Power BI visual into a canvas app.
 author: joel-lindstrom
@@ -8,10 +9,10 @@ ms.reviewer:
 ms.date: 06/25/2021
 ms.author: v-ljoel
 search.audienceType: 
-
   - maker
 search.app: 
   - PowerApps
+---
 
 # Example: Add a Power BI visual into a Canvas App
 
