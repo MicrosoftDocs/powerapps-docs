@@ -41,7 +41,7 @@ In this topic we will create a simple canvas app with barcode scanner and displa
 
 3.  Specify a name for your app, select **Phone**, and then select **Create**.
 
-![](media/how-to-create-an-app-with-the-barcode-scanner/open-a-blank-app-1.png)
+![Name the app](media/how-to-create-an-app-with-the-barcode-scanner/open-a-blank-app-1.png)
 
 ## Add barcode scanner
 
@@ -53,7 +53,7 @@ In this topic we will create a simple canvas app with barcode scanner and displa
 
 3.  On the **Advanced** tab of the right-hand pane, select **OnScan**.
 
-![](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-2.png "")
+![OnScan property](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-2.png "")
 
 4.  Set the **OnScan** property of the Barcode scanner control to this expression by typing or pasting it in the formula bar: 
 
@@ -68,7 +68,7 @@ Collect(
 
 5.  On the **Properties** tab of the right-hand pane, set **X** property to 180 and the **Y** property to 1005.
 
-![](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-4.png "")
+!X and y properties[](media/how-to-create-an-app-with-the-barcode-scanner/add-barcode-scanner-4.png "")
 
 ## Add gallery
 
