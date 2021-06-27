@@ -51,9 +51,9 @@ The first way to provision Dataverse for Teams in your Teams environment is to c
 
 3.  Create your data tables. For more information see [Create a table in Teams - Power Apps \| Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/teams/create-table).
 
-4.  Create your app by adding screens, connections, and controls. For more information see [Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness - Power Apps \ Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/teams/tutorial-buildapp-retrieve-videos).
+4.  Create your app by adding screens, connections, and controls. For more information see [Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness - Power Apps \ Microsoft Docs](https://docs.microsoft.com/powerapps/teams/tutorial-buildapp-retrieve-videos).
 
-5.  Publish your app. For more information, see [Publish your app using Power Apps app in Teams - Power Apps \| Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/teams/publish-and-share-apps).
+5.  Publish your app. For more information, see [Publish your app using Power Apps app in Teams - Power Apps \| Microsoft Docs](https://docs.microsoft.com/powerapps/teams/publish-and-share-apps).
 
 You now have Dataverse for Teams and Power Apps in your Team!
 
@@ -61,11 +61,11 @@ You now have Dataverse for Teams and Power Apps in your Team!
 
 The second way to provision Dataverse for Teams in your Team is by installing one of the ready-made template apps for Teams. These are fully functional app that provide a complete experience, but are also easy to enhance and configure to meet your specifications.
 
-There are currently 8 template apps from which to choose. To learn more about the sample apps for Teams, see [Use sample apps from teams store - Power Apps \| Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/teams/use-sample-apps-from-teams-store).
+There are currently 8 template apps from which to choose. To learn more about the sample apps for Teams, see [Use sample apps from teams store - Power Apps \| Microsoft Docs](https://docs.microsoft.com/powerapps/teams/use-sample-apps-from-teams-store).
 
 In this example, we are going to install the Employee Ideas app (aka.ms/TeamsEmployeeIdeas).
 
-# Installing Employee Ideas Template app
+## Installing Employee Ideas Template app
 
 The Employee Ideas app template for Microsoft Teams enables team members to quickly generate and organize ideas by campaigns. The app can be installedd from the Microsoft Teams store.
 
@@ -84,7 +84,7 @@ The Employee Ideas app template for Microsoft Teams enables team members to quic
 
 6.  Search for the channel in which you wish to install the app
 
-    ![](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-2.png "")
+    ![Search for channel](media/enable-dataverse-for-teams-and-power-apps-in-your-environment/installing-employee-ideas-template-app-2.png "Search for channel")
 
 7.  By default, the app will notify team members that the app has been added to the team. If you don’t want to notify the team, uncheck the **Post to the channel about this tab** checkbox.
 
