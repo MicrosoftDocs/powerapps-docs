@@ -102,35 +102,35 @@ In this lesson we will build an app to search, filter and lookup customer Accoun
 
 12.  Select the Edit fields button in the right pane
 
-    ![Select the Edit fields button in the right pane](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-10.png "Select the Edit fields button in the right pane")
+![Select the Edit fields button in the right pane](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-10.png "Select the Edit fields button in the right pane")
 
 13.  Select Add field button and look for Email and add the Email field to the form
 
-    ![Select Add field button and look for Email](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-11.png "Select Add field button and look for Email")
+![Select Add field button and look for Email](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-11.png "Select Add field button and look for Email")
 
 14.  The email field gets added
 
-    ![The email field gets added](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-12.png "The email field gets added")
+![The email field gets added](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-12.png "The email field gets added")
 
 15.  Set the default mode of the form to New
 
-    ![Set the default mode of the form to New](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-13.png "Set the default mode of the form to New")
+![Set the default mode of the form to New](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-13.png "Set the default mode of the form to New")
 
 16.  Navigate to Screen1 – accounts gallery screen and set the OnSelect property of the + icon to **Navigate(Screen2)**
 
-    ![Navigate to Screen1 accounts gallery screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-14.png "Navigate to Screen1 accounts gallery screen")
+![Navigate to Screen1 accounts gallery screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-14.png "Navigate to Screen1 accounts gallery screen")
 
 17.  Select Insert -\> New screen -\> Blank screen to add a new screen to the app
 
-    ![Select Insert New screen Blank screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-15.png "Select Insert New screen Blank screen")
+![Select Insert New screen Blank screen](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-15.png "Select Insert New screen Blank screen")
 
 18.  Select Insert -\> Icon and select the Check (badge) icon to add it to the screen
 
-    ![Select Insert Icon and select the Check badge icon](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-16.png "Select Insert Icon and select the Check badge icon")
+![Select Insert Icon and select the Check badge icon](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-16.png "Select Insert Icon and select the Check badge icon")
 
 19. Place the check icon and adjust the icon position and size as shown in the screenshot below
 
-    ![Place the check icon and adjust the icon position](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-17.png "Place the check icon and adjust the icon position")
+![Place the check icon and adjust the icon position](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-17.png "Place the check icon and adjust the icon position")
 
 20. Add a label with text **Account was created successfully!** and size and position as shown in the screenshot below
 
@@ -142,75 +142,75 @@ In this lesson we will build an app to search, filter and lookup customer Accoun
 
 22.  Add a Text Input box by selecting Insert -\> Input -\> Text Input and set the Mode to **Multiline** and default text to **Thank you for creating an account with us. We look forward to serving you!**
 
-    ![Thank you for creating an account with us](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-20.png "Thank you for creating an account with us")
+![Thank you for creating an account with us](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-20.png "Thank you for creating an account with us")
 
 23.  Set the following value on the OnVisible property of Screen3 – **Reset(TextInput1)**
 
-    ![Set the following value on the OnVisible property of Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-21.png "Set the following value on the OnVisible property of Screen3")
+![Set the following value on the OnVisible property of Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-21.png "Set the following value on the OnVisible property of Screen3")
 
 24.  Add two buttons to the screen with text Yes and No and place them below the Input text box as shown in the screenshot below
 
-    ![Add two buttons to the screen with text Yes and No](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-22.png "Add two buttons to the screen with text Yes and No")
+![Add two buttons to the screen with text Yes and No](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-22.png "Add two buttons to the screen with text Yes and No")
 
 25. Navigate to the New Account form screen and set the OnVisible property of the screen to **ResetForm(EditForm3)**
 
-    ![Navigate to the New Account form screen and set the OnVisible property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-23.png "Navigate to the New Account form screen and set the OnVisible property")
+![Navigate to the New Account form screen and set the OnVisible property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-23.png "Navigate to the New Account form screen and set the OnVisible property")
 
 26. Select the check icon on the top right and set the OnSelect property to **SubmitForm(EditForm3);Navigate(Screen3)**
 
-    ![Select the check icon on the top right](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-24.png "Select the check icon on the top right")
+![Select the check icon on the top right](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-24.png "Select the check icon on the top right")
 
 27. Select the x button on the top right and set the OnSelect property to **Back()**
 
-    ![Select the x button on the top right and set the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-25.png "Select the x button on the top right and set the OnSelect property")
+![Select the x button on the top right and set the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-25.png "Select the x button on the top right and set the OnSelect property")
 
 28. Navigate back to Screen3 by selecting Screen3 in the tree view
 
-    ![Navigate back to Screen3 by selecting Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-26.png "Navigate back to Screen3 by selecting Screen3")
+![Navigate back to Screen3 by selecting Screen3](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-26.png "Navigate back to Screen3 by selecting Screen3")
 
 29. Select the No button and select the OnSelect property and set it to Navigate(Screen1)
 
-    ![Select the No button and select the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-27.png "Select the No button and select the OnSelect property")
+![Select the No button and select the OnSelect property](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-27.png "Select the No button and select the OnSelect property")
 
 30. Select the Yes button and select Action on the top and select Power Automate
 
-    ![Select the Yes button and select Action on the top](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
+![Select the Yes button and select Action on the top](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
 
 31. Select Create a new flow to create a new Power Automate flow
 
-    ![Select Create a new flow to create](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-29.png "Select Create a new flow to create")
+![Select Create a new flow to create](media/create-and-trigger-a-flow-from-a-power-app/build-a-canvas-app-29.png "Select Create a new flow to create")
 
 ## Create the Power Automate Flow
 
 1.  Power Automate opens – select the **+Create** option from the left navigation menu and select the **Instant cloud flow** option
 
-    ![select the Instant cloud flow option](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
+![select the Instant cloud flow option](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
 
 2.  Enter a name for the flow – Flow triggered by Power app and select PowerApps as the trigger
 
-    ![Enter a name for the flow](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-2.png "Enter a name for the flow")
+![Enter a name for the flow](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-2.png "Enter a name for the flow")
 
 3.  PowerApps gets added as the trigger – select +New Step
 
-    ![PowerApps gets added as the trigger](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-3.png "PowerApps gets added as the trigger")
+![PowerApps gets added as the trigger](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-3.png "PowerApps gets added as the trigger")
 
 4.  Enter Send an email in the search connections textbox and select **Send an email (V2)** action
 
-    ![Enter Send an email in the search connections textbox](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
+![Enter Send an email in the search connections textbox](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
 
 5.  For the To field, select Add dynamic content and select Ask in PowerApps and then select Sendanemail(V2)\_To
 
-    ![For the To field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
+![For the To field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
 
 6.  For the Body field, select Add dynamic content and select Ask in PowerApps and then select Sendanemail(V2)\_Body
 
-    ![For the Body field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
+![For the Body field, select Add dynamic content](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
 
-    ![select Ask in PowerApps and then select Sendanemail V2](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
+![select Ask in PowerApps and then select Sendanemail V2](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
 
 7.  Enter Thank you for your business! In the Subject field
 
-    ![Enter Thank you for your business](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-8.png "Enter Thank you for your business")
+![Enter Thank you for your business](media/create-and-trigger-a-flow-from-a-power-app/create-the-power-automate-flow-8.png "Enter Thank you for your business")
 
 8.  Save the Power Automate Flow and go back to the Power App
 
@@ -218,7 +218,7 @@ In this lesson we will build an app to search, filter and lookup customer Accoun
 
 1.  Select the Yes button and select Action -\> Power Automate and then select the flow just created – **FlowtriggeredbyaPowerapp.Run(** is added to the OnSelect property – the parameters for this run function need to be defined in the next step
 
-    ![Flow triggered by a Powerapp](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
+![Flow triggered by a Powerapp](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
 
 2.  Then fill in the two parameters for the To email address and the Body of the email as follows
 
@@ -232,7 +232,7 @@ Navigate(Screen1);
 
   NOTE: The email address is picked up from the new account record created on the previous screen and the body for the email is picked from the text box text captured on this screen.
 
-  ![fill in the two parameters for the To email address](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-2.png)
+![fill in the two parameters for the To email address](media/create-and-trigger-a-flow-from-a-power-app/trigger-the-flow-from-within-the-power-app-2.png)
 
 # Test the app
 
@@ -245,4 +245,3 @@ Navigate(Screen1);
 An email like this should appear in your inbox
 
 ![Email like this should appear in your inbox](media/create-and-trigger-a-flow-from-a-power-app/test-the-app-3.png "mail like this should appear in your inbox")
-
