@@ -353,7 +353,7 @@ Copy and paste **btnXValueOverlay**, renaming it to **btnYValueOverlay**, changi
 
 This completes the bubble level-like visuals.
 
-## Test the app
+## Test the level app
 
 ![Test the app](media/how-to-build-an-app-using-mobile-sensors/test-the-app-1.png "Test the app")
 
