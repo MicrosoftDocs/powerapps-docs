@@ -28,7 +28,7 @@ search.app:
  - Regional Discovery Services are no longer avaialble.
  - To access Global Discovery functionality with the SDK going fowarded, see [here](/powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md)
 
-## Globla Discovery Service Endpoints:
+## Global Discovery Service Endpoints:
 [!INCLUDE [global-discovery-services](../../../includes/global-discovery-services.md)]
 
 ### See also
