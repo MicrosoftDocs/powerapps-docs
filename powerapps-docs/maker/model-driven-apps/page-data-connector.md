@@ -32,7 +32,7 @@ Publishing a model-driven app with custom pages will consolidate all of the conn
 | [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
 | [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, Sql Server Auth, Windows Auth, and Windows Auth non-shared | 
-| [Teams](https://docs.microsoft.com/connectors/teams/) | Verified |
+| [Teams](/connectors/teams/) | Verified |
 | [Custom connector](../canvas-apps/register-custom-api.md) | Partial | Verified with non-auth
 | [Excel Online for Business](../canvas-apps/connections/connection-excel.md) | Verified |  |
 | [Excel via file share](../canvas-apps/connections/connection-excel.md) | Partial | Verified Excel stored in only one of either OneDrive, Box, Dropbox, or Google Drive for a model-driven app |
