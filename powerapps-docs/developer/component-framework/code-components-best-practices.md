@@ -33,7 +33,7 @@ This section contains best practice and guidance relating to the Power Apps comp
 
 #### Avoid deploying development builds to Dataverse
 
-Code components can be built in [production or development mode](code-components-alm.md#building-%60.pcfproj%60-code-component-projects). Avoid deploying development builds to Dataverse since they adversely affect performance and can even be blocked from deployment due to their size. Even if you plan to deploy a release build later, it can be easy to forget to redeploy if you do not have an automated release pipeline. Instead, use the techniques described in [Debugging custom controls](debugging-custom-controls.md).
+Code components can be built in [production or development mode](code-components-alm.md#building-pcfproj-code-component-projects). Avoid deploying development builds to Dataverse since they adversely affect performance and can even be blocked from deployment due to their size. Even if you plan to deploy a release build later, it can be easy to forget to redeploy if you do not have an automated release pipeline. Instead, use the techniques described in [Debugging custom controls](debugging-custom-controls.md).
 
 #### Avoid using unsupported framework methods
 
@@ -248,11 +248,9 @@ When making network calls, never use a synchronous blocking request since this c
 
 Model-driven apps, canvas apps and portals all support multiple browsers. Be sure to use only techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time it still may be in use by some users.
 
-[Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
-
-https://docs.microsoft.com/en-us/power-platform/admin/supported-web-browsers-and-mobile-devices 
-
-https://docs.microsoft.com/en-us/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins 
+- [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
+- [Supported web browsers](https://docs.microsoft.com/power-platform/admin/supported-web-browsers-and-mobile-devices)
+- [Browsers used by office](https://docs.microsoft.com/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
 
 #### Code components should plan for supporting multiple clients & screen formats
 

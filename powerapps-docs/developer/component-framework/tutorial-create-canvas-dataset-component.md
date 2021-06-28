@@ -25,7 +25,7 @@ In addition to these requirements, you also ensure the code component follows th
 >[!div class="mx-imgBorder"]
 >![Canvas Grid Demo](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
 
-Before you start, ensure you have installed all of the [Prerequisites](implementing-controls-using-typescript.md#pre-requisites).
+Before you start, ensure you have installed all of the [Prerequisites](implementing-controls-using-typescript.md#prerequisites).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -58,7 +58,7 @@ Before you start, ensure you have installed all of the [Prerequisites](implement
    > If you receive the message `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
    >[!div class="mx-imgBorder"]
-   > ![Canvas dataset grid](media/tutorial-create-canvas-dataset-component/canvas-datagrid-1.gif "Canvas dataset grid")
+   > ![Canvas dataset grid](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
 The template includes an `index.ts` file in addition to the various configuration files. This is the entry point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
 
@@ -581,7 +581,7 @@ ReactDOM.render(
 When you save all files, the test harness will reload. If you use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts`, you can place a breakpoint inside the `onNavigate` method. Double-clicking on a row or (or highlighting it with the cursor keys and pressing `Enter`) will cause the breakpoint to be hit because the `DetailsList` invokes the `onNavigate` callback.
 
 > [!div class="mx-imgBorder"]
-> ![Canvas data grids 3](media/tutorial-create-canvas-dataset-component/canvas-datagrid-3.png "Canvas data grids 3")
+> ![Canvas data grids 3](media/canvas-datagrid-3.png "Canvas data grids 3")
 
 There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
@@ -1295,10 +1295,10 @@ REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'f
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
-   >[!div class="mx-imgBorder"] 
-   >![AutoResponder rule](media/tutorial-create-canvas-dataset-component/canvas-datagrid-8.png)
+   > [!div class="mx-imgBorder"] 
+   > ![AutoResponder rule](media/canvas-datagrid-8.png "AutoResponder rule")
 
-You will also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deployment-into-microsoft-dataverse-using-fiddler).
+You will also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler).
 
 You will need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can simply refresh the browser since Fiddler will add a cache control header to the file to prevent it from being cached.
 

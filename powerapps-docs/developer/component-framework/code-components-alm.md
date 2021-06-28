@@ -47,7 +47,7 @@ When your code component is ready for testing inside a model-driven app, canvas 
     > [!div class="mx-imgBorder"]
     > ![One-to-many relationship between cdsproj and pcfproj projects](media/code-component-projects.png "One-to-many relationship between cdsproj and pcfproj projects")
 
-## Building .pcfproj code component projects
+## Building pcfproj code component projects
 
 When building `pcfproj` projects, the generated JavaScript depends on the command used to build and the `PcfBuildMode` in the `pcfproj` file.
 

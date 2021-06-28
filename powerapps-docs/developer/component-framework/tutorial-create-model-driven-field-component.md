@@ -58,7 +58,7 @@ To create a new `pcfproj`:
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
    >[!div class="mx-imgBorder"]
-   ![Creating code component using pac pcf init](media/tutorial-create-model-driven-field-component/field-component-1.gif "Creating code component using pac pcf init")
+   ![Creating code component using pac pcf init](media/field-component-1.gif "Creating code component using pac pcf init")
 
 You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
 
