@@ -28,6 +28,19 @@ The following steps are required to build a linear slider code component:
 - [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
 - [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
 
+
+## Prerequisites
+
+For this tutorial you need install the following components:
+
+1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
+1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
+1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either the Visual Studio Code extension or the MSI installer)
+1. One of the following:
+   1. [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) 
+   2. [Visual Studio 2019 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). Select at minimum the workload `.NET build tools`.
+   3. [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Select at minimum the workload `.NET build tools`.
+
 ## Creating a new component project
 
 To create a new project:

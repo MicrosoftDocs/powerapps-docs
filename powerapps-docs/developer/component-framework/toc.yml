@@ -20,8 +20,14 @@
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
+    - name: Creating model-driven app field component
+      href: tutorial-create-model-driven-field-component.md
+    - name: Creating canvas app dataset component
+      href: tutorial-create-canvas-dataset-component.md
   - name: Code components ALM
     href: code-components-alm.md
+  - name: Best practices
+    href: code-components-best-practices.md
   - name: How-to guides
     items:
     - name: Create and build a code component 
@@ -56,9 +62,9 @@
       href: sample-controls/angular-flip-control.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid component for model-driven apps
+    - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
-    - name: Data Set component for canvas apps
+    - name: Property set table component
       href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
