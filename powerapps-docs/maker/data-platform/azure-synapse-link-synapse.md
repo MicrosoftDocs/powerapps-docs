@@ -144,6 +144,9 @@ You can use the Azure Synapse Link to connect your Dataverse data to Azure Synap
 
     ![Power BI select tables](media/pbi-select-tables.png "Power BI select tables")
 
+> [!NOTE]
+> If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the Serverless SQL endpoint. Repeat the above steps.
+
 8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
 
     ![Power BI simple table](media/pbi-simple-table.png "Power BI simple table")
