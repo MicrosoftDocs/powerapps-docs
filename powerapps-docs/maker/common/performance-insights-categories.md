@@ -193,7 +193,7 @@ Some older controls for model-driven apps like Flip Switch, Calendar Control (V1
 
 #### Motivation
 
-Using outdated controls can cause performance, reliability, and accessibility issues. Moreover, some of the limitations in these deprecated controls have been resolved with the new controls. For example, the Toggle control and Calendar Control (V2) use [Microsoft Fluent UI](https://developer.microsoft.com/fluentui).s
+Using outdated controls can cause performance, reliability, and accessibility issues. Moreover, some of the limitations in these deprecated controls have been resolved with the new controls. For example, the Toggle control and Calendar Control (V2) use [Microsoft Fluent UI](https://developer.microsoft.com/fluentui).
 
 #### How to improve
 
@@ -205,7 +205,7 @@ Notice that there are few significant design changes between the deprecated vers
 
 For more information about the deprecated controls, go to [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation).
 
-### Sandbox performance - Dominant plug-ins
+### Sandbox performance - dominant plug-ins
 
 Insight ID: Perf.Sandbox.Performance.Plug-ins.Dominant
 
@@ -213,18 +213,13 @@ This insight will help us identify the dominant plug-in, or in other words, the 
 
 #### Motivation
 
-Slow dominant plug-ins affect performance. These plug-ins should be investigated first.
+Slow dominant plug-ins affect performance. These plug-ins should be investigated.
 
 #### How to improve
+  
+Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/).
 
-Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are described here:
-
-- Associated SQL queries performed slow, hence the plug-in execution time increased.
-- Follow the single responsibility principle for your plug-in and don’t make transactions with significant transaction boundaries.
-- Plug-in might be making some external calls, which are slow.
-- Plug-in logic isn't optimized for multi-threading environments. Check your code.
-
-To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
 
 ## Configuration
 
