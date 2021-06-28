@@ -30,11 +30,14 @@ contributors:
 You can use the Azure Synapse Link to connect your Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
 1. Connect your Dataverse data to your Azure Synapse Analytics workspace with the Azure Synapse Link service.
-2. Query your data in Azure Synapse Analytics workspace.
-3. Generate a Power BI Report by connecting to the Serverless SQL Endpoint from your Azure Synapse Analytics workspace.
-4. Unlink your Azure Synapse Link.
+2. Query your data in Azure Synapse Analytics workspace with the built-in Serverless SQL Pool.
+3. Query multiple Dataverse databases with the built-in Serverless SQL Pool.
+4. Transform your data with an Apache Spark Notebook.
+5. Generate a Power BI Report by connecting to the Serverless SQL Endpoint from your Azure Synapse Analytics workspace.
+6. Unlink your Azure Synapse Link.
 
 > [!NOTE]
+>
 > - Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 > - This feature is still in preview and preview features are are not complete, but are made available on a “preview” basis so customers can get early access and provide feedback. Preview features may have limited or restricted functionality, are not meant for production use, and may be available only in selected geographic areas.
 
@@ -65,7 +68,10 @@ You can use the Azure Synapse Link to connect your Dataverse data to Azure Synap
 
     ![Add tables](media/add-tables.png "Add tables")
 
-## Query your Dataverse data
+## Query your Dataverse data with Serverless SQL Pool
+
+> [!NOTE]
+> Azure Synapse Link for Dataverse does not support the use of Dedicated SQL Pools at this time.
 
 1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
 
@@ -82,6 +88,39 @@ You can use the Azure Synapse Link to connect your Dataverse data to Azure Synap
 4. Select **Run**. Your query results are displayed on the **Results** tab. Alternatively, you can edit the script to your needs.
 
     ![Run query](media/run-query.png "Run query")
+
+## Query multiple Dataverse databases with Serverless SQL Pool
+
+> [!NOTE]
+>
+> - Azure Synapse Link for Dataverse does not support the use of Dedicated SQL Pools at this time.
+> - Querying multiple Dataverse databases requires that both Dataverse organizations are in the same region.
+
+1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
+
+2. Expand **Databases**, select one of the Dataverse containers. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+
+3. Right-click the a table and select **New SQL script** > **Select TOP 100 rows**.
+
+4. Edit the query to combine the two datasets. For instance, you can join the datasets based on a unique ID value.
+
+5. Select **Run**. Your query results are displayed on the **Results** tab.
+
+## Transform your data with an Apache Spark Notebook
+
+1. In your Synapse workspace, expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
+
+2. Right-click the desired table and select **New notebook** > **Load to DataFrame**.
+
+    ![Load to DataFrame](media/load-to-dataframe.png "Load to DataFrame")
+
+3. Attach the notebook to an Apache Spark pool by selecting a pool from the drop down menu. If you do not have an Apache Spark pool, select **Manage pools** to create one.
+
+    ![Attach Spark pool](media/attach-pool.png "Attach Spark pool")
+
+4. Add code cells to transform your data. Run individual cells by selecting the play button at the left of each cell or run all the cells in succession by selecting **Run all** from the top bar.
+
+    ![Spark notebook](media/spark-notebook.png "Spark notebook")
 
 ## Connect to your Azure Synapse Analytics workspace to Power BI
 
@@ -101,7 +140,7 @@ You can use the Azure Synapse Link to connect your Dataverse data to Azure Synap
 
 6. If prompted, sign in with your Microsoft Account.
 
-7. Select the container and the preferred table from the Navigator, and then select **Load**.
+7. Select the container and the preferred table from the Navigator, and then select **Load**. Optionally, expand *default* to access tables created with an Apache Spark notebook.
 
     ![Power BI select tables](media/pbi-select-tables.png "Power BI select tables")
 
