@@ -15,7 +15,7 @@ contributors:
 ---
 
 
-# Understand Perspectives (Preview) sample apps architecture
+# Understand Perspectives sample apps architecture (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 

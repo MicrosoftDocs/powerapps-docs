@@ -1,6 +1,6 @@
 ---
-title: Len function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Len function in Power Apps
+title: Len function in Power Apps
+description: Reference information including syntax and examples for the Len function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -43,12 +43,12 @@ For the examples in this section, the [data source](../working-with-data-sources
 ### Single-column table
 For the first example in this section, the data source is named **People** and contains this data:
 
-![](media/function-len/people-table.png)
+![People table](media/function-len/people-table.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![](media/function-len/people-table-len.png) |
-| **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![](media/function-len/people-table-len-inline.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![Len with ShowColumns](media/function-len/people-table-len.png) |
+| **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![Len with text values](media/function-len/people-table-len-inline.png) |
 
 
 
