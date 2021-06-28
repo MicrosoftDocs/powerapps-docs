@@ -2,7 +2,7 @@
 title: "Write Telemetry to your Application Insights resource using ILogger (preview)(Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK will write telemetry to your Application Insights resource."
 ms.custom: ""
-ms.date: 04/24/2021
+ms.date: 06/28/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,7 +18,12 @@ search.app:
 
 # Write Telemetry to your Application Insights resource using ILogger (Preview)
 
-When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the SDK will write telemetry to your Application Insights resource. To learn more about the Application Insights integration and how to enable it, see [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry).
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> To use this capability you must first enable the Application Insights integration preview feature. More information: [Preview: Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)
+
+When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the Organization Service SDK assemblies will write telemetry to your Application Insights resource.
 
 The Dataverse and model-driven app telemetry data you receive when using the Application Insights integration is captured by the Dataverse platform and exported to your Application Insights resource. This means there will be some latency between the time it was captured and when it becomes available to you in Application Insights.  Because this telemetry is gathered by Microsoft, you do not need to write any code to enable it.
 
@@ -47,7 +52,7 @@ If you are an ISV with a product that includes plug-ins, your customers who enab
 
 ## Use ILogger
 
-ILogger is a common interface for capturing log information. The implementation provided with the SDK provides common methods to support establishing a scope and different levels of logging.  There is currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
+ILogger is a common interface for capturing log information. The implementation provided with the Organization Service SDK assemblies provides common methods to support establishing a scope and different levels of logging.  There is currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
 
 The following is an example of a plug-in using both ILogger and ITracingService.Trace.
 
@@ -132,7 +137,9 @@ namespace ILoggerExample
                     }
 
                     // Obtain the organization service reference.
-                    IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+                    IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider
+                    .GetService(typeof(IOrganizationServiceFactory));
+
                     IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
                     //Create the task
                     service.Create(followup);
@@ -156,10 +163,20 @@ namespace ILoggerExample
                         client.Timeout = TimeSpan.FromMilliseconds(15000); //15 seconds
                         client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
 
-                        HttpResponseMessage response = client.GetAsync(webAddress).ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+                        HttpResponseMessage response = client
+                            .GetAsync(webAddress)
+                            .ConfigureAwait(false)
+                            .GetAwaiter()
+                            .GetResult(); //Make sure it is synchronous
+
                         response.EnsureSuccessStatusCode();
 
-                        string responseText = response.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+                        string responseText = response.Content
+                            .ReadAsStringAsync()
+                            .ConfigureAwait(false)
+                            .GetAwaiter()
+                            .GetResult(); //Make sure it is synchronous
+
                         string shortResponseText = responseText.Substring(0, 20);
 
                         logger.LogInformation(shortResponseText);
@@ -186,7 +203,8 @@ namespace ILoggerExample
     }
 }
 ```
-When this plug-in is registered on a synchronous `PostOperation` step for the `Create` of an account, you can use Application Insights Logs to view the output within a few minutes. You can use [Kusto Query Language (KQL)](/azure/data-explorer/kql-quick-reference) to query the results.
+
+When this plug-in is registered on a synchronous `PostOperation` step for the `Create` of an `account` entity, you can use Application Insights Logs to view the output within a few minutes. You can use [Kusto Query Language (KQL)](/azure/data-explorer/kql-quick-reference) to query the results.
 
 You can filter items for a single operation using the `operation_ParentId` that represents the request id of the response header.
 
