@@ -48,6 +48,8 @@ Use single-table quick find to only search for rows in a view.
 
 Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
+You can view a maximum of 80 rows per table with multiple-table quick find. You may need to refine your query, if the row you're looking for is outside maximum range.
+
 1.  To start a categorized search, on the command bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
