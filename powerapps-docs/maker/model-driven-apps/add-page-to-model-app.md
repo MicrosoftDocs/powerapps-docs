@@ -35,7 +35,7 @@ The following steps walk through opening the new modern app designer which is ne
 
 ### Create a new model-driven app using modern app designer
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true&cds-app-module-designer.isCustomPageEnabled=true)
+1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. Switch to Solutions and open or create a solution to contain the new model-driven app
 
@@ -53,7 +53,7 @@ The following steps walk through opening the new modern app designer which is ne
 
 ### Open an existing model-driven app using modern app designer
 
-1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true&cds-app-module-designer.isCustomPageEnabled=true)
+1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. Switch to Solutions and open the solution containing the existing model-driven app
 
@@ -82,7 +82,7 @@ Custom pages can be created from two places.  The first is while authoring a mod
 
 ### Create new custom page from solution explorer
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true&cds-app-module-designer.isCustomPageEnabled=true)
+1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. Switch to Solutions and open or create a solution to contain the new custom page
 
@@ -93,7 +93,7 @@ Custom pages can be created from two places.  The first is while authoring a mod
 
 ### Editing existing custom page
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true&cds-app-module-designer.isCustomPageEnabled=true)
+1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. Switch to Solutions and open or create a solution to contain the new custom page
 
@@ -121,7 +121,7 @@ Custom pages can be created from two places.  The first is while authoring a mod
 
 ## Add existing custom page into model-driven app sitemap
 
-1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true)
+1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. Select model-driven app and click **Edit** to open the new app designer
 
@@ -152,7 +152,7 @@ Custom pages can be created from two places.  The first is while authoring a mod
 
 By default custom pages is not available in the new app designer until custom page public preview.  These parameters are not needed for internal test.
 ```
-?cds-app-module-designer.isAppModuleDesignerEnabled=true&powerappsPortalApps.enableEditInShellAppDesigner=true&cds-app-module-designer.isCustomPageEnabled=true
+?cds-app-module-designer.isCustomPageEnabled=true
 ```
 
 ## Recently added items in new App Designer
