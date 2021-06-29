@@ -1,5 +1,5 @@
 ---
-title: How to sample app (Preview)
+title: Use How to sample app (Preview)
 description: Learn how to use the How to app and learn how to be a Power Apps maker.
 author: joel-lindstrom
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# How to sample app (Preview)
+# Use How to sample app (Preview)
 
 The How-to template app for Microsoft Teams provides a simple way to learn how to be a Power Apps maker by walking you step-by-step through designing data model, screens, and connecting screens together to build a complete Power Apps asset checkout solution.
 
@@ -1122,6 +1122,7 @@ colleagues](set-perms-and-share.md).
 
 ### See also
 
+- [Understand How to sample app architecture](how-to-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
