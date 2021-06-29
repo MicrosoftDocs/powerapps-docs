@@ -5,7 +5,7 @@ author: evanmlew
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/16/2021
+ms.date: 06/24/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -63,7 +63,7 @@ may need to select your developer environment in the top right of the screen. It
 If you're a Visual Studio Dev Essentials user, the Power Apps Developer Plan is included in your benefits. Visit [My
 benefits](https://my.visualstudio.com/benefits), and select the Power Apps tile to sign up for the Power Apps Developer Plan.
 
-![Power Apps Developer Plan in Visual Studio](media/developer-plan/power-apps-plan.png "Power Apps Developer Plan in Visual Studio")
+![Power Apps Developer Plan in Visual Studio](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
 
 ## Which features are included in the Power Apps Developer Plan?
 
@@ -117,6 +117,8 @@ business. For more information, see [Publish your app on
 AppSource](../developer/data-platform/publish-app-appsource.md).
 
 ## Frequently Asked Questions
+
+The following section lists frequently asked questions relevant to Power Apps Developer Plan. For more information about different types of environments including developer environment, see [Types of environments in Power Platform](/power-platform/admin/environments-overview#types-of-environments).
 
 ### What should I do if I reach the capacity limits of the environment?
 
