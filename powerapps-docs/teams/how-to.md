@@ -44,7 +44,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 ## Building an Asset management app
 
-In the How to app, we'll build an asset management app to enable users to checkout assets from the library and return it when they are done. The instructions are included in the app, and makers who open the app inside of the Power Apps app in Teams will see the instructions in the studio.
+In the How to app, we'll build an asset management app to enable users to check out assets from the library and return it when they're done. The instructions are included in the app, and makers who open the app in the Power Apps app in Teams will see the instructions in the studio.
 
 This article includes the steps from the app for makers who prefer to read them outside of the app. For example, you've two monitors, and you want to have the instructions open on another screen, or you might want to print them out.
 
@@ -60,17 +60,17 @@ In the asset checkout app, selecting an item will take you to a screen where you
 
 ![Example of checkout](media/how-to/checkout.png "Example of checkout")
 
-In the top left corner, you can select the icon for checkout items, which are available in your account.
+In the top-left corner, you can select the icon for checkout items, which are available in your account.
 
 ## Start your maker journey in How to
 
-How to is a self-contained lesson in how to build a Power app. All of the instructions are included in the app. To start learning, open How to app using Power Apps app in Teams:
+How to is a self-contained lesson in how to build a Power Apps. All of the instructions are included in the app. To start learning, open How to app using Power Apps app in Teams:
 
 1. In Teams, select **...** (ellipsis) from the left pane.
 
 1. Search for **Power Apps** and select the Power Apps app.
 
-1. Right-click on the Power Apps button, and select **Pop out app** to launch the Power apps app in a new window to make it easier to use.
+1. Right-click on the Power Apps button, and select **Pop out app** to launch the Power Apps app in a new window to make it easier to use.
 
 1. Select the Build tab.
 
@@ -88,13 +88,13 @@ How to is a self-contained lesson in how to build a Power app. All of the instru
 
 ## Understanding the overview screen
 
-The overview screen is your guide to your maker journey. From the overview screen, you can see where you're in the process. To start a step, hold your keyboard **Alt** key, and select the **Start** button. This will take you to the relevant screen, from which you will see the instructions to complete the step.
+The overview screen is your guide to your maker journey. From the overview screen, you can see where you're in the process. To start a step, hold your keyboard **Alt** key, and select the **Start** button. This will take you to the relevant screen, from which you'll see the instructions to complete the step.
 
 When done, return to the overview screen and select the button on the current step's tile to complete the step and move to the next lesson.
 
 ## Resetting your progress in How to
 
-So if you have started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
+So if you've started to go through the lessons in How to, and you decide you would like to start over, you can restart the process by following these steps:
 
 1. Right-click on Power Apps app in Teams, and select **Pop out**.
 
@@ -118,7 +118,7 @@ So if you have started to go through the lessons in How to, and you decide you w
 
 ## Learn to work with Data Model
 
-In this step, we'll add three tables. Creating the table names as item types, items and item checkouts. Tables are created to store the data.
+In this step, we'll add three tables. Creating the table names as item types, items, and item checkouts. Tables are created to store the data.
 
 For detailed instructions on how to create tables, see [Edit table data in Excel and publish it back to Dataverse for Teams](edit-data-in-excel.md)
 
@@ -153,7 +153,7 @@ Create the following tables and columns:
 
 ## Sample Data
 
-In this step, we need to add data to the tables which we created earlier. This data will be the items and item types for the asset checkout process. For example, if you're using this app to manage the items such as mice and keyboards, you can define item types like computers, phones, or desks which people can check out.
+In this step, we need to add data to the tables that we created earlier. This data will be the items and item types for the asset checkout process. For example, if you're using this app to manage the items such as mice and keyboards, you can define item types like computers, phones, or desks which people can check out.
 
 We'll use the table editable grid to populate the sample data in the app. To user the table editable grid, follow these steps:
 
@@ -200,7 +200,7 @@ Follow these steps to start creating your app.
     | Minimum Width     | 300                                                               |
     | Padding Top       | 20                                                                |
     | Padding Bottom    | 20                                                                |
-    | Fill              | If(gblThemeDark,ColorValue("\#141414"), gblThemeHiCo,Black,White) |
+    | Fill              | If(gblThemeDark.ColorValue("\#141414"), gblThemeHiCo,Black,White) |
 
 1. Add New Horizontal container to conItemTypes - **conItemTypesHeader**. It will contain a header label and an image.
 
@@ -233,7 +233,7 @@ Follow these steps to start creating your app.
     | Width        | 32                                                      |
     | Image        | If(gblThemeDark\|\|gblThemeHiCo,Checkout_Dark,Checkout) |
 
-1. Add a blank vertical gallery to conItemTypes – **galItemTypes**. Its a gallery of item types. Selecting an item type will display its related items.
+1. Add a blank vertical gallery to conItemTypes – **galItemTypes**. It's a gallery of item types. Selecting an item type will display its related items.
 
     | **Property**     | **Value**                                                                                                                    |
     |------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -243,8 +243,8 @@ Follow these steps to start creating your app.
     | Fill Portions    | 19                                                                                                                           |
     | Template Size    | 70                                                                                                                           |
     | Template Padding | 0                                                                                                                            |
-    | OnSelect         | UpdateContext( { locSelectedItemType: ThisItem, locShowItems: true } )                                                       |
-    | Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
+    | OnSelect         | UpdateContext({ locSelectedItemType: ThisItem, locShowItems: true })                                                       |
+    | Template Fill    | If(!('Items Screen'.Size = ScreenSize.Small), If(ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent), Transparent) |
 
 1. Add a label to galItemTypes – **lblName**. It's a label to display the item type name.
 
@@ -366,7 +366,7 @@ Follow these steps to start creating your app.
     | **Value**                  | **Property**                     |
     | -------------------------- | -------------------------------- |
     | btnItemsForeground         | Name                             |
-    | RGBA( 128, 128, 128, .06 ) | HoverFill                        |
+    | RGBA(128, 128, 128, .06) | HoverFill                        |
     | Transparent                | All other Fill except Hover Fill |
     | btnItemsBackground.X       | X                                |
     | btnItemsBackground.Y       | Y                                |
@@ -396,7 +396,7 @@ From this screen, the user provides details of the reason for checkout, duration
 | conItemTypes_Checkout | Minimum Width     | 300                                                              |
 | conItemTypes_Checkout | Padding Top       | 20                                                               |
 | conItemTypes_Checkout | Padding Bottom    | 20                                                               |
-| conItemTypes_Checkout | Fill              | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+| conItemTypes_Checkout | Fill              | If(gblThemeDark.ColorValue("\#141414"),gblThemeHiCo,Black,White) |
 
 1. Add a Horizontal container to conItemTypes_Checkout control - conItemTypesHeader_Checkout.
 
@@ -440,7 +440,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | galItemTypes_Checkout                                 | Fill Portions    | 19                                                             |
     | galItemTypes_Checkout                                 | Template Size    | 70                                                             |
     | galItemTypes_Checkout                                 | Template Padding | 0                                                              |
-    |                                                       | Template Fill    | If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ) |
+    |                                                       | Template Fill    | If(ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent) |
 
 1. Add a label to galItemTypes_Checkout control - lblIName_Checkout.
 
@@ -638,7 +638,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | btnCancelCheckout                  | Width        | 110                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
     | btnCancelCheckout                  | Button Type  | Primary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
     | btnCancelCheckout                  | Font weight  | Semibold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | btnCancelCheckout                  | OnSelect     | Patch( 'Item Checkouts', Defaults('Item Checkouts'), { Item: locSelectedItem, Name: CountRows('Item Checkouts')+1000, 'Checkout Status': 'Checkout Statuses'.Active, 'Checkout Duration': drpCheckoutDurationHeader.Selected.Value, 'Checkout Option': rdoCheckoutOptions.Selected.Value, 'Checkout Reason': drpCheckoutReasonHeader.Selected.Value, 'Delivery Address': If( rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery, txtDeliveryAddress ) } ); UpdateContext({locShowCheckoutConfirmation: true}) |
+    | btnCancelCheckout                  | OnSelect     | Patch( 'Item Checkouts', Defaults('Item Checkouts'), { Item: locSelectedItem, Name: CountRows('Item Checkouts')+1000, 'Checkout Status': 'Checkout Statuses'.Active, 'Checkout Duration': drpCheckoutDurationHeader.Selected.Value, 'Checkout Option': rdoCheckoutOptions.Selected.Value, 'Checkout Reason': drpCheckoutReasonHeader.Selected.Value, 'Delivery Address': If( rdoCheckoutOptions.Selected.Value = 'Checkout Options'.Delivery, txtDeliveryAddress ) }); UpdateContext({locShowCheckoutConfirmation: true}) |
 
 1. Add a Vertical Container to conParent_MyCheckouts control – conCheckoutConfirmation.
 
@@ -697,7 +697,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | Add a vertical blank gallery conCheckoutConfirmation | Name          | galCheckoutAdminContact                                          |
     | galCheckoutAdminContact                              | TemplateSize  | 100                                                              |
     | galCheckoutAdminContact                              | Height        | 100                                                              |
-    | galCheckoutAdminContact                              | Fill          | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+    | galCheckoutAdminContact                              | Fill          | If(gblThemeDark.ColorValue("\#141414"),gblThemeHiCo,Black,White) |
     | galCheckoutAdminContact                              | Width         | 400                                                              |
     | galCheckoutAdminContact                              | ShowScrollbar | false                                                            |
     | galCheckoutAdminContact                              | Items         | [1]                                                              |
@@ -711,7 +711,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | imgCheckoutAdmin_Photo                  | Y            | (Parent.TemplateHeight - Self.Height) / 2                                                                                              |
     | imgCheckoutAdmin_Photo                  | Width        | 64                                                                                                                                     |
     | imgCheckoutAdmin_Photo                  | Height       | 64                                                                                                                                     |
-    | imgCheckoutAdmin_Photo                  | Image        | If( !IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'), Office365Users.UserPhotoV2(locSelectedItem.'Item Type'.'Checkout Admin') ) |
+    | imgCheckoutAdmin_Photo                  | Image        | If(!IsBlank(locSelectedItem.'Item Type'.'Checkout Admin'), Office365Users.UserPhotoV2(locSelectedItem.'Item Type'.'Checkout Admin') ) |
 
 1. Add a label to galCheckoutAdminContact control - lblCheckoutAdmin_DisplayName.
 
@@ -774,7 +774,7 @@ From this screen, the user provides details of the reason for checkout, duration
 
 ## Building My checkout screen
 
-In this step, we're going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they have checked out and select to return the item.
+In this step, we're going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they've checked out and select to return the item.
 
 | **Control**              | **Property**      | **Value**                                                        |
 |--------------------------|-------------------|------------------------------------------------------------------|
@@ -787,7 +787,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
 | conItemTypes_MyCheckouts | Minimum Width     | 300                                                              |
 | conItemTypes_MyCheckouts | Padding Top       | 20                                                               |
 | conItemTypes_MyCheckouts | Padding Bottom    | 20                                                               |
-| conItemTypes_MyCheckouts | Fill              | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+| conItemTypes_MyCheckouts | Fill              | If(gblThemeDark.ColorValue("\#141414"),gblThemeHiCo,Black,White) |
 
 1. Add New Horizontal container to conItemTypes_MyCheckouts control - conItemTypesHeader_MyCheckouts.
 
@@ -820,7 +820,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | galItemTypes_MyCheckouts                                 | Fill Portions    | 19                                                                                                                           |
     | galItemTypes_MyCheckouts                                 | Template Size    | 70                                                                                                                           |
     | galItemTypes_MyCheckouts                                 | Template Padding | 0                                                                                                                            |
-    | galItemTypes_MyCheckouts                                 | Template Fill    | If( !('Items Screen'.Size = ScreenSize.Small), If( ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent ), Transparent ) |
+    | galItemTypes_MyCheckouts                                 | Template Fill    | If(!('Items Screen'.Size = ScreenSize.Small), If(ThisItem.IsSelected, ColorValue("\#E2E2F6"), Transparent), Transparent) |
 
 1. Add a label to galItemTypes_MyCheckouts control - lblIName_MyCheckouts.
 
@@ -930,7 +930,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | **Control**                    | **Property**                     | **Value**                       |
     |--------------------------------|----------------------------------|---------------------------------|
     | Add a button to galMyCheckouts | Name                             | btnCheckoutsForeground          |
-    | btnCheckoutsForeground         | HoverFill                        | RGBA( 128, 128, 128, .06 )      |
+    | btnCheckoutsForeground         | HoverFill                        | RGBA(128, 128, 128, .06)      |
     | btnCheckoutsForeground         | All other Fill except Hover Fill | Transparent                     |
     | btnCheckoutsForeground         | X                                | btnMyCheckouts_Background.X     |
     | btnCheckoutsForeground         | Y                                | btnMyCheckouts_Background.Y     |
@@ -947,7 +947,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | btnMyCheckouts_Return          | Width        | 96                                                                                                                                                                          |
     | btnMyCheckouts_Return          | OnSelect     | Patch('Item Checkouts',ThisItem,{'Checkout Status':'Checkout Statuses'.Returned});UpdateContext({locSelectedItemForReturn:ThisItem.Item,locShowReturnConfirmation: true }); |
 
-1. --> needs review <--
+1. Now set the Fill Portions property for the controls comMyCheckouts and conItemTypes_MyCheckouts as shown below - item types covers 25% of the screen and the remaining 75% is covered by the list of my checkouts.
 
     | **Control**              | **Property**  | **Value** |
     |--------------------------|---------------|-----------|
@@ -1011,7 +1011,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | Add a vertical blank gallery conReturnConfirmation | Name          | galReturnAdminContact                                            |
     | galReturnAdminContact                              | TemplateSize  | 100                                                              |
     | galReturnAdminContact                              | Height        | 100                                                              |
-    | galReturnAdminContact                              | Fill          | If(gblThemeDark,ColorValue("\#141414"),gblThemeHiCo,Black,White) |
+    | galReturnAdminContact                              | Fill          | If(gblThemeDark.ColorValue("\#141414"),gblThemeHiCo,Black,White) |
     | galReturnAdminContact                              | Width         | 400                                                              |
     | galReturnAdminContact                              | ShowScrollbar | false                                                            |
     | galReturnAdminContact                              | Items         | [1]                                                              |
@@ -1086,9 +1086,9 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | btnReturnBackToHome                   | Text         | "Return to home"    |
     | btnReturnBackToHome                   | Button Type  | Standard            |
 
-## Building connect screen
+## Connecting screens
 
-In this step we are going to organize the screens you designed for your app and connect the three screens that we have created in the previous steps.
+In this step, we're going to organize the screens you designed for your app and connect the three screens that we've created in the previous steps.
 
 Update the following expressions to connect the screens in this app.
 
@@ -1100,12 +1100,12 @@ Update the following expressions to connect the screens in this app.
 | btnCheckoutBackToHome    | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                           |
 | galItems                 | OnSelect     | Navigate('Checkout Screen',ScreenTransition.Fade,{locSelectedItem:ThisItem})                             |
 | imgCheckout              | OnSelect     | Navigate('My Checkouts Screen',ScreenTransition.Fade)                                                    |
-| galItemTypes_MyCheckouts | OnSelect     | Navigate( 'Items Screen', ScreenTransition.Fade, { locSelectedItemType: ThisItem, locShowItems: true } ) |
+| galItemTypes_MyCheckouts | OnSelect     | Navigate( 'Items Screen', ScreenTransition.Fade, { locSelectedItemType: ThisItem, locShowItems: true }) |
 | btnReturnBackToHome      | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                           |
 
 ## Publish the app to Teams
 
-In this step we are going to publish the app to Teams.
+In this step, we're going to publish the app to Teams.
 
 1. Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app.
 
@@ -1115,9 +1115,9 @@ In this step we are going to publish the app to Teams.
 
 ## Share your app with colleagues
 
-In this step we are going to share the app with colleagues and its underlying data with other colleagues within your company who are not members of the Team in which the app is installed.
+In this step, we're going to share the app with colleagues and its underlying data with other colleagues within your company who aren't members of the Team in which the app is installed.
 
-For more details on how to share an app, see [Set permission and share apps with
+For more information about how to share an app, see [Set permission and share apps with
 colleagues](set-perms-and-share.md).
 
 ### See also
