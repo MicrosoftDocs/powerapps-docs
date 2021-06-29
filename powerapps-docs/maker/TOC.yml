@@ -1318,6 +1318,12 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
+  - name: Use performance insights
+    items:
+    - name: Performance insights overview
+      href: ./common/performance-insights-overview.md
+    - name: Understand performance insights
+      href: ./common/performance-insights-categories.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
@@ -2192,8 +2198,24 @@
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
-            - name: Understand Employee ideas sample app architecture
-              href: ../teams/employee-ideas-architecture.md
+            - name: Customize Employee ideas app
+              items:
+                - name: Understand Employee ideas sample app architecture
+                  href: ../teams/employee-ideas-architecture.md
+                - name: Customize Employee ideas app
+                  href: ../teams/customize-employee-ideas.md
+                - name: Export Employee ideas for reporting
+                  href: ../teams/export-employee-ideas-for-reporting.md
+                - name: Replace notification with adaptive card to increase collaboration
+                  href: ../teams/replace-notification-with-adaptive-card.md
+        - name: How to (Preview)
+          items:
+             - name: Use How to sample app
+               href: ../teams/how-to.md
+             - name: Customize How to app
+               items:
+                - name: Understand How to sample app architecture
+                  href: ../teams/how-to-architecture.md
         - name: Inspection
           items:
             - name: Use Inspection sample app
@@ -2218,6 +2240,12 @@
                    href: ../teams/milestones-architecture.md
                  - name: Customize Milestones sample app
                    href: ../teams/customize-milestones.md
+                 - name: Add a new column to Milestones sample app to track work items
+                   href: ../teams/extend-milestones-add-column.md
+                 - name: Send a weekly report on project status from the Milestones sample app
+                   href: ../teams/extend-milestones-weekly-report.md
+                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
+                   href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives
