@@ -36,14 +36,16 @@ When developing code components, you would be following the steps mentioned belo
 
 When your code component is ready for testing inside a model-driven app, canvas app or portal, there are two ways to deploy a code component to Dataverse:
 
-1. `pac pcf push`: This deploys the code component to a temporary **PowerAppsTools** solution. This deploys single code component at a time.
+1. `pac pcf push`: This deploys the code component to a temporary **PowerAppsTools** solution. This deploys a single code component at a time.
 
-2. Using `pac solution init` and `msbuild` to build a solution project that has reference to one or more code components. A solution project can contain references to multiple code components, whereas code component projects may only contain a single code component.
+2. Using `pac solution init` and `msbuild` to build a `cdsproj` solution project that has references to one or more code components. Each code component is added to the `cdsproj` using `pac solution add-reference`. A solution project can contain references to multiple code components, whereas code component projects may only contain a single code component.
 
    The following diagram shows the one-to-many relationship between `cdsproj` and `pcfproj` projects:
 
     > [!div class="mx-imgBorder"]
     > ![One-to-many relationship between cdsproj and pcfproj projects](media/code-component-projects.png "One-to-many relationship between cdsproj and pcfproj projects")
+
+More information: [Package a code component](import-custom-controls.md#package-a-code-component)
 
 ## Building pcfproj code component projects
 
@@ -74,9 +76,9 @@ More information: [Package a code component](import-custom-controls.md#package-a
 
 ## Building .cdsproj solution projects
 
-When building a solution project (`.cdsproj`), you have an option to generate the output as unmanaged or managed solution.
+When building a solution project (`.cdsproj`), you have an option to generate the output as unmanaged or managed solution. Managed solutions are used to deploy to any environment that isn't a development environment for that solution. This includes test, UAT, SIT, and production environments. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions).
 
-The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac solution init,` but initially commented out. Uncomment the section and set to **Managed**, **Unmanaged** or **Both**
+The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac solution init,` but initially commented out. Uncomment the section and set to **Managed**, **Unmanaged** or **Both**. 
 
 ```xml
  <!-- Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both) -->
@@ -211,8 +213,8 @@ More information: [Package and distribute extensions using solutions](/powerapps
 
 In addition to manually building and deploying your code component solutions, you can also build and package your code components using automated build pipelines.
 
-- If you are using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools) for Azure DevOps.
-- If you are using **GitHub**, you can use the [Power Platform GitHub Actions](/power-platform/alm/devops-github-actions).
+- If you are using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tools](https://aka.ms/buildtoolsdoc) for Azure DevOps.
+- If you are using **GitHub**, you can use the [Power Platform GitHub Actions](https://aka.ms/PowerActionsDocs).
 
 Some of the advantages using automated build pipelines are:
 
@@ -317,4 +319,3 @@ Since the app contains a copy of the code component, is therefore possible to ha
 [Debug code components](debugging-custom-controls.md)<br/>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
