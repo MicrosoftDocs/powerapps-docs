@@ -183,6 +183,7 @@ This section explains the collections, variables, and execution details used on 
 ### Checkout screen collections
 
 The following collections are used on the checkout screen:
+
 | Collections     | Description                                            |
 |-----------------|--------------------------------------------------------|
 | colLocalization | collection of localized text based on user’s language. |
@@ -190,6 +191,7 @@ The following collections are used on the checkout screen:
 ### Checkout screen collections
 
 The following variables are used on the checkout screen:
+
 | Variable name               | Description                                                            |
 |-----------------------------|------------------------------------------------------------------------|
 | gblAppStyles                | global variable to store styling properties for all controls.           |
@@ -210,6 +212,7 @@ This section explains the collections, variables, and execution details used on 
 ### My checkout collections
 
 The following collections are used on the My checkout screen:
+
 | Variable name    | Description                                            |
 |------------------|--------------------------------------------------------|
 | colLocalization  | collection of localized text based on user’s language. |
