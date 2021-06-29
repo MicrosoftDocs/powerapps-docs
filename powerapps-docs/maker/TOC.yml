@@ -1194,7 +1194,9 @@
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Add connectors to a custom pages
-          href: ./model-driven-apps/page-data-connector.md  
+          href: ./model-driven-apps/page-data-connector.md
+        - name: Use monitor to troubleshoot custom pages
+          href: ./model-driven-apps/monitor-page-checker.md
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
