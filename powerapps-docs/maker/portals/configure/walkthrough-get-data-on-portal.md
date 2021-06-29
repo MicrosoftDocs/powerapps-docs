@@ -18,9 +18,9 @@ contributors:
 Power Apps portals has the ability to render&mdash;and allow the manipulation of&mdash; data on an internally facing or externally facing portal website. In this section, we will profile the tables that provide the foundation of this functionality and discuss the steps necessary to achieve it.
 
 ## Basic forms
-An basic form record allows an administrator to render a Power Apps form on a portal to edit, display, or capture a customizable set of data from its users. This is a relatively easy and straightforward process, and it eliminates the need for any code customizations that would have otherwise been required to achieve such a result before deploying a portal.
+A basic form record allows an administrator to render a Power Apps form on a portal to edit, display, or capture a customizable set of data from its users. This is a relatively easy and straightforward process, and it eliminates the need for any code customizations that would have otherwise been required to achieve such a result before deploying a portal.
 
-This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead table within the **Customize the System** interface, then create an basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using an basic form for profile management or a single page survey.
+This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead table within the **Customize the System** interface, then create a basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using a basic form for profile management or a single page survey.
 
 ![Contact Us Advanced Form on the left, and its rendering in the portal on the right side.](media/contact-us-web-form.png "A Contact Us advanced form next to its rendering in the portal")
 
@@ -65,19 +65,19 @@ Basic form metadata records contain additional behavior modification logic to au
 
 These records allow for additional configuration and manipulation of specific elements on the form, including fields, subgrids, or entire sections or tabs. Each element of the form that requires some type of modification requires a separate metadata record, which in turn is associated with the basic form record.
 
-To add metadata records to an basic form, you can go to the **Basic Form Metadata Associated View** from the navigation menu, or you can create these records directly from the basic form itself by using the Basic Form Metadata subgrid toward the bottom of the record’s form.
+To add metadata records to a basic form, you can go to the **Basic Form Metadata Associated View** from the navigation menu, or you can create these records directly from the basic form itself by using the Basic Form Metadata subgrid toward the bottom of the record’s form.
 
 Basic form metadata records can be used for a variety of scenarios, including controlling the style of a field, prepopulating a field with a specific value, setting values on the form upon save, validating user-entered values, and more.
 
 ## Lists
 
-While an Basic form record allows a portal administrator to expose a Power Apps form to portal users, lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
+While a Basic form record allows a portal administrator to expose a Power Apps form to portal users, lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
 
 Lists support sorting and filtering and will be paginated if the number of records is larger than the **Page Size** value specified on the List record. If a **Web Page for Details View** has also been specified, each record will contain a link to the page and the ID of the record will be appended to the query string along with the ID Query String Parameter Name.
 
 Lists also support multiple views and actions. If more than one view has been specified, a drop-down menu will be rendered to the end user that allows them to toggle between various views. Likewise, if actions such as **Edit** or **Delete** have been added as action buttons, users with the correct permissions will see these options rendered in the view.
 
-Building on the previous example of the administrator of Contoso, Inc. creating an basic form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
+Building on the previous example of the administrator of Contoso, Inc. creating a basic form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
 
 1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** table and dd the columns that should be exposed on the portal to this view.
 
@@ -105,7 +105,7 @@ Advanced Forms allow users to define basic forms and custom logic to render data
 
 Advanced forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Advanced forms also have additional properties that can be specified to override some of the default behaviors and overcome some table metadata and form designer limitations.
 
-The best way to fully grasp how a advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
+The best way to fully grasp how an advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
 
 1. Create a custom table using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the table **Survey**.  
 

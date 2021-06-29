@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/24/2021
+ms.date: 06/25/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -27,7 +27,7 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Boards (Preview) app](media/app-icons/boards-app-icon.png "Boards (Preview) app") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
+      ![Boards app (Preview)](media/app-icons/boards-app-icon.png "Boards app (Preview)") <br> [Boards (Preview)](boards.md) <br> A simple way to connect and share with people in your organization with similar interests.
    :::column-end:::
    :::column span="":::
       ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) <br> Manager and user apps for company communications.
@@ -38,23 +38,24 @@ Several sample apps are available from the Teams store that you can add to your 
 :::row-end:::
 :::row:::
    :::column span="":::
+      ![How to](media/app-icons/how-to-app-icon.png "How to app (Preview)") <br> [How to](how-to.md) <br> Learn how to be a Power Apps maker.
+   :::column-end:::
+   :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
    :::column-end:::
    :::column span="":::
       ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
    :::column-end:::
-   :::column span="":::
-      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
-   :::column-end:::
 :::row-end:::
 :::row:::
+   :::column span="":::
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) <br> App to keep track of projects, and initiatives.
+   :::column-end:::
     :::column span="":::
-      ![Perspectives (Preview) app](media/app-icons/perspectives-app-icon.png "Perspectives (Preview) app") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
+      ![Perspectives app (Preview)](media/app-icons/perspectives-app-icon.png "Perspectives app (Preview)") <br> [Perspectives (Preview)](perspectives.md) <br> A simple way to add topics and extend the topics with Q&A for discussions.
    :::column-end:::
    :::column span="":::
       ![Profile+ app](media/app-icons/profile-app-icon.png "Profile+ app") <br> [Profile+ (Preview)](profile-app.md) <br> Quickly find out about people in your organization.
-   :::column-end:::
-   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -160,7 +161,7 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
+- [Milestones sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Profile+ (Preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)

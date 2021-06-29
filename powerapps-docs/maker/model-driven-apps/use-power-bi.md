@@ -7,7 +7,7 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: overview
 author: Mattp123
 ms.author: matp
 manager: kvivek

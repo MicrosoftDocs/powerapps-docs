@@ -5,14 +5,16 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/07/2021
+ms.date: 05/27/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
-# Milestones sample app (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Milestones sample app 
 
 In this tutorial, you'll learn about configuring, and using the **Milestones** sample app.
 
@@ -30,10 +32,6 @@ Benefits of using the Milestones app:
 > [!NOTE]
 > - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
 > - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -74,29 +72,23 @@ activities, and project milestones.
 
 1. **Select theme** - allows managers to select a theme, or add a custom header image/color.
 
-1. **App information** - shows additional information about the app.
+1. **Customize** - shows additional information about the app.
 
-1. **App settings** - provides access for managers to change app settings, such as rename projects, or update project category, priority, and status.
+1. **App settings** - provides access for managers to change app settings, such as update project category, priority, and status.
 
 1. **New project** - create a new project.
 
 1. **Sort projects** - sorts the list of projects in ascending, or descending order based on project start date.
 
-1. **View team status of work items by owner** - color coded counts display the number of work items by team member.
-
-1. **Team/Milestone toggle** - toggle between user summary view, and milestone status view.
-
-1. **New activity** - add an update to the activity log.
-
-1. **Expand/collapse the activity log** - expands, or collapses the activity log section.
+1. **View team status of work items by owner** - color coded counts display the number of work items by milestone. Select the drop down to toggle to user summary view, showing work items by user.
 
 1. **Projects list** - shows all projects, or the results of the search term entered in the find projects search box. Overdue work item count is displayed if the project has any overdue work items.
 
-1. **Customize** - open the app inside Power Apps Studio for customization.
-
 1. **Project work items** - create, read, update, and delete work items associated with the project.
 
-1. **Activity log** - view activity log, including manually added items, and system-generated notifications.
+1. **Project properties** - update project properties, such as modifying or deleting projects or updating milestones and team members associated with the project.
+
+   
 
 ## Create a new project
 
@@ -204,21 +196,16 @@ To delete an existing project:
     ![Delete project](media/milestones/delete-project.png "Delete project")
 
 1. Select **I understand** checkbox.
-    
+   
 1. Select **Delete** to permanently delete the project.
 
 ### See also
 
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
+- [Customize Milestones sample app](customize-milestones.md)
+- [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Boards (Preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

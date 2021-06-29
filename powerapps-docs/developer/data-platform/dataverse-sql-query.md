@@ -68,12 +68,10 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
-
-Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
+Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
 The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
-`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
+`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
@@ -85,9 +83,17 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 > group by act.activityid, act.subject
 > ```
 
+### Lookup column type behaviors
+Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a result set.
+
+### Choice column type behaviors
+Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
+>[!TIP]
+> After making changes to labels for a choice column, the table needs to have customizations published. 
+
 ## Limitations
 
-There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
+There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 

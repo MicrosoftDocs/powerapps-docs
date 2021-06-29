@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 11/16/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28

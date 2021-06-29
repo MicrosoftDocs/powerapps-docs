@@ -2,7 +2,7 @@
 title: "Execute multiple requests using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/27/2019
+ms.date: 06/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,15 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Execute multiple requests using the Organization service
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-<!-- 
-
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load 
-
--->
 The primary purpose of executing multiple requests it so improve performance in high-latency environments by reducing the total volume of data that is transmitted over the network.
 
 You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message to support higher throughput bulk message passing scenarios in Microsoft Dataverse. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> accepts an input collection of message <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Requests>, executes each of the message requests in the order they appear in the input collection, and optionally returns a collection of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> containing each message’s response or the error that occurred. Each message request in the input collection is processed in a separate database transaction. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> is executed by using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.  
@@ -84,7 +80,7 @@ foreach (var responseItem in responseWithResults.Responses)
 More information:  [Sample: Execute multiple requests](samples/execute-multiple-requests.md)
   
 <a name="options"></a>
- 
+
 ## Specify run-time execution options  
 
 The <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest.Settings> parameter of <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> applies to all of the requests in the request collection controlling execution behavior and results returned. Let’s take a look at these options in more detail.  
@@ -154,6 +150,5 @@ catch (FaultException<OrganizationServiceFault> fault)
 [Use messages with the Organization service](use-messages.md)<br />
 [Use ExecuteAsync](use-executeAsync.md)<br />
 [Use ExecuteTransaction](use-executetransaction.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

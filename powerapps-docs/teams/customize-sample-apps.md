@@ -62,7 +62,7 @@ When you install sample apps, the tables are pre-populated with sample data. The
 | [Employee ideas](employee-ideas.md) | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
 | [Inspection](inspection.md) |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
 | [Issue reporting](issue-reporting.md) | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
-| [Milestones (Preview)](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
+| [Milestones](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
 
 To remove data from the sample apps:
 
@@ -374,7 +374,7 @@ More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones (Preview) sample app](milestones.md)
+- [Milestones sample app](milestones.md)
 - [Perspectives (Preview) sample app](perspectives.md)
 - [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

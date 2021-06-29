@@ -11,7 +11,7 @@ ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 search.audienceType: 
   - maker

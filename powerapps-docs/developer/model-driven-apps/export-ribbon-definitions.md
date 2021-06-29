@@ -213,7 +213,7 @@ Any custom tables also support ribbon customizations. To get a list of custom ta
 
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 ### See also  
  [Customize the ribbon](customize-commands-ribbon.md)   

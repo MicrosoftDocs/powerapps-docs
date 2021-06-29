@@ -1,14 +1,14 @@
 ---
 title: "Use custom process actions | MicrosoftDocs"
 description: "With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an custom process action creates a custom message."
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 04/28/2021
 ms.reviewer: ""
 ms.service: powerapps
 author: MSFTMAN
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 ms.assetid: 1475985f-d3c4-429d-beac-cb455965e792
 caps.latest.revision: 20
 ms.author: "DEONHE"
@@ -20,7 +20,7 @@ search.audienceType:
   - enduser
 ---
 
-# Use Custom process actions
+# Use custom process actions
 
 Custom process actions, also known as *Custom actions*, or just *actions*. open a range of possibilities for composing business logic. With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, a custom process action creates a custom message. Developers refer to these actions as *messages*. If the goal of a process is to create a row, then update it, and then assign it, there are three separate steps. Each step is defined by the capabilities of the table—not necessarily your business process.  
   

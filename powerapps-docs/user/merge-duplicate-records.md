@@ -61,7 +61,7 @@ There are a few situations when duplicates may be found:
 
 > [!IMPORTANT]
 >  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
+>   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
 >   - The control does not have a class property.
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.

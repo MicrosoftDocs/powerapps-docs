@@ -1,6 +1,6 @@
 ---
 title: "Sample: Create, retrieve, update, and delete (late bound) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound table class." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,19 +15,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Late-bound entity operations
+# Sample: Late-bound table operations
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-<!-- show deep insert equivalent 
 
-sample-initialize-record-existing-record.md
-sample-create-retrieve-update-delete-late-bound.md
-
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-late-bound
-
--->
-This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/LateBoundEntityOperations).
+This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound class. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/LateBoundEntityOperations).
 
 ## How to run this sample
 

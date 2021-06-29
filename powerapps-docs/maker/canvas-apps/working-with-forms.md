@@ -1,6 +1,6 @@
 ---
-title: Understand canvas-app forms | Microsoft Docs
-description: In Power Apps, add a form to a canvas app so that you can collect and display information from a data source.
+title: Understand canvas-app forms
+description: Learn about how to add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app forms in Microsoft Power Apps
+# Understand canvas-app forms
 
 Add three types of controls to a canvas app so that the user can browse for a record, display details about that record, and edit or create a record:
 
@@ -39,7 +39,7 @@ As this topic describes, combine these controls with formulas to create the over
 Power Apps can automatically generate an app based on a data source that you specify. Each app contains three screens with the controls described earlier and formulas that connect them. Run these apps "out of the box," customize them for your specific goals, or examine how they work so that you can learn useful concepts that apply to your own apps. In the following sections, inspect the screens, controls, and formulas that drive a generated app.  
 
 ### Browse screen
-![Browse screen controls](./media/working-with-forms/afd-browse-screen-basic.png)
+![Browse screen](./media/working-with-forms/afd-browse-screen-basic.png)
 
 This screen features these key formulas:
 
@@ -162,13 +162,13 @@ Get a quick piece of information from a record by finding it in a gallery on a b
 
 1. Add a **Vertical** gallery, and change the layout to **Title** only.
    
-    ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery.png)
+    ![Add vertical gallery](./media/working-with-forms/new-gallery.png)
 2. Set the gallery's **[Items](controls/properties-core.md)** property to **Ice Cream**.
 3. Set the **[Text](controls/properties-core.md)** property of the first label in the gallery to **ThisItem.Title** if it's set to something else.
    
     The label now shows the value in the **Title** field for each record.
    
-    ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-2.png)
+    ![Updated label](./media/working-with-forms/new-gallery-2.png)
 4. Resize the gallery to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
    
     The screen resembles this example, which shows all records in the data source:
@@ -194,7 +194,7 @@ To add a **[Display form](controls/control-form-detail.md)** control:
 
 In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/ice-cream-new.png)
+![Ice cream new screen](./media/working-with-forms/ice-cream-new.png)
 
 Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
 
@@ -219,7 +219,7 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
 2. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
    <br>**Navigate( Screen2, None )**
    
-    ![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
+    ![Display form for Ice Cream data source with back button with Navigate update](./media/working-with-forms/gallery-icecream-nav-new.png)
 
 3. Press F5, and then select an arrow in the gallery to show the details for an item.
 
@@ -257,7 +257,7 @@ To add navigation to and from this screen:
    
     This formula discards any unsaved edits and opens the previous screen.
    
-    ![Display form for Ice Cream data source](./media/working-with-forms/edit-icecream-cancel.png)
+    ![Updated screen](./media/working-with-forms/edit-icecream-cancel.png)
 2. Set the **[OnSuccess](controls/control-form-detail.md)** property of the form to **Back()**.
    
     When updates are successfully saved, the previous screen (in this case, the details screen) opens automatically.
@@ -265,7 +265,7 @@ To add navigation to and from this screen:
     ![Edit form with added "OnSuccess" rule](./media/working-with-forms/edit-icecream-onsuccess.png)
 3. On the **Display** screen, add a button, set its **[Text](controls/properties-core.md)** property to show **Edit**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **Navigate( Screen3, None )**
    
-    ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-edit.png)
+    ![Text property updated](./media/working-with-forms/viewform-icecream-edit.png)
 
 You've built a basic app with three screens for viewing and entering data.  To try it out, show the gallery screen, and then press F5 (or select the forward arrow "Preview" button near the upper-left corner of the screen). The pink dot indicates where the user clicks or taps the screen at each step.
 
@@ -286,7 +286,7 @@ On the first screen, you'll add a **New** button:
    
     This formula switches the **[Edit form](controls/control-form-detail.md)** control on **Screen3** to **New** mode and opens that screen so that the user can fill it in.
 
-![Display form with added "Edit" button](./media/working-with-forms/gallery-icecream-new.png)
+![Edit form updated](./media/working-with-forms/gallery-icecream-new.png)
 
 When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](functions/function-navigate.md)** function opens the screen for browsing the gallery.
 
@@ -295,7 +295,7 @@ When the Edit and Create screen opens, the form is empty, ready for the user to 
 2. Set the button's **[OnSelect](controls/properties-core.md)** property to this formula:
    <br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
    
-    ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-remove.png)
+    ![Remove a record](./media/working-with-forms/viewform-icecream-remove.png)
 
 ## Handling errors
 In this app, an error occurs when the value of a field is not valid, a required field is blank, you're disconnected from the network, or any number of other problems pop up.  

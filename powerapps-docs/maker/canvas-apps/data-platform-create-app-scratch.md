@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from scratch using Microsoft Dataverse | Microsoft Docs
-description: In Power Apps, create a canvas app to add, update, and delete records in Microsoft Dataverse.
+title: Create a canvas app from scratch using Microsoft Dataverse
+description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,11 +16,9 @@ search.app:
 ---
 # Create a canvas app from scratch using Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Build a canvas app to manage data that's stored in Dataverse, using standard tables (which are built in), custom tables (which your organization creates), or both.
 
-Build a canvas app to manage data that's stored in Dataverse, using standard entities (which are built in), custom entities (which your organization creates), or both.
-
-When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
+When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the tables that you want to show or manage in the app.
 
 ## Prerequisites
 
@@ -40,11 +38,11 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     You can build an app from scratch for tablets, but this topic shows building an app for phones.
 
-## Specify an entity
+## Specify a table
 
 1. In the middle of the screen, select **connect to data**.
 
-1. In the **Data** pane, select **Common Data Service**, select the **Accounts** check box, and then select **Connect**.
+1. In the **Data** pane, select **Microsoft Dataverse**, select the **Accounts** check box, and then select **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
@@ -60,7 +58,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     This formula specifies that:
 
-   - The gallery should show data from the **Accounts** entity.
+   - The gallery should show data from the **Accounts** table.
    - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
    - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
 
@@ -100,7 +98,7 @@ When you build an app from Dataverse, you don't need to create a connection from
     - **Annual Revenue**
 
     > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![Select and add a column](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 
@@ -108,7 +106,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     The screen reflects your changes.
 
-    ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/field-list.png)
+    ![Screen after the changes](./media/data-platform-create-app-scratch/field-list.png)
 
 1. Rename this screen **FormScreen**.
 

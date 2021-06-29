@@ -5,12 +5,13 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2021
+ms.date: 06/02/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
     - navjotm
+    - joel-lindstrom
 ---
 
 # Understand Employee ideas sample app architecture
@@ -29,6 +30,19 @@ To understand and use information in this article, you'll need to know about dif
 
 You'll also need to know about how to [install](use-sample-apps-from-teams-store.md), and [use](employee-ideas.md) Employee ideas sample app.
 
+## Architecture model
+
+The following diagram illustrates the way that users and systems interact with data in the Employee Ideas solution.
+
+![Employee Idease sample app architecture model](media/employee-ideas-architecture/architecture-model.png "Employee Ideas sample app architecture model")
+
+### Connectors
+
+The following connectors are used in the Employee Ideas app:
+
+- **Microsoft Dataverse** - used to read and write data in Dataverse.
+- **Office 365 Users** - used to read Microsoft 365 user profile data.
+
 ## Data model
 
 The following diagram explains the data model used by the Employee ideas sample app.
@@ -37,7 +51,7 @@ The following diagram explains the data model used by the Employee ideas sample 
 
 | Table name | Description |
 | - | - |
-| Employee Idea Campaign | A campaign is any series of actions or events that are meant to achieve a particular goal. Details such as title, description, start, and end dates of the campaign, team, and channel IDs are stored in the Employee Idea Campaign table. An idea campaign can have multiple ideas and idea questions.
+| Employee Idea Campaign | A campaign is any series of actions or events that are meant to achieve a particular goal. Details such as title, description, start, and end dates of the campaign, team, and channel IDs are stored in the Employee Idea Campaign table. An idea campaign can have multiple ideas and idea questions.|
 | Employee Idea | Ideas are thoughts or suggestions provided by employees to achieve a particular goal that is mentioned as part of a campaign. Details such as title, description, related campaign, outcome, and the vote count are stored in the Employee Idea table. There can be multiple files and idea questions associated to an idea. |
 | Employee Idea Questions | Idea questions help us to get more inputs from employees regarding an idea. Details such as instructions, associated campaign, the response type, and values for the question are stored in the Employee Idea Questions table. Each idea question may have multiple responses. |
 | Employee Idea Responses | Idea responses are used to get answers from the employees to the idea questions. Details such as instructions, associated idea, idea question, sequence, the response type, and values for the question are stored in the Employee Ideas Responses table. A Response can only be associated to one idea question. |
@@ -774,6 +788,7 @@ The about screen doesn't use any variables.
 
 ### See also
 
+[Customize employee ideas app](customize-employee-ideas.md) <br>
 [Employee ideas sample app](employee-ideas.md) <br>
 [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
 [Customize sample apps installed from Teams store](customize-sample-apps.md) <br>

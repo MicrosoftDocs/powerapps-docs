@@ -1,6 +1,6 @@
 ---
-title: Understand experimental, preview, and experimental features | Microsoft Docs
-description: Test and start to adopt new features.
+title: Understand experimental, preview, and deprecated features in Power Apps
+description: Learn about experimental, preview, and deprecated features.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

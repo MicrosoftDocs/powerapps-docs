@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -25,6 +25,7 @@ search.app:
 ---
 
 # Using the tree view in the form designer
+
 The **Tree View** pane displays a visual hierarchy of the components on the form. The icons in the tree view help you quickly identify the type of column or component. 
 
 You can also use the tree view to select columns and components present on the form. The tree view is helpful when you want to select hidden elements that are not visible on the form preview. 

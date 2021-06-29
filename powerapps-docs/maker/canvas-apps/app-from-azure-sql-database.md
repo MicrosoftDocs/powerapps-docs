@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app from Azure SQL Database | Microsoft Docs
+title: "Preview: Create a canvas app from Azure SQL Database"
 description: Describes how to create canvas app from your data in Azure SQL Database
 author: tapanm-msft
 manager: kvivek
@@ -89,7 +89,7 @@ You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databas
 ## Other considerations
 
 - The access of the app to SQL Database is implicitly shared to all users that you [share this app](share-app.md) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create a separate app that connects to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
-- Review throttling limits, delegatable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
+- Review throttling limits, delegable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
 - Create an app from [Power Apps](https://make.powerapps.com) when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
 
 ## Next steps

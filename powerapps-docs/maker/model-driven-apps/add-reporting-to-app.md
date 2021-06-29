@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 08/16/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"

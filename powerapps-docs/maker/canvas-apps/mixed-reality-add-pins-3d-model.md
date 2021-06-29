@@ -114,9 +114,9 @@ X Point | 0.00 | 0.72 | -0.20
 
 1. Set the following properties:
 
-    - **PinsX** as `TestData.'X Pins'`
-    - **PinsY** as `TestData.'Y Pins'`
-    - **PinsZ** as `TestData.'Z Pins'`
+    - **PinsX** as "X Pins"
+    - **PinsY** as "Y Pins"
+    - **PinsZ** as "Z Pins"
 
 1. The 3D component will now show each row in the table as a pin.
 
@@ -190,9 +190,9 @@ You can [create a collection](create-update-collection.md) within the app so use
 
 1. Set the following properties:
 
-    - **PinsX** as `PinsCollection.X`
-    - **PinsY** as `PinsCollection.Y`
-    - **PinsZ** as `PinsCollection.Z`
+    - **PinsX** as "X"
+    - **PinsY** as "Y"
+    - **PinsZ** as "Z"
 
 Now when a user enters coordinates into each of the fields and a label, and selects the **Add pin** button, the coordinates will be converted into a pin and placed on the model.
 
