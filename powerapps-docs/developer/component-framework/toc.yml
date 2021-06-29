@@ -20,11 +20,11 @@
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
-    - name: Creating model-driven app field component
+    - name: Creating model-driven app field type component
       href: tutorial-create-model-driven-field-component.md
-    - name: Creating model-driven app dataset component
-      href: tutorial-create-moel-driven-app-dataset-component.md
-    - name: Creating canvas app dataset component
+    - name: Creating model-driven app dataset type component
+      href: tutorial-create-model-driven-app-dataset-component.md
+    - name: Creating canvas app dataset type component
       href: tutorial-create-canvas-dataset-component.md
   - name: Code components ALM
     href: code-components-alm.md

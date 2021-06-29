@@ -13,19 +13,19 @@ author: Nkrb
 
 # Tutorial: Creating a model-driven app dataset component
 
-In this tutorial, you will create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allows highlighting of specific rows by configuring an indicator column. The dataset code component can be linked to a table main grid, view, or subgrid. 
+In this tutorial, you will create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allows highlighting specific rows by configuring an indicator column. The dataset code component can be linked to table main grid, view, or subgrid. 
 
-In addition to these requirements, you will also ensure the code component follows the best practice guidance:
+In addition to these requirements, you will also ensure that code component follows the best practice guidance:
 
 1. Use of  [Microsoft Fluent UI](code-components-best-practices.md#use-microsoft-fluent-ui-react) 
 2. Allow localization of the code component labels at both design and run-time.
-3. Component is responsive and renders at 100% of the height available, apart from where the height is provided by the maker when configuring the code component on a model-driven form subgrid.
+3. Component is responsive and renders at 100% of the height available, apart from where the height is provided by the maker when configuring the code component on the subgrid.
 4. Provide support for full-screen mode.
 
 > [!div class="mx-imgBorder"]
 > ![Model-driven grid sample](media/model-driven-grid-demo1.gif "Model-driven grid sample")
 
-You see that:
+From the above, you see that:
 
 1. Selecting record(s) on the grid enables the use of the command bar actions associated with the record(s) selected.
 2. The header row stays in place while the records are scrolled when there is not enough vertical height to accommodate the whole page.
@@ -33,7 +33,7 @@ You see that:
 4. The quick-find search box can be used with the code component to filter records.
 5. The footer shows the number of records, current page, and paging controls.
 
-Before you go further, see the [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md) to learn more about prerequisites, techniques used, and how to build and deploy the code component. 
+Before you go further, see [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md) article to learn more about prerequisites, techniques used, and how to build and deploy code component. 
 
 ## Download and install the model-driven app sample code.
 
@@ -43,9 +43,7 @@ Firstly, download the [sample code]() to a folder called `ModelDrivenGrid`. To i
 npm install
 ```
 
-Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring).
-
-Also, ensure that you have authenticated against Microsoft Dataverse using `pac auth`.
+Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using `pac auth`.
 
 At the terminal use:
 
@@ -53,9 +51,7 @@ At the terminal use:
 pac pcf push -pp samples
 ```
 
-This deploys the component into Dataverse so that it can be configured.
-
-More information: [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md).
+This deploys the code component into Dataverse so that it can be configured. More information: [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md).
 
 ### Differences between the model-driven and canvas apps dataset samples
 
@@ -95,7 +91,7 @@ Although the two samples are likely the same, there are a few notable difference
 2. The property-set `HighlightIndicator` is defined as type `OptionSet` since you are binding it to the `statuscode` column on the dataset, which is then used to control row highlighting. 
 3. You add a CSS file to the code component. This provides a workaround for ensuring the Fluent UI `StickyHeader` appears on top of the view selector and other flyout components of model-driven apps.
 
-### Configuring the code component on a table main grid
+### Configuring the code component on main grid
 
 To configure the code component to be displayed on the contact table inside a model-driven app:
 
