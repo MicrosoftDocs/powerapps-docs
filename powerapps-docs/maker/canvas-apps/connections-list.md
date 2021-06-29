@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 06/14/2021
+ms.date: 06/29/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -84,6 +84,9 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 
 As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
 
+> [!NOTE]
+> For detailed information about security considerations when using a relational database servers (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+
 ### Azure AD Integrated
 
 This is a secure type of connection.  For example, SharePoint uses this type of authentication.  SQL Server also allows for this type of authentication.  When you connect, the Azure AD service identifies you separately to SharePoint on your behalf.  You do not have to supply a username or password.  As an author you can create and work with the data source with your credentials.  When you publish your application and your application user logs in, they do so with their credentials. If the data is appropriately secured on a back-end your users can only see what they are authorized to see based on their credentials.   This type of security allows you to change rights for specific application users on the back-end data source after the application has been published.  For instance you can grant access, deny access, or refine what a user or set of users can see all on the back-end data source.
@@ -105,5 +108,9 @@ This type of connection is not very secure because it doesn't rely on end-user a
 ## Data sources in solutions
 
 Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+
+## Rename data sources in apps
+
+To learn about renaming data sources in an app, and the difference between tabular and action-based data sources, go to [Rename Power Apps action-based data sources](rename-data-source.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
