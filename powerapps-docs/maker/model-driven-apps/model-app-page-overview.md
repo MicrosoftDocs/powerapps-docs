@@ -1,26 +1,23 @@
 ---
-title: "How to converge model and canvas using the custom page in a model-driven app (preview)"
-description: "" 
-ms.custom: ""
-ms.date: 04/03/2020
-ms.reviewer: ""
+title: "Converge model-driven and canvas apps using the custom page"
+description: "Use a custom page to add a canvas app as a page to your model-driven app" 
+ms.date: 06/20/2021
+ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "overview"
 author: "adrianorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "aorth"
 manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
   - "PowerApps"
-  - D365CE
 ---
-# How to converge model and canvas using the custom page in a model-driven app (preview)
+# Overview of canvas app custom pages for model-driven apps
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The custom page is a new page type within model-driven app which brings in the power of canvas. With this we have increase the convergence of model and canvas. It can be used to add full pages, dialogs, or panes with the power of the canvas designer. It also includes a low code page authoring experience with expressions, custom PCF controls, and soon Power Apps connector data.  
+The custom page is a new page type within a model-driven app, which brings in the power of canvas apps. Custom pages increase the convergence of model-driven and canvas apps. Custom pages can be used to add full pages, dialogs, or panes with the power of the canvas designer. It also includes a low code page authoring experience with expressions and custom PCF controls.  
 
 This new page is more flexible than a modeled form, view, or dashboard page.  It allows including one or more tables.  Then the maker can define the data and component interactions.  The page is a separate solution element supporting co-authoring at a page level.  Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables. 
 
