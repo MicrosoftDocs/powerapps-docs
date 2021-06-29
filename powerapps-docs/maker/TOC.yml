@@ -2204,8 +2204,12 @@
                   href: ../teams/export-employee-ideas-for-reporting.md
         - name: How to (Preview)
           items:
-             - name: How to
+             - name: Use How to sample app
                href: ../teams/how-to.md
+             - name: Customize How to app
+               items:
+                - name: Understand How to sample app architecture
+                  href: ../teams/how-to-architecture.md
         - name: Inspection
           items:
             - name: Use Inspection sample app

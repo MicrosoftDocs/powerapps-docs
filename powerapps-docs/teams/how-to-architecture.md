@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/21/2021
+ms.date: 06/29/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -14,15 +14,11 @@ contributors:
     - joel-lindstrom
 ---
 
-
-
 # Understand How to app sample app architecture (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-In this article, you'll learn about the collections and global variables used by the How to app, and understand how to use them effectively. 
-
-
+In this article, you'll learn about the collections and global variables used by the How to app, and understand how to use them effectively.
 
 ## Prerequisites
 
@@ -34,7 +30,9 @@ To understand and use information in this article, you'll need to know about dif
 - [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
-
+> [!IMPORTANT]
+> This is a preview feature.
+> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Data model
 The following diagram shows the tables, columns, and relationships in the How to app solution:
@@ -54,7 +52,7 @@ The following diagram shows the tables, columns, and relationships in the How to
 
 
 ## Architecture model
-The following diagram illustrates the way that people, systems and data interact in the How to app solution
+The following diagram illustrates the way that people, systems, and data interact in the How to app solution
 
 ![How to app sample app architecture model](media/how-to-architecture/architecture-model.png "How to app sample app architecture model")
 
@@ -79,17 +77,17 @@ The following global variables are used in the How to app solution:
 
 | Variable Name                   | Type    | Description                                                           |
 |---------------------------------|---------|-----------------------------------------------------------------------|
-| gblUserLanguage                 | Text    | To check the logged in User’s Language                                |
-| gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark                       |
-| gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to High Contrast              |
-| gblAppSetting_inputMobileOnWeb  | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop |
-| gblAppSetting_inputScaleFontsby | Number  | Use this variable for scaling all fonts by a fixed amount             |
-| gblAppSetting_inputMobile       | Boolean | Variables to Scale fonts for mobile-oriented apps                     |
-| gblAppColors                    | Record  | Variable to set the Color value in the app                            |
-| gblAppSizes                     | Record  | Variable to set the Color value in the app                            |
-| gblAppStyles                    | Record  | Variable to set the Styling values in the app                         |
-| gblCurrUserEmail                | Record  | gblCurrUserEmail                                                      |
-| gblCurrUser                     | Record  | global variable to store the current user record                      |
+| gblUserLanguage                 | Text    | To check the logged in User’s Language.                                |
+| gblThemeDark                    | Boolean | To check whether the Teams theme is set to Dark.                       |
+| gblThemeHiCo                    | Boolean | To check whether the Teams theme is set to High Contrast.              |
+| gblAppSetting_inputMobileOnWeb  | Boolean | Variables to Scale fonts for mobile-oriented apps, running in desktop. |
+| gblAppSetting_inputScaleFontsby | Number  | Use this variable for scaling all fonts by a fixed amount.             |
+| gblAppSetting_inputMobile       | Boolean | Variables to Scale fonts for mobile-oriented apps.                     |
+| gblAppColors                    | Record  | Variable to set the Color value in the app.                            |
+| gblAppSizes                     | Record  | Variable to set the Color value in the app.                            |
+| gblAppStyles                    | Record  | Variable to set the Styling values in the app.                         |
+| gblCurrUserEmail                | Record  | Global variable to store current user email address.                                                      |
+| gblCurrUser                     | Record  | Global variable to store the current user record.                      |
 
 
 
@@ -109,15 +107,15 @@ The following variables are used on start of the application:
 | **Variable name**     | **Description**                                               |
 |-----------------------|---------------------------------------------------------------|
 | gblAppLoaded          | - global variable to check if the app has loaded completely.  |
-| gblUserLanguage       | - global variable to store the users language.                |
-| **gblCurrUserEmail**  | - global variable to store the current user email address     |
-| gblCurrUser           | - global variable to store the current user record            |
+| gblUserLanguage       | - global variable to store the user's language.                |
+| **gblCurrUserEmail**  | - global variable to store the current user email address.     |
+| gblCurrUser           | - global variable to store the current user record.            |
 
 ### OnStart execution details
 
 1.  When a user accesses the app, **gblAppLoaded** is set to false. The user’s language code is stored in **gblUserLanguage**, with English - US being the default one.
 
-2.  The user’s language is then used to collect localized text used throughout the app ( label and button text) in **colLocalization**.
+2.  The user’s language is then used to collect localized text used throughout the app (label and button text) in **colLocalization**.
 
 ## Welcome Screen
 This section explains the collections, variables, and execution details used in the welcome screen:
@@ -134,97 +132,115 @@ The following variables are used in the welcome screen:
 
 | **Variable name**               | **Description**                                                                                              |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------|
-| **gblCurrUserEmail**            | - global variable to store the current user email address                                                    |
-| gblThemeDark                    | - global variable to store if Teams is running in dark mode.                                                 |
-| gblThemeHiCo                    | - global variable to store if Teams is running in contrast mode.                                             |
-| gblAppColors                    | - global variable to store the app design colors                                                             |
-| gblAppSizes                     | - global variable to store the app sizes for app in mobile and mobile on web                                 |
-| gblAppStyles                    | - global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
-| gblAppSetting_inputMobileOnWeb  | - global variable to scale fonts for mobile-oriented apps, running in desktop.                               |
-| gblAppSetting_inputMobile       | - global variable to scale fonts for mobile-oriented apps.                                                   |
-| gblAppSetting_inputScaleFontsBy | - global variable for scaling all fonts by a fixed amount.                                                   |
+| **gblCurrUserEmail**            | Global variable to store the current user email address                                                    |
+| gblThemeDark                    | Global variable to store if Teams is running in dark mode.                                                 |
+| gblThemeHiCo                    | Global variable to store if Teams is running in contrast mode.                                             |
+| gblAppColors                    | Global variable to store the app design colors                                                             |
+| gblAppSizes                     | Global variable to store the app sizes for app in mobile and mobile on web                                 |
+| gblAppStyles                    | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
+| gblAppSetting_inputMobileOnWeb  | Global variable to scale fonts for mobile-oriented apps, running in desktop.                               |
+| gblAppSetting_inputMobile       | Global variable to scale fonts for mobile-oriented apps.                                                   |
+| gblAppSetting_inputScaleFontsBy | Global variable for scaling all fonts by a fixed amount.                                                   |
 
 ### Welcome screen execution details
 
-1.  If **gblAppStyles** is not blank (which means the styling variable has been loaded).
+1.  If **gblAppStyles** isn't blank (which means the styling variable has been loaded).
 
 2.  The loading screen will initialize all the global variables like  **gblAppStyles, gblAppSizes,** gblAppColors to show the screen and color settings as per the user setup like dark mode or high contrast mode in Teams desktop or in browser.
 
-3.  In this screen you will find **Preview App**. Click on it which will redirect to Assets Screen.
+3.  In this screen, you'll find **Preview App**. Selecting it will redirect to Assets Screen.
 
 ## Items screen
 This section explains the collections, variables, and execution details used on the items screen.
 
 ### Items screen collections
 The following collections are used on the items screen:
+
 | **Variable name** | **Description**                                          |
 |-------------------|----------------------------------------------------------|
-| colLocalization   | - collection of localized text based on user’s language. |
+| colLocalization   | Collection of localized text based on user’s language. |
 
 ### Items screen variables
-The following variables are used on teh items screen:
+The following variables are used on the items screen:
+
 | **Variable name**        | **Description**                                                                                              |
 |--------------------------|--------------------------------------------------------------------------------------------------------------|
-| **locShowItems**         | - local variable to show the items based on item type.                                                       |
-| **locSelectedItemType**  | - local variable to show the selected item types                                                             |
-| **gblThemeDark**         | - global variable to store if Teams is running in dark mode.                                                 |
-| **gblThemeHiCo**         | - global variable to store if Teams is running in contrast mode.                                             |
-| gblAppColors             | - global variable to store the app design colors                                                             |
-| **gblAppStyles**         | - global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
+| **locShowItems**         | Local variable to show the items based on item type.                                                       |
+| **locSelectedItemType**  | Local variable to show the selected item types.                                                             |
+| **gblThemeDark**         | Global variable to store if Teams is running in dark mode.                                                 |
+| **gblThemeHiCo**         | Global variable to store if Teams is running in contrast mode.                                             |
+| gblAppColors             | Global variable to store the app design colors.                                                             |
+| **gblAppStyles**         | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
 
 ### Items screen execution details
 
-1.  The items screen will show Item types with the number of items available under each item which are stored in galItemTypes_Demo.
+1.  The items screen will show Item types with the number of items available under each item that are stored in galItemTypes_Demo.
 
-2.  The items will be show in galItems_Demo when user select any of the itemtype in galItemTypes_Demo.
+2.  The items will be show in galItems_Demo when the user selects any of the item types in galItemTypes_Demo.
 
 ## Checkout Screen
 This section explains the collections, variables, and execution details used on the checkout screen.
 ### Checkout screen collections
+
 The following collections are used on the checkout screen:
 | Collections     | Description                                            |
 |-----------------|--------------------------------------------------------|
 | colLocalization | collection of localized text based on user’s language. |
+
 ### Checkout screen collections
+
 The following variables are used on the checkout screen:
 | Variable name               | Description                                                            |
 |-----------------------------|------------------------------------------------------------------------|
-| gblAppStyles                | global variable to store styling properties for all controls           |
-| gblThemeDark                | global variable to store if Teams is running in dark mode              |
-| locShowCheckoutConfirmation | local variable to show the connection by randomly shuffling the userid |
-| gblAppColors                | global variable to store the app design colors                         |
+| gblAppStyles                | global variable to store styling properties for all controls.           |
+| gblThemeDark                | global variable to store if Teams is running in dark mode.              |
+| locShowCheckoutConfirmation | local variable to show the connection by randomly shuffling the userid. |
+| gblAppColors                | global variable to store the app design colors.                         |
 | gblThemeHiCo                | global variable to store if Teams is running in contrast mode.         |
-| locSelectedItem             | global variable to store the current user email address                |
+| locSelectedItem             | global variable to store the current user email address.                |
+
 ### Checkout screen execution details
 
-1.  When user selects any of the item which are needed, they can click on  checkout based on availability of the item which are stored in locSelectedItem item.
+1.  When user selects any of the items that are needed, they can select checkout based on availability of the item that is stored in locSelectedItem item.
 
-2.  Once the item is checked out the confirmation message will be shown from locShowCheckoutConfirmation.
+2.  After the item is checked out, the confirmation message will be shown from locShowCheckoutConfirmation.
 
 ## My Checkout Screen
-This section explains the collections, variables, and execution details used on the my checkout screen.
+This section explains the collections, variables, and execution details used on the My checkout screen.
 ### My checkout collections
-The following collections are used on the my checkout screen:
+
+The following collections are used on the My checkout screen:
 | Variable name    | Description                                            |
 |------------------|--------------------------------------------------------|
 | colLocalization  | collection of localized text based on user’s language. |
 
 ### My checkout variables
-The following variables are used on the my checkout screen:
+The following variables are used on the My checkout screen:
+
 | Variable name             | Description                                                                                                |
 |---------------------------|------------------------------------------------------------------------------------------------------------|
-| gblAppStyles              | global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
-| gblThemeDark              | global variable to store if Teams is running in dark mode.                                                 |
-| gblThemeHiCo              | global variable to store if Teams is running in contrast mode.                                             |
-| gblAppColors              | global variable to store the app design colors                                                             |
-| locShowReturnConfirmation | Local variable to show the return confirmation message when user click on return button                    |
-| locSelectedItemType       | local variable to show the selected item types                                                             |
-| locShowItems              | local variable to show the items based on item types                                                       |
-| gblCurrUser               | global variable to store the current user record                                                           |
-| locSelectedItemForReturn  | local variable to return the selected item back to items                                                   |
+| gblAppStyles              | Global variable to store styling properties for all controls (set on the OnVisible of the Loading Screen). |
+| gblThemeDark              | Global variable to store if Teams is running in dark mode.                                                 |
+| gblThemeHiCo              | Global variable to store if Teams is running in contrast mode.                                             |
+| gblAppColors              | Global variable to store the app design colors.                                                             |
+| locShowReturnConfirmation | Local variable to show the return confirmation message when user selects return button.                    |
+| locSelectedItemType       | Local variable to show the selected item types.                                                             |
+| locShowItems              | Local variable to show the items based on item types.                                                       |
+| gblCurrUser               | Global variable to store the current user record.                                                           |
+| locSelectedItemForReturn  | Local variable to return the selected item back to items.                                                   |
 
 ### My checkout execution details
 
 1.  All the items checked out by the user will be show in this screen. The user will have option to return and show the days due for return
 
-2.  Once user clicks on return the item will be returned back to items screen.
+2.  After user selects return, the item will be returned back to items screen.
+
+### See also
+
+- [Use How to sample app (Preview)](how-to.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+
