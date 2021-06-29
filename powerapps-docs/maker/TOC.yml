@@ -1189,10 +1189,12 @@
           href: ./model-driven-apps/model-app-page-overview.md
         - name: Add a custom page to a model-driven app
           href: ./model-driven-apps/add-page-to-model-app.md
-        - name: Design a custom page
+        - name: Design considerations for a custom page
           href: ./model-driven-apps/design-page-for-model-app.md
         - name: Known issues with custom pages
-          href: ./model-driven-apps/model-app-page-issues.md  
+          href: ./model-driven-apps/model-app-page-issues.md
+        - name: Add connectors to a custom pages
+          href: ./model-driven-apps/page-data-connector.md  
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
