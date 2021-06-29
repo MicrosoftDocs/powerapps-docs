@@ -6,7 +6,7 @@ ms.reviewer: "matp"
 ms.service: powerapps
 ms.topic: "How-to"
 author: "aorth"
-ms.author: "adrianorth"
+ms.author: "aorth"
 manager: "kvivek"
 search.audienceType: 
   - maker
