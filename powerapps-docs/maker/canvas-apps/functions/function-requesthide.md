@@ -1,6 +1,6 @@
 ---
-title: RequestHide function | Microsoft Docs
-description: Reference information, including syntax and examples, for the RequestHide function in Power Apps
+title: RequestHide function in Power Apps
+description: Reference information including syntax and examples for the RequestHide function in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: Overview of the Office 365 Users connection | Microsoft Docs
-description: See how to connect to Office 365 Users, step through some examples, and see all the functions
+title: Connect to Office 365 Users connection from Power Apps
+description: See how to connect to Office 365 Users, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -112,7 +112,7 @@ The label shows the information that you entered about the current user.
 The label shows the information that you entered about the user you specified or that user's manager.
 
 > [!NOTE]
-> If you're developing an app based on an entity in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
+> If you're developing an app based on a table in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
 
 For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**

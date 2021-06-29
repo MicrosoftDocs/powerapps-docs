@@ -1,5 +1,5 @@
 ---
-title: Test Studio for testing canvas apps | Microsoft Docs
+title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
 author: aengusheaney
 manager: kvivek
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Test Studio 
+# Test Studio
 
 Build end-to-end UI tests for your canvas app using Test Studio. Maintain your app quality by continually validating that your app works as expected when new changes or updates are deployed. 
 
