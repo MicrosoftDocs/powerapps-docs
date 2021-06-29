@@ -465,7 +465,7 @@ From this screen, the user provides details of the reason for checkout, duration
     | lblItemCount_Checkout                | Y            | lblIName_Checkout.Y + lblIName_Checkout.Height |
     | lblItemCount_Checkout                | Text         | CountRows(ThisItem.Items.Item) & " items"      |
 
-1. Add container conCheckout.
+1. Now set the Fill Portions property for the controls conMyCheckouts and conItemTypes_MyCheckouts as shown below - item types covers 25% of the screen and the remaining 75% is covered by the list of my checkouts".
 
     | **Control** | **Property**      | **Value**                    |
     |-------------|-------------------|------------------------------|
@@ -772,15 +772,6 @@ From this screen, the user provides details of the reason for checkout, duration
     | btnCheckoutBackToHome                   | Text         | "Return to home"      |
     | btnCheckoutBackToHome                   | Button Type  | Standard              |
 
-1. --> needs review <--
-
-    | **Control**           | **Property** | **Value**                                                                                         |   |
-    |-----------------------|--------------|---------------------------------------------------------------------------------------------------|---|
-    | galItemTypes_Checkout | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade,{locSelectedItemType:ThisItem,locShowItems: true }) |   |
-    | imgCheckout_Checkout  | OnSelect     | Navigate('My Checkouts Screen',ScreenTransition.Fade)                                             |   |
-    | btnCancelCheckout     | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                    |   |
-    | btnCheckoutBackToHome | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                    |   |
-
 ## Building My checkout screen
 
 In this step, we're going to build the final screen of the app, the My checkout screen. From this screen, a user can view the items that they have checked out and select to return the item.
@@ -856,7 +847,7 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | lblItemCount_MyCheckouts                | Text         | CountRows(ThisItem.Items.Item) & " items"            |
     | lblItemCount_MyCheckouts                | Font Size    | 10.5                                                 |
 
-1. --> needs review <--
+1. The horizontal container **conMyCheckouts** will be used to contain a header label and a gallery of checkouts. Set its properties as shown below.
 
     | **Control**    | **Property**      | **Value**                  |
     |----------------|-------------------|----------------------------|
@@ -1094,13 +1085,6 @@ In this step, we're going to build the final screen of the app, the My checkout 
     | btnReturnBackToHome                   | Font Weight  | Semibold            |
     | btnReturnBackToHome                   | Text         | "Return to home"    |
     | btnReturnBackToHome                   | Button Type  | Standard            |
-
-1. --> needs review <--
-
-    | **Control**              | **Property** | **Value**                                                                                                |   |
-    |--------------------------|--------------|----------------------------------------------------------------------------------------------------------|---|
-    | galItemTypes_MyCheckouts | OnSelect     | Navigate( 'Items Screen', ScreenTransition.Fade, { locSelectedItemType: ThisItem, locShowItems: true } ) |   |
-    | btnReturnBackToHome      | OnSelect     | Navigate('Items Screen',ScreenTransition.Fade)                                                           |   |
 
 ## Building connect screen
 
