@@ -68,7 +68,7 @@ The following table shows which commands result in development vs. release build
 | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `npm start watch`               | Always                                                       |                                                              |
 | `pac pcf push`                  | Default behavior or when `PcfBuildMode` is set to **development** in the `pcfproj` file  | `PcfBuildMode` is set to **production** in the `pcfproj` file |
-| `npm run build`                 | Default behavior                                            | `npm run build -- --buildMode release`                       |
+| `npm run build`                 | Default behavior                                            | `npm run build -- --buildMode production`                       |
 
 More information: [Package a code component](import-custom-controls.md#package-a-code-component)
 
