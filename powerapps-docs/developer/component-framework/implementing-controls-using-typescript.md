@@ -41,11 +41,9 @@ For this tutorial you need install the following components:
    - [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Select at minimum the workload `.NET build tools`.
 
 > [!NOTE]
->
 > You may prefer to use the [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
 
 > [!TIP]
->
 > It is also recommended to install [git for source control](https://git-scm.com/downloads).
 
 ## Creating a new component project
@@ -72,7 +70,7 @@ To create a new project:
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
-## Updating the control manifest
+## Implementing manifest
 
 The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).
 
@@ -385,9 +383,9 @@ To add a code component like a linear input component, follow the steps mentione
 To add the code components to a canvas app, follow the steps in the article [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
 
 
-## Adding code components to a Portal
+## Adding code components to a portal
 
-To add the code component to a portal, follow the steps in the article [Use code components in portals](..\..\maker\portals\component-framework-tutorial.md).
+To add the code component to a portal, follow the steps in the article [Use code components in portals](/powerapps/maker/portals/component-framework-tutorial).
 
 ### See also
 

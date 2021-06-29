@@ -18,6 +18,16 @@ Here are some common issues that you might come across while using the Power App
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
+## Component changes are not reflected after the updated solution import?
+
+Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
+
+```XML
+ <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
+   version="1.0.1" 
+    display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+```
+
 ## Msbuild error MSB4036
 
 - The name of the task in the project file is same as the name of the task class.

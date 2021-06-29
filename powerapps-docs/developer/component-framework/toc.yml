@@ -22,6 +22,8 @@
       href: implementing-controls-using-typescript.md
     - name: Creating model-driven app field component
       href: tutorial-create-model-driven-field-component.md
+    - name: Creating model-driven app dataset component
+      href: tutorial-create-moel-driven-app-dataset-component.md
     - name: Creating canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
   - name: Code components ALM
@@ -50,8 +52,6 @@
     items:
     - name: Common issues and workarounds
       href: issues-and-workarounds.md
-    - name: Limitations
-      href: limitations.md
   - name: FAQs
     href: faq.yml
   - name: Sample components
