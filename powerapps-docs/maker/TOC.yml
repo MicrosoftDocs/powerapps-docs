@@ -2202,6 +2202,10 @@
                   href: ../teams/customize-employee-ideas.md
                 - name: Export Employee ideas for reporting
                   href: ../teams/export-employee-ideas-for-reporting.md
+        - name: How to (Preview)
+          items:
+             - name: How to
+               href: ../teams/how-to.md
         - name: Inspection
           items:
             - name: Use Inspection sample app
