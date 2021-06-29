@@ -224,6 +224,30 @@ Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are 
 - Plug-in logic isn't optimized for multi-threading environments. Check your code.
 
 To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+  
+### Saved query with leading wildcard
+
+Insight ID: Perf.ModelDriven.Customization.SavedQuery.LeadingWildCard
+
+Leading wildcards are “like”/“not like” conditions that use a wildcard (‘%’) at the start of a search string. An example of a poorly written request is: 
+<fetch version="1.0" output-format="xml-platform" mapping="logical"> 
+    <entity name="account"> 
+        <attribute name="accountid" /> 
+        <attribute name="accountnumber" /> 
+        <filter type="and"> 
+            <condition attribute="accountnumber" operator="like" value="%124" /> 
+        </filter> 
+    </entity> 
+</fetch> 
+
+#### Motivation
+
+Leading wildcard character (%) in a saved query can cause the query to timeout or perform slowly. This insight points to such slow saved queries with leading wildcards.
+
+#### How to improve
+
+Avoid using leading wildcards. In the search key, these are translated to “contains” in SQL which won’t take the advantage of index seek but will do a scan. If it is necessary to use a leading wildcard, limit the scope of search by including other conditions. Note that it is ok to use trailing wildcards (‘%’ at the end of search strings). 
+
 
 ## Configuration
 
