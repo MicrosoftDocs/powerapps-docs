@@ -1183,6 +1183,16 @@
           items:
           - name: Use Monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md
+      - name: Use custom pages to converge canvas and model-driven apps
+        items:
+        - name: Custom pages overview
+          href: ./model-driven-apps/model-app-page-overview.md
+        - name: Add a custom page to a model-driven app
+          href: ./model-driven-apps/add-page-to-model-app.md
+        - name: Design a custom page
+          href: ./model-driven-apps/design-page-for-model-app.md
+        - name: Known issues with custom pages
+          href: ./model-driven-apps/model-app-page-issues.md  
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
