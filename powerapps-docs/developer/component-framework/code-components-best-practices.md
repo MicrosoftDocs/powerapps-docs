@@ -260,6 +260,16 @@ Code components can be rendered in multiple clients (model-driven apps, canvas a
 - Implementing [`setFullScreen`](reference\mode\setfullscreen.md) allows users to expand to use the entire available screen available where space is limited. For an example of this, see the [Canvas App Grid sample](tutorial-create-canvas-dataset-component.md).
 - If a code component cannot provide a meaningful experience in the given container size, it should disable functionality appropriately and provide feedback to the user.
 
+#### Always use scoped CSS rules
+
+When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
+
+For example, if your namespace is `SampleNamespace` and your code component name is `LinearInputComponent`, you would add a custom CSS rule using:
+
+```css
+.SampleNamespace\.LinearInputComponent rule-name
+```
+
 ## ALM/Azure DevOps/GitHub
 
 See the article on [Code Component Application Lifecycle Management (ALM)](code-components-alm.md) for best practices on code components with ALM/Azure DevOps/GitHub.
