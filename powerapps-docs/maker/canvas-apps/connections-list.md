@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 06/14/2021
+ms.date: 06/29/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -108,5 +108,9 @@ This type of connection is not very secure because it doesn't rely on end-user a
 ## Data sources in solutions
 
 Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+
+## Rename data sources in apps
+
+To learn about renaming data sources in an app, and the difference between tabular and action-based data sources, go to [Rename Power Apps action-based data sources](rename-data-source.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

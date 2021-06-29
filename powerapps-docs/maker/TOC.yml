@@ -277,6 +277,8 @@
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
           href: ./canvas-apps/add-manage-connections.md
+        - name: Rename a data source in an app
+          href: ./canvas-apps/rename-data-source.md
         - name: Prepare Excel data
           href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
