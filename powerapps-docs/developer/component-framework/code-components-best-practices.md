@@ -55,6 +55,10 @@ If your code component is of type dataset, the bound dataset properties expose a
 
 In some circumstances, it is undesirable for updates to a UI control (such as keypresses or mouse move events) to each call `notifyOutputChanged` this would result in many more events propagating to the parent context than needed. Instead, consider using an event when a control loses focus, or when the user's touch or mouse event has completed.
 
+#### Check API availability
+
+When developing code components for different hosts (model-driven, canvas, portals) always check the availability of the APIs you are using for support on those platforms. For example, `context.webAPI` is not available in canvas apps. For individual API availability,  see [Power Apps component framework API reference](reference/index.md).
+
 ## Model-driven apps
 
 This section contains best practice and guidance relating to code components within model-driven apps.
@@ -98,7 +102,10 @@ By default, code components target ES5 to support older browsers (for example, I
 
 #### Module imports
 
-Always bundle the modules that you require as part of your code component instead of using scripts that are required to be loading using a `SCRIPT` tag. For example, if you wanted to use a third party charting API where the sample shows adding  `<script type="text/javascript" src="somechartlibrary.js></script>` to the page, this would not be supported inside a code component.
+Always bundle the modules that you require as part of your code component instead of using scripts that are required to be loading using a `SCRIPT` tag. For example, if you wanted to use a third party charting API where the sample shows adding  `<script type="text/javascript" src="somechartlibrary.js></script>` to the page, this would not be supported inside a code component. Bundling all of the required modules both isolates the code component from other libraries and also supports running in offline mode.
+
+> [!NOTE]
+> Support for shared libraries across components using library nodes in the component manifest is not yet supported. We are reviewing this and will be adding this capability in future release.
 
 #### Linting
 
@@ -265,6 +272,10 @@ For example, if your namespace is `SampleNamespace` and your code component name
 ```css
 .SampleNamespace\.LinearInputComponent rule-name
 ```
+
+#### Avoid use of web storage objects
+
+Code components should not use the HTML web storage objects, like `window.localStorage` and `window.sessionStorage`, to store data. Data stored locally on the user's browser or mobile client is not secure and not guaranteed to be available reliably.
 
 ## ALM/Azure DevOps/GitHub
 
