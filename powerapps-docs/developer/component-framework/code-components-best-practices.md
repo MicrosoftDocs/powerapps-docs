@@ -170,21 +170,17 @@ npm run lint:fix
 This will tidy up code in the project to match your chosen style, and it will also report some issues that we will resolve later.
 
 > [!NOTE]
->
 > ESLint will point out problems with the template code initially (e.g. empty constructor). You can add inline comments to instruct ESLint to exclude the rules such as:
 >
 > `// eslint-disable-next-line @typescript-eslint/no-empty-function`
 >
-> Additionally, you can add files to ignore (e.g. the automatically generated interfaces), by adding the following to the `.eslintrc.json`:
->
+> Additionally, you can add files to ignore (for example, the automatically generated interfaces), by adding the following to the `.eslintrc.json`:
 > ```
 > "ignorePatterns": ["**/generated/*.ts"]
 > ```
->
-> More information: [`ignorePatterns` in Config Files](https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-config-files).
+> More information: [ignorePatterns in config files](https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-config-files).
 
 > [!TIP]
->
 > You can install Visual Studio Code extension that will use the project's `.eslintrc.json` file to provide code highlighting of any issues detected, with the option to fix them directly inside the IDE. More information: [Managing Extensions in Visual Studio Code](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
 
@@ -192,7 +188,7 @@ This will tidy up code in the project to match your chosen style, and it will al
 
 This section contains best practice and guidance relating to HTML browser user interface development.
 
-#### Use Microsoft Fluent UI React
+### Use Microsoft Fluent UI React
 
 [Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web) is the official [open source](https://github.com/microsoft/fluentui) React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. Power Apps itself uses Fluent UI, meaning you will be able to create UI that is consistent with the rest of your apps.
 
@@ -219,7 +215,7 @@ You can take advantage of tree shaking (which only affects release/production bu
 "moduleResolution": "node"
 ```
 
-More information: [Fluent UI - Advanced Usage](https://github.com/microsoft/fluentui/wiki/Advanced-Usage).
+More information: [Fluent UI - Advanced usage](https://github.com/microsoft/fluentui/wiki/Advanced-Usage).
 
 #### Optimize React rendering
 
@@ -274,3 +270,10 @@ For example, if your namespace is `SampleNamespace` and your code component name
 
 See the article on [Code Component Application Lifecycle Management (ALM)](code-components-alm.md) for best practices on code components with ALM/Azure DevOps/GitHub.
 
+## Related topics
+
+[What are code components](custom-controls-overview.md)<br/>
+[Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
+[Create and build a code component](create-custom-controls-using-pcf.md)<br/>
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Use code components in Power Apps portals](../../maker/portals/component-framework.md)

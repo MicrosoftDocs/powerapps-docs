@@ -13,7 +13,7 @@ author: Nkrb
 
 # Tutorial: Creating a canvas app dataset component
 
-In this tutorial, you will create a canvas app dataset code component, deploy, add to a screen, and testing it using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allow highlighting of specific rows by configuring an indicator column. This is a common request from app makers and can be complex to implement using native canvas app components. Code components in general can be written to work on both canvas apps and model-driven apps; however this component is written to specifically target use within canvas apps.
+In this tutorial, you will create a canvas app dataset code component, deploy, add to a screen, and test the component using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allow highlighting of specific rows by configuring an indicator column. This is a common request from app makers and can be complex to implement using native canvas app components. Code components in general can be written to work on both canvas apps and model-driven apps; however this component is written to specifically target use within canvas apps.
 
 In addition to these requirements, you also ensure the code component follows the best practice guidance:
 
@@ -22,8 +22,8 @@ In addition to these requirements, you also ensure the code component follows th
 1. Renders at the width and height provided by the parent canvas app screen.
 1. Consider allowing the app maker to customize the user interface using input properties and external app elements as far as possible.
 
->[!div class="mx-imgBorder"]
->![Canvas Grid Demo](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
+> [!div class="mx-imgBorder"]
+> ![Canvas Grid Demo](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
 
 Before you start, ensure you have installed all of the [Prerequisites](implementing-controls-using-typescript.md#prerequisites).
 
@@ -57,31 +57,31 @@ Before you start, ensure you have installed all of the [Prerequisites](implement
    >
    > If you receive the message `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
-   >[!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Canvas dataset grid](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
-The template includes an `index.ts` file in addition to the various configuration files. This is the entry point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
+The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
 
 
 #### Install Microsoft Fluent UI
 
-You will be using Microsoft Fluent UI and React for the UI, so you must install these as dependencies. Use the following at the terminal:
+You will be using Microsoft Fluent UI and React for creating UI, so you must install these as dependencies. Use the following at the terminal:
 
 ```shell
 npm install react react-dom @fluentui/react
 ```
 
-This adds the modules to the `packages.json` and install them into the `node_modules` folder. You will not commit `node_modules` into source control since all the required modules can be restored again using `npm install`.
+This adds the modules to the `packages.json` and install them into the `node_modules` folder. You will not commit `node_modules` into source control since all the required modules can be restored using `npm install`.
 
-Advantages of Microsoft Fluent UI is that it provides a consistent and highly [accessible](code-components-best-practices.md#check-accessibility) UI.
+One of the advantages of Microsoft Fluent UI is that it provides a consistent and highly [accessible](code-components-best-practices.md#check-accessibility) UI.
 
 #### Configuring `eslint`
 
 The template used by `pac pcf init` installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` now requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
 
-### Defining the dataset properties
+## Defining the dataset properties
 
-The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes will already contain the namespace and name of our control. We now must define the records that the code component can be bound to, by adding the following inside the `control` element, replacing the existing `data-set` element:
+The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes already has the namespace and name of the component. You must define the records that the code component can be bound to, by adding the following inside the `control` element, replacing the existing `data-set` element:
 
 ```xml
 <data-set name="records" display-name-key="Records_Dataset_Display">
@@ -96,7 +96,7 @@ The records [data-set](manifest-schema-reference\data-set.md) will be bound to a
 
 ### Defining the input and output properties
 
-In addition to the dataset, the user will provide the following **input** properties:
+In addition to the dataset, you can provide the following **input** properties:
 
 - `HighlightValue` - Allows the app maker to provide a value to be compared against the column defined as the `HighlightIndicator` `propert-set`. When the values are equal, the row should be highlighted.
 - `HighlightColor` - Allow the app maker to provide a color to highlight rows using.
@@ -104,10 +104,10 @@ In addition to the dataset, the user will provide the following **input** proper
 > [!TIP]
 > It is recommended to provide input properties for styling of common aspects of your code components when creating code components for use in canvas apps.
 
-In addition to the input properties, an **output** property named `FilteredRecordCount` will be updated (and triggers the `OnChange` event) when the rows count is changed because of a filter action applied inside the code component. This is so that we can show a 'No Rows Found' message inside the parent app.
+In addition to the input properties, an **output** property named `FilteredRecordCount` will be updated (and triggers the `OnChange` event) when the rows count is changed because of a filter action applied inside the code component. This is helpful when you want to show a `No Rows Found` message inside the parent app.
 
 > [!NOTE]
-> In the future, code components will support custom events and so you can define an event rather than using the generic `OnChange` event.
+> In the future, code components will support custom events so that you can define a specific event rather than using the generic `OnChange` event.
 
 To define these three properties, add the following to the `CanvasGrid\ControlManifest.Input.xml` file, below the `data-set` element:
 
@@ -122,19 +122,18 @@ To define these three properties, add the following to the `CanvasGrid\ControlMa
 ```shell
 npm run build
 ```
+After the component is built, you see that:
 
 1. An automatically generated file  `CanvasGrid\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
 
-2. The build output is added to the `out` folder. The `bundle.js` is the 'transpiled' JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that is used during deployment. 
+2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that is used during deployment. 
 
    > [!NOTE]
    > Do not modify the `generated` and `out` folder contents directly, they will be overwritten as part of the build process.
 
-#### Grid Fluent UI React component
+## Grid Fluent UI React component
 
-When the code component uses React, there must be a single root component that is rendered within the `updateView` method.
-
-Inside the `CanvasGrid` folder, add a new TypeScript file, named `Grid.tsx`. Add the following content:
+When the code component uses React, there must be a single root component that is rendered within the `updateView` method. Inside the `CanvasGrid` folder, add a new TypeScript file, named `Grid.tsx`. Add the following content:
 
 ```react
 import { DetailsList } from '@fluentui/react/lib/components/DetailsList/DetailsList';
@@ -282,17 +281,17 @@ Grid.displayName = 'Grid';
 > [!NOTE]
 > The file has the extension `tsx` which is a TypeScript file that supports XML style syntax used by React. It is compiled into standard JavaScript by the build process. 
 
-Notice the following about this code:
+From the above code, you see that:
 
-1. The line `const { ... } = props;` is called 'destructuring', where we extract the fields required to render from the props, rather than prefixing them with `props.` each time they are used.
+1. The line `const { ... } = props;` is called 'destructuring', where you extract the columns (fields) required to render from the props, rather than prefixing them with `props.` each time they are used.
 
-2. You import the Fluent UI components using path-based imports so that our bundle size will be smaller. Instead of:
+2. You import the Fluent UI components using path-based imports so that your bundle size will be smaller. Instead of:
 
    ```typescript
    import { DetailsList, Stack } from '@fluentui/react';
    ```
 
-   we will use:
+   You'll use:
 
    ```typescript
    import { DetailsList } from '@fluentui/react/lib/components/DetailsList/DetailsList';
@@ -301,21 +300,21 @@ Notice the following about this code:
 
    An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size) 
 
-3. This is a React functional component, but equally it could be a class component. This is entirely based on your preferred coding style. Class components and Functional components can even be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React.
+3. This is a React functional component, but equally it could be a class component. This is entirely based on your preferred coding style. Class components and functional components can be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React.
 
-4. You are using  `React.memo` to wrap our functional component so that it will not render unless any of the input props have changed. 
+4. You can use  `React.memo` to wrap your functional component so that it will not render unless any of the input props have changed. 
 
-5. `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` have change. This is a best practice of function components that will reduce unnecessary renders of the child components.
+5. `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` have change. This is a best practice of function components that reduces unnecessary renders of the child components.
 
-6. You are wrapping the `DetailsList` in a `Stack` because later you will add a footer element with the paging controls.
+6. The `DetailsList` in a `Stack`  is wrapped because later you will add a footer element with the paging controls.
 
 7. The Fluent UI `Sticky` component is used to wrap the header columns (using `onRenderDetailsHeader`) so that they remain visible when scrolling the grid.
 
 8. `setKey` is passed to the `DetailsList` along with `initialFocusedIndex` so that when the current page changes, the scroll position and selection will be reset.
 
-9. The function `onRenderItemColumn` is used to render the cell contents. It accepts row item, which we use [getFormattedValue](reference\entityrecord\getformattedvalue.md) on to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
+9. The function `onRenderItemColumn` is used to render the cell contents. It accepts row item, which you use [getFormattedValue](reference\entityrecord\getformattedvalue.md) on to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
 
-10. The `gridColumns` block is mapping the object shape of the columns provided by the dataset context, onto the shape expected by the `DetailsList` columns prop. Since this is wrapped in the `useMemo` React hook, the output will only change when the `columns` or `sorting` props change. You display the sort and filter icons on the columns where the sorting and filtering details provided by the code component context matches the column being mapped. The columns are sorted using the [`column.order`](reference\column.md#order) property to ensure they are in the correct order on the grid as defined by the app maker.
+10. The `gridColumns` block is mapping the object shape of the columns provided by the dataset context, onto the shape expected by the `DetailsList` columns prop. Since this is wrapped in the `useMemo` React hook, the output will only change when the `columns` or `sorting` props change. You can display the sort and filter icons on the columns where the sorting and filtering details provided by the code component context matches the column being mapped. The columns are sorted using the [`column.order`](reference\column.md#order) property to ensure they are in the correct order on the grid as defined by the app maker.
 
 11. You are maintaining an internal state for `isComponentLoading` in our React component. This is because when the user selects sorting and filtering actions, you can grey out the grid as a visual cue until the `sortedRecordIds` are updated and the state is reset. There is an additional input prop called `itemsLoading` which is mapped to the [dataset.loading](reference\dataset.md#loading) property provided by the dataset context. Both flags are used to control the visual loading cue that is implemented using the Fluent UI `Overlay` component.
 
@@ -332,7 +331,7 @@ initializeIcons(undefined, { disableWarnings: true });
 ```
 
 > [!NOTE]
-> The import of `initializeIcons` is required because we are using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness - inside canvas apps they are already initialized. 
+> The import of `initializeIcons` is required because you are using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness - inside canvas apps they are already initialized. 
 
 Add the following class fields underneath `export class GridCanvas`:
 
@@ -363,16 +362,16 @@ this.isTestHarness = document.getElementById('control-dimensions') !== null;
 
 The `init` function is called when the code component is first initialized on an app screen. You store a reference to the following:
 
-- `notifyOutputChanged` - this is the callback provided that you call to notify the canvas app that one of the properties has changed.
+- `notifyOutputChanged` - This is the callback provided that you call to notify the canvas app that one of the properties has changed.
 
-- `container` - this is the DOM element that you add your code component UI to.
+- `container` - This is the DOM element that you add your code component UI to.
 
-- `resources` - used to retrieve localized strings in the current user's language.
+- `resources` - Used to retrieve localized strings in the current user's language.
 
 The [trackContainerResize(true)](reference\mode\trackcontainerresize.md) is used so that `updateView` will be called when the code component changes size.
 
 > [!NOTE]
-> Currently there is no way to determine if the code component is running inside the test harness so, you detect if the control-dimensions div is present as an indicator.
+> Currently there is no way to determine if the code component is running inside the test harness. You need to detect if the control-dimensions div is present as an indicator.
 
 Add the following to `updateView`:
 
@@ -434,7 +433,7 @@ public destroy(): void {
 }
 ```
 
-You can now run `npm start watch` to see the simple grid inside the test harness. You need to set a width and height to see the code component grid that is populated using the sample three records. You can then export a set of records into a CSV from Dataverse and then load into the test harness using  **Data Inputs** > **Records panel**:
+You can use `npm start watch` to see the simple grid inside the test harness. You need to set the width and height to see the code component grid that is populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load into the test harness using  **Data Inputs** > **Records panel**:
 
 > [!div class="mx-imgBorder"]
 > ![Test Harness](media/canvas-datagrid-2.gif "Test Harness")
@@ -526,7 +525,7 @@ ReactDOM.render(
     }),
 ```
 
-### Raising the `OnSelect` event
+### Invoking the `OnSelect` event
 
 There is a pattern in canvas apps where if a gallery or grid has an item selection invoked (for example, selecting a chevron icon) it raises the `OnSelect` event. You can implement this pattern using the [openDatasetItem](reference\dataset\opendatasetitem.md) method of the dataset. 
 
@@ -585,7 +584,7 @@ When you save all files, the test harness will reload. If you use `Ctrl` + `Shif
 
 There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
-### Adding Localization
+## Adding Localization
 
 Before you go any further, you need to add resource strings to our code component so that you can use localized strings for messages such as paging, sorting, and filtering. Add a new file `CanvasGrid\strings\CanvasGrid.1033.resx` with the following contents:
 
@@ -698,9 +697,9 @@ Before you go any further, you need to add resource strings to our code componen
 > [!TIP]
 > It's not recommended to edit `resx` files directly, instead you can use either Visual Studio's resource editor, or an extension for Visual Studio Code.
 
-You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in canvas app studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at run time using [getString](reference\resources\getstring.md). More information:  [Implementing localization API component](sample-controls\localization-api-control.md).
+You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in Power Apps Studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at runtime using [getString](reference\resources\getstring.md). More information:  [Implementing localization API component](sample-controls\localization-api-control.md).
 
-This new resource file must be also added to the `ControlManifest.Input.xml` file inside the `resources` element:
+This new resource file should be added to the `ControlManifest.Input.xml` file inside the `resources` element:
 
 ```xml
 <resx path="strings/CanvasGrid.1033.resx" version="1.0.0" />
@@ -710,7 +709,7 @@ This new resource file must be also added to the `ControlManifest.Input.xml` fil
 
 If you want to allow the user to sort and filter using grid column headers. The Fluent UI `DetailList` provides an easy way of adding context menus to the column headers.
 
-First, as before, you add to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
+First, you add to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
 
 ```typescript
 export class GridProps {
@@ -1188,9 +1187,9 @@ Now, you can pass the `onRenderRow` method into the `DetailsList` props:
     ></DetailsList>
 ```
 
-### Deploying and configuring
+## Deploying and configuring
 
-Now that you have implemented all the features, you must deploy to Microsoft Dataverse for testing.
+Now that you have implemented all the features, you must deploy the code component to Microsoft Dataverse for testing.
 
 1. Inside your Dataverse environment, ensure there is a publisher created with a prefix of `samples`:
 
@@ -1224,10 +1223,10 @@ Now that you have implemented all the features, you must deploy to Microsoft Dat
    > ![PowerAppsTools_samples solution](media/canvas-datagrid-4.png "PowerAppsTools_samples solution")
 
 5. To use code components inside canvas apps you must enable the **Power Apps component framework for canvas apps** on the environment you are using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment. 
-   Navigate to **Settings** -> **Product** -> **Features** -**>** Ensure **Power Apps component framework for canvas apps** is turned **On**:
+   Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
 
-   >[!div class="mx-imgBorder"]
-   >![Enable Code Components](media/canvas-datagrid-enable.png "Enable code components")
+   > [!div class="mx-imgBorder"]
+   > ![Enable Code Components](media/canvas-datagrid-enable.png "Enable code components")
 
 6. Create a new canvas app using the **Tablet** layout. 
 
@@ -1310,7 +1309,7 @@ So far, you have deployed a development build, which is not optimized and will r
 <PcfBuildMode>production</PcfBuildMode>
 ```
 
-See TODO: [Canvas Grid]() for the full code sample. 
+See [Canvas Grid]() for the full code sample. 
 
 ### Related articles
 

@@ -49,9 +49,9 @@ When your code component is ready for testing inside a model-driven app, canvas 
 
 When building `pcfproj` projects, the generated JavaScript depends on the command used to build and the `PcfBuildMode` in the `pcfproj` file.
 
-You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) 
+You don't normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) 
 
-For `pac pcf push` to result in a release build, the `PcfBuildMode` is set inside the `pcfproj` by adding a new element underneath the `OutputPath` element as follows:
+For `pac pcf push` to result in a release build, the `PcfBuildMode` is set inside the `pcfproj` by adding a new element under the `OutputPath` element as follows:
 
 ```xml
 <PropertyGroup>
@@ -205,7 +205,7 @@ The diagram describes the following points:
 
 9. **Deploy code component segmented solution before solutions that use it** - When importing solutions that take dependencies on segmented code component solution, the code component solution must be installed on the target environment before it can be imported.
 
-More information: [Package and distribute extensions using solutions](/dynamics365/customerengagement/on-premises/developer/package-distribute-extensions-use-solutions?-op&view=op-9-1).
+More information: [Package and distribute extensions using solutions](/powerapps/developer/data-platform/introduction-solutions).
 
 ## Code components and automated build pipelines
 
@@ -300,7 +300,7 @@ If you are using **AzureDevOps**, you can set your build pipeline versioning usi
 Consuming code components in canvas apps is different from model-driven apps that the code component must be explicitly added to the app using **Get more components** located on the **Insert** panel. Once a code component is added to the canvas app, it is included as the content inside the app definition. To update to a new version of a code component after it is deployed (and the control version incremented), the app maker must first open the app in maker studio and select **Update** when prompted on the **Update code components** dialog. The app must be then saved and published for the new version to be used when the app is played by users.
 
 > [!div class="mx-imgBorder"]
-> ![Update code components](media//upgrade-code-component.png "Update code components")
+> ![Update code components](media/upgrade-code-component.png "Update code components")
 
 If the app is not updated or **Skip** is used, the app will continue to use the older version of the code component even though it does not exist in the environment since it has been overwritten by the newer version. 
 

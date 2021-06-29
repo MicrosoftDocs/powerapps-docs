@@ -14,7 +14,7 @@ author: Nkrb
 
 # Tutorial: Creating a model-driven app field component
 
-In this tutorial, you will create a model-driven app `field` component, deploy, configure, and test the component on a form using Visual Studio Code. This code component displays a set of choices on a form, with an icon next to each choice value. The component uses some of the advanced features of model-driven apps, such as choices column definitions and field-level security.
+In this tutorial, you will create a model-driven app `field` component, deploy, configure, and test the component on a form using Visual Studio Code. This code component displays a set of choices on the form with an icon next to each choice value. The component uses some of the advanced features of model-driven apps, such as choices column definitions (metadata) and field-level security.
 
 In addition to these, you will also ensure the code component follows the best practice guidance:
 
@@ -36,7 +36,7 @@ To create a new `pcfproj`:
 
 1. Open Visual Studio Code and navigate to **File** > **Open Folder**  and then select the `ChoicesPicker` folder created before. If you have added the windows explorer extensions during the installation of Visual Studio Code, you can also use the **Open with Code** context menu option inside the folder. You may also add any folder into Visual Studio Code using `code .` in the command prompt when the current directory is set to that location.
 
-1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** -> **New Terminal**), use the following command to create a new code component project:
+1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
 
    ```CLI
    pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field
@@ -48,24 +48,24 @@ To create a new `pcfproj`:
    pac pcf init -ns SampleNamespace -n ChoicesPicker -t field
    ```
 
-1. This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules needed. To install the necessary modules use:
+This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules needed. To install the necessary modules use:
 
-   ```CLI
-   npm install
-   ```
+```CLI
+npm install
+```
 
-   > [!NOTE]
-   > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
+> [!NOTE]
+> If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
-   >[!div class="mx-imgBorder"]
-   ![Creating code component using pac pcf init](media/field-component-1.gif "Creating code component using pac pcf init")
+>[!div class="mx-imgBorder"]
+> ![Creating code component using pac pcf init](media/field-component-1.gif "Creating code component using pac pcf init")
 
 You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
 
 
 ### Install Microsoft Fluent UI
 
-You will be using Microsoft Fluent UI and React for the User Interface, so you need to install these as dependencies. To install the dependencies, use:
+You will be using Microsoft Fluent UI and React for creating UI, so you need to install these as dependencies. To install the dependencies, use:
 
 ```shell
 npm install react react-dom @fluentui/react
@@ -73,7 +73,7 @@ npm install react react-dom @fluentui/react
 
 This adds the modules to the `packages.json` and installs them into the `node_modules` folder. You will not commit `node_modules` into source control since all the required modules will be restored later using `npm install`.
 
-One of the advantages of Microsoft Fluent UI is that it provides a consistent and highly [accessible](code-components-best-practices.md#check-accessibility) User Interface.
+One of the advantages of Microsoft Fluent UI is that it provides a consistent and highly [accessible](code-components-best-practices.md#check-accessibility) UI.
 
 ### Configuring `eslint`
 
@@ -99,16 +99,16 @@ Save the changes you made and then use the following command to build the compon
 npm run build
 ```
 
-You should now notice two things:
+After the component is built, you see that:
 
-1. An automatically generated file  `ChoicesPicker\generated\ManifestTypes.d.ts` will be added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
+1. An automatically generated file  `ChoicesPicker\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
 
-2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser. The `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that will be used during deployment. 
+2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser. The `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that is used during deployment. 
 
    > [!NOTE]
-   > Do not modify the `generated` and `out` folder contents directly. They will always be overwritten as part of the build process.
+   > Do not modify the `generated` and `out` folders contents directly. They will be overwritten as part of the build process.
 
-#### Choices picker Fluent UI React component
+## Choices picker Fluent UI React component
 
 When the code component uses React, there must be a single root component that is rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file, named `ChoicesPickerComponent.tsx`. Add the following content:
 
@@ -177,13 +177,13 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 > [!NOTE]
 > The file has the extension `tsx`, a TypeScript file that supports XML style syntax used by React. It is compiled into standard JavaScript by the build process.
 
-Notice the following about this code:
+From the above code, you see that:
 
-1. The `const { label, value, options, onChange, configuration } = props;` is called 'destructuring', where you extract the attributes required to render from the props, rather than prefixing them with `props.` each time they are used.
+1. The `const { label, value, options, onChange, configuration } = props;` is called 'destructuring', where you extract the attributes required to render from the props, rather than prefixing them with `props` each time they are used.
 
 2. The input props have the following attributes that are provided by `index.ts`.
 
-   - `label` - Used to label the component and is bound to the metadata field label that will always be provided by the parent context, using the user interface language selected inside the model-driven app.
+   - `label` - Used to label the component and is bound to the metadata field label that is provided by the parent context, using the UI language selected inside the model-driven app.
 
    - `value` - Linked to the input property defined in the manifest. This can be null when the record is new, or the field is not set. TypeScript `null` is used rather than `undefined` when passing/returning property values.
 
@@ -191,7 +191,7 @@ Notice the following about this code:
 
    - `configuration` - The purpose of the component is to show an icon for each choice available. The configuration is provided by the app maker when they add the code component to a form. This property accepts a JSON string that maps each numeric choice value to a [fluent UI  icon name](https://developer.microsoft.com/fluentui#/styles/web/icons#available-icons). For example, `{"0":"ContactInfo","1":"Send","2":"Phone"}`.
 
-   - `onChange` - When the user changes the choices selection, the React component raises the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value. There are two types of React components:
+   - `onChange` - When the user changes the choices selection, the React component triggers the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value. There are two types of React components:
 
       1. **Uncontrolled** - These components maintain their internal state and use the input props as default values only.
       2. **Controlled** - These components render the value passed by the component props. If the `onChange` event does not update the prop values, the user will not see a change in the UI.
@@ -221,9 +221,9 @@ Notice the following about this code:
 
 7. `React.useCallback` is used to create a callback closure that is called when the fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
 
-8. If the parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
+8. If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
 
-### Render the React Component from inside `index.ts`
+### Render the React component from inside `index.ts`
 
 When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md). All the values needed to render the component are passed into the component such that whey they are changed, and then it is re-rendered. Before you can add the `ChoicesPickerComponent` to the `index.ts`, you  must add the following at the top of the file:
 
@@ -240,7 +240,7 @@ initializeIcons(undefined, { disableWarnings: true });
 > [!NOTE]
 > The import of `initializeIcons` is required because you are using the fluent UI icon set. You need to call `initializeIcons` to load the icons inside the test harness - inside model-driven apps they are already initialized. 
 
-The code component will maintain its instance state using attributes (this is different to React component state). Inside the `index.ts` `ChoicesPicker` class, add the following attributes:
+The code component maintains its instance state using attributes (this is different to React component state). Inside the `index.ts` `ChoicesPicker` class, add the following attributes:
 
 ```typescript
 notifyOutputChanged: () => void;
@@ -249,12 +249,12 @@ context: ComponentFramework.Context<IInputs>;
 selectedValue: number | undefined;
 ```
 
-- `notifyOutputChanged` - this holds a reference to the method used to notify the model-driven app that a user has changed a choice value and the code component is ready to pass it back to the parent context.
-- `rootContainer` - this is the HTML DOM element that is created to hold the code component inside the model-driven app.
-- `context` - this is the Power Apps component framework context that is used to read the properties defined in the manifest and other runtime properties and access API methods such as `trackContainerResize`.
-- `selectedValue` - this holds the state of the choice selected by the user so that it can be returned inside the `getOutputs` method.
+- `notifyOutputChanged` - Holds a reference to the method used to notify the model-driven app that a user has changed a choice value and the code component is ready to pass it back to the parent context.
+- `rootContainer` - HTML DOM element that is created to hold the code component inside the model-driven app.
+- `context` - Power Apps component framework context that is used to read the properties defined in the manifest and other runtime properties and access API methods such as `trackContainerResize`.
+- `selectedValue` - Holds the state of the choice selected by the user so that it can be returned inside the `getOutputs` method.
 
-To set these attributes, update the `init` method to be:
+To set these attributes, update the `init` method to:
 
 ```typescript
 public init(
@@ -269,12 +269,11 @@ public init(
   }
 ```
 
-The `init` is called when the code component is initialized on an app screen. You store a reference to the following:
+The `init` method is called when the code component is initialized on an app screen. You store a reference to the following:
 
-- `notifyOutputChanged` - this is the callback if you call to notify the canvas app that one of the properties has changed.
+- `notifyOutputChanged` - This is the callback if you call to notify the canvas app that one of the properties has changed.
 
-- `rootContainer` - this is the DOM element that you add your code component User Interface.
-
+- `rootContainer` - This is the DOM element that you add your code component UI.
 
 When the user changes the value selected, you must call the `notifyOutputChanged` from the `onChange` event.
 Add a function:
@@ -286,7 +285,7 @@ onChange = (newValue: number | undefined): void => {
 };
 ```
 
-Update the `getOutputs` method to be:
+Update the `getOutputs` method:
 
 ```typescript
 public getOutputs(): IOutputs {
@@ -317,9 +316,9 @@ public updateView(context: ComponentFramework.Context<IInputs>): void {
 }
 ```
 
-Notice that we are pulling the label and options from `context.parameters.value`, and the `value.raw` provides the numeric choice selected or `null` if no value is selected.
+Notice that you are pulling the label and options from `context.parameters.value`, and the `value.raw` provides the numeric choice selected or `null` if no value is selected.
 
-Lastly, we need to tidy up when the code component is destroyed:
+Lastly, you need to tidy up when the code component is destroyed:
 
 ```typescript
 public destroy(): void {
@@ -327,7 +326,7 @@ public destroy(): void {
 }
 ```
 
-#### Start the test harness
+## Start the test harness
 
 Ensure all the files are saved and at the terminal use:
 
@@ -335,7 +334,7 @@ Ensure all the files are saved and at the terminal use:
 npm start watch
 ```
 
-You should see that the test harness starts with the choices picker rendered inside a new browser window. Initially, it shows an error because the string property `configuration` has the default value `val`. Set the configuration so that it maps the test harness default choices 0,1 & 2 with the following Fluent UI icons:
+You see that the test harness starts with the choices picker rendered inside a new browser window. Initially, it shows an error because the string property `configuration` has the default value `val`. Set the configuration so that it maps the test harness default choices 0,1 & 2 with the following Fluent UI icons:
 
 ```json
 {"0":"ContactInfo","1":"Send","2":"Phone"}
@@ -346,9 +345,9 @@ You should see that the test harness starts with the choices picker rendered ins
 
 When you change the option selected, you will see the value in the **Data Inputs** panel on the right. Additionally, if you change the value, the component shows the associated value updated.
 
-#### Supporting read-only and field-level security
+### Supporting read-only and field-level security
 
-When creating model-driven apps field code components, enterprise applications need to respect the control state when read-only or masked due to field-level security. If the code component does not render a read-only UI when the column is read-only, in some circumstances (for example, when a record is inactive) a column can be updated by a user where it should not. More information: [Field level security in model-driven apps](/power-platform/admin/field-level-security).
+When creating model-driven apps `field` components, enterprise applications need to respect the control state when read-only or masked due to field-level security. If the code component does not render a read-only UI when the column is read-only, in some circumstances (for example, when a record is inactive) a column can be updated by the user where it should not. More information: [Field level security in model-driven apps](/power-platform/admin/field-level-security).
 
 Inside the `updateView`, add the following code to get the disabled and masked flags:
 
@@ -412,7 +411,7 @@ You will also need to add `disabled` and `masked` to the 'destructuring' of the 
 
 #### Making the code component responsive
 
-Code components can be rendered in both web, tablet, and mobile apps. It is important to consider the space available. Make the choices component render as a drop-down when the available width is restricted.
+Code components can be rendered on web, tablet, and mobile apps. It is important to consider the space available. Make the choices component render as a drop-down when the available width is restricted.
 
 First, you update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerProps` interface:
 
@@ -562,7 +561,7 @@ Now save all the changes, so they are automatically reflected in the test harnes
 > [!div class="mx-imgBorder"]
 > ![trackContainerResize](media/field-component-3.gif "trackContainerResize")
 
-#### Localization
+## Localization
 
 If you want to support multiple languages, your code component can hold a resource file that provides translations for both design and runtime strings. 
 
@@ -686,7 +685,7 @@ If you need any additional strings for use in your component, you can add them t
 
 One of the test harness limitations is that it does not load resource files, so you need to deploy the component to Microsoft Dataverse to fully test your component.
 
-#### Deploying and configuring in a model-driven app
+## Deploying and configuring in a model-driven app
 
 Once you have tested basic functionality with the test harness, you must deploy the component to Microsoft Dataverse so that the code component can be fully tested end-to-end inside a model-driven app.
 
@@ -743,8 +742,8 @@ Once you have tested basic functionality with the test harness, you must deploy 
 
      These are the fluent UI icons that will be used for each choice value.
 
-   > [!div class="mx-imgBorder"]
-   > ![Control Properties](media/field-component-6.png "Control properties")
+      > [!div class="mx-imgBorder"]
+      > ![Control Properties](media/field-component-6.png "Control properties")
 
    - Select the **Display tab** and uncheck **Display label on the form** since you will show the label above the choices picker.
 
@@ -756,7 +755,7 @@ Once you have tested basic functionality with the test harness, you must deploy 
    > You may see that text alignment is slightly different in the test harness compared to model-driven apps. This is because the test harness has different CSS rules to that of model-driven apps. For this reason, it is recommended that you always fully test your code component after deployment.
 
 
-#### Debugging after deployed to Dataverse
+### Debugging after deploying to Dataverse
 
 If you need to make further changes to your component, you do not need to deploy each time, but instead use the technique described in [Debug code components](debugging-custom-controls.md) to create a Fiddler **AutoResponder** to load the file from your local file system while `npm start watch` is running.
 
@@ -786,7 +785,7 @@ So far, you have deployed a development build that is not optimized and will run
 <PcfBuildMode>production</PcfBuildMode>
 ```
 
-See TODO: [Choice Picker for Model Driven Apps]() for the full code sample. 
+See [Choice picker sample for model-driven apps]() for the full code sample. 
 
 ### Related articles
 
