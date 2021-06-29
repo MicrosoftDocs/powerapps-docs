@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,7 +17,7 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Common Data Service (current environment) connector enables calling Custom APIs actions in Power Automate.
+Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Microsoft Dataverse connector enables calling Custom APIs actions in Power Automate.
 
 Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
 
