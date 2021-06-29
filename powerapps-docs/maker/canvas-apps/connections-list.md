@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 06/14/2021
+ms.date: 06/29/2021
 ms.author: lanced
 search.audienceType: 
   - maker
