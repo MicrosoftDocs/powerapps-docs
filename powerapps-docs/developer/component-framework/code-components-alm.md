@@ -22,9 +22,7 @@ This article describes how to manage specific aspects of the lifecycle managemen
 
 3. [Versioning and deploying updates](#versioning-and-deploying-updates)
 
-4. [Automated testing of code components](#automated-testing-of-code-components)
-
-5. [Canvas apps ALM considerations](#canvas-apps-alm-considerations)
+4. [Canvas apps ALM considerations](#canvas-apps-alm-considerations)
 
 ## Development and debugging ALM considerations
 
@@ -53,14 +51,6 @@ When building `pcfproj` projects, the generated JavaScript depends on the comman
 
 You would not normally deploy a code component into Microsoft Dataverse that has been built in development mode since it can often be too large to import and may result in slower runtime performance. More information: [Debugging after deploying into Microsoft Dataverse using Fiddler](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse-using-fiddler) 
 
-The following table shows which commands result in development vs. release builds:
-
-| Build command used on `pcfproj` | Development Build<br />(debug purposes only)                 | Release Build                                                |
-| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `npm start watch`               | Always                                                       |                                                              |
-| `pac pcf push`                  | Default behavior or when `PcfBuildMode` is set to **development** in the `pcfproj` file  | `PcfBuildMode` is set to **production** in the `pcfproj` file |
-| `npm run build`                 | Default behavior                                            | `npm run build -- --buildMode release`                       |
-
 For `pac pcf push` to result in a release build, the `PcfBuildMode` is set inside the `pcfproj` by adding a new element underneath the `OutputPath` element as follows:
 
 ```xml
@@ -72,21 +62,19 @@ For `pac pcf push` to result in a release build, the `PcfBuildMode` is set insid
 </PropertyGroup>
 ```
 
+The following table shows which commands result in development vs. release builds:
+
+| Build command used on `pcfproj` | Development Build<br />(debug purposes only)                 | Release Build                                                |
+| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `npm start watch`               | Always                                                       |                                                              |
+| `pac pcf push`                  | Default behavior or when `PcfBuildMode` is set to **development** in the `pcfproj` file  | `PcfBuildMode` is set to **production** in the `pcfproj` file |
+| `npm run build`                 | Default behavior                                            | `npm run build -- --buildMode release`                       |
+
 More information: [Package a code component](import-custom-controls.md#package-a-code-component)
 
 ## Building .cdsproj solution projects
 
-When building a solution project (`.cdsproj`), you have an option to generate the output as unmanaged or managed solution. 
-
-The following table shows which command and configuration results in development vs. release builds.
-
-| Build command used on  `cdsproj` | `SolutionPackageType` | Output                                              |
-| ------------------------------------ | --------------------- | --------------------------------------------------- |
-| `msbuild`                            | Managed               | **Development** build inside **Managed** Solution   |
-| `msbuild /p:configuration=Release`   | Managed               | **Release** build inside **Managed** Solution       |
-| `msbuild`                            | Unmanaged             | **Development** build inside **Unmanaged** Solution |
-| `msbuild /p:configuration=Release`   | Unmanaged             | **Release** build inside **Unmanaged** Solution     |
-
+When building a solution project (`.cdsproj`), you have an option to generate the output as unmanaged or managed solution.
 
 The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac solution init,` but initially commented out. Uncomment the section and set to **Managed**, **Unmanaged** or **Both**
 
@@ -96,6 +84,15 @@ The `SolutionPackagerType` is included in the `.cdsproj` file created by `pac so
     <SolutionPackageType>Managed</SolutionPackageType>
  </PropertyGroup>
 ```
+
+The following table shows which command and configuration results in development vs. release builds.
+
+| Build command used on  `cdsproj` | `SolutionPackageType` | Output                                              |
+| ------------------------------------ | --------------------- | --------------------------------------------------- |
+| `msbuild`                            | Managed               | **Development** build inside **Managed** Solution   |
+| `msbuild /p:configuration=Release`   | Managed               | **Release** build inside **Managed** Solution       |
+| `msbuild`                            | Unmanaged             | **Development** build inside **Unmanaged** Solution |
+| `msbuild /p:configuration=Release`   | Unmanaged             | **Release** build inside **Unmanaged** Solution     |
 
 More information: [Package a code component](import-custom-controls.md#package-a-code-component).
 
@@ -263,7 +260,7 @@ A common versioning strategy is [semantic versioning](https://semver.org/) which
 
 The `ControlManifest.Input.xml` stores the code component version in the control element:
 
-```
+```xml
 <control namespace="..." constructor="..." version="1.0.0" display-name-key="..." description-key="..." control-type="...">
 ```
 
@@ -285,7 +282,7 @@ It is recommended that the Major and Minor version of the code component's versi
 2. You make a small update to your code component and increment the patch version on the code component to `1.0.1` using `pac pcf version --strategy manifest`.
 3. When packaging the code component for deployment, the solution version in `Solution.xml` is updated to be 1.0.0.1 - or the version is incremented automatically by manually exporting the solution.
 4. You make significant changes to your solution such that you want to increment the major and minor version to 1.1.0.0.
-5. In this case, the code component version can be updated to be 1.1.0.
+5. In this case, the code component version also can be updated to be 1.1.0.
 
 [Dataverse solutions has four parts](/powerapps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates) and it can be thought of as the following structure:`MAJOR.MINOR.BUILD.REVISION`.
 
@@ -297,12 +294,6 @@ If you are using **AzureDevOps**, you can set your build pipeline versioning usi
 | MINOR                 | MINOR                                                        | MINOR                                                       | Set using Pipeline Variable `$(minorVersion)` or use the value last committed to source control. |
 | ---                   | ---                                                          | BUILD                                                       | `$(Build.BuildId)`                                           |
 | PATCH                 | PATCH                                                        | REVISION                                                    | `$(Rev:r)`                                                   |
-
-## Automated testing of code components
-
-**TODO:** Are there any recommendations on automated testing? Should we recommend EasyRepo for MDAs. What about canvas apps?
-
-https://docs.microsoft.com/powerapps/maker/canvas-apps/test-studio
 
 ## Canvas apps ALM considerations
 
