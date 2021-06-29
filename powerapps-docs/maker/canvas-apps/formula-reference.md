@@ -187,6 +187,8 @@ Other elements include:
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
+**[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
+
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
 **[IsError](functions/function-iferror.md)** – Checks for an error.

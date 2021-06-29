@@ -85,7 +85,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
  
 The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
-### Named account using Microsoft 365  
+### Named account using Office365  
 
 Create a new connection to Dataverse using a UserName or Password via Office365. This `AuthType` is deprecated and we recommend to use `OAuth` as the preferred authentication type. More information: [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse)
 
@@ -98,7 +98,7 @@ Create a new connection to Dataverse using a UserName or Password via Office365.
   Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
-### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
+### OAuth using named account in Office365 with UX to prompt for authentication  
 
 Create a new connection to Dataverse using a UserID or Password via OAuth.
 
