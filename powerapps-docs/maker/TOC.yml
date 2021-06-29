@@ -2194,8 +2194,14 @@
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
-            - name: Understand Employee ideas sample app architecture
-              href: ../teams/employee-ideas-architecture.md
+            - name: Customize Employee ideas app
+              items:
+                - name: Understand Employee ideas sample app architecture
+                  href: ../teams/employee-ideas-architecture.md
+                - name: Customize Employee ideas app
+                  href: ../teams/customize-employee-ideas.md
+                - name: Export Employee ideas for reporting
+                  href: ../teams/export-employee-ideas-for-reporting.md
         - name: How to (Preview)
           items:
              - name: How to
@@ -2228,6 +2234,8 @@
                    href: ../teams/extend-milestones-add-column.md
                  - name: Send a weekly report on project status from the Milestones sample app
                    href: ../teams/extend-milestones-weekly-report.md
+                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
+                   href: ../teams/extend-milestones-send notification.md
         - name: Perspectives (Preview)
           items:
             - name: Perspectives
