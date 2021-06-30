@@ -6,11 +6,8 @@ ms.author: nabuthuk
 author: Nkrb
 contributors:
     - v-scottdurow
-manager: kvivek
 ms.date: 06/30/2021
 ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
