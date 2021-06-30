@@ -2,7 +2,7 @@
 title: "Configure Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 05/26/2021
+ms.date: 06/30/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -68,10 +68,10 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
     ![Add tables](media/add-tables.png "Add tables")
 
-## Query your Dataverse data with Serverless SQL Pool
+## Query your Dataverse data with serverless SQL pool
 
 > [!NOTE]
-> Azure Synapse Link for Dataverse does not support the use of Dedicated SQL Pools at this time.
+> Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
 
 1. Select your storage account name from the list, and then select **Go to Azure Synapse workspace**.
 
@@ -89,11 +89,11 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
     ![Run query](media/run-query.png "Run query")
 
-## Query multiple Dataverse databases with Serverless SQL Pool
+## Query multiple Dataverse databases with serverless SQL pool
 
 > [!NOTE]
 >
-> - Azure Synapse Link for Dataverse does not support the use of Dedicated SQL Pools at this time.
+> - Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
 > - Querying multiple Dataverse databases requires that both Dataverse organizations are in the same region.
 
 1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
@@ -145,7 +145,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     ![Power BI select tables](media/pbi-select-tables.png "Power BI select tables")
 
 > [!NOTE]
-> If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the Serverless SQL endpoint. Repeat the above steps.
+> If you receive a credentials error, go to **File** > **Options and settings** > **Data source settings** and clear the permissions for the serverless SQL endpoint. Repeat the above steps.
 
 8. Select fields from the **Fields** pane to create a simple table or create other visualizations.
 
