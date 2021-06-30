@@ -4,16 +4,12 @@ description: Determines the container sizing if the component needs to react.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
+contributors:
+    - v-scottdurow
 manager: kvivek
-ms.date: 06/23/2021
+ms.date: 06/30/2021
 ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: c5f482c2-dde2-460b-89a7-39e0efcc5704
 ---
 
 # trackContainerResize
