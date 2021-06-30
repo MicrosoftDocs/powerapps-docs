@@ -27,13 +27,13 @@ contributors:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Azure Synapse Link to connect your Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
+You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
 1. Connect your Dataverse data to your Azure Synapse Analytics workspace with the Azure Synapse Link service.
-2. Query your data in Azure Synapse Analytics workspace with the built-in Serverless SQL Pool.
-3. Query multiple Dataverse databases with the built-in Serverless SQL Pool.
-4. Transform your data with an Apache Spark Notebook.
-5. Generate a Power BI Report by connecting to the Serverless SQL Endpoint from your Azure Synapse Analytics workspace.
+2. Query your data in Azure Synapse Analytics workspace with the built-in serverless SQL pool.
+3. Query multiple Dataverse databases with the built-in serverless SQL pool.
+4. Transform your data with an Apache Spark notebook.
+5. Generate a Power BI report by connecting to the serverless SQL endpoint from your Azure Synapse Analytics workspace.
 6. Unlink your Azure Synapse Link.
 
 > [!NOTE]
