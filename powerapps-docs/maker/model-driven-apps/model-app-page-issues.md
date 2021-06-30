@@ -22,9 +22,9 @@ search.app:
 
 The custom page is a new page type within model-driven app, which brings in the power of canvas.  Below are the known issues to be aware of.
 
-* When a custom page is modified (for example saved and published), the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published.  A model-driven app publish through app designer or solution explorer will update all custom pages in the model-driven app. This also applies to **Publish all**.
+## Maker Related Issues
 
-* When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
+* When a custom page is modified (for example saved and published), the model-driven app is not aware of the change and will continue to use the last version of the custom page when the model-driven app was published.  A model-driven app publish through app designer or solution explorer will update all custom pages in the model-driven app. This also applies to **Publish all**.
 
 * Deleting a model-driven app with a custom page from the make.powerapps.com Apps list fails with an error.  The work-around is to delete from the solution explorer list.
 
@@ -39,11 +39,21 @@ The custom page is a new page type within model-driven app, which brings in the 
 
 * Deleting a custom page that is referenced by a model-driven app will be blocked until the reference is removed from the model-driven app Pages and the sitemap. See more on [Managing dependencies](/power-platform/alm/removing-dependencies)
 
-* Under some cases, loading a custom page when there is a change can take longer and no page loading spinner is shown.
-
 * When a custom page with code component is opened for editing, a security dialog is shown.  On this dialog, clicking on **Go back** button does not navigate back to parent context.  User can close the browser tab to leave the canvas designer.  
 
+## End User Related Issues
+
+* When a user with no Power Apps user rights opens a custom page in the model-driven app, they will see an error mentioning no active entitlements to use PowerApps.  See more on [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus) and the associated licensing guide. 
+
 * When a user is prompted for consent with connectors and clicks "Don't allow", the custom page will render but without data.  The user does not get notified that data retrieval is skipped.
+
+* After a model-driven app or custom page is changed and published, loading a custom page can take longer than normal and no page loading spinner is shown.
+
+* When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
+
+* When a user using model-driven apps in Teams opens a custom page, an error message will indicate not supported yet.
+
+* When a user using Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer is not supported.
 
 ## Related topics
 
