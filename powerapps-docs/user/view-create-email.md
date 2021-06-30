@@ -1,6 +1,6 @@
 ---
-title: "Learn how to use email in model-driven apps | MicrosoftDocs"
-description: Learn how to use email.
+title: "Understand the email experience in model-driven apps | MicrosoftDocs"
+description: Understand the email experience
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -18,11 +18,10 @@ search.app:
   - D365CE
 ---
 
-# Use email
+# Understand the email experience
 
 Having the ability to communicate effectively with customers can lead to increased sales and customer satisfaction. The email capability in customer engagement apps empowers users with the ability to respond and provide timely customer interaction effortlessly through quick email access with enhanced features and functionality. You can compose, reply, and review email, as well as quickly attach and send images that add value and support to customer communication using streamlined functionality. You can also ensure interactions between you and your customers are consistent and professional by using email templates with rich text and images. 
 
-## Understand the email experience
 You can work in either the **navigate-to** email or the **contextual** email experience. The difference between the navigate-to vs. contextual email experience is where the email displays on your screen. Both experiences use the same **Enhanced Email** form, which is enabled by default out-of-the-box (OOTB).
 
 > [!Important]
