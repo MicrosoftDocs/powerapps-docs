@@ -6279,6 +6279,11 @@
       "source_path": "powerapps-docs/developer/data-platform/developer-resources-page.md",
       "redirect_url": "/powerapps/developer/data-platform/view-download-developer-resources",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/business-events.md",
+      "redirect_url": "/powerapps/developer/data-platform/business-events",
+      "redirect_document_id": "false"
     }
   ]
 }

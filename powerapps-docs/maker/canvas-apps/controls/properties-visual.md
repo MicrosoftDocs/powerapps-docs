@@ -1,6 +1,6 @@
 ---
-title: Visual properties | Microsoft Docs
-description: Reference information about properties such as Image, ImagePosition, and BackgroundImage
+title: Image properties in Power Apps
+description: Reference information about image properties in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: cf19b0b2-4da5-47c7-9c4c-24de9969bdf2
 ---
 
-Refreshes the data-set based on filters, sorting, linking, new column.
+Refreshes the dataset based on filters, sorting, linking, new column.

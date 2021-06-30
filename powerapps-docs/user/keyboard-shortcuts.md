@@ -43,6 +43,8 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Open a lookup drop-down list| Enter|
 |Close a lookup drop-down list|Esc|
 |Open a row found in lookup with forms in edit mode| Enter|
+|View more information when focus is on a lookup row item with a chevron | Right arrow (→) key|
+|Close the more information when focus is on a lookup item with a chevron | Left (←) arrow key|
 |Add an article to an email| N/A|
 |Apply an email template (when editing an email message)| N/A|
 

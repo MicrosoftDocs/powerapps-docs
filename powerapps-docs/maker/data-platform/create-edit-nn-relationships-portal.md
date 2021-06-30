@@ -2,7 +2,7 @@
 title: "Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
-ms.date: 08/27/2019
+ms.date: 06/10/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -74,7 +74,30 @@ The values for these columns are generated for you based on the tables chosen.
 
 Select **OK** to close the **Many-to-many** panel. The relationship will be created when you save changes to the table. 
 
-Once saved, there nothing that can be changed using [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
+Once saved, there's nothing that can be changed using [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). To edit properties of the relationship for model-driven apps use [solution explorer](create-edit-nn-relationships-solution-explorer.md).
+
+## Create a many-to-many relationship with the same table (self-referential relationship)
+
+There may be times when you need to create a many-to-many relationship that references the same table. For example, account records may have multiple parent account records. However, if the self-referential relationship doesn’t have custom labels configured, distinguishing the two related record types that appear in the app won’t be apparent to users. This is because the related records appear twice in the app by using the same table name.
+To create a self-referential relationship, use custom labels.
+1. Create a new custom table. In this example, the table is named *Custom table*.
+2. Open the classic solution explorer, open the custom table, and in the **N:N Relationships** section create a new **Many-to-Many Relationship**.
+3. Complete the relationship definition as follows. Make sure to add custom labels to both the current and the other table’s relationship:
+
+   **Current table** section
+   - **Display option**: **Use Custom Label**
+   - **Custom Label**: *Primary Custom Table Relationship*
+
+   **Other table** section
+   - **Entity Name**: *Custom table*
+   - **Display Option**: **Use Custom Label**
+   - **Custom Label**: *Secondary Custom Table Relationship*
+   :::image type="content" source="media/self-referencing-table-example.png" alt-text="Self-referential table relationship configuration":::
+4. Save the relationship, and then publish the customization.
+
+Because the related record types use the custom labels defined for the self-referential relationship instead of the table name, users running the app can distinguish between the two related record types that exist.
+
+:::image type="content" source="media/related-record-labels.png" alt-text="App with related records using relationship custom labels":::
 
 ## Delete relationships
 

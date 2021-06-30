@@ -1,5 +1,5 @@
 ---
-title: Collaborative troubleshooting using Monitor with features such as inviting a user or connecting a user to Monitor. | Microsoft Docs
+title: Collaborative troubleshooting using Monitor
 description: Learn about collaborative troubleshooting using Monitor with features such as inviting a user or connecting a user to Monitor.
 author: hasharaf
 ms.service: powerapps
@@ -110,7 +110,7 @@ The user can now interact with the app, and Monitor will show events for this in
 
 ### See also
 
-[Troubleshoot form issues in model-driven apps](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms)  
+[Troubleshoot form issues in model-driven apps](/powerapps/developer/model-driven-apps/troubleshoot-forms)  
 [Debugging canvas apps with Monitor](monitor-canvasapps.md)  
 [Debugging model-driven apps with Monitor](monitor-modelapps.md)  
 
