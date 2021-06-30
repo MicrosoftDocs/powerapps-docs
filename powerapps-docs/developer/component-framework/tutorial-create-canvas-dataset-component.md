@@ -161,7 +161,7 @@ import * as React from 'react';
 
 type DataSet = ComponentFramework.PropertyHelper.DataSetApi.EntityRecord & IObjectWithKey;
 
-export class GridProps {
+export interface GridProps {
     width?: number;
     height?: number;
     columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
@@ -538,7 +538,7 @@ There is a pattern in canvas apps where if a gallery or grid has an item selecti
 As before, you add an additional callback prop on the `Grid` component by adding the following to the `GridProps` interface inside `Grid.tsx`:
 
 ```typescript
-export class GridProps {
+export interface GridProps {
     ...
     onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
 }
@@ -718,7 +718,7 @@ If you want to allow the user to sort and filter using grid column headers. The 
 First, you add to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
 
 ```typescript
-export class GridProps {
+export interface GridProps {
     ...
     onSort: (name: string, desc: boolean) => void;
     onFilter: (name: string, filtered: boolean) => void;
@@ -1011,7 +1011,7 @@ Next, you must add the missing `loadFirstPage`, `loadNextPage` and `loadPrevious
 To the `GridProps` interface add the following:
 
 ```typescript
-export class GridProps {
+export interface GridProps {
     ...
      loadFirstPage: () => void;
      loadNextPage: () => void;
@@ -1059,6 +1059,9 @@ ReactDOM.render(
     }),
 ```
 
+> [!NOTE]
+> There is currently an issue with paging in canvas datasets where `currentPage` may get out of sync with the dataset page. A fix for this issue is being deployed. More information: [Canvas dataset paging is not reset when external filter applied](issues-and-workarounds.md#canvas-dataset-paging-is-not-reset-when-external-filter-applied)
+
 ### Adding full screen support
 
 Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there is limited space for the code component within a canvas app screen. You can use the Fluent UI `Link` component so it must be added to the imports at the top of `Grid.tsx`:
@@ -1085,7 +1088,7 @@ You see that:
 There are two props that must be added to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
 
 ```typescript
-export class GridProps {
+export interface GridProps {
     ...
     onFullScreen: () => void;
     isFullScreen: boolean;
