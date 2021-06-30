@@ -218,9 +218,9 @@ In addition to manually building and deploying your code component solutions, yo
 
 Some of the advantages using automated build pipelines are:
 
-- **Timely** - removing the manual tasks makes the tasks of building and packaging your component quicker so that it can be done more regularly such as every time a change is checked in.
-- **Repeatable** - once the build process is automated, it will be performed the same every time, and therefore not dependent on the member of the team who performs the build.
-- **Versioning consistency** - when the build pipeline automatically sets the version of your code component and the solution you can have confidence that when a new build is created, it is versioned consistently relative to previous versions. This facilitates tracking of features, bug fixes, and deployments.
+- **Timely** - Removing the manual tasks makes the tasks of building and packaging your component quicker so that it can be done more regularly such as every time a change is checked in.
+- **Repeatable** - Once the build process is automated, it will be performed the same every time, and therefore not dependent on the member of the team who performs the build.
+- **Versioning consistency** - When the build pipeline automatically sets the version of your code component and the solution you can have confidence that when a new build is created, it is versioned consistently relative to previous versions. This facilitates tracking of features, bug fixes, and deployments.
 - **Maintainable** - since everything that is needed to build your solution is contained from inside source control, you can always create new branches and development environments by checking out the code. When you are ready to deploy an update, Pull Requests can be merged into downstream branches. More information: [Branch and merging strategy with Microsoft Power Platform](/power-platform/alm/basics-alm#branching-and-merging-strategy).
 
 As described above, there are two approaches to solution management of code components, a segmented solution projects, or a single mixed solution containing other artifacts such as model-driven apps, canvas apps, and tables to which the code components are added.
@@ -233,7 +233,7 @@ If you are using the segmented code component solution project, then you can bui
 4. Collect the built solution zip into the pipeline release artifacts. This solution will contain all code components included as references in the `cdsproj`.
 
 
-If you are using a mixed solution that contains other components in addition to code components, then this would be extracted into Source control using **Solution Packager** as described above. Your pipeline would then perform the following:
+If you are using a mixed solution that contains other components in addition to code components, then this would be extracted into source control using **Solution Packager** as described above. Your pipeline would then perform the following:
 
 1. Update the solution and code component versions in the same way as described above.
 2. Install Microsoft Power Platform Build Tools into the build pipeline using the `PowerPlatformToolInstaller` task.
@@ -278,7 +278,7 @@ More information: [pac pcf version](/powerapps/developer/data-platform/powerapps
 
 ## When to increment the MAJOR and MINOR version
 
-It is recommended that the Major and Minor version of the code component's version are kept in sync with the Dataverse solution it is distributed using. For example:
+It is recommended that the Major and Minor version of the code component's version are kept in sync with the Dataverse solution it is distributed. For example:
 
 1. Your deployed code component version is `1.0.0` and your solution version is `1.0.0.0`.
 2. You make a small update to your code component and increment the patch version on the code component to `1.0.1` using `pac pcf version --strategy manifest`.
@@ -299,12 +299,12 @@ If you are using **AzureDevOps**, you can set your build pipeline versioning usi
 
 ## Canvas apps ALM considerations
 
-Consuming code components in canvas apps is different from model-driven apps that the code component must be explicitly added to the app using **Get more components** located on the **Insert** panel. Once a code component is added to the canvas app, it is included as the content inside the app definition. To update to a new version of a code component after it is deployed (and the control version incremented), the app maker must first open the app in maker studio and select **Update** when prompted on the **Update code components** dialog. The app must be then saved and published for the new version to be used when the app is played by users.
+Consuming code components in canvas apps is different from model-driven apps. Code components must be explicitly added to the app by selecting  **Get more components** on the **Insert** panel. Once the code component is added to canvas app, it is included as the content inside the app definition. To update to a new version of the code component after it is deployed (and the control version incremented), the app maker must first open the app in Power Apps Studio and select **Update** when prompted on the **Update code components** dialog. The app must be then saved and published for the new version to be used when the app is played by users.
 
 > [!div class="mx-imgBorder"]
 > ![Update code components](media/upgrade-code-component.png "Update code components")
 
-If the app is not updated or **Skip** is used, the app will continue to use the older version of the code component even though it does not exist in the environment since it has been overwritten by the newer version. 
+If the app is not updated or **Skip** is used, the app continues to use the older version of the code component even though it does not exist in the environment since it has been overwritten by the newer version. 
 
 Since the app contains a copy of the code component, is therefore possible to have different versions of the code components running side by side in a single environment from inside different canvas apps, however, you cannot have different versions of a code component running side by side in the same app. It is recommended that app makers are encouraged to update their apps to the latest version of code components when a new version is deployed.
 
