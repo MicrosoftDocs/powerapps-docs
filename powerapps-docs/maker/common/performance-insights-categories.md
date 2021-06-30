@@ -30,6 +30,7 @@ Performance insights distributes insights into the following categories:
 - [Customization](#customization)
 - [Configuration](#configuration)
 - [Network](#network)
+As the performance of an app could be impacted by various factors, performance insights categorizes areas to check how much overhead of performance get caused by. 
 
 ## Overall performance
 
@@ -69,7 +70,7 @@ Insight ID: Perf.Environment.Client.Browser.Version
 
 #### Motivation 
 
-This insight checks how many users are using your app from an old version of a browser. Even if users are on modern browsers, and not on non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
+This insight checks how many users are using your app from an old version of a browser. Even when users run modern browsers, and not non-recommended browser types like Internet Explorer, older versions of browsers perform slower.
 
 #### How to improve 
 
@@ -113,7 +114,7 @@ If the network protocol trace indicates HTTP/1.1, it might be because of the fol
 
 ## Usage pattern
 
-This category analyzes the state of page loads. Warm page loads retrieve the page directly from data that is cached locally, while cold page loads load from the server.
+This category analyzes the type of page loads. A warm page load renders the page using caches and existing DOM objects, while a cold page load renders the page fresh by downloading resources when required. Although users will not distinguish the type of page load, this insight analyzes and provides recommendations depending on what type of page loads occur on the client. 
 
 ### Page load type
 
@@ -142,11 +143,11 @@ Insight ID: Perf.ModelDriven.Page.Dashboard.SlowSQLQuery
 
 #### Motivation
 
-Slow SQL queries or using too many charts and tiles can cause poor performance in dashboards. This insight points to the dashboards that are affected by slow SQL queries. When this insight is recorded, the **Details** pane includes the dashboard ID for each dashboard included in the insight.
+Slow SQL queries or using too many charts and tiles in a dashboard can cause poor performance of the dashboard. This insight points to the dashboards that are affected by slow SQL queries. When this insight is recorded, the **Details** pane includes the dashboard ID for each dashboard included in the insight.
 
 #### How to improve
 
-Here's how to look up the name of dashboard using the dashboard ID. Then, you can determine which dashboards to consider for redesign.
+Here's how to look up the name of dashboard using the dashboard ID. Then, you can determine which dashboards to consider for redesign. 
 
 1. Go to your model-driven app, such as *https://contoso.crm.dynamics.com*.
 
