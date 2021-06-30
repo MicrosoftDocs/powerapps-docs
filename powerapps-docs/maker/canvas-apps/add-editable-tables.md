@@ -101,11 +101,65 @@ This step adds a form control to add new items.
     ```
 
     - [SubmitForm](functions/function-form.md) function submits the new product details to the Dataverse table.
-    - [NewForm](functions/function-form.md) changes the mode of the form back to new form to add new products.
+    - [NewForm](functions/function-form.md) changes the mode of the form back to new form to add new products after submitting new product details.
     - **Form1** in this formula is the name of the edit form control added earlier. Update the form name in this formula if your form name is different.
 
     ![Button OnSelect - new form](./media/add-editable-tables/button-onselect-newform.png "Button OnSelect - new form")
 
+1. On the left-pane, select **+** (Insert) > **Layout** > **Blank vertical gallery**.
+
+1. Select the table from Dataverse as the data source.
+
+1. Resize the gallery to take over remaining half of the entire canvas since this gallery will contain all editable columns from the data source.
+
+1. Select **Edit gallery**.
+
+    ![Edit blank vertical gallery](./media/add-editable-tables/edit-gallery.png "Edit blank vertical gallery")
+
+1. On the left-pane, select **+** (Insert) > **Input** > **Text input**.
+
+1. Align gallery with the following actions:
+
+    ![Align blank vertical gallery](./media/add-editable-tables/align-gallery.png "Align blank vertical gallery")
+
+    1. Move the top-most row for text input control to the top-left corner within the gallery. Moving this top-most row automatically moves remaining rows for same column.
+    1. Resize the first row height within the gallery to occupy the size of the first row you just moved to top-left.
+
+    At the end, you should see all rows stacked on left-side of the gallery.
+
+1. Update the **Default** property formula for the first text input row within the gallery:
+
+    ```powerapps-dot
+    ThisItem.Product
+    ```
+
+    - [ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators) in this formula relates to the item within the selected data source; which in this example is the Dataverse table.
+    - "Product" is the name of the column within the table.
+    - When this formula is updated for the first row in gallery, it automatically updates the entire column with product names. If you see an error, check if you've connected the gallery to the Dataverse table.
+
+    ![Product as seen within the gallery with the formula](./media/add-editable-tables/product-in-gallery.png "Product as seen within the gallery with the formula")
+
+1. Repeat previous steps to add a text input control for each column that you want to show up inside the app as editable field. Ensure you choose the correct columns in the formula replacing "Product" with the appropriate column names.
+
+    > [!TIP]
+    > To resize width, use **Width** property, or the drag using the buttons around the first row in each column.
+
+1. Select the first row from the first column inside the gallery, and add the following formula to the **OnChange** property:
+
+    ```powerapps-dot
+    Patch('Editable tables',ThisItem,{Product:TextInput8.Text})
+    ```
+
+    - [Patch](functions/function-patch.md) function in this formula updates the table selected as the data source with the values when changed.
+    - "Editable tables" is the sample data source name.
+    - [ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators) relates to the item within the selected data source for this column.
+    - "Product" is the name of the column within the selected data source.
+    - "TextInput8" is the name of the text input control added to the gallery attached to the "Product" column for the selected data source.
+    - "Text" for "TextInput8" is the text entered in the selected cell within the editable table on the canvas. 
+
+    ![OnChange formula for the gallery](./media/add-editable-tables/gallery-onchange.png "OnChange formula for the gallery")
+
+<!--- || -->
 1. Insert a new Form control by clicking Insert > Forms > Edit Form
 
 1. In the flyout, connect the data source to the one you just connected to, or manually update the DataSource property in the formula bar.
