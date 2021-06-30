@@ -248,7 +248,7 @@ Model-driven apps, canvas apps and portals all support multiple browsers. Be sur
 
 - [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
 - [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)
-- [Browsers used by office](https://docs.microsoft.com/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
+- [Browsers used by office](/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
 
 #### Code components should plan for supporting multiple clients & screen formats
 
