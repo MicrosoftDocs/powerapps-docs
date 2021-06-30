@@ -32,8 +32,8 @@ A model-driven app has multiple components including dashboards, forms, views, c
 ### See also
 
 [Find and run apps](index.md)<br/>
-[What is a model-driven app?](/powerapps/maker/model-driven-apps/model-driven-app-overview)<br/>
-[What is a canvas app?](/powerapps/maker/canvas-apps/getting-started)
+[What is a model-driven app?](../maker/model-driven-apps/model-driven-app-overview.md)<br/>
+[What is a canvas app?](../maker/canvas-apps/getting-started.md)
 
 
 

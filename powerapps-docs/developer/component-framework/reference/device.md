@@ -1,6 +1,6 @@
 ---
 title: Device | Microsoft Docs
-description: 
+description: Provides methods to use native device capabilities.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -26,7 +26,7 @@ ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Methods
 

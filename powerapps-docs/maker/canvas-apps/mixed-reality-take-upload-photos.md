@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 9/1/2020
+ms.date: 3/25/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
 ---
 
-# Take and upload mixed-reality photos in Power Apps (Preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+# Take and upload mixed-reality photos in Power Apps
 
 
 You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following components:
@@ -38,16 +38,14 @@ This topic will guide you through creating a test app that you can use to take a
 
 - Create a blank canvas app ready for editing.
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
-       
-       ![Create a blank phone layout app](./media/augmented-upload-photo/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
-- [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
 - Have a OneDrive folder called **MRPhotos** that you can store your photos in when testing the upload feature.
-- Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
+
 
 
 > [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
-
+> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
+>
+> LIDAR-enabled devices will also result in better tracking.
 
 ## Insert and connect a 3D object to the View in MR component and test your app
 
@@ -57,21 +55,22 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
 
-   ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
 
-1. In the **Properties** panel for the **View in MR** component, select the **Source** field and enter `ViewIn3D1.Src` to set the source object as the 3D object you inserted with the **View in 3D** component.  
+    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
 
-    You can also use the expression editor at the top of the window: type `ViewIn3D1.Src`.
+1. In the **Properties** panel for the **View in MR** component, on the **Advanced** tab, select the **Source** field and enter `ViewIn3D1.Source` to set the source object as the 3D object you inserted with the **View in 3D** component.  
 
-   ![Screenshot showing the Source property with ViewIn3D1.Src in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Src in the expression editor")
+    You can also use the expression editor at the top of the window: type `ViewIn3D1.Source`.
+
+   ![Screenshot showing the Source property with ViewIn3D1.Source in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Source in the expression editor")
 
 
-9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md) to test that you can view the 3D object in MR by selecting the **View in MR** button.
+9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile) to test that you can view the 3D object in MR by selecting the **View in MR** button.
 
 
 ## Insert a gallery to view photos taken in the app
@@ -82,11 +81,11 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
 
 1. Open the **Insert** tab.
 2. Select the **Vertical gallery** control to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-3. In the **Properties** panel for the gallery control, on the **Advanced** tab, set the **Items** property to equal `ViewInMR1.photos`.  
+3. In the **Properties** panel for the gallery control, on the **Advanced** tab, set the **Items** property to equal `ViewInMR1.Photos`.  
     
     You can also use the expression editor at the top of the window.
     
-    ![Screenshot showing the Items property with ViewInMR1.photos](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.photos")
+    ![Screenshot showing the Items property with ViewInMR1.Photos](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
 
 
     > [!TIP]
@@ -101,17 +100,20 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 3. Go to the **Advanced** tab of the **Properties** pane:  
     1. Change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:false})`.
-    2. Change the **Image** property to `Gallery1.Selected.Image2` (or whatever the first image in the gallery control is labeled).
+    2. Change the **Image** property to `Gallery1.Selected.Image1` (or whatever the first image in the gallery control is labeled).
     3. Change the **Visible** property to `vVisibleImageZoom`.
 4. Select the first image in the gallery control.
 5. Go to the **Advanced** tab of the **Properties** pane and change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:true})`.
 
     ![With the image thumbnail in the gallery selected, change the OnSelect property](./media/augmented-upload-photo/set-gallery-onselect.png "With the image thumbnail in the gallery selected, change the OnSelect property")
 
-6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md).
+6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
 7. Tap the **View in MR** button to open MR view. 
 8. Tap the screenshot icon at the bottom of the screen, then tap the back arrow at the top of the screen.
 9. You should see the screenshot now showing underneath the **View in MR** button. Tap the screenshot's thumbnail, and a large version of the screenshot will appear. Tap anywhere on the image to hide it.
+
+
+
 
 ## Upload photos to OneDrive with a Power Automate flow
 
@@ -166,7 +168,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 
 8. Open the **Insert** tab and select **Button**.
-9. Change the **Test** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
+9. Change the **Text** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
 10. In the expression editor at the top of the Power Apps window, select the **OnSelect** property, and then select the **Action** tab. Select **Power Automate**, and then select the flow you created.
 
     ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
@@ -188,6 +190,11 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
 
+## Use SaveData and LoadData functions
+
+You can use the **SaveData** and **LoadData** functions In Power Apps with the MR components.
+
+See the [SaveData, LoadData, and ClearData functions in Power Apps](./functions/function-savedata-loaddata.md) topic for how to use these functions.
 
 ## Other mixed-reality controls
 

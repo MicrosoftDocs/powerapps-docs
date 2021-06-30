@@ -1,13 +1,13 @@
 ---
-title: Transform your InfoPath form to a canvas app | Microsoft Docs
-description: Start to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
+title: Transform your InfoPath form to Power Apps
+description: Learn about how to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/05/2019
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -65,7 +65,7 @@ Use this technique if, instead of just updating the list-form experience, you wa
 To get started, follow these steps:
 
 1. Open the SharePoint list from which you would like to build an app.
-1. On the menu bar, select **Power Apps**, and then select **Create an app**.
+1. On the menu bar, select **Integrate** -> **Power Apps** -> **Create an app**.
 1. Provide a name, and then select **Create**.
 
 Power Apps will build you an app that you can customize.

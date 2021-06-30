@@ -2,7 +2,7 @@
 title: "Use XRM tooling to retrieve data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from Microsoft Dataverse"
 ms.custom: ""
-ms.date: 03/27/2019
+ms.date: 04/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -23,13 +23,13 @@ search.app:
 ---
 # Use XRM tooling to retrieve data
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
   
 ## GetEntityDataById  
 
-This method searches for an entity by the specified ID. In this sample, we specify null for the field list value to fetch all the attributes of the specified entity record (account), and then display the name of the retrieved account record.  
+This method searches for a table by the specified ID. In this sample, we specify null for the field list value to fetch all the columns of the specified table record (account), and then display the name of the retrieved account record.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
@@ -63,7 +63,7 @@ else
   
 ## GetEntityDataByFetchSearchEC  
 
-This method searches for the entity based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
+This method searches for the table based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  

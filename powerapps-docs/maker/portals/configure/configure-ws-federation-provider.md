@@ -1,13 +1,17 @@
 ---
-title: "Configure a WS-Federation provider for Power Apps portals.  | MicrosoftDocs"
-description: "Instructions to configure WS-Federation provider for Power Apps portals."
+title: Configure a WS-Federation provider for portals
+description: Learn how to configure WS-Federation provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a WS-Federation provider for portals
@@ -60,7 +64,7 @@ To configure a WS-Federation provider
     | Sign-out reply | The URL to return to (sign-out reply) after sign-out is complete. |
     | Valid audiences | Comma-separated list of audience URLs. |
     | Validate audiences | If this setting is enabled, the audience will be validated during token validation. |
-    | WHR | The home realm of the identity provider to use for authentication. Sets the WS-Federation sign-in request *whr* parameter. If this setting is empty, the *whr* parameter isn't included in the request. <br> More information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |
+    | WHR | The home realm of the identity provider to use for authentication. Sets the WS-Federation sign-in request *whr* parameter. If this setting is empty, the *whr* parameter isn't included in the request. <br> More information: [wsFederation](/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |
     | Contact mapping with email | Specify whether contacts are mapped to a corresponding email. When this setting is **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.

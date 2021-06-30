@@ -1,6 +1,6 @@
 ---
-title: Calendar-screen template | Microsoft Docs
-description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app
+title: Calendar-screen template in canvas apps
+description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the calendar-screen template for canvas apps
+# Calendar-screen template in canvas apps
 
 In a canvas app, add a calendar screen that shows users upcoming events from their Office 365 Outlook accounts. Users can select a date from a calendar and scroll through a list of that day's events. You can change which details appear in the list, add a second screen that shows more details about each event, show a list of attendees for each event, and make other customizations.
 
@@ -143,7 +143,7 @@ If you already know which calendar your users should view, you can simplify the 
 
 ### Show different details about an event
 
-By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) supports.
+By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](/connectors/office365/#calendareventclientreceive) supports.
 
 1. In **CalendarEventsGallery**, set the **Text** property of a new or an existing label to `ThisItem` followed by a period.
 
@@ -330,7 +330,7 @@ This list discusses what each **ClearCollect** operation does:
         )
     );
     ```
-    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
+    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
     > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 08/16/2019
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.author: "matp"
@@ -82,11 +82,11 @@ You can add, import, or export snapshots of reports as part of a solution. In mo
 
 ## Related topics
 
-[Work with reports](/powerapps/user/work-with-reports)<br/>
-[Create a report using the Report Wizard](/powerapps/user/create-report-with-wizard)<br/>
-[Add a report from outside Power Apps](/powerapps/user/add-existing-report)<br/>
-[Edit the default filter of a report](/powerapps/user/edit-report-filter)<br/>
-[Troubleshoot reports](/powerapps/user/troubleshoot-reports)
+[Work with reports](../../user/work-with-reports.md)<br/>
+[Create a report using the Report Wizard](../../user/create-report-with-wizard.md)<br/>
+[Add a report from outside Power Apps](../../user/add-existing-report.md)<br/>
+[Edit the default filter of a report](../../user/edit-report-filter.md)<br/>
+[Troubleshoot reports](../../user/troubleshoot-reports.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

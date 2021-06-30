@@ -1,13 +1,16 @@
 ---
-title: "Update the Power Apps portals solution | MicrosoftDocs"
-description: "Information about how to update the Power Apps portals solution."
+title: Update the Power Apps portals solution
+description: Learn how to update the Power Apps portals solution.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Update the Power Apps portals solution

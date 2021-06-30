@@ -24,13 +24,11 @@ search.app:
 
 # The Home page
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After a user logs into the ISV Studio, they are presented with the landing page
-known as the *Home* page. A welcome message is displayed which defines the
-objective of this page.
+After a user logs into the ISV Studio, they are presented with the landing page known as the *Home* page. A welcome message is displayed which defines the objective of this page.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 If a user is associated with multiple publishers, all publishers are displayed and the first publisher is selected by default. All the metrics on this page are specific to the selected publisher. The user can toggle to a different publisher name to see the corresponding metrics for that publisher.
 

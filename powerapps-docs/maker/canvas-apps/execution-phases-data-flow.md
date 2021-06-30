@@ -1,5 +1,5 @@
 ---
-title: Canvas app execution phases and data call flow | Microsoft Docs
+title: Understand canvas app execution phases and data call flow
 description: Learn about the execution phases of canvas apps while starting-up, and the flow of data calls.
 author: JinManAhn-MSFT
 ms.service: powerapps
@@ -20,7 +20,7 @@ contributors:
 
 # Understand canvas app execution phases and data call flow
 
-When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
+When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](./connections-list.md#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
 
 In this article, you'll learn about these different phases of execution and how an app connects to data sources.
 
@@ -66,11 +66,11 @@ The following diagram shows where and how the on-premises data gateway is put in
 
 If the app uses a data source on-premises, the location and the specification of the data gateway also affect the performance of data calls.
 
-### Data call flow with the Common Data Service connector (for Dataverse environments)
+### Data call flow with Microsoft Dataverse
 
-When you use the Common Data Service connector to access a Dataverse environment, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is much faster compared to the rest of the data sources. The Common Data Service connector is created by default when you create a new canvas app.
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is much faster compared to the rest of the data sources. The app is by default connected to Microsoft Dataverse when you create a new canvas app.
 
-![Data call flow for the Common Data Service connector](media\execution-phases-data-flow\dataverse-connector.png "Data call flow for the Common Data Service connector")
+![Data call flow with Microsoft Dataverse](media\execution-phases-data-flow\dataverse-connector.png "Data call flow with Microsoft Dataverse")
 
 With the understanding of this high-level concept of how data calls travel, you can get into the details of reviewing the performance of your app. In summary, performance overhead can happen at any of the layers&mdash;from client, API Management, connector, on-premises data gateway, or back-end data sources.
 

@@ -25,7 +25,7 @@ In some cases, tables contain complex business logic or are tied to customer eng
 ## Tables with complex business logic
 Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
 
-- Code plug-ins (for more information, see [Plug-in development](/powerapps/developer/data-platform/plug-ins))
+- Code plug-ins (for more information, see [Plug-in development](../../developer/data-platform/plug-ins.md))
 - Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))
 
     > [!NOTE]

@@ -1,6 +1,6 @@
 ---
-title: Find a property | Microsoft Docs
-description: Find a property by control, by category, or alphabetically.
+title: Controls and properties in canvas apps
+description: Learn about properties of different controls in canvas apps.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Controls and properties in Power Apps
+# Controls and properties in canvas apps
 
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
@@ -54,7 +54,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Edit form](controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
-**[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Microsoft Dataverse.
+**[Display and Edit form](./controls/control-form-detail.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Microsoft Dataverse.
 
 **[Export](controls/control-export-import.md)** – Export data for use elsewhere in Power Apps.
 

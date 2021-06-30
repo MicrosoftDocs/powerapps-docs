@@ -1,12 +1,12 @@
 ---
-title: Create a dependent drop-down list in a canvas app | Microsoft Docs
-description: In Power Apps, create a drop-down list that filters another drop-down list in a canvas app.
+title: Create a dependent drop-down list in a canvas app
+description: Learn about how to create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2021
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -60,10 +60,9 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 ## Open the form
 
-1. Open the **Incidents** list, and then select **Power Apps** > **Customize forms**.
+1. Open the **Incidents** list, and then select **Integrate** -> **Power Apps** -> **Customize forms**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
+    ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
 
     A browser tab opens with the default form in Power Apps Studio.
 
@@ -200,7 +199,7 @@ This symptom is likely due to using a **LookUp** column in SharePoint or a **Cho
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Microsoft Dataverse.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with choices in Microsoft Dataverse.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, Power Apps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.
 

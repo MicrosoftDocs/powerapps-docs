@@ -53,7 +53,8 @@
       "search.appverid": "met150",
       "search.app": [
         "PowerApps"
-      ]
+      ],
+      "recommendations": true
     },
     "fileMetadata": {
       "bilingual_type": {

@@ -1,22 +1,24 @@
 ---
-title: "ConnectionRole entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ConnectionRole table."
-ms.date: 11/14/2020
+title: "ConnectionRole table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ConnectionRole table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ConnectionRole entity reference
+
+# ConnectionRole table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Role describing a relationship between a two records.
 
@@ -25,14 +27,14 @@ Role describing a relationship between a two records.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/connectionroles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/connectionroles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/connectionroles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/connectionroles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/connectionroles(*connectionroleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -50,9 +52,9 @@ Role describing a relationship between a two records.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Category](#BKMK_Category)
 - [ConnectionRoleId](#BKMK_ConnectionRoleId)
@@ -77,7 +79,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Category Options
+#### Category Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -198,7 +200,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -219,7 +221,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -229,9 +231,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [ConnectionRoleIdUnique](#BKMK_ConnectionRoleIdUnique)
@@ -270,7 +272,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -413,7 +415,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -631,7 +633,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_connection_role_connections1"></a> connection_role_connections1
 
-Same as connection entity [connection_role_connections1](connection.md#BKMK_connection_role_connections1) Many-To-One relationship.
+Same as connection table [connection_role_connections1](connection.md#BKMK_connection_role_connections1) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -646,7 +648,7 @@ Same as connection entity [connection_role_connections1](connection.md#BKMK_conn
 
 ### <a name="BKMK_ConnectionRole_SyncErrors"></a> ConnectionRole_SyncErrors
 
-Same as syncerror entity [ConnectionRole_SyncErrors](syncerror.md#BKMK_ConnectionRole_SyncErrors) Many-To-One relationship.
+Same as syncerror table [ConnectionRole_SyncErrors](syncerror.md#BKMK_ConnectionRole_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -661,7 +663,7 @@ Same as syncerror entity [ConnectionRole_SyncErrors](syncerror.md#BKMK_Connectio
 
 ### <a name="BKMK_ConnectionRole_ProcessSessions"></a> ConnectionRole_ProcessSessions
 
-Same as processsession entity [ConnectionRole_ProcessSessions](processsession.md#BKMK_ConnectionRole_ProcessSessions) Many-To-One relationship.
+Same as processsession table [ConnectionRole_ProcessSessions](processsession.md#BKMK_ConnectionRole_ProcessSessions) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -676,7 +678,7 @@ Same as processsession entity [ConnectionRole_ProcessSessions](processsession.md
 
 ### <a name="BKMK_Connection_Role_AsyncOperations"></a> Connection_Role_AsyncOperations
 
-Same as asyncoperation entity [Connection_Role_AsyncOperations](asyncoperation.md#BKMK_Connection_Role_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [Connection_Role_AsyncOperations](asyncoperation.md#BKMK_Connection_Role_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -691,7 +693,7 @@ Same as asyncoperation entity [Connection_Role_AsyncOperations](asyncoperation.m
 
 ### <a name="BKMK_connection_role_connections2"></a> connection_role_connections2
 
-Same as connection entity [connection_role_connections2](connection.md#BKMK_connection_role_connections2) Many-To-One relationship.
+Same as connection table [connection_role_connections2](connection.md#BKMK_connection_role_connections2) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -707,7 +709,7 @@ Same as connection entity [connection_role_connections2](connection.md#BKMK_conn
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [createdby_connection_role](#BKMK_createdby_connection_role)
 - [organization_connection_roles](#BKMK_organization_connection_roles)
@@ -718,34 +720,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_createdby_connection_role"></a> createdby_connection_role
 
-See systemuser Entity [createdby_connection_role](systemuser.md#BKMK_createdby_connection_role) One-To-Many relationship.
+See systemuser Table [createdby_connection_role](systemuser.md#BKMK_createdby_connection_role) One-To-Many relationship.
 
 ### <a name="BKMK_organization_connection_roles"></a> organization_connection_roles
 
-See organization Entity [organization_connection_roles](organization.md#BKMK_organization_connection_roles) One-To-Many relationship.
+See organization Table [organization_connection_roles](organization.md#BKMK_organization_connection_roles) One-To-Many relationship.
 
 ### <a name="BKMK_lk_connectionrolebase_createdonbehalfby"></a> lk_connectionrolebase_createdonbehalfby
 
-See systemuser Entity [lk_connectionrolebase_createdonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_connectionrolebase_createdonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_modifiedby_connection_role"></a> modifiedby_connection_role
 
-See systemuser Entity [modifiedby_connection_role](systemuser.md#BKMK_modifiedby_connection_role) One-To-Many relationship.
+See systemuser Table [modifiedby_connection_role](systemuser.md#BKMK_modifiedby_connection_role) One-To-Many relationship.
 
 ### <a name="BKMK_lk_connectionrolebase_modifiedonbehalfby"></a> lk_connectionrolebase_modifiedonbehalfby
 
-See systemuser Entity [lk_connectionrolebase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_connectionrolebase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_modifiedonbehalfby) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the ConnectionRole entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the ConnectionRole table is the first table in the relationship. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_connectionroleassociation_association"></a> connectionroleassociation_association
 
 IntersectEntityName: connectionroleassociation<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -755,7 +757,7 @@ IntersectEntityName: connectionroleassociation<br />
 |NavigationPropertyName|connectionroleassociation_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -767,8 +769,6 @@ IntersectEntityName: connectionroleassociation<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.connectionrole?text=connectionrole EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,13 +1,17 @@
 ---
-title: "Configure the Azure Active Directory B2C identity provider manually for Power Apps portals. | MicrosoftDocs"
-description: "Learn how to configure the Azure Active Directory B2C identity provider manually for Power Apps portals."
+title: Configure the Azure Active Directory B2C provider manually
+description: Learn how to configure the Azure Active Directory B2C identity provider manually for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the Azure Active Directory B2C provider manually
@@ -39,9 +43,9 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
     1. Sign in to your [Azure portal](https://portal.azure.com/).
 
-    1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
+    1. [Create an Azure AD B2C tenant](/azure/active-directory-b2c/tutorial-create-tenant).
 
-    1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
+    1. [Register an application](/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
 
         1. Search for and select **Azure AD B2C**.
 
@@ -58,7 +62,7 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
         1. In the **Redirect URI** text box, enter the **Reply URL** for your portal. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
 
             > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** section on the **Configure identity provider** screen (step 4 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
 
             ![Register application](media/authentication/register-application-b2c.png "Register application")
 
@@ -72,9 +76,9 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
         1. Select **Save**.
 
-    1. [Create a sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, you can [create a password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
+    1. [Create a sign-up and sign-in user flow](/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, you can [create a password reset user flow](/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
-    1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) by using an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
+    1. [Configure token compatibility](/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) by using an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](/azure/active-directory-b2c/tokens-overview#compatibility)
 
         ![Configure token compatibility with tfp](media/authentication/token-compatibility.png "Configure token compatibility with tfp") 
 
@@ -128,10 +132,10 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
     ![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
 
     - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
     - **Login claims mapping**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
     - **External logout**: Choose whether to enable or disable federated sign-out:
       - Select **On** to redirect users to the federated sign-out user experience when they sign out from the portal.

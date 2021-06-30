@@ -1,6 +1,6 @@
 ---
-title: Publish the Power BI project report and create a dashboard | Microsoft Docs
-description: In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report.
+title: Publish the Power BI project report and create a dashboard
+description: Learn about how to publish our dataset and report to the Power BI service; and then create a dashboard based on the report.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -30,7 +30,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 3. Enter a password, then click or tap **Sign in**.
    
     ![Enter account password](./media/sharepoint-scenario-publish-report/06-01-03-password.png)
-4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Collaborate in your Power BI app workspace](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
+4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Collaborate in your Power BI app workspace](/power-bi/service-collaborate-power-bi-workspace).
    
     ![Destination workspace](./media/sharepoint-scenario-publish-report/06-01-04-workspace.png)
 5. After publishing completes, click or tap **Open 'project-analysis.pbx' in Power BI**.
@@ -67,7 +67,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 
 1. Click or tap the chart on the upper left, then click or tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
    
-    ![Pin chart](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
+    ![Select Pin chart](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
 2. Enter a name for the dashboard you want to pin to, then click or tap **Pin**.
    
     ![Pin chart to new dashboard](./media/sharepoint-scenario-publish-report/06-01-13-pin-new.png)

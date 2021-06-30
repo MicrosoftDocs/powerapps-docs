@@ -46,18 +46,18 @@ When you extract the .zip file, you see the following components in the extracte
 
 ## Step 2: Sign up for Power Apps, and create an environment
 
-Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
+Sign up for [Power Apps](/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
 After you purchase Power Apps, create an environment with a Dataverse database.
 
 1. Sign in to the [Power Platform admin center](https://aka.ms/ppac).
 
-1. Create a Dataverse environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+1. Create a Dataverse environment with a database. More information: [Create and manage environments](/power-platform/admin/create-environment)
 
     > [!IMPORTANT]
     > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
 
-1. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+1. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 ## Step 3: Install the app
 

@@ -21,7 +21,7 @@ search.app:
 
 If you’ve created a custom report outside of the system, you can easily add it to Power Apps.
 
-For information about how to create a custom report, see [Reporting and Analytics Guide](https://docs.microsoft.com/dynamics365/customer-engagement/analytics/get-started-writing-reports).
+For information about how to create a custom report, see [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/get-started-writing-reports).
 
 1. From the left navigation pane, select the reports area. 
 2. On the command bar select **New**.
@@ -35,7 +35,7 @@ For information about how to create a custom report, see [Reporting and Analytic
   
    2. In the **File Location** box, enter the path and file name of the file to add, or choose **Browse** to locate the file. 
    
-      You can can upload many other file types such as an excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](https://docs.microsoft.com/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
+      You can can upload many other file types such as an excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
   
       -OR  
   

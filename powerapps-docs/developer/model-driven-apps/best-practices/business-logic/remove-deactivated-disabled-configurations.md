@@ -35,6 +35,8 @@ Deactivated or disabled customizations should be removed from a solution to impr
 
 <a name='guidance'></a>
 
+[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
+
 ## Guidance
 
 Ensure that each solution component that is deactivated, or disabled, has been done so intentionally.  If so and will no longer be utilized, consider removing it from the solution to prevent confusion for users and system customizers. These components include:
@@ -44,7 +46,7 @@ Ensure that each solution component that is deactivated, or disabled, has been d
 - Record Creation and Update Rules
 - SLAs
 
-As well as Entity components such as:
+As well as table components such as:
 
 - Forms
 - Views
@@ -56,7 +58,7 @@ As well as Entity components such as:
 
 ### See also
 
-[Apply custom business logic with business rules and flows in model-driven apps](/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes)<br />
-[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>
+[Apply custom business logic with business rules and flows in model-driven apps](../../../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)<br />
+[Events in forms and grids in model-driven apps](../../clientapi/events-forms-grids.md)<br/>
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

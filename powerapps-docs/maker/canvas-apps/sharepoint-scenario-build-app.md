@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app to manage projects | Microsoft Docs
-description: In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details.
+title: Create a canvas app to manage projects
+description: Learn about how to build a canvas app from scratch allowing users to assign a manager to projects and to update project details.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -19,9 +19,6 @@ search.app:
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
-
-> [!TIP]
-> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
 
 ## Quick review of Power Apps Studio
 Power Apps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
@@ -140,7 +137,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 
 3. Resize the button to accommodate the text.
    
-    ![Update button text](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
+    ![Resize button](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
 4. Insert another button with the following properties:
    
    * **OnSelect** property = **Navigate(ViewProjects, Fade)**.
@@ -239,7 +236,7 @@ In this step, we'll use a gallery to display all projects that have been approve
 
    * **Title**
      
-     ![Gallery fields](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
+     ![Gallery](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
 
 5. Resize labels in the gallery as appropriate, and remove the arrow from the first gallery item (we don't need to navigate anywhere from this gallery).
    
@@ -316,7 +313,7 @@ In this step, we'll change properties for the gallery on the **ViewProjects** sc
    
     The gallery now has the right layout, with the default sample text.
    
-    ![Gallery with default text](./media/sharepoint-scenario-build-app/04-04-04b-gallery-default.png)
+    ![Gallery with right layout](./media/sharepoint-scenario-build-app/04-04-04b-gallery-default.png)
 
 5. Select the refresh button ![Refresh icon](./media/sharepoint-scenario-build-app/icon-refresh.png), and set its **OnSelect** property to **Refresh('Project Details')**.
 
@@ -461,7 +458,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
 
 1. Click or tap ![Back icon](./media/sharepoint-scenario-build-app/icon-back.png) to go back to the first screen, then click or tap **Update Details**.
    
-   ![App intro screen](./media/sharepoint-scenario-build-app/04-07-08-intro-screen.png)
+   ![Update details](./media/sharepoint-scenario-build-app/04-07-08-intro-screen.png)
 
 2. On the **View Projects** screen, enter "New" in the search box.
    

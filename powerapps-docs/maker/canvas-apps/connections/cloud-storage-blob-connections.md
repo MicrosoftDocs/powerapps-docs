@@ -1,12 +1,12 @@
 ---
-title: Overview of the cloud-storage connection | Microsoft Docs
+title: Connect to cloud-storage from Power Apps
 description: See how to connect to a cloud-storage account, and display Excel data in your app
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 12/15/2020
+ms.date: 03/15/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -15,11 +15,15 @@ search.app:
   - PowerApps
 ---
 # Connect to cloud-storage from Power Apps
+
 Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
-| [Azure Blob](https://docs.microsoft.com/connectors/azureblob/) | [Box](https://docs.microsoft.com/connectors/box/) | [Dropbox](https://docs.microsoft.com/connectors/dropbox/) | [Google Drive](https://docs.microsoft.com/connectors/googledrive/) | [OneDrive](https://docs.microsoft.com/connectors/onedrive/) | [OneDrive for Business](https://docs.microsoft.com/connectors/onedriveforbusiness/) |
-| --- | --- | --- | --- | --- | --- |
-| ![Azure Blob](media/cloud-storage-blob-connections/blobicon.png "Azure Blob") | ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+[Box](/connectors/box/) | [Dropbox](/connectors/dropbox/) | [Google Drive](/connectors/googledrive/) | [OneDrive](/connectors/onedrive/) | [OneDrive for Business](/connectors/onedriveforbusiness/) |
+| --- | --- | --- | --- | --- |
+| ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+
+> [!NOTE]
+> To learn about using Azure Blob Storage with Power Apps, go to [Connect to Azure Blob Storage from Power Apps](connection-azure-blob-storage.md).
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 

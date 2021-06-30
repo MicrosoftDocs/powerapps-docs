@@ -88,8 +88,8 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     
 > [!NOTE]
 > The reports that are querying notes, may display in HTML-formatted text instead of plain text. This is because the rich-text editor is enabled by default. To workaround this issue, do one of the following:
-> - Disable the rich-text editor, for more information see, [Enable or disable rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline). When you disable the rich-text editor, new notes that are created will not the have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
-> - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](https://docs.microsoft.com/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
+> - Disable the rich-text editor, for more information see, [Enable or disable rich-text editor for notes in timeline](../maker/model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline). When you disable the rich-text editor, new notes that are created will not the have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
+> - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
     
 
 ### See Also

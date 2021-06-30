@@ -1,13 +1,16 @@
 ---
-title: "Convert a portal to different lifecycle stages. | MicrosoftDocs"
-description: "Information about how to convert a portal to different lifecycle stages."
+title: Convert a portal
+description: Learn how to convert a portal to different lifecycle stages.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Convert a portal
@@ -45,7 +48,7 @@ To convert your portal from trial to production:
 
 ## Convert an existing portal to capacity-based model
 
-You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
+You can convert your existing portal license to [capacity-based licensing model](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
 
 > [!TIP]
 > To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
@@ -58,9 +61,9 @@ You can convert your existing portal license to [capacity-based licensing model]
 Consider the following before changing your portal license:
 
 - Your portal will restart and won't be available for a few minutes during license conversion. You might need to schedule this for a downtime period for business users.
-- Your environment must have an appropriate [license](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) available and assigned before you convert the license.
+- Your environment must have an appropriate [license](/power-platform/admin/powerapps-flow-licensing-faq#portals) available and assigned before you convert the license.
 - You must have administrative privileges to convert the license.
-- Only production environments can be converted from an existing license to a capacity-based license. If you have a [trial environment](https://docs.microsoft.com/power-platform/admin/trial-environments), you must convert it to a production environment first.
+- Only production environments can be converted from an existing license to a capacity-based license. If you have a [trial environment](/power-platform/admin/trial-environments), you must convert it to a production environment first.
 
 ## Considerations for conversion of add-on portals
 
@@ -88,8 +91,8 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 ### See also
 
 - [Understand lifecycle of a portal](portal-lifecycle.md) <br>
-- [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
-- [Power Apps portals FAQ](../faq.md)
+- [Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Power Apps portals FAQ](../faq.yml)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

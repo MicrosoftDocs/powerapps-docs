@@ -1,20 +1,19 @@
 ---
-title: "Overview of Power Apps portals admin center | MicrosoftDocs"
-description: "Information about Power Apps portals admin center."
+title: Power Apps portals admin center
+description: Learn about Power Apps portals admin center.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 03/12/2021
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Power Apps portals admin center
-
-> [!NOTE]
-> - Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md)
-> - We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
 
 The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
@@ -53,11 +52,11 @@ If you are not a global administrator and you try to manage a portal that has al
     > [!div class=mx-imgBorder]
     > ![Portal Details tab](../media/portal-details-admin.png "Portal Details tab")
 
-3. Go to Azure AD associated with your tenant. [!include[](../../../includes/proc-more-information.md)] [Take over an unmanaged directory as administrator in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-manage-o365-subscription)
+3. Go to Azure AD associated with your tenant. [!include[](../../../includes/proc-more-information.md)] [Take over an unmanaged directory as administrator in Azure Active Directory](/azure/active-directory/active-directory-manage-o365-subscription)
 
 4. In Azure AD, search for the app registration by using the application ID you copied. You might need to switch from **My apps** to **All apps**.
 
-5. Add users or groups as owners of this app registration. [!include[](../../../includes/proc-more-information.md)] [Managing access to apps](https://docs.microsoft.com/azure/active-directory/active-directory-managing-access-to-apps)
+5. Add users or groups as owners of this app registration. [!include[](../../../includes/proc-more-information.md)] [Managing access to apps](/azure/active-directory/active-directory-managing-access-to-apps)
 
     > [!Note]
     > This task can be performed either by a global administrator of your organization or the existing owner of this application.
@@ -66,8 +65,8 @@ If you are not a global administrator and you try to manage a portal that has al
 
 ### See also
 
-- [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
-- [Microsoft Learn: Power Apps portals architecture](https://docs.microsoft.com/learn/modules/portals-architecture)
+- [Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
+- [Microsoft Learn: Power Apps portals architecture](/learn/modules/portals-architecture)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

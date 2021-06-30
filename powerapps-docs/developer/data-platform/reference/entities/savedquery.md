@@ -1,22 +1,24 @@
 ---
-title: "SavedQuery entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SavedQuery table."
-ms.date: 11/14/2020
+title: "SavedQuery table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SavedQuery table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SavedQuery entity reference
+
+# SavedQuery table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Saved query against the database.
 
@@ -25,21 +27,21 @@ Saved query against the database.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/savedqueries<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|ExecuteByIdSavedQuery|[Retrieve and execute predefined queries](/powerapps/developer/data-platform/webapi/retrieve-and-execute-predefined-queries)|<xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdSavedQueryRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/savedqueries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|ExecuteByIdSavedQuery|[Retrieve and execute predefined queries](/powerapps/developer/common-data-service/webapi/retrieve-and-execute-predefined-queries)|<xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdSavedQueryRequest>|
 |InstantiateFilters|<xref href="Microsoft.Dynamics.CRM.InstantiateFilters?text=InstantiateFilters Action" />|<xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/savedqueries<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/savedqueries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/savedqueries(*savedqueryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |Validate|<xref href="Microsoft.Dynamics.CRM.Validate?text=Validate Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateRequest>|
 |ValidateSavedQuery|<xref href="Microsoft.Dynamics.CRM.ValidateSavedQuery?text=ValidateSavedQuery Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateSavedQueryRequest>|
 |ValidateUnpublished|<xref href="Microsoft.Dynamics.CRM.ValidateUnpublished?text=ValidateUnpublished Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateUnpublishedRequest>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -57,9 +59,9 @@ Saved query against the database.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AdvancedGroupBy](#BKMK_AdvancedGroupBy)
 - [CanBeDeleted](#BKMK_CanBeDeleted)
@@ -219,7 +221,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDefault Options
+#### IsDefault Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -242,7 +244,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsQuickFindQuery Options
+#### IsQuickFindQuery Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -389,7 +391,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -410,7 +412,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -420,9 +422,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -466,7 +468,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -596,7 +598,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsCustom Options
+#### IsCustom Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -619,7 +621,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -642,7 +644,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPrivate Options
+#### IsPrivate Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -665,7 +667,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsUserDefined Options
+#### IsUserDefined Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -927,7 +929,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SavedQuery_SyncErrors"></a> SavedQuery_SyncErrors
 
-Same as syncerror entity [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_SyncErrors) Many-To-One relationship.
+Same as syncerror table [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_SyncErrors) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -942,7 +944,7 @@ Same as syncerror entity [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_Sy
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_savedquery"></a> lk_mobileofflineprofileitem_savedquery
 
-Same as mobileofflineprofileitem entity [lk_mobileofflineprofileitem_savedquery](mobileofflineprofileitem.md#BKMK_lk_mobileofflineprofileitem_savedquery) Many-To-One relationship.
+Same as mobileofflineprofileitem table [lk_mobileofflineprofileitem_savedquery](mobileofflineprofileitem.md#BKMK_lk_mobileofflineprofileitem_savedquery) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -957,7 +959,7 @@ Same as mobileofflineprofileitem entity [lk_mobileofflineprofileitem_savedquery]
 
 ### <a name="BKMK_SavedQuery_BulkDeleteFailures"></a> SavedQuery_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [SavedQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SavedQuery_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [SavedQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SavedQuery_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -972,7 +974,7 @@ Same as bulkdeletefailure entity [SavedQuery_BulkDeleteFailures](bulkdeletefailu
 
 ### <a name="BKMK_SavedQuery_AsyncOperations"></a> SavedQuery_AsyncOperations
 
-Same as asyncoperation entity [SavedQuery_AsyncOperations](asyncoperation.md#BKMK_SavedQuery_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [SavedQuery_AsyncOperations](asyncoperation.md#BKMK_SavedQuery_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -988,7 +990,7 @@ Same as asyncoperation entity [SavedQuery_AsyncOperations](asyncoperation.md#BKM
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_savedquery_modifiedonbehalfby](#BKMK_lk_savedquery_modifiedonbehalfby)
 - [lk_savedquerybase_createdby](#BKMK_lk_savedquerybase_createdby)
@@ -999,28 +1001,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_savedquery_modifiedonbehalfby"></a> lk_savedquery_modifiedonbehalfby
 
-See systemuser Entity [lk_savedquery_modifiedonbehalfby](systemuser.md#BKMK_lk_savedquery_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_savedquery_modifiedonbehalfby](systemuser.md#BKMK_lk_savedquery_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_savedquerybase_createdby"></a> lk_savedquerybase_createdby
 
-See systemuser Entity [lk_savedquerybase_createdby](systemuser.md#BKMK_lk_savedquerybase_createdby) One-To-Many relationship.
+See systemuser Table [lk_savedquerybase_createdby](systemuser.md#BKMK_lk_savedquerybase_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_savedquerybase_modifiedby"></a> lk_savedquerybase_modifiedby
 
-See systemuser Entity [lk_savedquerybase_modifiedby](systemuser.md#BKMK_lk_savedquerybase_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_savedquerybase_modifiedby](systemuser.md#BKMK_lk_savedquerybase_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_saved_queries"></a> organization_saved_queries
 
-See organization Entity [organization_saved_queries](organization.md#BKMK_organization_saved_queries) One-To-Many relationship.
+See organization Table [organization_saved_queries](organization.md#BKMK_organization_saved_queries) One-To-Many relationship.
 
 ### <a name="BKMK_lk_savedquery_createdonbehalfby"></a> lk_savedquery_createdonbehalfby
 
-See systemuser Entity [lk_savedquery_createdonbehalfby](systemuser.md#BKMK_lk_savedquery_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_savedquery_createdonbehalfby](systemuser.md#BKMK_lk_savedquery_createdonbehalfby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

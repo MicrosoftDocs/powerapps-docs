@@ -1,6 +1,7 @@
 ---
 title: "Collections (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the Collections method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -17,9 +18,7 @@ search.app:
 # Collections (Client API reference)
 
 
-
-Collections are structures to provide access to data that represent an array,
-but without the ability to modify the data in the array. More information: [Collections in formContext object model](../clientapi-form-context.md#collections-in-the-formcontext-object-model)
+Collections are structures to provide access to data that represent an array, but without the ability to modify the data in the array. More information: [Collections in formContext object model](../clientapi-form-context.md#collections-in-the-formcontext-object-model)
 
 These methods are available to all the collections in the **formContext** object model.
 

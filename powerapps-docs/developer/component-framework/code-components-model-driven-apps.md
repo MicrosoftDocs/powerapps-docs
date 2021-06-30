@@ -1,6 +1,6 @@
 ---
 title: Code components for model-driven apps  | Microsoft Docs
-description: Create code components for canvas apps
+description: Learn how to create code components using Power Apps component framework for model-driven apps
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -15,7 +15,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 # Code components for model-driven apps
 
-Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code components to model-driven apps using [Power Apps CLI](get-powerapps-cli.md). You can add code components to fields, grids, and sub grids in model-driven apps. 
+Power Apps component framework gives developers the ability to extend the visualizations in model-driven apps. Professional developers can create, debug, import, and add code components to model-driven apps using [Microsoft Power Platform CLI](get-powerapps-cli.md). You can add code components to columns, grids, and sub grids in model-driven apps. 
 
 > [!IMPORTANT]
 > Power Apps component framework is enabled for model-driven apps by default. See [Code components for canvas apps](component-framework-for-canvas-apps.md) to learn how to enable Power Apps component framework for canvas apps.
@@ -28,7 +28,7 @@ The [create your first code component](implementing-controls-using-typescript.md
 
 ## Add code components to model-driven apps
 
-To add code components to a field or an entity in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
+To add code components to a column or a table in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Add linear slider control](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")
@@ -38,13 +38,13 @@ To add code components to a field or an entity in model-driven apps, see [Add co
 
 ## Update existing code components
 
-Whenever you update the code components and want to see the changes in runtime, you need to bump the version attribute in the manifest file. It is recommended to always bump the version of the component whenever you make changes.
+Whenever you update the code components and want to see the changes in runtime, you need to bump the version property in the manifest file. It is recommended to always bump the version of the component whenever you make changes.
 
 ## See also
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

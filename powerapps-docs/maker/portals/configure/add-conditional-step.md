@@ -1,18 +1,21 @@
 ---
-title: "Configure a conditional step type for a portal | MicrosoftDocs"
-description: "Instructions to add and configure a conditional step type for a portal."
+title: Add a conditional step type
+description: Learn how to add and configure a conditional step type for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Add a conditional step type
 
-A Web Form Step can be a 'Condition' type that indicates the step should evaluate an expression. If the expression evaluates to true then the next step is displayed. If the expression evaluates to false and if the 'Next Step If Condition Fails' has been specified, that step will be displayed. The current entity is the target used to evaluate the expression against. Record Source defaults to the Record Source of the previous step.
+An Advanced Form Step can be a 'Condition' type that indicates the step should evaluate an expression. If the expression evaluates to true then the next step is displayed. If the expression evaluates to false and if the 'Next Step If Condition Fails' has been specified, that step will be displayed. The current table is the target used to evaluate the expression against. Record Source defaults to the Record Source of the previous step.
 
 ## Attributes
 
@@ -62,8 +65,8 @@ new\_categorycode = 750101 & gendercode = 2
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[Define entity forms](entity-forms.md)  
-[Web Form steps for portals](web-form-steps.md)  
+[Define basic forms](entity-forms.md)  
+[Advanced Form steps for portals](web-form-steps.md)  
 [Load Form/Load Tab step type](load-form-step.md)  
 [Redirect step type](add-redirect-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  

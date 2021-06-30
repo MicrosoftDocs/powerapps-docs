@@ -1,6 +1,7 @@
 ---
 title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/06/2020
+description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -154,7 +155,7 @@ Deprecated; use [userSettings.roles](#roles) instead to view the display names o
 
 ## transactionCurrency 
 
-Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user. This method is supported only on Unified Interface.
+Returns a lookup object containing the ID, display name, and table type of the transaction currency for the current user. This method is supported only on Unified Interface.
 
 ### Syntax
 

@@ -1,9 +1,15 @@
-- name: Get started with virtual entities
+- name: Get started with virtual tables (entities)
   href: get-started-ve.md
   items:
+  - name: Walkthrough using the OData v4 data provider
+    href: ../../../maker/data-platform/virtual-entity-walkthrough-using-odata-provider.md
   - name: API considerations
     href: api-considerations-ve.md
   - name: Custom data providers
     href: custom-ve-data-providers.md
-  - name: 'Sample: Generic virtual entity data provider plug-in'
+  - name: Enable Virtual Tables to support Dataverse events
+    href: enable-virtual-table-event-support.md
+  - name: 'Sample: Generic virtual table data provider plug-in'
     href: sample-generic-ve-plugin.md
+  - name: 'Sample: Custom virtual table provider with CRUD operations'
+    href: sample-ve-provider-crud-operations.md

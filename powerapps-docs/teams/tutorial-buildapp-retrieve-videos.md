@@ -41,7 +41,7 @@ In this tutorial, we'll use a channel named "Readiness".
 
 ## Step 1: Install and pin Power Apps in Teams
 
-In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](https://docs.microsoft.com/powerapps/teams/install-personal-app).
+In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](./install-personal-app.md).
 
 If you’ve already done installed and pinned the Power Apps app, you can skip to the next step.
 
@@ -338,7 +338,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select **New Step**.
 
-1. Enter *Common Data Service (current environment)* in the search box and select the action named **List records**.
+1. Enter *Microsoft Dataverse* in the search box and select the action named **List records**.
 
 1. Select **Feeds** in the **Entity name** property.
 
@@ -479,7 +479,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 1. Inside *Loop through each of the items in the feed since last retrieved* action, select **Add an action**.
 
-1. Enter *Common Data Service (current environment)* in the search box, and then select the action called **Create a new record**.
+1. Enter *Microsoft Dataverse* in the search box, and then select the action called **Create a new record**.
 
 1. Select **Feed Items** in the *Entity name* property.
 
@@ -537,7 +537,7 @@ Select the header of the action to show the title of **Loop through each of the 
 
 1. Inside *Loop through each of the feeds in the database* action, select **Add an action**.
 
-1. Enter *Common Data Service (current environment)* in the search box, and then select the action **Update a record**.
+1. Enter *Microsoft Dataverse* in the search box, and then select the action **Update a record**.
 
 1. Select **Feeds** for the *Entity Name*.
 

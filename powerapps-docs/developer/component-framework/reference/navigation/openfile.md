@@ -1,6 +1,6 @@
 ---
 title: openFile | Microsoft Docs
-description: 
+description: Opens a file.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -40,7 +40,7 @@ This topic describes the requirements for the Azure Cosmos DB for SQL API data p
 
 ## What is Azure Cosmos DB?
 
-Azure Cosmos DB is Microsoft's globally distributed multi-model database service for mission-critical applications. It provides rich and familiar SQL query capabilities with consistent low latencies over schema-less JSON data. More information: [Introduction to Azure Cosmos DB: SQL API](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction)
+Azure Cosmos DB is Microsoft's globally distributed multi-model database service for mission-critical applications. It provides rich and familiar SQL query capabilities with consistent low latencies over schema-less JSON data. More information: [Introduction to Azure Cosmos DB: SQL API](/azure/cosmos-db/sql-api-introduction)
 
 ## Requirements
 

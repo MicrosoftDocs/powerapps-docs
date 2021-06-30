@@ -18,11 +18,9 @@ search.app:
 
 # Modify your code to use global Discovery Service
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+The Discovery Service APIs can be used by your application to discover business organization instances (environments) that the application user has access to. If your application currently uses the Organization Service API on the 2011 SOAP endpoint to discover organization instances, you can follow the steps in this topic and convert your application to access organization details using the OData V4 RESTful API with the global Discovery Service URL. If your application accesses the Discovery Service using the regional Discovery Service URL, you will need to change the application code from using the regional URL to the global Discovery Service URL.
 
-The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the Organization Service API on the 2011 SOAP endpoint to discover organization instances, you can follow the steps in this topic and convert your application to access organization details using the OData V4 RESTful API with the global Discovery Service URL. If your application accesses the Discovery Service using the regional Discovery Service URL, you will need to change the application code from using the regional URL to the global Discovery Service URL.
-
-A detailed description of using the Discovery Service with the RESTful API can be found on the [Discover the URL for your organization](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api) page.
+A detailed description of using the Discovery Service with the RESTful API can be found on the [Discover the URL for your organization](./discover-url-organization-web-api.md) page.
 
 > [!IMPORTANT]
 > When accessing the Discovery Service, it is strongly recommended that your application use the *global* Discovery Service endpoint (https://globaldisco.crm.dynamics.com) and not the *regional* Discovery Service endpoint, which will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated) on March 2, 2020. The global Discovery Service is only available when using the RESTful API.
@@ -45,7 +43,7 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances
 GET  https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(Region={region})
 ```
 Response
-```javascript
+```JSON
 {
   "value":[
     {
@@ -72,7 +70,7 @@ GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances(UniqueName
 ```  
 
 Response
-```javascript
+```JSON
 {
   "Id":"<GUID>",
   "UniqueName":"myorg",
@@ -85,8 +83,9 @@ Response
 }
 ```
 
-## Mapping of fields
-The table shown below shows the field mapping in the responses returned from the Discovery Service when using the two APIs. These are applicable to all above example calls.
+## Mapping of columns
+
+The table shown below shows the column mapping in the responses returned from the Discovery Service when using the two APIs. These are applicable to all above example calls.
 
 Response field (SOAP endpoint) |	Response field (OData V4 RESTful endpoint)
 ------------------------------------|---------------------------------
@@ -104,9 +103,8 @@ UrlName|UrlName
 The Organization Service API message GetUserIdByExternalId is not supported in the RESTful API.
 
 ## See Also
-[Discovery Services](/powerapps/developer/data-platform/discovery-service)
 
-[Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api)
-
+[Discovery Services](../discovery-service.md)  
+[Use the Dataverse Web API](./discover-url-organization-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

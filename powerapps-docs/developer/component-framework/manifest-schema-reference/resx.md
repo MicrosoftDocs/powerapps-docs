@@ -1,6 +1,6 @@
 ---
 title: Resx Element | Microsoft Docs
-description: 
+description: The resx web resource is used to manage the localized strings you define.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,9 +19,9 @@ ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|

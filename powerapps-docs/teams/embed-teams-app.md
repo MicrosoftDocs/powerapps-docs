@@ -5,7 +5,9 @@ author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: tapanm
 ms.date: 03/16/2020
 ms.author: mabolan
@@ -19,12 +21,12 @@ search.app:
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
 > [!NOTE]
-> Team custom app policies must be set to allow uploading custom apps. If you are unable to embed your app in Teams, check with your administrator to see if they've setup [custom app settings](https://docs.microsoft.com/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+> Team custom app policies must be set to allow uploading custom apps. If you are unable to embed your app in Teams, check with your administrator to see if they've setup [custom app settings](/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
 ## Prerequisites
 
-- You need a valid [Power Apps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
-- To embed an app into Teams, you need an existing app [created using Power Apps](/powerapps/maker/canvas-apps/data-platform-create-app).
+- You need a valid [Power Apps license](/power-platform/admin/pricing-billing-skus).
+- To embed an app into Teams, you need an existing app [created using Power Apps](../maker/canvas-apps/data-platform-create-app.md).
 
 ## Download the app
 
@@ -55,7 +57,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 1. To add the app as a personal app or as a tab to any channel or conversation, select **Apps** in the left navigation and then select **Upload a custom app**.
 
     > [!NOTE]
-    > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
+    > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
 
     ![Add app as tab](media/embed-teams-app/upload-custom-app.png "Upload a custom app")
 
@@ -63,7 +65,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 ## Publish the app to the Teams catalog
 
-If you're an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalog.
+If you're an admin, you can also [publish the app](/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalog.
 
 ## Use context from Teams
 
@@ -133,7 +135,7 @@ You can optionally preload your app within Teams to increase performance.
 
 ### See also
 
-[Welcome to Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
+[Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

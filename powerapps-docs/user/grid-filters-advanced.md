@@ -1,5 +1,6 @@
 ---
 title: "Create a personal view using advanced grid filters  | MicrosoftDocs"
+description: Edit or create personal views using advanced grid filters in model-driven Power Apps.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -52,7 +53,7 @@ To see which filters were applied to the current view, select a view and then se
 ## Add conditions to filters
 
 1. To edit the current view and add more filters, select a view and then select **Filter** ![Filter icon](media/commandbar_filter_icon.png "Filter icon").
-2. On the **Advanced filters** screen, use the expression builder to add conditions to filters. For more information on how to add conditions, see [Add conditions to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-conditions-to-a-filter).
+2. On the **Advanced filters** screen, use the expression builder to add conditions to filters. For more information on how to add conditions, see [Add conditions to a filter](../maker/model-driven-apps/create-edit-view-filters.md#add-conditions-to-a-filter).
 3. When you're done, select **Apply**. 
 
    > [!div class="mx-imgBorder"] 
@@ -60,7 +61,7 @@ To see which filters were applied to the current view, select a view and then se
 
 ### Add grouped or nested conditions
 
-To drill down further into your data, you can add grouped or nested conditions to the filters. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
+To drill down further into your data, you can add grouped or nested conditions to the filters. For more information, see [Add a group condition to a filter](../maker/model-driven-apps/create-edit-view-filters.md#add-a-group-condition-to-a-filter).
 
    > [!div class="mx-imgBorder"] 
    > ![Add a group or nested condition](media/group_condition.gif "This image demonstrates how to add a grouped or nested condition to a filter")

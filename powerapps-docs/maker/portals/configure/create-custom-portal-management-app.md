@@ -1,14 +1,16 @@
 ---
-title: "Create custom Portal Management app for Power Apps portal | MicrosoftDocs"
-description: "Learn how to create a custom Portal Management app for Power Apps portal."
-author: tapanm-msft
-manager: kvivek
+title: Create custom Portal Management app
+description: Learn how to create a custom Portal Management app for Power Apps portal.
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
-ms.author: tapanm
-ms.reviewer: sandhan
+ms.date: 04/21/2021
+ms.author: sandhan
+ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Create custom Portal Management app
@@ -90,9 +92,7 @@ To create a custom **Portal Management** app:
 
     ![Select new app](media/select-pma.png)
 
-1. Verify the settings in the new **Portal Management** custom app:
-
-    ![Verify settings](media/custom-pma.png)
+Now you can use the custom Portal Management app and configure portal settings.
 
 ## Next steps
 

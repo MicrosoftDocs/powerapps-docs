@@ -1,13 +1,13 @@
 ---
-title: DataSourceInfo function | Microsoft Docs
-description: Reference information, including syntax and examples, for the DataSourceInfo function in Power Apps
+title: DataSourceInfo function in Power Apps
+description: Reference information including syntax and examples for the DataSourceInfo function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 11/11/2015
+ms.date: 03/12/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -51,6 +51,9 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 | **DataSourceInfo.EditPermission** |Boolean |Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**. |
 | **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
 
+> [!NOTE]
+> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.
+
 ## Syntax
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
@@ -64,7 +67,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
+![Icecream example](media/function-datasourceinfo/icecream.png "Icecream example")
 
 The data source has also provided this information:
 

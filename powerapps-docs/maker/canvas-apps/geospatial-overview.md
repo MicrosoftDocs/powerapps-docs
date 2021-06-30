@@ -16,11 +16,13 @@ search.app:
 
 ---
 
+
 # Add geospatial components to your app
+
 
 You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
 
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
+Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](../../developer/component-framework/custom-controls-overview.md).
 
 The following prebuilt components can be used for geospatial and mapping scenarios:
 
@@ -71,7 +73,6 @@ The geospatial features require additional terms of use that must be reviewed an
     >
     >Additional licensing requirements might be required to enable this feature.  
 
-   
     >[!NOTE]
     >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
     >
@@ -84,9 +85,10 @@ The geospatial features require additional terms of use that must be reviewed an
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Common Data Service and Spatial Services connectors. 
+The geospatial components require the Microsoft Dataverse and Spatial Services connectors. This connector is used by the Power Apps Maps and Address Input components to connect to Microsoft’s Azure Maps service. It is used to fetch map tiles and satellite imagery, geocode addresses, and search for addresses. Thus, it is required for the Interactive Map and Address Input components to function.
 
 For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
+
 
 ### Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: deleteRecord | Microsoft Docs
-description: 
+description: Deletes a table record.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -38,13 +38,13 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to delete. For example: &quot;account&quot;. </td>
+<td>The table logical name of the record you want to delete. For example: &quot;account&quot;. </td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to delete.</td>
+<td>GUID of the table record you want to delete.</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -52,7 +52,7 @@ Model-driven apps
 <td>No</td>
 <td><p>A function to call when a record is deleted. An object with the following properties will be passed to identify the deleted record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the record.</li>
+<li><b>entityType</b>: String. The table type of the record.</li>
 <li><b>id</b>: String. GUID of the record.</li>
 <li><b>name</b>: String. Name of the record.</li>
 </ul></td>
@@ -67,7 +67,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
+Type: LookupValue[]
 
 ### Related topics
 

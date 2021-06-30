@@ -1,6 +1,6 @@
 ---
 title: Mode | Microsoft Docs
-description: 
+description: Provides access to methods to get the information about the current state of the code component.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -20,37 +20,37 @@ ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps.
 
 ## Properties
 
 ### allocatedHeight
 
-Height in pixels allocated to the component.
+Height in pixels allocated to the component. 
 
 **Type**: `number`
 
 ### allocatedWidth
 
-Width in pixels allocated to the component.
+Width in pixels allocated to the component. This property is supported in both model-driven and canvas apps.
 
 **Type**: `number`
 
 ### isControlDisabled
 
-Whether the component is disabled.
+Whether the component is disabled. This property is supported in both model-driven and canvas apps.
 
 **Type**: `string`
 
 ### isVisible
 
-Whether the component is visible on the page.
+Whether the component is visible on the page. This property is supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
 ### label
 
-The defined component label.
+The defined component label. This property is supported in both model-driven and canvas apps.
 
 **Type**: `string`
 

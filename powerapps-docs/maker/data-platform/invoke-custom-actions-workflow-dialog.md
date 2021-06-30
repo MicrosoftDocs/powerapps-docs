@@ -1,8 +1,8 @@
 ---
-title: "Invoke custom actions from a workflow | MicrosoftDocs"
-description: "Learn how to invoke a custom action from a workflow"
+title: "Invoke custom process actions from a workflow | MicrosoftDocs"
+description: "Learn how to invoke a custom process action from a workflow"
 ms.custom: ""
-ms.date: 11/22/2018
+ms.date: 04/28/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -28,19 +28,18 @@ search.audienceType:
 <!-- Be sure to update publication date. -->
 
 
-# Invoke custom actions from a workflow
+# Invoke custom process actions from a workflow
 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Workflows have numerous capabilities supporting business scenarios. Calling basic data operation actions for a row, such as create, update, and delete, from within a workflow solves quite a few business scenarios. However, if you couple the capabilities of the workflows with the power of the custom processs actions invoked directly from within a workflow, you add a whole new range of business scenarios to your application without needing to write code.  
+  
+Let’s look at the scenario in which a custom process action is invoked from a workflow. We’ll invoke a custom process action to request the manager’s approval when a discount for a particular opportunity exceeds 20 percent.  
+  
+<a name="action"></a>
 
-Workflows have numerous capabilities supporting business scenarios. Calling basic data operation actions for a row, such as create, update, and delete, from within a workflow solves quite a few business scenarios. However, if you couple the capabilities of the workflows with the power of the custom actions invoked directly from within a workflow, you add a whole new range of business scenarios to your application without needing to write code.  
+## Example: Create a custom process action using the opportunity table
   
-Let’s look at the scenario in which a custom action is invoked from a workflow. We’ll invoke a custom action to request the manager’s approval when a discount for a particular opportunity exceeds 20 percent.  
-  
-<a name="action"></a>   
-## Example: Create a custom action using the opportunity table
-  
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.  
+1. In [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Processes**.  
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Action** category.  
   
@@ -52,14 +51,15 @@ To configure the email message, choose **Set Properties**. When the form opens, 
   
 ![Set up email](media/enable-custom-action-approval-process-setup-email.png "Set up email")  
   
-Before you can invoke the action from a workflow, you have to activate it. After you have activated the action, you can view its properties by choosing **View properties**.  
+Before you can invoke the custom process action from a workflow, you have to activate it. After you have activated the action, you can view its properties by choosing **View properties**.  
   
 ![Activate custom action &#45; approval process](media/enable-custom-action-approval-process-activate-action.png "Activate custom action - approval process")  
   
-<a name="workflow"></a>   
-## Invoke a custom action from a workflow  
+<a name="workflow"></a>
+
+## Invoke a custom process action from a workflow  
   
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.   
+1. In [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Processes**.   
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Workflow** category.  
   
@@ -67,13 +67,9 @@ We created a workflow that invokes the **Approval Process** custom action whenev
   
 ![Set action properties from workflow](media/enable-custom-action-from-workflow.png "Set action properties from workflow")  
   
-You can set the action’s input properties by choosing **Set Properties**. We added a name of the account related to the opportunity in the special notes. In the **Form Assistant**, under **Look for**, choose **Account** in the first drop-down list, choose **Account Name** in the second drop-down list, and then choose **OK**. The **Target** property is required and it is populated by the system. The **{Opportunity(Opportunity)}** in the **Target** property is the same opportunity that the calling workflow is running on. Alternatively, you can choose a specific opportunity for the target property by using lookup.  
+You can set the custom process action’s input properties by choosing **Set Properties**. We added a name of the account related to the opportunity in the special notes. In the **Form Assistant**, under **Look for**, choose **Account** in the first drop-down list, choose **Account Name** in the second drop-down list, and then choose **OK**. The **Target** property is required and it is populated by the system. The **{Opportunity(Opportunity)}** in the **Target** property is the same opportunity that the calling workflow is running on. Alternatively, you can choose a specific opportunity for the target property by using lookup.  
   
 ![Set input parameters for ApprovalProcess action](media/enable-customaction-workflow-set-properties.png "Set input parameters for ApprovalProcess action")  
   
-
-
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

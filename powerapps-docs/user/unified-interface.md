@@ -68,7 +68,7 @@ The business process flow has been improved by the docking mechanism. You can do
 The improved accessibility experience lets you use screen readers to translate on-screen information into audible sound and print to a Braille reader so that more people can use the app. For more information, see [Use a screen reader](screen-reader.md).
 
 ## Create a Unified Interface app
-If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](../maker/model-driven-apps/model-driven-app-overview.md).
 
 ![Create new Unified Interface app](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 

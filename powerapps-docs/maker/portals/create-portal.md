@@ -1,13 +1,16 @@
 ---
-title: Create a portal in Power Apps | Microsoft Docs
-description: Instructions to create a portal in Power Apps.
+title: Create a Dataverse starter portal
+description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 02/08/2021
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create a Dataverse starter portal
@@ -16,13 +19,13 @@ With the capability to build a portal in Power Apps, you can create a website fo
 
 Some of the benefits of creating a Power Apps portal:
 
-- Because the data is stored in Dataverse, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Dataverse, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the tables that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
 You can create a portal either in a new environment or in your existing environment.
 
-If you choose to create your portal in a new environment using the **Create new environment** link, the required portal pre-requisites such as entities, data, and a starter portal template are installed when the environment is created. In this method, the portal is provisioned in a few minutes.
+If you choose to create your portal in a new environment using the **Create new environment** link, the required portal pre-requisites such as tables, data, and a starter portal template are installed when the environment is created. In this method, the portal is provisioned in a few minutes.
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
@@ -32,7 +35,7 @@ Based on the selected environment in Power Apps, you can create a Dataverse star
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
-More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
+More information on working with environments: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
@@ -54,7 +57,7 @@ To create a portal:
 5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
     > [!TIP]
-    > To create a portal using a different language, you must first [enable the language in the environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
+    > To create a portal using a different language, you must first [enable the language in the environment](/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
 
     > [!div class=mx-imgBorder]
     > ![create new portal](media/create-new-portal.png "Create new portal")  
@@ -120,8 +123,8 @@ Once the provisioning request is successfully placed, a confirmation email notif
 [Common problems and resolutions while creating a portal](create-common-problems.md) <br>
 [Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
+[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

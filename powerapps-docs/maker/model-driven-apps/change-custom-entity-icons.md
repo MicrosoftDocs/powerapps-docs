@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -69,14 +69,14 @@ You must use solution explorer to set table icons.
   
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Microsoft Dataverse](/powerapps/developer/data-platform/developer-tools) topic for community developed tools.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Microsoft Dataverse](../../developer/data-platform/developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
-[Create a table](../data-platform/create-edit-entities.md)<br />
+[Create a table](/powerapps/maker/model-driven-apps/data-platform-create-entity)<br />
 [Edit a table](../data-platform/edit-entities.md)
 
 

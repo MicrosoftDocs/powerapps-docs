@@ -1,6 +1,6 @@
 ---
-title: Create a component for canvas apps | Microsoft Docs
-description: Introduction to reusable components for canvas apps
+title: Create a component for canvas apps
+description: Learn about how to create reusable components for canvas apps.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -16,7 +16,7 @@ search.app:
 # Create a component for canvas apps
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 
@@ -39,7 +39,7 @@ Components available inside the app are listed under the **Custom** category in 
 ![Insert components to the app](./media/create-component/insert-components.png "Insert components to the app")
 
 > [!NOTE]
-> Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+> Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
 
 ## Scope
 
@@ -135,7 +135,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. On the **Insert** tab, open the **Components** menu, and then select **MenuComponent**.
 
-    ![Insert](./media/create-component/insert.png "Insert")
+    ![Insert component](./media/create-component/insert.png "Insert component")
 
     The new component is named **MenuComponent_1** by default.
 

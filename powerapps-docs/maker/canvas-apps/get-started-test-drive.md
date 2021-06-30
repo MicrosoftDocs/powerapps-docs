@@ -1,11 +1,13 @@
 ---
-title: Create a canvas app from a template | Microsoft Docs
+title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 01/29/2020
 ms.author: tapanm
@@ -15,7 +17,7 @@ search.app:
   - PowerApps
 ---
 
-# Create a canvas app from a template in Power Apps
+# Create a canvas app from a template
 
 Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
 
@@ -31,7 +33,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
     ![New canvas app](./media/get-started-test-drive/new-canvas-app.png)
 
-    This opens [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) in a new tab.
+    This opens [Power Apps Studio](../../powerapps-overview.md#power-apps-for-app-makerscreators) in a new tab.
 
 1. On the **App templates** tile, select **Phone layout** or **Tablet layout**.
 

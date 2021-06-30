@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -48,7 +48,7 @@ This topic shows you how to create business rules and recommendations to apply f
 -   Create business recommendations based on business intelligence.  
 
 > [!NOTE]
-> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
 > Business rules don’t work with multi-select choices.
   
@@ -71,13 +71,39 @@ This topic shows you how to create business rules and recommendations to apply f
   
 5.  Set the scope, according to the following:  
   
-    |||  
-    |-|-|  
-    |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|All forms and server|  
-    |**All Forms**|All forms|  
-    |Specific form (**Account** form, for example)|Just that form|  
-  
+    :::row:::
+    :::column span="":::
+       **If you select this item...**
+    :::column-end:::
+    :::column span="":::
+       **The scope is set to...**
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **Entity**
+    :::column-end:::
+    :::column span="":::
+       All forms and server
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       **All Forms**
+    :::column-end:::
+    :::column span="":::
+       All forms
+    :::column-end:::
+    :::row-end:::
+    :::row:::
+    :::column span="":::
+       Specific form (**Account** form, for example)
+    :::column-end:::
+    :::column span="":::
+       Just that form
+    :::column-end:::
+    :::row-end:::
+
 6. **Add conditions.** To add more conditions to your business rule:  
   
     1.  Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  
@@ -137,6 +163,9 @@ This section describes common issues that may occur when you use business rules.
 
 ### Full Name column and Address column not supported with Unified Interface apps
 Actions or conditions that use a composite column like the **Full Name** (fullname) column or an **Address** column aren't supported in apps based on Unified Interface.  Alternatively, you can use actions or conditions with the constituent columns. For example, for the **Full Name** column, you can use actions or conditions on the  **First Name** (firstname) and **Last Name** (lastname) columns. 
+
+### Business rules don't execute for some users
+Make sure that users have a security role that includes, at a minimum, user scope read privileges on the Process table. By default, the Basic User security role has this privilege.
 
 ### Business rules don't fire on editable grid on a dashboard
 Entity scoped business rules will not fire on an editable grid when the editable grid is configured on a dashboard page.

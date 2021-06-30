@@ -1,12 +1,12 @@
 ---
-title: Customize an app screen based on column status inside a SharePoint list | Microsoft Docs
+title: Customize an app screen based on column status inside a SharePoint list
 description: This article explains how to customize an app screen based on column status inside a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2020
+ms.date: 04/26/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -47,7 +47,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Share the list with a user—for example, Kenny Smith.
 
-1. Select **Power Apps**, and then select **Create an app** from the SharePoint list page.
+1. Select **Integrate** -> **Power Apps** -> **Create an app** from the SharePoint list page.
 
     ![Create an app](./media/scenarios-customize-view-based-on-column-status/create-app.png "Create an app")
 

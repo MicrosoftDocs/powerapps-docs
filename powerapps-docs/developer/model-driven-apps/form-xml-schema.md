@@ -2,7 +2,7 @@
 title: "Form XML schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about schema definition for form customizations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,10 +17,10 @@ search.app:
 ---
 # Form XML schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/form-xml-schema -->
+The following is the schema definition for form customizations for model-driven apps. More information: [Customize forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
 
-The following is the schema definition for form customizations for model-driven apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
-  
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 ## Schema  
   
 ```xml  
@@ -1876,9 +1876,9 @@ The following is the schema definition for form customizations for model-driven 
 ```  
   
 ### See also  
- [Customize entity forms](customize-entity-forms.md)   
- [Create, install, and update a managed solution](../data-platform/create-install-update-managed-solution.md)<br/>
- [Create, export, or import an Unmanaged solution](../data-platform/create-export-import-unmanaged-solution.md)<br/>
+ [Customize forms](customize-entity-forms.md)   
+ [Create, install, and update a managed solution](/power-platform/alm/solution-api)<br/>
+ [Create, export, or import an Unmanaged solution](/power-platform/alm/solution-api)<br/>
  [Form XML schema](form-xml-schema.md)
 
 

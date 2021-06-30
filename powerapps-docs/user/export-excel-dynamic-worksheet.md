@@ -33,7 +33,7 @@ A few things to note:
 - Some system views can be exported only to a static Excel worksheet.    
 - Currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4).
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.    
-- If you're an app maker, you can use the Microsoft Power Apps Excel Add-in to download your app data and make edit in Excel and then save the data back to your app. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
+- If you're an app maker, you can use the Microsoft Power Apps Excel Add-in to download your app data and make edit in Excel and then save the data back to your app. For more information, see [Open table data in Excel](../maker/data-platform/data-platform-excel-addin.md).
 
 ## Export a dynamic worksheet
 

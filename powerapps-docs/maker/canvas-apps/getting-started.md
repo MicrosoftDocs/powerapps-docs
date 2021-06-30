@@ -1,11 +1,13 @@
 ---
-title: What are canvas apps? | Microsoft Docs
+title: What are canvas apps?
 description: Design and build canvas apps in Power Apps so that users can manage line-of-business data in a browser or on their mobile devices
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: overview
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 06/16/2020
 ms.author: tapanm
@@ -16,20 +18,13 @@ search.app:
 searchScope:
   - "Power Apps"
 ---
-# What are canvas apps in Power Apps?
-
-> [!NOTE]
-> Effective November 2020:
-> - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
-> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
->
-> Canvas apps articles will be updated soon to reflect the latest terminology.
+# What are canvas apps?
 
 Design and build a business app from a canvas in Microsoft Power Apps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
 If you don't need a custom design and your data is in Microsoft Dataverse, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
 
-If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 
 ## Build an app
 To get started, automatically generate an app from one of these sources, among others:
@@ -50,10 +45,10 @@ After you've generated an app or two automatically and gained some experience wi
 ## Share and run an app
 When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.
 
-Run your own apps - and any apps shared with you - on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](../../user/run-app-client.md).
+Run your own apps - and any apps shared with you - on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
 
 ## Learn more
-- Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
+- Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](../../guidance/planning/introduction.md)
 - Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 - Review [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
 - Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to help you leverage the features and functions of Power Apps.
@@ -64,7 +59,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Apps administrator for your organization, you can also open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
 
 ## Next steps
-- [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
+- [Planning a Power Apps project](../../guidance/planning/introduction.md)
 - [Sign up for a free license](../signup-for-powerapps.md)
 - [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app](open-and-run-a-sample-app.md)

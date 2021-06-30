@@ -1,12 +1,12 @@
 ---
-title: Accessible colors in canvas apps | Microsoft Docs
+title: Accessible colors for canvas apps
 description: Color-contrast guidelines for canvas apps in Power Apps
 author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/18/2021
+ms.date: 05/19/2021
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -17,7 +17,8 @@ contributors:
   - tapanm-msft
   - chmoncay
 ---
-# Accessible colors for canvas apps in Power Apps
+# Accessible colors for canvas apps
+
 Colors used in a canvas app should be accessible to color-blind and low-vision users. All Power Apps themes are accessible by default. When modifying colors used in an app, follow these guidelines to ensure that they remain accessible. There are several tools available online which can help you identify color contrast issues.
 
 ## Minimum contrast for text
@@ -31,9 +32,8 @@ In practical terms, all interactive controls must have adequate color contrast b
 * **[HoverColor](controls/properties-color-border.md)** and **[HoverFill](controls/properties-color-border.md)**
 
 ## Minimum contrast for non-text
-
-> [!NOTE]
-> In the [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) standard, contrast requirements only applies to text. For greater accessibility, consider the upcoming [WCAG 2.1 contrast guidelines](https://www.w3.org/TR/WCAG21/#non-text-contrast) for essential user interface components like icon buttons. A minimum ratio of 3:1 is recommended for these components. The guidelines described in this section are **optional** for WCAG 2.0 compliance.
+* Non-text components, such as icons and borders, must have a contrast ratio of at least 3:1 with the colors outside of them.
+* Disabled and decorative components have no contrast requirements.
 
 ### User interface components
 All interactive controls must have adequate color contrast between:

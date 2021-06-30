@@ -1,6 +1,7 @@
 ---
-title: "OnStageSelected Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "OnStageSelected event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the OnStageSelected event.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,9 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# OnStageSelected Event (Client API reference)
-
-
+# OnStageSelected event (Client API reference)
 
 This event occurs when a stage of a business process flow control is selected. You can’t cancel the stage selection using code in a handler for this event.
 
@@ -28,6 +27,7 @@ You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to re
 **getStage**: Returns a stage object representing the selected stage. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
 ## Methods supported for this event
+
 - **formContext.data.process**.[addOnStageSelected](../formcontext-data-process/eventhandlers/addOnStageSelected.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnStageSelected](../formcontext-data-process/eventhandlers/addOnStageSelected.md) method to remove event handlers for this event. 
 

@@ -1,6 +1,6 @@
 ---
 title: getTitle | Microsoft Docs
-description: 
+description: Retrieves the view display name used by the dataset property.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

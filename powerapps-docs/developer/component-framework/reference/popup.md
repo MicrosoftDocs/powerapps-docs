@@ -1,6 +1,6 @@
 ---
 title: Popup | Microsoft Docs
-description: 
+description: Provides access to get all the information about the popup.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
-title: Tips to improve canvas app performance | Microsoft Docs
-description: Follow the best practices in this topic to boost the performance of canvas apps that you create in Power Apps. 
+title: Tips and best practices to improve performance of canvas apps
+description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
   - chmoncay
 ---
-# Tips and best practices to improve canvas app performance
+# Tips and best practices to improve performance of canvas apps
 
 In the previous articles, you learned about the [execution phases and data call flow](execution-phases-data-flow.md), [common sources of slow performance](slow-performance-sources.md), and [common performance issues and resolutions](common-performance-issue-resolutions.md) in canvas apps. You can also benefit by following the tips and best practices in this article to boost the performance of apps that you create.
 
@@ -26,7 +26,7 @@ In the previous articles, you learned about the [execution phases and data call 
 
 **Don't connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
 
 ## Limit the number of controls
 
@@ -97,9 +97,9 @@ There's an exception: In the previous example, imagine that the only way to disp
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the dataset is large.
 
 > [!TIP]
-> To learn about delegable functions supported by specific connectors, go to the [connector documentation](https://docs.microsoft.com/connectors/).
+> To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
@@ -112,11 +112,11 @@ The use of [non-delegable functions and inappropriate data row limits for non-de
 
 ## Use Delayed Load
 
-Turn on the [experimental feature](working-with-experimental.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
+Turn on the [experimental feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large datasets
 
-Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2,000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, use indexes on columns as described by the data sources such as [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide) or [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
+Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2,000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, use indexes on columns as described by the data sources such as [SQL Server](/sql/relational-databases/sql-server-index-design-guide) or [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
 
 > [!NOTE]
 > For additional information about how large datasets can cause common performance problems on different platforms, read [Large datasets loading slowly on different platforms](common-performance-issue-resolutions.md#large-datasets-loading-slowly-on-different-platforms).

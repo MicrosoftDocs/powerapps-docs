@@ -1,22 +1,24 @@
 ---
-title: "AppConfig entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppConfig table."
-ms.date: 11/14/2020
+title: "AppConfig table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the AppConfig table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AppConfig entity reference
+
+# AppConfig table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Contains a mapping between an app configuration instance and an app, which defines the properties that can be customized for the app. Optionally, also contains navigation setting for an app. For internal use only.
 
@@ -25,14 +27,14 @@ Contains a mapping between an app configuration instance and an app, which defin
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/appconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigs<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST [*org URI*]/api/data/v9.0/appconfigs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -50,9 +52,9 @@ Contains a mapping between an app configuration instance and an app, which defin
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AppConfigIdUnique](#BKMK_AppConfigIdUnique)
 - [AppConfigImportXml](#BKMK_AppConfigImportXml)
@@ -135,7 +137,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -156,7 +158,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -166,9 +168,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AppConfigId](#BKMK_AppConfigId)
 - [ComponentState](#BKMK_ComponentState)
@@ -220,7 +222,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -350,7 +352,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -564,7 +566,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_navigationsetting_appconfig"></a> navigationsetting_appconfig
 
-Same as navigationsetting entity [navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig) Many-To-One relationship.
+Same as navigationsetting table [navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -579,7 +581,7 @@ Same as navigationsetting entity [navigationsetting_appconfig](navigationsetting
 
 ### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
 
-Same as appconfiginstance entity [appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance) Many-To-One relationship.
+Same as appconfiginstance table [appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -595,7 +597,7 @@ Same as appconfiginstance entity [appconfig_appconfiginstance](appconfiginstance
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_appconfig_createdby](#BKMK_lk_appconfig_createdby)
 - [lk_appconfig_modifiedonbehalfby](#BKMK_lk_appconfig_modifiedonbehalfby)
@@ -607,32 +609,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_appconfig_createdby"></a> lk_appconfig_createdby
 
-See systemuser Entity [lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby) One-To-Many relationship.
+See systemuser Table [lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfig_modifiedonbehalfby"></a> lk_appconfig_modifiedonbehalfby
 
-See systemuser Entity [lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfig_createdonbehalfby"></a> lk_appconfig_createdonbehalfby
 
-See systemuser Entity [lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_appconfig"></a> organization_appconfig
 
-See organization Entity [organization_appconfig](organization.md#BKMK_organization_appconfig) One-To-Many relationship.
+See organization Table [organization_appconfig](organization.md#BKMK_organization_appconfig) One-To-Many relationship.
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
 
-See appmodule Entity [appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig) One-To-Many relationship.
+See appmodule Table [appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfig_modifiedby"></a> lk_appconfig_modifiedby
 
-See systemuser Entity [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfig?text=appconfig EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

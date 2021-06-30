@@ -2,7 +2,7 @@
 title: "Paging behaviors and ordering (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the different paging behaviors for FetchXML queries and how you can write queries to get the desired paging results." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 7/20/2020
+ms.date: 03/25/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,7 +18,7 @@ search.app:
 
 # Paging behaviors and ordering
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 When querying data using FetchXML, paging query results can make viewing large
 volumes of information easier. It is important when using paging to include
@@ -143,7 +143,7 @@ Listed below are some suggestions for improving ordering of paging results, alon
 
 #### Best ordering
 
-- Always include a column that has a unique identifier (i.e., entity ID
+- Always include a column that has a unique identifier (i.e., table ID
   columns, auto-number columns, user/contact IDs)
 
 #### Good ordering
@@ -160,17 +160,17 @@ Listed below are some suggestions for improving ordering of paging results, alon
 - Orders that have single or multiple fields that are not likely to provide
   uniqueness such as:
   - Status and state
-  - Option sets or booleans
+  - Choices or Yes/No
   - Name values by themselves (i.e., last only, first only, company name
     only)
   - Text fields like titles, descriptions, multi-line text
   - Non unique number fields
 
-### Ordering and multiple entity queries
+### Ordering and multiple table queries
 
-Sometimes data is needed that spans multiple entities and must be queried with a
-table JOIN. In these cases, ordering can be included for both entities in the
-query. Make sure to use at least one column with a unique ID per entity to
+Sometimes data is needed that spans multiple tables and must be queried with a
+table JOIN. In these cases, ordering can be included for both tables in the
+query. Make sure to use at least one column with a unique ID per table to
 ensure the paging provides the best results. However, the query will be
 downgraded to legacy paging, where no paging cookie will be returned, in these
 cases due to limitations of the N:1 relationship structure that could result in
@@ -179,6 +179,5 @@ missing data.
 ### See Also
 
 [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

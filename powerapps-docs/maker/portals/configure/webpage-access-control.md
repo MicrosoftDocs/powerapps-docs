@@ -1,13 +1,16 @@
 ---
-title: "Manage page permissions for a portal | MicrosoftDocs"
-description: "Learn about how to manage page permissions for a portal."
+title: Manage page permissions
+description: Learn about how to manage page permissions for a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/14/2020
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Manage page permissions
@@ -216,7 +219,7 @@ You then set **Right** to **Restrict Read** and **Web Page** to the page at the 
 ### See also
 
 [Create web roles for portals](create-web-roles.md)  
-[Add record-based security using entity permissions for portals](assign-entity-permissions.md)
+[Add record-based security using table permissions for portals](assign-entity-permissions.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

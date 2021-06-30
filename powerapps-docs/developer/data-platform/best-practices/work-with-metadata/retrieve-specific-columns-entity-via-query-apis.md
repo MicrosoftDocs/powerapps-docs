@@ -110,7 +110,7 @@ The following classes contain a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>  instan
 
 ## Problematic patterns
 
-Queries that include a defined <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> where the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns> property is `true` instruct the platform to issue a SQL command to ["SELECT *"](https://technet.microsoft.com/library/ms189287.aspx) on all physical data included in the query plan.  This scenario should be avoided whenever possible.
+Queries that include a defined <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> where the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns> property is `true` instruct the platform to issue a SQL command to ["SELECT *"](/previous-versions/sql/sql-server-2008-r2/ms189287(v=sql.105)) on all physical data included in the query plan.  This scenario should be avoided whenever possible.
 
 > [!WARNING]
 > These scenarios should be avoided.

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -31,7 +31,7 @@ search.app:
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
 
 > [!IMPORTANT]
-> Dataflow with Analytical tables feature utilizes the Export to data lake service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about the **Export to data lake** service, see the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
+> Dataflow with Analytical tables feature utilizes the Azure Synapse Link for Dataverse service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about Azure Synapse Link for Dataverse, see the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
 
 There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
 - Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
@@ -58,7 +58,7 @@ Before you configure your environment with an Azure Data Lake Storage Gen2 accou
 The following sections walk through the steps necessary to configure your Azure Data Lake Storage Gen2 account.
 
 ## Create the storage account
-Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 1.	Make sure you select the same region as your environment and set your storage as StorageV2 (general purpose v2).
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
@@ -108,8 +108,8 @@ There are a few considerations and limitations to keep in mind when working with
 > You shouldn't change files created by dataflows in your organization’s lake or add files to a dataflow’s **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.
 
 ## Privacy notice
-By enabling the creation of dataflows with Analytical tables in your organization, via the **Export to data lake** service, details about the Azure Data Lake storage account, such as the name of the storage account, will be sent to and stored in the Export to data lake service, which is currently located outside the PowerApps compliance boundary and may employ lesser or different privacy and security measures than those typically in PowerApps. Note that you may remove the data lake association at any time to discontinue use of this functionality and your Azure Data Lake storage account details will be removed from the **Export to data lake** service.
-Further information about Export to data lake, is available in [this article.](https://go.microsoft.com/fwlink/?linkid=2109088)
+By enabling the creation of dataflows with Analytical tables in your organization, via the Azure Synapse Link for Dataverse service, details about the Azure Data Lake storage account, such as the name of the storage account, will be sent to and stored in the Azure Synapse Link for Dataverse service, which is currently located outside the PowerApps compliance boundary and may employ lesser or different privacy and security measures than those typically in PowerApps. Note that you may remove the data lake association at any time to discontinue use of this functionality and your Azure Data Lake storage account details will be removed from the Azure Synapse Link for Dataverse service.
+Further information about Azure Synapse Link for Dataverse is available in [this article.](https://go.microsoft.com/fwlink/?linkid=2109088)
 
 
 ## Frequently asked questions
@@ -125,18 +125,18 @@ Further information about Export to data lake, is available in [this article.](h
 This article provided guidance about how to connect an Azure Data Lake Storage Gen2 account for dataflow storage. 
 
 For more information about dataflows, the Common Data Model, and Azure Data Lake Storage Gen2, see these articles:
-- [Self-service data prep with dataflows](https://go.microsoft.com/fwlink/?linkid=2099972)
-- [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
-- [Add data to a table in Microsoft Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
+- [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)
+- [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage]()
+- [Add data to a table in Microsoft Dataverse](./add-data-power-query.md)
 
 For more information about Azure storage, see this article:
-- [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide)
+- [Azure Storage security guide](/azure/storage/common/storage-security-guide)
 
 For more information about the Common Data Model, see these articles:
-- [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview) 
-- [Common Data Model folders](https://go.microsoft.com/fwlink/?linkid=2045304)
-- [CDM model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
+- [Common Data Model - overview](/common-data-model/) 
+- [Common Data Model folders](/common-data-model/data-lake)
+- [CDM model file definition](/common-data-model/model-json)
 
 You can ask questions in the [Power Apps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
 

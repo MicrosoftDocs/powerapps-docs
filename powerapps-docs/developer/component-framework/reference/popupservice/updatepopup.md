@@ -1,6 +1,6 @@
 ---
 title: updatePopup | Microsoft Docs
-description: 
+description: Updates an existing popup in the service with the given name. Does nothing if popup does not exist yet.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

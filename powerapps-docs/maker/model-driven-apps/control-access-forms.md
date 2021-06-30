@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
@@ -92,7 +92,7 @@ If you are using role-based forms because you want to restrict the information p
 The Client API form context (formContext) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed. More information: [Client API form context](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
 > [!IMPORTANT]
-> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](/powerapps/developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
+> The Xrm.Page object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](../../developer/model-driven-apps/clientapi/reference/executioncontext/getformcontext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
 
 ### See also  
 

@@ -17,7 +17,7 @@ After you've determined what data structure to use, the next step is to
 consider how to secure your data. You should consider what data will be
 accessed by whom, and refer back to tasks, business processes, and personas that
 you listed in the planning phase. This article explains general security concepts for people who are
-unfamiliar with them. For more information about the technical aspects of security, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
+unfamiliar with them. For more information about the technical aspects of security, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 ## Layers of security
 
@@ -64,7 +64,7 @@ update, and delete) that you can set up for record-level security:
 - **Delete** Allows the user to delete data (like removing a row in Excel).
 
 For Microsoft Dataverse, there are four more types of access: append,
-append-to, assign, and share. More information: [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+append-to, assign, and share. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 ### Field-level security
 
@@ -131,7 +131,7 @@ reports (but not change them).
 
 ![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
 
-More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
+More information: [Security in Dataverse](/power-platform/admin/wp-security)
 
 > [!div class="nextstepaction"]
 > [Next step: Make the app](making-phase.md)

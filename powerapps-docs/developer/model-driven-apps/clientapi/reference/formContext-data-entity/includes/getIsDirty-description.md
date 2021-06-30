@@ -1,1 +1,1 @@
-Gets a boolean value indicating whether any fields in the form have been modified.
+Gets a boolean value indicating whether any columns in the form have been modified.

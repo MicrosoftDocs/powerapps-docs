@@ -22,7 +22,7 @@ search.app:
 Access Team grant access to rows via sharing rows. Access Team members have privileges defined by their individual security roles and by roles from the teams they are members of. 
 
 > [!NOTE]
-> Before you can share rows using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
+> Before you can share rows using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
 
 1. To give a user permission to access a row, from the site map, select the row type. For example, **Accounts**.
 2. From the list of rows, open the row that you want to provide another user access to.

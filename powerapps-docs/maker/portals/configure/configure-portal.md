@@ -1,20 +1,19 @@
 ---
-title: "Overview of Portal Management app | MicrosoftDocs"
-description: "Information about Portal Management app."
+title: Portal Management app overview
+description: Learn about Portal Management app.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 03/12/2021
+ms.custom: intro-internal
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Portal Management app overview
-
-> [!NOTE]
-> - Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md)
-> - We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
 
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
@@ -42,7 +41,7 @@ If your web browser has any extensions such as ad-blockers, you may see a script
 
 ![Script error](media/configure-portal/script-error.png "Script error") 
 
-This error occurs for forms such as [Web pages](web-page.md), [Entity Forms](entity-forms.md), [Entity Lists](entity-lists.md), or [Web Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
+This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Lists](entity-lists.md), or [Advanced Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

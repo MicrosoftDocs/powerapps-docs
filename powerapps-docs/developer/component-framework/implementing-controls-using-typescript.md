@@ -1,9 +1,10 @@
 ---
-title: "Create your first component using Power Apps Component Framework | MicrosoftDocs"
-description: "How to implement code components using TypeScript"
+title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
+description: "Learn how to implement code components using Power Apps component framework"
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.service: "powerapps"
+ms.custom: "intro-internal"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
@@ -12,7 +13,9 @@ author: Nkrb
 
 # Create your first component 
 
- In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
+ In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column. 
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 The following steps are required to build a linear slider code component:
 
@@ -66,13 +69,13 @@ Make changes to the predefined manifest file, as shown here:
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="TSLinearInputComponent_Display_Key" description-key="TSLinearInputComponent_Desc_Key" control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
    - **description-name-key**: Description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
-   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the field. Input properties are either bound to a field or allow a static value.
+   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
    - **required**: Defines whether the property is required.
 
      ```XML
@@ -123,7 +126,7 @@ The next step after implementing the manifest file is to implement the component
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSLinearInputComponent
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the field is stored and used inside the component
+  // Value of the column is stored and used inside the component
   private _value: number;
   // Power Apps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;
@@ -316,7 +319,7 @@ Developers and app makers can define their styling to represent their code compo
      ```
 
 > [!NOTE]
-> Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
+> Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
 > See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources. 
 
 
@@ -344,7 +347,7 @@ npm start
 
 ## Packaging your code components
 
-Follow these steps to create and import a [solution](https://docs.microsoft.com/powerapps/maker/data-platform/solutions-overview) file:
+Follow these steps to create and import a [solution](../../maker/data-platform/solutions-overview.md) file:
 
 1. Create a new folder **Solutions** inside the **LinearComponent** folder and navigate into the folder. 
 2. Create a new solution project in the **LinearComponent** folder using the following command:
@@ -354,7 +357,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     ```
 
    > [!NOTE]
-   > The [publisher-name](https://docs.microsoft.com/powerapps/developer/data-platform/reference/entities/publisher) and [publisher-prefix](https://docs.microsoft.com/powerapps/maker/data-platform/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisher-name](../data-platform/reference/entities/publisher.md) and [publisher-prefix](/powerapps/maker/data-platform/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
 
@@ -384,11 +387,11 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+7. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Adding code components in model-driven apps
 
-To add a code component like a linear input component, follow the steps mentioned in the article [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a code component like a linear input component, follow the steps mentioned in the article [Add components to columns and tables](add-custom-controls-to-a-field-or-entity.md).
 
 ## Adding code components to a canvas app
 
@@ -397,9 +400,9 @@ To add the code components to a canvas app, follow the steps in the article [Add
 ### See also
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
-[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Microsoft Power Platform Build Tools](https://docs.microsoft.com/powerapps/developer/data-platform/build-tools-overview)<br/>
+[Microsoft Power Platform Build Tools](/powerapps/developer/data-platform/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
 

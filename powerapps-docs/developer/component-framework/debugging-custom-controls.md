@@ -14,6 +14,8 @@ author: Nkrb
 
 After implementing the code component logic, you can start testing and debugging the code component using the `npm start` command. This command builds the code component and opens it in the local test harness.
 
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 > [!div class="mx-imgBorder"]
 > ![Test harness 1](media/test-harness-1.png "Test harness 1")
 
@@ -74,7 +76,7 @@ For example, on **Microsoft Edge**:
 - On the top bar, go to **Debugger** and then search for the component name described in the manifest file in the search bar. For example, type your component name like `Hello World component`.
 
      > [!div class="mx-imgBorder"]
-     > ![Debug component](media/debug-control.png "Debug component")
+     > ![Debug components](media/debug-control.png "Debug components")
 
 > [!NOTE]
 > It is always a good practice to set breakpoints on the component's lifecycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md).
@@ -86,7 +88,7 @@ You can also interact with the component locally in real time and observe elemen
 
 ## Fiddler AutoResponder
 
-Use the Fiddler AutoResponder to debug your code components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
+Use the Fiddler AutoResponder to debug your code components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
 
 ### Related topics
 

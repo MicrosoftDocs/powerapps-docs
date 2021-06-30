@@ -1,5 +1,5 @@
 ---
-title: Sources of slow canvas app performance | Microsoft Docs
+title: Common sources of slow performance for a canvas app
 description: Learn about the common sources of slow performance for a canvas app.
 author: JinManAhn-MSFT
 ms.service: powerapps
@@ -56,13 +56,13 @@ Users can access canvas apps globally. However, we recommend that you locate the
 
 ## Temporary throttling of high-volume requests at the back end
 
-Depending on how you design a canvas app, it can generate many data calls within a short time. For example, an app connecting to a Microsoft Dataverse environment is subject to the [Dataverse service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits). Such an app might get throttled when the data calls exceed supported limits.
+Depending on how you design a canvas app, it can generate many data calls within a short time. For example, an app connecting to a Microsoft Dataverse environment is subject to the [Dataverse service protection API limits](../../developer/data-platform/api-limits.md). Such an app might get throttled when the data calls exceed supported limits.
 
 If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. Profiling the app by using Monitor can help you to investigate this problem. Also note that apps that generate many avoidable data calls might not give the best user experience, even if the calls don't get throttled.
 
 Makers can select from several data sources available for Power Apps by using different [connectors](connections-list.md). Although there are many options to choose a data source from, choosing the right data source and connector is important from many perspectives&mdash;architecture, performance, maintenance, and scalability.
 
-Connector-specific limits are available in [Power Apps connectors documentation](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors), and might vary in comparison to other connectors.
+Connector-specific limits are available in [Power Apps connectors documentation](/connectors/connector-reference/connector-reference-powerapps-connectors), and might vary in comparison to other connectors.
 
 ## Next steps
 

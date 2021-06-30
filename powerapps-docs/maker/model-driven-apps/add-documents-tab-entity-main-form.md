@@ -7,7 +7,7 @@ ms.reviewer:
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: how-to
 author: Mattp123
 ms.assetid: 
 caps.latest.revision: 
@@ -30,9 +30,10 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 > [!IMPORTANT]
 > To use this feature you must enable document management. More information: [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
 
-## Add the documents tab in the FormXML 
+## Add the documents tab in the FormXML
+
 1.	Create a new solution. Sign-in to Power Apps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../data-platform/create-solution.md)
-2. Add the table to the solution where you want to add the documents tab on the main form. All standard and custom tables are supported. More information: [Add an existing component to a solution](/powerapps/maker/data-platform/use-solution-explorer#add-an-existing-component-to-a-solution)
+2. Add the table to the solution where you want to add the documents tab on the main form. All standard and custom tables are supported. More information: [Add solution components](../data-platform/create-solution.md#add-solution-components)
 3. Include the form for the table in the solution, such as the main form for the account table. Next to the table, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
 
 4. Add a one-column tab to the main form. To do this, in the form designer select an area on the form canvas, select **Add Component**, and then select **1 Column Tab**.  

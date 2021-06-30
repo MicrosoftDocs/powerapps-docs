@@ -1,6 +1,7 @@
 ---
 title: "setStatus (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the setStatus method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -28,12 +29,12 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|status|String|Yes|The new status. The values can be **active**, **aborted**, or **finished**.|
+|status|String|Yes|The new status. The values can be **active**, **aborted**, **finished**, or **invalid**. |
 |callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed the new status as a string value.|
 
 **Type**: String. 
 
-**Description**:Returns one of the following values: **active**, **aborted**, or **finished**.
+**Description**:Returns one of the following values: **active**, **aborted**, or **finished**. It returns **invalid** if the setStatus API fails.
 
 ### Related topics
 

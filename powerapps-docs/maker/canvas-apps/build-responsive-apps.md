@@ -1,13 +1,12 @@
 ---
-title: Build responsive apps in canvas apps | Microsoft Docs
-description: Reference information about building responsive apps in canvas apps
+title: Building responsive canvas apps
+description: Learn about how to build responsive canvas apps.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 10/30/2020
+ms.date: 05/24/2021
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -15,7 +14,7 @@ search.app:
   - PowerApps
 ---
 
-# Building responsive apps  
+# Building responsive canvas apps  
 
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
 
@@ -55,10 +54,9 @@ Before you start using the responsive layouts, you need to do the following:
 
 1. Go to [Power Apps](https://make.powerapps.com).
 1. Open the app where you want to use the responsive layout.
-1. Go to **File** > **Settings** > **Screen size & orientation** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
+1. Go to **File** > **Settings** > **Display** to disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Settings disable lock orientation](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
+   ![Settings disable lock orientation](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
 
 ## Responsive layouts
 
@@ -84,7 +82,7 @@ Containers are building blocks of all the responsive design. A container can be 
 
 Below are some tips for building your app’s UI with containers:
 
-- Always create UI elements that form a UI entity inside a container.
+- Always create UI elements that form a UI table inside a container.
 
 - Allows the container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes.
 
@@ -112,7 +110,7 @@ To build a responsive screen:
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
+1. Select **File** > **Settings** > **Display** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]

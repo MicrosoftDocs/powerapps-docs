@@ -5,7 +5,7 @@ author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2018
 ms.author: lanced
 ms.reviewer: matp
@@ -48,7 +48,7 @@ Model driven apps can use all actions available on business rules, however not a
 
 ## Prerequisites
 
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit tables.
+To follow this topic, you must switch to an [environment](/power-platform/admin/working-with-environments) in which you can create and edit tables.
 
 ## Create a business rule
   
@@ -166,6 +166,9 @@ A business rule may not execute because the field referenced in the business rul
 
 *Do business rules react to changes made by an onLoad script?*
 - No, they will execute before an onload script is executed.
+
+*When I update a business rule, is it executed against all existing records?*
+- No. Business rules are run on clients. For example, they run when a form is opened by a user and when a field value changes on that open form. They are not executed inside Dataverse.
  
 ### See also
 

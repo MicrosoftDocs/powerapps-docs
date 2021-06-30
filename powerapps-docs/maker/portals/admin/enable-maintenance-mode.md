@@ -1,13 +1,16 @@
 ---
-title: "Enable maintenance mode for a portal | MicrosoftDocs"
-description: "Learn how to enable maintenance mode with your portal."
+title: Maintenance mode for a portal
+description: Learn how to enable maintenance mode with your portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Maintenance mode for a portal
@@ -78,7 +81,7 @@ You can also choose to disable maintenance mode on your portal when the schedule
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

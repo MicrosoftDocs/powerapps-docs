@@ -1,5 +1,5 @@
 ---
-title: Automate tests with Azure Pipelines using classic editor | Microsoft Docs
+title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
 author: aengusheaney
 manager: kvivek
@@ -17,7 +17,7 @@ search.app:
 
 # Automate tests with Azure Pipelines using classic editor
 
-In this article, you'll learn how to set up and run your canvas app tests built in Test Studio using the [Azure Pipelines classic editor](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-the-classic-interface) in [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
+In this article, you'll learn how to set up and run your canvas app tests built in Test Studio using the [Azure Pipelines classic editor](/azure/devops/pipelines/get-started/pipelines-get-started#define-pipelines-using-the-classic-interface) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 You can use a public project on GitHub - [Microsoft/PowerAppsTestAutomation](https://github.com/microsoft/PowerAppsTestAutomation) to:
 
@@ -51,11 +51,11 @@ A [fork](https://help.github.com/github/getting-started-with-github/fork-a-repo)
 
 1. Select **Fork**:
 
-    ![Fork](media/test-studio-classic-pipeline-editor/fork.png "Fork")
+    ![Select Fork](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
 
 1. Select where you want to fork:
 
-    ![Fork account](media/test-studio-classic-pipeline-editor/fork-account.png "Fork account")
+    ![Select fork account](media/test-studio-classic-pipeline-editor/fork-account.png "Select fork account")
 
 Your forked repository will now be available.
 
@@ -73,7 +73,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Commit the changes to your repo:
 
-    ![JSON update](media/test-studio-classic-pipeline-editor/json-update.png "JSON update")
+    ![JSON updated](media/test-studio-classic-pipeline-editor/json-update.png "JSON updated")
 
 ## Create a pipeline
 
@@ -85,7 +85,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Select **Create Pipeline**:
 
-    ![Create pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Create pipeline")
+    ![Created pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Created pipeline")
 
 1. Select **Use the classic editor**:
 
@@ -96,7 +96,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 1. If necessary, authorize your GitHub connection using OAuth or using a
     personal access token:
 
-    ![Pipeline - GitHub](media/test-studio-classic-pipeline-editor/pipeline-github.png "Pipeline - GitHub")
+    ![Pipeline in GitHub](media/test-studio-classic-pipeline-editor/pipeline-github.png "Pipeline in GitHub")
 
 1. If needed, edit the connection name.
 
@@ -104,13 +104,13 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Enter the name of your project on GitHub, and then **Select** it:
 
-    ![Select repo](media/test-studio-classic-pipeline-editor/select-repo.png "Select repo")
+    ![Select a repo](media/test-studio-classic-pipeline-editor/select-repo.png "Select a repo")
 
 1. Select **Continue**.
 
 1. In the Select a template screen, select **Empty job**:
 
-    ![Empty job](media/test-studio-classic-pipeline-editor/empty-job.png "Empty job")
+    ![Select Empty job](media/test-studio-classic-pipeline-editor/empty-job.png "Select Empty job")
 
 1. **Save** your pipeline.
 
@@ -137,7 +137,7 @@ from the pipeline in this sequence:
 
 1. Select **Add** to add a PowerShell task to the job:
 
-    ![PowerShell](media/test-studio-classic-pipeline-editor/powershell.png "PowerShell")
+    ![Add PowerShell](media/test-studio-classic-pipeline-editor/powershell.png "Add PowerShell")
 
 1. Select the task. <br>
     You can also update the display name to *Set Agent Screen
@@ -154,7 +154,7 @@ from the pipeline in this sequence:
     Get-DisplayResolution
     ```
 
-    ![Script](media/test-studio-classic-pipeline-editor/script.png "Script")
+    ![Script example](media/test-studio-classic-pipeline-editor/script.png "Script example")
 
 ### Step 2 - Restore NuGet packages
 
@@ -214,7 +214,7 @@ from the pipeline in this sequence:
 
 1. Select **Test mix contains UI tests**.
 
-    ![Chrome](media/test-studio-classic-pipeline-editor/chrome.png "Chrome")
+    ![Test mix contains UI tests](media/test-studio-classic-pipeline-editor/chrome.png "Test mix contains UI tests")
 
 1. Select **…** (ellipsis) in the **Settings file** field.
 
@@ -275,7 +275,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 
 1. Check the lock image to make this variable a secret.
 
-    ![Variables](media/test-studio-classic-pipeline-editor/variables.png "Variables")
+    ![Make variable secret](media/test-studio-classic-pipeline-editor/variables.png "Make variable secret")
 
 1. **Save** your pipeline configurations.
 

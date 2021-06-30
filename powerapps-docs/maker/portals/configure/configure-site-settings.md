@@ -1,13 +1,16 @@
 ---
-title: "Configure site settings for a portal | MicrosoftDocs"
-description: "Instructions to add and configure site settings for a portal and global settings for all portals in your organization."
+title: Configure site settings for portals
+description: Learnhow to add and configure site settings for a portal and global settings for all portals in your organization.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2019
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Configure site settings for portals

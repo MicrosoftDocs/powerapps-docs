@@ -1,13 +1,13 @@
 ---
-title: Sign in for the first time | Microsoft Docs
-description: A new home for all makers of apps.
+title: Sign in to Power Apps for the first time
+description: An introduction to the first-time sign-in experience for Power Apps.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 08/06/2018
+ms.date: 06/15/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -22,7 +22,7 @@ You can select options in three general areas:
 
 - the header along the top of the page
 
-    ![Header](media/intro-maker-portal/header.png)
+    ![Header for environment selection](media/intro-maker-portal/header.png)
 
 - the navigation bar along the left edge of the page
 
@@ -36,7 +36,7 @@ For best results, start by ensuring that the home page is set to the right envir
 
 ## Choose an environment
 
-Whether you're creating an app, a flow, a data connection, or an entity in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
@@ -45,9 +45,10 @@ To verify which environment you're in, find the environment switcher near the ri
 If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
 
 > [!IMPORTANT]
-> Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
+> - To view the environment list in the environment switcher in Power Apps, you must have the Environment Maker, System Customizer, or System Administrator security role in the environment. For information about predefined security roles, see [Predfined security roles](/power-platform/admin/database-security#predefined-security-roles) in the Microsoft Power Platform admin guide.
+> - Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
 
-For more information, see [Environments overview](../../administrator/environments-overview.md).
+For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 ## Choose an app type
 
@@ -55,8 +56,9 @@ In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
+- **Portals** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
 
-If you choose an environment that has a Dataverse database, you can build canvas or model-driven apps from the same **Home** page.
+If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
 ## Play or edit an app
 
@@ -68,15 +70,15 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
-## Create an app
+## Create an app, portal, chatbot, or AI model
 
-From the **Home** page, you can create apps in several ways:
+From the **Home** page, you can create apps, portals, chatbots and AI models:
 
-- [generate a canvas app automatically from a set of data](data-platform-create-app.md)
-- [customize a pre-built sample of a canvas app](open-and-run-a-sample-app.md)
-- [build a canvas app from a blank screen](data-platform-create-app-scratch.md)
-- [create your own model-driven app](../model-driven-apps/overview-model-driven-samples.md)
-- [customize a pre-built sample for a model-driven app](../model-driven-apps/build-first-model-driven-app.md)
+- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
+- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
+- [Get started with portals](/powerapps/maker/portals/)
+- [Get started with chatbots](/powerapps/chatbots)
+- [Get started with AI models](/powerapps/use-ai-builder)
 
 ## Learn more
 
@@ -87,11 +89,11 @@ You can find more information about either canvas apps or model-driven apps in t
 
     ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/help-icon.png)
 
-Both options show links to this documentation set, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+Both options show links to this documentation set, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
 ## Other common tasks
 
-By selecting options in the header and left navigation bar, you can do more than create and open apps.
+By selecting options in the header and left navigation bar, you can do more than create and open apps, portals, chatbots, and AI models.
 
 ### From the header
 
@@ -106,16 +108,16 @@ By selecting options in the header and left navigation bar, you can do more than
   - [Overview of canvas-app connectors](connections-list.md)
   - [Build and certify custom connectors for canvas apps](register-custom-api.md)
   - [Manage an on-premises data gateway](gateway-management.md)
-  - [Administer Power Apps](../../administrator/index.md)
-  - [Licensing overview](../../administrator/pricing-billing-skus.md)
+  - [Administer Power Apps](/power-platform/admin/admin-guide)
+  - [Licensing overview](/power-platform/admin/pricing-billing-skus)
   - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
 
 ### From the left navigation bar
 
 Extend the functionality of your apps by performing these tasks:
 
-- Manage entities, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
-- Configure business logic in [Power Automate](https://docs.microsoft.com/flow/getting-started).
+- Manage tables, choices, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
+- Configure business logic in [Power Automate](/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
 
 

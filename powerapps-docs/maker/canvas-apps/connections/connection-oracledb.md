@@ -1,12 +1,12 @@
 ---
-title: Connect to Oracle Database | Microsoft Docs
+title: Connect to an Oracle database from Power Apps
 description: Learn how to connect to Oracle Database and use it for building apps in Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/16/2020
+ms.date: 05/11/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -14,6 +14,7 @@ search.app:
   - PowerApps
 ---
 # Connect to an Oracle database from Power Apps
+
 List tables, and create, read, update, and delete table rows in an Oracle database after you create a connection and build an app in Power Apps. The Oracle Database connection supports full delegation of filtering, sorting, and other functions but not triggers or stored procedures.
 
 ## Prerequisites
@@ -34,9 +35,7 @@ On the same computer as the on-premises data gateway, install the [64-bit ODAC 1
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
-1. Select **Create** from the left pane.
-
-1. Select **Other data sources** in **Start from data** section.
+1. Under **Start from data** section, select **Other data sources**.
 
     ![Other data sources](./media/connection-oracledb/other-data-sources.png "Other data sources")
 
@@ -100,7 +99,7 @@ Power Apps creates an app that has three screens and shows data from the table t
 
 1. System.Data.OracleClient requires Oracle client software version 8.1.7 or greater.
    
-    This error appears if the Oracle client SDK isn't installed on the same computer as the on-premises data gateway. To resolve this issue, [install the official provider](https://go.microsoft.com/fwlink/p/?LinkID=272376).
+    This error appears if the Oracle client SDK isn't installed on the same computer as the on-premises data gateway. To resolve this issue, [install the official provider](/power-bi/connect-data/desktop-connect-oracle-database).
 
 3. Table '[Tablename]' doesn't define any key columns.
    

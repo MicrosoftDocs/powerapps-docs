@@ -1,13 +1,17 @@
 ---
-title: "Configure Google as the identity provider for Power Apps portals | MicrosoftDocs"
-description: "Learn how to configure Google as the identity provider for Power Apps portals."
+title: Configure the Google provider for portals
+description: Learn how to configure Google as the identity provider for Power Apps portals.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure the Google provider for portals

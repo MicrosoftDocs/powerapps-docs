@@ -38,7 +38,7 @@ This approach is perhaps easier than the next, but it allows for broader permiss
 ## Allow Power Query to access company data
 As an alternative, the tenant administrator can give consent to Power Query without modifying tenant-wide permissions.
 
-1. Install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps).
+1. Install [Azure PowerShell](/powershell/azure/install-azurerm-ps).
 2. Run the following PowerShell commands:
    * Login-AzureRmAccount (and sign in as the tenant admin)
    * New-AzureRmADServicePrincipal -ApplicationId f3b07414-6bf4-46e6-b63f-56941f3f4128

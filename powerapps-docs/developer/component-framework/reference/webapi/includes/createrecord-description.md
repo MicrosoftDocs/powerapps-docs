@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 0f880bd0-510f-4f01-9051-8793b08e516e
 ---
 
-Creates an entity record.
+Creates a table record.

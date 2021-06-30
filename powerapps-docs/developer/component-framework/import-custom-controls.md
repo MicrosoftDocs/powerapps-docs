@@ -1,10 +1,10 @@
 ---
-title: Import components  | Microsoft Docs
-description: This article describes how to import code components
+title: Import components into model-driven apps in MIcrosoft Dataverse | Microsoft Docs
+description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 06/20/2019
+ms.date: 04/01/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.topic: "article"
@@ -13,7 +13,9 @@ author: Nkrb
 
 # Package a code component
 
-This article describes how to import code components into Microsoft Dataverse. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
+This article describes how to import code components into Microsoft Dataverse. After implementing the code components using Microsoft Power Platform CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 To create and import a solution file:
 
@@ -47,11 +49,11 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+5. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Connecting to your environment
 
-You can deploy the code components directly from the Power Apps CLI by connecting to the Dataverse environment and then pushing the updated components.
+You can deploy the code components directly from Microsoft Power Platform CLI by connecting to the Dataverse environment and then pushing the updated components.
 
 Follow the steps below to create the authentication profile, connect to Dataverse, and push the updated components. 
  
@@ -115,13 +117,13 @@ To create a solution project based on an existing solution in Dataverse, run the
    > [!NOTE]
    > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
-More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
+More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
 ## Create a plug-in project and add a reference to it in your solution 
 
 > [!NOTE]
 > The plugin command is in public preview and 
-Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
+Microsoft Power Platform CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the root directory where you want the project to be created.
@@ -175,7 +177,7 @@ If you want to remove a code component from a solution file:
 
 ### See also
 
-[Add code components to a field or entity in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a column or table in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)

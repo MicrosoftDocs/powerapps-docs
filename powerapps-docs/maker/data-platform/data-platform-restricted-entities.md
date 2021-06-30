@@ -3,8 +3,8 @@ title: Restricted tables requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted tables in Microsoft Dataverse that require Dynamics 365 licenses.
 author: KumarVivek
 ms.service: powerapps
-ms.topic: reference
-ms.date: 08/25/2020
+ms.topic: conceptual
+ms.date: 06/08/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -17,7 +17,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](https://docs.microsoft.com/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
+App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](/common-data-model/) to create apps and flows for users who have any version of Power Apps and Power Automate license.  
 
 However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
 
@@ -71,17 +71,17 @@ Transaction Connection|msdyn_transactionconnection |Dynamics 365 for Project Ser
 Transaction Origin|msdyn_transactionorigin |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Transaction Type|msdyn_transactiontype |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Unique Number|msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Work Order |msdyn_workorder |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
-[1] *Case table actions permitted with only Power Apps license:*  
-     Power Apps licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on        behalf of customers. Power Apps licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’,     ‘close’,‘delete’,‘assign’,‘duplicate’ , ‘merge’ , ‘create child cases’ or perform any other custom operation on cases created by others- Users can't act as a customer service agent, can't manage cases.
+[1] *Case table actions permitted with only Power Apps, Power Automate, or Power Virtual Agents license:*  
+Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Power Virtual Agents licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
 
 > [!NOTE]
 > Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
 
 ## Licensing
-For more information on Power Apps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md) page.
+For more information on Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
 
 
 

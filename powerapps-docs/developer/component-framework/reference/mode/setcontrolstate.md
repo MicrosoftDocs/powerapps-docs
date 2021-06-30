@@ -1,6 +1,6 @@
 ---
 title: setControlState | Microsoft Docs
-description: 
+description: Set component state so that it will be stored in one session.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -26,7 +26,7 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven and canvas apps 
 
 ## Parameters
 

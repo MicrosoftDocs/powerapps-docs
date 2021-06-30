@@ -5,7 +5,7 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 06/01/2021
 ms.author: nhelgren
 ms.reviewer: matp
 ---
@@ -13,6 +13,9 @@ ms.reviewer: matp
 # Work with table columns
 
 With the exception of the Customer column, all column types in Dataverse are available in Dataverse for Teams as *columns*. This article covers the content you'll need for working with table columns in Dataverse for Teams.
+
+Watch this video for a quick overview about column data types in Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWErxo]
 
 Notice that the currency feature will always use the default currency for the country that was selected during Dataverse for Teams environment creation. This can't be changed, and additional transaction currencies or exchange rates can't be added. However, you can upgrade from Dataverse for Teams to Dataverse for full currency functionality.
 
@@ -25,6 +28,9 @@ For more information about the columns available, see these Dataverse articles:
 - [Behavior and format of the Date and Time column](../maker/data-platform/behavior-format-date-time-field.md)
 
 ## Create a column
+
+Watch this video to learn how to create columns in Dataverse for Teams:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7js]
 
 1. On the **Build** tab, select **See all**, and then expand **Tables**. 
 2. Select the table you want to add a column to, and then select **Add column** on the command bar.
@@ -41,7 +47,7 @@ In Dataverse for Teams, choices can only be created as a column within a table. 
 
 ## Calculated and rollup columns
 
-The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated columns to automate manual calculations](../maker/data-platform/define-calculated-fields.md) and [Define rollup columns that aggregate values](../maker/data-platform/define-rollup-fields.md)
+Calculated columns and rollup columns are not currently supported in Dataverse for Teams.
 
 ### See also
 

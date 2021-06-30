@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -107,7 +107,7 @@ The following table lists the table options that you can enable or disable at an
 
 ### See also
 
-[Create a table](create-edit-entities.md)<br />
+[Create a table](./data-platform-create-entity.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 

@@ -1,22 +1,24 @@
 ---
-title: "AppConfigMaster entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppConfigMaster table."
-ms.date: 11/14/2020
+title: "AppConfigMaster table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the AppConfigMaster table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AppConfigMaster entity reference
+
+# AppConfigMaster table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Contains the master list of all properties that can be customized for apps in Dynamics 365. For internal use only.
 
@@ -25,10 +27,10 @@ Contains the master list of all properties that can be customized for apps in Dy
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/appconfigmasters(*appconfigmasterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigmasters<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/appconfigmasters(*appconfigmasterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigmasters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ Contains the master list of all properties that can be customized for apps in Dy
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -68,9 +70,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AppConfigMasterId](#BKMK_AppConfigMasterId)
 - [ConfigType](#BKMK_ConfigType)
@@ -456,7 +458,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_appconfigmaster_appconfiginstance"></a> appconfigmaster_appconfiginstance
 
-Same as appconfiginstance entity [appconfigmaster_appconfiginstance](appconfiginstance.md#BKMK_appconfigmaster_appconfiginstance) Many-To-One relationship.
+Same as appconfiginstance table [appconfigmaster_appconfiginstance](appconfiginstance.md#BKMK_appconfigmaster_appconfiginstance) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -472,7 +474,7 @@ Same as appconfiginstance entity [appconfigmaster_appconfiginstance](appconfigin
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_appconfigmaster_modifiedby](#BKMK_lk_appconfigmaster_modifiedby)
 - [lk_appconfigmaster_createdonbehalfby](#BKMK_lk_appconfigmaster_createdonbehalfby)
@@ -483,28 +485,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_appconfigmaster_modifiedby"></a> lk_appconfigmaster_modifiedby
 
-See systemuser Entity [lk_appconfigmaster_modifiedby](systemuser.md#BKMK_lk_appconfigmaster_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_appconfigmaster_modifiedby](systemuser.md#BKMK_lk_appconfigmaster_modifiedby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfigmaster_createdonbehalfby"></a> lk_appconfigmaster_createdonbehalfby
 
-See systemuser Entity [lk_appconfigmaster_createdonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_appconfigmaster_createdonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_createdonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfigmaster_createdby"></a> lk_appconfigmaster_createdby
 
-See systemuser Entity [lk_appconfigmaster_createdby](systemuser.md#BKMK_lk_appconfigmaster_createdby) One-To-Many relationship.
+See systemuser Table [lk_appconfigmaster_createdby](systemuser.md#BKMK_lk_appconfigmaster_createdby) One-To-Many relationship.
 
 ### <a name="BKMK_lk_appconfigmaster_modifiedonbehalfby"></a> lk_appconfigmaster_modifiedonbehalfby
 
-See systemuser Entity [lk_appconfigmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_appconfigmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_modifiedonbehalfby) One-To-Many relationship.
 
 ### <a name="BKMK_organization_appconfigmaster"></a> organization_appconfigmaster
 
-See organization Entity [organization_appconfigmaster](organization.md#BKMK_organization_appconfigmaster) One-To-Many relationship.
+See organization Table [organization_appconfigmaster](organization.md#BKMK_organization_appconfigmaster) One-To-Many relationship.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfigmaster?text=appconfigmaster EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

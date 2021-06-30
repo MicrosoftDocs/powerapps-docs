@@ -84,7 +84,7 @@ Any usage of `window.top` should be avoided, if possible. The following are exam
 var myValue = window.top.myGlobalVariable;
 
 // Attempting to access the Xrm namespace at the top level
-myValue = window.top.Xrm.Page.getAttribute("field1");
+myValue = window.top.Xrm.Page.getAttribute("column1");
 ```
 
 <a name='additional'></a>
@@ -94,8 +94,8 @@ myValue = window.top.Xrm.Page.getAttribute("field1");
 In the scenarios mentioned, `window.top` refers to the window owned by an application context external to Dynamics 365. Due to the differing origins, the browser presents the user with a cross-origin security error.
 
 ### See also
-[Apply business logic using client scripting in model-driven apps using JavaScript](/powerapps/developer/model-driven-apps/client-scripting)<br/>
-[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>
+[Apply business logic using client scripting in model-driven apps using JavaScript](../../client-scripting.md)<br/>
+[Events in forms and grids in model-driven apps](../../clientapi/events-forms-grids.md)<br/>
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,13 +1,13 @@
 ---
-title: App object | Microsoft Docs
-description: Reference information, including syntax and examples, for the App object in Power Apps
+title: App object in Power Apps
+description: Reference information including syntax and examples for the App object in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/20/2020
+ms.date: 05/24/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -58,7 +58,7 @@ Nobody wants to lose unsaved changes. Use the **ConfirmExit** and **ConfirmExitM
 > **ConfirmExit** doesn't work in apps that are embedded in, for example, Power BI and SharePoint.
 
 > [!NOTE]
-> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, Power Apps Studio doesn't show an error, but the resulting published app doesn't open in Power Apps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **App settings** > **Advanced settings** (under **Preview features**).
+> At present, these properties can reference controls on only the first screen if the **Delayed load** preview feature is enabled (which it is by default for new apps). If references are made, Power Apps Studio doesn't show an error, but the resulting published app doesn't open in Power Apps Mobile or a browser. We're actively working to lift this limitation. In the meantime, you can turn off **Delayed load** in **File** > **Settings** > **Upcoming features** (under **Preview**).
 
 ### ConfirmExit
 
@@ -89,6 +89,10 @@ By default, the confirmation dialog box shows a generic message, such as **"You 
 Use **ConfirmExitMessage** to provide a custom message in the confirmation dialog box. If this property is *blank*, the default value is used. Custom messages are truncated as necessary to fit within the confirmation dialog box, so keep the message to a few lines at most.
 
 In a browser, the confirmation dialog box might appear with a generic message from the browser.
+
+
+> [!NOTE]
+> App object has two more additional properties `OnMessage` and `BackEnabled` which are experimental properties and will go away from the app object in future. We recommend not to use these properties in your production environment.
 
 ### Example
 

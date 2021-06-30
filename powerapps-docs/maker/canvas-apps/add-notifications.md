@@ -1,5 +1,5 @@
 ---
-title: Send a push notification from a canvas app. | Microsoft Docs
+title: Send notification from an app
 description: Learn how to send push notifications from a canvas app in Power Apps.
 author: kavishi
 ms.service: powerapps
@@ -102,7 +102,7 @@ PowerAppsNotification.SendPushNotification(
 ### See also
 
 - [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification.md)
-- [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/)
+- [Power Apps Notification reference](/connectors/powerappsnotification/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

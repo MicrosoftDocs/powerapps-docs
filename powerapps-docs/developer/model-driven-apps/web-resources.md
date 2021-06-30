@@ -1,10 +1,10 @@
 ---
 title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 02/03/2021
+ms.date: 04/15/2021
 ms.reviewer: ""
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,40 +17,46 @@ search.app:
 ---
 # Web resources in model-driven apps
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-resources -->
-
-
 Web resources are *virtual files* that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address.  
 
 > [!NOTE]
 > IFRAMEing content that is behind an authentication boundary is not supported through web resources or Power Apps component framework. Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this is not supported in mobile or tablet applications.
-The specific scenario of embedding an entity form within an IFRAME, embedded in another entity form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
 
 
 <a name="BKMK_CapabilitiesOfWebResources"></a>   
+
 ## Capabilities of web resources  
- Web resources represent files that can be used to extend the Dataverse web application such as html files, JavaScript, and CSS, and several image formats. You can use web resources in form customizations, the `SiteMap`, or the application ribbon because they can be referenced by using URL syntax.  
+
+Web resources represent files that can be used to extend the Dataverse web application such as html files, JavaScript, and CSS, and several image formats. You can use web resources in form customizations, the `SiteMap`, or the application ribbon because they can be referenced by using URL syntax.  
   
- The URL syntax for web resources allows for relative path references. With your development tools, you can create a group of interdependent files on a development server by using file types compatible with web resources. Then, if you use a consistent naming convention and relative path references, the website will function after you upload all the files into Dataverse.
+The URL syntax for web resources allows for relative path references. With your development tools, you can create a group of interdependent files on a development server by using file types compatible with web resources. Then, if you use a consistent naming convention and relative path references, the website will function after you upload all the files into Dataverse.
   
- Because web resources are stored in Dataverse and are solution components, they can be easily exported and installed to other Dataverse orgs. Web resources are also available to users of Dataverse for Microsoft Office Outlook with Offline Access when offline because they are synchronized with the user's data.  
+Because web resources are stored in Dataverse and are solution components, they can be easily exported and installed to other Dataverse orgs. Web resources are also available to users of Dataverse for Microsoft Office Outlook with Offline Access when offline because they are synchronized with the user's data.  
   
- You can use the form editor to add and configure form-enabled web resources into your entity forms.  
+ You can use the form editor to add and configure form-enabled web resources into your forms.  
   
  Because web resources are stored as records in the database, they can be managed programmatically by using the standard techniques to create, retrieve, and update records. Text-based web resources (JScript, CSS, XML, XSL, RESX, and HTML) can be edited and saved in the application.  
-  
+
+[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
 <a name="BKMK_LimitationsOfWebResources"></a>   
+
 ### Limitations of web resources  
- There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with Dataverse data.
+
+There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with Dataverse data.
   
- Web resources are only available by using the Dataverse web application security context. Only licensed Dataverse users who have the necessary privileges can access them.  
+Web resources are only available by using the Dataverse web application security context. Only licensed Dataverse users who have the necessary privileges can access them.  
   
 #### Size limitations  
+
 The maximum size of files that can be uploaded is determined by the Organization.MaxUploadFileSize property. This property is set in the Email tab of the System Settings in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.
   
-<a name="BKMK_WebResourceTypes"></a>   
+<a name="BKMK_WebResourceTypes"></a>  
+ 
 ## Web resource types  
- You can use ten file formats to create web resources. The following table lists each file format, the allowed file extensions, and the type value that you use for each.  
+ 
+You can use ten file formats to create web resources. The following table lists each file format, the allowed file extensions, and the type value that you use for each.  
   
 |File|File extensions|Type|  
 |----------|---------------------|----------|  
@@ -73,7 +79,7 @@ The maximum size of files that can be uploaded is determined by the Organization
   
 > [!NOTE]
 >  -   When possible, use the `$webresource` directive. Only references that use the `$webresource` directive in the site map or ribbon commands will establish dependencies. Dependencies are not created when web resources reference each other.  
->       - To display a Silverlight web resource outside an entity form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
+>       - To display a Silverlight web resource outside a form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
   
 <a name="BKMK_WebResourceDirective"></a>   
 ### $webresource directive  
@@ -151,16 +157,16 @@ A web resource control configured to use a certain number of rows will have diff
   
 ### See also  
 
- [Create Accessible Web Resources](create-accessible-web-resources.md)<br />
- [Web Page (HTML) Web Resources](webpage-html-web-resources.md)<br />
- [Script (JScript) Web Resources](script-jscript-web-resources.md)<br />
- [Image Web Resources](image-web-resources.md)<br />
- [Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)<br />
- [Data (XML) Web Resources](data-xml-web-resources.md)<br />
- [Style Sheet (CSS) Web Resources](css-web-resources.md)<br />
- [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
- [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
- [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
+ [Create Accessible web resources](create-accessible-web-resources.md)<br />
+ [Web Page (HTML) web resources](webpage-html-web-resources.md)<br />
+ [Script (JScript) web resources](script-jscript-web-resources.md)<br />
+ [Image web resources](image-web-resources.md)<br />
+ [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
+ [Data (XML) web resources](data-xml-web-resources.md)<br />
+ [Style Sheet (CSS) web resources](css-web-resources.md)<br />
+ [Web resource table reference](../data-platform/reference/entities/webresource.md)<br />
+ [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
+ [Sample: Importing files as web resources](sample-import-files-web-resources.md)<br />
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)
 
 

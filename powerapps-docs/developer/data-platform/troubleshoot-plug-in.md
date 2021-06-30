@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Contains information on errors that can occur with to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn what plug-in errors can occur and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
+ms.date: 03/16/2021
 ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
@@ -15,9 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Troubleshoot plug-ins 
+# Troubleshoot plug-ins
 
-This topic contains information about errors that can occur due to plug-ins and how to fix them.
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
+This topic contains information about errors that can occur due to plug-in execution and how to fix them.
 
 ## Error: No Sandbox Worker processes are currently available
 
@@ -260,7 +262,7 @@ A less common scenario is where the code in the plug-in is leaking memory. This 
 
 ## Transaction errors
 
-There are two common types of errors related to transactions: 
+There are two common types of errors related to transactions:
 
 Error Code: `-2146893812`<br />
 Error Message: `ISV code reduced the open transaction count. Custom plug-ins should not catch exceptions from OrganizationService calls and continue processing.`
@@ -296,15 +298,15 @@ When writing plug-ins, it is essential to understand how to design customization
 
 ### Cascade operations
 
-Certain actions you make in your plug-in, such as assigning or deleting a record, can initiate cascading operations on related records. These actions could apply locks on related records causing subsequent data operations to be blocked which in turn can lead to a SQL timeout. 
+Certain actions you make in your plug-in, such as assigning or deleting a record, can initiate cascading operations on related records. These actions could apply locks on related records causing subsequent data operations to be blocked which in turn can lead to a SQL timeout.
 
-You should consider the possible impact of these cascading operations on data operations in your plug-in. More information: [Entity relationship behavior](../../maker/data-platform/entity-relationship-behavior.md)
+You should consider the possible impact of these cascading operations on data operations in your plug-in. More information: [Table relationship behavior](../../maker/data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
 
 Because these behaviors can be configured differently between environments, the behavior may be difficult to reproduce unless the environments are configured in the same way.
 
-### Indexes on new entities
+### Indexes on new tables
 
-If the plug-in is performing operations using an entity or attribute that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
+If the plug-in is performing operations using a table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
 
 ## Errors due to user privileges
 
@@ -314,26 +316,23 @@ You can register the plug-in to run in the context of a user known to have the c
  - [Register a plug-in](register-plug-in.md)
  - [Impersonate a user](impersonate-a-user.md)
 
-<!-- But if you prefer that the logic in your plug-in adapt to the privileges that the calling user has, you really need to verify the user's privileges in your code.
-
-TODO: Add content that shows how to do this -->
+<!-- But if you prefer that the logic in your plug-in adapt to the privileges that the calling user has, you really need to verify the user's privileges in your code.-->
 
 ## Error: Message size exceeded when sending context to Sandbox
 
-<!-- This is the error code for an unexpected error we should be providing a specific error code. Bug 1470173 is tracking this. -->
 Error Code: `-2147220970`<br />
 Error Message: `Message size exceeded when sending context to Sandbox. Message size: ### Mb`
 
 This error occurs when a message payload is greater than 116.85 MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
- 
+
 The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Dataverse platform.
- 
+
 116.85 MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
- 
+
 If you encounter this error you can:
 
-1.	Remove the plug-in for the message. If there are no plug-ins registered for the message, the operation will complete without an error.
-2.	If the error is occurring in a custom client, you can modify your code so that it doesn't attempt to perform the work in a single operation. Instead, write code to retrieve the data in smaller parts.
+1. Remove the plug-in for the message. If there are no plug-ins registered for the message, the operation will complete without an error.
+2. If the error is occurring in a custom client, you can modify your code so that it doesn't attempt to perform the work in a single operation. Instead, write code to retrieve the data in smaller parts.
 
 ## Error: The given key was not present in the dictionary
 
@@ -360,13 +359,13 @@ Error Message: `An unexpected error occurred from ISV code.`
 
 This error frequently occurs at design time and can be due to a misspelling or using the incorrect casing. The key values are case sensitive.
 
-At run-time the error is frequently due to the developer assuming that the value will be present when it isn't. For example, in a plug-in that is registered for the update of an entity, only those values which are changed will be included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
+At run-time the error is frequently due to the developer assuming that the value will be present when it isn't. For example, in a plug-in that is registered for the update of a table, only those values which are changed will be included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
 
 ### Prevention
 
 To prevent this error you must check that the key exists before attempting to use it to access a value. 
 
-For example, when accessing an entity attribute, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether an attribute exists in an entity as shown in the following code.
+For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in a table as shown in the following code.
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -387,7 +386,7 @@ if (context.InputParameters.Contains("Target") &&
     }
 ```
 
-Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error when accessing entity attributes, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
+Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error when accessing a table column, but be aware that this method will return the default value of the type if the column doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
 
 ## Error: You cannot start a transaction with a different isolation level than is already set on the current transaction
 

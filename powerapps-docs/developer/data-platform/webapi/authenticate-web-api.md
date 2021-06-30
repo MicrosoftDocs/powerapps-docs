@@ -23,14 +23,11 @@ search.app:
 ---
 # Authenticate to Microsoft Dataverse with the Web API
 
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 You must use OAuth as described in [Use OAuth with Dataverse](../authenticate-oauth.md).
 
 The code you write to manage authentication when using the Web API depends on the type of deployment and where your code is.  
   
-### Authenticate with JavaScript in web resources  
+## Authenticate with JavaScript in web resources
 
 When you use the Web API with JavaScript within HTML web resources, form scripts, or ribbon commands you don’t need to include any code for authentication. In each of these cases the user is already authenticated by the application and authentication is managed by the application.  
 
@@ -43,6 +40,5 @@ If you’re creating a single page application (SPA) using JavaScript you can us
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Use OAuth with Dataverse](../authenticate-oauth.md)<br />
 [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

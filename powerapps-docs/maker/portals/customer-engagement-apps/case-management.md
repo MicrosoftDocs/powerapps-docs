@@ -1,13 +1,16 @@
 ---
-title: "Manage cases in a portal | MicrosoftDocs"
-description: "Learn how to manage cases in a portal."
+title: Manage cases in portals
+description: Learn how to manage cases in a portal.
 author: sbmjais
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2021
+ms.date: 04/21/2020
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: shjais
+contributors:
+    - tapanm-msft
+    - shjais
 ---
 
 # Manage cases in portals
@@ -36,7 +39,7 @@ By default, following error appears if you choose a contact that doesn't belong 
  
 *The specified contact doesn't belong to the account selected as the customer. Specify a contact that belongs to the selected account, and then try again.*
  
-You can customize this default error by adding a [Content Snippet](https://docs.microsoft.com/powerapps/maker/portals/configure/customize-content-snippets#edit-snippets) with the *Name* as **cases/unrelatedcontact** and *Value* as your custom error message text.
+You can customize this default error by adding a [Content Snippet](../configure/customize-content-snippets.md#edit-snippets) with the *Name* as **cases/unrelatedcontact** and *Value* as your custom error message text.
 
 ## Add case notes
 

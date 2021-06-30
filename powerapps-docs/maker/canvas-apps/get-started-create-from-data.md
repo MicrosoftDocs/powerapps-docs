@@ -1,20 +1,24 @@
 ---
-title: Create a canvas app from Excel | Microsoft Docs
-description: Use Power Apps to automatically create a canvas app using an Excel file stored in a cloud-storage account
+title: Create a canvas app with data from an Excel file
+description: Learn about how to use Power Apps to automatically create a canvas app using data stored in an Excel file in a cloud-storage account.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
-ms.date: 12/05/2019
+ms.date: 06/22/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
-# Create a canvas app from Excel in Power Apps
+# Create a canvas app with data from an Excel file
 
 In this topic, you'll create your first canvas app in Power Apps using data from an Excel table. You'll select an Excel file, create an app, and then run the app that you create. Every created app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
 
@@ -27,27 +31,26 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
-> You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
+> - You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md).
+> - The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
 ## Create the app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Start from data**, select **Other data sources**.
 
-    ![Option to create an app](./media/get-started-create-from-data/start-from-data.png)
+    ![Choose other data sources](./media/get-started-create-from-data/start-from-data.png)
 
-1. Under **Start with your data**, click or tap **Phone layout** on the tile for your cloud-storage account.
+1. Choose your connection, or select **New connection** to create, and then select **Create**.
 
-    ![Option to create an app](./media/get-started-create-from-data/odfb-tile.png)
-
-1. If prompted, click or tap **Connect**, and provide your credentials for that account.
+    ![Choose your data source](./media/get-started-create-from-data/odfb-tile.png)
 
 1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it. 
 
 1. Under **Choose a table**, click or tap **FlooringEstimates**, and then click or tap **Connect**.
 
-    ![Option to create an app](./media/get-started-create-from-data/choose-table.png)
+    ![Choose your table](./media/get-started-create-from-data/choose-table.png)
 
 ## Run the app
 

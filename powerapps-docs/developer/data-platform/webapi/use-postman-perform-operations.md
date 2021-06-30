@@ -20,7 +20,7 @@ search.app:
 
 # Use Postman to perform operations with the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Use Postman to compose and send Web API requests and view responses. This topic describes how to use Postman to create Web API requests that perform create, retrieve, update, and delete (CRUD) operations and use functions and actions.
 
@@ -100,7 +100,7 @@ The body of the response looks like this:
     }
 }
 ```
-More information: [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).
+More information: [Retrieve a table using the Web API](retrieve-entity-using-web-api.md).
 
 ## Create a record
 
@@ -116,11 +116,11 @@ Set the body of the request with information about the account to create.
 
 When you send this request, the body will be empty, but the ID of the created account will be in the `OData-EntityId` header value.
 
-More information: [Create an entity using the Web API](create-entity-web-api.md).
+More information: [Create a table using the Web API](create-entity-web-api.md).
 
 ## Update a record
 
-Use the `PATCH` method to update an entity record, as shown here.
+Use the `PATCH` method to update a table record, as shown here.
 
 `PATCH` `{{webapiurl}}accounts(`*&lt;accountid&gt;*`)`
 
@@ -128,7 +128,7 @@ Use the `PATCH` method to update an entity record, as shown here.
 
 When you send this request, the response body will be empty, but the ID of the updated account will be in the `OData-EntityId` header value.
 
-More information: [Update and delete entities using the Web API](update-delete-entities-using-web-api.md).
+More information: [Update and delete tables using the Web API](update-delete-entities-using-web-api.md).
 
 ## Delete a record
 
@@ -140,11 +140,11 @@ Use the `DELETE` method to delete an existing record.
 
 When you send this request, the account record with the given `accountid` gets deleted.
 
-More information: [Update and delete entities using the Web API](update-delete-entities-using-web-api.md).
+More information: [Update and delete tables using the Web API](update-delete-entities-using-web-api.md).
 
 ## Use a function
 
-Use a `GET` request with the functions listed in [Web API Function Reference](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/functions?view=dynamics-ce-odata-9) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function /> to detect and retrieve duplicates of a specified record.
+Use a `GET` request with the functions listed in [Web API Function Reference](/dynamics365/customer-engagement/web-api/functions?view=dynamics-ce-odata-9) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function /> to detect and retrieve duplicates of a specified record.
 
 |HTTP method|URL|
 |----|----|
@@ -169,7 +169,7 @@ More information: [Use Web API functions](use-web-api-functions.md).
 
 ## Use an action
 
-Use a `POST` request with the actions listed in [Web API Action Reference](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/actions?view=dynamics-ce-odata-9) to perform operations that have side effects.
+Use a `POST` request with the actions listed in [Web API Action Reference](/dynamics365/customer-engagement/web-api/actions?view=dynamics-ce-odata-9) to perform operations that have side effects.
 
 This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />.
 
@@ -177,7 +177,7 @@ This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDupli
 
 ![Create a Web API request that uses actions](media/postman-use-action.png "Create a Web API request that uses actions")
 
-The request in the example just shown submits an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the entity type. <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse?text=BulkDetectDuplicatesResponse ComplexType" /> is returned as a response from <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />. The response includes the `JobId` property, which contains the GUID of the asynchronous duplicate detection job that detects and logs duplicate records.
+The request in the example just shown submits an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse?text=BulkDetectDuplicatesResponse ComplexType" /> is returned as a response from <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />. The response includes the `JobId` property, which contains the GUID of the asynchronous duplicate detection job that detects and logs duplicate records.
 
 More information: [Use Web API actions](use-web-api-actions.md).
 

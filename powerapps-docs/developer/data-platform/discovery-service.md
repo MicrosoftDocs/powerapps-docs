@@ -1,8 +1,8 @@
 ---
 title: "Discovery Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about access to the Discovery Service for discovering business organization instance details."
+description: "Learn about accessing the Discovery service for discovering environment details."
 ms.custom: ""
-ms.date: 1/16/2019
+ms.date: 03/23/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,24 +15,23 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Discovery Service
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+# Discovery service
 
 [!INCLUDE [cc-discovery-service-description](includes/cc-discovery-service-description.md)]
 
-The Discovery Service is accessed through two different APIs:
+The Discovery service is accessed through two different APIs:
 
 - For the OData V4 RESTful API: [Discover the URL for your organization](webapi/discover-url-organization-web-api.md)
-- For the discovery API available through the 2011 (SOAP) endpoint: [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
+- For the discovery API available through the 2011 (SOAP) endpoint: [Use the Discovery service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
 
 > [!NOTE]
-> The *regional* Discovery Service is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming.md).
+> The *regional* Discovery service is deprecated. More information: [Important changes (deprecations)](/power-platform/important-changes-coming.md).
 
 ### See Also
 
 [Use the Microsoft Dataverse Web API](webapi/overview.md)<br />
-[Modify your code to use global Discovery Service](webapi/discovery-orgsdk-to-webapi.md)
+[Modify your code to use global Discovery service](webapi/discovery-orgsdk-to-webapi.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

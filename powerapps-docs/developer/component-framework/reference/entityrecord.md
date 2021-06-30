@@ -1,6 +1,6 @@
 ---
-title: EntityRecord | Microsoft Docs
-description: 
+title: EntityRecord in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for EntityRecord in Power Apps component framework.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -20,16 +20,16 @@ ms.assetid: 9efccace-015b-4d45-b893-3e794c254e36
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Methods
 
-|Methods|Description|
-|-----|-----|
-|[getFormattedValue](entityrecord/getformattedvalue.md)|[!INCLUDE [getformattedvalue-description](entityrecord/includes/getformattedvalue-description.md)]|
-|[getRecordId](entityrecord/getrecordid.md)|[!INCLUDE [getrecordid-description](entityrecord/includes/getrecordid-description.md)]|
-|[getValue](entityrecord/getvalue.md)|[!INCLUDE [getvalue-description](entityrecord/includes/getvalue-description.md)]|
-|[getNamedreference](entityrecord/getnamedreference.md)|[!INCLUDE [getnamedreference-description](entityrecord/includes/getnamedreference-description.md)]|
+|Methods|Description|Available for|
+|-----|-----|-----------|
+|[getFormattedValue](entityrecord/getformattedvalue.md)|[!INCLUDE [getformattedvalue-description](entityrecord/includes/getformattedvalue-description.md)]|Model-driven and canvas apps|
+|[getRecordId](entityrecord/getrecordid.md)|[!INCLUDE [getrecordid-description](entityrecord/includes/getrecordid-description.md)]|Model-driven and canvas apps|
+|[getValue](entityrecord/getvalue.md)|[!INCLUDE [getvalue-description](entityrecord/includes/getvalue-description.md)]|Model-driven and canvas apps|
+|[getNamedReference](entityrecord/getnamedreference.md)|[!INCLUDE [getnamedreference-description](entityrecord/includes/getnamedreference-description.md)]|Model-driven and canvas apps|
 
 
 ### Related topics

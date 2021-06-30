@@ -2,7 +2,7 @@
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
 ms.custom: ""
-ms.date: 1/31/2019
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -18,7 +18,7 @@ search.app:
 
 # Developer tools and resources
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Developers will use the following tools and resources when working with solutions using Microsoft Dataverse.
 
@@ -28,19 +28,19 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 
 |Tool  |Description  |
 |---------|---------|
-|Code generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the entity data model used by the organization service. <br />More information: <br />[Organization Service](work-with-data.md#organization-service)<br />[Create early bound entity classes with the code generation tool](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
-|Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom entities. This tool is not designed to move business data. <br /> More information: [Dataverse Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Dataverse instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy packages](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />[Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)|
-|Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Register a plug-in](register-plug-in.md)|
+|Code Generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the Entity Data Model used by the Organization service. <br />More information: <br />[Organization service](work-with-data.md#organization-service)<br />[Create early bound table classes with the Code Generation tool](org-service/generate-early-bound-classes.md)|
+|Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom tables. This tool is not designed to move business data. <br /> More information: [Dataverse Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
+|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Dataverse environments. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy packages](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />[Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)|
+|Plug-in Registration tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to data transaction events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Register a plug-in](register-plug-in.md)|
 |SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development](/power-platform/alm/team-development-alm)<br />[Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
-## .NET SDK Assemblies 
+## .NET SDK Assemblies
 
 The following are assemblies .NET developers can use. The latest versions are available to download in the corresponding NuGet packages.
 
 ### Work with data
 
-Use these assemblies to interact with the organization service and discovery services.
+Use these assemblies to interact with the Organization service and Discovery services.
 
 More information: [Use the Dataverse Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
 
@@ -51,9 +51,9 @@ More information: [Use the Dataverse Organization service](/dynamics365/customer
 |Microsoft.Crm.Sdk.Proxy.dll|[Microsoft.Crm.Sdk](/dotnet/api/microsoft.crm.sdk)<br />[Microsoft.Crm.Sdk.Messages](/dotnet/api/microsoft.crm.sdk.messages)|
 |Microsoft.Xrm.Sdk.dll|[Microsoft.Xrm.Sdk](/dotnet/api/microsoft.xrm.sdk)<br />[Microsoft.Xrm.Sdk.Client](/dotnet/api/microsoft.xrm.sdk.client)<br />[Microsoft.Xrm.Sdk.Discovery](/dotnet/api/microsoft.xrm.sdk.discovery)<br />[Microsoft.Xrm.Sdk.Messages](/dotnet/api/microsoft.xrm.sdk.messages)<br />[Microsoft.Xrm.Sdk.Metadata](/dotnet/api/microsoft.xrm.sdk.metadata)<br />[Microsoft.Xrm.Sdk.Metadata.Query](/dotnet/api/microsoft.xrm.sdk.metadata.query)<br />[Microsoft.Xrm.Sdk.Organization](/dotnet/api/microsoft.xrm.sdk.organization)<br />[Microsoft.Xrm.Sdk.Query](/dotnet/api/microsoft.xrm.sdk.query)<br />[Microsoft.Xrm.Sdk.WebServiceClient](/dotnet/api/microsoft.xrm.sdk.webserviceclient)|
 
-### Create Process Designer (Workflow) extensions
+### Create Process Designer (workflow) extensions
 
-Use this assembly to add custom activities to the Process designer. 
+Use this assembly to add custom activities to the Process Designer.
 
 More information [Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
 
@@ -65,7 +65,7 @@ More information [Custom workflow activities (workflow assemblies)](/dynamics365
 
 ### Build windows client applications
 
-Use these assemblies to facilitate connecting to the organization service and to build windows client applications. 
+Use these assemblies to facilitate connecting to the Organization service and to build Microsoft Windows client applications.
 
 More information [Build Windows client applications using the XRM tools](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
 
@@ -81,7 +81,7 @@ More information [Build Windows client applications using the XRM tools](/dynami
 
 ### Create packages
 
-Use these assemblies to create packages for the Package Deployer.
+Use these assemblies to create packages for the Package Deployer tool.
 
 More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)
 
@@ -91,11 +91,11 @@ More information: [Create packages for the Package Deployer](/power-platform/alm
 |---------|---------|
 |Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll|[Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase](/dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase)|
 
-### Create Custom virtual entity data providers
+### Create Custom virtual table data providers
 
-Use this assembly to create custom virtual entity data providers. 
+Use this assembly to create custom virtual table data providers.
 
-More information: [Get started with virtual entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
+More information: [Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
 
 **NuGet Package**: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
 
@@ -105,7 +105,7 @@ More information: [Get started with virtual entities](/dynamics365/customer-enga
 
 ### Extend Outlook Client
 
-Use this assembly to interact with Microsoft Dynamics 365 for Outlook and Microsoft Dataverse for Microsoft Office Outlook with Offline Access. 
+Use this assembly to interact with Microsoft Dynamics 365 for Outlook and Microsoft Dataverse for Microsoft Office Outlook with Offline Access.
 
 More information: [Extend Dynamics 365 for Outlook](/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook)
 
@@ -114,7 +114,5 @@ More information: [Extend Dynamics 365 for Outlook](/dynamics365/customer-engage
 |Assembly|Namespace|
 |---------|---------|
 |Microsoft.Crm.Outlook.Sdk.dll|[Microsoft.Crm.Outlook.Sdk](/dotnet/api/microsoft.crm.outlook.sdk)|
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

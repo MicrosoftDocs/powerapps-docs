@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -74,7 +74,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
 <a name="BKMK_EntitiesEnabledForCRMForTablets"></a>   
 ### Tables enabled for Dynamics 365 for phones and tablets  
- Only tables that are enabled for Dynamics 365 for phones and tablets use this presentation of the main form. More information: [Entities displayed in Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_CustomEntity)  
+ Only tables that are enabled for Dynamics 365 for phones and tablets use this presentation of the main form. More information: [Entities displayed in Dynamics 365 for phones and tablets](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_CustomEntity)  
   
 ### Form design  
  Dynamics 365 for phones and tablets takes many of the main form elements and presents them in a way optimized for phones or tablets. The following diagrams show the reflow from the web app to the tablet and phone apps.  
@@ -97,7 +97,7 @@ The main form is used by all model-driven app clients. This form provides a cons
  The following items are always visible within the view port in the context of a form:  
   
  **Nav bar**  
- The nav bar is a presentation of the sitemap that is optimized for touch. More information: [Change navigation options](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_NavigationOptions)  
+ The nav bar is a presentation of the sitemap that is optimized for touch. More information: [Change navigation options](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_NavigationOptions)  
   
  **Home**  
  The home button takes users to the dashboard that is the starting page for Dynamics 365  for phones and tablets.  
@@ -109,7 +109,7 @@ The main form is used by all model-driven app clients. This form provides a cons
  People can tap the search control to open the screen to search for rows.  
   
  **Command Bar**  
- By default, some of the commands that appear in the app running in a web browser do not appear in the Dynamics 365 for phones and tablets apps. Similar to the web application, the command bar is context-sensitive, so the available commands change depending on what is currently viewed or selected. More information [Change commands](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_ChangeCommands)  
+ By default, some of the commands that appear in the app running in a web browser do not appear in the Dynamics 365 for phones and tablets apps. Similar to the web application, the command bar is context-sensitive, so the available commands change depending on what is currently viewed or selected. More information [Change commands](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_ChangeCommands)  
   
 ### Form elements  
  The form elements displayed are taken from the main form and presented as a series of panels that users see through the view port.  

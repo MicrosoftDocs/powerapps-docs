@@ -27,11 +27,11 @@ landingContent:
           - text: What are model-driven apps?
             url: model-driven-app-overview.md
           - text: Planning a Power Apps project
-            url: /powerapps/guidance/planning/introduction
+            url: ../../guidance/planning/introduction.md
        - linkListType: learn
          links:
           - text: Get started with model-driven apps
-            url: https://docs.microsoft.com/learn/modules/get-started-with-model-driven-apps-in-powerapps/
+            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
 
   # Card
   - title: Create
@@ -105,11 +105,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: Transition quick start
-            url: transition-web-app.md
+            url: ../../user/unified-interface.md
           - text: Approaching a Unified Interface transition
-            url: approaching-unified-interface.md
+            url: ../../user/unified-interface.md
           - text: Transition FAQs
-            url: faqs-transition-unified-interface.md
+            url: ../../user/unified-interface.md
 
   # Card
   - title: Advanced app making and customization

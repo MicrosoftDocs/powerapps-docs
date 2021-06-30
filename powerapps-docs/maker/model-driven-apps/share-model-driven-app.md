@@ -8,7 +8,7 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: how-to
 ms.component: model
 ms.date: 03/04/2020
 ms.author: matp
@@ -26,7 +26,7 @@ search.app:
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
 ## Prerequisites
-Ensure you have a [security role](https://docs.microsoft.com/power-platform/admin/security-roles-privileges) with equal or greater permissions than the role you're assigning to the app and to other users. 
+Ensure you have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater permissions than the role you're assigning to the app and to other users. 
 
 ## Create a security role for your app
 Generally model-driven apps contain custom tables and other custom configuration. It's important to first create a security role with permission for all the components used in your app. More information: [Create a custom security role](#create-a-custom-security-role)
@@ -59,7 +59,7 @@ The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [pr
 - Expand an existing predefined security role, so that it includes privileges on rows based on the custom table. 
 - Create a custom security role for the purpose of managing privileges for users of the app. 
 
-For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
+For more information about access and scope privileges, see [Security roles](/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
 ### Create a custom security role
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site select **Apps**, next to the app you want to share select **…**, and  then select **Share**.
@@ -116,7 +116,7 @@ Security roles control a user’s access to data through a set of access levels 
 
 6. In the **Role Name** box provide a descriptive role such as *My custom app access*.  Click **Ok.**
 
-7. From the security role designer, you select the actions, such as read, write, or delete, and the [access levels](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#security-roles). Access levels determine how deep or high within the environments hierarchy the user can perform a particular action. 
+7. From the security role designer, you select the actions, such as read, write, or delete, and the [access levels](/power-platform/admin/security-roles-privileges#security-roles). Access levels determine how deep or high within the environments hierarchy the user can perform a particular action. 
 
 8. Select the **Custom Tables** tab, and then locate the custom table used in your app. 
 
@@ -140,10 +140,10 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 |Security role  |*Privileges  |Description |
 |---------|---------|---------|
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view rows for environment tables that they create. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view rows for environment tables that they create. More information: [Privileges required for customization](/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Basic User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the rows that they own.        |
-|Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to rows. More information: [Impersonate another user](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
+|Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to rows. More information: [Impersonate another user](/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Privilege is global scope unless specified otherwise.
 
@@ -152,9 +152,9 @@ Administrators can use their organization’s Azure Active Directory (Azure AD) 
 
 
 ### See also
-[Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
+[Run a model-driven app on a mobile device](/dynamics365/customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem)
 
-[Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+[Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 
 

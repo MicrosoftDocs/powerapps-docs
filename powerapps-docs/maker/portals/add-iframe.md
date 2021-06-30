@@ -1,13 +1,16 @@
 ---
-title: Add IFrame component to a Power Apps portals page using portals Studio. | Microsoft Docs
+title: Add IFrame
 description: Learn about how to add IFrame component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Add IFrame
@@ -41,7 +44,7 @@ To add IFrame component:
         > ![IFrame properties](media/iframe-props.png "IFrame properties")  
 
 > [!NOTE]
-> You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
+> You can also add [Power Virtual Agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
 
 ### See also
 

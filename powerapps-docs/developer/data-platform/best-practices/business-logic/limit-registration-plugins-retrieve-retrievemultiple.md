@@ -71,8 +71,8 @@ The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently pr
 
 ### See also
 
-[Performance Optimizations for Microsoft Dynamics CRM Online](https://docs.microsoft.com/dynamics/s-e/)<br />
-[Create and edit virtual entities that contain data from an external data source](/powerapps/maker/data-platform/create-edit-virtual-entities)<br />
+[Performance Optimizations for Microsoft Dynamics CRM Online](/dynamics/s-e/)<br />
+[Create and edit virtual entities that contain data from an external data source](../../../../maker/data-platform/create-edit-virtual-entities.md)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

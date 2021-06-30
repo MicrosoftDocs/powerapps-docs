@@ -19,7 +19,7 @@ The following catalog is organized from core knowledge to specific domains, and 
 
 | Content  | Description  | Format  | Length    | 
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------|
-| [Microsoft Power Platform Fundamentals](https://docs.microsoft.com/learn/paths/power-plat-fundamentals/)	|Learn the business value and product capabilities of Power Platform. Create a simple PowerApp, connect data with CDS, build a Power BI Dashboard, and automate a process with Microsoft Flow.|	Free, self-paced online learning path|	2 hr 42 min |
+| [Microsoft Power Platform Fundamentals](/learn/paths/power-plat-fundamentals/)	|Learn the business value and product capabilities of Power Platform. Create a simple PowerApp, connect data with CDS, build a Power BI Dashboard, and automate a process with Microsoft Flow.|	Free, self-paced online learning path|	2 hr 42 min |
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

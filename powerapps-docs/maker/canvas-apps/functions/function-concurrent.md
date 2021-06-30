@@ -1,6 +1,6 @@
 ---
-title: Concurrent function | Microsoft Docs
-description: Reference information, including syntax, for the Concurrent function in Power Apps
+title: Concurrent function in Power Apps
+description: Reference information including syntax and examples for the Concurrent function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -43,7 +43,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 1. Create an app, and add four data sources from Microsoft Dataverse, SQL Server, or SharePoint. 
 
-    This example uses four tables from the [sample Adventure Works database on SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). After you create the database, connect to it from Power Apps using the fully qualified server name (for example, srvname.database.windows.net):
+    This example uses four tables from the [sample Adventure Works database on SQL Azure](/azure/sql-database/sql-database-get-started-portal). After you create the database, connect to it from Power Apps using the fully qualified server name (for example, srvname.database.windows.net):
 
 	![Connect to Adventure Works database in Azure](media/function-concurrent/connect-database.png)
 
@@ -56,7 +56,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
     ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
     ```
 
-3. In [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/), turn on developer tools to monitor network traffic while your app is running.
+3. In [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/), turn on developer tools to monitor network traffic while your app is running.
 
 1. (optional) Turn on network throttling to exaggerate the effects of this comparison.
 

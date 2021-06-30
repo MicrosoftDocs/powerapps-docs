@@ -1,6 +1,6 @@
 ---
-title: Average, Max, Min, StdevP, Sum, and VarP functions | Microsoft Docs
-description: Reference information for the Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps, including syntax and examples
+title: Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps
+description: Reference information including syntax and examples for the Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -39,7 +39,7 @@ You can supply the values for these functions as:
 
 These functions operate on numeric values only. Other types of values, such as strings or records, are ignored. Use the **[Value](function-value.md)** function to convert a string into a number.
 
-The **Average**, **Max**, **Min**, and **Sum** functions can be delegated when used with a [data source that supports delegation for these functions](../delegation-list.md).  However, **StdevP** and **VarP** can't be delegated for any data sources.  If delegation is not supported, only the first portion of the data will be retrieved and then the function applied locally.  The result may not represent the complete story.  A delegation warning will appear at authoring time to remind you of this limitation and to suggest switching to delegable alternatives where possible. For more information, see the [delegation overview](../delegation-overview.md).
+The **Average**, **Max**, **Min**, and **Sum** functions can be delegated when used with a [data source that supports delegation for these functions](/powerapps/maker/canvas-apps/functions/delegation-overview#delegable-data-sources).  However, **StdevP** and **VarP** can't be delegated for any data sources.  If delegation is not supported, only the first portion of the data will be retrieved and then the function applied locally.  The result may not represent the complete story.  A delegation warning will appear at authoring time to remind you of this limitation and to suggest switching to delegable alternatives where possible. For more information, see the [delegation overview](../delegation-overview.md).
 
 ## Syntax
 **Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**StdevP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**VarP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )

@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Register an app with Azure Active Directory (Microsoft Dataverse) | Microsoft Docs"
-description: "This tutorial describes how to register an application with Azure Active Directory so that it can connect to the Microsoft Dataverse environment, authenticate using OAuth, and access the web services."
+description: "Describes how to register an application with Azure Active Directory for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 04/01/2019
+ms.date: 03/23/2021
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
@@ -19,14 +19,12 @@ search.app:
 
 # Tutorial: Register an app with Azure Active Directory
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 This tutorial describes how to register an application with Azure Active Directory, which enables a user with Power Apps user account to connect to their Microsoft Dataverse environment from external client applications using OAuth authentication.
 
 > [!IMPORTANT]
 > Power Apps also provides you with Server-to-Server (S2S) authentication option to connect to Dataverse environment from external applications and services using the special application user account. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the data of their subscribers. More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 
-App registration in Azure Active Directory is typically done by ISVs who want to develop external client applications to read and write data in Dataverse. Registering an app in Azure Active Directory provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their Dataverse environment by providing their Dataverse credentials, a consent form is presented to the end user. After consenting to use their Dataverse account with the ISV's application, end users can connect to Dataverse environment from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Azure Active Directory are multi-tenant, which implies that other Dataverse users from other tenant can connect to their environment using the ISV's app. 
+App registration in Azure Active Directory is typically done by ISVs who want to develop external client applications to read and write data in Dataverse. Registering an app in Azure Active Directory provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their Dataverse environment by providing their Dataverse credentials, a consent form is presented to the end user. After consenting to use their Dataverse account with the ISV's application, end users can connect to Dataverse environment from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Azure Active Directory are multi-tenant, which implies that other Dataverse users from other tenant can connect to their environment using the ISV's app.
 
 App registration can also be done by an application developer or individual user who is building a client application to connect to and read/write data in Dataverse. Use the **Application ID** and **Redirect URI** values from your registered app in your client application's authentication code to be able to connect to Dataverse environment from your client application, and perform the required operations. Note that if the app is registered in the same tenant as your Dataverse environment, you won't be presented with a consent form when connecting from your client application to your Dataverse environment.
 
@@ -34,12 +32,12 @@ App registration can also be done by an application developer or individual user
 
 - An Azure subscription for application registration. A trial account will also work.  
   
-## Create an application registration 
+## Create an application registration
   
 1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Azure Active Directory**.  
   
    > [!NOTE]
-   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment) to associate the two accounts.<br><br> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
+   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.<br><br> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
 2. In the Azure portal, select **Azure Active Directory** in the left pane and select **App registrations** and click on **New registration**.
     
@@ -87,7 +85,7 @@ More information: [Tutorial: Registering and configuring a SPA application with 
 If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
   
 ### See also  
- [Application registration in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)    
+ [Application registration in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)    
  [Authenticate Users with Dataverse Web Services](authentication.md)
 
 

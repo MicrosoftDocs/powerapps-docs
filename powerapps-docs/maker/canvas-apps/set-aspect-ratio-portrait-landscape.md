@@ -1,20 +1,19 @@
 ---
-title: Change screen size and orientation of a canvas app | Microsoft Docs
-description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in Power Apps
+title: Change screen size and orientation of canvas apps
+description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in Power Apps.
 author: emcoope-MSFT
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/28/2020
+ms.date: 05/24/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Change screen size and orientation of a canvas app in Power Apps
+# Change screen size and orientation of canvas apps
 
 Customize a canvas app by changing its screen size and orientation.
 
@@ -24,11 +23,8 @@ Customize a canvas app by changing its screen size and orientation.
 1. Open the app to [edit](edit-app.md).
 1. Select **File** menu.
 1. Select **Settings**.
-1. Select **Screen size + orientation**.
-
-    ![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png "Screen size + orientation option")
-
-1. In the **Orientation** list, select **Portrait** or **Landscape**. <br> 
+1. Select **Display**.
+1. Under **Orientation** list, select **Portrait** or **Landscape**. <br> 
 
     ![Orientation for phone layout](./media/set-aspect-ratio-portrait-landscape/phone-layout-orientation.png "Orientation for phone layout")
 
@@ -66,19 +62,17 @@ Customize a canvas app by changing its screen size and orientation.
 
     If you lock the app's orientation, the app retains the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app displays incorrectly and may show unwanted results. If you unlock the app's orientation, it adjusts to the screen orientation of the device on which it's running.
 
-    You can also modify the app's orientation by enabling **Optimize embedding appearance** in **Advanced settings** under **Experimental features**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
+    You can also modify the app's orientation by enabling **Optimize embedding appearance** in **Settings** > **Display**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
 
     ![Embedding experience](./media/set-aspect-ratio-portrait-landscape/embedding-experience.png "Embedding experience")
 
-1. Select **Apply** to save the changes.
-
-    > [!IMPORTANT]
-    > Ensure you select **Apply** to reflect the screen size and orientation changes to your app.
+1. Close **Settings** dialog.
 
 1. [Save and publish](save-publish-app.md) your app.
 
-## Next step
+## Next steps
 
-[Create responsive layouts in canvas apps](create-responsive-layout.md)
+- [Create responsive layouts in canvas apps](create-responsive-layout.md).
+- Check [common issues and resolutions](common-issues-and-resolutions.md) if you're running into any problems.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

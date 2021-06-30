@@ -1,6 +1,6 @@
 ---
 title: openWebResource | Microsoft Docs
-description: 
+description: Opens a HTML web resource.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

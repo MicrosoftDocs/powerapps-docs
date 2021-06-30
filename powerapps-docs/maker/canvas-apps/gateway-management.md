@@ -1,6 +1,6 @@
 ---
-title: Manage an on-premises data gateway for canvas apps | Microsoft Docs
-description: Manage an on-premises data gateway and its connections
+title: Manage an on-premises data gateway in Power Apps
+description: Learn about how to manage an on-premises data gateway and its connections.
 author: arthiriyer
 manager: kvivek
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 
 Install an on-premises data gateway to transfer data quickly and securely between a canvas app that's built in Power Apps and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways. 
 
-You can connect to on-premises data over the [connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors) that use data gateway.
+You can connect to on-premises data over the [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors) that use data gateway.
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 ---
 title: Set up push notification for the Power Apps mobile app| Microsoft Docs
 description: Learn how to send push notifications for Power Apps mobile.
-author: mduelae
+author: anuitz
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
@@ -38,8 +38,8 @@ Create an app
 
 You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-- [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
-- [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
+- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md#create-your-model-driven-app)
+- [Create a canvas app](../maker/canvas-apps/get-started-test-drive.md)
      
 ## Create a notification from a flow
 
@@ -159,7 +159,7 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Notifications show the generic Power Apps icon instead of a specific app icon.
 * Notifications are not supported in China.
 
-For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
+For reference information, see [Power Apps Notification reference](/connectors/powerappsnotification/).
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Self-service data prep with dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to use dataflows in Power Apps to prepare your data"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 08/05/2019
 ms.reviewer: ""
 ms.service: powerapps
@@ -70,7 +70,7 @@ in either of the following:
 -   **Azure Data Lake Storage Gen2.** Lets you collaborate with people in your
     organization using Power BI, Azure Data, and AI services or custom-built line-of-business applications that read data from the lake. Dataflows that load
     data to an Azure Data Lake Storage Gen2 account store data in [Common Data Model
-    folders](https://go.microsoft.com/fwlink/?linkid=2045304). **Common Data Model folders**
+    folders](/common-data-model/data-lake). **Common Data Model folders**
     contain schematized data and metadata in a standardized format to
     facilitate data exchange and to enable full interoperability across services
     that produce or consume data stored in an organization’s Azure Data Lake
@@ -105,7 +105,7 @@ section, you get a tour of how dataflows can be used in an organization.
 
 ### Load data to Dataverse
 Dataflows can be used to populate tables in the [Common Data
-Service](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)
+Service](./data-platform-intro.md)
 that are then used in Power Apps applications. With a few clicks, you can
 integrate data from online and on-premises sources data sources.
 
@@ -164,13 +164,13 @@ This article provided an overview of self-service data prep in the Power Apps po
 and the ways you can use it. The following topics go into more detail about
 common usage scenarios for dataflows:
 
--   [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
+-   [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
 
--   [Add data to a table in Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
+-   [Add data to a table in Dataverse](./add-data-power-query.md)
 
--   [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
+-   [Connect Azure Data Lake Storage Gen2 for dataflow storage](./connect-azure-data-lake-storage-for-dataflow.md)
 
--   [Using dataflows with on-premises data sources](https://go.microsoft.com/fwlink/?linkid=2100077)
+-   [Using dataflows with on-premises data sources](./using-dataflows-with-on-premises-data.md)
 
 For more information about Power Query and scheduled refresh, you can read these
 articles:
@@ -182,7 +182,7 @@ articles:
 For more information about the Common Data Model, you can read its overview
 article:
 
--   [Common Data Model - overview](/powerapps/common-data-model/overview)
+-   [Common Data Model - overview](/common-data-model/)
 
 
 

@@ -23,15 +23,12 @@ search.app:
 ---
 # Use CrmServiceClient constructors to connect to Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+Use the various constructors to create an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class to connect to Dataverse. More information: [CrmServiceClient Constructors](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor)
 
-Use the various constructors to create an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class to connect to Dataverse. More information: [CrmServiceClient Constructors](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor)
-
-The [connection string](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor?view=dynamics-xrmtooling-ce-9#Microsoft_Xrm_Tooling_Connector_CrmServiceClient__ctor_System_String_) constructor is the most easy, convenient way to get an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. More information: [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)
+The [connection string](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor?view=dynamics-xrmtooling-ce-9#Microsoft_Xrm_Tooling_Connector_CrmServiceClient__ctor_System_String_) constructor is the most easy, convenient way to get an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. More information: [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)
 
 ## See also
 
-[Use XRM Tooling Windows PowerShell Cmdlets to connect to Dataverse](use-powershell-cmdlets-xrm-tooling-connect.md) 
-
+[Use XRM Tooling Windows PowerShell Cmdlets to connect to Dataverse](use-powershell-cmdlets-xrm-tooling-connect.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

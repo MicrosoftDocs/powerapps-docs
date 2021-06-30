@@ -1,11 +1,13 @@
 ---
-title: Create a canvas app from scratch based on Excel data | Microsoft Docs
+title: Create a canvas app from scratch based on Excel data
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: 
+  - canvas
+  - intro-internal
 ms.reviewer: 
 ms.date: 12/05/2019
 ms.author: tapanm
@@ -85,7 +87,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. At the top of the new screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
-     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Change title bar for view records](./media/get-started-create-from-blank/change-title-bar.png)
 
 1. In the left navigation bar, select **BrowseGallery1**.
 
@@ -174,7 +176,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Near the top of the **ViewScreen**, select the circular-arrow icon.
 
-    ![Add record](./media/get-started-create-from-blank/refresh-icon.png)
+    ![Add record for refresh](./media/get-started-create-from-blank/refresh-icon.png)
 
 1. Set the **OnSelect** property for that icon to this formula:
 

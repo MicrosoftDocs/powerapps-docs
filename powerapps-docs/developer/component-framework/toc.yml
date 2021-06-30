@@ -10,10 +10,12 @@
       href: code-components-model-driven-apps.md
     - name: Code components for canvas apps
       href: component-framework-for-canvas-apps.md
-  - name: Get Power Apps CLI
+    - name: Code components for portals (Preview)
+      href: ../../maker/portals/component-framework.md
+  - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
-    href: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework
+    href: /learn/paths/use-power-apps-component-framework
   - name: Tutorial
     items:
     - name: Create your first component
@@ -30,6 +32,8 @@
       href: add-custom-controls-to-a-field-or-entity.md
     - name: Add components to canvas apps
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
+    - name: Add components to portals (Preview)
+      href: ../../maker/portals/component-framework-tutorial.md
     - name: Update existing code components
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
@@ -66,8 +70,12 @@
       href: sample-controls/linear-input-control.md
     - name: Localization API component
       href: sample-controls/localization-api-control.md
+    - name: Lookup component
+      href: sample-controls/lookup-control.md
     - name: Map component
       href: sample-controls/map-control.md
+    - name: Choices (Multi select option set) component
+      href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
     - name: React Facepile component
@@ -295,6 +303,8 @@
           href: reference/control/init.md
         - name: updateView
           href: reference/control/updateview.md
+      - name: updatedProperties
+        hred: reference/context.md
       - name: UserSettings
         href: reference/usersettings.md
       - name: Utility

@@ -125,7 +125,7 @@ The export can take several minutes to complete. Once finished, the export .zip 
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
+More information:   [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
 
 ### See also
 [Import solutions](import-update-export-solutions.md) <br />

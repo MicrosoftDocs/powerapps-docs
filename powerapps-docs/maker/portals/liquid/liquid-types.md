@@ -1,13 +1,16 @@
 ---
-title: "Use Liquid types for a portal | MicrosoftDocs"
-description: "Learn about the available liquid types in a portal."
+title: Available Liquid types
+description: Learn about the available liquid types in a portal.
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/21/2020
 ms.author: gisingh
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - GitanjaliSingh33msft
 ---
 
 # Available Liquid types
@@ -75,7 +78,7 @@ An array holds a list of values of any type. You can access a given item by (zer
 
 {% if entitylist.views.size > 0 %}
 
-This entity list has {{ entitylist.views.size }} views.
+This list has {{ entitylist.views.size }} views.
 
 {% endif %}
 ```

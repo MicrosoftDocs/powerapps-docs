@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -43,7 +43,7 @@ Alternatively, developers can build their own data providers. Data providers are
   
 ## Virtual table benefits  
   
-- Developers can implement plugins to read external data using the Dataverse web services and Plug-in Registration tool.  
+- Developers can implement plugins to read, update or delete external data using the Dataverse web services and Plug-in Registration tool.  
 - System customizers use Power Apps solution explorer to configure the data source row and create virtual tables that are used to access external data without writing any code.  
 - End users work with the rows created by the virtual table to view the data in columns, grids, search results, and Fetch XML-based reports and dashboards.  
   
@@ -112,7 +112,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
     > [!IMPORTANT]
     > Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual tables. More Information [Considerations when you use virtual tables](#considerations)  
       
-    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](create-edit-entities.md).  
+    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](./data-platform-create-entity.md).  
   
 1. Create and add one or more columns for the virtual table. In addition to the standard column properties required to create a custom column, these optional properties are available for each custom column you create for a virtual table.
 
@@ -135,17 +135,15 @@ Part of the name of any virtual table you create is the customization prefix. Th
 
 Virtual tables have these restrictions.  
   
-- All virtual tables are read-only.  
 - Existing tables cannot be converted to virtual tables.  
 - By default, virtual tables contain only a Name and Id column.  No other system managed columns, such as Status or Created On/Modified On are supported.
 - Virtual tables don't support custom columns with the Currency, Image, or Customer data types.
 - Virtual tables don't support auditing.  
-- Charts and dashboards are not supported for virtual entities.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
-- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Relevance Search, Portals for Dynamics 365 web portal solutions, and N:N relationships between virtual tables.  
+- Dashboards and charts are not supported with virtual tables.
+- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, relevance search, and Power Apps portals solutions.  
 - Virtual tables are organization owned and don't support the row-level Dataverse security concepts. We recommend that you implement your own security model for the external data source.  
-- We recommend that you target a single data source when you use virtual tables in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Dataverse native data and the virtual table external data isn't supported.  
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
 - Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service.
 - Virtual tables that use the included OData v4 data provider are enabled on outbound port 443.
@@ -153,7 +151,7 @@ Virtual tables have these restrictions.
 ### See also  
 
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
-[Create and edit tables](create-edit-entities.md)</br>
+[Create and edit tables](./data-platform-create-entity.md)</br>
 [Create and edit columns](create-edit-fields.md)
 
 

@@ -5,7 +5,7 @@ metadata:
   author: ghurlman
   ms.service: powerapps
   ms.search.keywords: 
-  ms.date: 12/10/2020
+  ms.date: 06/08/2021
   ms.author: grhurl
   ms.reviewer: nabuthuk
 title: Power Apps component framework FAQs
@@ -17,16 +17,17 @@ sections:
         answer: |
           Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
           Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
-          > [!NOTE]
-          > - A new solution must be created every time if you wish to have a major version bump. Incrementing the major version number (e.g., 1.0 to 2.0) is not supported as an upgrade.
-          > - Only three version sections are supported (i.e., MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
-
+          ```XML
+          <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
+            version="1.0.1" 
+             display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+          ```
       - question: What are the things to be considered from a performance perspective?
         answer: |
           1. If you wish to access a large chunk of data items, implement [filtering](reference/filtering.md) and [paging](reference/paging.md) methods to limit how much data should be loaded.
           2. Batch your network calls, and make any network calls asynchronous. Design the component in such a way that all the required information is provided with a single call. 
           3. Design the component such that the user has to perform an action (such as clicking on a button) to initiate the loading of a specific item's data rather than making the call for each data item.
-          4. Ensure that you clean up the resources using the [destroy](reference/control/destroy.md) function. Open network calls, connections, and event handlers need to be cleaned up to increase the performance.
+          4. Ensure that you clean up the resources using the [destroy](reference/control/destroy.md) function. Open network calls, connections, event handlers, and references to DOM nodes need to be cleaned up to increase the performance.
 
       - question: Where can I find some good examples of code components?
         answer: |
@@ -34,19 +35,15 @@ sections:
 
       - question: How to use rich data types in code components such as Collections?
         answer: |
-          Currently, this feature is not supported. However, there is a [JSON function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-json) in canvas-apps that allows app makers to stringify their data.
+          Currently, this feature is not supported. However, there is a [JSON function](../../maker/canvas-apps/functions/function-json.md) in canvas-apps that allows app makers to stringify their data.
           
           1. Pass the collection into the JSON function.
           2. Pass the string representation of the collection data that is returned from the JSON function into one of the component's string properties.
           3. Use [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) in the component code to convert it back into a JavaScript Object.         
-      
-      - question: How can I define multiple components in a single manifest file?
-        answer: |
-          This is not supported at this time. Currently, you can only call dialog boxes using the [Navigation](reference/navigation.md) method in model-driven apps.
 
-      - question: How can I call other components from within another component?
+      - question: Can I call other components from within another component?
         answer: |
-          This is not supported natively by the framework. You can use one of many third-party libraries to enable this functionality in your components.
+          This is not currently supported.
 
       - question: Can I bundle font resources?
         answer: |
@@ -60,12 +57,16 @@ sections:
         answer: |
           Currently, code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
 
-      - question: How to add commandbar, search to subgrids
+      - question: Can I add commandbar, search to subgrids
         answer: |
           To add commandbar, search to a subgrid for model-driven apps, you need to specify the [cds-data-set-options](manifest-schema-reference/data-set.md).
+          
+      - question: Can I access form context like I can in model-driven apps event handlers?
+        answer: |
+          Accessing form context directly in a control is not supported. Code components are expected to work across various products like model-driven apps, canvas apps, dashboards, and hence they cannot have dependency on the form context. A work around is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the form context. Column not bound to a table could be used, or a column bound to a table with `submitMode` set to `never` can be used. We will add support for the custom events in future which can be used for communicating changes outside of a control without adding a column configuration.
      
 additionalContent: |
   ## See also
 
   [Power Apps component framework API reference](reference/index.md)<br/>
-  [Power Apps component framework overview](overview.md) 
+  [Power Apps component framework overview](overview.md)

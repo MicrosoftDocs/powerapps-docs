@@ -1,8 +1,8 @@
 ---
-title: "Sample: Generic virtual entity data provider plug-in (Microsoft Dataverse) | Microsoft Docs"
-description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual entity plug-in."
+title: "Sample: Generic virtual table data provider plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual table plug-in."
 ms.custom: ""
-ms.date: 06/24/2020
+ms.date: 04/09/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -21,13 +21,13 @@ search.app:
   - D365CE
 ---
 
-# Sample: Generic virtual entity data provider plug-in
+# Sample: Generic virtual table data provider plug-in
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 ## Demonstrates
 
-This sample shows a minimal implementation for a generic Microsoft Dataverse virtual entity data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
+This sample shows a minimal implementation for a generic Microsoft Dataverse virtual table data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
 
 > [!NOTE]
 > This sample requires the use of ILMERGE to combine the plug-in and Dropbox assemblies prior to registering the assembly with Dataverse. Use of ILMERGE is not officially supported. A future update to this sample will remove the need to use ILMERGE. 
@@ -122,9 +122,8 @@ public class DropboxRetrieveMultiplePlugin : IPlugin
 
 ### See also
 
-[Get started with virtual entities](get-started-ve.md)<br />
-[API considerations of virtual entities](api-considerations-ve.md)<br />
-[Custom virtual entity data providers](custom-ve-data-providers.md)
-
+[Get started with virtual tables](get-started-ve.md)<br />
+[API considerations of virtual tables](api-considerations-ve.md)<br />
+[Custom virtual table data providers](custom-ve-data-providers.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

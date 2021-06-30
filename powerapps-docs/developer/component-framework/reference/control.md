@@ -1,5 +1,6 @@
 ---
 title: StandardControl | MicrosoftDocs
+description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component.
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -16,7 +17,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Methods
 

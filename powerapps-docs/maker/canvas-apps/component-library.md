@@ -1,6 +1,6 @@
 ---
-title: Create a component library for canvas apps | Microsoft Docs
-description: Library of reusable components for canvas apps
+title: Component library
+description: Learn about working with a library of reusable components for canvas apps.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -16,7 +16,7 @@ search.app:
 # Component library
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
@@ -40,7 +40,7 @@ The screens inside a component library are available for testing only. It provid
 You can preview component library components using the screens inside the library with the play option. When you select the component tab, the play option is disabled. The component library doesn't display when using Power Apps Mobile.
 
 > [!NOTE]
-> The component library discussed in this article is different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+> The component library discussed in this article is different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
 
 ## Working with component library
 

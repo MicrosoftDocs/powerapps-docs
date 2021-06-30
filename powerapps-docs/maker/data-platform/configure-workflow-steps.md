@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "Mattp123"
 ms.assetid: 0b47dfd5-76db-464f-90c0-c64a0173dcdd
 caps.latest.revision: 18
@@ -72,7 +72,7 @@ The actions that you will apply often depend on conditions. Real-time workflow p
   
 |Condition Type|Description|  
 |--------------------|-----------------|  
-|**Check Condition**|A logical "if \<condition> then" statement.<br /><br /> You can check the current values for the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps. Based on these values, you can define additional steps when the condition is true.<br /><br /> In the "if \<condition> then" statement, you can use the following operators: **Equals**, **Does Not Equal**, **Contains Data**, **Does Not Contain Data**, **Under** and **Not Under**. <br /><br />**Note:**  The **Under** and **Not Under** are hierarchical operators. They can only be used on the tables that have a hierarchical relationship defined. If you’re trying to use these operators on the tables that don’t have the hierarchical relationship defined, you’ll see the error message: “You’re using a hierarchical operator on a table that doesn’t have a hierarchical relationship defined. Either make the table hierarchical (by marking a relationship as hierarchical) or use a different operator.” <br /><br />For more information about hierarchical relationships, go to [Define and query hierarchically related data](/powerapps/maker/data-platform/define-query-hierarchical-data). A screenshot that follows the table is an example of the definition of the real-time workflow process that uses the **Under** and **Not Under** hierarchical operators.|  
+|**Check Condition**|A logical "if \<condition> then" statement.<br /><br /> You can check the current values for the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps. Based on these values, you can define additional steps when the condition is true.<br /><br /> In the "if \<condition> then" statement, you can use the following operators: **Equals**, **Does Not Equal**, **Contains Data**, **Does Not Contain Data**, **Under** and **Not Under**. <br /><br />**Note:**  The **Under** and **Not Under** are hierarchical operators. They can only be used on the tables that have a hierarchical relationship defined. If you’re trying to use these operators on the tables that don’t have the hierarchical relationship defined, you’ll see the error message: “You’re using a hierarchical operator on a table that doesn’t have a hierarchical relationship defined. Either make the table hierarchical (by marking a relationship as hierarchical) or use a different operator.” <br /><br />For more information about hierarchical relationships, go to [Define and query hierarchically related data](./define-query-hierarchical-data.md). A screenshot that follows the table is an example of the definition of the real-time workflow process that uses the **Under** and **Not Under** hierarchical operators.|  
 |**Conditional Branch**|A logical "else-if-then" statement, the editor uses the text “Otherwise, if \<condition> then:”<br /><br /> Select a check condition you have previously defined and you can add a conditional branch to define additional steps when the check condition returns false.|  
 |**Default Action**|A logical "else" statement. The editor uses the text “Otherwise:”<br /><br /> Select a check condition, conditional branch, wait condition, or parallel wait branch that you have previously defined and you can use a default action to define steps for all cases that do not match the criteria defined in condition or branch elements.|  
 |**Wait Condition**|Enables a real-time workflow to pause itself until the criteria defined by the condition have been met. The real-time workflow starts again automatically when the criteria in the wait condition have been met.<br /><br /> Real-time workflows cannot use wait conditions.|  
@@ -100,7 +100,7 @@ The following screenshot contains an example of the workflow process definition 
 |Row columns change     |  Before <br />  After   |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.        |
 |Row is deleted     |  Before       |  Only **Before** is available. Row deletion corresponds to the PreOperation stage. After the MainOperation occurs, the row is deleted and there is no further status change that can occur.       |
 
-For more information about preoperation, mainoperation, and postoperation stages, see [Event execution pipeline](/powerapps/developer/data-platform/event-framework#event-execution-pipeline).
+For more information about preoperation, mainoperation, and postoperation stages, see [Event execution pipeline](../../developer/data-platform/event-framework.md#event-execution-pipeline).
 
 ## Using real-time workflows  
 

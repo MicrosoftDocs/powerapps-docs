@@ -1,5 +1,5 @@
 ---
-title: Automate tests with Azure Pipelines using YAML | Microsoft Docs
+title: Automate tests with Azure Pipelines using YAML
 description: Describes how to automate test suites and cases using an Azure Pipelines YAML.
 author: aengusheaney
 manager: kvivek
@@ -17,7 +17,7 @@ search.app:
 
 # Automate tests with Azure Pipelines using YAML
 
-In this article, you'll learn how to set up and run your canvas app tests built in the Test Studio by using a [YAML pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-yaml-syntax) in [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
+In this article, you'll learn how to set up and run your canvas app tests built in the Test Studio by using a [YAML pipeline](/azure/devops/pipelines/get-started/pipelines-get-started#define-pipelines-using-yaml-syntax) in [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops).
 
 You can use a public project on GitHub&mdash;[Microsoft/PowerAppsTestAutomation](https://GitHub.com/microsoft/PowerAppsTestAutomation)&mdash;to:
 
@@ -55,7 +55,7 @@ A *[fork](https://help.GitHub.com/GitHub/getting-started-with-GitHub/fork-a-repo
 
 1. Select **Fork**.
 
-    ![Fork](media/test-studio-classic-pipeline-editor/fork.png "Fork")
+    ![Select Fork](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
 
 1. Select where you want to locate the fork.
 
@@ -129,7 +129,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Create Pipeline**.
 
-    ![Create a pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Create a pipeline")
+    ![Select Create a pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Select Create a pipeline")
 
 1. Select **GitHub YAML**.
 

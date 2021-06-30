@@ -1,5 +1,5 @@
 ---
-title: Behavior formulas for components | Microsoft Docs
+title: Behavior formulas for components
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: yifwang
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 # Behavior formulas for components
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
+> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
 
@@ -27,14 +27,14 @@ For example, set a component's **OnReset** property to one or more formulas that
 With a component master selected, select **OnReset** in the drop-down list of properties (on the left side of the formula bar), and then enter one or more formulas.
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example](./media/component-behavior/example-onreset.png "OnReset example")
+> ![OnReset property](./media/component-behavior/example-onreset.png "OnReset property")
 
 To test **OnReset**, configure a control to reset the component. For example, set the **OnSelect** property of a button to this formula: **Reset**(*ComponentName*).
 
 ### Example - Reset timer
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example](./media/component-behavior/Resettimer.gif "OnReset example")
+> ![Reset timer](./media/component-behavior/Resettimer.gif "Reset timer")
 
 In this time picker component, two variables are used to display the time _selectedHour and _selectedMinute. When the picker gets reset, these variables should be reset to a default value, say 12: 12.  The OnReset property for the component has the following formula: **Set(_selectedHour,12); Set(_selectedMinute,12)**
 
@@ -47,12 +47,12 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 Besides resetting a component instance from outside of the component, there's another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property. It allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset the default value easily. 
 
-> ![OnReset example](./media/component-behavior/property-trigger.png "OnReset example")
+> ![OnSelect property](./media/component-behavior/property-trigger.png "OnSelect property")
 
 ### Example
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example](./media/component-behavior/updateordernumber2.gif "OnReset example")
+> ![OnSelect example animation](./media/component-behavior/updateordernumber2.gif "OnSelect example animation")
 
 The example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of the numeric up and down component is reset to display the order number of the selected tool. **Raise OnReset when value changes** made it possible to reset the default value when the input changes. 
 

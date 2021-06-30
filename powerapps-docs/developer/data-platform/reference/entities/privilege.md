@@ -1,22 +1,24 @@
 ---
-title: "Privilege entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Privilege table."
-ms.date: 11/14/2020
+title: "Privilege table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Privilege table/entity."
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Privilege entity reference
+
+# Privilege table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Permission to perform an action in Microsoft CRM. The platform checks for the privilege and rejects the attempt if the user does not hold the privilege.
 
@@ -25,10 +27,10 @@ Permission to perform an action in Microsoft CRM. The platform checks for the pr
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/privileges<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/privileges<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ Permission to perform an action in Microsoft CRM. The platform checks for the pr
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AccessRight](#BKMK_AccessRight)
 - [CanBeBasic](#BKMK_CanBeBasic)
@@ -91,7 +93,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeBasic Options
+#### CanBeBasic Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -114,7 +116,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeDeep Options
+#### CanBeDeep Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -137,7 +139,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeEntityReference Options
+#### CanBeEntityReference Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -160,7 +162,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeGlobal Options
+#### CanBeGlobal Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -183,7 +185,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeLocal Options
+#### CanBeLocal Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -206,7 +208,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CanBeParentEntityReference Options
+#### CanBeParentEntityReference Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -279,9 +281,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [IsDisabledWhenIntegrated](#BKMK_IsDisabledWhenIntegrated)
@@ -304,7 +306,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -327,7 +329,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDisabledWhenIntegrated Options
+#### IsDisabledWhenIntegrated Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -350,7 +352,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
 |Value|Label|
 |-----|-----|
@@ -428,7 +430,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
 
-Same as asyncoperation entity [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -443,7 +445,7 @@ Same as asyncoperation entity [Privilege_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_Privilege_BulkDeleteFailures"></a> Privilege_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -459,23 +461,23 @@ Same as bulkdeletefailure entity [Privilege_BulkDeleteFailures](bulkdeletefailur
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
 
-See solution Entity [solution_privilege](solution.md#BKMK_solution_privilege) One-To-Many relationship.
+See solution Table [solution_privilege](solution.md#BKMK_solution_privilege) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the Privilege entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the Privilege table is the first table in the relationship. Listed by **SchemaName**.
 
 
 ### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
 
 IntersectEntityName: roleprivileges<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -485,7 +487,7 @@ IntersectEntityName: roleprivileges<br />
 |NavigationPropertyName|roleprivileges_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -497,8 +499,6 @@ IntersectEntityName: roleprivileges<br />
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.privilege?text=privilege EntityType" />
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

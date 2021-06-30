@@ -1,13 +1,16 @@
 ---
-title: Create additional portals in an environment | Microsoft Docs
+title: Create additional portals in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 04/21/2021
 ms.author: nenandw
 ms.reviewer: tapanm
+contributors:
+    - neerajnandwana-msft
+    - tapanm-msft
 ---
 
 # Create additional portals in an environment
@@ -35,7 +38,7 @@ When an environment already has a portal of the available template type created,
 
 ![Error when creating additional portal](media/create-additional-portal-error.png "Error when creating additional portal")
 
-For more information about enabling languages in an environment, go to [Enable language for an environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language).
+For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 
 ## Create new environment
 
@@ -77,8 +80,8 @@ After you enter the portal name, address, and choose the language, the portal cr
 ### See also
 
 [Available portal templates](portal-templates.md) <br>
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
+[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,13 +1,17 @@
 ---
-title: "Configure a contact for use on a portal  | MicrosoftDocs"
-description: "Instructions to add and configure a contact to be used in a portal."
+title: Configure a contact for use on a portal
+description: Learn how to add and configure a contact to be used in a portal.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure a contact for use on a portal

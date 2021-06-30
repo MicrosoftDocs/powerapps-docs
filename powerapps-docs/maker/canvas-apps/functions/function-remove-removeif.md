@@ -1,13 +1,13 @@
 ---
-title: Remove and RemoveIf functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Remove and RemoveIf functions in Power Apps
+title: Remove and RemoveIf functions in Power Apps
+description: Reference information including syntax and examples for the Remove and RemoveIf functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/04/2020
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -55,7 +55,7 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 
 In these examples, you'll remove a record or records in a data source that's named **IceCream** and that starts with the data in this table:
 
-![](media/function-remove-removeif/icecream.png)
+![IceCream example](media/function-remove-removeif/icecream.png)
 
 #### Create a collection with sample records
 
@@ -78,11 +78,11 @@ To create a collection with this data:
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Removes the **Chocolate** record from the data source. | ![](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>The **IceCream** data source has been modified. |
-| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Removes two records from the data source. |![](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Removes records that have a **Quantity** that's greater than **150**. |![](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
-| **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Removes the **Chocolate** record from the data source. | ![Result with Vanilla and Strawberry](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>The **IceCream** data source has been modified. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Removes two records from the data source. |![Result with only Vanilla](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Removes records that have a **Quantity** that's greater than **150**. |![Result with only Chocolate](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![Result with Chocolate and Vanilla](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
+| **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![Result with no IceCream](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
 ## Examples - remove button outside a gallery
 
@@ -90,7 +90,7 @@ In this example, you'll use a [**Gallery** control](../controls/control-gallery.
 
 ### Prepare for sample data
 
-This example uses the **Contacts** entity in Microsoft Dataverse available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead.
+This example uses the **Contacts** table in Microsoft Dataverse available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead.
 
 ### Remove button outside a gallery
 
@@ -108,13 +108,13 @@ In this example, you'll remove an item by using a *button* that is outside the g
     ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
 
 1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
-    For example, select the **Contacts** entity to use *sample data*:  
+    For example, select the **Contacts** table to use *sample data*:  
 
-    ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+    ![Selecting the Contacts table to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
 
-    The gallery shows items from this entity: 
+    The gallery shows items from this table: 
 
-    ![Gallery added showing the Contacts entity](media/function-remove-removeif/gallery-data.png)
+    ![Gallery added showing the Contacts table](media/function-remove-removeif/gallery-data.png)
 
 1. Insert a [**Button**](../controls/control-button.md) control from left pane:
     
@@ -197,9 +197,9 @@ Sample collection is created that you can use in the following example.
     ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
 
 1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
-    For example, select the **Contacts** entity to use *sample data*:  
+    For example, select the **Contacts** table to use *sample data*:  
 
-    ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+    ![Selecting the Contacts table to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
 
     If you created a [collection](#create-a-collection-with-sample-data), select your collection instead:
 
@@ -240,7 +240,7 @@ Sample collection is created that you can use in the following example.
     ```
 
     > [!NOTE]
-    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* entity to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is not required.
+    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is not required.
 
     ![OnSelect for trash icon](media/function-remove-removeif/gallery-onselect.png)
 

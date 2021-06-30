@@ -1,12 +1,12 @@
 ---
-title: Common canvas apps performance issues and resolutions | Microsoft Docs
+title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2021
+ms.date: 05/06/2021
 ms.author: jiahn
 search.audienceType: 
   - maker
@@ -41,7 +41,7 @@ We recommend that you select only the columns that are necessary for the app. Ad
 
 For example, if you use Dataverse as the data source for your app, make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict data retrieval to only the columns used in the app.
 
-To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Advanced settings**, and then turn on the **Explicit column selection** toggle.
+To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
 
 ## Unsupported or legacy browsers
 
@@ -97,7 +97,7 @@ When using data from sources such as Dataverse or SQL Server, you can use a **Vi
 
 If client-heavy operations like **JOIN** or **Group By** happened at the client side with a dataset that has 2,000 records or more, the objects in the heap will increase, resulting in exceeding memory limits.
 
-Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
+Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
 ![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
@@ -118,7 +118,7 @@ To avoid the problem, use **view objects** in the SQL back end or change the use
 
 ### Table scan instead of index seek
 
-An app might slow down if the functions used by the app run queries in the database that result in table scans instead of index seek. More information: [Hints, Table SCAN, and Index SEEK](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-table)
+An app might slow down if the functions used by the app run queries in the database that result in table scans instead of index seek. More information: [Hints, Table SCAN, and Index SEEK](/sql/t-sql/queries/hints-transact-sql-table)
 
 To resolve such problems, use [**StartsWith**](functions/function-startswith.md) instead of [**IN**](functions/operators.md#in-and-exactin-operators) in the formula. With a SQL data source, the **StartsWith** operator results in an index seek, but the **IN** operator results in an index or table scan.
 
@@ -136,16 +136,16 @@ Check the execution plan of slow queries to see whether any table or index scan 
 
 More information:
 
-- [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)
-- [Monitoring performance by using the Query Store](https://docs.microsoft.com/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-- [Extended Events overview](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
+- [Monitor and tune for performance](/sql/relational-databases/performance/monitor-and-tune-for-performance)
+- [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+- [Extended Events overview](/sql/relational-databases/extended-events/extended-events)
 
 ### Database resource contention
 
 Ensure that the data source&mdash;SQL database&mdash;has no resource contentions such as processor bottlenecks, I/O contention, memory pressure, or *tempDB* contention. Also check for locks, waits, deadlocks, and query timeouts.
 
 > [!TIP]
-> Use [automatic tuning](https://docs.microsoft.com/sql/relational-databases/automatic-tuning/automatic-tuning) for insights into potential query performance problems, recommended solutions, and to automatically fix the identified problems.
+> Use [automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning) for insights into potential query performance problems, recommended solutions, and to automatically fix the identified problems.
 
 ### Thick client or excessive requests
 
@@ -176,7 +176,7 @@ Ensure that all on-premises data gateway nodes are healthy and configured with a
 
 #### Location of the on-premises data gateway
 
-A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data entity schema to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
+A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data table schema to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
 
 In an enterprise environment, having a scalable data gateway cluster is recommended when heavy data requests are expected. Check how many connections are established between the data gateway nodes and the SQL instance.
 
@@ -188,13 +188,13 @@ If you expect to access a large volume of data from the on-premises data gateway
 
 A single node of the on-premises data gateway might be sufficient to deal with 200 or fewer concurrent connections. However, if all these concurrent connections are executing queries actively, other requests end up waiting for an available connection.
 
-For information about ensuring that your on-premises data gateway scales in accordance with the volume of data and requests, go to [Monitor and optimize on-premises data gateway performance](https://docs.microsoft.com/data-integration/gateway/service-gateway-performance).
+For information about ensuring that your on-premises data gateway scales in accordance with the volume of data and requests, go to [Monitor and optimize on-premises data gateway performance](/data-integration/gateway/service-gateway-performance).
 
 ### Considerations specific to Azure SQL Database
 
 Canvas apps can connect to Azure SQL Database by using the SQL Server connector. A common cause of performance problems when using Azure SQL Database is selecting the wrong tier for your business requirements.
 
-Azure SQL Database is available in different service tiers, with varied capabilities for matching different business requirements. For more information about tiers, go to [Azure SQL Database documentation](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview).
+Azure SQL Database is available in different service tiers, with varied capabilities for matching different business requirements. For more information about tiers, go to [Azure SQL Database documentation](/azure/azure-sql/database/sql-database-paas-overview).
 
 With heavy data requests, the resources on the tier you select might get throttled as soon as the threshold value is reached. Such throttling compromises the performance of the next set of queries.
 
@@ -230,14 +230,14 @@ In the real world, though, apps are designed to meet certain business requiremen
 
 ## Performance considerations for using Dataverse as the data source
 
-When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Dataverse environment, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow with the Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-the-common-data-service-connector-for-dataverse-environments)
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow when connecting to Microsoft Dataverse](execution-phases-data-flow.md#data-call-flow-with-microsoft-dataverse)
 
 > [!TIP]
-> When custom entities are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+> When custom tables are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](/power-platform/admin/database-security), and [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN** client-side instead of server-side.
 
-Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join tables and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ## Performance considerations for the Excel connector
 

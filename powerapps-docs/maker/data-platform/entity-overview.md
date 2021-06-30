@@ -1,11 +1,11 @@
 ---
 title: "Tables in Dataverse | MicrosoftDocs"
 description: "Learn about tables in Power Apps"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 01/14/2021
 ms.reviewer: ""
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 0
@@ -24,7 +24,7 @@ search.app:
 
 Tables are used to model and manage business data. When you develop an app, you can use standard tables, custom tables, or both. Dataverse provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-![tables-dataverse](media/tables-dataverse.png "Tables in Dataverse")
+![Dataverse account tables](media/tables-dataverse.png "Dataverse account tables")
 
 ### See also
 [Types of tables](types-of-entities.md)<br/>

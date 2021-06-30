@@ -86,7 +86,7 @@ The option to overwrite customizations is only available with the classic import
 [Add solution components](create-solution.md#add-solution-components) <br />
 [Export solutions](export-solutions.md) <br />
 [Import solutions](import-update-export-solutions.md) <br />
-[Create solution patches](/powerapps/maker/data-platform/solution-patches) <br />
+[Create solution patches](/power-platform/alm/update-solutions-alm#create-solution-patches) <br />
 [For developers: Cloning, patching, and upgrading](/power-platform/alm/solution-api#cloning-patching-and-upgrading)
 
 

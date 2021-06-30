@@ -1,6 +1,7 @@
 ---
 title: "getIsDirty (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the getIsDirty method.
+ms.date: 04/19/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -18,9 +19,9 @@ search.app:
 
 
 
-Returns a Boolean value indicating if there are unsaved changes to the attribute value. 
+Returns a boolean value indicating if there are unsaved changes to the column value. 
 
-## Attribute types supported
+## Column types supported
 
 All
 

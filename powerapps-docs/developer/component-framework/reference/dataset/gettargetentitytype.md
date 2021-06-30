@@ -1,6 +1,6 @@
 ---
 title: getTargetEntityType | Microsoft Docs
-description: 
+description: Returns the target table type name.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -19,7 +19,7 @@ ms.assetid: 4027f62f-1cc7-4eb6-aae8-a05d1a5fc722
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 

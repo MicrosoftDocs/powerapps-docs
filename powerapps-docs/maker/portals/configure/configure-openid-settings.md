@@ -1,13 +1,17 @@
 ---
-title: "Configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow.  | MicrosoftDocs"
-description: "Instructions to configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow."
+title: Configure an OpenID Connect provider for portals with Azure AD
+description: Learn how to configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 04/21/2021
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
 # Configure an OpenID Connect provider for portals with Azure AD
@@ -38,7 +42,7 @@ In this article, you'll learn about configuring an OpenID Connect provider for p
 
     > [!NOTE]
     > - The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
-    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
     1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -52,14 +56,14 @@ In this article, you'll learn about configuring an OpenID Connect provider for p
 
     1. Enter a name.
 
-    1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](/azure/active-directory/develop/quickstart-register-app)
 
     1. Under **Redirect URI**, select **Web** (if it isn't already selected).
 
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** section on the **Configure identity provider** screen (step 6 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
 
         ![Register application](media/authentication/register-application.png "Register application")
 
@@ -130,7 +134,7 @@ In this article, you'll learn about configuring an OpenID Connect provider for p
 
 ## Configure additional claims
 
-1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
+1. Enable [optional claims in Azure AD](/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
 
 1. Set **Scope** to include the additional claims.
     <br> Example: `openid email profile`
@@ -148,7 +152,7 @@ For example, the first name, last name, and email addresses supplied with the ad
 <a name="enable-authentication-using-a-multi-tenant-azure-active-directory-application"></a>
 ## Enable authentication by using a multitenant Azure AD application
 
-You can configure your portal to accept Azure AD users from any tenant in Azure, and not just from a specific tenant, by using the multitenant application registered in Azure AD. To enable multitenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the Azure AD application.
+You can configure your portal to accept Azure AD users from any tenant in Azure, and not just from a specific tenant, by using the multitenant application registered in Azure AD. To enable multitenancy, [update the application registration](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the Azure AD application.
 
 To support authentication against Azure AD by using a multitenant application, you have to create or configure the additional **Issuer Filter** site setting.
 

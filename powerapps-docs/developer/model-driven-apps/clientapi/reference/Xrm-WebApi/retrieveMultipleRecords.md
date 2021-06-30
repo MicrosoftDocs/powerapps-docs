@@ -1,6 +1,7 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 04/13/2019
+description: Includes description and supported parameters for the retrieveMultipleRecords method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
@@ -36,7 +37,7 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the records you want to retrieve. For example: "account".</td>
+<td>The table logical name of the records you want to retrieve. For example: "account".</td>
 </tr>
 <tr>
 <td>options</td>
@@ -45,9 +46,9 @@ search.app:
 <td><p>OData system query options or FetchXML query to retrieve your data. </p> 
 <ul>
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-<li>To specify a FetchXML query, use the <code>fetchXml</code> attribute to specify the query.</li>
+<li>To specify a FetchXML query, use the <code>fetchXml</code> column to specify the query.</li>
 </ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for an entity record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
 <p>When you specify a FetchXML query for the <code>options</code> parameter, the query should not be encoded.
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
@@ -56,17 +57,18 @@ search.app:
 <td>maxPageSize</td>
 <td>Number</td>
 <td>No</td>
-<td><p>Specify a positive number that indicates the number of entity records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
-<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next set of entities. </td>
+<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
+<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> column in the returned promise object will contain a link to retrieve records. </td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when entity records are retrieved. An object with the following attributes is passed to the function:</p>
+<td><p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
 <ul>
-<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values as <code>key: value</code> pairs. The Id of the entity record is retrieved by default.</li>
-<li><b>nextLink</b>: String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return next set of records.</li>
+<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as <code>key: value</code> pairs. The Id of the table record is retrieved by default.</li>
+<li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this returns the URL to return the next page of records.</li>
+<li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
 </ul>
 </td>
 </tr>
@@ -80,7 +82,9 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+For a successful OData query retrieveMultipleRecords operation, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next page of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+
+For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
 
 ## Examples
 
@@ -88,7 +92,7 @@ Most of the scenarios/examples mentioned in [Query Data using the Web API](../..
 
 ### Basic retrieve multiple
 
-This example queries the accounts entity set and uses the `$select` and `$top` system query options to return the name property for the first three accounts:
+This example queries the accounts table set and uses the `$select` and `$top` system query options to return the name property for the first three accounts:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
@@ -96,6 +100,29 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
         for (var i = 0; i < result.entities.length; i++) {
             console.log(result.entities[i]);
         }                    
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+### Basic retrieve multiple with FetchXML
+
+This example queries the `account` entity using fetchXML.
+
+```JavaScript
+var fetchXml = "<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+
+Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+
         // perform additional operations on retrieved records
     },
     function (error) {
@@ -114,7 +141,7 @@ Here are code examples for both the scenarios:
 
 #### For online scenario (connected to server)
 
-This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact:
+This example queries the accounts table set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_value&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77").then(
@@ -133,7 +160,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_v
 
 #### For mobile offline scenario
 
-This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact when working in the offline mode:
+This example queries the accounts table set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact when working in the offline mode:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$filter=primarycontactid eq a0dbf27c-8efb-e511-80d2-00155db07c77").then(
@@ -149,7 +176,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$f
     }
 );
 ```
-### Specify the number of entities to return in a page
+### Specify the number of tables to return in a page
 
 The following example demonstrates the use of the `maxPageSize` parameter to specify the number of records (3) to be displayed in a page.
 
@@ -217,10 +244,173 @@ Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoke
 > [!IMPORTANT]
 >  The value of the `nextLink` property is URI encoded. If you URI encode the value before you send it, the XML cookie information in the URL will cause an error.
 
-### Retrieve related entities by expanding navigation properties
+#### FetchXML Example (online scenario)
+The following example demonstrates the use of the `count` parameter of the FetchXML to specify the number of records (3) to be displayed in a page.
+
+> [!NOTE]
+> The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](online.md)). It is not supported offline.
+
+```JavaScript
+var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
+fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+
+Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }          
+
+        console.log("Paging cookie: " + result.fetchXmlPagingCookie);
+
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+This example will display 3 records and return a FetchXML Paging Cookie to the retrieve the results of the next page if there are additional records belonging to the result set. Here is an example output from the **Console** in the browser developer tools:
+
+```JSON
+{
+	"entities": [
+		{
+			"@odata.etag": "W/\"1035542\"",
+			"accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "Blue Yonder Airlines"
+		},
+		{
+			"@odata.etag": "W/\"1031348\"",
+			"accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "City Power & Light"
+		},
+		{
+			"@odata.etag": "W/\"1035543\"",
+			"accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+			"name": "Coho Winery"
+		}
+	],
+	"fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
+}
+```
+
+We can use the `fetchXmlPagingCookie` as shown in the example below to fetch large result sets with paging.
+
+```JavaScript
+function CreateXml(fetchXml, pagingCookie, page, count) {
+  var domParser = new DOMParser();
+  var xmlSerializer = new XMLSerializer();
+
+  var fetchXmlDocument = domParser.parseFromString(fetchXml, "text/xml");
+
+  if (page) {
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute("page", page.toString());
+  }
+
+  if (count) {
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute("count", count.toString());
+  }
+
+  if (pagingCookie) {
+    var cookieDoc = domParser.parseFromString(pagingCookie, "text/xml");
+    var innerPagingCookie = domParser.parseFromString(
+      decodeURIComponent(
+        decodeURIComponent(
+          cookieDoc
+            .getElementsByTagName("cookie")[0]
+            .getAttribute("pagingcookie")
+        )
+      ),
+      "text/xml"
+    );
+    fetchXmlDocument
+      .getElementsByTagName("fetch")[0]
+      .setAttribute(
+        "paging-cookie",
+        xmlSerializer.serializeToString(innerPagingCookie)
+      );
+  }
+
+  return xmlSerializer.serializeToString(fetchXmlDocument);
+}
+
+function retrieveAllRecords(entityName, fetchXml, page, count, pagingCookie) {
+  if (!page) {
+    page = 0;
+  }
+
+  return retrievePage(entityName, fetchXml, page + 1, count, pagingCookie).then(
+    function success(pageResults) {
+      if (pageResults.fetchXmlPagingCookie) {
+        return retrieveAllRecords(
+          entityName,
+          fetchXml,
+          page + 1,
+          count,
+          pageResults.fetchXmlPagingCookie
+        ).then(
+          function success(results) {
+            if (results) {
+              return pageResults.entities.concat(results);
+            }
+          },
+          function error(e) {
+            throw e;
+          }
+        );
+      } else {
+        return pageResults.entities;
+      }
+    },
+    function error(e) {
+      throw e;
+    }
+  );
+}
+
+function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
+  var fetchXml =
+    "?fetchXml=" +
+    encodeURIComponent(CreateXml(fetchXml, pagingCookie, pageNumber, count));
+
+  return Xrm.WebApi.online.retrieveMultipleRecords(entityName, fetchXml).then(
+    function success(result) {
+      return result;
+    },
+    function error(e) {
+      throw e;
+    }
+  );
+}
+
+var count = 3;
+var fetchXml =
+  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+
+retrieveAllRecords("account", fetchXml, null, count, null).then(
+  function success(result) {
+    console.log(result);
+
+    // perform additional operations on retrieved records
+  },
+  function error(error) {
+    console.log(error.message);
+    // handle error conditions
+  }
+);
+
+```
+
+### Retrieve related tables by expanding navigation properties
 #### For online scenario (connected to server)
 
-Use the **$expand** system query option in the navigation properties to control the data that is returned from related entities. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the `contactid` and `fullname`:
+Use the **$expand** system query option in the navigation properties to control the data that is returned from related tables. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the `contactid` and `fullname`:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)", 3).then(

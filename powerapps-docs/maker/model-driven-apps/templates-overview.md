@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -44,8 +44,8 @@ You can use templates in a variety of ways to speed your work and improve consis
 
 For information on using templates, see the following documentation:
 
-- Word templates:  [Use Word templates to create standardized documents](https://docs.microsoft.com/dynamics365/customer-engagement/admin/using-word-templates-dynamics-365)
-- Excel templates: [Analyze and share your data with Excel templates](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates)
+- Word templates:  [Use Word templates to create standardized documents](/dynamics365/customer-engagement/admin/using-word-templates-dynamics-365)
+- Excel templates: [Analyze and share your data with Excel templates](/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates)
 
 
 

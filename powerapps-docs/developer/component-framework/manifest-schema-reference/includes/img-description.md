@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 8adf55e2-504b-4313-a292-eb186b7cc850
 ---
-The `img` webresource allows you to add images for the code components.
+The `img` web resource allows you to add images for the code components.

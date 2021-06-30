@@ -1,13 +1,16 @@
 ---
-title: "Use faceted search to improve portal search | MicrosoftDocs"
-description: "Instructions to enable or disable faceted search."
+title: Use faceted search to improve portal search
+description: Learn how to enable or disable faceted search.
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 04/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+contributors:
+    - tapanm-msft
+    - sandhangitmsft
 ---
 
 # Use faceted search to improve portal search
@@ -28,13 +31,13 @@ To disable a single piece of the faceted view:
 2. Select the view to disable (that is, Knowledge Management – Top Rated Articles)
 3. Select **Deactivate** at the top of the page.
 
-## Group entities as part of a record type for faceted view
+## Group tables as part of a record type for faceted view
 
-The site setting **Search/RecordTypeFacetsEntities** allows you to group similar entities together so users have logical ways of filtering search results. For example, instead of having separate options for forums, forum posts, and forum threads, these entities are grouped under the Forums record type.
+The site setting **Search/RecordTypeFacetsEntities** allows you to group similar tables together so users have logical ways of filtering search results. For example, instead of having separate options for forums, forum posts, and forum threads, these tables are grouped under the Forums record type.
 
 Go to **Portals** &gt; **Websites** &gt; **Site Settings** and open the **Search/RecordTypeFacetsEntities** site setting. 
 
-Notice that the different entities are preceded by the word **Forums:**. This is because the first value is the name with they are grouped as. This word will be translated based on the language that is being used on the portal.
+Notice that the different tables are preceded by the word **Forums:**. This is because the first value is the name with they are grouped as. This word will be translated based on the language that is being used on the portal.
 
 ## Use faceted search to improve knowledge search results
 
@@ -42,5 +45,8 @@ Faceted search enables portals to have search filters on the leftmost side allow
 
 ![Use filters to improve search results](../media/faceted-search-filter.png "Use filters to improve search results")
 
+### See also
+
+[Progressive search](progressive-search.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

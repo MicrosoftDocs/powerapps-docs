@@ -1,6 +1,6 @@
 ---
-title: Move customizations between Dataverse for Teams environments | Microsoft Docs
-description: Explains how to transport customizations betweem Microsoft Dataverse for Teams environments.
+title: Move customizations between environments | Microsoft Docs
+description: Explains how to transport customizations between Microsoft Dataverse for Teams environments or between Dataverse and Dataverse for Teams.
 author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,9 +9,7 @@ ms.date: 03/11/2020
 ms.author: wimcoor
 ms.reviewer: matp
 ---
-#  Move customizations between Dataverse for Teams environments
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+#  Move customizations between environments
 
 Microsoft Dataverse for Teams provides a simplified way to transport customizations between Dataverse for Teams environments. Additionally, customizations can also be moved between Dataverse and Dataverse for Teams environments.
 

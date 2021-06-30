@@ -1,8 +1,8 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to write custom code to be executed on specific events of the Dataverse database transaction." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/03/2020
+ms.date: 03/18/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,17 +17,17 @@ search.app:
 ---
 # Write a plug-in
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 The process of writing, registering, and debugging a plug-in is:
 
-1. **Create a .NET Framework Class library project in Visual Studio**
-1. **Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project**
-1. **Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.**
-1. **Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface**
-    1. **Get references to services you need**
-    1. **Add your business logic**
-1. **Sign & build the assembly**
+1. Create a .NET Framework Class library project in Visual Studio
+1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
+1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
+1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
+    1. Get references to services you need
+    1. Add your business logic
+1. Sign & build the assembly
 1. Test the assembly
     1. Register the assembly in a test environment
     1. Add your registered assembly and steps to an unmanaged solution
@@ -35,7 +35,7 @@ The process of writing, registering, and debugging a plug-in is:
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
-Content in this topic discusses the steps **in bold** above and supports the following tutorials:
+Content in this topic discusses steps 1 thru 5 above and supports the following tutorials:
 
 - [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
@@ -59,18 +59,17 @@ All assemblies must be signed before they can be registered. This can be done us
 
 ### Do not depend on .NET assemblies that interact with low-level Windows APIs
 
-Plug-in assemblies must contain all the necessary logic within the respective dll.  Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface.
+Plug-in assemblies must contain all the necessary logic within the respective DLL.  Plug-ins may reference some core .Net assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
 
 ### Do not depend on any other assemblies
 
 Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
- 
-Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present and compatible with your code.
 
+Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present and compatible with your code.
 
 ## IPlugin interface
 
-A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.6.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
+A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.6.2 in Visual Studio. Each class in the project that will be registered on a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
 > [!IMPORTANT]
 > When implementing `IPlugin`, the class should be *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method. There are some exceptions to this. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.  More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
@@ -80,7 +79,7 @@ The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:Syst
 ## Pass configuration data to your plug-in
 
 When you register a plug-in you have the ability to pass configuration data to it. Configuration data allows you to define how a specific instance of a registered plug-in should behave. This information is passed as string data to parameters in the constructor of your class. There are two parameters: `unsecure` and `secure`.
-Use the first `unsecure` parameter for data that you don't mind if people can see. Use the second `secure` parameter for sensitive data. 
+Use the first `unsecure` parameter for data that you don't mind if people can see. Use the second `secure` parameter for sensitive data.
 
 The following code shows the three possible signatures for a plug-in class named `SamplePlugin`.
 
@@ -89,14 +88,15 @@ public SamplePlugin()
 public SamplePlugin(string unsecure)  
 public SamplePlugin(string unsecure, string secure)
 ```
-The secure configuration data is stored in a separate entity which only system administrators have privileges to read. More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
+
+The secure configuration data is stored in a separate table which only system administrators have privileges to read. More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
 
 ## Services you can use in your code
 
 Within your plug-in you will need to:
- 
+
 - Access the contextual information about what is happening in the event your plug-in was registered to handle. This is called the *execution context*.
-- Access the Organization web service so you can write code to query data, work with entity records, use messages to perform operations.
+- Access the Organization web service so you can write code to query data, work with table records, use messages to perform operations.
 - Write messages to the Tracing service so you can evaluate how your code is executing.
 
 The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
@@ -106,7 +106,7 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 
 ## Organization Service
 
-To work with data within a plug-in you use the organization service. Do not try to use the Web API. Plug-ins are optimized to use the .NET SDK assemblies.
+To work with data within a plug-in you use the Organization service. Do not try to use the Web API. Plug-ins can only be written using the SDK API and compiled as .NET assemblies.
 
 To gain access to a `svc` variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface, use the following code:
 
@@ -123,21 +123,22 @@ The `context.UserId` variable used with <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 
 More information:
 
-- [Entity Operations](org-service/entity-operations.md)
+- [Table Operations](org-service/entity-operations.md)
 - [Query data](org-service/entity-operations-query-data.md)
-- [Create entities](org-service/entity-operations-create.md)
-- [Retrieve an entity](org-service/entity-operations-retrieve.md)
-- [Update and Delete entities](org-service/entity-operations-update-delete.md)
-- [Associate and disassociate entities](org-service/entity-operations-associate-disassociate.md)
+- [Create tables](org-service/entity-operations-create.md)
+- [Retrieve a table](org-service/entity-operations-retrieve.md)
+- [Update and Delete tables](org-service/entity-operations-update-delete.md)
+- [Associate and disassociate tables](org-service/entity-operations-associate-disassociate.md)
 - [Use messages](org-service/use-messages.md)
 - [Late-bound and Early-bound programming](org-service/early-bound-programming.md)
 
-You can use early bound types within a plug-in. Just include the generated types file in your project. But you should be aware that all entity types that are provided by the execution context input parameters will be late-bound types. You will need to convert them to early bound types. For example you can do the following when you know the `Target` parameter represents an account entity.
+You can use early bound types within a plug-in. Just include the generated types file in your project. But you should be aware that all table types that are provided by the execution context input parameters will be late-bound types. You will need to convert them to early bound types. For example you can do the following when you know the `Target` parameter represents an account table.
 
 ```csharp
 Account acct = context.InputParameters["Target"].ToEntity<Account>();
-``` 
-But you should never try to set the value using an early bound type. Don't try to do this:
+```
+
+But you should never try to set the value using an early-bound type. Don't try to do this:
 
 ```csharp
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
@@ -147,9 +148,9 @@ This will cause an <xref:System.Runtime.Serialization.SerializationException> to
 
 ## Use the tracing service
 
-Use the tracing service to write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
+Use the tracing service to write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
-To write to the tracelog, you need to get an instance of the tracing service. The following code shows how to get an instance of the tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
+To write to the tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
 
 ```csharp
@@ -181,9 +182,9 @@ If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown.
 
 ### Monitor Performance
 
-Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Entity](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This entity provides the following data points:
+Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
 
-|**Attribute**|**Description**|
+|**Column**|**Description**|
 |--|--|
 |AverageExecuteTimeInMilliseconds|The average execution time (in milliseconds) for the plug-in type. |
 |CrashContributionPercent|The plug-in type percentage contribution to crashes. |
@@ -209,7 +210,7 @@ This data is also available for you to browse using the [Power Platform Admin Ce
 ### See also
 
 [Write plug-ins to extend business processes](plug-ins.md)<br />
-[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
+[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)<br />
 [Handle exceptions](handle-exceptions.md)<br />
 [Impersonate a user](impersonate-a-user.md)<br />
 [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />

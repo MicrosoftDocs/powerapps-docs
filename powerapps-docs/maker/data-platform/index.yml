@@ -31,7 +31,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: https://docs.microsoft.com/learn/modules/introduction-common-data-service
+            url: /learn/modules/introduction-common-data-service
 
   # Card
   - title: Define data
@@ -136,4 +136,4 @@ landingContent:
           - text: Work with metadata using code
             url: ../../developer/data-platform/metadata-services.md
           - text: More >
-            url: /powerapps/developer/data-platform/        
+            url: ../../developer/data-platform/index.yml

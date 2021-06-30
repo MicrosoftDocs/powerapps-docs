@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 06/23/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -187,7 +187,7 @@ When you edit a public or system  view, you must save and publish your changes b
 ## Community tools
 **View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Power Apps.
 
-More information: [Developer tools](/powerapps/developer/data-platform/developer-tools).
+More information: [Developer tools](../../developer/data-platform/developer-tools.md).
 
 > [!NOTE]
 > These tools are provided by XrmToolBox and are not supported by Microsoft. If you have questions pertaining to the tool, please contact the publisher. More information: [XrmToolBox](https://www.xrmtoolbox.com/). 

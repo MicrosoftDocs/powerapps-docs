@@ -1,6 +1,6 @@
 ---
 title: "Appendix: App certification checklist (PowerApps) | Microsoft Docs"
-description: "The app certification checklist provides you information about the checks that your model-driven, canvas apps and flows have to go through before it can be published on AppSoutce."
+description: "The app certification checklist provides you information about the checks that your model-driven, canvas apps and flows have to go through before it can be published on AppSource."
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
@@ -17,9 +17,10 @@ search.app:
 ---
 # Appendix: App certification checklist
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The following checklist provides the list of validations performed by Microsoft during the certification process after you [submit](next-steps-submit-app-cloud-partner-portal.md) your app. 
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 <table>
 <tbody>
@@ -29,11 +30,11 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="https://docs.microsoft.com/power-automate/getting-started">flows</a> that connect to Microsoft Dataverse<br/></td>
+<td rowspan=5><a href="/powerapps/maker/model-driven-apps/model-driven-app-overview">Model-driven apps</a>, <a href="/powerapps/maker/canvas-apps/getting-started">canvas apps</a>, and <a href="/power-automate/getting-started">flows</a> that connect to Microsoft Dataverse<br/></td>
 <td>Sanity Check</td>
 <td><ul>
 <li>Check for app registration type: Free, Trial or Contact me.</li>
-<li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/data-platform/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
+<li>Verify the submitted <a href="/powerapps/developer/data-platform/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
 <li>Download the end-to-end (E2E) functional document from <a href="https://partner.microsoft.com/dashboard">Partner Center</a> and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
 </td>
@@ -42,15 +43,15 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Code Validation</td>
 <td>
 <ul>
-<li>Code validation for canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in Power Apps to check for the following:
+<li>Code validation for canvas apps will be done through <a href="/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in Power Apps to check for the following:
 <ul>
 <li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
 <li>Accessibility errors and warnings: All Accessibility errors should be resolved as per Solution Checker guidelines.</li>
 </ul></li>
-<li>Code Validation for Dataverse solution will be done utilizing <a href="https://docs.microsoft.com/power-platform/alm/checker-api/overview">Power Apps Checker</a>.</li>
+<li>Code Validation for Dataverse solution will be done utilizing <a href="/power-platform/alm/checker-api/overview">Power Apps Checker</a>.</li>
 <li>Issues reported from Power Apps Checker will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
-<li>The quality of the solution and packages are validated against the AppSource certification <a href="https://docs.microsoft.com/power-platform/alm/checker-api/retrieve-rulesets">ruleset</a>. 
+<li>The quality of the solution and packages are validated against the AppSource certification <a href="/power-platform/alm/checker-api/retrieve-rulesets">ruleset</a>. 
 <li>Generated report is shared with the publisher through email.</li>
 </ul>
 </td>
@@ -59,9 +60,9 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Deployment Validation</td>
 <td>
 <ul>
-<li>Solution will be installed to a Power Apps studio using <a href="https://docs.microsoft.com/power-platform/alm/package-deployer-tool">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from Power Apps studio to validate successful uninstallation</li>
+<li>Solution will be installed to a Power Apps studio using <a href="/power-platform/alm/package-deployer-tool">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from Power Apps studio to validate successful uninstallation</li>
 <li>Check the canvas app successfully connects through the connectors provided by the publishers. For example, Dataverse or any other connections.</li>
-<li>Check all Dataverse components (entities, web resources, plug-ins and other components) are available in the solution.</li>
+<li>Check all Dataverse components (tables, web resources, plug-ins and other components) are available in the solution.</li>
 <li>Manually uninstall the solution and check if all the components associated to the managed solution is removed.</li>
 </ul>
 </td>
@@ -87,7 +88,7 @@ The following checklist provides the list of validations performed by Microsoft 
 </td>
 </tr>
 <tr>
-<td rowspan=5><a href="https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="https://docs.microsoft.com/power-automate/getting-started">flows</a> that connect to data sources <i>other</i> than Dataverse
+<td rowspan=5><a href="/powerapps/maker/canvas-apps/getting-started">Canvas apps</a> and <a href="/power-automate/getting-started">flows</a> that connect to data sources <i>other</i> than Dataverse
 </td>
 <td>Sanity Check</td>
 <td><ul>
@@ -129,11 +130,11 @@ The following checklist provides the list of validations performed by Microsoft 
 
 For information on best practices for creating:
 - Canvas apps, see [Canvas App Coding Standard and Guidelines](https://aka.ms/powerappscanvasguidelines)
-- Model-driven apps, see [Understand model-driven app components](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-components)
+- Model-driven apps, see [Understand model-driven app components](../../maker/model-driven-apps/model-driven-app-components.md)
 
 ### See also
 
-[Partner Center documentation](https://docs.microsoft.com/partner-center/)
+[Partner Center documentation](/partner-center/)
 
 
 

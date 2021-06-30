@@ -21,7 +21,8 @@ search.app:
 
 Reports help you monitor your progress towards your business goals by helping you see how you’re doing. You can also track trends - which can give you an advantage over your competitors.  
 
-For more information on organizing and creating reports, see: [Customize and organize reports](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
+The reporting features needs to be enabled for your model-driven app for you to see the reports area on the left navigation pane. More information, see [Add reporting features to your model-driven app](/maker/model-driven-apps/add-reporting-to-app).
+
   
 ## Run a report  
   

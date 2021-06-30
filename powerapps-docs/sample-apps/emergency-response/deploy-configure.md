@@ -30,8 +30,8 @@ The commercial version of the service URL is used throughout this article. If yo
 | [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
-- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
-- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+- [Power Apps for US Government](/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](/power-bi/service-govus-overview)
 
 
 ## Step 1: Download the deployment package
@@ -61,18 +61,18 @@ If you don't already have Power Apps, sign up for Power Apps and purchase an app
 More information:
 
 -   [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
--   [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
+-   [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin)
 
 After you have purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Dataverse environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2.  Create a Dataverse environment with the database. More information: [Create and manage environments](/power-platform/admin/create-environment)
 
     > [!IMPORTANT]
     > While creating the database, if you select a security group for the database, the apps can be shared *only* with users that are members of the security group.
 
-3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+3.  Create appropriate users in your environment. More information: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
 ## Step 3: Install the app
 
@@ -82,17 +82,17 @@ Follow the steps below to install Hospital Emergency Response app along with the
 > 
 > - The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
 >
-> - If you intend to transfer data from the hospital to [regional](/powerapps/sample-apps/regional-emergency-response/overview) solution, make sure you create the connections in your environment as described in [Create connections](/powerapps/sample-apps/emergency-response-data-transfer#step-1-create-connections) before installing the solution. The out-of-box solution to [transfer data from hospital to regional](../emergency-response-data-transfer.md) solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. 
+> - If you intend to transfer data from the hospital to [regional](../regional-emergency-response/overview.md) solution, make sure you create the connections in your environment as described in [Create connections](../emergency-response-data-transfer.md#step-1-create-connections) before installing the solution. The out-of-box solution to [transfer data from hospital to regional](../emergency-response-data-transfer.md) solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. 
 
 You can install the app by using one of the following 3 options:
 
-- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
+- Power Platform admin center (for Power Apps US Govt customers only). See [Option A: Install the app from Power Platform admin center (US Govt customers)](#option-a-install-the-app-from-power-platform-admin-center-us-govt-customers)
 
 - Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
 - Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
-### Option A: Install the app from Microsoft AppSource (US Govt customers)
+### Option A: Install the app from Power Platform admin center (US Govt customers)
 
 1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
     - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)
@@ -295,7 +295,7 @@ Next do the following:
 
 ## Step 6: Add Azure Application Insights key to mobile apps for telemetry (optional)
 
-Optionally, you can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](https://docs.microsoft.com/powerapps/maker/canvas-apps/application-insights)
+Optionally, you can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](../../maker/canvas-apps/application-insights.md)
 
 ## Step 7: Share canvas apps with users in your organization
 
@@ -304,7 +304,7 @@ mobile devices, the apps must be shared with them. It's easier to use Azure AD
 groups to easily share apps with groups of users.
 
 > [!IMPORTANT]
-> Make sure the user or group you plan to share the apps with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-2-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing apps with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
+> Make sure the user or group you plan to share the apps with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-2-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing apps with them: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles).
 
 1.  Sign in to [Power Apps](https://make.powerapps.com)
 
@@ -323,7 +323,7 @@ groups to easily share apps with groups of users.
 
 5.  Repeat steps 3 and 4 for each mobile app.
 
-Detailed information about sharing your apps: [Share a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app)
+Detailed information about sharing your apps: [Share a canvas app](../../maker/canvas-apps/share-app.md)
 
 ## Step 8: Set your mobile app as hero and featured app (optional)
 
@@ -371,7 +371,7 @@ Next, do the following:
 For your admin users to use the admin app (model-driven app), it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
 > [!IMPORTANT]
-> Make sure the user or group you plan to share the app with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-2-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
+> Make sure the user or group you plan to share the app with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-2-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles).
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -389,7 +389,7 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-Detailed information about using the template app from the AppSource is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-health-emergency-response)
+Detailed information about using the template app from the AppSource is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](/power-bi/connect-data/service-connect-to-health-emergency-response)
 
 > [!IMPORTANT]
 > This is an easier way to publish the Power BI dashboard than using the .pbit file option to publish. We recommend customers use this option instead of publishing using the .pbit file option. 
@@ -404,7 +404,7 @@ This section provides information on how you can use the **Emergency Response Ap
 
 - Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
-- Create a workspace in Power BI where you publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
+- Create a workspace in Power BI where you publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces)
 
 - Install Power BI Desktop from the Windows app store: <https://aka.ms/pbidesktop>
 
@@ -473,7 +473,7 @@ This section provides information on how you can use the **Emergency Response Ap
     > ![Scheduled refresh](media/refresh-schedule.png)
 
     > [!NOTE] 
-    > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+    > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](/power-bi/refresh-data#data-refresh)
 
 16. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
 
@@ -486,12 +486,12 @@ This section provides information on how you can use the **Emergency Response Ap
 
     2. On the **Navigation** tab, specify the location of the dashboard where you will publish it.
 
-    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
+    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
 
         > [!div class="mx-imgBorder"]
         > ![Select to install apps automatically](media/select-install-apps-automatically.png)
 
-18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](/power-bi/service-create-distribute-apps#publish-your-app).
 
 ### After publishing the dashboard
 

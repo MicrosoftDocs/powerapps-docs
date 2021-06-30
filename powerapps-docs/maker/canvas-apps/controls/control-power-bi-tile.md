@@ -1,6 +1,6 @@
 ---
-title: 'Power BI tile control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Power BI tile control
+title: Power BI tile control in Power Apps
+description: Learn about the details, properties and examples of the Power BI tile control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -18,11 +18,11 @@ search.app:
 
 A control that shows a [Power BI](https://powerbi.microsoft.com) tile inside an app.
 
-Don't have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
+Don't have Power BI? [Sign up](/power-bi/service-self-service-signup-for-power-bi).
 
 ## Description
 
-Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
+Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
   > [!NOTE]
   > - Power BI tile control only supports tile visualizations pinned to a dashboard. To embed a report page, pin the page to the dashboard first. Then, you can embed that tile visualization.
@@ -30,7 +30,7 @@ Take advantage of your existing data analysis and reporting by displaying your *
 
 ## Sharing and security
 
-When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
+When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
 
 ## Performance
 
@@ -58,6 +58,7 @@ The parameter will filter a value in the dataset of the report where the tile or
 - Only the `eq` operator is supported.
 - Field type must be string.
 - Filtering is only available on pinned visualization tiles. It's not supported for pinned reports.
+- R and Python script visuals cannot be filtered.
 
 You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 
@@ -111,7 +112,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 ## Accessibility guidelines
 
-The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/power-bi/desktop-accessibility).
+The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](/power-bi/desktop-accessibility).
 
 If the Power BI content doesn't have a title, consider adding a heading using a **[Label](control-text-box.md)** control to support screen readers. You can position the label immediately before the Power BI tile.
 

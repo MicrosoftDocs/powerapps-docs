@@ -1,6 +1,6 @@
 ---
-title: Reference for the email-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the email-screen template for canvas apps works in Power Apps
+title: Reference information about the email-screen template in canvas apps
+description: Understand details of how the email-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Reference information about the email-screen template for canvas apps
+# Reference information about the email-screen template in canvas apps
 
 For canvas apps in Power Apps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
@@ -90,7 +90,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
     )
     ```
 
-  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
+  The items of this gallery are populated by search results from the [Office365.SearchUser](/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
   
   **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid. The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function, which means that the operation is performed only if the search box contains user-entered text. This improves performance. 
 
@@ -188,7 +188,7 @@ Selecting this control does three things concurrently:
   Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
   1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
 
-  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) operation to send the email to the recipients.
+  1. It then uses the [Office365.SendEmail](/connectors/office365/#sendemail) operation to send the email to the recipients.
     The operation has three required parameters, **To**, **Subject**, and **Body**, and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
   1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 

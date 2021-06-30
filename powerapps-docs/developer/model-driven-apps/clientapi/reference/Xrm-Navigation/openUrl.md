@@ -1,6 +1,7 @@
 ---
 title: "openUrl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: Includes description and supported parameters for the openUrl method.
+ms.date: 04/21/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -29,7 +30,7 @@ search.app:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |url|String|Yes|URL to open.|
-|openUrlOptions|Object|No|Options to open the URL.The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **width**: (Optional) Number. Width of the window to display the resultant page in pixels.|
+|openUrlOptions|Object|No|Options to open the URL.The object contains the following values:<br/>- **height**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **width**: (Optional) Number. Width of the window to display the resultant page in pixels.|
 
 ## Remarks
 

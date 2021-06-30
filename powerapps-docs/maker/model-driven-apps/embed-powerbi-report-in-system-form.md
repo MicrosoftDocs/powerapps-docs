@@ -4,7 +4,7 @@ description: Learn how to embed a Power BI report in a model-driven app form
 ms.custom: ""
 ms.date: 08/04/2020
 ms.service: powerapps
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 author: "adrianorth"
 ms.author: "aorth"
 manager: "kvivek"
@@ -25,7 +25,7 @@ You can use Power BI reports in Power Apps model-driven apps to bring rich repor
 ## Prerequisites
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
-This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
+This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing managed solution.
 
 ## Embed without contextual filtering
 You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all rows of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
@@ -158,13 +158,13 @@ Additionally, when you export the solution as managed, add the **solutionaction=
    > [!div class="mx-imgBorder"] 
    > ![User that is signed in doesn't have appropriate permission](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "User that is signed in doesn't have appropriate permission")
 
-- The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
+- The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 
 
 ### See also
 
-[Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](/powerapps/user/add-powerbi-dashboards)
+[Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](../../user/add-powerbi-dashboards.md)
 
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 

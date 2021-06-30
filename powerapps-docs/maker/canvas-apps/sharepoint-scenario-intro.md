@@ -1,6 +1,6 @@
 ---
-title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
-description: 'This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI.'
+title: Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
+description: In this series of tutorials, we'll explore how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online - Power Apps, Power Automate, and Power BI.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
@@ -26,8 +26,8 @@ In this series of tutorials, the company Contoso has a SharePoint Online site wh
 The scenario we present in this series of tutorials is simple compared to a full-blown project management and analysis app, but it still takes some time to complete all the tasks. If you just want a quick introduction to using Power Apps, Power Automate, and Power BI with SharePoint, check out the following articles:
 
 * **Power Apps**: [Create an app from within SharePoint using Power Apps](app-from-sharepoint.md#create-an-app-from-within-sharepoint-online) and [Create an app to manage data in a SharePoint list](app-from-sharepoint.md)
-* **Power Automate**: [Wait for approval in Power Automate](https://docs.microsoft.com/flow/wait-for-approvals)
-* **Power BI**: [Embed with report web part in SharePoint Online](https://docs.microsoft.com/power-bi/service-embed-report-spo)
+* **Power Automate**: [Wait for approval in Power Automate](/flow/wait-for-approvals)
+* **Power BI**: [Embed with report web part in SharePoint Online](/power-bi/service-embed-report-spo)
 
 When you're done, we hope you'll be back to check out this full scenario.
 
@@ -45,9 +45,9 @@ To complete the scenario, you need the following subscriptions and desktop tools
 Ideally, you have basic familiarity with each technology, but you can still complete the scenario if you're new to some of these technologies. Use the following content to get up to speed:
 
 * [Get started with SharePoint](https://support.office.com/article/Get-started-with-SharePoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
-* [Power Apps Guided Learning](../../guided-learning/index.md)
-* [Power Automate Guided Learning](https://docs.microsoft.com/flow/guided-learning/)
-* [Power BI Guided Learning](https://docs.microsoft.com/power-bi/guided-learning/)
+* [Power Apps Guided Learning](/learn/browse/?products=powerapps&resource_type=learning+path)
+* [Power Automate Guided Learning](/flow/guided-learning/)
+* [Power BI Guided Learning](/power-bi/guided-learning/)
 
 ## Next steps
 The next step in this tutorial series is to [set up the SharePoint Online lists](sharepoint-scenario-setup.md) that we use throughout the series.

@@ -1,6 +1,6 @@
 ---
-title: Analyze app telemetry using Application Insights | Microsoft Docs
-description: How to analyze app telemetry using Application Insights
+title: Analyze telemetry of a canvas app using Application Insights
+description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
 author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,9 +14,9 @@ search.app:
   - PowerApps
 ---
 
-# Analyze app telemetry using Application Insights
+# Analyze telemetry of a canvas app using Application Insights
 
-You can connect your app with [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. 
+You can connect your app with [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. 
 
 With your app connected to Applications Insights, you can collect information to help you drive better business decisions and improve the quality of your apps.
 
@@ -25,7 +25,7 @@ In this quickstart, you'll instrument a canvas app called Kudos. This helps you 
 ## Prerequisites
 
 - You must have access to the [Azure portal](https://portal.azure.com).
-- You must have the permissions to [create Azure resources](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal).
+- You must have the permissions to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
 ### Optional
 
@@ -45,7 +45,7 @@ Before you can send telemetry for an app, you'll need to create an Application I
 
     ![Add an Application Insights resource](./media/application-insights/azureappinsights-add.png "Add an Application Insights resource")
 
-1. Enter the appropriate values and select **Review + create**. For more details, read [Create an Application Insights resource](https://docs.microsoft.com/azure/azure-monitor/app/create-new-resource). 
+1. Enter the appropriate values and select **Review + create**. For more details, read [Create an Application Insights resource](/azure/azure-monitor/app/create-new-resource). 
 
     ![Create a resource](./media/application-insights/createresource.png "Create a resource")
 
@@ -95,7 +95,7 @@ As you browse through different screens, events are automatically logged to Appl
     > - Operating systems and browser version details of the users.
     > - Region and location of the users.
     > 
-    > For more details, read [Users, sessions, and events analysis in Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/usage-segmentation).
+    > For more details, read [Users, sessions, and events analysis in Application Insights](/azure/azure-monitor/app/usage-segmentation).
 
 1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
 
@@ -107,15 +107,15 @@ As you browse through different screens, events are automatically logged to Appl
 
 > [!TIP]
 > Some of the additional Application Insights features you can use are:  
-> - [Funnels](https://docs.microsoft.com/azure/azure-monitor/app/usage-funnels)
-> - [Cohorts](https://docs.microsoft.com/azure/azure-monitor/app/usage-cohorts)
-> - [Impact analysis](https://docs.microsoft.com/azure/azure-monitor/app/usage-impact)
-> - [Retention analysis](https://docs.microsoft.com/azure/azure-monitor/app/usage-retention)
-> - [Usage flows](https://docs.microsoft.com/azure/azure-monitor/app/usage-flows)
+> - [Funnels](/azure/azure-monitor/app/usage-funnels)
+> - [Cohorts](/azure/azure-monitor/app/usage-cohorts)
+> - [Impact analysis](/azure/azure-monitor/app/usage-impact)
+> - [Retention analysis](/azure/azure-monitor/app/usage-retention)
+> - [Usage flows](/azure/azure-monitor/app/usage-flows)
 
 ## Create custom trace events
 
-You can write custom traces directly to Application Insights and start to analyze information specific to your scenario. [Trace](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-trace) function allows you to collect:
+You can write custom traces directly to Application Insights and start to analyze information specific to your scenario. [Trace](./functions/function-trace.md) function allows you to collect:
 
 - Granular usage information for controls on the screens.
 - Which specific users are accessing your app.
@@ -274,7 +274,7 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
     ![Extend customDimensions query](./media/application-insights/custom-dimensions-extend-query.png "Extend customDimensions query")
 
     > [!TIP]
-    > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. For more information, read [Log queries](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview).
+    > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. For more information, read [Log queries](/azure/azure-monitor/log-query/log-query-overview).
 
 ## Export data to Power BI
 

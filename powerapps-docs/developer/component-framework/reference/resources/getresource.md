@@ -1,6 +1,6 @@
 ---
 title: getResource | Microsoft Docs
-description: 
+description: Provides information about the methods available for getResource.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
