@@ -25,14 +25,14 @@ Custom APIs provide a capabilities specifically for developers to define their l
 
 ## Create a custom API
 
-A Custom API may or may not include logic implemented with a plug-in. Using Dataverse business events, you may create a Custom API to pass data about an event that other subscribers will respond to.
+A Custom API may or may not include logic implemented with a plug-in. Using Dataverse business events, you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
 
 However, in other cases it is expected that the message you create performs some kind of logic using a plug-in. You can approach the development of your custom API by:
 
 - Write the plug-in first, and then define the Custom API for it.
 - Define the Custom API first, then write the plug-in to implement it.
 
-Your Custom API will be completed when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
+A custom API with a plug-in will be complete when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
 
 There are several different ways to create a custom API:
 

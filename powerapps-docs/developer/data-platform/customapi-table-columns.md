@@ -45,7 +45,7 @@ The table below includes selected columns of a Custom API table that you can set
 
 ## Execute Privilege Name
 
-Set the **Execute Privilege Name** property to the name of the privilege to require it. There is currently no supported way for developers outside of Microsoft to create new privileges, but an existing privilege can be used. More information: [Q: Can I create a new privilege for my Custom API?](custom-api.md#q-can-i-create-a-new-privilege-for-my-custom-api) 
+Set the **Execute Privilege Name** (`ExecutePrivilegeName`) property to the name of the privilege to require it. There is currently no supported way for developers outside of Microsoft to create new privileges, but an existing privilege can be used. More information: [Q: Can I create a new privilege for my Custom API?](custom-api.md#q-can-i-create-a-new-privilege-for-my-custom-api) 
 
 ## Plugin Type
 
@@ -57,7 +57,7 @@ You might want to do this as a testing step, but any output parameter values wil
 
 ## Enabled for Workflow
 
-Set **Enabled for Workflow** to true when you need to enable calling a Custom API as a workflow action. However, when this is selected the following limitations are imposed so that the Custom API can be called in the workflow designer:
+Set **Enabled for Workflow** (`WorkflowSdkStepEnabled`) to true when you need to enable calling a Custom API as a workflow action. However, when this is selected the following limitations are imposed so that the Custom API can be called in the workflow designer:
 
 - The Custom API cannot be a function, **Is Function** must be false.
 - The Custom API can only have request parameter or response property types that workflow supports:
