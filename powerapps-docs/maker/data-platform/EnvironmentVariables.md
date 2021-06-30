@@ -26,16 +26,16 @@ Benefits of using environment variables:
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Enter different values while importing solutions to other environments. 
 - Update values without a code change.
-- Granular level security managed by [Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro).
+- Granular level security managed by [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
-- Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](https://docs.microsoft.com/en-us/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
+- Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
 - Support for localization.
 - Can be used to control feature flags and other application settings.
 
 
 ## How do they work?
-Environment variables can be created and managed through the modern solution interface or by [using code](https://docs.microsoft.com/powerapps/developer/data-platform/work-with-data). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components. 
+Environment variables can be created and managed through the modern solution interface or by [using code](/powerapps/developer/data-platform/work-with-data). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components. 
 
 ### Create an environment variable in Power Apps
 1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
@@ -71,7 +71,7 @@ A notification is displayed when the environment variables do not have any value
 
 ## Security
 
-The environmentvariabledefinition table is [user or team owned](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/types-of-entities). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
+The environmentvariabledefinition table is [user or team owned](/powerapps/maker/data-platform/types-of-entities). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
 
 ## Current limitations
 
@@ -84,10 +84,10 @@ The environmentvariabledefinition table is [user or team owned](https://docs.mic
 
 ### See also
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
-[Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/data-platform/plug-ins) </BR>
-[Web API samples](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-[Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)
+[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins) </BR>
+[Web API samples]/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
+[Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
+[Create a flow with Dataverse](/flow/connection-cds)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 
