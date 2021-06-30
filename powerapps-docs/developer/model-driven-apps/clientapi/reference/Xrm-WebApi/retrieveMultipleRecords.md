@@ -50,7 +50,7 @@ search.app:
 </ul>
 <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
-<p>When you specify an OData System query for the <code>options</code> parameter, the query <b>should be encoded</b> for special characters.
+<p>When you specify an OData query string for the <code>options</code> parameter, the query <b>should be encoded</b> for special characters.
 <p>When you specify a FetchXML query for the <code>options</code> parameter, the query <b>should not be encoded</b>. 
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
 </tr>
