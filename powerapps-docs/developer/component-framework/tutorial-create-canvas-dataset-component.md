@@ -1,6 +1,6 @@
 ---
 title: "Creating a canvas app dataset component in Microsoft Dataverse| MicrosoftDocs"
-description: "Learn how to implement a field components using Power Apps component framework"
+description: "Learn how to implement a canvas app dataset components using Power Apps component framework"
 manager: kvivek
 ms.date: 06/25/2021
 ms.service: "powerapps"
@@ -9,6 +9,8 @@ ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 author: Nkrb
+contributors:
+    - v-scottdurow
 ---
 
 # Tutorial: Creating a canvas app dataset component

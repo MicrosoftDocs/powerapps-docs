@@ -149,7 +149,6 @@ Then answer the following questions when prompted:
   Answer: **Yes**
 
 > [!NOTE]
->
 > You can customize this configuration to suit your particular needs (for example, if you are not using React). More information: [Getting started with ESLint](https://eslint.org/docs/user-guide/getting-started).
 
 Before you can use `eslint`, you need to add some scripts to the `package.json`:
@@ -175,7 +174,6 @@ This will tidy up code in the project to match your chosen style, and it will al
 
 > [!NOTE]
 > ESLint will point out problems with the template code initially (e.g. empty constructor). You can add inline comments to instruct ESLint to exclude the rules such as:
->
 > `// eslint-disable-next-line @typescript-eslint/no-empty-function`
 >
 > Additionally, you can add files to ignore (for example, the automatically generated interfaces), by adding the following to the `.eslintrc.json`:
@@ -249,7 +247,7 @@ When making network calls, never use a synchronous blocking request since this c
 Model-driven apps, canvas apps and portals all support multiple browsers. Be sure to use only techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time it still may be in use by some users.
 
 - [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
-- [Supported web browsers](https://docs.microsoft.com/power-platform/admin/supported-web-browsers-and-mobile-devices)
+- [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)
 - [Browsers used by office](https://docs.microsoft.com/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
 
 #### Code components should plan for supporting multiple clients & screen formats

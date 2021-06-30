@@ -9,6 +9,8 @@ ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 author: Nkrb
+contributors:
+    - v-scottdurow
 ---
 
 # Tutorial: Creating a model-driven app dataset component
@@ -166,7 +168,7 @@ Once configured on a subgrid, it will look similar to the following:
 ### Related articles
 
 [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring)<br/>
-[Application lifecycle management (ALM) with Microsoft Power Platform](https://docs.microsoft.com/power-platform/alm/overview-alm)<br/>
+[Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Create your first component](implementing-controls-using-typescript.md)<br/>
 [Debug code components](debugging-custom-controls.md)<br/>
