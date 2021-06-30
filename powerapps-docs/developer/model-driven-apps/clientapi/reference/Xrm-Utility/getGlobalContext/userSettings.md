@@ -135,6 +135,34 @@ Returns an array of strings that represent the GUID values of each of the securi
 
 **Description**: GUID values of each of the security role privilege.
 
+## getSecurityRolePrivilegesInfo()
+Returns a Promise which resolves with an object whose keys are the security role privilege GUIDs and values are objects containing the `businessUnitId`, `depth`, and `privilegeName` of the security role privilege.
+
+### Syntax
+```
+userSettings.getSecurityRolePrivilegesInfo()
+.then(function success(rolePrivileges) {
+  console.log(rolePrivileges)
+  {
+    "0a3d4421-af6d-42ed-b3c2-b51deb73d1d5": {
+      "id": "0a3d4421-af6d-42ed-b3c2-b51deb73d1d5",
+      "businessUnitId": "b60509fb-77d4-eb11-b1b5-000d3a6f1d14",
+      "privilegeName": "prvCreateUser",
+      "depth": 3
+    }
+    "0a3ec381-896a-4795-a237-c401a2d4b300": {
+      ...
+    }
+    ...
+  }
+})
+```
+
+### Return Value
+**Type**: `Promise<{[key: string]: {id: string, businessUnitId: string, privilegeName: string, depth: number}}>`
+
+**Description**: GUID and additional details like Business Unit and Privilege Name of each of the security role privileges.
+
 ## securityRoles 
 
 Returns an array of strings that represent the GUID values of each of the security role or teams that the user is associated with. 
