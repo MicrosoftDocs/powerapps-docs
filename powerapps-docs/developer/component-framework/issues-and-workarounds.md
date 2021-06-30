@@ -145,6 +145,13 @@ Power Apps component framework dataset component currently does not properly sho
 
 No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+## Canvas dataset paging is not reset when filter applied
+ 
+Currently there is an issue with canvas app datasets bound to code components. When the dataset is filtered externally to the code component using PowerFX, the page should be reset to the first page, and the hasPreviousPage should be set to false. This is the functionality inside model-driven apps. This does not happen for canvas apps and so the code components cannot reset the paging and the page numbers can get out of sync. 
+ 
+**Workaround**
+
+No workaround as of now. A fix for this issue is being deployed.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
