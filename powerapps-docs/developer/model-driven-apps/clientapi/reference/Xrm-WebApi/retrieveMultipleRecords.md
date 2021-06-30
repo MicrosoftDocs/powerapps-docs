@@ -115,8 +115,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 This example queries the `account` entity using fetchXML.
 
 ```JavaScript
-var fetchXml = "<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
-fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
@@ -252,8 +251,7 @@ The following example demonstrates the use of the `count` parameter of the Fetch
 > The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](online.md)). It is not supported offline.
 
 ```JavaScript
-var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
-fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+var fetchXml = "?fetchXml=<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
@@ -377,8 +375,7 @@ function retrieveAllRecords(entityName, fetchXml, page, count, pagingCookie) {
 
 function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
   var fetchXml =
-    "?fetchXml=" +
-    encodeURIComponent(CreateXml(fetchXml, pagingCookie, pageNumber, count));
+    "?fetchXml=" + CreateXml(fetchXml, pagingCookie, pageNumber, count);
 
   return Xrm.WebApi.online.retrieveMultipleRecords(entityName, fetchXml).then(
     function success(result) {
