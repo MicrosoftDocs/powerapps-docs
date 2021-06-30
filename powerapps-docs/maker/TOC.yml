@@ -266,13 +266,19 @@
             - name: SharePoint
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
-              href: canvas-apps/connections/connection-azure-sqldatabase.md
+              items:
+                - name: Connect to SQL Server from Power Apps
+                  href: canvas-apps/connections/connection-azure-sqldatabase.md
+                - name: Use SQL Server securely with Power Apps
+                  href: canvas-apps/connections/sql-server-security.md
             - name: Twitter
               href: canvas-apps/connections/connection-twitter.md
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
           href: ./canvas-apps/add-manage-connections.md
+        - name: Rename a data source in an app
+          href: ./canvas-apps/rename-data-source.md
         - name: Prepare Excel data
           href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
@@ -2202,6 +2208,16 @@
                   href: ../teams/customize-employee-ideas.md
                 - name: Export Employee ideas for reporting
                   href: ../teams/export-employee-ideas-for-reporting.md
+                - name: Replace notification with adaptive card to increase collaboration
+                  href: ../teams/replace-notification-with-adaptive-card.md
+        - name: How to (Preview)
+          items:
+             - name: Use How to sample app
+               href: ../teams/how-to.md
+             - name: Customize How to app
+               items:
+                - name: Understand How to sample app architecture
+                  href: ../teams/how-to-architecture.md
         - name: Inspection
           items:
             - name: Use Inspection sample app
