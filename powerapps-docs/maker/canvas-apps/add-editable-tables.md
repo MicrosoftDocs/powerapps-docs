@@ -144,7 +144,7 @@ This step adds a form control to add new items.
     > [!TIP]
     > To resize width, use **Width** property, or the drag using the buttons around the first row in each column.
 
-1. Select the first row from the first column inside the gallery, and add the following formula to the **OnChange** property:
+1. Select the first row from the first column inside the gallery, and add the following formula to the **OnChange** property with changes to column and control names as appropriate:
 
     ```powerapps-dot
     Patch('Editable tables',ThisItem,{Product:TextInput8.Text})
