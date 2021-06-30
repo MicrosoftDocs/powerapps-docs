@@ -1,5 +1,5 @@
 ---
-title: Add editable tables in Power Apps canvas apps | Microsoft Docs
+title: Add editable tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
 author: denisem-msft
 ms.service: powerapps
@@ -14,36 +14,97 @@ search.app:
   - PowerApps
 ---
 
-# Add editable tables in Power Apps canvas apps
+# Add editable tables in canvas apps
 
-Designing a productivity application to have related data and functions in one place is good practice. This is because more can be done without having to switch back and fourth between screens. That's why many people like Excel&mdash;they're able to edit data real-time in a fast and efficient way.
+Designing a productivity application to have related data and functions in one place enables you to achieve more without having to switch back and fourth between the screens. Microsoft Excel is one such example that allows editing data real-time in fast and efficient way.
 
-In Microsoft Power Apps, you can apply the same concept by providing it as a front end to any data source. You're also able to customize it even more.
+Using Power Apps, you can apply the same concept by providing it as a front end to any data source. You're also able to customize it even more.
 
 ![Power Apps front end](./media/add-editable-tables/admin-cat-mngmt-app.png "Power Apps front end")
 
-## Components needed for implementation
+This tutorial uses the following components to make a sample app:
 
-If you want to use this method for hosting everything in the same place, you'll need the following components:
-
-- A data source (Microsoft Dataverse or other)
+- A data source (Microsoft Dataverse, you can also use Excel instead)
 - Form&mdash;For new items
 - Gallery&mdash;To display existing items and
 - Text input controls&mdash;To update existing items
 
-## Step 1: Add a data source
+## Prerequisites
 
-1. Select **View** > **Data sources**.
+To follow this tutorial, you'll need access to a [Power Platform environment](/power-platform/admin/environments-overview#types-of-environments), and the ability to create tables in Microsoft Dataverse.
 
-1. Add an existing connection or create a new one to the desired data source.
+The tutorial uses the following structure to create the sample app:
 
-   ![Add a data source](./media/add-editable-tables/add-data-source.png "Add a data source or create a new one.")
+![Dataverse columns for sample table](./media/add-editable-tables/dataverse-table-columns.png "Dataverse columns for sample table")
 
-    To learn how to add a connection, see [Add data source](add-data-connection.md#add-data-source).
+To learn about how to add columns, see [Work with table columns](/powerapps/teams/table-columns).
 
-## Step 2: Set up a form control
+A new main form has been created to add sample data:
+
+![New main form for adding data to Dataverse table](./media/add-editable-tables/main-form.png "New main form for adding data to Dataverse table")
+
+To learn about how to create a main form with the required columns, see [Create a form](/powerapps/maker/model-driven-apps/create-and-edit-forms#create-a-form). Be sure to use the correct [form order](/powerapps/maker/model-driven-apps/control-access-forms#set-the-form-order) for adding records using the new form.
+
+## Step 1: Create blank app
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Canvas app from blank** under **Make your own app** in Power Apps Home.
+1. Enter a name for the app, such as "Catalog Management App".
+1. Choose **Tablet** format.
+1. Select **Create**.
+
+## Step 2: Add a data source
+
+This section shows how to add a Dataverse table as the data source for the sample app. You can also use an Excel file from a SharePoint site, or OneDrive as the data source; or any other data source type of your choice.
+
+1. From the left-pane, select **Data** > **Add data**.
+1. Select **See all tables**.
+1. Select **Editable tables**, or the table that you created earlier.
+
+    ![Add Dataverse table as the data source](./media/add-editable-tables/add-table-data-source.png "Add Dataverse table as the data source")
+
+For more information about adding a connection to a canvas app, see [Add data source](add-data-connection.md#add-data-source).
+
+## Step 3: Set up a form control
 
 This step adds a form control to add new items.
+
+1. Select **+** (Insert) > **Edit form**.
+
+    ![Add edit form control](./media/add-editable-tables/add-edit-form-control.png "Add edit form control")
+
+1. On the right-pane, choose the table as the data source for the edit form control.
+
+    ![Choose the table as the data source for edit form control](./media/add-editable-tables/select-data-source-for-form.png "Choose the table as the data source for edit form control")
+
+1. Use the **Edit fields** properties option to select the columns to show on the edit form control. You can also change the column order as appropriate.
+
+    ![Edit fields on the edit form control](./media/add-editable-tables/edit-fields.png "Edit fields on the edit form control")
+
+1. Choose the **Default mode** for the form to **New**.
+
+    ![Choose form control mode as New](./media/add-editable-tables/default-form-control-mode.png "Choose form control mode as New")
+
+1. Adjust the **Width**, **Height** properties for size of the data cards to fill the canvas as appropriate.
+
+1. On the left-pane, select **+** (Insert) > **Button**.
+
+1. Update the button text to **Add product**.
+
+1. Select **OnSelect** property for the button control from the top-left side of the screen.
+
+1. In the formula bar, enter the following formula.
+
+    ```powerapps-dot
+    SubmitForm(Form1);
+    NewForm(Form1);
+    ```
+
+    - [SubmitForm](functions/function-form.md) function submits the new product details to the Dataverse table.
+    - [NewForm](functions/function-form.md) changes the mode of the form back to new form to add new products.
+    - **Form1** in this formula is the name of the edit form control added earlier. Update the form name in this formula if your form name is different.
+
+    ![Button OnSelect - new form](./media/add-editable-tables/button-onselect-newform.png "Button OnSelect - new form")
 
 1. Insert a new Form control by clicking Insert > Forms > Edit Form
 
