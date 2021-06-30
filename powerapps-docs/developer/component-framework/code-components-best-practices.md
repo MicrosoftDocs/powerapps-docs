@@ -7,7 +7,7 @@ author: Nkrb
 contributors:
     - v-scottdurow
 manager: kvivek
-ms.date: 06/28/2021
+ms.date: 06/30/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,7 +21,7 @@ Developing, deploying, and maintaining code components needs a combination of kn
 
 - Power Apps component framework
 - Microsoft Power Apps
-- TypeScript & JavaScript
+- TypeScript and JavaScript
 - HTML Browser User Interface Development
 - Azure DevOps/GitHub
 
