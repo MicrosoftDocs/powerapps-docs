@@ -94,7 +94,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > [!NOTE]
 >
 > - Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-> - Querying multiple Dataverse databases requires that both Dataverse organizations are in the same region.
+> - Querying multiple Dataverse databases requires that both Dataverse environments are in the same region.
 
 1. Follow the steps above to connect another Dataverse organization to same Azure Synapse Analytics workspace. You must use the same storage account for both connections.
 
@@ -106,7 +106,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 5. Select **Run**. Your query results are displayed on the **Results** tab.
 
-## Transform your data with an Apache Spark Notebook
+## Transform your data with an Apache Spark notebook
 
 1. In your Synapse workspace, expand **Databases**, select your Dataverse container. Your exported tables are displayed under the **Tables** directory on the left sidebar.
 
