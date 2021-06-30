@@ -80,7 +80,7 @@ activities, and project milestones.
 
 1. **Sort projects** - sorts the list of projects in ascending, or descending order based on project start date.
 
-1. **View team status of work items by owner** - color coded counts display the number of work items by milestone. Select the drop down to toggle to user summary view, shoing work items by user.
+1. **View team status of work items by owner** - color coded counts display the number of work items by milestone. Select the drop down to toggle to user summary view, showing work items by user.
 
 1. **Projects list** - shows all projects, or the results of the search term entered in the find projects search box. Overdue work item count is displayed if the project has any overdue work items.
 
@@ -201,6 +201,8 @@ To delete an existing project:
 
 ### See also
 
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
+- [Customize Milestones sample app](customize-milestones.md)
 - [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)

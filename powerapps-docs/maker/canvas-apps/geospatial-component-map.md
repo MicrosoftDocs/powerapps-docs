@@ -44,7 +44,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 4. To show the user's current location, 
 	- Toggle **Show current location** to **On**. 
 	- Under the property **Current location latitude**, insert **Location.Latitude**. 
-	- Under the property **Current location longitude**, insert **Location.Longitde**. 
+	- Under the property **Current location longitude**, insert **Location.Longitude**. 
 	- The current location pin should now appear on the map.
 	
 You can modify the component by using a number of [properties](#input-properties).
