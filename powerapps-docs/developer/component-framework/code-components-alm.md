@@ -1,8 +1,7 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Code components application lifecycle management"
-manager: kvivek
-ms.date: 06/23/2021
+ms.date: 06/30/2021
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
