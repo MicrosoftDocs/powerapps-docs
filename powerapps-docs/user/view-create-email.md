@@ -59,7 +59,7 @@ The following highlights the difference between the "navigate-to" and contextual
    >[!Note]
    > - If you use customized forms in email, you will still be able to see and use them. The **Enhanced Email** form showcases various email capabilities and functionality. 
 
-For more information, see [Enable the enhanced email experience](enhanced-email.md).
+For more information, see [View, compose and respond to email](view-compose-email.md).
 
 
 
