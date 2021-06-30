@@ -217,7 +217,7 @@ Slow dominant plug-ins affect performance. These plug-ins should be investigated
 
 #### How to improve
   
-Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/).
+Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](/powerapps/developer/data-platform/best-practices/business-logic/).
 
 To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
 
