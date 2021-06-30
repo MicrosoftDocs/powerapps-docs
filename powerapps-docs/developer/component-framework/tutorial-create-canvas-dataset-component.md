@@ -1320,7 +1320,7 @@ So far, you have deployed a development build, which is not optimized and will r
 
 ### Related articles
 
-[Application lifecycle management (ALM) with Microsoft Power Platform](https://docs.microsoft.com/power-platform/alm/overview-alm)<br/>
+[Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Create your first component](implementing-controls-using-typescript.md)<br/>
 [Debug code components](debugging-custom-controls.md)<br/>
