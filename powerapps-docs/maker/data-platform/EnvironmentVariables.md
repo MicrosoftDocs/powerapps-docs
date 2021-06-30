@@ -25,29 +25,13 @@ Applications often require different configuration settings or input parameters 
 > New capabilities for data sources are just now being deployed and may not be available yet in your region.
 
 Benefits of using environment variables:
-- No need to manually edit configurable values in a production environment.
-- Configure one or more variables in one place and reference like a parameter across multiple solution components.
-- Enter different values while importing solutions to other environments. 
-- Update values without a code change.
-- Granular level security managed by [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
-- Unlimited number of variables (max solution size is 29 MB).
-- Service the definitions and the values independently or together.
-- Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
-- Support for localization.
-- Can be used to control feature flags and other application settings.
-
-
-## How do they work?
-
-Environment variables can be created and managed through the modern solution interface or by [using code](/powerapps/developer/data-platform/work-with-data). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components. 
-
 - Provide new parameter values while **importing solutions** to other environments.
 - Store configuration for the **data sources** used in canvas apps and flows. For example, SharePoint Online site and list parameters can be stored as environment variables; therefore allowing you to connect to different sites and lists in different environments without needing to modify the apps and flows.
 - Package and transport your customization and configuration together and manage them in a single location.
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
 - Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
 - Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/data-platform/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
-- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to. 
+- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
 
 ## How do they work?
 
@@ -132,22 +116,6 @@ A notification is displayed when the environment variables do not have any value
 
 ## Security
 
-The environmentvariabledefinition table is [user or team owned](/powerapps/maker/data-platform/types-of-entities). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
-
-## Current limitations
-
-- Caching. Plugins will need to run a query to fetch the values. 
-- Canvas apps and flows can consume environment variables just like table row data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
-- Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.
-- Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
-- Dependencies are not enforced for certain component types.
-- If using Excel to import environment variables, be sure to prepend the publisher prefix to the SchemaName.
-
-### See also
-[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
-[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins) </BR>
-[Web API samples]/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-
 The `environmentvariabledefinition` table is [user or team owned](/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the `environmentvariablevalue` table is inherited from the parent `environmentvariabledefinition` table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
 
 ## Current limitations
@@ -164,7 +132,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
 - When editing a cloud flow, an environment variable with a label of **$authentication** might show up that was not defined in the environment. 
- 
+
 ## Frequently asked questions
 
 **How can I view where environment variables are being used?**
