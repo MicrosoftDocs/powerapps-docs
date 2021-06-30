@@ -62,7 +62,7 @@ Once you select **Insert Template**, the following window appears displaying a l
 ### See also
 
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
-[Use email](view-create-email.md)
+[Understand the email experience](view-create-email.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
