@@ -17,7 +17,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 
 Power Apps component framework enables app makers to create code components that can be used in their canvas apps. More information: [Power Apps component framework overview](overview.md) 
 
-Power Apps component framework enables professional developers to create, import, and add code components to canvas applications using [Power Apps CLI](get-powerapps-cli.md). Certain APIs may not be available in canvas Apps. We recommend you check each API to determine where it is available.  
+Power Apps component framework enables professional developers to create, import, and add code components to canvas applications using [Microsoft Power Platform CLI](get-powerapps-cli.md). Certain APIs may not be available in canvas Apps. We recommend you check each API to determine where it is available.  
 
 ## Security considerations
 

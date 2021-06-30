@@ -1,6 +1,6 @@
 ---
-title: Exit function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Exit function in Power Apps
+title: Exit function in Power Apps
+description: Reference information including syntax and examples for the Exit function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

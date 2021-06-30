@@ -1,6 +1,6 @@
 ---
-title: Manage an on-premises data gateway for canvas apps | Microsoft Docs
-description: Manage an on-premises data gateway and its connections
+title: Manage an on-premises data gateway in Power Apps
+description: Learn about how to manage an on-premises data gateway and its connections.
 author: arthiriyer
 manager: kvivek
 ms.service: powerapps

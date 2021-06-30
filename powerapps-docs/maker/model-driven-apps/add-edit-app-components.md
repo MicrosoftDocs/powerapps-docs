@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 03/05/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

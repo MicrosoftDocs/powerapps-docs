@@ -1,5 +1,5 @@
 ---
-title: Behavior formulas for components | Microsoft Docs
+title: Behavior formulas for components
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: hemantgaur
 ms.service: powerapps
@@ -55,7 +55,7 @@ Besides resetting a component instance from outside of the component, there's an
 ### Example
 
 > [!div class="mx-imgBorder"]
-> ![OnReset example using custom property](./media/component-behavior/updateordernumber2.gif "OnReset example using custom property")
+> ![OnSelect example animation](./media/component-behavior/updateordernumber2.gif "OnSelect example animation")
 
 The example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of the numeric up and down component is reset to display the order number of the selected tool. **Raise OnReset when value changes** made it possible to reset the default value when the input changes. 
 

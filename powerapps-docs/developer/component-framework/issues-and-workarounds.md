@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Common issues and workarounds
 
-Here are some common issues that you might come across while using the Power Apps component framework and Power Apps CLI.
+Here are some common issues that you might come across while using the Power Apps component framework and Microsoft Power Platform CLI.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 

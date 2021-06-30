@@ -7,7 +7,7 @@ ms.author: mkaur
 manager: kvivek
 ms.date: 05/21/2021
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - Dynamics 365 (online)
   - Dynamics 365 Version 9.x
