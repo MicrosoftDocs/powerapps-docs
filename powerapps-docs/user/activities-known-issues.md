@@ -1,6 +1,6 @@
 ---
 title: "Email FAQs and known issues| MicrosoftDocs"
-description: Email FAQs and known issue
+description: Email FAQs and known issues.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Email FAQs and known issue
+# Email FAQs and known issues
 
 Find answers to common questions regarding the email experience features and functionality, configurations, and other key concepts.
 
