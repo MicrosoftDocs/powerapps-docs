@@ -15,19 +15,25 @@ search.app:
   - PowerApps
 ---
 # Connect to Excel from Power Apps
+
 ![Excel](./media/connection-excel/excelicon.png)
 
 Excel is *kind of* a connection which when added to Power Apps become a data source.
 
 ## 1. Format your data as a table in Excel
+
 Ensure that the Excel data you want to use in Power Apps is [formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
 ## 2. Store your Excel file in a cloud location
+
 Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, OneDrive, and OneDrive for Business.  There are two versions of the Excel connector and the more recent one can access more cloud locations.
 
 ## 3. Add Excel as a data source for your Power App
+
 There are currently two ways to add the Excel table as a data source in your application.  These two different approaches each uses a slightly different version of the connector.
 
 ### Start from Data
+
 You can automatically add Excel and create a 3 screen application by choosing "Start from Data".
 
 ![Excel](./media/connection-excel/StartFromData.png)
@@ -43,11 +49,16 @@ If you choose this route, you will use an older version of the connector. When y
 
 You can create a blank application (or you can modify an existing one) and then choose to add a new Excel data source.
 
-The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint Sites, and Office 365 Groups).  There were several limitations of the old Excel connector including the fact that only a single user could work with the Excel file at a time and that you could not access files on a a SharePoint Site.
+The Excel Online (Business) Connector allows users to work with Excel files in document libraries that are supported by Microsoft Graph (OneDrive for Business, SharePoint Sites [Preview], and Office 365 Groups).  
 
-The updated Excel Online (Business) Connector is faster, more robust, allows for multiple users, and can work with all standard document libraries (One Drive for Business, SharePoint Sites, and Office 365 Groups.)
+> [!NOTE]
+> The ability to connect to SharePoint sites is still in Preview.  OneDrive is fully supported.
 
-To add Excel as a data source, find the **Excel Online (Business)** connector in the list of connectors. 
+There were several limitations of the old Excel connector including the fact that only a single user could work with the Excel file at a time and that you could not access files on a a SharePoint Site [Preview].
+
+The updated Excel Online (Business) Connector is faster, more robust, allows for multiple users, and can work with all standard document libraries (One Drive for Business, SharePoint Sites [Preview], and Office 365 Groups.)
+
+To add Excel as a data source, find the **Excel Online (Business)** connector in the list of connectors.
 
 ![Excel](./media/connection-excel/ExcelConnectorAmongOthers.png)
 
@@ -67,11 +78,11 @@ If you want a **Start from Data** app but with the newer version of the connecto
 ![Excel](./media/connection-excel/ExcelDataSourcewithApp.png)
 
 ## Other connectors
+
 For information about how to connect to other types of data, see the [list of connections for Power Apps](../connections-list.md).
 
 ## Known limitations
+
 For information about how to share Excel data within your organization, [review these limitations](cloud-storage-blob-connections.md#sharing-excel-tables).
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
