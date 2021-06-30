@@ -39,7 +39,7 @@ Before you go further, see [Creating a canvas app dataset component tutorial](tu
 
 ## Download and install the model-driven app sample code
 
-Firstly, download the [sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ModelDrivenGridControl) to a folder called `ModelDrivenGrid`. To install the code component, open the folder that contains the `pcfproj` inside Visual Studio COde, and at the terminal use:
+Firstly, download the [sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ModelDrivenGridControl) to a folder called `ModelDrivenGrid`. To install the code component, open the folder that contains the `pcfproj` inside Visual Studio Code, and at the terminal use:
 
 ```powershell
 npm install
