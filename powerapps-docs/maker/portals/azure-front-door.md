@@ -15,22 +15,22 @@ contributors:
 
 # Set up Azure Front Door with portals
 
-As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-premium/overview) with Power Apps portals to utilize its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to setup Azure Front Door with portals.
+As a portal maker, you can use [Azure Front Door](/azure/frontdoor/standard-premium/overview) with Power Apps portals to use its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to set up Azure Front Door with portals.
 
 > [!NOTE]
 > Although this article is focused on Azure Front Door, similar steps can be used for any CDN/WAF provider. The terminology used by various components might be different.
 
-Follow these steps so setup Azure Front Door with portals:
+Follow these steps so set up Azure Front Door with portals:
 
 1. [Setup Azure Front Door endpoint and custom domain name that the portal end users will use](#setup-azure-front-door-endpoint-and-custom-domain-name).
 1. [Configure your portal as the Origin](#configure-portal-as-origin-server).
-1. Setup routing rules to cache static requests.
-1. Setup WAF rules to analyze incoming requests.
-1. Setup portal to only accept traffic from Azure Front Door.
+1. [Set up routing rules to cache static requests](#set-up-routing-rules-to-cache-static-requests).
+1. [Set up WAF rules to analyze incoming requests](#set-up-waf-rules-to-analyze-incoming-requests).
+1. [Set up portal to only accept traffic from Azure Front Door](#setup-power-apps-portals-to-only-accept-traffic-from-azure-front-door).
 
 ## Setup Azure Front Door endpoint and custom domain name
 
-In this section, you'll learn about how to setup Azure Front Door service and enable a custom domain name for this setup.
+In this section, you'll learn about how to set up Azure Front Door service and enable a custom domain name for this setup.
 
 ### Prerequisites
 
@@ -40,11 +40,11 @@ In this section, you'll learn about how to setup Azure Front Door service and en
 
 - SSL certificate that will be used for custom domain name. The certificate must meet the [minimum requirements](admin/add-custom-domain.md) for portals.
 
-- [Owner access](admin/portal-admin-roles.md#portal-owner) on portals in order to setup custom domain name.
+- [Owner access](admin/portal-admin-roles.md#portal-owner) on portals in order to set up custom domain name.
 
 ### Setup Azure Front Door endpoint
 
-To setup Azure Front Door endpoint:
+To set up Azure Front Door endpoint:
 
 1. Sign in to [Azure portal](https://portal.azure.com), and create a new Azure Front Door (Standard or Premium) resource. For more information, see [Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/standard-premium/create-front-door-portal)
 
@@ -70,14 +70,14 @@ To setup Azure Front Door endpoint:
     | Resource group location | Location of the resource group. |
     | **Profile details** | Configuration for the Front Door. |
     | Name | Name of the Front Door resource. |
-    | Tier | Select a tier for the Front Door. For this tutorial, we've selected Premium tier that allows access to Microsoft managed rule set and bot prevention rule set for WAF. |
+    | Tier | Select a tier for the Front Door. For this tutorial, we've selected Premium tier that allows access to Microsoft-managed rule set and bot prevention rule set for WAF. |
     | **Endpoint settings** | Settings for the Azure Front Door endpoint. |
-    | Endpoint name | Enter a name for your Front Door requests. This is the actual URL that will serve the traffic for end users. Later, we'll setup a custom domain name pointing to this URL. |
+    | Endpoint name | Enter a name for your Front Door requests. This name is the actual URL that will serve the traffic for end users. Later, we'll set up a custom domain name pointing to this URL. |
     | Origin type | Select **Custom** as the origin type. |
     | Origin host name | Hostname of your Power Apps portal. <br> Format: `YourPortalName.powerappsportals.com` or `YourPortalName.microsoftcrmportals.com` without `https://` at the beginning. <br> For example, `contoso.powerappsportals.com` |
     | Private link | Don't enable the private link service. |
     | Caching | Enable caching. Caching uses the edge caching capabilities for static content. <br> Caching is discussed more during the routing rules setup later in this article to ensure only static content is cached. |
-    | Query string caching behavior | Select **Use Query String**. This will ensure that if a page has dynamic content based on query string, it's taking query string into account. |
+    | Query string caching behavior | Select **Use Query String**. This option will ensure that if a page has dynamic content based on query string, its taking query string into account. |
     | Compression | Enable compression. |
     | WAF policy | Create a new WAF policy, or use an existing one. <br> WAF policy is discussed more later in this article. For more information about WAF policy, go to [Create WAF policy](/azure/web-application-firewall/afds/waf-front-door-create-portal). |
 
@@ -94,23 +94,23 @@ To setup Azure Front Door endpoint:
 
 ### Setup custom domain name
 
-So far, Azure Front Door endpoint has been setup to serve traffic from the Power Apps portals backend. However, this setup is still using the Front Door URL.
+So far, Azure Front Door endpoint has been set up to serve traffic from the Power Apps portals backend. However, this setup is still using the Front Door URL.
 
-To setup a custom domain with Azure Front Door:
+To set up a custom domain with Azure Front Door:
 
-1. Setup custom domain name on your portal.
+1. Set up custom domain name on your portal.
 
     Web browsers reject cookies set by Power Apps portals when you use Azure Front Door endpoint URL that is different from the URL of your portal. Hence, setup a custom domain name for both your portal and the Azure Front Door endpoint to problems such as captcha check failures, or scaling problems.
 
-    To learn about how to setup custom domain name for your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
+    To learn about how to set up custom domain name for your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
 
-1. Setup custom domain name on your Azure Front Door resource.
+1. Set up custom domain name on your Azure Front Door resource.
 
     After you've finished setting up custom domain name on your portal, enable it on the Azure Front Door resource so it can accept the traffic. For more information, see [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
-    1. Update your DNS provider and remove the CNAME record created earlier during the custom domain setup for portals. Only CNAME needs to be updated, don't remove the origin host name. DNS will point CNAME to Azure Front Door endpoint. The only purpose of adding CNAME was to ensure that custom host name is present on portals. This presence ensures that portals can serve traffic to this custom domain name through the Front Door, and all the portal cookies also have domain setup correctly.
+    1. Update your DNS provider and remove the CNAME record created earlier during the custom domain setup for portals. Only CNAME should be updated, don't remove the origin host name. DNS will point CNAME to Azure Front Door endpoint. The only purpose of adding CNAME was to ensure that custom host name is present on portals. This presence ensures that portals can serve traffic to this custom domain name through the Front Door, and all the portal cookies also have domain set up correctly.
 
-    1. Setup custom domain name on Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain)
+    1. Set up custom domain name on Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain)
 
 1. Check the following to validate the setup:
 
@@ -122,11 +122,11 @@ After following these steps, you'll have a basic Azure Front Door endpoint setup
 
 ## Configure portal as origin server
 
-The next steps is to optimize the origin server settings to ensure that the setup works correctly. To do this setup, start at the **Endpoint Manager** tab in Front Door configurations on Azure portal to update the origin group settings.
+The next step is to optimize the origin server settings to ensure that the setup works correctly. To do this setup, start at the **Endpoint Manager** tab in Front Door configurations on Azure portal to update the origin group settings.
 
 ![Endpoint Manager](media/azure-front-door/endpoint-manager.png "Endpoint Manager")
 
-During quick create setup earlier, you've entered endpoint details that automatically created the configuration with the name **default-origin-group(associated)** (this name may vary depending on the locale settings). For this step, you'll modify the settings for this **default-origin-group**. The following image shows how the settings for this step looks like when you open it for the first time.
+During quick create setup earlier, you've entered endpoint details that automatically created the configuration with the name **default-origin-group(associated)** (this name may vary depending on the locale settings). For this step, you'll modify the settings for this **default-origin-group**. The following image shows how the settings for this step look like when you open it for the first time.
 
 ![Origin group as seen for the first time](media/azure-front-door/origin-group-initial.png "Origin group as seen for the first time")
 
@@ -155,18 +155,18 @@ Use the following settings when configuring origin for portals:
 | Private link | Disabled |
 | Status | Check "Enable this origin" |
 
-After you've configured origin and go back to the origin group, update the settings for health probes and load balancing options.
+After you've configured origin and go back to the origin group, update the settings for health probes and load-balancing options.
 
 | Option | Configuration type or value |
 | - | - |
 | Health probes | Health probes are a mechanism to ensure that the origin service is up and running, and to make the traffic routing decisions depending on the probe results. In this case, we don’t require health probes; and hence, turned it off. |
-| Load balancing | Since we have a single origin setup and health probe is turned off, this setting won't play any role in this setup. |
+| Load balancing | Since we have a single origin set up and health probe is turned off, this setting won't play any role in this setup. |
 
 Validate the origin group configuration so it looks like the following image.
 
 ![Validate origin configuration](media/azure-front-door/origin-configuration-validate.png "Validate origin configuration")
 
-## Setup routing rules to cache static requests
+## Set up routing rules to cache static requests
 
 Routes determine how we use the edge caching capabilities of Azure Front Door to improve the scalability of a portal. It's also an important step to ensure that we're not caching dynamic content served by the portal that can lead to unintended data access.
 
@@ -205,11 +205,11 @@ Update the route configuration as below.
 
 ### Setup rule set
 
-Rule set governs how the content should be cached. This step is very important as it governs how the content would be cached by the edge servers to improve scaling for the portal. However, incorrectly configured rules set can lead to caching of dynamic content which should differ from user to user.
+Rule set governs how the content should be cached. This step is important as it governs how the content would be cached by the edge servers to improve scaling for the portal. However, incorrectly configured rules set can lead to caching of dynamic content that should differ from user to user.
 
-To setup the rule set correctly, it becomes important to understand the type of content your portal is serving. This understanding helps you configure the rule set with effective rules.
+To set up the rule set correctly, it becomes important to understand the type of content your portal is serving. This understanding helps you configure the rule set with effective rules.
 
-For this article, the portal in context uses dynamic content on all pages, and also serves static files, hence this is what this portal's scenario is trying to achieve:
+For this article, the portal in context uses dynamic content on all pages, and also serves static files, hence this is what the portal in this scenario is trying to achieve:
 
 1. All static files are cached, and served from the edge servers.
 1. None of the page content is cached.
@@ -228,14 +228,14 @@ Now, lets configure the rule set based on the business requirement, with the fol
 
 #### Requirement: All static files are cached, and served from the edge servers
 
-The portal in this scenario has static files with file name extensions of css, png, jpg, js, svg, woff or ico. Hence, a rule is required to evaluate file extension of the request, and check for specific file extension types.
+The portal in this scenario has static files with file name extensions of css, png, jpg, js, svg, woff, or ico. Hence, a rule is required to evaluate file extension of the request, and check for specific file extension types.
 
 > [!NOTE]
 > There are other ways to write this rule, such as using the request URL, or file name. For more information about the Azure Front Door rules matching conditions, see [Azure Front Door Rules Engine match conditions](/azure/frontdoor/front-door-rules-engine-match-conditions).
 
 ![Example rule set for file extensions](media/azure-front-door/file-extensions-rule-set.png "Example rule set for file extensions")
 
-In the action configuration, override the cache header set by portals, so that these files are cached a little longer on the browser. By default, portals will set the caching expiration to one day. But in this scenario, we'll override it to seven days. To do this, we setup an action looking like the following image where the action type is **Cache expiration**, and **Cache behavior** is set to "override".
+In the action configuration, override the cache header set by portals, so that these files are cached a little longer on the browser. By default, portals will set the caching expiration to one day. But in this scenario, we'll override it to seven days. To do this, we set up an action looking like the following image where the action type is **Cache expiration**, and **Cache behavior** is set to "override".
 
 ![Example cache expiration action](media/azure-front-door/cache-expiration-action.png "Example cache expiration action")
 
@@ -245,7 +245,7 @@ At the end, the complete rule looks like the following image:
 
 #### Requirement: None of the page content is cached
 
-In general, portal setup ensures that if a page has a form embedded in it (which means it is serving content specific to a record), it'll have “Cache-control” header value set to “private” which ensures that Front Door won't cache that request.
+In general, portal setup ensures that if a page has a form embedded in it (which means it's serving content specific to a record), it will have “Cache-control” header value set to “private” which ensures that Front Door won't cache that request.
 
 However, this method doesn’t take into account the scenarios where you're using liquid templates to embed user-specific content on the pages like displaying a specific record to a set of users. Hence, we'll add an explicit rule to ensure no portal page is cached.
 
@@ -281,144 +281,97 @@ After you've created a rule set, the next step is to associate it with a route.
 
 1. Ensure that all the traffic is served only through HTTPS, and all the HTTP calls are redirected to HTTPS. To verify, enter the domain name in a browser, and ensure the URL changes to HTTPS automatically while rendering the content.
 
-1. Ensure that caching rules are evaluated, and working as expected using the following steps:
+1. Ensure that caching rules are evaluated, and working as expected. To check caching rules, we'll need to analyze network trace in a web browser's developer toolbar to validate the caching headers for different types of content are set correctly.
 
     > [!NOTE]
     > Rule changes might take up to 10 minutes to reflect.
 
-    1. To do this we will need to analyze network trace in browser developer
-        toolbar to ensure right caching headers are set on different type of
-        content.
+    1. Open a new browser tab > open developer toolbar > browse to the portal url (ensure you browse to the URL after opening the developer toolbar).
 
-    2. To do this open a new browser tab -\> open developer toolbar -\>
-        navigate to portal url in this tab (ensure that it is done after opening
-        developer toolbar).
+    1. Go to the network tab to see all network requests.
 
-    3. Now, in developer toolbar, go to network tab which should show all
-        network requests.
+    1. Select the request for any CSS file from the list of requests. And then, analyze the request details. In the “Response headers” section, ensure a header called “x-cache” is present. This header ensures that the request is served through edge servers, and can be cached.
 
-    4. Select the request for any css file from the list of request, and
-        analyze the request details. In the “Response headers” section, ensure
-        that a header called “x-cache” is present. This ensures that the request
-        is served through edge servers and can be cached.
+    If the value is set to “CONFIG_NOCACHE” or any other value containing the term “NOCACHE”, then the setup isn't correct.
 
-        1.  If the value is set to “CONFIG_NOCACHE” or any other value
-            containing the term “NOCACHE” , then the setup is not correct.
+    ![Response header called x-cache with cache hit value](media/azure-front-door/response-header-x-cache.png "Response header called x-cache with cache hit value")
 
-![Graphical user interface, text, application, letter, email Description automatically generated](media/azure-front-door/4c097b84df837567e25c25cc74baac59.png)
+1. Similar to the previous step, select a “Page” request this time, and check its headers. If x-cache is set to “CONFIG_NOCACHE”, then your setup is working correctly.
 
-1.  Similar to last step, select a “Page” request this time and check its
-    headers. If x-cache is set to “CONFIG_NOCACHE”, then your setup is working
-    correctly.
+    ![Response header called x-cache with CONFIG_NOCACHE value for a Page](media/azure-front-door/response-header-x-cache-config-nocache.png "Response header called x-cache with CONFIG_NOCACHE value for a Page")
 
-![Graphical user interface, text, application, Teams Description automatically generated](media/azure-front-door/3d344b9d5de50f52150665538d4b7529.png)
+## Set up WAF rules to analyze incoming requests
 
-Setup WAF rules to analyze incoming requests.
-=============================================
+The next step in the setup is to configure the WAF rules on incoming requests. In this article, we'll cover only basic steps. For advanced WAF configuration, see [Azure Web Application Firewall on Azure Front Door](/azure/web-application-firewall/afds/afds-overview)
 
-Next Step in the setup is to configure WAF rules on incoming requests. In this
-article, we will cover only the basic steps and for advanced WAF configuration,
-please follow [WAF
-articleation](https://docs.microsoft.com/en-us/azure/web-application-firewall/afds/afds-overview)
+1. Go to the **Security** tab.
 
-Following steps should be followed to finish the WAF setup
+    ![Security tab for Front Door configuration](media/azure-front-door/security-tab.png "Security tab for Front Door configuration")
 
-1.  Go to Security tab
+    During quick create setup, we had already setup a new WAF policy that shows up here. However, if you skipped that step, you can do that from this user interface by selecting the **New** button.
 
-![A picture containing graphical user interface Description automatically generated](media/azure-front-door/ebaacf76d6ce38a6a1a3e4f27c91b1cd.png)
+1. Select the name of WAF policy to go to WAF configuration.
 
-1.  During quick create setup, we had already setup a new WAF policy which will
-    appear here, however if you skipped that step, you can do that from this UI
-    by click on New button.
+1. Select **Policy Settings**, and setup following policy settings.
 
-2.  Click on the Name of WAF policy to go to WAF configuration
+    1. **Enable request body inspection** > Enable this setting if you want request body to be inspected as well along with cookies, headers, and URLs.
 
-3.  In WAF configuration, first thing to setup is policy settings, to do that
-    click on Policy Settings and setup following settings
+    1. **Redirect URL** > Set this to a non-portal URL. This URL is where the user would be redirected to if a WAF rule is set to redirect. Ensure this URL is accessible publicly and anonymously.
 
-    1.  Enable request body inspection -\> Enable this setting if you want
-        request body to be inspected as well along with cookies, headers and
-        urls
+    1. **Block Request Status Code** > This HTTP status code is returned to the user if the request is blocked by WAF.
 
-    2.  Redirect URL -\> Set this to a non Portal URL . This is the URL to which
-        a user would be redirected to if a WAF rule is set to redirect. Ensure
-        that this url is accessible publicly and anonymously
+    1. **Block response body** > You can add a custom message here that will be returned to the user if the request is blocked by WAF.
 
-    3.  Block Request Status Code -\> This is the http status code returned to
-        the user if the request is blocked by WAF
+        ![Policy Settings for WAF](media/azure-front-door/waf-policy-settings.png "Policy Settings for WAF")
 
-    4.  Block response body -\> You can add a custom message here which will be
-        returned to the user if the request is blocked by WAF.
+    1. To configure rule set against which every request would be evaluated, select the **Managed Rules** tab.
 
-![Graphical user interface, application Description automatically generated](media/azure-front-door/3425ffa9264f221dabf5999760ccbeb8.png)
+        ![Managed rules - rule set](media/azure-front-door/managed-rules.png "Managed rules - rule set")
 
-1.  Next thing to configure would be ruleset against which every request would
-    be evaluated. In this article, we will only cover Managed ruleset. To do
-    this setup click on “Managed Rules” tab
+    1. Select **Assign** button at the top, and select from the list of default rule set. Managed rule sets are managed by Microsoft, and updated regularly. For more information about rule sets, go to [Web Application Firewall DRS rule groups and rules](/azure/web-application-firewall/afds/waf-front-door-drs).
 
-![Table Description automatically generated](media/azure-front-door/5f8a0a90206224a9355b4b049c513aa7.png)
+        ![Manage rule set - Assign](media/azure-front-door/manage-rule-set.png "Manage rule set - Assign")
 
-1.  Click on Assign button at the top and select from the list of default rule
-    set. Managed Rule sets are Managed by microsoft and are updated regularly,
-    [learn more about managed rule
-    set,](https://docs.microsoft.com/en-us/azure/web-application-firewall/afds/waf-front-door-drs?tabs=drs20)
+After the managed rule set is assigned, your setup is complete. As an extra step, you can also look at setting up exclusion lists for existing rules and enabling custom rules.
 
-![](media/azure-front-door/c6c3ec765fbfd8c010ebc096b61c0b01.png)
+> [!IMPORTANT]
+> By default, WAF is setup in **Detection Policy** mode that detects issues against the defined rule set and logs them. However, this mode doesn't block the requests. To block requests, WAF must be switched to **Prevention** mode.
 
->   Graphical user interface, table Description automatically generated
+We recommend you do a thorough testing in prevention mode to ensure all the scenarios are working fine, and to ensure you don’t have to tweak the rule set or add exclusion policies. Prevention mode should be enabled only after verifying the entire setup is working as expected.
 
-1.  Once Managed rule set is assigned, your setup is effectively complete. As
-    additional setup you can also look at setting up exclusion lists for
-    existing rules as well as enabling custom rules
+## Setup Power Apps portals to only accept traffic from Azure Front Door
 
-Do note that by default WAF is setup in Detection Policy mode in which it will
-detect issues against the defined rule set and log it. However, in this mode, it
-will not block the requests. To do that WAF must be switched to prevention mode.
+The last step in this setup is to ensure that your portal only accepts traffic from Azure Front Door. For this verification, we'll need to enable [IP address restrictions](admin/ip-address-restrict.md) on the portal.
 
-It is highly advisable to first do a thorough testing in prevention mode to
-ensure that all the scenarios are working fine, in order to ensure that you
-don’t have to tweak the rule set or add exclusion policies. Once it is all
-working fine, then WAF prevention mode should be enabled.
+To find the IP address range on which Azure Front Door operates, see [How do I lock down the access to my backend to only Azure Front Door?](/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-).
 
-Setup Portal to only accept traffic from Front Door
-===================================================
+> [!NOTE]
+> Power Apps portals doesn't support **X-Azure-FDID** based filtering.
 
-One of the last step in this whole setup is to ensure that Portal only accepts
-traffic from Azure Front Door. To do this, we will need to enable IP address
-restrictions
-<https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/ip-address-restrict>
-on the portal.
+## Increase Origin response time
 
-To do this we will need to find the IP address range on which Azure Front Door
-operates, this is described
-[here](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-)
-.
+By default, Azure Front Door has an origin response timeout of 60 seconds. However, we recommend increasing this to 240 seconds to ensure long running scenarios like file uploads or export to Excel work as expected.
 
-Do note that we don’t support “**X-Azure-FDID**' based filtering today in
-portals.
+1. Go to the **Endpoint Manager** tab.
 
-Increase Origin response time
-=============================
+    ![Select Endpoint Manager tab](media/azure-front-door/endpoint-manager-tab.png "Select Endpoint Manager tab")
 
-By default, Azure Front Door has an origin response timeout of 60 sec. However,
-we recommend increasing this to 240 sec to match Portal request timeout, this
-would be important to ensure long running scenarios like file uploads or export
-to excel works properly.
+1. Select **Edit endpoint**.
 
-To do this: -
+    ![Select to edit endpoint](media/azure-front-door/edit-endpoint.png "Select to edit endpoint")
 
-1.  Go to Endpoint tab
+1. Select endpoint properties.
 
-![Graphical user interface, text, application Description automatically generated](media/azure-front-door/f10290f8dd557ea21d6d1cffbad1db8c.png)
+    ![Select properties for endpoint](media/azure-front-door/endpoint-properties.png "Select properties for endpoint")
 
-1.  Click on Edit endpoint button
+1. Change the origin response time to 240 seconds, and then select **Update**.
 
-![Graphical user interface, application, Teams Description automatically generated](media/azure-front-door/7f6a6d8b63c82b5a4fe7971aaa96b7e6.png)
+    ![Set endpoint origin response time to 240 seconds](media/azure-front-door/update-endpoint.png "Set endpoint origin response time to 240 seconds")
 
-1.  Click on Endpoint properties
+### See also
 
-![Graphical user interface, application Description automatically generated](media/azure-front-door/06c60d69b60c6a0d6dc9aff19c3e6d05.png)
-
-1.  Change the origin response time to 240 and click on update
-
-![Graphical user interface, application Description automatically generated](media/azure-front-door/908e823a212a8aaeaed3f800778915c8.png)
+[Azure Front Door](/azure/frontdoor/standard-premium/overview) <br>
+[Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/standard-premium/create-front-door-portal) <br>
+[Create a custom domain on Azure Front Door Standard/Premium SKU (Preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain) <br>
+[How do I lock down the access to my backend to only Azure Front Door?](/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-) <br>
+[Azure Front Door Rules Engine match conditions](/azure/frontdoor/front-door-rules-engine-match-conditions) <br>
