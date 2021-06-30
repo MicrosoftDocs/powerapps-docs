@@ -19,7 +19,8 @@ search.app:
 ---
 
 
-# Create a signature for emails and queues
+# Create a signature for emails
+
 Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.  
 
 ## Add an email signature
