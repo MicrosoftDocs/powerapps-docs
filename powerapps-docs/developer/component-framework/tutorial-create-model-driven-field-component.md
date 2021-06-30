@@ -28,6 +28,10 @@ In addition to these, you will also ensure the code component follows the best p
 
 Before you start, make sure you have installed all the [Prerequisites](implementing-controls-using-typescript.md#prerequisites).
 
+## Code 
+
+You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl).
+
 ## Create a new `pcfproj` project
 
 To create a new `pcfproj`:
@@ -784,8 +788,6 @@ So far, you have deployed a development build that is not optimized and will run
 ```xml
 <PcfBuildMode>production</PcfBuildMode>
 ```
-
-See [Choice picker sample for model-driven apps]() for the full code sample. 
 
 ### Related articles
 

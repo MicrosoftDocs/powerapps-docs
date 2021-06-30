@@ -29,6 +29,10 @@ Before you start, ensure you have installed all of the [Prerequisites](implement
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
+## Code
+
+You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/CanvasGridControl).
+
 #### Create a new `pcfproj` project
 
 1. Create a new folder to use for your code component. For example, `C:\repos\CanvasGrid`.
@@ -1308,8 +1312,6 @@ So far, you have deployed a development build, which is not optimized and will r
 ```xml
 <PcfBuildMode>production</PcfBuildMode>
 ```
-
-See [Canvas Grid]() for the full code sample. 
 
 ### Related articles
 

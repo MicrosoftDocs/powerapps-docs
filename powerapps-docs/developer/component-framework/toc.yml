@@ -60,12 +60,14 @@
       href: use-sample-components.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
+    - name: Canvas app grid component
+      href: tutorial-create-canvas-dataset-component.md
+    - name: Choice picker component
+      href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
-    - name: Property set table component
-      href: sample-controls/data-set-component-canvas.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -82,10 +84,14 @@
       href: sample-controls/lookup-control.md
     - name: Map component
       href: sample-controls/map-control.md
+    - name: Model-driven app grid component
+      href: tutorial-create-model-driven-app-dataset-component.md
     - name: Choices (Multi select option set) component
       href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Property set table component
+      href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
       href: sample-controls/react-facepile-control.md
     - name: Table component
