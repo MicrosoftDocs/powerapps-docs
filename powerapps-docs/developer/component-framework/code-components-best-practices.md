@@ -1,20 +1,21 @@
 ---
-title: Code components best practices  | Microsoft Docs
-description: Best practices and guidance on how to use code components
+title: Best practices and guidance for code components created using Power Apps component framework  | Microsoft Docs
+description: Best practices and guidance on how to use code components created using Power Apps component framework
 keywords:
 ms.author: nabuthuk
 author: Nkrb
+contributors:
+    - v-scottdurow
 manager: kvivek
 ms.date: 06/28/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
 
-# Best practices and guidance for code components
+# Best practices and guidance for code components created using Power Apps component framework
 
 Developing, deploying, and maintaining code components needs a combination of knowledge that includes the following:
 
