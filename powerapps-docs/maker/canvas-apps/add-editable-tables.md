@@ -20,7 +20,7 @@ Designing a productivity application to have related data and functions in one p
 
 Using Power Apps, you can apply the same concept by providing it as a front end to any data source. You're also able to customize it even more.
 
-![Power Apps front end](./media/add-editable-tables/admin-cat-mngmt-app.png "Power Apps front end")
+![Admin Catalog Management - sample app demo](./media/add-editable-tables/admin-catalog-management-demo.gif "Admin Catalog Management - sample app demo")
 
 This tutorial uses the following components to make a sample app:
 
@@ -44,12 +44,6 @@ A new main form has been created to add sample data:
 ![New main form for adding data to Dataverse table](./media/add-editable-tables/main-form.png "New main form for adding data to Dataverse table")
 
 To learn about how to create a main form with the required columns, see [Create a form](/powerapps/maker/model-driven-apps/create-and-edit-forms#create-a-form). Be sure to use the correct [form order](/powerapps/maker/model-driven-apps/control-access-forms#set-the-form-order) for adding records using the new form.
-
-## Sample app demo
-
-At the end of this tutorial, the app will look like the following animation.
-
-![Admin Catalog Management - sample app demo](./media/add-editable-tables/admin-catalog-management-demo.gif "Admin Catalog Management - sample app demo")
 
 ## Step 1: Create blank app
 
