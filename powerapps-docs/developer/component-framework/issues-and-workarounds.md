@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 06/08/2021
+ms.date: 07/01/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -46,7 +46,6 @@ Update the component version (minor or patch) in the component manifest file (fo
 
 ## Issues while updating existing code components
 
-- If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.
 - If you have created a code component using the CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the updates to the `package.json` file as shown below:
    
    ```JSON
@@ -64,13 +63,13 @@ Update the component version (minor or patch) in the component manifest file (fo
      <?xml version="1.0" encoding="utf-8"?>  
      <configuration>  
      <packageSources>  
-         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
+         <add key="YourFeedName" value="https://contoso.com/_packaging/YourFeedName/nuget/v3/index.json" />  
       </packageSources>  
       <packageSourceCredentials>  
-      <CRMSharedFeed>  
+      <YourFeedName>  
       <add key="Username" value="anything" />  
       <add key="Password" value="User PAT" />  
-        </CRMSharedFeed>  
+        </YourFeedName>  
         </packageSourceCredentials>  
        </configuration>
      ```
