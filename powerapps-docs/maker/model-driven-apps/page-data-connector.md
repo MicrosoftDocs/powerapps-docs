@@ -32,6 +32,7 @@ Publishing a model-driven app with custom pages will consolidate all of the conn
 | [Outlook](../canvas-apps/connections/connection-office365-outlook.md) | Verified |
 | [SharePoint Online](../canvas-apps/connections/connection-sharepoint-online.md) | Verified |
 | [SQL Server](../canvas-apps/connections/connection-azure-sqldatabase.md) | Verified | Includes AAD Auth, Sql Server Auth, Windows Auth, and Windows Auth non-shared | 
+| Power Automate | Verified |
 | [Teams](/connectors/teams/) | Verified |
 | [Custom connector](../canvas-apps/register-custom-api.md) | Partial | Verified with non-auth
 | [Excel Online for Business](../canvas-apps/connections/connection-excel.md) | Verified |  |
@@ -41,14 +42,12 @@ Note: connectors on the supported list expected to work with on-prem gateway
 
 ## Upcoming changes to connectors for custom pages
 
-* Power Automate
 * Environment variable support for connections
 * Connection References support for shared connections
 
 ## Known issues
 
 * No support to enable bypassing Microsoft connectors
-* Error when Flow is used in custom connector
 * Unable to use Excel stored in two or more of OneDrive, Box, Dropbox, or Google Drive within a single model-driven app.  The new Excel Online connector doesn't have this limitation.
 * Missing consent prompt for the cross environment Dataverse connection
 
