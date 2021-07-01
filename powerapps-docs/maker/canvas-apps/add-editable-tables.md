@@ -207,6 +207,35 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
 
     ![Edit or cancel with change to gallery](./media/add-editable-tables/edit-cancel-in-action.png "Edit or cancel with change to gallery")
 
+    > [!TIP]
+    > You can use the **Preview** button from top-right side of the screen to preview the app, or use F5 key on the keyboard. Another quick alternative for testing is to press the **Alt** key on the keyboard, and select the button while keeping the key pressed. This method also simulates app's preview functionality for the specific selection while key remains pressed.
+
+## Step 6: Add search capability
+
+As the data in the connected data source grows, it becomes difficult to find a specific row. This step adds search capability to the app to filter the gallery with searched keywords making it easier to find relevant data.
+
+1. Add a text input control in the middle of the canvas, above the gallery.
+
+1. Update the **Items** property for the gallery with the following formula instead of the table name, replacing table and control names as appropriate.
+
+    ```powerapps-dot
+    If(IsBlank(TextInput15.Text),'Editable tables',Filter('Editable tables',(TextInput15.Text in Product) || TextInput15.Text in Segment))
+    ```
+
+    - [If](functions/function-if.md) function checks for condition whether the search terms are specified, or blank. The gallery is populated depending on the listed items.
+    - [IsBlank](functions/function-isblank-isempty.md) function checks the condition whether the search text is specified, or not.
+    - "Editable tables" is the name of the connected sample data source in this example. This value is set as the default if no search term is specified.
+    - [Filter](functions/function-filter-lookup.md) function filters the items in the gallery depending on the text criteria set within this function. This function is used to filter the gallery depending on the searched term.
+    - "TextInput15" is the name of the text input control being used as the search box to filter the gallery.
+    - "Product" and "Segment" are the names of the columns that are searched for using the text defined in the "TextInput15" control using the '.Text" syntax.
+    - "In" checks for the value of text input control to the specified column in the connected data source.
+    - "||" is the "OR" condition, signifying the search should be performed for Product, or Segment columns. Likewise, you can update formula to suite your specific business needs.
+
+    ![Filter gallery based on the criteria defined](./media/add-editable-tables/filter-gallery.png "Filter gallery based on the criteria defined")
+
+    > [!TIP]
+    > You can retain older functions, or add comments, using "//" inside the formula bar. This method can be more useful for more complex formulas, or to keep older functionality in case if you'd want to revert later.
+
 
 
 <!--- || -->
