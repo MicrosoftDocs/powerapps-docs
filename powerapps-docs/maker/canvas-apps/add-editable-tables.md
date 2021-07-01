@@ -256,6 +256,10 @@ For example, the completed screen looks like this with the controls and properti
 
 ![Final version of app with all controls and properties configured](./media/add-editable-tables/final-app.png "Final version of app with all controls and properties configured")
 
+## Step 8: Save, publish and share
+
+Now that you've completed the sample app, [save, publish](save-publish-app.md) and share the app [within your organization](share-app.md), or with [guests](share-app-guests.md).
+
 ## See also
 
 - [Control reference](reference-properties.md)
