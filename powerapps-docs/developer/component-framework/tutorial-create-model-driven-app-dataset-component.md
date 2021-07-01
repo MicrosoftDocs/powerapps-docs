@@ -1,8 +1,7 @@
 ---
 title: "Creating a model-driven app dataset component in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement a dataset component using Power Apps component framework"
-manager: kvivek
-ms.date: 06/25/2021
+ms.date: 06/30/2021
 ms.service: "powerapps"
 ms.custom: "intro-internal"
 ms.topic: "index-page"
