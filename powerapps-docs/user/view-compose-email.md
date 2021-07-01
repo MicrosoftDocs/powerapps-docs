@@ -53,11 +53,11 @@ Legend
 1. **Form**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
 2. **Expand**. The **Expand** ![Expand icon](media\email-expand-icon.png "xpand email") icon allows you to compose your email in a full-screen view and minimize when done.
 3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default.<BR>
-  For more information, see [Editor functionality](customer-service-hub-user-guide-email-overview.md#formatting-options) and [Accessibility shortcuts](customer-service-hub-user-guide-email-overview.md#accessibility-shortcuts). 
+  For more information, see [Use the rich text editor toolbar in emai](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). 
 4. **Body**. The body is where you compose and/or reply to an email.
 5. **Insert Signature**. Use this command to personalize your message.  
 6. **Insert Template**. This is used to apply an email template. <BR>
-For more information, see [Insert an email template](customer-service-hub-user-guide-email-insert-template.md).
+For more information, see [Insert an email template](insert-email-template.md).
 
    > [!Note]
    > The **To** box must contain a recipient to select a template.
@@ -73,7 +73,6 @@ For more information, see [Insert an email template](customer-service-hub-user-g
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
 
-For more information on enhanced email and configurations, see [Enable the enhanced email experience](customer-service-hub-user-guide-email-admin.md#enable-the-enhanced-email-experience).
 
 ### Reply to an email
 The way you can reply to an email depends on where you are in your app. 
