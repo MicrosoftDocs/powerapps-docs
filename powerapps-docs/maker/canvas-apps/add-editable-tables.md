@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/11/2021
+ms.date: 07/01/2021
 ms.author: denisem
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 
 # Add editable tables in canvas apps
 
-Designing a productivity application to have related data and functions in one place enables you to achieve more without having to switch back and fourth between the screens. Microsoft Excel is one such example that allows editing data real-time in fast and efficient way.
+Designing a productivity application to have related data and functions in one place enables you to achieve more without having to switch back and forth between the screens. Microsoft Excel is one such example that allows editing data real time in fast and efficient way.
 
 Using Power Apps, you can apply the same concept by providing it as a front end to any data source. You're also able to customize it even more.
 
@@ -44,6 +44,12 @@ A new main form has been created to add sample data:
 ![New main form for adding data to Dataverse table](./media/add-editable-tables/main-form.png "New main form for adding data to Dataverse table")
 
 To learn about how to create a main form with the required columns, see [Create a form](/powerapps/maker/model-driven-apps/create-and-edit-forms#create-a-form). Be sure to use the correct [form order](/powerapps/maker/model-driven-apps/control-access-forms#set-the-form-order) for adding records using the new form.
+
+## Sample app demo
+
+At the end of this tutorial, the app will look like the following animation.
+
+![Admin Catalog Management - sample app demo](./media/add-editable-tables/admin-catalog-management-demo.gif "Admin Catalog Management - sample app demo")
 
 ## Step 1: Create blank app
 
@@ -163,7 +169,7 @@ This step adds a blank vertical gallery to edit the items as an editable table.
 
     ![OnChange formula for the gallery](./media/add-editable-tables/gallery-onchange.png "OnChange formula for the gallery")
 
-1. Repeat the previous step for each additional text input control added for rest of the columns from the connected data source. Ensure the formula is updated to use the correct column and control names.
+1. Repeat the previous step for each text input control added for rest of the columns from the connected data source. Ensure the formula is updated to use the correct column and control names.
 
 ## Step 5: Set up edit and cancel options
 
@@ -185,7 +191,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
     - "Gallery2" in this formula is the name of the gallery.
     - **DisplayMode** is the DisplayMode property for the selected gallery.
     - "galleryDisplayMode" is the new variable that this formula creates to store the value of the gallery's display mode.
-    - [Set](functions/function-set.md) function sets the "galleryDisplayMode" variable defined in the previous line with the value of "Disabled" using "DisplayMode.Disabled". With disabled display mode, the gallery is not editable by default when the app starts (app OnStart).
+    - [Set](functions/function-set.md) function sets the "galleryDisplayMode" variable defined in the previous line with the value of "Disabled" using "DisplayMode.Disabled". With disabled display mode, the gallery isn't editable by default when the app starts (app OnStart).
 
 1. Select the blank vertical gallery, and then select the **DisplayMode** property.
 
@@ -216,7 +222,7 @@ As the data in the connected data source grows, it becomes difficult to find a s
 
 1. Add a text input control in the middle of the canvas, above the gallery.
 
-1. Update the **Items** property for the gallery with the following formula instead of the table name, replacing table and control names as appropriate.
+1. Update the **Items** property for the gallery with the following formula instead of the table name, replacing table, and control names as appropriate.
 
     ```powerapps-dot
     If(IsBlank(TextInput15.Text),'Editable tables',Filter('Editable tables',(TextInput15.Text in Product) || TextInput15.Text in Segment))
@@ -227,7 +233,7 @@ As the data in the connected data source grows, it becomes difficult to find a s
     - "Editable tables" is the name of the connected sample data source in this example. This value is set as the default if no search term is specified.
     - [Filter](functions/function-filter-lookup.md) function filters the items in the gallery depending on the text criteria set within this function. This function is used to filter the gallery depending on the searched term.
     - "TextInput15" is the name of the text input control being used as the search box to filter the gallery.
-    - "Product" and "Segment" are the names of the columns that are searched for using the text defined in the "TextInput15" control using the '.Text" syntax.
+    - "Product" and "Segment" are the names of the columns that are searched for using the text defined in the "TextInput15" control using the `.Text` syntax.
     - "In" checks for the value of text input control to the specified column in the connected data source.
     - "||" is the "OR" condition, signifying the search should be performed for Product, or Segment columns. Likewise, you can update formula to suite your specific business needs.
 
@@ -236,22 +242,25 @@ As the data in the connected data source grows, it becomes difficult to find a s
     > [!TIP]
     > You can retain older functions, or add comments, using "//" inside the formula bar. This method can be more useful for more complex formulas, or to keep older functionality in case if you'd want to revert later.
 
+## Step 7: Miscellaneous changes such as branding, profile information, and reset
 
+The sample app is complete with the expected functionality in this tutorial. However, extra considerations can be added&mdash;such as&mdash;the ability to reset the filter text input control, branding such as title for the gallery and app, and user profile details. You can also do more, start with [Add, and configure controls in canvas apps](add-configure-controls.md).
 
-<!--- || -->
-1. Insert a new Form control by clicking Insert > Forms > Edit Form
+The following table summarizes all the branding, profile, and reset information added to the sample app. Use the method described earlier in this article to work with different controls and properties. Ensure to replace the table, connector, and control names as appropriate.
 
-1. In the flyout, connect the data source to the one you just connected to, or manually update the DataSource property in the formula bar.
+| Capability | Control | Properties | Additional information |
+| - | - | - | - |
+| App banner/label at the top of the screen | Text label | **Text** - "Admin Catalog Management" <br> **Font size** - 28 <br> **Fill color** - Blue <br> **Text alignment** - Align center | Change all values as appropriate. |
+| Add user display name to the top-right side of the screen | Text label | **Text** - `Office365Users.MyProfileV2().displayName` | Connect to Microsoft 365 first by adding a connection to [Office 365 Users](connections/connection-office365-users.md) |
+| Add user profile photo on the left-side of the user display name on the top-right side of the screen | Image | **Image** - `Office365Users.UserPhotoV2(Office365Users.MyProfileV2().userPrincipalName)` | Office365Users.UserPhotoV2(Office365Users.MyProfileV2().userPrincipalName) |
+| Reset the search text box on the top-left corner of the screen | Icon of type "Reload" | **OnSelect** - `Reset(TextInput15)` where "TextInput15" is the text input control used as the search box. | When selected, it will reset the search text box resulting in the gallery to display all data by default. |
+| Update text for **Add product** button | Add product button | **Text** - "Add new product" | Change as appropriate. |
+| Add a label above the gallery, on the left-side of the search input box to signify current products | Text label | **Text** - "Current products" <br> **Font size** - 16 <br> **Font weight** - Bold | Change as appropriate. |
+| Add hint text for search text input box | Text input | **Hint Text** - "Search products or segments" | Change as appropriate, and ensure the list of fields (such as Products, Segments) aligns with the column names in your data source. |
 
-1. Change the Form.DisplayMode property to New (or FormMode.New)
+For example, the completed screen looks like this with the controls and properties configured above:
 
-1. Make sure to add a button to submit the form – Button.OnSelect = NewForm(Form)
-
-   ![Add a button formula](./media/add-editable-tables/add-button-formula.png "Add a button formula.")
-
-
-
-See additional documentation on the form control here
+![Final version of app with all controls and properties configured](./media/add-editable-tables/final-app.png "Final version of app with all controls and properties configured")
 
 ## See also
 
