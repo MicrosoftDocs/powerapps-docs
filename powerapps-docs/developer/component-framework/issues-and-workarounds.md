@@ -67,8 +67,8 @@ Update the component version (minor or patch) in the component manifest file (fo
       </packageSources>  
       <packageSourceCredentials>  
       <YourFeedName>  
-      <add key="Username" value="YourUsername" />  
-      <add key="Password" value="YourPassword" />  
+      <add key="Username" value="anything" />  
+      <add key="Password" value="User PAT" />  
         </YourFeedName>  
         </packageSourceCredentials>  
        </configuration>
