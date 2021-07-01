@@ -1,52 +1,49 @@
 ---
-title: "Add a custom page to your model-driven app (preview)" 
-description: ""
-ms.custom: ""
-ms.date: 04/02/2020
-ms.reviewer: ""
+title: "Add a custom page to your model-driven app" 
+description: " Learn how to add a custom page to a model-driven app"
+ms.date: 06/29/2021
+ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "How-to"
 author: "aorth"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
-ms.author: "matp"
+ms.author: "aorth"
 manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
   - "PowerApps"
-  - D365CE
 ---
-# Add a custom page to your model-driven app (preview)
+# Add a custom page to your model-driven app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic guides creating and editing a custom page for a model-driven app using the modern app designer.
+This topic guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom page must be created from a solution either with from the modern app designer and or the solution explorer using New > Page.  The custom page is a different canvas type than the normal standalone canvas app.
+  > Custom page must be created from a solution either from the modern app designer and or the Solution area in Power Apps using **New** > **Page**. The custom page is a different canvas app type than the normal standalone canvas app.
 
 ## Create or edit a model-driven app using modern app designer
 
-The following steps walk through opening the new modern app designer which is needed to add custom pages into the model-driven app.
+The following steps walk you through opening the new modern app designer, which is needed to add custom pages into a model-driven app.
 
 ### Create a new model-driven app using modern app designer
 
-1. Open up [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
-1. Switch to Solutions and open or create a solution to contain the new model-driven app
+1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
 
-1. Click **New > App > Model-driven app**
+1. Select **New** > **App** > **Model-driven app**
 
-1. Select **Use modern app designer (preview)** and click **Next**
+1. Select **Use modern app designer**, and then select **Next**
 
     > [!div class="mx-imgBorder"]
     > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")
 
-1. Enter the new app's name
+1. Enter the new app's name.
 
     > [!div class="mx-imgBorder"]
     > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
@@ -55,22 +52,22 @@ The following steps walk through opening the new modern app designer which is ne
 
 1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
-1. Switch to Solutions and open the solution containing the existing model-driven app
+1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Open the model-driven app menu and click **Edit** > **Edit in preview** to open the modern app designer
+1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
 
     > [!div class="mx-imgBorder"]
     > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
 
 ## Create or edit a custom page
 
-Custom pages can be created from two places.  The first is while authoring a model-driven app in the modern app designer.  The other is from the solution explorer.  Custom pages can be edited from the solution explorer.  Custom pages will not show up in the Home or Apps areas of make.powerapps.com.
+Custom pages can be created from two places. The first is while authoring a model-driven app in the modern app designer. The other is from the **Solutions** area in Power Apps. Custom pages can be edited from the the **Solutions** area. Custom pages won't appear in the **Home** or **Apps** areas of make.powerapps.com.
 
 ### Create new custom page from modern app designer
 
-1. Open modern app designer
+1. Open modern app designer.
 
-1. Click **New custom canvas page**
+1. Select **New custom canvas page**.
 
     > [!div class="mx-imgBorder"]
     > ![App designer create new page](media/add-page-to-model-app/app-designer-create-new-page.png "App designer create new page")
