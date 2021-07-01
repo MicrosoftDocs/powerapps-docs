@@ -2,7 +2,7 @@
 title: "Creating a model-driven app field component in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement a field components using Power Apps component framework"
 manager: kvivek
-ms.date: 06/25/2021
+ms.date: 06/30/2021
 ms.service: "powerapps"
 ms.custom: "intro-internal"
 ms.topic: "index-page"
