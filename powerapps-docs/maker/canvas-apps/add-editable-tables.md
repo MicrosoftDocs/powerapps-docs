@@ -106,6 +106,10 @@ This step adds a form control to add new items.
 
     ![Button OnSelect - new form](./media/add-editable-tables/button-onselect-newform.png "Button OnSelect - new form")
 
+## Step 4: Set up gallery as editable table
+
+This step adds a blank vertical gallery to edit the items as an editable table.
+
 1. On the left-pane, select **+** (Insert) > **Layout** > **Blank vertical gallery**.
 
 1. Select the table from Dataverse as the data source.
@@ -158,6 +162,52 @@ This step adds a form control to add new items.
     - "Text" for "TextInput8" is the text entered in the selected cell within the editable table on the canvas. 
 
     ![OnChange formula for the gallery](./media/add-editable-tables/gallery-onchange.png "OnChange formula for the gallery")
+
+1. Repeat the previous step for each additional text input control added for rest of the columns from the connected data source. Ensure the formula is updated to use the correct column and control names.
+
+## Step 5: Set up edit and cancel options
+
+This step adds the options to edit and cancel the edit progress. Gallery having text input controls editable by default may be subject to unintentional updates. Having an explicit edit option, and then to stop edit capability, ensures the edits are always expected.
+
+1. Select **Insert** from the top menu > **Icons**, and add two icons - **Edit**, and **Cancel (badge)**.
+
+    ![Ability to edit or cancel](./media/add-editable-tables/edit-cancel.png "Ability to edit or cancel")
+
+1. Select **Tree view** from the left-pane, and then select **App**.
+
+1. Select the app **OnStart** property, and add the following formula with changes to gallery name as appropriate:
+
+    ```powerapps-dot
+    Gallery2.DisplayMode = "galleryDisplayMode";
+    Set(galleryDisplayMode, DisplayMode.Disabled);
+    ```
+
+    - "Gallery2" in this formula is the name of the gallery.
+    - **DisplayMode** is the DisplayMode property for the selected gallery.
+    - "galleryDisplayMode" is the new variable that this formula creates to store the value of the gallery's display mode.
+    - [Set](functions/function-set.md) function sets the "galleryDisplayMode" variable defined in the previous line with the value of "Disabled" using "DisplayMode.Disabled". With disabled display mode, the gallery is not editable by default when the app starts (app OnStart).
+
+1. Select the blank vertical gallery, and then select the **DisplayMode** property.
+
+1. Update the property value from `Edit` to `galleryDisplayMode`. This change ensures the gallery's mode is always defined using the value of the "galleryDisplayMode" variable created in the previous step.
+
+1. Update the properties and formulas for the icons as below:
+
+    | Icon | Property | Formula |
+    | - | - | - |
+    | Edit | OnSelect | `Set(galleryDisplayMode, DisplayMode.Edit)` |
+    | Edit | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
+    | Cancel | OnSelect | `Set(galleryDisplayMode, DisplayMode.Disabled)` |
+    | Cancel | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
+
+    - [Set](functions/function-set.md) function sets the display mode of the gallery depending on which icon is selected.
+    - The variable "galleryDisplayMode" controls the visibility of the edit or cancel icons. When the gallery is editable, only cancel button appears. And only edit button appears when gallery is disabled.
+
+1. Overlap edit and cancel icons, since we're managing the visibility for both icons depending on the state of the gallery.
+
+    ![Edit or cancel with change to gallery](./media/add-editable-tables/edit-cancel-in-action.png "Edit or cancel with change to gallery")
+
+
 
 <!--- || -->
 1. Insert a new Form control by clicking Insert > Forms > Edit Form
