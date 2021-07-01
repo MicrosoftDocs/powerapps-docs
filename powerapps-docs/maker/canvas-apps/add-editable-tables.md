@@ -245,8 +245,8 @@ The following table summarizes all the branding, profile, and reset information 
 | Capability | Control | Properties | Additional information |
 | - | - | - | - |
 | App banner/label at the top of the screen | Text label | **Text** - "Admin Catalog Management" <br> **Font size** - 28 <br> **Fill color** - Blue <br> **Text alignment** - Align center | Change all values as appropriate. |
-| Add user display name to the top-right side of the screen | Text label | **Text** - `Office365Users.MyProfileV2().displayName` | Connect to Microsoft 365 first by adding a connection to [Office 365 Users](connections/connection-office365-users.md) |
-| Add user profile photo on the left-side of the user display name on the top-right side of the screen | Image | **Image** - `Office365Users.UserPhotoV2(Office365Users.MyProfileV2().userPrincipalName)` | Office365Users.UserPhotoV2(Office365Users.MyProfileV2().userPrincipalName) |
+| Add user display name to the top-right side of the screen | Text label | **Text** - `Office365Users.MyProfileV2().displayName` | Connect to Microsoft 365 first by adding a connection to [Office 365 Users](connections/connection-office365-users.md). |
+| Add user profile photo on the left-side of the user display name on the top-right side of the screen | Image | **Image** - `Office365Users.UserPhotoV2(Office365Users.MyProfileV2().userPrincipalName)` | Connect to Microsoft 365 first by adding a connection to [Office 365 Users](connections/connection-office365-users.md). |
 | Reset the search text box on the top-left corner of the screen | Icon of type "Reload" | **OnSelect** - `Reset(TextInput15)` where "TextInput15" is the text input control used as the search box. | When selected, it will reset the search text box resulting in the gallery to display all data by default. |
 | Update text for **Add product** button | Add product button | **Text** - "Add new product" | Change as appropriate. |
 | Add a label above the gallery, on the left-side of the search input box to signify current products | Text label | **Text** - "Current products" <br> **Font size** - 16 <br> **Font weight** - Bold | Change as appropriate. |
