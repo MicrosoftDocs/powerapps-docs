@@ -80,21 +80,33 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: FAQs about activities
-        href: ../user/faq-for-timeline-and-activity.md
-      - name: Known issues for activities
-        href: ../user/activities-known-issues.md     
+        href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
       items:
-      - name: View and create email through the activities grid
+      - name: Understand the email experience
         href: ../user/view-create-email.md
-      - name: Send email using the enhanced email experience
-        href: ../user/enhanced-email.md
-      - name: Insert an email template
-        href: ../user/insert-email-template.md
+      - name: View, compose and respond to email
+        href: ../user/view-compose-email.md
+      - name: Attach a file to email
+        href: ../user/attach-email.md
+      - name: Use the rich text editor toolbar in email
+        href: ../user/email-rich-text-editor.md
       - name: Send email to multiple recipients
         href: ../user/direct-email.md
       - name: Resolve an unresolved email recipient
         href: ../user/unresolved-email-recipient.md
+      - name: FAQs about email
+        href: ../user/activities-known-issues.md    
+      - name: Email templates
+        items:
+        - name: Create email templates
+          href: ../user/email-template-create.md
+        - name: Insert an email template
+          href: ../user/insert-email-template.md
+        - name: Convert an email to a template
+          href: ../user/email-template-convert.md
+        - name: Create a signature for emails
+          href: ../user/email-signature.md
     - name: Work with grid filters
       items:
       - name: Use grid filters
