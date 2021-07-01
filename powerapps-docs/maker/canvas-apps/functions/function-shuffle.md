@@ -1,6 +1,6 @@
 ---
-title: Shuffle function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Shuffle function in Power Apps
+title: Shuffle function in Power Apps
+description: Reference information including syntax and examples for the Shuffle function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

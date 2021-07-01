@@ -1,6 +1,6 @@
 ---
-title: Create a rule | Microsoft Docs
-description: Step-by-step instructions for building app logic by creating rules
+title: Create a rule in canvas apps
+description: Learn about how to build app logic by creating rules in canvas apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

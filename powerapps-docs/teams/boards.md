@@ -1,5 +1,5 @@
 ---
-title: Boards (Preview) sample app
+title: Boards sample app (Preview)
 description: Learn how to use the Boards app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Boards (Preview) sample app
+# Boards sample app (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 

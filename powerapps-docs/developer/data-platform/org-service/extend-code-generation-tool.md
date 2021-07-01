@@ -1,8 +1,8 @@
 ---
 title: "Create extensions for the code generation tool (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The SDK download package includes an extension to the CrmSvcUtil code generation tool that you can use to generate enumerations for all option set values including global option sets, picklist, state, and status values." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The SDK download package includes an extension to the CrmSvcUtil code generation tool that you can use to generate enumerations for all choices (optionset) values including global choices, picklist, state, and status values." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/02/2020
+ms.date: 06/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Create extensions for the code generation tool
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You can extend the functionality of the code generation tool by specifying additional command-line parameters and parameter values. To specify a parameter, add the following to the command line: /\<*parametername*>:\<*class name*>,\<*assembly name*>. Note that assembly name does not include the .dll extension. As an alternative, you can add the equivalent value to the config file in the format “<add key=”\<*parametername*>” value=”\<*class name*>,\<*assembly name*>” />”.  
 
@@ -43,7 +44,7 @@ The `Microsoft.Crm.Services.Utility` namespace is defined in CrmSvcUtil.exe. Add
 
 <a name="Generate_Enums"></a>
 
-## Sample extension to generate enumerations for option sets
+## Sample extension to generate enumerations for choices (option sets)
 
 The following sample code demonstrates how to write an extension.  
 
@@ -107,11 +108,11 @@ The **GeneratePicklistEnums** sample extension outputs a source code file that c
 
 In addition, it includes a helper code file that contains the enumerations generated for all out-of-the-box values. These enumerations can be used in your code by adding the file `SampleCode\CS\HelperCode\OptionSets.cs` or `SampleCode\VB\HelperCode\OptionSets.vb` to your project.
 
-Each enumeration can be used to test or set the value for a property. Typically this property is an entity attribute but there are a few that are used for other properties.
+Each enumeration can be used to test or set the value for a property. Typically this property is a table column (entity attribute) but there are a few that are used for other properties.
 
 ### Usage Example
 
-The following example shows how to use one of these enumerations to set a value in the `Account` entity.
+The following example shows how to use one of these enumerations to set a value in an account.
 
 ```csharp
 // Instantiate an account object. Note the use of the option set enumerations defined

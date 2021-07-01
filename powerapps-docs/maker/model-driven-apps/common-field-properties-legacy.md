@@ -1,13 +1,13 @@
 ---
 title: Model-driven app common column properties in Power Apps | MicrosoftDocs
-description: Understand the Common column properties for Main form
+description: Understand how to view the common column properties for a main form.
 Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.date: 02/25/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

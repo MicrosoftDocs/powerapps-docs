@@ -1,13 +1,13 @@
 ---
-title: Create a detail gallery in a canvas app | Microsoft Docs
-description: Create a detail gallery in a canvas app to manage data for Northwind Traders
+title: Create a detail gallery in a canvas app
+description: Learn about how to create a detail gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/06/2019
+ms.date: 05/13/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -53,10 +53,7 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Add a blank vertical gallery](media/northwind-orders-canvas-part3/details-03.png)
 
-    The new gallery, which will show order details, appears in the upper-left corner:
-
-    > [!div class="mx-imgBorder"]
-    > ![Default location of order-details gallery](media/northwind-orders-canvas-part3/details-04.png)
+    The new gallery, which will show order details, appears in the upper-left corner.
 
 1. Close the fly out data source dialog, and then resize and move the detail gallery to the lower-right corner, below the new title bar:
 
@@ -74,10 +71,9 @@ Before you start this topic, you must install the database as described earlier 
 
     If an error appears, confirm that the order gallery is named **Gallery1** (in the **Tree view** pane near the left edge). If that gallery has a different name, rename it **Gallery1**.
 
-    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** entity. If that order contains one or more line items, the record in the **Orders** entity is linked to one or more records in the **Order details** entity, and data from those records appears in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** entities. The formula that you specified "walks" that relationship by using dot notation:
+    You've just linked the two galleries. When the user selects an order in the order gallery, that selection identifies a record in the **Orders** table. If that order contains one or more line items, the record in the **Orders** table is linked to one or more records in the **Order details** table, and data from those records appears in the detail gallery. This behavior reflects the one-to-many relationship that was created for you between the **Orders** and **Order Details** tables. The formula that you specified "walks" that relationship by using dot notation:
 
-    > [!div class="mx-imgBorder"]
-    > ![One-to-many relationship between the Orders entity and the Order Details entity](media/northwind-orders-canvas-part3/schema-orders-rel.png)
+    ![One-to-many relationship between the Orders table and the Order Details table](media/northwind-orders-canvas-part3/schema-orders-rel.png)
 
 ## Show product names
 
@@ -108,22 +104,20 @@ Before you start this topic, you must install the database as described earlier 
     > [!div class="mx-imgBorder"]
     > ![Show product name in order detail](media/northwind-orders-canvas-part3/details-09.png)
 
-    This expression walks from a record in the **Order Details** entity. The record is held in **ThisItem** over to the **Order Products** entity through a many-to-one relationship:
+    This expression walks from a record in the **Order Details** table. The record is held in **ThisItem** over to the **Order Products** table through a many-to-one relationship:
 
-    > [!div class="mx-imgBorder"]
-    > ![Many-to-one relationship between the Order Details entity and the Order Product entity](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
+    ![Many-to-one relationship between the Order Details table and the Order Product table](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
 
-    The **Product Name** field (and other fields that you're about to use) are extracted:
+    The **Product Name** column (and other columns that you're about to use) are extracted:
 
-    > [!div class="mx-imgBorder"]
-    > ![Fields in the Order Products entity](media/northwind-orders-canvas-part3/schema-products-fields.png)
+    ![Column in the Order Products table](media/northwind-orders-canvas-part3/schema-products-fields.png)
 
 ## Show product images
 
 1. On the **Insert** tab, insert an [**Image**](controls/control-image.md) control into the detail gallery:
 
     > [!div class="mx-imgBorder"]
-    > ![Insert image control](media/northwind-orders-canvas-part3/details-10.png)
+    > ![Insert image control on canvas](media/northwind-orders-canvas-part3/details-10.png)
 
 1. Resize and move the image and the label to be side by side.
 
@@ -159,7 +153,7 @@ Before you start this topic, you must install the database as described earlier 
     ThisItem.Quantity
     ```
 
-    This formula pulls information directly from the **Order Details** entity (no relationship required).
+    This formula pulls information directly from the **Order Details** table (no relationship required).
 
     > [!div class="mx-imgBorder"]
     > ![Show product quantity](media/northwind-orders-canvas-part3/details-13b.png) 
@@ -167,7 +161,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-14.png)
+    > ![Change alignment to right](media/northwind-orders-canvas-part3/details-14.png)
 
 1. On the **Insert** tab, insert another label into the detail gallery, and then resize and move the label to the right of the quantity label.
 
@@ -185,7 +179,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-16.png)
+    > ![Change alignment towards right](media/northwind-orders-canvas-part3/details-16.png)
 
 1. On the **Insert** tab, insert another label control into the detail gallery, and then resize and move the new label to the right of the unit price.
 
@@ -203,7 +197,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Home** tab, change the alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/details-18.png)
+    > ![Change alignment on right](media/northwind-orders-canvas-part3/details-18.png)
 
     You're done adding controls to the detail gallery for now.
 
@@ -214,7 +208,7 @@ Before you start this topic, you must install the database as described earlier 
 1. On the **Insert** tab, insert another label on to the screen:
 
     > [!div class="mx-imgBorder"]
-    > ![Insert label](media/northwind-orders-canvas-part3/details-19.png)
+    > ![Screenshot of insert label](media/northwind-orders-canvas-part3/details-19.png)
 
 1. Resize and move the new label above the pictures of the products in the second title bar, and then change the text's color to white on the **Home** tab.
 
@@ -293,7 +287,7 @@ Before you start this topic, you must install the database as described earlier 
 
 ## Add space for new details
 
-In any gallery, you can show data but you can't update it or add records. Under the detail gallery, you'll add an area where the user can configure a record in the **Order Details** entity and insert that record into an order.
+In any gallery, you can show data but you can't update it or add records. Under the detail gallery, you'll add an area where the user can configure a record in the **Order Details** table and insert that record into an order.
 
 1. Reduce the height of the detail gallery enough to make room for a single-item editing space under that gallery.
 
@@ -305,7 +299,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Insert** tab, insert a label, and then resize and move it under the detail gallery.
 
     > [!div class="mx-imgBorder"]
-    > ![Insert a label](media/northwind-orders-canvas-part3/add-details-02.png)
+    > ![Insert label](media/northwind-orders-canvas-part3/add-details-02.png)
 
 1. Double-click the text of the new label, and then press Delete.
 
@@ -323,10 +317,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 
     The [**Combo box**](controls/control-combo-box.md) control appears in the upper-left corner.
 
-1. In the fly out dialog, select the **Order Products** data source:
-
-    > [!div class="mx-imgBorder"]
-    > ![Set the combo box's Items property](media/northwind-orders-canvas-part3/add-details-09.png)
+1. In the fly out dialog, select the **Order Products** data source.
 
 1. In the **Properties** tab for the combo box, select **Edit** (next to **Fields**) to open the **Data** pane.  Ensure that the **Primary text** and **SearchField** are set to **nwind_productname**.
 
@@ -347,7 +338,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Move combo box](media/northwind-orders-canvas-part3/add-details-13.png)
 
-    In this combo box, the user will specify a record in the **Product** entity for the **Order Details** record that the app will create.
+    In this combo box, the user will specify a record in the **Product** table for the **Order Details** record that the app will create.
 
 1. While holding down the Alt key, select the combo box's down arrow.
 
@@ -411,7 +402,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Home** tab, set the text alignment of this control to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/add-details-22.png)
+    > ![Change alignment of the control to right](media/northwind-orders-canvas-part3/add-details-22.png)
 
 ## Show the unit and extended prices
 
@@ -431,7 +422,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Set the label's Text property](media/northwind-orders-canvas-part3/add-details-24.png)
 
-    This control shows the **List Price** from the **Order Products** entity. This value will determine the **Unit Price** field in the **Order Details** record.
+    This control shows the **List Price** from the **Order Products** table. This value will determine the **Unit Price** field in the **Order Details** record.
 
     > [!NOTE]
     > For this scenario, the value is read-only, but other scenarios might call for the app user to modify it. In that case, use a **Text input** control, and set its **Default** property to **List Price**.
@@ -439,7 +430,7 @@ In any gallery, you can show data but you can't update it or add records. Under 
 1. On the **Home** tab, set the text alignment of the list-price label to **Right**:
 
     > [!div class="mx-imgBorder"]
-    > ![Change alignment](media/northwind-orders-canvas-part3/add-details-25.png)
+    > ![Change alignment of control to right side](media/northwind-orders-canvas-part3/add-details-25.png)
 
 1. Copy and paste the list-price label, and then resize and move the copy to the right of the list-price label.
 
@@ -491,12 +482,12 @@ In any gallery, you can show data but you can't update it or add records. Under 
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Set the icon's OnSelect property](media/northwind-orders-canvas-part3/add-details-31.png)
+    > ![Set the icon OnSelect property](media/northwind-orders-canvas-part3/add-details-31.png)
 
     In general, the [**Patch**](functions/function-patch.md) function updates and creates records, and the specific arguments in this formula determine the exact changes that the function will make.
 
-    - The first argument specifies the data source (in this case, the **Order Details** entity) in which the function will update or create a record.
-    - The second argument specifies that the function will create a record with the default values for the **Order Details** entity unless otherwise specified in the third argument.
+    - The first argument specifies the data source (in this case, the **Order Details** table) in which the function will update or create a record.
+    - The second argument specifies that the function will create a record with the default values for the **Order Details** table unless otherwise specified in the third argument.
     - The third argument specifies that four columns in the new record will contain values from the user.
 
       - The **Order** column will contain the number of the order that the user selected in order gallery.
@@ -505,9 +496,9 @@ In any gallery, you can show data but you can't update it or add records. Under 
       - The **Unit Price** column will contain the list price of the product that the user selected for this order detail.
 
     > [!NOTE]
-    > You can build formulas that use data from any column (in the **Order Products** entity) for whatever product the app user selects in the combo box that shows products. When the user selects a record in the **Order Products** entity, not only does the product’s name appear in that combo box but also the product’s unit price appears in a label. Each lookup value in a canvas app references an entire record, not just a primary key.
+    > You can build formulas that use data from any column (in the **Order Products** table) for whatever product the app user selects in the combo box that shows products. When the user selects a record in the **Order Products** table, not only does the product’s name appear in that combo box but also the product’s unit price appears in a label. Each lookup value in a canvas app references an entire record, not just a primary key.
 
-    The **Refresh** function ensures that the **Orders** entity reflects the record that you’ve just added to the **Order Details** entity. The **Reset** function clears the product, quantity, and unit-price data so that the user can more easily create another order detail for the same order.
+    The **Refresh** function ensures that the **Orders** table reflects the record that you’ve just added to the **Order Details** table. The **Reset** function clears the product, quantity, and unit-price data so that the user can more easily create another order detail for the same order.
 
 1. Press F5, and then select the **Add** icon.
 
@@ -546,9 +537,9 @@ In any gallery, you can show data but you can't update it or add records. Under 
     > [!div class="mx-imgBorder"]
     > ![Set the icon's OnSelect property](media/northwind-orders-canvas-part3/remove-details-04.png)
 
-    As of this writing, you can't remove a record directly from a relationship, so the [**Remove**](functions/function-remove-removeif.md) function removes a record directly from the related entity. **ThisItem** specifies the record to remove, taken from the same record in the detail gallery where the Trash icon appears.
+    As of this writing, you can't remove a record directly from a relationship, so the [**Remove**](functions/function-remove-removeif.md) function removes a record directly from the related table. **ThisItem** specifies the record to remove, taken from the same record in the detail gallery where the Trash icon appears.
 
-    Again, the operation uses cached data, so the **Refresh** function informs the **Orders** entity that the app has changed one of its related entities.
+    Again, the operation uses cached data, so the **Refresh** function informs the **Orders** table that the app has changed one of its related tables.
 
 1. Press F5 to open Preview mode, and then select the Trash icon next to each **Order Details** record that you want to remove from the order.
 
@@ -562,13 +553,13 @@ In any gallery, you can show data but you can't update it or add records. Under 
 To recap, you added another gallery to show order details and controls adding and removing an order detail in the app. You used these elements:
 
 - A second gallery control, linked to the order gallery through a one-to-many relationship: **Gallery2.Items** = `Gallery1.Selected.'Order Details'`
-- A many-to-one relationship from the **Order Details** entity to the **Order Products** entity: `ThisItem.Product.'Product Name'` and `ThisItem.Product.Picture`
+- A many-to-one relationship from the **Order Details** table to the **Order Products** table: `ThisItem.Product.'Product Name'` and `ThisItem.Product.Picture`
 - The **Choices** function to get a list of products: `Choices( 'Order Details'.Product' )`
 - The **Selected** property of a combo box as the complete many-to-one related record: `ComboBox1.Selected.Picture` and `ComboBox1.Selected.'List Price'`
 - The **Patch** function to create an **Order Details** record: `Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
 - The **Remove** function to delete an **Order Details** record: `Remove( 'Order Details', ThisItem )`
 
-This series of topics has been a quick walkthrough of using Dataverse relationships and option sets in a canvas app for educational purposes. Before you release any app to production, you should consider field validation, error handling, and many other factors.
+This series of topics has been a quick walkthrough of using Dataverse relationships and choices in a canvas app for educational purposes. Before you release any app to production, you should consider field validation, error handling, and many other factors.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: SaveData, LoadData, and ClearData functions | Microsoft Docs
-description: Reference information, including syntax, for the SaveData, LoadData, and ClearData functions in Power Apps
+title: SaveData, LoadData, and ClearData functions in Power Apps
+description: Reference information including syntax and examples for the SaveData, LoadData, and ClearData functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
