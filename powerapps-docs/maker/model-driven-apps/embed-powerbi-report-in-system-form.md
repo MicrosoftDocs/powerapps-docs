@@ -161,6 +161,34 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 - The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 
+## Common issues
+- The group id is not specified in the TileUrl node of the control parameters when it may need to be.
+```xml
+<parameters>
+	<PowerBIGroupId>fd266a4c-9a02-4553-9310-80e05ee844f3</PowerBIGroupId>
+	<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
+	<TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081&amp;groupId=fd266a4c-9a02-4553-9310-80e05ee844f3</TileUrl>
+</parameters>
+```
+- Fields have different data types in PowerBI and Dataverse. They need to be the same type, e.g. string in Power BI and string in Dataverse.
+- String fields don't have escaped quotes in the Power BI filter. Below, notice ```values``` has ```[\"$a\"]``` rather than ```[$a]```.
+```json
+	{
+	        "Filter": "[{
+	                \"$schema\":\"basic\",
+	                \"target\":{
+	                        \"table\":\"My Active Accounts\",
+	                        \"column\":\"Account Name\"
+	                },
+	                \"operator\":\"In\",
+	                \"values\":[\"$a\"],
+	                \"filterType\":1
+	        }]",
+	        "Alias": {
+	                "$a": "name",
+	        }
+	}
+```
 
 ### See also
 
