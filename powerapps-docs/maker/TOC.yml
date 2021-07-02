@@ -2226,6 +2226,8 @@
                   href: ../teams/make-ideas-editable-by-original-creator.md
                 - name: Add tag to mark prioritized ideas
                   href: ../teams/add-tag-to-mark-prioritized-ideas.md
+                - name: Enable users to discuss ideas
+                  href: ../teams/extend-ideas-discussions.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
