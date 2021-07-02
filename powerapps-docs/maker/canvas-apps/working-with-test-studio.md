@@ -21,8 +21,6 @@ In this quickstart, you'll create tests for a canvas app called Kudos. You can a
 
 ## Open Test Studio
 
-You don't need to enable this feature in your app like other experimental features. Test Studio is available by default for all canvas apps.
-
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 2. Create a [new app](get-started-test-drive.md) or [edit an existing app](edit-app.md).
