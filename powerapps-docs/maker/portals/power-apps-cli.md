@@ -42,7 +42,7 @@ using Microsoft Power Platform CLI.
 With portals support for Microsoft Power Platform CLI, you can now use offline-like capability
 for portals customization by making changes to the portals content. And once all
 customizations or changes are saved, upload them to the portal. When you
-download portals content using Microsoft Power Platform CLI, the content is structured in JSON
+download portals content using Microsoft Power Platform CLI, the content is structured in YAML
 and HTML formats making it easy to customize, enabling a pro-development
 experience.
 
