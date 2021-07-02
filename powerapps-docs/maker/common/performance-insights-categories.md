@@ -156,6 +156,23 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 1. You will receive OData request similar to the below. **Agent Dashboard** displayed below represents the user-friendly name of the given dashboard ID.
 
    `{"@odata.context":https://contoso.crm.dynamics.com/api/data/v9.1/$metadata#systemforms(2ff4a8cf-378b-e811-a964-000d3a30dc0a)/name,"value":"Contoso - Agent Dashboard"}`
+  
+### Synchronous plug-ins with slow external calls
+
+Insight ID: Perf.Sandbox.Performance.Plug-ins.ExternalCall
+
+Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocol. If these external services performed slowly, the plug-in itself will timeout or perform slowly.
+
+#### Motivation
+
+This insight checks out the performance of the external endpoints and detect plug-ins in your app that are impacted by the slow external calls. 
+
+#### How to improve
+
+-	[Set KeepAlive to false when interacting with external hosts in a plug-in](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set Timeout explicitly when making external calls in a plug-in](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+
+ More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/access-web-services).
 
 ## Customization
 
