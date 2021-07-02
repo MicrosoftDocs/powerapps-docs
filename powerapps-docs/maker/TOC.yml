@@ -2224,7 +2224,8 @@
                   href: ../teams/replace-notification-with-adaptive-card.md
                 - name: Make ideas editable by original creator
                   href: ../teams/make-ideas-editable-by-original-creator.md
-                  
+                - name: Add tag to mark prioritized ideas
+                  href: ../teams/add-tag-to-mark-prioritized-ideas.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
