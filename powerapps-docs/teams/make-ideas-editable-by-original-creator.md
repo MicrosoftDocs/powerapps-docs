@@ -286,7 +286,7 @@ Now, we'll add a container that will include the idea details section on our ide
 
 1. Paste the controls copied into this container.
 
-1. Update the OnSelect property of btnCampaignIdeaControls_Back\_1 to Navigate('Campaign Detail Screen').
+1. Update the OnSelect property of btnCampaignIdeaControls_Back_1 to Navigate('Campaign Detail Screen').
 
 1. Select **btnCampaignIdeaControls_Edit_1**, and update the following properties:
 
@@ -303,7 +303,7 @@ Now, we'll add a container that will include the idea details section on our ide
 
 1. Go back to the **Edit Idea Screen**, and select the container **conIdeaEditPane**, and paste the canvas. The canvas gets pasted in the container.
 
-1. Set the following properties for the canvas
+1. Set the following properties for the canvas:
 
     | Property | Value |
     | - | - |
@@ -323,7 +323,7 @@ Now, we'll add a container that will include the idea details section on our ide
 
     | Property | Value |
     | - | - |
-    | BorderThickness | If((ThisItem.appRefNo \<\> ThisItem.appRatingValue),1,0) |
+    | BorderThickness | If((ThisItem.appRefNo <> ThisItem.appRatingValue),1,0) |
     | X | 0 |
     | Y | 0 |
 
@@ -410,7 +410,6 @@ Now, we'll add a container that will include the idea details section on our ide
     
     )
     
-    1.  
     ```
 
 1. Update the **OnSelect** Property of **imgIdeaResponseRating_Select_1**:
@@ -519,13 +518,13 @@ Now, we'll add a container that will include the idea details section on our ide
     
     colResponses,
     
-    Sequence \>= 0,
+    Sequence >= 0,
     
     !IsBlank('Employee Idea Response')
     
     ),
     
-    "msft\_employeeidea_responseid",
+    "msft_employeeidea_responseid",
     
     "ResponseId"
     
