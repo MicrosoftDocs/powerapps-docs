@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/17/2021
+ms.date: 06/22/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 contributors:
@@ -48,7 +48,7 @@ Dataverse for Teams doesn't support [hidden membership groups](/graph/api/resour
 `Existing limits on this team` <br>
 `You're unable to continue due to an administrative setting on this team. You can try again with another team.`
 
-The group may have hidden membership enabled by your administrator. Try using Dataverse for Teams on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Dataverse for Teams on a new Teams team, an existing team that doesn't have hidden membership enabled, or contact your administrator.
 
 ## Localization
 
@@ -56,13 +56,17 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 
 ## Required fields
 
-There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
+There's no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
 
 ## Studio
 
 ### Classic controls
 
 Enabling [classic controls](understand-power-apps-studio.md#classic-controls) requires a refresh of Power Apps Studio.  
+
+### Fluent UI date picker control
+
+The Fluent UI date picker control doesn't yet support format string.  If you need to support special formatting, you'll need to enable classic controls and use the classic Date Picker.
 
 ### Canvas components
 
@@ -97,7 +101,7 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 
 ## Others
 
--	If a user is an owner of the Azure Active Directory (Azure AD) group associated with a team but is not also a member of that group, they may not be able to see that team in the Power Apps and Power Virtual Agents apps.
+-	If a user is an owner of the Azure Active Directory (Azure AD) group associated with a team but isn't also a member of that group, they may not be able to see that team in the Power Apps and Power Virtual Agents apps.
 
 -	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 

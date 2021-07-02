@@ -44,12 +44,12 @@ For information about types of files that are not allowed, see [System Settings 
 ## Supporting columns  
 When a file column is added to a table some additional columns are created to support it.
   
-### MaxSizeInKB column
+### MaxValue column
 
  This value represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
  
  > [!NOTE]
- > MaxSizeInKB is set when the File column is added to a table. This cannot be changed after it is set.
+ > MaxValue is set when the File column is added to a table. This cannot be changed after it is set.
   
 ## Retrieve file data
 To retrieve file column data use the following APIs.
