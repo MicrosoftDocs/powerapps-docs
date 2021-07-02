@@ -1,16 +1,19 @@
 ---
 title: Create a component for canvas apps
 description: Learn about how to create reusable components for canvas apps.
-author: yifwang
+author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 04/24/2020
-ms.author: yifwang
+ms.date: 07/01/2021
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Create a component for canvas apps
@@ -32,7 +35,7 @@ To create a component within an app, go to **Tree View**, select the **Component
 
 Selecting **New component** opens an empty canvas. You can add controls as part of the component definition on the canvas. If you edit a component in the canvas, you'll update instances of the same component in other app screens. Apps that reuse an already created component can also receive component updates after you publish component changes.
 
-You can select a component from the list of existing components in the left navigation after you select a screen. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
+You can select a component from the list of existing components in the left pane after you select a screen. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
 
 Components available inside the app are listed under the **Custom** category in a list of components inside the tree view. Components imported from component libraries are listed under the **Library components** category:
 
@@ -65,13 +68,13 @@ In this example, you'll create a menu component that resembles the following gra
 ![Final gallery](./media/create-component/menu-instance-new.png "Final gallery")
 
 > [!NOTE]
-> We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When you import components from one app to another, new updates to components in the original app do not propagate to the app that imported those components earlier. When using a component library, you get prompted to update components if components inside a library are updated and published.
+> We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When using a component library, you get prompted to update components if components inside a library are updated and published.
 
 ### Create a new component
 
-1. Sign in to [make.powerapps.com](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** and select **Canvas app from blank**. 
+1. Select **Apps** and select **Canvas app from blank**.
 
 1. Provide an app name, select any layout, and then select **Create**.
 
@@ -79,7 +82,7 @@ In this example, you'll create a menu component that resembles the following gra
 
     ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
-1. Select the new component in the left navigation, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
+1. Select the new component in the left pane, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
 
 1. In the right-hand pane, set the component's width as **150** and its height as **250**, and then select **New custom property**. You can also set the height and width to any other value as appropriate.
 
@@ -129,7 +132,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 Next, you'll add the component to a screen and specify a table of strings for the component to show.
 
-1. In the left navigation bar, select the list of screens, and then select the default screen.
+1. In the left pane, select the list of screens, and then select the default screen.
 
     ![Default screen](./media/create-component/default-screen.png "Default screen")
 
@@ -186,11 +189,17 @@ So far, you've created a component and added it to an app. Next, you'll create a
 ## Import and export components
 
 > [!NOTE]
-> This feature will be deprecated. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
+> This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
+
+The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
+
+![Enable export and import of components](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
+
+After you enable this feature, you can use the following capabilities to import and export components.
 
 ### Import components from another app
 
-To import one or more components from one app into another, select **Import components** from the **Insert** menu and then use the **Custom** drop-down menu. Or use **Components** in the tree view on the left navigation.
+To import one or more components from one app into another, select **Import components** from the **Insert** menu and then use the **Custom** drop-down menu. Or use **Components** in the tree view on the left pane.
 
 A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
 
@@ -206,7 +215,7 @@ After you create components in an app, other apps can consume the components fro
 
 You can export components to a file and download them for import to another app.
 
-Select the **Export components** option from the **Components** section in the left navigation tree view:
+Select the **Export components** option from the **Components** section in the tree view on the left pane:
 
 ![Export components tree view](./media/create-component/export-components-treeview.png "Export components tree view")
 
@@ -222,7 +231,7 @@ The downloaded component file uses the *.msapp* file name extension.
 
 ### Import components from exported components file
 
-To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left navigation. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
+To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left pane. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
 
 ![Import component file](./media/create-component/import-component-file.png "Import component file")
 
