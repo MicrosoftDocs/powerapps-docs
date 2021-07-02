@@ -1,107 +1,93 @@
 ---
-title: How to make ideas editable by original creator
-description: Learn about how to make ideas editable by original creator
+title: Make ideas editable by original creator
+description: Learn about how to make ideas editable by original creator.
 author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2021
+ms.date: 07/02/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
-    - v-ljoel
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
+  - sbahl10
 ---
 
 # Make ideas editable by original creator
 
-The Employee Ideas Power Apps sample app for Microsoft Teams provides a platform for employees to submit ideas for various campaigns (i.e., categories for grouping ideas around common themes).
+The Employee Ideas sample app for Microsoft Teams provides a platform for employees to submit ideas for various campaigns (that is, categories for grouping ideas around common themes).
 
-The Employee Ideas app solution consists of two apps:
+With the Ideas app, managers can set up campaigns, users can submit ideas, view other users’ ideas, and also vote for ideas that they like the best. The experience can be customized by the admin, or managers by editing campaigns, specifying justification questions that need to be answered by people submitting the ideas and also specify date threshold between which the campaign would be open for submitting ideas. The app also includes insights about who is submitting the greatest number of ideas and the most popular ideas during the week.
 
-1.  [Ideas app](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app) 
-    
-2.  [Manage Ideas app](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
+But what if a user wants to add more details about the idea after they submit the idea? The standard Employee Ideas app doesn't provide an edit button. But if you add an edit button, you'll want to be careful to limit which idea a user can edit, as you would likely not want someone editing ideas that were submitted by other people.
 
-With the Ideas app, Managers can setup campaigns, users can submit ideas, view other users’ ideas, and also vote for ideas that they like the best. The
-experience can be customized by the admin or managers by editing campaigns, specifying justification questions that need to be answered by people submitting the ideas and also specify date threshold between which the campaign would be open for submitting ideas. The app also includes insights about who is submitting the greatest number of ideas and the most popular ideas during the week.
+In this article, we'll learn how to enable the editing of an idea by the original creator of the idea.
 
-But what if a user wants to add more details about the idea after they submit the idea? The standard Employee Ideas app does not provide an edit button. But if you add an edit button, you will want to be careful to limit which idea a user can edit, as you would likely not want someone editing ideas that were submitted by other people.
-
-In this topic we will learn how to enable the editing of an idea by the original creator of the idea.
-
-> NOTE: before starting this topic, please review **How to customize Employee Ideas** (insert link).
+> [!NOTE]
+> Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Employee Ideas Power Apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsEmployeeIdeas.
+To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the [Employee Ideas sample app](employee-ideas.md) installed. This app can also be installed using <https://aka.ms/TeamsEmployeeIdeas>.
 
 ## Open Employee Ideas in Power Apps
 
-To start, let’s open the Employee Ideas app in Power Apps in Microsoft Teams
+To open the Employee Ideas app using Power Apps in Microsoft Teams:
 
-1.  Right click on the Power Apps icon on the Microsoft Teams app bar.
+1. Right-click on the Power Apps icon on the left-pane in Microsoft Teams.
 
-2.  Select the Build tab.
+1. Select the **Build** tab.
 
-3.  Select the Team in which the Employee Ideas app is installed from the left navigation menu.
-    
-4.  Select Installed Apps and select Ideas to open the app.
+1. Select the team in which the Employee Ideas app is installed from the left-pane.
 
-5.  The Ideas app opens.
+1. Select **Installed Apps**, and then select **Ideas** to open the app.
 
 ## Add an Edit button to the Campaign Details Screen
 
 Next, let’s add a button to launch an edit screen when viewing ideas on the campaign details screen.
 
-1.  Select the Tree view and open up the Campaign Summary Screen.
+1. Select the Tree view and open up the **Campaign Summary Screen**.
 
-2.  Press down the Alt key and select one of the campaigns from the bottom.
+1. Press down the **Alt** key on the keyboard, and select one of the campaigns from the bottom. This action opens the **Summary Detail Screen** with the list of ideas in the selected campaign.
 
-3.  The Summary Detail Screen with the list of ideas in the selected campaign opens.
-    
-4.  Select conCampaignIdeaControls from the Tree view.
+1. Select **conCampaignIdeaControls** from the Tree view on the left-pane.
 
-5.  Select the + Insert option and then select Button to add a new button to the container.
-    
-6.  Update the properties of the Button to the following
+1. Select the **+** (Insert), and then select **Button** to add a new button to the container.
 
-    - Name = btnCampaignIdeaControls_Edit
+1. Update the properties of the Button to the following:
 
-    - Text = "Edit"
-
-    - ButtonType = "Primary"
-
-    - X = Parent.Width - btnCampaignIdeaControls_Share.Width - Self.Width-30
-
-    - Y = (Parent.Height - Self.Height) / 2
-
-    - Width = 96
-
-    - Height = 32
-
-    - Visible = !locCreateNewIdea And locVisibleCampaignIdea
+    | Property | Value |
+    | - | - |
+    | Name | btnCampaignIdeaControls_Edit |
+    | Text | "Edit" |
+    | ButtonType | "Primary" |
+    | X | Parent.Width - btnCampaignIdeaControls_Share.Width - Self.Width-30 |
+    | Y | (Parent.Height - Self.Height) / 2 |
+    | Width | 96 |
+    | Height | 32 |
+    | Visible | !locCreateNewIdea And locVisibleCampaignIdea |
 
 ## Add a new screen
 
 Next, add a screen that will be used to edit the idea selected when the edit button was selected.
 
-1.  Select the Tree view from the left navigation.
+1. Select the Tree view from the left-pane.
 
-2.  Select the New screen button to add a new screen.
+1. Select the **New screen** button to add a new screen.
 
-3.  Select Blank layout.
+1. Select **Blank layout**.
 
-4.  A new screen gets added.
+1. Rename the screen to "Edit Idea Screen".
 
-5.  Rename the screen to – Edit Idea Screen.
+1. Select the **Fill** property of the screen, and set the value to `gblAppStyles.Background.Fill` in the formula bar.
 
-6.  Select the Fill property of the screen and set the value to gblAppStyles.Background.Fill in the formula bar.
-    
-7.  Go back to the Campaign Details Screen and select the Edit button.
+1. Go back to the **Campaign Details Screen**, and select the **Edit** button.
 
-8. We need to get the details of the current Idea record and send to the edit screen. To do this, update the OnSelect property to the following
+1. We need to get the details of the current Idea record and send to the edit screen. To do this, update the **OnSelect** property to the following
 
-   ```
+   ```powerapps-dot
    OnSelect = 
    
       Clear(colResponses);
@@ -168,25 +154,22 @@ Next, add a screen that will be used to edit the idea selected when the edit but
    
       );
    
-   	Navigate('Edit Idea Screen')
+    Navigate('Edit Idea Screen')
    ```
-
-   
-
 
 ### Add the header component
 
-Employee Ideas leverages a header component to provide consistent menu experience between screens. We will now copy this component to our new screen so that users can navigate to the other app screens when on our new screen.
+Employee Ideas app uses a header component to provide consistent menu experience between screens. We'll now copy this component to our new screen so that users can go to the other app screens when on our new screen.
 
-1.  Navigate to the Campaign Detail Screen.
+1. Go to the **Campaign Detail Screen**.
 
-2.  Copy the comHeader_CampaignDetail container from that screen and paste it on the new screen just added.
-    
-3.  Rename the container to comHeader_CampaignDetail\_EditScreen.
+1. Copy the **comHeader_CampaignDetail** container from that screen, and paste it on the new screen just added.
 
-4.  Select the inputHeaderSettings property of the comHeader_CampaignDetail_EditScreen and paste the following formula
-    
-    ```
+1. Rename the container to **comHeader_CampaignDetail_EditScreen**.
+
+1. Select the **inputHeaderSettings** property of the **comHeader_CampaignDetail_EditScreen**, and paste the following formula:
+
+    ```powerapps-dot
     {
     
     headerLabel: "Edit Idea",
@@ -199,45 +182,39 @@ Employee Ideas leverages a header component to provide consistent menu experienc
     
     }
     ```
-    
-    
-    
-5.  Select inputHelpIcon property from the functions list and delete the contents from the formula bar.
-    
-6.  Select inputHelpScreen property from the functions list and delete the contents from the formula bar.
-    
-7.  There is a chance that the Link button still shows up in the header though it does not really do anything.
-    
-8.  To get rid of it:
 
-    - Select the header component and go to Components tab in the Tree view.
+1. Select **inputHelpIcon** property from the functions list, and delete the contents from the formula bar.
 
-    - Select the btnHeaderExternalLink control.
+1. Select **inputHelpScreen** property from the functions list, and delete the contents from the formula bar.
 
-    - Select the Visible property of the control and select the whole thing – Ctrl + C – and then – Ctrl + V or just delete the last “)” and re-add it.
-    
-- Now when you go back to the screen, the visible property should have refreshed, and the Link button should no longer be visible.
+1. There's a chance that the Link button still shows up in the header though it does not really do anything. To remove the button:
+
+    - Select the header component and go to **Components** tab in the Tree view.
+
+    - Select the **btnHeaderExternalLink** control.
+
+    - Select the **Visible** property of the control, and remove the last bracket - “)”, and re-add it.
+
+Now when you go back to the screen, the visible property should have refreshed, and the Link button should no longer be visible.
 
 ### Add the left side navigation component
 
-1.  Navigate back to the Campaign Detail Screen and copy the container conCampaignDetailNav.
-    
-2.  Come back to the Edit Idea Screen and paste the copied container.
+1. Go back to the **Campaign Detail Screen**, and copy the container **conCampaignDetailNav**.
 
-3.  Update the following properties
+1. Come back to the **Edit Idea Screen** and paste the copied container.
 
-    - Name = conCampaignDetailNav_EditScreen
+1. Update the following properties:
 
-    - Set X = 0
+    | Property | Value |
+    | - | - |
+    | Name | conCampaignDetailNav_EditScreen |
+    | X | 0 |
 
-4.  Two errors will show up.
+    This change will result in errors, and that is expected. We'll fix them in the next steps.
 
-5.  One on imgCampaignDetail_SortGallery\_1 – DisplayMode formula.
+1. For the error on imgCampaignDetail_SortGallery_1 – DisplayMode formula, since we copied the formula from another screen, there was a variable that checked to see if it was a new idea. Since this screen is only used for edit, update the **DisplayMode** formula to:
 
-6.  Since we copied the formula from another screen, there was a variable that checked to see if it was a new idea. Since this screen is only used for
-    edit, update the DisplayMode formula to
-    
-    ```
+    ```powerapps-dot
     If(
     
     locVisibleCampaignView,
@@ -252,13 +229,10 @@ Employee Ideas leverages a header component to provide consistent menu experienc
     
     )
     ```
-    
-7.  The other error would be on galCampaignDetailNav\_1 – DisplayMode formula.
 
-8.  Since we copied the formula from another screen, there was a variable that checked to see if it was a new idea. Since this screen is only used for
-    edit, update the DisplayMode formula to
-    
-    ```
+1. For the error on galCampaignDetailNav_1 – DisplayMode formula, since we copied the formula from another screen, there was a variable that checked to see if it was a new idea. As this screen is only used for edit, update the **DisplayMode** formula to
+
+    ```powerapps-dot
     If(
     
     locVisibleCampaignView,
@@ -273,511 +247,489 @@ Employee Ideas leverages a header component to provide consistent menu experienc
     
     )
     ```
-    
-    
 
 ## Add a new container for the Idea Details section
 
-Now we will add a container that will include the idea details section on our idea edit screen.
+Now, we'll add a container that will include the idea details section on our idea edit screen.
 
-1.  Select the newly added screen (Edit Idea Screen).
+1. Select the newly added **Edit Idea Screen**.
 
-2.  Select the + Insert button from the left navigation.
+1. Select the **+** (Insert) button from the left-pane.
 
-3.  Select Layout -\> Container (just above the Media selection).
+1. Select **Layout** > **Container**. A container gets added.
 
-4.  A container gets added.
+1. Set the following properties on this container.
 
-5.  Set the following properties on this container.
+    | Property | Value |
+    | - | - |
+    | Name | conIdeaEditPane |
+    | X | 300 |
+    | Y | comHeader_CampaignDetail_EditScreen.Y + comHeader_CampaignDetail_EditScreen.Height |
+    | Width | Parent.Width - conCampaignDetailNav_1.Width |
+    | Height | Parent.Height - Self.Y |
 
-    - Name = conIdeaEditPane
+1. Add another container inside this new container using the steps above.
 
-    - X = 300
+1. Set the following properties on this container
 
-    - Y = comHeader_CampaignDetail_EditScreen.Y + comHeader_CampaignDetail_EditScreen.Height
+    | Property | Value |
+    | - | - |
+    | Name | conCampaignIdeaControls_EditScreen |
+    | X | 0 |
+    | Y | 0 |
+    | Width | Parent.Width |
+    | Height | 60 |
+
+1. Go to the **Campaign Detail Screen**, and copy the controls – **btnCampaignIdeaControls_Edit**, **btnCampaignIdeaControls_Back**, and **imgCampaignIdeaControls_Back**.
+
+1. Come back to the **Edit Idea Screen**, and select the container added earlier.
+
+1. Paste the controls copied into this container.
+
+1. Update the OnSelect property of btnCampaignIdeaControls_Back\_1 to Navigate('Campaign Detail Screen').
+
+1. Select **btnCampaignIdeaControls_Edit_1**, and update the following properties:
+
+    | Property | Value |
+    | - | - |
+    | Text | “Update” |
+    | Visible | true |
+    | X | Parent.Width - Self.Width – 20 |
+    | Y | (Parent.Height - Self.Height) / 2 |
+    | Width | 96 |
+    | Height | 32 |
+
+1. We need to add a canvas to the new container added earlier (conIdeaEditPane). To add a canvas, add a new scrollable screen - **New screen** > **Scenarios** > **Scrollable**, and copy its canvas.
+
+1. Go back to the **Edit Idea Screen**, and select the container **conIdeaEditPane**, and paste the canvas. The canvas gets pasted in the container.
+
+1. Set the following properties for the canvas
+
+    | Property | Value |
+    | - | - |
+    | Name | canvasEditScreen |
+    | X | 0 |
+    | Y | conCampaignIdeaControls_EditScreen.Y + conCampaignIdeaControls_EditScreen.Height |
+    | Width | Parent.Width |
+    | Height | Parent.Height - Self.Y |
+
+1. Go to the **Campaign Detail Screen**, and copy the **galIdeaResponses** gallery.
+
+1. Come back to the **Edit Idea Screen**, and select the canvas added in the previous step.
+
+1. Paste the gallery in the canvas. <br> An error may show up on the BorderThickness property of **shpIdeaResponseRating_Value_1**.
+
+1. Set the properties on **galIdeaResponses**:
+
+    | Property | Value |
+    | - | - |
+    | BorderThickness | If((ThisItem.appRefNo \<\> ThisItem.appRatingValue),1,0) |
+    | X | 0 |
+    | Y | 0 |
+
+1. We want to make the edit experience is consistent with the new idea experience, so we'll update the **Items** property of **galIdeaResponseRating_1** to the following:
+
+    ```powerapps-dot
+    With(
     
-    - Width = Parent.Width - conCampaignDetailNav\_1.Width
+    {varRecord: ThisItem},
     
-    - Height = Parent.Height - Self.Y
+    Table(
     
-6.  Add another container inside this new container following steps 2 and 3 above.
+    {
     
-7.  Set the following properties on this container
-
-    - Name = conCampaignIdeaControls_EditScreen
-
-    - X = 0
-
-    - Y = 0
-
-    - Width = Parent.Width
-
-    - Height = 60
-
-8.  Navigate to the Campaign Detail Screen and copy the controls – btnCampaignIdeaControls_Edit, btnCampaignIdeaControls_Back and
-    imgCampaignIdeaControls\_Back. 
+    appRefNo: 1,
     
-9.  Come back to the Edit Idea Screen and select the container added in step 6 above.
+    appRef: varRecord.appRef,
     
-10. Paste the controls copied into this container.
-
-11. Update the OnSelect property of btnCampaignIdeaControls_Back\_1 to Navigate('Campaign Detail Screen').
+    appRatingValue: varRecord.'Response Rating',
     
-12. Select btnCampaignIdeaControls_Edit_1 and update the following properties
-
-    - Text = “Update”
-
-    - Visible = true
-
-    - X = Parent.Width - Self.Width – 20
-
-    - Y = (Parent.Height - Self.Height) / 2
-
-    - Width = 96
-
-    - Height = 32
-
-13. We need to add a canvas to the new container added in step 2 above (conIdeaEditPane)
+    appRatingTextLow: varRecord.'Rating Text (Low)',
     
-14. To add a canvas, add a new scrollable screen (New screen-\>Scenarios-\>Scrollable) & copy its canvas.
+    appRatingTextHigh: varRecord.'Rating Text (High)'
     
-15. Then go back to the Edit Idea Screen and select the container conIdeaEditPane and paste the canvas there.
+    },
     
-16. The canvas gets pasted in the container.
-
-17. Set the following properties for the canvas
-
-    - Name = canvasEditScreen
-
-    - X = 0
-
-    - Y = conCampaignIdeaControls_EditScreen.Y + conCampaignIdeaControls_EditScreen.Height
+    {
     
-    - Width = Parent.Width
+    appRefNo: 2,
     
-    - Height = Parent.Height - Self.Y
+    appRef: varRecord.appRef,
     
-18. Now, navigate to the Campaign Detail Screen and copy the galIdeaResponses gallery.
+    appRatingValue: varRecord.'Response Rating',
     
-19. Come back to the Edit Idea Screen and select the canvas added in the previous step.
+    appRatingTextLow: varRecord.'Rating Text (Low)',
     
-20. Hit Ctrl + V to paste the gallery in the canvas.
-
-21. The gallery gets pasted in the canvas.
-
-22. An error may show up on the BorderThickness property of shpIdeaResponseRating_Value\_1.
+    appRatingTextHigh: varRecord.'Rating Text (High)'
     
-23. Set the properties on galIdeaResponses.
-
-    1.  BorderThickness = If((ThisItem.appRefNo \<\> ThisItem.appRatingValue),1,0)
-        
-    2.  X = 0
+    },
     
-    3.  Y = 0
+    {
     
-24.  We want to make the edit experience consistent with the new idea experience, so we will update the Items property of galIdeaResponseRating\_1 to the following
-
-```
-With(
-
-{varRecord: ThisItem},
-
-Table(
-
-{
-
-appRefNo: 1,
-
-appRef: varRecord.appRef,
-
-appRatingValue: varRecord.'Response Rating',
-
-appRatingTextLow: varRecord.'Rating Text (Low)',
-
-appRatingTextHigh: varRecord.'Rating Text (High)'
-
-},
-
-{
-
-appRefNo: 2,
-
-appRef: varRecord.appRef,
-
-appRatingValue: varRecord.'Response Rating',
-
-appRatingTextLow: varRecord.'Rating Text (Low)',
-
-appRatingTextHigh: varRecord.'Rating Text (High)'
-
-},
-
-{
-
-appRefNo: 3,
-
-appRef: varRecord.appRef,
-
-appRatingValue: varRecord.'Response Rating',
-
-appRatingTextLow: varRecord.'Rating Text (Low)',
-
-appRatingTextHigh: varRecord.'Rating Text (High)'
-
-},
-
-{
-
-appRefNo: 4,
-
-appRef: varRecord.appRef,
-
-appRatingValue: varRecord.'Response Rating',
-
-appRatingTextLow: varRecord.'Rating Text (Low)',
-
-appRatingTextHigh: varRecord.'Rating Text (High)'
-
-},
-
-{
-
-appRefNo: 5,
-
-appRef: varRecord.appRef,
-
-appRatingValue: varRecord.'Response Rating',
-
-appRatingTextLow: varRecord.'Rating Text (Low)',
-
-appRatingTextHigh: varRecord.'Rating Text (High)'
-
-}
-
-)
-
-)
-
-1.  
-```
-
-25. Update the OnSelect Property of imgIdeaResponseRating_Select\_1.
-
-```
-UpdateIf(
-
-colResponses,
-
-colResponses[@appRef] = ThisItem.appRef,
-
-{msft_responserating: ThisItem.appRefNo}
-
-);
-```
-
-26. We need to copy controls from dtcFilesImages from Campaign Detail Screen to the canvas.
-
-![List of controls under dtcFileImages](media/make-ideas-editable-by-original-creator/controls-under-dtcfileimages-group.png "List of controls under dtcFileImages")
-
-27. Select to expand the Edit Idea Screen.
-
-28. Select galIdeaResponses_2 and then paste by hitting Ctrl+V.
-
-29. A bunch of errors will pop.
-
-![Errors on idea responses gallery](media/make-ideas-editable-by-original-creator/errors-on-idea-responses-gallery.png "Errors on idea responses gallery")
-
-30. All except one are related to visibility of the controls, you can select the error and select Edit In Formula Bar.
-
-31. Set the Visible property for all these to true.
-
-32. There will be one error for lbldeaFiles_Header_2 on the Text property.
-
-33. Update the Text property to “Attachments”.
-
-34. Update the following property of lbldeaFiles_Header\_1.
-    - Y = galIdeaResponses\_1.Y + galIdeaResponses_1.Height + 20
-35. Select the Delete icon from the attachment section imgIdeaFile_Delete_1 and set the following property
-
-    - OnSelect = Remove(colFiles,ThisItem);Collect(colRemovedFiles,ThisItem)
-
-36. Select the Datacard that was added along with the canvas and update the following properties.
-
-    - X = 0
-
-    - Y = 0
-
-    - Width = Parent.Width
-
-    - Height = galIdeaFiles\_1.Y + galIdeaFiles\_1.Height + 20
-
-37. Select galIdeaFiles_1 under the Datacard.
-
-38. Select the OnSelect property and set it to Launch(ThisItem.msft_file.Value).
-
-39. Now we will set the button to patch and update the selected idea. Select the Update button from the Edit Idea Screen – Container 3 and set the OnSelect property to the following
-
-```
-UpdateContext({locSelectedIdea: gblRecordCampaignIdea.'Employee Idea'});
-
-Patch(
-
-'Employee Ideas',
-
-gblRecordCampaignIdea,
-
-{
-
-Title: LookUp(
-
-colResponses,
-
-Sequence = -2,
-
-msft_responsetext
-
-),
-
-Description: LookUp(
-
-colResponses,
-
-Sequence = -1,
-
-msft_responsetext
-
-),
-
-'Attachment Count': CountRows(
-
-Filter(
-
-colFiles,
-
-appIsNew
-
-)
-
-)
-
-}
-
-);
-
-ForAll(
-
-RenameColumns(
-
-Filter(
-
-colResponses,
-
-Sequence \>= 0,
-
-!IsBlank('Employee Idea Response')
-
-),
-
-"msft\_employeeidea_responseid",
-
-"ResponseId"
-
-),
-
-Patch(
-
-'Employee Idea Responses',
-
-LookUp(
-
-'Employee Idea Responses',
-
-'Employee Idea Response' = ResponseId
-
-),
-
-{
-
-Instructions: ThisRecord.Instructions,
-
-Question: ThisRecord.msft_employeeidea_questionid,
-
-Sequence: ThisRecord.Sequence,
-
-'Response Type': ThisRecord.'Response Type',
-
-'Response Text': ThisRecord.'Response Text',
-
-'Response Rating': ThisRecord.'Response Rating',
-
-'Rating Text (Low)': ThisRecord.'Rating Text (Low)',
-
-'Rating Text (High)': ThisRecord.'Rating Text (High)'
-
-}
-
-)
-
-);
-
-ForAll(
-
-Filter(
-
-colFiles,
-
-appIsNew
-
-),
-
-Patch(
-
-'Employee Idea Files',
-
-Defaults('Employee Idea Files'),
-
-{
-
-Idea: gblRecordCampaignIdea,
-
-Name: Text(ThisRecord.msft_name),
-
-File: {
-
-FileName: Text(ThisRecord.msft_name),
-
-Value: ThisRecord.appFileValue
-
-}
-
-}
-
-)
-
-);
-
-ForAll(
-
-colRemovedFiles,
-
-Remove(
-
-'Employee Idea Files',
-
-ThisRecord
-
-)
-
-);
-
-Set(
-
-gblRecordCampaignIdea,
-
-LookUp(
-
-'Employee Ideas',
-
-'Employee Idea' = locSelectedIdea
-
-)
-
-);
-
-ClearCollect(
-
-colResponses,
-
-Filter(
-
-'Employee Idea Responses',
-
-Idea.msft_employeeideaid = gblRecordCampaignIdea.msft_employeeideaid
-
-)
-
-);
-
-ClearCollect(
-
-colFiles,
-
-Filter(
-
-'Employee Idea Files',
-
-'Employee Idea Files'[@Idea].'Employee Idea' = gblRecordCampaignIdea.'Employee
-Idea'
-
-)
-
-);
-
-Set(
-
-gblRecordCampaignIdea,
-
-LookUp(
-
-'Employee Ideas',
-
-'Employee Idea' = locSelectedIdea
-
-)
-
-);
-
-Navigate(
-
-'Campaign Detail Screen',
-
-ScreenTransition.None,
-
-{
-
-locVisibleCampaignIdea: true,
-
-locVisibleCampaignView: false,
-
-locCreateNewIdea: false
-
-}
-
-)
-
-## 
-```
-
-## Publish the Ideas App
-
-1.  All the changes to the Bulletins app are completed.
-
-2.  The app can now be published by selecting the Publish to Teams button on the top right.
+    appRefNo: 3,
+    
+    appRef: varRecord.appRef,
+    
+    appRatingValue: varRecord.'Response Rating',
+    
+    appRatingTextLow: varRecord.'Rating Text (Low)',
+    
+    appRatingTextHigh: varRecord.'Rating Text (High)'
+    
+    },
+    
+    {
+    
+    appRefNo: 4,
+    
+    appRef: varRecord.appRef,
+    
+    appRatingValue: varRecord.'Response Rating',
+    
+    appRatingTextLow: varRecord.'Rating Text (Low)',
+    
+    appRatingTextHigh: varRecord.'Rating Text (High)'
+    
+    },
+    
+    {
+    
+    appRefNo: 5,
+    
+    appRef: varRecord.appRef,
+    
+    appRatingValue: varRecord.'Response Rating',
+    
+    appRatingTextLow: varRecord.'Rating Text (Low)',
+    
+    appRatingTextHigh: varRecord.'Rating Text (High)'
+    
+    }
+    
+    )
+    
+    )
+    
+    1.  
+    ```
+
+1. Update the **OnSelect** Property of **imgIdeaResponseRating_Select_1**:
+
+    ```powerapps-dot
+    UpdateIf(
+    
+    colResponses,
+    
+    colResponses[@appRef] = ThisItem.appRef,
+    
+    {msft_responserating: ThisItem.appRefNo}
+    
+    );
+    ```
+
+1. We need to copy controls from **dtcFilesImages** from the **Campaign Detail Screen** to the canvas.
+
+    ![List of controls under dtcFileImages](media/make-ideas-editable-by-original-creator/controls-under-dtcfileimages-group.png "List of controls under dtcFileImages")
+
+1. Select to expand the **Edit Idea Screen**.
+
+1. Select **galIdeaResponses_2**, and then paste the copied controls. When you paste the controls, you'll also see a few errors:
+
+    ![Errors on idea responses gallery](media/make-ideas-editable-by-original-creator/errors-on-idea-responses-gallery.png "Errors on idea responses gallery")
+
+1. All errors except one are related to visibility of the controls. You can select the error, and select **Edit In Formula Bar**.
+
+1. Set the **Visible** property for all these controls to true.
+
+1. There will be one error for **lbldeaFiles_Header_2** on the **Text** property.
+
+1. Update the **Text** property to “Attachments”.
+
+1. Update the **Y** property of **lbldeaFiles_Header_1** to "galIdeaResponses_1.Y + galIdeaResponses_1.Height + 20".
+
+1. Select the **Delete** icon from the attachment section **imgIdeaFile_Delete_1**, and set the **OnSelect** property to `Remove(colFiles,ThisItem);Collect(colRemovedFiles,ThisItem)`.
+
+1. Select the datacard that was added along with the canvas and update the following properties.
+
+    | Property | Value |
+    | - | - |
+    | X | 0 |
+    | Y | 0 |
+    | Width | Parent.Width |
+    | Height | galIdeaFiles_1.Y + galIdeaFiles_1.Height + 20 |
+
+1. Select **galIdeaFiles_1** under the datacard.
+
+1. Select the **OnSelect** property, and set it to `Launch(ThisItem.msft_file.Value)`.
+
+1. Now we'll set the button to patch and update the selected idea. Select the **Update** button from the **Edit Idea Screen – Container 3**, and set the **OnSelect** property to the following formula:
+
+    ```powerapps-dot
+    UpdateContext({locSelectedIdea: gblRecordCampaignIdea.'Employee Idea'});
+    
+    Patch(
+    
+    'Employee Ideas',
+    
+    gblRecordCampaignIdea,
+    
+    {
+    
+    Title: LookUp(
+    
+    colResponses,
+    
+    Sequence = -2,
+    
+    msft_responsetext
+    
+    ),
+    
+    Description: LookUp(
+    
+    colResponses,
+    
+    Sequence = -1,
+    
+    msft_responsetext
+    
+    ),
+    
+    'Attachment Count': CountRows(
+    
+    Filter(
+    
+    colFiles,
+    
+    appIsNew
+    
+    )
+    
+    )
+    
+    }
+    
+    );
+    
+    ForAll(
+    
+    RenameColumns(
+    
+    Filter(
+    
+    colResponses,
+    
+    Sequence \>= 0,
+    
+    !IsBlank('Employee Idea Response')
+    
+    ),
+    
+    "msft\_employeeidea_responseid",
+    
+    "ResponseId"
+    
+    ),
+    
+    Patch(
+    
+    'Employee Idea Responses',
+    
+    LookUp(
+    
+    'Employee Idea Responses',
+    
+    'Employee Idea Response' = ResponseId
+    
+    ),
+    
+    {
+    
+    Instructions: ThisRecord.Instructions,
+    
+    Question: ThisRecord.msft_employeeidea_questionid,
+    
+    Sequence: ThisRecord.Sequence,
+    
+    'Response Type': ThisRecord.'Response Type',
+    
+    'Response Text': ThisRecord.'Response Text',
+    
+    'Response Rating': ThisRecord.'Response Rating',
+    
+    'Rating Text (Low)': ThisRecord.'Rating Text (Low)',
+    
+    'Rating Text (High)': ThisRecord.'Rating Text (High)'
+    
+    }
+    
+    )
+    
+    );
+    
+    ForAll(
+    
+    Filter(
+    
+    colFiles,
+    
+    appIsNew
+    
+    ),
+    
+    Patch(
+    
+    'Employee Idea Files',
+    
+    Defaults('Employee Idea Files'),
+    
+    {
+    
+    Idea: gblRecordCampaignIdea,
+    
+    Name: Text(ThisRecord.msft_name),
+    
+    File: {
+    
+    FileName: Text(ThisRecord.msft_name),
+    
+    Value: ThisRecord.appFileValue
+    
+    }
+    
+    }
+    
+    )
+    
+    );
+    
+    ForAll(
+    
+    colRemovedFiles,
+    
+    Remove(
+    
+    'Employee Idea Files',
+    
+    ThisRecord
+    
+    )
+    
+    );
+    
+    Set(
+    
+    gblRecordCampaignIdea,
+    
+    LookUp(
+    
+    'Employee Ideas',
+    
+    'Employee Idea' = locSelectedIdea
+    
+    )
+    
+    );
+    
+    ClearCollect(
+    
+    colResponses,
+    
+    Filter(
+    
+    'Employee Idea Responses',
+    
+    Idea.msft_employeeideaid = gblRecordCampaignIdea.msft_employeeideaid
+    
+    )
+    
+    );
+    
+    ClearCollect(
+    
+    colFiles,
+    
+    Filter(
+    
+    'Employee Idea Files',
+    
+    'Employee Idea Files'[@Idea].'Employee Idea' = gblRecordCampaignIdea.'Employee
+    Idea'
+    
+    )
+    
+    );
+    
+    Set(
+    
+    gblRecordCampaignIdea,
+    
+    LookUp(
+    
+    'Employee Ideas',
+    
+    'Employee Idea' = locSelectedIdea
+    
+    )
+    
+    );
+    
+    Navigate(
+    
+    'Campaign Detail Screen',
+    
+    ScreenTransition.None,
+    
+    {
+    
+    locVisibleCampaignIdea: true,
+    
+    locVisibleCampaignView: false,
+    
+    locCreateNewIdea: false
+    
+    }
+    
+    )
+    
+    ## 
+    ```
+
+## Publish the Ideas app
+
+All the changes to the Bulletins app are completed. The app can now be published by selecting the **Publish to Teams** button on the top-right.
 
 ## Test the app
 
 Finally, let’s test the app and try editing an idea.
 
-1.  Login into Teams and navigate to Team where the Ideas app is installed.
+1. Sign in to Teams, and go to the team where the Ideas app is installed.
 
-2.  Select the Ideas tab on the top.
+1. Select the **Ideas** tab on the top.
 
-3.  The Ideas app opens.
+1. Select on one of the campaigns, for example **Workplace Safety**.
 
-4.  Select on one of the Campaigns – say Workplace Safety.
+1. Open an idea that was created by your user – the idea should say who the idea was created by.
 
-5.  Open an idea that was created by your user – the idea should say who the idea was created by.
-    
-6.  Verify that the Edit button shows up on the Campaign Details screen.
+1. Verify that the **Edit** button shows up on the **Campaign Details Screen**.
 
-![Select edit option on the Idea screen](media/make-ideas-editable-by-original-creator/select-edit-option-on-campaign-details-screen.png "Select edit option on the Idea screen")
+    ![Select edit option on the Idea screen](media/make-ideas-editable-by-original-creator/select-edit-option-on-campaign-details-screen.png "Select edit option on the Idea screen")
 
-7. Select the Edit button and verify that the Edit Idea screen opens.
+1. Select the **Edit** button, and verify that the **Edit Idea** screen opens.
 
-8. Verify that all the details are displayed on the screen.
+1. Verify that all the details are displayed on the screen.
 
-![Idea details screen](media/make-ideas-editable-by-original-creator/idea-details.png "Idea details screen")
+    ![Idea details screen](media/make-ideas-editable-by-original-creator/idea-details.png "Idea details screen")
 
-9. Make some changes to the idea and then hit the Update button.
+1. Make some changes to the idea and then select the **Update** button.
 
-10. Verify that you are taken back to the Campaign Idea Details screen and all the changes you made are saved and viewable on this screen.
+1. Verify that you're taken back to the **Campaign Idea Details** screen and all the changes you made are saved, and viewable on this screen.
+
+### See also
+
+- [Understand Employee ideas app architecture](employee-ideas-architecture.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Teams store](use-sample-apps-from-Teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
