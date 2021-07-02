@@ -4,7 +4,7 @@ description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 06/11/2021
+ms.date: 07/01/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -68,7 +68,7 @@ In this example, you'll create a menu component that resembles the following gra
 ![Final gallery](./media/create-component/menu-instance-new.png "Final gallery")
 
 > [!NOTE]
-> We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When you import components from one app to another, new updates to components in the original app do not propagate to the app that imported those components earlier. When using a component library, you get prompted to update components if components inside a library are updated and published.
+> We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When using a component library, you get prompted to update components if components inside a library are updated and published.
 
 ### Create a new component
 

@@ -4,7 +4,7 @@ description: Do one or more tasks in canvas app when a component-based action oc
 author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 04/24/2020
+ms.date: 07/01/2020
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
