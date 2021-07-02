@@ -163,6 +163,7 @@ Open positions now appear in Profile+ linked to the manager responsible for them
 
 ### See also
 
+- [Deploy Profile+ app broadly in your organization](deploy-profile-plus-broad-distribution.md)
 - [Profile+ sample app architecture](profile-plus-architecture.md)
 - [Extend Profile+ app (Preview) with additional org-specific data](profile-plus-org-specific.md)
 - [Customize sample apps](customize-sample-apps.md)

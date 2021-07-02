@@ -1,16 +1,19 @@
 ---
 title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
-author: yifwang
+author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 04/24/2020
-ms.author: yifwang
+ms.date: 07/01/2021
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Component library
@@ -27,7 +30,7 @@ Component libraries are containers of component definitions that make it easy to
 - Notify app makers of available component updates. 
 
 > [!NOTE]
-> Component libraries are the recommended way to reuse components across apps. When using a component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead. An earlier Power Apps feature that allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components) will be deprecated.
+> Component libraries are the recommended way to reuse components across apps. When using a component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead. An earlier Power Apps feature that allowed [importing components from one canvas app to another](create-component.md?#import-and-export-components) is retired.
 
 ## Difference between an app and a component library
 
