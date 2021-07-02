@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/20/2020
+ms.date: 06/30/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -77,17 +77,11 @@ Native apps on a device can't be launched directly. There may be indirect option
 
     This form can be easier to work with as it makes the association between name and value clearer. It's the only form that supports the optional *LaunchTarget* argument.
 
-> [!NOTE]
-> The record option for parameters is currently in **Preview** and will be released in all regions soon. For more details about preview features, go to [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
-
 The address and parameters are URL encoded before being passed to replace certain non-alphanumeric characters with `%` and a hexadecimal number as if the [**EncodeUrl**](function-encode-decode.md) function has been used on each.
 
 When launching a webpage, a [query string](https://en.wikipedia.org/wiki/Query_string) of parameters can be included at the end of the URL address.  Any additional parameters provided to **Launch** will be added to the end of the query string. Query strings don't work when launching a canvas app.
 
 ### Target
-
-> [!NOTE]
-> The *LaunchTarget* argument is currently in **Preview** and will be released in all regions soon. For more details about preview features, go to [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
 
 Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
 
@@ -148,7 +142,7 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 | ------- | ----------- |
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>"q",&nbsp;"Power&nbsp;Apps",&nbsp;"count",&nbsp;1&nbsp;)** | Opens the webpage **http://bing.com/search?q=Power%20Apps&count=1**.  A new window or tab is opened. |  
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;}&nbsp;)** | The same as the previous examples using the equivalent record notation.  A new window or tab is opened. | 
-| **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>LaunchTarget.Self&nbsp;)** | The same as the previous examples, replacing the current window or tab with the result if running in a web browser. | 
+| **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>LaunchTarget.Replace&nbsp;)** | The same as the previous examples, replacing the current window or tab with the result if running in a web browser. | 
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>"Search&nbsp;Results"&nbsp;)** | The same as the previous example, creating or replacing the contents of the window or tab named **Search Results**. |
 
 #### From a canvas app to a canvas app
