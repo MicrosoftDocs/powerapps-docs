@@ -41,15 +41,23 @@ The custom page is a new page type within model-driven app, which brings in the 
 
 * When a custom page with code component is opened for editing, a security dialog is shown.  On this dialog, clicking on **Go back** button does not navigate back to parent context.  User can close the browser tab to leave the canvas designer.  
 
+* Supports the most common canvas controls and custom pro-dev components. For more information on what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
+
+* Makers need to share custom pages to allow another maker to make changes.  This is a different behavior than the typical model components.
+
 ## End User Related Issues
 
 * When a user with no Power Apps user rights opens a custom page in the model-driven app, they will see an error mentioning no active entitlements to use PowerApps.  See more on [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus) and the associated licensing guide. 
+
+* Custom pages require third-party cookie to be enabled which is required by the canvas runtime.
 
 * When a user is prompted for consent with connectors and clicks "Don't allow", the custom page will render but without data.  The user does not get notified that data retrieval is skipped.
 
 * After a model-driven app or custom page is changed and published, loading a custom page can take longer than normal and no page loading spinner is shown.
 
 * When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
+
+* Native player support (for example, iOS, Android) is coming soon for online-only. Offline support will be coming in 2022.
 
 * When a user using model-driven apps in Teams opens a custom page, an error message will indicate not supported yet.
 
