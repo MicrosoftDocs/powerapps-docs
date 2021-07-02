@@ -39,7 +39,7 @@ Use the second parameter to **WeekNum** to specify which day begins a week.  You
 | **15** |**StartOfWeek.Friday** |Week begins on Friday. |
 | **16** |**StartOfWeek.Saturday** |Week begins on Saturday. |
 
-**ISOWeekNum** always uses Monday as the start of the week.  Excel supports an addition code **21** that is the equivalent of using **ISOWeekNum**.
+**ISOWeekNum** always uses Monday as the start of the week.  In Excel, the **WeekNum** function supports an addition code **21** that is not supported here; use **ISOWeekNum** instead.
 
 If you pass a single number to these functions, the return value is a single result.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
 
