@@ -20,13 +20,12 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 
-
 > [!div class="mx-imgBorder"]
 > ![Data set grid control](../media/data-set-grid-control-canvas.png)
 
 ## Available for 
 
-Model-driven and canvas apps.
+Canvas apps.
 
 ## Code
 
