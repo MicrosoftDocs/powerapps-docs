@@ -2290,7 +2290,7 @@
                   href: ../teams/customize-profile-plus.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
-        - name: How the sample apps for Microsoft Teams are built
+        - name: How to build apps like the sample apps
           href: ../teams/how-templates-built.md
         - name: FAQs for sample apps
           href: ../teams/sample-apps-faqs.md
