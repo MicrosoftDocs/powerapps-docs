@@ -1,5 +1,5 @@
 ---
-title: Reference for the calendar-screen template for canvas apps | Microsoft Docs
+title: Reference information about the calendar-screen template for canvas apps
 description: Understand details of how the calendar-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
