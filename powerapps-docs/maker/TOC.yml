@@ -2212,6 +2212,8 @@
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
+            - name: Deploy Employee ideas app broadly in your organization
+              href: ../teams/deploy-employee-ideas-broad-distribution.md
             - name: Customize Employee ideas app
               items:
                 - name: Understand Employee ideas sample app architecture
