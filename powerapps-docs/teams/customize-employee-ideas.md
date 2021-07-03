@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2021
+ms.date: 07/02/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -160,6 +160,24 @@ The following are the screens in the Manage Ideas app:
 | Mobile Campaign Detail Screen  | This screen displays the details of a campaign and the related ideas on mobile.                                                                                                      |
 | Mobile Idea Screen             | This screen is used on mobile to enter an idea.                                                                                                                                      |
 | Mobile Success Screen          | This screen is displayed when an idea is submitted.                                                                                                                                  |
+
+## Common customization scenarios
+
+In this section, we'll discuss common customization/extension scenarios for Employee Ideas and where you would make these changes.
+
+### Export ideas for archival/reporting
+
+Let's consider that you want to get the data out of Employee Ideas so you can report on it or use it for other purposes. In the article [Export data from Employee Ideas](export-employee-ideas-for-reporting.md), we'll create a Power Automate flow to export the data from ideas to excel.
+
+### Make ideas editable by the idea creator
+
+By default, ideas can't be edited once they are created but if you want to make ideas editable by the person who created them, see the article [Make ideas editable by the idea creator](make-ideas-editable-by-original-creator.md).
+
+### Add a tag field to mark prioritized ideas
+
+Ideas helps you generate and crowdsource voting on ideas. But how do you, as a manager, prioritize ideas for implementation? One idea is to add a priority tag to the idea, and from Manage Ideas, allow managers to prioritize ideas based on input and votes. See [add a tag field to mark prioritized ideas](add-tag-to-mark-prioritized-ideas.md) for details.
+
+
 
 ## Related ideas
 

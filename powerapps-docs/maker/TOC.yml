@@ -2212,6 +2212,8 @@
           items:
             - name: Use Employee ideas sample app
               href: ../teams/employee-ideas.md
+            - name: Deploy Employee ideas app broadly in your organization
+              href: ../teams/deploy-employee-ideas-broad-distribution.md
             - name: Customize Employee ideas app
               items:
                 - name: Understand Employee ideas sample app architecture
@@ -2222,6 +2224,12 @@
                   href: ../teams/export-employee-ideas-for-reporting.md
                 - name: Replace notification with adaptive card to increase collaboration
                   href: ../teams/replace-notification-with-adaptive-card.md
+                - name: Make ideas editable by original creator
+                  href: ../teams/make-ideas-editable-by-original-creator.md
+                - name: Add tag to mark prioritized ideas
+                  href: ../teams/add-tag-to-mark-prioritized-ideas.md
+                - name: Enable users to discuss ideas
+                  href: ../teams/extend-ideas-discussions.md
         - name: How to (Preview)
           items:
              - name: Use How to sample app
