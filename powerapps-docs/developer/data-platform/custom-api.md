@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/29/2021
+ms.date: 07/03/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -70,6 +70,10 @@ See the following topics for detailed information about the columns/attributes y
 - [CustomAPI Table Columns](customapi-table-columns.md)
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
 - [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
+
+This diagram shows how the tables are related to these tables as well as others:
+
+:::image type="content" source="media/custom-api-data-model.png" alt-text="Diagram showing relationships between tables":::
 
 
 ## Invoking Custom APIs
