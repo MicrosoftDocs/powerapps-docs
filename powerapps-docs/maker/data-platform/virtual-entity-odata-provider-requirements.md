@@ -72,7 +72,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
     - **OData v4 Data Provider**. Dataverse includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
-    - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)  
+    - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual tables](/powerapps/developer/data-platform/virtual-entities/get-started-ve)  
     
 1. On the **New Data Source** properties page, complete the following columns, and then save the row.  
   

@@ -268,6 +268,7 @@ To delete an idea:
 
 ### See also
 
+- [Deploy Employee Ideas app as broad distribution app](deploy-employee-ideas-broad-distribution.md)
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize employee ideas app](customize-employee-ideas.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
