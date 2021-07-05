@@ -18,16 +18,17 @@ search.app:
 
 # Catalog and CatalogAssignment tables
 
-Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events is a new capability currently being developed. Business events will enable many scenarios to create integrations with many applications through Dataverse. More information: [Microsoft Dataverse business events](business-events.md)
+Use the [Catalog](reference/entities/catalog.md) and [CatalogAssignment](reference/entities/catalogassignment.md) tables to create a structure to expose actions used in your solution as business events. Microsoft Dataverse Business events enable many scenarios to create integrations with other applications through Dataverse. More information: [Microsoft Dataverse business events](business-events.md)
 
 Your catalog will describe those events that are relevant to your solution so that people can use them. If you do not catalog the events relevant to your solution, they may not be available to people using your solution.
 
-Use the Catalog table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the category.
+Use the `Catalog` table to create a two level hierarchy. This will create a **Catalog** and **Category** group where the second level catalog represents the category.
 
 The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
-For each second-level catalog that represents the categories within your solution, you will use the CatalogAssignment table to specify any Tables, Custom API, or Custom Process actions you want to be available as events. Only Custom API that are configured as Actions can be used.
+For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events. 
 
+<!-- I don't think this is true any longer
 > [!IMPORTANT]
 > In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these tables. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
 > You must grant **Read** access to the security roles assigned to any users who will need to use these tables. These tables are found within the **Custom Entities** tab when you edit a security role.
@@ -35,6 +36,7 @@ For each second-level catalog that represents the categories within your solutio
 > More information: 
 > - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 > - [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+-->
 
 ## Example: Contoso Customer Management
 
@@ -54,7 +56,7 @@ Contoso Customer management is a solution which includes the following tables:
 |---------|---------|---------|
 |`Account`|Account|A Dataverse system table|
 |`Contact`|Contact|A Dataverse system table|
-|`contoso_Membership`|Membership|A custom table|
+|`contoso_Membership`|Membership|A custom organization-owned table|
 
 ### Custom API
 
@@ -203,8 +205,6 @@ The following table includes selected columns/attributes of a Catalog table/enti
 |Unique Name<br/>`UniqueName`<br/>`uniquename`|String|Unique name for the catalog.<br/>**Required**<br/>Must begin with a customization prefix.|
 
 > [!NOTE]
-> Unless you want to allow people who install your managed solution to modify your catalog, you should set the **Is Customizable** managed property to false.
->
 > When you associate a Catalog Assignment to a Catalog, you will not be able to delete the catalog until you remove the catalog assignment.
 
 
@@ -221,9 +221,6 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 |Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the CatalogAssignment can be customized or deleted. <br/>The default value is true. More information: [Block customization of catalog items in your managed solution](#block-customization-of-catalog-items-in-your-managed-solution)<br/>**Required**|
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog assignment.  |
 |Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />This polymorphic lookup can be linked to the following tables:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a table, custom api, or custom process action you will need to get the respectiveid value. See [Get the Id for CatalogAssignment items](#get-the-id-for-catalogassignment-items) for more information.|
-
-> [!NOTE]
-> Unless you want to allow people who install your managed solution to modify your catalog assignments, you should set the **Is Customizable** managed property to false.
 
 
 ### Get the Id for CatalogAssignment items
