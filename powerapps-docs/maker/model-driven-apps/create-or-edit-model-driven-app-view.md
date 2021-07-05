@@ -1,15 +1,12 @@
 ---
-title: "Example: create and edit public or system model-driven app views | MicrosoftDocs"
-description: "Learn how to create system views of application data in model-driven apps.---
-title: "Example: add and customize visualizations in model-driven apps | MicrosoftDocs"
-description: "Learn how to visualize your data in model-driven apps."
-ms.date: 07/05/2021
+title: "Create and edit public or system model-driven app views | MicrosoftDocs"
+description: "Learn how to create or edit public or system model-driven app views."
+ms.date: 07/04/2021
 ms.service: powerapps
 ms.topic: how-to
-author: joel-lindstrom
+author: Joel-Lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
-
 ---
 # Create and edit public or system model-driven app views
 
