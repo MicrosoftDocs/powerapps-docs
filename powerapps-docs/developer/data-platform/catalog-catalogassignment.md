@@ -2,7 +2,7 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 06/08/2021
+ms.date: 07/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -87,14 +87,16 @@ The Contoso Customer management solution catalog looks like this:
 
 ### Events available
 
-When you make a CatalogAssignement to a table, any system bound operations for that table become available as events.
+When you make a `CatalogAssignment` to a table, some system bound operations for that table become available as events.
 
 With this catalog, the following events will be available:
 
 |Table  |Event  |Why available  |
 |---------|---------|---------|
 |Account|Create<br />Update<br />Delete| Standard Data Operation |
+|Account|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
 |Contact|Create<br />Update<br />Delete| Standard Data Operation |
+|Contact|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
 |Membership|Create<br />Update<br />Delete| Standard Data Operation |
 |N/A|`contoso_CustomerEnteredStore`|Explicit Catalog Assignment|
 |N/A|`contoso_CustomerVisitWebSite`|Explicit Catalog Assignment|
@@ -102,40 +104,86 @@ With this catalog, the following events will be available:
 |N/A|`contoso_CustomerReturnedProduct`|Explicit Catalog Assignment|
 
 Most tables will support **Create**, **Update**, and **Delete** events. There are some exceptions.
+User-owned tables will expose events for changes to sharing: **GrantAccess**, **ModifyAccess**, and **RevokeAccess**
 
-> [!NOTE]
-> More specialized events bound to tables are planned. As those events are enabled, your catalog assignments will include those events.
->
-> For example:
-> - User-owned tables will include **GrantAccess**, **ModifyAccess**, **RevokeAccess** events
-> - Those tables that support the **Merge** action will include that event.
-
-
-
-<!--  Describes events to be enabled in future
-|Table  |Event  |Why available  |
-|---------|---------|---------|
-|Account|Create<br />Update<br />Delete| Standard Data Operation |
-|Account|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
-|Account|Merge|Account table supports merge operations|
-|Contact|Create<br />Update<br />Delete| Standard Data Operation |
-|Contact|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
-|Contact|Merge|Contact table supports merge operations|
-|Membership|Create<br />Update<br />Delete| Standard Data Operation |
-|Membership|GrantAccess<br />ModifyAccess<br />RevokeAccess|User owned entity can be shared.|
-|N/A|`contoso_CustomerEnteredStore`|Explicit Catalog Assignment|
-|N/A|`contoso_CustomerVisitWebSite`|Explicit Catalog Assignment|
-|N/A|`contoso_CustomerPurchasedProduct`|Explicit Catalog Assignment|
-|N/A|`contoso_CustomerReturnedProduct`|Explicit Catalog Assignment|
-
-- Most Tables will support Create, Update, and Delete events. There are some exceptions.
-- User-owned Tables can be shared, and sharing can be changed or revoked. The events for those operations will be included with the tables.
-- Certain system tables support special operations, such as Merge.
-- Any custom table will not have any additional events, unless they are user-owned.
-
--->
 
 Any Custom API or Custom Process Actions, even if they are bound to a table, must be explicitly assigned.
+
+## Create a Catalog in Power Apps
+
+You can create **Catalog** and **Catalog Assignment**  records in Power Apps (<https://make.powerapps.com>).
+
+You should always create a catalog as part of a solution. Use the following instructions to create catalog records:
+
+1. Sign in to [Power Apps](https://make.powerapps.com), 
+1. In the left navigation pane, select **Solutions**.
+1. Create or select a solution that you want to use, then click **New**.
+1. Select **Catalog** from the menu and a new window will open.
+1. Enter the following fields:
+
+    |Field  |Description  |
+    |---------|---------|
+    |**Parent Catalog**|Do not set a parent catalog for the solution root catalog. Otherwise, set the solution root catalog.|
+    |**Unique Name**|The unique name must have a customization prefix and have no spaces. This prefix should be the same as the customization prefix for the solution publisher.|
+    |**Name** |Enter a name for the catalog. Usually the same as the **Unique Name**, but without the customization prefix and with spaces.|
+    |**Display Name**|Typically the same as the **Name**.|
+    |**Description**|Enter a meaningful description of the catalog.|
+
+1. Save and close the form.
+
+> [!IMPORTANT]
+> There is a known issue where the catalog will not be added to the solution. Until this is fixed, you must manually add the catalog to your solution.
+
+### Add a catalog to your solution
+
+1. While viewing your solution, click **Add existing**.
+1. Select the catalog you want to add, and click **Add**.
+
+
+## Create a Catalog Assignment in Power Apps
+
+Using the same solution that contains the catalog in [Power Apps](https://make.powerapps.com)
+1. Click **New**.
+1. Select **Catalog Assignment** from the menu and a new window will open.
+1. Enter the **Name**. This value must begin with a customization prefix and have no spaces. You should use the same customization prefix defined for your solution publisher.
+1. Set the **Catalog Assignment Object**. This lookup allows for setting three different types of records:
+    - Custom APIs
+    - Entities
+    - Processes
+
+    You should be able to discover the type you are looking for by typing the name.
+
+1. Select a catalog
+
+    > [!NOTE]
+    > The catalog you select must be a second-level catalog representing a category.
+
+1. Save and close the form
+
+> [!IMPORTANT]
+> There is a known issue where the catalog assignment will not be added to the solution. Until this is fixed, you must manually add the catalog assignement to your solution.
+
+### Add a catalog assignment to your solution
+
+1. While viewing your solution, click **Add existing**.
+1. Select the catalog assignment you want to add, and click **Add**.
+
+## Block customization of catalog items in your managed solution
+
+Unless you want to allow people who install your managed solution to be able to customize the catalog and catalog assignments, you should make sure to set the `IsCustomizable` property to `false` because the default value allows them to be customized.
+
+To set this in the Power Apps UI:
+
+1. Select each catalog or catalog assignment within your solution
+1. In the menu, click the ellipses (...) and select **Managed Properties**.
+
+    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button":::
+
+1. In the window that opens, deselect **Allow customizations**.
+
+    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations":::
+
+1. Click **Done**
 
 ## Catalog table columns
 
@@ -149,7 +197,7 @@ The following table includes selected columns/attributes of a Catalog table/enti
 |Catalog<br/>`CatalogId`<br/>`catalogid`|Uniqueidentifier|Unique identifier for catalog instances.|
 |Description<br/>`Description`<br/>`description`|String|Localized description for catalog instances.<br/>**Required**|
 |Display Name<br/>`DisplayName`<br/>`displayname`|String|Localized display name for catalog instances.<br/>**Required**|
-|Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the Catalog can be customized or deleted.<br/>**Required**|
+|Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the Catalog can be customized or deleted. <br/>The default value is true. More information: [Block customization of catalog items in your managed solution](#block-customization-of-catalog-items-in-your-managed-solution)<br/>**Required**|
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog.<br/>**Required**|
 |Parent Catalog<br/>`ParentCatalogId`<br/>`parentcatalogid`|Lookup|Unique identifier for the Parent Catalog.<br />**Cannot be changed after it is saved.**|
 |Unique Name<br/>`UniqueName`<br/>`uniquename`|String|Unique name for the catalog.<br/>**Required**<br/>Must begin with a customization prefix.|
@@ -170,7 +218,7 @@ The following table includes selected columns/attributes of a CatalogAssignment 
 |---------|---------|---------|
 |Catalog Assignment<br/>`CatalogAssignmentId`<br/>`catalogassignmentid`|Uniqueidentifier|Unique identifier for catalog assignment instances.  |
 |catalog<br/>`CatalogId`<br/>`catalogid`|Lookup|Unique identifier for the catalog associated with the catalog assignment.<br/>**Required**|
-|Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the CatalogAssignment can be customized or deleted.<br/>**Required**|
+|Is Customizable<br/>`IsCustomizable`<br/>`iscustomizable`|ManagedProperty|Controls whether the CatalogAssignment can be customized or deleted. <br/>The default value is true. More information: [Block customization of catalog items in your managed solution](#block-customization-of-catalog-items-in-your-managed-solution)<br/>**Required**|
 |Name<br/>`Name`<br/>`name`|String|The primary name of the catalog assignment.  |
 |Catalog Assignment Object<br/>`Object`<br/>`object`|Lookup|Unique identifier for the object associated with the catalog assignment.<br/>**Required**<br />**Cannot be changed after it is saved.**<br />This polymorphic lookup can be linked to the following tables:<br/>&nbsp;&nbsp;customapi<br />&nbsp;&nbsp;entity<br />&nbsp;&nbsp;workflow<br/><br/>When using the Web API to associate this polymorphic relationship, you must use the single-valued navigation property names for each relationship.<br/><br/>These names are:<br/>&nbsp;&nbsp;`CustomAPIId`<br />&nbsp;&nbsp;`EntityId`<br />&nbsp;&nbsp;`WorkflowId`<br /><br />When associating to a table, custom api, or custom process action you will need to get the respectiveid value. See [Get the Id for CatalogAssignment items](#get-the-id-for-catalogassignment-items) for more information.|
 
@@ -184,14 +232,14 @@ You will need to get the id of entities, custom apis, and custom process actions
 
 #### Get the Id of a table
 
-The Entity table contains multiple rows for each table. One for each layer in the solution. You can get the Id for a specific table, such as the Account table, using either of these queries using the Web API:
+The Entity table contains a row for each table. You can get the Id for a specific table, such as the Account table, using either of these queries using the Web API:
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')?$select=MetadataId
 ```
 
 ```http
-GET [Organization URI]/api/data/v9.2/entities?$select=entityid&$filter=name eq 'Account'&$top=1
+GET [Organization URI]/api/data/v9.2/entities?$select=entityid&$filter=name eq 'Account'
 ```
 
 
@@ -212,34 +260,24 @@ GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$fi
 ```
 
 > [!NOTE]
-> The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the custom action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be `ExampleCustomProcessAction`.
+> The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be `ExampleCustomProcessAction`.
 >
 > Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `2`. This is the activated workflow.
 >
 > Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
 
+### Retrieve existing Catalog Assignments
 
-## Create a Catalog in Power Apps
+You can use the following OData query to retrieve information about Catalog Assignments, the type of assignment, the catalog they are associated with, and the parent catalog.
 
-At the time of this writing, you can create **Catalog** records in Power Apps (<https://make.powerapps.com>), but you cannot create **Catalog Assignment** records. Without catalog assignments, the catalog will not be functional. Catalog assignments can only be created using code at this time. See [Create Catalogs and CatalogAssignments with code](#create-catalogs-and-catalogassignments-with-code)
-
-You should always create a catalog as part of a solution. Use the following instructions to create catalog records:
-
-1. Sign in to [Power Apps](https://make.powerapps.com), 
-1. In the left navigation pane, select **Solutions**.
-1. Create or select a solution that you want to use, then click **New**.
-1. Select **Catalog** from the menu and a new window will open.
-1. Complete the form using information from [Catalog table columns](#catalog-table-columns).
-1. Save and close the form.
-
-> [!IMPORTANT]
-> There is a known issue where the catalog will not be added to the solution. Until this is fixed, you must manually add the catalog to your solution.
-
-### Add a catalog to your solution
-
-1. While viewing your solution, click **Add existing**.
-1. Select the catalog you want to add, and click **Add**.
-
+```http
+GET [Organization URI]/api/data/v9.2/catalogassignments?$select=name
+    &$expand=CatalogId($select=uniquename;$expand=ParentCatalogId($select=uniquename)),
+    EntityId($select=entityid),
+    CustomAPIId($select=uniquename),
+    WorkflowId($select=uniquename)
+    &$filter=name ne null
+```
 
 ## Create Catalogs and CatalogAssignments with code
 
@@ -248,7 +286,9 @@ You can create catalogs and catalog assignment records using either the Web API 
 ### Using the Web API
 
 > [!NOTE]
-> At this time it is not possible to create catalog and catalog assignment records using 'deep-insert'. Each record must be created individually and associated with the records.
+> At this time it is not possible to create catalog and catalog assignment records using 'deep-insert'.
+> 
+> You can create a hierarchy of catalog records using 'deep-insert', but you must create the catalog assignments individually.
 
 The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: `ContosoCustomerManagement`. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
 
@@ -324,7 +364,7 @@ See [Get the Id of a table](#get-the-id-of-a-table) for information about the id
 **Request**
 
 ```http
-POST {{webapiurl}}catalogassignments HTTP/1.1
+POST [Organization URI]/api/data/v9.2/catalogassignments HTTP/1.1
 MSCRM.SolutionUniqueName: ContosoCustomerManagement
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -431,12 +471,12 @@ Guid accountAssignmentId = ((CreateResponse)service.Execute(accountAssignmentReq
 
 ## Create Catalog and Catalog Assignments by editing solution files
 
-Within a solution file, you can edit the files to create catalogs and catalog assignments. 
+Within a solution file, you can edit the files to create catalogs and catalog assignments.
 
 Use the [SolutionPackager tool](/power-platform/alm/solution-packager-tool) to extract a solution into files that can be managed in source control. You can then edit the files. You can then use SolutionPackager to pack the extracted files back into a solution. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
 
 > [!TIP]
-> Create some catalogs and catalog assignments with code in a solution, then export and extract the solution to see some examples.
+> Create some catalogs and catalog assignments in a solution, then export and extract the solution to see some examples.
 >
 > Make sure you are using the latest version of the [Microsoft.CrmSdk.CoreTools NuGet Package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)
 
@@ -491,10 +531,14 @@ For example:
 
 ```xml
 <catalogassignments>
-    <catalogassignment objectidtype="entity" object.logicalname="account" catalogid.uniquename="contoso_TableEvents">
+    <catalogassignment object.logicalname="account" catalogid.uniquename="contoso_TableEvents" objectidtype="entity">
         <iscustomizable>0</iscustomizable>
         <name>Account</name>
     </catalogassignment>
+    <catalogassignment catalogid.uniquename="contoso_CustomerEvents" object.uniquename="contoso_CustomerEnteredStore" objectidtype="customapi">
+        <iscustomizable>0</iscustomizable>
+        <name>Customer Entered Store</name>
+  </catalogassignment>
 </catalogassignments>
 ```
 
