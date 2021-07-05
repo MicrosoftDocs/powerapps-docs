@@ -27,7 +27,7 @@ Each environment can have one Dataverse database.
 
 1.  Select the environment you want, or go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to create a new one. You can select the environment by selecting “environment” in the upper right corner.
 
-2.  We recommend creating your model driven app from a solution. A solution is a package containing Dataverse tables, forms, views, apps, flows, and other components. By building your model driven app in a solution, you can easily move it to other environments or preserve a copy in your source control repository. For more information about creating a solution, see [Create a solution](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/create-solution).
+2.  We recommend creating your model driven app from a solution. A solution is a package containing Dataverse tables, forms, views, apps, flows, and other components. By building your model driven app in a solution, you can easily move it to other environments or preserve a copy in your source control repository. For more information about creating a solution, see [Create a solution](https://docs.microsoft.com/powerapps/maker/data-platform/create-solution).
 
 3.  Create a solution. For this example, we will call our solution **Power Apps Training**. Next we will add the tables that will be in our Model-driven app.
 
