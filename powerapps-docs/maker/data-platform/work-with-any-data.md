@@ -74,11 +74,11 @@ Dataverse provides easy-to-use visual designers to define the different types of
 
 The relationship types are:
 
-- **Many-to-one**: In this type of relationship, many table A records can be associated with a single table B record. For example, a class of students have a single classroom.
+- **Many-to-one**: In this type of relationship, many records from the table A can be associated with a single record from the table B. For example, a class of students have a single classroom.
 
-- **One-to-many**: In this type of relationship, a single table B record can be associated with many table A records. For example, one single teacher teaches many classes.
+- **One-to-many**: In this type of relationship, a single record from the table B can be associated with many records from the table A. For example, one single teacher teaches many classes.
 
-- **Many-to-many**: In this type of relationship, each record in table A can match more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+- **Many-to-many**: In this type of relationship, each record in table A can matches more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Because many-to-one relationships are the most common, Dataverse provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
