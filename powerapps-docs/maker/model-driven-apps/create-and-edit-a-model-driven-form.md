@@ -16,10 +16,10 @@ In model-driven Power Apps, forms provide the user interface that people use to 
 
 | **Form type**    | **Description**                                                                                                                                                                                                                         | **More information**                                                                                                                        |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **Main**         | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  These forms provide the main user interface for interacting with table data.                                                                        | [Design considerations for main forms](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/design-considerations-main-forms) |
-| **Quick Create** | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  For updated tables, these forms provide a basic form optimized for creating new rows.                                                               | [Create and edit quick create forms](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-edit-quick-view-forms)       |
-| **Quick View**   | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  For updated tables, these forms appear within the main form to display additional data for a row that is referenced by a lookup column in the form. | [Create and edit quick view forms](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-edit-quick-view-forms)         |
-| **Card**         | Used in views for Power Apps apps. Card forms are designed to present information in a compact format that is suitable for mobile devices.                                                                                              | [Create a card form](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/create-card-forms)                                  |
+| **Main**         | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  These forms provide the main user interface for interacting with table data.                                                                        | [Design considerations for main forms](https://docs.microsoft.com/powerapps/maker/model-driven-apps/design-considerations-main-forms) |
+| **Quick Create** | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  For updated tables, these forms provide a basic form optimized for creating new rows.                                                               | [Create and edit quick create forms](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-quick-view-forms)       |
+| **Quick View**   | Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.  For updated tables, these forms appear within the main form to display additional data for a row that is referenced by a lookup column in the form. | [Create and edit quick view forms](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-quick-view-forms)         |
+| **Card**         | Used in views for Power Apps apps. Card forms are designed to present information in a compact format that is suitable for mobile devices.                                                                                              | [Create a card form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-card-forms)                                  |
 
 In this lesson, we will be configuring a Main type form. This is the primary form type that users see when they open records in model-driven apps.
 
@@ -68,15 +68,15 @@ Using the left side panel, you can add various items to the form:
 
 •	**Components**: From this tab you can add new tabs, sections, or visual controls
 
-![ImageDescHere](media/create-and-edit-a-model-driven-form/add-items-to-the-form-1.png "")
+![Components](media/create-and-edit-a-model-driven-form/add-items-to-the-form-1.png "")
 
 •	**Table Columns**: From this tab you can add fields to your form
 
-![ImageDescHere](media/create-and-edit-a-model-driven-form/add-items-to-the-form-2.png "")
+![Table columns](media/create-and-edit-a-model-driven-form/add-items-to-the-form-2.png "")
 
 •	**Tree View**: From this tab you can select to navigate to the form header, footer, or any tab or section on the form. This is useful when configuring forms with many tabs.
 
-![ImageDescHere](media/create-and-edit-a-model-driven-form/add-items-to-the-form-3.png "")
+![Tree view](media/create-and-edit-a-model-driven-form/add-items-to-the-form-3.png "")
 
 •	**Form Libraries**: Model-driven forms allow you to add JavaScript libraries to further extend your form behavior.  
 
@@ -123,7 +123,7 @@ If your app includes multiple model-driven main forms, users can select which fo
 
 We recommend that you check all quick view forms and quick create type forms, unless you have specific reasons to not check them. Only select the main form(s) that you want users to see. You must also ensure that your new form is enabled for a security role that users of the app have been assigned.
 
-For more details, see [Assign security roles to a form | Microsoft Docs](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/admin/assign-security-roles-form)
+For more details, see [Assign security roles to a form | Microsoft Docs](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/admin/assign-security-roles-form)
 
 ## View your new form
 Now that you have created and modified a new form, let’s test it out. Follow these steps to view your new form:
