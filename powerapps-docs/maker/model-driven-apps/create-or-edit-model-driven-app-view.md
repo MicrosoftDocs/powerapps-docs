@@ -8,7 +8,7 @@ author: Joel-Lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
-# Create and edit public or system model-driven app views
+# Example: Create and edit public or system model-driven app views
 
 In Power Apps, views define how rows for a specific table are displayed. A view defines the following:
 
