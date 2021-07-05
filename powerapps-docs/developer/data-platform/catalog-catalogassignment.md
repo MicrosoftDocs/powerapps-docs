@@ -26,9 +26,8 @@ Use the `Catalog` table to create a two level hierarchy. This will create a **Ca
 
 The first level catalog must represent your solution. Use multiple second-level catalogs related to your first level catalog to group different categories of functionality within your solution.
 
-For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events. 
+For each second-level catalog that represents the categories within your solution, you will use the `CatalogAssignment` table to specify any Tables, Custom API, or Custom Process actions you want to be available as events.
 
-<!-- I don't think this is true any longer
 > [!IMPORTANT]
 > In order for people to use Catalogs and Catalog Assignments, they must be given read access to these these tables. Currently only the System Administrator has full access to the Catalog and Catalog Assignment tables.
 > You must grant **Read** access to the security roles assigned to any users who will need to use these tables. These tables are found within the **Custom Entities** tab when you edit a security role.
@@ -36,7 +35,6 @@ For each second-level catalog that represents the categories within your solutio
 > More information: 
 > - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 > - [Security roles and privileges](/power-platform/admin/security-roles-privileges)
--->
 
 ## Example: Contoso Customer Management
 
