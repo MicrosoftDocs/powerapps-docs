@@ -139,10 +139,9 @@ Virtual tables have these restrictions.
 - By default, virtual tables contain only a Name and Id column.  No other system managed columns, such as Status or Created On/Modified On are supported.
 - Virtual tables don't support custom columns with the Currency, Image, or Customer data types.
 - Virtual tables don't support auditing.  
-- Charts and dashboards are not supported for virtual entities.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
-- Dashboard and Charts are not supported for virtual tables.
+- Dashboards and charts are not supported with virtual tables.
 - Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, relevance search, and Power Apps portals solutions.  
 - Virtual tables are organization owned and don't support the row-level Dataverse security concepts. We recommend that you implement your own security model for the external data source.  
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.

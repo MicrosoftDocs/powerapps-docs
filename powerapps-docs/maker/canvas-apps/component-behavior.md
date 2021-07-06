@@ -1,16 +1,19 @@
 ---
 title: Behavior formulas for components
 description: Do one or more tasks in canvas app when a component-based action occurs.
-author: yifwang
+author: hemantgaur
 ms.service: powerapps
 ms.topic: article
-ms.date: 04/24/2020
-ms.author: yifwang
+ms.date: 07/01/2020
+ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - hemantgaur
+  - tapanm-msft
 ---
 
 # Behavior formulas for components
@@ -34,7 +37,7 @@ To test **OnReset**, configure a control to reset the component. For example, se
 ### Example - Reset timer
 
 > [!div class="mx-imgBorder"]
-> ![Reset timer](./media/component-behavior/Resettimer.gif "Reset timer")
+> ![OnReset Example - Reset timer](./media/component-behavior/Resettimer.gif "OnReset Example - Reset timer")
 
 In this time picker component, two variables are used to display the time _selectedHour and _selectedMinute. When the picker gets reset, these variables should be reset to a default value, say 12: 12.  The OnReset property for the component has the following formula: **Set(_selectedHour,12); Set(_selectedMinute,12)**
 
@@ -47,7 +50,7 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 Besides resetting a component instance from outside of the component, there's another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property. It allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset the default value easily. 
 
-> ![OnSelect property](./media/component-behavior/property-trigger.png "OnSelect property")
+> ![OnReset using custom property](./media/component-behavior/property-trigger.png "OnReset using custom property")
 
 ### Example
 

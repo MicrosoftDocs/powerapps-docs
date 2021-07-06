@@ -2,7 +2,8 @@
 title: Add data to a table in Microsoft Dataverse by using Power Query | Microsoft Docs
 description: Step-by-step instructions for how to use Power Query to add data to a new or existing table in Microsoft Dataverse from another data source.
 author: mllopis
-manager: kfile
+manager: kvivek
+ms.reviewer: matp
 ms.service: powerapps
 ms.devlang: na
 ms.topic: how-to
@@ -98,10 +99,7 @@ If you select **Load to existing table**, you can specify a table into which you
 
 We're excited about this functionality and eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
 
-If an [error message about permissions](troubleshoot-power-query-issues.md) appears, talk to your administrator.
-
-> [!WARNING]
-> There is a limit of 500,000 rows per run and per project that can be loaded using this feature.
+If an [error message about permissions](troubleshoot-power-query-issues.md) appears, contact your administrator.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

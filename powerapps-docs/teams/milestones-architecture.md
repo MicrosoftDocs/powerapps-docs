@@ -1442,6 +1442,7 @@ The following variables are used when a status is deleted.
 
 ### See also
 
+- [Customize Milestones sample app](customize-milestones.md)
 - [Milestones sample app](milestones.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
