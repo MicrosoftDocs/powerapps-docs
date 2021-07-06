@@ -1,6 +1,6 @@
 ---
-title: Build responsive apps in canvas apps | Microsoft Docs
-description: Reference information about building responsive apps in canvas apps
+title: Building responsive canvas apps
+description: Learn about how to build responsive canvas apps.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 ---
 
-# Building responsive apps  
+# Building responsive canvas apps  
 
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
 
@@ -82,7 +82,7 @@ Containers are building blocks of all the responsive design. A container can be 
 
 Below are some tips for building your app’s UI with containers:
 
-- Always create UI elements that form a UI entity inside a container.
+- Always create UI elements that form a UI table inside a container.
 
 - Allows the container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes.
 

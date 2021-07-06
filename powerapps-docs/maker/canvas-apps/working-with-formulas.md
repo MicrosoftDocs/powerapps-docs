@@ -1,6 +1,6 @@
 ---
-title: Get started with formulas in a canvas app | Microsoft Docs
-description: In Power Apps, use formulas to customize a canvas app.
+title: Get started with formulas in canvas apps
+description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Get started with canvas-app formulas in Power Apps
+# Get started with formulas in canvas apps
 
 > [!NOTE]
 > Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)? 

@@ -1,6 +1,6 @@
 ---
-title: 'List Box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the List Box control
+title: List Box control in Power Apps
+description: Learn about the details, properties and examples of the List Box control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -72,9 +72,9 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -153,7 +153,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
    
-    ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
+    ![Selected lists](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.
 
 

@@ -1,6 +1,6 @@
 ---
-title: Defaults function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Defaults function in Power Apps
+title: Defaults function in Power Apps
+description: Reference information including syntax and examples for the Defaults function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
