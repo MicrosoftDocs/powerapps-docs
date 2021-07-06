@@ -120,7 +120,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 
 ## Current limitations
 
-- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Common Data Service connector will be available soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. 
+- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. There is also a known issue when using choice data types within SharePoint lists. The Common Data Service connector will also be available soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. 
 - Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Common Data Service, and SQL server.
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.  
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
