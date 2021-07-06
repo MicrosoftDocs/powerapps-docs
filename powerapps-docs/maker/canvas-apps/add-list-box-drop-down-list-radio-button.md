@@ -162,7 +162,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 3. Set **[OnChange](properties-core.md)** property on **btnDelete** to this formula:
    <br>`Remove(MyItems, lbItems.Selected)`
 
-4. Arrange **btnDelete* so it's lined up vertically underneath **btnReset**
+4. Arrange **btnDelete** so it's lined up vertically underneath **btnReset**
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png
 
