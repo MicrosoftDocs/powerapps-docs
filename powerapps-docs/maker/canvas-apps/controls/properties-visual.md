@@ -28,7 +28,7 @@ Configure graphical elements in your app, including images, photos, and elements
 **ImagePosition** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 - Fill - Fills the entire specified size with the image. Scales the image proportionally. Crops the image as needed.
 - Fit - Fits the entire image into the specified size. Scales the image proportionally. Doesn't crop the image.
-- Stretch - Fills the entire specified size with the image. Stretches the image disproportionally as needed. Doesn't crop the image.
+- Stretch - Fills the entire specified size with the image. Stretches the image disproportionately as needed. Doesn't crop the image.
 - Tile - Repeats the image across the control into the specified size.  Doesn't scale the image. Crops the image as needed.
 - Center - Places the image in the center of the control. Doesn't scale the image. Crops the image as needed.
 
