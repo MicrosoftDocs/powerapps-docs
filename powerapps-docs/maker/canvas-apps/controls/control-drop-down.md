@@ -1,6 +1,6 @@
 ---
-title: 'Drop down control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Drop down control
+title: Drop down control in Power Apps
+description: Learn about the details, properties and examples of the drop down control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -133,19 +133,19 @@ A **Drop down** control conserves screen real estate, especially when the list c
 ### List from a data source
 The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Microsoft Dataverse database has been created and sample data added.
 
-1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](../data-platform-create-app-scratch.md#specify-an-entity).
+1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** table](../data-platform-create-app-scratch.md#specify-a-table).
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
     `Distinct(Accounts, 'Address 1: City')`
 
-    This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
+    This formula shows all the cities in the **Accounts** table. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
 1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
     `Filter(Accounts, address1_city = Cities.Selected.Result)`
 
-   This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
+    This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** table for which the city matches the selected value in the **Cities** control.
 
 ## Accessibility guidelines
 ### Color contrast

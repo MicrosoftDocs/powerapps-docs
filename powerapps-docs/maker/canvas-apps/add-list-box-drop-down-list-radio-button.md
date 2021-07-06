@@ -1,6 +1,6 @@
 ---
 title: Add a list box, a drop-down list, or radio buttons to a canvas app | Microsoft Docs
-description: In Power Apps, create or configure multiselect options in a canvas app
+description: In Power Apps, create or configure multi-select options in a canvas app
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -34,15 +34,15 @@ This topic focuses on lists boxes and radio buttons, but the same principles app
 
     Your designer looks similar to the following:
 
-    ![][4]
+    ![Screen with list box control][4]
 
 4. On the **Insert** tab, select **Icons**, select the circle, and move it under **MyListBox**:
 
-    ![][5]  
+    ![Add icon][5]  
 
 5. Add a triangle and a rectangle, and then arrange the shapes in a row under **MyListBox**:
 
-    ![][6]  
+    ![Add shapes][6]  
 
 6. Set the **[Visible](controls/properties-core.md)** property of the following shapes to the following functions:  
 
@@ -63,12 +63,12 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 2. On the **Insert** tab, select **Controls**, and then select **Radio**.
 
-    ![][10]  
+    ![Add Radio button][10]  
 
 3. Rename the **Radio** control to **Choices**, and set its **[Items](controls/properties-core.md)** property to this formula:  
    ```["red","green","blue"]```  <br/>
 
-    ![][12]  
+    ![Rename control][12]  
 
     If needed, resize the control to show all the options.
 
@@ -81,7 +81,7 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 6. Move the circle under the **Radio** control, as in this example:
 
-    ![][14]  
+    ![Move circle under the Radio control][14]  
 
 7. While holding down the Alt key, select a different radio button to change the color of the circle.
 

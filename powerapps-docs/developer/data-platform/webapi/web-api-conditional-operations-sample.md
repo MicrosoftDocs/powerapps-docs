@@ -1,8 +1,8 @@
 ---
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Microsoft Dataverse server and/or currently maintained by the client"
+description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/17/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,11 +20,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Conditional Operations Sample
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Microsoft Dataverse server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
+This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
   
  [Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)  
  
@@ -42,13 +43,13 @@ This group of samples demonstrate how to perform operations that are conditional
 |[Optimistic concurrency on delete and update](#bkmk_optimisiticConcurrency)|[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)|  
 |[Controlling upsert operations](#bkmk_controllingUpsert)|[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)|  
   
- The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers have been omitted. The URIs of the records will vary with the base organization address and the ID of the record assigned by your Dataverse server.  
+ The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output which is the same for each language implementation. For brevity, less pertinent HTTP headers have been omitted. The URIs of the table rows will vary with the base organization address and the ID of the row assigned by your Dataverse server.  
   
 <a name="bkmk_sampleData"></a>
    
 ## Sample data
 
- The sample creates the following record before the principal code sections are executed.  
+ The sample creates the following table row before the principal code sections are executed.  
   
 |Entity type|Client-assigned properties|Server-assigned properties|  
 |-----------------|---------------------------------|---------------------------------|  
@@ -58,9 +59,9 @@ This group of samples demonstrate how to perform operations that are conditional
 
 ## Conditional GET
 
- This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current record state on the client. More information:[Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
+ This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current row state on the client. More information:[Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
   
-1.  Attempt to retrieve the account `Contoso Ltd.` only if it does *not* match the current version, identified by the initial ETag value that was returned when the account record was created. This condition is represented by the `If-None-Match` header.  
+1.  Attempt to retrieve the account `Contoso Ltd.` only if it does *not* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
   
  **Request**  
   
@@ -86,7 +87,7 @@ This group of samples demonstrate how to perform operations that are conditional
    Expected outcome: Entity was not modified so nothing was returned.  
    ```  
 
-   The response value, `304 Not Modified`, indicates that the current record is the most current, so the server does *not* return the requested record in the response body.  
+   The response value, `304 Not Modified`, indicates that the current table row is the most current, so the server does *not* return the requested row in the response body.  
   
 2.  Update the account by modifying its primary telephone number property.  
   
@@ -115,7 +116,7 @@ This group of samples demonstrate how to perform operations that are conditional
    Account telephone number updated.  
    ```  
   
-3.  Re-attempt the same conditional GET operation, again using the original ETag value. This time the operation returns the requested data because the version on the server is different (and newer) than the version identified in the request. As in all record retrievals, the response includes an ETag header that identifies the current version.  
+3.  Re-attempt the same conditional GET operation, again using the original ETag value. This time the operation returns the requested data because the version on the server is different (and newer) than the version identified in the request. As in all table row retrievals, the response includes an ETag header that identifies the current version.  
   
  **Request**  
   
@@ -166,9 +167,9 @@ This group of samples demonstrate how to perform operations that are conditional
   
 ## Optimistic concurrency on delete and update
  
- This section of the program demonstrates how to perform conditional delete and update operations.  The most common use for such operations is in implementing an optimistic concurrency approach to record processing in a multi-user environment. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
+ This section of the program demonstrates how to perform conditional delete and update operations.  The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
   
-1.  Attempt to delete original account if and only if it matches the original version (ETag value).  This condition is represented by the `If-Match` header.  This operation fails because the account record was updated in the previous section, so as a result, its version was updated on the server.  
+1.  Attempt to delete original account if and only if it matches the original version (ETag value).  This condition is represented by the `If-Match` header.  This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
   
  **Request**  
   
@@ -237,7 +238,7 @@ This group of samples demonstrate how to perform operations that are conditional
             Account not updated using ETag 'W/"628448"', status code: '412'.  
    ```  
   
-3.  Re-attempt an update, but instead use the current ETag value obtained from the last record retrieval in the previous section.  
+3.  Re-attempt an update, but instead use the current ETag value obtained from the last row retrieval in the previous section.  
   
  **Request**  
   
@@ -316,7 +317,7 @@ This group of samples demonstrate how to perform operations that are conditional
 
  This section of the program demonstrates how to perform conditional `PATCH` operations, limiting upsert operations to perform as either update-only or insert-only operations. More information:[Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations)  
   
-1.  Attempt to insert, without updating, the primary telephone and revenue properties for this account. The `If-None-Match` header with the value of  `*` represents this upsert condition. This operation fails because this account record still exists on the server (unless it was concurrently deleted by another user or process).  
+1.  Attempt to insert, without updating, the primary telephone and revenue properties for this account. The `If-None-Match` header with the value of  `*` represents this upsert condition. This operation fails because this account row still exists on the server (unless it was concurrently deleted by another user or process).  
   
  **Request**  
   
@@ -353,7 +354,7 @@ This group of samples demonstrate how to perform operations that are conditional
             Account not updated using ETag 'W/"628448", status code: '412'.    
    ```  
   
-2.  Attempt to perform the same update operation without creation. To accomplish this, the conditional `If-Match` header is used with a value of `*`.  This operation succeeds because the record exists on the server.  
+2.  Attempt to perform the same update operation without creation. To accomplish this, the conditional `If-Match` header is used with a value of `*`.  This operation succeeds because the row exists on the server.  
   
  **Request**  
   
@@ -382,7 +383,7 @@ This group of samples demonstrate how to perform operations that are conditional
     Account updated using If-Match '*'  
    ```  
   
-3.  Retrieve and output the current account state with a basic `GET` request. Note that the returned ETag value has changed to reflect the new, updated version of the account record.  
+3.  Retrieve and output the current account state with a basic `GET` request. Note that the returned ETag value has changed to reflect the new, updated version of the account row.  
   
  **Request**  
   
@@ -449,7 +450,7 @@ This group of samples demonstrate how to perform operations that are conditional
     Account was deleted.  
    ```  
   
-5.  Just as in step 2, attempt to update the account if it exists.  Again, this condition is represented by the `If-Match` header with a value of `*`.  This operation fails because this record was just deleted. However, if this `If-Match` header was absent, then the resulting basic upsert operation should successfully create a new record.  
+5.  Just as in step 2, attempt to update the account if it exists.  Again, this condition is represented by the `If-Match` header with a value of `*`.  This operation fails because this table row was just deleted. However, if this `If-Match` header was absent, then the resulting basic upsert operation should successfully create a new row.  
   
  **Request**  
   
@@ -486,13 +487,12 @@ This group of samples demonstrate how to perform operations that are conditional
     Account not updated because it does not exist, status code: '404'.    
    ```  
   
- There is no need to cleanup sample data because the one account record was already deleted in step 4.  
+ There is no need to cleanup sample data because the one account row was already deleted in step 4.  
   
 ### See also
 
 [Use the Dataverse Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)   
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

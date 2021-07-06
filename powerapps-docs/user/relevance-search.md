@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/8/2021
+ms.date: 6/24/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -26,10 +26,6 @@ With relevance search, the search box is always available at the top of every pa
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app](media/new-search-exp.png "Search box in the header for an app")
-
-## Turn on relevance search
-
-Your administrator must turn on the new relevance search experience for your organization. When relevance search is turned on, you'll see a search box in the header that resembles the search experience you're familiar with. After it's enabled, it will be available across all model-driven apps in your organization. More information: [Configure relevance search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)
 
 
 ## See recent rows and searches
@@ -156,7 +152,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 ## Feedback link
 
-On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
 
 Currently there is no option to disable the feedback question prompt.
 
@@ -250,7 +246,7 @@ However, searching for **evaluation + -agreed** will match all rows that contain
 
 ### Wildcards
 
-Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*winery** will show results for all records associated with a keyword that ends with **winery**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
 
 ![Example of results for a search that uses a wildcard](media/wild-card.png "Example of results for a search that uses a wildcard")  
 
@@ -262,7 +258,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 ## Quick actions
 
-The new relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
+The relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
 Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
@@ -295,36 +291,6 @@ On the results page, hover over the results to see quick actions available for t
 
 ![This diagram shows how hovering over a row on the results page displays the quick actions menu](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
 
-## Use the old relevance search experience
-
-When your organization has relevance search enabled but your administrator hasn't turned on the new relevance search experience, you'll see the old relevance search experience.
-
-### Switch between the previous relevance search experience and categorized search
-
-If your organization has turned on both search options (old relevance search and categorized search), you can switch between the two.
-
-1. On the navigation bar, select **Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Search command on the navigation bar](media/commandbar-search-button.png "Search command on the navigation bar") 
-
-2. On the drop-down menu to the left of the search box, select **Relevance Search** or **Categorized Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Switch between relevance search and categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
-
-### Start a search by using the previous relevance search experience
-
-1. On the navigation bar, select **Search**.  
-
-    > [!div class="mx-imgBorder"]
-    > ![Global search](media/commandbar-search-button.png "Global search") 
-  
-2. Enter your search words in the search box, and then select **Search**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Relevance search box](media/relevance-search-box.png "Relevance search box")
-    > 
 
 ## Use keyboard shortcuts
 

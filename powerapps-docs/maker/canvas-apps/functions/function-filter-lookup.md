@@ -1,6 +1,6 @@
 ---
-title: Filter, Search, and LookUp functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Filter and LookUp functions in Power Apps
+title: Filter, Search, and LookUp functions in Power Apps
+description: Reference information including syntax and examples for the Filter, Search, and LookUp functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: Create responsive layouts in canvas apps | Microsoft Docs
-description: Reference information about configuring Height, Width, X, and Y properties on controls in canvas apps
+title: Create responsive layouts in canvas apps
+description: Learn about configuring Height, Width, X, and Y properties of controls in canvas apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps

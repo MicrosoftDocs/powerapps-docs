@@ -9,10 +9,13 @@ ms.date: 06/02/2021
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 
-# Understand Perspectives (Preview) sample apps architecture
+# Understand Perspectives sample apps architecture (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -130,12 +133,12 @@ The following are the global variables used in the Perspectives app.
     controls the visibility of the splash dialog. If there are multiple project user settings records exist, the oldest record is selected and stored in the
     **gblRecordUserSettings** variable.
 
-### App OnStart
+## App OnStart
 
 This section explains the collections, variables, and execution details used
 when the app starts.
 
-##### OnStart collections
+### OnStart collections
 
 The following collections are used when the app starts
 
@@ -147,7 +150,7 @@ The following collections are used when the app starts
 
 
 
-##### OnStart variables
+### OnStart variables
 
 | Variable name                    | Description                                                                                                              |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -172,12 +175,12 @@ The following collections are used when the app starts
 | locShowPowerAppsPrompt           | Local variable to indicate if the user has set the preference to see Power Apps prompt to yes or no.                     |
 |  locShowFirstRun                 | Local variable to indicate of the current run of the app is the first run for the user.                                  |
 
-### About Screen
+## About Screen
 
 This section explains the collections and execution details used on the about
 screen
 
-##### About screen collections
+### About screen collections
 
 The following collection is used on the about screen.
 
@@ -185,19 +188,19 @@ The following collection is used on the about screen.
 |---------------------|--------------------------------------------------------|
 | colLocalization     | Collection of localized text based on user's language. |
 
-##### About screen variables
+### About screen variables
 
 No variables
 
-### **Topic screen**
+## Topic screen
 
-#### Find topic
+### Find topic
 
 This section explains collections, global variables, and execution details used
 when finding discussion topic. No collections are involved in finding discussion
 topic process.
 
-#### Find topic variables
+### Find topic variables
 
 Variables used by topic screen:
 
@@ -205,7 +208,7 @@ Variables used by topic screen:
 |------------------|------------------------------------------|
 | locSelectedTopic | Local variable to store selected topic.  |
 
-#### Find topic execution details 
+### Find topic execution details 
 
 1.  On search of discussion topic from search bar app will fetch matching result
     from Dataverse in ascending order
@@ -213,14 +216,14 @@ Variables used by topic screen:
 2.  On select of discussion topic, **locSelectedTopic** is set to selected
     discussion topic and navigate to ‘Discussion Screen’
 
-### **Add topic screen**
+## Add topic screen
 
-#### Add a new topic
+### Add a new topic
 
 This section explains collections, global variables, and execution details used
 when adding a new topic.
 
-#### Add topic collections
+### Add topic collections
 
 Collections used by new add topic screen:
 
@@ -231,7 +234,7 @@ Collections used by new add topic screen:
 | colStockIcons        | Collection of stock icons.                             |
 | colStockImages       | Collection of stock images.                            |
 
-#### Add topic variables
+### Add topic variables
 
 Variables used by Add topic screen:
 
@@ -240,7 +243,7 @@ Variables used by Add topic screen:
 | locDefaultBoardCoverColor  | Local variable to determine default board cover color. |
 | locDefaultBoardCoverIcon   | Local variable to determine default board cover icon.  |
 
-#### Add topic execution details
+### Add topic execution details
 
 1.  On select of **Add a Topic** button form Topic Screen, screen navigate to
     Add topic screen
@@ -249,14 +252,14 @@ Variables used by Add topic screen:
 
 3.  When **Save** button selected, Topic will be created.
 
-### **Edit topic screen**
+## Edit topic screen
 
-#### Edit topic
+### Edit topic
 
 This section explains collections, global variables, and execution details used
 when editing a topic.
 
-#### Edit topic collections
+### Edit topic collections
 
 Collections used by new edit topic screen:
 
@@ -267,7 +270,7 @@ Collections used by new edit topic screen:
 | colStockIcons        | Collection of stock icons.                             |
 | colStockImages       | Collection of stock images.                            |
 
-#### Edit topic variables
+### Edit topic variables
 
 Variables used by edit topic screen:
 
@@ -280,7 +283,7 @@ Variables used by edit topic screen:
 | locDefaultBoardCoverColor  | Local variable to determine default board cover color.         |
 | locDeleteTopicWarning      | Local variable to control the visibility of the delete dialog. |
 
-#### Edit and Delete topic execution details
+### Edit and Delete topic execution details
 
 1.  On select of **Edit button** from the Discussion Screen,
     **locSelectedTopic** local variable will be updated with current topics
@@ -309,14 +312,14 @@ Variables used by edit topic screen:
 
 8.  Once the delete process is complete the app navigates to Topic screen.
 
-### **Discussion screen**
+## Discussion screen
 
-#### Add a new discussion
+### Add a new discussion
 
 This section explains collections, global variables, and execution details used
 when adding a new discussion.
 
-#### Discussion collections
+### Discussion collections
 
 Collections used by new add discussion screen:
 
@@ -325,7 +328,7 @@ Collections used by new add discussion screen:
 | colSelectedTopicDiscussions  | Collection of selected discussion information.         |
 | colLocalization              | Collection of localized text based on user's language. |
 
-#### Discussion variables
+### Discussion variables
 
 Variables used by Add discussion screen:
 
@@ -334,7 +337,7 @@ Variables used by Add discussion screen:
 | locSelectedTopic       | Local variable storing selected topic.                 |
 | locSelectedDiscussion  | Local variable containing discussion selected by user. |
 
-#### Discussion execution details
+### Discussion execution details
 
 1.  On select of **New Discussion** button from Discussion Screen, screen will
     navigate to New Discussion screen
@@ -344,14 +347,14 @@ Variables used by Add discussion screen:
 3.  When **Save** button selected, **locSelectedDiscussion** local variable that will be updated with currant discussion fields and Discussion record
     will be created in Dataverse against topic.
 
-### **Response screen**
+## Response screen
 
-#### Response
+### Response
 
 This section explains collections, global variables, and execution details used
 in response screen.
 
-#### Response collections
+### Response collections
 
 Collections used by new add topic screen:
 
@@ -360,7 +363,7 @@ Collections used by new add topic screen:
 | colSelectedTopicDiscussions  | Collection of selected discussion information.         |
 | colLocalization              | Collection of localized text based on user's language. |
 
-#### Response variables
+### Response variables
 
 Variables used from response screen:
 
@@ -377,7 +380,7 @@ Variables used from response screen:
 | locResponseCreatedByUserSetting  | Local variable to store the discussion user setting record of the user who created the response.          |
 | locDeleteResponse                | Local variable to determine whether the response dialog should be used to delete an existing response.    |
 
-#### Add response execution details
+### Add response execution details
 
 1.  When response screen is loaded local variables **locAddResponse** and
     **locEditResponse** are set to false.
@@ -394,7 +397,7 @@ Variables used from response screen:
 5.  Once user selects the **Add** button response will be added in against
     discussion
 
-#### Edit response execution details
+### Edit response execution details
 
 1.  User can select any discussion from discussion screen. Once discussion is selected from discussion screen, it will be navigated to Response screen.
 
@@ -412,7 +415,7 @@ Variables used from response screen:
 6.  Once user updated in response then **Update** button will be activated and
     response will be updated in Dataverse.
 
-#### Delete response execution details
+### Delete response execution details
 
 1.  User can select any discussion from discussion screen. Once discussion is selected from discussion screen, it will be navigated to Response screen.
 

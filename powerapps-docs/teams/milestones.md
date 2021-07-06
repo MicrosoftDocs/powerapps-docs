@@ -8,6 +8,10 @@ ms.custom:
 ms.date: 05/27/2021
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
 ---
 
 # Milestones sample app 
@@ -68,29 +72,23 @@ activities, and project milestones.
 
 1. **Select theme** - allows managers to select a theme, or add a custom header image/color.
 
-1. **App information** - shows additional information about the app.
+1. **Customize** - shows additional information about the app.
 
-1. **App settings** - provides access for managers to change app settings, such as rename projects, or update project category, priority, and status.
+1. **App settings** - provides access for managers to change app settings, such as update project category, priority, and status.
 
 1. **New project** - create a new project.
 
 1. **Sort projects** - sorts the list of projects in ascending, or descending order based on project start date.
 
-1. **View team status of work items by owner** - color coded counts display the number of work items by team member.
-
-1. **Team/Milestone toggle** - toggle between user summary view, and milestone status view.
-
-1. **New activity** - add an update to the activity log.
-
-1. **Expand/collapse the activity log** - expands, or collapses the activity log section.
+1. **View team status of work items by owner** - color coded counts display the number of work items by milestone. Select the drop down to toggle to user summary view, showing work items by user.
 
 1. **Projects list** - shows all projects, or the results of the search term entered in the find projects search box. Overdue work item count is displayed if the project has any overdue work items.
 
-1. **Customize** - open the app inside Power Apps Studio for customization.
-
 1. **Project work items** - create, read, update, and delete work items associated with the project.
 
-1. **Activity log** - view activity log, including manually added items, and system-generated notifications.
+1. **Project properties** - update project properties, such as modifying or deleting projects or updating milestones and team members associated with the project.
+
+   
 
 ## Create a new project
 
@@ -203,16 +201,11 @@ To delete an existing project:
 
 ### See also
 
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
+- [Customize Milestones sample app](customize-milestones.md)
+- [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Boards (Preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

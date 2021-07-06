@@ -1,6 +1,6 @@
 ---
 title: Types  | Microsoft Docs
-description: 
+description: Provides information on methods available for types element.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -17,7 +17,7 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven and canvas apps 
 
 ## Parent Elements
 

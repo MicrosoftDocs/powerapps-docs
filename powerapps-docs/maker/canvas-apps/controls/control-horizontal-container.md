@@ -1,6 +1,6 @@
 ---
-title: 'Horizontal container: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Horizontal container control
+title: Horizontal container control in Power Apps
+description: Learn about the details, properties and examples of the horizontal container control in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Horizontal container control 
+# Horizontal container control in Power Apps
 
 Horizontal container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
