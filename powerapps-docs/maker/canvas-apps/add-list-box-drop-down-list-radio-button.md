@@ -102,52 +102,52 @@ In these steps, you used an expression to create a list of items. You can apply 
 
    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
-1. Set **[OnChange](properties-core.md)** property on **btnReset** to this formula:
+2. Set **[OnChange](properties-core.md)** property on **btnReset** to this formula:
    <br>`ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})`
    
-1. Set the **[Text](properties-core.md)** property on **btnReset** to 
+3. Set the **[Text](properties-core.md)** property on **btnReset** to 
    <br>`"Reset"`
 
-1. Add a **List box** control named **lbItems**, and set its **Items** property to this expression:
+4. Add a **List box** control named **lbItems**, and set its **Items** property to this expression:
    <br/> `MyItems`
 
-1. While holding down the Alt key, press the Reset button.
+5. While holding down the Alt key, press the Reset button.
 
 > [!NOTE]
 > The list box should populate with the items from the MyItems collection.
 
-1. Arrange the list box and button so they're lined up vertically:
+6. Arrange the list box and button so they're lined up vertically:
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/listboxbutton.png
 
-1. Add a **[Text Input](control-text-input.md)** control and name it **txtAdd**.
+7. Add a **[Text Input](control-text-input.md)** control and name it **txtAdd**.
 
-1. Set **[Text](properties-core.md)** property on **txtAdd** to
+8. Set **[Text](properties-core.md)** property on **txtAdd** to
    <br>`""`
 
-1. Add a **[Button](control-button.md)** control and name it **btnAdd**.
+9. Add a **[Button](control-button.md)** control and name it **btnAdd**.
 
-1. Set the **[Text](properties-core.md)** property on **btnAdd** to
+10. Set the **[Text](properties-core.md)** property on **btnAdd** to
    <br>`"Add"`
 
-1. Set **[OnChange](properties-core.md)** property on **btnAdd** to this formula:
+11. Set **[OnChange](properties-core.md)** property on **btnAdd** to this formula:
    <br>`Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)`
 
 > [!NOTE]
 > The collect function will add the text from the text input as an item in the collection.
 > The reset function will reset the text input back to it's default state.
 
-1. Arrange **txtAdd** and **btnAdd* so they're lined up vertically underneath **lbItems** and **btnReset**
+12. Arrange **txtAdd** and **btnAdd* so they're lined up vertically underneath **lbItems** and **btnReset**
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsbeforeadd.png
 
-1. Preview the app by pressing F5.
+13. Preview the app by pressing F5.
 
-1. Add a text value to **txtAdd** text input control.
+14. Add a text value to **txtAdd** text input control.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolstextentered.png
 
-1. Press the Add button.
+15. Press the Add button.
 
 > [!NOTE]
 > The list box should populate with the items from the MyItems collection.
@@ -156,25 +156,25 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 1. Add a **[Button](control-button.md)** control and name it **btnDelete**.
 
-1. Set the **[Text](properties-core.md)** property on **btnDelete** to
+2. Set the **[Text](properties-core.md)** property on **btnDelete** to
    <br>`"Delete"`
 
-1. Set **[OnChange](properties-core.md)** property on **btnDelete** to this formula:
+3. Set **[OnChange](properties-core.md)** property on **btnDelete** to this formula:
    <br>`Remove(MyItems, lbItems.Selected)`
 
-1. Arrange **btnDelete* so it's lined up vertically underneath **btnReset**
+4. Arrange **btnDelete* so it's lined up vertically underneath **btnReset**
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png
 
-1. Preview the app by pressing F5.
+5. Preview the app by pressing F5.
 
-1. Press the Reset button to reset the list box.
+6. Press the Reset button to reset the list box.
 
-1. Press an item in the list box to select it.
+7. Press an item in the list box to select it.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeleteselected.png
 
-1. Press the Delete button to delete item.
+8. Press the Delete button to delete item.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsafterdelete.png
 
