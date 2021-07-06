@@ -74,9 +74,9 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of the drop-down.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -118,7 +118,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Example
+## Examples
 
 ### Simple list
 
@@ -137,15 +137,15 @@ The principles in this procedure apply to any [data source that provides tables]
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
-    `Distinct(Accounts, address1_city)`
+    `Distinct(Accounts, 'Address 1: City')`
 
     This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
 1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
-    `Filter(Accounts, address1_city = Cities.Selected.Value)`
+    `Filter(Accounts, address1_city = Cities.Selected.Result)`
 
-    This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
+   This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
 
 ## Accessibility guidelines
 ### Color contrast
