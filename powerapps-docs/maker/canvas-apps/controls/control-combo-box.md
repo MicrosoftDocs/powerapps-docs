@@ -2,18 +2,18 @@
 title: Combo box control in Power Apps
 description: Learn about the details, properties and examples of the combo box control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/11/2021
+ms.date: 07/06/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Combo box control in Power Apps
 A control that allows users to make selections from provided choices.  Supports search and multiple selections.
 
@@ -49,7 +49,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **SearchFields** - The data fields of the data source searched when user is entering text.  
 
 > [!NOTE]
-> To search on multiple fields, set ComboBox1.SearchFields = ["MyFirstColumn", "MySecondColumn"].  Only text fields are supported.
+> To search on multiple fields, set **SearchFields** property in this format: ["MyFirstColumn", "MySecondColumn"].  Only text fields are supported.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -63,7 +63,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **DisplayFields** – List of fields shown for each item returned by the search.  Easiest to configure via the Data pane in the Properties option tab.
 
 > [!NOTE]
-> To update multiple display fields given template, set ComboBox1.DisplayFields = ["MyFirstColumn", "MySecondColumn"].
+> To update multiple display fields in given template, set **DisplayFields** property in this format: `["MyFirstColumn", "MySecondColumn"]`.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
@@ -95,43 +95,49 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 ### Basic Combo box
 
-The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Microsoft Dataverse database has been created and sample data added.
+The steps in this example apply to any [data source that provides tables](../connections-list.md#tables), but to follow these steps exactly, use an environment with Microsoft Dataverse database having sample data.
 
-1. On the **Insert** tab, open the **Input** menu, and then select **Combo box** and name it **Combobox1**.  
+1. Select **Insert** > **Input** > **Combo box**, and name it "Combobox1".  
 
-1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.  Lets select the Accounts table.
+1. On the **Properties** pane on the right-side of the screen, open the **Select a data source** list (next to **Items**), and then add or select a data source such as the Accounts table.
 
-1. On the same tab, select **Edit** (next to **Fields**).
+1. On the same pane, select **Edit** (next to **Fields**).
 
 1. In the **Data** pane, open the **Primary text** list, and then select the **Primary Name** column that will show in the **Combo box** control.
 
-1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
+1. While holding down the **Alt** key, select the down arrow to open the **Combo box** control.
 
     The control shows the data from the Primary Name that you specified in the data source that you specified.
 
 #### (Optional) Show the first record by default
 
 1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
-    <br />`First(DataSource)`
+    
+    ```powerapps-dot    
+    First(DataSource)
+    ```
 
 #### (Optional) Display selected Account Name value in a label
 
-1. On the **Insert** tab, open the **Text** menu, and then select **Label**.  
-1. Set the **Text** property to this expression, replacing *Text* with the following:
-<br />`If(CountRows(ComboBox1.SelectedItems)>0, Concat(ComboBox1.SelectedItems,'Account Name',", "), "NO SELECTED ITEM")`
+1. Select **Insert** > **Text label**, and then select **Label**.  
+1. Set the **Text** property to this expression, replacing *Text* with the following formula:
 
-> [!NOTE]
-> The If statement will check to see how may selected items exist and display them in a comma delimited label or a "NO SELECTED ITEM" message when empty. 
-    
-### Simulate simple drop down behaviour 
+    ```powerapps-dot
+    If(CountRows(ComboBox1.SelectedItems)>0, Concat(ComboBox1.SelectedItems,'Account Name',", "), "NO SELECTED ITEM")
+    ```
+
+    > [!NOTE]
+    > The If statement will check to see how may selected items exist and display them in a comma delimited label or a "NO SELECTED ITEM" message when empty.
+
+### Simulate simple drop down behavior
 
 By setting **IsSearchable** to false and **SelectMultiple** to false, you can achieve the same functionality of a drop down.
 
-1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
+1. Select **Insert** > **Input**, and then select **Combo box**.  
 
-1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
+1. On the **Properties** pane on the right-side of the screen, open the **Select a data source** list (next to **Items**), and then add or select a data source.
 
-1. On the same tab, select **Edit** (next to **Fields**).
+1. On the same pane, select **Edit** (next to **Fields**).
 
 1. In the **Data** pane, open the **Primary text** list, and then select the column that you want to show in the **Combo box** control.
 
@@ -139,12 +145,12 @@ By setting **IsSearchable** to false and **SelectMultiple** to false, you can ac
 
 1. Set the **SelectMultiple** property to false.
 
-1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
+1. While holding down the **Alt** key, select the down arrow to open the **Combo box** control.
 
     The control shows the data from the column that you specified in the data source that you specified.
-        
-> [!NOTE]
-> Notice that the "Find items" text has disappeared and that you'll only be able to select a single item.
+    
+    > [!NOTE]
+    > "Find items" text has disappeared, and that you'll only be able to select a single item.
 
 ## Accessibility guidelines
 ### Color contrast
