@@ -2,7 +2,7 @@
 title: "Use multi-table lookup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/28/2021
+ms.date: 07/06/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
