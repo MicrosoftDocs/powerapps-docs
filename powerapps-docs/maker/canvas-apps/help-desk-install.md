@@ -72,3 +72,4 @@ You can also enable the capability to send emails or approval routing using [Pow
 [Share a canvas app](share-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
