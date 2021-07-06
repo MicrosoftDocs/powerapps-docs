@@ -169,16 +169,16 @@ The response from the HTTP post is shown below containing the ID of the polymorp
 
 ```json
 {
-    "@odata.context": 
-      "http://<organization URL>/api/data/v9.1/\$metadata\#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
+    "@odata.context":
+      "http://<organization URL>/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
 
-    "RelationshipIds": [
+    "RelationshipIds":[
         "77d4c6e9-0397-eb11-a81c-000d3a6cfaba",
         "7ed4c6e9-0397-eb11-a81c-000d3a6cfaba",
         "85d4c6e9-0397-eb11-a81c-000d3a6cfaba"
     ],
 
-    "AttributeId": "d378dd3e-42f4-4bd7-95c7-0ee546c7de40"
+    "AttributeId":"d378dd3e-42f4-4bd7-95c7-0ee546c7de40"
 ```
 
 ### See Also
