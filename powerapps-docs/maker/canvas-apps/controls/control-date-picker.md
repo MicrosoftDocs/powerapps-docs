@@ -74,7 +74,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **InputTextPlaceholder** – Instructional text that appears if no dates are entered.
 
-**IsEditable** – Whether the datepicker text can be edited. If false, the date can only be changed by using the calendar.
+**IsEditable** – Whether the Date Picker text can be edited. If false, the date can only be changed by using the calendar.
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
@@ -92,7 +92,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**Reset** - Whether the datepicker control should be reset to the **DefaultDate** value.
+**Reset** - Whether the Date Picker control should be reset to the **DefaultDate** value.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
