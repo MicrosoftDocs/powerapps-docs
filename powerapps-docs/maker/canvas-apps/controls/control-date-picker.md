@@ -1,6 +1,6 @@
 ---
-title: 'Date Picker control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Date Picker control
+title: Date Picker control in Power Apps
+description: Learn about the details, properties and examples of the Date Picker control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -77,9 +77,9 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control. 
+**[OnChange](properties-core.md)** –  Actions to perform when the user changes the value of a control. 
 
 Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger on the same user action if the user's *click* causes the change. In this case, OnSelect triggers **before** OnChange.
 
@@ -90,6 +90,8 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 **[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+
+**Reset** - Whether the datepicker control should be reset to the **DefaultDate** value.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
@@ -110,7 +112,9 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 ## Related functions
 **[Year](../functions/function-datetime-parts.md)**( *DateTimeValue* )
 
-## Example
+## Examples
+
+### Basic date picker
 1. Add a **Date Picker** control, and name it **Deadline**.
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -123,6 +127,19 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
     The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
 4. To return to the default workspace, press Esc.
 
+##  Reset date picker to default date
+1. Add a **Date Picker** control, and name it **DateTimeReset**.
+
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+
+1. Add a **[Button](control-button.md)** control, and set its **[OnChange](properties-core.md)** property to this formula:
+   <br>**Reset(DateTimeReset)**
+
+1. Press F5, choose a new date in **DateTimeReset**, and then click or tap **OK**.
+
+1. Press the button. The date will reset back to the **DefaultDate** (Today).
+
+1. To return to the default workspace, press Esc.
 
 ## Accessibility guidelines
 ### Color contrast
