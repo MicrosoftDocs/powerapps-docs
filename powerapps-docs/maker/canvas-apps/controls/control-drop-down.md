@@ -2,18 +2,18 @@
 title: Drop down control in Power Apps
 description: Learn about the details, properties and examples of the drop down control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 07/06/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Drop down control in Power Apps
 A list that shows only the first item unless the user opens it.
 
@@ -74,9 +74,9 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of the drop-down.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -118,7 +118,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Example
+## Examples
 
 ### Simple list
 
@@ -137,13 +137,13 @@ The principles in this procedure apply to any [data source that provides tables]
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
-    `Distinct(Accounts, address1_city)`
+    `Distinct(Accounts, 'Address 1: City')`
 
     This formula shows all the cities in the **Accounts** table. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
 1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
-    `Filter(Accounts, address1_city = Cities.Selected.Value)`
+    `Filter(Accounts, address1_city = Cities.Selected.Result)`
 
     This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** table for which the city matches the selected value in the **Cities** control.
 
