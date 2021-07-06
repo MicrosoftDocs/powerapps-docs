@@ -2,7 +2,7 @@
 title: "Create and update table relationships using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table relationships using the Web API"
 ms.custom: ""
-ms.date: 04/29/2021
+ms.date: 07/06/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
