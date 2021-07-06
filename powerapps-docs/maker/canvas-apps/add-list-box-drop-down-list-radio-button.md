@@ -14,12 +14,12 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add a list box, a drop-down list, or radio buttons to a canvas app
+# Add a list box, a drop-down list, a combo box, or radio buttons to a canvas app
 
 Show a single column of data (for example, from a multi-column table) in a canvas app so that users can select one or more items in a list.
 
 - Add a list box to allow users to select more than one option.
-- Add a drop-down list to take up less space on a screen.
+- Add a drop-down list or combo box to take up less space on a screen.
 - Add a set of radio buttons for a particular design effect.
 
 This topic focuses on lists boxes and radio buttons, but the same principles apply to drop-down lists.
@@ -95,6 +95,88 @@ In these steps, you used an expression to create a list of items. You can apply 
 [12]: ./media/add-list-box-drop-down-list-radio-button/itemsradio.png
 [14]: ./media/add-list-box-drop-down-list-radio-button/radiocircle.png
 [15]: ./media/add-list-box-drop-down-list-radio-button/dropdown.png
+
+## Add an item to an existing list
+
+1. Add a **[Button](control-button.md)** control and name it **btnReset**.
+
+   Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   
+1. Set **[OnChange](properties-core.md)** property on **btnReset** to this formula:
+   <br>`ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})`
+   
+1. Set the **[Text](properties-core.md)** property on **btnReset** to 
+   <br>`"Reset"`
+
+1. Add a **List box** control named **lbItems**, and set its **Items** property to this expression:
+   <br/> `MyItems`
+
+1. While holding down the Alt key, press the Reset button.
+
+> [!NOTE]
+> The list box should populate with the items from the MyItems collection.
+
+1. Arrange the list box and button so they're lined up vertically:
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/listboxbutton.png
+
+1. Add a **[Text Input](control-text-input.md)** control and name it **txtAdd**.
+
+1. Set **[Text](properties-core.md)** property on **txtAdd** to
+   <br>`""`
+
+1. Add a **[Button](control-button.md)** control and name it **btnAdd**.
+
+1. Set the **[Text](properties-core.md)** property on **btnAdd** to
+   <br>`"Add"`
+
+1. Set **[OnChange](properties-core.md)** property on **btnAdd** to this formula:
+   <br>`Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)`
+
+> [!NOTE]
+> The collect function will add the text from the text input as an item in the collection.
+> The reset function will reset the text input back to it's default state.
+
+1. Arrange **txtAdd** and **btnAdd* so they're lined up vertically underneath **lbItems** and **btnReset**
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsbeforeadd.png
+
+1. Preview the app by pressing F5.
+
+1. Add a text value to **txtAdd** text input control.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolstextentered.png
+
+1. Press the Add button.
+
+> [!NOTE]
+> The list box should populate with the items from the MyItems collection.
+
+### (Optional) Remove an item from an existing list
+
+1. Add a **[Button](control-button.md)** control and name it **btnDelete**.
+
+1. Set the **[Text](properties-core.md)** property on **btnDelete** to
+   <br>`"Delete"`
+
+1. Set **[OnChange](properties-core.md)** property on **btnDelete** to this formula:
+   <br>`Remove(MyItems, lbItems.Selected)`
+
+1. Arrange **btnDelete* so it's lined up vertically underneath **btnReset**
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png
+
+1. Preview the app by pressing F5.
+
+1. Press the Reset button to reset the list box.
+
+1. Press an item in the list box to select it.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeleteselected.png
+
+1. Press the Delete button to delete item.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsafterdelete.png
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
