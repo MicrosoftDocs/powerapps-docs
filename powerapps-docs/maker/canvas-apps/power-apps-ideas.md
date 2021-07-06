@@ -80,7 +80,7 @@ To get the best results, here's some tips that you can follow when writing the p
 
 During this public preview, Power Apps Ideas has the following limitations:
 
-- Regions and language: Currently available in environments created inside United States, and Canada, with the browser default language as English.
+- Regions and language: Currently available in environments created inside United States, with the browser default language as English.
 - Controls: Supports only **Gallery** and **Data table** controls&mdash;on their **Items** property.
 - Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. We’ll continue to add support of more functions.
 - Data types: Supports Text, Date time, Numbers. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
