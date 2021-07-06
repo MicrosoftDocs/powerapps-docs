@@ -31,9 +31,9 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 
 **Type** – Output property that contains the type of the code that was scanned most recently.
 
-**OnScan** – How an app responds when a barcode is successfully scanned.
+**OnScan** – Actions to perform when a barcode is successfully scanned.
 
-**OnCancel** – How an app responds when a barcode scan is canceled by the user.
+**OnCancel** – Actions to perform when a barcode scan is canceled by the user.
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. BarcodeType.Code128 & BarcodeType.Code39  **Default: Auto**
 

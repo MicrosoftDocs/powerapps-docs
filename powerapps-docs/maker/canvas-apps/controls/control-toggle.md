@@ -58,11 +58,11 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
+**OnCheck** – Actions to perform when the value of a checkbox or a toggle changes to **true**.
 
 **[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
+**OnUncheck** – Actions to perform when the value of a checkbox or a toggle changes to **false**.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 

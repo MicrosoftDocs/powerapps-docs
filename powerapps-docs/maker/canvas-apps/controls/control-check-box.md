@@ -72,11 +72,11 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
+**OnCheck** – Actions to perform when the value of a checkbox or a toggle changes to **true**.
 
 **[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
+**OnUncheck** – Actions to perform when the value of a checkbox or a toggle changes to **false**.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

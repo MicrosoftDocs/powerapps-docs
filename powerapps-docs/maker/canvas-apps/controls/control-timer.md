@@ -27,7 +27,7 @@ Timers can, for example, determine how long a control appears or change other pr
 ## Key properties
 **Duration** – How long a timer runs in milliseconds. The maximum is 24 hours expressed in milliseconds. Default is 60 seconds.
 
-**OnTimerEnd** – How an app responds when a timer finishes running.
+**OnTimerEnd** – Actions to perform when a timer finishes running.
 
 **Repeat** – Whether a timer automatically restarts when it finishes running.
 
@@ -76,7 +76,7 @@ Timers can, for example, determine how long a control appears or change other pr
 
 **[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnTimerStart** – How an app responds when a timer starts to run.
+**OnTimerStart** – Actions to perform when a timer starts to run.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
