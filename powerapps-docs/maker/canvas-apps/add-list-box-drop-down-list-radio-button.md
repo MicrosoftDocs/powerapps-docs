@@ -7,8 +7,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/24/2018
-ms.author: fikaradz
+ms.date: 07/06/2021
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
@@ -98,50 +98,52 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 ## Add an item to an existing list
 
-1. Add a **[Button](control-button.md)** control and name it **btnReset**.
+1. Add a **[Button](control-button.md)** control and name it "btnReset".
 
    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
 2. Set **[OnChange](properties-core.md)** property on **btnReset** to this formula:
-   <br>`ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})`
    
-3. Set the **[Text](properties-core.md)** property on **btnReset** to 
-   <br>`"Reset"`
+    ```powerapps-dot
+    ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})
+    ```
+   
+3. Set the **[Text](properties-core.md)** property on **btnReset** to `"Reset"`.
 
-4. Add a **List box** control named **lbItems**, and set its **Items** property to this expression:
-   <br/> `MyItems`
+4. Add a **List box** control named **lbItems**, and set its **Items** property to `MyItems`.
 
-5. While holding down the Alt key, press the Reset button.
+5. While holding down the **Alt** key, press the **Reset** button.
 
-> [!NOTE]
-> The list box should populate with the items from the MyItems collection.
+    > [!NOTE]
+    > The list box should populate with the items from the "MyItems" collection.
 
-6. Arrange the list box and button so they're lined up vertically:
+6. Arrange the list box and button so they're lined up vertically.
 
-[1]: ./media/add-list-box-drop-down-list-radio-button/listboxbutton.png
+    ![List box button](media\add-list-box-drop-down-list-radio-button\listboxbutton.png "List box button")
 
-7. Add a **[Text Input](control-text-input.md)** control and name it **txtAdd**.
+7. Add a **[Text Input](control-text-input.md)** control, and name it "txtAdd".
 
-8. Set **[Text](properties-core.md)** property on **txtAdd** to
-   <br>`""`
+8. Set **[Text](properties-core.md)** property of **txtAdd** to `""`.
 
-9. Add a **[Button](control-button.md)** control and name it **btnAdd**.
+9. Add a **[Button](control-button.md)** control, and name it "btnAdd".
 
-10. Set the **[Text](properties-core.md)** property on **btnAdd** to
-   <br>`"Add"`
+10. Set the **[Text](properties-core.md)** property of **btnAdd** to `"Add"`.
 
-11. Set **[OnChange](properties-core.md)** property on **btnAdd** to this formula:
-   <br>`Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)`
+11. Set **[OnChange](properties-core.md)** property of **btnAdd** to the following formula:
 
-> [!NOTE]
-> The collect function will add the text from the text input as an item in the collection.
-> The reset function will reset the text input back to it's default state.
+    ```powerapps-dot
+    Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)
+    ```
 
-12. Arrange **txtAdd** and **btnAdd* so they're lined up vertically underneath **lbItems** and **btnReset**
+    > [!NOTE]
+    > - The collect function will add the text from the text input as an item in the collection.
+    > - The reset function will reset the text input back to it's default state.
 
-[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsbeforeadd.png
+12. Arrange **txtAdd** and **btnAdd** so they're lined up vertically underneath **lbItems** and **btnReset**.
 
-13. Preview the app by pressing F5.
+    ![All controls - before adding](media\add-list-box-drop-down-list-radio-button\allcontrolsbeforeadd.png "All controls - before adding")
+
+13. Preview the app by pressing **F5**.
 
 14. Add a text value to **txtAdd** text input control.
 
@@ -149,24 +151,26 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 15. Press the Add button.
 
-> [!NOTE]
-> The list box should populate with the items from the MyItems collection.
+    > [!NOTE]
+    > The list box should populate with the items from the MyItems collection.
 
 ### (Optional) Remove an item from an existing list
 
-1. Add a **[Button](control-button.md)** control and name it **btnDelete**.
+1. Add a **[Button](control-button.md)** control, and name it "btnDelete".
 
-2. Set the **[Text](properties-core.md)** property on **btnDelete** to
-   <br>`"Delete"`
+2. Set the **[Text](properties-core.md)** property of **btnDelete** to`"Delete"`.
 
-3. Set **[OnChange](properties-core.md)** property on **btnDelete** to this formula:
-   <br>`Remove(MyItems, lbItems.Selected)`
+3. Set **[OnChange](properties-core.md)** property of **btnDelete** to the following formula:
+
+    ```powerapps-dot
+    Remove(MyItems, lbItems.Selected)
+    ```
 
 4. Arrange **btnDelete** so it's lined up vertically underneath **btnReset**
 
-[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png
+    ![All controls with delete button](media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png "All controls with delete button")
 
-5. Preview the app by pressing F5.
+5. Preview the app by pressing **F5**.
 
 6. Press the Reset button to reset the list box.
 
