@@ -94,21 +94,34 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 ## Examples
 
 ### Basic Combo box
-1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
-1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
+The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Microsoft Dataverse database has been created and sample data added.
+
+1. On the **Insert** tab, open the **Input** menu, and then select **Combo box** and name it **Combobox1**.  
+
+1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.  Lets select the Accounts table.
 
 1. On the same tab, select **Edit** (next to **Fields**).
 
-1. In the **Data** pane, open the **Primary text** list, and then select the column that you want to show in the **Combo box** control.
+1. In the **Data** pane, open the **Primary text** list, and then select the **Primary Name** column that will show in the **Combo box** control.
 
 1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
 
-    The control shows the data from the column that you specified in the data source that you specified.
-    
-1. (optional) To show the first record by default, set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
+    The control shows the data from the Primary Name that you specified in the data source that you specified.
 
-    `First(DataSource)`
+#### (Optional) Show the first record by default
+
+1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
+    <br />`First(DataSource)`
+
+#### (Optional) Display selected Account Name value in a label
+
+1. On the **Insert** tab, open the **Text** menu, and then select **Label**.  
+1. Set the **Text** property to this expression, replacing *Text* with the following:
+<br />`If(CountRows(ComboBox1.SelectedItems)>0, Concat(ComboBox1.SelectedItems,'Account Name',", "), "NO SELECTED ITEM")`
+
+> [!NOTE]
+> The If statement will check to see how may selected items exist and display them in a comma delimited label or a "NO SELECTED ITEM" message when empty. 
     
 ### Simulate simple drop down behaviour 
 
