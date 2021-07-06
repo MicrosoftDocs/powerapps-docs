@@ -2,18 +2,18 @@
 title: Drop down control in Power Apps
 description: Learn about the details, properties and examples of the drop down control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 07/06/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Drop down control in Power Apps
 A list that shows only the first item unless the user opens it.
 
