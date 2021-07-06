@@ -1,19 +1,19 @@
 ---
 title: Image properties in Power Apps
 description: Reference information about image properties in Power Apps.
-author: gregli-msft
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 07/06/2021
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Image properties in Power Apps
 Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
@@ -26,11 +26,11 @@ Configure graphical elements in your app, including images, photos, and elements
 * Applies to **[Audio](control-audio-video.md)**, **[Image](control-image.md)**, **[Microphone](control-microphone.md)**, and **[Video](control-audio-video.md)** controls.
 
 **ImagePosition** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
-- Fill: Fills the entire specified size with the image. Scales the image proportionally. Crops the image as needed.
-- Fit: Fits the entire image into the specified size. Scales the image proportionally. Does not crop the image.
-- Stretch: Fills the entire specified size with the image. Stretches the image disproportionally as needed. Does not crop the image.
-- Tile: Repeats the image across the control into the specified size.  Does not scale the image. Crops the image as needed.
-- Center: Places the image in the center of the control. Does not scale the image. Crops the image as needed.
+- Fill - Fills the entire specified size with the image. Scales the image proportionally. Crops the image as needed.
+- Fit - Fits the entire image into the specified size. Scales the image proportionally. Doesn't crop the image.
+- Stretch - Fills the entire specified size with the image. Stretches the image disproportionally as needed. Doesn't crop the image.
+- Tile - Repeats the image across the control into the specified size.  Doesn't scale the image. Crops the image as needed.
+- Center - Places the image in the center of the control. Doesn't scale the image. Crops the image as needed.
 
 * Applies to **[Audio](control-audio-video.md)**, **[Image](control-image.md)**, **[Microphone](control-microphone.md)**, **[Screen](control-screen.md)**, and **[Video](control-audio-video.md)** controls.
 
