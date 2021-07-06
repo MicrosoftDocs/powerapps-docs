@@ -35,11 +35,11 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
 
-**OnAddFile** – How the app responds when the user adds a new file attachment.
+**OnAddFile** – Actions to perform when the user adds a new file attachment.
 
-**OnRemoveFile** – How the app responds when the user deletes an existing attachment.
+**OnRemoveFile** – Actions to perform when the user deletes an existing attachment.
 
-**OnUndoRemoveFile** – How the app responds when the user restores a deleted attachment.
+**OnUndoRemoveFile** – Actions to perform when the user restores a deleted attachment.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.

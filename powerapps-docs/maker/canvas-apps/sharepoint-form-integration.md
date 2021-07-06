@@ -77,15 +77,15 @@ The **SharePointIntegration** control has the following properties:
 
 **Selected** - The selected item from the SharePoint list.
 
-**OnNew** - How an app responds when a user clicks or taps the **New** button or opens the **Create item** form in SharePoint.
+**OnNew** - Actions to perform when a user clicks or taps the **New** button or opens the **Create item** form in SharePoint.
 
-**OnView** - How an app responds when a user clicks or taps an **item** or opens the **Item detail** form in SharePoint.
+**OnView** - Actions to perform when a user clicks or taps an **item** or opens the **Item detail** form in SharePoint.
 
-**OnEdit** - How an app responds when a user clicks or taps the **Edit all** button or opens the **Edit item** form in SharePoint.
+**OnEdit** - Actions to perform when a user clicks or taps the **Edit all** button or opens the **Edit item** form in SharePoint.
 
-**OnSave** - How an app responds when a user clicks or taps the **Save** button in SharePoint.
+**OnSave** - Actions to perform when a user clicks or taps the **Save** button in SharePoint.
 
-**OnCancel** - How an app responds when a user clicks or taps the **Cancel** button in SharePoint.
+**OnCancel** - Actions to perform when a user clicks or taps the **Cancel** button in SharePoint.
 
 **SelectedListItemID** - Item ID for the selected item in a SharePoint list.
 
