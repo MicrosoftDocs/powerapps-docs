@@ -91,7 +91,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Example
+## Examples
+
+### Basic Combo box
 1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
 1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
@@ -108,7 +110,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
     `First(DataSource)`
     
-## Drop Down Example
+### Simulate simple drop down behaviour 
 
 By setting **IsSearchable** to false and **SelectMultiple** to false, you can achieve the same functionality of a drop down.
 
