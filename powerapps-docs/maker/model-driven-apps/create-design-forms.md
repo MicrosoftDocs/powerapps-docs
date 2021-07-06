@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -46,15 +46,109 @@ With the client API, you can use main form dialogs so users can open a related r
 Power Apps provides many options for designing forms. With Unified Interface, most tables were updated to better suit the responsive interface. Updated tables as well as your own custom tables include support for the Dynamics 365 for tablets client, business process flows, and business rules. When you use these tables, you can design once and deploy to all clients.  
   
 There are still a number of tables, referred to here as classic tables, that retain the appearance and capabilities from earlier versions. These tables are used less often. They are listed here:  
-  
-||||||  
-|-|-|-|-|-|  
-|Address|Article|Article Comment|Bulk Delete Operation|Connection|  
-|Discount|Discount List|Document Location|Email Attachment|Follow|  
-|Goal|Goal Metric|Import Source File|Invoice Product|Order Product|  
-|Price List|Queue Item|Quote Product|Rollup Field|Rollup Query|  
-|Saved View|Service|Service Activity|SharePoint Site|Site|  
-|Territory|Unit|Unit Group|||  
+
+:::row:::
+   :::column span="":::
+      Address
+   :::column-end:::
+   :::column span="":::
+      Article
+   :::column-end:::
+   :::column span="":::
+      Article Comment
+   :::column-end:::
+   :::column span="":::
+      Bulk Delete Operation
+   :::column-end:::
+   :::column span="":::
+      Connection
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Discount
+   :::column-end:::
+   :::column span="":::
+      Discount List
+   :::column-end:::
+   :::column span="":::
+      Document Location
+   :::column-end:::
+   :::column span="":::
+      Email Attachment
+   :::column-end:::
+   :::column span="":::
+      Follow
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Goal
+   :::column-end:::
+   :::column span="":::
+      Goal Metric
+   :::column-end:::
+   :::column span="":::
+      Import Source File
+   :::column-end:::
+   :::column span="":::
+      Invoice Product
+   :::column-end:::
+   :::column span="":::
+      Order Product
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Price List
+   :::column-end:::
+   :::column span="":::
+      Queue Item
+   :::column-end:::
+   :::column span="":::
+      Quote Product
+   :::column-end:::
+   :::column span="":::
+      Rollup Field
+   :::column-end:::
+   :::column span="":::
+      Rollup Query
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Saved View
+   :::column-end:::
+   :::column span="":::
+      Service
+   :::column-end:::
+   :::column span="":::
+      Service Activity
+   :::column-end:::
+   :::column span="":::
+      SharePoint Site
+   :::column-end:::
+   :::column span="":::
+      Site
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Territory
+   :::column-end:::
+   :::column span="":::
+      Unit
+   :::column-end:::
+   :::column span="":::
+      Unit Group
+   :::column-end:::
+   :::column span="":::
+             
+   :::column-end:::
+   :::column span="":::
+           
+   :::column-end:::
+:::row-end:::
 
 ## Create or edit a form
 

@@ -1,5 +1,5 @@
 ---
-title: Use drop-down lists with choices from lookup columns in a SharePoint list | Microsoft Docs
+title: Use drop-down lists with choices from lookup columns in a SharePoint list
 description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps

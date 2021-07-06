@@ -1,6 +1,6 @@
 ---
-title: License designation for an app | Microsoft Docs
-description: Explains how to check license designation for the selected app
+title: How to check license designation for an app
+description: Explains how to check license designation for the selected canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps

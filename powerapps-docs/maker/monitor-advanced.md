@@ -1,5 +1,5 @@
 ---
-title: Advanced Monitor concepts | Microsoft Docs
+title: Advanced Monitor concepts
 description: Learn about advanced monitoring concepts related to Monitor.
 author: hasharaf
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
-title: 'Label control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the label control
+title: Label control in Power Apps
+description: Learn about the details, properties and examples of the label control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Label control in canvas apps
+# Label control in Power Apps
 
 A box that shows data such as text, numbers, dates, or currency.
 
