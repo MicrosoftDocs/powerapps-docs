@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 81843cd6-36b4-4d93-9942-32d680789bbd
 ---
 
-Defines an inner configuration within a data-set manifest node to allow you to explicitly configure a column of your data-set against a column of a given type from the table against which the data-set is configured.
+Defines an inner configuration within a dataset manifest node to allow you to explicitly configure a column of your dataset against a column of a given type from the table against which the dataset is configured.

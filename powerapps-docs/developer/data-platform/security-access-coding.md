@@ -2,7 +2,7 @@
 title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/11/2021
+ms.date: 06/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -174,7 +174,19 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 | Message | Web API function,<br/> SDK API class |
 | --- | --- |
 | RetrieveUserPrivilegeByPrivilegeId | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest> |
-| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
+| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
+| RetrieveUserSetOfPrivilegesByIds | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds>,<br/>RetrieveUserSetOfPrivilegesByIdsRequest |
+| RetrieveUserSetOfPrivilegesByNames | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames>,<br/>RetrieveUserSetOfPrivilegesByNamesRequest |
+
+## Retrieve privileges for a security role
+
+You can retrieve privileges by security role. Below is a Web API example showing how this is done.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.0/roles(<role ID>)/roleprivileges_association?$select=name&$orderby=privilegeid 
+```
 
 ### See Also
 

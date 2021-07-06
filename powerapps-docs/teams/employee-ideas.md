@@ -268,8 +268,9 @@ To delete an idea:
 
 ### See also
 
+- [Deploy Employee Ideas app as broad distribution app](deploy-employee-ideas-broad-distribution.md)
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Customize employee ideas app](customize-employee-ideas.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 

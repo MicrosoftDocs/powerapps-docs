@@ -1,6 +1,6 @@
 ---
-title: Reference for the email-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the email-screen template for canvas apps works in Power Apps
+title: Reference information about the email-screen template in canvas apps
+description: Understand details of how the email-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Reference information about the email-screen template for canvas apps
+# Reference information about the email-screen template in canvas apps
 
 For canvas apps in Power Apps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
