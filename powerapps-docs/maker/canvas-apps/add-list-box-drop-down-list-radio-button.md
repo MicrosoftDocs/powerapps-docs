@@ -98,17 +98,17 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 ## Add an item to an existing list
 
-1. Add a **[Button](control-button.md)** control and name it "btnReset".
+1. Add a **[Button](controls/control-button.md)** control and name it "btnReset".
 
-   Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   Don't know how to [add, name, and configure a control](add-configure-controls.md)?
    
-2. Set **[OnChange](properties-core.md)** property on **btnReset** to this formula:
+2. Set **[OnChange](controls/properties-core.md)** property on **btnReset** to this formula:
    
     ```powerapps-dot
     ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})
     ```
    
-3. Set the **[Text](properties-core.md)** property on **btnReset** to `"Reset"`.
+3. Set the **[Text](controls/properties-core.md)** property on **btnReset** to `"Reset"`.
 
 4. Add a **List box** control named **lbItems**, and set its **Items** property to `MyItems`.
 
@@ -121,15 +121,15 @@ In these steps, you used an expression to create a list of items. You can apply 
 
     ![List box button](media\add-list-box-drop-down-list-radio-button\listboxbutton.png "List box button")
 
-7. Add a **[Text Input](control-text-input.md)** control, and name it "txtAdd".
+7. Add a **[Text Input](controls/control-text-input.md)** control, and name it "txtAdd".
 
-8. Set **[Text](properties-core.md)** property of **txtAdd** to `""`.
+8. Set **[Text](controls/properties-core.md)** property of **txtAdd** to `""`.
 
-9. Add a **[Button](control-button.md)** control, and name it "btnAdd".
+9. Add a **[Button](controls/control-button.md)** control, and name it "btnAdd".
 
-10. Set the **[Text](properties-core.md)** property of **btnAdd** to `"Add"`.
+10. Set the **[Text](controls/properties-core.md)** property of **btnAdd** to `"Add"`.
 
-11. Set **[OnChange](properties-core.md)** property of **btnAdd** to the following formula:
+11. Set **[OnChange](controls/properties-core.md)** property of **btnAdd** to the following formula:
 
     ```powerapps-dot
     Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)
@@ -156,11 +156,11 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 ### (Optional) Remove an item from an existing list
 
-1. Add a **[Button](control-button.md)** control, and name it "btnDelete".
+1. Add a **[Button](controls/control-button.md)** control, and name it "btnDelete".
 
-2. Set the **[Text](properties-core.md)** property of **btnDelete** to`"Delete"`.
+2. Set the **[Text](controls/properties-core.md)** property of **btnDelete** to`"Delete"`.
 
-3. Set **[OnChange](properties-core.md)** property of **btnDelete** to the following formula:
+3. Set **[OnChange](controls/properties-core.md)** property of **btnDelete** to the following formula:
 
     ```powerapps-dot
     Remove(MyItems, lbItems.Selected)
