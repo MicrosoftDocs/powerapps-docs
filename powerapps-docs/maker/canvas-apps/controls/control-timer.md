@@ -74,7 +74,7 @@ Timers can, for example, determine how long a control appears or change other pr
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **OnTimerStart** – How an app responds when a timer starts to run.
 

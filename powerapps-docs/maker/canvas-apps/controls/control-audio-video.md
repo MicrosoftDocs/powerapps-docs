@@ -62,7 +62,7 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 
 **OnPause** – How an app responds when the user pauses the clip that an audio or video control is playing.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.
+**OnStart** – Actions to perform when the user starts to record with a microphone control.
 
 **Paused** – *True* if a media playback control is currently paused, *false* otherwise.
 

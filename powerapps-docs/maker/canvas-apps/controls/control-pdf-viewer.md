@@ -63,7 +63,7 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **OnStateChange** – How an app responds when the state of the control changes.
 

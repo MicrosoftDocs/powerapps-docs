@@ -74,7 +74,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
 
