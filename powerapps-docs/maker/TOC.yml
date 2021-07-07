@@ -541,7 +541,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Preview)
+        - name: Use Power Apps Ideas (Experimental)
           href: ./canvas-apps/power-apps-ideas.md
         - name: Formula reference
           items:
