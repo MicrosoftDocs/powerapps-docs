@@ -23,7 +23,7 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 ## Key properties (icons and shapes)
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user selects a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user selects a control.
 
 ## Key properties (icons only)
 

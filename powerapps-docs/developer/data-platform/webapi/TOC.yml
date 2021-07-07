@@ -74,6 +74,8 @@
     href: create-update-entity-definitions-using-web-api.md 
   - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
+  - name: Use multi-table lookup columns
+    href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
 - name: Use Postman with Web API

@@ -42,9 +42,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**Input** – **Deprecated.** Whether the input supports mouse, pen, or touch inputs.  Defalut value (7) supports all three.
+**Input** – **Deprecated.** Whether the input supports mouse, pen, or touch inputs.  Default value (7) supports all three.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
