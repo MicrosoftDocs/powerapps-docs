@@ -82,6 +82,7 @@ During this experimental release, Power Apps Ideas has the following limitations
 
 - Regions and language: Currently available in environments created inside United States, with the browser default language as English.
 - Controls: Supports only **Gallery** and **Data table** controls&mdash;on their **Items** property.
+- Data sources: Currently the model is optimized for **Dataverse** tables and won't generate any suggestions if your Gallery or Data table is not bound to a Dataverse table.
 - Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. We’ll continue to add support of more functions.
 - Data types: Supports Text, Date time, Numbers. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
 - This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. However, it needs you to be precise about table, column, control names. <br> For example, if you enter `search Accounts with name in textbox`, it might not give you good result because there’s no linkage build on the model to understand “name” maps to “Account Name” column and textbox maps to TextSearchBox1. <br> 
