@@ -24,24 +24,34 @@ Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers d
 
 ## Install Microsoft Power Platform CLI
 
-1. Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+### Using Power Platform VS Code Extension
+
+To install Microsoft Power Platform CLI using Visual Studio Code Extension:
+
+1. Open [Visual Studio Code](https://code.visualstudio.com/).
+1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform VS Code Extension**.
+1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
+
+   > [!div class="mx-imgBorder"]
+   > ![VS code extension install](media/power-platform-vs-code-extension-install.png "VS code extension install")
+   
+> [!NOTE]
+> Microsoft Power Platform Visual Studio Code Extension updates automatically. 
+
+### Standalone Power Platform CLI
+
+To install standalone Power Platform CLI:
+
+1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
 1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
     ```CLI
     pac install latest
+
     ```
 > [!NOTE]
 > - Currently, Microsoft Power Platform CLI is supported only on Windows 10.
-> - Power Platform Extension for Visual Studio Code is in public preview, and works on both Windows 10 and macOS. 
-
-## Install Power Platform VS Code Extension
-
-You can also install the [Power Platform VS Code Extension](https://aka.ms/ppcvscode), which installs Microsoft Power Platform CLI for use within Visual Studio Code. The Power Platform extension makes it easy to manage Microsoft Power Platform environments and allows the developer to create and build packages, and deploy solutions and portals.
-
-> [!IMPORTANT]
-> - Power Platform Extension for Visual Studio Code is in public preview. 
-> - Preview features aren't meant for production use, and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - The Microsoft Power Platform CLI version that is included with this extension may also be a public preview version. We recommend that you install the latest version by using the steps described earlier in this topic.
+> - Power Platform VS Code Extension is in public preview, and works on both Windows 10 and macOS. 
 
 ## Common commands
 
