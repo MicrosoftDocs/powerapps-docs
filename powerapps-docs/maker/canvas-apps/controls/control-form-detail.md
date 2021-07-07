@@ -125,15 +125,15 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 * The **[EditForm](../functions/function-form.md)** function runs.
 * The **[ResetForm](../functions/function-form.md)** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
 
-**OnFailure** – How an app responds when a data operation has been unsuccessful.
+**OnFailure** – Actions to perform when a data operation has been unsuccessful.
 
 * This property applies only to the **Edit form** control.
 
-**OnReset** – How an app responds when an **Edit form** control is reset.
+**OnReset** – Actions to perform when an **Edit form** control is reset.
 
 * This property applies only to the **Edit form** control.
 
-**OnSuccess** – How an app responds when a data operation has been successful.
+**OnSuccess** – Actions to perform when a data operation has been successful.
 
 * This property applies only to the **Edit form** control.
 
