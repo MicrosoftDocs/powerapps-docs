@@ -5,7 +5,7 @@ author: norliu
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 07/06/2021
+ms.date: 07/07/2021
 ms.author: norliu
 ms.reviewer: tapanm
 search.audienceType: 
