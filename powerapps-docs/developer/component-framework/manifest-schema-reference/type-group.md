@@ -41,7 +41,7 @@ Model-driven and canvas apps
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
 
-The `type-group` has a limited support for canvas apps in this experimental preview. Only next types are compatible:
+The `type-group` has a limited support for canvas apps. Only next types are compatible:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
    - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
