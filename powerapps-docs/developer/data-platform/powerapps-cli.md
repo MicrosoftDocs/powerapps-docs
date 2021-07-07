@@ -24,7 +24,7 @@ Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers d
 
 ## Install Microsoft Power Platform CLI
 
-You can use either of the following modes of installing the Microsoft Power Platform CLI
+You can use either of the following ways to install Microsoft Power Platform CLI.
 
 ### Using Power Platform VS Code Extension
 
