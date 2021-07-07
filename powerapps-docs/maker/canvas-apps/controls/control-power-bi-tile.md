@@ -38,7 +38,7 @@ It's not recommended to have more than 3 Power BI tiles loaded at the same time 
 
 ## Pass a parameter
 
-By passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces.
+By passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces. If there is a space in table or column names then you must have to use _x0020_  (percent-encoded %20) in place of that space. For instance a table named **Financial Aid** can be expressed as **Financial_x0020_Aid** in a OData expression.
 
 To pass a single filter value, modify the value of the **TileURL** property, which follows this syntax:
 
