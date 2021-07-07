@@ -96,7 +96,8 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 |MSI|✖|✖|
 |AZTEC|✔|✔|
 
-**NOTE:** PDF_417 and AZTEC aren't supported in Auto mode
+> [!NOTE]
+> PDF_417 and AZTEC aren't supported in Auto mode
 
 ### See also
 
