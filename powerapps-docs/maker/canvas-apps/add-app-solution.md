@@ -30,7 +30,7 @@ To follow the steps in this topic, you must switch to an environment that contai
 > [!NOTE]
 > To use or run a flow in a canvas app that is included in a [solution](../data-platform/solutions-overview.md), you must be assigned a Dataverse security role with the following permissions at the minimum:
 > - Read privilege on the [Solution](../../developer/data-platform/reference/entities/solution.md) table
-> - Read privilege on the [Process](../../developer/data-platform/reference/entities/workflow.md) table
+> - Read privilege on the [Process (Workflow)](../../developer/data-platform/reference/entities/workflow.md) table
 >
 > For more information about security roles and privileges in Dataverse, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
