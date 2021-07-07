@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2021
+ms.date: 07/06/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -104,7 +104,7 @@ by Cassie Breviu
 by Matthew Bolanos  
 [Register and watch now](https://info.microsoft.com/ww-landing-3Steps-build-first-app-teams.html?LCID=EN-US)
 
-**The Downlow on Low Code App Platforms in 15 Minutes (Intro to Power apps)**  
+**Transform Your Org with Low Code App Platforms**  
 by Clay Wesener  
 [Register and watch now](https://info.microsoft.com/ww-landing-low-code-platforms-15minutes.html?LCID=EN-US)
 

@@ -31,7 +31,7 @@ The export functionality isn't supported in web browsers.
 
 * The **Data** property is available for an **Export** control but not an **Import** control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 ## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
