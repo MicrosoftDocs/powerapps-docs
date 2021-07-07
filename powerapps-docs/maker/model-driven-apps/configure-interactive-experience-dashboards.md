@@ -250,7 +250,7 @@ You can configure a particular color that will appear in the charts and streams 
   
 > [!IMPORTANT]
 >  - The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.
->  - When the chart is grouped by any of the following column types, the chart displays in the color that is defined for that column, not the dashboard:
+>  - When used in an interactive dashboard, a chart uses the color assigned to the categories that make up the different values, even if the chart is configured to use random colors, when the chart is configured to be grouped by any of the following column types:
 >     - Choice
 >     - Yes/No
 >     - Status Reason
