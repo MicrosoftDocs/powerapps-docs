@@ -2,7 +2,7 @@
 title: "Understanding the information returned from performance insights in Power Apps | MicrosoftDocs"
 description: Understand the information returned with performance insights. 
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 07/07/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -156,6 +156,23 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 1. You will receive OData request similar to the below. **Agent Dashboard** displayed below represents the user-friendly name of the given dashboard ID.
 
    `{"@odata.context":https://contoso.crm.dynamics.com/api/data/v9.1/$metadata#systemforms(2ff4a8cf-378b-e811-a964-000d3a30dc0a)/name,"value":"Contoso - Agent Dashboard"}`
+  
+### Synchronous plug-ins with slow external calls
+
+Insight ID: Perf.Sandbox.Performance.Plug-ins.ExternalCall
+
+Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocols. If these external services perform slowly, the plug-in itself will timeout or perform slowly.
+
+#### Motivation
+
+This insight checks the performance of the external endpoints and detects plug-ins in your app that are impacted by the slow external calls. 
+
+#### How to improve
+
+-	[Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+
+ More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](/powerapps/developer/data-platform/access-web-services).
 
 ## Customization
 
@@ -217,9 +234,43 @@ Slow dominant plug-ins affect performance. These plug-ins should be investigated
 
 #### How to improve
   
-Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/).
+Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](/powerapps/developer/data-platform/best-practices/business-logic/).
 
 To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+
+Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are described here:
+
+- Associated SQL queries performed slow, hence the plug-in execution time increased.
+- Follow the single responsibility principle for your plug-in and don’t make transactions with significant transaction boundaries.
+- Plug-in might be making some external calls, which are slow.
+- Plug-in logic isn't optimized for multi-threading environments. Check your code.
+
+To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+  
+### Saved query with leading wildcard
+
+Insight ID: Perf.ModelDriven.Customization.SavedQuery.LeadingWildCard
+
+Leading wildcards are *like* or *not like* conditions that use a wildcard (%) at the start of a search string. An example of a poorly written request is: 
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical"> 
+    <entity name="account"> 
+        <attribute name="accountid" /> 
+        <attribute name="accountnumber" /> 
+        <filter type="and"> 
+            <condition attribute="accountnumber" operator="like" value="%124" /> 
+        </filter> 
+    </entity> 
+</fetch>
+```
+
+#### Motivation
+
+A leading wildcard character (%) in a saved query can cause the query to timeout or perform slowly. This insight points to such slow saved queries with leading wildcards.
+
+#### How to improve
+
+Avoid using leading wildcards. In the search key, these are translated to “contains” in SQL Server, which won’t take the advantage of index seek but will do a scan. If it is necessary to use a leading wildcard, limit the scope of search by including other conditions. Note that it is ok to use trailing wildcards (%) at the end of search strings. 
 
 ## Configuration
 

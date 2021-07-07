@@ -41,14 +41,12 @@ Model-driven and canvas apps
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
 
-The `type-group` has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components into Microsoft Dataverse:
-
-1. All the types listed in the in the type-group are of compatible in canvas apps. The types that are compatible are:
+The `type-group` has a limited support for canvas apps. Only the following types are compatible:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
    - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
-2. If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type listed in the `type-group` is considered.
+If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type from `type-group` is considered.
 
 ### Example
 
