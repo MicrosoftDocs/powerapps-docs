@@ -1,5 +1,5 @@
 ---
-title: Power Apps Ideas (Preview)
+title: Power Apps Ideas (Experimental)
 description: Learn about using Power Apps Ideas natural language to transform into Power Fx formulas.
 author: norliu
 ms.service: powerapps
@@ -17,7 +17,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (Preview)
+# Power Apps Ideas (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -25,8 +25,8 @@ contributors:
 now be used to transform natural language to a Power Fx formula.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 For example, instead of figuring out how to write the following formula:
 
@@ -78,7 +78,7 @@ To get the best results, here's some tips that you can follow when writing the p
 
 ## Limitations
 
-During this public preview, Power Apps Ideas has the following limitations:
+During this experimental release, Power Apps Ideas has the following limitations:
 
 - Regions and language: Currently available in environments created inside United States, with the browser default language as English.
 - Controls: Supports only **Gallery** and **Data table** controls&mdash;on their **Items** property.
