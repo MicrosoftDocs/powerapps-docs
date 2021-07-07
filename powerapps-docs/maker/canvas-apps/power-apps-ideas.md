@@ -17,7 +17,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (Preview)
+# Power Apps Ideas (Experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -25,7 +25,7 @@ contributors:
 now be used to transform natural language to a Power Fx formula.
 
 > [!IMPORTANT]
-> - This is a preview feature.
+> - This is a experimental feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 For example, instead of figuring out how to write the following formula:
@@ -78,9 +78,10 @@ To get the best results, here's some tips that you can follow when writing the p
 
 ## Limitations
 
-During this public preview, Power Apps Ideas has the following limitations:
+During this experimental release, Power Apps Ideas has the following limitations:
 
 - Regions and language: Currently available in environments created inside United States, with the browser default language as English.
+- Data sources: Currently this feature is optimized for **Dataverse** tables and we're working on incremenatlly expand the support to more data sources.
 - Controls: Supports only **Gallery** and **Data table** controls&mdash;on their **Items** property.
 - Functions: Works best on `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. We’ll continue to add support of more functions.
 - Data types: Supports Text, Date time, Numbers. Not supported: Lookup, Choice, Choices, Yes/No, File and Image.
