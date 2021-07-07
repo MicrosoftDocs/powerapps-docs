@@ -1,12 +1,12 @@
 ---
-title: "View and create email in model-driven apps | MicrosoftDocs"
-description: "View and create email while using a model-driven app."
+title: "Understand the email experience in model-driven apps | MicrosoftDocs"
+description: Understand the email experience
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/19/2020
+ms.date: 6/30/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -18,96 +18,48 @@ search.app:
   - D365CE
 ---
 
+# Understand the email experience
 
-# View and create email through the Activities grid
+Having the ability to communicate effectively with customers can lead to increased sales and customer satisfaction. The email capability in customer engagement apps empowers users with the ability to respond and provide timely customer interaction effortlessly through quick email access with enhanced features and functionality. You can compose, reply, and review email, as well as quickly attach and send images that add value and support to customer communication using streamlined functionality. You can also ensure interactions between you and your customers are consistent and professional by using email templates with rich text and images. 
 
-Dynamics 365 model-driven apps let you interact with customers through email. The email functionality allows you to:
+You can work in either the **navigate-to** email or the **contextual** email experience. The difference between the navigate-to vs. contextual email experience is where the email displays on your screen. Both experiences use the same **Enhanced Email** form, which is enabled by default out-of-the-box (OOTB).
 
-- View and respond to emails. 
+> [!Important]
+> - **Contextual** email is also referred to as enhanced email. Please be aware that there isn't any special functionality associated with the contextual email experience, other than it is a pop-up experience. 
 
-- Utilize common email toolbar functionality and rich text editor controls. 
+<ul>
+<li><b>Navigate-to email experience</b>: Always displays in a new screen. </li>
+<li><b>Contextual email experience</b>: Can only be initiated from the timeline, displays email in a pop-up screen, and allows you to:
+<ul>
+<li>Move to different pages without losing email content.</li>
+<li>Minimize the email window to return to the records you were working on.</li>
+<li>Simultaneously view, compose, and reply to five emails in pop-up windows when enabled. </li></ul></ul>
 
-- View and insert images inline using drag-and-drop or copy-and-paste functionality. 
+The following highlights the difference between the "navigate-to" and contextual email experience in the timeline based on how your system administrator has configured your email:
 
-- Create email in a pop-up window.  
+1.	Select **Create a timeline record**.
 
-- Preview templates before applying them. 
+    ![Select Create a timeline record](media\create-a-record-icon-1.png "Select Create a timeline record")
 
+2. Select **Email**.
 
+    ![Select email](media\create-a-record-icon-1a.png "Select email.")
 
-## View your email
+   Depending on the experience you are using, your email will display as follows:
 
-To view your email:
+   |Navigate-to email experience |-| Contextual email experience|
+   |-----------------------------|-|----------------|
+   | ![Navigate-to email experience](media\navigate-to-email-view-1c.png "View of the navigate-to email experience") ||  ![Contextual email experience](media\contextual-email-view-1c.png "View of the contextual email experience.")|
+   |The "navigate-to" email will display in a new screen.||The contextual email will display in a pop-up window on your current screen.|
 
-1. In the model-driven app's sitemap, select **Activities**. 
+   > [!Important]
+   > - The pop-up window only opens when the height and width of your screen size is at least 400 x 650 pixels or greater. If lower, "navigate-to" email will be the default experience.
+   > - The contextual email experience is available only for timeline.
 
-2. Select the **All Activities** drop-down, and then select **My Received Emails**.
+   >[!Note]
+   > - If you use customized forms in email, you will still be able to see and use them. The **Enhanced Email** form showcases various email capabilities and functionality. 
 
-    ![Display received emails](media/view-email.png "Display received emails")
-
-3. Select the email you want to view to open it. The email will open, where you can then reply to the sender and recipients or forward it.
-
-## Create email
-
-The following steps detail how to create an email.
-
-1. In the model-driven app's sitemap, select **Activities**.
-
-2. On the command bar, select **Email**. A new email window opens.
-
-    ![Create a new email](media/create-email.png "Create a new email")
-
-    The **From** column is automatically populated based on the currently logged-in user.
-
-3. Write your email directly in the composer or select **Insert Template** to search for and apply a template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md).
-
-4. To compose your email in a full-screen window, select the expand icon.
-
-    ![Expand the email window](media/email-expand-window.png "Expand the email window")
-
-    The message box has a rich text editor that enables you to create rich and well-formatted content for the emails with emphasis. The editor brings common word processor features like: 
-
-    - Copy formatting
-    - Font and size
-    - Bold, italic, and underline
-    - Background color for text and text color
-    - Bulleted and numbered list
-    - Decrease and increase indent
-    - Block quote
-    - Text alignment (align left, center, and right)
-    - Link and unlink
-    - Text strikethrough
-    - Image
-    - Text direction from right to left and left to right
-    - Undo and redo
-    - Remove format
-    - Table
-
-    ![Use the rich text editor features](media/email-toolbar.png "Use the rich text editor features")
-
-5. When you're done, select **Send**.
-
-## Accessibility shortcuts
-
-The following table outlines a list of accessibility shortcuts available when using email. You can access this list while composing email by pressing **Alt+0**.
-
-|Type | Shortcut key | Description |
-|----------------------|-------------------------|-----------------------------|
-| General | Alt+F11 | Toggle full-screen view. |
-| Tab navigation | Alt+Ctrl+0 | Go to menu bar. |
-| Tab navigation | Alt+1 | Go to the rich-text editor. |
-| Tab navigation | Alt+2 | Go to the HTML editor. |
-| Tab navigation | Alt+3 | Go to the preview view. |
-| General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
-| General editor commands |  | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively.. |
-| General editor commands |  | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
-| Base commands | Ctrl+Z | Undo command. |
-| Base commands | Shift+Ctrl+Z | Redo command. |
-| Base commands | Ctrl+B | Bold command. |
-| Base commands | Ctrl+I | Italic command. |
-| Base commands | Ctrl+U | Underline command. |
-| Base commands | Alt+0 | Accessibility help. |
-| Base commands | Esc | Cancel operation. |
+For more information, see [View, compose and respond to email](view-compose-email.md).
 
 
 

@@ -21,7 +21,9 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
-If you don't find the answer to your issue, then email us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues) and include your device make and model, session ID, and provide the exact error message that you get.
+
+> [!NOTE]
+> If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
 
 
 ## Unable to sign in on an Android device using Authenticator or Company Portal
@@ -60,7 +62,6 @@ If you already have the Microsoft Authenticator app installed and you're having 
 4. Reinstall the Microsoft Authenticator app and add your back up account.
 5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
-
 
 ## Error: Your device configuration is preventing sign in
 
@@ -108,6 +109,10 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 **iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](../mobile/run-powerapps-on-mobile.md#use-siri-shortcuts-to-add-a-shortcut-to-the-home-screen-ios-14-or-later).
 
 **iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](../mobile/run-powerapps-on-mobile.md#use-safari-to-add-a-shortcut-ios-13-or-earlier)
+
+## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
+
+If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again. 
 
 ## App list is empty
 

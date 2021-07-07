@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Export ribbon definitions
+# Sample: Export ribbon definitions (Microsoft Dataverse)
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -28,7 +28,7 @@ This sample shows how to export ribbon definitions. It uses the [RetrieveApplica
 
 ## What this sample does
 
-The `RetrieveApplicationRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the data that defines the content and behavior of the application ribbon. The `RetrieveEntityRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve ribbon definitions for an entity.
+The `RetrieveApplicationRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the data that defines the content and behavior of the application ribbon. The `RetrieveEntityRibbonRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve ribbon definitions for a table.
 
 ## How this sample works
 
@@ -41,7 +41,7 @@ Checks for the current version of the org.
 ### Demonstrate
 
 1. The `RetrieveApplicationRibbonRequest` method retrieves the application ribbon.
-2. The `RetrieveEntityRibbonRequest` method retrieves the system entity ribbons
+2. The `RetrieveEntityRibbonRequest` method retrieves the system ribbons
 
 ### Clean up
 

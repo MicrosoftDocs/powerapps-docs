@@ -31,7 +31,7 @@ Benefits of using environment variables:
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
 - Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
 - Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/data-platform/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
-- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to. 
+- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
 
 ## How do they work?
 
@@ -132,7 +132,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
 - When editing a cloud flow, an environment variable with a label of **$authentication** might show up that was not defined in the environment. 
- 
+
 ## Frequently asked questions
 
 **How can I view where environment variables are being used?**
@@ -181,11 +181,14 @@ Yes if your configuration data is not relational. Environment variables should b
 
 
 ### See also
-[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
-[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins) </BR>
+[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
+[EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
+
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
 [Create a flow with Dataverse](/flow/connection-cds)
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)] 
+

@@ -95,7 +95,7 @@ There are three different ways that command data can be displayed.
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbons available](./ribbons-available.md)   
  [Export ribbon definitions](export-ribbon-definitions.md)   
- [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+ [Troubleshoot ribbon issues](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: "Use the FilterExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the FilterExpression class to build a query that expresses multiple conditions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/02/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use the FilterExpression class
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class to build a query that expresses multiple conditions. For example, you can create a query expression that is the equivalent of a SQL statement such as `([FirstName] = 'Joe' OR [FirstName] = 'John') AND [City] = 'Redmond'`.  
   
@@ -25,7 +26,7 @@ In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpr
   
 |Property|Description|
 |-|-|
-|<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions>|Gets or sets condition expressions that include attributes, condition operators, and attribute values.|  
+|<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions>|Gets or sets condition expressions that include table columns, condition operators, and column values.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.FilterOperator>|Gets or sets logical `AND/OR` filter operators. This is set by using the <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator> enumeration.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters>|Gets or sets a hierarchy of condition and logical filter expressions that filter the results of the query.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter>|Gets or sets a value that indicates whether the expression is part of a quick find query.|  
@@ -68,7 +69,7 @@ Console.WriteLine("---------------------------------------");
   
 ## About the IsQuickFindFilter property  
 
- You can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property, that is analogous to the `isquickfindfields` attribute that exists on the `filter` node in Fetch XML. When a Fetch query is saved, this is stored in the `SavedQuery` and `UserQuery` entities `IsQuickFind` properties. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property was added to provide consistency between Query Expression and Fetch XML queries.  
+ You can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property, that is analogous to the `isquickfindfields` column that exists on the `filter` node in Fetch XML. When a Fetch query is saved, this is stored in the `SavedQuery` and `UserQuery` tables' `IsQuickFind` properties. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property was added to provide consistency between Query Expression and Fetch XML queries.  
   
  The following rules apply to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property:  
   
@@ -78,7 +79,7 @@ Console.WriteLine("---------------------------------------");
   
 -   If a filter expression has <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true**, it cannot have any child filter expression properties, it can only have <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> properties. If you add a child filter expression, an exception is thrown.  
   
--   All condition expressions related to a filter expression with <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true** must be single non-null value conditions. In other words, given that a condition is made up of attribute, operator, and value, only conditions where the value property is a single value that is not **null** are supported. In addition, the only condition operators supported on these condition expressions are ones that work with a single value that is not null. If a **null** value or multiple values are detected, an exception is thrown.  
+-   All condition expressions related to a filter expression with <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true** must be single non-null value conditions. In other words, given that a condition is made up of column, operator, and value, only conditions where the value property is a single value that is not **null** are supported. In addition, the only condition operators supported on these condition expressions are ones that work with a single value that is not null. If a **null** value or multiple values are detected, an exception is thrown.  
   
 ### See also  
 

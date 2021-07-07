@@ -1,8 +1,8 @@
 ---
-title: "Create custom entity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Shows how to programmatically create a custom entity in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create a custom table using code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Shows how to programmatically create a custom table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/10/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,22 +15,23 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create custom entity
+
+# Create a custom table using code
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.  
+This topic shows how to programmatically create a custom user-owned table (entity) called **Bank Account** and add four different types of columns (attributes) to it.  
   
-You can also create organization-owned custom entities. More information: [Entity ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
+You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
 > [!NOTE]
->  You won’t be able to see this entity in the application navigation unless the entity properties are edited to set the **Areas that display this entity** are set.  
+> You won’t be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
   
 <a name="BKMK_CreateCustomEntity"></a>   
 
-## Create a custom entity  
+## Create the custom table
 
- The following sample uses the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> to create the entity and the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata><xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute>.  
+ The following code sample uses the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> to create the table (entity) and the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata><xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute>.  
   
  The `_customEntityName` value is “new_bankaccount”.  
   
@@ -68,9 +69,9 @@ Console.WriteLine("The bank account entity has been created.");
   
 <a name="BKMK_AddStringAttribute"></a>   
 
-## Add a String attribute to the custom entity  
+## Add a String column to the custom table
 
-The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> attribute to the `Bank Account` entity.  
+The following code sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column (attribute) to the `Bank Account` table.  
   
 ```csharp
 CreateAttributeRequest createBankNameAttributeRequest = new CreateAttributeRequest
@@ -92,9 +93,9 @@ _serviceProxy.Execute(createBankNameAttributeRequest);
   
 <a name="BKMK_AddMoneyAttribute"></a>   
 
-## Add a Money attribute to the custom entity  
+## Add a Money column to the custom table
 
- The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata> attribute to the `Bank Account` entity.  
+ The following code sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata> column (attribute) to the `Bank Account` table.  
   
 ```csharp
 CreateAttributeRequest createBalanceAttributeRequest = new CreateAttributeRequest
@@ -117,9 +118,9 @@ _serviceProxy.Execute(createBalanceAttributeRequest);
   
 <a name="BKMK_AddDateTimeAttribute"></a>   
 
-## Add a DateTime attribute to the custom entity  
+## Add a DateTime column to the custom table  
 
-The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> attribute to the `Bank Account` entity.  
+The following code sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> column (attribute) to the `Bank Account` table.  
   
 ```csharp
 CreateAttributeRequest createCheckedDateRequest = new CreateAttributeRequest
@@ -141,10 +142,10 @@ Console.WriteLine("An date attribute has been added to the bank account entity."
 ```
   
 <a name="BKMK_AddLookupAttribute"></a>
-   
-## Add a Lookup attribute to the custom entity 
- 
- The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> to create a one-to-many relationship with the `Contact` entity so that a <xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata> attribute is added to the `Bank Account` entity.  
+
+## Add a Lookup column to the custom table
+
+ The following code sample uses <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> to create a one-to-many relationship with the `Contact` table so that a <xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata> column (attribute) is added to the `Bank Account` table.  
   
 ```csharp
 CreateOneToManyRequest req = new CreateOneToManyRequest()
@@ -185,15 +186,14 @@ _serviceProxy.Execute(req);
 ```
   
 ### See also  
- [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
+ [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)  
  <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>   
- [Customize entity metadata](../customize-entity-metadata.md)   
- [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
- [Retrieve, update, and delete entities](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
- [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
- [Create a custom activity entity](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   
- [Change Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
- [Change Entity Messages](/dynamics365/customer-engagement/developer/modify-messages-entity)
-
+ [Customize table definitions](../customize-entity-metadata.md)   
+ [Which tables are customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
+ [Retrieve, update, and delete table rows](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
+ [Create and update a table row than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
+ [Create a custom activity](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   
+ [Change table icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
+ [Change table messages](/dynamics365/customer-engagement/developer/modify-messages-entity)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

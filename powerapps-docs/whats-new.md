@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 04/21/2020
+ms.date: 06/03/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ This topic provides resources where you can learn about the new features that ha
 
 ## Weekly releases
 
-For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft Power Apps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps).
+For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft Power Apps](/business-applications-release-notes/powerplatform/released-versions/powerapps).
 
 To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
@@ -33,11 +33,10 @@ To know more about how to browse information in the weekly release notes, read t
 
 ## Release plan
 
-For information about new features releasing over the next few months that you can use for planning, see [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features)
+For information about new features releasing over the next few months that you can use for planning, see [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps/planned-features).
 
 ## Known limitations
 
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
-
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

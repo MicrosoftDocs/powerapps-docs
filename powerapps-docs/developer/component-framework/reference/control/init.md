@@ -2,7 +2,7 @@
 title: "init | MicrosoftDocs"
 description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 06/08/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
@@ -14,9 +14,14 @@ author: Nkrb
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 
+[trackContainerResize](../mode/trackcontainerresize.md) should be called once preferably in the component `init` method to notify that the component needs the layout information . This indicates the framework to populate `allocatedHeight` and `allocatedWidth` methods.
+
+> [!NOTE]
+> tractContainerResize should be called first before the `allocatedHeight` and `allocatedWidth` methods.
+
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Syntax
 

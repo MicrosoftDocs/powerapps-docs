@@ -1,6 +1,6 @@
 ---
-title: Calendar-screen template | Microsoft Docs
-description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app
+title: Calendar-screen template in canvas apps
+description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the calendar-screen template for canvas apps
+# Calendar-screen template in canvas apps
 
 In a canvas app, add a calendar screen that shows users upcoming events from their Office 365 Outlook accounts. Users can select a date from a calendar and scroll through a list of that day's events. You can change which details appear in the list, add a second screen that shows more details about each event, show a list of attendees for each event, and make other customizations.
 
