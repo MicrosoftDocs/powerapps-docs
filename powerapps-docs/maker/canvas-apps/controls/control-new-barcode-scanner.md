@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/07/2021
+ms.date: 07/07/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
@@ -97,7 +97,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 |AZTEC|✔|✔|
 
 > [!NOTE]
-> PDF_417 and AZTEC aren't supported in Auto mode
+> PDF_417 and AZTEC aren't supported in Auto mode.
 
 ### See also
 
