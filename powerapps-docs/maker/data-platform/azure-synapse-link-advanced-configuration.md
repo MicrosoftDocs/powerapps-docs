@@ -2,7 +2,7 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 02/10/2021
+ms.date: 07/07/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -87,9 +87,9 @@ For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-e
 
 To read all the Dataverse choices as a table in Power BI complete the following steps:
 
-1. Launch Power Bi Desktop.
+1. Open Power BI Desktop.
 
-2. Select **Get Data** > **Blank query** and open the **Advanced Editor**.
+2. Select **Get Data** > **Blank query** and then open the **Advanced Editor**.
 
 3. Paste the following query and replace **\<STORAGE\>** with the storage account name, **\<CONTAINER\>** with the name of the container, and **\<TABLE\>** with the name of the Dataverse Table that contains the Choices you want to access.
 
