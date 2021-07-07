@@ -481,7 +481,7 @@ Within a solution, all the catalogs will be within a `catalogs` folder. You can 
 
 Each catalog will be included in a folder matching the `uniquename` of the catalog, such as `contoso_CustomerManagement`.
 
-Within the folder is an XML file containing the definition of the catalog.
+Within the folder is a `catalog.xml` file containing the definition of the catalog.
 
 For example:
 
@@ -555,9 +555,9 @@ Each `catalogassignment` element has these attributes:
 |Attribute  |Description  |
 |---------|---------|
 |`catalogid.uniquename`|Unique name of the sub-catalog that the catalog assignment is for.|
-|`objecttypeid`|The type of object. Values are: <br/>`entity`<br/>`customapi`<br/>`workflow`|
+|`objecttypeid`|The type of object. Valid values are: <br/>`entity`<br/>`customapi`<br/>`workflow`|
 
-Depending on the `objectypeid`, each `catalogassignment` element must have one of these attributes:
+Depending on the `objectypeid`, each `catalogassignment` element must have one of these corresponding attributes:
 
 |Attribute  |Description  |
 |---------|---------|
