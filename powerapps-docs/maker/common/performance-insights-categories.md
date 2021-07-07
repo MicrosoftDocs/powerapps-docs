@@ -2,7 +2,7 @@
 title: "Understanding the information returned from performance insights in Power Apps | MicrosoftDocs"
 description: Understand the information returned with performance insights. 
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 07/07/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -161,18 +161,18 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 
 Insight ID: Perf.Sandbox.Performance.Plug-ins.ExternalCall
 
-Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocol. If these external services performed slowly, the plug-in itself will timeout or perform slowly.
+Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocols. If these external services perform slowly, the plug-in itself will timeout or perform slowly.
 
 #### Motivation
 
-This insight checks out the performance of the external endpoints and detect plug-ins in your app that are impacted by the slow external calls. 
+This insight checks the performance of the external endpoints and detects plug-ins in your app that are impacted by the slow external calls. 
 
 #### How to improve
 
--	[Set KeepAlive to false when interacting with external hosts in a plug-in](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
--	[Set Timeout explicitly when making external calls in a plug-in](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
 
- More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/access-web-services).
+ More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](/powerapps/developer/data-platform/access-web-services).
 
 ## Customization
 
