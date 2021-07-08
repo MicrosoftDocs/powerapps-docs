@@ -3,7 +3,6 @@ title: "Create or edit a model-driven app system chart in Power Apps | Microsoft
 description: "Learn how to create a system chart for a model-driven app"
 ms.custom: ""
 ms.date: 07/08/2021
-ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,8 +30,8 @@ In this article you learn how to create a system chart. System charts are organi
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. On the left navigation pane, select **Apps**.
 
-1. Next to the model driven app to which you want to add a chart, select **...** (ellipses), and then select **Edit**. In this example, we use the **Manage Customers** app used in the tutorial *How to create a model driven app*.
-1. In the app designer, locate the table to which you want to add the chart, and then select the corresponding **Charts** tile. In this example, we add a chart to the **Account** table
+1. Next to the model driven app to which you want to edit by adding a chart, select **...** (ellipses), and then select **Edit**. <!--In this example, we use the **Manage Customers** app used in the tutorial *How to create a model driven app*. -->
+1. In the app designer, locate the table to which you want to add the chart, and then select the corresponding **Charts** tile. In this example, we add a chart to the **Account** table.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Locate the table where you want to add a chart":::
 
