@@ -788,6 +788,7 @@ The about screen doesn't use any variables.
 
 ### See also
 
+[Customize employee ideas app](customize-employee-ideas.md) <br>
 [Employee ideas sample app](employee-ideas.md) <br>
 [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md) <br>
 [Customize sample apps installed from Teams store](customize-sample-apps.md) <br>

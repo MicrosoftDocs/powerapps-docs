@@ -1,6 +1,6 @@
 ---
-title: 'Column chart control and Line chart control: reference | Microsoft Docs'
-description: Information, including properties and examples, about Column chart controls and Line chart controls
+title: Column chart and Line chart controls in Power Apps
+description: Learn about the details, properties and examples of the Column chart, and Line chart controls in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -62,7 +62,7 @@ Controls that show data as graphs with x- and y-axes.
 
 * The **MinimumBarWidth** property is available for the **Column chart** control but not the **Line chart** control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

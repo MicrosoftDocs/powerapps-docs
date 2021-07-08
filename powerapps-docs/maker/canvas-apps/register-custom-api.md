@@ -1,6 +1,6 @@
 ---
-title: Links to content about custom connectors for canvas apps | Microsoft Docs
-description: Links to content for creating, using, sharing, and certifying custom connectors for canvas apps in Power Apps.
+title: Custom connectors for canvas apps
+description: Learn about creating, using, sharing, and certifying custom connectors for canvas apps in Power Apps.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps

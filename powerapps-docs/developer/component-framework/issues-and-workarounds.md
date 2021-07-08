@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 06/08/2021
+ms.date: 07/01/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,6 +17,16 @@ ms.topic: "article"
 Here are some common issues that you might come across while using the Power Apps component framework and Microsoft Power Platform CLI.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+
+## Component changes are not reflected after the updated solution import?
+
+Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
+
+```XML
+ <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
+   version="1.0.1" 
+    display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
+```
 
 ## Msbuild error MSB4036
 
@@ -36,7 +46,6 @@ Here are some common issues that you might come across while using the Power App
 
 ## Issues while updating existing code components
 
-- If you get a 1ES notification asking how pcf-scripts are being used, note that these scripts are only used to build the code components but they are not bundled or used by the resulting component.
 - If you have created a code component using the CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the updates to the `package.json` file as shown below:
    
    ```JSON
@@ -54,13 +63,13 @@ Here are some common issues that you might come across while using the Power App
      <?xml version="1.0" encoding="utf-8"?>  
      <configuration>  
      <packageSources>  
-         <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
+         <add key="YourFeedName" value="https://contoso.com/_packaging/YourFeedName/nuget/v3/index.json" />  
       </packageSources>  
       <packageSourceCredentials>  
-      <CRMSharedFeed>  
+      <YourFeedName>  
       <add key="Username" value="anything" />  
       <add key="Password" value="User PAT" />  
-        </CRMSharedFeed>  
+        </YourFeedName>  
         </packageSourceCredentials>  
        </configuration>
      ```
@@ -135,6 +144,13 @@ Power Apps component framework dataset component currently does not properly sho
 
 No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+## Canvas dataset paging is not reset when external filter applied
+ 
+Currently there is an issue with canvas app datasets bound to code components. When the dataset is filtered externally to the code component using PowerFX, the page should be reset to the first page, and the hasPreviousPage should be set to false. This is the functionality inside model-driven apps. This does not happen for canvas apps and so the code components cannot reset the paging and the page numbers can get out of sync. 
+ 
+**Workaround**
+
+No workaround as of now. A fix for this issue is being deployed.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

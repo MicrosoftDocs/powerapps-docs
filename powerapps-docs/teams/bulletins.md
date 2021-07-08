@@ -457,7 +457,7 @@ To view links, and contacts:
 ### See also
 
 - [Understand Bulletins sample app architecture](bulletins-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Customize Bulletins app](customize-bulletins.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 

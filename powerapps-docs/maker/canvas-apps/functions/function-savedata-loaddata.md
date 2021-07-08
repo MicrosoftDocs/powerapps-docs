@@ -1,6 +1,6 @@
 ---
-title: SaveData, LoadData, and ClearData functions | Microsoft Docs
-description: Reference information, including syntax, for the SaveData, LoadData, and ClearData functions in Power Apps
+title: SaveData, LoadData, and ClearData functions in Power Apps
+description: Reference information including syntax and examples for the SaveData, LoadData, and ClearData functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -25,7 +25,8 @@ The **LoadData** function reloads a collection by name that was previously saved
 The **ClearData** function clears the storage under a specific name or clears all storage associated with the app if no name is provided.  
 
 > [!NOTE]
-> The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`.
+> * The name shared between **SaveData**, **LoadData**, and **ClearData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`. 
+> * ClearData is currently only supported for Teams-based Power Apps. It is not yet supported for standalone Power Apps on mobile.
 
 Use these functions to improve app-startup performance by:
 

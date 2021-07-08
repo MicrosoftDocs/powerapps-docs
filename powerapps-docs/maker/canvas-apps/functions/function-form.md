@@ -1,6 +1,6 @@
 ---
-title: EditForm, NewForm, SubmitForm, ResetForm, And ViewForm functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
+title: EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
+description: Reference information including syntax and examples for the EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
