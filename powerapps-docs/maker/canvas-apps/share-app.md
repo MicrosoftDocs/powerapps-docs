@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/13/2021
+ms.date: 07/08/2021
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -88,7 +88,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. At the bottom of the share panel, select **Share**.
 
-    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 
