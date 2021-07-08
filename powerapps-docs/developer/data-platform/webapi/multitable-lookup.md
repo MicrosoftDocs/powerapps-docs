@@ -196,10 +196,10 @@ The following table lists the operations relevant for table and attribute defini
 
 The following table lists the operations relevant for table and attribute data.
 
-| Operation<br/>(method) | URL format | Description |
+| Operation<br/>(method) | Description | URL format |
 | --- | --- | --- |
-| Create<br/>(POST) | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\> | See the "new_checkouts" example below |
-| Retrieve<br/>(GET) | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\>(\<recordId\>) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" |
+| Create<br/>(POST) | See the "new_checkouts" example below | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\> |
+| Retrieve<br/>(GET) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\>(\<recordId\>) |
 
 Below is an example request that creates a new entityset with 2 rows.<p/>
 
