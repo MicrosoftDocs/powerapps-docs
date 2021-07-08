@@ -1099,6 +1099,8 @@
         items: 
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
+        - name: Create an app with an account table
+          href: ./model-driven-apps/create-a-model-driven-app.md
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
