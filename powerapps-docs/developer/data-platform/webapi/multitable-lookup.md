@@ -2,7 +2,7 @@
 title: "Use multi-table lookup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/06/2021
+ms.date: 07/07/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -180,6 +180,49 @@ The response from the HTTP post is shown below containing the ID of the polymorp
 
     "AttributeId":"d378dd3e-42f4-4bd7-95c7-0ee546c7de40"
 ```
+
+## Multi-table API reference
+
+> [!NOTE]
+> This section will be removed in a future article update after the API information contained here is migrated to the
+> [Web API Reference](/dynamics365/customer-engagement/web-api/about).
+
+The following table lists the operations relevant for table and attribute definitions.
+
+| Operation<br/>(method) | URL format | Description |
+| --- | --- | --- |
+| Create<br/>(POST) | [OrganizationUrl]/api/data/v9.0/CreatePolymorphicLookupAttribute | New API |
+| Retrieve attribute<br/>(GET) | [OrganizationUrl]/api/data/v9.0/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
+| Retrieve relationship<br/>(GET) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
+| Add relationship<br/>(POST) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions | Adds a relationship to an existing polymorphic lookup attribute |
+| Remove relationship<br/>(DELETE) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
+| Remove attribute<br/>(DELETE) | [OrganizationUrl]/api/data/v9.0/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
+
+The following table lists the operations relevant for table and attribute data.
+
+| Operation<br/>(method) | URL format | Description |
+| --- | --- | --- |
+| Create<br/>(POST) | [OrganizationUrl]/api/data/v9.1/\<entitysetName\> | See the "new_checkouts" example below |
+| Retrieve<br/>(GET) | [OrganizationUrl]/api/data/v9.1/\<entitysetName\>(\<recordId\>) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" |
+
+```rest
+[OrganizationUrl]/api/data/v9.1/new_checkouts
+
+{
+  "new_name": "c1",
+  new_CheckedoutItem_new_book@odata.bind: "/new_books(387a2c9b-ecc6-ea11-a81e-000d3af68bd7)"
+}
+
+{
+  "new_name": "c2",
+  new_CheckedoutItem_new_device@odata.bind: "/new_devices(6472e7ba-ecc6-ea11-a81e-000d3af68bd7)"
+}
+```
+
+### Create polymorphic lookup (example payload)
+
+### Add relationship to existing polymorphic lookup (example payload)
+
 
 ### See Also
 
