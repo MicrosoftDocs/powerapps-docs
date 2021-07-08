@@ -3,15 +3,16 @@ title: "Example: Create a model-driven apps | MicrosoftDocs"
 description: "Learn how to create a model-driven app."
 ms.date: 07/05/2021
 ms.service: powerapps
-ms.topic: how-to
+ms.topic: tutorial
 author: joel-lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
-# Example: Create a model-driven app
+# Create a model-driven app
 
-Model-driven app design is a component-focused approach to app development. Model driven apps are especially well suited for process driven apps that are data dense and make it very easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model driven app is a great choice. Model driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards. In this lesson we will create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account entity.
+Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it very easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards. 
 
+In this tutorial you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 
 ## Sign in to Power Apps
 
@@ -19,76 +20,78 @@ Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have 
 
 ## Understanding environments
 
-An environment in Power Apps is a space to store, manage, and share your organization’s business data, apps, chatbots, and flows. It also serves as a container to separate apps that might have different roles, security requirements , or target audiences.
+An environment in Power Apps is a space to store, manage, and share your organization’s business data, apps, chatbots, and flows. It also serves as a container to separate apps that might have different roles, security requirements, or target audiences.
 
-Each environment can have one Dataverse database. 
+Each environment can have one Dataverse database.
 
 ## Create your model-driven app
 
-1.  Select the environment you want, or go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to create a new one. You can select the environment by selecting “environment” in the upper right corner.
+1. Select the environment you want, or go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to create a new one. You can choose the environment by selecting **Environment** from the upper right.
 
-2.  We recommend creating your model driven app from a solution. A solution is a package containing Dataverse tables, forms, views, apps, flows, and other components. By building your model driven app in a solution, you can easily move it to other environments or preserve a copy in your source control repository. For more information about creating a solution, see [Create a solution](https://docs.microsoft.com/powerapps/maker/data-platform/create-solution).
+1. We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository. For more information about creating a solution, see [Create a solution](https://docs.microsoft.com/powerapps/maker/data-platform/create-solution).
 
-3.  Create a solution. For this example, we will call our solution **Power Apps Training**. Next we will add the tables that will be in our Model-driven app.
+1. Create a solution. For this example, we name our solution **Power Apps Training**. Next, we add the tables that will be included in our model-driven app.
 
-4.  In your solution, select **Add existing** and select **Table.**
+1. In your solution, select **Add existing**, and then select **Table.**
 
-5.  From **Add existing tables** screen, select the **Account** table, then select **Next**.
+1. Under **Add existing tables** screen, select the **Account** table, and then select **Next**.
 
-6.  Check the **Include all components** checkbox and select **Add.**
+1. Select **Include all components**, and then select **Add.**
 
-Now that we have a solution and have added the Account table to it, we are ready to create our model-driven app.
+   Now that you have a solution and have added the account table to it, you're ready to create a model-driven app.
 
-1. In your solution, select **New**, then select **App** and then select **Model-driven app.**
+1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
 
-2. Select **Modern app designer** then select **Next**
+1. Select **Modern app designer**, and then select **Create**
 
-   ![](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\create-your-model-driven-app-1.png)
+   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app":::
 
-3.  Choose a name for app then select **Create**
+1. Enter a name for app, and then select **Create**.
 
-    ![](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\create-your-model-driven-app-2.png)
-
-
+   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create":::
 
 ## Add pages to your app
 
-Next we will add a new page to the model-driven app.  Select **New page** from the **Pages** menu.
+Next, you add a new page to the model-driven app. 
+1. Select **New page** from the **Pages** menu.
 
-![](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\add-pages-to-an-app-1.png)
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-1.png" alt-text="Add a page to a model-driven app":::
 
+1. Select **Table based view and form**, and then select **Next**.
 
-Choose **Table based view and form** then select Next.
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table based view and form":::
 
-![add-pages-to-an-app-2](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\add-pages-to-an-app-2.png)
+1. Select the **Account** table, and then select **Add**.
 
-Choose the **Account** table then select Add. 
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app":::
 
-![add-pages-to-an-app-3](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\add-pages-to-an-app-3.png)
+   The account form and view appear in the pages menu.
 
-The Account form and view now appear in the pages menu.  Select **Account view** and then select **Manage views**.
+1. Select **Account view**, and then select **Manage views**.
 
-![add-pages-to-an-app-4](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\add-pages-to-an-app-4.png)
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view":::
 
-Pick the following views and select Save: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**.
+1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**.
 
-![add-pages-to-an-app-5](C:\Users\mdevaney\OneDrive - Hitachi Solutions\MS Docs\7-11\media\create-a-model-driven-app\add-pages-to-an-app-5.png)
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app":::
+
+1. Select **Save**.
 
 ## Publish your app
 
-On the app designer toolbar, select **Publish**.
+1. On the app designer command bar, select **Publish**.
 
-After publishing the app it's ready for you to run or share with others.
+After publishing the app, it's ready for you to run or share with others.
 
-## Run your app on desktop
+## Run your app on a desktop computer
 
-To run your app, log in to Power Apps and select Apps on the left navigation menu.
+1. To run your app, sign in to [Power Apps](https://make.powerapps.com/), and  on the left navigation pane, select **Apps**.
 
-![log in to Power Apps and select Apps](media/create-a-model-driven-app/run-your-app-on-desktop-1.png "log in to Power Apps and select Apps")
+   :::image type="content" source="media/create-a-model-driven-app/run-your-app-on-desktop-1.png" alt-text="Select Apps":::
 
-Select the app from the app list.  The app will open in browser.
+1. Select the app from the app list. The app opens in your browser.
 
-![Simple account table app](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Simple account table app")
+   ![Simple account table app](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Simple account table app")
 
 ## Run your app on mobile
 
