@@ -20,6 +20,9 @@ search.app:
 
 Object checker runs real-time diagnostics on objects within your solution. If issues are detected a recommendation will be returned for fixing the issue. This may include documentation, instructions, or a clickable action that will fix the issue for you. 
 
+## Difference between object checker and solution checker
+They are similar and share much of the same infrastructure. However, object checker runs **live diagnostics on the database** and can analyze issues based on the metadata and layering of a given solution object - regardless of which solution(s) the object is in. Therefore object checker is better suited for troubleshooting **ALM** related issues in **test and production environments.** 
+Solution checker runs offline analysis on a single solution file and requires the solution to be exported. Solution checker is better suited for development environments or analyzing a solution prior to committing it to a source control repository.
 
 ## Example issues object checker detects
 
@@ -28,8 +31,16 @@ Object checker runs real-time diagnostics on objects within your solution. If is
 - Duplicate site maps
 - Soft deleted apps causing upgrade failures
 
+## Use object checker
+1. Navigate to any solution containing the problematic object. You may run object checker within both managed and unmanaged solutions.
+2. Select a single object
+3. Click **Run**
+4. Click **View results**
+5. If issue(s) are detected, follow the prompt to resolve the issue(s)
 
 
+## Current limitations
+Object checker is currently only supported for model-driven apps and site maps. This is a framework that will grow to support other object types and additional rules over time.
 
 
 
