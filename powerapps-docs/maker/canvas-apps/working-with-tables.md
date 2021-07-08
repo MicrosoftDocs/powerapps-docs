@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/23/2019
+ms.date: 07/07/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -58,7 +58,7 @@ All values within a column are of the same data type. In the above example, the 
 You may have referred to columns as "fields" in other tools.
 
 > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+> For data sources such as SharePoint, Excel, or Power BI tiles that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint, Excel, or Power BI tile will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
