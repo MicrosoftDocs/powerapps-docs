@@ -149,7 +149,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 By default custom pages is not available in the new app designer until custom page public preview.  These parameters are not needed for internal test.
 ```
-?cds-app-module-designer.isCustomPageEnabled=true
+?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true
 ```
 
 ## Recently added items in new App Designer
