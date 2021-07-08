@@ -1,6 +1,6 @@
 ---
 title: "Example: Create a model-driven apps | MicrosoftDocs"
-description: "Learn how to create a model-driven app."
+description: "Learn how to create a model-driven app that has the account table added to it."
 ms.date: 07/05/2021
 ms.service: powerapps
 ms.topic: tutorial
