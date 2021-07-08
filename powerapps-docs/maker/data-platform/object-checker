@@ -1,0 +1,37 @@
+---
+title: "Use object checker in solutions | MicrosoftDocs"
+description: "Use object checker to run live analysis of potential issues with objects in your solution."
+Keywords: object checker, checker, solution checker, solution issue
+author: caburk
+ms.author: caburk
+ms.reviewer: matp
+manager: kvivek
+ms.date: 07/08/2021
+ms.service: powerapps
+ms.topic: conceptual
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
+# Object checker overview
+
+Object checker runs real-time diagnostics on objects within your solution. If issues are detected a recommendation will be returned for fixing the issue. This may include documentation, instructions, or a clickable action that will fix the issue for you. 
+
+
+## Example issues object checker detects
+
+- Active layer hiding customizations
+- Malformed or corrupted metadata
+- Duplicate site maps
+- Soft deleted apps causing upgrade failures
+
+
+
+
+
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
