@@ -1,6 +1,6 @@
 ---
-title: Integrate canvas apps into websites and other services | Microsoft Docs
-description: Embed canvas apps in websites and other services.
+title: Integrate canvas apps into websites and other services
+description: Learn about how to embed canvas apps in websites and other services.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
