@@ -2216,6 +2216,8 @@
                   href: ../teams/customize-bulletins.md
                 - name: Send an alert when a new bulletin is posted
                   href: ../teams/new-bulletin-alert.md
+                - name: Customize apps for end user to add notification preferences
+                  href: ../teams/add-notification-preference-for-bulletins.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app

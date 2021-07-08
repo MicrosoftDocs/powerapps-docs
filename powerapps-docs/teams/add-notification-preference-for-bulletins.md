@@ -14,27 +14,30 @@ contributors:
 
 # Customize apps for end user to add notification preferences
 
-The Bulletins Power Apps template for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search and read bulletin posts.
+The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search and read bulletin posts.
 
 The Bulletins app solution consists of two apps:
 
-[**Manage bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#manage-bulletins-app)Manager experience for managing **Bulletins** app.
+[Manage bulletins app](bulletins.md#manage-bulletins-app)
+
+-   Manager experience for managing **Bulletins** app.
 
 -   Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
-[**Bulletins app**](https://docs.microsoft.com/powerapps/teams/bulletins#bulletins-app)
+[Bulletins app](bulletins.md#bulletins-app)
 
 -   Central location for all company communication such as memos, broadcasts, and news.
     
--   Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins**  app.
+-   Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins** app.
 
-In this topic we will learn how to enable users to set notification preferences per category for which they want to get notified when new bulletins get added.
+In this article, we'll learn how to enable users to set notification preferences per category for which they want to get notified when new bulletins get added.
 
-> NOTE: before starting this topic, please review **How to customize Bulletins** (insert link).
+> [!NOTE]
+> Before you proceed, review [customize Bulletins app](customize-bulletins.md).
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Bulletins Power Apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsBulletins (confirm link). Also, we would need to complete lesson 82 Add "notify me" settings to category (confirm link). We will use steps followed in that lesson and build up on those in this topic.
+To complete this lesson, we would need the ability to login into Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Bulletins Power Apps template for Teams installed. This app can be installed from <https://aka.ms/TeamsBulletins>. Also, we would need to review [Send an alert when a new bulletin is posted](new-bulletin-alert.md).
 
 ## Add a column to the Bulletin Notifications table
 
@@ -218,3 +221,12 @@ To complete this lesson, we would need the ability to login into Microsoft Teams
 29. In a few minutes, a Teams message should appear in the Teams channel in which the App is installed as shown in the image below.
 
 ![Teams notification](media/add-notification-preference-for-bulletins/teams-notification.png "Teams notification")
+
+### See also
+
+- [Understand Bulletins sample app architecture](bulletins-architecture.md)
+- [Customize Bulletins app](customize-bulletins.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
