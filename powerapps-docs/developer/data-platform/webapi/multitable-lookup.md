@@ -187,27 +187,31 @@ The response from the HTTP post is shown below containing the ID of the polymorp
 > This section will be removed in a future article update after the API information contained here is migrated to the
 > [Web API Reference](/dynamics365/customer-engagement/web-api/about).
 
-The following table lists the operations relevant for table and attribute definitions.
+The following table lists the operations relevant for table and attribute definitions. In the table [EndpointUrl] is [OrganizationUrl]/api/data/v9.0.<p/>
 
 | Operation<br/>(method) | URL format | Description |
 | --- | --- | --- |
-| Create<br/>(POST) | [OrganizationUrl]/api/data/v9.0/CreatePolymorphicLookupAttribute | New API |
-| Retrieve attribute<br/>(GET) | [OrganizationUrl]/api/data/v9.0/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
-| Retrieve relationship<br/>(GET) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
-| Add relationship<br/>(POST) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions | Adds a relationship to an existing polymorphic lookup attribute |
-| Remove relationship<br/>(DELETE) | [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
-| Remove attribute<br/>(DELETE) | [OrganizationUrl]/api/data/v9.0/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
+| Create<br/>(POST) | [EndpointUrl]/CreatePolymorphicLookupAttribute | New API |
+| Retrieve attribute<br/>(GET) | [EndpointUrl]/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
+| Retrieve relationship<br/>(GET) | [EndpointUrl]/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
+| Add relationship<br/>(POST) | [EndpointUrl]/RelationshipDefinitions | Adds a relationship to an existing polymorphic lookup attribute |
+| Remove relationship<br/>(DELETE) | [EndpointUrl]/RelationshipDefinitions(\<RelationshipId\>) | Existing API |
+| Remove attribute<br/>(DELETE) | [EndpointUrl]/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) | Existing API |
 
-The following table lists the operations relevant for table and attribute data.
+The following table lists the operations relevant for table and attribute data. In the table [EndpointUrl] is [OrganizationUrl]/api/data/v9.1.<p/>
 
 | Operation<br/>(method) | URL format | Description |
 | --- | --- | --- |
-| Create<br/>(POST) | [OrganizationUrl]/api/data/v9.1/\<entitysetName\> | See the "new_checkouts" example below |
-| Retrieve<br/>(GET) | [OrganizationUrl]/api/data/v9.1/\<entitysetName\>(\<recordId\>) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" |
+| Create<br/>(POST) | [EndpointUrl]/\<entitysetName\> | See the "new_checkouts" example below |
+| Retrieve<br/>(GET) | [EndpointUrl]/\<entitysetName\>(\<recordId\>) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" |
 
-```rest
-[OrganizationUrl]/api/data/v9.1/new_checkouts
+Below is an example request that creates a new entityset with 2 rows.<p/>
 
+```http
+POST [OrganizationUrl]/api/data/v9.1/new_checkouts
+```
+
+```http
 {
   "new_name": "c1",
   new_CheckedoutItem_new_book@odata.bind: "/new_books(387a2c9b-ecc6-ea11-a81e-000d3af68bd7)"
