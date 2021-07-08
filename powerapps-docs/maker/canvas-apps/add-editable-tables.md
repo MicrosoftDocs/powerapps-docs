@@ -6,12 +6,15 @@ ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/01/2021
+ms.date: 07/08/2021
 ms.author: denisem
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - denisem-msft
+  - tapanm-msft
 ---
 
 # Add editable tables in canvas apps
