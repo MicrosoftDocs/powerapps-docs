@@ -31,8 +31,8 @@ In this article you learn how to create a system chart. System charts are organi
 
    - Enter the chart name, such as *Number of employees by account*.
    - In the **Select Column** dropdowns:
-      -  In the **Select Column** **Series** axis dropdown list select a column, such as **Number of Employees**.
-      - In the **Select Column** **Category** axis dropdown list select a column, such as **Account Name**.
+      -  In the **Legend Entries (Series)** dropdown list select a column, such as **Number of Employees**.
+      - In the **Horizonal (Category) Axis** dropdown list select a column, such as **Account Name**.
 
    -   Add a description to identify the purpose of the chart, such as *This column chart displays the number of employees by account name*.
 
@@ -40,7 +40,7 @@ In this article you learn how to create a system chart. System charts are organi
 
 1. Select **Save and Close**.
 
-The **Number of employees by account** chart is now displayed in the app designer chart list.
+The **Number of employees by account** chart is now displayed in the app designer list of charts available for the account table.
 
 ## View your visualization in your model-driven app
 
@@ -50,29 +50,27 @@ Now that you have created your chart in your app, you can now use it to visualiz
 
    The app launches.
 
-1. Select **Accounts** in menu on left
+1. On the left navigation pane, select **Accounts**.
 
-4.  In the Command Bar, select **Show Chart**
+1. On the command bar, select **Show Chart**.
 
-5.  Chart pane will open
+   The chart pane opens.
 
-6.  Select the chart selector drop-down
+1. Select the chart selector, and then select **Number of employees by account**.
 
-![chart selector dropdown](media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-1.png "chart selector dropdown")
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-1.png" alt-text="Chart selector":::
 
-7.  Select **Number of employees by account**
 
-8.  Your visualization will appear in-line with the data view
+   Your chart appears in-line with the data view.
 
-![Your visualization will appear in-line with the data view](media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-2.png "Your visualization will appear in-line with the data view")
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-2.png" alt-text="Your system chart named Number of employees by account is displayed":::
 
-Selecting a bar in the chart will filter the data in the view
+Use your chart:
+- Select a bar on the chart to filter the data in the view.
+- Refresh the chart to display other data by changing the view.
+- Add the chart to a model-driven app dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
-Changing the view selected will refresh the chart to display the data from the newly selected view
-
-Charts can also be added to model-driven app dashboards
-
-## Known issues
+## Known issue
 
 In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated columns, a related table column, or a local column on the table.
 
