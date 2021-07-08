@@ -1,19 +1,22 @@
 ---
 title: Create a canvas app from within a solution
 description: In Power Apps, create a canvas app in a solution so that you can deploy the app to another environment.
-author: tapanm-msft
-manager: kvivek
+author: caburk
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer:
-ms.date: 10/23/2018
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 07/07/2021
+ms.author: caburk
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - caburk
 ---
+
 # Create a canvas app from within a solution
 
 Create an app from within a solution if, for example, you want to deploy the app to a different environment. Solutions can contain not only apps but also customized tables, choices, and other components. You can quickly customize an environment in a variety of ways by creating apps and other components from within a solution, exporting the solution, and then importing it into another environment.
@@ -23,6 +26,13 @@ For more information about solutions, see [Solutions overview](../data-platform/
 ## Prerequisite
 
 To follow the steps in this topic, you must switch to an environment that contains a Microsoft Dataverse database.
+
+> [!NOTE]
+> To use or run a flow in a canvas app that is included in a [solution](../data-platform/solutions-overview.md), you must be assigned a Dataverse security role with the following permissions at the minimum:
+> - Read privilege on the [Solution](../../developer/data-platform/reference/entities/solution.md) table
+> - Read privilege on the [Process (Workflow)](../../developer/data-platform/reference/entities/workflow.md) table
+>
+> For more information about security roles and privileges in Dataverse, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 ## Create a solution
 

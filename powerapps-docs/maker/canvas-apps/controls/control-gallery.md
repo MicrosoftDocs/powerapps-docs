@@ -110,7 +110,7 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 - [Show text](control-text-box.md#show-data-in-a-gallery)
 - [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-- [Filter data by selecting a list option](control-drop-down.md#example)
+- [Filter data by selecting a list option](control-drop-down.md#examples)
 - [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user
