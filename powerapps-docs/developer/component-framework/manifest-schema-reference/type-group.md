@@ -57,7 +57,7 @@ For example, the following type group results in the component receiving the val
 ```
 When a `type-group` includes a value that is not included in any of the above groups, or includes values from more than one group, the first value listed in the `type-group` is  chosen as the type for that parameter.
 
-For example, for the following type group results in the component receiving the value **TwoOptions** for the given parameter's type:
+For example, the following type group results in the component receiving the value **TwoOptions** for the given parameter's type:
 ```XML
 <type-group name="example1">
        <type>TwoOptions</type>
