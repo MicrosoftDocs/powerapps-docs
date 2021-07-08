@@ -1,5 +1,5 @@
 ---
-title: "Example: Create a model-driven apps | MicrosoftDocs"
+title: "Example: Create a model-driven app | MicrosoftDocs"
 description: "Learn how to create a model-driven app that has the account table added to it."
 ms.date: 07/05/2021
 ms.service: powerapps
@@ -10,13 +10,13 @@ ms.reviewer: matp
 ---
 # Create a model-driven app that has an account table page
 
-Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it very easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
+Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 
-In this tutorial you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
+In this tutorial, you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 
 ## Sign in to Power Apps
 
-Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a PowerApps account, select the **Get started free** link.
+Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a Power Apps account, select the **Get started free** link.
 
 ## Select the environment
 
@@ -59,7 +59,7 @@ Next, you add a new page to the model-driven app.
 
 1. Select **Table based view and form**, and then select **Next**.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table based view and form":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form":::
 
 1. Select the **Account** table, and then select **Add**.
 
