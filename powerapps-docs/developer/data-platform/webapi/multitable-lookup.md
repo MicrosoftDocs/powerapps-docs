@@ -129,7 +129,7 @@ OData-Version: 4.0 
      "@odata.type": "Microsoft.Dynamics.CRM.Label",
      "LocalizedLabels": [
        {
-         "\@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
          "Label": "Media Polymorphic Lookup",
          "LanguageCode": 1033
        }
