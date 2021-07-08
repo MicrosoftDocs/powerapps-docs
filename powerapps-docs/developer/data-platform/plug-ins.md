@@ -1,7 +1,7 @@
 ---
 title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how plug-ins provide a way to respond to a data processing event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/15/2021
 ms.reviewer: "phecke"
 ms.service: powerapps
@@ -56,7 +56,7 @@ These are the main advantages of plug-ins:
 
 ### Disadvantages of plug-ins
 
-- Plug-ins require the special skills of a developer to create and maintain. Developers are expensive and many business don't have access to one when they have a need. Business processes can change rapidly and providing options to enable change without requiring a developer can allow the system to adapt more rapidly.
+- Plug-ins require the special skills of a developer to create and maintain. Developers are expensive and many businesses don't have access to one when they have a need. Business processes can change rapidly and providing options to enable change without requiring a developer can allow the system to adapt more rapidly.
 - Plug-ins can be abused. A poorly written plug-in can cause significant impact on the performance of the environment. The great power of plug-ins needs to be applied with some restraint and consideration for the impact they have on the system as a whole.
 
 

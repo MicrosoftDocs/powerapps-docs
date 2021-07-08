@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ Entity that defines a custom API
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/customapis(*customapiid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customapis<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -88,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+- [WorkflowSdkStepEnabled](#BKMK_WorkflowSdkStepEnabled)
 
 
 ### <a name="BKMK_AllowedCustomProcessingStepType"></a> AllowedCustomProcessingStepType
@@ -178,7 +178,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|description|
-|MaxLength|100|
+|MaxLength|300|
 |RequiredLevel|SystemRequired|
 |Type|String|
 
@@ -478,6 +478,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_WorkflowSdkStepEnabled"></a> WorkflowSdkStepEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if the custom API is enabled as a workflow action|
+|DisplayName|Enabled for Workflow|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|workflowsdkstepenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### WorkflowSdkStepEnabled Choices/Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
 
 <a name="read-only-attributes"></a>
 
@@ -1174,7 +1198,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_customapi_modifiedonbehalfby](#BKMK_lk_customapi_modifiedonbehalfby)
 - [user_customapi](#BKMK_user_customapi)
 - [team_customapi](#BKMK_team_customapi)
-- [owner_customapi](#BKMK_owner_customapi)
 - [business_unit_customapi](#BKMK_business_unit_customapi)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [plugintype_customapi](#BKMK_plugintype_customapi)
@@ -1215,12 +1238,6 @@ See systemuser Table [user_customapi](systemuser.md#BKMK_user_customapi) One-To-
 **Added by**: System Solution Solution
 
 See team Table [team_customapi](team.md#BKMK_team_customapi) One-To-Many relationship.
-
-### <a name="BKMK_owner_customapi"></a> owner_customapi
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_customapi](owner.md#BKMK_owner_customapi) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_customapi"></a> business_unit_customapi
 

@@ -190,7 +190,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [systemuserauthorizationchangetracker_SyncErrors](syncerror.md#BKMK_systemuserauthorizationchangetracker_SyncErrors) Many-To-One relationship.
+Same as syncerror table [systemuserauthorizationchangetracker_SyncErrors](syncerror.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -207,7 +207,7 @@ Same as syncerror table [systemuserauthorizationchangetracker_SyncErrors](syncer
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [systemuserauthorizationchangetracker_AsyncOperations](asyncoperation.md#BKMK_systemuserauthorizationchangetracker_AsyncOperations) Many-To-One relationship.
+Same as asyncoperation table [systemuserauthorizationchangetracker_AsyncOperations](asyncoperation.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -224,7 +224,7 @@ Same as asyncoperation table [systemuserauthorizationchangetracker_AsyncOperatio
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [systemuserauthorizationchangetracker_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_systemuserauthorizationchangetracker_MailboxTrackingFolders) Many-To-One relationship.
+Same as mailboxtrackingfolder table [systemuserauthorizationchangetracker_MailboxTrackingFolders](mailboxtrackingfolder.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -241,7 +241,7 @@ Same as mailboxtrackingfolder table [systemuserauthorizationchangetracker_Mailbo
 
 **Added by**: System Solution Solution
 
-Same as processsession table [systemuserauthorizationchangetracker_ProcessSession](processsession.md#BKMK_systemuserauthorizationchangetracker_ProcessSession) Many-To-One relationship.
+Same as processsession table [systemuserauthorizationchangetracker_ProcessSession](processsession.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -258,7 +258,7 @@ Same as processsession table [systemuserauthorizationchangetracker_ProcessSessio
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [systemuserauthorizationchangetracker_BulkDeleteFailures](bulkdeletefailure.md#BKMK_systemuserauthorizationchangetracker_BulkDeleteFailures) Many-To-One relationship.
+Same as bulkdeletefailure table [systemuserauthorizationchangetracker_BulkDeleteFailures](bulkdeletefailure.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -275,7 +275,7 @@ Same as bulkdeletefailure table [systemuserauthorizationchangetracker_BulkDelete
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as principalobjectattributeaccess table [systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
@@ -298,7 +298,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_userauthztracker](systemuser.md#BKMK_user_userauthztracker) One-To-Many relationship.
+See systemuser Table [user_userauthztracker](systemuser.md) One-To-Many relationship.
 
 ### See also
 

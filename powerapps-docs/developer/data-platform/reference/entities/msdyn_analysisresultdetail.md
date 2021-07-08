@@ -1,7 +1,7 @@
 ---
 title: "msdyn_analysisresultdetail table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_analysisresultdetail table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_analysisresultdetails(*msdyn_analysisresultdetailid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_analysisresultdetails<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -916,7 +915,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_analysisresultdetail_modifiedonbehalfby](#BKMK_lk_msdyn_analysisresultdetail_modifiedonbehalfby)
 - [user_msdyn_analysisresultdetail](#BKMK_user_msdyn_analysisresultdetail)
 - [team_msdyn_analysisresultdetail](#BKMK_team_msdyn_analysisresultdetail)
-- [owner_msdyn_analysisresultdetail](#BKMK_owner_msdyn_analysisresultdetail)
 - [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
 - [msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult](#BKMK_msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult)
 
@@ -956,12 +954,6 @@ See systemuser Table [user_msdyn_analysisresultdetail](systemuser.md#BKMK_user_m
 **Added by**: System Solution Solution
 
 See team Table [team_msdyn_analysisresultdetail](team.md#BKMK_team_msdyn_analysisresultdetail) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_analysisresultdetail"></a> owner_msdyn_analysisresultdetail
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_analysisresultdetail](owner.md#BKMK_owner_msdyn_analysisresultdetail) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_analysisresultdetail"></a> business_unit_msdyn_analysisresultdetail
 

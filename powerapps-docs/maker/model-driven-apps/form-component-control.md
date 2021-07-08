@@ -2,12 +2,12 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 12/14/2020
+ms.date: 06/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "PowerApps"
 author: "Mattp123"
@@ -63,6 +63,9 @@ In this example, the **Contact** standard main form is configured for the form c
 
 This section describes form component behavior when used in a model-driven app.
 
+### Record selection
+In order for the form component control to show a form, the lookup column it is bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
+
 ### Column validation
 
 All columns, both in the main form and in the form component controls, must be valid for data to be sent to Microsoft Dataverse. This is true for both column validation errors, missing required columns, and so on.
@@ -106,6 +109,8 @@ Note the following limitations when you add the form component control to a tabl
 - On mobile, the timeline control does not currently appear in the form component control.
 
 - For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
+
+- Form component controls are not supported in bulk edit dialogs. They will not appear in the form in the bulk edit dialog by default and any changes made to related table records with them will not be saved.
 
 ### See also
 

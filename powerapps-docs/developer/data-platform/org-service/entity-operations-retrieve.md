@@ -1,8 +1,8 @@
 ---
-title: "Retrieve an entity using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes options available when retrieving a record programmatically" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Retrieve a table row using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/03/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,27 +15,27 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Retrieve an entity using the Organization Service
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Retrieve a table row using the Organization Service
 
-You will typically retrieve a record based on the results of a query and the query results should include a unique identifier for the entity record.
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+You will typically retrieve a row based on the results of a query and the query results should include a unique identifier for the row.
 
 > [!NOTE]
-> In the following examples the `accountid` variable represents the <xref:System.Guid> identifier for an account entity record.
+> In the following examples the `accountid` variable represents the <xref:System.Guid> identifier for an account row.
 
-You have some options to define the data returned when you retrieve an entity record. You will use the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class to define which attribute values you require.
+You have some options to define the data returned when you retrieve a row. You will use the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class to define which column (attribute) values you require.
 
 
 > [!IMPORTANT]
-> When retrieving entity records you should only request the attributes values you need by setting the specific attributes using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
+> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve all table columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
 
-If you need to return related entity records you can include a query with your retrieve request to define which related records to return.
-
+If you need to return related rows you can include a query with your retrieve request to define which related rows to return.
 
 ## Basic Retrieve
 
-You can retrieve individual records using either the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> class to a reference record and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+You can retrieve individual rows using either the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> class to a reference row and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 This example shows using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method.
 
@@ -62,17 +62,16 @@ Console.WriteLine("account name: {0}", entity["name"]);
 >
 > Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. 
 > More information: 
-> - [Retrieve with related records](#retrieve-with-related-records)
+> - [Retrieve with related rows](#retrieve-with-related-rows)
 > - [Retrieve with an alternate key](#retrieve-with-an-alternate-key)
 
+## Retrieve with related rows
 
-## Retrieve with related records
+When you retrieve an individual row you can also include a query to include related rows by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.
 
-When you retrieve an individual record you can also include a query to include related records by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.
+You can define a query using any of the classes derived from <xref:Microsoft.Xrm.Sdk.Query.QueryBase> and associate it with a specific table row relationship. Add a collection of pairs of queries and relationships to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property using a <xref:Microsoft.Xrm.Sdk.RelationshipQueryCollection>.
 
-You can define a query using any of the classes derived from <xref:Microsoft.Xrm.Sdk.Query.QueryBase> and associate it with a specific entity relationship. Add a collection of pairs of queries and relationships to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property using a <xref:Microsoft.Xrm.Sdk.RelationshipQueryCollection>.
-
-The following example includes  `task` and `contact` records related to the `account` entity record that is being retrieved.
+The following example includes  `task` and `contact` rows related to the `account` row that is being retrieved.
 
 ```csharp
 
@@ -130,9 +129,9 @@ More information: [Query data using the Organization service](entity-operations-
 
 ## Retrieve with an alternate key
 
-If you have configured an entity to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property.
+If you have configured a table to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property.
 
-For example, if you define the `account` `accountnumber` attribute to be an alternate key, you can retrieve an account using the value of that attribute.
+For example, if you define the `account` `accountnumber` column to be an alternate key, you can retrieve an account using the value of that column.
 
 
 ```csharp
@@ -147,7 +146,7 @@ Entity entity = response.Entity;
 Console.WriteLine(entity["name"]);
 ```
 
-If your alternate key is a composite of several attributes, you would define a <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection>. The following example is for an account entity that has an alternate key that includes both the `accountnumber` and `sic` attributes.
+If your alternate key is a composite of several columns (attributes), you would define a <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection>. The following example is for an account that has an alternate key that includes both the `accountnumber` and `sic` attributes.
 
 ```csharp
 var keyCollection = new KeyAttributeCollection();
@@ -169,7 +168,7 @@ Console.WriteLine(entity["name"]);
 
 ## Retrieve documents in storage partitions
 
-If you are retrieving entity data stored in partitions be sure to specify the partition key when retrieving that entity data. More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
 
 ## Access Formatted values
 
@@ -179,9 +178,9 @@ The method to access formatted values on a retrieve operation is the same you wi
 
 ### See also
 
-[Create entities using the Organization Service](entity-operations-create.md)<br />
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Create table rows using the Organization Service](entity-operations-create.md)<br />
+[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

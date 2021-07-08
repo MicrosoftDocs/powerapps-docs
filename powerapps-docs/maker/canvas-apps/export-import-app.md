@@ -1,6 +1,6 @@
 ---
-title: Export and import canvas app | Microsoft Docs
-description: Learn how to export and import canvas app
+title: Export and import canvas app packages
+description: Learn how to export and import canvas apps.
 author: caburk
 manager: kvivek
 ms.service: powerapps

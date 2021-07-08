@@ -1,6 +1,6 @@
 ---
 title: getResource | Microsoft Docs
-description: Provides access to the methods to get all the information about the resource files defined in the manifest.
+description: Provides information about the methods available for getResource.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -4,8 +4,8 @@ description: Learn how to create your first app in Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: 
-ms.date: 04/12/2021
+ms.custom: intro-internal
+ms.date: 05/13/2021
 ms.author: jshum
 ms.reviewer: tapanm-msft
 contributors:
@@ -24,6 +24,9 @@ Creating an app in Microsoft Teams is a quick and easy 3-step process.
 1. [Customize and publish your app](#customize-and-publish-your-app)
 
 ![Create your first app in 3 steps](media/create-your-first-app.png "Create your first app in 3 steps")
+
+Watch this video to learn how to create your first app.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEmEP]
 
 Now let's go through each step in detail.
 

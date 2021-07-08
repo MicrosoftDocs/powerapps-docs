@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/04/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -15,23 +15,23 @@ contributors:
 
 # About lists
 
-An list is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. By using lists, you can expose records for display on portals.
+A list is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. By using lists, you can expose records for display on portals.
 
 The grid supports sorting and will be paginated if the number of records is larger than the page size specified. If **Web Page for Details View** has been specified, each record will contain a link to the page, and the ID of the record will be appended to the query string along with the ID Query String Parameter Name. The list also supports multiple views. If more than one view has been specified, a drop-down list will be rendered to allow the user to switch between the various views.
 
 The data can also be filtered by the current portal user, the current portal user's parent Customer account, and the current portal website. If a value exists for both filter conditions **Portal User Attribute** and **Account Attribute**, the portal will render a drop-down list to allow the user to view their own (My) data or their parent Customer account's data.
 
-## Add an list to your portal
+## Add a list to your portal
 
 The list contains relationships to webpages and various properties to control the initialization of the list of records within the portal. The relationship to the webpage allows dynamic retrieval of the list definition for a given page node within the website. To view existing Table views or to create new Table views, go to **Portals** > **Lists**.
 
 > [!Note]
-> - An list must be associated with a webpage in a given website for the list to be viewable within the site.
+> - A list must be associated with a webpage in a given website for the list to be viewable within the site.
 > - Multi-select option set is not supported in lists.
 
 The webpages associated with the list can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu. When creating your list, the first step is to choose the table for which you want to render a list on the portal. You'll then choose one or more model-driven app views to render.
 
-When creating or editing a webpage, you can specify an list in the lookup field provided on the Web Page form. The page template typically will be the Page template, but can be one of several other templates designed for content because the master templates contain the necessary logic to determine whether an list should be rendered.
+When creating or editing a webpage, you can specify a list in the lookup field provided on the Web Page form. The page template typically will be the Page template, but can be one of several other templates designed for content because the master templates contain the necessary logic to determine whether a list should be rendered.
 
 ## List attributes and relationships
 
@@ -86,11 +86,11 @@ $(document).ready(function (){
 ```
 ## List configuration
 
-You can easily enable and configure actions (Create, Edit, Delete, and so on) for records in an list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
+You can easily enable and configure actions (Create, Edit, Delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
 These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure an list](../media/configure-entitylist.png "Configure an list")  
+![Configure a list](../media/configure-entitylist.png "Configure a list")  
 
 **Attributes**
 
@@ -149,7 +149,7 @@ Generally, you can configure the corresponding dialog box for each action, which
 
 **Create action settings**
 
-Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with an basic form that the user can use to create a new record, provided the Create privilege has been granted by Table Permissions.
+Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with a basic form that the user can use to create a new record, provided the Create privilege has been granted by Table Permissions.
 
 | Name               | Description                          |
 |--------------------|--------------------------------------|
@@ -274,15 +274,15 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ## Securing lists
 
-To secure an list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
+To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
 
-The act of securing an list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
+The act of securing a list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
 In addition, any actions that are defined for the list will respect the corresponding permissions for that action on a per-record basis. That is, if you have Edit permission for a record, the Edit action will be enabled for that record. The same applies for Delete, Create, and so on. Note that if no records are available, a message indicating this will be shown when the list is loaded.
 
 However, good website design requires that if a user is not in a role that has any permissions for the table (that is, there will never be a situation where they should see any records), they should not have access to the page at all. Ideally, the page should be protected by using Webpage Access Permissions.
 
-If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case table, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
+If you have secured a list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case table, whereas Teddy has global read access. If a list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
 
 If the **EntityList/ShowRecordLevelActions** site setting is set to **false** and the table has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
 
@@ -290,15 +290,15 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an basic form or Advanced form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or Advanced form.
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
 ![Add view details page](../media/add-view-details-page.png "Add view details page")  
 
-**Using an basic form to display details**
+**Using a basic form to display details**
 
-To create an basic form please refer the instructions found on the [basic form](entity-forms.md) page.
+To create a basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the basic form.
 
@@ -306,7 +306,7 @@ The Record ID Parameter Name on Basic Form must match the ID Query String Parame
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
-**Using avanced form to display details**
+**Using advanced form to display details**
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the Advanced form.
 
@@ -322,7 +322,7 @@ If you assign a webpage to the Create Lookup on the list and do not specify a Cr
 
 ## List filter configuration
 
-Adding the ability to filter records on an list is easy: simply enable the filtering option and then choose one or more filter types to display to users. It is possible to filter by an attribute that matches text provided by the user, or to select from a series of options. You can even design virtually any type of filter you can imagine by using Advanced Find.
+Adding the ability to filter records on a list is easy: simply enable the filtering option and then choose one or more filter types to display to users. It is possible to filter by an attribute that matches text provided by the user, or to select from a series of options. You can even design virtually any type of filter you can imagine by using Advanced Find.
 
 **Enable the list filter**
 
@@ -396,7 +396,7 @@ The Lookup Set uses the following attributes:
 |**Name**     |**Description**                                                                                                                                           |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Relationship | The name of the related table to the list's selected table type to filter by. Only tables with a one-to-many or many-to-many relationship with the list's selected table type appear as options for this filter type.          |
-| Display Name | Override the label for the filter when the list is displayed. By default, this will be automatically be set to the name of the selected relationship. |
+| Display Name | Override the label for the filter when the list is displayed. By default, this will be automatically set to the name of the selected relationship. |
 | Options      | A collection of possible values to filter by. See below for more details.                                                                                 |
 
 **Lookup Set options**
@@ -491,9 +491,9 @@ With lists, it is possible to enable and configure a Map view of the data, power
 
 ## List Calendar view
 
-Use the List Calendar view to render an list as a calendar, with each individual record configured to act as a single event.
+Use the List Calendar view to render a list as a calendar, with each individual record configured to act as a single event.
 
-To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, an List Calendar view will appear on the portal.
+To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a List Calendar view will appear on the portal.
 
 ## List OData feeds
 

@@ -5,6 +5,7 @@ services: ''
 suite: powerapps
 author: KumarVivek
 ms.service: powerapps
+ms.custom: "intro-internal"
 ms.topic: article
 ms.date: 04/15/2021
 ms.author: kvivek

@@ -1,7 +1,7 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 03/03/2021
 ms.service: powerapps
 ms.topic: "article"

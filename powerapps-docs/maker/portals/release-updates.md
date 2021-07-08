@@ -1,11 +1,11 @@
 ---
-title: Release updates
-description: Learn about release updates of Power Apps portals.
+title: Portals release updates and new features
+description: Learn about the new features that have been recently released for Power Apps portals, and features that will be releasing over the next few months.
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/26/2021
+ms.date: 06/01/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 contributors:
@@ -15,11 +15,11 @@ contributors:
 
 # Release updates
 
-This topic provides resources where you can learn about the new features that have recently released and new features that will be releasing over the next few months.
+This topic provides resources where you can learn about the new features that have been recently released and features that will be releasing over the next few months.
 
 ## Portals release plans
 
-For information about the roadmap and new features releasing over the next few months that you can use for planning, see:
+For information about the roadmap and new features releasing over the next few months, see:
 
 - [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps-portals/)
 - [2020 release wave 2 plan](/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
@@ -27,15 +27,16 @@ For information about the roadmap and new features releasing over the next few m
 
 ## Portals version updates
 
-The following articles provide details about the portals version updates.
+The following articles provide details about the portals version updates:
 
+- [Power Apps portals version 9.3.6.x](versions/version-9.3.6.x.md)
 - [Power Apps portals version 9.3.4.x](versions/version-9.3.4.x.md)
 - [Power Apps portals version 9.3.3.x](versions/version-9.3.3.x.md)
 - [Power Apps portals versions before 9.3.3.x](versions/versions-before-9.3.3.x.md)
 
 ## Starter portal package updates
 
-The following articles provide details about the starter portal package updates.
+The following articles provide details about the starter portal package updates:
 
 - [Starter portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
 - [Starter portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)

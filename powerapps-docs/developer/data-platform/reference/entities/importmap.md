@@ -1,7 +1,7 @@
 ---
 title: "ImportMap table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ImportMap table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -35,7 +35,6 @@ Data map used in import.
 |ImportMappingsImportMap|<xref href="Microsoft.Dynamics.CRM.ImportMappingsImportMap?text=ImportMappingsImportMap Action" />|<xref:Microsoft.Crm.Sdk.Messages.ImportMappingsImportMapRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importmaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1171,11 +1170,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9987|External Party Item|
 |9996|HolidayWrapper|
 |9997|Email Signature|
-|10000|Solution History|
-|10001|Solution History Data Source|
-|10002|Solution Component Attribute Configuration|
-|10003|Solution Component Configuration|
-|10004|Solution Component Relationship Configuration|
+|10000|Solution Component Attribute Configuration|
+|10001|Solution Component Configuration|
+|10002|Solution Component Relationship Configuration|
+|10003|Solution History|
+|10004|Solution History Data Source|
 |10005|Component Layer|
 |10006|Component Layer Data Source|
 |10007|Package|
@@ -1200,55 +1199,67 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10030|Setting Definition|
 |10031|CanvasApp Extended Metadata|
 |10032|OData v4 Data Source|
-|10033|ProcessStageParameter|
-|10034|Workflow Binary|
-|10035|Connection Reference|
-|10036|Help Page|
-|10037|BotContent|
-|10038|ConversationTranscript|
-|10039|Chatbot|
-|10040|Chatbot subcomponent|
-|10044|PDF Setting|
-|10045|Service Configuration|
-|10046|SLA KPI|
-|10047|Knowledge Federated Article|
-|10048|Knowledge FederatedArticle Incident|
-|10049|Search provider|
-|10050|Knowledge Article Image|
-|10051|Knowledge Interaction Insight|
-|10052|Knowledge Search Insight|
-|10053|Knowledge Article Template|
-|10054|Catalog|
-|10055|Catalog Assignment|
-|10056|Internal Catalog Assignment|
-|10057|Custom API|
-|10058|Custom API Request Parameter|
-|10059|Custom API Response Property|
-|10060|TeamMobileOfflineProfileMembership|
-|10061|UserMobileOfflineProfileMembership|
-|10062|OrganizationDataSyncSubscription|
-|10063|OrganizationDataSyncSubscriptionEntity|
-|10064|Rich Text Attachment|
-|10065|NonRelational Data Source|
-|10066|Search Telemetry|
-|10067|AI Builder Dataset|
-|10068|AI Builder Dataset File|
-|10069|AI Builder Dataset Record|
-|10070|AI Builder Datasets Container|
-|10071|AI Builder File|
-|10072|AI Builder File Attached Data|
-|10073|AI Form Processing Document|
-|10074|AI Object Detection Image|
-|10075|AI Object Detection Label|
-|10076|AI Object Detection Bounding Box|
-|10077|AI Object Detection Image Mapping|
-|10079|Analysis Component|
-|10080|Analysis Job|
-|10081|Analysis Result|
-|10082|Analysis Result Detail|
-|10083|Solution Health Rule|
-|10084|Solution Health Rule Argument|
-|10085|Solution Health Rule Set|
+|10033|Flow Machine|
+|10034|Flow Machine Group|
+|10035|ProcessStageParameter|
+|10036|Workflow Binary|
+|10037|Connection Reference|
+|10038|Help Page|
+|10039|BotContent|
+|10040|ConversationTranscript|
+|10041|Chatbot|
+|10042|Chatbot subcomponent|
+|10048|PDF Setting|
+|10049|Activity File Attachment|
+|10050|Service Configuration|
+|10051|SLA KPI|
+|10052|Knowledge Federated Article|
+|10053|Knowledge FederatedArticle Incident|
+|10054|Search provider|
+|10055|Knowledge Article Image|
+|10056|Knowledge Interaction Insight|
+|10057|Knowledge Search Insight|
+|10058|Knowledge article language setting|
+|10059|Knowledge personalization|
+|10060|Knowledge Article Template|
+|10061|Knowledge search personal filter config|
+|10062|Knowledge search filter|
+|10063|KeyVaultReference|
+|10064|ManagedIdentity|
+|10065|Catalog|
+|10066|Catalog Assignment|
+|10067|Internal Catalog Assignment|
+|10068|Custom API|
+|10069|Custom API Request Parameter|
+|10070|Custom API Response Property|
+|10071|TeamMobileOfflineProfileMembership|
+|10072|UserMobileOfflineProfileMembership|
+|10073|OrganizationDataSyncSubscription|
+|10074|OrganizationDataSyncSubscriptionEntity|
+|10075|Notification|
+|10076|Rich Text Attachment|
+|10077|NonRelational Data Source|
+|10078|Search Telemetry|
+|10079|AI Builder Dataset|
+|10080|AI Builder Dataset File|
+|10081|AI Builder Dataset Record|
+|10082|AI Builder Datasets Container|
+|10083|AI Builder File|
+|10084|AI Builder File Attached Data|
+|10085|AI Form Processing Document|
+|10086|AI Object Detection Image|
+|10087|AI Object Detection Label|
+|10088|AI Object Detection Bounding Box|
+|10089|AI Object Detection Image Mapping|
+|10091|PM Inferred Task|
+|10092|PM Recording|
+|10093|Analysis Component|
+|10094|Analysis Job|
+|10095|Analysis Result|
+|10096|Analysis Result Detail|
+|10097|Solution Health Rule|
+|10098|Solution Health Rule Argument|
+|10099|Solution Health Rule Set|
 |90001|RevokeInheritedAccessRecordsTracker|
 
 
@@ -1395,7 +1406,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 - [lk_importmapbase_createdby](#BKMK_lk_importmapbase_createdby)
 - [lk_importmap_createdonbehalfby](#BKMK_lk_importmap_createdonbehalfby)
-- [owner_importmaps](#BKMK_owner_importmaps)
 - [BusinessUnit_ImportMaps](#BKMK_BusinessUnit_ImportMaps)
 - [team_ImportMaps](#BKMK_team_ImportMaps)
 - [lk_importmap_modifiedonbehalfby](#BKMK_lk_importmap_modifiedonbehalfby)
@@ -1410,10 +1420,6 @@ See systemuser Table [lk_importmapbase_createdby](systemuser.md#BKMK_lk_importma
 ### <a name="BKMK_lk_importmap_createdonbehalfby"></a> lk_importmap_createdonbehalfby
 
 See systemuser Table [lk_importmap_createdonbehalfby](systemuser.md#BKMK_lk_importmap_createdonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_importmaps"></a> owner_importmaps
-
-See owner Table [owner_importmaps](owner.md#BKMK_owner_importmaps) One-To-Many relationship.
 
 ### <a name="BKMK_BusinessUnit_ImportMaps"></a> BusinessUnit_ImportMaps
 

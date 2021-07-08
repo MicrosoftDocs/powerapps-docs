@@ -204,9 +204,11 @@ You can continue drilling further into the chart data. As you drill down deeper,
 ## Known issues  
 
 
+- In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
 
-In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
+- Chart displays zero values when there is no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there is no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
 
+- By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
 
 
 

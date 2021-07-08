@@ -1,11 +1,11 @@
 ---
 title: "Create a custom process action | MicrosoftDocs"
-description: "Use custom actions when you want to automate a series of commands in the system. Actions expand the vocabulary available for developers to express business processes."
+description: "Use custom process actions when you want to automate a series of commands in the system. Actions expand the vocabulary available for developers to express business processes."
 ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.topic: "article"
+ms.topic: "conceptual"
 author: "msftman"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 ms.author: "deonhe"
@@ -16,9 +16,6 @@ search.audienceType:
   - flowmaker
   - enduser
 ---
-
-
-<!-- Be sure to update the publication date. -->
 
 # Create a custom process action
 
@@ -166,7 +163,7 @@ The **Is Custom Processing Step Allowed for Other Publishers** managed property 
   
 ## Next steps
 
-[Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
+[Invoke custom process actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

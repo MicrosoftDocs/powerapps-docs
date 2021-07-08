@@ -2,12 +2,13 @@
 title: Understand model-driven app components in Power Apps | MicrosoftDocs
 description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
 Keywords: columns, attributes, model-driven app
+ms.custom: intro-internal
 author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020
 ms.service: powerapps
-ms.topic: article
+ms.topic: conceptual
 search.audienceType: 
   - maker
 search.app: 
@@ -26,7 +27,7 @@ These components determine what data the app will be based upon and what designe
 |Component  |Description  |Designer  |
 |---------|---------|---------|
 |Table     |An item with properties that you track, such as a contact or account. Many standard tables are available. You can customize a non-system standard table (production table) or create a custom table from scratch.     | Power Apps table designer        |
-|Relationship     | Table relationships define how tables can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup column to a table creates a new 1:N relationship between the two tables and lets you put that lookup column on a form.   | Power Apps table designer        |
+|Relationship     | Table relationships define how tables can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships. For example, adding a lookup column to a table creates a new 1:N relationship between the two tables and lets you put that lookup column on a form.   | Power Apps table designer        |
 |Column     | A property that is associated with an table. A column is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another table). Columns typically are used with forms, views, and searches.        | Power Apps table designer   |
 |Choice column     | This is a special type of column, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this column displays a control for the user to select an option.  There are two kinds of choices; choices, where the user can only select one option, and multi-select choices, which allow more than one selection.  | Power Apps option set designer     |
 

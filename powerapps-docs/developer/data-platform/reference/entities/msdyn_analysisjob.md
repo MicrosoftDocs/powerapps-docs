@@ -1,7 +1,7 @@
 ---
 title: "msdyn_analysisjob table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_analysisjob table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_analysisjobs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -83,7 +82,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_sevlowcount](#BKMK_msdyn_sevlowcount)
 - [msdyn_sevmediumcount](#BKMK_msdyn_sevmediumcount)
 - [msdyn_StartTime](#BKMK_msdyn_StartTime)
+- [msdyn_SuggestionCount](#BKMK_msdyn_SuggestionCount)
 - [msdyn_TenantId](#BKMK_msdyn_TenantId)
+- [msdyn_TriggerType](#BKMK_msdyn_TriggerType)
 - [msdyn_WarningCount](#BKMK_msdyn_WarningCount)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -363,6 +364,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_msdyn_SuggestionCount"></a> msdyn_SuggestionCount
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Suggestion Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_suggestioncount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_msdyn_TenantId"></a> msdyn_TenantId
 
 |Property|Value|
@@ -374,6 +391,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_tenantid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_TriggerType"></a> msdyn_TriggerType
+
+|Property|Value|
+|--------|-----|
+|Description|Health rule set Trigger Type.|
+|DisplayName|Health rule set Trigger Type.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_triggertype|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
@@ -1080,7 +1113,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_analysisjob_modifiedonbehalfby](#BKMK_lk_msdyn_analysisjob_modifiedonbehalfby)
 - [user_msdyn_analysisjob](#BKMK_user_msdyn_analysisjob)
 - [team_msdyn_analysisjob](#BKMK_team_msdyn_analysisjob)
-- [owner_msdyn_analysisjob](#BKMK_owner_msdyn_analysisjob)
 - [business_unit_msdyn_analysisjob](#BKMK_business_unit_msdyn_analysisjob)
 
 
@@ -1119,12 +1151,6 @@ See systemuser Table [user_msdyn_analysisjob](systemuser.md#BKMK_user_msdyn_anal
 **Added by**: System Solution Solution
 
 See team Table [team_msdyn_analysisjob](team.md#BKMK_team_msdyn_analysisjob) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_analysisjob"></a> owner_msdyn_analysisjob
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_analysisjob](owner.md#BKMK_owner_msdyn_analysisjob) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_msdyn_analysisjob"></a> business_unit_msdyn_analysisjob
 

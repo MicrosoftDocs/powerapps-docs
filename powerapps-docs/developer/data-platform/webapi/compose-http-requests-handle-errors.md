@@ -118,6 +118,8 @@ You can use additional headers to enable specific capabilities.
 - When you create a solution component and want to associate it with a solution, use the `MSCRM.SolutionUniqueName` request header and set the value to the  unique name of the solution.
 
 - When you want to enable duplicate detection when creating a new entity record, set the `MSCRM.SuppressDuplicateDetection` request header value to false. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)
+
+- When you want to by-pass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege, set the `MSCRM.BypassCustomPluginExecution` request header to `true`. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
   
 <a name="bkmk_statusCodes"></a>
 

@@ -756,27 +756,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_calendarrule_createdonbehalfby"></a> lk_calendarrule_createdonbehalfby
 
-See systemuser Table [lk_calendarrule_createdonbehalfby](systemuser.md#BKMK_lk_calendarrule_createdonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_calendarrule_createdonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_calendarrule_createdby"></a> lk_calendarrule_createdby
 
-See systemuser Table [lk_calendarrule_createdby](systemuser.md#BKMK_lk_calendarrule_createdby) One-To-Many relationship.
+See systemuser Table [lk_calendarrule_createdby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_inner_calendar_calendar_rules"></a> inner_calendar_calendar_rules
 
-See calendar Table [inner_calendar_calendar_rules](calendar.md#BKMK_inner_calendar_calendar_rules) One-To-Many relationship.
+See calendar Table [inner_calendar_calendar_rules](calendar.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_calendarrule_modifiedby"></a> lk_calendarrule_modifiedby
 
-See systemuser Table [lk_calendarrule_modifiedby](systemuser.md#BKMK_lk_calendarrule_modifiedby) One-To-Many relationship.
+See systemuser Table [lk_calendarrule_modifiedby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_lk_calendarrule_modifiedonbehalfby"></a> lk_calendarrule_modifiedonbehalfby
 
-See systemuser Table [lk_calendarrule_modifiedonbehalfby](systemuser.md#BKMK_lk_calendarrule_modifiedonbehalfby) One-To-Many relationship.
+See systemuser Table [lk_calendarrule_modifiedonbehalfby](systemuser.md) One-To-Many relationship.
 
 ### <a name="BKMK_calendar_calendar_rules"></a> calendar_calendar_rules
 
-See calendar Table [calendar_calendar_rules](calendar.md#BKMK_calendar_calendar_rules) One-To-Many relationship.
+See calendar Table [calendar_calendar_rules](calendar.md) One-To-Many relationship.
 
 ### See also
 

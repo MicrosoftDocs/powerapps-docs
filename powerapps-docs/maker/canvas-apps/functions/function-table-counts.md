@@ -1,13 +1,13 @@
 ---
-title: Count, CountA, CountIf, and CountRows functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Count, CountA, CountIf, and CountRows functions in Power Apps
+title: Count, CountA, CountIf, and CountRows functions in Power Apps
+description: Reference information including syntax and examples for the Count, CountA, CountIf, and CountRows functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 02/02/2021
+ms.date: 05/24/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -29,11 +29,11 @@ The **CountRows** function counts the number of records in a table.
 
 Each of these functions returns a number.
 
-You need to enable the **Enhanced delegation for Common Data Service** option in the advance settings to make **CountIf** and **CountRows** functions delegation to work. To enable the option:
+You need to enable the **Enhanced delegation for Microsoft Dataverse** option in the advance settings to make **CountIf** and **CountRows** functions delegation to work. To enable the option:
 
 1. Open the app where you want to use the functions. 
-1. Select **File** > **Settings** > **Advanced settings**.
-1. Turn on the **Enhanced delegation for Common Data Service** option.
+1. Select **File** > **Settings** > **Upcoming features** > **Preview**.
+1. Turn on the **Enhanced delegation for Microsoft Dataverse** option.
 
     > [!div class="mx-imgBorder"]
     > ![Enable delegation](media/enable-delegation-functions.png)

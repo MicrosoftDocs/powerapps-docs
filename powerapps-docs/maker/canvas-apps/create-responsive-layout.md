@@ -1,13 +1,13 @@
 ---
-title: Create responsive layouts in canvas apps | Microsoft Docs
-description: Reference information about configuring Height, Width, X, and Y properties on controls in canvas apps
+title: Create responsive layouts in canvas apps
+description: Learn about configuring Height, Width, X, and Y properties of controls in canvas apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 04/22/2020
+ms.date: 05/24/2021
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -18,7 +18,7 @@ search.app:
 
 Before you build a canvas app in Power Apps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
 
-After you make that choice, you can make a few more choices if you select **File** > **App settings** > **Screen size + orientation**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
+After you make that choice, you can make a few more choices if you select **File** > **Settings** > **Display**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
 
 Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 
@@ -44,7 +44,7 @@ To make your app's layouts respond to changes in the screen dimensions, you'll w
 
 These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device or browser window in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
+The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Display** pane of **Settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
 
 As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. In that case, the user must scroll to view all of the screen's content.
 
@@ -149,7 +149,7 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ### Container control
 
-You can use an experimental feature, the **Container** control, as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
+You can use an experimental feature, the **Layout container** control, as a parent control. To turn this feature on, select **File** > **Settings** > **Upcoming features** > **Preview**, and select **Layout containers** to turn the feature on.
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the **Container** control, containing a **Label** control and two **Icon** controls:
 

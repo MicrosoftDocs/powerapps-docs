@@ -18,19 +18,19 @@ search.app:
 
 # Appendix: Add licensing information to your solution
 
-This article is related to the license management capability that Microsoft provides for ISVs to manage and enforce licenses for their products. More information: [Third-party app license management through Microsoft](https://docs.microsoft.com/azure/marketplace/third-party-license) 
+This article is related to the license management capability that Microsoft provides for ISVs to manage and enforce licenses for their products. More information: [Third-party app license management through Microsoft](/azure/marketplace/third-party-license) 
 
 This article outlines how to add licensing information to a Microsoft Dataverse solution, package it, and upload the solution zip file to Microsoft AppSource.  More information: [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
 The following steps are required to add license information to your solution: 
 
 - Clone existing solution.
-- Use the Power Apps CLI tool to add license information to the solution.  
+- Use Microsoft Power Platform CLI to add license information to the solution.  
 - Build the solution, package it, and upload the zip file to AppSource. 
 
-## Download the latest version of the Power Apps CLI 
+## Download the latest version of Microsoft Power Platform CLI  
 
-You can download the latest version of Power Apps CLI from [here](/powerapps/developer/data-platform/powerapps-cli). The Power Apps CLI tool includes commands that are required for adding licensing information to the solution. To verify that you have the latest version of the tool:
+You can download the latest version of Microsoft Power Platform CLI from [here](/powerapps/developer/data-platform/powerapps-cli). Microsoft Power Platform CLI tool includes commands that are required for adding licensing information to the solution. To verify that you have the latest version of the tool:
 
 1. Open a **Developer Command Prompt for VS 2017** or higher window. 
 2. Enter the command `pac install latest`. This will install the latest version of the tooling.
@@ -38,7 +38,7 @@ You can download the latest version of Power Apps CLI from [here](/powerapps/dev
  
 ## Clone a solution
 
-Use Power Apps CLI commands to clone the solution. To clone a solution:
+Use Microsoft Power Platform CLI commands to clone the solution. To clone a solution:
  
 1. Create an authentication profile for the environment where you want to add your solution by using the command: 
 

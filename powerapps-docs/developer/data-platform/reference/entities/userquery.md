@@ -1,7 +1,7 @@
 ---
 title: "UserQuery table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the UserQuery table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ Saved database query that is owned by a user.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/userqueries(*userqueryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userqueries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -750,7 +749,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_userquery_modifiedonbehalfby](#BKMK_lk_userquery_modifiedonbehalfby)
 - [business_unit_userquery](#BKMK_business_unit_userquery)
 - [user_userquery](#BKMK_user_userquery)
-- [owner_userquerys](#BKMK_owner_userquerys)
 - [team_userquery](#BKMK_team_userquery)
 - [lk_userquery_modifiedby](#BKMK_lk_userquery_modifiedby)
 - [lk_userquery_createdby](#BKMK_lk_userquery_createdby)
@@ -768,10 +766,6 @@ See businessunit Table [business_unit_userquery](businessunit.md#BKMK_business_u
 ### <a name="BKMK_user_userquery"></a> user_userquery
 
 See systemuser Table [user_userquery](systemuser.md#BKMK_user_userquery) One-To-Many relationship.
-
-### <a name="BKMK_owner_userquerys"></a> owner_userquerys
-
-See owner Table [owner_userquerys](owner.md#BKMK_owner_userquerys) One-To-Many relationship.
 
 ### <a name="BKMK_team_userquery"></a> team_userquery
 

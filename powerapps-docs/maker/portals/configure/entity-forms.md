@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/11/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -33,7 +33,7 @@ When creating a new basic form, the first step is to decide the **Table** and **
 > - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
 > - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
-> - If you create an basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
+> - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
 
 The webpages associated with the basic form can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu.
@@ -44,7 +44,7 @@ The various master pages used by the portal contain declarations of the **TableF
 
 ## Secure your forms
 
-To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on an basic form and does not have permissions, they will receive an error message. To enable permissions for an basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
+To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on a basic form and does not have permissions, they will receive an error message. To enable permissions for a basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
 ## Basic form attributes and relationships
 
@@ -69,8 +69,8 @@ To secure your forms, you must create table permissions that determine access an
 |Add Captcha|    Displays captcha.|
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
-|Auto Generate Steps From Tabs|    Indicates that multiple tabs on an basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
-|Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an basic form.|
+|Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
+|Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in a basic form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target table.|
 |Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
@@ -146,7 +146,7 @@ This provides a way to associate the current record being created or updated by 
 
 ## Basic form action configuration
 
-By default an Basic Form will allow for reading or updating of an existing record, or the insertion of a new record.  However, you can easily enable and configure additional actions for records in an Basic Form  as well (Delete, Activate, Deactivate, etc.). It is also possible to override default labels, sizes, and other attributes that will appear if there are actions enabled.
+By default a Basic Form will allow for reading or updating of an existing record, or the insertion of a new record.  However, you can easily enable and configure additional actions for records in a Basic Form  as well (Delete, Activate, Deactivate, etc.). It is also possible to override default labels, sizes, and other attributes that will appear if there are actions enabled.
 
 These settings are found in the **Additional Settings** section of the basic form. By default, only **Basic Settings** are shown. You can select **Advanced Settings** to show additional settings.
 
@@ -192,7 +192,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside basic form fields:
 
-![Request validation error](../media/request-validation-error.png)
+`Found field(s) submitted with potentially dangerous value(s) such as HTML, or script. Please review the field value(s) and try again.`
 
 To disable request validation, follow these steps:
 

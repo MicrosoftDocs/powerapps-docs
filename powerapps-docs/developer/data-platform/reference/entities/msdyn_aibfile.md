@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIBFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the msdyn_AIBFile table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_aibfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -817,7 +816,6 @@ Listed by **SchemaName**.
 - [msdyn_aibfile_ProcessSession](#BKMK_msdyn_aibfile_ProcessSession)
 - [msdyn_aibfile_BulkDeleteFailures](#BKMK_msdyn_aibfile_BulkDeleteFailures)
 - [msdyn_aibfile_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aibfile_PrincipalObjectAttributeAccesses)
-- [msdyn_aibfile_FileAttachments](#BKMK_msdyn_aibfile_FileAttachments)
 - [msdyn_AIBDatasetFile_msdyn_AIBuilde](#BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde)
 
 
@@ -957,23 +955,6 @@ Same as principalobjectattributeaccess table [msdyn_aibfile_PrincipalObjectAttri
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_aibfile_FileAttachments"></a> msdyn_aibfile_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [msdyn_aibfile_FileAttachments](fileattachment.md#BKMK_msdyn_aibfile_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibfile_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde"></a> msdyn_AIBDatasetFile_msdyn_AIBuilde
 
 Same as msdyn_aibdatasetfile table [msdyn_AIBDatasetFile_msdyn_AIBuilde](msdyn_aibdatasetfile.md#BKMK_msdyn_AIBDatasetFile_msdyn_AIBuilde) Many-To-One relationship.
@@ -1000,9 +981,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_aibfile_modifiedonbehalfby](#BKMK_lk_msdyn_aibfile_modifiedonbehalfby)
 - [user_msdyn_aibfile](#BKMK_user_msdyn_aibfile)
 - [team_msdyn_aibfile](#BKMK_team_msdyn_aibfile)
-- [owner_msdyn_aibfile](#BKMK_owner_msdyn_aibfile)
 - [business_unit_msdyn_aibfile](#BKMK_business_unit_msdyn_aibfile)
-- [FileAttachment_msdyn_AIBFile_msdyn_File](#BKMK_FileAttachment_msdyn_AIBFile_msdyn_File)
 - [msdyn_AIBFile_msdyn_AIBDatasetsCont](#BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont)
 
 
@@ -1042,23 +1021,11 @@ See systemuser Table [user_msdyn_aibfile](systemuser.md#BKMK_user_msdyn_aibfile)
 
 See team Table [team_msdyn_aibfile](team.md#BKMK_team_msdyn_aibfile) One-To-Many relationship.
 
-### <a name="BKMK_owner_msdyn_aibfile"></a> owner_msdyn_aibfile
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_aibfile](owner.md#BKMK_owner_msdyn_aibfile) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_msdyn_aibfile"></a> business_unit_msdyn_aibfile
 
 **Added by**: System Solution Solution
 
 See businessunit Table [business_unit_msdyn_aibfile](businessunit.md#BKMK_business_unit_msdyn_aibfile) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_msdyn_AIBFile_msdyn_File"></a> FileAttachment_msdyn_AIBFile_msdyn_File
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_msdyn_AIBFile_msdyn_File](fileattachment.md) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_AIBFile_msdyn_AIBDatasetsCont"></a> msdyn_AIBFile_msdyn_AIBDatasetsCont
 

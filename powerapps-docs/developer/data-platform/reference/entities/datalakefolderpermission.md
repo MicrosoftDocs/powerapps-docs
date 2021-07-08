@@ -1,7 +1,7 @@
 ---
 title: "datalakefolderpermission table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the datalakefolderpermission table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/datalakefolderpermissions(*datalakefolderpermissionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakefolderpermissions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1047,7 +1046,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_datalakefolderpermission_modifiedonbehalfby](#BKMK_lk_datalakefolderpermission_modifiedonbehalfby)
 - [user_datalakefolderpermission](#BKMK_user_datalakefolderpermission)
 - [team_datalakefolderpermission](#BKMK_team_datalakefolderpermission)
-- [owner_datalakefolderpermission](#BKMK_owner_datalakefolderpermission)
 - [business_unit_datalakefolderpermission](#BKMK_business_unit_datalakefolderpermission)
 - [datalakefolder_datalakefolderpermission](#BKMK_datalakefolder_datalakefolderpermission)
 
@@ -1087,12 +1085,6 @@ See systemuser Table [user_datalakefolderpermission](systemuser.md#BKMK_user_dat
 **Added by**: System Solution Solution
 
 See team Table [team_datalakefolderpermission](team.md#BKMK_team_datalakefolderpermission) One-To-Many relationship.
-
-### <a name="BKMK_owner_datalakefolderpermission"></a> owner_datalakefolderpermission
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_datalakefolderpermission](owner.md#BKMK_owner_datalakefolderpermission) One-To-Many relationship.
 
 ### <a name="BKMK_business_unit_datalakefolderpermission"></a> business_unit_datalakefolderpermission
 

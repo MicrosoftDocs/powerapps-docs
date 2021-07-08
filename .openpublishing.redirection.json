@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/dev-community-plan.md",
+      "redirect_url": "developer-plan",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/user/powerapps-mobile-troubleshoot.md",
       "redirect_url": "../mobile/powerapps-mobile-troubleshoot",
       "redirect_document_id": "false"
@@ -6268,6 +6273,16 @@
     {
       "source_path": "powerapps-docs/sample-apps/return-to-workplace/app-for-employee.md",
       "redirect_url": "/dynamics365/industry/return-to-workplace/app-for-employee",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/developer-resources-page.md",
+      "redirect_url": "/powerapps/developer/data-platform/view-download-developer-resources",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/business-events.md",
+      "redirect_url": "/powerapps/developer/data-platform/business-events",
       "redirect_document_id": "false"
     }
   ]

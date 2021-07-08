@@ -1,11 +1,11 @@
 ---
-title: Tutorial - Use Power Apps CLI with portals
-description: A tutorial with examples about how to use Power Apps CLI with Power Apps portals for CI/CD .
+title: Tutorial on how to use Power Apps CLI with portals
+description: This page provides a walk-through with examples for how to use Power Apps CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2021
+ms.date: 05/27/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -13,17 +13,16 @@ contributors:
     - tapanm-msft
 ---
 
-# Tutorial: Use Power Apps CLI with portals
+# Tutorial: Use Microsoft Power Platform CLI with portals
 
 [This article is pre-release documentation and is subject to change.]
 
-In this tutorial example, you’ll see how to get started with Power Apps CLI
-to update sample portals configuration.
+In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
 > [!NOTE]
-> This tutorial focuses on the required Power Apps CLI commands for
+> This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Apps
-CLI, read [common
+CLI, read [Common
 commands](../../developer/data-platform/powerapps-cli.md#common-commands).
 
 > [!IMPORTANT]
@@ -32,22 +31,22 @@ commands](../../developer/data-platform/powerapps-cli.md#common-commands).
 
 ## Download and install Visual Studio Code
 
-To connect to Power Apps portals, and to use Power Apps CLI commands, use
+To connect to Power Apps portals, and to use Microsoft Power Platform CLI commands, use
 [Visual Studio Code](https://code.visualstudio.com/docs) and the [integrated
 terminal](https://code.visualstudio.com/docs/editor/integrated-terminal). The
 integrated terminal makes it easy to connect to the Dataverse environment and to
-download/change/upload the portals configuration. You can also use Windows
+download, change, and upload the portals configuration. You can also use Windows
 PowerShell instead.
 
 ## Step 1: Authenticate
 
-Before you connect, list, download or upload any changes for a Power Apps
+Before you connect, list, download, or upload any changes for a Power Apps
 portal, you must authenticate to the Dataverse environment first. For more
-information about authentication using Power Apps CLI, go to [Power Apps CLI –
+information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
 Auth](../../developer/data-platform/powerapps-cli.md#auth).
 
-To authenticate, open Windows PowerShell, and run the following command using
-your Dataverse environment URL.
+To authenticate, open Windows PowerShell and run the following command using
+your Dataverse environment URL:
 
 `pac auth create -u [Dataverse URL]`
 
@@ -55,14 +54,14 @@ your Dataverse environment URL.
 
 `pac auth create -u https://contoso-org.crm.dynamics.com`
 
-Follow the prompts of authentication to sign into the environment.
+Follow the prompts of authentication to sign in to the environment.
 
-![Example of how to authenticate to a Dataverse environment using Power Apps CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Power Apps CLI")
+![Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI")
 
 ## Step 2: List available portals
 
 Use the **list** command to list the available Power Apps portals in the
-Dataverse environment you connected to using the previous step.
+Dataverse environment you connected to in the previous step.
 
 `pac paportal list`
 
@@ -90,17 +89,17 @@ Change the configuration using Visual Studio Code and save your changes.
 
 > [!NOTE]
 > Ensure you update only the supported tables for use with Power Apps
-CLI. More information: [Supported tables](power-apps-cli.md#supported-tables)
+CLI. For more information, see [Supported tables](power-apps-cli.md#supported-tables).
 
-For example, the default portal page shows the text such as this:
+For example, the default portal page shows text such as this:
 
 ![Sample portals page text](media/power-apps-cli/sample-page.png "Sample portals page text")
 
-This text is visible from the web page html:
+This text is visible from the webpage html:
 
 ![Visual Studio Code with text highlighted for change](media/power-apps-cli/vs-code-page.png "Visual Studio Code with text highlighted for change")
 
-You can change this text, and save the changes:
+You can alter this text and save the changes:
 
 ![Updated text using Visual Studio Code](media/power-apps-cli/page-updated.png "Updated text using Visual Studio Code")
 
@@ -111,7 +110,7 @@ directly in Visual Studio Code.
 
 ## Step 5: Upload the changes
 
-After making the required changes, upload them using the following command.
+After making the required changes, upload them using the following command:
 
 `pac paportal --path [Folder-location]`
 
@@ -128,8 +127,8 @@ portals content. For example, if the portal’s friendly name is *custom-portal,
 the path for the above command (--path) should be
 *C:\\pac-portals\\downloads\\custom-portal*.
 
-The upload only happens for content that has changed. In this example, since the
-change is made to a web page, content is uploaded only for the adx_webpage
+The upload only happens for content that's been changed. In this example, since the
+change is made to a webpage, content is uploaded only for the adx_webpage
 table.
 
 ![Upload completed only for changed content](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
@@ -153,8 +152,10 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Power Apps CLI](power-apps-cli-tutorial.md)
+[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
 
 ### See also
 
-[Power Apps CLI](../../developer/data-platform/powerapps-cli.md)
+- [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
+- [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+

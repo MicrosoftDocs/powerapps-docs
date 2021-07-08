@@ -1,7 +1,7 @@
 ---
 title: "PhoneCall table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PhoneCall table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -33,7 +33,6 @@ Activity to track a telephone call.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/phonecalls<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -1233,7 +1232,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [phonecall_PostRegardings](#BKMK_phonecall_PostRegardings)
 - [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
 - [PhoneCall_AsyncOperations](#BKMK_PhoneCall_AsyncOperations)
 - [phonecall_connections2](#BKMK_phonecall_connections2)
@@ -1249,21 +1247,6 @@ Listed by **SchemaName**.
 - [phonecall_activity_parties](#BKMK_phonecall_activity_parties)
 - [PhoneCall_QueueItem](#BKMK_PhoneCall_QueueItem)
 - [phonecall_principalobjectattributeaccess](#BKMK_phonecall_principalobjectattributeaccess)
-
-
-### <a name="BKMK_phonecall_PostRegardings"></a> phonecall_PostRegardings
-
-Same as postregarding table [phonecall_PostRegardings](postregarding.md#BKMK_phonecall_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|phonecall_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
@@ -1512,7 +1495,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_phonecall](#BKMK_team_phonecall)
 - [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
 - [business_unit_phone_call_activities](#BKMK_business_unit_phone_call_activities)
-- [owner_phonecalls](#BKMK_owner_phonecalls)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
@@ -1578,10 +1560,6 @@ See transactioncurrency Table [TransactionCurrency_PhoneCall](transactioncurrenc
 ### <a name="BKMK_business_unit_phone_call_activities"></a> business_unit_phone_call_activities
 
 See businessunit Table [business_unit_phone_call_activities](businessunit.md#BKMK_business_unit_phone_call_activities) One-To-Many relationship.
-
-### <a name="BKMK_owner_phonecalls"></a> owner_phonecalls
-
-See owner Table [owner_phonecalls](owner.md#BKMK_owner_phonecalls) One-To-Many relationship.
 
 ### See also
 

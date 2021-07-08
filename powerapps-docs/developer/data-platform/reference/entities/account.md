@@ -1,7 +1,7 @@
 ---
 title: "Account table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Account table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ Business that represents a customer or potential customer. The company that is b
 |Merge|<xref href="Microsoft.Dynamics.CRM.Merge?text=Merge Action" />|<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/accounts(*accountid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/accounts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -3215,7 +3214,6 @@ Listed by **SchemaName**.
 - [Account_Faxes](#BKMK_Account_Faxes)
 - [slakpiinstance_account](#BKMK_slakpiinstance_account)
 - [account_PostFollows](#BKMK_account_PostFollows)
-- [account_PostRegardings](#BKMK_account_PostRegardings)
 - [Account_Tasks](#BKMK_Account_Tasks)
 - [account_connections1](#BKMK_account_connections1)
 - [SocialActivity_PostAuthorAccount_accounts](#BKMK_SocialActivity_PostAuthorAccount_accounts)
@@ -3304,21 +3302,6 @@ Same as postfollow table [account_PostFollows](postfollow.md#BKMK_account_PostFo
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|account_PostFollows|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_account_PostRegardings"></a> account_PostRegardings
-
-Same as postregarding table [account_PostRegardings](postregarding.md#BKMK_account_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|account_PostRegardings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -3793,7 +3776,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_account](#BKMK_sla_account)
 - [lk_accountbase_modifiedonbehalfby](#BKMK_lk_accountbase_modifiedonbehalfby)
 - [team_accounts](#BKMK_team_accounts)
-- [owner_accounts](#BKMK_owner_accounts)
 
 
 ### <a name="BKMK_account_primary_contact"></a> account_primary_contact
@@ -3855,10 +3837,6 @@ See systemuser Table [lk_accountbase_modifiedonbehalfby](systemuser.md#BKMK_lk_a
 ### <a name="BKMK_team_accounts"></a> team_accounts
 
 See team Table [team_accounts](team.md#BKMK_team_accounts) One-To-Many relationship.
-
-### <a name="BKMK_owner_accounts"></a> owner_accounts
-
-See owner Table [owner_accounts](owner.md#BKMK_owner_accounts) One-To-Many relationship.
 
 ### See also
 

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "conceptual"
 author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
@@ -36,6 +36,9 @@ When a form does not specify header density or when a new form is created, the f
 > ![High-density form header](media/form-header-high-density.png "High-density form header")
     
 ## Low density header
+> [!IMPORTANT]
+> Low-density headers will be deprecated in 2021 Release Wave 2. At that time, existing low-density headers will render as high-density with flyout. We recommend that you set your forms to high-density with flyout and not low-density. 
+
 Low density form header allows users to directly edit the column values in the header. It also allows visualizations such as custom components and web resources.  
   
 However, often this comes at the cost of key information being truncated or not readily visible. Low-density header truncates the row title as well as column values displayed in the header. Often only one or two columns are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
@@ -68,6 +71,9 @@ With a high-density form header, the header flyout displays all header columns i
 > ![Header flyout with high-density header](media/form-header-flyout-high-density.png "Header flyout with high-density header")
 
 ### Low-density header flyout
+> [!IMPORTANT]
+> Low-density headers will be deprecated in 2021 Release Wave 2. At that time, existing low-density headers will render as high-density with flyout. We recommend that you set your forms to high-density with flyout and not low-density.
+
 With a low-density form header, the header flyout displays only overflow columns, such as  columns that the form is unable to display directly in the header based on the width of the form. The header flyout is also automatically displayed or hidden based on the number of columns in the header and the width of the form. Makers can't control the visibility of the header flyout when using a low-density header.
 
 > [!div class="mx-imgBorder"] 

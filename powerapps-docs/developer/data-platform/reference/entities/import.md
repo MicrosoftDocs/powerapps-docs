@@ -1,7 +1,7 @@
 ---
 title: "Import table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Import table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -34,7 +34,6 @@ Status and ownership information for an import job.
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |ParseImport|<xref href="Microsoft.Dynamics.CRM.ParseImport?text=ParseImport Action" />|<xref:Microsoft.Crm.Sdk.Messages.ParseImportRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/imports(*importid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/imports<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -662,7 +661,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [SystemUser_Imports](#BKMK_SystemUser_Imports)
 - [lk_import_createdonbehalfby](#BKMK_lk_import_createdonbehalfby)
 - [lk_importbase_createdby](#BKMK_lk_importbase_createdby)
-- [owner_imports](#BKMK_owner_imports)
 
 
 ### <a name="BKMK_lk_import_modifiedonbehalfby"></a> lk_import_modifiedonbehalfby
@@ -692,10 +690,6 @@ See systemuser Table [lk_import_createdonbehalfby](systemuser.md#BKMK_lk_import_
 ### <a name="BKMK_lk_importbase_createdby"></a> lk_importbase_createdby
 
 See systemuser Table [lk_importbase_createdby](systemuser.md#BKMK_lk_importbase_createdby) One-To-Many relationship.
-
-### <a name="BKMK_owner_imports"></a> owner_imports
-
-See owner Table [owner_imports](owner.md#BKMK_owner_imports) One-To-Many relationship.
 
 ### See also
 

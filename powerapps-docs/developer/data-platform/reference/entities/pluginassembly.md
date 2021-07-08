@@ -1,7 +1,7 @@
 ---
 title: "PluginAssembly table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PluginAssembly table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Assembly that contains one or more plug-in types.
 |Create|POST [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -64,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsHidden](#BKMK_IsHidden)
 - [IsolationMode](#BKMK_IsolationMode)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
 - [Name](#BKMK_Name)
 - [Password](#BKMK_Password)
 - [Path](#BKMK_Path)
@@ -207,6 +207,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|Sandbox|
 |3|External|
 
+
+
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for managedidentity associated with pluginassembly.|
+|DisplayName|ManagedIdentityId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|managedidentityid|
+|RequiredLevel|None|
+|Targets|managedidentity|
+|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -390,6 +406,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [IsManaged](#BKMK_IsManaged)
 - [IsPasswordSet](#BKMK_IsPasswordSet)
 - [Major](#BKMK_Major)
+- [managedidentityidName](#BKMK_managedidentityidName)
 - [Minor](#BKMK_Minor)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -595,6 +612,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_managedidentityidName"></a> managedidentityidName
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|managedidentityidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Minor"></a> Minor
@@ -818,6 +853,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_pluginassembly](#BKMK_organization_pluginassembly)
 - [lk_pluginassembly_modifiedonbehalfby](#BKMK_lk_pluginassembly_modifiedonbehalfby)
 - [lk_pluginassembly_createdonbehalfby](#BKMK_lk_pluginassembly_createdonbehalfby)
+- [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
 
 
 ### <a name="BKMK_modifiedby_pluginassembly"></a> modifiedby_pluginassembly
@@ -839,6 +875,12 @@ See systemuser Table [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_l
 ### <a name="BKMK_lk_pluginassembly_createdonbehalfby"></a> lk_pluginassembly_createdonbehalfby
 
 See systemuser Table [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See managedidentity Table [managedidentity_PluginAssembly](managedidentity.md#BKMK_managedidentity_PluginAssembly) One-To-Many relationship.
 
 ### See also
 

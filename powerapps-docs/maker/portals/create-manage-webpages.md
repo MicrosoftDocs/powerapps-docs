@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/10/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -44,12 +44,11 @@ A webpage is a document that is identified by a unique URL in a website. It is o
         > [!div class=mx-imgBorder]
         > ![webpage properties](media/webpage-props.png "Webpage properties")
 
-The webpages you create are added and their hierarchy are displayed in the **Pages** pane. To view the **Pages** pane, select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view the this pane, select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 Let's say you have created a few webpages for your portal. The page hierarchy looks as follows:
 
-> [!div class=mx-imgBorder]
-> ![pages pane](media/pages-pane.png "Pages pane")  
+![pages pane](media/pages-pane.png "Pages pane")  
 
 The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
@@ -68,7 +67,7 @@ If you are working with a portal created in an environment containing customer e
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Pages** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+2.  Select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 

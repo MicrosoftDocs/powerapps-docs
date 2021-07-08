@@ -1,7 +1,7 @@
 ---
 title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 02/02/2019
 ms.service: powerapps
 ms.suite: ""

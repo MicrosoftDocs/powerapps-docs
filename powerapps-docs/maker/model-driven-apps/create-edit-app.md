@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 03/05/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: get-started-article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -86,8 +86,6 @@ Verify the following prerequisites before you start creating an app:
   
 ### Next steps  
  [Add or edit app components](add-edit-app-components.md)   
-
-
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -31,7 +31,7 @@ throttling that particular query which would allow all other scenarios to
 perform normally.
 
 The primary way in which *query throttling* is different from 
-[Service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits) is
+[Service protection API limits](api-limits.md) is
 query throttling targets a specific query that causes a performance degradation while
 leaving the rest of the traffic unaffected. If the throttled query
 originates from a non-interactive application, throttling is likely to not be
@@ -50,7 +50,7 @@ Throttling can manifest in two ways:
 
 | **Error code** | **Hex code** | **Message**                                                                                                                    |
 |----------------|--------------|--------------------------------------------------------------------------------------------------------------------------------|
-| \-2147187388   | 0x80048544   | This query cannot be executed because it conflicts with query throttling. Please refer to [Query throttling](https://docs.microsoft.com/powerapps/developer/data-platform/query-throttling) |
+| \-2147187388   | 0x80048544   | This query cannot be executed because it conflicts with query throttling. Please refer to [Query throttling](query-throttling.md) |
 
 ## Common causes
 

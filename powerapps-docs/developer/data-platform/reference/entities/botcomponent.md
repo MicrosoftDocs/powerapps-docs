@@ -1,7 +1,7 @@
 ---
 title: "botcomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the botcomponent table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,7 +36,6 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/botcomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -142,6 +141,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |5|Trigger|
 |6|Language understanding|
 |7|Language generation|
+|8|Dialog schema|
 
 
 
@@ -1079,7 +1079,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_botcomponent_modifiedonbehalfby](#BKMK_lk_botcomponent_modifiedonbehalfby)
 - [user_botcomponent](#BKMK_user_botcomponent)
 - [team_botcomponent](#BKMK_team_botcomponent)
-- [owner_botcomponent](#BKMK_owner_botcomponent)
 - [business_unit_botcomponent](#BKMK_business_unit_botcomponent)
 - [botcomponent_parent_botcomponent](#BKMK_botcomponent_parent_botcomponent)
 
@@ -1120,12 +1119,6 @@ See systemuser Table [user_botcomponent](systemuser.md#BKMK_user_botcomponent) O
 
 See team Table [team_botcomponent](team.md#BKMK_team_botcomponent) One-To-Many relationship.
 
-### <a name="BKMK_owner_botcomponent"></a> owner_botcomponent
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_botcomponent](owner.md#BKMK_owner_botcomponent) One-To-Many relationship.
-
 ### <a name="BKMK_business_unit_botcomponent"></a> business_unit_botcomponent
 
 **Added by**: System Solution Solution
@@ -1143,6 +1136,7 @@ Relationship details provided where the botcomponent table is the first table in
 
 - [bot_botcomponent](#BKMK_bot_botcomponent)
 - [botcomponent_botcomponent](#BKMK_botcomponent_botcomponent)
+- [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
 
 
@@ -1170,6 +1164,29 @@ IntersectEntityName: botcomponent_botcomponent<br />
 |LogicalName|botcomponent|
 |IntersectAttribute|botcomponentidtwo|
 |NavigationPropertyName|botcomponent_botcomponent|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_environmentvariabledefinition"></a> botcomponent_environmentvariabledefinition
+
+IntersectEntityName: botcomponent_environmentvariabledefinition<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|environmentvariabledefinition|
+|IntersectAttribute|environmentvariabledefinitionid|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 

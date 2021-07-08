@@ -144,21 +144,19 @@ var opportunityClose = {
 var winOpportunityRequest = new Sdk.WinOpportunityRequest(opportunityClose, 3);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(winOpportunityRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
-            // The WinOpportunityRequest does not return any response body content. So we
-            // need not access the response.json() property.
+Xrm.WebApi.online.execute(winOpportunityRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+        // The WinOpportunityRequest does not return any response body content. So we
+        // need not access the response.json() property.
 
-            // Perform other operations as required.
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // Perform other operations as required.
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 
@@ -188,24 +186,24 @@ Sdk.WhoAmIRequest.prototype.getMetadata = function () {
 var whoAmIRequest = new Sdk.WhoAmIRequest();
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(whoAmIRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(whoAmIRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // Use response.json() to access the content of the response body.
-            response.json().then(
-                function (responseBody) {
-                    console.log("User Id: %s", responseBody.UserId);
-                    // perform other operations as required;
-                });
-        }
-    },
-    function (error) {
-        console.log(error.message);
-        // handle error conditions
+        // Use response.json() to access the content of the response body.
+        return response.json();
     }
-);
+}
+)
+.then(function (responseBody) {
+    console.log("User Id: %s", responseBody.UserId);
+    // perform other operations as required;
+})
+.catch(function (error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.CalculateRollupField> function:
@@ -251,22 +249,23 @@ var fieldName = "new_test_rollup";
 var calculateRollupFieldRequest = new Sdk.CalculateRollupFieldRequest(quoteId, fieldName);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
-    function(response) {
-        if (response.ok) { // If a response was received.
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(calculateRollupFieldRequest)
+.then(function(response) {
+    if (response.ok) { // If a response was received.
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // Use response.json() to access the content of the response body.
-            response.json().then(
-                function(responseBody) { //Do something with the response
-                    console.log("The response is: %s", responseBody);
-                });
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
-    });
+        // Use response.json() to access the content of the response body.
+        return response.json();
+    }
+})
+.then(function(responseBody) { 
+    //Do something with the response
+    console.log("The response is: %s", responseBody);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates> function:
@@ -281,6 +280,8 @@ Sdk.RetrieveDuplicatesRequest = function(businessEntity, matchingEntityName, pag
 
 };
 
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+// function object itself.
 Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     return {
         boundParameter: null,
@@ -320,22 +321,119 @@ var pagingInfo = {
 var retrieveDuplicatesRequest = new Sdk.RetrieveDuplicatesRequest(contactRecord, "contact", pagingInfo);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(retrieveDuplicatesRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // Use response.json() to access the content of the response body.
-            response.json().then(
-                function(responseBody) { // Do something with the response
-                    console.log("The response is: %s", responseBody);
-                });
-        }
+        // Use response.json() to access the content of the response body.
+        return response.json();
+    }
+})
+.then(function(responseBody) { 
+    // Do something with the response
+    console.log("The response is: %s", responseBody);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
+```
+
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.InitializeFrom> function:
+```JavaScript
+var Sdk = window.Sdk || {};
+
+Sdk.InitializeFromRequest = function (
+  entityMoniker,
+  targetEntityName,
+  targetFieldType
+) {
+  this.EntityMoniker = entityMoniker;
+  this.TargetEntityName = targetEntityName;
+  this.TargetFieldType = targetFieldType;
+};
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+// function object itself.
+Sdk.InitializeFromRequest.prototype.getMetadata = function () {
+  return {
+    boundParameter: null,
+    parameterTypes: {
+      EntityMoniker: {
+        typeName: "mscrm.crmbaseentity",
+        structuralProperty: 5, //Entity Type
+      },
+      TargetEntityName: {
+        typeName: "Edm.String",
+        structuralProperty: 1, // PrimitiveType
+      },
+      TargetFieldType: {
+        typeName: "Microsoft.Dynamics.CRM.TargetFieldType",
+        structuralProperty: 3, // Enum Type
+        enumProperties: [
+          {
+            name: "All",
+            value: 0,
+          },
+          {
+            name: "ValidForCreate",
+            value: 1,
+          },
+          {
+            name: "ValidForUpdate",
+            value: 2,
+          },
+          {
+            name: "ValidForRead",
+            value: 3,
+          },
+        ],
+      },
     },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
-    });
+    operationType: 1, // This is a function. Use '0' for actions and '2' for CRUD
+    operationName: "InitializeFrom",
+  };
+};
+
+// Create a variable to point to tje parent account record
+var parentAccountRecord = {
+  "@odata.type": "Microsoft.Dynamics.CRM.account",
+  accountid: "141da047-eaad-eb11-b1b4-000d3ac581a0",
+};
+
+// Create a variable for the target entity name
+var targetEntityName = "account";
+
+// Create a variable for the target field type
+var targetFieldType = 0;
+
+// Build the request
+var initializeFromRequest = new Sdk.InitializeFromRequest(
+  parentAccountRecord,
+  targetEntityName,
+  targetFieldType
+);
+
+// Execute the request
+Xrm.WebApi.online.execute(initializeFromRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        // Use response.json() to access the content of the response body.
+        return response.json();
+    }
+})
+.then(function(responseBody) { 
+    // Do something with the response
+    console.log("The response is: %s", responseBody);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
+
 ```
 
 ### Perform CRUD operations
@@ -372,22 +470,21 @@ var payload = {
 var createRequest = new Sdk.CreateRequest("account", payload);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(createRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", result.status, result.statusText);
-            
-            // The Create request does not return any response body content. So we
-            // need not access the response.json() property.
+Xrm.WebApi.online.execute(createRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", result.status, result.statusText);
+        
+        // The Create request does not return any response body content. So we
+        // need not access the response.json() property.
 
-            // Perform other operations as required.
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // Perform other operations as required.
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
  ```
  
 #### Retrieve a record
@@ -423,25 +520,24 @@ var entityReference = {
 var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(retrieveRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", result.status, result.statusText);
+Xrm.WebApi.online.execute(retrieveRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", result.status, result.statusText);
 
-            // Use response.json() to access the content of the response body.
-            result.json().then(
-                function(responseBody) {
-                    console.log("Name: %s", responseBody.name);
-                    
-                    // perform other operations as required;
-                });
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // Use response.json() to access the content of the response body.
+        return result.json();
     }
-);
+})
+.then(function(responseBody) {
+    console.log("Name: %s", responseBody.name);
+    
+    // perform other operations as required;
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 #### Update a record
@@ -479,22 +575,21 @@ var payload = {
 var updateRequest = new Sdk.UpdateRequest("account", "d2b6c3f8-b0fa-e911-a812-000d3a59fa22", payload);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(updateRequest).then(
-    function (response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(updateRequest)
+.then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // The Update request does not return any response body content. So we
-            // need not access the response.json() property.
-            
-            // perform other operations as required;
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // The Update request does not return any response body content. So we
+        // need not access the response.json() property.
+        
+        // perform other operations as required;
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 #### Delete a record
@@ -532,22 +627,21 @@ var entityReference = {
 var deleteRequest = new Sdk.DeleteRequest(entityReference);
 
 // Use the request object to execute the function
-Xrm.WebApi.online.execute(deleteRequest).then(
-    function(response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
-            
-            // The Delete request does not return any response body content. So we
-            // need not access the response.json() property.
+Xrm.WebApi.online.execute(deleteRequest)
+.then(function(response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+        
+        // The Delete request does not return any response body content. So we
+        // need not access the response.json() property.
 
-            // perform other operations as required;
-        }
-    },
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // perform other operations as required;
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 ### Associate a record
@@ -599,22 +693,21 @@ var relationship = "new_account_contact";
 
 var manyToManyAssociateRequest = new Sdk.AssociateRequest(target, relatedEntities, relationship)
 
-Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
-    function(response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(manyToManyAssociateRequest)
+.then(function(response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // The Associate request does not return any response body content. So we
-            // need not access the response.json() property.
+        // The Associate request does not return any response body content. So we
+        // need not access the response.json() property.
 
-            // perform other operations as required;
-        }
-    }, 
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // perform other operations as required;
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 ### Disassociate a record
@@ -660,22 +753,21 @@ var relationship = "new_account_contact";
 
 var manyToManyDisassociateRequest = new Sdk.DisassociateRequest(target, relatedEntityId, relationship)
 
-Xrm.WebApi.online.execute(manyToManyDisassociateRequest).then(
-    function(response) {
-        if (response.ok) {
-            console.log("Status: %s %s", response.status, response.statusText);
+Xrm.WebApi.online.execute(manyToManyDisassociateRequest)
+.then(function(response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
 
-            // The Disassociate request does not return any response body content. So we
-            // need not access the response.json() property.
+        // The Disassociate request does not return any response body content. So we
+        // need not access the response.json() property.
 
-            // perform other operations as required;
-        }
-    }, 
-    function(error) {
-        console.log(error.message);
-        // handle error conditions
+        // perform other operations as required;
     }
-);
+})
+.catch(function(error) {
+    console.log(error.message);
+    // handle error conditions
+});
 ```
 
 ### Related topics

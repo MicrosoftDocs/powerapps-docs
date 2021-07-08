@@ -1,7 +1,7 @@
 ---
 title: "ImportFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ImportFile table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -35,7 +35,6 @@ File name of file used for import.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveParsedDataImportFile|<xref href="Microsoft.Dynamics.CRM.RetrieveParsedDataImportFile?text=RetrieveParsedDataImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveParsedDataImportFileRequest>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -1164,7 +1163,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [ImportFile_BulkDeleteFailures](#BKMK_ImportFile_BulkDeleteFailures)
-- [ImportFile_ImportData](#BKMK_ImportFile_ImportData)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
 - [ImportFile_AsyncOperations](#BKMK_ImportFile_AsyncOperations)
 
@@ -1180,21 +1178,6 @@ Same as bulkdeletefailure table [ImportFile_BulkDeleteFailures](bulkdeletefailur
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|ImportFile_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_ImportFile_ImportData"></a> ImportFile_ImportData
-
-Same as importdata table [ImportFile_ImportData](importdata.md#BKMK_ImportFile_ImportData) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|importdata|
-|ReferencingAttribute|importfileid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ImportFile_ImportData|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -1237,7 +1220,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_importfilebase_createdby](#BKMK_lk_importfilebase_createdby)
 - [lk_importfilebase_createdonbehalfby](#BKMK_lk_importfilebase_createdonbehalfby)
 - [team_ImportFiles](#BKMK_team_ImportFiles)
-- [owner_importfiles](#BKMK_owner_importfiles)
 - [ImportFile_Team](#BKMK_ImportFile_Team)
 - [ImportFile_SystemUser](#BKMK_ImportFile_SystemUser)
 - [SystemUser_ImportFiles](#BKMK_SystemUser_ImportFiles)
@@ -1259,10 +1241,6 @@ See systemuser Table [lk_importfilebase_createdonbehalfby](systemuser.md#BKMK_lk
 ### <a name="BKMK_team_ImportFiles"></a> team_ImportFiles
 
 See team Table [team_ImportFiles](team.md#BKMK_team_ImportFiles) One-To-Many relationship.
-
-### <a name="BKMK_owner_importfiles"></a> owner_importfiles
-
-See owner Table [owner_importfiles](owner.md#BKMK_owner_importfiles) One-To-Many relationship.
 
 ### <a name="BKMK_ImportFile_Team"></a> ImportFile_Team
 

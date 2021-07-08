@@ -22,8 +22,6 @@ search.app:
 
 # View or download developer resources
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 This article provides resources for developers and information about the specific environment you're working with.
 
 ## View the Developer Resources page for your environment
@@ -72,6 +70,8 @@ You can download the WSDL for this service here, but usually you will use the Cr
 - [Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/powerapps/developer/data-platform/org-service/generate-early-bound-classes)
 - [Use the Organization Service](/powerapps/developer/data-platform/org-service/overview)
 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
 ### Instance Reference Information
 
 This information uniquely describes your instance. There is a GUID **ID** and a **Unique Name**.
@@ -92,4 +92,3 @@ More information: [Discover the URL for your organization using the Web API](/po
 This is the endpoint address for the SOAP version of the Discovery service to use for your instance. You can also download the service document here.
 More information: [Discover the URL for your organization using the Organization service](/powerapps/developer/data-platform/org-service/discovery-service)
   
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]

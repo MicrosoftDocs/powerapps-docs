@@ -40,7 +40,7 @@ This tutorial will describe additional common things you will do with plug-ins. 
  - Create and register a synchronous plug-in
  - Use configuration data in the plug-in
  - Throw an error to show to the user
- - Configure and use a pre-table image in your code
+ - Configure and use a pre-entity image in your code
  - Unregister and assembly, a plug-in, or a step
 
 

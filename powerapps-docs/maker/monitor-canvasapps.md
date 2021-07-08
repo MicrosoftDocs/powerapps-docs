@@ -1,12 +1,12 @@
 ---
-title: Canvas app debugging with Monitor | Microsoft Docs
+title: Debugging canvas apps with Monitor
 description: Learn about debugging canvas apps by using Monitor.
 author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/19/2020
+ms.date: 05/24/2021
 ms.author: hasharaf
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ Monitor is available by default for all canvas apps. Using Monitor, you can trac
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+1. Create a [new app](canvas-apps/get-started-test-drive.md), or [edit an existing app](canvas-apps/edit-app.md).
 
 1. On the left pane, select **Advanced tools**.
 
@@ -70,11 +70,11 @@ Monitor also displays a notification that the monitoring session that's currentl
 
 ![Published app session](media/monitor/published-app-session.png "Published app session")
 
-### Advanced setting: Debug published app
+### Setting: Debug published app
 
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
 
-To enable this setting, go to **File** > **Settings** > **Advanced settings**, and then turn on **Debug published app**.
+To enable this setting, go to **File** > **Settings**, and then turn on **Debug published app**.
 
 ![Debug published app](media/monitor/debug-published-app.png "Debug published app")
 
@@ -88,7 +88,7 @@ display the table of events as they're occurring, along with specific details.
 ## Example: Using Monitor with canvas apps
 
 In this example, you'll use the Northwind Sample Data app included with
-the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
+the [Northwind sample solution](canvas-apps/northwind-install.md).
 
 The *Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse. You can also create a new app or use an existing app instead.
 

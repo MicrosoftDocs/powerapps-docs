@@ -1,7 +1,7 @@
 ---
 title: "Start a Microsoft Dataverse Web API project in Visual Studio (C#) (Dataverse)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: 
+ms.custom: intro-internal
 ms.date: 04/22/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps

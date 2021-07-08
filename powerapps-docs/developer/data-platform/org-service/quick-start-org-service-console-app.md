@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Organization service sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This quickstart will show you how to connect to the organization service of the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 02/13/2021
+ms.custom: intro-internal
+ms.date: 05/26/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Quickstart: Organization service sample (C#)
+
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This is where you begin working with the .NET SDK assemblies to work with data using Microsoft Dataverse.
 
@@ -118,7 +120,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
 1. Press F5 to run the program. The output should look like this:
 
-    ```
+    ```bash
     Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
     Press any key to exit.
     ```
@@ -127,16 +129,15 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
 You have successfully connected to the organization service.
 
-
 ## Next Steps
 
-These articles will explain how to work with Dataverse entities:
+These articles will explain how to work with Dataverse tables:
 
-[Entity Operations using the Organization service](entity-operations.md)<br />
-[Create entities using the Organization Service](entity-operations-create.md)<br />
-[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)
+[Entity class operations using the Organization service](entity-operations.md)<br />
+[Create table rows using the Organization Service](entity-operations-create.md)<br />
+[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
+[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

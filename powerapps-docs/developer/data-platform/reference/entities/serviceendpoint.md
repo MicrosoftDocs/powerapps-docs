@@ -1,7 +1,7 @@
 ---
 title: "ServiceEndpoint table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ServiceEndpoint table/entity."
-ms.date: 03/04/2021
+ms.date: 05/20/2021
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -30,7 +30,6 @@ Service endpoint that can be contacted.
 |Create|POST [*org URI*]/api/data/v9.0/serviceendpoints<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/serviceendpoints(*serviceendpointid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/serviceendpoints(*serviceendpointid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/serviceendpoints<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |TriggerServiceEndpointCheck|<xref href="Microsoft.Dynamics.CRM.TriggerServiceEndpointCheck?text=TriggerServiceEndpointCheck Action" />|<xref:Microsoft.Crm.Sdk.Messages.TriggerServiceEndpointCheckRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/serviceendpoints(*serviceendpointid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -64,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Description](#BKMK_Description)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [KeyVaultReferenceId](#BKMK_KeyVaultReferenceId)
 - [MessageFormat](#BKMK_MessageFormat)
 - [Name](#BKMK_Name)
 - [NamespaceAddress](#BKMK_NamespaceAddress)
@@ -72,9 +72,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SASKey](#BKMK_SASKey)
 - [SASKeyName](#BKMK_SASKeyName)
 - [SASToken](#BKMK_SASToken)
+- [SchemaType](#BKMK_SchemaType)
 - [ServiceEndpointId](#BKMK_ServiceEndpointId)
 - [SolutionNamespace](#BKMK_SolutionNamespace)
 - [Url](#BKMK_Url)
+- [UseKeyVaultConfiguration](#BKMK_UseKeyVaultConfiguration)
 - [UserClaim](#BKMK_UserClaim)
 
 
@@ -100,6 +102,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Webhook Key|
 |5|Http Header|
 |6|Http Query String|
+|7|Connection String|
+|8|Access Key|
 
 
 
@@ -164,6 +168,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|Queue (Persistent)|
 |7|Event Hub|
 |8|Webhook|
+|9|Event Grid|
 
 
 
@@ -211,6 +216,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_KeyVaultReferenceId"></a> KeyVaultReferenceId
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for keyvaultreference associated with serviceendpoint.|
+|DisplayName|KeyVaultReferenceId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|keyvaultreferenceid|
+|RequiredLevel|None|
+|Targets|keyvaultreference|
+|Type|Lookup|
 
 
 ### <a name="BKMK_MessageFormat"></a> MessageFormat
@@ -352,6 +373,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_SchemaType"></a> SchemaType
+
+**Added by**: ServiceEndpointInfrastructure Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Specifies schema type for event grid events|
+|DisplayName|Specifies schema type for event grid events|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|schematype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### SchemaType Choices/Options
+
+|Value|Label|
+|-----|-----|
+|1|Event Grid|
+|2|Cloud Events|
+
+
+
 ### <a name="BKMK_ServiceEndpointId"></a> ServiceEndpointId
 
 |Property|Value|
@@ -398,6 +442,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_UseKeyVaultConfiguration"></a> UseKeyVaultConfiguration
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Use Auth Information in KeyVault|
+|DisplayName|Use Auth Information in KeyVault|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|usekeyvaultconfiguration|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### UseKeyVaultConfiguration Choices/Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_UserClaim"></a> UserClaim
 
 |Property|Value|
@@ -435,6 +504,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [IsManaged](#BKMK_IsManaged)
 - [IsSASKeySet](#BKMK_IsSASKeySet)
 - [IsSASTokenSet](#BKMK_IsSASTokenSet)
+- [keyvaultreferenceidName](#BKMK_keyvaultreferenceidName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
@@ -637,6 +707,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 
+### <a name="BKMK_keyvaultreferenceidName"></a> keyvaultreferenceidName
+
+**Added by**: ManagedIdentityExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|keyvaultreferenceidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -811,6 +899,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [modifiedby_serviceendpoint](#BKMK_modifiedby_serviceendpoint)
 - [organization_serviceendpoint](#BKMK_organization_serviceendpoint)
 - [lk_serviceendpointbase_createdonbehalfby](#BKMK_lk_serviceendpointbase_createdonbehalfby)
+- [keyvaultreference_ServiceEndpoint](#BKMK_keyvaultreference_ServiceEndpoint)
 
 
 ### <a name="BKMK_createdby_serviceendpoint"></a> createdby_serviceendpoint
@@ -832,6 +921,12 @@ See organization Table [organization_serviceendpoint](organization.md#BKMK_organ
 ### <a name="BKMK_lk_serviceendpointbase_createdonbehalfby"></a> lk_serviceendpointbase_createdonbehalfby
 
 See systemuser Table [lk_serviceendpointbase_createdonbehalfby](systemuser.md#BKMK_lk_serviceendpointbase_createdonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_keyvaultreference_ServiceEndpoint"></a> keyvaultreference_ServiceEndpoint
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See keyvaultreference Table [keyvaultreference_ServiceEndpoint](keyvaultreference.md#BKMK_keyvaultreference_ServiceEndpoint) One-To-Many relationship.
 
 ### See also
 

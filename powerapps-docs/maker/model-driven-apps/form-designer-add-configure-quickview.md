@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -33,16 +33,12 @@ You add a quick view component in the same way as you add any other component. M
 ## Configure a quick view component
 These are the properties available to configure when using a quick view component on a form using the form designer.
 
-
-<!--note from editor: "Drop-down" should be used only as an adjective. In the following table, is it a list? A menu? (It's used three times in line 44.) --> 
-
-
 |Area   |Name  |Description  |
 |---------|---------|---------|
 |**Display options** | **Label** | The localizable label for the quick view visible to users. <br /><br /> This property is required. |
 | **Display options** | **Name** |  The unique name for the quick view that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /> <br />This property is required. |
 | **Display options**  | **Hide label** |  When selected, the quick view label is hidden. |
-| **Display options**  | **Quick view forms** |  A list of quick view forms that are displayed to app users. <br /><br />To configure the list of quick view forms <br /><br /> Select **Select forms ...**, and then in the **Lookup** drop-down select a lookup column where you want to display a quick view form. <br /><br />Depending on the lookup column you select in the **Lookup** drop-down, you will see drop-downs that will let you select quick view forms for one or more tables. |
+| **Display options**  | **Quick view forms** |  A list of quick view forms that are displayed to app users. <br /><br />To configure the list of quick view forms <br /><br /> Select **Select forms ...**, and then in the **Lookup** drop-down list select a lookup column where you want to display a quick view form. <br /><br />Depending on the lookup column you select in the **Lookup** drop-down list, you will see lists that will let you select quick view forms for one or more tables. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  

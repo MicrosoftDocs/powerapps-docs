@@ -2,9 +2,9 @@
 title: "Embed a Power BI report in a model-driven system form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
 ms.custom: ""
-ms.date: 08/04/2020
+ms.date: 07/01/2021
 ms.service: powerapps
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 author: "adrianorth"
 ms.author: "aorth"
 manager: "kvivek"
@@ -140,8 +140,6 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 </cell>
 ```
 
-
-
 ## Known issues and limitations
 - This integration is available only in the Unified Interface client, on supported web browsers and mobile devices.
 - Opening this form in the Power Apps form designer will not show the control in a meaningful way. This is because the control is customized outside of the form designer.
@@ -161,6 +159,34 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 - The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 
+### Common issues
+- The group ID is not specified in the `TileUrl` node of the control parameters when it may need to be. This example includes a group ID.
+```xml
+<parameters>
+	<PowerBIGroupId>fd266a4c-9a02-4553-9310-80e05ee844f3</PowerBIGroupId>
+	<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
+	<TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081&amp;groupId=fd266a4c-9a02-4553-9310-80e05ee844f3</TileUrl>
+</parameters>
+```
+- Fields have different data types in PowerBI and Dataverse. They need to be the same type, such as string in Power BI and string in Dataverse.
+- String fields don't have escaped quotes in the Power BI filter. Below, notice ```values``` has ```[\"$a\"]``` rather than ```[$a]```.
+```json
+	{
+	        "Filter": "[{
+	                \"$schema\":\"basic\",
+	                \"target\":{
+	                        \"table\":\"My Active Accounts\",
+	                        \"column\":\"Account Name\"
+	                },
+	                \"operator\":\"In\",
+	                \"values\":[\"$a\"],
+	                \"filterType\":1
+	        }]",
+	        "Alias": {
+	                "$a": "name",
+	        }
+	}
+```
 
 ### See also
 

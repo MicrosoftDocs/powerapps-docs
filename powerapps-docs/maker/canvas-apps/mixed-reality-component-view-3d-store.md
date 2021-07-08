@@ -40,7 +40,7 @@ Loading models as attachments or media content works through the binary storage 
 1. Create a new item in the list for each 3D model that you want to have in your app.
 1. In a canvas app, add a Gallery.
 1. Set the gallery data source to the SharePoint list created earlier.
-1. Add the **View in 3D** control and in the **Advanced** tab, set the **Src** property to **First(Gallery1.Selected.Attachments).Value**.
+1. Add the **View in 3D** control and in the **Advanced** tab, set the **Source** property to **First(Gallery1.Selected.Attachments).Value**.
 
 **To use Excel Online**
 
@@ -53,9 +53,10 @@ Loading models as attachments or media content works through the binary storage 
 
     ![Using Excel Online to share .glb file](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
 
+1. Close the excel workbook.
 1. In a canvas-based app, add a **Gallery**.
-1. Set the gallery data source to the Excel Online workbook.
-1. In the **Advanced** properties tab for the **View in 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
+1. Set the gallery data source to the Excel Online workbook through the OneDrive connector.
+1. In the **Advanced** properties tab for the **View in 3D** component, set the **Source** property to **Gallery1.Selected.'3DModel'**.
 
 ### Load models from a URL
 
@@ -95,7 +96,7 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
 1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column of type **multiple-line text**.
 1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
 1. Add a new step to **Get file content from SharePoint**, setting **File Identifier** to **Identifier**.
-1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple-line text column, with the following expression as the URI:  
+1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to File Name with extension, and the multiple-line text column to the following expression:
     ```
     concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))
     ```

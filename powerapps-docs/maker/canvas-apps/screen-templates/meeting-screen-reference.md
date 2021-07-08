@@ -1,6 +1,6 @@
 ---
-title: Reference for the meeting-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the meeting-screen template for canvas apps works in Power Apps
+title: Reference information about the meeting-screen template for canvas apps
+description: Understand details of how the meeting-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -55,7 +55,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Schedule tab
 
-   ![LblInviteTab control](media/meeting-screen/meeting-schedule-text.png)
+   ![Schedule tab](media/meeting-screen/meeting-schedule-text.png)
 
 * Property: **Color**<br>
     Value: `If( !_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
@@ -380,7 +380,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Meeting duration drop-down
 
-   ![MeetingDateSelect control](media/meeting-screen/meeting-timepicker.png)
+   ![MeetingDateSelect control - duration](media/meeting-screen/meeting-timepicker.png)
 
 * Property: **DisplayMode**<br>
     Value: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
