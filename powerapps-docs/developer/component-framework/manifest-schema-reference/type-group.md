@@ -40,13 +40,45 @@ Model-driven and canvas apps
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
+The `type-group` node has a limited support for canvas apps. When the type groups can easily resolve to a common type, the "most compatible" type (generally the least specific type) will be chosen for the type of the given field. The resolvable type groupings are as follows:
 
-The `type-group` has a limited support for canvas apps. Only the following types are compatible:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
    - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
-If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type from `type-group` is considered.
+For example, the following type group:
+
+```XML
+<type-group name="numeric">
+       <type>FP</type>
+       <type>Decimal</type>
+       <type>Whole.None</type>
+</type-group>
+```
+
+would result in the control receiving the value **Decimal** as the type for the given parameter's Type.
+
+When a `type-group` includes a value not included in any of the above groupings, or includes values from more than one grouping, the first value listed in the `type-group` is always chosen as the type for that parameter.
+
+For example, for the following type group:
+```XML
+<type-group name="example1">
+       <type>TwoOptions</type>
+       <type>Decimal</type>
+       <type>FP</type>
+</type-group>
+```
+
+Would result in the control receiving the value **TwoOptions** for the given parameter's type, while the following:
+
+```XML
+<type-group name="example2">
+       <type>Decimal</type>
+       <type>TwoOptions</type>
+       <type>FP</type>
+</type-group>
+```
+would again receive "Decimal".
 
 ### Example
 
