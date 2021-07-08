@@ -181,11 +181,7 @@ The response from the HTTP post is shown below containing the ID of the polymorp
     "AttributeId":"d378dd3e-42f4-4bd7-95c7-0ee546c7de40"
 ```
 
-## Multi-table lookup API reference
-
-> [!NOTE]
-> This section will be removed in a future article update after the API information contained here is migrated to the
-> [Web API Reference](/dynamics365/customer-engagement/web-api/about).
+## Use the multi-table lookup API's
 
 The following table lists the operations relevant for table and attribute definitions.
 
