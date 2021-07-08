@@ -145,7 +145,7 @@ OData-Version: 4.0
 - A task is created because it is defined an object within an array that is set to the value of a collection-valued navigation property `Opportunity_Tasks`.
 
 > [!NOTE]
-> When creating a new record, it is not possible to combine the record creation with the insert of a non-primary image. For a non-primary image to be added, the record must already exist.
+> When creating a new table row, it is not possible to combine the row creation with the insert of a non-primary image. For a non-primary image to be added, the row must already exist.
 
 **Request**
 
