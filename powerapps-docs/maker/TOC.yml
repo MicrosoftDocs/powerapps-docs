@@ -2214,6 +2214,8 @@
                   href: ../teams/bulletins-architecture.md
                 - name: Customize Bulletins app
                   href: ../teams/customize-bulletins.md
+                - name: Send an alert when a new bulletin is posted
+                  href: ../teams/new-bulletin-alert.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app
