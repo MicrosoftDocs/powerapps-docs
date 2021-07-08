@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/03/2020
+ms.date: 07/07/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -94,6 +94,7 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
+* Image and file columns are not supported. You won’t be able to see any data when you open an Excel worksheet that includes those data types.
 * The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
 * Rows are processed sequentially. If there is an error in saving a row, changes to subsequent rows will be aborted. Changes to preceding rows are kept.
 * [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported. This add-in requires access to the Office store.

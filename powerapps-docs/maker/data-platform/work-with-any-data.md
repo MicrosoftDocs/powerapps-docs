@@ -54,9 +54,9 @@ A set of tables that are commonly used across industries, such as **User** and *
 
 ## Columns
 
-Columns define the individual data items that can be used to store data in a table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
+Columns define the individual data items that can be used to store data in a table. Fields are sometimes called attributes by developers. A table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
 
-Columns might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Dataverse stores the data in the best storage type for the model created.
+Columns might have different types of data such as numerals, strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Dataverse stores the data in the best storage type for the model created.
 
 Each of these columns can be associated with one of many data types supported by Dataverse.
 
