@@ -71,11 +71,11 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view":::
 
-1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**.
+1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app":::
 
-1. Select **Save**.
+1. On the app designer command bar, select **Save**.
 
 ## Publish your app
 
