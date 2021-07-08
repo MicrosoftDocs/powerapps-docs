@@ -221,8 +221,136 @@ The following table lists the operations relevant for table and attribute data.
 
 ### Create polymorphic lookup (example payload)
 
+```http
+POST [OrganizationUrl]/api/data/v9.0/CreatePolymorphicLookupAttribute
+```
+
+```rest
+{
+  "OneToManyRelationships": [
+    {
+      "SchemaName": "new_checkout_poly_new_book",
+      "ReferencedEntity": "new_book",
+      "ReferencingEntity": "new_checkout"
+    },
+    {
+      "SchemaName": "new_checkout_poly_new_device",
+      "ReferencedEntity": "new_device",
+      "ReferencingEntity": "new_checkout"
+    },
+    {
+      "SchemaName": "new_checkout_poly_new_dvd",
+      "ReferencedEntity": "new_dvd",
+      "ReferencingEntity": "new_checkout",
+      "CascadeConfiguration": {
+        "Assign": "NoCascade",
+        "Delete": "RemoveLink",
+        "Merge": "NoCascade",
+        "Reparent": "NoCascade",
+        "Share": "NoCascade",
+        "Unshare": "NoCascade"
+      }
+    }
+  ],
+  "Lookup": {
+    "AttributeType": "Lookup",
+    "AttributeTypeName": {
+      "Value": "LookupType"
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Checkouted item Polymorphic Lookup Attribute",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Checkedout item Polymorphic Lookup Attribute",
+        "LanguageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Checkedout item",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Checkedout item",
+        "LanguageCode": 1033
+      }
+    },
+    "SchemaName": "new_CheckedoutItem",
+    "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata"
+  }
+}
+```
+
 ### Add relationship to existing polymorphic lookup (example payload)
 
+```http
+POST [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions
+```
+
+```rest
+{
+  "SchemaName": "new_checkout_poly_new_researchresource",
+  "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",
+  "CascadeConfiguration": {
+    "Assign": "NoCascade",
+    "Delete": "RemoveLink",
+    "Merge": "NoCascade",
+    "Reparent": "NoCascade",
+    "Share": "NoCascade",
+    "Unshare": "NoCascade"
+  },
+  "ReferencedEntity": "new_researchresource",
+  "ReferencingEntity": "new_checkout",
+  "Lookup": {
+    "AttributeType": "Lookup",
+    "AttributeTypeName": { "Value": "LookupType" },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Checkout Polymorphic Lookup Attribute",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Checkout Polymorphic Lookup Attribute",
+        "LanguageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Checkout item",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Checkout item",
+        "LanguageCode": 1033
+      }
+    },
+    "SchemaName": "new_CheckedoutItem",
+    "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+  }
+}
+```
 
 ### See Also
 
