@@ -97,12 +97,12 @@ After publishing the app, it's ready for you to run or share with others.
 
 To test your Power App on your mobile device, follow these steps:
 
-1.  Download the app from your mobile app store
+1. Download the app from your device's mobile app store:
 
--   IOS: [‎Power Apps on the App Store (apple.com)](https://apps.apple.com/us/app/power-apps/id1047318566)
+   - IOS: [‎Power Apps on the App Store (apple.com)](https://apps.apple.com/us/app/power-apps/id1047318566)
 
--   Android: [Power Apps - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps&hl=en_US&gl=US)
+   - Android: [Power Apps - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps&hl=en_US&gl=US)
 
-1.  Log in using your Microsoft work or school account
+1. Open the app, tap **Sign in**, and then enter your Microsoft work or school account.
 
-2.  Select your app from the list
+1. Select your app from the list to run it.
