@@ -25,7 +25,7 @@ Once the app is installed, you can then customize the app using the following st
 
 ## Open Power Apps app in Teams
 
-1. Select ellipsis (…), and search for **Power Apps**.
+1. Select **...** (ellipsis), and search for **Power Apps**.
 
    ![Search for Power Apps](media/customize-bulletins/search-power-apps.png "Search for Power Apps")
 
@@ -121,7 +121,7 @@ Now let’s look at the screens in the **Manage bulletins** app:
 
 6.  Select the **Tree view** and review the screens in the Manage bulletins app.
 
-![Manage Bulletins app tree view](media/customize-bulletins/manage-bulletins-app-tree-view.png "Manage Bulletins app tree view")
+    ![Manage Bulletins app tree view](media/customize-bulletins/manage-bulletins-app-tree-view.png "Manage Bulletins app tree view")
 
 The following are the screens in the Manage bulletins app:
 
