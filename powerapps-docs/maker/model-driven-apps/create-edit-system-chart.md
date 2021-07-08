@@ -58,7 +58,7 @@ The **Number of employees by account** chart is now displayed in the app designe
 
 ## View your visualization in your model-driven app
 
-Now that you have created your chart in your app, you can now use it to visualize account data in your app. Follow these steps to view your chart:
+Now that you have created your chart, you can use it to visualize account data in your app. Follow these steps to view your chart:
 
 1. In the app designer, select **Play**.
 
