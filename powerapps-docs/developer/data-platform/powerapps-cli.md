@@ -256,7 +256,7 @@ Manages to create a [plug-in](./plug-ins.md) project.
 
 To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerPlatformCLI).
 
-To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select uninstall button
+To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the uninstall button.
 
 If you're a Private Preview participant and have an older version of CLI, follow these steps:
 
