@@ -40,13 +40,13 @@ Model-driven and canvas apps
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
-The `type-group` node has a limited support for canvas apps. When the type groups can easily resolve to a common type, the "most compatible" type (generally the least specific type) will be chosen for the type of the given field. The resolvable type groupings are as follows:
+The `type-group` has a limited support for canvas apps. When the type groups can easily resolve to a common type, the "most compatible" type (generally the least specific type) is chosen for the type of the given column. The resolvable type groupings are as follows:
 
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
    - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
-For example, the following type group:
+For example, the following type group results in the component receiving the value **Decimal** as the type for the given parameter's type:
 
 ```XML
 <type-group name="numeric">
@@ -55,12 +55,9 @@ For example, the following type group:
        <type>Whole.None</type>
 </type-group>
 ```
+When a `type-group` includes a value that is not included in any of the above groups, or includes values from more than one group, the first value listed in the `type-group` is  chosen as the type for that parameter.
 
-would result in the control receiving the value **Decimal** as the type for the given parameter's Type.
-
-When a `type-group` includes a value not included in any of the above groupings, or includes values from more than one grouping, the first value listed in the `type-group` is always chosen as the type for that parameter.
-
-For example, for the following type group:
+For example, for the following type group results in the component receiving the value **TwoOptions** for the given parameter's type:
 ```XML
 <type-group name="example1">
        <type>TwoOptions</type>
@@ -68,8 +65,7 @@ For example, for the following type group:
        <type>FP</type>
 </type-group>
 ```
-
-Would result in the control receiving the value **TwoOptions** for the given parameter's type, while the following:
+While the following would again receive "Decimal":
 
 ```XML
 <type-group name="example2">
@@ -78,7 +74,7 @@ Would result in the control receiving the value **TwoOptions** for the given par
        <type>FP</type>
 </type-group>
 ```
-would again receive "Decimal".
+
 
 ### Example
 
