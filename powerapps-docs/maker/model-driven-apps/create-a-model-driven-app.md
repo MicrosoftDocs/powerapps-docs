@@ -30,7 +30,7 @@ Each environment can have one Dataverse database.
 
 1. We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository. For more information about creating a solution, see [Create a solution](/powerapps/maker/data-platform/create-solution).
 
-1. Create a solution. For this example, we name our solution **Power Apps Training**. Next, we add the tables that will be included in our model-driven app.
+1. Create a solution. Enter a name for your solution, such as **Power Apps Training**. Next, you add the account table that will be included in your model-driven app.
 
 1. In your solution, select **Add existing**, and then select **Table.**
 
@@ -46,7 +46,7 @@ Each environment can have one Dataverse database.
 
    :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app":::
 
-1. Enter a name for app, and then select **Create**.
+1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
    :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create":::
 
@@ -106,3 +106,6 @@ To run your Power App on your mobile device, follow these steps:
 1. Open the app, tap **Sign in**, and then enter your Microsoft work or school account.
 
 1. Select your app from the list to run it.
+
+### See also
+[Overview of the model-driven app designer](app-designer-overview.md)
