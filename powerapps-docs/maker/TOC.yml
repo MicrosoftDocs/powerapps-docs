@@ -399,6 +399,8 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
+          - name: Add editable tables
+            href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Control reference
@@ -2208,8 +2210,14 @@
           items:
             - name: Use Bulletins sample app
               href: ../teams/bulletins.md
-            - name: Understand Bulletins sample app architecture
-              href: ../teams/bulletins-architecture.md
+            - name: Customize Bulletins app
+              items:
+                - name: Understand Bulletins sample app architecture
+                  href: ../teams/bulletins-architecture.md
+                - name: Customize Bulletins app
+                  href: ../teams/customize-bulletins.md
+                - name: Send an alert when a new bulletin is posted
+                  href: ../teams/new-bulletin-alert.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app
