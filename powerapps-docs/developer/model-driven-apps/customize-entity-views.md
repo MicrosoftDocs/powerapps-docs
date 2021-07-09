@@ -331,7 +331,7 @@ function displayIconTooltip(rowData, userLCID) {
   
  This results in displaying the values in the `Rating` column with appropriate icons depending on the value, and icon tooltip text when you hover over the icons.  
   
- ![Custom icons displayed for a column in a view](media/customiconsinviews.png "Custom icons displayed for a column in a view")  
+ ![Custom icons displayed for a column in a view.](media/customiconsinviews.png "Custom icons displayed for a column in a view")  
   
 <a name="BKMK_SetAsDefault"></a>   
 ## Set as default  

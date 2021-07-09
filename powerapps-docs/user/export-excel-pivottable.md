@@ -33,12 +33,12 @@ A few things to note:
 2. On the command bar select the **Export to Excel** menu, and then select **Dynamic PivotTable**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export-excel-pivottable.png "Select export to Excel")
+   > ![Export to excel.](media/export-excel-pivottable.png "Select export to Excel")
   
 3. In the **Select Columns for Pivot Excel** dialog box, select the column settings and then select **Export**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Columns and then select export](media/export-excel-pivottable-1.png "Select Columns and then select export")
+   > ![Select Columns and then select export.](media/export-excel-pivottable-1.png "Select Columns and then select export")
 
   
    By default, the **PivotTable Column List** includes only columns that are displayed in the **Select Columns for Pivot Excel** list.  
@@ -61,7 +61,7 @@ A few things to note:
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Enable content](media/enable-content.png "Enable content") 
+   > ![Enable content.](media/enable-content.png "Enable content") 
 
  > [!NOTE]
  > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).

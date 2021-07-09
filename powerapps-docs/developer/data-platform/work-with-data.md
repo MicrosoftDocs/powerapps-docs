@@ -25,7 +25,7 @@ Dataverse has [tables](entities.md) that are used to model and manage business d
 
 Dataverse provides two web services that you can use to interact with data: data service, and Organization service. Choose the one that best matches the requirement and your skills. Use the Web API when coding for the data service and the SDK API when coding for the Organization service.
 
-![Flow diagram to choose web service](media/whentousewebapi.png)
+![Flow diagram to choose web service.](media/whentousewebapi.png)
 
 ### Web API
 

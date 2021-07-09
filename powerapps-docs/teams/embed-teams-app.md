@@ -32,21 +32,21 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
 
-    ![Show list of apps](media/embed-teams-app/file-apps2.png "Show list of apps")
+    ![Show list of apps.](media/embed-teams-app/file-apps2.png "Show list of apps")
 
 1. Select **More actions** (...) for the app you want to share in Teams, and then select **Add to Teams**.
 
-    ![Add to Teams](media/embed-teams-app/add-to-teams.png "Add to Teams")
+    ![Add to Teams.](media/embed-teams-app/add-to-teams.png "Add to Teams")
 
     **Add to Teams** panel opens on the right-side of the screen.
 
-    ![Add to Teams panel](media/embed-teams-app/download-app.png "Add to Teams panel")
+    ![Add to Teams panel.](media/embed-teams-app/download-app.png "Add to Teams panel")
 
 1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in Power Apps Studio to add.
 
 1. (Optional) Select **Advanced settings** to add additional details such as *Name*, *Website*, *Terms of Use*, *Privacy Policy*, *MPN ID* (Microsoft Partner Network ID).
 
-    ![Add additional details](media/embed-teams-app/additional-settings-embed.png "Add additional details")
+    ![Add additional details.](media/embed-teams-app/additional-settings-embed.png "Add additional details")
 
 1. Select **Download app**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
 
@@ -59,7 +59,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
     > [!NOTE]
     > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
 
-    ![Add app as tab](media/embed-teams-app/upload-custom-app.png "Upload a custom app")
+    ![Add app as tab.](media/embed-teams-app/upload-custom-app.png "Upload a custom app")
 
 2. Select **Add** to add the app as a personal app or select **Add to team** to add the app as a tab within an existing channel or conversation.
 
@@ -126,7 +126,7 @@ You can optionally preload your app within Teams to increase performance.
 
 3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
 
-    ![Preload app for enhanced performance](media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
+    ![Preload app for enhanced performance.](media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
 
 4. For the changes to take effect, remove and add your app into Teams again.
 

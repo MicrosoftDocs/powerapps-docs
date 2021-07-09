@@ -173,7 +173,7 @@ A form may not be available because it hasn’t been added to the app.
 3. On the **Components** tab, verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
 
    > [!div class="mx-imgBorder"] 
-   > ![Forms included with app](media/forms-included-in-app.png "Forms included with app")
+   > ![Forms included with app.](media/forms-included-in-app.png "Forms included with app")
    
 ### Why isn't my form displayed as the default form in the app?
 A form can be set as the default form through the form order configuration or when a user sets the default form as a personalization setting.
@@ -181,12 +181,12 @@ A form can be set as the default form through the form order configuration or wh
 2. On the toolbar select **Form Order** > **Main Form Set**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Form Order toolbar command](media/form-order-toolbar.png "Form Order toolbar command")
+   > ![Form Order toolbar command.](media/form-order-toolbar.png "Form Order toolbar command")
    
 3. The form order is displayed. Select the form and use the up and down arrows to move the form within the form order. The form at the top of the list is the default form. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Form order dialog](media/form-order-dialog.png "Form order dialog")
+   > ![Form order dialog.](media/form-order-dialog.png "Form order dialog")
    
 4. Select **OK** to save the form order changes.
 5. On the form designer toolbar, select **Publish** to make the form order available in apps.
@@ -195,7 +195,7 @@ A form can be set as the default form through the form order configuration or wh
 Notice that, when an app user changes the form selection in the form selector drop down of an app, that form becomes the default form for the user. This personalization overrides the default form specified for the table in the app.
 
    > [!div class="mx-imgBorder"] 
-   > ![User setting to change default form](media/change-form-user-setting.png "User setting to change default form")
+   > ![User setting to change default form.](media/change-form-user-setting.png "User setting to change default form")
 
 ### Related topics  
     

@@ -29,7 +29,7 @@ search.app:
 Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
 
 > [!div class="mx-imgBorder"] 
-> ![Form designer property pane](media/form-designer-property-pane.png "Form designer property pane")
+> ![Form designer property pane.](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
 

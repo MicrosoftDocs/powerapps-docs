@@ -89,7 +89,7 @@ The entire process is costing the company:
 
 > \$655,200 + \$204,750 + \$77,220 + \$111,384 = \$1,048,554
 
-![Business process flowchart showing the employee cost for each task and the total cost of the process](media/cost-of-process.png "Business process flowchart showing the employee cost for each task and the total cost of the process")
+![Business process flowchart showing the employee cost for each task and the total cost of the process.](media/cost-of-process.png "Business process flowchart showing the employee cost for each task and the total cost of the process")
 
 > [!div class="nextstepaction"]
 > [Next step: Defining the business value](defining-business-value.md)

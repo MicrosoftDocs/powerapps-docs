@@ -1,6 +1,6 @@
 ---
-title: Reference for the email-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the email-screen template for canvas apps works in Power Apps
+title: Reference information about the email-screen template in canvas apps
+description: Understand details of how the email-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Reference information about the email-screen template for canvas apps
+# Reference information about the email-screen template in canvas apps
 
 For canvas apps in Power Apps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
@@ -33,7 +33,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Text search box
 
-   ![TextSearchBox control](media/email-screen/email-search-box.png)
+   ![TextSearchBox control.](media/email-screen/email-search-box.png)
 
 Several other controls in the screen have a dependency on the **Text search box** control:
 
@@ -43,7 +43,7 @@ Several other controls in the screen have a dependency on the **Text search box*
 
 ## Add icon
 
-   ![AddIcon control](media/email-screen/email-add-icon.png)
+   ![AddIcon control.](media/email-screen/email-add-icon.png)
 
 The **Add icon** control allows app users to add people who don't exist inside their org to the recipient list of the email being composed.
 
@@ -79,7 +79,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
 
 ## People browse gallery
 
-   ![PeopleBrowseGallery control](media/email-screen/email-browse-gall.png)
+   ![PeopleBrowseGallery control.](media/email-screen/email-browse-gall.png)
 
 * Property: **Items**<br>
     Value: The top 15 search results of the search text typed into the **TextSearchBox** control:
@@ -96,7 +96,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
 
 ### People browse gallery Title control
 
-   ![PeopleBrowseGallery Title control](media/email-screen/email-browse-gall-title.png)
+   ![PeopleBrowseGallery Title control.](media/email-screen/email-browse-gall-title.png)
 
 * Property: **Text**<br>
     Value: `ThisItem.DisplayName`
@@ -123,7 +123,7 @@ Selecting this control does three things concurrently:
 
 ## Email people gallery
 
-   ![EmailPeopleGallery control](media/email-screen/email-people-gall.png)
+   ![EmailPeopleGallery control.](media/email-screen/email-people-gall.png)
 
 * Property: **Items**<br>
     Value: `MyPeople`
@@ -152,7 +152,7 @@ Selecting this control does three things concurrently:
 
 ### Email people gallery Title control
 
-   ![EmailPeopleGallery Title control](media/email-screen/email-people-gall-text.png)
+   ![EmailPeopleGallery Title control.](media/email-screen/email-people-gall-text.png)
 
 * Property: **OnSelect**<br>
     Value: `Set(_selectedUser, ThisItem)`
@@ -161,7 +161,7 @@ Selecting this control does three things concurrently:
 
 ### Email people gallery iconRemove control
 
-   ![MonthDayGallery Title control](media/email-screen/email-people-gall-delete.png)
+   ![MonthDayGallery Title control.](media/email-screen/email-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
     Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`

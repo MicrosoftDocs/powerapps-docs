@@ -38,7 +38,7 @@ These are the properties available to configure when using a tab on a form using
 ||**Event Handlers**|Configure the functions from the libraries that should be called for the tab `TabStateChange` event. More information: [Configure Event Handlers](configure-event-handlers-legacy.md)|  
 
   > [!div class="mx-imgBorder"] 
-  > ![tab-properties classic](media/tab-properties.png "Tab properties in Classic")
+  > ![tab-properties classic.](media/tab-properties.png "Tab properties in Classic")
 
 ## Next steps
 

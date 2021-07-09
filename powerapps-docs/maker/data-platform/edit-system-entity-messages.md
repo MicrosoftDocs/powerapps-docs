@@ -35,7 +35,7 @@ You cannot edit system messages using the Power Apps portal, you must use soluti
 
 In the solution explorer, below the table, if you see a **Messages** node you can edit certain text that includes references to the original table display name. 
 
-![Table Messages](../model-driven-apps/media/entity-messages.png)
+![Table Messages.](../model-driven-apps/media/entity-messages.png)
 
 Editing this text is straightforward. Double-click the message to see a form with three columns:  
   
@@ -47,7 +47,7 @@ Editing this text is straightforward. Double-click the message to see a form wit
   
 Some of the message text may have placeholders in them. These placeholders are numbers with brackets on either side. For example: `{0}`. These placeholders allow for text to be inserted  in the message. If you edit messages, make sure that you keep these placeholders. 
 
-Select ![Save](media/save-entity-icon-solution-explorer.png) to save your changes. Select **Save and Close** to close the form when you save.
+Select ![Save.](media/save-entity-icon-solution-explorer.png) to save your changes. Select **Save and Close** to close the form when you save.
 
 > [!NOTE]
 > Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. For a more comprehensive approach, see [Updating localizable text in the base language](../model-driven-apps/translate-localizable-text.md#updating-localizable-text-in-the-base-language)

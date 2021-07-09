@@ -40,7 +40,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 3. Select the table that you want to enable for connection roles, and then on the command bar select **Settings**. 
 4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.
     > [!div class="mx-imgBorder"] 
-    > ![Enable connections setting](media/enable-connections.png "Enable connections setting")
+    > ![Enable connections setting.](media/enable-connections.png "Enable connections setting")
 
 6. Select **Done**. 
 
@@ -61,11 +61,11 @@ There are a number of standard connection roles already configured in Dataverse.
 
 Most of the connection roles you can see in the **Settings** area are defined within the *internal* **Default Solution** (not to be confused with the **Common Data Services Default Solution**). This internal **Default Solution** contains all the customizations in the system. To view the **Default Solution** choose the **All Solutions - Internal** view. 
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and than on the command bar select **Settings** ![Settings](media/powerapps-gear.png), and then select **Advanced Settings**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and than on the command bar select **Settings** ![Settings.](media/powerapps-gear.png), and then select **Advanced Settings**.
 2. Navigate to **Settings** > **Business** > **Business Management** and then select **Connection Roles**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Connection roles in the Business Management settings](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
+   > ![Connection roles in the Business Management settings.](media/navigate-settings-connection-roles.png "Connection roles in the Business Management settings")
 
 In this view you can see all the connection roles that are available for this environment and you can edit them here.
 
@@ -75,7 +75,7 @@ Because connection roles are *solution aware*, which means that they can be incl
 Generally it is not recommended to edit components in the internal **Default Solution**. Within the solution you have created to work in, you can use the **Add Existing** command in the **Solutions** area to bring any of the active connection roles into your solution.
 
 > [!div class="mx-imgBorder"] 
-> ![Add existing connection role](media/add-existing-connection-role.png)
+> ![Add existing connection role.](media/add-existing-connection-role.png)
 
 Once you add the connection role to your solution, you can edit it wherever it is visible.
 
@@ -93,7 +93,7 @@ Once you add the connection role to your solution, you can edit it wherever it i
 3. Complete the three steps on the form to [Describe the connection role](#describe-the-connection-role).
 
    > [!div class="mx-imgBorder"] 
-   > ![Create Connection Role form](media/create-connection-role-form.png)
+   > ![Create Connection Role form.](media/create-connection-role-form.png)
 
 ### Describe the connection role
 

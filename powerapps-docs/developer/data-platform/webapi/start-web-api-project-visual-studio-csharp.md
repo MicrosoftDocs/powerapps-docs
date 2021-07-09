@@ -47,7 +47,7 @@ The following procedure demonstrates how to create a console application project
   
 4. From the list of templates, select **Console App(.NET Framework)**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
-   ![A new console app project dialog in Dataverse](media/new-project.PNG "A new console app project dialog in Dataverse")  
+   ![A new console app project dialog in Dataverse.](media/new-project.PNG "A new console app project dialog in Dataverse")  
   
 5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name "StartWebAPI-CS" was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   

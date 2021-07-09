@@ -16,7 +16,7 @@ ms.reviewer: kathyos
 The example below shows how a typical paper-based expense approval within the
 organization has inefficiencies for multiple departments and employees.
 
-![Various team members explain the drawbacks of the current paper-based process](media/process-problem.png "Various team members explain the drawbacks of the current paper-based process")
+![Various team members explain the drawbacks of the current paper-based process.](media/process-problem.png "Various team members explain the drawbacks of the current paper-based process")
 
 As you can see from the example, every person has their own issues, but the
 common issue here is that the expense approval process is done on paper, which

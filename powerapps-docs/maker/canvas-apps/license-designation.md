@@ -1,6 +1,6 @@
 ---
-title: License designation for an app | Microsoft Docs
-description: Explains how to check license designation for the selected app
+title: How to check license designation for an app
+description: Explains how to check license designation for the selected canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -45,11 +45,11 @@ The following table outlines the designations and which license an end user must
 
 1. Select an app from the list of app. You can use the **Settings** option from top or, use the **More Commands** (**...**) and then **Settings** from the drop-down menu:
 
-    ![Settings option](media/license-designation/app-settings.png)
+    ![Settings option.](media/license-designation/app-settings.png)
 
 1. Select **Settings** to see the license designation information:
 
-    ![License designation from settings](media/license-designation/settings-license-designation.png)
+    ![License designation from settings.](media/license-designation/settings-license-designation.png)
 
 ## Check app license designation from app details
 
@@ -59,11 +59,11 @@ The following table outlines the designations and which license an end user must
 
 1. Select an app from the list of app. You can use the **Details** option from top or, use the **More Commands** (**...**) and then **Details** from the drop-down menu:
 
-    ![App details](media/license-designation/app-details.png)
+    ![App details.](media/license-designation/app-details.png)
 
 1. Select **Details**:
 
-    ![App designation in details](media/license-designation/app-details-page.png)
+    ![App designation in details.](media/license-designation/app-details-page.png)
 
 ## Pass assignment
 
