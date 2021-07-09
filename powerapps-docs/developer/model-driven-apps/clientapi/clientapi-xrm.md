@@ -27,7 +27,7 @@ The **Xrm** object is globally available to use in your code without having to u
 
 The following illustration displays the Xrm object model:
 
-![Xrm Object Model](../media/ClientAPI-XrmModel.png)
+![Xrm Object Model.](../media/ClientAPI-XrmModel.png)
 
 Here is the information about each of the namespaces in the Xrm object:
 

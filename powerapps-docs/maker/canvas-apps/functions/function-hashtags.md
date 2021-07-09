@@ -1,6 +1,6 @@
 ---
-title: HashTags function | Microsoft Docs
-description: Reference information, including syntax and examples, for the HashTags function in Power Apps
+title: HashTags function in Power Apps
+description: Reference information including syntax and examples for the HashTags function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

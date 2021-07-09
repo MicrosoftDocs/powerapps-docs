@@ -32,7 +32,7 @@ By default, the Bing maps control is configured on the main form for both the ac
 When enabled, the map displays the location specified in the address composite columns for the given row. 
 
 > [!div class="mx-imgBorder"] 
-> ![Bing map control in an app](media/bing-map-example.png "Bing map control in an app")
+> ![Bing map control in an app.](media/bing-map-example.png "Bing map control in an app")
 
 > [!IMPORTANT]
 > To use maps the system setting Show Bing Maps on forms must be enabled. More information: [Enable maps for your environment](#enable-maps-for-your-environment)
@@ -44,7 +44,7 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 2. Select **Settings** > **Administration** > **System Settings**. 
 3. On the **General** tab, select **Show Bing Maps on forms**, and then select **OK**. 
  
-    ![Enable maps on forms](media/enable-maps.png)
+    ![Enable maps on forms.](media/enable-maps.png)
 
 ## Configure a map 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
@@ -52,7 +52,7 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 3. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**. 
 4. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
 
-    ![Map view control](media/map-view-control.png)
+    ![Map view control.](media/map-view-control.png)
 
 To remove the map control from the form, select the **Map View** control, and then press the Delete key.
 

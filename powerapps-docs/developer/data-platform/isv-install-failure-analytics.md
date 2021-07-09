@@ -36,7 +36,7 @@ The install failures features makes it easy for you to quickly resolve the issue
 With the install failures feature, you can see the install failures data by date, GEO, package, and by solution version. You can also see the failure details on the install failures dashboard. 
 
 > [!div class="mx-imgBorder"]
-> ![Install failure dashboard](media/isv-install-failure-report.png "Install failure dashboard")
+> ![Install failure dashboard.](media/isv-install-failure-report.png "Install failure dashboard")
  
 ## View the install failure dashboard
 
@@ -48,7 +48,7 @@ To view the install failure data:
 1. You can also see the install failure details by directly selecting the install failure icon from the list of apps as shown in the screenshot:
 
    > [!div class="mx-imgBorder"]
-   > ![Failure icon](media/isv-install-failure-icon.png "Failure icon")
+   > ![Failure icon.](media/isv-install-failure-icon.png "Failure icon")
 
 The install failures tab contains the following graphs and metrics.
 
@@ -60,7 +60,7 @@ The line chart shown below illustrates the number of app installation failures o
  1. Date 
 
 > [!div class="mx-imgBorder"]
-> ![Date](media/isv-failure-by-date.png "Date")
+> ![Date.](media/isv-failure-by-date.png "Date")
 
 ### Failure by Geo
 
@@ -70,7 +70,7 @@ The pie chart shown below illustrates the number app installation failures by GE
 1. Failure Count
 
 > [!div class="mx-imgBorder"]
-> ![Geo](media/isv-failure-by-geo.png "Geo")
+> ![Geo.](media/isv-failure-by-geo.png "Geo")
 
 ### Failure by solution version
 
@@ -81,7 +81,7 @@ The bar chart shown below illustrates the number of app installation failures oc
 1. Failure Count
 
 > [!div class="mx-imgBorder"]
-> ![Package version](media/isv-failure-by-package-version.png "Package version")
+> ![Package version.](media/isv-failure-by-package-version.png "Package version")
 
 ### Failure details
 
@@ -98,12 +98,12 @@ Tracks the information about the app install failure error in detail. The follow
 1. Tenant
 
 > [!div class="mx-imgBorder"]
-> ![Install error details](media/isv-install-error-details.png "Install error details")
+> ![Install error details.](media/isv-install-error-details.png "Install error details")
 
 You can drill through the **Failure** column to see the full failure details. To see the full failure details, right-click on one of the error messages on the **Failure details** tab and then select **Drill through** > **Failure details**.
 
 > [!div class="mx-imgBorder"]
-> ![Failure details](media/isv-failure-details-drill-through.png "Failure details")
+> ![Failure details.](media/isv-failure-details-drill-through.png "Failure details")
 
 ### Filtering the install failure dashboard
 

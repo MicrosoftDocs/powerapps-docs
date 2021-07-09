@@ -27,7 +27,7 @@ Automation of business logic and integration with other systems are driven by ev
 - Web Hooks
 - Dataverse plug-ins
 
-Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](../../developer/data-platform/event-framework.md)
+Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system using the Dataverse Event Framework. This isn't changing. More information [Event framework](event-framework.md)
 
 Dataverse Business events provides new ways to expose events and compose your business logic to respond to them asynchronously, such as the Power Automate Dataverse **When an action is performed** trigger.
 
@@ -51,7 +51,7 @@ Dataverse business events includes concepts from [Dynamics Finance and Operation
 
 ## Event Catalog
 
-To expose a business event it must be cataloged. More information: [Catalog and CatalogAssignment tables](../../developer/data-platform/catalog-catalogassignment.md)
+To expose a business event it must be cataloged. More information: [Catalog and CatalogAssignment tables](catalog-catalogassignment.md)
 
 A catalog makes it easier to discover the business event because they are grouped by the containing solution and categories defined for that solution. The solution publisher selects which events are most relevant for their solution.
 
@@ -78,7 +78,7 @@ If your solution consists of multiple dependent solutions, you may define the ro
 
 When a table is assigned to a category, certain operations bound to the table will be included. You can't select each operation individually. If the table supports Create, Update, and Delete operations, these events will be included.
 
-Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security events. The owner of any record in the table will be able to share it, change sharing capabilities, or stop sharing the record. Operations related to sharing are exposed as `GrantAccess`, `ModifyAccess`, and `RevokeAccess` events. Additional events may also be included depending on the table. If the table is a Virtual Table, and it has been configured to support Virtual Table events, the `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted` events will be included. More information: [Enable Virtual Tables to support Dataverse events](../../developer/data-platform/virtual-entities/enable-virtual-table-event-support.md)
+Additional events related to other operations will also be included. For example, if the table is user-owned it participates in security events. The owner of any record in the table will be able to share it, change sharing capabilities, or stop sharing the record. Operations related to sharing are exposed as `GrantAccess`, `ModifyAccess`, and `RevokeAccess` events. Additional events may also be included depending on the table. If the table is a Virtual Table, and it has been configured to support Virtual Table events, the `OnExternalCreated`, `OnExternalUpdated`, `OnExternalDeleted` events will be included. More information: [Enable Virtual Tables to support Dataverse events](virtual-entities/enable-virtual-table-event-support.md)
 
 Add only those tables which contain business data that will be of interest to subscribers. You should not try to include every table.
 
@@ -86,7 +86,7 @@ The same table can be included in multiple catalogs. For example, if your soluti
 
 ## Custom Events
 
-Use Dataverse Custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. More information: [Create and use Custom APIs](../../developer/data-platform/custom-api.md).
+Use Dataverse Custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. More information: [Create and use Custom APIs](custom-api.md).
 
 Custom business events can only send notifications when an event is completed. Dataverse event framework provides capabilities to include synchronous logic which can cancel an operation or change the output so that you can extend the behavior of the system. Many of the same messages exposed with business events may be extended using synchronous logic in the Dataverse event framework, but business event notifications only occur when these operations complete successfully.
 
@@ -110,7 +110,7 @@ When you consider custom apis to catalog as business events in your solution use
 
 ### Custom Process Actions
 
-The concept of *Custom Action* includes both [Custom API](../../developer/data-platform/custom-api.md) and [Custom Process actions](../../developer/data-platform/workflow-custom-actions.md). They both create a new API, but how they do it is different. For custom business events, we recommend Custom API.
+The concept of *Custom Action* includes both [Custom API](custom-api.md) and [Custom Process actions](workflow-custom-actions.md). They both create a new API, but how they do it is different. For custom business events, we recommend Custom API.
 
 Custom process actions can also be cataloged as business events. This is for backward compatibility if your solution already uses custom process actions to encapsulate some business logic which would represent a business event. You are not required to migrate this custom action to use Custom API.
 
@@ -119,7 +119,7 @@ However, custom process actions have the following limitations:
 - Like any workflow, they can be disabled in the UI. You may not know when someone disables your custom process action until it suddenly stops working.
 - Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](/reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
 
-For more information about how they are different, see [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+For more information about how they are different, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api)
 
 If your custom process action doesn’t contain any logic within the workflow designer and relies only on plug-ins to perform operations, you can probably migrate the custom process action to be a custom api to mitigate these issues. 
 
@@ -136,7 +136,7 @@ Custom APIs created for external events should align to these principles:
 
 - They should not have any plug-in type specified for the main operation.
 - They should not allow any synchronous step registrations. 
-    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any asynchronous steps from being applied for this API.
+    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any synchronous steps from being applied for this API.
 - They should not have any response properties, only request parameters.
     - With no synchronous logic, there is no way to set response properties.
 
@@ -165,7 +165,7 @@ The key requirement to use custom API to send business events is that your appli
 
 By removing all synchronous logic from the custom api the likelihood of an error causing the operation to fail is extremely low, but not impossible. Your calling application must provide a way to deal with transient errors in the event the Dataverse service isn’t responding, there are network connectivity issues, or service protection limit errors are returned.
 
-To enable authorized calls to Dataverse from your application there must be an Application user configured for the Dataverse environment. More information: [Build web applications using server-to-server (S2S) authentication](../../developer/data-platform/build-web-applications-server-server-s2s-authentication.md).
+To enable authorized calls to Dataverse from your application there must be an Application user configured for the Dataverse environment. More information: [Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 
 ## Use Business Events to trigger automation
 
@@ -173,14 +173,14 @@ As business events becomes a common pattern, there will be multiple ways to enab
 
 The first experience where business events are exposed is in Power Automate Dataverse connector using the [When an action is performed (preview)](/connectors/commondataserviceforapps/#when-an-action-is-performed-(preview)) trigger.
 
-:::image type="content" source="../../developer/data-platform/media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger":::
+:::image type="content" source="media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger.":::
 
 Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
 
 
 ## See Also
 
-[Catalog and CatalogAssignment tables](../../developer/data-platform/catalog-catalogassignment.md)<br />
-[Enable Virtual Tables to support Dataverse events](../../developer/data-platform/virtual-entities/enable-virtual-table-event-support.md)
+[Catalog and CatalogAssignment tables](catalog-catalogassignment.md)<br />
+[Enable Virtual Tables to support Dataverse events](virtual-entities/enable-virtual-table-event-support.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

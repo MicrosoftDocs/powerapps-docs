@@ -1,6 +1,6 @@
 ---
-title: Understand experimental, preview, and deprecated features | Microsoft Docs
-description: Test and start to adopt new features.
+title: Understand experimental, preview, and deprecated features in Power Apps
+description: Learn about experimental, preview, and deprecated features.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -62,7 +62,7 @@ Experimental features are different.  They are works in progress, and we don't c
 
 Experimental and preview features are listed in the app's **Settings** > **Upcoming features**.  From within the app, select the **File** menu, select **Settings**, and then select **Upcoming features**. Select **Preview**, **Experimental**, or **Retired** features using the available tabs.
 
-![Advanced settings for canvas app](media/working-with-experimental/advanced-settings.png "Advanced settings for canvas app")
+![Advanced settings for canvas app.](media/working-with-experimental/advanced-settings.png "Advanced settings for canvas app")
 
 Each feature has a toggle switch.  **Off** means that the feature is disabled.  Having all switches turned off is the baseline and safest way to run your app.
 

@@ -1,6 +1,6 @@
 ---
-title: Collect, Clear, and ClearCollect functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in Power Apps
+title: Collect, Clear, and ClearCollect functions in Power Apps
+description: Reference information including syntax and examples for the Collect, Clear, and ClearCollect functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -79,13 +79,13 @@ The **ClearCollect** function deletes all the records from a collection. And the
 
 In these examples, you'll erase and add to a collection that's named **IceCream**. The data source begins with these contents:
 
-![Sample data source](media/function-clear-collect-clearcollect/icecream.png)
+![Sample data source.](media/function-clear-collect-clearcollect/icecream.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. | ![Table with one record](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** collection has also been modified. |
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and orange ice cream. |![Table with two records](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** collection has also been modified. |
-| **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![Empty table](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. | ![Table with one record.](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** collection has also been modified. |
+| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and orange ice cream. |![Table with two records.](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** collection has also been modified. |
+| **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![Empty table.](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** collection has also been modified. |
 
 For step-by-step examples of how to create a collection, see [Create and update a collection](../create-update-collection.md).
 
@@ -95,9 +95,9 @@ These examples examine how record and table arguments to **Collect** and **Clear
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;}  )** | Clear all data and then adds two records to the **IceCream** collection that includes a quantity of chocolate and vanilla ice cream.  The records to be added are provided as individual arguments to the function.| ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png) <br><br>The **IceCream** collection has also been modified. |
-| **ClearCollect( IceCream, Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) )** | Same as the previous example except that the records are combined in a table and passed in through a single argument. The contents of the table are extracted record by record before being added to the **IceCream** collection. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png)<br><br>The **IceCream** collection has also been modified. |
-| **ClearCollect( IceCream,<br>{&nbsp;MyFavorites: Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) } )** | Same as the previous example except that the table is wrapped in a record.  The records of the table aren't extracted and instead the entire table is added as a cell of the record. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream-myfavorites.png)<br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;}  )** | Clear all data and then adds two records to the **IceCream** collection that includes a quantity of chocolate and vanilla ice cream.  The records to be added are provided as individual arguments to the function.| ![Chocolate and Vanilla records added to collection.](media/function-clear-collect-clearcollect/icecream.png) <br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream, Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) )** | Same as the previous example except that the records are combined in a table and passed in through a single argument. The contents of the table are extracted record by record before being added to the **IceCream** collection. | ![Chocolate and Vanilla records added to collection and modified.](media/function-clear-collect-clearcollect/icecream.png)<br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream,<br>{&nbsp;MyFavorites: Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) } )** | Same as the previous example except that the table is wrapped in a record.  The records of the table aren't extracted and instead the entire table is added as a cell of the record. | ![Chocolate and Vanilla records added to collection modified with table wrapped in a record.](media/function-clear-collect-clearcollect/icecream-myfavorites.png)<br><br>The **IceCream** collection has also been modified. |
 
 
 

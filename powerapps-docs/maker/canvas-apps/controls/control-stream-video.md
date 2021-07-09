@@ -1,6 +1,6 @@
 ---
-title: 'Microsoft Stream video control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Microsoft Stream video control
+title: Microsoft Stream video control in Power Apps
+description: Learn about the details, properties and examples of the Microsoft Stream video control in Power Apps.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -70,11 +70,11 @@ The control is currently not supported in the native Windows player for Power Ap
 1. On the **File** menu, select **Insert** and then open **Media** drop-down menu. 
 2. Select **Microsoft Stream** from the list of media controls:
 
-    ![Microsoft Stream](./media/control-stream-video/stream-icon.png "Microsoft Stream")
+    ![Microsoft Stream.](./media/control-stream-video/stream-icon.png "Microsoft Stream")
 
 3. Paste the video link inside **Stream URL** property on the left:
 
-    ![Customize StreamUrl property](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
+    ![Customize StreamUrl property.](./media/control-stream-video/stream-url.png "Customize StreamUrl property")
 
 4. Press F5, select the play button of the control that you added.
 

@@ -42,7 +42,7 @@ Part of the name of any custom column you create is the customization prefix. Th
 
 With solution explorer open, under **Components** expand **Tables** and select the table where you want to create or edit the column.
 
-![Solution explorer columns view](media/solution-explorer-fields-view.png)
+![Solution explorer columns view.](media/solution-explorer-fields-view.png)
 
 You can select the following views: 
 
@@ -59,7 +59,7 @@ While viewing columns, in the command bar, click **New** which will open the new
 > [!NOTE]
 > For model-driven apps you can also create a new column from the form editor. In the form editor, below the **Column Explorer** click **New Column** to create a new column. More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md)
 
-![Solution explorer new column form](media/solution-explorer-new-field-form.png)
+![Solution explorer new column form.](media/solution-explorer-new-field-form.png)
 
 You must enter data and confirm default values set for the following properties before you save.
 
@@ -136,7 +136,7 @@ Using a global choice  is valuable when you find yourself creating the same set 
 
 When you choose **Multi Select Choice** or **Choice** data type the solution explorer designer will provide the option for a local choice by default.
 
-![Configure a local choice ](media/local-option-set-solution-explorer.png)
+![Configure a local choice .](media/local-option-set-solution-explorer.png)
 
 #### Configure local choices
 
@@ -146,7 +146,7 @@ When you choose **Multi Select Choice** or **Choice** data type the solution exp
 
 If you to choose **Use Existing Option Set** the designer will display a list of existing *global choices* and include an **Edit** and **New** buttons to configure the global choices that this column should use.
 
-![Configure a global choice ](media/global-option-set-solution-explorer.png)
+![Configure a global choice .](media/global-option-set-solution-explorer.png)
 
 You can also configure global choices separately. More information: [Create and edit global choices for Dataverse (picklists)](create-edit-global-option-sets.md)
 
@@ -245,7 +245,7 @@ With the system administrator security role, you can delete any custom columns t
 > [!NOTE]
 > Before you can delete a custom column, you must remove any dependencies that may exist in other solution components. 
 
-1. While [viewing columns](#view-columns), select a custom column that can be deleted in the list and click the ![Delete command](../model-driven-apps/media/delete.gif) button in the command bar.
+1. While [viewing columns](#view-columns), select a custom column that can be deleted in the list and click the ![Delete command.](../model-driven-apps/media/delete.gif) button in the command bar.
 2. In the **Confirm Deletion** dialog, select **Delete**.
 
 > [!TIP]
@@ -255,7 +255,7 @@ With the system administrator security role, you can delete any custom columns t
 
 Select the column in the list. In the **More Actions** menu, select **Show Dependencies**.
 
-![Show dependencies for column](media/check-field-dependencies.png)
+![Show dependencies for column.](media/check-field-dependencies.png)
 
 Dependencies are any related use of the column that would prevent it from being deleted. For example, if the column is used in a form or view, you must first remove references to the column in those solution components.  
   

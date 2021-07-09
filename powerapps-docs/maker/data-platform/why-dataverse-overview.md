@@ -72,7 +72,7 @@ The goal of Dataverse working with any app means it should also work with the to
 
 Dataverse can be used to gain insights and drive business action using analytics and reporting. Dataverse also includes a variety of ways to deliver data and insight to key decision makers.
 
-![Analytics and reporting features with Dataverse](media/analytics-and-reporting.png "Analytics and reporting features with Dataverse")
+![Analytics and reporting features with Dataverse.](media/analytics-and-reporting.png "Analytics and reporting features with Dataverse")
 
 Dataverse includes the ability to create lightweight charts and paginated reports. The data in Dataverse can also be used with Power BI to create rich, interactive reports and dashboards.
 
@@ -80,7 +80,7 @@ For organizations that are interested in employing AI to analyze their data, AI 
 
 To support advanced analytics and machine learning, Dataverse includes a managed data lake. Data within the lake can be used to run Power BI reporting, machine learning, data warehousing, and other downstream data processing.
 
-![Dataverse with Azure services](media/ai-builder-and-cds.png "Dataverse with Azure services")
+![Dataverse with Azure services.](media/ai-builder-and-cds.png "Dataverse with Azure services")
 
 One of the benefits of the data being in Azure Data Lake is that organizations can take advantage of Azure Synapse Analytics. This service can deliver added productivity by bringing together enterprise data warehousing, data exploration, code-free data orchestration, deeply integrated Apache Spark and SQL engines,
 and integrated AI and BI.

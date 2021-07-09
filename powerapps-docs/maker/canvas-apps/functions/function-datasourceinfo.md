@@ -1,6 +1,6 @@
 ---
-title: DataSourceInfo function | Microsoft Docs
-description: Reference information, including syntax and examples, for the DataSourceInfo function in Power Apps
+title: DataSourceInfo function in Power Apps
+description: Reference information including syntax and examples for the DataSourceInfo function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -67,7 +67,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
+![Icecream example.](media/function-datasourceinfo/icecream.png "Icecream example")
 
 The data source has also provided this information:
 
