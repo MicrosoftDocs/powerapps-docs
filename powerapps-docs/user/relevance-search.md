@@ -25,7 +25,7 @@ search.app:
 With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
 > [!div class="mx-imgBorder"]
-> ![Search box in the header for an app](media/new-search-exp.png "Search box in the header for an app")
+> ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
 
 
 ## See recent rows and searches
@@ -37,7 +37,7 @@ Up to three recent search terms appear at the top, based on the last three searc
 The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for relevance search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of the relevance search flyout window](media/legend-for-new-exp.png "Screenshot of the relevance search flyout window]") 
+> ![Screenshot of the relevance search flyout window.](media/legend-for-new-exp.png "Screenshot of the relevance search flyout window]") 
 
 Legend
 
@@ -57,7 +57,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
 
 
-![Suggested results that appear when you enter a search query](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
+![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
 
 With suggestions, you can access your information quickly by using minimal keystrokes even when the search term is misspelled by a character. Text that's highlighted in bold in the suggestions shows the term that was matched.
 
@@ -78,7 +78,7 @@ The **Top results** tab displays the top 20 results for the search term, with re
 
 In the following image, the top search results from three tables are displayed.
 
-![Example of top search results from three different tables](media/rel-search-top-results.png "Example of top search results from three different tables")
+![Example of top search results from three different tables.](media/rel-search-top-results.png "Example of top search results from three different tables")
 
 Legend:
 
@@ -92,19 +92,19 @@ Tabs for the specific tables that contain search results are displayed horizonta
 
 The tables that include the rows in the top 20 results are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
 
-![Tabs on the search results page, numbered left to right](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
+![Tabs on the search results page, numbered left to right.](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
 
 Legend:
 
-![Number 1](media/one.png) Shows the top 20 results from three different tables. 
+![Number 1.](media/one.png) Shows the top 20 results from three different tables. 
 
-![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
+![Number 2.](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
 
-![Number 3](media/three.png) Shows the rest of the matched table types, ordered by the number of records that match the search.
+![Number 3.](media/three.png) Shows the rest of the matched table types, ordered by the number of records that match the search.
 
 Select a tab to drill down into a specific table and view more information about the rows in the results.
 
-![Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on](media/view-results.png "Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on")
+![Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on.](media/view-results.png "Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on")
 
 Legend:
 
@@ -138,7 +138,7 @@ You can personalize facets for a table by using the **Set Personal Options** dia
 
 All **Lookup** and **Choice** data types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values (choices) and their corresponding counts.
 
-![The Priority facet has values of High, Normal, and Low](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
+![The Priority facet has values of High, Normal, and Low.](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
 
 Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
@@ -148,7 +148,7 @@ When you select a facet value, you filter search results to show only rows where
 
 The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down lists to specify a time period.
 
-![Due and Modified On facets have the values From and To](media/date-facets.png "Due and Modified On facets have the values From and To") 
+![Due and Modified On facets have the values From and To.](media/date-facets.png "Due and Modified On facets have the values From and To") 
 
 ## Feedback link
 
@@ -157,7 +157,7 @@ On the search results page, the answer to **Did you find what you were looking f
 Currently there is no option to disable the feedback question prompt.
 
 > [!div class="mx-imgBorder"]
-> ![Feedback link](media/feedbacklink.png "Feedback link")  
+> ![Feedback link.](media/feedbacklink.png "Feedback link")  
 
 ## Understand search results
 
@@ -228,33 +228,33 @@ Operators help you craft precise search queries that can tailor your results acc
 Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
 For example, **alpine + paul** returns the contact record **Paul Cannon** related to the account record **Alpine Ski House**.
 
-![Example with the AND operator](media/bollean.png "Example with the AND operator")  
+![Example with the AND operator.](media/bollean.png "Example with the AND operator")  
 
 Similarly, the **OR** operator can be indicated by separating terms with a vertical bar (**|**). For example, searching for **alpine | paul** returns records with reference to either term.
 
-![Example with the OR operator](media/bollean-1.png "Example with the OR operator")  
+![Example with the OR operator.](media/bollean-1.png "Example with the OR operator")  
 
 Use the **NOT** operator with a hyphen (**-**) before a keyword to indicate that it should be excluded from results.<!--note from editor: I suggest using this term, otherwise, people might try to find a hyphen on the keyboard.-->
 
 For example, when you search for **evaluation**, all rows matching the term **evaluation** will appear in results.
 
-![Example of searching for the term "evaluation"](media/eval-1.png "Example of searching for the term 'evaluation'")  
+![Example of searching for the term "evaluation."](media/eval-1.png "Example of searching for the term 'evaluation'")  
 
 However, searching for **evaluation + -agreed** will match all rows that contain the term **evaluation** but not the term **agreed**.
 
-![Example of searching for the term "evaluation" but excluding the term "agreed"](media/eval-2.png "Example of searching for the term 'evaluation' but excluding the term 'agreed'")  
+![Example of searching for the term "evaluation" but excluding the term "agreed."](media/eval-2.png "Example of searching for the term 'evaluation' but excluding the term 'agreed'")  
 
 ### Wildcards
 
 Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
 
-![Example of results for a search that uses a wildcard](media/wild-card.png "Example of results for a search that uses a wildcard")  
+![Example of results for a search that uses a wildcard.](media/wild-card.png "Example of results for a search that uses a wildcard")  
 
 ### Exact matches
 
 Use double quotation marks around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and **a**. To improve matching, use double quotation marks and force an exact match for your search. For example, searching on **"Call back for resolution (sample)"** will match the exact keywords. 
 
-![Example of results for a search that uses an exact match](media/exact-match.png "Example of results for a search that uses an exact match")  
+![Example of results for a search that uses an exact match.](media/exact-match.png "Example of results for a search that uses an exact match")  
 
 ## Quick actions
 
@@ -279,17 +279,17 @@ As you interact with search, you'll find quick actions next to the most recently
 
 | Quick actions for recently accessed rows  | Quick actions for suggested results as you type |
 |---------|---------|
-| ![Quick actions for recently accessed rows](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
+| ![Quick actions for recently accessed rows.](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
 
 ### Quick actions in results pages
 
 As you type, quick actions will appear for suggested results.
 
-![This diagram shows the quick actions menu that appears when you hover over a suggested result](media/quick-actions-diagram.gif "This diagram shows the quick actions menu that appears when you hover over a suggested result")
+![This diagram shows the quick actions menu that appears when you hover over a suggested result.](media/quick-actions-diagram.gif "This diagram shows the quick actions menu that appears when you hover over a suggested result")
 
 On the results page, hover over the results to see quick actions available for the row.
 
-![This diagram shows how hovering over a row on the results page displays the quick actions menu](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
+![This diagram shows how hovering over a row on the results page displays the quick actions menu.](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
 
 
 ## Use keyboard shortcuts

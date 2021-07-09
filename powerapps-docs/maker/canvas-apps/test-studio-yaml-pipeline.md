@@ -51,15 +51,15 @@ A *[fork](https://help.GitHub.com/GitHub/getting-started-with-GitHub/fork-a-repo
 
 1. Go to the [microsoft/PowerAppsTestAutomation](https://GitHub.com/microsoft/PowerAppsTestAutomation) repository. You can also search for **microsoft/PowerAppsTestAutomation** instead, and then select the repository.
 
-    ![Search GitHub](media/test-studio-classic-pipeline-editor/search-GitHub.png "Search GitHub")
+    ![Search GitHub.](media/test-studio-classic-pipeline-editor/search-GitHub.png "Search GitHub")
 
 1. Select **Fork**.
 
-    ![Select Fork](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
+    ![Select Fork.](media/test-studio-classic-pipeline-editor/fork.png "Select Fork")
 
 1. Select where you want to locate the fork.
 
-    ![Fork account](media/test-studio-classic-pipeline-editor/fork-account.png "Fork account")
+    ![Fork account.](media/test-studio-classic-pipeline-editor/fork-account.png "Fork account")
 
 Your forked repository will now be available.
 
@@ -77,7 +77,7 @@ You can find a sample file, Samples/TestAutomationURLs.json, in the repo you cre
 
 1. Commit the changes to your repo.
 
-    ![Update the JSON file](media/test-studio-classic-pipeline-editor/json-update.png "Update the JSON file")
+    ![Update the JSON file.](media/test-studio-classic-pipeline-editor/json-update.png "Update the JSON file")
 
 ### Step 3 - Create an Azure Pipeline YAML file
 
@@ -97,11 +97,11 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Project settings** at the bottom of the left navigation pane.
 
-    ![Create a pipeline](media/test-studio-yaml-pipeline/project-settings.png "Create a pipeline")
+    ![Create a pipeline.](media/test-studio-yaml-pipeline/project-settings.png "Create a pipeline")
 
 1. Under **Pipelines**, select **Service connections**.
 
-    ![Service connections](media/test-studio-yaml-pipeline/select-service-connections.png "Service connections")
+    ![Service connections.](media/test-studio-yaml-pipeline/select-service-connections.png "Service connections")
 
 1. Select **Create service connection**.
 
@@ -109,19 +109,19 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Next**.
 
-    ![GitHub service connection](media/test-studio-yaml-pipeline/select-GitHub.png "GitHub service connection")
+    ![GitHub service connection.](media/test-studio-yaml-pipeline/select-GitHub.png "GitHub service connection")
 
 1. Under **OAuth Configuration**, select **AzurePipelines**.
 
 1. Select **Authorize**.
 
-    ![Authorize the service connection](media/test-studio-yaml-pipeline/azure-pipelines-authorize.png "Authorize the service connection")
+    ![Authorize the service connection.](media/test-studio-yaml-pipeline/azure-pipelines-authorize.png "Authorize the service connection")
 
 1. Optionally, you can update the **Service connection name**.
 
 1. Select **Save**.
 
-    ![Save the service connection](media/test-studio-yaml-pipeline/service-connection-save.png "Save the service connection")
+    ![Save the service connection.](media/test-studio-yaml-pipeline/service-connection-save.png "Save the service connection")
 
 ## Create a pipeline
 
@@ -129,15 +129,15 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Create Pipeline**.
 
-    ![Select Create a pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png "Select Create a pipeline")
+    ![Select Create a pipeline.](media/test-studio-classic-pipeline-editor/create-pipeline.png "Select Create a pipeline")
 
 1. Select **GitHub YAML**.
 
-    ![GitHub YAML](media/test-studio-yaml-pipeline/use-github-yaml.png "GitHub YAML")
+    ![GitHub YAML.](media/test-studio-yaml-pipeline/use-github-yaml.png "GitHub YAML")
 
 1. Search for or select your repo.
 
-    ![Select repo](media/test-studio-yaml-pipeline/select-repo.png "Select repo")
+    ![Select repo.](media/test-studio-yaml-pipeline/select-repo.png "Select repo")
 
 1. Select **Existing Azure Pipelines YAML file**.
 
@@ -145,17 +145,17 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Continue**:
 
-    ![Review YAML](media/test-studio-yaml-pipeline/use-existing-pipelines-yaml.png "Review YAML")
+    ![Review YAML.](media/test-studio-yaml-pipeline/use-existing-pipelines-yaml.png "Review YAML")
 
     The azure-pipelines.yml file appears.
 
-    ![Review Azure YAML](media/test-studio-yaml-pipeline/review-pipeline-yaml.png "Review Azure YAML")
+    ![Review Azure YAML.](media/test-studio-yaml-pipeline/review-pipeline-yaml.png "Review Azure YAML")
 
 1. Update **repositories name** to your repo. 
 
 1. Update **endpoint** to the name of the [GitHub service connection](#step-4---create-a-github-service-connection) you created earlier.
 
-    ![YAML endpoint](media/test-studio-yaml-pipeline/update-yaml-endpoint.png "YAML endpoint")
+    ![YAML endpoint.](media/test-studio-yaml-pipeline/update-yaml-endpoint.png "YAML endpoint")
 
 1. Update the **TestAutomationURLs** file name. This is the [test URLs .json file](#step-2---create-a-test-url-json-file) file you created earlier.
 
@@ -163,7 +163,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Update the **TestAutomationURLFilePath** to the location of the test URLs .json file in your repo.
 
-    ![Test parameters](media/test-studio-yaml-pipeline/update-yaml-test-file.png "Test parameters")
+    ![Test parameters.](media/test-studio-yaml-pipeline/update-yaml-test-file.png "Test parameters")
 
 1. Select **Variables**.
 
@@ -175,31 +175,31 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Keep this value secret** and **Let users override this value when running this pipeline**.
  
-    ![Pipeline variables](media/test-studio-yaml-pipeline/set-password-variable.png "Pipeline variables")
+    ![Pipeline variables.](media/test-studio-yaml-pipeline/set-password-variable.png "Pipeline variables")
 
 1. **Save** and **Commit** the changes to your repo.  
 
-    ![Save the pipeline configuration](media/test-studio-yaml-pipeline/save-pipeline.png "Save the pipeline configuration")
+    ![Save the pipeline configuration.](media/test-studio-yaml-pipeline/save-pipeline.png "Save the pipeline configuration")
 
 ## Run and analyze tests
 
 To validate whether your tests are being successfully executed, select **Run**. Optionally, you can optionally select the server image to run your tests and also the browser types.
 
-![Run job](media/test-studio-yaml-pipeline/run-job.png "Run job")
+![Run job.](media/test-studio-yaml-pipeline/run-job.png "Run job")
 
 As the job runs, select it to see detailed status for each of the tasks that are running.
 
-![Job details](media/test-studio-yaml-pipeline/job-details.png "Job details")
+![Job details.](media/test-studio-yaml-pipeline/job-details.png "Job details")
 
 When the job is completed, you can view the high-level job summary and any errors or warnings. By selecting the **Test** tab, you can view specific details on the test cases you've executed.
 
 The following example indicates that at least one of our test cases has failed while executing the tests by using the Chrome browser.
 
-![Chrome - failed](media/test-studio-classic-pipeline-editor/chrome-failed.png "Chrome - failed")
+![Chrome - failed.](media/test-studio-classic-pipeline-editor/chrome-failed.png "Chrome - failed")
 
 Select **RunTestAutomation** to drill into the details about the failed test cases<!--Edit okay?-->. On the **Attachments** tab, you can see the summary of the test execution and which test cases have failed or passed in your test suite.
 
-![Attachments tab](media/test-studio-classic-pipeline-editor/attachments-tab.png "Attachments tab")
+![Attachments tab.](media/test-studio-classic-pipeline-editor/attachments-tab.png "Attachments tab")
 
 > [!NOTE]
 > If you execute a test suite, you'll see a summary of test cases that have passed and failed. If you execute a test case, you'll see specific details about the failure with any trace information, if available.

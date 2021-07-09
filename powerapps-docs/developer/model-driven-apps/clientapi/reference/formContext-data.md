@@ -19,7 +19,7 @@ search.app:
 
 Provides properties and methods to work with the data on a form.
 
-![formContext Data object model](../../media/ClientAPI-formContext-data-Model.png)
+![formContext Data object model.](../../media/ClientAPI-formContext-data-Model.png)
 
 ## Properties
 

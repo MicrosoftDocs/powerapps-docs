@@ -18,7 +18,7 @@ search.app:
 
 Microsoft Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
-![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
+![Power BI Desktop.](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ To use Power BI with Dataverse, you need the following items:
 
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Session details**.
 
-   :::image type="content" source="media/session-details.png" alt-text="Session details":::
+   :::image type="content" source="media/session-details.png" alt-text="Session details.":::
 1. In the **Power Apps session details** dialog box, select **Copy Details**.
 1. Paste the session details somewhere such as Notepad so that you can copy only the **Instance url**. The instance URL is the unique URL for your environment. The URL will be in the format: `https://yourenvironmentid.crm.dynamics.com/`. **Make sure you remove *https://* and the trailing */* from the URL before pasting it to connect to your environment.** Keep this somewhere handy so you can use it when creating your Power BI reports.
 
@@ -60,12 +60,12 @@ To use Power BI with Dataverse, you need the following items:
 1. The **Navigator** displays all tables available for your environment, such as the account and contact tables. Select the **account** table to see a preview of your data in the right pane. Select **Load**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Load account table rows](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table rows")
+    > ![Load account table rows.](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table rows")
 
 1. Your table is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
+    > ![Power BI Desktop visualization.](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
 
 
 ## Special column types
@@ -104,14 +104,14 @@ While some relationships may be automatically created, you can still review and 
 
 This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
-:::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message":::
+:::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message.":::
 To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
 
 ### Error message: Unable to connect (provider Named Pipes Provider, error: 40 – Could not open a connection to SQL Server)
 
 When this error message occurs, the connector fails to connect to the TDS endpoint. This can occur when the URL used with the connector includes *https://* and/or the ending */*.
 
-:::image type="content" source="media/tls-unable-to-connect.png" alt-text="Unable to connect error message":::
+:::image type="content" source="media/tls-unable-to-connect.png" alt-text="Unable to connect error message.":::
 Remove the https:// and ending forward slash so that the URL is in the form *orgname.crm.dynamics.com*.
 
 ### See also

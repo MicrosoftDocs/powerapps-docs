@@ -73,7 +73,7 @@ This step is required for both hospital and regional solutions.
 1. From the search results, select **+** next to **Common Data Service** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
-    > ![Common Data Service connector](media/cds-connector.png)
+    > ![Common Data Service connector.](media/cds-connector.png)
 
 1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
@@ -88,7 +88,7 @@ This step is required for both hospital and regional solutions.
 1. From the search results, select **+** next to **SFTP - SSH** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
-    > ![SFTP connector](media/sftp-connector.png)
+    > ![SFTP connector.](media/sftp-connector.png)
 
 1. In the **SFTP - SSH** dialog box, provide the credentials to connect to the folder on the SFTP server. These details would have been already provided to you by your regional health organization as mentioned earlier in the **Prerequisites** section.
 
@@ -119,7 +119,7 @@ To enable these flows:
 1.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![All flows](media/all-flows-hospital.png)
+    > ![All flows.](media/all-flows-hospital.png)
 
 1.  Select a flow name to open the flow definition. For example, select **Publish Bed Census Data**. 
 
@@ -142,19 +142,19 @@ The **Publish Data for All Facilities** flow contains the information about the 
 1.  In the solution, search for "Publish Data for". The **Publish Data for All Facilities** flow appears in the search result.
 
     > [!div class="mx-imgBorder"] 
-    > ![Publish Data for All Facilities flow](media/publish-all-data-flow.png)
+    > ![Publish Data for All Facilities flow.](media/publish-all-data-flow.png)
 
 1.  Select the flow name to open the flow definition, and then select **Edit** in the toolbar.
 
 1.  In the flow definition, select **Recurrence** and then select **Edit**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Update the data publish recurrence schedule](media/update-publish-schedule1.png)
+    > ![Update the data publish recurrence schedule.](media/update-publish-schedule1.png)
 
 1. Specify the data publish recurrence schedule. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Update the data publish recurrence schedule](media/update-publish-schedule2.png)
+    > ![Update the data publish recurrence schedule.](media/update-publish-schedule2.png)
 
 1.  Select **Save** to save your changes.
 
@@ -178,7 +178,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 1.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![Flows in the app](media/conf-all-flows.png "Flows in the app")
+    > ![Flows in the app.](media/conf-all-flows.png "Flows in the app")
 
 1.  Select the **Create Record when a File is Created in SFTP Location** flow to open the flow definition. 
 
@@ -196,7 +196,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
     
     1. Select **When a file is added or modified**, and select appropriate value in the **Folder** field:
         > [!div class="mx-imgBorder"] 
-        > ![Edit the flow](media/edit-flow.png "Edit the flow")
+        > ![Edit the flow.](media/edit-flow.png "Edit the flow")
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
@@ -214,19 +214,19 @@ After your IT admin has configured the solution for data transfer from the hospi
 1. In the app, all the facilities are listed. Select a facility for which you want to review the data and publish. This will open the facility record.
 
     > [!div class="mx-imgBorder"] 
-    > ![Facility review](media/facility-review.png)
+    > ![Facility review.](media/facility-review.png)
 
 1. Scroll down the page to review the following data for your facility: Bed Census, COVID Stats, Equipment Needs, Supply Tracking, and Staff Updates. If necessary, update the data in grids, and then select the save icon to save your changes.
 
     > [!div class="mx-imgBorder"] 
-    > ![Update values](media/update-values.png)
+    > ![Update values.](media/update-values.png)
 
 1. Once reviewed, you can select a row of data, and select **Mark Complete**. Select **OK** in the confirmation dialog box to complete the action.
 
     The record's review status changes to **Completed**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Review completed](media/review-completed.png)
+    > ![Review completed.](media/review-completed.png)
 
 The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier ([Step 3: Specify the data publish schedule (Hospital)](#step-3-specify-the-data-publish-schedule-hospital)).
 
@@ -237,17 +237,17 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 1.  In the **Review and Publish Data** app, select the record that you want to publish from the **Published History** in the left pane. All the published data for the selected entity are displayed. If you want to view the active records for the entity, use the view selector.
 
     > [!div class="mx-imgBorder"] 
-    > ![Review completed](media/manual-data-publish.png)
+    > ![Review completed.](media/manual-data-publish.png)
 
 1. In this case, we will publish the data that we reviewed in the previous section. So, select the **Active Bed Census** view, select the row that was marked as completed, and then select **Flow** > **Publish Bed Census Data**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Manually run flow](media/manually-run-flow.png)
+    > ![Manually run flow.](media/manually-run-flow.png)
 
 1. On the next screen, review that the connections are valid, and select **Continue**.
 
     > [!div class="mx-imgBorder"]
-    > ![Manually run flow](media/publish-data-flow.png)
+    > ![Manually run flow.](media/publish-data-flow.png)
 
 1. On the next screen select **Run flow**. A message appears stating that the flow run started successfully and how you can monitor the progress.
 

@@ -25,19 +25,19 @@ To open Power Apps portals Studio:
 
 1. Select **Apps** from the left pane.
 
-    ![Select Apps from left pane](media/studio-apps.png "Select Apps from left pane")
+    ![Select Apps from left pane.](media/studio-apps.png "Select Apps from left pane")
 
 1. Select your portal.
 
 1. Select **Edit**.
 
-    ![Select Edit to open the portal in Studio](media/edit-portal.png "Select Edit to open the portal in Studio")
+    ![Select Edit to open the portal in Studio.](media/edit-portal.png "Select Edit to open the portal in Studio")
 
 ## Understand portals Studio
 
 The anatomy of Power Apps portals Studio is as follows:
 
-![Power Apps portals Studio anatomy](media/maker-anatomy.png "Power Apps portals Studio anatomy")  
+![Power Apps portals Studio anatomy.](media/maker-anatomy.png "Power Apps portals Studio anatomy")  
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|

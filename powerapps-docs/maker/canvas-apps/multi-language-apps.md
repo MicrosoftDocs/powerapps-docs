@@ -33,7 +33,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. Under **Apps**, select **Component libraries (preview)**.
 
-    ![Select Component libraries (preview)](media/multi-language-apps/apps-component-libraries.png "Select Component libraries (preview)")
+    ![Select Component libraries (preview).](media/multi-language-apps/apps-component-libraries.png "Select Component libraries (preview)")
 
 1. Select **+ New component library (preview)**.
 
@@ -41,7 +41,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. Rename "Component1" by selecting **...** on the left pane, and then select **Rename** as "Translation component".
 
-   ![Rename component](media/multi-language-apps/rename-component.png "Rename component")
+   ![Rename component.](media/multi-language-apps/rename-component.png "Rename component")
 
 1. From the property pane on the right-side of the screen, select **+ New custom property**.
 
@@ -57,7 +57,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. Select **Raise OnReset when value changes** checkbox.
 
-    ![New custom property](media/multi-language-apps/new-custom-property.png "New custom property")
+    ![New custom property.](media/multi-language-apps/new-custom-property.png "New custom property")
 
 1. Select **Create**.
 
@@ -76,7 +76,7 @@ When working with a multi-language app, the first step is to create a reusable c
     | Property type | Output |
     | Data type | Record |
 
-    ![New labels property](media/multi-language-apps/new-labels-property.png "New labels property")
+    ![New labels property.](media/multi-language-apps/new-labels-property.png "New labels property")
 
 1. Select **Create**.
 
@@ -85,7 +85,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. On the upper-left side of the screen, select the property list drop-down and choose **OnReset** property for the component.
 
-    ![OnReset property for the component](media/multi-language-apps/onreset.png "OnReset property for the component")
+    ![OnReset property for the component.](media/multi-language-apps/onreset.png "OnReset property for the component")
 
 1. Copy and pate the following formula in the formula bar for the **OnReset** property.
 
@@ -117,7 +117,7 @@ When working with a multi-language app, the first step is to create a reusable c
 
 1. On the upper-left side of the screen, select the property list drop-down and choose **Labels** property for the component.
 
-    ![Labels property for the component](media/multi-language-apps/labels.png "Labels property for the component")
+    ![Labels property for the component.](media/multi-language-apps/labels.png "Labels property for the component")
 
 1. Copy and pate the following formula in the formula bar for the **OnReset** property.
 
@@ -161,7 +161,7 @@ Previously, you created the translation component library for reuse. In this sec
 
 1. Select **Translation component**.
 
-    ![Select Translation component library](media/multi-language-apps/import-translation-component.png "Select Translation component library")
+    ![Select Translation component library.](media/multi-language-apps/import-translation-component.png "Select Translation component library")
 
     > [!NOTE]
     > The name might be different if you saved the component library created earlier with a different name.
@@ -238,7 +238,7 @@ Now your app is using the translation component. Go to [Power Apps](https://make
 
 When the toggle is selected, the language is changed to Portuguese (BR) for the labels. When unchecked, the language is set back to English (US).
 
-![Translation demo](media/multi-language-apps/translation-demo.png "Translation demo")
+![Translation demo.](media/multi-language-apps/translation-demo.png "Translation demo")
 
 With this approach, you can now create your own component having the translations dictionary that fits your business requirement. And then, create more canvas apps that use the component that gives the business users the ability to use different languages.
 

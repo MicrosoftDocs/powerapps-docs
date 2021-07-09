@@ -29,7 +29,7 @@ Relevance search is already available when you're using a model-driven app in a 
 Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
 
   > [!div class="mx-imgBorder"]
-  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
+  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile.](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
 
 ## Run a search
 
@@ -38,23 +38,23 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 1. Select the search button. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select the search button](media/search-on-mobile-1.png "Select the search button") 
+   > ![Select the search button.](media/search-on-mobile-1.png "Select the search button") 
   
 2. Enter the words you want to search for in the search box.  
 
    > [!div class="mx-imgBorder"]
-   > ![Enter search text](media/search-on-mobile-2.png "Enter search text") 
+   > ![Enter search text.](media/search-on-mobile-2.png "Enter search text") 
   
 3. As you enter search text, rows that match your text begin to appear.
 
    > [!div class="mx-imgBorder"]
-   > ![See suggested results as you type](media/suggested-results.png "See suggested results as you type")
+   > ![See suggested results as you type.](media/suggested-results.png "See suggested results as you type")
 
 ## View search results
 
 Search results are ranked and grouped by table.
 
-![Search results page](media/search-results-page.png "Search results page") 
+![Search results page.](media/search-results-page.png "Search results page") 
   
   Legend
   
@@ -68,7 +68,7 @@ Search results are ranked and grouped by table.
   
 Use filters to drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search, you can filter by **Owner**, **Created On**, or **Modified On**.
 
-![Filter results page](media/filter-results-page.png "Filter results page") 
+![Filter results page.](media/filter-results-page.png "Filter results page") 
   
   Legend
   

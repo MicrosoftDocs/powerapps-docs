@@ -23,7 +23,7 @@ search.app:
 
 If you previously created an email template, you can easily use it as the basis for your email by inserting it into the email.
 
-   ![Insert an email template](media\email-how-to-insert-an-email-template-1a.png "How to insert an email template")
+   ![Insert an email template.](media\email-how-to-insert-an-email-template-1a.png "How to insert an email template")
 
    - You can access the email template you created from the command bar by selecting **Insert Template**. <BR><BR>
 
@@ -35,11 +35,11 @@ Once you select **Insert Template**, the following window appears displaying a l
 > There is an intermediary window that may display if:
 > 1. You don't have either a Recipient or Regarding field for your email.
 >
-> ![Message window for no recipient or regarding field](media\email-template-recipient.png "Message when missing recipient or regarding field")
+> ![Message window for no recipient or regarding field.](media\email-template-recipient.png "Message when missing recipient or regarding field")
 >
 > 2. When you have both a Recipient and Regarding field. You must select one.
 >
-> ![Message when both recipient and regarding field are present](media\email-template-select-record.png "Message when both recipient and regarding fields are present)
+> ![Message when both recipient and regarding field are present.](media\email-template-select-record.png "Message when both recipient and regarding fields are present)
 >
 > The selection of one of these fields determines which template types are shown to a user in the template selection window:
 > - Recipient (TO): user (global) and contact templates are displayed.
@@ -47,7 +47,7 @@ Once you select **Insert Template**, the following window appears displaying a l
 
 #### Email template selection window
 
-   ![Email template selection window](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
+   ![Email template selection window.](media\email-how-to-insert-an-email-template-1b.png "Email template selection window")
 
    Legend
    1. **Language**. Templates are loaded as per the selected language.

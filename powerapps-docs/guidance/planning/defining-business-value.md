@@ -134,7 +134,7 @@ report app.
     >
     >   Saving the company roughly **\$777,738 each year**
 
-![Business process flowchart showing the updated costs for the optimized process and the total savings to be gained](media/optimized-flow-costs.png "Business process flowchart showing the updated costs for the optimized process and the total savings to be gained")
+![Business process flowchart showing the updated costs for the optimized process and the total savings to be gained.](media/optimized-flow-costs.png "Business process flowchart showing the updated costs for the optimized process and the total savings to be gained")
 
 > [!div class="nextstepaction"]
 > [Next step: Measuring success](measuring-success.md)

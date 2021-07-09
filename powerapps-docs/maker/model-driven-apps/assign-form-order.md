@@ -39,7 +39,7 @@ search.app:
 2.  In the form list toolbar select **Form Order**.  
 
      > [!div class="mx-imgBorder"] 
-     > ![Form order toolbar command](media/form-order.png)
+     > ![Form order toolbar command.](media/form-order.png)
   
 3.  Choose either **Main Form Set**, **Quick Create Form Set**, **Quick View Form Set**, or **Card Form Set** depending on the type of forms you want to work with. More information: [Type of forms](types-forms.md). 
   

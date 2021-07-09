@@ -41,7 +41,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Create a few sample issue items.
 
-    ![Issue tracking sample items](./media/scenarios-customize-view-based-on-column-status/issue-tracking-list-items.png "Issue tracking sample items")
+    ![Issue tracking sample items.](./media/scenarios-customize-view-based-on-column-status/issue-tracking-list-items.png "Issue tracking sample items")
 
     Ensure the issue items have both *Active* and *Closed* items.
 
@@ -49,17 +49,17 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Select **Integrate** -> **Power Apps** -> **Create an app** from the SharePoint list page.
 
-    ![Create an app](./media/scenarios-customize-view-based-on-column-status/create-app.png "Create an app")
+    ![Create an app.](./media/scenarios-customize-view-based-on-column-status/create-app.png "Create an app")
 
     You can see all issues listed in the app inside the studio.
 
-    ![List of issues](./media/scenarios-customize-view-based-on-column-status/app-list-of-issues.png "List of issues")
+    ![List of issues.](./media/scenarios-customize-view-based-on-column-status/app-list-of-issues.png "List of issues")
 
     The sample list only has two items. However, when the number of issues increases, it becomes overwhelming to scan through issues or search them, especially when the objective is to show only active issues.
 
 1. Select the items gallery, by default named BrowseGallery1.
 
-    ![Items gallery](./media/scenarios-customize-view-based-on-column-status/select-browse-gallery.png "Items gallery")
+    ![Items gallery.](./media/scenarios-customize-view-based-on-column-status/select-browse-gallery.png "Items gallery")
 
 1. Update the formula for the default **Items** property to include filter criteria for issues status.
 
@@ -88,7 +88,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Run the app as the user that you shared the app with (Kenny Smith in this example).
 
-    ![App, as run by the user](./media/scenarios-customize-view-based-on-column-status/user-runs-app.png "App, as run by the user")
+    ![App, as run by the user.](./media/scenarios-customize-view-based-on-column-status/user-runs-app.png "App, as run by the user")
 
 Similarly, you can use different screens in your app based on the column value, such as a separate screen to view all the **Closed** issues.
 

@@ -31,7 +31,7 @@ For portal users with moderation permission, moderation controls will automatica
 
 2. In the **Delete this thread?** pop-up window, select **Yes**.
 
-    ![Delete a forum thread](media/delete-forum-thread.png "Delete a forum thread")  
+    ![Delete a forum thread.](media/delete-forum-thread.png "Delete a forum thread")  
 
 ### Edit the forum thread
 
@@ -41,7 +41,7 @@ For portal users with moderation permission, moderation controls will automatica
 
 3. Select **Save**.
 
-    ![Edit a forum thread](media/edit-forum-thread.png "Edit a forum thread")
+    ![Edit a forum thread.](media/edit-forum-thread.png "Edit a forum thread")
 
 ### Delete a forum post
 
@@ -51,7 +51,7 @@ For portal users with moderation permission, moderation controls will automatica
 
 3. In the **Delete this thread?** pop-up window, select **Yes**.
 
-    ![Delete a forum post](media/delete-forum-post.png "Delete a forum post")  
+    ![Delete a forum post.](media/delete-forum-post.png "Delete a forum post")  
 
 ### Edit a forum post
 
@@ -63,7 +63,7 @@ For portal users with moderation permission, moderation controls will automatica
 
 4. Select **Save**.
 
-    ![Edit a forum post](media/edit-forum-post.png "Edit a forum post")
+    ![Edit a forum post.](media/edit-forum-post.png "Edit a forum post")
 
 ### See also
 

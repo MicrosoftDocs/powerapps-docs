@@ -53,10 +53,10 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
     The **Data table** control is initialized and shows a set of default fields.
 6. Click or tap the **Full name** column.
    
-    ![Column control selected](./media/control-column/pre-resize-column.png)
+    ![Column control selected.](./media/control-column/pre-resize-column.png)
 7. Drag the adorner on the right side to resize the field.
    
-    ![Column control resized](./media/control-column/post-resize-column.png)
+    ![Column control resized.](./media/control-column/post-resize-column.png)
 
 
 ## Accessibility guidelines

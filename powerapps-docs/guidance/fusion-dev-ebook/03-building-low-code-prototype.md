@@ -29,7 +29,7 @@ Maria is very familiar with the existing inventory management system and underst
 > [!NOTE] 
 > You can find a copy of this workbook in the [Assets](https://github.com/microsoft/fusion-dev-ebook/tree/main/Assets) folder in the Git repository for this guide.
 
-![Boiler parts worksheet, showing a list of parts with Id, Name, CategoryId, Price, Overview, NumberInStock, and Image columns](media/image8.png)
+![Boiler parts worksheet, showing a list of parts with Id, Name, CategoryId, Price, Overview, NumberInStock, and Image columns.](media/image8.png)
 
 If you're a relational database designer, you'll notice that the Excel workbook presents a denormalized view of the data. For example, in a relational database, **CategoryID** would most likely be a numeric identifier that references a separate table containing the details of the category, including the name.
 
@@ -42,38 +42,38 @@ Follow these steps to create the app with Power Apps.
 
 2. On the **Home** page, under **Start from data**, select **Excel Online**.
 
-    ![Power Apps Studio home page](media/image9.png)
+    ![Power Apps Studio home page.](media/image9.png)
 
 3. On the **Connections** page, select **OneDrive for Business**, and then select **Create**.
 
-    ![New OneDrive connection](media/image10.png)
+    ![New OneDrive connection.](media/image10.png)
 
 4. On the **OneDrive for Business** page, select the **BoilerParts.xlsx** file.
 
-    ![Connect to the Excel workbook](media/image11.png)
+    ![Connect to the Excel workbook.](media/image11.png)
 
 5. Select the table in the Excel file (Maria created the table by using the default name, **Table1**), and then select **Connect**.
 
-    ![Connect to the Excel table](media/image12.png)
+    ![Connect to the Excel table.](media/image12.png)
 
 6. Wait while Power Apps generates the app.
 
-    ![Generate the app](media/image13.png)
+    ![Generate the app.](media/image13.png)
 
 7. When the app has been generated, you'll see the **Browse** screen, displaying **CategoryID**, **ID**, and **Image** fields from each row of the parts table in the workbook.
 
-    ![Parts shown on the Browse screen](media/image14.png)
+    ![Parts shown on the Browse screen.](media/image14.png)
 
 8. The fields that are currently displayed aren't very useful for helping an engineer select a product. On the pane displaying the **Browse** screen, select the **Heat Exchanger** label in the first row of data. In the formula bar, select the **Text** property from the dropdown list. Change the value of this property to **ThisItem.Name**. The text in the first field of each row will switch to display the part name.
 
     > [!NOTE] 
     > In the following image, the **Heat Exchanger** label originally displayed on the form has changed to the product name, **3.5 W/S Heater**.
 
-    ![Change the text for a label control](media/image15.png)
+    ![Change the text for a label control.](media/image15.png)
 
 9. Repeat the previous step for the **ID** and **Image** labels. Change the **Text** property of the **ID** field to **CategoryID**, and the **Text** property of the **Image** field to **Overview**. The **Browse** screen should now look like the following image, which a field engineer is more likely to find useful for selecting parts.
 
-    ![A list of items that show the name of a part, the category it's in, and a descriptive overview](media/image16.png)
+    ![A list of items that show the name of a part, the category it's in, and a descriptive overview.](media/image16.png)
 
 10. The search feature of the **Browse** screen defaults to using the fields that were initially selected when the screen was generated&mdash;in this case, **CategoryID**, **ID**, and **Image**. The results are sorted by **CategoryID**. It makes sense to switch this to the **Name**, **CategoryID**, and **Overview** fields, with results sorted by **Name**. Select the **BrowseGallery1** control on the **Tree view** pane. In the dropdown list on the left side of the formula bar, select the **Items** property. Drag the lower edge of the formula bar down so the formula is completely visible. The formula contains the following expression:
 
@@ -81,7 +81,7 @@ Follow these steps to create the app with Power Apps.
     **SortByColumns(Search([\@Table1], TextSearchBox1.Text, "CategoryID","ID","Image"), "CategoryID", If(SortDescending1, Descending, Ascending))
     ```
 
-    ![Sort and search fields](media/image17.png)
+    ![Sort and search fields.](media/image17.png)
 
 11. Change the **Search** expression to reference the **Name**, **CategoryID**, and **Overview** fields by using the following formula:
 
@@ -93,7 +93,7 @@ Follow these steps to create the app with Power Apps.
 
 13. On the toolbar, select **Theme** (you might have to expand the toolbar to display more items), and then select the **Forest** theme. The colors and styling for the **Browse** screen will change to match the theme.
 
-    ![Select the theme](media/image18.png)
+    ![Select the theme.](media/image18.png)
 
 #### Make the Details screen more useful
 
@@ -101,14 +101,14 @@ You've created the basic app and modified the **Browse** screen to display field
 
 1. On the **Tree view** pane, scroll down and select **DetailScreen1**. This screen displays details about the part that a user selects on the **Browse** screen.
 
-    ![Parts details screen](media/image19.png)
+    ![Parts details screen.](media/image19.png)
 
 2. In the header of the **Details** screen on the middle pane, select the **Table1** label. On the right pane, on the **Properties** tab, change the **Text** property to **Part Details**.
 
     > [!NOTE] 
     > In many cases, you can accomplish the same results by using the formula bar as the **Properties** pane. However, some properties that are only available through the **Properties** pane.
 
-    ![Change browse parts screen header](media/image20.png)
+    ![Change browse parts screen header.](media/image20.png)
 
 3. On the **Tree view** pane, under **DetailScreen1**, select **DetailForm1**. On the right pane, on the **Properties** tab, select **Edit fields** next to **Fields**. On the middle pane, select and drag the fields so that they're displayed in the following order, from top to bottom:
 
@@ -120,28 +120,28 @@ You've created the basic app and modified the **Browse** screen to display field
    - Image
    - ID
 
-    ![Arrange fields on the details screen](media/image21.png)
+    ![Arrange fields on the details screen.](media/image21.png)
 
 4. Select the **ID** field, select the ellipsis that appears on the right side of the field, and then select **Remove** from the dropdown menu that appears. This action removes the **ID** field from the form.
 
-    ![Remove the ID field from the form](media/image22.png)
+    ![Remove the ID field from the form.](media/image22.png)
 
 5. On the **Tree view** pane, under **DetailForm1**, select **CategoryID\_DataCard1**. This element is a **DataCard** control that displays the name of a field (called the **key**) and its value.
 
-    ![CategoryID data card control](media/image23.png)
+    ![CategoryID data card control.](media/image23.png)
 
     On the right pane, on the **Advanced** tab, select **Unlock to change properties**. In the **Data** section, change the **DisplayName** field to **"Category"** (include the quotation marks).
 
     > [!NOTE] 
     > As with the **Properties** tab, many of the properties on the **Advanced** tab are also accessible through the formula bar. To set these properties, you can use the formula bar if you prefer.
 
-    ![Change the CategoryID details field display name](media/image24.png)
+    ![Change the CategoryID details field display name.](media/image24.png)
 
 6. Repeat the previous step to change the key for **NumberInStock\_DataCard1** to **"Number in Stock"** (include the quotation marks).
 
 7. You need to adjust the formatting of the **Price** field to display the data as a currency value. On the **Tree view** pane, under **DetailForm1**, under **Price\_DataCard1**, select **DataCardValue7**. This is the field that displays the value of the **Price** field. On the **DataCardValue7** pane on the right, on the **Advanced** tab, change the **Text** property to **Text(Value(Parent.Default), "[\$-en-US]\$ \#\#\#,\#\#0.00")**
 
-    ![Format price as currency](media/image25.png)
+    ![Format price as currency.](media/image25.png)
 
     The expression **Parent.Default** refers to the data item to which the parent control (the **DataCard**) is bound&mdash;in this case, the **Price** column. The **Text** function reformats this value by using the format specified as the second argument; in this example, this is the local currency with two decimal places.
 
@@ -149,15 +149,15 @@ You've created the basic app and modified the **Browse** screen to display field
 
 9. Select **Image\_DataCard1**. On the left pane, select **+ Insert**. On the **Insert** pane, expand **Media**, and then select **Image**.
 
-    ![Replace an image URL with an image](media/image26.png)
+    ![Replace an image URL with an image.](media/image26.png)
 
 10. Return to the **Tree view** pane, and verify that the **Image1** text control has been added to the **Image\_DataCard1** control.
 
-    ![Verify that the image control has been added](media/image27.png)
+    ![Verify that the image control has been added.](media/image27.png)
 
 11. On the **Tree view** pane, select **Image\_DataCard1**. On the right pane, on the **Advanced** tab, change **Height** to **500**, to allow sufficient space for an image to be displayed.
 
-    ![Set the image data card height](media/image28.png)
+    ![Set the image data card height.](media/image28.png)
 
 12. On the **Tree view** pane, select **Image1**. Set the following properties:
 
@@ -173,39 +173,39 @@ The app also contains an **Edit** screen, which enables a user to change the inf
 
 1. On the **Tree view** pane, select **EditScreen1**. Select the ellipsis button, and then select **Delete** to remove this screen.
 
-    ![Delete the Edit screen](media/image29.png)
+    ![Delete the Edit screen.](media/image29.png)
 
 2. On the **Tree view** pane, select **DetailsScreen1**. Notice that Power Apps Studio displays an error message for this screen. This error occurs because the **DetailsScreen1** contains expressions that reference the **EditScreen1** screen, which no longer exists.
 
 3. In the header of the **DetailsScreen1**, select the pencil (**IconEdit1**) icon. The **OnSelect** property for this control contains the expression **EditForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)**. When the **Edit** icon is selected, this expression runs and attempts to move to the **EditScreen1** screen.
 
-    ![Edit OnSelect property](media/image30.png)
+    ![Edit OnSelect property.](media/image30.png)
 
 4. On the **Tree view** pane, select **IconEdit1**, and then select **Delete**. This icon is no longer required.
 
 5. Select **IconDelete1**, and then select **Delete**. This icon is used to delete the current part, and is also not required.
 
-    ![Remove the delete and edit icons](media/image31.png)
+    ![Remove the delete and edit icons.](media/image31.png)
 
 6. Notice that the **Part Details** text has disappeared from the screen header, and instead Power Apps Studio displays an error message. This has happened because the width of the label control that displays the text is calculated. On the **Tree view** pane, select **LblAppName2**. Examine the **Width** property. The value of this property is the result of the expression **Parent.Width - Self.X - IconDelete1.Width - IconEdit1.Width**.
 
-    ![LblAppName2 control displaying a width error](media/image32.png)
+    ![LblAppName2 control displaying a width error.](media/image32.png)
 
 7. Change the expression for the **Width** property to **Parent.Width - Self.X**. The error should disappear, and the **Part Details** text should reappear in the screen header.
 
 8. On the **Tree view** pane, select **BrowseScreen1**. This screen will also display an error message. The **+** icon in the toolbar (**IconNewItem1**) enables the user to add a new part. The **OnSelect** property for this icon references the **EditScreen1** screen.
 
-    ![New item icon displaying an error](media/image33.png)
+    ![New item icon displaying an error.](media/image33.png)
 
 9. Select **IconNewItem1**, and then select **Delete**. As before, the text in the header for the screen disappears and an error message is displayed, and for the same reason.
 
 10. On the **Tree view** pane, under **BrowseScreen1**, select **LblAppName1**. Modify the expression for the **Width** property by removing the reference to **IconNewItem1.Width**. The new expression should be **Parent.Width - Self.X - IconSortUpDown1.Width - IconRefresh1.Width**.
 
-    ![Change the label width](media/image34.png)
+    ![Change the label width.](media/image34.png)
 
 11. There's still a problem with the header. Although the **Browse Parts** text has reappeared, an error is being displayed, and the refresh and sort icons are in the wrong place. On the **Tree view** pane, select  **IconSortUpDown1**. Find the **X** property for this control. This property determines the horizontal position of the icon in the header. It's currently calculated based on the width of the **IconNewItem1** control.
 
-    ![Sort icon error](media/image35.png)
+    ![Sort icon error.](media/image35.png)
 
 12. Change the expression for the **X** property to **Parent.Width - Self.Width**.
 
@@ -219,21 +219,21 @@ Now you can save and test the app.
 
 2. Under **Save as**, select **The cloud**, enter the name **VanArsdelApp**, and then select **Save**.
 
-    ![Save the app](media/image36.png)
+    ![Save the app.](media/image36.png)
 
 3. Select the back arrow to return to the **Home** screen.
 
-    ![Go back to the Home screen](media/image37.png)
+    ![Go back to the Home screen.](media/image37.png)
 
 4. Select **F5** to preview the app. On the **Browse Parts** page, select the right angle bracket (**\>**) to the right of any part. The **Details** screen for the part appears.
 
-    ![Initial run of the app](media/image38.png)
+    ![Initial run of the app.](media/image38.png)
 
 5. Select the left angle bracket (**\<**) in the **Details** screen header to return to the **Browse** screen.
 
 6. On the **Browse Parts** screen, enter text in the **Search** box. As you type, the items will be filtered to only show those that have matching text in the **Name**, **CategoryID**, or **Overview** fields.
 
-    ![Search on the Browse Parts screen](media/image39.png)
+    ![Search on the Browse Parts screen.](media/image39.png)
 
 7. Close the preview window and return to Power Apps Studio.
 
@@ -245,21 +245,21 @@ Maria decides to create a new screen based on the **List** template available in
 
 1.  On the Power Apps Studio **Home** screen toolbar, select **New Screen**, and then select **List**.
 
-    ![The List template](media/image40.png)
+    ![The List template.](media/image40.png)
 
 2.  In the screen header, select the label that displays the text **\[Title]**. Change the **Text** property to **"Query"** (include the quotation marks).
 
-    ![Modify the query screen header text](media/image41.png)
+    ![Modify the query screen header text.](media/image41.png)
 
 3.  In the screen header, select the plus sign (**+**), and then select **Delete**. The **+** icon is intended to enable the user to add more items to the list. The knowledge base is query-only, so this feature isn't needed.
 
-    ![Remove the + icon](media/image42.png)
+    ![Remove the + icon.](media/image42.png)
 
     Notice that removing this icon causes an error in the header due to the way in which the location and widths of the other items are calculated. You saw this earlier with the inventory management screen, and the solution is the same, as described in the following steps.
 
 4.  On the **Tree view** pane, scroll down to the **Screen1** section, and select **LblAppName3**. Change the **Width** property to the formula **Parent.Width - LblAppName3.X - IconSortUpDown2.Width - IconRefresh2.Width**.
 
-    ![Modify the query screen header width](media/image43.png)
+    ![Modify the query screen header width.](media/image43.png)
 
 5.  On the **Tree view** pane, select **IconSortUpDown2**. Modify the **X** property to the formula **Parent.Width - IconSortUpDown2.Width**.
 
@@ -271,7 +271,7 @@ Maria decides to create a new screen based on the **List** template available in
 
 9.  Return to the **Home** screen and select **F5** to preview the new screen. It should look like the following image.
 
-    ![Query screen running](media/image44.png)
+    ![Query screen running.](media/image44.png)
 
     Note that if you select the **\>** icon next to any of the dummy entries, the details functionality doesn't currently work. You'll address this later when you integrate Azure Cognitive Search into the app.
 
@@ -293,7 +293,7 @@ Maria works with Malik, the office receptionist, to design the interface for the
 -   Notes (a text description with any notes added by the engineer)
 -   Image (a photograph of the appliance, either in working condition after repair or as a supplementary picture for the engineer's notes)
 
-![Appointments workbook](media/image45.png)
+![Appointments workbook.](media/image45.png)
 
 > [!NOTE] 
 > As with the field inventory management data, this workbook presents a denormalized view of the data. In the existing appointments system, this data is stored in separate tables that hold appointment data and customer data.
@@ -314,27 +314,27 @@ Maria decides to build the appointments screens initially as a separate app. Thi
 
 1.  In the Power Apps Studio menu bar, select **File**.
 
-    ![File menu](media/image46.png)
+    ![File menu.](media/image46.png)
 
 2.  On the left pane, select **New**. On the main pane, select the **OneDrive for Business - Phone layout** box.
 
-    ![Create a new app](media/image47.png)
+    ![Create a new app.](media/image47.png)
 
 3.  On the **Connections** pane, select **Appointments.xlsx**.
 
-    ![New app from the appointments workbook](media/image48.png)
+    ![New app from the appointments workbook.](media/image48.png)
 
 4.  In the Excel file, select the **Appointments** table, and then select **Connect**.
 
-    ![Select the appointments table](media/image49.png)
+    ![Select the appointments table.](media/image49.png)
 
 5.  Wait while the app is generated. When the new app appears, it will contain a **Browse** screen, a **Details** screen, and an **Edit** screen, using the default theme.
 
-    ![The generated appointments app](media/image50.png)
+    ![The generated appointments app.](media/image50.png)
 
 6.  On the **Tree view** pane, in the **BrowseScreen1** section under **BrowseGallery1**, select **Image1**, and then select **Delete**. The **Browse** screen should just list appointments, not any images associated with them.
 
-    ![Delete the image control](media/image51.png)
+    ![Delete the image control.](media/image51.png)
 
     Notice that removing the **Image1** control causes several errors on the screen because the widths and location of the **Title1** control both reference the **Image** control. You'll fix these problems in the following step.
 
@@ -342,7 +342,7 @@ Maria decides to build the appointments screens initially as a separate app. Thi
 
 8.  On the **Tree view** pane under **BrowseGallery1**, select **Body1**. This control currently displays the contact telephone details for the customer. Change the value in the **Text** property to **ThisItem.'Customer Name'** (include the single quotation marks).
 
-    ![Change the Body1 control to customer name](media/image52.png)
+    ![Change the Body1 control to customer name.](media/image52.png)
 
     The details on the **Browse** screen name now display the customer name.
 
@@ -363,7 +363,7 @@ Maria decides to build the appointments screens initially as a separate app. Thi
 
 14. On the **Tree view** pane, select **BrowseScreen1**, and then select the ellipsis button (**...**). On the dropdown menu that appears, select **Rename** and change the name of the screen to **BrowseAppointments**.
 
-    ![Rename the browse screen](media/image53.png)
+    ![Rename the browse screen.](media/image53.png)
 
 15. Using the same technique, change the name of the **BrowseGallery1** control to **BrowseAppointmentsGallery**.
 
@@ -375,7 +375,7 @@ You can now turn your attention to the **Details** screen.
 
 1.  On the **Tree view** pane, scroll down to the **DetailsScreen1** section. You can see that the details are presented in alphabetical order by field names, and some useful bits of information&mdash;such as the **Notes** field&mdash;aren't displayed at all.
 
-    ![Layout of the appointment details screen](media/image54.png)
+    ![Layout of the appointment details screen.](media/image54.png)
 
 2.  On the **Tree view** pane, select **DetailForm1**. On the right pane on the **Properties** tab, select **Edit fields** next to **Fields**. On the middle pane, select each of the following fields, and then select **Delete**:
 
@@ -390,7 +390,7 @@ You can now turn your attention to the **Details** screen.
     -   Problem Details
     -   Status
 
-    ![Add fields to the details screen](media/image55.png)
+    ![Add fields to the details screen.](media/image55.png)
 
 4.  Drag each field so that they're displayed in the following order, from top to bottom:
 
@@ -404,7 +404,7 @@ You can now turn your attention to the **Details** screen.
 
 5.  On the **Tree view** pane, select **Notes\_DataCard1**. Change the **Height** property to **320**.
 
-    ![Modify the size of the notes field](media/image56.png)
+    ![Modify the size of the notes field.](media/image56.png)
 
 6.  On the **Tree view** pane, delete **IconDelete1**. Engineers shouldn't be able to remove appointments from the system.
 
@@ -445,7 +445,7 @@ The final screen to look at, for now, is the **Edit** screen.
 
 6.  Select the **Customer Name** field and expand it to view its properties. Change the **Control type** to **View text**. This change makes the control read-only; it's useful to see the customer's name on the **Edit** screen, but an engineer shouldn't be able to change it.
 
-    ![Make the customer name read-only](media/image57.png)
+    ![Make the customer name read-only.](media/image57.png)
 
 7.  Select the **Contact Number** field and expand it to view its properties. Change the **Control type** to **View text**. This field should also be read-only.
 
@@ -455,7 +455,7 @@ The final screen to look at, for now, is the **Edit** screen.
 
 10. On the **Tree view** pane, select **Status\_DataCard5**. On the right pane, on the **Properties** tab, select **Unlock to change properties**. Scroll down to the **AllowedValues** property, and change the text to **["Fixed", "Parts Ordered", "Unresolved"]** (include the square brackets). The field engineer can only set the **Status** to one of these defined values.
 
-    ![Set the allowed status values](media/image58.png)
+    ![Set the allowed status values.](media/image58.png)
 
 11. On the **Tree view** pane, rename **EditScreen1** as **EditAppointment**.
 
@@ -477,7 +477,7 @@ You can now save and test the app.
     > [!NOTE]
     > An enhancement that you'll add later will allow you to take a picture with your phone from within the app, and add it to the image field.
 
-    ![The Appointments app running](media/image59.png)
+    ![The Appointments app running.](media/image59.png)
 
 ## Combining the screens into a single app
 
@@ -487,11 +487,11 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 2.  On the left pane, select **Apps**, select **VanArdselApp**, and then select **Edit.**
 
-    ![Open the VanArsdel app](media/image60.png)
+    ![Open the VanArsdel app.](media/image60.png)
 
 3.  In the toolbar, select **New screen**, and then select **Blank**. This action will add a new screen to the app into which you'll copy the controls for the **Browse** screen for the **VanArsdelAppointments** app.
 
-    ![Add a blank screen](media/image61.png)
+    ![Add a blank screen.](media/image61.png)
 
 4.  The new screen will be named **Screen2**. On the **Tree view** pane, rename it as **BrowseAppointments**.
 
@@ -501,7 +501,7 @@ Maria has built two apps, but she wants to combine them into a single app. To do
 
 7.  On the left toolbar of Power Apps Studio, select the **Data** icon. On the **Data** pane, select **Add data**. In the **Select a data source** dropdown list, in the **Search** field, enter **OneDrive**, and then select **OneDrive for Business**.
 
-    ![Select the data source](media/image62.png)
+    ![Select the data source.](media/image62.png)
 
 8.  Select the **Appointments.xlsx** Excel file, select the **Appointments** table, and then select **Connect**.
 
@@ -554,30 +554,30 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
 
 3.  On the toolbar, select **Insert**. In the list of controls, expand **Media**, and then select **Image**. The control will be added to the screen.
 
-    ![Add an image control to the Home screen](media/image64.png)
+    ![Add an image control to the Home screen.](media/image64.png)
 
 4.  Set the **X** position of the control to **16**, and the **Y** position to **22**. Change the **Width** to **605**, and the **Height** to **127**. Change the **Image position** to **Fill**.
 
-    ![Set image size and position](media/image65.png)
+    ![Set image size and position.](media/image65.png)
 
 5.  While still on the **Properties** tab, in the **Image** dropdown list, select **+ Add an image file**, and then upload the **VanArsdelLogo.png** image to the control.
 
     > [!NOTE]
     > The image file is available in the **Assets** folder in the Git repository for this guide.
 
-    ![Add a logo to the image](media/image66.png)
+    ![Add a logo to the image.](media/image66.png)
 
 6.  From the list of controls, add four **Text label** controls to the form and position them so they're stacked under the VanArsdel logo.
 
-    ![Add text label controls](media/image67.png)
+    ![Add text label controls.](media/image67.png)
 
 7.  Select the uppermost **Text label** control. On the right pane, on the **Properties** tab, set the **Text** property to **Next Appointment**. Set the **Font Size** to **30**, and use the color picker to set the font color to green (to match the logo).
 
-    ![Set the font color](media/image68.png)
+    ![Set the font color.](media/image68.png)
 
 8.  Select the second **Text label** control. Change the value of the **Text** property to **First(Appointments).\'Customer Name\'** (include the quotation marks). This formula retrieves the customer name from the first row in the appointments table.
 
-    ![Display the customer name](media/image69.png)
+    ![Display the customer name.](media/image69.png)
 
     > [!NOTE]
     > Currently, this formula just acts as a placeholder. You'll modify the label later to retrieve the next appointment for the engineer, rather than always display the first one.
@@ -598,11 +598,11 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
 
 12. Add three **Button** controls to the screen, arranged vertically and spaced evenly below the separator. Set the **Text** property for the top button to **Appointments**, the **Text** property for the middle button to **Parts**, and the **Text** property for the lower button to **Knowledgebase**.
 
-    ![Home screen buttons](media/image70.png)
+    ![Home screen buttons.](media/image70.png)
 
 13. Select the **Appointments** button. Change the expression in the **OnSelect** action to the formula **Navigate(BrowseAppointments, ScreenTransition.Fade)**. This action switches the display to the appointments screen when the user selects the button.
 
-    ![Appointments button](media/image71.png)
+    ![Appointments button.](media/image71.png)
 
 14. Set the **OnSelect** action for the **Parts** button to **Navigate(BrowseParts, ScreenTransition.Fade)**.
 
@@ -616,7 +616,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 3.  Select the **Insert** menu, and select **Add icon.** Move the icon to the left of the **RectQuickActionBar1** control. Note that the icon will obscure part of the **Browse Parts** label.
 
-    ![Add an icon](media/image72.png)
+    ![Add an icon.](media/image72.png)
 
 4.  On the **Tree view** menu, change the name of the new icon control to **IconReturn1**.
 
@@ -626,7 +626,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 7.  In the screen header, select the **Browse Parts** label. Change the **X** property to **IconReturn1.Width + 20.** The **Browse parts** label should no longer be partially obscured.
 
-    ![Move the Browse Parts label](media/image73.png)
+    ![Move the Browse Parts label.](media/image73.png)
 
 8.  Following the process described in steps 16 to 22, add an icon named **IconReturn2** to the **RectQuickActionBar3** control in the **Knowledgebase** screen.
 
@@ -634,7 +634,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 10. On the **Tree view** pane, select the **App** object. Change the **OnStart** action property to the expression **Navigate(Home, ScreenTransition.Fade)**. This action ensures that the **Home** screen is displayed whenever the app starts:
 
-    ![Set App OnStart formula](media/image74.png)
+    ![Set App OnStart formula.](media/image74.png)
 
     > [!NOTE]
     > If you don't specify which screen to display when the app starts, the screen that appears at the top of the **Tree view** pane will be used. To move a screen to the start of the list, right-click the screen on the **Tree view** pane and select **Move up** until it's at the top.

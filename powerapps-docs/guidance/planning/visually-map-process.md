@@ -28,7 +28,7 @@ process accurately.
 
 Here's an example business process map:
 
-![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports](media/original-business-process.png "Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports")
+![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports.](media/original-business-process.png "Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports")
 
 List each activity in order, and link it to the next part of the process​:
 

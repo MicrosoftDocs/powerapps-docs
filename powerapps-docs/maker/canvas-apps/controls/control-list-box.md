@@ -133,7 +133,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
-    ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
+    ![Flooring categories in listbox.](./media/control-list-box/category-listbox.png)
 2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 3. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
@@ -141,7 +141,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
    * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
-     ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
+     ![Flooring names in dropdown lists.](./media/control-list-box/flooring-names.png)
 4. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
    * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
@@ -153,7 +153,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
    
     The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
    
-    ![Selected lists](./media/control-list-box/selected-lists.png)
+    ![Selected lists.](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.
 
 

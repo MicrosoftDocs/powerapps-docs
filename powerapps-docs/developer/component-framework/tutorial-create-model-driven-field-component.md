@@ -26,7 +26,7 @@ In addition to these, you will also ensure the code component follows the best p
 4. Renders according to the form factor and available width, displaying a compact drop-down with icons where space is limited.
 
 >[!div class="mx-imgBorder"]
-> ![ChoicesPicker component](media/field-component-result.gif "ChoicesPicker component")
+> ![ChoicesPicker component.](media/field-component-result.gif "ChoicesPicker component")
 
 Before you start, make sure you have installed all the [Prerequisites](implementing-controls-using-typescript.md#prerequisites).
 
@@ -64,7 +64,7 @@ npm install
 > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
 >[!div class="mx-imgBorder"]
-> ![Creating code component using pac pcf init](media/field-component-1.gif "Creating code component using pac pcf init")
+> ![Creating code component using pac pcf init.](media/field-component-1.gif "Creating code component using pac pcf init")
 
 You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
 
@@ -347,7 +347,7 @@ You see that the test harness starts with the choices picker rendered inside a n
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Test harness choices with Icons](media/field-component-2.png "Test harness choices with icons")
+> ![Test harness choices with Icons.](media/field-component-2.png "Test harness choices with icons")
 
 When you change the option selected, you will see the value in the **Data Inputs** panel on the right. Additionally, if you change the value, the component shows the associated value updated.
 
@@ -565,7 +565,7 @@ this.context.mode.trackContainerResize(true);
 Now save all the changes, so they are automatically reflected in the test harness browser window (because you still have `npm start watch` running from earlier). You can now switch the value of **Component Container Width** between **349** and **350** and see the rendering behave differently. You can also swap the **Form Factor** between **Web** and **Phone** and see the same behavior. 
 
 > [!div class="mx-imgBorder"]
-> ![trackContainerResize](media/field-component-3.gif "trackContainerResize")
+> ![trackContainerResize.](media/field-component-3.gif "trackContainerResize")
 
 ## Localization
 
@@ -698,7 +698,7 @@ Once you have tested basic functionality with the test harness, you must deploy 
 1. Inside your Dataverse environment, ensure there is a publisher created with a prefix of `samples`:
 
    >[!div class="mx-imgBorder"]
-   > ![Add new publisher](media/field-component-4.png "Add new publisher")
+   > ![Add new publisher.](media/field-component-4.png "Add new publisher")
 
    Equally, this could be your publisher, provided you update the publisher prefix parameter in the call to `pac pcf push` below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
@@ -723,7 +723,7 @@ Once you have tested basic functionality with the test harness, you must deploy 
 4. Once completed, this process creates a temporary solution named **PowerAppTools_samples** in your environment. The `ChoicesPicker` code component will be added to this solution. You can move the code component into your solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
 
    > [!div class="mx-imgBorder"]
-   > ![PowerAppsTools_sample temporary solution](media/field-component-5.png "PowerAppsTools_sample temporary solution")
+   > ![PowerAppsTools_sample temporary solution.](media/field-component-5.png "PowerAppsTools_sample temporary solution")
 
 5. Next, add the code component to the **Contacts** form by navigating to **Main Form** in the **Classic Editor**, select **Preferred Method of Contact**  > **Change Properties** > **Controls Tab**  > **Add Control** > **Select Choices Picker** > **Add**.
 
@@ -749,7 +749,7 @@ Once you have tested basic functionality with the test harness, you must deploy 
      These are the fluent UI icons that will be used for each choice value.
 
       > [!div class="mx-imgBorder"]
-      > ![Control Properties](media/field-component-6.png "Control properties")
+      > ![Control Properties.](media/field-component-6.png "Control properties")
 
    - Select the **Display tab** and uncheck **Display label on the form** since you will show the label above the choices picker.
 
@@ -779,7 +779,7 @@ C:\repos\ChoicesPicker\out\controls\ChoicesPicker\${folder}\${fname}
 ```
 
 >[!div class="mx-imgBorder"]
-> ![AutoResponder rule](media//field-component-7.png "AutoResponder rule")
+> ![AutoResponder rule.](media//field-component-7.png "AutoResponder rule")
 
 You need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can refresh the browser since Fiddler will add a cache-control header to the file to prevent it from being cached.
 

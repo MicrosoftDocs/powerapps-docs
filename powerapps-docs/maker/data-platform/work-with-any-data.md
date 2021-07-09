@@ -42,7 +42,7 @@ The Common Data Model schemas can be used to inform the creation of tables in Da
 
 The following image shows some elements of the standard Common Data Model tables. 
 
-![Common Data Model schema](media/common-data-model.png "Common Data Model schema")
+![Common Data Model schema.](media/common-data-model.png "Common Data Model schema")
 
 ## Tables
 
@@ -50,7 +50,7 @@ In Dataverse, tables are used to model and manage business data. To increase pro
 
 A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Dataverse and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Dataverse.
 
-![View tables](media/standard-entities.png "View tables")
+![View tables.](media/standard-entities.png "View tables")
 
 ## Columns
 
@@ -60,7 +60,7 @@ Columns might have different types of data such as numerals, strings, digital da
 
 Each of these columns can be associated with one of many data types supported by Dataverse.
 
-![Create a column](media/entity-field.png "Create a column")
+![Create a column.](media/entity-field.png "Create a column")
 
 More information: [Types of columns](./types-of-fields.md)
 
@@ -70,7 +70,7 @@ Data in one table often relates to data in another table. table relationships de
 
 Dataverse provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
-![Account table relationships](media/entity-relationships.png "Account table relationships")
+![Account table relationships.](media/entity-relationships.png "Account table relationships")
 
 The relationship types are:
 
@@ -130,7 +130,7 @@ Dataverse includes the ability to find rows quickly and has approaches that will
 
 *Single-table quick find* is used to find rows of only one type. This search option is available from within a view.
 
-![Single-table quick find](media/single-entity-quick-find.png "Single-table quick find")
+![Single-table quick find.](media/single-entity-quick-find.png "Single-table quick find")
 
 *Multiple-table quick find (categorized search)* is also used to find
 rows, but will find them across different types of tables, such as accounts or contacts.
@@ -139,7 +139,7 @@ rows, but will find them across different types of tables, such as accounts or c
 
 Dataverse supports continuous replication of table data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
 
-![Dataverse data replication to Azure Data Lake Storage](media/cds-with-data-lake.png "Dataverse data replication to Azure Data Lake Storage")
+![Dataverse data replication to Azure Data Lake Storage.](media/cds-with-data-lake.png "Dataverse data replication to Azure Data Lake Storage")
 
 This feature is designed for enterprise big-data analytics. It's cost-effective, scalable, has high availability and disaster recovery capabilities, and enables best-in-class analytics performance.
 

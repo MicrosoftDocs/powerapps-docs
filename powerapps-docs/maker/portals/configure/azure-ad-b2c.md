@@ -409,7 +409,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. Sign in to Azure portal.
 
-1. From the top-left corner of the Azure portal, select ![Show portal menu](media/authentication/show-portal-menu.png "Show portal menu").
+1. From the top-left corner of the Azure portal, select ![Show portal menu.](media/authentication/show-portal-menu.png "Show portal menu").
 
 1. Select **All resources**.
 

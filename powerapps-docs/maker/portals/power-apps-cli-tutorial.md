@@ -56,7 +56,7 @@ your Dataverse environment URL:
 
 Follow the prompts of authentication to sign in to the environment.
 
-![Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI")
+![Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI.](media/power-apps-cli/auth-create.png "Example of how to authenticate to a Dataverse environment using Microsoft Power Platform CLI")
 
 ## Step 2: List available portals
 
@@ -65,7 +65,7 @@ Dataverse environment you connected to in the previous step.
 
 `pac paportal list`
 
-![Example list of portals](media/power-apps-cli/paportal-list.png "Example list of portals")
+![Example list of portals.](media/power-apps-cli/paportal-list.png "Example list of portals")
 
 ## Step 3: Download portals content
 
@@ -81,7 +81,7 @@ d44574f9-acc3-4ccc-8d8d-85cf5b7ad141`
 For the **id** parameter, use the **WebSiteId** returned from the output of the
 previous step.
 
-![Example of downloading portals content](media/power-apps-cli/paportal-download.png "Example of downloading portals content")
+![Example of downloading portals content.](media/power-apps-cli/paportal-download.png "Example of downloading portals content")
 
 ## Step 4: Change portals content
 
@@ -93,15 +93,15 @@ CLI. For more information, see [Supported tables](power-apps-cli.md#supported-ta
 
 For example, the default portal page shows text such as this:
 
-![Sample portals page text](media/power-apps-cli/sample-page.png "Sample portals page text")
+![Sample portals page text.](media/power-apps-cli/sample-page.png "Sample portals page text")
 
 This text is visible from the webpage html:
 
-![Visual Studio Code with text highlighted for change](media/power-apps-cli/vs-code-page.png "Visual Studio Code with text highlighted for change")
+![Visual Studio Code with text highlighted for change.](media/power-apps-cli/vs-code-page.png "Visual Studio Code with text highlighted for change")
 
 You can alter this text and save the changes:
 
-![Updated text using Visual Studio Code](media/power-apps-cli/page-updated.png "Updated text using Visual Studio Code")
+![Updated text using Visual Studio Code.](media/power-apps-cli/page-updated.png "Updated text using Visual Studio Code")
 
 > [!TIP]
 > You can change the location of the folder path in PowerShell/integrated
@@ -118,7 +118,7 @@ After making the required changes, upload them using the following command:
 
 `pac paportal upload --path C:\pac-portals\downloads\custom-portal\`
 
-![Starting upload](media/power-apps-cli/upload.png "Starting upload")
+![Starting upload.](media/power-apps-cli/upload.png "Starting upload")
 
 > [!NOTE]
 > Ensure the path for the portals content you entered is correct. By
@@ -131,7 +131,7 @@ The upload only happens for content that's been changed. In this example, since 
 change is made to a webpage, content is uploaded only for the adx_webpage
 table.
 
-![Upload completed only for changed content](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
+![Upload completed only for changed content.](media/power-apps-cli/upload-completed.png "Upload completed only for changed content")
 
 ## Step 6: Confirm the changes
 
@@ -145,7 +145,7 @@ To confirm the changes made to the portal webpage:
 
 2.  Browse to the portal webpage to see the change.
 
-    ![View updated page content](media/power-apps-cli/changed-page.png "View updated page content")
+    ![View updated page content.](media/power-apps-cli/changed-page.png "View updated page content")
 
 This concludes the tutorial. You can repeat the above steps and change the
 portals content for other [supported tables](power-apps-cli.md#supported-tables).

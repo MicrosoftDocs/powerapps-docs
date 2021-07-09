@@ -31,7 +31,7 @@ You can send an email to multiple recipients by using email templates. This is k
 3. On the command bar, select **Send Direct Email**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Select multiple contacts and then select Send Direct Email](media/select-contacts.png "Select multiple contacts and then select Send Direct Email")
+    > ![Select multiple contacts and then select Send Direct Email.](media/select-contacts.png "Select multiple contacts and then select Send Direct Email")
 
 4. In the **Send Email** pane, select an email template from the **Template** list.
 
@@ -44,7 +44,7 @@ You can send an email to multiple recipients by using email templates. This is k
 5. Select **Send**.
 
     > [!div class="mx-imgBorder"]
-    > ![Send email to multiple recipients](media/direct-email.png "Send email to multiple recipients")
+    > ![Send email to multiple recipients.](media/direct-email.png "Send email to multiple recipients")
 
 ## Check the status of bulk email action
 
@@ -55,7 +55,7 @@ You can check the status of bulk email action on the **System Jobs** page. You c
 1. In your app, select the **Settings** icon, and then select **Advanced Settings**.
 
     > [!div class="mx-imgBorder"]
-    > ![Advanced settings](media/advanced-settings.png "Advanced settings") 
+    > ![Advanced settings.](media/advanced-settings.png "Advanced settings") 
 
     The **Business Management** page opens in a new browser tab.
 
@@ -64,19 +64,19 @@ You can check the status of bulk email action on the **System Jobs** page. You c
     A list of system jobs is displayed.
 
     > [!div class="mx-imgBorder"]
-    > ![List of system jobs](media/filter-jobs.png "List of system jobs") 
+    > ![List of system jobs.](media/filter-jobs.png "List of system jobs") 
 
-3. In the grid header, select **Filter** ![Filter icon to filter system jobs](media/filter-icon.png "Filter icon to filter system jobs").
+3. In the grid header, select **Filter** ![Filter icon to filter system jobs.](media/filter-icon.png "Filter icon to filter system jobs").
 
 4. In the **System Job Type** column header, select the down arrow, select **Bulk Email**, and then select **OK**.
 
     > [!div class="mx-imgBorder"]
-    > ![Bulk email filter](media/bulk-email-filter.png "Bulk email filter") 
+    > ![Bulk email filter.](media/bulk-email-filter.png "Bulk email filter") 
 
     Bulk email jobs are displayed with their corresponding status.
 
     > [!div class="mx-imgBorder"]
-    > ![Bulk email jobs](media/bulk-email-jobs.png "Bulk email jobs") 
+    > ![Bulk email jobs.](media/bulk-email-jobs.png "Bulk email jobs") 
 
 5. Double-click the failed job to see its details.
 

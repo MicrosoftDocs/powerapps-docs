@@ -35,14 +35,14 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 ## Data Model  
 
 
-![Milestones sample app data model](media/milestones-architecture/data-model.png "Milestones sample app data model")
+![Milestones sample app data model.](media/milestones-architecture/data-model.png "Milestones sample app data model")
 
 ## Architecture model
 
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
 
-![Milestones architecture model](media/milestones-architecture/architecture-model.png "Milestones sample app architecture model")
+![Milestones architecture model.](media/milestones-architecture/architecture-model.png "Milestones sample app architecture model")
 
 ### Connectors
 
