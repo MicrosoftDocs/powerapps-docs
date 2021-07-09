@@ -32,7 +32,7 @@ This troubleshooting article helps fix common configuration problems that preven
     Try again
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 - When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
 
@@ -48,7 +48,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
@@ -84,7 +84,7 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 | <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) | Not applicable |
 | <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
 
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
@@ -207,7 +207,7 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 Internet Explorer uses *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
 
 > [!NOTE]
-> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 - **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
