@@ -25,12 +25,12 @@ You can change the base URL of a portal after it is provisioned. For example, if
 2.	Go to **Portal Actions** > **Change base URL**. 
 
     > [!div class=mx-imgBorder]
-    > ![Change base URL of a portal](../media/change-base-url-action.png "Change base URL of a portal")
+    > ![Change base URL of a portal.](../media/change-base-url-action.png "Change base URL of a portal")
 
 3.	In the Change base URL window, enter the new base URL for the portal.
 
     > [!div class=mx-imgBorder]
-    > ![Specify a new base URL of the portal](../media/change-base-url.png "Specify a new base URL of the portal")
+    > ![Specify a new base URL of the portal.](../media/change-base-url.png "Specify a new base URL of the portal")
 
 4.	Select **Change URL** in the confirmation window.
 
@@ -43,7 +43,7 @@ This section provides information about troubleshooting issues while changing th
 If changing the base URL of a portal fails, an error is displayed as shown in the following image:
 
 > [!div class=mx-imgBorder]
-> ![Error while changing the base URL of the portal](../media/change-base-url-error.png "Error while changing the base URL of the portal")
+> ![Error while changing the base URL of the portal.](../media/change-base-url-error.png "Error while changing the base URL of the portal")
 
 Typically, these are transient errors and you must select **Change base URL** to retry changing the base URL. If the issue persists, contact Microsoft support.
 

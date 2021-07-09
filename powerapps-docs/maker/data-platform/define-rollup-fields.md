@@ -78,7 +78,7 @@ The rollups are calculated by scheduled system jobs that run asynchronously in t
 To view rollup jobs:
 
 1. While viewing the **Common Data Services Default Solution** edit the URL, removing everything after `dynamics.com` and refresh the page.
-2. In the **Settings** area, select **System** > **System Jobs**.<br />![Navigate to system jobs](media/navigate-system-jobs.png)
+2. In the **Settings** area, select **System** > **System Jobs**.<br />![Navigate to system jobs.](media/navigate-system-jobs.png)
 1. In the  view selector, choose **Recurring System Jobs**.
 2. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
  
@@ -94,7 +94,7 @@ To view rollup jobs:
 The rollup column on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
 
 > [!div class="mx-imgBorder"] 
-> ![Rollup column on the account form](media/rollup-field-on-account-form.png)
+> ![Rollup column on the account form.](media/rollup-field-on-account-form.png)
   
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
@@ -132,19 +132,19 @@ Let’s take a look at several rollup column examples. We’ll aggregate data fo
 
 In this example, a hierarchy is not used. The total estimated revenue is calculated for an account, from the related open opportunities.  
 
-![Aggregate the estimated revenue for an account](media/rollup-field-no-hierarchy.png)
+![Aggregate the estimated revenue for an account.](media/rollup-field-no-hierarchy.png)
   
 ### Aggregate data for a row from the child rows, over the hierarchy 
  
 In this example, we calculate the total estimated revenue of an opportunity including the child opportunities, over the hierarchy.  
   
-![Aggregate estimated revenue, opportunity hierarchy](media/rollup-field-hierarchy-self.png)
+![Aggregate estimated revenue, opportunity hierarchy.](media/rollup-field-hierarchy-self.png)
   
 ### Aggregate data for a row from the related rows, over the hierarchy
 
 In this example, we calculate the total estimated revenue of open opportunities across all accounts, over the hierarchy.  
   
-![Aggregate estimated revenue over account hierarchy](media/rollup-field-hierarchy.png)  
+![Aggregate estimated revenue over account hierarchy.](media/rollup-field-hierarchy.png)  
   
 ### Aggregate data for a row from all related activities
   
@@ -152,7 +152,7 @@ In this example, we calculate the total time spent and billed from all activitie
   
 In earlier releases, you could define a rollup column for an individual activity, such as a phone call, fax, or appointment. But, to achieve the result of the example shown below, you had to total the data by using the calculated columns. Now, you can do it all in one step by defining one rollup column for the Activity table.  
   
-![Rollup all activities for an account](media/rollup-enhancements-activities.png)  
+![Rollup all activities for an account.](media/rollup-enhancements-activities.png)  
   
 ### Aggregate data for a row from all related activities and activities indirectly related via the Activity Party table  
 
@@ -161,17 +161,17 @@ In this example, we count the total number of emails sent to an account, where t
 For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-entity).
 
   
-![Rollup related activities and activity party](media/rollup-enhancements-indirect-activities.png)  
+![Rollup related activities and activity party.](media/rollup-enhancements-indirect-activities.png)  
   
 ### Aggregate data for a row from related rows using the AVG operator
 
 In this example, we calculate an average estimated revenue from all opportunities related to an account.  
   
-![Average estimated revenue in Dynamics 365](media/rollup-enhancements-average.PNG)  
+![Average estimated revenue in Dynamics 365.](media/rollup-enhancements-average.PNG)  
   
 The following example shows how to calculate an average estimated revenue from related opportunities over a hierarchy of accounts. An average estimated revenue can be seen at each level in the hierarchy.  
   
-![Average estimated revenue over hierarchy in Dynamics 365](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
+![Average estimated revenue over hierarchy in Dynamics 365.](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
   
 <a name="BKMK_considerations"></a> 
 

@@ -1,17 +1,20 @@
 ---
 title: Troubleshooting startup issues for Power Apps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
-author: navjotm
+author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/19/2021
+ms.date: 07/08/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - wimcoor
+  - tapanm-msft
 ---
 
 # Troubleshooting startup issues for Power Apps
@@ -29,7 +32,7 @@ This troubleshooting article helps fix common configuration problems that preven
     Try again
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 - When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
 
@@ -45,11 +48,11 @@ This troubleshooting article helps fix common configuration problems that preven
 
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
-    ![Hmmm … We couldn’t sign you in. The information below may be helpful](maker/media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
+    ![Hmmm … We couldn’t sign you in. The information below may be helpful.](maker/media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
     **Resolution**: Check [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
     
@@ -81,13 +84,15 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 | <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) | Not applicable |
 | <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
 
-*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
-## Enable storage of third-party cookies and local data in your browser
+## Enable storage of third-party cookies and local data in your browser or app
 
-Power Apps stores some data such as user identity and preferences locally in your browser. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
+Power Apps stores some data such as user identity and preferences locally leveraging your browser's capabilities. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
 
-Most browsers allow settings to reflect the changes immediately. You may also close all the browser windows and reopen instead.
+Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen instead.
+
+To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings fpr iOS. 
 
 ### Instructions for Microsoft Edge
 
@@ -105,6 +110,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
 - **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services.**
     
@@ -136,6 +142,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
 - **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services**
 
@@ -153,6 +160,18 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
 1. Select **Privacy**.
 1. Ensure **Block all cookies** isn't selected.
 1. Ensure **Prevent cross-site tracking** isn't selected.
+
+### Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Dynamics 365**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+    
+### Instructions for Power Apps app on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Power Apps**. 
+1. Toggle on **Allow Cross-Website Tracking**.
 
 ### Instructions for Internet Explorer 11
 
@@ -188,7 +207,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
 Internet Explorer uses *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
 
 > [!NOTE]
-> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 - **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
@@ -205,6 +224,7 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
         - `https://*.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
     1. Select **Close**.
     1. Select **OK**.
     1. Close all Internet Explorer windows.
@@ -225,6 +245,7 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
         - `https://apps.powerapps.com`
         - `https://*.powerapps.com`
         - Any other address that ends in `powerapps.com` or `create.powerapps.com`.
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
     1. Select **Close**.
 
 ## Azure Active Directory Errors

@@ -38,7 +38,7 @@ To view IFrame properties, follow these steps.
 4.  On the **Insert** tab, select IFRAME to view IFRAME properties.
 
       > [!div class="mx-imgBorder"] 
-      > ![iframe properties](media/iframe-properties.png)
+      > ![iframe properties.](media/iframe-properties.png)
 
 
 > [!NOTE]

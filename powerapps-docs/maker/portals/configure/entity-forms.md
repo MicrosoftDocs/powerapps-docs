@@ -17,7 +17,7 @@ contributors:
 
 A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, basic forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About lists](entity-lists.md) 
 
-![Contact us form](../media/contact-us-form.png "Contact us form")  
+![Contact us form.](../media/contact-us-form.png "Contact us form")  
 
 ## Add a form to your portal
 
@@ -180,7 +180,7 @@ A managed form can be configured to display a map control to either display an e
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The basic form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
 
-![Geolocation data in basic form](../media/geolocation-managed-form.png "Geolocation data in basic form") 
+![Geolocation data in basic form.](../media/geolocation-managed-form.png "Geolocation data in basic form") 
 
 > [!Note]
 > - The address field in a read-only basic form is replaced with the map when geolocation is enabled.

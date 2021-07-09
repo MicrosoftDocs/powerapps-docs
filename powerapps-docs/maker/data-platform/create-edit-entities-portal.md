@@ -38,12 +38,12 @@ The portal enables configuring the most common options, but certain options can 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**.
 
     > [!div class="mx-imgBorder"] 
-    > ![View tables](media/view-entities-portal.png)
+    > ![View tables.](media/view-entities-portal.png)
 
    You can filter the tables you see using the following views in a list: 
 
    > [!div class="mx-imgBorder"] 
-	 > ![table views](media/entity-views-portal.png) 
+	 > ![table views.](media/entity-views-portal.png) 
 
  |View|Description|
  |--|--|
@@ -59,7 +59,7 @@ You can also select **Group** to group tables by the **Tags** applied to them.
 While [viewing tables](#view-tables), in the menu bar select **New table**. This will open the New table panel.
 
 > [!div class="mx-imgBorder"] 
-> ![New table Panel](media/new-entity-panel.png)
+> ![New table Panel.](media/new-entity-panel.png)
 
 Enter data for the following columns
 
@@ -89,7 +89,7 @@ Select **Create** to continue, this will close the **New table** panel and displ
 The **Primary Name** column of the table is displayed in the list of columns. Select the **Primary Name** column to edit it if you want to change the **Display Name**or **Name** of the column. The default values are shown below:
 
 > [!div class="mx-imgBorder"] 
-> ![Primary Name panel](media/primary-name-panel.png)
+> ![Primary Name panel.](media/primary-name-panel.png)
 
 ## Edit a table
 
@@ -98,7 +98,7 @@ While [viewing tables](#view-tables), select the table you want to edit.
 Select **Settings** from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the table.
 
 > [!div class="mx-imgBorder"] 
-> ![table Settings](media/entity-settings-portal.png)
+> ![table Settings.](media/entity-settings-portal.png)
 
 For other items choose from the tabs.
 
@@ -140,7 +140,7 @@ View the data in the table.
 Use the **Select view** menu to choose from available views for the table or to show all columns.
 
 > [!div class="mx-imgBorder"] 
-> ![Select view](media/entity-data-select-view.png)
+> ![Select view.](media/entity-data-select-view.png)
 
 Use the **Next Page** and **Previous Page** commands at the bottom of the form to see more data.
 
@@ -157,7 +157,7 @@ As someone with the system administrator security role, you can delete custom ta
 While [viewing tables](#view-tables), select the table and select **Delete table** from the menu.
 
 > [!div class="mx-imgBorder"] 
-> ![Delete a table using the Power Apps portal](media/delete-entity-powerapps-portal.png)
+> ![Delete a table using the Power Apps portal.](media/delete-entity-powerapps-portal.png)
 
 If the table has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 

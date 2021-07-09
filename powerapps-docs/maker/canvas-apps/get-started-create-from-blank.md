@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app from scratch based on Excel data | Microsoft Docs
+title: Create a canvas app from scratch based on Excel data
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: tapanm-msft
 manager: kvivek
@@ -51,14 +51,14 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. Under **Make your own app**, select **Canvas app from blank**.
 
     > [!div class="mx-imgBorder"]
-    >![Create blank canvas app](./media/get-started-create-from-blank/blank-app.png)
+    >![Create blank canvas app.](./media/get-started-create-from-blank/blank-app.png)
 
 1. Specify a name for your app, select **Phone**, and then select **Create**.
 
     You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
     > [!div class="mx-imgBorder"]
-    >![Specify name and format of app](./media/get-started-create-from-blank/excel-demo.png)
+    >![Specify name and format of app.](./media/get-started-create-from-blank/excel-demo.png)
 
     Power Apps Studio creates a blank app for phones.
 
@@ -87,17 +87,17 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. At the top of the new screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
-     ![Change title bar for view records](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Change title bar for view records.](./media/get-started-create-from-blank/change-title-bar.png)
 
 1. In the left navigation bar, select **BrowseGallery1**.
 
     A selection box with handles surrounds the gallery.
 
-    ![Add a list screen](./media/get-started-create-from-blank/select-gallery.png)
+    ![Add a list screen.](./media/get-started-create-from-blank/select-gallery.png)
 
 1. On the **Properties** tab of the right-hand pane, select the down arrow for the **Layout** menu.
 
-    ![Open the layout menu](./media/get-started-create-from-blank/select-layout.png)
+    ![Open the layout menu.](./media/get-started-create-from-blank/select-layout.png)
 
 1. Select **Title, subtitle, and body**.
 
@@ -150,7 +150,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Select the arrow next to the name of each field to collapse it, and then drag the **Volunteer** field up so that it appears at the top of the list of fields.
 
-     ![Reorder fields](./media/get-started-create-from-blank/reorder-fields.png)
+     ![Reorder fields.](./media/get-started-create-from-blank/reorder-fields.png)
 
 1. In the upper-right corner of the **Fields** pane, close it by selecting the close icon (X).
 
@@ -160,13 +160,13 @@ For more information about these and other functions, see the [formula reference
 
 1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records**.
 
-    ![Change title bar](./media/get-started-create-from-blank/change-title-bar2.png)
+    ![Change title bar.](./media/get-started-create-from-blank/change-title-bar2.png)
 
 ## Delete and rename screens
 
 1. In the left navigation bar, select the ellipsis (...) for **Screen1**, and then select **Delete**.
 
-    ![Delete screen](./media/get-started-create-from-blank/delete-screen.png)
+    ![Delete screen.](./media/get-started-create-from-blank/delete-screen.png)
 
 1. Select the ellipsis (...) for **Screen2**, select **Rename**, and then type or paste **ViewScreen**.
 
@@ -176,7 +176,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Near the top of the **ViewScreen**, select the circular-arrow icon.
 
-    ![Add record for refresh](./media/get-started-create-from-blank/refresh-icon.png)
+    ![Add record for refresh.](./media/get-started-create-from-blank/refresh-icon.png)
 
 1. Set the **OnSelect** property for that icon to this formula:
 
@@ -188,7 +188,7 @@ For more information about these and other functions, see the [formula reference
 
 1. In the upper-right corner of the **ViewScreen**, select the plus icon.
 
-    ![Add record](./media/get-started-create-from-blank/add-record.png)
+    ![Add record.](./media/get-started-create-from-blank/add-record.png)
 
 1. Set the **OnSelect** property for that icon to this formula:
 
@@ -198,7 +198,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Select the right-pointing arrow for the first record in the gallery.
 
-    ![Select arrow](./media/get-started-create-from-blank/select-arrow.png)
+    ![Select arrow.](./media/get-started-create-from-blank/select-arrow.png)
 
 1. Set the **OnSelect** property for the arrow to this formula:
 
@@ -210,7 +210,7 @@ For more information about these and other functions, see the [formula reference
 
 1. On **ChangeScreen**, select the "X" icon in the upper-left corner.
 
-    ![Cancel icon](./media/get-started-create-from-blank/cancel-icon.png)
+    ![Cancel icon.](./media/get-started-create-from-blank/cancel-icon.png)
 
 1. Set the **OnSelect** property for that icon to this formula:
 
@@ -220,7 +220,7 @@ For more information about these and other functions, see the [formula reference
 
 1. In the upper-right corner, select the checkmark icon.
 
-    ![Checkmark icon](./media/get-started-create-from-blank/checkmark-icon.png)
+    ![Checkmark icon.](./media/get-started-create-from-blank/checkmark-icon.png)
 
 1. Set the **OnSelect** property for the checkmark to this formula:
 
@@ -232,7 +232,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Set the new icon's **Color** property to **White**, and move the new icon so it appears next to the checkmark icon.
 
-    ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
+    ![Trash icon.](./media/get-started-create-from-blank/trash-icon.png)
 
 1. Set the **Visible** property for the trash icon to this formula:
 
@@ -250,7 +250,7 @@ For more information about these and other functions, see the [formula reference
 
 1. Select the **ViewScreen**, and then open Preview by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
 
-    ![Open Preview mode](./media/get-started-create-from-blank/open-preview.png)
+    ![Open Preview mode.](./media/get-started-create-from-blank/open-preview.png)
 
 1. Type or paste one or more letters in the search box to filter the list based on the name of the volunteer.
 

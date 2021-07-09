@@ -58,16 +58,16 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 1. Open Visual Studio and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.6.2**
 
-    ![Open a new class library (.NET Framework) project using .NET Framework 4.6.2](media/tutorial-write-plug-in-create-visual-studio-project.png)
+    ![Open a new class library (.NET Framework) project using .NET Framework 4.6.2.](media/tutorial-write-plug-in-create-visual-studio-project.png)
 
     The name used for the project will be the name of the assembly. This tutorial uses the name `BasicPlugin`.
 1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.
 
-    ![Manage NuGet packages](media/tutorial-write-plug-in-manage-nuget-packages.png)
+    ![Manage NuGet packages.](media/tutorial-write-plug-in-manage-nuget-packages.png)
 
 1. Select **Browse** and search for `Microsoft.CrmSdk.CoreAssemblies` and install the latest version.
 
-    ![Install Microsoft.CrmSdk.CoreAssemblies NuGet Package](media/tutorial-write-plug-in-install-microsoft.crmsdk.coreassemblies.png)
+    ![Install Microsoft.CrmSdk.CoreAssemblies NuGet Package.](media/tutorial-write-plug-in-install-microsoft.crmsdk.coreassemblies.png)
 
 1. You must select **I Accept** in the **License Acceptance** dialog.
 
@@ -78,12 +78,12 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
 
-    ![Rename class](media/tutorial-write-plug-in-rename-class.png)
+    ![Rename class.](media/tutorial-write-plug-in-rename-class.png)
 
 1. Rename the `Class1.cs` file to `FollowupPlugin.cs`.
 1. When prompted, allow Visual Studio to re-name the class to match the file name.
 
-    ![Confirm rename dialog](media/tutorial-write-plug-in-rename-class-confirm.png)
+    ![Confirm rename dialog.](media/tutorial-write-plug-in-rename-class-confirm.png)
 
 ### Edit the class file to enable a plug-in
 
@@ -208,11 +208,11 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 
 1. In **Solution Explorer**, right click the **BasicPlugin** project and in the context menu select **Properties**.
 
-    ![Open project properties](media/tutorial-write-plug-in-project-properties.png)
+    ![Open project properties.](media/tutorial-write-plug-in-project-properties.png)
 
 1. In the project properties, select the **Signing** tab and select the **Sign the assembly** checkbox.
 
-    ![Sign the assembly](media/tutorial-write-plug-in-sign-assembly.png)
+    ![Sign the assembly.](media/tutorial-write-plug-in-sign-assembly.png)
 
 1. In the **Choose a strong name key file**: dropdown, select **<New…>**. 
 1. In the **Create Strong Name Key**dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
@@ -236,11 +236,11 @@ To register a plug-in, you will need the Plug-in Registration tool
 
 1. In the **Register** drop-down, select **New Assembly**.
 
-    ![Register new assembly](media/tutorial-write-plug-in-register-new-assembly.png)
+    ![Register new assembly.](media/tutorial-write-plug-in-register-new-assembly.png)
 
 1. In the **Register New Assembly** dialog, select the ellipses (**…**) button and browse to the assembly you built in the previous step.
 
-    ![Register new assembly dialog](media/tutorial-write-plug-in-register-new-assembly-dialog.png)
+    ![Register new assembly dialog.](media/tutorial-write-plug-in-register-new-assembly-dialog.png)
 
 1. For Microsoft 365 users, verify that the **isolation mode** is set to **sandbox** and the **location** to store the assembly is **Database**.
 
@@ -250,7 +250,7 @@ To register a plug-in, you will need the Plug-in Registration tool
 1. Click **Register Selected Plug-ins**.
 1. You will see a **Registered Plug-ins** confirmation dialog.
 
-    ![Registerd plug-ins confirmation dialog](media/tutorial-write-plug-in-register-new-assembly-dialog-confirm.png)
+    ![Registerd plug-ins confirmation dialog.](media/tutorial-write-plug-in-register-new-assembly-dialog-confirm.png)
 
 1. Click **OK** to close the dialog and close the **Register New Assembly** dialog. 
 1. You should now see the **(Assembly) BasicPlugin** assembly which you can expand to view the **(Plugin) BasicPlugin.FollowUpPlugin** plugin.
@@ -261,7 +261,7 @@ To register a plug-in, you will need the Plug-in Registration tool
 
 1. Right-click the **(Plugin) BasicPlugin.FollowUpPlugin** and select **Register New Step**.
 
-    ![Register a new step](media/tutorial-write-plug-in-register-new-step.png)
+    ![Register a new step.](media/tutorial-write-plug-in-register-new-step.png)
 
 1. In the **Register New Step** dialog, set the following fields:
 
@@ -272,12 +272,12 @@ To register a plug-in, you will need the Plug-in Registration tool
     |Event Pipeline Stage of Execution|PostOperation|
     |Execution Mode|Asynchronous|
 
-    ![Entering relevant step data](media/tutorial-write-plug-in-register-new-step-dialog.png)
+    ![Entering relevant step data.](media/tutorial-write-plug-in-register-new-step-dialog.png)
 
 1. Click **Register New Step** to complete the registration and close the **Register New Step** dialog.
 1. You can now see the registered step.
 
-    ![View the registered step](media/tutorial-write-plug-in-view-registered-step.png)
+    ![View the registered step.](media/tutorial-write-plug-in-view-registered-step.png)
 
 > [!NOTE]
 > At this point the assembly and steps are part of the system **Default Solution**. When creating a production plug-in, you would add them to the unmanaged solution that you will distribute. These steps are not included in this tutorial. See [Add your assembly to a solution](register-plug-in.md#add-your-assembly-to-a-solution) and [Add step to solution](register-plug-in.md#add-step-to-solution) for more information.
@@ -287,7 +287,7 @@ To register a plug-in, you will need the Plug-in Registration tool
 1. Open a model-driven app and create an account table.
 1. Within a short time, open the account and you can verify the creation of the task.
 
-    ![Account table record with related task activity create by plug-in](media/tutorial-write-plug-in-test-plugin-in-model-app.png)
+    ![Account table record with related task activity create by plug-in.](media/tutorial-write-plug-in-test-plugin-in-model-app.png)
 
 ### What if the task wasn't created?
 
@@ -301,23 +301,23 @@ Use the **Dynamics 365 --custom** app to view system jobs.
 
 1. In your model-driven app, navigate to the app
 
-    ![view the dynamics 365 custom app](media/dynamics-365-custom-app.png)
+    ![view the dynamics 365 custom app.](media/dynamics-365-custom-app.png)
 
 1. In the **Dynamics 365 --custom** app, navigate to **Settings** > **System** > **System Jobs**.
 
-    ![navigate to system jobs](media/navigate-system-jobs.png)
+    ![navigate to system jobs.](media/navigate-system-jobs.png)
 
 1. When viewing system jobs, you can filter by **Table (Entity)**. Select **Account**.
 
-    ![Filter on accounts](media/system-jobs-filter-entity-account.png)
+    ![Filter on accounts.](media/system-jobs-filter-entity-account.png)
 
 1. If the job failed, you should see a record with the name **BasicPlugin.FollowupPlugin: Create of account**
 
-    ![Failed system job](media/failed-system-job.png)
+    ![Failed system job.](media/failed-system-job.png)
 
 1. If you open the system job, you can expand the **Details** section to view the information written to the trace and details about the error.
 
-    ![system job details](media/system-job-failed-plug-in.png)
+    ![system job details.](media/system-job-failed-plug-in.png)
 
 ### Query System jobs
 
@@ -368,16 +368,16 @@ Use the following steps to enable them in a model-driven app.
 
 1. Open the Dynamics 365 - custom  app.
 
-    ![Open the Dynamics 365 - custom  app](media/tutorial-write-plug-in-open-dynamics365-custom-app.png)
+    ![Open the Dynamics 365 - custom  app.](media/tutorial-write-plug-in-open-dynamics365-custom-app.png)
 
 1. Navigate to **Settings** > **System** > **Administration**.
 
-    ![navigate to administration](media/tutorial-write-plug-in-navigate-administration.png)
+    ![navigate to administration.](media/tutorial-write-plug-in-navigate-administration.png)
 
 1. In **Administration**, select **System Settings**.
 1. In the **System Settings** dialog, in the customization tab, set **Enable logging to plug-in trace log** to **All**.
 
-    ![System Settings Customization tab](media/tutorial-write-plug-in-system-settings-customization-tab.png)
+    ![System Settings Customization tab.](media/tutorial-write-plug-in-system-settings-customization-tab.png)
 
     > [!NOTE]
     > You should disable logging after you are finished testing your plug-in, or at least set it to **Exception** rather than **All**.
@@ -387,7 +387,7 @@ Use the following steps to enable them in a model-driven app.
 1. In the **Dynamics 365 -- custom app**, navigate to **Settings** > **Customization** > **Plug-In Trace Log**.
 1. You should find that a new plug-in trace Log record has been created.
 
-    ![Plug-in trace log record](media/tutorial-write-plug-in-plug-in-trace-log.png)
+    ![Plug-in trace log record.](media/tutorial-write-plug-in-plug-in-trace-log.png)
 
 1. If you open the record you might expect that it would include the information you set in your trace, but it does not. It only verifies that the trace occurred.
 1. To see the details, it is easier to query this data using the Web API in your browser using the following query with the <xref href="Microsoft.Dynamics.CRM.plugintracelog?text=plugintracelog EntityType" />, using the `typename` property to filter results in the `messageblock` property based on the name of the plug-in class:

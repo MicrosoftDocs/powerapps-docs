@@ -48,11 +48,11 @@ Once you have a chatbot created, you can add this component to a portals page wi
 
 1. Select **Chatbot** component.
 
-    ![Add chatbot component to a page](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
+    ![Add chatbot component to a page.](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
 
 1. Select your bot.
 
-    ![Select your bot](media/add-chatbot/select-your-bot.png "Select your bot")
+    ![Select your bot.](media/add-chatbot/select-your-bot.png "Select your bot")
 
     > [!NOTE]
     > If you don't have a bot already created, or want to create a new bot to use in portals, select **Power Virtual Agents**. After you create your bot, select **Sync configuration** inside portals Studio to reflect the bot changes.
@@ -67,7 +67,7 @@ You can add more bots from your environment across different pages in a portal. 
 
 The chatbot component is rendered using a web template called **Power Virtual Agents**.
 
-![Chatbot web template](media/add-chatbot/pva-web-template.png "Chatbot web template")
+![Chatbot web template.](media/add-chatbot/pva-web-template.png "Chatbot web template")
 
 You can change the values for the following parameters inside the "window.PvaEmbeddedWebChat.renderWebChat()" function.
 

@@ -35,15 +35,15 @@ Before embedding your model-driven app into Teams, you first need to enable inte
 
 1. Select **+** to add a tab.
 
-   :::image type="content" source="media/teams-add-a-tab.png" alt-text="Add a tab":::
+   :::image type="content" source="media/teams-add-a-tab.png" alt-text="Add a tab.":::
 
 1. In the **Add a tab** dialog box, select **PowerApps**.
 
-   :::image type="content" source="media/teams-powerapps-tab.png" alt-text="Add the PowerApps tab":::
+   :::image type="content" source="media/teams-powerapps-tab.png" alt-text="Add the PowerApps tab.":::
 
 1. Select **Model-driven apps** in the dropdown list and then search for and select the model-driven app you would like to pin.
 
-   :::image type="content" source="media/teams-select-model-driven.png" alt-text="Select Model-driven apps":::
+   :::image type="content" source="media/teams-select-model-driven.png" alt-text="Select Model-driven apps.":::
 
 1. Select **Save**.
 

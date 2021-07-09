@@ -25,7 +25,7 @@ To add text box:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.    Under **Portal components**, select **Text**.
 
@@ -34,7 +34,7 @@ To add text box:
 7.  To format the text, select the text to display the format options. Modify the font size and style as required.
 
     > [!div class=mx-imgBorder]
-    > ![text component](media/text-component.png "Text component")  
+    > ![text component.](media/text-component.png "Text component")  
 
 8. In the properties pane on the right side of the screen, select the following information:
 
@@ -43,7 +43,7 @@ To add text box:
     - **Font color**: Select a color for the text.
 
         > [!div class=mx-imgBorder]
-        > ![Select text alignment and color](media/text-props.png "Select text alignment and color")  
+        > ![Select text alignment and color.](media/text-props.png "Select text alignment and color")  
  
 ### See also
 

@@ -1,6 +1,6 @@
 ---
-title: 'Gallery control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Gallery control
+title: Gallery control in Power Apps
+description: Learn about the details, properties and examples of the gallery control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Gallery control in canvas apps
+# Gallery control in Power Apps
 
 A control that contains other controls and shows a set of data.
 
@@ -110,7 +110,7 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 - [Show text](control-text-box.md#show-data-in-a-gallery)
 - [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-- [Filter data by selecting a list option](control-drop-down.md#example)
+- [Filter data by selecting a list option](control-drop-down.md#examples)
 - [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user

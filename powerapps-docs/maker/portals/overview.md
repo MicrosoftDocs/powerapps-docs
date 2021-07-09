@@ -29,7 +29,7 @@ One of the major changes introduced to portals after October 1, 2019 is the lice
 
 You can check the type of a portal from the [Power Apps portals admin center](./admin/admin-overview.md):
 
-![Power Apps portals type](./media/power-apps-portals-type.png)
+![Power Apps portals type.](./media/power-apps-portals-type.png)
 
 Additional differences between Power Apps portals with capacity-based licenses and add-on licenses include:
 

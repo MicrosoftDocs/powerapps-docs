@@ -13,7 +13,7 @@ ms.reviewer: mvakoc
 
 Power Virtual Agents allows you to quickly create and maintain intelligent chatbots using a no-code interface. App makers can create and manage their chatbots directly from [Power Apps](https://make.powerapps.com). 
 
-![Chatbots from Power Apps](media/chatbots.png "Chatbots from Power Apps")
+![Chatbots from Power Apps.](media/chatbots.png "Chatbots from Power Apps")
 
 You can create and manage your chatbots using the **Chatbots** option in the left navigation pane.
 
