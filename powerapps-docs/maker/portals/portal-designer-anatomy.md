@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 04/21/2021
+ms.date: 07/09/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -48,7 +48,8 @@ The anatomy of Power Apps portals Studio is as follows:
 | 5              | Properties pane | Displays properties of webpage and selected components and lets you edit them as required. |
 
 > [!NOTE]
-> Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Microsoft Dataverse.
+> - Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Microsoft Dataverse.
+> - Power Apps portals Studio only supports editing in the language selected while provisioning the portal. For help with creating portals in additional languages, see [Create additional portals in an environment](create-additional-portals.md).
 
 ## Next steps
 
