@@ -45,11 +45,11 @@ To add a calendar screen from the template:
 
     By default, the screen looks similar to this:
 
-    ![Calendar screen](media/calendar-screen/calendar-initial.png)
+    ![Calendar screen.](media/calendar-screen/calendar-initial.png)
 
 1. To show data, select an option in the drop-down list near the top of the screen.
 
-    ![Calendar screen after loading is complete](./media/calendar-screen/calendar-screen.png)
+    ![Calendar screen after loading is complete.](./media/calendar-screen/calendar-screen.png)
 
 A few helpful notes:
 

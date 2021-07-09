@@ -177,11 +177,11 @@ To set this in the Power Apps UI:
 1. Select each catalog or catalog assignment within your solution
 1. In the menu, click the ellipses (...) and select **Managed Properties**.
 
-    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button":::
+    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button.":::
 
 1. In the window that opens, deselect **Allow customizations**.
 
-    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations":::
+    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations.":::
 
 1. Click **Done**
 

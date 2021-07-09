@@ -21,15 +21,15 @@ Preeti is concerned that the app and the Web API must be secure because they pro
 
 Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Azure Active Directory because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
 
-![App Service authentication configuration](media/image100.png)
+![App Service authentication configuration.](media/image100.png)
 
 App Service also provides horizontal and vertical scalability. If needed, Preeti can scale up the resources available to the Web API by upgrading the App Service plan for the web app:
 
-![App Service scale up](media/image101.png)
+![App Service scale up.](media/image101.png)
 
 She can also arrange for the system to scale out by configuring autoscaling. App Service enables an operations manager to define autoscale rules that determine the conditions under which the system should scale out across more instances when the load increases, or back in again as demand drops. She can also configure pre-emptive autoscaling to occur according to a schedule:
 
-![App Service scale out](media/image102.png)
+![App Service scale out.](media/image102.png)
 
 A key part of the role of an IT Operations Manager is to have an eye for how systems might evolve, and to ensure that the underlying support structures will handle future expansion and changes. Preeti knows that the Web API developed by Kiana might be extended, and reused by other VanArsdel systems in the future. She needs to be able to manage and control the way in which developers request use of the Web API, protect it as a valuable resource, and monitor its use. Therefore Preeti decides to protect the Web API behind the Azure API Management service.
 
@@ -43,13 +43,13 @@ Preeti created the API Management service through the Azure portal, using the fo
 
 1.  Sign in to the [Azure portal](https://portal.azure.com) and, on the **Home** page, select **Create a resource**.
 
-    ![Azure portal Home page](media/image103.png)
+    ![Azure portal Home page.](media/image103.png)
 
 2.  In the **Search the MarketPlace** text box, enter **API Management**, and then select **Enter**.
 
 3.  On the **API Management** page, select **Create**.
 
-    ![Azure Create API Management Service page](media/image104.png)
+    ![Azure Create API Management Service page.](media/image104.png)
 
 4.  On the **Create API Management** page, enter the following values, and then select **Review + create**:
 
@@ -64,7 +64,7 @@ Preeti created the API Management service through the Azure portal, using the fo
     > [!NOTE]
     > Don't use the **Developer** pricing tier for a production system.
 
-    ![New API Management Service page](media/image105.png)
+    ![New API Management Service page.](media/image105.png)
 
 5.  On the validation page, select **Create**, and wait while the API Management service is created.
 
@@ -79,11 +79,11 @@ After the API Management service was created, Preeti published the Web API to ma
 
 2.  On the **API Management service** page, on the left pane under **APIs**, select **APIs**:
 
-    ![API Management Service page. Select APIs](media/image106.png)
+    ![API Management Service page. Select APIs.](media/image106.png)
 
 3.  In the **Add a new API** pane, select **OpenAPI**:
 
-    ![API Management Service page. Select OpenAPI](media/image107.png)
+    ![API Management Service page. Select OpenAPI.](media/image107.png)
 
 4.  In the **Create from OpenAPI specification** dialog, enter the following values, and then select **Create**:
 
@@ -93,19 +93,19 @@ After the API Management service was created, Preeti published the Web API to ma
     -   API URL suffix: Leave empty
     -   Base URL: Use the default URL
 
-    ![Create API from OpenAPI specification](media/image108.png)
+    ![Create API from OpenAPI specification.](media/image108.png)
 
 5.  When the Field Engineer API has been created, select the **Settings** tab for the API, set the **Web Service URL** to **https://*\<webapp name\>*.azurewebsites.net**, and then select **Save**:
 
-    ![Configure API settings](media/image109.png)
+    ![Configure API settings.](media/image109.png)
 
 6.  On the **Test** tab, select the **GET api/Appointments URI**, and then select **Send**:
 
-    ![Test GetAppointments API](media/image110.png)
+    ![Test GetAppointments API.](media/image110.png)
 
 7.  Verify that the request is successful (the HTTP return code is **200 OK**), and that it returns a result containing a list of appointments in the response body:
 
-    ![Response from testing GetAppointments API](media/image111.png)
+    ![Response from testing GetAppointments API.](media/image111.png)
 
 ## Connecting to API Management from the app
 
@@ -119,19 +119,19 @@ The first task is to create a custom connector that's used by the app to communi
 
 3.  Select the ellipsis button for the **Field Engineer Ap**i, and then select **Export**.
 
-    ![Export the Web API](media/image112.png)
+    ![Export the Web API.](media/image112.png)
 
 4.  On the **Export API** pane, select **Power Apps and Power Automate**:
 
-    ![Export the Web API to Power Apps](media/image113.png)
+    ![Export the Web API to Power Apps.](media/image113.png)
 
 5.  On the **Export API to PowerApps** pane, select the Power Apps environment in which you created the prototype app (**Maria** in the following image), and then select **Export**.
 
-    ![Export to Maria's Power Apps environment](media/image114.png)
+    ![Export to Maria's Power Apps environment.](media/image114.png)
 
 6.  After the API has been exported, select the **Field Engineer API**. On the **Settings** page, scroll down to the **Subscriptions** section, clear **Subscription required**, and then select **Save**.
 
-    ![Deselect Subscription Required](media/image115.png)
+    ![Deselect Subscription Required.](media/image115.png)
 
 The prototype app used Excel workbooks for the data sources. Now that the custom connector for the Web API is available, Maria performs the following steps to add the connector to the app:
 
@@ -139,35 +139,35 @@ The prototype app used Excel workbooks for the data sources. Now that the custom
 
 2.  On the left pane, expand **Data**, and select **Custom Connectors**. The **field-engineer-api** custom connector should be listed. Select **Create connection**.
 
-    ![Create a new custom connector](media/image116.png)
+    ![Create a new custom connector.](media/image116.png)
 
 3.  In the **field-engineer-api** dialog, select **Create**.
 
-    ![Create FieldEngineerAPI connector](media/image117.png)
+    ![Create FieldEngineerAPI connector.](media/image117.png)
 
 4.  When the connection has been created, verify that it appears in the list of available connections.
 
-    ![Display available connections](media/image118.png)
+    ![Display available connections.](media/image118.png)
 
 5.  On the left pane, select **Apps**, select **VanArsdelApp**, and then select **Edit**.
 
-    ![Edit VanArsdel app](media/image119.png)
+    ![Edit VanArsdel app.](media/image119.png)
 
 6.  On the left pane, select the **Data** tab. Select **Add data**, select the ellipsis button for **Connectors**, and then select **Refresh**.
 
-    ![Refresh data sources](media/image120.png)
+    ![Refresh data sources.](media/image120.png)
 
 7.  In the list of connectors, select the **field-engineer-api** connector.
 
-    ![View connectors](media/image121.png)
+    ![View connectors.](media/image121.png)
 
 8.  In the **field-engineer-api** dialog, select the **field-engineer-api** connector.
 
-    ![Add FieldEngineerAPI connection](media/image122.png)
+    ![Add FieldEngineerAPI connection.](media/image122.png)
 
 9.  On the **Data** pane, verify that the **FieldEngineerApi** connector is listed.
 
-    ![FieldEngineerAPI connection added](media/image123.png)
+    ![FieldEngineerAPI connection added.](media/image123.png)
 
 ## Updating the app to use the connector: Field inventory management
 
@@ -183,7 +183,7 @@ Now that the connection has been added to the app, Maria can modify the screens 
 
     The **ClearCollect** function creates a new collection named **partsCollection**, and populates it with the data that results from calling the **getboilerparts** operation in the **FieldEngineerAPI** connection.
 
-    ![Create partsCollection variable](media/image124.png)
+    ![Create partsCollection variable.](media/image124.png)
 
     > [!NOTE]
     > It's good practice to retrieve the data into a collection and reference that collection from any screens that need the information. This approach can save different screens from repeatedly running the same query and fetching the same data.
@@ -203,7 +203,7 @@ Now that the connection has been added to the app, Maria can modify the screens 
     SortByColumns(Search(FieldEngineerApi.getapiboilerparts(), TextSearchBox1.Text, "name", "categoryId", "overview"), "name", If(SortDescending1, Descending, Ascending))
     ```
 
-    ![Update formula for Browse screen](media/image125.png)
+    ![Update formula for Browse screen.](media/image125.png)
 
 5.  On the **Tree view** pane, select the **IconRefresh1** control. Change the **OnSelect** action to the formula **ClearCollect(partsCollection, FieldEngineerAPI.getapiboilerparts())**.
 
@@ -220,7 +220,7 @@ Now that the connection has been added to the app, Maria can modify the screens 
 
 10. On the **Tree view** pane, select the **Name\_DataCard1** control under **DetailForm1**. Change the **Default** property to **ThisItem.name**.
 
-    ![Change Default for the Name data card](media/image126.png)
+    ![Change Default for the Name data card.](media/image126.png)
 
 11. Change the **Default** property of the **CategoryID\_DataCard1** control to **ThisItem.categoryId**.
 
@@ -234,7 +234,7 @@ Now that the connection has been added to the app, Maria can modify the screens 
 
 16. On the left pane on the **Data** tab, right-click the **Table1** data connection, and then select **Remove** to delete it from the app. This connection is no longer required.
 
-    ![Remove the Table1 connection](media/image127.png)
+    ![Remove the Table1 connection.](media/image127.png)
 
 17. Save the app.
 
@@ -387,7 +387,7 @@ Azure Cognitive Search works best if the data to be searched is contained in a s
 
 2.  On the left pane, select **Query Editor** and sign in to the database as **sqladmin**, using the password **Pa55w.rd**.
 
-    ![Sign in to Azure SQL Database](media/image128.png)
+    ![Sign in to Azure SQL Database.](media/image128.png)
 
 3.  In the query window, enter the following statement, and then select **Run**.
 
@@ -404,13 +404,13 @@ Azure Cognitive Search works best if the data to be searched is contained in a s
 
 4.  On the left pane, select **Connection strings**. Make a note of the **ADO.NET** connection string; you'll need it when you configure **Azure Cognitive Search**.
 
-    ![ADO.NET connection string for the KnowledgeDB database](media/image130.png)
+    ![ADO.NET connection string for the KnowledgeDB database.](media/image130.png)
 
 Working with Kiana, Preeti configures a new instance of the Azure Cognitive Search service to perform searches on rows in the **Knowledge** view, as follows:
 
 1.  On the **Home** page, in the Azure portal, select **+ Create a resource**, enter **Azure Cognitive Search**, select **Enter**, and then select **Create**.
 
-    ![Create the Azure Cognitive Search service](media/image131.png)
+    ![Create the Azure Cognitive Search service.](media/image131.png)
 
 2.  On the **New Search Service** page, enter the following settings, and then select **Review + create**:
 
@@ -424,11 +424,11 @@ Working with Kiana, Preeti configures a new instance of the Azure Cognitive Sear
 
 4.  Go to the page for the new search service, select **Overview**, make a note of the **Url** (you'll need this later when you create the custom connector for Power Apps), and then select **Import Data**.
 
-    ![Search Service Overview page](media/image132.png)
+    ![Search Service Overview page.](media/image132.png)
 
 5.  On the **Import data** page, in the **Data Source** dropdown list box, select **Azure SQL Database**.
 
-    ![Select Azure SQL Database](media/image133.png)
+    ![Select Azure SQL Database.](media/image133.png)
 
 6.  On the **Connect to your data** page, specify the following settings:
 
@@ -439,25 +439,25 @@ Working with Kiana, Preeti configures a new instance of the Azure Cognitive Sear
 
 7.  Select **Test connection**. Ensure that the test is successful, select **[Knowledge]** in the **Table/View** dropdown list box, and then select **Next: Add cognitive skills (Optional)**.
 
-    ![Specify the search view](media/image134.png)
+    ![Specify the search view.](media/image134.png)
 
 8.  On the **Add cognitive skills (Optional)** page, select **Skip to: Customize target index**.
 
 9.  On the **Customize target index** page, select **Retrievable** for all columns, and **Searchable** for **Subject**, **Body**, **Name**, and **Overview**. Select **Next: Create an indexer**.
 
-    ![Customize the target index](media/image135.png)
+    ![Customize the target index.](media/image135.png)
 
 10. On the **Create an indexer** page, change the indexer **Name** to **knowledgebase-indexer**. For the **Schedule**, select **Hourly**, set the **High watermark column** to **Id**, and then select **Submit**:
 
-    ![Create the indexer](media/image136.png)
+    ![Create the indexer.](media/image136.png)
 
 11. To test the indexer, on the **Overview** page for the search service, select **Search Explorer**:
 
-    ![Select Search explorer](media/image137.png)
+    ![Select Search explorer.](media/image137.png)
 
 12. In the **Query** **string** field, enter a word to search for in the knowledge base, and then select **Search**. The search service should generate a list of documents with a match in the **Subject**, **Body**, **Name**, or **Overview** fields, and display them in the **Results** pane. Make a note of the **Request URL** and the sample **Results**; you'll need these items later as an example request and response when you set up the Power Apps custom connector.
 
-    ![Search query results](media/image138.png)
+    ![Search query results.](media/image138.png)
 
 ## Creating the custom connector for the Azure Cognitive Search service
 
@@ -467,23 +467,23 @@ Kiana can now create a custom connector that Power Apps uses to send search requ
 
 2.  On the left pane, expand **Data**, and select **Custom Connectors**. On the right pane, select **+ New custom connector**, and then select **Create from blank**:
 
-    ![New custom connector](media/image139.png)
+    ![New custom connector.](media/image139.png)
 
 3.  In the **Create from blank** dialog, set the new connector name to **VanArsdelKBConnector**, and then select **Continue**:
 
-    ![Create knowledgebase connector](media/image140.png)
+    ![Create knowledgebase connector.](media/image140.png)
 
 4.  On the **General information** page, enter a description and set the **Scheme** to **HTTPS**. In the **Hosts** box, enter the URL for your search service (you noted this URL earlier), but without the **https://** prefix, and then select **Security**.
 
-    ![Search service connector General page](media/image141.png)
+    ![Search service connector General page.](media/image141.png)
 
 5.  On the **Security** page, in the **Authentication** dropdown list box, select **API Key**. In the **Parameter label** field, enter **api-key**. In the **Parameter name** field, enter **api-key**. Select **Definition**.
 
-    ![Search service connector Security page](media/image142.png)
+    ![Search service connector Security page.](media/image142.png)
 
 6.  On the **Definition** page, select **New action**. In the **Summary** field, enter **Query**. In the **Description** field, enter **Query the knowledgebase**. In the **Operation ID** field, enter **Query**. Under **Request**, select **+ Import from sample**.
 
-    ![Search service connector Definition page](media/image143.png)
+    ![Search service connector Definition page.](media/image143.png)
 
 7.  In the **Import from sample** dialog, enter the following values, and then select **Import**:
 
@@ -491,46 +491,46 @@ Kiana can now create a custom connector that Power Apps uses to send search requ
     -   URL: Provide the example request URL that you noted when you tested the search service in the search explorer earlier
     -   Headers: **Content-type**
 
-    ![Import definition from sample request](media/image144.png)
+    ![Import definition from sample request.](media/image144.png)
 
 8.  Back on the **Definition** page, scroll down to the **Query** section, select the ellipsis button next to **search**, and then select **Edit**.
 
-    ![Edit aearch request definition](media/image145.png)
+    ![Edit aearch request definition.](media/image145.png)
 
 9.  On the edit screen, in the **Parameters** section, in the **Default value** field, enter an asterisk (**\***). Leave the other fields at their default values, and then select **Back**.
 
-    ![Set search default value](media/image146.png)
+    ![Set search default value.](media/image146.png)
 
 10. On the **Definition** page, in the **Query** section, select the ellipsis button next to **api-version**, and then select **Edit**.
 
-    ![Edit the API version](media/image147.png)
+    ![Edit the API version.](media/image147.png)
 
 11. On the edit screen, in the **Parameters** section, in the **Default value** field, enter **2020-06-30-Preview** (this is the version associated with the current version of Azure Cognitive Search; you can see the version in the request URL that you noted earlier). Set **Is required** to **Yes**, and set **Visibility** to **internal**. Leave the other fields at their default values, and then select **Back**.
 
-    ![Set the API values for search parameters](media/image148.png)
+    ![Set the API values for search parameters.](media/image148.png)
 
 12. On the **Definition** page, scroll down to the **Response** section, and select **+ Add default response**.
 
-    ![Add default response definition](media/image149.png)]
+    ![Add default response definition.](media/image149.png)]
 
 13. In the **Import from sample** dialog, in the **Headers** field, enter the text **Content-type**. In the **Body** field, enter the example results that you recorded when testing the search service, and then select **Import**.
 
-    ![Import the response message from a sample](media/image150.png)
+    ![Import the response message from a sample.](media/image150.png)
 
 14. On the **Definition** page, select the **default** response.
 
-    ![Select the default response](media/image151.png)
+    ![Select the default response.](media/image151.png)
 
 15. In the **Description** field of the **Content-type** response, enter **application/json**, and then select **Back**.
 
-    ![Set the response message header content](media/image152.png)
+    ![Set the response message header content.](media/image152.png)
 
     > [!NOTE]
     > The **Body** section on this page should display the fields of the response, such as **Body**, **Id**, **Name**, **Overview**, and **Subject** if it has been parsed successfully.
 
 16. Select **Create connector**.
 
-    ![Create the Azure Cognitive Search connector](media/image153.png)
+    ![Create the Azure Cognitive Search connector.](media/image153.png)
 
 The connector should be created without reporting any errors or warnings.
 
@@ -538,7 +538,7 @@ The connector should be created without reporting any errors or warnings.
 
 Maria can now use the custom connector in the app. But first, she requires a key that grants her the privileges required to connect to the Azure Cognitive Search service. Preeti obtains the key from the **Keys** page for the service in the Azure portal, and gives it to Maria.
 
-![Search Service key in the Azure portal](media/image154.png)
+![Search Service key in the Azure portal.](media/image154.png)
 
 Maria edits the app in Power Apps Studio and performs the following tasks:
 
@@ -546,15 +546,15 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 2.  On the **View** menu, select **Data sources**, and then select **Add data**.
 
-    ![Add the data source to the app](media/image155.png)
+    ![Add the data source to the app.](media/image155.png)
 
 3.  In the **Search** box, under **Select a data source**, enter **Van**. The **VanArdelKBConnector** connector should be listed.
 
-    ![Search for the Azure Cognitive Search connector](media/image156.png)
+    ![Search for the Azure Cognitive Search connector.](media/image156.png)
 
 4.  Select the **VanArdelKBConnector** connector. In the **VanArdelKBConnector** pane, enter the key that Preeti provided for the search service, and then select **Connect**.
 
-    ![Enter the API key](media/image157.png)
+    ![Enter the API key.](media/image157.png)
 
 5.  On the **File** menu, save and close the app, and then open it again. You might be prompted to authorize use of the custom connector when the app reopens.
 
@@ -583,7 +583,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 11. Select **F5** to preview the app. On the **Knowledgebase** screen, enter a search term, and then select **Enter**. Matching articles from the knowledge base should be displayed.
 
-    ![Knowledgebase query in the app](media/image157.png)
+    ![Knowledgebase query in the app.](media/image157.png)
 
     > [!NOTE]
     > The details screen hasn't been created yet, so selecting the **\>** icon next to an article doesn't work.
@@ -592,7 +592,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 13. On the **Tree view** pane, right-click the **PartDetails** screen, and select **Duplicate screen**. This action will add another screen to the app, named **PartDetails\_1**.
 
-    ![Duplicate the PartDetails screen](media/image159.png)
+    ![Duplicate the PartDetails screen.](media/image159.png)
 
 14. On the **Tree view** pane, rename the **PartDetails\_1** screen as **KnowledgebaseDetails**.
 
@@ -636,7 +636,7 @@ Maria edits the app in Power Apps Studio and performs the following tasks:
 
 23. Resize each of the data card controls to spread them out down the screen.
 
-    ![The ArticleDetails screen](media/image160.png)
+    ![The ArticleDetails screen.](media/image160.png)
 
 24. Select the back arrow in the screen header. Change the **OnSelect** action property to **Navigate(Knowledgebase, ScreenTransition.None)**.
 

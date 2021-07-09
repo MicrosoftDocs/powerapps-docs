@@ -19,7 +19,7 @@ search.app:
 
 Provides properties and methods to retrieve information about the user interface (UI) as well as collections for several sub components of the form.
 
-![formContext UI object model](../../media/ClientAPI-formContext-ui-Model.png)
+![formContext UI object model.](../../media/ClientAPI-formContext-ui-Model.png)
 
 ## Properties
 

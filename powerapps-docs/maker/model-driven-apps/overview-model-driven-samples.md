@@ -26,7 +26,7 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 <!-- Be sure to check out documentation specific to each sample app for more details. -->
 
 > [!div class="mx-imgBorder"] 
-> ![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
+> ![Fundraiser Sample App.](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
 
 ## Get sample apps
 
@@ -50,7 +50,7 @@ After you provision an environment with a database that include sample apps, the
 ### Asset Checkout
 Asset Checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
 
-![Asset checkout sample app](media/overview-model-driven-samples/asset-checkout.png)
+![Asset checkout sample app.](media/overview-model-driven-samples/asset-checkout.png)
 
 #### Solution components included in this sample app
 
@@ -71,7 +71,7 @@ Asset Checkout provides self-service capabilities to reserve the tools and equip
 
 Start a companywide innovation challenge. Ideas are submitted, reviewed, voted on, and the best ideas get funded for new projects.
 
-![Innovation Challenge sample app](media/overview-model-driven-samples/innovation-challenge.png)
+![Innovation Challenge sample app.](media/overview-model-driven-samples/innovation-challenge.png)
 
 #### Solution components included in this app
 
@@ -102,7 +102,7 @@ Start a companywide innovation challenge. Ideas are submitted, reviewed, voted o
 
 Fundraiser provides employees the opportunity to donate time and money towards causes they're passionate about. Start a fundraiser for your favorite cause, set goals, and track performance towards goals.
 
-![Fundrasier sample app](media/overview-model-driven-samples/fundraiser.png)
+![Fundrasier sample app.](media/overview-model-driven-samples/fundraiser.png)
 
 #### Solution components included in this app
 

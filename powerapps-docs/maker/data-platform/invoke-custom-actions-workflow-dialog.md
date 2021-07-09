@@ -45,15 +45,15 @@ Let’s look at the scenario in which a custom process action is invoked from a 
   
 To request an approval for the discount, we’re using a custom action called **Approval Process**. We added an input parameter, **SpecialNotes**, and a **Send email** step to create a new message and send a request for the manager’s approval, as shown here.  
   
-![Add a step &#45; send email](media/enable-custom-action-approval-proces-sadd-email.png "Add a step - send email")  
+![Add a step &#45; send email.](media/enable-custom-action-approval-proces-sadd-email.png "Add a step - send email")  
   
 To configure the email message, choose **Set Properties**. When the form opens, use the **Form Assistant** to add special notes and other information to the email, as highlighted on the screenshot. To add the special notes, place the cursor where you want the notes to appear in the message, and then, in the **Form Assistant**, under **Look for**, choose **Arguments** in the first drop-down list and choose **SpecialNotes** in the second drop-down list, and then choose **OK**.  
   
-![Set up email](media/enable-custom-action-approval-process-setup-email.png "Set up email")  
+![Set up email.](media/enable-custom-action-approval-process-setup-email.png "Set up email")  
   
 Before you can invoke the custom process action from a workflow, you have to activate it. After you have activated the action, you can view its properties by choosing **View properties**.  
   
-![Activate custom action &#45; approval process](media/enable-custom-action-approval-process-activate-action.png "Activate custom action - approval process")  
+![Activate custom action &#45; approval process.](media/enable-custom-action-approval-process-activate-action.png "Activate custom action - approval process")  
   
 <a name="workflow"></a>
 
@@ -65,11 +65,11 @@ Before you can invoke the custom process action from a workflow, you have to act
   
 We created a workflow that invokes the **Approval Process** custom action whenever the manager’s approval for a discount of more than 20 percent for an opportunity is required.  
   
-![Set action properties from workflow](media/enable-custom-action-from-workflow.png "Set action properties from workflow")  
+![Set action properties from workflow.](media/enable-custom-action-from-workflow.png "Set action properties from workflow")  
   
 You can set the custom process action’s input properties by choosing **Set Properties**. We added a name of the account related to the opportunity in the special notes. In the **Form Assistant**, under **Look for**, choose **Account** in the first drop-down list, choose **Account Name** in the second drop-down list, and then choose **OK**. The **Target** property is required and it is populated by the system. The **{Opportunity(Opportunity)}** in the **Target** property is the same opportunity that the calling workflow is running on. Alternatively, you can choose a specific opportunity for the target property by using lookup.  
   
-![Set input parameters for ApprovalProcess action](media/enable-customaction-workflow-set-properties.png "Set input parameters for ApprovalProcess action")  
+![Set input parameters for ApprovalProcess action.](media/enable-customaction-workflow-set-properties.png "Set input parameters for ApprovalProcess action")  
   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

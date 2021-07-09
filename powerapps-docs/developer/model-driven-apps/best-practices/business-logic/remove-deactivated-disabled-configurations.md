@@ -52,7 +52,7 @@ As well as table components such as:
 - Views
 - Business Rules
 
-![Deactivated Processes](../media/deactivated-processes.png)
+![Deactivated Processes.](../media/deactivated-processes.png)
 
 <a name='seealso'></a>
 

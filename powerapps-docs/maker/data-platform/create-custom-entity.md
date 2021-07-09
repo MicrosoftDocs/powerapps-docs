@@ -40,7 +40,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 1. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New table](media/create-custom-entity/create-new-entity.png)
+    > ![New table.](media/create-custom-entity/create-new-entity.png)
 
 2. In the right pane, enter the following values, and then select **Create**.
 
@@ -59,7 +59,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
     - Make sure **Searchable** is selected.
   
       > [!div class="mx-imgBorder"] 
-      > ![Change primary column](media/create-custom-entity/primary-field.png)
+      > ![Change primary column.](media/create-custom-entity/primary-field.png)
 
 1. Select **Done**.
 
@@ -81,7 +81,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
       d. Select **Done**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New choice ](media/create-custom-entity/optionset-add-items.png)
+    > ![New choice .](media/create-custom-entity/optionset-add-items.png)
 
 1. Make sure **Searchable** is selected, and then select **Done**.
 
@@ -109,7 +109,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
   Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
   > [!div class="mx-imgBorder"]
-  > ![Account lookup column](media/create-custom-entity/account-lookup-field.png)
+  > ![Account lookup column.](media/create-custom-entity/account-lookup-field.png)
 
 ## Customize a view
 
@@ -126,7 +126,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. To arrange the columns, on the view designer canvas, select the column you want to move and then use **Move Left** or **Move Right**. Your view should look like this.
     > [!div class="mx-imgBorder"] 
-    > ![Active pets view](media/create-custom-entity/active-pets-view.png)
+    > ![Active pets view.](media/create-custom-entity/active-pets-view.png)
 
 1. On the view designer toolbar, select **Save**, and then select **Publish**.  
 
@@ -141,12 +141,12 @@ Skip this step if you only want to use the Pet table in a canvas app.
 1. In the **Pet** table, select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit main form](media/create-custom-entity/main-form-edit.png)
+    > ![Edit main form.](media/create-custom-entity/main-form-edit.png)
 
 1. On the form editor, select the  **Table columns** on the left pane. Then, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the pane on to the **General** section of the form designer canvas until the form looks like this.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select columns for main form](media/create-custom-entity/main-form-edit2.png) 
+    > ![Select columns for main form.](media/create-custom-entity/main-form-edit2.png) 
 
 1. Select **Save**.
 

@@ -46,7 +46,7 @@ To add a timer control to a form:
 6.  In the classic form designer, select the **Insert** tab, and then on the toolbar select **Timer**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Insert timer control](media/insert-timer-control.png)
+    > ![Insert timer control.](media/insert-timer-control.png)
 
 7.  On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
 

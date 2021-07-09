@@ -34,7 +34,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 
 The following diagram illustrates the way that users and systems interact with data in the Issue Reporting solution
 
-![Issue Reporting sample app architecture model](media/issue-reporting-architecture/architecture-model.png "Issue Reporting sample app architecture model")
+![Issue Reporting sample app architecture model.](media/issue-reporting-architecture/architecture-model.png "Issue Reporting sample app architecture model")
 
 ### Connectors
 
@@ -49,7 +49,7 @@ The following connectors are used in the Issue Reporting app:
 
 The following diagram explains the data model used by the Issue Reporting sample app.
 
-![Issue Reporting sample app data model](media/issue-reporting-architecture/data-model.png "Issue Reporting sample app data model")
+![Issue Reporting sample app data model.](media/issue-reporting-architecture/data-model.png "Issue Reporting sample app data model")
 
 ### Tables
 

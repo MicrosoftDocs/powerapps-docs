@@ -83,7 +83,7 @@ The return value for **IsEmpty** is a Boolean **true** or **false**.
 
      The **Cities** collection appears, showing one record with "Seattle" and "Rainy":
 
-    ![Collection showing Seattle with Rainy weather](./media/function-isblank-isempty/seattle-rainy.png)
+    ![Collection showing Seattle with Rainy weather.](./media/function-isblank-isempty/seattle-rainy.png)
 5. Click or tap the back arrow to return to the default workspace.
 6. Add a **Label** control, and set its **Text** property to this formula:
 
@@ -101,7 +101,7 @@ The return value for **IsEmpty** is a Boolean **true** or **false**.
 
     The **Weather** field of the first record in **Cities** is replaced with a *blank*, removing the "Rainy" that was there previously.
 
-    ![Collection showing Seattle with a blank Weather field](./media/function-isblank-isempty/seattle-blank.png)
+    ![Collection showing Seattle with a blank Weather field.](./media/function-isblank-isempty/seattle-blank.png)
 
     The label shows **true** because the **Weather** field no longer contains a value.
 
@@ -149,7 +149,7 @@ Other examples:
 
     A collection named **IceCream** is created and contains this data:
 
-    ![A table with Strawberry and Chocolate flavours with quantity 300 and 100](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
+    ![A table with Strawberry and Chocolate flavours with quantity 300 and 100.](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
 
     This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 4. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
@@ -159,7 +159,7 @@ Other examples:
 
     The collection is now empty:
 
-    ![A collection with Flavor and Quantity as empty collection](media/function-isblank-isempty/icecream-clear.png)
+    ![A collection with Flavor and Quantity as empty collection.](media/function-isblank-isempty/icecream-clear.png)
 
     The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 

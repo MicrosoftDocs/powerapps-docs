@@ -42,25 +42,25 @@ Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Business Apps** to launch your business app that you have access to.
 
 
-![Busines Apps](media/bussinessapps.png)
+![Busines Apps.](media/bussinessapps.png)
 
 
 
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
-![Run an app from URL](./media/run-app-browser/web-login.png)
+![Run an app from URL.](./media/run-app-browser/web-login.png)
 
 ## Connect to data
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
-![Connection](./media/run-app-browser/app-connection.png)
+![Connection.](./media/run-app-browser/app-connection.png)
 
 ## Sign out
 To sign out of the Microsoft 365 apps page, select your profile image and then select **Sign out**.
 
 
-![Sign out](media/bussinessapps-2.png)
+![Sign out.](media/bussinessapps-2.png)
 
 ## Next steps
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:

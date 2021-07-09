@@ -19,7 +19,7 @@ This sample component renders as an `Upload` button to upload the image and a de
 The selected image renders within the component. Meanwhile, the `Remove` button is shown if we need to reset. When you click on the `Remove` button, the default image is displayed.
 
 > [!div class="mx-imgBorder"]
-> ![Image Upload component](../media/image-upload-control.png "Image Upload component")
+> ![Image Upload component.](../media/image-upload-control.png "Image Upload component")
 
 ## Available for 
 

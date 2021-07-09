@@ -62,7 +62,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 2. Open an unmanaged solution, on the command bar select **New**, point to **Other**, and then select **Web resource**. 
 3. Complete the form to create the web resource:
 
-    ![Create a web resource](media/new-web-resource-form.png)
+    ![Create a web resource.](media/new-web-resource-form.png)
   
 |Column|Description|  
 |-----------|-----------------|  

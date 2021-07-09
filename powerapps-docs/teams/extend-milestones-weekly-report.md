@@ -38,11 +38,11 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
 
 1. Update the flow title, and select **Recurrence** as the flow trigger.
 
-    ![Set flow title and recurrence trigger](media/extend-milestones-weekly-report/flow-recurrence.png "Set flow title and recurrence trigger")
+    ![Set flow title and recurrence trigger.](media/extend-milestones-weekly-report/flow-recurrence.png "Set flow title and recurrence trigger")
 
 1. Update the **Recurring** trigger values as shown below.
 
-    ![Flow recurrence step](media/extend-milestones-weekly-report/recurrence-step.png "R")
+    ![Flow recurrence step.](media/extend-milestones-weekly-report/recurrence-step.png "R")
 
 1. Add the following steps to the flow.
 
@@ -52,7 +52,7 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
 
     - Expand Query – "createdby"
 
-    ![List projects step](media/extend-milestones-weekly-report/list-projects.png "List projects step")
+    ![List projects step.](media/extend-milestones-weekly-report/list-projects.png "List projects step")
 
 1. List rows – renamed to List Work Items.
 
@@ -78,7 +78,7 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
         | WorkItemName | Name from the List Work Items step |
         | WorkItemStatus | Work Item Status from the List Work Items step |
 
-    ![Create an HTML table](media/extend-milestones-weekly-report/create-html-table.png "Create an HTML table")
+    ![Create an HTML table.](media/extend-milestones-weekly-report/create-html-table.png "Create an HTML table")
 
 1. Send an email (v2).
 
@@ -88,7 +88,7 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
 
     - Body: Output from the Create HTML table step.
 
-    ![Send email step](media/extend-milestones-weekly-report/send-email.png "Send email step")
+    ![Send email step.](media/extend-milestones-weekly-report/send-email.png "Send email step")
 
 1. Save the flow.
 
@@ -110,13 +110,13 @@ To complete this exercise, we'd need the ability to log in into Teams that will 
 
 1. Select Test on the top right.
 
-    ![Test the flow](media/extend-milestones-weekly-report/test-flow.png "Test the flow")
+    ![Test the flow.](media/extend-milestones-weekly-report/test-flow.png "Test the flow")
 
 1. Run the flow.
 
 1. Check inbox for emails with weekly status – We should see one or more emails in the inbox for each Project.
 
-    ![Email status report](media/extend-milestones-weekly-report/status-report.png "Email status report")
+    ![Email status report.](media/extend-milestones-weekly-report/status-report.png "Email status report")
 
 ### See also
 

@@ -37,11 +37,11 @@ For example, [Azure DevOps](/connectors/visualstudioteamservices) is action-base
 For example, when you reference an Azure DevOps instance, the formula uses
 Azure DevOps as the data source name
 
-![Example of AzureDevOps data source](media/rename-data-source/azuredevops.png "Example of AzureDevOps data source")
+![Example of AzureDevOps data source.](media/rename-data-source/azuredevops.png "Example of AzureDevOps data source")
 
 When using Excel, the data source name in formula uses the table name (instead of the connector, or the service name):
 
-![Example of Excel data source](media/rename-data-source/excel.png "Example of Excel data source")
+![Example of Excel data source.](media/rename-data-source/excel.png "Example of Excel data source")
 
 ## How are data source names generated?
 
@@ -67,7 +67,7 @@ new data source will be named “NewConnector”. Your formulas will still refer
 Using the new “Rename” feature, you can rename your action-based connectors and
 fix up your formulas automatically.
 
-![Rename option for data source](media/rename-data-source/rename-data-source.png "Rename option for data source")
+![Rename option for data source.](media/rename-data-source/rename-data-source.png "Rename option for data source")
 
 To fix this kind of problem, rename the data source from the new display name
 back to the old display name.

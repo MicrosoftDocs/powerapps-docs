@@ -36,7 +36,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 
     > [!div class="mx-imgBorder"] 
-    > ![Expand contact profile card detail](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
+    > ![Expand contact profile card detail.](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
 
 
 

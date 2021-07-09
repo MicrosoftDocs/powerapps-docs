@@ -42,7 +42,7 @@ To get started, let’s create a flow to replace the current notification with a
 
 1. Select **+New** step to add a new step > select the action Get a row by ID and for Row ID > select the Value field area to reveal the Dynamic content menu > select **Ask in Power Apps**. This action will create a variable in the Power Apps trigger to allow passing data from the app to Power Automate.
 
-    ![Power apps flow trigger and get employee idea step](media/replace-notification-with-adaptive-card/power-apps-flow-trigger-and-get-idea-step.png "Power apps flow trigger and get employee idea step")
+    ![Power apps flow trigger and get employee idea step.](media/replace-notification-with-adaptive-card/power-apps-flow-trigger-and-get-idea-step.png "Power apps flow trigger and get employee idea step")
 
 1. Next, add two **Initialize Variable** actions. These actions will be used to store information from Power Apps and to store a link to the Ideas app that will be used in the adaptive card to link straight to the record. Rename each of the actions as follows:
 
@@ -62,11 +62,11 @@ To get started, let’s create a flow to replace the current notification with a
 
 1. For the Card Title and Campaign actions, select the Value field area to reveal the Dynamic content menu, and then select **Ask in Power Apps**. This configuration will create a variable in the Power Apps trigger to allow passing data from the app to Power Automate.
 
-    ![Initialize card title and campaign variable](media/replace-notification-with-adaptive-card/initialize-card-title-and-campaign-variable.png)
+    ![Initialize card title and campaign variable.](media/replace-notification-with-adaptive-card/initialize-card-title-and-campaign-variable.png)
 
 1. For the Review Ideas Link action, we'll use the link to the app. To find this link, go to the Team where the Ideas app is and copy the link for tab in which the app is installed. You can copy the link to the tab by opening the tab, then selecting the ellipses (…) in the upper right corner.
 
-    ![Select ellipses then select Copy link to tab](media/replace-notification-with-adaptive-card/select-ellipses-then-copy-link-to-tab.png "Select ellipses then select Copy link to tab")
+    ![Select ellipses then select Copy link to tab.](media/replace-notification-with-adaptive-card/select-ellipses-then-copy-link-to-tab.png "Select ellipses then select Copy link to tab")
 
     Your URL will look something like the following example:
 
@@ -74,7 +74,7 @@ To get started, let’s create a flow to replace the current notification with a
 
 1. To continue, copy the part of the URL that comes after **context=** use a URL decoder such as <https://www.urldecoder.org/> to decode the text.
 
-    ![Decode URL](media/replace-notification-with-adaptive-card/decode-url.png "Decode URL")
+    ![Decode URL.](media/replace-notification-with-adaptive-card/decode-url.png "Decode URL")
 
 1. Copy the decoded text, and go back to the Power Automate flow.
 
@@ -88,7 +88,7 @@ To get started, let’s create a flow to replace the current notification with a
     
     - Enter Value = *{paste the text copied from the url above}*
 
-    ![Initialize ReviewIdeasLink variable](media/replace-notification-with-adaptive-card/initialize-variable-reviewideaslink.png "Initialize ReviewIdeasLink variable")
+    ![Initialize ReviewIdeasLink variable.](media/replace-notification-with-adaptive-card/initialize-variable-reviewideaslink.png "Initialize ReviewIdeasLink variable")
 
 1. Add a new step with the action Compose and in the Inputs field paste the following code:
 
@@ -96,7 +96,7 @@ To get started, let’s create a flow to replace the current notification with a
     replace(replace(replace(variables('varReviewIdeasLink'),'{','%7B'),'"','%22'),'}','%7D')
     ```
 
-    ![Compose replace step](media/replace-notification-with-adaptive-card/compose-replace-step.png "Compose replace step")
+    ![Compose replace step.](media/replace-notification-with-adaptive-card/compose-replace-step.png "Compose replace step")
 
 1. Add a **Post adaptive card in a chat or channel** action. Set the **Post as** value to *User* and the **Post in** value to *Channel*. In the **Team** and **Channel** fields, select the Team and Channel that you would like to post the adaptive card to.
 
@@ -179,7 +179,7 @@ visual editor at <https://adaptivecards.io/designer/>.
     New idea submitted for @{variables('varCampaign')} Campaign
     ```
 
-    ![Post adaptive card in Teams step](media/replace-notification-with-adaptive-card/post-adaptive-card-in-teams-step.png "Post adaptive card in Teams step")
+    ![Post adaptive card in Teams step.](media/replace-notification-with-adaptive-card/post-adaptive-card-in-teams-step.png "Post adaptive card in Teams step")
 
 This action will set the adaptive card’s characteristics and use the variables from Power Apps in the adaptive card.
 
@@ -195,7 +195,7 @@ Once you've verified that the flow is working properly, you can add it to the Id
 
 1. Next, select the Submit idea button (named btnCampaignIdeaControls_Submit in the Tree View). We'll add the Power Automate flow we created to this button.
 
-    ![Select Submit button to add flow functionality](media/replace-notification-with-adaptive-card/submit-idea-button-flow-trigger.png "Select Submit button to add flow functionality")
+    ![Select Submit button to add flow functionality.](media/replace-notification-with-adaptive-card/submit-idea-button-flow-trigger.png "Select Submit button to add flow functionality")
 
 1. First, we'll copy the code currently in the OnSelect property of the button. One issue with adding Power Automate flows to controls in Power Apps is that any existing code on the control will be removed. To work around this problem, paste the copied code into a text editor, such as Notepad, and edit it to paste back in the OnSelect property when done. After pasting the code, ensure that all the code was added.
 
@@ -483,11 +483,11 @@ This action should load all the required data appropriately after the app opens.
 
 4.  Select one of the Campaigns – for example, Workplace Safety.
 
-    ![Select an idea from the list](media/replace-notification-with-adaptive-card/select-idea.png "Select an idea from the list")
+    ![Select an idea from the list.](media/replace-notification-with-adaptive-card/select-idea.png "Select an idea from the list")
 
 5.  Select the Submit an idea button.
 
-    ![Select Submit idea option](media/replace-notification-with-adaptive-card/select-submit-idea-option.png "Select Submit idea option")
+    ![Select Submit idea option.](media/replace-notification-with-adaptive-card/select-submit-idea-option.png "Select Submit idea option")
 
 6.  Enter Title and Description.
 
@@ -503,7 +503,7 @@ This action should load all the required data appropriately after the app opens.
 
 12. Select the link in the notification and verify that the idea record opens.
 
-    ![Adaptive card notification in Teams](media/replace-notification-with-adaptive-card/adaptive-card-notification-in-teams.png "Adaptive card notification in Teams")
+    ![Adaptive card notification in Teams.](media/replace-notification-with-adaptive-card/adaptive-card-notification-in-teams.png "Adaptive card notification in Teams")
 
 ### See also
 

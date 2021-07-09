@@ -59,7 +59,7 @@ function displayName(executionContext)
 
 Use the **data** and **ui** objects under the **formContext** object to programmatically manipulate data and user interface elements in model-driven apps.
 
-![formContext object model](../media/ClientAPI-formContextModel.png)
+![formContext object model.](../media/ClientAPI-formContextModel.png)
 
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 

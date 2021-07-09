@@ -30,13 +30,13 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
-    ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
+    ![Select report data.](./media/powerapps-custom-visual/add-visual-set-data.png)
 
     You can choose an existing app or create one, but the report must be published to the Power BI service and opened in Microsoft Edge or Google Chrome.
 
 3.  If you choose to create an app, you can choose in which environment to create it.
 
-    ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
+    ![New or existing app.](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
     If you choose to use an existing app, the visual prompts you to open the app in Power Apps. The visual then sets up the required components in your app so that Power BI can send data to Power Apps.
 
@@ -45,11 +45,11 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
     > [!NOTE]
     > You must create a new app from Power Apps visual in Power BI report for the `PowerBIIntegration.Refresh()` function to be available in the app.
 
-    ![New app](./media/powerapps-custom-visual/new-app.png)
+    ![New app.](./media/powerapps-custom-visual/new-app.png)
 
 4. Now in Power Apps Studio, you can use the data fields you set in step 2. The `PowerBIIntegration` object acts like any other Power Apps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
 
-    ![Custom formula](./media/powerapps-custom-visual/custom-formula.png)
+    ![Custom formula.](./media/powerapps-custom-visual/custom-formula.png)
 
     This formula joins Power BI data with the Customer data source: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
@@ -61,11 +61,11 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 7. You've created a report in which your users can take actions as they gain insights from your data.
 
-    ![Working report](./media/powerapps-custom-visual/working-report.gif)
+    ![Working report.](./media/powerapps-custom-visual/working-report.gif)
 
     If you need to make changes to an app, open the report in edit mode, select **More options** (**. . .**) on the Power Apps visual and select **Edit**.
 
-    ![Edit app](./media/powerapps-custom-visual/edit-app.png)
+    ![Edit app.](./media/powerapps-custom-visual/edit-app.png)
 
 ## Limitations of the Power Apps visual
 
