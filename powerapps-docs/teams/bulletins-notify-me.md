@@ -67,6 +67,7 @@ To get started, let’s add a table to store the notification settings.
 1. Using **Add column** on the top, add the following columns.
 
     | Column name | Data type | Related table |
+    | - | - |
     | User ID | Lookup | User |
     | Category | Lookup | Bulletin Category |
 
@@ -83,6 +84,7 @@ To get started, let’s add a table to store the notification settings.
 1. Set the following properties on the added toggle control.
 
     | Property | Value |
+    | - | - |
     | X | `Parent.Width - Self.Width` |
     | Y | `lblGalBulletins_ByCategory_Name.Y` |
     | On Text | Turn off notifications |
