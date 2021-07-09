@@ -37,7 +37,7 @@ Dataverse includes an OData Data Provider that you can use to connect with an OD
   
 Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/data-platform/virtual-entities/get-started-ve.md)
   
- <!-- ![Virtual table diagram](media/virtual-entity-diagram.png "Virtual table diagram")  -->
+ <!-- ![Virtual table diagram.](media/virtual-entity-diagram.png "Virtual table diagram")  -->
   
 <a name="benefits"></a> 
   
@@ -72,7 +72,7 @@ You create columns for a Data Source in the same way as any other table. For dat
 > The Data Source Secret attribute is only available with columns added to a Data Source form.
 
 > [!div class="mx-imgBorder"] 
-> ![Data source secret attribute](media/datasourcesecret.png)
+> ![Data source secret attribute.](media/datasourcesecret.png)
   
 <a name="createVirtualtable"></a> 
   
@@ -95,7 +95,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
 2. On the **General** tab of the **Entity Definition**, select **Virtual Entity**, and then in the **Data Source** drop down list, select the data source that you want.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Virtual table option on table definition](media/virtual-entity-click-option.png)  
+    > ![Virtual table option on table definition.](media/virtual-entity-click-option.png)  
   
 1. On the Entity Definition, complete the following required columns.
   
@@ -107,7 +107,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
     Here's an example of a virtual table named *Movie* that uses a Azure Cosmos DB data provider to access document files.  
       
     > [!div class="mx-imgBorder"] 
-    > ![Virtual table definition using the Azure Cosmos DB data provider](media/virtual-entity-definition.PNG)  
+    > ![Virtual table definition using the Azure Cosmos DB data provider.](media/virtual-entity-definition.PNG)  
       
     > [!IMPORTANT]
     > Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual tables. More Information [Considerations when you use virtual tables](#considerations)  

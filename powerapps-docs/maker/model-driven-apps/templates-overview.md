@@ -30,17 +30,17 @@ You can use templates in a variety of ways to speed your work and improve consis
 
 ## Enable and work with Excel and Word templates
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and in the upper-right corner, select the ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and in the upper-right corner, select the ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 
 2. Select **Settings** > **Templates**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Settings Templates](media/settings-templates.png "Settings Templates") 
+   > ![Settings Templates.](media/settings-templates.png "Settings Templates") 
 
 3. On the **Templates** page, select **Document Template** to work with Excel or Word templates.
 
    > [!div class="mx-imgBorder"] 
-   > ![Document Templates](media/document-templates.png "Document Templates") 
+   > ![Document Templates.](media/document-templates.png "Document Templates") 
 
 For information on using templates, see the following documentation:
 

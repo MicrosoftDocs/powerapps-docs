@@ -27,7 +27,7 @@ You can delete custom tables, but you can't delete standard tables. Notice that 
 ## Delete a custom table
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** in the left navigation pane, open the solution that contains the custom table you want to delete, and then select it.
 
-    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "Table List")
+    ![Table Details.](./media/data-platform-cds-create-entity/entitylist.png "Table List")
 
 2. On the command bar select **Remove**, and then select from the following choices:  
    - **Remove from this solution**. Removes the table from the solution. You can still access the table from the Default Solution. 

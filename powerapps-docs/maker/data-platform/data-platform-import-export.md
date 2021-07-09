@@ -44,14 +44,14 @@ Every table has required columns that must exist in your input file. We recommen
     > To import data into more than one table, in the top menu, select **Get Data**. Select **Get data from Excel**. Then you can choose multiple tables and select **Next**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of importing data to an **Account** table](./media/data-platform-import-export/import-data-to-account.png)
+    > ![Example of importing data to an **Account** table.](./media/data-platform-import-export/import-data-to-account.png)
 
     d. On the **Import data** screen, choose whether to import data from an Excel or a CSV file.  
     e. Select **Upload**.  
     f. Choose your file. Follow the prompts to upload your file.  
 
    <!-- > [!div class="mx-imgBorder"] 
-    > ![Example of uploading a file to an **Account** table](./media/data-platform-import-export/upload-account.png)  -->
+    > ![Example of uploading a file to an **Account** table.](./media/data-platform-import-export/upload-account.png)  -->
 
     g. After the file is uploaded and **Mapping status** is green, select **Import** in the top-right corner. Refer to the next section to navigate and fix any mapping errors.  
 
@@ -74,13 +74,13 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
     > Depending on whether you get a Warning or an Error, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
 
   <!--  > [!div class="mx-imgBorder"] 
-    > ![Example of a partial match due to warnings with column mappings](./media/data-platform-import-export/partial-match.png)
+    > ![Example of a partial match due to warnings with column mappings.](./media/data-platform-import-export/partial-match.png)
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of navigating column mapping issues](./media/data-platform-import-export/navigate-mappings.png)
+    > ![Example of navigating column mapping issues.](./media/data-platform-import-export/navigate-mappings.png)
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of inspecting and rectifying warnings with column mappings](./media/data-platform-import-export/inspect-warnings.png) -->
+    > ![Example of inspecting and rectifying warnings with column mappings.](./media/data-platform-import-export/inspect-warnings.png) -->
 
 2. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 3. When the **Mapping Status** column shows **Completed** in green, select **Import** in the top-right corner.
@@ -94,7 +94,7 @@ Example:
 The primary key for an **Account** table is **accountid**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Sample export file from an **Account** table showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
+   > ![Sample export file from an **Account** table showing **accountid** as the primary key.](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use Dataverse to define alternate keys that uniquely identify a row in place of the primary key.
 
@@ -102,10 +102,10 @@ Example:
 For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
    > [!div class="mx-imgBorder"] 
-   > ![Example of creating an alternate key on a **Currency** table](./media/data-platform-import-export/create-ak.png)
+   > ![Example of creating an alternate key on a **Currency** table.](./media/data-platform-import-export/create-ak.png)
 
    > [!div class="mx-imgBorder"] 
-   > ![Sample export file from an **Account** table showing **currency name** as a natural key](./media/data-platform-import-export/export-nk.png)
+   > ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
 
 Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
@@ -118,7 +118,7 @@ You can do a one-time data export from a standard table or custom table. And you
 1. Select the ellipsis or menu at the top. Select **Export data**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of exporting data from an **Account** table](./media/data-platform-import-export/export-account.png)
+    > ![Example of exporting data from an **Account** table.](./media/data-platform-import-export/export-account.png)
 
     > [!NOTE]
     > To export data from multiple tables, in the top menu, select **Export**. Select **Data**. You can choose multiple tables.
@@ -126,7 +126,7 @@ You can do a one-time data export from a standard table or custom table. And you
 1. After the export finishes successfully, you can **Download exported data**. This download gives you a link to the downloadable CSV file.
 
   <!--  > [!div class="mx-imgBorder"] 
-    > ![Sample export that shows successful export with link downloadable file](./media/data-platform-import-export/export-success.png) -->
+    > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png) -->
 
 ## Unsupported data types
 

@@ -49,7 +49,7 @@ You can preview component library components using the screens inside the librar
 
 You can create a new component library or edit an existing component library from the same interface. Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
 
-![Create or edit component library](./media/component-library/create-edit-component-library.png "Create or edit component library")
+![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
 
 ## Create an example component library
 
@@ -69,14 +69,14 @@ The steps to create components inside a component library are the same as creati
 
     You also have an option to save a **version note**. A version note is useful to retrieve versions of a component library and for upgrading the components used in apps from this component library.
 
-    ![Version note when saving component library](./media/component-library/save-component-libray-version-note.png "Version note when saving component library")
+    ![Version note when saving component library.](./media/component-library/save-component-libray-version-note.png "Version note when saving component library")
 
     > [!TIP]
     > A version note is useful when reviewing versions of a component library and for the app makers using your component library to review changes and update apps consuming these components as needed. Go to [update a component library](component-library.md?#update-a-component-library) for more details.   
 
 1. A saved component library can be published. Only published component library updates are available for apps that consume a component library. Select **Publish** to publish the component library version:
 
-    ![Publish component library version](./media/component-library/publish-component-library.png "Publish component library version")
+    ![Publish component library version.](./media/component-library/publish-component-library.png "Publish component library version")
 
 ## Import from a component library
 
@@ -84,11 +84,11 @@ After you create a component library and publish, apps can consume the component
 
 To import from a component library, edit an existing app or create a new app. After the app opens in canvas app studio, select **Insert** or the **+** on the left navigation. Then select **Get more components** to list the component libraries available in the current environment:
 
-![Get more components](./media/component-library/get-more-components.png "Get more components")
+![Get more components.](./media/component-library/get-more-components.png "Get more components")
 
 You'll see the list of component libraries available in the current environment on the right side of the screen. Select an individual component from a component library. Or use **Select all** to import all of the components from the library at once:
 
-![Import components](./media/component-library/components.png "Import components")
+![Import components.](./media/component-library/components.png "Import components")
 
 > [!NOTE]
 > If a maker doesn't see the component library listed in the import section, ensure the component library is shared with the maker. For more details, go to [component library permissions](component-library.md#component-library-permissions). 
@@ -97,7 +97,7 @@ Notice you can select and import more than one component and across different co
 
 Components available inside the app are listed under the **Custom** category in the list of components in the **Insert** pane. Components available from imported component libraries are listed under the **Library components** category:
 
-![Insert components to the app](./media/component-library/insert-components.png "Insert components to the app")
+![Insert components to the app.](./media/component-library/insert-components.png "Insert components to the app")
 
 ## Update a component library
 
@@ -105,11 +105,11 @@ You can modify an existing component library and save any changes with additiona
 
 Makers of other apps are notified of updated components being available. The notification appears when makers edit the apps in canvas app studio. They can choose to update the components:
 
-![Update available](./media/component-library/update-available.png "Update available")
+![Update available.](./media/component-library/update-available.png "Update available")
 
 Select **Review**, and you'll see the option to update the component:
 
-![Update component](./media/component-library/update-components.png "Update component")
+![Update component.](./media/component-library/update-components.png "Update component")
 
 Notice that the version note you added when publishing the component library version shows up here. 
 
@@ -124,13 +124,13 @@ Sharing a component library works the same way you share a canvas app. When you 
 - [Known limitations](create-component.md#known-limitations) applicable to components also applies to component libraries.
 - You can't import components using a component library from locally saved component library files. If you try to import a locally saved component library using **File** > **Save As** > **This Computer** and download the component library file as an app, following error message appears: 
 
-    ![Import component library file](./media/component-library/import-component-library-file.png "Import component library file")
+    ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
 
 - You can't add existing component libraries to a [solution](add-app-solution.md). However, you can create new component libraries for solutions using add component library flow.
 
 - If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
 
-    ![Edit library component](./media/component-library/edit-library-component.png "Edit library component")
+    ![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
 
     If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
     

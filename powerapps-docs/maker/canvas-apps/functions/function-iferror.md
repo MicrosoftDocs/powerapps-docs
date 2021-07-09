@@ -125,7 +125,7 @@ IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.P
 
 The example formula above would display the following banner when the button is activated:
 
-![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
+![Button control activated, showing a notification from the Notify function.](media/function-iferror/notify-errorinfo.png)
 
 ## IsError
 

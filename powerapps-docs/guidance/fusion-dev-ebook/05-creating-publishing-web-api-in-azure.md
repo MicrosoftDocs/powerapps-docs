@@ -69,7 +69,7 @@ The existing systems store data by using Azure SQL Database. Kiana decides to bu
 
 Kiana started with the Field Inventory functionality because this is the most straightforward part. The Field Inventory operations in the Web API query a single table, **BoilerParts**, in the **InventoryDB** database. This table contains the columns shown in the following image.
 
-![The BoilerParts table showing Id, Name, CategoryId, Price, Overview, NumberInStock, and ImageURL columns](media/image82.png)
+![The BoilerParts table showing Id, Name, CategoryId, Price, Overview, NumberInStock, and ImageURL columns.](media/image82.png)
 
 Kiana took the "code-first" approach to building the Web API. With this strategy, she did the following:
 
@@ -85,13 +85,13 @@ Kiana took the "code-first" approach to building the Web API. With this strategy
 
 The following image shows the high-level structure of the Web API.
 
-![High-level structure of the Inventory Web API](media/image83.png)
+![High-level structure of the Inventory Web API.](media/image83.png)
 
 Kiana used the following procedure to create the Web API using .NET 5.0 command-line tools and Visual Studio Code:
 
 1.  Open a terminal window in Visual Studio Code.
 
-    ![New Terminal Window in VS Code](media/image84.png)
+    ![New Terminal Window in VS Code.](media/image84.png)
 
 2.  Run the following command to create a new Web API project named **FieldEngineerApi**.
 
@@ -101,11 +101,11 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
 
 3.  Open the **FieldEngineerApi** folder.
 
-    ![Open the FieldEngineerApi folder](media/image85.png)
+    ![Open the FieldEngineerApi folder.](media/image85.png)
 
 4.  Remove the example **WeatherForecastController.cs** controller and **WeatherForecast.cs** class file that was created by the Web API template.
 
-    ![Delete WeatherForecast files](media/image86.png)
+    ![Delete WeatherForecast files.](media/image86.png)
 
 5.  In the **Terminal** window, add the following Entity Framework packages and tools, together with support for using SQL Server, to the project.
 
@@ -125,11 +125,11 @@ Kiana used the following procedure to create the Web API using .NET 5.0 command-
 
 6.  In the **FieldEngineerApi** folder, create a new folder named **Models**.
 
-    ![Create Models folder](media/image87.png)
+    ![Create Models folder.](media/image87.png)
 
 7.  In the **Models** folder, create a C\# code file named **BoilerPart.cs**.
 
-    ![Create BoilerPart class](media/image88.png)
+    ![Create BoilerPart class.](media/image88.png)
 
 8.  In this file, add the following properties and fields. These properties and fields mirror the structure of the **BoilerParts** table in the **InventoryDB** database.
 
@@ -337,27 +337,27 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
 7.  In Visual Studio Code, right-click the **publish** folder, and then select **Deploy to Web App**.
 
-    ![Deploy the Web app from VS Code](media/image89.png)
+    ![Deploy the Web app from VS Code.](media/image89.png)
 
 8.  Select the name of the web app you created earlier in step 4 (*\<webapp name\>*). In the following example, the web app is named **my-fieldengineer-webapp**.
 
-    ![Select the Web app](media/image90.png)
+    ![Select the Web app.](media/image90.png)
 
 9.  At the prompt in the Visual Studio Code dialog, select **Deploy** to accept the warning and deploy the web app.
 
-    ![VS Code deployment warning](media/image91.png)
+    ![VS Code deployment warning.](media/image91.png)
 
 10. Verify that the web app is deployed successfully, and then browse to the website.
 
-    ![Browse to website dialog in VS Code](media/image92.png)
+    ![Browse to website dialog in VS Code.](media/image92.png)
 
 11. The website will open in a new browser window, but will display an HTTP 404 error (not found). This is because the Web API operations are available through the **api** endpoint rather than the root of the website. Change the URL to **https://*\<webapp name\>*.azurewebsites.net/api/BoilerParts**. This URI invokes the **GetBoilerParts** method in the **BoilerParts** controller. The Web API should respond with a JSON document that lists all the boiler parts in the **InventoryDB** database.
 
-    ![Parts list displayed in the Web browser](media/image93.png)
+    ![Parts list displayed in the Web browser.](media/image93.png)
 
 12. Change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The Swagger API should appear. This is a graphical user interface that enables a developer to verify and test each of the operations in a Web API. It also acts as a useful documentation tool.
 
-    ![The Swagger UI displaying the list of operations](media/image94.png)
+    ![The Swagger UI displaying the list of operations.](media/image94.png)
 
 13. Select **GET** adjacent to the **/api/BoilerParts/{id}** endpoint, and then select **Try it out**.
 
@@ -365,7 +365,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
 14. In the **id** field, enter the ID of a part, and then select **Execute**. This action calls the **GetBoilerPart(long id)** method in the **BoilerParts** controller. It will return a JSON document with the details of the part or an HTTP 404 error if no matching part is found in the database.
 
-    ![The response in the Swagger UI](media/image96.png)
+    ![The response in the Swagger UI.](media/image96.png)
 
 15. Close the web browser and return to Visual Studio Code.
 
@@ -373,7 +373,7 @@ Kiana deployed and tested the Web API, by performing the following tasks:
 
 The Field Knowledgebase operations in the Web API work on three tables in the **KnowledgeDB** database: **Tips**, **BoilerParts**, and **Engineers**. The following image shows the relationships among these tables and the columns they contain.
 
-![Knowledgebase tables relationships](media/image97.png)
+![Knowledgebase tables relationships.](media/image97.png)
 
 Kiana adopted a similar approach for the Field Knowledgebase database that she used for the Field Inventory Management database. She performed the following tasks:
 
@@ -632,13 +632,13 @@ Kiana adopted a similar approach for the Field Knowledgebase database that she u
 
 12. When deployment is complete, browse to the website but change the URL in the browser to **https://*\<webapp name\>*.azurewebsites.net/swagger**. The operations for the **KnowledgeBaseBoilerPart**, **KnowledgeBaseEngineer**, and **KnowldgeBaseTip** controllers should be listed in addition to the existing **BoilerParts** operations. Verify that the **KnowledgeBaseBoilerPart** operations include a **GET** operation for the URI **/api/KnowledgeBaseBoilerPart/{id}/Tips**, and the **KnowledgeBaseEngineer** operations include a **GET** operation for the URI **/api/KnowledgeBaseEngineer/{id}/Tips**.
 
-    ![Swagger UI with new operations](media/image98.png)
+    ![Swagger UI with new operations.](media/image98.png)
 
 ## Building and Deploying the Web API: Field Scheduling
 
 The Field Scheduling operations use the tables **Appointments**, **AppointmentStatuses** (this is a simple lookup table that lists the valid appointment status values), **Customers**, and **Engineers**, shown in the following image. These tables are stored in the **SchedulesDB** database.
 
-![Appointments and scheduling tables relationships](media/image99.png)
+![Appointments and scheduling tables relationships.](media/image99.png)
 
 To create the Web API operations for the Field Scheduling part of the system, Kiana performed the following tasks:
 

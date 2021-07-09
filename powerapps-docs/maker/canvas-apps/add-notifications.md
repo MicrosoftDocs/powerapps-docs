@@ -38,11 +38,11 @@ In this article, the sample app used for notifications is built from the default
 
 1. Select **Power Apps Notification**.
 
-    ![Select Power Apps Notification](./media/add-notifications/select-powerapps-notification.png "Select Power Apps Notification")
+    ![Select Power Apps Notification.](./media/add-notifications/select-powerapps-notification.png "Select Power Apps Notification")
 
 1. Paste the app ID copied from the previous step.
 
-    ![Paste the app ID](./media/add-notifications/paste-app-id.png "Paste the app ID")
+    ![Paste the app ID.](./media/add-notifications/paste-app-id.png "Paste the app ID")
 
 1. Select **Connect**.
 
@@ -50,13 +50,13 @@ In this article, the sample app used for notifications is built from the default
 
     In our example, we use the same app as the trigger app. The user who reassigns the case also triggers a push notification to the new case owner.
 
-    ![Add connection](./media/add-notifications/add-connection.png)
+    ![Add connection.](./media/add-notifications/add-connection.png)
 
 1. From the push notification connection, call the **SendPushNotification** method.
 
     In our example, we trigger this notification by using the **OnSuccess** property in a form.
 
-    ![Power Apps formula](./media/add-notifications/powerapps-function.png)
+    ![Power Apps formula.](./media/add-notifications/powerapps-function.png)
 
 
 ## Syntax

@@ -30,11 +30,11 @@ Monitor is available by default for all canvas apps. Using Monitor, you can trac
 
 1. Select **Open monitor**.
 
-    ![Open monitor](media/monitor/open-monitor.png "Open monitor")
+    ![Open monitor.](media/monitor/open-monitor.png "Open monitor")
 
 This action opens Monitor in a new browser tab and connects it to your existing Power Apps Studio session.
 
-![Monitor - opened](media/monitor/monitor-opened.png "Monitor - opened")
+![Monitor - opened.](media/monitor/monitor-opened.png "Monitor - opened")
 
 A notification appears at the top to show the current monitoring session as a *Studio session*.
 
@@ -58,17 +58,17 @@ You can also use Monitor to debug the published app in the web player.
 1. Select **Monitor** from the menu. Or, you can select **More
     Commands** (**...**), and then select **Monitor**.
 
-    ![Open Monitor for a published app](media/monitor/open-published-app-monitor.png "Open Monitor for a published app")
+    ![Open Monitor for a published app.](media/monitor/open-published-app-monitor.png "Open Monitor for a published app")
 
 1. Select **Play published app**.
 
-    ![Play published app](media/monitor/play-published-app.png "Play published app")
+    ![Play published app.](media/monitor/play-published-app.png "Play published app")
 
 This action opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in Monitor when the app is loaded in the web player, and as you interact with the published app.
 
 Monitor also displays a notification that the monitoring session that's currently open is for the published version of the app.
 
-![Published app session](media/monitor/published-app-session.png "Published app session")
+![Published app session.](media/monitor/published-app-session.png "Published app session")
 
 ### Setting: Debug published app
 
@@ -76,14 +76,14 @@ If you want to view the source expressions in Monitor for the published app, you
 
 To enable this setting, go to **File** > **Settings**, and then turn on **Debug published app**.
 
-![Debug published app](media/monitor/debug-published-app.png "Debug published app")
+![Debug published app.](media/monitor/debug-published-app.png "Debug published app")
 
 ### View events in Monitor
 
 To view events from your app, play the app in Power Apps Studio. Monitor will then
 display the table of events as they're occurring, along with specific details.
 
-![View events as they occur](media/monitor/monitor-events-occurring.png "View events as they occur")
+![View events as they occur.](media/monitor/monitor-events-occurring.png "View events as they occur")
 
 ## Example: Using Monitor with canvas apps
 
@@ -100,7 +100,7 @@ When you check Monitor, you see data operations as expected. However, you also s
 
 When you select such an event, you see the error as "Rate limit exceeded. Try again in XX seconds."
 
-![Example scenario - error 429](media/monitor/error-429.png "Example scenario - error 429")
+![Example scenario - error 429.](media/monitor/error-429.png "Example scenario - error 429")
 
 ### **Analysis**
 
@@ -108,7 +108,7 @@ The problem needs further analysis to understand why requests are getting
 throttled. In Monitor, you see that for each **createRow** call, there are
 several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor, as shown in the following image.
 
-![Error 429 - Formula](media/monitor/error-429-formula.png "Error 429 - Formula")
+![Error 429 - Formula.](media/monitor/error-429-formula.png "Error 429 - Formula")
 
 For each record added, the formula is evaluated again and **CountRows** is
 called on several entities. This behavior results in **getRows** in the log,

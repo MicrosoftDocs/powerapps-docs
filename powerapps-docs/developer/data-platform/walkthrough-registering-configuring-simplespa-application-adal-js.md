@@ -45,7 +45,7 @@ After you enter your credentials you will be directed back to the HTML page wher
 
 Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
   
-![The SimpleSPA page](media/simple-spa.png "The SimpleSPA page")  
+![The SimpleSPA page.](media/simple-spa.png "The SimpleSPA page")  
 
 > [!NOTE]
 > The initial load of data from Dataverse may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
@@ -294,19 +294,19 @@ Finally, you can click on **Logout** button to logout.
   
 3. Now select **Enterprise Applications** in the panel that opens up.
 
-   ![Select Enterprise Applications](media/register-spa-app-registration.PNG)
+   ![Select Enterprise Applications.](media/register-spa-app-registration.PNG)
 
 4. Select **New application**(near the top of the page), and then under **Add your own app** select **Application you're developing**.  
 
-   ![Select Application you're developing](media/register-spa-app-you-developing.PNG)
+   ![Select Application you're developing.](media/register-spa-app-you-developing.PNG)
   
 5. Now click on **Ok, take me to App Registrations to register my new application**.
 
-   ![Select Ok, take me to App Registrations](media/register-spa-take-me-app-reg.PNG)
+   ![Select Ok, take me to App Registrations.](media/register-spa-take-me-app-reg.PNG)
 
 6. Now click on **New application registration**(near the top of the page).  
 
-   ![Select New application registration](media/register-spa-new-reg.PNG)
+   ![Select New application registration.](media/register-spa-new-reg.PNG)
   
 7. Enter the following information :  
   
@@ -316,21 +316,21 @@ Finally, you can click on **Logout** button to logout.
 
    - **Redirect URL**<br />This is the URL which the user should be redirected to after they sign in. Select **Web** from the drop down list. For debugging purposes in Visual Studio it should be  `https://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure. Then click on **Register** at the end of the page.
 
-   ![Enter details](media/new-app-registration-page.png)
+   ![Enter details.](media/new-app-registration-page.png)
 
 8. In the tab of the newly registered app, copy the **Application (client) ID**. Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
 
 9. Now click on **API permissions** and then select **Add a permission**.
 
-   ![Select Required permissions](media/azure-api-permissions-page.png)
+   ![Select Required permissions.](media/azure-api-permissions-page.png)
 
 10. Select **Dynamics CRM** under **Microsoft APIs** tab.
 
-    ![Select Dynamics CRM Online under Select an API](media/app-registration-select-api-page.png)
+    ![Select Dynamics CRM Online under Select an API.](media/app-registration-select-api-page.png)
 
 11. Click on **Delegated permissions** tab, select all permissions and click on **Add permissions** at the end of the page.
 
-    ![Select all Delegated permissions](media/app-registration-delegate-permissions-page.png)
+    ![Select all Delegated permissions.](media/app-registration-delegate-permissions-page.png)
 
 12. Then select **Done**. You will see a row for **Dynamics CRM** added.
 
@@ -338,19 +338,19 @@ Finally, you can click on **Logout** button to logout.
 
 14. Locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
 
-    ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
+    ![Set oauth2AllowImplicitFlow to true in Manifest file.](media/register-spa-edit-manifest.PNG)
 
 15. For successful execution of your application, you will also need to grant administrator consent to it. To do this, login as a tenant admin in your Azure management portal and select **Azure Active Directory**. Then click on **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
 
-    ![Grant administrator consent to your application](media/simple-spa-admin-consent.PNG)
+    ![Grant administrator consent to your application.](media/simple-spa-admin-consent.PNG)
 
 16. Now select **API permissions** as shown above, and click on **Grant admin consent for**`<your AAD Org name>`.
 
-    ![Click on Grant admin consent button](media/simple-spa-admin-consent-button.PNG)
+    ![Click on Grant admin consent button.](media/simple-spa-admin-consent-button.PNG)
 
 17. Once you click on this button, it will open a login window and ask you whether you wish to grant the requested permissions to your application. Click on **Accept** to proceed.
 
-    ![Click on Accept to grant the requested permissions](media/simple-spa-admin-consent-click-accept.PNG)
+    ![Click on Accept to grant the requested permissions.](media/simple-spa-admin-consent-click-accept.PNG)
 
 18. Once this is done, proceed to debugging the application.
 

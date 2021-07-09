@@ -43,13 +43,13 @@ The portal enables configuring the most common options, but certain options can 
  |**Custom**|Shows only custom relationships for the table|
  |**Default**|Shows only the standard relationships for the table|
 
-![Account table relationships](media/view-account-relationships-portal.png)
+![Account table relationships.](media/view-account-relationships-portal.png)
 
 ## Create relationships
 
 While [viewing table relationships](#view-table-relationships), in the command bar, select **Add relationship** and choose either **Many-to-one** or **One-to-many**.
 
-![Select type of relationship](media/add-relationship-menu-portal.png)
+![Select type of relationship.](media/add-relationship-menu-portal.png)
 
 > [!NOTE]
 > For information about **Many-to-many** relationships see [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
@@ -99,7 +99,7 @@ The only columns you can edit are **Lookup column display name** and **Lookup co
 
 While [viewing table relationships](#view-table-relationships), select the relationship you want to delete.
 
-![Delete table relationship](media/delete-entity-relationship-portal.png)
+![Delete table relationship.](media/delete-entity-relationship-portal.png)
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you click the ellipses (**...**).
 

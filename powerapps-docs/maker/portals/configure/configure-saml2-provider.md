@@ -31,17 +31,17 @@ To provide external authentication, you can add one or more [SAML 2.0](https://d
 
 1. Enter a provider name.
 
-    ![Provider name](media/authentication/saml2-provider-name.png "Provider name")
+    ![Provider name.](media/authentication/saml2-provider-name.png "Provider name")
 
 1. Select **Next**.
 
 1. Create the application and configure the settings with your identity provider.
 
-    ![Create a SAML 2.0 application](media/authentication/step-1-saml2.png "Create a SAML 2.0 application")
+    ![Create a SAML 2.0 application.](media/authentication/step-1-saml2.png "Create a SAML 2.0 application")
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure SAML 2.0 site settings](media/authentication/saml2-site-settings.png "Configure SAML 2.0 site settings")
+    ![Configure SAML 2.0 site settings.](media/authentication/saml2-site-settings.png "Configure SAML 2.0 site settings")
 
     > [!NOTE]
     > Ensure that you review&mdash;and if required, change&mdash;the default values.
@@ -57,7 +57,7 @@ To provide external authentication, you can add one or more [SAML 2.0](https://d
 
 1. (Optional) Configure additional settings.
 
-    ![Additional settings](media/authentication/saml2-site-settings-additional.png "Additional settings")
+    ![Additional settings.](media/authentication/saml2-site-settings-additional.png "Additional settings")
 
     | Name | Description
     | - | - |

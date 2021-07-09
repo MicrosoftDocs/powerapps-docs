@@ -57,7 +57,7 @@ The forum thread editor will appear automatically when a user has successfully s
 
 5. Select **Create this thread**.
 
-    ![Create a new forum thread](media/create-new-forum-thread.png "Create a new forum thread")  
+    ![Create a new forum thread.](media/create-new-forum-thread.png "Create a new forum thread")  
 
 ### Forum thread attributes used by portals
 

@@ -84,18 +84,18 @@ If you use **AddColumns** in this manner, **Filter** must make separate calls to
 ## Examples
 The examples in this section use the **IceCreamSales** data source, which contains the data in this table:
 
-![IceCream example](media/function-table-shaping/icecream.png)
+![IceCream example.](media/function-table-shaping/icecream.png)
 
 None of these examples modify the **IceCreamSales** data source. Each function transforms the value of the data source as a table and returns that value as the result.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Adds a **Revenue** column to the result.  For each record, **UnitPrice * QuantitySold** is evaluated, and the result is placed in the new column. | ![Result with Srawberry, Chocolate and Vanilla](media/function-table-shaping/icecream-add-revenue.png) |
-| **DropColumns( IceCreamSales, "UnitPrice" )** |Excludes the **UnitPrice** column from the result. Use this function to exclude columns, and use **ShowColumns** to include them. |![Result with Strawberry, Chocolate, Vanilla having only QuantitySold column](media/function-table-shaping/icecream-drop-price.png) |
-| **ShowColumns( IceCreamSales, "Flavor" )** |Includes only the **Flavor** column in the result. Use this function include columns, and use **DropColumns** to exclude them. |![Only Flavor column](media/function-table-shaping/icecream-select-flavor.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Renames the **UnitPrice** column in the result. |![Result with Flavor, Price and Revenue](media/function-table-shaping/icecream-rename-price.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Renames the **UnitPrice** and **QuantitySold** columns in the result. |![Result with 3 IceCreams and columns as Flavor, Price, Revenue](media/function-table-shaping/icecream-rename-price-quant.png) |
-| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![IceCream example for unit price](media/function-table-shaping/icecream-all-transforms.png) |
+| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Adds a **Revenue** column to the result.  For each record, **UnitPrice * QuantitySold** is evaluated, and the result is placed in the new column. | ![Result with Srawberry, Chocolate and Vanilla.](media/function-table-shaping/icecream-add-revenue.png) |
+| **DropColumns( IceCreamSales, "UnitPrice" )** |Excludes the **UnitPrice** column from the result. Use this function to exclude columns, and use **ShowColumns** to include them. |![Result with Strawberry, Chocolate, Vanilla having only QuantitySold column.](media/function-table-shaping/icecream-drop-price.png) |
+| **ShowColumns( IceCreamSales, "Flavor" )** |Includes only the **Flavor** column in the result. Use this function include columns, and use **DropColumns** to exclude them. |![Only Flavor column.](media/function-table-shaping/icecream-select-flavor.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Renames the **UnitPrice** column in the result. |![Result with Flavor, Price and Revenue.](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Renames the **UnitPrice** and **QuantitySold** columns in the result. |![Result with 3 IceCreams and columns as Flavor, Price, Revenue.](media/function-table-shaping/icecream-rename-price-quant.png) |
+| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![IceCream example for unit price.](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### Step by step
 
@@ -126,13 +126,13 @@ Let's try some of the examples from earlier in this topic.
  
 	As this graphic shows, the second formula didn't modify this collection. The **AddColumns** function used **IceCreamSales** as a read-only argument; the function didn't modify the table to which that argument refers.
 	
-	![Collection viewer showing three records of the Ice Cream Sales collection that doesn't include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
+	![Collection viewer showing three records of the Ice Cream Sales collection that doesn't include a Revenue column.](media/function-table-shaping/ice-cream-sales-collection.png)
 
 1. Select **FirstExample**.
 
 	As this graphic shows, the second formula returned a new table with the added column. The **ClearCollect** function captured the new table in the **FirstExample** collection, adding something to the original table as it flowed through the function without modifying the source:
 
-	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
+	![Collection viewer showing three records of the First Example collection that includes a new Revenue column.](media/function-table-shaping/first-example-collection.png)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

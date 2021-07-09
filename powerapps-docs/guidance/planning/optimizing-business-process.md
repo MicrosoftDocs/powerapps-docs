@@ -94,7 +94,7 @@ Rebecca is researching how the semiannual audit might be optimized by using AI.
 
 Our proposed optimized process looks like the following illustration.
 
-![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
+![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article.](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)

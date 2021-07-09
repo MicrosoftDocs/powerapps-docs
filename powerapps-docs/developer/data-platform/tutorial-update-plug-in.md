@@ -177,11 +177,11 @@ The existing assembly from [Tutorial: Write and register a plug-in](tutorial-wri
 
 1. Select the **(Assembly) Basic Plugin** and select **Update**.
 
-    ![Select Update](media/tutorial-update-plug-in-update.png)
+    ![Select Update.](media/tutorial-update-plug-in-update.png)
 
 1. In the **Update Assembly: Basic Plugin** dialog, specify the location of the assembly by clicking the ellipses (**…**) and the assembly will load.
 
-    ![Update Assembly: Basic Plugin diallog](media/tutorial-update-plug-in-update-assembly.png)
+    ![Update Assembly: Basic Plugin diallog.](media/tutorial-update-plug-in-update-assembly.png)
 
 1. Verify that the assembly and both plug-ins are selected and click **Update Selected Plugins**.
 
@@ -198,13 +198,13 @@ Configure the **ValidateAccountName** plug-in using these settings:
 |Execution Mode|Synchronous|
 |Unsecure Configuration|test,<br />foo,<br />bar|
 
-![Register New Step](media/tutorial-update-plug-in-register-new-step.png)
+![Register New Step.](media/tutorial-update-plug-in-register-new-step.png)
 
 ## Add an image
 
 1. Right-click the step you just registered and select **Register New Image**.
 
-    ![Register New Image](media/tutorial-update-plug-in-register-new-image.png)
+    ![Register New Image.](media/tutorial-update-plug-in-register-new-image.png)
 
 1. In the **Register New Image** dialog, configure the image with these settings:
 
@@ -215,18 +215,18 @@ Configure the **ValidateAccountName** plug-in using these settings:
     |Entity Alias|a|
     |Parameters|name|
 
-    ![Register new Image dialog](media/tutorial-update-plug-in-register-new-image-dialog.png)
+    ![Register new Image dialog.](media/tutorial-update-plug-in-register-new-image-dialog.png)
 
 1. When the image is registered you will see it in the Plug-in Registration tool.
 
-    ![The registered image](media/tutorial-update-plug-in-image-added.png)
+    ![The registered image.](media/tutorial-update-plug-in-image-added.png)
 
 ## Test the plug-in
 
 1. Open the application and attempt to update an existing account name to `test`, `foo`, or `bar`.
 1. When you try to save, you should see the following message:
 
-    ![Error message](media/tutorial-update-plug-in-error-message.png)
+    ![Error message.](media/tutorial-update-plug-in-error-message.png)
 
 1. If you update an existing account with a name that includes `test`, `foo`, or `bar`, then update the account to `test`, `foo`, or `bar` you should not see the message.
 
@@ -234,7 +234,7 @@ Configure the **ValidateAccountName** plug-in using these settings:
 
 Use the Plug-in Registration tool to **Unregister** (delete) any assembly, plug-in or step. Deleting an assembly will delete all plug-ins and steps for that assembly.
 
-![unregister an assembly](media/tutorial-update-plug-in-unregister.png)
+![unregister an assembly.](media/tutorial-update-plug-in-unregister.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

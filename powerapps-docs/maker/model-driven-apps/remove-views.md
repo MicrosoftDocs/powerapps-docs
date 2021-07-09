@@ -41,7 +41,7 @@ search.app:
 
 2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
-3.  Select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Delete view**. You can also select **Delete view** on the menu bar.
+3.  Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Delete view**. You can also select **Delete view** on the menu bar.
 
 ## Deactivate or activate views  
 
@@ -49,11 +49,11 @@ search.app:
 
 2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
-3.  Select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select either **Deactivate** or **Activate**. You can also select **Deactivate** or **Activate** on the menu bar.
+3.  Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select either **Deactivate** or **Activate**. You can also select **Deactivate** or **Activate** on the menu bar.
 
 ## Delete a view in solution explorer  
 
-You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md#open-a-view-for-editing-in-solution-explorer) to find the view you want to delete and use the ![Delete button](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
+You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md#open-a-view-for-editing-in-solution-explorer) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
   
 ## Deactivate or activate views in solution explorer 
 

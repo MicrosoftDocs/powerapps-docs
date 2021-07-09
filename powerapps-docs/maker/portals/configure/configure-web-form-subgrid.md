@@ -35,7 +35,7 @@ To edit an existing record, select the record in the grid. Selecting **Subgrid**
 
 Selecting the subgrid in the form editor will display a properties window. This contains a **Name** field that should be used to assign to the **Subgrid Name** field on the Basic Form Metadata record.
 
-![Add subgrid metadata](../media/add-subgrid-metadata.png "Add subgrid metadata")  
+![Add subgrid metadata.](../media/add-subgrid-metadata.png "Add subgrid metadata")  
 
 Specifying a valid subgrid name will display the subgrid configuration settings. By default, only **Basic Settings** are shown. Select **Advanced Settings** to show additional settings.
 
