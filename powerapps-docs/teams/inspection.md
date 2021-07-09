@@ -404,6 +404,7 @@ To submit inspection of grouped locations:
 ### See also
 
 - [Understand Inspection sample apps architecture](inspection-architecture.md)
+- [Customize Inspection sample app](customize-inspections.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

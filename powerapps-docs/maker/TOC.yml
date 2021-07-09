@@ -2258,8 +2258,12 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
-            - name: Understand Inspection sample app architecture
-              href: ../teams/inspection-architecture.md
+            - name: Customize Inspection app
+              items:
+                - name: Understand Inspection sample app architecture
+                  href: ../teams/inspection-architecture.md
+                - name: Customize Inspection sample app
+                  href: ../teams/customize-inspections.md
         - name: Issue reporting
           items:
             - name: Issue reporting
