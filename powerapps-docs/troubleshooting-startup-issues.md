@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting startup issues for Power Apps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
-author: navjotm
+author: wimcoor
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -14,7 +14,6 @@ search.app:
   - PowerApps
 contributors:
   - wimcoor
-  - navjotm
   - tapanm-msft
 ---
 
@@ -111,6 +110,7 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
 - **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services.**
     
@@ -142,6 +142,7 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
 - **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services**
 
@@ -223,6 +224,7 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
         - `https://*.powerapps.com`
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
     1. Select **Close**.
     1. Select **OK**.
     1. Close all Internet Explorer windows.
@@ -243,6 +245,7 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
         - `https://apps.powerapps.com`
         - `https://*.powerapps.com`
         - Any other address that ends in `powerapps.com` or `create.powerapps.com`.
+        - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
     1. Select **Close**.
 
 ## Azure Active Directory Errors
