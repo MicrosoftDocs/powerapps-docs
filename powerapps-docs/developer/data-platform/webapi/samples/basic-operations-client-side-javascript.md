@@ -36,7 +36,7 @@ This sample demonstrates how to perform basic CRUD (create, retrieve, update, an
 
  To run this sample, the following is required:  
   
-- Access to Microsoft Dataverse online or on-premises version 8.0 or higher.  
+- Access to Microsoft Dataverse environment.  
   
 - A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -44,7 +44,7 @@ This sample demonstrates how to perform basic CRUD (create, retrieve, update, an
 
 ## Run this sample
 
-To run this sample, download the solution package here [Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript)](/samples/browse/). Download the Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript).zip file and extract the contents. Locate the  WebAPIBasicOperations_1_0_0_1_managed.zip solution and import it into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIBasicOperations) . Download the Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript).zip file and extract the contents. Locate the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution and import it into your Dataverse environment and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codesample"></a>
 
@@ -868,9 +868,9 @@ Sdk.deleteSampleData = function () {
 ### See also
 
 [Use the Dataverse Web API](../overview.md)<br />
-[Create an entity using the Web API](../create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](../retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Create a table using the Web API](../create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](../retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
 [Web API Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />

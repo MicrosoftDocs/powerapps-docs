@@ -43,7 +43,7 @@ This sample demonstrates how to perform basic query requests using the Microsoft
 
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](/samples/browse/) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample,download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIQueryData). Extract the contents of the sample archive and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
