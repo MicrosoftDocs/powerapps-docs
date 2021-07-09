@@ -157,7 +157,7 @@ Returns a Promise which resolves with an object whose keys are the security role
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when the security role privileges information is retrieved. A dictionary will be passed to the success callback where the security role privilege GUIDs will be the keys and the values will be an object containing the following properties:</p>
+<td><p>A function to call when the security role privileges information is retrieved. A dictionary will be passed to the success callback where the security role privilege GUIDs will be the keys and the values will be objects containing the following properties:</p>
 <ul>
 <li><b>id</b>: String. The security role privilege GUID.</li>
 <li><b>businessUnitId</b>: String. The GUID of the business unit of the security role privilege.</li>
