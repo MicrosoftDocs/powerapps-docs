@@ -30,8 +30,25 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 
-For example, if three's only three rows in your history, then the lookup will display those three rows,
+For example, if there's only three rows in your history, then the lookup will display those three rows,
 along with seven of your favorite rows. If you haven't pinned any rows to favorites, then the most recently viewed rows will be displayed.
+
+
+
+  > [!div class="mx-imgBorder"]
+  > ![How to use lookups](media/lookups-main.png "How to use lookups")
+
+
+Legend
+
+1. **Look for records**: Select the textbox and type your search criteria to look for rows.
+2. **Recent**: Rows that were recently searched.
+3. **New Record**: Create a new row. 
+4. **Types of records**: Select to filter by a table type such as Contact table or Account table. The number in front of **type of records** represents how many table are available to filter from.
+5. **Browse in a lookup column**: To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
+6. **Expand item**: Use the Right and Left arrow keys on your keyboard to expand collapse each item. For more information on keyboard shortcuts, see [Use keyboard shortcuts in Power Apps](keyboard-shortcuts.md).
+7. **Change View**: Select to switch to another view. For more information on views, see [Use grid filters](grid-filters.md#use-search-on-a-grid).
+
 
 ## Types of lookups
 
@@ -39,7 +56,7 @@ Lookups are classified into the following:
 
 - **Simple lookup:** Select a single row from a single table.
 
-- **PartyList-type lookup:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
+- **PartyList-type lookup:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row. Note, you can't customize the system and disable views for PartyList-type look.
   
 - **Regarding-type lookup:** Use to select a single row from multiple tables in a lookup. Activities must be enabled for a table to use the Regarding lookup. For more information: [Enable activities for a table](../maker/data-platform/types-of-entities.md#enable-activities-for-a-table)
 
@@ -124,6 +141,8 @@ When lookup has more rows in a column than can fit in the available display area
 To use **Advanced lookup**, your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
+
+Advanced lookup supports customizations on lookup control through Client APIs such as *addCustomView*, *addCustomFilter*, *addPreSearch* and *removePreSearch*. 
 
 1. To use **Advanced lookup**, select the lookup icon (magnifying glass) on any lookup column and then select **Advanced lookup**. 
 

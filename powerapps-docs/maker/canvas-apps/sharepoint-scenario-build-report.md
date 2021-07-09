@@ -1,6 +1,6 @@
 ---
-title: Create a Power BI report to analyze projects | Microsoft Docs
-description: In this task, we'll create a Power BI report based on two SharePoint lists.
+title: Create a Power BI report to analyze projects
+description: Learn about how to create a Power BI report based on two SharePoint lists.
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -19,9 +19,6 @@ search.app:
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll create a Power BI report based on the two SharePoint lists. We'll bring the list data into Power BI Desktop and clean it up a little, do some basic data modeling, and create a set of visuals that tell us something about the data.
-
-> [!TIP]
-> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this report: project-analysis.pbix.
 
 ## Quick review of Power BI Desktop
 Before we dive into report creation, let's review Power BI Desktop. This is a powerful tool, with a lot of features, so we will focus on an overview of the areas that you will use in this task. There are three main work areas or *views* in Power BI Desktop: **Report** view, **Data** view, and **Relationships** view. Power BI Desktop also includes **Query Editor**, which opens in a separate window.
@@ -307,10 +304,10 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
     ![Axis in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-00-axis.png)
 4. Drag **VarProjectedActual** from **Project Details** in the **Fields** pane to **Value** in the **Visualizations** pane.
    
-    ![Value in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
+    ![VarProjectedActual value in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
 5. Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then select the **Completed** check box.
    
-    ![Filter by Status column](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
+    ![Filter by Status column in Project Details](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
    
     The visualization should now look like the following image.
    

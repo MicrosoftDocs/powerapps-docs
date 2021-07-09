@@ -6,12 +6,12 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 04/08/2020
+ms.date: 06/01/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -244,12 +244,18 @@ For example, instead of selecting a table, some columns in the table-specific da
   
  ![Add a tile to the single-stream dashboard](media/add-tile.png "Add a tile to the single-stream dashboard")  
   
-<a name="BKMK_ConfigureColors"></a>   
-## Configure dashboard colors  
-For all **Choice** and **Two Options** type columns, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** table, you can configure a particular color that will appear in the charts and streams for specific column values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
+## Configure dashboard colors
+
+You can configure a particular color that will appear in the charts and streams for specific column values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
   
-> [!NOTE]
->  The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.  
+> [!IMPORTANT]
+>  - The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.
+>  - With interactive dashboards, a chart uses the color assigned to the categories that make up the different values, even if the chart is configured to use random colors, when the chart is configured to be grouped by any of the following column types:
+>     - Choice
+>     - Yes/No
+>     - Status Reason
+> 
+>    More information: [Chart colors are not correct on dashboards]( https://support.microsoft.com/topic/chart-colors-are-not-correct-on-dashboards-82dd1165-b509-ab64-954e-2e09a3487fd7)
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
 2.  Under **Components**, expand **Tables**, and then expand the table you want. If the table you want isn't displayed select **Add Existing** to add it.  
