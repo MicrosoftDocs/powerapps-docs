@@ -44,7 +44,7 @@ With Microsoft Dataverse, hierarchical data structures are supported by *self-re
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 
-![Hierarchical setting in relationship definition](media/self-referential-relationship-widget.png)
+![Hierarchical setting in relationship definition.](media/self-referential-relationship-widget.png)
 
 To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. 
 
@@ -78,15 +78,15 @@ The following examples illustrate scenarios for querying hierarchies:
   
 ### Query account hierarchy  
   
-![Query accounts in the account hierarchy](media/query-accounts.png)  
+![Query accounts in the account hierarchy.](media/query-accounts.png)  
   
 ### Query account hierarchy, including related activities  
   
-![Query account's related activities](media/query-account-related-activities.png)  
+![Query account's related activities.](media/query-account-related-activities.png)  
   
 ###  Query account hierarchy, including related opportunities  
   
-![Query account's related opportunities](media/query-account-related-opportunities.png)  
+![Query account's related opportunities.](media/query-account-related-opportunities.png)  
   
 ## See also 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)<br />

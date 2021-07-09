@@ -56,7 +56,7 @@ The app designer interface has the following areas:
 
 7. Fit to width - Quick action to fit the app preview to the available width.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
  
 ## Known limitations
 

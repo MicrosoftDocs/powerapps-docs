@@ -157,7 +157,7 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ### Supported clients per feature  
  The [!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)] features supported depend on the client you're running. The following table summarizes which features are supported for each client/configuration of [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] and [!INCLUDE[pn_Exchange](../includes/pn-exchange.md)].  
   
- ![Clients supported for each Dynamics 365 App for Outlook feature](media/clients-supported-for-each-dynamics-365-app-for-outlook-feature.png "Clients supported for each Dynamics 365 App for Outlook feature")  
+ ![Clients supported for each Dynamics 365 App for Outlook feature.](media/clients-supported-for-each-dynamics-365-app-for-outlook-feature.png "Clients supported for each Dynamics 365 App for Outlook feature")  
   
  (1)  [!INCLUDE[pn_outlook_web_app](../includes/pn-outlook-web-app.md)] supports [!INCLUDE[pn_IE_10](../includes/pn-ie-10.md)], [!INCLUDE[pn_ie_11](../includes/pn-ie-11.md)], [!INCLUDE[pn_microsoft_edge](../includes/pn-microsoft-edge.md)], [!INCLUDE[tn_Safari](../includes/tn-safari.md)] 9, [!INCLUDE[tn_Safari](../includes/tn-safari.md)] 10, [!INCLUDE[tn_Firefox](../includes/tn-firefox.md)], and [!INCLUDE[tn_chrome](../includes/tn-chrome.md)].  
   
@@ -226,7 +226,7 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
   
 #### To have users install the app themselves  
   
-1.  Users click the **Settings** button ![Settings button](media/mp-ua-r16-settings.png "Settings button"), and then click **Apps for Dynamics 365**.  
+1.  Users click the **Settings** button ![Settings button.](media/mp-ua-r16-settings.png "Settings button"), and then click **Apps for Dynamics 365**.  
   
 2.  In the **Apps for Dynamics 365** screen, under **[!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)]**, users click **Add app to [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)]**.  
   
@@ -249,7 +249,7 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ## Explore the User’s Guide and train your users  
  To learn how to use [!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)], [see the Dynamics 365 App for Outlook User’s Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099).  
   
- ![Dynamics 365 App for Outlook User's Guide page](media/dynamics-365-app-for-outlook-user-s-guide-page.png "Dynamics 365 App for Outlook User's Guide page")  
+ ![Dynamics 365 App for Outlook User's Guide page.](media/dynamics-365-app-for-outlook-user-s-guide-page.png "Dynamics 365 App for Outlook User's Guide page")  
   
 ## See Also  
  [Dynamics 365 App for Outlook User's Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099)   

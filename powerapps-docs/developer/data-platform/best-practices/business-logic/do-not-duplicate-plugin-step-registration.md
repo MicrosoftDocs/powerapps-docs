@@ -56,7 +56,7 @@ Ensure you are updating existing plug-in registration steps rather than deleting
 
 Deleting and recreating a step in the source instance (test, dev, preprod) will also create a duplicate step being registered in the target environment if that step had been registered before.
 
-![Duplicate Plug-in Step Registration](../media/duplicate-plugin-registration-step.png)
+![Duplicate Plug-in Step Registration.](../media/duplicate-plugin-registration-step.png)
 
 Manually creating the `SDKMessageProcessingSteps` with a new GUID or updating the existing GUID within the `customizations.xml` file will result in a duplicate step being registered. These types of tasks are unsupported as outlined in [When to edit the customizations file](/power-platform/alm/when-edit-customization-file).
 

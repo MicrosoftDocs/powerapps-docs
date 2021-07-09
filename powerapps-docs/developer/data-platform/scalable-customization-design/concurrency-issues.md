@@ -30,7 +30,7 @@ You also need to be aware of the multiple ways that activity can be driven onto 
 
 Some key areas to consider design for, and check for if you do see problems, are:
 
-![overlapping requests](media/concurrency-considerations.png)
+![overlapping requests.](media/concurrency-considerations.png)
 
 - **User driven activity**: Directly through the user interface.
 - **Async actions**: Activity that occurs later as a result of other actions. When this activity will be processed isn’t known at the time the initiating action is triggered.
@@ -54,7 +54,7 @@ A high degree of serialization is typically what turns blocking into timeouts an
 
 The plug-in timeout starts from when it is initiated. A SQL timeout is calculated on the database request, so if a query blocks waiting for a long time, it can time out.
 
-![Serialization and Timeouts](media/serialization-and-timeouts.png)
+![Serialization and Timeouts.](media/serialization-and-timeouts.png)
 
 ## Chain of actions
 
@@ -62,7 +62,7 @@ As well as understanding the specific queries in the directly triggered activiti
  
 Each message request made in a plug-in or as a step in a synchronous workflow not only triggers the direct action but may also cause other synchronous plug-ins and workflows to fire. Each of these synchronous activities will occur in the same transaction, extending the life of that transaction and any locks held possibly much longer than may be realized.
 
-![chain of actions](media/chain-of-actions.png)
+![chain of actions.](media/chain-of-actions.png)
 
 The overall effect may be much greater than initially realized. This can often happen unintentionally where multiple people are building up the implementation, or it evolves over time. 
 
@@ -78,7 +78,7 @@ While the easy way to avoid the errors may be to relax the platform constraints,
 
 What often also has an impact on usage is a cascading series of implications of this behavior.
 
-![impact on usage](media/impact-on-usage.png)
+![impact on usage.](media/impact-on-usage.png)
 
 The initial issue is locks and therefore blocking in the system. This leads to slow user response times, which is then amplified as unpredictable and unreliable user response times, often in a particular area of the system.
 

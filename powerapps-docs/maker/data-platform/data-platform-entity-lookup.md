@@ -44,12 +44,12 @@ To add a lookup relation to a table, create a relation under the **Relationships
 1. On the right pane, select a **Related** table for the **Current** table, and then select **Done**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to one relationship example](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to one relationship example")
+    > ![Many to one relationship example.](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to one relationship example")
 
 1. Select **Save table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship") 
+    > ![Many to One Relationship.](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship") 
 
 ## Add a One-to-many relationship
 
@@ -63,14 +63,14 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 
 4. Select the down arrow to the right of **Add relationship**, and then select **One-to-many**.
     > [!div class="mx-imgBorder"] 
-    > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
+    > ![One to Many Relationship.](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
 5. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they will default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
 
     > [!NOTE]
     > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, create a Many-to-one relationship.
 
-    :::image type="content" source="media/data-platform-cds-newrelationship/one-to-many-example.png" alt-text="One to many example":::
+    :::image type="content" source="media/data-platform-cds-newrelationship/one-to-many-example.png" alt-text="One to many example.":::
 6. Select **Save table**.
 
 ## Add a Many-to-many relationship
@@ -87,7 +87,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 5. After selecting a table, the names for the relationship and relationship table will appear. They will default with the names of the tables combined, but you can change them if needed.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to Many Relationship](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
+    > ![Many to Many Relationship.](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
 
 6. Select **Done** to add the relationship to your table, and then click **Save table**.
 
@@ -96,7 +96,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 While building a one-to-many or a many-to-one relationship, you can also set advanced behaviors.
 
-![Advanced behavior](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
+![Advanced behavior.](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
 These options are also referred to as cascading behaviors because they cascade down the hierarchy of related tables. For example, it may be desirable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
 
@@ -109,14 +109,14 @@ As you model your business data by creating custom tables or when using existing
 * **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row will not be applied to the child row, but the parent row cannot be deleted while the child row exists. This is useful if you do not want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
-    > ![Referential, Restrict Delete](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
+    > ![Referential, Restrict Delete.](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
 * **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table row. For example, this would cause all of the child rows to be deleted when the parent is deleted.
 
 * **Custom:** In a custom relationship between two tables, you select the behavior associated with each of a set of possible actions. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Custom behavior](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
+    > ![Custom behavior.](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
 
 For more information on defaults and custom behaviors: [Configure table relationship behavior](./create-edit-entity-relationships.md#table-relationship-behavior).
 

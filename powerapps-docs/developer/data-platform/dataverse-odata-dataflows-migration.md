@@ -69,7 +69,7 @@ From the **source** environment, get the [OData endpoint](./view-download-develo
 1. Copy the **Service Root URL** to Notepad.
 
     > [!div class="mx-imgBorder"]
-    > ![Copy the service root URL in the developer resources](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
+    > ![Copy the service root URL in the developer resources.](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
  
 ## Step 3: Create a new OData dataflow
 
@@ -83,17 +83,17 @@ In the **target** environment, create a new dataflow with the OData connector.
 
 1. Select **New dataflow** to create a new dataflow. Provide a meaningful name for the dataflow. Select **Create**.
    > [!div class="mx-imgBorder"]
-   > ![Prompt for a new dataflow](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
+   > ![Prompt for a new dataflow.](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
 
 1. Select the **OData** connector.
 
     > [!div class="mx-imgBorder"]
-    > ![Select OData source](media/select-odata-data-source.png "Select OData source")
+    > ![Select OData source.](media/select-odata-data-source.png "Select OData source")
 
 1. In the **Connection settings** dialog box, type the column values:
 
     > [!div class="mx-imgBorder"]
-    > ![Confirm the column values are correct](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
+    > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
 
     | Column | Description |
@@ -116,7 +116,7 @@ Use Power Query to select the tables and also transform data as per your require
 First, select the tables that need to be transferred. You can browse all tables in the source environment and preview some of the data in each table.
 
 > [!div class="mx-imgBorder"]
-> ![Power query navigator](./media/edit-queries-for-selected-entities.png "Power query navigator")
+> ![Power query navigator.](./media/edit-queries-for-selected-entities.png "Power query navigator")
 
 1. Select one or multiple tables as needed, and then select **Transform data**.
 
@@ -143,7 +143,7 @@ This section describes how to define the target environment settings.
 For each table chosen, select the behavior for importing that table in these settings and then select **Next**.
 
 > [!div class="mx-imgBorder"]
-> ![Map tables](./media/map-entities-to-target.png "Map tables")
+> ![Map tables.](./media/map-entities-to-target.png "Map tables")
 
 - **Load to existing table (recommended)**
 
@@ -174,12 +174,12 @@ Select **Refresh manually** since this is a one-time migration and then select *
 The initial dataflow load initiates when you select **Create**. 
 
 > [!div class="mx-imgBorder"]
-> ![Initial dataflow load](./media/initiate-dataflow-process.png "Initial dataflow load")
+> ![Initial dataflow load.](./media/initiate-dataflow-process.png "Initial dataflow load")
 
 You can manually initiate a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows have completed.
 
 > [!div class="mx-imgBorder"]
-> ![Refresh manually](./media/refresh-dataflow-manually.png "Refresh manually") 
+> ![Refresh manually.](./media/refresh-dataflow-manually.png "Refresh manually") 
 
 ## Tips
 

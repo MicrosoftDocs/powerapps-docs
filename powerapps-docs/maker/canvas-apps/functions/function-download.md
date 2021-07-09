@@ -1,6 +1,6 @@
 ---
-title: Download function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Download function in canvas apps
+title: Download function in Power Apps
+description: Reference information including syntax and examples for the Download function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -65,7 +65,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. From property list on top left, select **OnSelect**.
 1. Enter formula as `Download("https://go.microsoft.com/fwlink/?linkid=827480")`. You can also use any other URL of your choice.
 
-    ![Download example](media/function-download/download-example-onselect.png "Download example")
+    ![Download example.](media/function-download/download-example-onselect.png "Download example")
 
 1. Save and publish the app.
 1. Play the app.

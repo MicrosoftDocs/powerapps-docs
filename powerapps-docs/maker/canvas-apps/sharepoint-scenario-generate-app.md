@@ -1,6 +1,6 @@
 ---
-title: Generate a canvas app to handle project requests | Microsoft Docs
-description: In this task, we'll generate a basic canvas app with three screens directly from a SharePoint list.
+title: Generate a canvas app to handle project requests
+description: Learn about how to generate a basic canvas app with three screens directly from a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -28,21 +28,21 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 1. In the **Project Requests** list you created, select **Integrate** -> **Power Apps** -> **Create an app**.
    
-    ![Create an app](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
+    ![Create an app.](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
 2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in Power Apps Studio.
    
-    ![Specify a name for the app](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
+    ![Specify a name for the app.](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
 ## Step 2: Review the app in Power Apps Studio
 
 1. In Power Apps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
    
-    ![Power Apps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
+    ![Power Apps Studio with hierarchical view.](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
 
 2. Click or tap the thumbnail icon to switch views.
    
-    ![Power Apps Studio view selector](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
+    ![Power Apps Studio view selector.](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
 
 3. Click or tap each screen to view it in the middle pane. There are three screens:
    
@@ -52,7 +52,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
     
     (c). The **edit/create** screen, where you edit an existing item or create a new one.
       
-      ![Power Apps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
+      ![Power Apps Studio with thumbnail view.](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
 ## Step 3: Customize the app's browse screen
 
@@ -62,7 +62,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 2. Select the **BrowseGallery1** gallery by clicking or tapping any record except the first one.
    
-    ![Browse gallery](./media/sharepoint-scenario-generate-app/02-03-01-browse-gallery.png)
+    ![Browse gallery.](./media/sharepoint-scenario-generate-app/02-03-01-browse-gallery.png)
 
 3. In the right pane, under **Properties**, click or tap **Project Requests**. 
 
@@ -74,60 +74,60 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
    * **Title**
 
-     ![Gallery fields](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
+     ![Gallery fields.](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
 
 5. With **BrowseGallery1** still selected, select the **Items** property.
    
-    ![Items property](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
+    ![Items property.](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
 
 6. Change the formula to **SortByColumns(Filter('Project Requests', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
    
-    ![Formula bar](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
+    ![Formula bar.](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    
     This allows you to sort and search by the **Title** field, instead of the default that Power Apps picked. See [Formula deep-dive](#formula-deep-dive) for more information.
 
-6. Click or tap **File**, then **Save**. Click or tap ![Back to app icon](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) to go back to the app.
+6. Click or tap **File**, then **Save**. Click or tap ![Back to app icon.](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) to go back to the app.
 
 ## Step 4: Review the app's details screen and edit screen
 1. Click or tap the details screen.
    
     This screen has a different layout that contains a *display form* to show the details for an item selected in the gallery. It has controls to edit and delete items, and to go back to the browse screen.
    
-    ![Details display form](./media/sharepoint-scenario-generate-app/02-04-01-details.png)
+    ![Details display form.](./media/sharepoint-scenario-generate-app/02-04-01-details.png)
 
 4. Click or tap the edit screen.
    
     This screen contains an *edit form* to edit the selected item, or create a new one (if you come here directly from the browse screen). It has controls to save or discard changes.
 
-    ![Edit form](./media/sharepoint-scenario-generate-app/02-04-03-edit.png)
+    ![Edit form.](./media/sharepoint-scenario-generate-app/02-04-03-edit.png)
 
 ## Step 5: Run the app from the list
 
 1. In the **Project Requests** list, click or tap **All Items**, then **Project Requests app**.
    
-    ![View Project Requests app](./media/sharepoint-scenario-generate-app/02-05-01-view-app.png)
+    ![View Project Requests app.](./media/sharepoint-scenario-generate-app/02-05-01-view-app.png)
 2. Click **Open**, which opens the app in a new browser tab.
    
-    ![Open Project Requests app](./media/sharepoint-scenario-generate-app/02-05-02-open-app.png)
+    ![Open Project Requests app.](./media/sharepoint-scenario-generate-app/02-05-02-open-app.png)
 
-3. In the app, click or tap ![Go to details icon](./media/sharepoint-scenario-generate-app/icon-details-arrow.png) for the first item in the browse gallery.
+3. In the app, click or tap ![Go to details icon.](./media/sharepoint-scenario-generate-app/icon-details-arrow.png) for the first item in the browse gallery.
    
-    ![First gallery item](./media/sharepoint-scenario-generate-app/02-05-04-first-item.png)
+    ![First gallery item.](./media/sharepoint-scenario-generate-app/02-05-04-first-item.png)
 
-4. Click or tap ![Pencil edit icon](./media/sharepoint-scenario-generate-app/icon-pencil.png) to edit the item.
+4. Click or tap ![Pencil edit icon.](./media/sharepoint-scenario-generate-app/icon-pencil.png) to edit the item.
 
-5. Update the **Description** field – change the last word from "group" to "team," then click or tap ![Check mark icon](./media/sharepoint-scenario-generate-app/icon-check-mark.png)
+5. Update the **Description** field – change the last word from "group" to "team," then click or tap ![Check mark icon.](./media/sharepoint-scenario-generate-app/icon-check-mark.png)
    
-   ![Update Description field](./media/sharepoint-scenario-generate-app/02-05-07-edit.png)
+   ![Update Description field.](./media/sharepoint-scenario-generate-app/02-05-07-edit.png)
 
 6. Close the browser tab.
 
 7. Go back to the **Project Requests** list, click or tap **Project Requests app**, then **All Items**.
    
-   ![View all items](./media/sharepoint-scenario-generate-app/02-05-08-view-all.png)
+   ![View all items.](./media/sharepoint-scenario-generate-app/02-05-08-view-all.png)
 8. Verify the change you made from the app.
    
-    ![Verify your edit](./media/sharepoint-scenario-generate-app/02-05-09-verify-edit.png)
+    ![Verify your edit.](./media/sharepoint-scenario-generate-app/02-05-09-verify-edit.png)
 
 This is a pretty simple app, and we only made a few basic customizations, but you can see it's possible to quickly build something interesting. We're going to move on to the next task, but look around the app a little more if you want, and see how the controls and formulas work together to drive app behavior.
 

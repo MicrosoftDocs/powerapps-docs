@@ -1,6 +1,6 @@
 ---
-title: Connectors overview for canvas apps | Microsoft Docs
-description: Overview of all the available connections that you can use to build canvas apps
+title: Overview of connectors for canvas apps
+description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,15 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 06/14/2021
+ms.date: 06/29/2021
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Overview of canvas-app connectors for Power Apps
+# Overview of connectors for canvas apps
+
 Data is at the core of most apps, including those you build in Power Apps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. Power Apps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, and Twitter. To get started adding data to a canvas app, see [Add a data connection in Power Apps](add-data-connection.md).
 
 A connector may provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector may be either a standard or custom connector.
@@ -25,11 +26,11 @@ A connector may provide **tables** of data or **actions**. Some connectors provi
 
 If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
- ![Plain data source Items property](./media/connections-list/ItemPropertyPlain.png)
+ ![Plain data source Items property.](./media/connections-list/ItemPropertyPlain.png)
 
 You can specify the data that your app retrieves by customizing the **Items** property of the control that shows your data. Continuing the previous example, you can sort or filter the data in the **Lessons** table by using that name as an argument for the **Search** and **SortByColumn** functions. In this graphic, the formula to which the **Items** property is set specifies that the data is sorted and filtered based on the text in **TextSearchBox1**. 
 
- ![Expanded data source Items property](./media/connections-list/ItemPropertyExpanded.png)
+ ![Expanded data source Items property.](./media/connections-list/ItemPropertyExpanded.png)
 
 For more information about how to customize your formula with tables, see these topics:
 
@@ -45,7 +46,7 @@ For more information about how to customize your formula with tables, see these 
 
 If your connector provides actions, you must still select your data source as you did before. Instead of selecting a table as the next step, however, you manually connect a control to an action by editing the **Items** property of the control that will show your data. The formula to which you set the **Items** property specifies the action that retrieves data. For example, the app won't retrieve any data if you connect to Yammer and then set the **Items** property to the name of the data source. To populate a control with data, specify an action such as **GetMessagesInGroup(5033622).messages**.
 
-![Action data source Items property](./media/connections-list/ItemPropertyAction.png)
+![Action data source Items property.](./media/connections-list/ItemPropertyAction.png)
 
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
 
@@ -62,12 +63,12 @@ This table has links to more information about our most popular connectors. For 
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
-| ![Dataverse](./media/connections-list/cdm.png) |[**Common Data Service**](connections/connection-common-data-service.md) |&nbsp; |![Cloud storage](./media/connections-list/onedrive.png) |[**Cloud storage**](connections/cloud-storage-blob-connections.md) ** |
-| ![Dynamics AX](./media/connections-list/dynamics-ax.png) |[**Dynamics AX**](connections/connection-dynamicsax.md)|&nbsp; |![Microsoft Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md)|
-| ![Microsoft Translator](./media/connections-list/microsoft-translator.png) |[**Microsoft Translator**](connections/connection-microsoft-translator.md)|&nbsp; | ![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](connections/connection-office365-outlook.md)|
-| ![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](connections/connection-office365-users.md)  |&nbsp; | ![Oracle](./media/connections-list/oracle-icon.png) |[**Oracle**](connections/connection-oracledb.md)|
-| ![Power BI](./media/connections-list/powerbi.png) |[**Power BI**](connections/connection-powerbi.md) |&nbsp; | ![SharePoint logo](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |
-| ![SQL Server](./media/connections-list/sql.png) |[**SQL Server**](connections/connection-azure-sqldatabase.md) |&nbsp; | ![Twitter logo](./media/connections-list/twitter.png) |[**Twitter**](connections/connection-twitter.md) |
+| ![Microsoft Dataverse.](./media/connections-list/cdm.png) |[**Microsoft Dataverse**](connections/connection-common-data-service.md) |&nbsp; |![Cloud storage](./media/connections-list/onedrive.png) |[**Cloud storage**](connections/cloud-storage-blob-connections.md) ** |
+| ![Dynamics AX.](./media/connections-list/dynamics-ax.png) |[**Dynamics AX**](connections/connection-dynamicsax.md)|&nbsp; |![Microsoft Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md)|
+| ![Microsoft Translator.](./media/connections-list/microsoft-translator.png) |[**Microsoft Translator**](connections/connection-microsoft-translator.md)|&nbsp; | ![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](connections/connection-office365-outlook.md)|
+| ![Office 365 Users.](./media/connections-list/office365.png) |[**Office 365 Users**](connections/connection-office365-users.md)  |&nbsp; | ![Oracle](./media/connections-list/oracle-icon.png) |[**Oracle**](connections/connection-oracledb.md)|
+| ![Power BI.](./media/connections-list/powerbi.png) |[**Power BI**](connections/connection-powerbi.md) |&nbsp; | ![SharePoint logo](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |
+| ![SQL Server.](./media/connections-list/sql.png) |[**SQL Server**](connections/connection-azure-sqldatabase.md) |&nbsp; | ![Twitter logo](./media/connections-list/twitter.png) |[**Twitter**](connections/connection-twitter.md) |
 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive and OneDrive for Business
 
@@ -82,6 +83,9 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 ## Security and types of authentication
 
 As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
+
+> [!NOTE]
+> For detailed information about security considerations when using a relational database servers (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
 
 ### Azure AD Integrated
 
@@ -104,5 +108,9 @@ This type of connection is not very secure because it doesn't rely on end-user a
 ## Data sources in solutions
 
 Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is a solution, [connection references](/maker/data-platform/create-connection-reference) and [environment variables](/maker/data-platform/environmentvariables) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+
+## Rename data sources in apps
+
+To learn about renaming data sources in an app, and the difference between tabular and action-based data sources, go to [Rename Power Apps action-based data sources](rename-data-source.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

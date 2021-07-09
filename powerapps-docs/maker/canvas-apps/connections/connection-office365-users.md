@@ -1,6 +1,6 @@
 ---
-title: Overview of the Office 365 Users connection | Microsoft Docs
-description: See how to connect to Office 365 Users, step through some examples, and see all the functions
+title: Connect to Office 365 Users connection from Power Apps
+description: See how to connect to Office 365 Users, step through some examples, and see all the functions.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 ---
 # Connect to Office 365 Users connection from Power Apps
 
-![Office 365 Users](./media/connection-office365-users/office365icon.png)
+![Office 365 Users.](./media/connection-office365-users/office365icon.png)
 
 Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports.
 
@@ -30,7 +30,7 @@ This article shows you how to add Office 365 Users as a connection, add Office 3
 
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
 
-    ![Connect to Office 365](./media/connection-office365-users/add-office.png)
+    ![Connect to Office 365.](./media/connection-office365-users/add-office.png)
 2. Select **Connect**, and if prompted to sign in, enter your work account.
 
 The Office 365 Users connection has been created and added to your app. Now, it's ready to be used.
@@ -63,7 +63,7 @@ The label shows the information that you entered about the current user.
 ### Show information about another user
 1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename it **InfoAbout**:  
 
-    ![Rename control](./media/connection-office365-users/renameinfoabout.png)
+    ![Rename control.](./media/connection-office365-users/renameinfoabout.png)
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
 3. Add a **Label** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
@@ -112,7 +112,7 @@ The label shows the information that you entered about the current user.
 The label shows the information that you entered about the user you specified or that user's manager.
 
 > [!NOTE]
-> If you're developing an app based on an entity in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
+> If you're developing an app based on a table in the Microsoft Dataverse, you can specify a user based on ID instead of email address.
 
 For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**

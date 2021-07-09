@@ -23,7 +23,7 @@ Take the following steps to export your customizations from Dataverse for Teams:
    - We recommend that you keep the option **Export all dependencies**  under **Advanced settings** selected. By including all dependencies you are optimizing your success when importing your customizations into another environment.
    - If you prefer to manually select the dependencies of your items, you can change the value to **Export selected dependencies** under **Advanced settings**. Note that importing customizations that do not include all dependencies will fail if those dependencies are not already in the destination environment.
 
-     ![Review selections](media/export-customizations.png)
+     ![Review selections.](media/export-customizations.png)
 1. Select **Export as zip**. The selected items are exported as a compressed solution file (.zip). The solution file is automatically offered for download when the export completes.
    - Files you download from Microsoft Teams will show up in your device's downloads folder. In Microsoft Teams desktop, you can navigate to the **Downloads** section by select **Files** on the left side of the Teams client.
 
@@ -35,13 +35,13 @@ Take the following steps to import your customizations into Dataverse for Teams:
 1. Select **See all**, and then on the command bar, select **Import**.
 1. On the **Import a solution** page, select **Browse**.
 
-    ![Select Browse](media/teams-import-solution.png)
+    ![Select Browse.](media/teams-import-solution.png)
 1. Locate the compressed (.zip) file that contains the solution you want to import, select **Open**, and then select **Next**. 
 1. Review the items that you want to import.
    - If you are importing an unmanaged solution, you can select the item that you want to import into your team. We recommend that you keep the default selection and import all of the items. This helps ensure that all items and their dependencies are imported. Import will fail when you exclude an item that is not already in the team and another item in the import is dependent on it.
    - If you are importing a managed solution, all the items will be imported.
  
-   ![Choose items to import](media/import-customizations.png)
+   ![Choose items to import.](media/import-customizations.png)
 1. Depending on the components in the solution, you might be prompted for additional information when you select **Next**.
    - If your solution contains connection references, you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one.
    - If your solution contains environment variables, you'll be prompted to enter values. You will not see this page if values are already present in your solution or the target environment.
@@ -49,7 +49,7 @@ Take the following steps to import your customizations into Dataverse for Teams:
 
 Your solution imports in the background and might take a while. A notification appears on the **Build** tab as the solution is imported.
 
-![Currently importing solution message](media/teams-import-staus.png)
+![Currently importing solution message.](media/teams-import-staus.png)
 After the import completes, a success or failure notification is displayed.
  
 The location of your solution components is different depending on whether you imported a managed or unmanaged solution:

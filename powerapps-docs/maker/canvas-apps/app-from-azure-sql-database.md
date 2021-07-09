@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app from Azure SQL Database | Microsoft Docs
+title: "Preview: Create a canvas app from Azure SQL Database"
 description: Describes how to create canvas app from your data in Azure SQL Database
 author: tapanm-msft
 manager: kvivek
@@ -43,7 +43,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 1. Go to your SQL database.
 1. Select **Power Apps**.
     
-    ![Power Apps option in SQL database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
+    ![Power Apps option in SQL database options.](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
 
 1. Select **Get started**.
 
@@ -59,7 +59,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 
 1. Select **Create**.
 
-    ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
+    ![Specify the information for your app.](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
     The [Power Apps Studio](https://create.powerapps.com/studio/) opens in a new tab. If the pop-up is blocked, update the browser to allow pop-ups and try again. Once created, you'll have a three-page app with data from your SQL database.
 
@@ -89,7 +89,7 @@ You can also use stored procedure [sp_set_firewall_rule](/sql/relational-databas
 ## Other considerations
 
 - The access of the app to SQL Database is implicitly shared to all users that you [share this app](share-app.md) with. Ensure the SQL authentication credentials have appropriate access for reading and writing data. </br> For example, you can create a separate app that connects to the same SQL Database with different SQL authentication credentials to segregate read and read/write access.
-- Review throttling limits, delegatable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
+- Review throttling limits, delegable functions and operations, known issues, and limitations of the [SQL Database](/connectors/sql/) connector this feature uses for performance considerations.
 - Create an app from [Power Apps](https://make.powerapps.com) when you need to create an app for a non-default environment and a different region for the tenant using data from SQL Database.
 
 ## Next steps

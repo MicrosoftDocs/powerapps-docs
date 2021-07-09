@@ -29,12 +29,12 @@ In the **Set Personal Options** dialog box, you can personalize the facets for a
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
    > [!div class="mx-imgBorder"]
-   > ![Personalization settings](media/personalization-settings.png "Personalization settings")
+   > ![Personalization settings.](media/personalization-settings.png "Personalization settings")
   
 2. On the **General** tab, in the **Select the default search experience** section, for **Facets and Filters**, select **Configure**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Configure facets and filters](media/configure-facets-filters.png "Configure facets and filters")  
+   > ![Configure facets and filters.](media/configure-facets-filters.png "Configure facets and filters")  
   
 3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table: 
   

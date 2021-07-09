@@ -41,7 +41,7 @@ To import a solution:
 1. On the command bar, select **Import**.  
 
     > [!div class="mx-imgBorder"]  
-    > ![Import solution](media/solution-import.png "Import solution") 
+    > ![Import solution.](media/solution-import.png "Import solution") 
   
 1. On the **Import a solution** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 
