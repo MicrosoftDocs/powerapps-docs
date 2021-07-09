@@ -2212,6 +2212,8 @@
           items:
             - name: Use Bulletins sample app
               href: ../teams/bulletins.md
+            - name: Deploy Bulletins app broadly in your organization
+              href: ../teams/bulletins-deploy-broadly.md
             - name: Customize Bulletins app
               items:
                 - name: Understand Bulletins sample app architecture
