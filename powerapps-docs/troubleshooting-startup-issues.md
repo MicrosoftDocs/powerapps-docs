@@ -83,11 +83,13 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 *Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
-## Enable storage of third-party cookies and local data in your browser
+## Enable storage of third-party cookies and local data in your browser or app
 
-Power Apps stores some data such as user identity and preferences locally in your browser. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
+Power Apps stores some data such as user identity and preferences locally leveraging your browser's capabilities. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
 
-Most browsers allow settings to reflect the changes immediately. You may also close all the browser windows and reopen instead.
+Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen instead.
+
+To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings fpr iOS. 
 
 ### Instructions for Microsoft Edge
 
@@ -182,6 +184,16 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     7. Select **OK**.
     8. Select **OK** to close the Internet Options dialog box.
     9. Close all Internet Explorer and Microsoft Edge windows.
+
+### Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
+1. On iOS select **Settings**.
+1. Scroll down to **Dynamics 365**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+    
+### Instructions for Power Apps app on iOS
+1. On iOS select **Settings**.
+1. Scroll down to **Power Apps**. 
+1. Toggle on **Allow Cross-Website Tracking**.
 
 ## Configure Trust Zones for Internet Explorer
 
