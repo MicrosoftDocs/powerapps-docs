@@ -6,12 +6,16 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/19/2021
+ms.date: 07/08/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - wimcoor
+  - navjotm
+  - tapanm-msft
 ---
 
 # Troubleshooting startup issues for Power Apps
@@ -156,6 +160,18 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 1. Ensure **Block all cookies** isn't selected.
 1. Ensure **Prevent cross-site tracking** isn't selected.
 
+### Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Dynamics 365**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+    
+### Instructions for Power Apps app on iOS
+
+1. On iOS, select **Settings**.
+1. Scroll down to **Power Apps**. 
+1. Toggle on **Allow Cross-Website Tracking**.
+
 ### Instructions for Internet Explorer 11
 
 - **Option 1: Enable local data for all sites**
@@ -184,16 +200,6 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
     7. Select **OK**.
     8. Select **OK** to close the Internet Options dialog box.
     9. Close all Internet Explorer and Microsoft Edge windows.
-
-### Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
-1. On iOS select **Settings**.
-1. Scroll down to **Dynamics 365**. 
-1. Toggle on **Allow Cross-Website Tracking**.
-    
-### Instructions for Power Apps app on iOS
-1. On iOS select **Settings**.
-1. Scroll down to **Power Apps**. 
-1. Toggle on **Allow Cross-Website Tracking**.
 
 ## Configure Trust Zones for Internet Explorer
 
