@@ -188,24 +188,19 @@ On success, returns a promise object containing the values specified in the desc
 ### Example
 
 ```
-userSettings.getSecurityRolePrivilegesInfo()
-.then(function success(rolePrivileges) {
-  console.log(rolePrivileges);
+userSettings
+  .getSecurityRolePrivilegesInfo()
+  .then(function success(rolePrivileges) {
+    var privilegeGuids = Object.keys(rolePrivileges);
+    console.log("Privileges Count: " + privilegeGuids.length);
 
-  // Will output something like:
-  // {
-  //   "0a3d4421-af6d-42ed-b3c2-b51deb73d1d5": {
-  //     "id": "0a3d4421-af6d-42ed-b3c2-b51deb73d1d5",
-  //     "businessUnitId": "b60509fb-77d4-eb11-b1b5-000d3a6f1d14",
-  //     "privilegeName": "prvCreateUser",
-  //     "depth": 3
-  //   }
-  //   "0a3ec381-896a-4795-a237-c401a2d4b300": {
-  //     ...
-  //   }
-  //   ...
-  // }
-})
+    // Print information about the first role privilege in the dictionary
+    var guid = privilegeGuids[0];
+    console.log("Privilege Id: " + privilege[guid].id);
+    console.log("Privilege Name: " + privilege[guid].privilegeName);
+    console.log("Privilege Business Unit Id: " + privilege[guid].businessUnitId);
+    console.log("Privilege depth: " + privilege[guid].depth);
+  });
 ```
 
 ## securityRoles
