@@ -139,7 +139,7 @@ Now let’s look at the screens in the **Manage inspections** app. This screen i
 
 1. Select the **Tree view** and review the screens in the Manage inspections app.
 
-![Manage Inspection Tree View](media/customize-inspections/manage-inspections-tree-view.png "Manage Inspection Tile")
+    ![Manage Inspection Tree View](media/customize-inspections/manage-inspections-tree-view.png "Manage Inspection Tile")
 
 The following are the screens in the Manage Inspections app:
 
@@ -242,15 +242,15 @@ Before modifying the Inspection app, note the following considerations.
 
     ![Install new version](media/customize-inspections/install-new-version.png "Install new version")
 
-After upgrading the solution, your current app version will still be "Live". The updated version of the app is available from the version history of the app.
-
-![Inspection App Details](media/customize-inspections/inspection-app-details.png "Inspection App Details")
-
-Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
-
-![Inspection Versions](media/customize-inspections/inspection-versions.png "Inspection Versions")
-
-You can choose to publish the new version or keep using the older one.
+    After upgrading the solution, your current app version will still be "Live". The updated version of the app is available from the version history of the app.
+    
+    ![Inspection App Details](media/customize-inspections/inspection-app-details.png "Inspection App Details")
+    
+    Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
+    
+    ![Inspection Versions](media/customize-inspections/inspection-versions.png "Inspection Versions")
+    
+    You can choose to publish the new version or keep using the older one.
 
 - When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Teams.
 
