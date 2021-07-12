@@ -2264,6 +2264,8 @@
                   href: ../teams/inspection-architecture.md
                 - name: Customize Inspection sample app
                   href: ../teams/customize-inspections.md
+                - name: Add hierarchy inspection location
+                  href: ../teams/inspections-hierarchy-locations.md
         - name: Issue reporting
           items:
             - name: Issue reporting
