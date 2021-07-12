@@ -113,4 +113,41 @@ Solutions are used for [application lifecycle management](/power-platform/alm/ov
 
 To learn about renaming data sources in an app, and the difference between tabular and action-based data sources, go to [Rename Power Apps action-based data sources](rename-data-source.md).
 
+## Connection consent dialog
+
+When users first launch an app using connectors, users are presented with a ‘connection consent’ dialog which serves four purposes: 
+1.	it informs users of the data sources accessed by the app, 
+2.	it outlines actions a connector may perform in an app, e.g. when an app uses the Office 365 Users connector it presents: 
+
+“This app will be able to: 
+- Read your full user profile
+- Read the full profile of all users
+
+It won't be able to:
+- Modify or delete any user-profile information”
+
+3.	it captures end-user consent to connect to those data sources
+4.	it facilitates manual end-user authentication, when needed.
+For some connections, Power Platform can automatically authenticate a user to access a data source, however, if the automatic sign in fails this dialog prompts users to fix a connection by manually signing in. Power Platform can only attempt automatic sign in for a connection when a data source pre-authorizes Microsoft’s Azure API connections service principal, granting it permission to perform single sign-on for a user when a connection is created. For more details on single sign-on see ‘[What is single sign-on (SSO)?](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on)”. The following image is an example of the connection consent dialog for an app connecting to SharePoint.  
+
+For select connectors, admins can suppress this dialog and consent on behalf of end-users to connect to a data source. The following table illustrates which types of connectors the consent dialog may be suppressed for an app. 
+
+> ![NOTE]
+> If an admin suppresses the consent dialog but the platform can’t perform single-sign-on for an end-user, the dialog will be presented to the user when they launch the app. 
+
+| # | Connector type                                                                                                                                           | Consent dialog suppressible? | Reference               |
+|---|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|-------------------------|
+| 1 | Microsoft First Party connectors that support single sign on (e.g. SharePoint, Office 365 users)                                                         | Yes                          | [Power Apps admin cmdlet](https://docs.microsoft.com/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappapistobypassconsent) |
+| 2 | Connector accessing a non-Microsoft, 3rd party service, e.g. Salesforce                                                                                  | No                           | N/A                     |
+| 3 | Custom connectors using OAuth with Azure AD as the identity provider. These are custom connectors built by Contoso and only accessible by Contoso users. | No                           | N/A                     |
+
+Microsoft Power Platform is only able to suppress the consent dialog for connections to data sources where: 
+
+1.	there isn’t an obligation by the data source to show an explicit consent UI
+2.	the data source pre-authorizes Microsoft’s Azure API connections service principal to enable single-sign-on 
+3.	an admin configures an app to suppress the consent for the preceding connections. 
+
+The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft First Party data sources and may be configured by custom applications registered in an Azure AD tenant that are used by custom connectors. An admin manages consent suppression on a per app basis (as opposed to connector basis) so suppression is managed at the most granular app experience level – this prevents consent suppression for an organization’s ‘approved apps’ from inadvertently suppressing consent for ‘un-reviewed/unapproved’ apps. 
+
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
