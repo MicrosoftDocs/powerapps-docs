@@ -196,7 +196,7 @@ All the changes to the Inspections app are completed. The app can now be publish
             Today(),
             Hours
                 ) \> 0,
-        galInspections.Selected.Store.Name & " \| Submitted by " &
+        galInspections.Selected.Store.Name & " | Submitted by " &
         galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
         Date(
             Year(galInspections.Selected.createdon),
@@ -217,7 +217,7 @@ All the changes to the Inspections app are completed. The app can now be publish
         Hours
         ) = 0,
     //"minutes ago"
-    galInspections.Selected.Store.Name & " \| Submitted by " &
+    galInspections.Selected.Store.Name & " | Submitted by " &
     galInspections.Selected.createdby.'Full Name' & ", minutes ago"
     ,
     If(
@@ -231,9 +231,9 @@ All the changes to the Inspections app are completed. The app can now be publish
         Days
         ) = 1,
         //"yesterday",
-        galInspections.Selected.Store.Name & " \| Submitted by " &
+        galInspections.Selected.Store.Name & " | Submitted by " &
         galInspections.Selected.createdby.'Full Name' & ", yesterday",
-        galInspections.Selected.Store.Name & " \| Submitted by " &
+        galInspections.Selected.Store.Name & " | Submitted by " &
         galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
         Date(
             Year(galInspections.Selected.createdon),
