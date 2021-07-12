@@ -230,19 +230,19 @@ All the changes to the Inspections app are completed. The app can now be publish
         Today(),
         Days
         ) = 1,
-    //"yesterday",
-    galInspections.Selected.Store.Name & " \| Submitted by " &
-    galInspections.Selected.createdby.'Full Name' & ", yesterday",
-    galInspections.Selected.Store.Name & " \| Submitted by " &
-    galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
-    Date(
-        Year(galInspections.Selected.createdon),
-        Month(galInspections.Selected.createdon),
-        Day(galInspections.Selected.createdon)
-        ),
-    Today(),
-    Days
-    ) & " days ago"
+        //"yesterday",
+        galInspections.Selected.Store.Name & " \| Submitted by " &
+        galInspections.Selected.createdby.'Full Name' & ", yesterday",
+        galInspections.Selected.Store.Name & " \| Submitted by " &
+        galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
+        Date(
+            Year(galInspections.Selected.createdon),
+            Month(galInspections.Selected.createdon),
+            Day(galInspections.Selected.createdon)
+            ),
+        Today(),
+        Days
+        ) & " days ago"
     )
     )
     )
