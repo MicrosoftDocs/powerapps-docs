@@ -30,7 +30,7 @@ The current experience creating Custom API within the maker portal is temporary.
 
 When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the following publisher:
 
-:::image type="content" source="media/solution-publisher-with-sample-prefix.png" alt-text="Solution publisher with sample prefix":::
+:::image type="content" source="media/solution-publisher-with-sample-prefix.png" alt-text="Solution publisher with sample prefix.":::
 
 > [!NOTE]
 > This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/data-platform/create-solution.md)
@@ -43,7 +43,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
 
 1. Click **Save**. Your form should look something like this:
-    :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form":::
+    :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form.":::
 
 > [!NOTE]
 > If you delete the Custom API record, all request parameters and response properties will be deleted with it. Make sure that the Custom API field values are correct before proceeding. Otherwise you may need to repeat all of these steps to re-create your Custom API if you need to delete it.
@@ -75,7 +75,7 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
 
 1. Click **Save**. Your form should look something like this:
 
-    :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form":::
+    :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form.":::
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this request parameter record to your solution.
@@ -98,7 +98,7 @@ For example, if your Custom API Unique name is `sample_CustomAPIExample`, it wil
 
 1. Click **Save**. Your form should look something like this:
 
-    :::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form":::
+    :::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form.":::
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this response property record to your solution.
@@ -135,7 +135,7 @@ For information about how to write a plug-in for a custom api, see [Write a Plug
 
 After you have registered your assembly, you need to set the **Type** value for the Custom API you created. This is a lookup property, so you just need to find the Plug-in Type that represents the type created when you registered the assembly.
 
-:::image type="content" source="media/set-custom-api-type.png" alt-text="Set the Custom API Type Lookup":::
+:::image type="content" source="media/set-custom-api-type.png" alt-text="Set the Custom API Type Lookup.":::
 
 Once you have set the **Type**, you can test your Custom API to verify the correct results are returned.
 

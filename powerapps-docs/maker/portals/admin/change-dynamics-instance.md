@@ -30,10 +30,10 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 4. Select **Update Dynamics 365 Instance**. In the dialog box, use the provided fields to change your Dynamics 365 instance, portal development status, portal language, or your portal administrator. You can also keep the same Dynamics 365 instance, but change the portal audience or type of portal.
 
-5. Select the ![Confirm action](../media/confirm-action-icon.png "Confirm action") button to confirm your changes.  
+5. Select the ![Confirm action.](../media/confirm-action-icon.png "Confirm action") button to confirm your changes.  
 
    > [!div class="mx-imgBorder"]
-   > ![Change Dynamics 365 instance](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
+   > ![Change Dynamics 365 instance.](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

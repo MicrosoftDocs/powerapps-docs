@@ -26,19 +26,19 @@ Dataverse follows the "low-code" approach of Power Apps, enabling a business use
 
 Dataverse enables you to unify data held in disparate databases into a single repository. You can create dataflows that periodically ingest data held in one or more databases into the tables in Dataverse to create aggregated datasets. More information: [Why choose Dataverse?](../../maker/data-platform/why-dataverse-overview.md)
 
-![Upload to Dataverse from external sources](media/image75.png)
+![Upload to Dataverse from external sources.](media/image75.png)
 
 ## Defining entities and relationships in Dataverse
 
 Dataverse contains a collection of open-sourced, standardized, extensible data entities and relationships that Microsoft and its partners have published in the industry-wide Open Data Initiative. The data for these entities is stored in a set of tables. Dataverse defines entities for many common business objects, such as Account, Address, Contact, Organization, Team, and User. You can view the tables in Dataverse on the **Tables** tab under **Data** in [Power Apps](https://make.powerapps.com). You can add your own custom tables to Dataverse if necessary, but it's a good practice to use existing tables wherever possible. This will help to ensure the portability of your apps. Tables that are part of the default Dataverse have a Type designated as Standard, but the Type of your own tables will be marked as Custom.
 
-![Dataverse tables](media/image76.png)
+![Dataverse tables.](media/image76.png)
 
 In Dataverse, each entity is tabular, with a default set of columns that are also defined by the Open Data Initiative. You can view the definition of a table by using the **Edit** command for that entity in the list of tables. You can extend a table by using your own columns, but&mdash;as noted earlier&mdash;it's a good practice to use existing columns wherever possible. The following example shows the default definition of the Account table.
 
 > [!NOTE]
 > You can modify the display name of tables and columns without changing their names. Power Apps uses the display names as the default labels that appear on forms.
-![The Account table in Dataverse](media/image77.png)
+![The Account table in Dataverse.](media/image77.png)
 
 Dataverse supports a rich set of data types for columns, ranging from simple text and numeric values to abstractions that have specified formatting constraints, such as **Email**, **URL**, **Phone**, and **Ticker Symbol**. You can use other types, such as **Choice** and **Lookup**, to restrict the values entered in a column to a fixed domain or data retrieved from a column in a related table. Use the **File** and **Image** types to store unstructured data and images in a table. Images have a maximum size of 30 MB, but files can be as large as 128 MB.
 
@@ -53,17 +53,17 @@ You can also define relationships among tables. These relationships can be *many
 
 The following example shows how to add a one-to-many relationship from the Account table to a custom table named SalesLT Customer. The behavior prevents a customer from being deleted if it's referenced by a row in the Account table.
 
-![Relations in Dataverse](media/image78.png)
+![Relations in Dataverse.](media/image78.png)
 
 ## Adding views and business rules
 
 A view provides access to specified columns and rows in one or more related tables. You can think of a view as being a query, but with a name that allows you to treat it as a table. A view contains selected columns from a table but can include columns from related tables. Additionally, a view can filter rows to only show rows that match specified criteria. You can also stipulate the default sort order for the rows presented by a view. Note that a view provides a dynamic window onto the underlying data; if the data changes in the tables behind a view, so does the information represented by the view. You can display data through views in model-driven apps. The following image shows the view designer. The user is adding a new column to a view based on the Account table.
 
-![Defining a view in Dataverse](media/image79.png)
+![Defining a view in Dataverse.](media/image79.png)
 
 You use business rules to define validations and automate the flow of control when data is added, modified, or deleted in an entity. A business rule comprises a condition that can test for certain conditions in the affected entity, such as whether the data in a column matches or breaks a given rule. The business rules designer in Power Apps Studio provides a graphical user interface for defining business rules, as shown in the the following image.
 
-![Defining business rules in Dataverse](media/image80.png)
+![Defining business rules in Dataverse.](media/image80.png)
 
 The business rules designer supports the following actions:
 
@@ -90,7 +90,7 @@ You implement the actual business logic by using custom actions, or your own cod
 
 In addition to storing the data structure and logic associated with a business entity, Dataverse can also store layouts for forms, charts, and dashboards associated with an entity. When you create a model-driven app, you can use these forms for data entry and display, while the charts and dashboards enable a user to visualize the data more easily than by looking at basic data values.
 
-![Defining a chart](media/image81.png)
+![Defining a chart.](media/image81.png)
 
 ## Maria's decision to use Dataverse
 

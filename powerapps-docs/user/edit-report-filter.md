@@ -25,7 +25,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 2. Choose a report and on the commbar bar, select **Edit Default Filter**.
 
      > [!div class="mx-imgBorder"]
-     > ![Edit default report filter](media/edit_filter.png "Edit default report filter")
+     > ![Edit default report filter.](media/edit_filter.png "Edit default report filter")
   
 3. Modify the filter criteria.  
   
@@ -42,7 +42,7 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
    2.  Select the query relational operator, and select an operator.  
 
-   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this column** button ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
+   3.  Select **Enter Value**, and enter a value to filter on. For some values, you can select the **Select or change the values for this column** button ![Ellipsis button.](media/ellipsis-button.png "Ellipsis button") to open the **Select Values** dialog box and select the value you want.  
 
    ### To group criteria
    You must select two or more rows for the same row type. However, rows with column values from different row types, such as **Account** and **Contact** row types, cannot be grouped.  

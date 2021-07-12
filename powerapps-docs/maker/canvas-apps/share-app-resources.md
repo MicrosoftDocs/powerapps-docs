@@ -1,6 +1,6 @@
 ---
-title: Share resources used in your canvas app | Microsoft Docs
-description: Understand how you share resources that your canvas app uses in Power Apps
+title: Share resources used by canvas apps
+description: Understand how you share resources that your canvas app uses.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -14,13 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Share canvas-app resources in Power Apps
+# Share resources used by canvas apps
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
-* Entities in Microsoft Dataverse.
+* Tables in Microsoft Dataverse.
 
-    For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
+    For information about giving users access to this data, see [Manage table permissions](share-app.md#manage-table-permissions).
     
 * A connection to a data source.
 * An on-premises data gateway.
@@ -38,15 +38,15 @@ Some connections (such as SQL Server with SQL or Windows authentication) are [im
 
 You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 
-  ![No share for OneDrive for Business](./media/share-app-resources/shared-connections-odb.png)
+  ![No share for OneDrive for Business.](./media/share-app-resources/shared-connections-odb.png)
 
-  ![Share SQL auth connection to SQL Server](./media/share-app-resources/shared-connections-sqlauth.png)
+  ![Share SQL auth connection to SQL Server.](./media/share-app-resources/shared-connections-sqlauth.png)
 
 ### Implicit sharing
 
 When you share an app that uses a connection that can be shared, the app connection is **implicitly shared** along with the app. For example, following message appears when you go to make.powerapps.com, select **Apps**, choose an app that uses such connection, select *More Commands* (...) and then select **Share**:
 
-  ![Implicit permission warning](./media/share-app-resources/share-app-implicit-permission.png)
+  ![Implicit permission warning.](./media/share-app-resources/share-app-implicit-permission.png)
 
 If you select **Confirm** and share the chosen app with other users, the app connection is implicitly shared with those users along with the app.
 

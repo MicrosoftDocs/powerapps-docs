@@ -58,19 +58,19 @@ Returning portal visitors can authenticate by using local user credentials or ex
 
 The following image shows a sign in option with using a local account, or by selecting an external identity provider.
 
-![Sign in by using a local account](../media/sign-in-local-account.png "Sign in by using a local account")  
+![Sign in by using a local account.](../media/sign-in-local-account.png "Sign in by using a local account")  
 
 ### Sign up by using a local identity or external identity
 
 The following image shows a sign-up screen to register with using a local account, or by selecting an external identity provider.
 
-![Register for a new local account](../media/register-new-local-account.png "Register for a new local account")  
+![Register for a new local account.](../media/register-new-local-account.png "Register for a new local account")  
 
 ### Redeem an invitation code manually
 
 The following image shows the option to redeem an invitation using the invitation code.
 
-![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
+![Sign up by using an invitation code.](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
 ## Forgot password or password reset 
 
@@ -104,18 +104,18 @@ The email sent by this workflow must be customized by using the URL to the redee
 
 1. Create an invitation for a new contact.
 
-    ![Create an invitation for a new contact](../media/create-invitation.png "Create an invitation for a new contact")  
+    ![Create an invitation for a new contact.](../media/create-invitation.png "Create an invitation for a new contact")  
 
 2. Customize and save the new invitation.
 
-    ![Customize a new invitation](../media/customize-new-invitation.png "Customize a new invitation")  
+    ![Customize a new invitation.](../media/customize-new-invitation.png "Customize a new invitation")  
 
 3. Customize the invitation email.
 4. Process the [Send invitation](invite-contacts.md) workflow.
 1. The invitation email opens the redemption page.
 1. The user signs up by using the submitted invitation code.
 
-    ![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
+    ![Sign up by using an invitation code.](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
 ### Disabled registration
 
@@ -195,7 +195,7 @@ An authenticated user can connect (register) multiple external identities to the
 
 1.  Select a provider to connect to your user account.
 
-    ![Manage external accounts](../media/manage-external-accounts.png "Manage external accounts")  
+    ![Manage external accounts.](../media/manage-external-accounts.png "Manage external accounts")  
 
 2.  Sign in by using the provider you want to connect.
 

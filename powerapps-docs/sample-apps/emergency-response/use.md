@@ -40,7 +40,7 @@ Watch how to use the Hospital Emergency Response mobile app.
 
 ## Hospital Emergency Response mobile app
 
-![Hospital Emergency Response mobile app](media/use/app-launcher.png)
+![Hospital Emergency Response mobile app.](media/use/app-launcher.png)
 
 The Hospital Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Hospital Emergency Response mobile app from the Power Apps Mobile app, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
 
@@ -48,7 +48,7 @@ The Hospital Emergency Response mobile app has a modular structure with differen
 > When you launch the Hospital Emergency Response mobile app or any of
 its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](/powerapps/user/run-app-client#give-consent).
 
-![Hospital Emergency Response mobile app components](media/use/app-components.png)
+![Hospital Emergency Response mobile app components.](media/use/app-components.png)
 
 The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Hospital Emergency Response mobile app**.
 
@@ -80,7 +80,7 @@ Use the hospital operations apps to collect hospital and facility-specific data 
 
 ### COVID-19 stats
 
-![COVID-19 Stats](media/use/covid19-stats.png)
+![COVID-19 Stats.](media/use/covid19-stats.png)
 
 Submit COVID-19 specific details using the **COVID-19 stats** app. You can
 update the location-specific patient details such as PUIs, positives, intubated,  and discharged patients.
@@ -101,7 +101,7 @@ After you submit the data, you can go back to the **COVID-19 stats** app to crea
 
 ### Equipment
 
-![Equipment](media/use/equipment.png)
+![Equipment.](media/use/equipment.png)
 
 Submit location-specific equipment details using the **Equipment** app. You can update the amount of in-use equipment such as ventilators, NIPPV, and PAPR.
 
@@ -122,7 +122,7 @@ After you submit the data, you can go back to the **Equipment** app to create an
 
 ### Staff
 
-![Staff](media/use/staff.png)
+![Staff.](media/use/staff.png)
 
 Submit location-specific inventory for Registered nurses, patients, and
 equipment. You don't have to enter values for each field on the screen. Enter a number for the field that you need to save in the solution database.
@@ -149,7 +149,7 @@ After you submit the data, you can go back to the **Staff** app to create anothe
 
 ### Supplies
 
-![Supplies](media/use/supplies.png)
+![Supplies.](media/use/supplies.png)
 
 Collect the supplies inventory with the **Supplies** app. You can update the supply
 component quantities in the entire facility inventory and the daily burn rate
@@ -174,7 +174,7 @@ model-driven app for Power Apps. For more information, see [configuration guide]
 
 ### Staffing needs
 
-![Staffing needs](media/use/staffing-needs.png)
+![Staffing needs.](media/use/staffing-needs.png)
 
 Collects labor pool requests for the selected facility. Before you can submit the
 labor pool request for a facility, ensure fields marked as *required* (*) are
@@ -196,7 +196,7 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 
 ### Discharge planning
 
-![Discharge](media/use/discharge.png)
+![Discharge.](media/use/discharge.png)
 
 Submit discharge information and patient status with total number using
 the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers. 
@@ -245,7 +245,7 @@ Use the government reporting apps to collect hospital and facility-specific data
 
 ### COVID-19 patient impact - CDC reporting
 
-![COVID-19 patient impact - CDC reporting](media/use/cdc-covid-19-patient-impact.png)
+![COVID-19 patient impact - CDC reporting.](media/use/cdc-covid-19-patient-impact.png)
 
 Use the **COVID-19 patient impact** app to submit COVID-19 suspected and confirmed patient information such as hospitalized patients, onset numbers, emergency department, and overflow information. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
@@ -284,7 +284,7 @@ Only available if the facility is enabled for emergency department or overflow l
 
 ### Healthcare worker staffing - CDC reporting
 
-![Healthcare worker staffing - CDC reporting](media/use/cdc-healthcare-worker-staffing.png)
+![Healthcare worker staffing - CDC reporting.](media/use/cdc-healthcare-worker-staffing.png)
 
 Collect shortage information for staffing such as physicians, RNs, licensed practitioners, pharmacists, or therapists using the **Healthcare worker staffing** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
@@ -298,7 +298,7 @@ IT Administrators can add or update the **Healthcare worker staffing** app items
 
 ### Bed capacity - CDC reporting
 
-![Bed capacity - CDC reporting](media/use/cdc-bed-capacity.png)
+![Bed capacity - CDC reporting.](media/use/cdc-bed-capacity.png)
 
 Collect bed information such as ICU/AIIR availability, occupancy in other areas, or inpatient staffing/surge capacity using the **Bed capacity** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
@@ -342,7 +342,7 @@ Select whether your facility is staffed for its inpatient bed capacity, and if y
 
 ### Supply planning - CDC reporting
 
-![Supply planning - CDC reporting](media/use/cdc-supply-planning.png)
+![Supply planning - CDC reporting.](media/use/cdc-supply-planning.png)
 
 Collect the supplies inventory with the **Supply planning** app. You can update the supply component quantities in the entire facility inventory, burn rate, extended use/reuse methods and ability to source inventory. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
@@ -394,7 +394,7 @@ mobile app components.
 You can sign out from the app using the profile icon on the upper-left side of
 the screen.  
 
-![Sign out](media/use/sign-out.png)
+![Sign out.](media/use/sign-out.png)
 
 Select the **End shift** button to end your session and sign out.
 
@@ -406,14 +406,14 @@ device sharing.
 
 You can share your feedback with the **App feedback** option from any Hospital Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Submit feedback** button:
 
-![Provide feedback](media/use/give-feedback.png)
+![Provide feedback.](media/use/give-feedback.png)
 
 When you select **App feedback**, you have
 options to share a praise, an idea or report an issue with the app.
 
 ### Switch facility
 
-![Switch facility](media/use/switch-facility.png)
+![Switch facility.](media/use/switch-facility.png)
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **Hospital Emergency Response app** screen where you can select a different hospital, region, or facility.
 

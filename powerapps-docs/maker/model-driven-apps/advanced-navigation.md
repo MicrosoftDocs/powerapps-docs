@@ -37,7 +37,7 @@ The solutions area is where you can view, edit, create, import, export, and dele
 ## Solution explorer
 Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
 
-1.	From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+1.	From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 
 2.	Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
 
@@ -52,19 +52,19 @@ To share an app:
 3.  Select **…** > **Share**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Share app link](media/share-link.png) 
+    > ![Share app link.](media/share-link.png) 
 
 4. Then follow these steps: [Share a model-driven app](./share-model-driven-app.md#preview-share-a-model-driven-app)
  
 ## Settings
 Use the settings area to configure environment settings, activate or deactivate processes, and more. 
 
-1.  From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
+1.  From a Power Apps model-driven app, select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
 
 2.  Select **Settings**, and then select the settings area that you want.
 
     > [!div class="mx-imgBorder"] 
-    > ![Settings areas](media/settings-areas.png) 
+    > ![Settings areas.](media/settings-areas.png) 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)

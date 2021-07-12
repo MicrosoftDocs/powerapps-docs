@@ -1,6 +1,6 @@
 ---
-title: Show text, dates, and times in a canvas app | Microsoft Docs
-description: In Power Apps, show text, dates, and times in a canvas app
+title: Show text, dates, and times in canvas apps
+description: Learn about how to show text, dates, and times in a canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show text, dates, and times in Power Apps
+# Show text, dates, and times in canvas apps
 In Power Apps, add dates and times to a canvas app, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
 For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in Power Apps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
@@ -44,7 +44,7 @@ Here are some examples.
 2. Set the **[Text](controls/properties-core.md)** property of **ShowText** to this formula:
    <br>**DateDiff(Today(), DateValue("01/01/2020"))**
    
-    ![Number of days between today and Jan. 1, 2020](./media/show-text-dates-times/date-diff-text.png)
+    ![Number of days between today and Jan. 1, 2020.](./media/show-text-dates-times/date-diff-text.png)
    
     The control shows the number of days between today and January 1, 2020, by using these functions:
    
@@ -58,7 +58,7 @@ Here are some examples.
 5. Set the **[Text](controls/properties-core.md)** property of **ShowText** to this formula:
    <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
    
-    ![Number of days between today and your birthday](./media/show-text-dates-times/birth-diff.png)
+    ![Number of days between today and your birthday.](./media/show-text-dates-times/birth-diff.png)
    
     **ShowText** shows the number of days between today and whatever date you type into **BirthDate**. If your birthday has already occurred this year, **ShowText** displays a negative value.
 
@@ -80,26 +80,26 @@ Convert dates and times from strings of text to values, which you can format in 
 2. Add a **[Label](controls/control-text-box.md)** control named **ShowDate**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateTimeValue(ArrivalDateTime.Text)**
    
-    ![Convert a date/time from text to a value](./media/show-text-dates-times/date-value.png)
+    ![Convert a date/time from text to a value.](./media/show-text-dates-times/date-value.png)
    
     **ShowDate** shows the same information that you typed, but it's been converted from text to a value and formatted differently. For example, the year appears as four digits instead of just two.
 3. Change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
    
-    ![Change ShowDate](./media/show-text-dates-times/date-value-fr.png "Change ShowDate")
+    ![Change ShowDate.](./media/show-text-dates-times/date-value-fr.png "Change ShowDate")
    
     **ShowDate** shows the day before the month, as a French user would expect.
    
    > [!TIP]
    > To display a list of other locales in Intellisense, remove the closing quotation mark and **fr** from the formula, but leave the open quotation mark:
    > 
-   > ![Show a list of locales](./media/show-text-dates-times/locale-list.png)
+   > ![Show a list of locales.](./media/show-text-dates-times/locale-list.png)
    > 
    > 
 4. To use one of several built-in formats, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
    
-    ![Use built-in formulas](./media/show-text-dates-times/long-date-time.png "Use built-in formulas")
+    ![Use built-in formulas.](./media/show-text-dates-times/long-date-time.png "Use built-in formulas")
    
     **ShowDate** shows the day of the week, the date, and the time.
    
@@ -110,7 +110,7 @@ Convert dates and times from strings of text to values, which you can format in 
 5. To use a custom format, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
-    ![Use custom format](./media/show-text-dates-times/format-milliseconds.png "Use custom format")
+    ![Use custom format.](./media/show-text-dates-times/format-milliseconds.png "Use custom format")
    
     **ShowDate** shows the date/time value in the format that you specified, including milliseconds.
    
@@ -169,7 +169,7 @@ Convert dates and times from strings of text to values, which you can format in 
 3. Add a **[Label](controls/control-text-box.md)** control named **DateDiff**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text))**
    
-    ![Compare two dates](./media/show-text-dates-times/date-diff.png)
+    ![Compare two dates.](./media/show-text-dates-times/date-diff.png)
    
     **DateDiff** shows **275**, which is the number of days between April 1, 2015, and January 1, 2016.
 4. Set the **[Text](controls/properties-core.md)** property of **DateDiff** to this formula:  <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text), Months)**
@@ -183,19 +183,19 @@ Convert dates and times from strings of text to values, which you can format in 
 2. Add a **[Label](controls/control-text-box.md)** control named **DateAdd**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateAdd(DateValue(Start.Text), 3)**
    
-    ![Add three days](./media/show-text-dates-times/date-add.png)
+    ![Add three days.](./media/show-text-dates-times/date-add.png)
    
     **DateAdd** shows **5/13/1985**, which is three days after the date in **Start**.
 3. Set the **[Text](controls/properties-core.md)** property of **DateAdd** to this formula:
    <br>**DateAdd(DateValue(Start.Text), -3)**
    
-    ![Subtract three days](./media/show-text-dates-times/date-subtract.png)
+    ![Subtract three days.](./media/show-text-dates-times/date-subtract.png)
    
     **DateAdd** shows **5/7/1985**, which is three days before the date in **Start**.
 4. Change the **[Text](controls/properties-core.md)** property of **DateAdd** to this formula:
    <br>**DateAdd(DateValue(Start.Text), 3, Months)**
    
-    ![Add three months](./media/show-text-dates-times/date-add-months.png)
+    ![Add three months.](./media/show-text-dates-times/date-add-months.png)
    
     The label shows **8/10/1985**, which is three months after the date in **Start**. Replace **Months** with **Quarters** or **Years** to identify a date that's the specified number of quarters or years before or after the date in **Start**.
 

@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/17/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -364,11 +364,11 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. Select the **Portal Management** app.
 
-    ![Portal Management app](media/web-api/portal-management.png "Portal Management app")
+    ![Portal Management app.](media/web-api/portal-management.png "Portal Management app")
 
 1. In the **Portal Management** app on the left pane, select **Site Settings**.
 
-    ![Site Settings](media/web-api/site-settings.png "Site Settings")
+    ![Site Settings.](media/web-api/site-settings.png "Site Settings")
 
 1. Select **New**.
 
@@ -378,7 +378,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter **true**.
 
-   ![Web API contact enabled setting](media/web-api/webapi-contact-enabled.png "Web API contact enabled setting") 
+   ![Web API contact enabled setting.](media/web-api/webapi-contact-enabled.png "Web API contact enabled setting") 
 
 1. Select **Save & Close**.
 
@@ -390,7 +390,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter<br>**firstname,lastname,fullname,emailaddress1,telephone1**
 
-   ![Web API contact fields](media/web-api/webapi-contact-fields.png "Web API contact fields")
+   ![Web API contact fields.](media/web-api/webapi-contact-fields.png "Web API contact fields")
 
 1. Select **Save & Close**.
 
@@ -402,13 +402,13 @@ Before you can use the portals Web API, you have to enable the required site set
 
 1. In the **Value** box, enter **true**.
 
-   ![Web API error](media/web-api/webapi-error.png "Web API error") 
+   ![Web API error.](media/web-api/webapi-error.png "Web API error") 
 
 1. Select **Save & Close**.
 
 1. Verify the site settings for **Web API**.
 
-    ![Web API Site Settings](media/web-api/site-settings-complete.png "Web API Site Settings") 
+    ![Web API Site Settings.](media/web-api/site-settings-complete.png "Web API Site Settings") 
 
 ### Step 2 - Configure permissions
 
@@ -430,7 +430,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Save & Close**.
 
-    ![Table permissions](media/web-api/entity-permissions.png "Table permissions")
+    ![Table permissions.](media/web-api/entity-permissions.png "Table permissions")
 
 1. On the left pane, select **Web Roles** .
 
@@ -442,13 +442,13 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. For **Authenticated Users Role**, select **Yes**.
 
-    ![Web role](media/web-api/web-role.png "Web role")
+    ![Web role.](media/web-api/web-role.png "Web role")
 
 1. Select **Save**.
 
 1. Select **Related** > **Table Permissions**.
 
-    ![Related table permissions](media/web-api/related-entity-permissions.png "Related table permissions")
+    ![Related table permissions.](media/web-api/related-entity-permissions.png "Related table permissions")
 
 1. Select **Add Existing Table Permission**.
 
@@ -456,11 +456,11 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Add**.
 
-    ![Add Contact Table Permission to Web API User Web Role](media/web-api/add-contact-entity-permission.png "Add Contact Table Permission to Web API User Web Role")
+    ![Add Contact Table Permission to Web API User Web Role.](media/web-api/add-contact-entity-permission.png "Add Contact Table Permission to Web API User Web Role")
 
 1. Select **Save & Close**.
 
-    ![Web API User Web Role Table Permissions](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Table Permissions")
+    ![Web API User Web Role Table Permissions.](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Table Permissions")
 
 1. On the left pane, select **Contacts**.
 
@@ -471,7 +471,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Related** > **Web Roles**.
 
-    ![Web Roles for user](media/web-api/web-roles-for-user.png "Web Roles for user")
+    ![Web Roles for user.](media/web-api/web-roles-for-user.png "Web Roles for user")
 
 1. Select **Add Existing Web Role**.
 
@@ -479,7 +479,7 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Add**.
 
-    ![Web Role added for user](media/web-api/web-role-added-to-user.png "Web Role added for user")
+    ![Web Role added for user.](media/web-api/web-role-added-to-user.png "Web Role added for user")
 
 1. Select **Save & Close**.
 
@@ -505,23 +505,23 @@ Now that you've enabled the Web API and configured user permissions, create a we
 
 1. Select **Save**.
 
-    ![Web page](media/web-api/webpage.png "Web page")
+    ![Web page.](media/web-api/webpage.png "Web page")
 
 1. Select **Related** > **Web Pages**.
 
-    ![Related Web Pages](media/web-api/webpages-related.png "Related Web Pages")
+    ![Related Web Pages.](media/web-api/webpages-related.png "Related Web Pages")
 
 1. From **Web Page Associated View**, select **webapi**.
 
-    ![Web Page Associated View](media/web-api/webpage-associated-view.png "Web Page Associated View")
+    ![Web Page Associated View.](media/web-api/webpage-associated-view.png "Web Page Associated View")
 
 1. Scroll down to the **Content** section, and then go to **Copy (HTML)** (HTML designer).
 
-    ![HTML designer](media/web-api/copy-content.png "HTML designer")
+    ![HTML designer.](media/web-api/copy-content.png "HTML designer")
 
 1. Select the **HTML** tab.
 
-    ![Select the HTML tab](media/web-api/select-html-tab.png "Select the HTML tab")
+    ![Select the HTML tab.](media/web-api/select-html-tab.png "Select the HTML tab")
 
 1. Copy the following sample code snippet and paste it in the HTML designer.
 
@@ -568,7 +568,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <script>
         //Add the contact data in json object
         var contactList = [
-            {% for table in contactList.results.entities %}
+            {% for entity in contactList.results.entities %}
         {
             id: "{{entity.contactid}}",
                 fullname: "{{entity.fullname}}",
@@ -814,7 +814,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <div id="dataTable"></div>
     ```
 
-    ![Copy and paste the code](media/web-api/paste-code.png "Copy and paste the code")
+    ![Copy and paste the code.](media/web-api/paste-code.png "Copy and paste the code")
 
 1. Select **Save & Close**.
 
@@ -831,7 +831,7 @@ To clear the cache:
 
 1. Change the URL by appending **/_services/about** at the end. For example, if the portal URL is https://contoso.powerappsportals.com, change it to https://contoso.powerappsportals.com/_services/about.
 
-    ![Portal services about page](media/web-api/portal-clear-cache.png "Portal services about page")
+    ![Portal services about page.](media/web-api/portal-clear-cache.png "Portal services about page")
 
     > [!NOTE]
     > You must be a member of the **Administrators** web role to clear the cache. If you see a blank screen, check the web role assignments.
@@ -850,15 +850,15 @@ To test the Web API functionality:
 
 1. Go to the **webapi** webpage created earlier. For example, *https://contoso.powerappsportals.com/webapi*.
 
-    ![Sample webapi webpage](media/web-api/sample-page.png "Sample webapi webpage")
+    ![Sample webapi webpage.](media/web-api/sample-page.png "Sample webapi webpage")
 
 1. Select **Add Sample Record** to add the sample record from the script.
 
 1. Select a field. In this example, we've selected **Email** to change the email address of a contact.
 
-    ![Edit email](media/web-api/edit-record.png "Edit email")
+    ![Edit email.](media/web-api/edit-record.png "Edit email")
 
-1. Select ![Delete record](media/web-api/delete.png "Delete record") to delete a record.
+1. Select ![Delete record.](media/web-api/delete.png "Delete record") to delete a record.
 
 Now that you've created a webpage with a sample in this example to view, edit, create and delete records, you can customize the forms and layout.
 

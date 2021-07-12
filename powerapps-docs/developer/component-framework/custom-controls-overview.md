@@ -18,7 +18,7 @@ Code components are a type of solution component, which means they can be includ
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"] 
-> ![Code components](media/code-components.gif "Code components")
+> ![Code components.](media/code-components.gif "Code components")
 
 Code components can be including into a solution and then imported into Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 

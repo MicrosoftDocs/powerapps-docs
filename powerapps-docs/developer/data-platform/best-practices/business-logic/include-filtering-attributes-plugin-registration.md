@@ -41,7 +41,7 @@ If no filtering attributes are set for a plug-in registration step, then the plu
 
 Most plug-ins registered for an entity's update message do not need to execute on all updates. Usually, there is only a need to process certain logic when a specific attribute or attributes have changed. In order to prevent extra processing in the environment, minimize the logic needed in a plug-in and all the update to complete as quickly as possible, it is highly recommended that plug-in step registrations also include filtering attributes for update messages.
 
-![Plug-in Registration Step with Filtering Attributes](../media/plugin-registration-step-with-filtering-attributes.png)
+![Plug-in Registration Step with Filtering Attributes.](../media/plugin-registration-step-with-filtering-attributes.png)
 
 <a name='additional'></a>
 

@@ -38,7 +38,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 2.  In the view designer, select **Configure Sorting**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
+    > ![Configure sorting.](media/configure-sorting.png "Configure sorting")
   
 3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   

@@ -1,6 +1,6 @@
 ---
-title: 'Container control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Container control
+title: Container control (preview) in Power Apps
+description: Learn about the details, properties and examples of the container control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference
@@ -17,7 +17,7 @@ contributors:
   - tahoon-ms
   - tapanm-msft
 ---
-# Container control in Power Apps (preview)
+# Container control (preview) in Power Apps
 Provides the ability to create hierarchy.
 
 > [!IMPORTANT]

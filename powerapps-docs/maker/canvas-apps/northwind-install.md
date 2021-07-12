@@ -1,6 +1,6 @@
 ---
-title: Install Northwind Traders database and apps | Microsoft Docs
-description: Install the Northwind database and apps into an environment to explore relational concepts.
+title: Install Northwind Traders database and apps
+description: Learn about how to install the Northwind database and apps into an environment to explore relational concepts.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -31,7 +31,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 > [!div class="nextstepaction"]
 > [Download the Northwind Traders Solution File](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_6.zip)
 
-This [solution](../../developer/data-platform/introduction-solutions.md) file (.zip) contains the definitions of entities, option sets, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
+This [solution](../../developer/data-platform/introduction-solutions.md) file (.zip) contains the definitions of tables, choices, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
 ## Install the solution
 
@@ -40,12 +40,12 @@ This [solution](../../developer/data-platform/introduction-solutions.md) file (.
 1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions view and import-solution entry point](media/northwind-install/solution-import.png)
+    > ![Solutions view and import-solution entry point.](media/northwind-install/solution-import.png)
 
 1. In the **Select Solution Package** page, select **Browse**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select Solution Package page before package is selected](media/northwind-install/select-solution2.png)
+    > ![Select Solution Package page before package is selected.](media/northwind-install/select-solution2.png)
 
 1. Find the file that you downloaded, and then select **Open**.
 
@@ -54,27 +54,27 @@ This [solution](../../developer/data-platform/introduction-solutions.md) file (.
 1. If you have the correct file (the version number might vary), select **Next**:
 
     > [!div class="mx-imgBorder"]
-    > ![Select Solution Package page after package is selected](media/northwind-install/confirm-solution2.png)
+    > ![Select Solution Package page after package is selected.](media/northwind-install/confirm-solution2.png)
 
 1. In the **Solution Information** page, select **Next** if the name of the solution and the publisher are correct.
 
     > [!div class="mx-imgBorder"]
-    > ![Solution Information page](media/northwind-install/confirm-publisher.png)
+    > ![Solution Information page.](media/northwind-install/confirm-publisher.png)
 
 1. In the **Import Options** page, select **Import** to confirm SDK message handling, which the sample requires:
 
     > [!div class="mx-imgBorder"]
-    > ![Import Options page](media/northwind-install/confirm-sdk.png)
+    > ![Import Options page.](media/northwind-install/confirm-sdk.png)
 
     Another page appears and shows progress as the solution is installed over the next few minutes:
 
     > [!div class="mx-imgBorder"]
-    > ![progress bar](media/northwind-install/solution-progress.png)
+    > ![progress bar.](media/northwind-install/solution-progress.png)
 
     When the installation finishes, the original page shows the result:
 
     > [!div class="mx-imgBorder"]
-    > ![Importing Solution page](media/northwind-install/solution-success.png)
+    > ![Importing Solution page.](media/northwind-install/solution-success.png)
 
 1. Select **Close**.
 
@@ -85,31 +85,31 @@ This [solution](../../developer/data-platform/introduction-solutions.md) file (.
     Wait a few minutes if the Northwind apps don't appear immediately after you install the solution:
 
     > [!div class="mx-imgBorder"]
-    > ![Northwind database in list of apps](media/northwind-install/sample-data-app.png)
+    > ![Northwind database in list of apps.](media/northwind-install/sample-data-app.png)
 
 1. When the app asks for permission to interact with Dataverse, select **Allow**:
 
     > [!div class="mx-imgBorder"]
-    > ![Consent dialog box for Dataverse](media/northwind-install/sample-data-permission.png)
+    > ![Consent dialog box for Dataverse.](media/northwind-install/sample-data-permission.png)
 
-1. After the app loads and shows that the sample entities contain no records, select **Load Data** to populate the entities:
+1. After the app loads and shows that the sample tables contain no records, select **Load Data** to populate the tables:
 
     > [!div class="mx-imgBorder"]
-    > ![Load data button in Sample Data Manager](media/northwind-install/sample-data-load.png)
+    > ![Load data button in Sample Data Manager.](media/northwind-install/sample-data-load.png)
 
     As the app loads the data, dots march across the top of the app, and the number of records increases.
 
-    Entities are loaded in a specific order so that relationships can be established between records. For example, the **Order Details** entity has a many-to-one relationship with the **Orders** and **Order Products** entities, which are loaded first.
+    Tables are loaded in a specific order so that relationships can be established between records. For example, the **Order Details** table has a many-to-one relationship with the **Orders** and **Order Products** tables, which are loaded first.
 
     You can cancel the process at any time by selecting **Cancel**, and you can remove the data at any time by selecting **Remove Data**:
 
     > [!div class="mx-imgBorder"]
-    > ![Sample Data Manager as data is loaded](media/northwind-install/sample-data-progress.png)
+    > ![Sample Data Manager as data is loaded.](media/northwind-install/sample-data-progress.png)
 
     When the data finishes loading, the last row (**Many to Many Relationships**) shows **Done**, and the **Load Data** and **Remove Data** buttons are enabled again:
 
     > [!div class="mx-imgBorder"]
-    > ![Sample Data Manager after data is loaded](media/northwind-install/sample-data-complete.png)
+    > ![Sample Data Manager after data is loaded.](media/northwind-install/sample-data-complete.png)
 
 ## Sample apps
 
@@ -122,27 +122,27 @@ You open these apps the same way that you opened the app in the previous procedu
 
 ### Canvas
 
-This single-screen app offers a simple master-detail view of the **Orders** entity, where you can view and edit a summary of the order and each line item for an order. A list of orders appears near the left edge, and you can select an arrow in that list to show a summary and the details of that order. More information: [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
+This single-screen app offers a simple master-detail view of the **Orders** table, where you can view and edit a summary of the order and each line item for an order. A list of orders appears near the left edge, and you can select an arrow in that list to show a summary and the details of that order. More information: [Overview of the canvas app for Northwind Traders](northwind-orders-canvas-overview.md).
 
 > [!div class="mx-imgBorder"]
-> ![List of orders and details in Northwind canvas app](media/northwind-install/orders-canvas.png)
+> ![List of orders and details in Northwind canvas app.](media/northwind-install/orders-canvas.png)
 
 ### Model-driven
 
-This app operates on the same data (in the **Orders** entity) as the canvas app. In the list of orders, show more information about an order by selecting its number:
+This app operates on the same data (in the **Orders** table) as the canvas app. In the list of orders, show more information about an order by selecting its number:
 
 > [!div class="mx-imgBorder"]
-> ![list of orders in Northwind model-driven app](media/northwind-install/orders-model.png)
+> ![list of orders in Northwind model-driven app.](media/northwind-install/orders-model.png)
 
 A summary of the order appears on a separate form:
 
 > [!div class="mx-imgBorder"]
-> ![order details in model-driven app](media/northwind-install/orders-model-2.png)
+> ![order details in model-driven app.](media/northwind-install/orders-model-2.png)
 
 If you scroll down the form, it shows the same line items as the canvas app does:
 
 > [!div class="mx-imgBorder"]
-> ![more order details in model-driven app](media/northwind-install/orders-model-3.png)
+> ![more order details in model-driven app.](media/northwind-install/orders-model-3.png)
 
 ## Do it yourself
 

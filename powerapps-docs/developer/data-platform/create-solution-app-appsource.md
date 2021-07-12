@@ -28,11 +28,11 @@ Create a managed solution to include all the components for your app. You might 
 
 While creating a solution to package your app components, make sure you provide appropriate values in the **Display Name** and **Description** columns for your new solution that you want to be displayed to your customers.
 
-![Create a solution](media/appsource-new-solution.png)
+![Create a solution.](media/appsource-new-solution.png)
 
 The **Display Name** and **Description** values for a solution are displayed to the customers in the **Dynamics 365 Administration Center** portal.
 
-![Solutions](media/appsource-solution-names.png)
+![Solutions.](media/appsource-solution-names.png)
 
 ## Supporting data for your solution
 

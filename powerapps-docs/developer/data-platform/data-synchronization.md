@@ -36,14 +36,14 @@ Sometimes you’ll need to synchronize and integrate Microsoft Dataverse data wi
 
 |   Before    |        Description  |
 |----------------------|----------------------------|
-| ![Update using specialized messages](media/before-carina-dynamics-crm-2015.png "Update using specialized messages") | For each record:<br /><br /> 1.  Query Dataverse to see if the account exists. If it exists, get its account ID (for example, ABC123)<br />2.  Query the contacts to verify that the contact exists. If it exists, get the email ID of the contact (for example, contact@company.com).<br />3.  Query to get or set the region ID (for example, NW).<br />4.  Query to get the user ID to set the owner (for example, user@mycompany.com)<br />5.  Update the account.<br />6.  Set the state of the account by calling the `SetState` API.<br />7.  Assign the owner by calling the `Assign` API. |
+| ![Update using specialized messages.](media/before-carina-dynamics-crm-2015.png "Update using specialized messages") | For each record:<br /><br /> 1.  Query Dataverse to see if the account exists. If it exists, get its account ID (for example, ABC123)<br />2.  Query the contacts to verify that the contact exists. If it exists, get the email ID of the contact (for example, contact@company.com).<br />3.  Query to get or set the region ID (for example, NW).<br />4.  Query to get the user ID to set the owner (for example, user@mycompany.com)<br />5.  Update the account.<br />6.  Set the state of the account by calling the `SetState` API.<br />7.  Assign the owner by calling the `Assign` API. |
 
  Now, with the new features, it just takes one call to the server to perform the same operations as previously shown.  
 
 
 |After  |     Description   |
 |-----------------------|------------------------------|
-| ![Update using UpdateRequest](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
+| ![Update using UpdateRequest.](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
 
 ## In This Section  
  [Define alternate keys for the table](define-alternate-keys-entity.md)<br />

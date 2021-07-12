@@ -1,6 +1,6 @@
 ---
-title: Tips to improve canvas app performance | Microsoft Docs
-description: Follow the best practices in this topic to boost the performance of canvas apps that you create in Power Apps. 
+title: Tips and best practices to improve performance of canvas apps
+description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
   - chmoncay
 ---
-# Tips and best practices to improve canvas app performance
+# Tips and best practices to improve performance of canvas apps
 
 In the previous articles, you learned about the [execution phases and data call flow](execution-phases-data-flow.md), [common sources of slow performance](slow-performance-sources.md), and [common performance issues and resolutions](common-performance-issue-resolutions.md) in canvas apps. You can also benefit by following the tips and best practices in this article to boost the performance of apps that you create.
 
@@ -51,7 +51,7 @@ ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
 
 You can confirm this behavior in the Developer Tools for your browser, as shown in the following image.
 
-![Diagram showing the four tables being loaded one after the other](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
+![Diagram showing the four tables being loaded one after the other.](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
 
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
@@ -65,7 +65,7 @@ Concurrent(
 
 With this change, the app fetches the tables in parallel, as shown in the following image.
 
-![Diagram showing the four tables being loaded simultaneously](./media/performance-tips/perfconcurrent2.png)	
+![Diagram showing the four tables being loaded simultaneously.](./media/performance-tips/perfconcurrent2.png)	
 
 > [!NOTE]
 > For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).

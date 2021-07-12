@@ -1,5 +1,5 @@
 ---
-title: Understand Boards (Preview) sample app architecture
+title: Understand Boards sample app architecture (Preview)
 description: Learn about the architecture of the Boards sample app.
 author: joel-lindstrom
 ms.service: powerapps
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Understand Boards (Preview) sample app architecture
+# Understand Boards sample app architecture (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -50,7 +50,7 @@ Boards sample app.
 The following diagram illustrates the way that users and systems interact with
 data in the Boards solution
 
-![Boards sample app architecture model](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
+![Boards sample app architecture model.](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
 
 ### Connectors
 
@@ -64,7 +64,7 @@ The following connectors are used in the Boards app:
 
 The following diagram explains the data model used by the Boards sample app.
 
-![Boards sample app data model](media/boards-architecture/data-model.png "Boards sample app data model")
+![Boards sample app data model.](media/boards-architecture/data-model.png "Boards sample app data model")
 
 ### Tables
 

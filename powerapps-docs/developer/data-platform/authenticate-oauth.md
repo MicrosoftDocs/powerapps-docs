@@ -345,7 +345,7 @@ After you have created the custom security role, you must create the user accoun
   
     If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
   
-   ![Select Application User Form](media/select-application-user-form.PNG "Select Application User Form")  
+   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")  
   
 4. Add the appropriate values to the fields:  
   

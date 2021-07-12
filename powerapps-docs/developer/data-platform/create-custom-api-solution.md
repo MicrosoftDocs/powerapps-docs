@@ -38,13 +38,13 @@ You should not try to compose a solution file manually. Use the tools in [Power 
 
     For this example, the solution is defined simply like this:
 
-    :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution":::
+    :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution.":::
 
 1. [Export solutions](../../maker/data-platform/export-solutions.md)
 
     For this example, make sure you export an unmanaged solution. Managed solution is the default.
 
-    :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution":::
+    :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution.":::
     
 You can find the exported file in your downloads folder. It will have a name that depends on the name and version of the solution, in this case: `CustomAPIExample_1_0_0_2.zip`.
 
@@ -183,7 +183,7 @@ See the information in [CustomAPIResponseProperty Table Columns](customapirespon
 1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version)
 1. Select all the extracted files and the **customapis** folder you created.
 
-    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files":::
+    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files.":::
 
 1. Right-click the selected files and choose **Send to** > **Compressed (zipped folder)**.
 1. You can re-name the resulting file to be anything you want. For this example, rename it to match the original exported solution file: `CustomAPIExample_1_0_0_2.zip`.
@@ -193,7 +193,7 @@ See the information in [CustomAPIResponseProperty Table Columns](customapirespon
 1. Return to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions**.
 1. Select **Import** and follow the instructions to select the solution file you created in the previous step.
 
-    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file":::
+    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file.":::
 
     > [!NOTE]
     > If you see a warning saying **This version of the solution package is already installed**, you must not have updated the `Version` element of the solution.xml as described in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version).
@@ -208,7 +208,7 @@ See the information in [CustomAPIResponseProperty Table Columns](customapirespon
 
 Open the solution you created and verify that the Custom API and the associated request parameters and response properties are included.
 
-:::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully":::
+:::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully.":::
 
 At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
 

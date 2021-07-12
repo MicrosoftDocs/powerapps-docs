@@ -29,7 +29,7 @@ For information about types of files that are not allowed, see [System Settings 
 
 > [!IMPORTANT]
 > Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
-> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse file and image data types (aka File data type). Files within CMK organizations are
+> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
 > limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob
 > storage.
 > Other limitations:
@@ -44,12 +44,12 @@ For information about types of files that are not allowed, see [System Settings 
 ## Supporting columns  
 When a file column is added to a table some additional columns are created to support it.
   
-### MaxSizeInKB column
+### MaxValue column
 
  This value represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
  
  > [!NOTE]
- > MaxSizeInKB is set when the File column is added to a table. This cannot be changed after it is set.
+ > MaxValue is set when the File column is added to a table. This cannot be changed after it is set.
   
 ## Retrieve file data
 To retrieve file column data use the following APIs.

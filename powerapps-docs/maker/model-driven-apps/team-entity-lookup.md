@@ -30,12 +30,12 @@ search.app:
 With Unified Interface apps, for a table to be available in a lookup it must be added to the app. For example, contact rows have the ability to be assigned to a user or a team.  
 
 > [!div class="mx-imgBorder"] 
-> ![Entity lookup with both users and teams available](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
+> ![Entity lookup with both users and teams available.](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
 
 However, if the user table is included in the app but the team table is not, only user rows will appear in a lookup. 
 
 > [!div class="mx-imgBorder"] 
-> ![Entity lookup with users only](media/entity-lookup-user-only.png "Entity lookup with users only")
+> ![Entity lookup with users only.](media/entity-lookup-user-only.png "Entity lookup with users only")
 
 ## Add the team table to an app
 
@@ -43,7 +43,7 @@ However, if the user table is included in the app but the team table is not, onl
 2. Select the **Components** tab, select **Entities**, and then select **Team**.    
 
     > [!div class="mx-imgBorder"] 
-    > ![Add the team table to the app](media/add-team-entity-app.png "Add the team table to the app")
+    > ![Add the team table to the app.](media/add-team-entity-app.png "Add the team table to the app")
 
 3. Select **Save**, and then select **Publish** to make your change available to app users.   
 

@@ -1,6 +1,6 @@
 ---
-title: 'Label control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the label control
+title: Label control in Power Apps
+description: Learn about the details, properties and examples of the label control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Label control in canvas apps
+# Label control in Power Apps
 
 A box that shows data such as text, numbers, dates, or currency.
 
@@ -80,7 +80,7 @@ A label shows data that you specify as a literal string of text, which appears e
 * When set to **Polite**, the screen reader finishes speaking before announcing any changes that occurred while the screen reader was speaking.
 * When set to **Assertive**, the screen reader interrupts itself to announce any changes that occurred while the screen reader was speaking.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **Overflow** – Whether a scrollbar appears in a label if its **Wrap** property is set to **true** and the value of the control's **[Text](properties-core.md)** property contains more characters than the control can show at one time.
 

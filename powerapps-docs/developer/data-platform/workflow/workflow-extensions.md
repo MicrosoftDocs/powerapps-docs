@@ -292,7 +292,7 @@ For custom workflow activities you must specify the following properties to cont
 |`Name`|The name of the menu represented|
 |`WorkflowActivityGroupName`|The name of the submenu added to the main menu in the Dataverse process designer.|
 
-![Set descriptive properties](media/create-workflow-activity-set-properties.png)
+![Set descriptive properties.](media/create-workflow-activity-set-properties.png)
 
 > [!NOTE]
 > These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
@@ -370,7 +370,7 @@ If you make changes that include significant changes to public classes or method
 
     You will find a **Version** selector in the process designer that you can use to choose which version of the assembly should be used.
 
-    ![Workflow set version](media/workflow-set-version.png)
+    ![Workflow set version.](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
 

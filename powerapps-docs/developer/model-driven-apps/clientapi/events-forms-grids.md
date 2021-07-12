@@ -28,7 +28,7 @@ You can associate event handlers to only some events using the UI. For events th
 
 Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and columns.
 
-![Event Handler section in Form Properties](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
+![Event Handler section in Form Properties.](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
 
 ### [Unified Interface](#tab/add-event-handlers-unified-interface)
 
@@ -39,15 +39,15 @@ To add or remove event handler functions to events in the new Unified Interface:
 1. From the list of tables, select the table where you want to add the event handlers.
 1. Select **Forms** tab from the command bar and then select the form where you want to add.
 
-    ![Select form from list](../media/select-form-from-list.png "Select form from list")
+    ![Select form from list.](../media/select-form-from-list.png "Select form from list")
 
 1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
 
-    ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
+    ![Form event handlers.](../media/form-event-handlers.png "Form event handlers")
 
 1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
 
-     ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
+     ![Onchange handler.](../media/onchange-event-handler.png "Onchange handler")
 
 ---
 
