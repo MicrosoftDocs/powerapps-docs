@@ -25,13 +25,13 @@ The forms that are displayed on the portal for creating and updating cases can b
 
 2. A list of cases logged by you is displayed.
 
-    ![View existing cases](media/view-cases.png "View existing cases") 
+    ![View existing cases.](media/view-cases.png "View existing cases") 
 
 3. To create new case, select **Open a New Case**.
 
 4. Enter required details in the form.
 
-    ![Create a new case](media/create-case.png "Create a new case") 
+    ![Create a new case.](media/create-case.png "Create a new case") 
 
 5. Select **Submit**.
 
@@ -54,7 +54,7 @@ Web portal customers can easily add case notes, and then select **Update** to in
 
 A web portal customer can close a case directly from the portal. When editing a case, the customer can select the **Close Case** or **Cancel Case** buttons. The system will ask the customer for confirming the action for the selected operation. The customer can then select **Yes** to confirm the case closure or cancellation. This action will automatically close any open activities that are linked to the case record.
 
-![Close or cancel a case](media/case-actions.png "Close or cancel a case") 
+![Close or cancel a case.](media/case-actions.png "Close or cancel a case") 
 
 A web portal customer also has the ability to re-open a closed case if they feel that his or her issue has not been dealt with properly.
 
@@ -62,7 +62,7 @@ A web portal customer also has the ability to re-open a closed case if they feel
 
 Case deflection consists of a mandatory search that users must go through before they can create a new case. The user first types a description of their problem into the search box and clicks the search button. A list of results is then displayed. The list of results is also displayed when a user enters the case title while creating a new case.
 
-![Case deflection](media/case-deflection.png "Case deflection")
+![Case deflection.](media/case-deflection.png "Case deflection")
 
 This list includes (can be configured): blog posts, web content (web pages), forum threads, issues, and resolved cases.  Note that only publicly viewable fields of a resolved case are viewable by the public. The user can of course skip reading the search results if they wish, but this search encourages them to make use of existing knowledge resources before resorting to direct support.
 

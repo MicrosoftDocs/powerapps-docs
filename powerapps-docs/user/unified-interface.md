@@ -21,7 +21,7 @@ search.app:
 
 Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
-> ![Unified Interface adapts to the screen](media/Reflow_2.png "Unified Interface adapts to the screen")
+> ![Unified Interface adapts to the screen.](media/Reflow_2.png "Unified Interface adapts to the screen")
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
@@ -43,7 +43,7 @@ In example below, each number corresponds to a control.
 
 The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed rows and pinned favorites.
 
-![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  
+![Navigation controls showing expanded view.](media/nav-expanded2.png "Navigation controls showing expanded view")  
 
 Legend
   
@@ -70,7 +70,7 @@ The improved accessibility experience lets you use screen readers to translate o
 ## Create a Unified Interface app
 If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](../maker/model-driven-apps/model-driven-app-overview.md).
 
-![Create new Unified Interface app](media/uci-model-driven-app_1.png "Create new Unified Interface app")
+![Create new Unified Interface app.](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 
 ## Unified Interface Community
 

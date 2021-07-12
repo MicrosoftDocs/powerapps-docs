@@ -27,7 +27,7 @@ To add list component:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **List**.
 
@@ -52,8 +52,6 @@ To add list component:
 
     - **Delete record**: Allows a user to delete a record.
 
-    - **Empty list message**: Message to be displayed when there are no records to be displayed.
-
     - **Number of records per page**: Enter the number of the records to display on a page.
 
     - **Enable search in list**: Allows a user to search records in the list.
@@ -61,7 +59,7 @@ To add list component:
     - **Enable table permissions**: Table permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)  
 
     > [!div class=mx-imgBorder]
-    > ![list properties](media/list-props.png "List properties")
+    > ![list properties.](media/list-props.png "List properties")
 
 ### See also
 

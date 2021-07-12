@@ -72,15 +72,15 @@ it.
 
 1.  Sign in to Power Apps, and verify which environment you're in, find the environment switcher near the right side of the command bar.
 
-    ![Environment switcher](media/environment-switcher.png)
+    ![Environment switcher.](media/environment-switcher.png)
 
 2.  On the left navigation pane, select the down arrow next to **Data**.
 
-    ![Data select](media/data-select.png)
+    ![Data select.](media/data-select.png)
 
 3.  In the **Data** list, select **Dataflows**, select **New dataflow**, and then select **Start from blank**.
 
-    ![Create a dataflow](media/create-a-dataflow.png)
+    ![Create a dataflow.](media/create-a-dataflow.png)
 
 4.  On the **New Dataflow** page enter a **Name** for the dataflow. By default, dataflows store tables in Dataverse. Select **Analytical entities only** if you want tables to be stored in your organization's Azure Data Lake storage account. Select **Create**. <!-- On the **Select load target** page, select the destination storage where you want tables to be stored. Dataflows can store tables in Dataverse or in your organization's Azure Data Lake storage account. Once you select a destination to load data to, enter a **Name** for the dataflow, and then select **Create**. -->
 
@@ -95,12 +95,12 @@ it.
 
 5. On the **Choose data source** page, select the data source where the tables are stored. The selection of data sources displayed allows you to create dataflow tables. 
 
-    ![Choose a data source](media/choose-data-source.png)
+    ![Choose a data source.](media/choose-data-source.png)
 
 6. After you select a data source, you’re prompted to provide the connection
 settings, including the account to use when connecting to the data source. Select **Next**.
 
-    ![Connect to data source](media/data-source-provide-cred.png)
+    ![Connect to data source.](media/data-source-provide-cred.png)
 
 7. Once connected, you select the data to use for your table. When you
 choose data and a source, the Power Platform Dataflow service will subsequently
@@ -108,7 +108,7 @@ reconnect to the data source in order to keep the data in your dataflow
 refreshed, at the frequency you select later in the setup process.
 
 
-    ![Choose data](media/choose-data.png)
+    ![Choose data.](media/choose-data.png)
 
 Now that you've selected the data to use in the table, you can use the dataflow editor to
 shape or transform that data into the format necessary for use in your dataflow.
@@ -121,7 +121,7 @@ Desktop. To learn more about Power Query, see [Query overview in Power BI Deskto
 If you want to see the code that Query Editor is creating with each step, or
 if you want to create your own shaping code, you can use the advanced editor.
 
-![Advanced editor](media/advanced-editor.png)
+![Advanced editor.](media/advanced-editor.png)
 
 ## Dataflows and the Common Data Model 
 Dataflows tables include new tools to easily map your business data to the
@@ -136,7 +136,7 @@ Model](/common-data-model/).
 
 To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
-![Map to standard table](media/map-to-standard-entity.png)
+![Map to standard table.](media/map-to-standard-entity.png)
 
 When you map a source column to a standard column, the following occurs:
 
@@ -162,7 +162,7 @@ frequency for each of your connected data sources.
 1. Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled
 interval of your choice. To schedule a refresh automatically, select **Refresh automatically**.
 
-   ![Refresh automatically](media/refresh-automatically.png)
+   ![Refresh automatically.](media/refresh-automatically.png)
 
 2. Enter the dataflow refresh frequency, start date, and time, in UTC.
 
@@ -174,7 +174,7 @@ for each data source that will populate the model, you’re ready for the final 
 
 To connect to the dataflow, in Power BI Desktop select **Get Data** > **Power Platform** > **Power Platform dataflows** > **Connect**.
 
-![Connect to the dataflow](media/get-data.png)
+![Connect to the dataflow.](media/get-data.png)
 
 Navigate to the environment where you saved your dataflow, select
 the dataflow, and then select the tables that you created from the list.

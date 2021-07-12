@@ -32,19 +32,19 @@ To create a custom **Portal Management** app:
 
 1. Select **Model-driven app from blank**:
 
-    ![Create model-driven app from blank](media/create-model-driven-app.png)
+    ![Create model-driven app from blank.](media/create-model-driven-app.png)
 
 1. Select **Create**:
 
-    ![Create button](media/create-button.png)
+    ![Create button.](media/create-button.png)
 
     Selecting **Create** button opens app designer with **Create a New App** form:
 
-    ![App designer](media/app-designer.png)
+    ![App designer.](media/app-designer.png)
 
 1. Enter a name for the app. For example, *Portal Management (custom)*:
 
-    ![App name](media/app-name.png)
+    ![App name.](media/app-name.png)
 
     The *Unique Name* for the app is automatically updated. 
 
@@ -52,31 +52,31 @@ To create a custom **Portal Management** app:
 
 1. Uncheck *Use Default Image* for *Icon* and select image file as *adx_nav_portals_32.png*:
 
-    ![Image icon](media/icon.png)
+    ![Image icon.](media/icon.png)
 
 1. Check *Use existing solution to create the App*:
 
-    ![Use existing solution](media/use-existing-solution.png)
+    ![Use existing solution.](media/use-existing-solution.png)
 
 1. Verify all the settings and then select **Next**:
 
-    ![Verify and next](media/verify-next.png)
+    ![Verify and next.](media/verify-next.png)
 
 1. Select *Dynamics 365 Portals - Portal base* as the solution for *Select Solution* drop down option:
 
-    ![Select solution](media/select-solution.png)
+    ![Select solution.](media/select-solution.png)
 
 1. Select *Dynamics 365 Portals* as the sitemap for *Select Sitemap* drop down option:
 
-    ![Select sitemap](media/select-sitemap.png)
+    ![Select sitemap.](media/select-sitemap.png)
 
 1. Verify selections and then select **Done**:
 
-    ![Verify and done](media/verify-done.png)
+    ![Verify and done.](media/verify-done.png)
 
 1. After the app opens in **App Designer**, select **Publish**:
 
-    ![Publish the app](media/publish.png)
+    ![Publish the app.](media/publish.png)
 
 1. Close the **App Designer** browser tab.
 
@@ -86,11 +86,11 @@ To create a custom **Portal Management** app:
 
 1. You can see the new **Portal Management** custom app created:
 
-    ![Maker apps](media/maker-apps.png)
+    ![Maker apps.](media/maker-apps.png)
 
 1. Hover over the new app name and select to open the new **Portal Management** custom app:
 
-    ![Select new app](media/select-pma.png)
+    ![Select new app.](media/select-pma.png)
 
 Now you can use the custom Portal Management app and configure portal settings.
 

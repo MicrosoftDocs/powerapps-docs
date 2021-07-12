@@ -1,6 +1,6 @@
 ---
-title: Average, Max, Min, StdevP, Sum, and VarP functions | Microsoft Docs
-description: Reference information for the Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps, including syntax and examples
+title: Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps
+description: Reference information including syntax and examples for the Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -56,7 +56,7 @@ The **Average**, **Max**, **Min**, and **Sum** functions can be delegated when u
 Let's say that you had a [data source](../working-with-data-sources.md) named **Sales** that contained a **CostPerUnit** column and a **UnitsSold** column, and you set the **[Text](../controls/properties-core.md)** property of a label to this function:<br>
 **Sum(Sales, CostPerUnit * UnitsSold)**
 
-The label would show total sales by multiplying the values in those columns for each record and then adding the results from all records together:<br>![Calculate total sales from units sold and cost per unit](./media/function-aggregates/total-sales.png)
+The label would show total sales by multiplying the values in those columns for each record and then adding the results from all records together:<br>![Calculate total sales from units sold and cost per unit.](./media/function-aggregates/total-sales.png)
 
 As a different example, let's say that you had sliders that were named **Slider1**, **Slider2**, and **Slider3** and a label with its **[Text](../controls/properties-core.md)** property set to this formula:<br>
 **Sum(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the sum of all values to which the sliders were set.<br>

@@ -26,7 +26,7 @@ User and team management is the area of Microsoft Dataverse where you can create
 
  The following illustration shows the entity relationships for users and teams.  
 
- ![User and team entity relationship diagram](media/crm-v5s-em-userteam.gif "User and team entity relationship diagram")  
+ ![User and team entity relationship diagram.](media/crm-v5s-em-userteam.gif "User and team entity relationship diagram")  
 
 ## Users  
  In Dataverse, users can be disabled but they cannot be deleted. To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  

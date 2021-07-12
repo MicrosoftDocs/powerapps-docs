@@ -58,7 +58,7 @@ You can also make changes to rows that support the table:
 
 In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, open the unmanaged solution you want, and then select the table you want to edit. To modify the table properties, select **Settings** on the command bar to view the **Edit table** pane as shown below:
 
-![Edit table properties](media/edit-entity-properties-powerapps-portal-designer.png)
+![Edit table properties.](media/edit-entity-properties-powerapps-portal-designer.png)
 
 For a description of the properties available to edit see, [Create a table](data-platform-create-entity.md#create-a-table).
 

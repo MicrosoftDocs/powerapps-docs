@@ -47,7 +47,7 @@ After you create customized table and column text in your unmanaged solution, yo
 
 8. Add the translated text in the new column for the object names and object ids that you want.
     > [!div class="mx-imgBorder"]
-    > ![Translated text in Excel file](media/translated-entity-label-text.png)
+    > ![Translated text in Excel file.](media/translated-entity-label-text.png)
 
 9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and column text](import-translated-entity-field-text.md).
 
