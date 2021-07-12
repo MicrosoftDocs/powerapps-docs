@@ -23,7 +23,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Define rollup columns that aggregate values
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -65,7 +64,8 @@ Each Rollup column creates two accessory columns with *&lt;columnname&gt;*`_date
 |3|OtherError|The column value calculation failed due to an internal error. The following run of the calculation job will likely fix it.|  
 |4|RetryLimitExceeded|The column value calculation failed because the maximum number of retry attempts to calculate the value was exceeded due to high number of concurrency and locking conflicts.|  
 |5|HierarchicalRecursionLimitReached|The column value calculation failed because the maximum hierarchy depth limit for the calculation was reached.|  
-|6|LoopDetected|The column value calculation failed because a recursive loop was detected in the hierarchy of the row.|  
+|6|LoopDetected|The column value calculation failed because a recursive loop was detected in the hierarchy of the row.|
+| 7 | CurrencyMissing   | The column value calculation failed because the required field currency is missing. | 
   
 <a name="BKMK_calculations"></a>  
  
@@ -88,7 +88,7 @@ To view rollup jobs:
 
 ### Calculate Rollup Column 
 
-**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on a table is created and deleted when the last rollup column is deleted.  
+**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default minimum recurrence setting is one hour. The job is automatically created when the first rollup column on a table is created and deleted when the last rollup column is deleted.  
 
 ## Online recalculation option
 The rollup column on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
