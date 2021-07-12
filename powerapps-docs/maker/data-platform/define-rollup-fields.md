@@ -23,7 +23,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Define rollup columns that aggregate values
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
