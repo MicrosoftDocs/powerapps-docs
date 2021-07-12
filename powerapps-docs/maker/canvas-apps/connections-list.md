@@ -130,6 +130,8 @@ It won't be able to:
 4.	it facilitates manual end-user authentication, when needed.
 For some connections, Power Platform can automatically authenticate a user to access a data source, however, if the automatic sign in fails this dialog prompts users to fix a connection by manually signing in. Power Platform can only attempt automatic sign in for a connection when a data source pre-authorizes Microsoft’s Azure API connections service principal, granting it permission to perform single sign-on for a user when a connection is created. For more details on single sign-on see ‘[What is single sign-on (SSO)?](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on)”. The following image is an example of the connection consent dialog for an app connecting to SharePoint.  
 
+![Power Apps consent dialog](./media/connections-list/power_apps_consent_dialog.png)
+
 For select connectors, admins can suppress this dialog and consent on behalf of end-users to connect to a data source. The following table illustrates which types of connectors the consent dialog may be suppressed for an app. 
 
 > ![NOTE]
