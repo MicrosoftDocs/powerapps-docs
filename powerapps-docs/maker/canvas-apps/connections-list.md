@@ -134,7 +134,7 @@ For some connections, Power Platform can automatically authenticate a user to ac
 
 For select connectors, admins can suppress this dialog and consent on behalf of end-users to connect to a data source. The following table illustrates which types of connectors the consent dialog may be suppressed for an app. 
 
-> ![NOTE]
+> [!NOTE]
 > If an admin suppresses the consent dialog but the platform can’t perform single-sign-on for an end-user, the dialog will be presented to the user when they launch the app. 
 
 | # | Connector type                                                                                                                                           | Consent dialog suppressible? | Reference               |
