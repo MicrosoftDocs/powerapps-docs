@@ -2,7 +2,7 @@
 title: "Understanding the information returned from performance insights in Power Apps | MicrosoftDocs"
 description: Understand the information returned with performance insights. 
 ms.custom: ""
-ms.date: 06/15/2021
+ms.date: 07/07/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -106,7 +106,7 @@ Several configurations and network infrastructure can block the HTTP/2 protocol,
 
 Users can check what protocol has been used from a development tool included with the browser. In the figure below, network calls occurred over HTTP/2.
 
-:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
+:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls.":::
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
 - Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and **Use TLS 1.2** options aren't enabled.
@@ -156,6 +156,23 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 1. You will receive OData request similar to the below. **Agent Dashboard** displayed below represents the user-friendly name of the given dashboard ID.
 
    `{"@odata.context":https://contoso.crm.dynamics.com/api/data/v9.1/$metadata#systemforms(2ff4a8cf-378b-e811-a964-000d3a30dc0a)/name,"value":"Contoso - Agent Dashboard"}`
+  
+### Synchronous plug-ins with slow external calls
+
+Insight ID: Perf.Sandbox.Performance.Plug-ins.ExternalCall
+
+Plug-ins and custom workflow activities can access web services (external endpoints) via HTTP and HTTPS protocols. If these external services perform slowly, the plug-in itself will timeout or perform slowly.
+
+#### Motivation
+
+This insight checks the performance of the external endpoints and detects plug-ins in your app that are impacted by the slow external calls. 
+
+#### How to improve
+
+-	[Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-	[Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+
+ More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](/powerapps/developer/data-platform/access-web-services).
 
 ## Customization
 
@@ -263,7 +280,7 @@ Insight ID: Perf.Sandbox.Configuration.PluginTraceSettings
 
 Makers can debug their plug-ins through plug-in trace logs. The Dataverse admins can set plug-in and custom workflow activity tracing to **Off**, **Exception**, or **All**.
 
-:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings":::
+:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings.":::
 
 #### Motivation
 

@@ -35,7 +35,7 @@ Ratings are custom activities, and can be used in the same way as any other acti
 
 For webpages that have page ratings enabled, users can rate the page by using the rating scale.
 
-![Rating type](../media/rating-type.png "Rating type")  
+![Rating type.](../media/rating-type.png "Rating type")  
 
 ## Manage ratings
 

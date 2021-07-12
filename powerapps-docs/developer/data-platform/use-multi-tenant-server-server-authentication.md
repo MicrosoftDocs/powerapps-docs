@@ -82,7 +82,7 @@ Azure AD requires the following values to register your application:
   
  If you create a new ASP.NET MVC application with Visual Studio you will have options to specify that the application will support the multi-tenant functionality. The template for an MVC application provides the option to specify what kind of authentication occurs. You will have the option to choose the authentication method by configuring the properties of your project when you create it. The following diagram shows the options available:  
   
- ![ASP.NET MVC Change Authentication Dialog](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
+ ![ASP.NET MVC Change Authentication Dialog.](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
   
  When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with Dataverse. 
   
@@ -108,7 +108,7 @@ Azure AD requires the following values to register your application:
   
 6. Click **Done** to add these permissions. When you are done you should see the permissions applied.  
   
-   ![Grant Dynamics 365&#45;Permissions to application](media/grant-crm-permissions-to-application.png "Grant Dynamics 365-Permissions to application")  
+   ![Grant Dynamics 365&#45;Permissions to application.](media/grant-crm-permissions-to-application.png "Grant Dynamics 365-Permissions to application")  
   
 <a name="bkmk_CreateAppUser"></a>
 
@@ -154,7 +154,7 @@ Azure AD requires the following values to register your application:
   
     If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
   
-   ![Select Application User Form](media/select-application-user-form.PNG "Select Application User Form")  
+   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")  
   
 4. Add the appropriate values to the fields:  
   
@@ -182,7 +182,7 @@ Azure AD requires the following values to register your application:
 
  Before you test your application with a separate Dataverse tenant, an administrator for the Azure AD tenant must grant consent for the application. The administrator grants consent by navigating to the application using a browser. The first time they access the application, they will see a dialog like this:  
   
- ![Grant consent to access Dynamics 365 data](media/grant-consent-to-access-crm-data.PNG "Grant consent to access Dynamics 365 data")  
+ ![Grant consent to access Dynamics 365 data.](media/grant-consent-to-access-crm-data.PNG "Grant consent to access Dynamics 365 data")  
   
  When they grant consent, your registered application will be added to the  Azure AD Enterprise applications list and it is available to the users of the Azure AD tenant.  
   

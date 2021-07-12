@@ -25,7 +25,7 @@ Add, configure, move, or delete sections on a form using the form designer.
 To add sections to a form, use the **Components** pane. 
 
 > [!div class="mx-imgBorder"] 
-> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components.](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md).

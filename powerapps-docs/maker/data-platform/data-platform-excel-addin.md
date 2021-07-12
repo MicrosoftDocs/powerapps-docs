@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/03/2020
+ms.date: 07/07/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ search.app:
 By opening table data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. 
 
 > [!div class="mx-imgBorder"] 
-> ![Excel Add-in](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
+> ![Excel Add-in.](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
 
 To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
@@ -69,7 +69,7 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 1. Enable the data source designer of the Excel add-in by selecting the **Options** button (the gear symbol).
 
-   :::image type="content" source="media/power-apps-excel-addin-settings.png" alt-text="Settings icon in the add-in pane":::
+   :::image type="content" source="media/power-apps-excel-addin-settings.png" alt-text="Settings icon in the add-in pane.":::
 
 1. Expand the **Data Connector** section, and then select the **Enable design** check box, and then select **OK**.
 
@@ -94,6 +94,7 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
+* Image and file columns are not supported. You won’t be able to see any data when you open an Excel worksheet that includes those data types.
 * The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
 * Rows are processed sequentially. If there is an error in saving a row, changes to subsequent rows will be aborted. Changes to preceding rows are kept.
 * [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported. This add-in requires access to the Office store.

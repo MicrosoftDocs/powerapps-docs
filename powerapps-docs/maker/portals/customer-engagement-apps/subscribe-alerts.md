@@ -27,7 +27,7 @@ Users can indicate they wish to receive notification when new posts are created 
 2. Navigate to a **Forum Thread**.
 3. Select **Subscribe**.
 
-![Subscribe to alerts](media/subscribe-alerts.png "Subscribe to alerts")  
+![Subscribe to alerts.](media/subscribe-alerts.png "Subscribe to alerts")  
 
 ## Unsubscribe from alerts in the portal
 
@@ -37,7 +37,7 @@ Users can indicate that they do not wish to receive notification when new posts 
 2. Navigate to a **Forum Thread**.
 3. Select **Unsubscribe**.
 
-![Unsubscribe from alerts](media/unsubscribe-alerts.png "Unsubscribe from alerts")  
+![Unsubscribe from alerts.](media/unsubscribe-alerts.png "Unsubscribe from alerts")  
 
 ## Manage forum alerts
 

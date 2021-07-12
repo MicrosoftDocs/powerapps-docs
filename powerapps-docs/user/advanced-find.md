@@ -22,7 +22,7 @@ search.app:
 Find the rows you want in your app by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
 
   
-1. On the command bar, the select **Advanced Find** button ![Advanced find button](media/advanced_filter_icon.png "Advanced find button").
+1. On the command bar, the select **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button").
   
 2. Specify what to search for.  
   
@@ -65,29 +65,29 @@ Before you can share a personal view, it must be saved.
 2. On the Advanced Find tab, select **Saved Views**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Saved view button](media/saved_views_1.png "Saved view button")
+   > ![Saved view button.](media/saved_views_1.png "Saved view button")
    
 3. From the list of saved views, select a view and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select a saved view](media/saved_views_2.png "Select a saved view")
+   > ![Select a saved view.](media/saved_views_2.png "Select a saved view")
    
 4. In the **Share saved view** screen, select **Add User/Team**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select users or team](media/saved_views_3.png "Select users or team")
+   > ![Select users or team.](media/saved_views_3.png "Select users or team")
 
 
 5. Use the look up to find the users or team that you want to share the view with.
 6. When you find the user or team, select their name and then choose **Select** and then **Add**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select user or team names](media/saved_views_4.png "Select the user or team names")
+   > ![Select user or team names.](media/saved_views_4.png "Select the user or team names")
     
 7. Select each user’s permission and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Share the view](media/saved_views_5.png "Select share to share the view")
+   > ![Share the view.](media/saved_views_5.png "Select share to share the view")
 
 
 

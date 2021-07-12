@@ -90,7 +90,7 @@ The apps that you used recently will show on the default screen when you sign in
 
 The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. 
 
-![Default Home screen](media/default-home-screen.png "Default Home screen")
+![Default Home screen.](media/default-home-screen.png "Default Home screen")
 
 
 
@@ -98,7 +98,7 @@ The **Home** is the default screen when you sign in. It shows the apps that you 
 
 If you don't have any apps, then when you sign in, you will land on the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
-![Filter and find apps](media/app-list-2.png "Filter and find apps")  
+![Filter and find apps.](media/app-list-2.png "Filter and find apps")  
 
 1. **Settings**: Access app settings and sign out.
 2. **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on.
@@ -114,7 +114,7 @@ If you don't have any apps, then when you sign in, you will land on the **All ap
 
 You can only add canvas apps to your list of favorite apps.
 
-- Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button](media/detailsbutton.png) and then add the app to favorites.
+- Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button.](media/detailsbutton.png) and then add the app to favorites.
 
    > [!div class="mx-imgBorder"]
    > ![Add to list of favorites.](media/add-to-favs-1-1.png "Add to list of favorites")     
@@ -148,7 +148,7 @@ To find an app, enter the app name in the search field. The app will only search
 On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
 
    > [!div class="mx-imgBorder"]
-   >![Refresh the app list](media/refesh-apps-iphone.png)
+   >![Refresh the app list.](media/refesh-apps-iphone.png)
 
 
 ## Add shortcuts
@@ -248,7 +248,7 @@ Select the ellipsis (...) on the app tile, select **Pin to Home**, and then foll
 
 By default, only production model-driven apps are shown in the list of apps.
 
-To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
+To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon.](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
 
 ![Non-production apps toggle.](media/non_prod_toggle.png "Non-production apps toggle")
 
@@ -290,7 +290,7 @@ If an app requires a connection to a data source or permission to use the device
 
 #### Close a model-drive app
 
-Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), and then select **Apps**.
+Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map icon"), and then select **Apps**.
 
 ![Close a model-driven app.](media/pa_mobile_close_app.png "Close a model-driven app")
 

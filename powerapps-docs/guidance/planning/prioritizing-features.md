@@ -43,7 +43,7 @@ The following table shows an example of how you can record each feature.
 After you've listed all your feature requests, you should triage the requests
 into the quadrants shown in the following chart.
 
-![Priority quadrants, with an axis for low to high impact and an axis for low to high effort](media/priority-quadrant.png "Priority quadrants, with an axis for low to high impact and an axis for low to high effort")
+![Priority quadrants, with an axis for low to high impact and an axis for low to high effort.](media/priority-quadrant.png "Priority quadrants, with an axis for low to high impact and an axis for low to high effort")
 
 ### Quick Wins
 

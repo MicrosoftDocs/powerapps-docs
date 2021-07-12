@@ -119,7 +119,7 @@ Apart from each table being enabled for change tracking, organizations on a whol
 
 You may see a *Page Not Found* error message that appears different from the default error page content on the **Page Not Found** site marker and webpage.
 
-![Page Not Found](media/page-not-found.png "Page Not Found")
+![Page Not Found.](media/page-not-found.png "Page Not Found")
 
 This *Page Not Found* error appears if: 
 

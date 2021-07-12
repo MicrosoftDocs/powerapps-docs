@@ -29,7 +29,7 @@ Adding an email signature is easy and can be done at any point while you are com
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
 - From the drop-down list, select an existing signature or select **New Email Signature**.<BR>
-![How to add an email signature](media\email-how-to-add-an-email-signature-1a.png "How to add an email signature")
+![How to add an email signature.](media\email-how-to-add-an-email-signature-1a.png "How to add an email signature")
 
 ## Create an email signature
 You can quickly create an email signature at any point while you are composing an email.
@@ -38,7 +38,7 @@ You can quickly create an email signature at any point while you are composing a
 
 You can add a new email signature by:
 
-   ![Add a new email signature](media\email-how-to-create-an-email-signature-1b.png "Add a new email signature")
+   ![Add a new email signature.](media\email-how-to-create-an-email-signature-1b.png "Add a new email signature")
 
    1. **Details** in this section, enter the name of the email signature.
    2. **Signature editor**. This allows you to create your email signature and **Save** when finished. 
@@ -51,7 +51,7 @@ You can add a new email signature by:
 
 You can view and manage email signatures you have created to make edits, change default, and who can view your signatures.
 
-   ![Manage email signature lists](media\email-manage-email-signature-lists-11a.png "Manage email signature lists")
+   ![Manage email signature lists.](media\email-manage-email-signature-lists-11a.png "Manage email signature lists")
 
    Legend
    1. Under **Templates** select **Email signatures**.
@@ -62,7 +62,7 @@ You can view and manage email signatures you have created to make edits, change 
 ## Change the default email signature setting
 While you can create multiple email signatures depending on you needs, only one can be set as your default email.   
 
-   ![Change email signature default setting](media\email-change-email-signature-default-setting-1a.png "Change email signature default setting")
+   ![Change email signature default setting.](media\email-change-email-signature-default-setting-1a.png "Change email signature default setting")
 
    To change your default email signature setting:
    1. Select the email signature you want to set as default. This will change the command bar to display **Edit**.

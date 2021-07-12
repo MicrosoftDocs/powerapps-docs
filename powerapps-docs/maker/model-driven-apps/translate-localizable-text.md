@@ -56,7 +56,7 @@ The scope of the localizable text that will be exported is the unmanaged solutio
 3. In the menu bar select **Translations** > **Export Translations**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Export Translations](media/export-localizable-text.png "Export Translations")
+    > ![Export Translations.](media/export-localizable-text.png "Export Translations")
 
     You could see an alert that says:
     > Exporting customized labels for translation can take several minutes. Do not click the export link again until the first export has finished. Are you sure that you want to export now?
@@ -83,7 +83,7 @@ You can open the CrmTranslations.xml file with Microsoft Office Excel.
 
 When you view the data in Excel, look at the **Localized Labels** tab.
 
-![Exported text for localization](media/localized-labels-tab-exported-languages.png "Exported text for localization")
+![Exported text for localization.](media/localized-labels-tab-exported-languages.png "Exported text for localization")
 
 Any custom tables or columns will have empty cells for the localizable text. Add the localized values for those items.
 
@@ -116,10 +116,10 @@ After changes are made to the `CrmTranslations.xml` file, you must compress the 
 
 From the same unmanaged solution that you exported the translations from, in the menu choose **Translations** > **Import Translations**. 
 
-<!-- ![Import translations](media/import-translations.png) -->
+<!-- ![Import translations.](media/import-translations.png) -->
 
 > [!div class="mx-imgBorder"] 
-> ![Import selected file](media/import-translated-text-dialog.png "Import localized text")
+> ![Import selected file.](media/import-translated-text-dialog.png "Import localized text")
 
 Select the file that contains the compressed translated text and select **Import**.
 

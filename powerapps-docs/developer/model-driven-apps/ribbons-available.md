@@ -97,7 +97,7 @@ The table grid ribbon is a collection of tabs that have an ID value beginning wi
 
  When a list of records for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
 
-- **Add**: The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current record.  
+- **Add**: The default behavior of the command with the ![Add button.](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current record.  
 
      If the records are related to the current record, the default behavior is look for existing records. If an existing record cannot be found, or if the user simply wants to create a new record, they can select **Add New**.  
 
@@ -108,13 +108,13 @@ The table grid ribbon is a collection of tabs that have an ID value beginning wi
      > [!NOTE]
      >  Offline mode in Dynamics 365 does not support many-to-many relationship on custom tables. Due to this, the **Add New** button on a sub grid in Dynamics 365 offline mode will not be displayed.
 
-- **Show List**: The command with the ![Open view button](media/customization-open-view.PNG "Open view button") icon will open the full list where all available commands can be used.  
+- **Show List**: The command with the ![Open view button.](media/customization-open-view.PNG "Open view button") icon will open the full list where all available commands can be used.  
 
      If the subgrid is associated with the current record, the default behavior of this command is to open the associated  view.  
 
      If the subgrid is not associated with the current record, the default behavior of this command is to open the view in the main list view.  
 
-- **Delete**: The ![Sublist delete icon](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the records in the list.  
+- **Delete**: The ![Sublist delete icon.](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the records in the list.  
 
      For records with a 1:N relationship or no relationship, the default behavior is to delete the record. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of records that may not be deleted due to relationship configurations.  
 

@@ -34,12 +34,12 @@ There are many situations that you might encounter where access to the informati
 1. Sign in to [Power Apps](https://make.powerapps.com/), select **Apps**, select the app you want, and then select **Monitor** on the command bar. Follow the instructions on your screen to run the app and join the monitoring session.
 
    You can also start a Monitor session from a model-driven app. To do this, append *&monitor=true* to the end of the URL in the browser. This displays the **Monitor** command on the model-driven app global command bar. Select **Monitor** to open a monitoring session in a new tab.
-   ![Add the URL parameter to run Monitor from a model-driven app](media/run-monitor-from-app.png)
+   ![Add the URL parameter to run Monitor from a model-driven app.](media/run-monitor-from-app.png)
 
 2. On the browser window running Monitor, select the three horizontal lines on the **Category** column to open the filter options.
 
    > [!div class="mx-imgBorder"] 
-   > ![Filter on form events in Monitor](media/monitor-filter-formchecker.png)
+   > ![Filter on form events in Monitor.](media/monitor-filter-formchecker.png)
 
 3. Enter *formchecker* in the topmost **Filter** box. Don't make any other changes. Select **Apply**. 
 
@@ -48,14 +48,14 @@ There are many situations that you might encounter where access to the informati
 4. Select anywhere outside the filter dialog to close the dialog and refresh the list in Monitor. You can expand the **Operation** column to see the full name of the events that are tracked by selecting and holding the right side of the column and dragging to the right. As you use the app and open and use a form, Monitor updates the list of events.
 
    > [!div class="mx-imgBorder"] 
-   >![Monitored form events displayed](media/monitor-formchecker-events.png)
+   >![Monitored form events displayed.](media/monitor-formchecker-events.png)
 
 ## Use Monitor to understand form behavior
 
 For each row, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** row in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected to display additional information.
 
 > [!div class="mx-imgBorder"] 
-> ![Monitoring a related menu](media/monitor-formchecker-related-menu.png)
+> ![Monitoring a related menu.](media/monitor-formchecker-related-menu.png)
 
 To see the full details, select **+** next to the line that displays the word **data** in the title, which is line **5** in the previous screenshot. The expanded details display all items in the related menu with information that can help you understand why a table is, or isn't, included in the related menu options. There are many types of events that are monitored, including the standard form events like `onload`, `onsave`, and `onclose`.
 

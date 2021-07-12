@@ -38,7 +38,7 @@ To find out which license or licenses you already have:
 
 2. Select the gear icon near the upper-right corner, and then select **Plan(s)**.
 
-    ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
+    ![Gear icon.](./media/signup-for-powerapps/gear-icon.png)
 
 ## Upgrade an existing license
 
@@ -61,7 +61,7 @@ Regardless of whether you have a license for Power Apps, you can start a free, 3
 
 1. If a dialog box indicates that Power Apps recognizes your organizational credentials, follow the prompts to finish signing in.
 
-    ![Sign in with work account](./media/signup-for-powerapps/we-know-you.png)
+    ![Sign in with work account.](./media/signup-for-powerapps/we-know-you.png)
 
     Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and select **Start**.
 

@@ -43,11 +43,11 @@ You can launch canvas apps with **Web link** or **App ID**. To find these values
 1. Select your app.
 1. Select **Details** from top menu. <br> You can also select **...** (**More Commands**) and then select **Details** from the drop-down menu.
 
-    ![App details option](media/function-param/portal-details.png "App details option")
+    ![App details option.](media/function-param/portal-details.png "App details option")
 
 1. Copy **Web link** or **App ID**.
     
-    ![App details with web link and app id](media/function-param/portal-links.png "App details with web link and app id")
+    ![App details with web link and app id.](media/function-param/portal-links.png "App details with web link and app id")
 
 The **Web link** can be used in any web page and will launch the canvas app.  It can also be used with the **Launch** function.
 
@@ -193,7 +193,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. From property list on top left, select **OnSelect**.
 1. Enter formula as ```Launch("https://www.bing.com/news/search","q","Microsoft Surface tablets")```. You can also use any other URL, parameter, and keywords of your choice.
 
-    ![Launch example](media/function-param/launch-example-onselect.png "Launch example")
+    ![Launch example.](media/function-param/launch-example-onselect.png "Launch example")
 
 1. Save and publish the app.
 1. Play the app.
@@ -212,25 +212,25 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. Select **Text** property for the label from top left.
 1. Enter formula as ```Param("browser")```. You can also use a different parameter of your choice.
 
-    ![Param example](media/function-param/param-example.png "Param example")
+    ![Param example.](media/function-param/param-example.png "Param example")
 
 1. Save and publish the app.
 1. Copy [web link](#address) for your app from [Power Apps](https://make.powerapps.com).
 1. Open a new browser.
 1. Paste the app web link in the browser and append ```&browser=Microsoft%20Edge``` at the end.
 
-    ![Web address](media/function-param/param-example-web-address.png "Web address")
+    ![Web address.](media/function-param/param-example-web-address.png "Web address")
 
 1. When your app launches, the label shows the parameter value passed.
 
-    ![Param example label](media/function-param/param-example-label.png "Param example label")
+    ![Param example label.](media/function-param/param-example-label.png "Param example label")
 
 1. Close the app player and edit the app.
 1. Select **App** from the Tree view on left navigation.
 1. Select **OnStart** property on top left.
 1. Enter the formula as ```If(Param("screen")="techspecs",Navigate(TechSpecs,Fade))```.  
 
-    ![Param example for navigation](media/function-param/param-example-screen.png "Param example for navigation")
+    ![Param example for navigation.](media/function-param/param-example-screen.png "Param example for navigation")
 
     [If function](function-if.md) in [OnStart](object-app.md#onstart-property) property checks if parameter equals a certain value, in this case the value *techspecs*. And if it matches, the app navigates to *TechSpecs* screen.
 
@@ -241,7 +241,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. Open a new browser.
 1. Paste the app web link in the browser and append ```&screen=techspecs``` at the end.
 
-    ![Web address for TechSpecs screen](media/function-param/param-example-web-address-techspecs.png "Web address for TechSpecs screen")
+    ![Web address for TechSpecs screen.](media/function-param/param-example-web-address-techspecs.png "Web address for TechSpecs screen")
 
 1. The app directly launches with **TechSpecs** or a screen you entered in Navigate function.
 

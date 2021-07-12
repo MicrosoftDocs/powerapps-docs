@@ -39,7 +39,7 @@ Using Azure Synapse Link, continuously export data from:
 
 The Azure Synapse Link for Dataverse is a service designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments.
 
-![Azure Synapse Link overview](media/azure-synapse-link-overview.png "Azure Synapse Link overview")
+![Azure Synapse Link overview.](media/azure-synapse-link-overview.png "Azure Synapse Link overview")
 
 The Azure Synapse Link for Dataverse provides these features:
 
@@ -57,7 +57,7 @@ Both standard and custom tables can be exported. Notice that the change tracking
 All create, update, and delete operations are exported from Dataverse to the data lake. For example, when a user deletes an Account table row in Dataverse, the transaction is replicated in the destination location.
 
 > [!div class="mx-imgBorder"] 
-> ![Azure Synapse Link GIF](media/azure-synapse-link-gif.gif "Azure Synapse Link GIF")
+> ![Azure Synapse Link GIF.](media/azure-synapse-link-gif.gif "Azure Synapse Link GIF")
 
 ## Rapidly analyze your Dataverse data in Azure Synapse Analytics
 

@@ -399,6 +399,8 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
+          - name: Add editable tables
+            href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Control reference
@@ -541,7 +543,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Use Power Apps Ideas (Preview)
+        - name: Use Power Apps Ideas (Experimental)
           href: ./canvas-apps/power-apps-ideas.md
         - name: Formula reference
           items:
@@ -1101,6 +1103,8 @@
         items: 
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
+        - name: Create an app with an account table
+          href: ./model-driven-apps/create-a-model-driven-app.md
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
@@ -2208,8 +2212,18 @@
           items:
             - name: Use Bulletins sample app
               href: ../teams/bulletins.md
-            - name: Understand Bulletins sample app architecture
-              href: ../teams/bulletins-architecture.md
+            - name: Deploy Bulletins app broadly in your organization
+              href: ../teams/bulletins-deploy-broadly.md
+            - name: Customize Bulletins app
+              items:
+                - name: Understand Bulletins sample app architecture
+                  href: ../teams/bulletins-architecture.md
+                - name: Customize Bulletins app
+                  href: ../teams/customize-bulletins.md
+                - name: Send an alert when a new bulletin is posted
+                  href: ../teams/new-bulletin-alert.md
+                - name: Add "Notify me" settings to category in Bulletins app
+                  href: ../teams/bulletins-notify-me.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app
@@ -2244,8 +2258,12 @@
           items:
             - name: Use Inspection sample app
               href: ../teams/inspection.md
-            - name: Understand Inspection sample app architecture
-              href: ../teams/inspection-architecture.md
+            - name: Customize Inspection app
+              items:
+                - name: Understand Inspection sample app architecture
+                  href: ../teams/inspection-architecture.md
+                - name: Customize Inspection sample app
+                  href: ../teams/customize-inspections.md
         - name: Issue reporting
           items:
             - name: Issue reporting

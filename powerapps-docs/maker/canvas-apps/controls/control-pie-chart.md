@@ -56,7 +56,7 @@ This control is a grouped control containing three controls: a **[Label](control
 
 **LabelPosition** – The location of labels in a pie chart relative to its wedges.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 

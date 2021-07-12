@@ -44,7 +44,7 @@ The portal enables configuring the most common options, but certain options can 
  |**Custom**|Shows only custom relationships for the table|
  |**Default**|Shows only the standard relationships for the table|
 
-![Account table relationships](media/view-account-relationships-portal.png)
+![Account table relationships.](media/view-account-relationships-portal.png)
 
 Many-to-many relationships will have a **Relationship type** of **Many-to-many**.
 
@@ -55,17 +55,17 @@ Many-to-many relationships will have a **Relationship type** of **Many-to-many**
 
 While [viewing table relationships](#view-many-to-many-table-relationships), in the command bar, select **Add relationship** and choose **Many-to-many**.
 
-![Select type of relationship](media/add-relationship-menu-portal.png)
+![Select type of relationship.](media/add-relationship-menu-portal.png)
 
 In the **Many-to-many** panel, choose the table you want related to the current table.
 
 > [!div class="mx-imgBorder"] 
-> ![Many-to-many panel with account table selected](media/many-to-many-panel-1.png)
+> ![Many-to-many panel with account table selected.](media/many-to-many-panel-1.png)
 
 Select **More Options** to view the **Relationship Name** and **Relationship table name** columns.
 
 > [!div class="mx-imgBorder"] 
-> ![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
+> ![Many-to-many panel with More Options selected.](media/many-to-many-panel-2.png)
 
 The values for these columns are generated for you based on the tables chosen.
 
@@ -92,18 +92,18 @@ To create a self-referential relationship, use custom labels.
    - **Entity Name**: *Custom table*
    - **Display Option**: **Use Custom Label**
    - **Custom Label**: *Secondary Custom Table Relationship*
-   :::image type="content" source="media/self-referencing-table-example.png" alt-text="Self-referential table relationship configuration":::
+   :::image type="content" source="media/self-referencing-table-example.png" alt-text="Self-referential table relationship configuration.":::
 4. Save the relationship, and then publish the customization.
 
 Because the related record types use the custom labels defined for the self-referential relationship instead of the table name, users running the app can distinguish between the two related record types that exist.
 
-:::image type="content" source="media/related-record-labels.png" alt-text="App with related records using relationship custom labels":::
+:::image type="content" source="media/related-record-labels.png" alt-text="App with related records using relationship custom labels.":::
 
 ## Delete relationships
 
 While [viewing table relationships](#view-many-to-many-table-relationships), select the relationship you want to delete.
 
-![Delete table relationship](media/delete-entity-relationship-portal.png)
+![Delete table relationship.](media/delete-entity-relationship-portal.png)
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you select the ellipses (**...**).
 

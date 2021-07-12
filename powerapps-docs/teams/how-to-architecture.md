@@ -37,7 +37,7 @@ To understand and use information in this article, you'll need to know about dif
 ## Data model
 The following diagram shows the tables, columns, and relationships in the How to app solution:
 
-![How to app sample app data model](media/how-to-architecture/data-model.png "How to app sample app data model")
+![How to app sample app data model.](media/how-to-architecture/data-model.png "How to app sample app data model")
 
 ## Tables
 
@@ -54,7 +54,7 @@ The following diagram shows the tables, columns, and relationships in the How to
 ## Architecture model
 The following diagram illustrates the way that people, systems, and data interact in the How to app solution
 
-![How to app sample app architecture model](media/how-to-architecture/architecture-model.png "How to app sample app architecture model")
+![How to app sample app architecture model.](media/how-to-architecture/architecture-model.png "How to app sample app architecture model")
 
 ### Connectors
 

@@ -59,7 +59,7 @@ users are allowed to perform create, update, and delete operations on this entit
 
 You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses table records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
 
-![Portals Web API security](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
+![Portals Web API security.](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 
 ## Authenticating portals Web API requests
 
@@ -71,7 +71,7 @@ All request headers will have a contact ID passed for auditing purpose. For an a
 
 If audit logging is enabled, a user can see all the audit events in the [Office 365 audit log](https://protection.office.com/unifiedauditlog).
 
-![Office 365 audit log](media/web-api/office365-security-compliance-audit-log.png)
+![Office 365 audit log.](media/web-api/office365-security-compliance-audit-log.png)
 
 More information:<br>[Enable and use Activity Logging](/power-platform/admin/enable-use-comprehensive-auditing)<br>[Export, configure, and view audit log records](/microsoft-365/compliance/export-view-audit-log-records).
 

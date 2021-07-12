@@ -41,14 +41,14 @@ This sample demonstrates how to perform bound and unbound functions and actions,
 
  To run this sample, the following is required:  
   
-- Access to Dataverse online or on-premises version 8.0 or higher.  
+- Access to Dataverse environment.  
 - A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
 <a name="bkmk_runsample"></a>
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript)](/samples/browse/) and download the Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the  WebAPIFunctionsandActions_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Dataverse organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIFunctionsAndActions), extract the contents, and locate the  `WebAPIFunctionsandActions_1_0_0_0_managed.zip` managed solution file. Import the managed solution into your Dataverse organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 

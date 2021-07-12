@@ -63,7 +63,7 @@ The following screenshot shows the checklist items in Microsoft Excel file. You 
 The example uses collections to demo this behavior. The approach works for any tabular backend of your choice.
 
 > [!div class="mx-imgBorder"]
-> ![alt text](./media/create-records-update-bulk/bulk-update-records-1.png)
+> ![alt text.](./media/create-records-update-bulk/bulk-update-records-1.png)
 
 The Excel data is imported as static data into the app. On the `App.OnStart` property, `Collect()` the Excel ChecklistItems data into the `ChecklistItemsSource` collection. The `ChecklistItemsSource` collection will be used as the source data throughout the app.
 
@@ -73,7 +73,7 @@ This example uses a two screen app:
 - **Screen 2**&mdash;Used to create a new checklist item. The new item will be added to `ChecklistItemsSource` collection.
 
 > [!div class="mx-imgBorder"]
-> ![Screen1](./media/create-records-update-bulk/bulk-update-records-2.jpg) ![Screen2](./media/create-records-update-bulk/bulk-update-records-3.jpg)
+> ![Screen1.](./media/create-records-update-bulk/bulk-update-records-2.jpg) ![Screen2](./media/create-records-update-bulk/bulk-update-records-3.jpg)
 
 Every time a checklist item is checked, it's added into a collection called `CheckedItems`. It uses the formula below on the `OnCheck` event property of the checkbox control. If the item is already checked and is part of the collection, it's removed. If not, the checked item is added.
 

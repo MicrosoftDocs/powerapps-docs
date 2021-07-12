@@ -107,7 +107,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Open a new record](media/open-new-record-mfd.png "Open a new record")
+> ![Open a new record.](media/open-new-record-mfd.png "Open a new record")
 
 ### Open an existing record
 
@@ -128,7 +128,7 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record](media/open-existing-record-mfd.png "Open an existing record")
+> ![Open an existing record.](media/open-existing-record-mfd.png "Open an existing record")
 
 ### Open a new record on the side pane
 
@@ -148,7 +148,7 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
+> ![Open an existing record on side pane.](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
 
 ### Open main form in a dialog with callback method
 

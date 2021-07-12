@@ -55,7 +55,7 @@ Environment variables can be created and modified within the modern solution int
       Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher may list their offer on AppSource with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer will not be overwritten. 
 
       > [!div class="mx-imgBorder"] 
-      > ![New environment variable](media/new-environment-variable.png)
+      > ![New environment variable.](media/new-environment-variable.png)
 
       >[!NOTE]
       > A value can't exist without a definition. The interface only allows creation of one value per definition.
@@ -100,7 +100,7 @@ To use an environment variable in a solution cloud flow:
     a. If the parameter takes a simple value, such as a string or number, enter the parameter.
     
     b. If the parameter is a lookup, scroll to the bottom of the lookup, and then select **Enter custom value**. Environment variables that you have access to are listed in the dynamic content selector with other dynamic content.
-       :::image type="content" source="media/select-environment-variable.png" alt-text="Select an environment variable to add to a cloud flow trigger or action":::
+       :::image type="content" source="media/select-environment-variable.png" alt-text="Select an environment variable to add to a cloud flow trigger or action.":::
 1. Select the desired environment variable.
 
 ## Enter new values while importing solutions
