@@ -25,7 +25,7 @@ In this article, we'll learn how to update the app to add a hierarchy of stores 
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
+To complete this lesson, we'd need the ability to log in into Microsoft Teams that will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
 
 ## Edit the Inspections app
 
@@ -59,7 +59,7 @@ To complete this lesson, we'd need the ability to login into Microsoft Teams whi
 
 1. Select **Data** from the left navigation menu.
 
-1. Locate the **Area Inspections** table and hit on the three dots.
+1. Locate the **Area Inspections** table, and select **...** (ellipsis).
 
 1. Select **Edit data**.
 
@@ -132,239 +132,220 @@ To complete this lesson, we'd need the ability to login into Microsoft Teams whi
 
 ### Update the Welcome Screen navigation
 
-1.  From the tree view, select the Welcome Screen.
+1. From the tree view, select the Welcome Screen.
 
-2.  Select the button Perform an Inspection (btnInspect).
+1. Select the button **Perform an Inspection** (btnInspect).
 
-3. Update the Navigate function from the OnSelect property of the button so that it navigates to the StoreSelectionScreen instead of the Items screen leaving the rest of the formula as is
+1. Update the **Navigate** function from the **OnSelect** property of the button so that it takes you to the **StoreSelectionScreen** screen instead of the **Items** screen, with the remaining of the formula unchanged.
 
-   ```
+   ```powerapps-dot
    Navigate(
-   
    StoreSelectionScreen,
-   
    ScreenTransition.Fade
-   
    );
    ```
 
-![Navigate to Store Selection screen](media/extend-inspections-add-hierarchy-to-locations/code-to-navigate-to-store-selection-screen.png "Navigate to Store Selection screen")
+    ![Navigate to Store Selection screen](media/extend-inspections-add-hierarchy-to-locations/code-to-navigate-to-store-selection-screen.png "Navigate to Store Selection screen")
 
 ### Publish the Inspections app
 
-1.  All the changes to the Inspections app are completed.
-
-2.  The app can now be published by selecting the Publish to Teams button on the top right.
+All the changes to the Inspections app are completed. The app can now be published by selecting the **Publish to Teams** button on the top-right.
 
 ![Publish to Teams](media/extend-inspections-add-hierarchy-to-locations/publish-to-teams.png "Publish to Teams")
 
 ## Edit the Review Inspections app
 
-1.  Login into Teams and right click Power Apps from the left menu and select **Pop out app**.
+1. Open **Power Apps** in Teams.
+
+1. Select **Build** tab from the top ribbon.
+
+1. Select the team in which the Inspections app is installed.
+
+1. Select **Review Inspections** to open the app in the editor.
+
+1. Select **Data** from the left-pane.
+
+1. Select **+ Add** data, and add the **Stores** table to this database for this app.
+
+1. Refresh the **Area Inspections** table so that the **Stores** column shows up in the table.
+
+### Add a label to display the store on the Inspection
+
+1. Open the tree view, and select the Items Screen.
+
+1. Under the group **grpInspectionSteps**, select label called "lblInspection_SubmissionDetails", and update it's **Text** property to the following formula.
+
+    ```powerapps-dot
+    If(
     
-2.  Select Build from the top ribbon.
-
-3.  Select the Team in which the Inspections app is installed.
-
-4.  Select Review Inspections to open the app in the editor.
-
-5.  The Review Inspections app opens.
-
-6.  Select **Data** from the left navigation menu.
-
-7.  Select **+Add** data and add the Stores table to this database for this app.
-
-8.  Also, refresh the Area Inspections table so that the Store column shows up in the table.
-
-### Add a label to display the Store on the Inspection
-
-1.  Open the Tree view and select the Items Screen.
-
-2.  Under the Group grpInspectionSteps, there is a label called lblInspection\_SubmissionDetails.
+    DateDiff(
     
-3.  Update the Text property of lblInspection_SubmissionDetails to the following
-
-```
-If(
-
-DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Days
-
-) = 0,
-
-If(
-
-DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Hours
-
-) \> 0,
-
-galInspections.Selected.Store.Name & " \| Submitted by " &
-galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Hours
-
-) & " hrs ago",
-
-If(
-
-DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Hours
-
-) = 0,
-
-//"minutes ago"
-
-galInspections.Selected.Store.Name & " \| Submitted by " &
-galInspections.Selected.createdby.'Full Name' & ", minutes ago"
-
-,
-
-If(
-
-DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Days
-
-) = 1,
-
-//"yesterday",
-
-galInspections.Selected.Store.Name & " \| Submitted by " &
-galInspections.Selected.createdby.'Full Name' & ", yesterday",
-
-galInspections.Selected.Store.Name & " \| Submitted by " &
-galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
-
-Date(
-
-Year(galInspections.Selected.createdon),
-
-Month(galInspections.Selected.createdon),
-
-Day(galInspections.Selected.createdon)
-
-),
-
-Today(),
-
-Days
-
-) & " days ago"
-
-)
-
-)
-
-)
-
-)
-```
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Days
+    
+    ) = 0,
+    
+    If(
+    
+    DateDiff(
+    
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Hours
+    
+    ) \> 0,
+    
+    galInspections.Selected.Store.Name & " \| Submitted by " &
+    galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
+    
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Hours
+    
+    ) & " hrs ago",
+    
+    If(
+    
+    DateDiff(
+    
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Hours
+    
+    ) = 0,
+    
+    //"minutes ago"
+    
+    galInspections.Selected.Store.Name & " \| Submitted by " &
+    galInspections.Selected.createdby.'Full Name' & ", minutes ago"
+    
+    ,
+    
+    If(
+    
+    DateDiff(
+    
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Days
+    
+    ) = 1,
+    
+    //"yesterday",
+    
+    galInspections.Selected.Store.Name & " \| Submitted by " &
+    galInspections.Selected.createdby.'Full Name' & ", yesterday",
+    
+    galInspections.Selected.Store.Name & " \| Submitted by " &
+    galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
+    
+    Date(
+    
+    Year(galInspections.Selected.createdon),
+    
+    Month(galInspections.Selected.createdon),
+    
+    Day(galInspections.Selected.createdon)
+    
+    ),
+    
+    Today(),
+    
+    Days
+    
+    ) & " days ago"
+    
+    )
+    
+    )
+    
+    )
+    
+    )
+    ```
 
 ## Test the app
 
-1.  Open the Inspections app in the team in which it is installed.
+1. Open the Inspections app in the team in which it's installed.
 
-2.  The app loads.
+1. Select the Welcome screen from the tree view if running inside Studio, and select **Preview**.
 
-3.  Select the Welcome screen from the Tree view if running in the Editor and hit the Preview button to run the app.
-    
-4.  Select the Perform an Inspection button.
+1. Select **Perform an Inspection**.
 
-5.  Verify that the Store Selector screen opens.
+1. Verify that the Store Selector screen opens.
 
-6.  Select a store.
+1. Select a store. The next screen should be the Items screen.
 
-7.  The next screen should be the Items screen.
+1. Select a location.
 
-8.  Select a location.
+1. Select a food inspection checklist on the next screen.
 
-9.  Select a food inspection checklist on the next screen.
+1. Select the button **Begin Inspection**.
 
-10. Select the button **Begin Inspection**.
+1. Answer the questions that are part of the inspection, and then select **Review Inspection**.
 
-11. Answer the questions that are part of the inspection and hit the Review Inspection button at the bottom.
-    
-12. Select **Submit Inspection** on the next screen.
+1. Select **Submit Inspection** on the next screen.
 
-13. The Inspection is submitted.
+1. Now, login into the **Review Inspections** app by selecting the **Review Inspection** tab on the top in the team where it's installed.
 
-14. Now, login into the Review Inspections app by selecting the Review Inspection tab on the top in the Team in which it is installed.
-    
-15. The app loads.
+1. Select the location that you selected earlier to show a list of inspections performed.
 
-16. Select the location that you selected in step 8.
+1. Select the inspection that was submitted earlier.
 
-17. The list of inspections performed is displayed.
+1. The screen displays the store name.
 
-18. Select the Inspection that was submitted in step 13 above.
-
-19.  The screen displays the Store name before the Submitted by as shown in the screenshot below.
-
-![Store showing on Location screen](media/extend-inspections-add-hierarchy-to-locations/test-result-store-on-location-screen.png "Store showing on Location screen")
+    ![Store showing on Location screen](media/extend-inspections-add-hierarchy-to-locations/test-result-store-on-location-screen.png "Store showing on Location screen")
 
 ### See also
 
