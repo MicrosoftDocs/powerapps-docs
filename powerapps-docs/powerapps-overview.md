@@ -20,7 +20,7 @@ contributors:
 
 Power Apps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform ([Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)) *or* in various online and on-premises data sources (SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on). 
 
-![Power Apps](media/PowerApps-intro.png "Power Apps")
+![Power Apps.](media/PowerApps-intro.png "Power Apps")
 
 Apps built using Power Apps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using Power Apps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). Power Apps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 

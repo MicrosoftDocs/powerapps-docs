@@ -29,7 +29,7 @@ The forum post editor will appear automatically when a user has successfully sig
 
 4. Select **Post this reply**.
 
-    ![Create a forum post](media/create-forum-post.png "Create a forum post") 
+    ![Create a forum post.](media/create-forum-post.png "Create a forum post") 
 
 ### Attribute relationships
 

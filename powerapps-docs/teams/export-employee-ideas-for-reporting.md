@@ -127,7 +127,7 @@ Next, create a flow to copy ideas to the newly created SharePoint list. We'll ha
 2. For the flow trigger, select **Recurrence** and **1** for interval and **Day** for frequency.
 
    > [!div class="mx-imgBorder"]
-   > ![Recurrence interval definition step](media/export-employee-ideas-for-reporting/define-recurrence-interval-for-the-flow-to-run.png "Recurrence interval definition step")
+   > ![Recurrence interval definition step.](media/export-employee-ideas-for-reporting/define-recurrence-interval-for-the-flow-to-run.png "Recurrence interval definition step")
     
 3. Add a Dataverse List rows action. Select **Employee ideas** as the table name. Rename step to **List ideas**. Add **createdby** to the **Expand Query** field.
     
@@ -136,12 +136,12 @@ Next, create a flow to copy ideas to the newly created SharePoint list. We'll ha
 5. Inside the apply to each step, add a Dataverse **Get row** action. Rename it to **Get campaign.** Set the **Row ID** to the Campaign value from the List ideas step.
     
     > [!div class="mx-imgBorder"]
-    > ![List ideas and get campaign steps](media/export-employee-ideas-for-reporting/list-ideas-and-get-campaign-steps.png "List ideas and get campaign steps")
+    > ![List ideas and get campaign steps.](media/export-employee-ideas-for-reporting/list-ideas-and-get-campaign-steps.png "List ideas and get campaign steps")
 
 6. In the Apply to each action, select **Add an action**, and select the O365 Users **Get user profile (V2)** action. Set **User (UPN)** to Created By Primary Email.
     
    > [!div class="mx-imgBorder"]
-   > ![Get user record of the creator of the idea record](media/export-employee-ideas-for-reporting/get-user-record-from-created-by-of-the-idea.png "Get user record of the creator of the idea record")
+   > ![Get user record of the creator of the idea record.](media/export-employee-ideas-for-reporting/get-user-record-from-created-by-of-the-idea.png "Get user record of the creator of the idea record")
 
 7.  Add an Excel **Add a row into a table** step.
 
@@ -169,7 +169,7 @@ Next, create a flow to copy ideas to the newly created SharePoint list. We'll ha
     - Email (set to Mail value from Get user profile (V2) step
     
       > [!div class="mx-imgBorder"]
-      > ![Add idea row to excel table](media/export-employee-ideas-for-reporting/add-idea-row-to-excel-step.png "Add idea row to excel table")
+      > ![Add idea row to excel table.](media/export-employee-ideas-for-reporting/add-idea-row-to-excel-step.png "Add idea row to excel table")
     
 9.  Add another list rows step outside of the apply to each step.
 
@@ -206,7 +206,7 @@ Next, create a flow to copy ideas to the newly created SharePoint list. We'll ha
   
     
 > [!div class="mx-imgBorder"]
->![List voters flow step](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
+>![List voters flow step.](media/export-employee-ideas-for-reporting/list-voters-flow-step.png "List voters flow step")
     
 13. We now are going to update the excel workbook vote table with the votes by idea. Add an apply to each step inside the apply to each created in step 10. For the output field, select the value from the list rows step created in step 12.
     
@@ -225,14 +225,14 @@ Next, create a flow to copy ideas to the newly created SharePoint list. We'll ha
 16. Save the flow. Your flow should look like this:
 
     > [!div class="mx-imgBorder"]
-    > ![Complete flow](media/export-employee-ideas-for-reporting/complete-flow-screenshot.png "Complete flow")
+    > ![Complete flow.](media/export-employee-ideas-for-reporting/complete-flow-screenshot.png "Complete flow")
 
 
     > [!NOTE]
     > Flow checker may give you a warning recommending that you use an Odata query on the list rows step. Using an Odata query will be advantageous if you have many idea records or want to filter ideas to a subset, such as ideas associated with open campaigns. This warning is not an error, and can be safely ignored. Select the X in the upper right corner to close the flow checker.
 
     > [!div class="mx-imgBorder"]
-    > ![Flow checker showing warnings](media/export-employee-ideas-for-reporting/flow-checker-showing-warnings.png "Flow checker showing warnings")
+    > ![Flow checker showing warnings.](media/export-employee-ideas-for-reporting/flow-checker-showing-warnings.png "Flow checker showing warnings")
 
 ### Test the flow
 
@@ -243,7 +243,7 @@ Test the flow to make sure that it works.
 2. Select **Manually** and select **Test**.
 
    > [!div class="mx-imgBorder"]
-   > ![Test the flow manually](media/export-employee-ideas-for-reporting/test-flow-manually.png "Test the flow manually")
+   > ![Test the flow manually.](media/export-employee-ideas-for-reporting/test-flow-manually.png "Test the flow manually")
 
 3. Select **Run flow**.
 
@@ -251,7 +251,6 @@ Test the flow to make sure that it works.
 
 ### See also
 
-- [Export Employee ideas for reporting](export-employee-ideas-for-reporting.md)
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)

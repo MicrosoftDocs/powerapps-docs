@@ -173,7 +173,7 @@ As business events becomes a common pattern, there will be multiple ways to enab
 
 The first experience where business events are exposed is in Power Automate Dataverse connector using the [When an action is performed (preview)](/connectors/commondataserviceforapps/#when-an-action-is-performed-(preview)) trigger.
 
-:::image type="content" source="media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger":::
+:::image type="content" source="media/when-an-action-is-performed-trigger.png" alt-text="When an action is performed trigger.":::
 
 Within this experience Create, Update, and Delete events are not shown for table events. These events are already available using the [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger.
 

@@ -30,15 +30,15 @@ This article provides resources for developers and information about the specifi
 
 1. Select the **Settings** button in the top-right corner, and select **Advanced Settings**.
 
-    ![Advanced settings](media/advanced-customizations-menu.png)
+    ![Advanced settings.](media/advanced-customizations-menu.png)
 
 1. On the **Settings** page, select the drop-down arrow next to **Settings**, and select **Customizations**.
 
-    ![Select customizations](media/dev-customization.png)
+    ![Select customizations.](media/dev-customization.png)
 
 1. On the **Customizations** page, select **Developer Resources** to view the page with resources for developers.
 
-    ![Developer Resources page](media/developer-resources-page.png)
+    ![Developer Resources page.](media/developer-resources-page.png)
 
 The following sections explain the information available on the developer resources page.
 

@@ -82,7 +82,7 @@ Horizontal container control determines the position of the child components so 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Insert containers](../media/create-responsive-layout/insert-containers.png "Insert containers")
+   > ![Insert containers.](../media/create-responsive-layout/insert-containers.png "Insert containers")
 
 1. Set the following properties to occupy the full available space of the screen:
    1. X = 0

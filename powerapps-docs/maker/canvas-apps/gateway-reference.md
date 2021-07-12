@@ -21,7 +21,7 @@ The on-premises data gateway acts as a bridge to provide quick and secure data t
 
 ## How the gateway works
 
-![Gateway overview](media/gateway-reference/on-premises-data-gateway.png)
+![Gateway overview.](media/gateway-reference/on-premises-data-gateway.png)
 
 For more information on how the gateway works, see [On-premises data gateway architecture](/data-integration/gateway/service-gateway-onprem-indepth).
 

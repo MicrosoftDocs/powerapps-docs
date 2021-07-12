@@ -65,40 +65,40 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions area](media/solutions-area-tasks.png)
+    > ![Solutions area.](media/solutions-area-tasks.png)
 
 From the **Solutions** area, select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
-> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")   
+> ![Demo solution with all components.](media/solution-all-items-list.PNG "Demo solution with all components")   
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
-> ![Load more components](media/load-more.PNG "Load more components")  
+> ![Load more components.](media/load-more.PNG "Load more components")  
 
  ## Search and filter in a solution
   You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
-> ![Search component](media/solution-search-box.png "Search component")  
+> ![Search component.](media/solution-search-box.png "Search component")  
  
  Or filter all items in the list by the component type.
   
 > [!div class="mx-imgBorder"]  
-> ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
+> ![Filter component by type.](media/solution-filter.PNG "Filter component by type")  
  
 
  ## Contextual commands
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
-> ![Component specific commands](media/component-commands.png "Component specific commands")  
+> ![Component specific commands.](media/component-commands.png "Component specific commands")  
  
  When you don't select any component, the command bar will show actions applied to the solution itself. 
  
 > [!div class="mx-imgBorder"]  
-> ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
+> ![Solution specific commands.](media/solution-commands.PNG "Solution specific commands")  
  
 With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
  

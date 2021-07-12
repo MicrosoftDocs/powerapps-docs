@@ -22,7 +22,7 @@ The Advanced Form Step provides the flow logic of the form's user experience suc
 
 Each Advanced Form will be presented on the portal has one or more steps. These steps share some common properties, outlined below. Each Step contains a pointer (a lookup) to the next step, except for terminal steps. Terminal steps don't have a next time, and are thus the last step of the Advanced Form (because of conditional branching, there can be multiple terminal steps).
 
-![Steps to create an advanced form](../media/web-form-creation-steps.png "Steps to create an advanced form")  
+![Steps to create an advanced form.](../media/web-form-creation-steps.png "Steps to create an advanced form")  
 
 | Name     | Description                                    |
 |----------|------------------------------------------------|

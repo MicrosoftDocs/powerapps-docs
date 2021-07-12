@@ -23,7 +23,7 @@ Creating an app in Microsoft Teams is a quick and easy 3-step process.
 1. [Create your first table](#create-your-first-table)
 1. [Customize and publish your app](#customize-and-publish-your-app)
 
-![Create your first app in 3 steps](media/create-your-first-app.png "Create your first app in 3 steps")
+![Create your first app in 3 steps.](media/create-your-first-app.png "Create your first app in 3 steps")
 
 Watch this video to learn how to create your first app.
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEmEP]
@@ -38,31 +38,31 @@ After installing the Power Apps app from the Teams store:
 
 1. In the left pane, select **Power Apps**, and then select **Create an app**.
 
-    ![Start creating an app](media/create-app-1.png "Start creating an app")
+    ![Start creating an app.](media/create-app-1.png "Start creating an app")
 
     > [!TIP]
-    > If you don't see the **Power Apps** app in the left pane, select ![More added apps - ellipsis](media/more-added-apps-ellipsis.png "More added apps - ellipsis") (*More added apps*), and then select **Power Apps**.
+    > If you don't see the **Power Apps** app in the left pane, select ![More added apps - ellipsis.](media/more-added-apps-ellipsis.png "More added apps - ellipsis") (*More added apps*), and then select **Power Apps**.
     
-    ![Power Apps](media/power-apps.png "Power Apps")
+    ![Power Apps.](media/power-apps.png "Power Apps")
 
 1. You'll be prompted to select a team where you want to create the app. This is where the app will live. Team members can't see the app until you publish the app. You will also have an opportunity to share the app with colleagues within your company that are not part of the Team. More information: [Set permission and share apps with colleagues](set-perms-and-share.md)
 
-    ![Select a team to create the app](media/select-a-team-for-this-app.png "Select a team to create the app")
+    ![Select a team to create the app.](media/select-a-team-for-this-app.png "Select a team to create the app")
 
     If this is the first app being created in the selected team, a new Dataverse for Teams environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
-    ![Creating the first app in a team](media/select-a-team-for-this-app-environment.png "Creating the first app in a team")
+    ![Creating the first app in a team.](media/select-a-team-for-this-app-environment.png "Creating the first app in a team")
 
 1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app with an email and a Teams notification.
 
-    ![First app in a team](media/create-app-4.png "First app in a team")
+    ![First app in a team.](media/create-app-4.png "First app in a team")
 
     > [!NOTE]
     > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 1. Enter an app name, and then select **Save**.
 
-    ![Name your app](media/name-your-app.png "Name your app")
+    ![Name your app.](media/name-your-app.png "Name your app")
 
     > [!TIP]
     > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
@@ -78,7 +78,7 @@ To get started creating your first table:
 
 1. Select **Create new table**.
 
-    ![Create your first table](media/create-first-table.png "Create your first table")
+    ![Create your first table.](media/create-first-table.png "Create your first table")
 
 1. In the **Create a table** dialog box, type a meaningful name for your
 new table that describes this dataset, and then select
@@ -87,7 +87,7 @@ new table that describes this dataset, and then select
 1. After the table is created, you can add columns of different types, add rows, and
 work with data in the visual editor.
 
-   ![Visual editor](media/table-designer-1.png "Visual editor")
+   ![Visual editor.](media/table-designer-1.png "Visual editor")
 
 ### Add columns to the table
 
@@ -114,7 +114,7 @@ To add a new column to track new data:
 To add rows, select the empty row and start typing additional data, or
 select **Add row**.
 
-![Add rows](media/add-rows.png "Add rows")
+![Add rows.](media/add-rows.png "Add rows")
 
 #### Paste the copied data into the table
 
@@ -130,11 +130,11 @@ To paste the data from clipboard into the table:
 1. Select **Insert row above**, or **Insert row below** to insert rows before or after existing rows.
     <br> For example, inserting row above the selected row:
 
-    ![Insert row above](media/insert-row.png "Insert row above")
+    ![Insert row above.](media/insert-row.png "Insert row above")
 
     To add rows at the top instead, select **Add row**.
 
-    ![Add row](media/add-row.png "Add row")
+    ![Add row.](media/add-row.png "Add row")
 
 1. Repeat the above step to add more empty rows, as needed.
 
@@ -143,25 +143,25 @@ To paste the data from clipboard into the table:
 
 1. Select the top-left cell from the newly created rows.
 
-    ![Select top-left cell](media/select-top-left-cell.png "Select top-left cell")
+    ![Select top-left cell.](media/select-top-left-cell.png "Select top-left cell")
 
 1. Paste the copied data.
 
-    ![Paste rows](media/paste-rows.png "Paste rows")
+    ![Paste rows.](media/paste-rows.png "Paste rows")
 
     > [!NOTE]
     > If you paste data when the cell is in edit mode (if you *double-clicked* top-left cell), the data is pasted inside the cell. If this problem happens, delete the incorrectly pasted data, select any other cell, select the top-left cell, and try to paste again.
 
-    ![Incorrect pasting of rows](media/paste-inside-edit-cell.png "Incorrect pasting of rows")
+    ![Incorrect pasting of rows.](media/paste-inside-edit-cell.png "Incorrect pasting of rows")
 
 1. Remove any extra empty rows.
 
-    ![Delete extra row](media/delete-extra-row.png "Delete extra row")
+    ![Delete extra row.](media/delete-extra-row.png "Delete extra row")
 
     > [!TIP]
     > To delete multiple rows that are together, select the top row, and press the **Shift** key on the keyboard. Keeping the key pressed, select the last row in the chunk of the rows that you want to delete. And then, select **Delete X record(s)**.
 
-    ![Delete multiple rows](media/delete-multiple-records.png "Delete multiple rows")
+    ![Delete multiple rows.](media/delete-multiple-records.png "Delete multiple rows")
 
 Changes to the table are automatically saved. However, check for errors, and fix them before you close the visual editor.
 
@@ -172,7 +172,7 @@ After you close the table, the app template that was added to the app screen by 
 > [!NOTE]
 > If you add additional data sources, such as a new table, or if you reopened the app, refer to [Manually connect data to the app](#manually-connect-data-to-the-app) to manually refresh the app with the new data.
 
-![Updated app template](media/updated-gallery.png "Updated app template")
+![Updated app template.](media/updated-gallery.png "Updated app template")
 
 Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
 
@@ -187,15 +187,15 @@ To manually connect to the new data:
 
 1. Select the gallery, and then select the correct data source.
 
-    ![Change the gallery data source](media/select-gallery-source.png "Change the gallery data source")
+    ![Change the gallery data source.](media/select-gallery-source.png "Change the gallery data source")
 
 1. Select the form, and then select the correct data source.
 
-    ![Change the form data source](media/select-form-source.png "Change the form data source")
+    ![Change the form data source.](media/select-form-source.png "Change the form data source")
 
 1. If you see any formula error, select **Edit in the formula bar**, and update the formula with the data source name.
 
-    ![Edit the formula](media/edit-formula.png "Edit the formula")
+    ![Edit the formula.](media/edit-formula.png "Edit the formula")
 
     For example, to change from using *Instructions* as the data source name for the edit form to *Recipes*, replace the name of the data source.
 
@@ -220,11 +220,11 @@ To update the selected item background color:
 
 1. Select the gallery.
 
-    ![Select the gallery for background fill](media/select-gallery.png "Select the gallery for background fill")
+    ![Select the gallery for background fill.](media/select-gallery.png "Select the gallery for background fill")
 
 2. Select *TemplateFill* property from the property drop-down on the top-left.
 
-    ![Select TemplateFill property](media/select-templatefill.png "Select TemplateFill property")
+    ![Select TemplateFill property.](media/select-templatefill.png "Select TemplateFill property")
 
 3. Update the *TemplateFill* property value in the formula bar to the following formula:
 
@@ -232,7 +232,7 @@ To update the selected item background color:
     If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
     ```
 
-    ![Update TemplateFill property](media/templatefill-property.png "Update TemplateFill property")
+    ![Update TemplateFill property.](media/templatefill-property.png "Update TemplateFill property")
 
 ### Update fields on the form
 
@@ -240,53 +240,53 @@ The template shows two fields inside the form by default. To add more fields to 
 
 1. Select the form.
 
-    ![Select the form](media/app-form.png "Select the form")
+    ![Select the form.](media/app-form.png "Select the form")
 
 1. Select **Edit fields** from the property pane on the right.
 
-    ![Edit fields](media/edit-form-fields.png "Edit fields")
+    ![Edit fields.](media/edit-form-fields.png "Edit fields")
 
 1. Select **Add fields**.
 
-    ![Add fields](media/add-fields.png "Add fields")
+    ![Add fields.](media/add-fields.png "Add fields")
 
 1. Select the fields that you want to add on the form.
 
-    ![Select fields to add](media/add-fields-list.png "Select fields to add")
+    ![Select fields to add.](media/add-fields-list.png "Select fields to add")
 
 1. Select **Add**.
 
 1. (Optional) Select fields to move up or down, or remove unwanted fields by selecting **Remove**.
 
-    ![Move or remove fields](media/move-remove-field.png "Move or remove fields")
+    ![Move or remove fields.](media/move-remove-field.png "Move or remove fields")
 
 1. Close the fields pane.
 
 Adding, removing, and reordering fields automatically updates the form.
 
-![Updated form](media/form-updated.png "Updated form")
+![Updated form.](media/form-updated.png "Updated form")
 
 ### Update fields in the gallery
 
 The gallery on the default app template might need updates to reflect the fields from the table you created.
 
-![Default gallery](media/gallery-fields.png "Default gallery")
+![Default gallery.](media/gallery-fields.png "Default gallery")
 
 To update the fields in the gallery:
 
 1. Select **Edit fields** from the property pane on the right.
 
-    ![Edit fields for the gallery](media/edit-gallery-fields.png "Edit fields for the gallery")
+    ![Edit fields for the gallery.](media/edit-gallery-fields.png "Edit fields for the gallery")
 
 1. Select the drop-down menu for a gallery component (such as image, title, or subtitle) and change the selection to the field you want.
 
-    ![Edit selected field](media/gallery-fields-change.png "Edit selected field")
+    ![Edit selected field.](media/gallery-fields-change.png "Edit selected field")
 
 1. Close the data pane.
 
 The gallery is updated with the selected changes.
 
-![Updated gallery](media/gallery-fields-updated.png "Updated gallery")
+![Updated gallery.](media/gallery-fields-updated.png "Updated gallery")
 
 ### Update the app title
 
@@ -294,26 +294,26 @@ To update the app title:
 
 1. Select the label from the upper-left corner of the screen.
 
-    ![Updated title](media/app-title.png "Updated title")
+    ![Updated title.](media/app-title.png "Updated title")
 
 1. Change the *Text* property value from the properties pane on the right.
 
-    ![Update title property](media/update-title.png "Update title property")
+    ![Update title property.](media/update-title.png "Update title property")
 
 Verify all the changes you made to the app.
 
-![Verify all changes](media/app-changes.png "Verify all changes")
+![Verify all changes.](media/app-changes.png "Verify all changes")
 
 > [!TIP]
 > For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property set to *On*. If you want to resize the data cards manually, select the data cards and then set the **Width fit** property to *Off* first.
 
-![Data card - width fit property](media/data-card-width-fit.png "Data card - width fit property")
+![Data card - width fit property.](media/data-card-width-fit.png "Data card - width fit property")
 
 ### Save and preview the app
 
 Now that you've created your first app with data, you can save your changes and preview the app.
 
-![Save and preview](media/save-preview.png "Save and preview")
+![Save and preview.](media/save-preview.png "Save and preview")
 
 1. Select **Save**.
 
@@ -358,11 +358,11 @@ To find the **GroupId** (ObjectID in Azure AD) of a team:
 
 1. Select **More options** (...) from the upper-right corner, and then select **Get link to channel**.
 
-    ![Get link to the channel](media/get-channel-link.png "Get link to the channel")
+    ![Get link to the channel.](media/get-channel-link.png "Get link to the channel")
 
 1. Copy the *GroupID* from the link.
 
-    ![Group ID](media/group-id.png "Group ID")
+    ![Group ID.](media/group-id.png "Group ID")
 
     You can also copy the channel link by selecting **Copy**, and then pasting it into a text editor
 to get the *GroupID* value.

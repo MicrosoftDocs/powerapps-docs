@@ -50,15 +50,15 @@ This article includes the steps from the app for makers who prefer to read them 
 
 From the main screen, you can see a summary of the steps to build the How to app and have the ability to preview the app.
 
-![How to app start screen](media/how-to/start-screen.png "How to app start screen")
+![How to app start screen.](media/how-to/start-screen.png "How to app start screen")
 
 Selecting **Get started in Power Apps** will take you to the Teams Power Apps app, from which you can start the maker journey. Selecting **Preview App** which will redirects the user to Assets Screen, from which the user can use the asset checkout app, and see what the final experience will be when they finish the app.
 
-![How to app - final app example](media/how-to/final-app.png "How to app - final app example")
+![How to app - final app example.](media/how-to/final-app.png "How to app - final app example")
 
 In the asset checkout app, selecting an item will take you to a screen where you can check out the item.
 
-![Example of checkout](media/how-to/checkout.png "Example of checkout")
+![Example of checkout.](media/how-to/checkout.png "Example of checkout")
 
 In the top-left corner, you can select the icon for checkout items, which are available in your account.
 
@@ -80,11 +80,11 @@ How to is a self-contained lesson in how to build a Power Apps. All of the instr
 
 1. In the How to tile, select the **How to** app. The app will open in the Power Apps app.
 
-    ![How to app tile](media/how-to/how-to-tile.png "How to app tile")
+    ![How to app tile.](media/how-to/how-to-tile.png "How to app tile")
 
 1. From the Tree view, select **Overview screen**.
 
-    ![How to app - overview screen](media/how-to/overview-screen.png "How to app - overview screen")
+    ![How to app - overview screen.](media/how-to/overview-screen.png "How to app - overview screen")
 
 ## Understanding the overview screen
 

@@ -45,7 +45,7 @@ Profile + sample app.
 
 The following diagram shows the intersection of users, data, and systems.
 
-![Profile + sample app data model](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
+![Profile + sample app data model.](media/Profile-plus-architecture/architecture-model.png "Profile + sample app data model")
 
 The following connectors are used in the Issue Reporting app:
 
@@ -59,7 +59,7 @@ The following connectors are used in the Issue Reporting app:
 
 ## Data Model
 
-![Profile + app data model](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
+![Profile + app data model.](media/profile-plus-architecture/data-model.png "Profile + sample app data model")
 
 ## Tables
 

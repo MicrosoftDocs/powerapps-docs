@@ -20,7 +20,7 @@ As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-p
 
 To configure the additional settings for any OAuth 2.0 identity provider, select **Configure** from the [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page, and expand **Additional settings**.
 
-![Configure additional settings](media/use-simplified-authentication-configuration/additional-oauth-settings.png "Configure additional settings")
+![Configure additional settings.](media/use-simplified-authentication-configuration/additional-oauth-settings.png "Configure additional settings")
 
 - **Authentication type**: The OWIN authentication middleware type. <br> Example: `https://sts.windows.net/contoso.onmicrosoft.com/`
 - **Authentication mode**: The OWIN authentication middleware mode.

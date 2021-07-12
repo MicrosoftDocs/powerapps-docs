@@ -29,12 +29,12 @@ search.app:
 
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
   > [!div class="mx-imgBorder"] 
-  > ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
+  > ![Dashboard designer chart edit component.](media/dashboard-chart-select.png)
 
 This opens the **Set Properties** dialog box.
 
   > [!div class="mx-imgBorder"] 
-  > ![Chart set properties](media/set-properties-chart.png)  
+  > ![Chart set properties.](media/set-properties-chart.png)  
  
 You can set the following chart properties from the **Set Properties** dialog box:  
   

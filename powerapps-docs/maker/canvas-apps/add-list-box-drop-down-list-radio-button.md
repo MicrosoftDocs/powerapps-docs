@@ -1,25 +1,25 @@
 ---
-title: Add a list box, a drop-down list, or radio buttons to a canvas app
-description: In Power Apps, create or configure multi-select options in a canvas app.
-author: fikaradz
+title: Add a list box, a drop-down list, or radio buttons to a canvas app | Microsoft Docs
+description: In Power Apps, create or configure multi-select options in a canvas app
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/24/2018
-ms.author: fikaradz
+ms.date: 07/06/2021
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Add a list box, a drop-down list, or radio buttons to a canvas app
+# Add a list box, a drop-down list, a combo box, or radio buttons to a canvas app
 
 Show a single column of data (for example, from a multi-column table) in a canvas app so that users can select one or more items in a list.
 
 - Add a list box to allow users to select more than one option.
-- Add a drop-down list to take up less space on a screen.
+- Add a drop-down list or combo box to take up less space on a screen.
 - Add a set of radio buttons for a particular design effect.
 
 This topic focuses on lists boxes and radio buttons, but the same principles apply to drop-down lists.
@@ -95,6 +95,92 @@ In these steps, you used an expression to create a list of items. You can apply 
 [12]: ./media/add-list-box-drop-down-list-radio-button/itemsradio.png
 [14]: ./media/add-list-box-drop-down-list-radio-button/radiocircle.png
 [15]: ./media/add-list-box-drop-down-list-radio-button/dropdown.png
+
+## Add an item to an existing list
+
+1. Add a **[Button](controls/control-button.md)** control and name it "btnReset".
+
+   Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+   
+2. Set **[OnChange](controls/properties-core.md)** property on **btnReset** to this formula:
+   
+    ```powerapps-dot
+    ClearCollect(MyItems, {value: "circle"},{value: "triangle"},{value: "rectangle"})
+    ```
+   
+3. Set the **[Text](controls/properties-core.md)** property on **btnReset** to `"Reset"`.
+
+4. Add a **List box** control named **lbItems**, and set its **Items** property to `MyItems`.
+
+5. While holding down the **Alt** key, press the **Reset** button.
+
+    > [!NOTE]
+    > The list box should populate with the items from the "MyItems" collection.
+
+6. Arrange the list box and button so they're lined up vertically.
+
+    ![List box button.](media\add-list-box-drop-down-list-radio-button\listboxbutton.png "List box button")
+
+7. Add a **[Text Input](controls/control-text-input.md)** control, and name it "txtAdd".
+
+8. Set **[Text](controls/properties-core.md)** property of **txtAdd** to `""`.
+
+9. Add a **[Button](controls/control-button.md)** control, and name it "btnAdd".
+
+10. Set the **[Text](controls/properties-core.md)** property of **btnAdd** to `"Add"`.
+
+11. Set **[OnChange](controls/properties-core.md)** property of **btnAdd** to the following formula:
+
+    ```powerapps-dot
+    Collect(MyItems,{value: txtAdd.Text}); Reset(txtAdd)
+    ```
+
+    > [!NOTE]
+    > - The collect function will add the text from the text input as an item in the collection.
+    > - The reset function will reset the text input back to it's default state.
+
+12. Arrange **txtAdd** and **btnAdd** so they're lined up vertically underneath **lbItems** and **btnReset**.
+
+    ![All controls - before adding.](media\add-list-box-drop-down-list-radio-button\allcontrolsbeforeadd.png "All controls - before adding")
+
+13. Preview the app by pressing **F5**.
+
+14. Add a text value to **txtAdd** text input control.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolstextentered.png
+
+15. Press the Add button.
+
+    > [!NOTE]
+    > The list box should populate with the items from the MyItems collection.
+
+### (Optional) Remove an item from an existing list
+
+1. Add a **[Button](controls/control-button.md)** control, and name it "btnDelete".
+
+2. Set the **[Text](controls/properties-core.md)** property of **btnDelete** to`"Delete"`.
+
+3. Set **[OnChange](controls/properties-core.md)** property of **btnDelete** to the following formula:
+
+    ```powerapps-dot
+    Remove(MyItems, lbItems.Selected)
+    ```
+
+4. Arrange **btnDelete** so it's lined up vertically underneath **btnReset**
+
+    ![All controls with delete button.](media/add-list-box-drop-down-list-radio-button/allcontrolsdeletebutton.png "All controls with delete button")
+
+5. Preview the app by pressing **F5**.
+
+6. Press the Reset button to reset the list box.
+
+7. Press an item in the list box to select it.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsdeleteselected.png
+
+8. Press the Delete button to delete item.
+
+[1]: ./media/add-list-box-drop-down-list-radio-button/allcontrolsafterdelete.png
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -68,7 +68,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Each time the button is clicked, the message **Hello, World** is displayed to the user as informational.  It will dismiss automatically in 10 seconds (default timeout) if the user does not dismiss it or press the button again.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a blue banner message for the user](media/function-showerror/hello-world.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a blue banner message for the user.](media/function-showerror/hello-world.png)
 
 4. Change the type of message to indicate an error.  Add a second argument to our formula:
 
@@ -80,7 +80,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as an error.  It will dismiss automatically in 10 seconds (default timeout) if the user does not dismiss it or press the button again.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a red banner message for the user](media/function-showerror/hello-world-error.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a red banner message for the user.](media/function-showerror/hello-world-error.png)
 
 4. Change the type of message to indicate a warning.  Change the second argument in our formula:
 
@@ -92,7 +92,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as a warning.  It will dismiss automatically in 4 seconds (4,000 milliseconds) if the user does not dismiss it or press the button again.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as an orange banner message for the user](media/function-showerror/hello-world-warning.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as an orange banner message for the user.](media/function-showerror/hello-world-warning.png)
 
 4. Change the type of message to indicate success.  Change the second argument in our formula:
 
@@ -104,7 +104,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as success.  With a **0** timeout, the notification will only be dismissed by the user or by pressing the button again.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a green banner message for the user](media/function-showerror/hello-world-success.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a green banner message for the user.](media/function-showerror/hello-world-success.png)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

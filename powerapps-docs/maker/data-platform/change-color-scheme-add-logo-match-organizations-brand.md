@@ -77,7 +77,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
 
 2.	Select **Model-driven** (lower left). 
 
-3.	Select ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
+3.	Select ![Settings icon.](../model-driven-apps/media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
 
 4. Under **Themes** select **All themes**. 
 
@@ -86,19 +86,19 @@ You can create a custom look and feel (a theme), for your app by making changes 
 The following screenshot shows a portion of the default theme setup.  
 
 > [!div class="mx-imgBorder"] 
-> ![Default theme](media/default-theme.png) 
+> ![Default theme.](media/default-theme.png) 
   
  We cloned the default theme and changed the colors. The following screenshots show the new colors for navigation and highlighting. You can also choose a new logo for product.  
   
  The following screenshot shows the new navigation color.  
  
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")  
+ > ![Gentle green theme colors.](media/theme-gentle-green.png "Gentle green theme colors")  
   
  The following screenshot shows the account table grid with the new highlight color.  
  
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
+ > ![Gentle green theme account grid.](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
   
 <a name="Publish"></a>   
 ## Preview and publish a theme  
@@ -112,7 +112,7 @@ The following screenshot shows a portion of the default theme setup.
   
  The following screenshot shows the buttons on the command bar for preview and publishing.  
   
- ![Use preview buttons to enter&#47;exit the preview mode](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
+ ![Use preview buttons to enter&#47;exit the preview mode.](media/themes-preview-buttons.PNG "Use preview buttons to enter/exit the preview mode")  
   
 <a name="BestPracticies"></a>   
 ## Best practices  

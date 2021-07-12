@@ -11,11 +11,11 @@ ms.author: margoc
 
 Find the right online training, in-person workshops, and events for your role as a user of Power Apps.
 
-<!-- ![Universal Windows Platform (UWP)](images/platform-uwp.png)  -->  
+<!-- ![Universal Windows Platform (UWP).](images/platform-uwp.png)  -->  
 
 :::row:::
     :::column:::
-<!-- ![Universal Windows Platform (UWP)](images/platform-uwp.png)  -->  
+<!-- ![Universal Windows Platform (UWP).](images/platform-uwp.png)  -->  
 
     ### Business and Technical Decision Makers
 

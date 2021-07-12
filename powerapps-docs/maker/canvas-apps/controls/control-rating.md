@@ -44,9 +44,9 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **RatingFill** – The color of the stars in a rating control.
 

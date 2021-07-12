@@ -118,7 +118,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     You can toggle back and forth between options, as needed.
 
-    ![Form Settings options](./media/customize-list-form/form-settings.png)
+    ![Form Settings options.](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
 
@@ -128,7 +128,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. On the **Form Settings** page, select **Use the default SharePoint form**, and then select **Delete custom form**.
 
-    ![Delete the custom form](./media/customize-list-form/use-default-sharepoint.png)
+    ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
 
 ## Q & A
 
@@ -224,7 +224,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     If the app type is SharePoint Form, the app is a customized form.
 
-    ![List of customized forms](./media/customize-list-form/customized-forms.png)
+    ![List of customized forms.](./media/customize-list-form/customized-forms.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

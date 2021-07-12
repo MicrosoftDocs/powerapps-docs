@@ -32,7 +32,7 @@ There are times when you need to update an existing managed solution. To update 
 2.	Increment the version number when you export the solution as a managed solution. More information: [Understanding version numbers for updates](#understanding-version-numbers-for-updates) 
 
     > [!div class="mx-imgBorder"] 
-    > ![Update solution version](media/update-solution-version.png)
+    > ![Update solution version.](media/update-solution-version.png)
 3. [Apply the upgrade or update in the target environment](#apply-the-upgrade-or-update-in-the-target-environment)
 
 ## Apply the upgrade or update in the target environment
@@ -62,7 +62,7 @@ The procedure to import the updated solution is similar to installing a new mana
         
 9. Select **Import**.  
 
-   :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options":::
+   :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options.":::
 
 10. You may need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
 
