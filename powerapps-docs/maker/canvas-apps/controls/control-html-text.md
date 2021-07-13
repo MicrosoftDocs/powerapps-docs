@@ -1,6 +1,6 @@
 ---
 title: HTML text control in Power Apps
-description: Learn about the details, properties and examples of the HTML text control in Power Apps.
+description: Learn about the details, properties, and examples of the HTML text control in Power Apps.
 author: chmoncay
 ms.service: powerapps
 ms.topic: reference
@@ -48,7 +48,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to do when the user selects a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -74,11 +74,12 @@ An **HTML text** control not only shows plain text and numbers but also converts
 [**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
 ## Example
+
 1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
 
-"\<p>We've\&nbsp;done an unusually \&quot;deep\&quot; globalization and localization.\<p>"
+    "\<p>We've\&nbsp;done an unusually \&quot;deep\&quot; globalization and localization.\<p>"
 
-Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add an **HTML text** control, and set its **HtmlText** property to this value:<br>
    **Source.Text**
@@ -86,7 +87,7 @@ Don't know how to [add, name, and configure a control](../add-configure-controls
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** is not meant to be interactive. It should only be used for text display.
+**HTML text** isn't meant to be interactive. Use it only for text display.
 
 ### Color contrast
 There must be adequate color contrast between:
@@ -97,7 +98,7 @@ There must be adequate color contrast between:
 * **HtmlText** must be present.
 
 ### Keyboard support
-* **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps does not consider elements inside **HtmlText**.
+* **HtmlText** shouldn't contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps doesn't consider elements inside **HtmlText**.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
