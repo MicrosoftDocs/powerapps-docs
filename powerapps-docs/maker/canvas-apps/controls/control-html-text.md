@@ -2,12 +2,11 @@
 title: HTML text control in Power Apps
 description: Learn about the details, properties and examples of the HTML text control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 07/13/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -19,6 +18,9 @@ A box that shows text and converts HTML tags to formatting.
 
 ## Description
 An **HTML text** control not only shows plain text and numbers but also converts HTML tags, such as non-breaking spaces.
+
+> [!NOTE]
+> HTML text control assumes the HtmlText is relatively positioned. If you need to use an absolute position for your HTML text, wrap the text around a relatively positioned div. For example, `"<div style='position:relative'>" & varPageContent & "</div>"`
 
 ## Key properties
 **[Color](properties-color-border.md)** – The color of text in a control.
@@ -97,7 +99,5 @@ There must be adequate color contrast between:
 ### Keyboard support
 * **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps does not consider elements inside **HtmlText**.
 
-### Limitations
-**HTML text** control assumes the **HtmlText** is relatively positioned.  In the case that you need to use absolute positioning for your HTML text you can wrap the text around a relatively positioned div.  `"<div style='position:relative'>" & varPageContent & "</div>"`
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
