@@ -2223,7 +2223,7 @@
                 - name: Send an alert when a new bulletin is posted
                   href: ../teams/new-bulletin-alert.md
                 - name: Customize apps for end user to add notification preferences
-                  href: ../teams/add-notification-preference-for-bulletins.md
+                  href: ../teams/bulletins-notification-preference.md
                 - name: Add "Notify me" settings to category in Bulletins app
                   href: ../teams/bulletins-notify-me.md
         - name: Employee ideas
