@@ -2,6 +2,7 @@
 title: Type Group Element | Microsoft Docs
 description: The type-group node defines a set of types identified by a single name. This information can be used to identify the data types supported by a specific property.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

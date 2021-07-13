@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021
+ms.subservice: end-user
 ms.author: shjais
 ms.reviewer: ""
 ms.assetid: 

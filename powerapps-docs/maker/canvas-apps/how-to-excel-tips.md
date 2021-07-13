@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/03/2018
+ms.subservice: canvas-maker
 ms.author: yifwang
 search.audienceType: 
   - maker

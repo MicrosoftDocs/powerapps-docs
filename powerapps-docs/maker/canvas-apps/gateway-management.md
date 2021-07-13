@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/16/2020
+ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker

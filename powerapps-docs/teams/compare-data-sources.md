@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 05/06/2021
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
 ---

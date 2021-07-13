@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: article
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""

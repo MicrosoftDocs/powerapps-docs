@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/05/2017
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker

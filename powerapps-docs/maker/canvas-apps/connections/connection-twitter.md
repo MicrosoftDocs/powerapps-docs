@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/28/2020
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker

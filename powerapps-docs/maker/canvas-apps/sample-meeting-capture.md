@@ -8,6 +8,7 @@ ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/29/2019
+ms.subservice: canvas-maker
 ms.author: mabolan
 search.audienceType: 
   - maker

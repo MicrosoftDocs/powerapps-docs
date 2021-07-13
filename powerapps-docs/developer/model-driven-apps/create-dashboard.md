@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: da41f997-1f61-7ea8-db83-5d670d708d67
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 

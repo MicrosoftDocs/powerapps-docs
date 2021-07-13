@@ -3,6 +3,7 @@ title: "Use environment variables in solutions | MicrosoftDocs"
 description: "Use environment variables to migrate application configuration data in solutions."
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
+ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek

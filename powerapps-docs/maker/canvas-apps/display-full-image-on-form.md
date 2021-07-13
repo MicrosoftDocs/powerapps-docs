@@ -10,6 +10,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 
+ms.subservice: canvas-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 

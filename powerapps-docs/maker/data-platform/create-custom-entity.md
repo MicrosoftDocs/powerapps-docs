@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
 ms.date: 01/26/2021
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
