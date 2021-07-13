@@ -56,7 +56,7 @@ To enable a portal for early upgrade:
 2.	On the **Portal Actions** tab, select **Enable portal for early upgrade**.
 
     > [!div class="mx-imgBorder"]
-    > ![Enable a portal for early upgrade](../media/upgrade-portal.png "Enable a portal for early upgrade")
+    > ![Enable a portal for early upgrade.](../media/upgrade-portal.png "Enable a portal for early upgrade")
 
 > [!NOTE]
 > You can enable or disable a portal for early upgrade anytime. However, a snapshot is taken for all portals marked for early access two days before any release, and any portal marked for early access after that is not guaranteed to get an early upgrade.

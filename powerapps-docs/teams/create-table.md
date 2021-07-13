@@ -28,15 +28,15 @@ Watch this video for a quick overview about how to create a table in Dataverse f
 
 1. Sign in to Teams, and then select the link for **Power Apps**.
    > [!div class="mx-imgBorder"] 
-   > ![Sign in to Power Apps](media/create-table1.png "Sign in to Power Apps")
+   > ![Sign in to Power Apps.](media/create-table1.png "Sign in to Power Apps")
 
 2. Select the **Build** tab, and then select **See all**.
    > [!div class="mx-imgBorder"] 
-   > ![The Build tab](media/create-table2.png "The Build tab")
+   > ![The Build tab.](media/create-table2.png "The Build tab")
 
 3. Select **New**, and then select **Table**.
     > [!div class="mx-imgBorder"] 
-    > ![New table menu option](media/create-table3.png "New table menu option")
+    > ![New table menu option.](media/create-table3.png "New table menu option")
 
 4. In the **New table** pane, enter the following information. Required columns are designated with an asterisk (*) next to the column label.
     - **Display name**: The name of the table to be displayed. For example, **Product**.

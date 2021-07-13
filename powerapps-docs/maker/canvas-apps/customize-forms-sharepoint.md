@@ -33,22 +33,22 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then select **DetailForm1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select details screen](./media/customize-forms-sharepoint/select-detailform.png)
+    > ![Select details screen.](./media/customize-forms-sharepoint/select-detailform.png)
 
 1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane.
 
     > [!div class="mx-imgBorder"]
-    > ![Open fields pane](./media/customize-forms-sharepoint/edit-fields.png)
+    > ![Open fields pane.](./media/customize-forms-sharepoint/edit-fields.png)
 
 1. Hide a field, such as **Description**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
 
     > [!div class="mx-imgBorder"]
-    > ![Hide description](./media/customize-forms-sharepoint/hide-fields.png)
+    > ![Hide description.](./media/customize-forms-sharepoint/hide-fields.png)
 
 1. Show a field by selecting **Add field**, typing or pasting the first few letters of the field's name in the search box, selecting the field's check box, and then selecting **Add**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of fields](./media/customize-forms-sharepoint/show-field.png)
+    > ![List of fields.](./media/customize-forms-sharepoint/show-field.png)
 
 ## Reorder the cards
 
@@ -57,7 +57,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
     The cards in **DetailForm1** reflect the change.
 
     > [!div class="mx-imgBorder"]
-    > ![Reordered cards](./media/customize-forms-sharepoint/reordered-card.png)
+    > ![Reordered cards.](./media/customize-forms-sharepoint/reordered-card.png)
 
 1. (optional) Reorder the other cards into this sequence:
 
@@ -81,37 +81,37 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 1. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
 
     > [!div class="mx-imgBorder"]
-    > ![Preview icon](./media/customize-forms-sharepoint/open-preview.png)
+    > ![Preview icon.](./media/customize-forms-sharepoint/open-preview.png)
 
 1. In the upper-right corner, select the plus icon to add a record in **EditScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Add record](./media/customize-forms-sharepoint/add-record.png)
+    > ![Add record.](./media/customize-forms-sharepoint/add-record.png)
 
 1. Add whatever data you want, and then select the checkmark icon in the upper-right corner to save your changes and return to **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Save record](./media/customize-forms-sharepoint/save-record.png)
+    > ![Save record.](./media/customize-forms-sharepoint/save-record.png)
 
 1. Select the arrow for the item that you just created to show details about that item in **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Right arrow](./media/customize-forms-sharepoint/right-arrow.png)
+    > ![Right arrow.](./media/customize-forms-sharepoint/right-arrow.png)
 
 1. In the upper-right corner, select the edit icon to update the record in **EditScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Edit record](./media/customize-forms-sharepoint/edit-record.png)
+    > ![Edit record.](./media/customize-forms-sharepoint/edit-record.png)
 
 1. Change the information in one or more fields, and then select the check mark in the upper-right corner to save your changes and return to **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Save changes](./media/customize-forms-sharepoint/save-record.png)
+    > ![Save changes.](./media/customize-forms-sharepoint/save-record.png)
 
 1. Near the upper-right corner, select the trash-can icon to delete the record that you just updated and to return to **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Delete record](./media/customize-forms-sharepoint/delete-record.png)
+    > ![Delete record.](./media/customize-forms-sharepoint/delete-record.png)
 
 1. Close Preview mode by pressing Esc (or by selecting the close icon near the upper-left corner).
 

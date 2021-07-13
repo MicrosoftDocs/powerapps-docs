@@ -30,7 +30,7 @@ To open Power Apps in Teams:
 
 1.  The Power Apps Studio in the Teams app can be popped out as shown below.
 
-    ![Pop out Power Apps app](media/extend-milestones-add-column/pop-out-app.png "Pop out Power Apps app")
+    ![Pop out Power Apps app.](media/extend-milestones-add-column/pop-out-app.png "Pop out Power Apps app")
 
 2.  To pop out the Power Apps Studio while using the Team web app, right-click on the Build tab on top and select the Open in a new tab option to open the editor in a separate tab.
 
@@ -54,7 +54,7 @@ To add the column to the app, we'll add the field to the underlying table and th
 
 7.  Select the table Project Work Items, then select the ellipses and select **Edit data**
 
-    ![Edit data in table](media/extend-milestones-add-column/edit-data.png "Edit data in table")
+    ![Edit data in table.](media/extend-milestones-add-column/edit-data.png "Edit data in table")
 
 8.  Select **Add column** to add a new column and enter the following details as shown in the screenshot below:
     
@@ -66,7 +66,7 @@ To add the column to the app, we'll add the field to the underlying table and th
     
 9.  Select Create.
 
-    ![Create effort column](media/extend-milestones-add-column/create-effort-field.png "Create effort column")
+    ![Create effort column.](media/extend-milestones-add-column/create-effort-field.png "Create effort column")
 
 The new column gets added to the table.
 
@@ -79,7 +79,7 @@ The following changes are required to add the Effort field/column on the Add/Edi
     > [!NOTE]
     > A new control can also be added by copying and pasting it from the Hidden Controls Screen. This is helpful because all the styling properties of the control are already set, thus preventing the need to update every styling property.
 
-    ![The hidden screen](media/extend-milestones-add-column/hidden-screen.png "The hidden screen")
+    ![The hidden screen.](media/extend-milestones-add-column/hidden-screen.png "The hidden screen")
 
 1.  Rename the newly added label to `lblAddWorkItemEffort`.
 
@@ -121,11 +121,11 @@ The following changes are required to add the Effort field/column on the Add/Edi
     
 20.  Select the Done button, and add the following to both the Patch functions 'Effort: cmbAddWorkItemEffort.Selected.Value,' right after the description formula 'Description: txtAddWorkItemDesc.Text,'.
 
-![Update description formula](media/extend-milestones-add-column/description-field.png "Update description formula")
+![Update description formula.](media/extend-milestones-add-column/description-field.png "Update description formula")
 
 The screen will appear as shown below with the newly added column
 
-![The updated screen](media/extend-milestones-add-column/effort-on-form.png "The updated screen")
+![The updated screen.](media/extend-milestones-add-column/effort-on-form.png "The updated screen")
 
 ### Adding the new field to the Mobile Work Item Details screen
 
@@ -188,11 +188,11 @@ Now that we've added the field, we'll add it to the mobile screen.
 
 27.  Select the Done button to add the following step in the Patch function `Effort: cmbAddWorkItemEffort.Selected.Value`.
 
-![Patching effort value](media/extend-milestones-add-column/cmb-add-work-item-effort.png "Patching effort value")
+![Patching effort value.](media/extend-milestones-add-column/cmb-add-work-item-effort.png "Patching effort value")
 
 28.  The updated screen is as shown below.
 
-![Mobile work item details screen](media/extend-milestones-add-column/mobile-workitem-detail-screen.png "Mobile work item details screen")
+![Mobile work item details screen.](media/extend-milestones-add-column/mobile-workitem-detail-screen.png "Mobile work item details screen")
 
 1.  Similar to the above scenario, we need to add the Effort field to the New Work Item details screen.
 
@@ -249,7 +249,7 @@ Now that we've added the field, we'll add it to the mobile screen.
 
 24.  The updated screen with the Effort field is as shown below.
 
-![Updated mobile screen](media/extend-milestones-add-column/effort-on-form-mobile.png "Updated mobile screen")
+![Updated mobile screen.](media/extend-milestones-add-column/effort-on-form-mobile.png "Updated mobile screen")
 
 ## Optional: Add the new field to the work item list on the home page
 
@@ -270,7 +270,7 @@ Work items are also displayed in a list on the main screen of the app in context
 
 1.  Select the Publish in Teams button on the top right of the Editor.
 
-    ![Publish app to Teams](media/extend-milestones-add-column/publish-to-teams.png "Publish to Teams")
+    ![Publish app to Teams.](media/extend-milestones-add-column/publish-to-teams.png "Publish to Teams")
 
 2.  Open the app in the Team and do a test on the new work item screen.
 

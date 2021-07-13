@@ -29,10 +29,10 @@ To open a template in code editor:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
+2.  Select **Templates** ![templates icon.](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 
     > [!div class=mx-imgBorder]
-    > ![templates pane](media/templates-pane.png "Templates pane")  
+    > ![templates pane.](media/templates-pane.png "Templates pane")  
 
 3.  Select the required template to open it in the code editor.
 

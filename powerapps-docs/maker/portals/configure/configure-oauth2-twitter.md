@@ -21,7 +21,7 @@ As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-p
 > [!IMPORTANT]
 > Twitter authentication for portals is temporarily unavailable because of the compatibility issues.
 
-![Configure the Twitter app](media/use-simplified-authentication-configuration/configure-twitter.png "Configure the Twitter app")
+![Configure the Twitter app.](media/use-simplified-authentication-configuration/configure-twitter.png "Configure the Twitter app")
 
 ## Step 1. Create a Twitter app
 

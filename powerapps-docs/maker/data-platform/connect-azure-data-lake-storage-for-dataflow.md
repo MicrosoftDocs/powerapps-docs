@@ -70,15 +70,15 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and verify which environment you're in. The environment switcher is located on the right side of the header. 
 2. On the left navigation pane, select the down arrow next to **Data**.
 
-   ![Power Apps maker portal Data tab](media/powerapps-portal-data.png)
+   ![Power Apps maker portal Data tab.](media/powerapps-portal-data.png)
 
 3. In the list that appears, select **Dataflows** and then on the command bar select **New dataflow**.
 
-   ![Create a new dataflow](media/create-a-dataflow.png) 
+   ![Create a new dataflow.](media/create-a-dataflow.png) 
 
 4. Select the analytical tables you want. These tables indicate what data you want to store in your organization's Azure Data Lake Store Gen2 account. 
 
-   ![Select analytical tables](media/select-analytical-entities.png)
+   ![Select analytical tables.](media/select-analytical-entities.png)
 
 ## Select the storage account to use for dataflow storage
 If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 
@@ -88,7 +88,7 @@ If a storage account has not yet been associated with the environment, a **Link 
 
     The **Select Storage Account** screen appears.
     
-    ![Select storage account](media/select-storage-account.png)
+    ![Select storage account.](media/select-storage-account.png)
     
 2. Select the **Subscription ID** of the storage account.
 3. Select the **Resource group name** in which the storage account was created.

@@ -45,7 +45,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 1. If the Plug-in Registration tool isn't already installed and open, follow the steps in [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to open it. Complete the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) section.
 1. In the Plugin Registration tool, click **Install Profiler**.
 
-    ![Install Profiler](media/tutorial-debug-plug-in-install-profiler.md.png)
+    ![Install Profiler.](media/tutorial-debug-plug-in-install-profiler.md.png)
 
 1. This will install a new managed solution named Plug-in Profiler in your Microsoft Dataverse environment. This will take a minute or two to complete.
 
@@ -53,11 +53,11 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 
 1. In the Plug-in Registration tool, select the **(Step) BasicPlugin.FollowupPlugin: Create of account** step you registered earlier, and click **Start Profiling**.
 
-    ![Start profiling](media/tutorial-debug-plug-in-start-profiling.png)
+    ![Start profiling.](media/tutorial-debug-plug-in-start-profiling.png)
 
 1. In the **Profiler Settings** dialog accept the default settings and click **OK** to close the dialog.
 
-    ![foo](media/tutorial-debug-plug-in-profiler-settings.png)
+    ![foo.](media/tutorial-debug-plug-in-profiler-settings.png)
 
 
 For more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
@@ -67,41 +67,41 @@ For more information about running the profiler see [Run the plug-in profiler fr
 1. In your model-driven app, create a new account to trigger the plug-in. This will capture an instance of the plug-in executing and persist it as a profile record in the system.
 1. In the Plug-in Registration tool, click **Debug**.
 
-    ![Click Debug](media/tutorial-debug-plug-in-capture-profile-debug.png)
+    ![Click Debug.](media/tutorial-debug-plug-in-capture-profile-debug.png)
 
-1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
+1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, click the ![Select profile command.](media/tutorial-debug-plug-in-select-profile-command.png) icon to open the **Select Profile from CRM** dialog.
 1. In the **Select Profile from CRM** dialog, select the profile where **Type Name** equals **BasicPlugin.FollowupPlugin** and represents the profile captured when you last triggered the plug-in.
 
-    ![Select Profile from CRM dialog](media/tutorial-debug-plug-in-select-profile-dialog.png)
+    ![Select Profile from CRM dialog.](media/tutorial-debug-plug-in-select-profile-dialog.png)
 
 ## Debug your plug-in
 
 1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, in the **Specify Assembly** section, click the ellipses (**…**) button and choose the location of your `BasicPlugin.dll`.
 
-    ![Replay plug-in execution](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
+    ![Replay plug-in execution.](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
 
 1. In your Visual Studio project, set a break point in your plug-in class.
 
-    ![Set a break point](media/tutorial-debug-plug-in-set-break-point.png)
+    ![Set a break point.](media/tutorial-debug-plug-in-set-break-point.png)
 
 1. In your Visual Studio project, select **Debug** > **Attach to Process…**.
 
-    ![Attach to process command](media/tutorial-debug-plug-in-attach-to-process.png)
+    ![Attach to process command.](media/tutorial-debug-plug-in-attach-to-process.png)
 
 1. Select the **PluginRegistration.exe** process and click **Attach**.
 
-    ![Attach to process dialog](media/tutorial-debug-plug-in-attach-to-process-dialog.png)
+    ![Attach to process dialog.](media/tutorial-debug-plug-in-attach-to-process-dialog.png)
 
     > [!NOTE]
     > You should see that the Plug-in Registration tool is now running in debug mode.
 
 1. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
 
-    ![Start Execution](media/tutorial-debug-plug-in-replay-plug-in-execution-debug.png)
+    ![Start Execution.](media/tutorial-debug-plug-in-replay-plug-in-execution-debug.png)
 
 1. In your Visual Studio project, you should see that the code is paused at the breakpoint you set earlier. 
 
-    ![Breakpoint hit](media/tutorial-debug-plug-in-breakpoint-hit.png)
+    ![Breakpoint hit.](media/tutorial-debug-plug-in-breakpoint-hit.png)
 
 1. You can now step through your code to debug.
 
@@ -115,7 +115,7 @@ To repeat, in your Visual Studio project select **Debug** > **Reattach** to proc
 1. Close the **Replay Plug-in Execution** dialog
 1. In the Plug-in Registration tool, click **Stop Profiling**.
 
-    ![Stop profiling](media/tutorial-debug-plug-in-stop-profiling.png)
+    ![Stop profiling.](media/tutorial-debug-plug-in-stop-profiling.png)
 
 ## Next steps
 

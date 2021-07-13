@@ -41,7 +41,7 @@ To add a meeting screen from the template:
 
   When filled out, both tabs of the meeting screen look similar to this:
 
-  ![Meeting screen, both tabs](media/meeting-screen/meeting-screen-full-both.png)
+  ![Meeting screen, both tabs.](media/meeting-screen/meeting-screen-full-both.png)
 
 A few helpful notes:
 

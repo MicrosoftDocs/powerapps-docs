@@ -28,7 +28,7 @@ This article walks you through working with multimedia, streaming, and input con
 
 You can choose the kind of media file to add (for example, images, video, or audio). You can add images using the media pane, or using the images control.
 
-![Media pane](./media/add-images-pictures-audio-video/media-pane.gif "Media pane")
+![Media pane.](./media/add-images-pictures-audio-video/media-pane.gif "Media pane")
 
 ### Add images, audio, or video using the media pane
 
@@ -36,17 +36,17 @@ To use the **Media** pane to add, remove or use media files in your app:
 
 1. Select **Media** from the left pane.
 
-    ![Media](./media/add-images-pictures-audio-video/media-panel.png "Media")
+    ![Media.](./media/add-images-pictures-audio-video/media-panel.png "Media")
 
 1. Select **Upload** from the media panel.
 
-    ![Upload media](./media/add-images-pictures-audio-video/upload-media.png "Upload media")
+    ![Upload media.](./media/add-images-pictures-audio-video/upload-media.png "Upload media")
 
 1. Select the file(s) that you want to add, and then select **Open**.
 
 1. Select the file from the media pane to insert into the screen.
 
-    ![Add media](./media/add-images-pictures-audio-video/add-media.png "Add media")
+    ![Add media.](./media/add-images-pictures-audio-video/add-media.png "Add media")
 
 1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
 
@@ -76,7 +76,7 @@ For **Image** control, update the *Image* property with the image file name, wit
 
     As this graphic shows, you can choose any streaming URL that Azure Media Services supports:
 
-    ![Set media property](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
+    ![Set media property.](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
 
 1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
 
@@ -101,7 +101,7 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
 
 1. In an Excel spreadsheet, create a one-column table, and fill it with the following data.
 
-    ![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
+    ![Jackets table.](./media/add-images-pictures-audio-video/jackets.png)
 
     To copy the file path from **OneDrive for Business**, select a file, and then select **Path** (*Copy direct link*) from the details pane on the right side of the screen.
 
@@ -115,21 +115,21 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
 
 1. Optionally, select text field and then the heading field under the first image, and delete them to keep only images on the screen.
 
-    ![Delete fields](./media/add-images-pictures-audio-video/delete-fields.png)
+    ![Delete fields.](./media/add-images-pictures-audio-video/delete-fields.png)
 
     If you see a formula error, press **Ctrl+Z** to undo the delete and then ensure to first delete the *Subtitle* field and then the *Title* field.
 
 1. Set the gallery's **Items** property of the gallery to `Jackets`.
 
-    ![Items property](./media/add-images-pictures-audio-video/items-jackets.png)
+    ![Items property.](./media/add-images-pictures-audio-video/items-jackets.png)
 
 1. Select the first image in the gallery, and set its **Image** property to `ThisItem.Images`:
 
-    ![Items images](./media/add-images-pictures-audio-video/image-this-item.png)
+    ![Items images.](./media/add-images-pictures-audio-video/image-this-item.png)
 
     The gallery is automatically updated with the images:  
 
-    ![Jacket images](./media/add-images-pictures-audio-video/images.png)
+    ![Jacket images.](./media/add-images-pictures-audio-video/images.png)
 
     When you set the **Items** property, a column named **PowerAppsId** is automatically added to the Excel table.
 
@@ -151,13 +151,13 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
    1. In the dialog box, select **My table has headers**, and then select **OK**.
 
-       ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
+       ![Create a table.](./media/add-images-pictures-audio-video/create-table.png)
 
        Your Excel file is now in a table format. For more information about table formatting in Excel, see [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
 
    1. Name the table **Drawings**:
 
-       ![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
+       ![Rename table to Drawings.](./media/add-images-pictures-audio-video/name-media-table.png)
 
 1. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
@@ -167,7 +167,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
    1. Select **View** menu, and then select **Data sources**.
 
-       ![Choose data source](./media/add-images-pictures-audio-video/choose-data-sources.png)
+       ![Choose data source.](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
    1. Select **Add data source**, and then select **OneDrive for Business**.
 
@@ -175,7 +175,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
    1. Select the **Drawings** table, and then select **Connect**.
 
-       ![Connect](./media/add-images-pictures-audio-video/savepen.png)  
+       ![Connect.](./media/add-images-pictures-audio-video/savepen.png)  
 
        Now, the Drawings table is listed as a data source.
 
@@ -183,19 +183,19 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 1. Rename the new control **MyPen**:  
 
-    ![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
+    ![Rename.](./media/add-images-pictures-audio-video/rename-mypen.png)
 
 1. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
 
     **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
 
-    ![Button OnSelect](./media/add-images-pictures-audio-video/button-on-select.png)
+    ![Button OnSelect.](./media/add-images-pictures-audio-video/button-on-select.png)
 
 1. Add a **Horizontal** gallery control (**Insert** tab > **Gallery**).
 
 1. Optionally, select text field and then the heading field under the first image, and delete them to keep only images on the screen.
 
-    ![Delete fields](./media/add-images-pictures-audio-video/delete-fields.png)
+    ![Delete fields.](./media/add-images-pictures-audio-video/delete-fields.png)
 
     If you see a formula error, press **Ctrl+Z** to undo the delete and then ensure to first delete the *Subtitle* field and then the *Title* field.
 
@@ -203,9 +203,9 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
     Arrange the controls so that your screen resembles as shown below:  
 
-    ![Sample screen](./media/add-images-pictures-audio-video/screen.png)
+    ![Sample screen.](./media/add-images-pictures-audio-video/screen.png)
 
-1. Press F5, or select Preview ( ![Preview button](./media/add-images-pictures-audio-video/preview.png) ).
+1. Press F5, or select Preview ( ![Preview button.](./media/add-images-pictures-audio-video/preview.png) ).
 
 1. Draw something in MyPen, and then select the button.
 

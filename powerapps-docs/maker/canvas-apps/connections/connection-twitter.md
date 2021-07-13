@@ -16,7 +16,7 @@ search.app:
 ---
 # Connect to Twitter from Power Apps
 
-![Twitter](./media/connection-twitter/twittericon.png)
+![Twitter.](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
 
@@ -29,16 +29,16 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 ## Connect to Twitter
 1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
-   ![Open a blank app](./media/connection-twitter/blank-app.png)
+   ![Open a blank app.](./media/connection-twitter/blank-app.png)
 2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Twitter**:  
 
-    ![Add connection](./media/connection-twitter/addconnection.png)
+    ![Add connection.](./media/connection-twitter/addconnection.png)
 
-    ![Connect to Twitter](./media/connection-twitter/add-twitter.png)
+    ![Connect to Twitter.](./media/connection-twitter/add-twitter.png)
 4. Select **Connect**, enter your Twitter sign in credentials, and then select **Authorize app**.
 5. Select **Add Data Source**. Your connection appears under **Data sources**:  
-    ![Close the Options pane](./media/connection-twitter/twitterdatasource.png)
+    ![Close the Options pane.](./media/connection-twitter/twitterdatasource.png)
 
 The Twitter connection has been created, and added to your app. Now, it's ready to be used.
 
@@ -168,7 +168,7 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 2. Add a button, and then set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
     `Twitter.Tweet("",{tweetText: MyTweet.Text})`
     <br> Example: `Twitter.Tweet("",{tweetText:"Sample tweet!"})`
-3. Press F5, or select the Preview button (![Preview button](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
+3. Press F5, or select the Preview button (![Preview button.](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 4. Press Esc to return to the default workspace.
 
 ## View the available functions

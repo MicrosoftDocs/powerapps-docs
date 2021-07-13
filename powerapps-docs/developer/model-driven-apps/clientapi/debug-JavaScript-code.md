@@ -25,7 +25,7 @@ For Google Chrome, press F12 to open developer tools. Firebug is a popular brows
 
 When you use JavaScript libraries in model-driven apps, your libraries are loaded with the web page. It can sometimes be difficult to isolate your specific library in the debugging environment. When using debugging tools in Microsoft Edge, on the **Debugger** tab, click on the folder icon at the top-left corner, and expand the available scripts and find the one with the name that corresponds to the name of your JavaScript web resource, such as the **new_myCustomJavaScript.js** web resource shown below. You can also search for your JavaScript library by typing the file name in the search box.
 
-![Debugging JavaScript](../media/form-script-debugging.png)
+![Debugging JavaScript.](../media/form-script-debugging.png)
 
 Debugging tools for different browsers have similar capabilities. Once you have found your library, you can set a break point and recreate the event that should cause your code to run.
 

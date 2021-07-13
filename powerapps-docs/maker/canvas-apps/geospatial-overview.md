@@ -50,15 +50,15 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings** from the top menu.
 
-    ![Environment selected in the Power Platform admin center](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
+    ![Environment selected in the Power Platform admin center.](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
 
 1. Expand **Product**, and then select **Features**.
 
-    ![Screenshot of environment settings with Features selection highlighted](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
+    ![Screenshot of environment settings with Features selection highlighted.](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
 
 1. Under **Geospatial services (preview)**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
 
-    ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
+    ![Screenshot of the terms of service.](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
     >You must read and agree to the terms of service before you can use geospatial features. 
@@ -81,7 +81,7 @@ The geospatial features require additional terms of use that must be reviewed an
 
 1. Select **Save** at the bottom of the settings page.
 
-    ![Screenshot of the Save button](./media/geospatial/ppac-save.png "Screenshot of the Save button")
+    ![Screenshot of the Save button.](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
 ### Review the environment's data loss prevention policies
 

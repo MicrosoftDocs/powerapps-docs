@@ -26,7 +26,7 @@ aircraft maintenance to elementary school.
 
 ## How to recognize the inspection pattern
 
-![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps](media/inspection-illustration.png "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
+![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps.](media/inspection-illustration.png "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
 
 In a typical inspection scenario:
 
@@ -55,7 +55,7 @@ In a typical inspection scenario:
 
 The Inspection solution for Microsoft Teams is a general inspection app that can be used to inspect anything from a location (such as a retail store or manufacturing plant) to assets and equipment (such as vehicles and machines). The solution includes an app for performing inspections as well as an app for configuring and managing inspections.
 
-![Screenshot of the Inspection app for Microsoft Teams](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
+![Screenshot of the Inspection app for Microsoft Teams.](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
 
 Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
 
@@ -69,7 +69,7 @@ inventory of available hospital beds and supplies. It also uses dashboards to
 summarize key data and insights for users to make informed decisions, resulting
 in efficient deployment and usage of resources.
 
-![Screenshots of the Hospital Emergency Response app](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
+![Screenshots of the Hospital Emergency Response app.](media/hospital-emergency-response-app.png "Screenshots of the Hospital Emergency Response app")
 
 The main components of the Hospital Emergency Response solution are:
 
@@ -102,14 +102,14 @@ highlighted in green to provide a visual aid. Unexpected answers are highlighted
 in red and followed up with a prompt, which the engineer can use to record a finding
 and assign a follow-up task to a manager.
 
-![Screenshots of the Virgin Atlantic safety and compliance audit app](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
+![Screenshots of the Virgin Atlantic safety and compliance audit app.](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
 
 Engineering compliance managers use a Power Apps canvas app integrated within a
 SharePoint list to review completed inspections and view all inspection
 findings. They can also generate HTML and PDF inspection summaries from the app
 if an inspector or executive requires further information.
 
-![Engineering compliance manager view - Power Apps running embedded in SharePoint](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
+![Engineering compliance manager view - Power Apps running embedded in SharePoint.](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
 
 ### Standard Bank ATM inspection app
 
@@ -126,7 +126,7 @@ inspection reports each month. The app uses the device GPS capabilities to find
 nearby ATMs and the device camera to take pictures when issues need to be
 reported.
 
-![Standard Bank ATM inspection app](media/standard-bank-atm-app-blurred.png "Standard Bank ATM inspection app")
+![Standard Bank ATM inspection app.](media/standard-bank-atm-app-blurred.png "Standard Bank ATM inspection app")
 
 [Watch a demo of the ATM inspection.](https://youtu.be/-JRUIA8ItWE?t=1469)
 
@@ -136,7 +136,7 @@ which is their central data repository to enable business intelligence to aid in
 future improvements. Power BI dashboards and reports are used to visualize the
 aggregate data.
 
-![Screenshots of the Standard Bank ATM inspection app](media/standard-bank-atm-audit.jpg "Screenshots of the Standard Bank ATM inspection app")
+![Screenshots of the Standard Bank ATM inspection app.](media/standard-bank-atm-audit.jpg "Screenshots of the Standard Bank ATM inspection app")
 
 ### Tacoma Public schools reading assessment
 
@@ -155,7 +155,7 @@ their mobile device or Surface tablets provided by the school. Teachers use the
 app to enter detailed information from each student's reading assessment, such
 as oral reading goals and comprehension goals.
 
-![Screenshots of the Tacoma Public Schools DRA2 app](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
+![Screenshots of the Tacoma Public Schools DRA2 app.](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
 
 ### Additional stories
 

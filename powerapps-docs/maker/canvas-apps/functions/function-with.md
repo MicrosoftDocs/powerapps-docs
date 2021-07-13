@@ -51,7 +51,7 @@ This example uses a record of named values to calculate the volume of a cylinder
 
 ### Nested With
 
-![Interest calculator using With function](media/function-with/interest-calculator.gif)
+![Interest calculator using With function.](media/function-with/interest-calculator.gif)
 
 ```powerapps-dot
 With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments and convert to decimal

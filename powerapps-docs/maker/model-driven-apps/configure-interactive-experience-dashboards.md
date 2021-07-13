@@ -51,28 +51,28 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 ### Multi-stream dashboard standard view  
  In the multi-stream dashboard, you see a row of visual filters at the top with the data streams below them.  
  
-![Multi-stream interactive dashboard](media/interactive-dashboards-multi-stream.png) 
+![Multi-stream interactive dashboard.](media/interactive-dashboards-multi-stream.png) 
    
 ### Multi-stream dashboard tile view  
  The same dashboard, only in the tile view.  
   
- ![Multi-stream dashboard tile view](media/interactive-dashboards-multi-stream-tiles.png "Multi-stream dashboard tile view")  
+ ![Multi-stream dashboard tile view.](media/interactive-dashboards-multi-stream-tiles.png "Multi-stream dashboard tile view")  
   
 ### Multi-stream dashboard layouts  
  For multi-stream dashboards, you can choose from four different layouts.  
 
  > [!div class="mx-imgBorder"] 
- > ![Multi-stream dashboard layouts](media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
+ > ![Multi-stream dashboard layouts.](media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
   
 ### Multi-stream table-specific dashboard  
  The table-specific dashboard for the case table is shown here.  
   
- ![Open cases dashboard](media/interactive-dashboard-cases-entity-specific.png "Open cases dashboard")  
+ ![Open cases dashboard.](media/interactive-dashboard-cases-entity-specific.png "Open cases dashboard")  
   
 ### Single-stream dashboard  
  The single-stream dashboard contains the data stream on the left and visual filters and tiles on the right.  
   
- ![Single-stream interactive service hub dashboard](media/interactive-dashboards-single-stream.png "Single-stream interactive service hub dashboard")  
+ ![Single-stream interactive service hub dashboard.](media/interactive-dashboards-single-stream.png "Single-stream interactive service hub dashboard")  
   
 ### Single-stream dashboard layouts  
  For single-stream dashboards, you can choose from four different layouts.  
@@ -93,7 +93,7 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
 In this example there are two interactive dashboard options available in the Case table for the **IsEscalated** column.  
 
  > [!div class="mx-imgBorder"] 
- > ![Enable a column for global filter and sort](media/enable-filter-sort.png "Enable a column for global filter and sort")  
+ > ![Enable a column for global filter and sort.](media/enable-filter-sort.png "Enable a column for global filter and sort")  
   
 ### Configure the 'Appears in global filter in interactive experience' option
 
@@ -108,7 +108,7 @@ In this example there are two interactive dashboard options available in the Cas
   
  The global filter flyout window is shown here:  
   
- ![Add two global filter columns](media/global-filter-escalated.png "Global filter columns")  
+ ![Add two global filter columns.](media/global-filter-escalated.png "Global filter columns")  
   
 > [!TIP]
 >  When you configure a visual filter based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
@@ -126,7 +126,7 @@ The columns that you configure for sorting appear in the drop-down list on the s
 
 The following illustration shows the flyout dialog with the list of the available columns for sorting, in the drop-down list. The default sort is always set on the **Modified On** column.  
   
- ![Sort by drop-down list](media/sort-field.png "Sort by drop-down list")    
+ ![Sort by drop-down list.](media/sort-field.png "Sort by drop-down list")    
     
 ### Enable security roles  
  Select and enable security roles that will be able to view the interactive dashboards.  
@@ -140,11 +140,11 @@ The following illustration shows the flyout dialog with the list of the availabl
 3.  Select the dashboard that you want and then on the toolbar select **Enable security roles**. 
   
     > [!div class="mx-imgBorder"] 
-    > ![Enable security roles](media/dashboard-enable-security-roles.png)
+    > ![Enable security roles.](media/dashboard-enable-security-roles.png)
 
 4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
 
-     ![Select display only these selected security roles](media/security-roles.png "Select display only these selected security roles")    
+     ![Select display only these selected security roles.](media/security-roles.png "Select display only these selected security roles")    
   
 5.  Select **Publish** for your changes to take effect.    
   
@@ -161,14 +161,14 @@ The following sections describe how to create and then configure the various typ
 
 3.  In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**. 
 
-    ![New Interactive experience dashboard](media/interactive-exp-dash-sol-explorer.png)
+    ![New Interactive experience dashboard.](media/interactive-exp-dash-sol-explorer.png)
   
 4.  Choose the layout, either 2, 3, or 4 column width.  
   
 5.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
  
     > [!div class="mx-imgBorder"] 
-    > ![Add visual filters](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
+    > ![Add visual filters.](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
   
    - **Filter Table**: The visual filters and global filter attributes are based on this table.  
       
@@ -191,7 +191,7 @@ The following sections describe how to create and then configure the various typ
 >  The charts configured for the visual filters can use the columns of the **Filter** table as well as related tables. When you use charts based on related table columns, the customer service representatives can filter charts using these related table columns. The columns that are based on the related table usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** column. To create multi-entity charts, you must add  columns of a related table to any of the views, and then use these columns while creating charts.  
  
  > [!div class="mx-imgBorder"] 
- > ![Creating charts for visual filters](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
+ > ![Creating charts for visual filters.](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
   
  Next, configure the streams. Just like with adding components in the charts, select the element inside the stream panel. When the dialog appears, select **View** or **Queue** depending on what element you want the stream to use. Enter the required information, as shown in the following illustration.  
   
@@ -205,7 +205,7 @@ The following sections describe how to create and then configure the various typ
 The following illustration is an example of a fully configured chart panel and stream panel:  
  
  > [!div class="mx-imgBorder"] 
- > ![Fully configured dashboard](media/example-stream-visual.png "Fully configured dashboard")  
+ > ![Fully configured dashboard.](media/example-stream-visual.png "Fully configured dashboard")  
   
  After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect.   
   
@@ -242,7 +242,7 @@ For example, instead of selecting a table, some columns in the table-specific da
 ### Configure a single-stream dashboard  
  Configuring a single-stream dashboard is similar to the multi-stream dashboard. All UI navigation steps are the same as for the multi-stream dashboard. You can choose a layout that includes tiles or the layout that doesn’t include tiles. If the tiles are included, they are always displayed on the dashboard. To configure a tile, you select the icon in the center of the tile. When the **Add Tile** window opens, fill in the required data. The following illustration is an example of the tile setup.  
   
- ![Add a tile to the single-stream dashboard](media/add-tile.png "Add a tile to the single-stream dashboard")  
+ ![Add a tile to the single-stream dashboard.](media/add-tile.png "Add a tile to the single-stream dashboard")  
   
 ## Configure dashboard colors
 
@@ -273,15 +273,15 @@ You can configure a particular color that will appear in the charts and streams 
 In the following example, we’re changing the color for the **IsEscalated** column. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
  > [!div class="mx-imgBorder"] 
- > ![Change color in the dashboard](media/edit-color.png "Change color in the dashboard")  
+ > ![Change color in the dashboard.](media/edit-color.png "Change color in the dashboard")  
   
 When the **Modify List Value** dialog box opens, enter the hexadecimal color code, such as #800000 shown here:  
   
- ![Enter the hexadecimal color code](media/modify-color.png "Enter the hexadecimal color code")  
+ ![Enter the hexadecimal color code.](media/modify-color.png "Enter the hexadecimal color code")  
 
 Similarly, if you go to the **Priority** column to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
 
- ![Modify the dashboard color](media/priority-color-modify.png "Change dashboard color for case priority")  
+ ![Modify the dashboard color.](media/priority-color-modify.png "Change dashboard color for case priority")  
   
 ### See also  
  

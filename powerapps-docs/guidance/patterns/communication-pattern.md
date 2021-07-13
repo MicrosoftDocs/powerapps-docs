@@ -14,7 +14,7 @@ ms.reviewer: kathyos
 
 # Pattern: Communication
 
-<!--![Collage of communication app screenshots](media/communication-collage.png "Collage of communication app screenshots")-->
+<!--![Collage of communication app screenshots.](media/communication-collage.png "Collage of communication app screenshots")-->
 
 Want to quickly share news, event announcements, and the latest up-to-date information
 with your employees no matter where they are? A common use of Microsoft Power Platform is
@@ -26,7 +26,7 @@ communicate information to employees.
 
 ## How to recognize the communication/announcement pattern
 
-![Illustration of the communication pattern with compose, publish, and consume steps](media/communication-illustration.png "Illustration of the communication pattern with compose, publish, and consume steps")
+![Illustration of the communication pattern with compose, publish, and consume steps.](media/communication-illustration.png "Illustration of the communication pattern with compose, publish, and consume steps")
 
 In a typical communication scenario:
 
@@ -82,12 +82,12 @@ Key features include:
 The Crisis Communication Admin app enables the admin to compose news and
 information, in addition to configuring the features of the employee app.
 
-![A screenshot of the Crisis Communication admin app](media/crisis-communication-admin-app.png "A screenshot of the Crisis Communication admin app")
+![A screenshot of the Crisis Communication admin app.](media/crisis-communication-admin-app.png "A screenshot of the Crisis Communication admin app")
 
 The employee app, which can be embedded in Teams, enables users to consume news
 and information, and reach out for assistance.
 
-![A screenshot of the Crisis Communication employee app](media/crisis-communication-employee-app.jpg "A screenshot of the Crisis Communication employee app")
+![A screenshot of the Crisis Communication employee app.](media/crisis-communication-employee-app.jpg "A screenshot of the Crisis Communication employee app")
 
 More information:<br>[Video demo of the Crisis Communication solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis Communication sample template](../../maker/canvas-apps/sample-crisis-communication-app.md)
 
@@ -109,9 +109,9 @@ organizations like the WHO and CDC, in addition to company-specific information.
 The app is a single source of truth and a reference for preventive measures to
 minimize exposure.
 
-![Some screenshots of the Schlumberger Stay SAFE app](media/schlumberger-stay-safe-app-1.png "Some screenshots of the Schlumberger Stay SAFE app")
+![Some screenshots of the Schlumberger Stay SAFE app.](media/schlumberger-stay-safe-app-1.png "Some screenshots of the Schlumberger Stay SAFE app")
 
-![Examples of preventative measures in the Schlumberger Stay SAFE app](media/schlumberger-stay-safe-app-2.png "Examples of preventative measures in the Schlumberger Stay SAFE app")
+![Examples of preventative measures in the Schlumberger Stay SAFE app.](media/schlumberger-stay-safe-app-2.png "Examples of preventative measures in the Schlumberger Stay SAFE app")
 
 ### Telstra Technician Plus app
 
@@ -161,7 +161,7 @@ app's key capabilities and benefits include:
 - Picking the author on whose behalf the email is sent, and having their
     signature be automatically populated.
 
-![Some screenshots of the Hexion Broadcast app](media/hexion-broadcaster-app.png "Some screenshots of the Hexion Broadcast app")
+![Some screenshots of the Hexion Broadcast app.](media/hexion-broadcaster-app.png "Some screenshots of the Hexion Broadcast app")
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

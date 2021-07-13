@@ -57,19 +57,19 @@ Example of the various progress indicator types:
 
 **Title**
 
-![Track progress using a title](../media/track-progress-title.png "Track progress by using a title")  
+![Track progress using a title.](../media/track-progress-title.png "Track progress by using a title")  
 
 **Title with Step Number prepended**
 
-![Track progress using a step number](../media/track-progress-step-number.png "Track progress by using a step number")  
+![Track progress using a step number.](../media/track-progress-step-number.png "Track progress by using a step number")  
 
 **Numeric**
 
-![Track progress using a numeral](../media/track-progress-numeral.png "Track progress by using a numeral")  
+![Track progress using a numeral.](../media/track-progress-numeral.png "Track progress by using a numeral")  
 
 **Progress Bar**
 
-![Track progress using a bar](../media/track-progress-bar.png "Track progress by using a bar")  
+![Track progress using a bar.](../media/track-progress-bar.png "Track progress by using a bar")  
 
 ## “Save changes” warning 
 
@@ -81,7 +81,7 @@ Example of the various progress indicator types:
 
 Example:
 
-![Save changes warning](../media/save-changes-warning.png "Save changes warning")  
+![Save changes warning.](../media/save-changes-warning.png "Save changes warning")  
 
 >[!NOTE]
 > Because of the recent changes related to browsers support for custom text in *beforeunload* event, the ability to specify a custom message using "Save changes" warning is limited to only Internet Explorer 11. More information: [onbeforeunload event in Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741880(v=vs.85)), [Browser compatibility](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event#browser_compatibility)
@@ -92,7 +92,7 @@ A managed form can be configured to display a map control to either display an e
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The Advanced Form Step record has a section that defines these field mappings that you must assign values for. The field names will vary depending on the schema you have created.
 
-![Geolocation data in advanced form](../media/geolocation-managed-form.png "Geolocation data in advanced form")
+![Geolocation data in advanced form.](../media/geolocation-managed-form.png "Geolocation data in advanced form")
 
 > [!Note]
 > The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.

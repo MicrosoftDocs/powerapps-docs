@@ -35,7 +35,7 @@ To install Microsoft Power Platform CLI using Visual Studio Code Extension:
 1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
 
    > [!div class="mx-imgBorder"]
-   > ![VS code extension install](media/power-platform-vs-code-extension-install.png "VS code extension install")
+   > ![VS code extension install.](media/power-platform-vs-code-extension-install.png "VS code extension install")
    
 > [!NOTE]
 > Microsoft Power Platform Visual Studio Code Extension updates automatically. 
@@ -254,7 +254,9 @@ Manages to create a [plug-in](./plug-ins.md) project.
 
 ## Uninstall Microsoft Power Platform CLI 
 
-To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerAppsCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerPlatformCLI).
+
+To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the uninstall button.
 
 If you're a Private Preview participant and have an older version of CLI, follow these steps:
 

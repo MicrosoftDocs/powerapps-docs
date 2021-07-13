@@ -25,7 +25,7 @@ The public key of a portal is used to configure Live Assist for customer engagem
 2.	Go to **Portal Actions** > **Get Public Key**. The key is displayed.
 
     > [!div class=mx-imgBorder]
-    > ![Get public key of a portal](../media/get-public-key.png "Get public key of a portal")
+    > ![Get public key of a portal.](../media/get-public-key.png "Get public key of a portal")
 
 3.	Select **Download as Text** to download the key in a text file.
 

@@ -20,6 +20,6 @@ After you create a portal, it will begin provisioning and you are notified about
 If you need to see more details about the provisioned portal such as, portal type, application ID, owner of the portal, and so on, you can open [Power Apps portals admin center](admin-overview.md) and navigate to the **Portal Details** tab. The user who has created the portal is the owner of the portal.
 
 > [!div class=mx-imgBorder]
-> ![Portal details](../media/portal-details-admin.png "Portal details")
+> ![Portal details.](../media/portal-details-admin.png "Portal details")
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

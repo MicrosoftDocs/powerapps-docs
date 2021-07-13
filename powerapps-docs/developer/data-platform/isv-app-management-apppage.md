@@ -28,7 +28,7 @@ After the user selects an app, the user is navigated to the app's detail page, w
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![App detail page](media/isv-portal-apppage-appname.png)
+> ![App detail page.](media/isv-portal-apppage-appname.png)
 
 The app detail page contains the following graphs and metrics.
 
@@ -41,7 +41,7 @@ When hovering over the graph, the following information is shown:
 Install Count: Number of app installations happened on a particular date.
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by environment type](media/isv-portal-apppage-graph1.png)
+> ![Package installs by environment type.](media/isv-portal-apppage-graph1.png)
 
 ## Installs by geo
 
@@ -54,7 +54,7 @@ When hovering over the graph, the following information is shown:
 
 
 > [!div class="mx-imgBorder"]
-> ![Package install attempts by tenant (last 28 days)](media/isv-portal-apppage-graph2.png)
+> ![Package install attempts by tenant (last 28 days).](media/isv-portal-apppage-graph2.png)
 
 ## Installs by environment
 
@@ -66,7 +66,7 @@ When hovering over the graph, the following information is shown:
 2. Install Count
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by location of tenants](media/isv-portal-apppage-graph3.png)
+> ![Package installs by location of tenants.](media/isv-portal-apppage-graph3.png)
 
 ## Installs by tenant
 
@@ -81,7 +81,7 @@ When hovering over any item of the graph, the following information is shown:
 1. Environment
 
 > [!div class="mx-imgBorder"]
-> ![Package and version installs by tenant](media/isv-portal-apppage-graph4.png)
+> ![Package and version installs by tenant.](media/isv-portal-apppage-graph4.png)
 
 ## Filtering the app page
 

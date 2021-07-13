@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to Dynamics AX from Power Apps
-![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)
+![Dynamics AX Online.](./media/connection-dynamicsax/dynamics-ax.png)
 
 Use this connection to easily build apps that read, update, and delete data from these versions of Dynamics AX:
 

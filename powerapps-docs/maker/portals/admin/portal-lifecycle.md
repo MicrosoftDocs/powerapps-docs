@@ -25,7 +25,7 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 The following diagram explains various stages that a Power Apps portals goes through, from creation until deletion.
 
-![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
+![Portal lifecycle stages.](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
 
 Let's understand each portal lifecycle stage.
 

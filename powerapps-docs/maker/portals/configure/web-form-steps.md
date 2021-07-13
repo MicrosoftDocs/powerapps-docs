@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/24/2021
+ms.date: 07/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -22,7 +22,7 @@ The Advanced Form Step provides the flow logic of the form's user experience suc
 
 Each Advanced Form will be presented on the portal has one or more steps. These steps share some common properties, outlined below. Each Step contains a pointer (a lookup) to the next step, except for terminal steps. Terminal steps don't have a next time, and are thus the last step of the Advanced Form (because of conditional branching, there can be multiple terminal steps).
 
-![Steps to create an advanced form](../media/web-form-creation-steps.png "Steps to create an advanced form")  
+![Steps to create an advanced form.](../media/web-form-creation-steps.png "Steps to create an advanced form")  
 
 | Name     | Description                                    |
 |----------|------------------------------------------------|
@@ -34,10 +34,18 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
 
-> [!NOTE]
-> Advanced form steps can't be reused for all step type configurations except when using "Next step if Condition fails" option in step type "Condition". If you try to use advanced form step again, you'll see the following message:
-> <br> `The step <advanced form step name> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again.`
-> <br> When that happens, ensure you use don't reuse advanced form steps in an Advanced Form.
+## Considerations for advanced form steps
+
+Advanced form steps can't be reused. If you try to use advanced form step again, you'll see the following message:
+
+"The step <advanced form step name> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again."
+
+When that happens, ensure you use don't reuse advanced form steps in an Advanced Form.
+
+The following conditions are exempt from the limitation of advanced form step reuse:
+
+- When using "Next step if Condition fails" option in step type "Condition".
+- When using different&mdash;Yes/No&mdash;branches.
 
 ### See also
 

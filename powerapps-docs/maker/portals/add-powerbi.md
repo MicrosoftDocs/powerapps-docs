@@ -37,7 +37,7 @@ To add a Power BI component to a webpage:
 
     1. **Access type**: From the drop-down, select the appropriate option for your business requirements.
 
-        ![Power BI Access type](media/powerbi-access-type.png "Power BI Access type")
+        ![Power BI Access type.](media/powerbi-access-type.png "Power BI Access type")
 
         1. **Embed for your customers** - Allows you to securely share the Power BI dashboards or reports to external users without a Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI dashboards or reports into your portal.
             > [!NOTE]
@@ -56,21 +56,21 @@ To add a Power BI component to a webpage:
 
     1. **Select type**: Select type as *Dashboard* or *Report* from the list.
 
-        ![Select type](media/type-powerbi.png "Select type")
+        ![Select type.](media/type-powerbi.png "Select type")
 
         - **Dashboard** - Allows you to choose a **Dashboard**, and then a **Tile** from the selected dashboard to display on the webpage.
         - **Report** - Allows you to select a **Report**, and then a **Page** from the report to display on the webpage.
 
     1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter the appropriate roles in this field.
 
-        ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
+        ![Apply roles.](media/apply-roles-powerbi.png "Apply roles")
     
         - You can enter multiple roles separated by a comma (for example, `role_1,role_2`). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls). <br>
         - This option is only available for the access type **Embed for your customers**.
 
     1. **Apply filter**: Allows the user to load the report with pre-filtered values. The user can provide a filter condition in the field. 
         
-        ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
+        ![Apply filter.](media/apply-filter-powerbi.png "Apply filter")
 
         - The filter parameter must be without the `?filter=''` prefix. For example, `Table/Field eq 'value'`.
         <br> For more information, go to [filter parameter details](/power-bi/service-url-filters).
@@ -78,7 +78,7 @@ To add a Power BI component to a webpage:
 
     1. **Embed code URL**: Enter the embed code URL.
     
-        ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
+        ![Embed Code URL.](media/embed-code-url.png "Embed Code URL")
 
         - To learn how to create and manage embed codes, go to [Publish to web from Power BI](/power-bi/service-publish-to-web)
         - This option is only available for the access type **Publish to web**.
@@ -92,7 +92,7 @@ The following list explains Power BI access types in brief and lists access type
     - Uses Power BI Embedded service.
     - If you've used Power BI Embedded service with Power Apps portals before, you'll see the following error when you select **Embed for your customers**:
 
-        ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
+        ![Power BI Embed for your customers - enable visualization again.](media/embed-power-bi-visualization-enable-again.png)
     
         When this message appears, ensure you [disable](../portals/admin/set-up-power-bi-integration.md#disable-power-bi-visualization) and then [enable](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization) Power BI visualization again.
     - If you add Power BI with **Embed for your customers** on a portal page that's available **anonymously**, anyone can view the dashboard. To secure this page, read [webpage access control in Power Apps portals](../portals/configure/webpage-access-control.md).

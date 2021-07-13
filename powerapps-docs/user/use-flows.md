@@ -32,7 +32,7 @@ Connect with Power Automate from your app to manage your flows.
 1. On the command bar, select **Flow**.  
   
    > [!div class="mx-imgBorder"]
-   > ![Power Automate menu](media/flow.png "Power Automate menu") 
+   > ![Power Automate menu.](media/flow.png "Power Automate menu") 
   
 2. The following options appear:  
   

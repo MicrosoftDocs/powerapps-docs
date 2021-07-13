@@ -31,19 +31,19 @@ Before you can add connection roles, it needs to be enabled by your admin. For m
 2. Select the **Related** tab and then select **Connection**. This will open the connection grid with the list of connections for the row.
 
     > [!div class="mx-imgBorder"]
-    > ![Add a new connection role](media/connection1.png "Add a new connection role") 
+    > ![Add a new connection role.](media/connection1.png "Add a new connection role") 
 
 3. Select **Connect** and then choose **To Another** or **To Me**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select connection type](media/connection2.png "Select connection type") 
+    > ![Select connection type.](media/connection2.png "Select connection type") 
   
 4. On the **Name** column, enter or find the name of the row for the connection.
 
 5. On the **As this Role** column select the lookup icon and then choose **New Connection Role**. Or, use the search to find an existing role that you want to associate to the connection and then select **Save**.
 
     > [!div class="mx-imgBorder"]
-    > ![Choose new connection role](media/connection3.png "Choose new connection role")  
+    > ![Choose new connection role.](media/connection3.png "Choose new connection role")  
 
     > [!NOTE]
     > If you have entered information before creating a new connection role, a warning dialog will be displayed asking if you would like to cancel and continue working on the connection or to go ahead and leave the current row you are working on.
@@ -51,7 +51,7 @@ Before you can add connection roles, it needs to be enabled by your admin. For m
 6. To create a new connection role, on the **New Connection Role** screen enter a name and then choose a **Connection Role Category**.
 
     > [!div class="mx-imgBorder"]
-    >  ![Add connection role category](media/connection4.png "Add connection role category") 
+    >  ![Add connection role category.](media/connection4.png "Add connection role category") 
 
 7. When you are done, select **Save & Close**.
 
@@ -62,20 +62,20 @@ To manage a connection role, select  the connection role from a connection table
 
 
    > [!div class="mx-imgBorder"]
-   > ![Manage connection role](media/connection7.png "Manage connection role") 
+   > ![Manage connection role.](media/connection7.png "Manage connection role") 
   
 You can also manage the connection role types that you want associate to the connection role.
 
 1. Open the connection role and then select **Manage Row Type** on the command. 
 
     > [!div class="mx-imgBorder"]
-    > ![Edit connection role](media/connection5.png "Editconnection role") 
+    > ![Edit connection role.](media/connection5.png "Editconnection role") 
   
 
 2. This will open a list of connection role types that you can add or remove for this connection role.
 
     > [!div class="mx-imgBorder"]
-    > ![Manage Row Type](media/connection6.png "Manage Row Type") 
+    > ![Manage Row Type.](media/connection6.png "Manage Row Type") 
 
 
 

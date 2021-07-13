@@ -44,7 +44,7 @@ help with code completion, assistance, and hinting while customizing portals
 interface using VS Code. Using the VS Code extension, you can also configure portals through the [portals
 support for Microsoft Power Platform CLI](power-apps-cli.md).
 
-![Animation that explains how to install and set Power Platform VS Code Extension with file icon theme](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform VS Code Extension with file icon theme")
+![Animation that explains how to install and set Power Platform VS Code Extension with file icon theme.](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform VS Code Extension with file icon theme")
 
 ## Prerequisites
 
@@ -65,15 +65,15 @@ To install the VS Code extension:
 
 1.  Open Visual Studio Code.
 
-2.  Select ![Extensions icon](media/vs-code-extension/extensions-symbol.png "Extensions icon") (Extensions) from the left pane.
+2.  Select ![Extensions icon.](media/vs-code-extension/extensions-symbol.png "Extensions icon") (Extensions) from the left pane.
 
-    ![Select extensions](media/vs-code-extension/extensions.png "Select extensions")
+    ![Select extensions.](media/vs-code-extension/extensions.png "Select extensions")
 
-3.  Select ![Settings icon](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
+3.  Select ![Settings icon.](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
 
 4.  Search for and select **Power Platform VS Code Extension**.
 
-    ![Select Power Platform VS Code Extension](media/vs-code-extension/vs-code-extension.png "Select Power Platform VS Code Extension")
+    ![Select Power Platform VS Code Extension.](media/vs-code-extension/vs-code-extension.png "Select Power Platform VS Code Extension")
 
 5.  Select **Install**.
 
@@ -124,9 +124,9 @@ The VS Code extension enables a live preview option to view the portals content 
 inside the Visual Studio Code interface during the development
 experience.
 
-To see the preview, select ![Preview button](media/vs-code-extension/preview-symbol.png "Preview button") from the top-right when having an HTML file open in edit mode.
+To see the preview, select ![Preview button.](media/vs-code-extension/preview-symbol.png "Preview button") from the top-right when having an HTML file open in edit mode.
 
-![Page preview](media/vs-code-extension/page-preview.png "Page preview")
+![Page preview.](media/vs-code-extension/page-preview.png "Page preview")
 
 The preview pane opens on the right side of the page being edited.
 

@@ -33,7 +33,7 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
   
 1. Select **Update**. You should see the following form with the fields already filled in.  
   
-    ![Update service endpoint SAS key value](media/sas-key.PNG "Update service endpoint SAS key value")  
+    ![Update service endpoint SAS key value.](media/sas-key.PNG "Update service endpoint SAS key value")  
   
 1. The **SAS Key** field is displayed with a value of "*******".  Replace that value with the correct SAS key value. You can obtain the SAS Key for your Azure messaging entity (queue, topic, etc.) from the [Azure portal](https://portal.azure.com).  
   

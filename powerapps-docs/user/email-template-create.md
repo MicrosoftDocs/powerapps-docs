@@ -24,7 +24,7 @@ Email templates are a fast and easy way to send repetitive and recurring email t
 
 When creating a template, you have the option to work with a blank or existing template.
 
-   ![Create an email template](media\email-how-to-create-an-email-template-1a.png "Create an email template")
+   ![Create an email template.](media\email-how-to-create-an-email-template-1a.png "Create an email template")
 
 When you select **New** from the **Email Templates** command bar, a drop-down list appears with options to either **Start with a blank template** or **Start with existing templates**.
 
@@ -34,7 +34,7 @@ Starting with a blank template means that you build and add all the data to the 
 
 If you select **Create an email template**, the following is displayed:
 
-   ![Start with a blank template option](media\email-create-an-email-template-1a.png "Start  with a blank template option")
+   ![Start with a blank template option.](media\email-create-an-email-template-1a.png "Start  with a blank template option")
 
 Legend 
    1. **Template name**. Assign your email template a detailed name you want to save for future use.
@@ -47,7 +47,7 @@ Legend
 
 If you select **New Customer Template**, the following example page displays, where you can make edits. 
 
-   ![New Customer Template](media\email-new-customer-template-1c.png "New Customer Template")
+   ![New Customer Template.](media\email-new-customer-template-1c.png "New Customer Template")
 
 Legend 
    1. **New Attachments**. Allows you to include attachments to your template. 
@@ -62,7 +62,7 @@ Starting with an existing template means the template is automatically pre-popul
 
 The following **Create a new email template** screen appears, which allows you to customize your template
 
-  ![Start with existing templates](media\email-start-with-existing-templates-1a.png "Start with existing templates")
+  ![Start with existing templates.](media\email-start-with-existing-templates-1a.png "Start with existing templates")
 
    Legend
    1. **Search**. Allows you to search for templates. Search does not support regular expressions and it works on the template name only.
@@ -77,7 +77,7 @@ The following **Create a new email template** screen appears, which allows you t
 
 When you select an existing template, the following display appears:
 
-   ![Creating email template copies](media\email-template-copy-1a.png "Creating email template copies")
+   ![Creating email template copies.](media\email-template-copy-1a.png "Creating email template copies")
 
    - **Name**. The new template you created from the existing template will display **– Copy** at the end of the template name to identify it is a copy of an existing template.
    - **Template Editor**. All of the data is carried over from the existing template which can be edited and modified.
