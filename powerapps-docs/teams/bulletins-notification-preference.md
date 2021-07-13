@@ -104,7 +104,7 @@ Now if you select **+ Insert** on the left-pane, you'll see classic controls lis
     | OnChange | `Patch('Bulletin Notifications',LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'UserID'.User=gblUserRecord.User),{Preference:Self.Selected.Value})` <br> **NOTE**: Patch function is to save the selected preference on the record in the Bulletin Notifications table. |
     | Default | `LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'UserID'.User=gblUserRecord.User).Preference` |
 
-1. Select the **Toggle1** control (that was added as part of the [Add "notify me" settings to category](bulletins-notify-me.md), and change the following properties:
+1. Select the **Toggle1** control (added as part of the [Add "notify me" settings to category](bulletins-notify-me.md)), and change the following properties:
 
     | Property | Value |
     | - | - |
