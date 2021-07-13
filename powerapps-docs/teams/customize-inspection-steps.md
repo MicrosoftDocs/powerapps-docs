@@ -5,11 +5,14 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2021
+ms.date: 07/12/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
-- v-ljoel
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
+  - sbahl10
 ---
 
 # Inspections App – Customize inspection steps
@@ -143,3 +146,13 @@ btnImageBackground.X+18
 1.  On the Inspection list screen, once you make the change for any of the above listed scenarios, hit the Preview button to run the app.
     
 2.  Make sure to check for responsiveness by shrinking the size of the screen when testing in the Window mode.
+
+### See also
+
+- [Understand Inspection sample apps architecture](inspection-architecture.md)
+- [Customize Inspection sample app](customize-inspections.md)
+- [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
