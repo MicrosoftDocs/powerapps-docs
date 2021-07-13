@@ -9,7 +9,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 07/12/2021
+ms.date: 07/13/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -131,7 +131,7 @@ When users open an app that uses connectors for the first time, they'll see a "c
         - Read your full user profile
         - Read the full profile of all users
     - It won't be able to:
-    - Modify or delete any user-profile information”
+        - Modify or delete any user-profile information
 
 1. To capture end-user consent to connect to the data sources that the app uses.
 
