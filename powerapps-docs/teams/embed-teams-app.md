@@ -131,7 +131,7 @@ You can optionally preload your app within Teams to increase performance.
 4. For the changes to take effect, remove and add your app into Teams again.
 
 > [!NOTE]
-> This allows users to download the app file while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This ensures that your app data will not be available to unauthenticated users.
+> This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This ensures that your app data will not be available to unauthenticated users. Information in the compiled app includes: a collection of JavaScript files containing text authored in app controls, media assets (e.g. images), the app name, the environment URL the app resides in.  
 
 ### See also
 
