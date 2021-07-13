@@ -185,6 +185,24 @@ Indicates whether the Skype protocol is used for the current organization.
 
 **Description**: **true** if Skype protocol is used; **false** otherwise.
 
+### Syntax
+
+`organizationSettings.fullNameConventionCode`
+
+### Return Value
+
+**Type**: Number
+
+**Description**: Returns a number denoting the full name format selected in the system settings. Below are the possible values and the corresponding format:
+
+0: LastName, FirstName
+1: FirstName LastName
+2: LastName, FirstName MiddleInitial
+3: FirstName MiddleInitial LastName
+4: LastName, FirstName MiddleName
+5: FirstNamet MiddleName LastName
+6: LastName FirstName
+7: LastNameFirstName
 
 ## Related topics
 
