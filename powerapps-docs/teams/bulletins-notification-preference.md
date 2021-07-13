@@ -57,6 +57,7 @@ To complete this lesson, we'd need the ability to log in into Teams that will be
 1. Select **+ Add column** to add a new column with the following configuration.
 
     | Property | Value |
+    | - | - |
     | Name | Preference |
     | Type | Choice |
     | Choices | Choice 1 - "Email" <br> Choice 2 - "Teams" |
