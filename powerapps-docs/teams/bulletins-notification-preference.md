@@ -1,20 +1,23 @@
 ---
 title: Customize apps for end user to add notification preferences
-description: Learn about how to add notification preferences for Bulletins 
+description: Learn about how to add notification preferences for Bulletins. 
 author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/18/2021
+ms.date: 07/13/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
-    - v-ljoel
+  - joel-lindstrom
+  - navjotm
+  - tapanm-msft
+  - sbahl10
 ---
 
 # Customize apps for end user to add notification preferences
 
-The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search and read bulletin posts.
+The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search, and read bulletin posts.
 
 The Bulletins app solution consists of two apps:
 
@@ -37,190 +40,165 @@ In this article, we'll learn how to enable users to set notification preferences
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to login into Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Bulletins Power Apps template for Teams installed. This app can be installed from <https://aka.ms/TeamsBulletins>. Also, we would need to review [Send an alert when a new bulletin is posted](new-bulletin-alert.md).
+To complete this lesson, we'd need the ability to log in into Teams that will be available as part of select Microsoft 365 subscriptions and will also need to have the Bulletins Power Apps template for Teams installed. This app can be installed from <https://aka.ms/TeamsBulletins>. Also, we'd need to review [Send an alert when a new bulletin is posted](new-bulletin-alert.md).
 
 ## Add a column to the Bulletin Notifications table
 
-1.  Select the Power Apps button from the left navigation menu in Teams.
+1. Select the Power Apps button from the left-pane in Teams.
 
-2.  Go to the Build tab and select Installed apps.
+1. Go to the Build tab, and select Installed apps.
 
-3.  Open the Bulletins app.
+1. Open the Bulletins app.
 
-4.  Select the Data icon from the left navigation menu.
+1. Select **Data** from the left-pane.
 
-5.  Find the Bulletin Notifications table and hit the three dots and select Edit data option *(Bulletin Notifications table was created as part of the* **Add
-    "notify me" settings to category** *lesson).*
-    
-6.  The table opens.
+1. Find the Bulletin Notifications table, select **...** (ellipsis), and then select **Edit data** option (Bulletin Notifications table was created as part of the [Add "notify me" settings to category](bulletins-notify-me.md).
 
-7.  Select +Add column to add a new column.
+1. Select **+ Add column** to add a new column with the following configuration.
 
-8.  Set Name = Preference.
-
-9.  Select Type = Choice.
-
-10. Enter choices – Choice 1 = Email, Choice 2 = Teams.
-
-11. The new column gets added to the table.
+    | Property | Value |
+    | Name | Preference |
+    | Type | Choice |
+    | Choices | Choice 1 - "Email" <br> Choice 2 - "Teams" |
 
 ## Turn on the Classic Controls Setting
 
-1.  Select the Settings button on the top ribbon.
+1. Select **Settings** on the top ribbon.
 
-2.  Select Upcoming features from the left menu.
+1. Select **Upcoming features** from the left menu.
 
-3.  Select the Experimental tab.
+1. Select the **Experimental** tab.
 
-4.  Scroll to the bottom and turn on the Classic Controls setting and close the Settings.
-    
-5.  Now if you selecton the + Insert icon on the left navigation menu, Classic controls should appear at the bottom.
+1. Scroll to the bottom, and then turn on the **Classic Controls** setting.
+
+1. Close the Settings.
+
+Now if you select **+ Insert** on the left-pane, you'll see classic controls listed.
 
 ## Add a Dropdown control to select Notification Preference
 
-1.  From the Tree view, select the Home screen.
+1. From the Tree view, select the Home screen.
 
-2.  Select galBulletins_ByCategory from the tree view to select the gallery control.
-    
-3.  Now, select the gallery galBulletins_ByCategory from the tree view again.
+1. Select **galBulletins_ByCategory** from the tree view to select the gallery control.
 
-4.  Select the Insert option from the left navigation menu.
+1. Now, select the gallery **galBulletins_ByCategory** from the tree view again.
 
-5.  Select Classic -\> Radio button.
+1. Select **Insert** from the left-pane.
 
-6.  The Combo box control gets added to the gallery.
+1. Select **Classic** > **Radio** button.
 
-7. Set the following properties on the List box
+1. Set the following properties on the List box.
 
-   - Width = 208
+    | Property | Value |
+    | - | - |
+    | Width | 208 |
+    | Height | 40 |
+    | Padding Top | 10 |
+    | Padding Bottom | 10 |
+    | X | `Parent.Width - Self.Width - 20` |
+    | Y | `lblGalBulletins_ByCategory_Name.Y` |
+    | Items | `Choices('Preference (Bulletin Notifications)')` |
+    | Tooltip | "Notification Preference" |
+    | Visible | `Toggle1.Checked` |
+    | OnChange | `Patch('Bulletin Notifications',LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'UserID'.User=gblUserRecord.User),{Preference:Self.Selected.Value})` <br> **NOTE**: Patch function is to save the selected preference on the record in the Bulletin Notifications table. |
+    | Default | `LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'UserID'.User=gblUserRecord.User).Preference` |
 
-   - Height = 40
+1. Select the **Toggle1** control (that was added as part of the [Add "notify me" settings to category](bulletins-notify-me.md), and change the following properties:
 
-   - Padding Top = 10
-
-   - Padding Bottom = 10
-
-   - X = Parent.Width - Self.Width - 20.
-
-   - Y = lblGalBulletins_ByCategory_Name.Y
-
-   - Items = Choices('Preference (Bulletin Notifications)')
-
-   - Tooltip = "Notification Preference"
-
-   - Visible = Toggle1.Checked
-
-   - OnChange = Patch('Bulletin Notifications',LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'User
-     ID'.User=gblUserRecord.User),{Preference:Self.Selected.Value})
-
-   *(This Patch function is to save the selected preference on the record in the Bulletin Notifications table)*  
-
-   1.  Default = LookUp('Bulletin Notifications',Category.'Bulletin Category'=ThisItem.appCategoryGUID&&'User 
-       ID'.User=gblUserRecord.User).Preference
-
-8.  Now, select the Toggle1 control *(that was added as part of the* **Add "notify me" settings to category** *lesson)*
-    
-9. Adjust the following properties
-
-   - X = If(Self.Checked, Parent.Width - Self.Width - Radio1.Width - 20, Parent.Width - Self.Width - 20)
-
-   - OnCheck = Patch('Bulletin Notifications',{Category:LookUp('Bulletin Categories','Bulletin Category'=ThisItem.appCategoryGUID),'User
-     ID':gblUserRecord,Preference:'Preference (Bulletin Notifications)'.Email})
+    | Property | Value |
+    | - | - |
+    | X | `If(Self.Checked, Parent.Width - Self.Width - Radio1.Width - 20, Parent.Width - Self.Width - 20)` |
+    | OnCheck | `Patch('Bulletin Notifications',{Category:LookUp('Bulletin Categories','Bulletin Category'=ThisItem.appCategoryGUID),'UserID':gblUserRecord,Preference:'Preference (Bulletin Notifications)'.Email})` |
 
 ## Publish the Bulletins App
 
-1.  All the changes to the Bulletins app are completed.
+All the changes to the Bulletins app are completed. The app can now be published by selecting the **Publish to Teams** button on the top-right.
 
-2.  The app can now be published by selecting the Publish to Teams button on the top right.
+## Update the Power Automate flow to send email notification
 
-## Update the Power Automate Flow to send email notification
+1. Go to https://flow.microsoft.com.
 
-1.  Navigate to flow.microsoft.com.
+1. Open the flow **Send notification based on notify me flag when a new bulletin is created** created as part of [Add "notify me" settings to category](bulletins-notify-me.md).
 
-2.  Open the flow **Send notification based on notify me flag when a new bulletin is created** *(that was created as part of the* **Add "notify me"
-    settings to category** *lesson)*.
-    
-3.  Verify that the flow was created in the environment with the same name as the team in which the app was installed.
-    
-4.  The current flow sends an email notification to the user when a new bulletin is added for a category, they have chosen to get notified for.
-    
-5.  As a part of this topic, we will add a couple more steps where the system would look at the notification preference selected by the user whether email or teams message and send out the notification accordingly.
+1. Verify that the flow was created in the environment with the same name as the team in which the app was installed.
 
-![Flow trigger and get category step](media/add-notification-preference-for-bulletins/flow-trigger-and-get-category-step.png "Flow trigger and get category step")
+    The current flow sends an email notification to the user when a new bulletin is added for a category, they have chosen to get notified for.
 
-![List bulletins by category step](media/add-notification-preference-for-bulletins/list-bulletins-by-category-step.png "List bulletins by category step")
+    As a part of this topic, we'll add a couple more steps where the system would look at the notification preference selected by the user whether email or teams message and send out the notification accordingly.
 
-6. In the Apply to each step below, add a Switch case step to check if the Preference on the record is Email(0) or Teams(1).
+    ![Flow trigger and get category step](media/add-notification-preference-for-bulletins/flow-trigger-and-get-category-step.png "Flow trigger and get category step")
 
-7. Move the Send and email step under the Email case.
+    ![List bulletins by category step](media/add-notification-preference-for-bulletins/list-bulletins-by-category-step.png "List bulletins by category step")
 
-8. Add a step under the Teams case as shown below – Make sure to select the Team where you would like to receive the notification.
+1. In the **Apply to each step below**, add a switch case step to check if the preference on the record is Email(0) or Teams(1).
 
-![Send notification by preference flow step](media/add-notification-preference-for-bulletins/flow-step-to-send-notification-by-preference.png "Send notification by preference flow step")
+1. Move the Send and email step under the Email case.
 
-![Send email or post message in teams](media/add-notification-preference-for-bulletins/send-email-post-message-flow-step.png "Send email or post message in teams")
+1. Add a step under the Teams case as shown below. Ensure to select the team where you would like to receive the notification.
+
+    ![Send notification by preference flow step](media/add-notification-preference-for-bulletins/flow-step-to-send-notification-by-preference.png "Send notification by preference flow step")
+
+    ![Send email or post message in teams](media/add-notification-preference-for-bulletins/send-email-post-message-flow-step.png "Send email or post message in teams")
 
 ## Test the app
 
-1.  Login into Teams and navigate to Team where the Bulletins app is installed.
+1. Open Teams, and the team where the Bulletins app is installed.
 
-2.  Select the Bulletins tab on the top.
+1. Select the **Bulletins** tab on the top.
 
-3.  The Bulletins app opens.
+1. Verify that the Turn on notifications toggle show up on the top right of each row of the categories gallery.
 
-4.  Verify that the Turn on notifications toggle show up on the top right of each row of the categories gallery.
-    
-5.  Verify that the Email/Teams Radio button shows up only when the Toggle button is set to On.
-    
-6.  Select the Turn on notifications toggle to turn notifications on for the particular categories.
-    
-7.  Set the Notification preference to Email for one and Teams for the other.
+1. Verify that the Email/Teams Radio button shows up only when the Toggle button is set to On.
 
-![Setup notification preference for each bulletin](media/add-notification-preference-for-bulletins/turn-on-notification-and-select-preference.png "Setup notification preference for each bulletin")
+1. Select the Turn on notifications toggle to turn on notifications for the particular categories.
 
-8. Now, select the Manage Bulletins tab on the top.
+1. Set the Notification preference to Email for one and Teams for the other.
 
-9. Select the New Bulletin button on the top right.
+    ![Setup notification preference for each bulletin](media/add-notification-preference-for-bulletins/turn-on-notification-and-select-preference.png "Setup notification preference for each bulletin")
 
-10. The New bulletin screen appears.
+1. Select the **Manage Bulletins** tab on the top.
 
-11. Select the Category for which you want the bulletin created – Customer Updates.
+1. Select **New Bulletin** on the top-right.
 
-12. Enter a title in the Add title text box – New Cust Updates Bulletin.
+1. Select the Category for which you want the bulletin created; such as "Customer Updates".
 
-13. Enter a subtitle in the Add subtitle text box – New Bulletin for Customer Updates.
+1. Enter a title, such as "New Customer Updates Bulletin".
 
-14. Enter a description in the Description box – New Bulletin for Customer Updates.
+1. Enter a subtitle, such as "New Bulletin for Customer Updates".
 
-15. Select Upload cover image and select and image.
+1. Enter a description, such as "New Bulletin for Customer Updates".
 
-16. Hit the Save button on top.
+1. Select **Upload**, and select an image.
 
-17. Then hit the Publish button.
+1. Select **Save**.
 
-18. In a few minutes, an email as shown in the image below should appear in the inbox of the primary email address of all the users who registered for email notifications of the selected category.
+1. Select **Publish**.
 
-![Email notification screenshot](media/add-notification-preference-for-bulletins/email-notification.png "Email notification screenshot")
+    In a few minutes, an email as shown in the image below should appear in the inbox of the primary email address of all the users who registered for email notifications of the selected category.
 
-19. Now we will run another test to verify the Teams notification scenario.
+    ![Email notification screenshot](media/add-notification-preference-for-bulletins/email-notification.png "Email notification screenshot")
 
-20. Select the New Bulletin button on the top right.
+    Now we'll run another test to verify the Teams notification scenario.
 
-21. The New bulletin screen appears.
+1. Select **New Bulletin** on the top-right.
 
-22. Select the Category for which you want the bulletin created – Employee Resources.
+1. Select the Category for which you want the bulletin created, such as "Employee Resources".
 
-23. Enter a title in the Add title text box – New Emp Resources Bulletin.
+1. Enter a title, such as "New Employee Resources Bulletin".
 
-24. Enter a subtitle in the Add subtitle text box – New Bulletin for Employee Resources.
+1. Enter a subtitle, such as "New Bulletin for Employee Resources".
 
-25. Enter a description in the Description box – New Bulletin for Employee Resources
-26. Select Upload cover image and select and image.
-27. Hit the Save button on top.
-28. Then hit the Publish button.
-29. In a few minutes, a Teams message should appear in the Teams channel in which the App is installed as shown in the image below.
+1. Enter a description, such as "New Bulletin for Employee Resources".
 
-![Teams notification](media/add-notification-preference-for-bulletins/teams-notification.png "Teams notification")
+1. Select **Upload**, and select an image.
+
+1. Select **Save**.
+
+1. Select **Publish**.
+
+    In a few minutes, a Teams message should appear in the Teams channel in which the app is installed as shown in the image below.
+
+    ![Teams notification](media/add-notification-preference-for-bulletins/teams-notification.png "Teams notification")
 
 ### See also
 
