@@ -2266,6 +2266,8 @@
                   href: ../teams/customize-inspections.md
                 - name: Add hierarchy inspection location
                   href: ../teams/inspections-hierarchy-locations.md
+                - name: Customize inspection steps
+                  href: ../teams/customize-inspection-steps.md
         - name: Issue reporting
           items:
             - name: Issue reporting

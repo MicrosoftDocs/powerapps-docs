@@ -17,92 +17,82 @@ contributors:
 
 # Inspections App – Customize inspection steps
 
-The Inspections Power Apps template allows users to create and perform inspections in the app. There are three apps, one per persona to perform,
-manage, and review Inspections. The three apps are – Inspections, Manage Inspections and Review Inspections.
+The Inspections sample app allows users to create and perform inspections in the app. There are three apps, one per persona to perform, manage, and review Inspections. The three apps are&mdash;Inspections, Manage Inspections and Review Inspections.
 
-In this topic we will learn how to customize inspection steps in the user app e.g. removing the ability to add pictures to checklist steps. This is important
-because just deleting the particular control can cause issues with responsiveness and the look and feel of the app can get affected.
+In this article, we'll learn how to customize inspection steps in the user app. For example, removing the ability to add pictures to checklist steps. This customization is important because just deleting the particular control can cause issues with responsiveness, and the look and feel of the app can get affected.
 
 ## Prerequisites
 
-To complete this lesson, we would need the ability to login into Microsoft Teams which will be available as part of select Microsoft 365 subscriptions and will also need to have the Inspections Power Apps template for Microsoft Teams installed. This app can be installed from aka.ms/TeamsInspection.
+To complete this lesson, we'd need the ability to sign-in to Microsoft Teams which will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
 
-## Login into the Inspections app
+## Open the Inspections app
 
-1.  Login into Teams and right click Power Apps from the left menu and select **Pop out app**.
-2.  Select Build from the top ribbon.
-3.  Select the Team in which the Inspections app is installed.
-4.  Select Inspections to open the app in the editor.
+1. Login into Teams, and right-click Power Apps from the left-pane, and select **Pop out app**.
+1. Select **Build** from the top ribbon.
+1. Select the team where the Inspections app is installed.
+1. Select Inspections to open the app in the editor.
 
-![Open Inspection app](media/customize-inspection-steps/open-inspection-app.png "Open Inspection app")
+    ![Open Inspection app](media/customize-inspection-steps/open-inspection-app.png "Open Inspection app")
 
-5. The Inspections app opens.
+1. Select the tree view from the left-pane.
 
-6. Select the tree view from the left menu.
+1. Select to open the Items screen.
 
-7. Select to open the Items screen.
+    ![Items Screen](media/customize-inspection-steps/items-screen.png "Items Screen")
 
-![Items Screen](media/customize-inspection-steps/items-screen.png "Items Screen")
+1. Press **Alt** key on the keyboard, and select Ambient or Backstage to open the record. The Food Inspection checklists page opens.
 
-8. Press Alt and select Ambient or Backstage to open the record.
+1. Press **Alt** key on the keyboard, and select any one of the options (Detailed Walk/Morning Store Walk). The Inspection Overview screen appears.
 
-9. The Food Inspection checklists page opens.
+1. Press **Alt** key on the keyboard, and select **Begin Inspection**. The Inspection list screen opens.
 
-10. Press Alt and select any one of the options (Detailed Walk/Morning Store Walk).
+    ![Inspection List Screen](media/customize-inspection-steps/inspection-list-screen.png "Inspection List Screen")
 
-11. The Inspection Overview screen appears.
+1. This article explains the following scenarios:
 
-12. Press Alt and select the Begin Inspection button.
+   - [Hiding the Add details section](#hiding-the-add-details-section)
 
-13. The Inspection list screen opens.
+      ![Hide Add Details Section](media/customize-inspection-steps/hide-add-details-section.png "Hide Add Details Section")
 
-![Inspection List Screen](media/customize-inspection-steps/inspection-list-screen.png "Inspection List Screen")
+   - [Hiding just the Photo option](#hiding-the-photo-option)
 
-1. The three scenarios we will be covering in this topic are
+      ![Hide Photo Option](media/customize-inspection-steps/hide-photo-option.png "Hide Photo Option")
 
-   - **Hiding the Add details section completely**
+   - [Hiding the Task option](#hiding-the-task-option)
 
-   ![Hide Add Details Section](media/customize-inspection-steps/hide-add-details-section.png "Hide Add Details Section")
+      ![Hide Task Option](media/customize-inspection-steps/hide-task-option.png)
 
-   - **Hiding just the Photo option**
+## Hiding the Add Details section
 
-   ![Hide Photo Option](media/customize-inspection-steps/hide-photo-option.png "Hide Photo Option")
+Hiding the Add Details section includes more than just setting the Visible property of all those controls to False.
 
-   - **Hiding the Task option**
+1. Set the **Visible** property for the **Add details** label, and the other labels (Photo, Note and Task) and their icons to "False".
 
-![Hide Task Option](media/customize-inspection-steps/hide-task-option.png)
+    ![Add Details Label visibility False](media/customize-inspection-steps/lbladddetails-visible-false.png "Add Details Label")
 
-## Customizing Inspection Steps
+    ![Photo Container grpPhoto visibility False](media/customize-inspection-steps/photo-visible-false.png "Photo Container grpPhoto visibility False")
 
-### Hiding the Add Details section completely
+1. Set the **Visible** property for **grpNote**, **grpTask**, and **grpPhoto** to "False".
 
-1.  Hiding the Add Details section completely is not as easy as just setting the Visible property of all those controls to False.
-    
-2.  First, set the Visible property for the Add details label and the other labels (Photo, Note and Task) and their icons to False.
+    ![All icons visibility False](media/customize-inspection-steps/all-icons-visible-false.png "All icons visibility False")
 
-![Add Details Label visibility False](media/customize-inspection-steps/lbladddetails-visible-false.png "Add Details Label")
+1. We'll also need to shrink the white space containing the Photo, Note and Task buttons to avoid wasting any extra space. Select **btnActionBackground** control from the tree view, select somewhere on the white space to highlight the box space.
 
-![Photo Container grpPhoto visibility False](media/customize-inspection-steps/photo-visible-false.png "Photo Container grpPhoto visibility False")
+    ![Adjust Button Background](media/customize-inspection-steps/adjust-button-background.png "Adjust Button Background")
 
-3. Thus, set the Visible property for grpNote, grpTask and grpPhoto to false – and all the options get hidden.
+1. Open the **Height** property of the control, and comment the existing formula with `//` at the beginning of each line.
 
-![All icons visibility False](media/customize-inspection-steps/all-icons-visible-false.png "All icons visibility False")
+1. Add the following formula.
 
-4. Then, we will also need to shrink the white space containing the Photo, Note and Task buttons to avoid wasting any extra space – select btnActionBackground control from the tree view or just click somewhere on the white space to highlight the box space.
+    ```powerapps-dot
+    btnOK.Y + btnOK.Height - Self.Y + 20
+    ```
 
-![Adjust Button Background](media/customize-inspection-steps/adjust-button-background.png "Adjust Button Background")
+    ![Adjust Button Height](media/customize-inspection-steps/adjust-button-height.png "Adjust Button Height")
 
-5. Open the Height property of the control and comment the existing formula.
+The white space shrinks, and leaves no extra space hiding the entire **Add Details** section.
 
-6. Then add the following formula – btnOK.Y + btnOK.Height - Self.Y + 20.
-
-![Adjust Button Height](media/customize-inspection-steps/adjust-button-height.png "Adjust Button Height")
-
-7. The white space shrinks and leaves no extra space/wastage.
-
-8. Thus, the entire Add Details section is hidden.
-
-### Hiding just the Photo Option
+### Hiding the Photo Option
 
 1.  For this scenario (assuming all the changes made above were undone), we will have to set the Visible property of the Photo option label and icon to false and then move the Note option and the Task Options to the left. 
 2.  To hide the Photo option, we will select grpPhoto from the tree view and set Visible = false.
@@ -118,7 +108,7 @@ btnImageBackground.X+18
 
 ![Adjust X position of Note icon](media/customize-inspection-steps/adjust-note-icon-x.png "Adjust X position of Note icon")
 
-### Hiding the Task Option Only
+### Hiding the Task Option
 
 1.  For this scenario (assuming all the changes made above were undone), we only want to hide the Task section.
     
@@ -153,6 +143,6 @@ btnImageBackground.X+18
 - [Customize Inspection sample app](customize-inspections.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+- [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
