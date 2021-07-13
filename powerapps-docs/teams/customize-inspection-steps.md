@@ -23,7 +23,7 @@ In this article, we'll learn how to customize inspection steps in the user app. 
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to sign-in to Microsoft Teams which will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
+To complete this lesson, we'd need the ability to sign-in to Microsoft Teams that will be available as part of select Microsoft 365 subscriptions, and will also need to have the Inspections sample app for Teams installed. This app can be installed from <https://aka.ms/TeamsInspection>.
 
 ## Open the Inspections app
 
@@ -50,23 +50,23 @@ To complete this lesson, we'd need the ability to sign-in to Microsoft Teams whi
 
 1. This article explains the following scenarios:
 
-   - [Hiding the Add details section](#hiding-the-add-details-section)
+   - [Hide the Add details section](#hide-the-add-details-section)
 
       ![Hide Add Details Section](media/customize-inspection-steps/hide-add-details-section.png "Hide Add Details Section")
 
-   - [Hiding just the Photo option](#hiding-the-photo-option)
+   - [Hide just the Photo option](#hide-the-photo-option)
 
       ![Hide Photo Option](media/customize-inspection-steps/hide-photo-option.png "Hide Photo Option")
 
-   - [Hiding the Task option](#hiding-the-task-option)
+   - [Hide the Task option](#hide-the-task-option)
 
       ![Hide Task Option](media/customize-inspection-steps/hide-task-option.png)
 
-## Hiding the Add Details section
+## Hide the Add Details section
 
 Hiding the Add Details section includes more than just setting the Visible property of all those controls to False.
 
-1. Set the **Visible** property for the **Add details** label, and the other labels (Photo, Note and Task) and their icons to "False".
+1. Set the **Visible** property for the **Add details** label, and the other labels (Photo, Note, and Task) and their icons to "False".
 
     ![Add Details Label visibility False](media/customize-inspection-steps/lbladddetails-visible-false.png "Add Details Label")
 
@@ -76,7 +76,7 @@ Hiding the Add Details section includes more than just setting the Visible prope
 
     ![All icons visibility False](media/customize-inspection-steps/all-icons-visible-false.png "All icons visibility False")
 
-1. We'll also need to shrink the white space containing the Photo, Note and Task buttons to avoid wasting any extra space. Select **btnActionBackground** control from the tree view, select somewhere on the white space to highlight the box space.
+1. We'll also need to shrink the white space containing the Photo, Note, and Task buttons to avoid wasting any extra space. Select **btnActionBackground** control from the tree view, select somewhere on the white space to highlight the box space.
 
     ![Adjust Button Background](media/customize-inspection-steps/adjust-button-background.png "Adjust Button Background")
 
@@ -92,50 +92,51 @@ Hiding the Add Details section includes more than just setting the Visible prope
 
 The white space shrinks, and leaves no extra space hiding the entire **Add Details** section.
 
-### Hiding the Photo Option
+## Hide the Photo Option
 
-1.  For this scenario (assuming all the changes made above were undone), we will have to set the Visible property of the Photo option label and icon to false and then move the Note option and the Task Options to the left. 
-2.  To hide the Photo option, we will select grpPhoto from the tree view and set Visible = false.
+This scenario requires to revert all the changes made above. And then, we'll have to set the **Visible** property of the Photo option label, and icon to "False", and then move the Note option and the Task Options to the left.
 
-![Photo visibility set to False](media/customize-inspection-steps/set-grpphoto-visible-false.png "Photo visibility set to False")
+1. To hide the Photo option, select **grpPhoto** from the tree view, and set **Visible** property to "False".
 
-3. The Note option needs to move to the left in place of the Photo option – for this copy the X property of the Photo Icon and paste it in the X property of the Note icon (Notice that the label also moves along with the icon – this is because the Note label’s X property is dependent on the Note icon’s X
-   property and changes accordingly thus leaving no empty spaces – the Task option also reacts similarly) 
+    ![Photo visibility set to False](media/customize-inspection-steps/set-grpphoto-visible-false.png "Photo visibility set to False")
 
-```
-btnImageBackground.X+18
-```
+1. The Note option needs to move to the left in place of the Photo option. Copy the X property of the Photo Icon and paste it in the X property of the Note icon (notice that the label also moves along with the icon&mdash;this is because the Note label’s X property is dependent on the Note icon’s X property, and changes accordingly thus leaving no empty spaces – the Task option also reacts similarly).
 
-![Adjust X position of Note icon](media/customize-inspection-steps/adjust-note-icon-x.png "Adjust X position of Note icon")
+    ```powerapps-dot
+    btnImageBackground.X+18
+    ```
 
-### Hiding the Task Option
+    ![Adjust X position of Note icon](media/customize-inspection-steps/adjust-note-icon-x.png "Adjust X position of Note icon")
 
-1.  For this scenario (assuming all the changes made above were undone), we only want to hide the Task section.
-    
-2.  Since there are no other controls dependent on the Task control it is a fairly straightforward change to make where we would change the Visible
-    property for grpTask to false.
-    
-3.  This was an easy change and did not need any additional changes as hiding the Task option does not really affect anything else.
+## Hide the Task Option
+
+This scenario requires to revert all the changes made above. With this scenario, we only want to hide the Task section.
+
+Change the **Visible** property for **grpTask** to "False".
 
 ![Task visibility set to False](media/customize-inspection-steps/set-grptask-visible-false.png "Task visibility set to False")
 
-### Publish the Inspection app
+## Publish the Inspection app
 
-1.  All the changes to the Inspection app are completed.
+All the changes to the Inspection app are completed. 
 
-2.  The app can now be published by selecting the Publish to Teams button on the top right.
+1. Select **Publish to Teams** on the top-right.
 
-![Publish to Teams](media/customize-inspection-steps/publish-to-teams.png "Publish to Teams")
+    ![Publish to Teams](media/customize-inspection-steps/publish-to-teams.png "Publish to Teams")
 
-![Confirm publishing to Teams](media/customize-inspection-steps/confirm-publishing-to-teams.png "Confirm publishing to Teams")
+1. Select **Next**.
 
-![Add app to Channel](media/customize-inspection-steps/add-to-channel.png "Add app to Channel")
+    ![Confirm publishing to Teams](media/customize-inspection-steps/confirm-publishing-to-teams.png "Confirm publishing to Teams")
+
+1. Select **Save and close**.
+
+    ![Add app to Channel](media/customize-inspection-steps/add-to-channel.png "Add app to Channel")
 
 ## Test the app
 
-1.  On the Inspection list screen, once you make the change for any of the above listed scenarios, hit the Preview button to run the app.
-    
-2.  Make sure to check for responsiveness by shrinking the size of the screen when testing in the Window mode.
+On the Inspection list screen, once you make the change for any of the above listed scenarios, select **Preview** to run the app.
+
+Make sure to check for responsiveness by shrinking the size of the screen when testing in the Window mode.
 
 ### See also
 
