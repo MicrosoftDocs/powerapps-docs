@@ -150,8 +150,8 @@ For select connectors, admins can suppress this dialog, and consent on behalf of
 
 | Connector type                                                                                                                                           | Consent dialog suppressible? | Reference               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|-------------------------|
-| Microsoft First Party connectors that support single sign-on (such as SharePoint, Office 365 users)                                                         | Yes                          | [Power Apps admin cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappapistobypassconsent) |
-| Connector accessing a non-Microsoft, third party service, such as Salesforce                                                                                  | No                           | Not applicable                    |
+| Microsoft first-party connectors that support single sign-on (such as SharePoint, Office 365 users)                                                         | Yes                          | [Power Apps admin cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappapistobypassconsent) |
+| Connector accessing a non-Microsoft, third-party service, such as Salesforce                                                                                  | No                           | Not applicable                    |
 | Custom connectors using OAuth with Azure Active Directory as the identity provider. These are custom connectors built by organizations, and are only accessible by the users within the organization (for example, built by Contoso for only Contoso users) | No                           | Not applicable                    |
 
 Microsoft Power Platform is only able to suppress the consent dialog for connections to data sources where:
@@ -160,7 +160,7 @@ Microsoft Power Platform is only able to suppress the consent dialog for connect
 1. The data source pre-authorizes Microsoft’s Azure API connections service principal to enable single-sign-on.
 1. An admin configures an app to suppress the consent for the preceding connections.
 
-The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft's first party data sources, and may be configured by custom applications registered in an Azure AD tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
+The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and may be configured by custom applications registered in an Azure AD tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
