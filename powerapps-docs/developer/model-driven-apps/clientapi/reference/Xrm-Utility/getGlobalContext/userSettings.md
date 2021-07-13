@@ -1,7 +1,7 @@
 ---
 title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
-ms.date: 04/21/2021
+ms.date: 07/13/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -110,7 +110,7 @@ Returns the language ID for the current user.
 
 ## roles
 
-Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to a team that the user is associated with. This method is supported only on Unified Interface.
+Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to the team that the user is associated with. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -138,7 +138,7 @@ Returns an array of strings that represent the GUID values of each of the securi
 
 ## getSecurityRolePrivilegesInfo()
 
-Returns a Promise which resolves with an object whose keys are the security role privilege GUIDs and values are objects containing the `businessUnitId`, `depth`, and `privilegeName` of the security role privilege.
+Returns a promise which resolves with an object whose keys are the security role privilege GUIDs and values are objects containing the `businessUnitId`, `depth`, and `privilegeName` of the security role privilege.
 
 ### Syntax
 
