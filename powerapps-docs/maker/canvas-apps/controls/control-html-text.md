@@ -83,7 +83,6 @@ Don't know how to [add, name, and configure a control](../add-configure-controls
    
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
-
 ## Accessibility guidelines
 **HTML text** is not meant to be interactive. It should only be used for text display.
 
@@ -98,5 +97,7 @@ There must be adequate color contrast between:
 ### Keyboard support
 * **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps does not consider elements inside **HtmlText**.
 
+### Limitations
+**HTML text** control assumes the **HtmlText** is relatively positioned.  In the case that you need to use absolute positioning for your HTML text you can wrap the text around a relatively positioned div.  `"<div style='position:relative'>" & varPageContent & "</div>"`
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
