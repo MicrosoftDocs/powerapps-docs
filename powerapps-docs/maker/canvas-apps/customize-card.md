@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/18/2018
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker

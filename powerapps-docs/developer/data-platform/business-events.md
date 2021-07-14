@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 06/12/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - maker

@@ -2,6 +2,7 @@
 title: Control Element | Microsoft Docs
 description: Defines the component's namespace, version and display information.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

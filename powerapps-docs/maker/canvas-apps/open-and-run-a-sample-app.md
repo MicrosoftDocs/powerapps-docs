@@ -9,6 +9,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: tapanm
 ms.date: 10/16/2020
+ms.subservice: canvas-maker
 ms.author: wimcoor
 search.audienceType: 
   - maker

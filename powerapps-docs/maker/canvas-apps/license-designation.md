@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
+ms.subservice: canvas-maker
 ms.date: 07/13/2021
 ms.author: alaug
 search.audienceType: 

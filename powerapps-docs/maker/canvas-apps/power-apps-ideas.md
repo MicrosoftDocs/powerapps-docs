@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: tapanm
 search.audienceType: 

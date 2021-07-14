@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/23/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker

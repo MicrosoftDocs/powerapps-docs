@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/01/2017
+ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 06/15/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:

@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/19/2021
+ms.subservice: canvas-maker
 ms.author: hasharaf
 search.audienceType: 
   - maker

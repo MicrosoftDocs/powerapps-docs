@@ -10,6 +10,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: tapanm
 ms.date: 03/16/2020
+ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
   - maker

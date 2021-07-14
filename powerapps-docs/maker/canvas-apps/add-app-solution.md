@@ -7,6 +7,7 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: caburk
 search.audienceType: 
   - maker
