@@ -3,6 +3,7 @@ title: Monitor overview
 description: Overview of Power Apps Monitor.
 author: hasharaf
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -4,9 +4,9 @@ description: Learn about how to embed canvas apps in your applications using the
 author: nkrb
 manager: kvivek
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
 ms.custom: canvas
-ms.subservice: canvas-maker
 ms.author: nabuthuk
 ms.date: 08/23/2019
 search.audienceType: 

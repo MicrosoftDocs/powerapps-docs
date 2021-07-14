@@ -4,11 +4,11 @@ description: Learn about creating, using, sharing, and certifying custom connect
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/05/2017
-ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker

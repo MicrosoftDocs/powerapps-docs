@@ -3,6 +3,7 @@ title: Power Apps Developer Plan
 description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse.
 author: evanmlew
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 06/24/2021
