@@ -1,0 +1,57 @@
+---
+title: "Customize the command bar (preview) | MicrosoftDocs"
+description: "Use the command designer to customize the command bar."
+Keywords: command bar, command designer
+author: caburk
+ms.author: caburk
+ms.reviewer: matp
+manager: kvivek
+ms.date: 07/26/2021
+ms.service: powerapps
+ms.topic: conceptual
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
+# Customize the command bar using command designer
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+This topic guides you through creating and editing modern commands using the new low-code designer and Power Fx.
+
+  > [!IMPORTANT]
+  > - This is a preview feature, and may not be available in all regions.
+  > - This is a new infrastructure that stores metadata separately from classic commands. However, classic and modern commands can run side-by-side.
+  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  
+ ### Create a new model-driven app using modern app designer
+
+1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+
+1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
+
+1. Select **New** > **App** > **Model-driven app**
+
+1. Select **Use modern app designer**, and then select **Next**
+
+    > [!div class="mx-imgBorder"]
+    > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")
+
+1. Enter the new app's name.
+
+    > [!div class="mx-imgBorder"]
+    > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
+
+### Open an existing model-driven app using modern app designer
+
+1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+
+1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
+
+1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
+
+    > [!div class="mx-imgBorder"]
+    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
