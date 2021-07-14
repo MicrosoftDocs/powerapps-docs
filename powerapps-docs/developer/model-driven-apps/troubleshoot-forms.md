@@ -341,7 +341,7 @@ There are multiple reasons why a control may/may not have a certain value on for
 
 **Resolution:**
 
-The `ControlDefaultValue` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explains the source of the default values. 
+The `ControlDefaultValue` operation in [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) explains the source of the default values. 
 
 > [!div class="mx-imgBorder"]
 > ![Default control value.](media/control-default-value.png "Default control value")
