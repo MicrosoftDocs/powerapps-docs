@@ -8,6 +8,7 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2018
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker

@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
+ms.subservice: dataverse-developer
 ms.author: "mayadu" 
 manager: "annbe" 
 search.audienceType: 

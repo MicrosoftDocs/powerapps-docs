@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2017
+ms.subservice: canvas-maker
 ms.author: aneesa
 search.audienceType: 
   - maker

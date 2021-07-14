@@ -2,6 +2,7 @@
 title: Best practices and guidance for code components created using Power Apps component framework  | Microsoft Docs
 description: Best practices and guidance on how to use code components created using Power Apps component framework
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 contributors:

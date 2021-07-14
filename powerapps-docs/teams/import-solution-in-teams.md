@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 03/11/2020
+ms.subservice: teams
 ms.author: wimcoor
 ms.reviewer: matp
 ---

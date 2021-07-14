@@ -7,6 +7,7 @@ ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/08/2021
+ms.subservice: canvas-maker
 ms.author: denisem
 search.audienceType: 
   - maker

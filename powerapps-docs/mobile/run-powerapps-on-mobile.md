@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 06/29/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""

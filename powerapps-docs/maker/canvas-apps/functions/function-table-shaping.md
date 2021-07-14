@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 04/04/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker

@@ -6,6 +6,7 @@ author: JimDaly
 manager: ryjones
 ms.service: powerapps
 ms.date: 03/11/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: "pehecke"
 ms.custom: intro-internal

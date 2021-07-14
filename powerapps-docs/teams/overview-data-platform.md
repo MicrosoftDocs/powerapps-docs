@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 09/22/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
 ---

@@ -9,6 +9,7 @@ ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.component: canvas
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
