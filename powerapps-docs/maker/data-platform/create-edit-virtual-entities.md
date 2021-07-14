@@ -61,7 +61,7 @@ Alternatively, developers can build their own data providers. Data providers are
  
     |Data Provider|Description|
     |--|--|
-    |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)|
+    |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual tables](/powerapps/developer/data-platform/virtual-entities/get-started-ve)|
     |**OData v4 Data Provider**|Dataverse includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
 
   
