@@ -3,11 +3,11 @@ title: Get a session ID or a canvas-app ID
 description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
 author: tapanm-msft
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/24/2021
-ms.subservice: troubleshoot
 ms.author: tapanm
 search.audienceType: 
   - maker

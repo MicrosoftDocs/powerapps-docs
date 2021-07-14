@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 04/13/2020
-ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker

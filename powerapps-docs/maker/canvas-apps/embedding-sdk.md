@@ -7,7 +7,6 @@ ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
 ms.custom: canvas
-ms.subservice: canvas-maker
 ms.author: nabuthuk
 ms.date: 08/23/2019
 search.audienceType: 
