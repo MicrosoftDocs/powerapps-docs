@@ -1,0 +1,62 @@
+
+---
+title: "Command designer overview | MicrosoftDocs"
+description: "Overview of modern commanding, command designer, and Power Fx"
+Keywords: command bar, command designer
+author: caburk
+ms.author: caburk
+ms.reviewer: matp
+manager: kvivek
+ms.date: 07/26/2021
+ms.service: powerapps
+ms.topic: conceptual
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+# Modern commanding overview
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+  > [!IMPORTANT]
+  > - This is a preview feature, and may not be available in all regions.
+  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  
+ Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar. 
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Command bar](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-location.png "Command bar")
+ 
+ ## Classic commanding gaps
+ Classic commands (formerly known as the ribbon) were not customizable via low code; with code it was difficult, tedious, & error prone.   In order to scale commanding to low-code as well as **converge canvas and model-driven apps**, it was vital to re-invent and re-build the infrastructure. 
+
+**Classic commands** had several key **gaps** including:
+  - No low code designer
+  --Resulted in many forced XML hacks & often caused breaking changes
+  - Different apps couldn’t use a different set of commands for common tables
+  - Lack of granular level scopes could impact performance due to processing unused logic on the client.
+  - The legacy solution implementation was designed for the now deprecated web client. It has been highly problematic and has an overly complex structure that’s no longer needed in the unified client. 
+  - “Ribbon” concepts that are no longer relevant: Tabs, Groups, Scaling, MaxSize, TabCommands, CustomActions, HideCustomActions. 
+  - Classic “Ribbons” and commands lacked proper ALM support and management within solutions.
+  - Legacy code wasn’t capable of handling app separation, solution segmentation, solution patches, promote and delete concept (solution upgrade).
+  - Missing all core solution behaviors like add/remove, managed properties, dependencies, etc
+  - Had different/unnatural mechanism for localization
+  - Too flexible – every custom action, button, group, command action, or rule, at every level can be overridden. Hard for customers to understand what has been modified.
+    
+  ## Modern commanding key improvements
+  While various limitations are present during this preview, modern commanding largely addresses the above gaps and provides a modern infrastructure that will continue to scale.
+  
+   - New infrastructure, combines benefits of canvas and model-driven apps
+   - Low-code designer 
+   - Power Fx support for visibility and actions 
+   - JavaScript remains supported
+   - Better ALM support
+   - Better app level control – commands are applied to individual apps
+   - Simple, flat data model
+   - Many work-arounds used today are no longer needed
+   - Classic commands remain supported, Apps can run both classic + modern commands side by side 
+   - No forced customer migration 
+   - Arrange modern commands amongst existing classic commands
+
