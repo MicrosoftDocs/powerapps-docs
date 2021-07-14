@@ -27,11 +27,11 @@ This topic provides tips to design a custom page for use in a model-driven app.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Supported controls in custom page
-Custom page authoring will start with a subset of controls supported and will be gradually adding more controls.  Interaction with controls not supported may change so they should not be used until supported.
+Custom page authoring will start with a subset of controls supported and will be gradually adding more controls. Interaction with controls currently not supported may change so they should not be used until they are officially supported.
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
-  |Custom control|Custom|See [Power Apps Component Framework supported canvas control](../../developer/component-framework/overview.md)|
+  |Code Components|Custom|See [Power Apps component framework for canvas apps](../../developer/component-framework/component-framework-for-canvas-apps.md)|
   |Label<sup>1</sup>|Display||
   |Text Box<sup>1</sup>|Input||
   |Date Picker<sup>1</sup>|Input|
