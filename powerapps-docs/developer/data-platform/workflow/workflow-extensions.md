@@ -331,7 +331,7 @@ When you register an assembly containing custom workflow activities the version 
 
 You will find a section at the bottom that looks like this:
 
-```
+```csharp
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
