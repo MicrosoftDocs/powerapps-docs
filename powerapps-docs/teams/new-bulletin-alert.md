@@ -16,7 +16,7 @@ contributors:
   - sbahl10
 ---
 
-# Bulletins App – Send an alert when a new bulletin is posted
+# Send an alert when a new bulletin is posted
 
 The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search, and read bulletin posts.
 
