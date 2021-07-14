@@ -1,6 +1,6 @@
 ---
 title: Create a choice| Microsoft Docs
-description: Step-by-step instructions for how to create an choice.
+description: Step-by-step instructions for how to create a choice.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -88,7 +88,7 @@ Choices can be created in two ways, either from the **Choices** list within the 
 
 ## Global and local choices
 
-By default, Choices are created as Global Choices which allows them to be reused across multiple tables. Under the **View more** option when creating a new Choice you can chose to make an Choice **Local**. This option is only available when creating an Choice while adding a column, and not through the **Choices** list. Local choices can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
+By default, Choices are created as Global Choices which allows them to be reused across multiple tables. Under the **View more** option when creating a new Choice you can chose to make a Choice **Local**. This option is only available when creating a new Choice while adding a column, and not through the **Choices** list. Local choices can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
 
 > [!IMPORTANT]
 > Once a choice  is created as local or global, this cannot be changed.

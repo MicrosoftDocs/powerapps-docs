@@ -1,7 +1,7 @@
 ---
 title: Developer learning catalog
-description: Find all the training options for Power Apps
-author: loreleishannonmsft
+description: Find all the training options for Power Apps developers
+author: MargoC
 ms.topic: article
 ms.date: 02/19/2020
 ms.service: powerapps
@@ -28,7 +28,7 @@ The following catalog is organized from core knowledge to specific domains, and 
 | [Work with Dataverse Web API](/learn/modules/common-data-service-web-api/)                                      | Learn about working with the Dataverse Web API   | Free, self-paced online learning path                                          | 2 hours |
 | [Integrate Dataverse Azure solutions](/learn/modules/integrate-common-data-service-azure-solutions/)            | Gain an in-depth overview of options available within Dataverse to integrate data and events to Azure.   | Free, self-paced online learning path                                          | 2 hours |
 | [Access Dataverse data in Dynamics 365 portals](/learn/modules/access-common-data-service-dynamics-365/)        | The ability to easily surface and interact with Dataverse data on a website is one of the core benefit for implementing a Dynamics 365 Portal. This module will focus on the techniques and methods to display and interact with Dataverse data on the Dynamics 365 Portal.| Free, self-paced online learning path                                          | 1 hour  |
-| [Microsoft Power Apps + Dynamics 365 Developer](/learn/certifications/courses/mb-400t00)                             | In this course, Power Apps Developers will build on their existing knowledge of the Power Platform, Microsoft stack, and standard development tools and practices. Power Apps Developers will learn how to estimate effort and scope; validate requirements and design technical architecture; create data models; determine implementation tools; and document their technical design. Broad topics will include implementing user security and accessibility; managing environments; extending the Dataverse; creating and using web resources; and working with plug-ins. | Instructor-led in person or online training, cost varies by region and partner | 3 days  |
+| [Microsoft Power Power Platform Developer](/learn/certifications/courses/pl-400t00)                             | In this course, Power Apps Developers will build on their existing knowledge of the Power Platform, Microsoft stack, and standard development tools and practices. Power Apps Developers will learn how to estimate effort and scope; validate requirements and design technical architecture; create data models; determine implementation tools; and document their technical design. Broad topics will include implementing user security and accessibility; managing environments; extending the Dataverse; creating and using web resources; and working with plug-ins. | Instructor-led in person or online training, cost varies by region and partner | 3 days  |
 ## App Creation<a name="app creation"></a>
 | Content  | Description     | Format     | Length    | 
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|----------------------------------------------------------|
