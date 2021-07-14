@@ -1,0 +1,40 @@
+---
+title: "Manage commands in solutions | MicrosoftDocs"
+description: "Modern commands can be managed in solutions."
+Keywords: command bar, command designer
+author: caburk
+ms.author: caburk
+ms.reviewer: matp
+manager: kvivek
+ms.date: 07/26/2021
+ms.service: powerapps
+ms.topic: conceptual
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
+# Manage commands in solutions
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Core solution actions](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-core-solution-actions.png "Core solution actions")
+
+- Add things that depend on it
+- Block commands from being customized (managed properties)*
+- View dependencies
+- Troubleshoot by viewing which solutions modified the component and when (solution layers)*
+- Remove any unmanaged customizations if in an unhealthy state
+- Add or remove from solution
+- Segment solutions and ship minor updates or patches
+    > [!div class="mx-imgBorder"]
+    > ![Clone a patch](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-clone-a-patch.png "Clone a patch")
+- Works with solution upgrade so can delete component by importing new version
+- Standardized localization via export/import translations
+
+## Related topics
