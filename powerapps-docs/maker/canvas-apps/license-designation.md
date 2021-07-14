@@ -64,6 +64,9 @@ The following table outlines the designations and which license an end user must
 1. Select **Details**:
 
     ![App designation in details.](media/license-designation/app-details-page.png)
+    
+## Known issues
+1. The use of the HTTP connector in a Flow that is connected to an app, isn't recognized by the app's license designation. E.g. an app that only uses standard connectors and is connected to a flow using the HTTP connector will have a license designation as 'standard' although it requires end-users to have 'premium' use rights. 
 
 ## Pass assignment
 
