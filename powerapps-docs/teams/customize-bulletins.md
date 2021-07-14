@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/07/2021
+ms.date: 07/13/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -156,6 +156,14 @@ In this section, we discuss common customization/extension scenarios for Bulleti
 ### Send an alert when a new FAQ is posted
 
 For notifications when a new FAQ is published, use Power Automate flow running when a row is added to the Bulletin FAQ table.
+
+### Add contact phone in Links and Contacts section
+
+By default, contacts in Bulletins do not include phone number. Add a phone number column to the Bulletin Contacts table and add the phone number to the Contact Detail Screen and Mobile Contacts Screen. For more details see [Add contact phone in Links and Contacts](bulletins-contact-phone.md).
+
+### Add **notify me** settings to a category
+
+If users wanted to be notified when a new bulletin was posted in a category, you can create a flow to notify them when a new bulletin is posted. For more details see [Add notify me settings to category](bulletins-notify-me.md).
 
 ## Publish changes
 
