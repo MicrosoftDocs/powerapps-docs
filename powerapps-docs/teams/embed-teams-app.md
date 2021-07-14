@@ -2,20 +2,23 @@
 title: Embed an app in Teams  | Microsoft Docs
 description: You can embed an app created in Power Apps in Microsoft Teams to share it.
 author: matthewbolanos
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 07/14/2021
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - alaug
+  - navjotm
+  - tapanm-msft
 ---
 # Embed a canvas app as personal app in Teams
 
@@ -132,7 +135,7 @@ You can optionally preload your app within Teams to increase performance.
 4. For the changes to take effect, remove and add your app into Teams again.
 
 > [!NOTE]
-> This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This ensures that your app data will not be available to unauthenticated users. Information in the compiled app includes: a collection of JavaScript files containing text authored in app controls, media assets (e.g. images), the app name, the environment URL the app resides in.  
+> This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that your app data won't be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in.  
 
 ### See also
 
