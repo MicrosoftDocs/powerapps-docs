@@ -72,10 +72,14 @@ Command designer can currently only be accessed through the modern app designer.
  1. Select any table from the **Pages** area.
  
  1. Click the elipsis. Select **Edit command bar (preview)** 
+    > [!div class="mx-imgBorder"]
+    > ![App Designer entry point](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-App designer entry point.png "App Designer entry point")
  
  1. Select the **location** of the command bar you'd like to edit.
- 
-  ### Create a new command
+    > [!div class="mx-imgBorder"]
+    > ![Select location](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Command bar location selection.png "Select location")
+  
+ ### Create a new command
  > [!NOTE]
  > Unlike classic commands, modern commands will only be displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance. Support for creating commands that display across all apps is targeted for a future release. 
  > A command component library will be created on your behalf to store **Power Fx** formulas.
@@ -107,11 +111,20 @@ Command designer can currently only be accessed through the modern app designer.
 
 2.	Click **Add library** or select one from the list. The list is populated with any libraries in use by the current command bar. 
  
+    > [!div class="mx-imgBorder"]
+    > ![Add JavaScript Library](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
+
 3.	Search for existing JavaScript web resources or you may add your own. **Add**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Add JavaScript Library](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Library Modal.png "Add JavaScript Library")
  
 4.	Type the Function name.	For example, chose the Main_system_library.js then call this function: XrmCore.Commands.Open.opennewrecord
 
 6.	Add parameters to pass to your function. Existing functionality is supported here. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Add Parameters](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Parameters.png "Add Parameters")
  
   > [!NOTE] 
   > We are not supporting the use of calling multiple JavaScript libraries or calling multiple functions from a single command.
