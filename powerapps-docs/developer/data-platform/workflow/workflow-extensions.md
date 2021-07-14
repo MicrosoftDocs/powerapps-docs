@@ -307,10 +307,10 @@ The following example shows using the tracing service to write the following mes
 protected override void Execute(CodeActivityContext context)
 {
 //Create the tracing service
-ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+ITracingService tracingService = context.GetExtension<ITracingService>();
 
 //Use the tracing service
-tracingService.Trace("{0} {1} {2}.","Add","your","message");
+tracingService.Trace("{0} {1} {2}.", "Add", "your", "message");
 ...
 ```
 
