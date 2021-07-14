@@ -66,7 +66,7 @@ You can modify the status reason column options for the Case table and custom ta
   
  When you edit a status reason column the **Edit Status Reason Transitions** button is in the menu. 
 
-![Edit Status Reason Transitions command](media/status-reason-transitions-command.png)
+![Edit Status Reason Transitions command.](media/status-reason-transitions-command.png)
 
 When you click this button the **Status Reason Transitions** dialog provides the option to choose **Enable Status Reason Transitions**. When this option is selected you must define which *other* status reason values are allowed for each status reason. To remove the filtering applied, remove the **Enable Status Reason Transitions** selection. The transitions you have defined will be kept but not applied.  
   
@@ -79,7 +79,7 @@ The screenshot below provides an example that meets the following requirements:
   > [!NOTE]
   >  This is not a good example for real work, but it demonstrates how stages of status can be enforced through status reason transitions.  
   
- ![Example of status reason transitions for case](media/status-reason-transitions-example.PNG)  
+ ![Example of status reason transitions for case.](media/status-reason-transitions-example.PNG)  
   
 ### See Also  
 

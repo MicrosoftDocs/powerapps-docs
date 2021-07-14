@@ -76,9 +76,9 @@ The control can have a horizontal or vertical layout.
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

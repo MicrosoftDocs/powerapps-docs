@@ -47,13 +47,13 @@ Within the Ad form, you specify a **Name** to describe the ad, the **Website** w
 When creating a new ad placement, specify a **Name** to describe the ad placement and the **Website** where the ad placement will be displayed as required. The example Web Templates that enable the use of ads as an out-of-the-box feature will be displayed within the lookup of the Web Template field in the form. These templates are also intended to be used as a source to create custom templates.
 
 > [!div class=mx-imgBorder]
-> ![See lookup record](../media/see-lookup-record.png "See lookup record")  
+> ![See lookup record.](../media/see-lookup-record.png "See lookup record")  
 
 > [!div class=mx-imgBorder]
-> ![Sidebar bottom settings](../media/set-sidebar-bottom.png "Sidebar bottom settings")  
+> ![Sidebar bottom settings.](../media/set-sidebar-bottom.png "Sidebar bottom settings")  
 
 > [!div class=mx-imgBorder]
-> ![Ad company portal](../media/ad-company-portal.png "Ad company portal")  
+> ![Ad company portal.](../media/ad-company-portal.png "Ad company portal")  
 
 > [!NOTE] 
 > The ad created above will not be displayed on the home page of the starter portal.

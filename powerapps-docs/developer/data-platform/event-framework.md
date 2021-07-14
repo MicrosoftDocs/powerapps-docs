@@ -39,7 +39,7 @@ As described in [Use messages with the Organization service](org-service/use-mes
 
 When you use the Plug-in Registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 
-![Dialog to register a step](media/register-new-step-plug-in.png)
+![Dialog to register a step.](media/register-new-step-plug-in.png)
 
 A step provides the information about which message the extensions should respond to as well as a number of other configuration choices. Use the **Message** field to choose the message your extension will respond to.
 

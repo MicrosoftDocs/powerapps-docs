@@ -43,7 +43,7 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
 1. Select **Drop down**.
 
-    ![Select Drop down](./media/scenarios-choice-to-lookup/insert-drop-down.png "Select Drop down")
+    ![Select Drop down.](./media/scenarios-choice-to-lookup/insert-drop-down.png "Select Drop down")
 
 1. Update the **Items** property with the following formula:
 
@@ -51,11 +51,11 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
     Replace **Vehicle registration** with the name of your SharePoint list and **Vehicle type** with the name of the lookup column in the list.
 
-    ![Choices formula](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
+    ![Choices formula.](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
 1. Play the app, or press **Alt** on the keyboard and select the drop-down list.
 
-    ![Drop-down choices](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
+    ![Drop-down choices.](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
 
 ### See also
 

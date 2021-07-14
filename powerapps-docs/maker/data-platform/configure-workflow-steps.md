@@ -81,7 +81,7 @@ The actions that you will apply often depend on conditions. Real-time workflow p
   
 The following screenshot contains an example of the workflow process definition with the **Under** and **Not Under** hierarchical operators. In our example, we apply two different discounts to two groups of accounts. In **Add Step**, we selected the **Check Condition** to specify the **if-then** condition containing the **Under** or **Not Under** operators. The first **if-then** condition applies to all accounts that are **Under** the Alpine Ski House account. These accounts receive a 10% discount on purchased good and services. The second **if-then** condition applies to all accounts that are **Not Under** the Alpine Ski House account and they receive a 5% discount. Then, we selected **Update Row** to define the action to be performed based on the condition.  
   
-![Workflow process with Under&#47;Not Under operators](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")  
+![Workflow process with Under&#47;Not Under operators.](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")  
   
 <a name="BKMK_SynchronousWorkflows"></a>   
 

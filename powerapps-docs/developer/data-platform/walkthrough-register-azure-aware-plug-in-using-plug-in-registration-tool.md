@@ -49,7 +49,7 @@ Follow the steps below to connect to Dataverse using the Plug-in Registration to
 1. Click **Create New Connection**.  
 1. In the **Login** dialog box, select **Microsoft 365**.
 
-    ![Login form for an online deployment](media/crm-v6s-pr.png "Login form for an online deployment")
+    ![Login form for an online deployment.](media/crm-v6s-pr.png "Login form for an online deployment")
 
 1. If you check **Display list of available organizations**, you are presented with a list of organizations that you belong to after you click **Login**. This enables you to choose the organization that you want to register the service endpoint with. Otherwise, your default organization is used.  
 1. Enter the indicated information about the server and logon account, and then click **Login**.  
@@ -64,7 +64,7 @@ Follow the steps below to register a step for an event on the service endpoint.
 1. Navigate to the **Register** menu and click **Register New Step**.  
 1. Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.
 
-    ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
+    ![Creating a service endpoint step.](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
   
 1. Click **Register New Step**.  
   

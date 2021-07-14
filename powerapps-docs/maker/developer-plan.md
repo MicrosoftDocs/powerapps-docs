@@ -5,7 +5,7 @@ author: evanmlew
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/16/2021
+ms.date: 06/24/2021
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -56,14 +56,14 @@ Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevP
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
 may need to select your developer environment in the top right of the screen. It will be shown with your name, for example "John Doe's environment". If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment". You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
 
-![Individual environment for Developer Plan](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
+![Individual environment for Developer Plan.](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
 
 ### Get the Developer Plan with Visual Studio Dev Essentials
 
 If you're a Visual Studio Dev Essentials user, the Power Apps Developer Plan is included in your benefits. Visit [My
 benefits](https://my.visualstudio.com/benefits), and select the Power Apps tile to sign up for the Power Apps Developer Plan.
 
-![Power Apps Developer Plan in Visual Studio](media/developer-plan/power-apps-plan.png "Power Apps Developer Plan in Visual Studio")
+![Power Apps Developer Plan in Visual Studio.](media/developer-plan/developer_plan_developer_essentials.png "Power Apps Developer Plan in Visual Studio")
 
 ## Which features are included in the Power Apps Developer Plan?
 
@@ -117,6 +117,8 @@ business. For more information, see [Publish your app on
 AppSource](../developer/data-platform/publish-app-appsource.md).
 
 ## Frequently Asked Questions
+
+The following section lists frequently asked questions relevant to Power Apps Developer Plan. For more information about different types of environments including developer environment, see [Types of environments in Power Platform](/power-platform/admin/environments-overview#types-of-environments).
 
 ### What should I do if I reach the capacity limits of the environment?
 

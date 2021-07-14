@@ -73,7 +73,7 @@ Now, let's add another card with another control.
     ![A line chart added to the bottom of the new card][12]
 3. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
    
-    ![Open Preview mode](./media/add-scrolling-screen/open-preview.png)
+    ![Open Preview mode.](./media/add-scrolling-screen/open-preview.png)
 4. Scroll down to display the new line chart.  
    
     ![Preview shows the line chart][13]

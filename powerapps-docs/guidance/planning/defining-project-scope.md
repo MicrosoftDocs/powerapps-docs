@@ -54,7 +54,7 @@ Looking at our business process, we see that it's divided into five main tasks:
 
 5. Auditing
 
-![Business process flowchart with major tasks and task location called out](media/task-chart.png "Business process flowchart with major tasks and task location called out")
+![Business process flowchart with major tasks and task location called out.](media/task-chart.png "Business process flowchart with major tasks and task location called out")
 
 We think we have the expertise to create an expense report app and the approvals
 process. The auditing requirements seem to have quite a bit of overlap with what

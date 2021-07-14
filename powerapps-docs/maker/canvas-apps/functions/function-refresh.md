@@ -30,7 +30,7 @@ The **Refresh** function retrieves a fresh copy of a data source.  You'll see ch
 ## Example
 In this example, you'll refresh the data source named **IceCream**, which starts with this data:
 
-![IceCream example](media/function-refresh/icecream.png)
+![IceCream example.](media/function-refresh/icecream.png)
 
 A user on another device changes the **Quantity** in the **Strawberry** record to **400**.  You won't see this change until this formula executes:
 
@@ -38,7 +38,7 @@ A user on another device changes the **Quantity** in the **Strawberry** record t
 
 After that formula executes, galleries that are bound to the **IceCream** data source will show the updated value for **Strawberry**:
 
-![IceCream after refresh](media/function-refresh/icecream-after.png)
+![IceCream after refresh.](media/function-refresh/icecream-after.png)
 
 
 

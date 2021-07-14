@@ -47,7 +47,7 @@ Only the **Owner** or **Co-owner** of an app can export a canvas app package. To
 
 To export a canvas app package, select your app, and then select **Export Package**.
 
-![Export package GIF demo with example export walkthrough](media/export-import-app/export-app.gif "Export package GIF demo with example export walkthrough")
+![Export package GIF demo with example export walkthrough.](media/export-import-app/export-app.gif "Export package GIF demo with example export walkthrough")
 
 You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will become the default action during the app import.
 
@@ -66,28 +66,28 @@ You can change the default **Import Action** for each resource that your canvas 
 
 1. Select **Export Package**.
 
-    ![Select export](media/export-import-app/export-app.png "Select export")
+    ![Select export.](media/export-import-app/export-app.png "Select export")
 
 1. Enter the package **Name** and **Description**. You can also change the **Environment** name, if needed.
 
-    ![Review package details](media/export-import-app/export-app-details.png "Review package details")
+    ![Review package details.](media/export-import-app/export-app-details.png "Review package details")
 
 1. Select **Update** to choose the import action for the app package resource.
 
-    ![Configure package content action](media/export-import-app/import-app-package-content-action.png "Configure package content action")
+    ![Configure package content action.](media/export-import-app/import-app-package-content-action.png "Configure package content action")
 
 1. Select **Create as new** if the app should be created during import, or **Update** to update an existing app.
 
-    ![Import setup](media/export-import-app/import-setup.png "Import setup")
+    ![Import setup.](media/export-import-app/import-setup.png "Import setup")
 
     > [!NOTE]
     > The **Import Setup** action text changes depending on your new selection.
 
 1. Repeat the previous step for each additional resource in the app package.
 
-1. (Optional) Select ![Import comment icon](media/export-import-app/comment.png "Import comment icon") (comment icon) to insert a comment for each resource.
+1. (Optional) Select ![Import comment icon.](media/export-import-app/comment.png "Import comment icon") (comment icon) to insert a comment for each resource.
 
-    ![Import comment](media/export-import-app/add-comment.png "Import comment")
+    ![Import comment.](media/export-import-app/add-comment.png "Import comment")
 
 1. Select **Export** to export the package.
 
@@ -97,7 +97,7 @@ The package is downloaded to your browser's default downloads folder.
 
 To import a canvas app package, select **Import canvas app**. Be sure to select the correct actions for each app package resource&mdash;for example, create a new instance of an app or a flow. You can also read additional information in comments that were entered while the app package was being exported.
 
-![Import package GIF demo with example export walkthrough](media/export-import-app/import-app.gif "Import package GIF demo with example export walkthrough")
+![Import package GIF demo with example export walkthrough.](media/export-import-app/import-app.gif "Import package GIF demo with example export walkthrough")
 
 If you're updating an existing app or resource, be sure to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
 
@@ -132,38 +132,38 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
 
 1. Select **Import canvas app**.
 
-    ![Select import](media/export-import-app/import-app.png "Select import")
+    ![Select import.](media/export-import-app/import-app.png "Select import")
 
 1. Select **Upload**, and select the app package file that you want to import.
 
-1. Select the **Import Setup** action, or ![Wrench icon](media/export-import-app/wrench.png "Wrench icon") for a resource.
+1. Select the **Import Setup** action, or ![Wrench icon.](media/export-import-app/wrench.png "Wrench icon") for a resource.
 
-    ![Select import action](media/export-import-app/update-import-action-when-importing.png "Select import action")
+    ![Select import action.](media/export-import-app/update-import-action-when-importing.png "Select import action")
 
     - If you select **Create as new**, you can change the resource name.
 
-        ![Select import action - resource name](media/export-import-app/create-as-new-resource-name.png "Select import action - resource name")
+        ![Select import action - resource name.](media/export-import-app/create-as-new-resource-name.png "Select import action - resource name")
 
     - If you select **Update**, select an app that you want to update during the import.
 
-        ![Select import action - update](media/export-import-app/update-import-action-select-app-to-update.png "Select import action - update")
+        ![Select import action - update.](media/export-import-app/update-import-action-select-app-to-update.png "Select import action - update")
 
 1. Repeat the previous step for each additional resource in the app package.
 
 1. (Optional) If the app package contains references to [connections](connections-list.md), you can choose the connection from the available connections list.
 
-    ![Select connection during import](media/export-import-app/select-connection-during-import.png "Select connection during import")
+    ![Select connection during import.](media/export-import-app/select-connection-during-import.png "Select connection during import")
 
     Select **Select during import** to choose the appropriate connection.
 
-    ![Select connection](media/export-import-app/select-or-create-connection-during-import.png "Select connection")
+    ![Select connection.](media/export-import-app/select-or-create-connection-during-import.png "Select connection")
 
     > [!NOTE]
     > If no connections are available, or the connection you want isn't listed, select **Create new** to create a new connection in a new browser tab. Ensure that you create the connection for the correct resource type. After creating the connection, return to the import app browser tab and select **Refresh list** to reflect and choose the newly created connection.
 
 1. (Optional) If comments were entered for a resource during the export of the app package, the comment icon will appear filled and the text **Comment yes** will appear when you hover over it. Select the comment to view it.
 
-    ![Comment available to view](media/export-import-app/comment-yes-during-import.png "Comment available to view")
+    ![Comment available to view.](media/export-import-app/comment-yes-during-import.png "Comment available to view")
 
 1. Select **Import** to import the app package.
 

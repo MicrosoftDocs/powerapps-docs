@@ -70,7 +70,7 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 2. On the left nav, select **Data** to expand it and then select **Tables**.  
 
    > [!div class="mx-imgBorder"]
-   >![Go to Tables in maker portal](media/maker-data-tables.png "Go to Tables in maker portal")
+   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")
    
   
 3. Select a table.
@@ -78,12 +78,12 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 4. On the command bar, select **Settings**. 
 
    > [!div class="mx-imgBorder"]
-   >![Select settings](media/maker-row-settings.png "Select setting")
+   >![Select settings.](media/maker-row-settings.png "Select setting")
 
 5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
 
    > [!div class="mx-imgBorder"]
-   >![Communication and collaboration activity enabled](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
+   >![Communication and collaboration activity enabled.](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
    
    > [!IMPORTANT]
    > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.

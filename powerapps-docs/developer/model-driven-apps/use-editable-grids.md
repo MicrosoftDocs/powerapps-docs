@@ -32,13 +32,13 @@ You can enable editable grids at the table level to use in the main grid, or at 
   
 2. In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
-     ![Add Editable Grids custom control](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
+     ![Add Editable Grids custom control.](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
 3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
 4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
   
-     ![Editable Grid row with form factor selection](../../maker/model-driven-apps/media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
+     ![Editable Grid row with form factor selection.](../../maker/model-driven-apps/media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
 
    > [!NOTE]
    >  At runtime, users can toggle between editable grids and read-only grids. 

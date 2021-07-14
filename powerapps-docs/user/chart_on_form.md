@@ -73,7 +73,7 @@ Legend:
 
 You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill-down option that you select will filter both chart and grid as shown in this illustration. 
 
-![Drill down into a chart](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
+![Drill down into a chart.](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
 
 For more information on how to use the drill-down feature, go to [Drill-down in a chart](./track-your-progress-with-dashboard-and-charts.md#drill-down-in-a-chart).
 

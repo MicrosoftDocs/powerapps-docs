@@ -66,7 +66,7 @@ You can reduce the complexity involved with data integration scenarios by using 
   
    The following illustration shows the process that unfolds when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received.  
   
-   ![upsert process flow](media/upsert-flowchart-dynamics-crm-2015.png "upsert process flow")  
+   ![upsert process flow.](media/upsert-flowchart-dynamics-crm-2015.png "upsert process flow")  
   
 <a name="BKMK_SampleCode"></a>   
 

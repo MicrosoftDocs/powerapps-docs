@@ -29,7 +29,7 @@ search.app:
 ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
 
 > [!div class="mx-imgBorder"]
-> ![Studio home page](media/isv-studio-home-page.png "Studio home page")
+> ![Studio home page.](media/isv-studio-home-page.png "Studio home page")
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -68,12 +68,12 @@ If you want more users within your tenant/organization to get,  read-only access
 1. In ISV Studio, select **Settings** gear icon on the top right. Select **Manage access**.
 
    > [!div class="mx-imgBorder"]
-   > ![Settings panel](media/isv-settings-panel.png "Settings panel")
+   > ![Settings panel.](media/isv-settings-panel.png "Settings panel")
 
 1. Search for a **Publisher account** in the organization. Select a user within your organization to give access. Select **Save**.
 
    > [!div class="mx-imgBorder"]
-   > ![User Management](media/isv-user-management-dashboard.png "User Management")
+   > ![User Management.](media/isv-user-management-dashboard.png "User Management")
 
    > [!NOTE]
    > You can only search and add users within your tenant/organization.

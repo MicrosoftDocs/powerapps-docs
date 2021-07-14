@@ -26,12 +26,12 @@ When you run Portal Checker, the results are displayed in the **Diagnostic Resul
 By default, information in the grid is sorted by the **Result** column in this order: error, warning, and pass.
 
 > [!div class=mx-imgBorder]
-> ![Diagnostic results](../media/diagnostic-results.png "Diagnostic results")
+> ![Diagnostic results.](../media/diagnostic-results.png "Diagnostic results")
 
 You can expand an issue to view detailed information and mitigation steps. If the mitigation requires any action, you'll see a button that will perform the action. You can also provide feedback on whether the mitigation was useful.
 
 > [!div class=mx-imgBorder]
-> ![Expand an issue in diagnostic results](../media/diagnostic-results-issue-expand.png "Expand an issue in diagnostic results")
+> ![Expand an issue in diagnostic results.](../media/diagnostic-results-issue-expand.png "Expand an issue in diagnostic results")
 
 If required, you can rerun the diagnostic checks, which will refresh the results with updated data.
 
@@ -47,17 +47,17 @@ To run Portal Checker:
 2.	Go to **Run Portal Checker**.
 
     > [!div class=mx-imgBorder]
-    > ![Run Portal Checker](../media/run-diagnostics.png "Run Portal Checker")
+    > ![Run Portal Checker.](../media/run-diagnostics.png "Run Portal Checker")
 
 3.	Select the **Run Portal Checker** button. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic Results** section.
 
     > [!div class=mx-imgBorder]
-    > ![Diagnostic results](../media/diagnostic-results.png "Diagnostic results")
+    > ![Diagnostic results.](../media/diagnostic-results.png "Diagnostic results")
 
 4.	To rerun the diagnostic checks, select **Refresh results**.
 
     > [!div class=mx-imgBorder]
-    > ![Refresh diagnostic results](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
+    > ![Refresh diagnostic results.](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
 
 ## Next steps
 

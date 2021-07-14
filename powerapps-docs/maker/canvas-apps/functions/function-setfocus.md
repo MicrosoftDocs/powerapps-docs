@@ -59,7 +59,7 @@ You can use **SetFocus** only in [behavior formulas](../working-with-formulas-in
 
 Many shopping carts allow the customer to use the shipping address as the billing address, alleviating the need to enter the same information twice.  If a different billing address is desired, the billing address text input boxes are enabled, and it is helpful to guide the customer to the these newly enabled controls for faster data entry.  
 
-![Animation of choosing to use a custom Billing address, with focus moved to the Billing name input control as a result,turning off the automatic sync with the Shipping addresss](media/function-setfocus/shipping-billing.gif)
+![Animation of choosing to use a custom Billing address, with focus moved to the Billing name input control as a result,turning off the automatic sync with the Shipping addresss.](media/function-setfocus/shipping-billing.gif)
 
 There are many formulas in play here, but the one that moves the focus is on the **OnUncheck** property of the **Check box** control:
 
@@ -132,7 +132,7 @@ To create this example:
 
 Similar to exposing an input control, when displaying a data entry screen it is helpful to focus the first input control for faster data entry.
 
-![An animation showing a side by side comparison of using SetFocus versus not using it when displaying a data entry screen](media/function-setfocus/visible-setfocus.gif)
+![An animation showing a side by side comparison of using SetFocus versus not using it when displaying a data entry screen.](media/function-setfocus/visible-setfocus.gif)
 
 In this animation, the data entry screen on the left is not using **SetFocus**.  Upon display no input control has focus, requiring the user to tab, touch, mouse, or use another means to focus the **Name** field before a value can be typed into it.
 

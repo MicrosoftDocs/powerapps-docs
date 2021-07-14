@@ -39,11 +39,11 @@ Sharing a model-driven app involves two primary steps. First, associate a one or
 2. Select a model-driven app and click **Share**.
 3. Select the app then choose a security role from the list.
     > [!div class="mx-imgBorder"] 
-    > ![Assign a role to the app](media/share-model-driven-app/share-app.png "Assign a role to the app")
+    > ![Assign a role to the app.](media/share-model-driven-app/share-app.png "Assign a role to the app")
 4. Search for a user
 5. Select the user then select a role from the list.
     > [!div class="mx-imgBorder"] 
-    > !["Assign a role to the user](media/share-model-driven-app/share-user.png "Assign a role to the user")
+    > !["Assign a role to the user.](media/share-model-driven-app/share-user.png "Assign a role to the user")
 6. Click **Share**.
 
 ### Share the link to your app
@@ -72,17 +72,17 @@ For more information about access and scope privileges, see [Security roles](/dy
 
 5. Select the **Custom Tables** tab, and then locate the custom table that you want. For this example, the custom table named **Pet** is used. 
 
-6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
+6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
 
    > [!div class="mx-imgBorder"] 
-   > ![New security role](media/share-model-driven-app/custom-security-role.png)
+   > ![New security role.](media/share-model-driven-app/custom-security-role.png)
 
-7. Because the pet grooming app also has a relationship with the account table, select the **Core Rows** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+7. Because the pet grooming app also has a relationship with the account table, select the **Core Rows** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 
-8. Select the **Customization** tab, and then in the privileges list select the **Read** privilege next to **Model-driven App** so that organization scope ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
+8. Select the **Customization** tab, and then in the privileges list select the **Read** privilege next to **Model-driven App** so that organization scope ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select security roles for the app](media/app-access-specific-use.png)
+    > ![Select security roles for the app.](media/app-access-specific-use.png)
 
 9. Select **Save and Close**. 
 
@@ -90,10 +90,10 @@ For more information about access and scope privileges, see [Security roles](/dy
 
 11. Select the **Custom Tables** tab, and then locate the **Pet** table. 
 
-12. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
+12. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
-13. Because the pet grooming app also has a relationship with the account table and schedulers must be able to create and modify account rows, select the **Core Rows** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+13. Because the pet grooming app also has a relationship with the account table and schedulers must be able to create and modify account rows, select the **Core Rows** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
 14. Select **Save and Close**.
@@ -107,7 +107,7 @@ Security roles control a user’s access to data through a set of access levels 
 
 3. Click **Manage security roles.**
     > [!div class="mx-imgBorder"] 
-    > ![Manage roles](media/share-model-driven-app/manage-roles.png "Manage roles")
+    > ![Manage roles.](media/share-model-driven-app/manage-roles.png "Manage roles")
 
 4. On the **All Roles** page, select **Microsoft Dataverse user** then click **Actions** then **Copy Role.** 
 
@@ -124,11 +124,11 @@ Security roles control a user’s access to data through a set of access levels 
 
 10. Repeat for other tables used in your app. 
 
-11. Select the **Customization** tab, and ensure **Read** privilege is set for **Model-driven App** so that organization access level ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
+11. Select the **Customization** tab, and ensure **Read** privilege is set for **Model-driven App** so that organization access level ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
     > [!IMPORTANT]
     > Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
-    > ![Create and Write with Model-driven App privilege](media/app-access-cds.png)
+    > ![Create and Write with Model-driven App privilege.](media/app-access-cds.png)
 
 12. Select **Save and Close**. 
 

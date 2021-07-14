@@ -50,7 +50,7 @@ We'll continue to add patterns over time.
     :::column-end:::
     :::column:::
         Collect approval from one or more sources
-![Illustration of the approval pattern with request, review, and respond steps](media/approval-illustration.png?thumbnail "Illustration of the project management pattern with request, review, and respond steps")
+![Illustration of the approval pattern with request, review, and respond steps.](media/approval-illustration.png?thumbnail "Illustration of the project management pattern with request, review, and respond steps")
     :::column-end:::
     :::column:::
         Example use cases: 
@@ -75,7 +75,7 @@ We'll continue to add patterns over time.
     :::column-end:::
     :::column:::
         Manage inventory or other assets
-![Illustration of the asset management pattern with find, reserve, and manage steps](media/asset-management-illustration.png?thumbnail "Illustration of the asset management pattern with find, reserve, and manage steps")
+![Illustration of the asset management pattern with find, reserve, and manage steps.](media/asset-management-illustration.png?thumbnail "Illustration of the asset management pattern with find, reserve, and manage steps")
     :::column-end:::
     :::column:::
         Example use cases: 
@@ -100,7 +100,7 @@ We'll continue to add patterns over time.
    :::column-end:::
    :::column span="":::
       Calculate or transform data
-![Illustration of the calculation pattern with input, calculation, and output steps](media/calculation-illustration.png "Illustration of the calculation pattern with input, calculation, and output steps")
+![Illustration of the calculation pattern with input, calculation, and output steps.](media/calculation-illustration.png "Illustration of the calculation pattern with input, calculation, and output steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -129,7 +129,7 @@ We'll continue to add patterns over time.
    :::column-end:::
    :::column span="":::
       Publish news or information to employees or customers
-![Illustration of the communication pattern with compose, publish, and consume steps](media/communication-illustration.png?thumbnail "Illustration of the communication pattern with compose, publish, and consume steps")
+![Illustration of the communication pattern with compose, publish, and consume steps.](media/communication-illustration.png?thumbnail "Illustration of the communication pattern with compose, publish, and consume steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -155,7 +155,7 @@ We'll continue to add patterns over time.
    :::column-end:::
    :::column span="":::
       Create standardized questionnaires to be filled out and acted on
-![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps](media/inspection-illustration.png?thumbnail "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
+![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps.](media/inspection-illustration.png?thumbnail "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
    :::column-end:::
    :::column span="":::
       Example use cases
@@ -184,7 +184,7 @@ We'll continue to add patterns over time.
     :::column-end:::
     :::column:::
         Track a project from inception to completion
-![Illustration of the project management pattern with plan, track, and review steps](media/project-management-illustration.png?thumbnail "Illustration of the project management pattern with plan, track, and review steps")
+![Illustration of the project management pattern with plan, track, and review steps.](media/project-management-illustration.png?thumbnail "Illustration of the project management pattern with plan, track, and review steps")
     :::column-end:::
     :::column:::
         Example use cases: 
