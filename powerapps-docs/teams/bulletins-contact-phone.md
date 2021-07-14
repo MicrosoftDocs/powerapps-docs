@@ -5,7 +5,7 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2021
+ms.date: 07/13/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -46,7 +46,7 @@ By default, there's no phone number to call the person. We'll add the ability to
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to login into Teams which will be available as part of select Microsoft 365 subscriptions, and will also need to have the Bulletins app for Teams installed. This app can be installed from <https://aka.ms/TeamsBulletins>. Also, we'd need to complete lesson 82&mdash;Add "notify me" settings to category (confirm link). We'll use steps followed in that lesson and build up on those in this topic.
+To complete this lesson, we'd need the ability to login into Teams which will be available as part of select Microsoft 365 subscriptions, and will also need to have the Bulletins app for Teams installed. This app can be installed from <https://aka.ms/TeamsBulletins>. Also, we'd need to complete [Add "notify me" settings to category](bulletins-notify-me.md). We'll use steps followed in that lesson and build up on those in this topic.
 
 > [!NOTE]
 > Follow below steps on both the Bulletins and the Manage Bulletins apps where you want the "Call contact" functionality enabled.
