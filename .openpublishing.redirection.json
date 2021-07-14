@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/component-framework/reference/lookupoptions.md",
+      "redirect_url": "utility/lookupobjects",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/dev-community-plan.md",
       "redirect_url": "developer-plan",
       "redirect_document_id": "false"
@@ -6309,7 +6314,7 @@
       "source_path": "powerapps-docs/learning-catalog/learning-catalog-developer.md",
       "redirect_url": "powerapps-docs/learning-catalog/developer.md",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/learning-catalog/learning-catalog-functional-consultant.md",
       "redirect_url": "powerapps-docs/learning-catalog/functional-consultant.md",
