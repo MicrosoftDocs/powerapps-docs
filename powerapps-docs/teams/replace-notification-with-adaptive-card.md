@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
+ms.subservice: teams
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:

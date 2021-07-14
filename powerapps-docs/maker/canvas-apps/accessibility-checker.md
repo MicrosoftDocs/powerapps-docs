@@ -5,6 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
 ms.date: 02/18/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker

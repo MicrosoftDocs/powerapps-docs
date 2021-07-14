@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/23/2020
+ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker

@@ -1260,6 +1260,8 @@
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
+      - name: Add a Power BI visual to an app
+        href: ./model-driven-apps/add-powerbi-visual.md
       - name: Create a system chart
         href: ./model-driven-apps/create-edit-system-chart.md
       - name: Create or edit dashboards
@@ -2226,6 +2228,8 @@
                   href: ../teams/bulletins-notify-me.md
                 - name: Customize apps for end user to add notification preferences
                   href: ../teams/bulletins-notification-preference.md
+                - name: Add contact phone in links and contacts section
+                  href: ../teams/bulletins-contact-phone.md
         - name: Employee ideas
           items:
             - name: Use Employee ideas sample app

@@ -3,6 +3,7 @@ title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 07/01/2021
 ms.author: hemantg

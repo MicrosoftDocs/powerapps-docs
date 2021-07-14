@@ -4,6 +4,7 @@ description: "Understand various components of a model-driven app such as data, 
 Keywords: columns, attributes, model-driven app
 ms.custom: intro-internal
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020

@@ -10,6 +10,7 @@ ms.topic: "article"
 applies_to: 
   - "powerapps"
 author: "mmercuri"
+ms.subservice: dataverse-maker
 ms.author: "mmercuri"
 manager: "kvivek"
 search.audienceType: 

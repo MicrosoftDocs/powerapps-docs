@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
