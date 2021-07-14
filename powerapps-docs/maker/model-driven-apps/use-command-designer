@@ -55,3 +55,66 @@ This topic guides you through creating and editing modern commands using the new
 
     > [!div class="mx-imgBorder"]
     > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+    
+## Create or edit modern commands
+
+Command designer can currently only be accessed through the modern app designer. In the future you'll also be able to access the command designer from the **Solutions** area in Power Apps.
+
+ > [!NOTE]
+ > Classic commands cannot currently be edited within the command designer. 
+ 
+ ### Edit the command bar
+ 
+ 1. Open modern app designer.
+ 
+ 1. Ensure to **publish** the app.
+ 
+ 1. Select any table from the **Pages** area.
+ 
+ 1. Click the elipsis. Select **Edit command bar (preview)** 
+ 
+ 1. Select the **location** of the command bar you'd like to edit.
+ 
+  ### Create a new command
+ > [!NOTE]
+ > Unlike classic commands, modern commands will only be displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance. Support for creating commands that display across all apps is targeted for a future release. 
+ > A command component library will be created on your behalf to store **Power Fx** formulas.
+ 
+ 1. In command designer click **+ New**.
+ 
+ 1. Provide a **label** and or an **icon**.
+ 
+ 1. You may choose from any system font icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG**, **Save**, and **Publish** the web resource. 
+ 
+ 1. Move the command to the desired location. You may arrange modern commands amonst classic commands.
+ 
+ 1. Optionally provide **Tooltip** and **Accessibility** information
+ 
+ 
+ ## User Power Fx for Actions and Visibility
+ You may now use Power Fx for both Actions (what happens when the button is clicked) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands. 
+ 
+ You’ll notice it has a similar formula bar experience as canvas apps. However, not all functions available within canvas apps are supported currently for commands. Additionally, we've introduced some new functions specific to commands.
+ 
+ For working with **Dataverse** data you may use Power Fx formulas just as you would in canvas apps. The main difference is you cannot currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
+  > [!NOTE]
+  > Dataverse is currently the only data source supported. Additional data sources will be supported in future releases. 
+  
+  ## Use JavaScript for Actions
+  JavaScript is supported both in classic and modern commands and will remain supported for the foreseeable future. In fact, it’s now much simpler to create commands and associate your JavaScript. 
+  
+1.	For the **Action** choose **Run JavaScript**
+
+2.	Click **Add library** or select one from the list. The list is populated with any libraries in use by the current command bar. 
+ 
+3.	Search for existing JavaScript web resources or you may add your own. **Add**.
+ 
+4.	Type the Function name.	For example, chose the Main_system_library.js then call this function: XrmCore.Commands.Open.opennewrecord
+
+6.	Add parameters to pass to your function. Existing functionality is supported here. 
+ 
+  > [!NOTE] 
+  > We are not supporting the use of calling multiple JavaScript libraries or calling multiple functions from a single command.
+  
+  
+  ## Related topics
