@@ -280,7 +280,7 @@ The following describes settings for modifying default authentication cookie beh
 | Authentication/ApplicationCookie/ReturnUrlParameter                      | The ReturnUrlParameter determines the name of the query string parameter that's appended by the middleware when a 401 Unauthorized status code is changed to a 302 redirect onto the sign-in path. |
 | Authentication/ApplicationCookie/SecurityStampValidator/ValidateInterval | The period of time between security stamp validations. <br> Default: `30` minutes |
 | Authentication/TwoFactorCookie/AuthenticationType                        | The type of two-factor authentication cookie. <br> Default: `TwoFactorCookie` |
-| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time a two-factor cookie will remain valid from the moment it was created. <br> Default: `5` minutes |
+| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time a two-factor cookie will remain valid from the moment it was created. Value should be <= `6` minutes <br> Default: `5` minutes |
 
 ## Next steps
 
