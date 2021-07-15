@@ -17,11 +17,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The custom page is a new page type within a model-driven app, which brings in the power of canvas apps. Custom pages increase the convergence of model-driven and canvas apps. Custom pages can be used to add full pages, dialogs, or panes with the power of the canvas designer. It also includes a low-code page authoring experience with expressions and custom code components.  
+The custom page is a new page type within a model-driven app, which brings in the power of canvas apps. Custom pages is a huge step towards the convergence of model-driven and canvas apps. Custom pages can be used to add full pages, dialogs, or panes to the model-driven app utilizing the power of the canvas designer. Custom page also includes support for low-code page authoring experiences with Power Fx expressions, canvas components and custom code components. 
 
-This new page can be more flexible than a modeled form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
-
-Below shows the custom page inline within the model-driven app having the full-page space other than header and navigation.
+This new page is more flexible than the current model-driven application form, view, or dashboard page. For example, it lets you include one or more tables on a single page. Maker can then define data and component interactions using expressions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the custom page state can be governed either from the parameters passed or retrieved from persisted tables.
+Images below shows inline rendering of a custom page within the model-driven app. This custom page utilizes all of the available space while maintaining header and navigation areas from the main model-driven app. 
 
 Custom page as main page.
 
@@ -37,24 +36,26 @@ Custom page as a side dialog.
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
+  > 
 
-Custom pages are added through a solution using either the modern app designer or the **Solutions** area in Power Apps. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md) for details.
+Custom page must be created from a solution either from the modern app designer or the Solution area in Power Apps using New > Page. See [add a custom page to your model-driven app](add-page-to-model-app.md) for details.
 
   > [!IMPORTANT]
   > - This is a preview feature, and isn't available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Custom pages is a significant new feature and has a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+Custom pages is a new feature with significant product changes and currently has a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Custom pages are different than embedded canvas apps
 
-A custom page enables makers to create a new page experience using the canvas app capabilities.  This provides a low-code authoring experience with more flexible layouts, more control with styling options, ability to add connector data, use expressions, and so on. Custom page authoring happens in the canvas app designer with increasing context of the model-driven app that the page runs in. 
+A custom page enables makers to create a new page experience using the canvas app capabilities. This provides a low-code authoring experience with more flexible layouts, better control with styling options, ability to add connector data, use expressions, custom UX components and so on. Custom page authoring happens in the canvas app designer which has  added context of the model-driven app that the page runs in.
 
-Embedded canvas apps also use the canvas capabilities with a hosting approach that not as integrated as a custom page. The simpler integration of an embedded canvas app means the current limitation on number of embedded canvas apps hasn't changed. The advanced integration of the custom page addresses those limits.  The embedded canvas app can only be placed with a model-driven form acting like a low code component. For more information, see [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md).
+While embedded canvas apps can utilize limited canvas capabilities with the full app hosting approach, embedding is not deeply integrated. The direct use of embedded canvas app also implies that the current limitation on number of embedded canvas apps hasn't changed. The advanced integration of the custom page addresses those limits and is much more performant. Additionally, the embedded canvas app can only be placed within a model-driven form which is not the case with the custom page. For more information, see [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md).
 
-Think of a custom page in your model-driven app like a table form or a dashboard page. The page can consist of any set of controls that are supported on the page and can interact and navigate between other model-driven app page types and a canvas page. A custom page isn't a canvas app that has multiple screens or pages inside of it. It truly is a single page, not a series or set of canvas pages like an embedded canvas app.
+Think of a custom page in your model-driven app like a table, form or a dashboard page. This page can consist of any set of controls that are supported on the page. Custom page can interact and seamlessly navigate between other model-driven app page types and other custom pages. A custom page is truly a single page and is not like a canvas app that can have multiple screens or pages inside of it. 
 
-In most cases, we recommend that you use custom pages instead of embedded canvas apps.
+In most cases, we recommend that you use custom pages instead of embedded canvas apps for tighter integration and better performance. 
+
 
 ## Migrating standalone canvas app content to custom pages
 
