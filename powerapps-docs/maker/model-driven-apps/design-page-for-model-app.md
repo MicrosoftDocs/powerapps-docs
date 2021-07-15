@@ -31,7 +31,6 @@ Custom page authoring will start with a subset of controls supported and will be
 
   | Control | Control Type | Notes |
   | --- | --- | --- |
-  |Code Components|Custom|See [Power Apps component framework for canvas apps](../../developer/component-framework/component-framework-for-canvas-apps.md)|
   |Label<sup>1</sup>|Display||
   |Text Box<sup>1</sup>|Input||
   |Date Picker<sup>1</sup>|Input|
@@ -50,12 +49,13 @@ Custom page authoring will start with a subset of controls supported and will be
   |Image|Media|
   |Edit Form|Input|
   |Display Form|Input|
+  |Code components|Custom|See [Add code components to a custom page](page-code-components.md)|
+  |Canvas components|Custom|See [Add canvas components to a custom page](page-canvas-components.md)|
   
   > [!Note]
-  > Controls with “1” are the new control version used by canvas apps in Teams; these controls are from the [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
+  >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams](https://docs.microsoft.com/en-us/power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
 
-More examples of custom components is available in  
-[Custom component samples](../../developer/component-framework/use-sample-components.md).
+Additionally you can add both low-code and pro-code custom UX compoennts to your environment and make them available for all makers. For custom component samples please visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/community-resources) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 
 ## Enable responsive layout with Container control
 
@@ -121,6 +121,9 @@ By creating the custom page from the modern app designer, the important properti
     FontWeight=Normal
     ```
 
+1. Theme defaulting 
+   
+    Custom page studio editor does not has explicit theme selector. Theme values for the controls is automatically set to match the default blue theme of the unified interface. We will enhace the custom page theme integration in future releases to match the hosting model-application theming.
 
 ## Related topics
 
