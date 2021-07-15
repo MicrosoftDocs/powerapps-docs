@@ -34,7 +34,7 @@ Main forms have a default three column layout. Model-driven form fields and comp
 | **Title**            | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table they will use this name to differentiate between the available forms.  This property is required. |
 | **Description**      | Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the the form designer and in the list of forms for a table in the solution explorer.                                                               |
 | **Max Width**        | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900.  This property is required.                                                                                                                               |
-| **Show image**       | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form.  See [Enable or disable table options](../data-platform/edit-entities#enable-or-disable-table-options) for more information about table options.                                    |
+| **Show image**       | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form.  See [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) for more information about table options.                                    |
 
 ![properties available to configure a form](media/create-and-edit-a-model-driven-form/configure-a-form-1.png "properties available to configure a form")
 
