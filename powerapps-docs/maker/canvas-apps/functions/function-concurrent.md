@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/26/2018
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Concurrent function in Power Apps
 Evaluates multiple formulas concurrently with one another.
@@ -45,7 +49,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
     This example uses four tables from the [sample Adventure Works database on SQL Azure](/azure/sql-database/sql-database-get-started-portal). After you create the database, connect to it from Power Apps using the fully qualified server name (for example, srvname.database.windows.net):
 
-	![Connect to Adventure Works database in Azure](media/function-concurrent/connect-database.png)
+	![Connect to Adventure Works database in Azure.](media/function-concurrent/connect-database.png)
 
 2. Add a **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
@@ -64,7 +68,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
     The tools show four requests performed in series, similar to this example.  Actual times have been removed as they will vary wildly.  The graph shows that each call starts after the last has finished:
 
-	![Time graph of four network requests, each one starting after the last finishes, covering the entire span of time](media/function-concurrent/chained-network.png)
+	![Time graph of four network requests, each one starting after the last finishes, covering the entire span of time.](media/function-concurrent/chained-network.png)
 
 5. Save, close, and reopen the app.
 
@@ -91,7 +95,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
     The tools show four requests performed concurrently, similar to this example.  Again, actual times have been removed as they will vary wildly.  The graph shows that all the calls start at about the same time and do not wait for the previous one to finish:
 
-	![Time graph of four network requests, all four starting together, covering about half of the span of time](media/function-concurrent/concurrent-network.png)
+	![Time graph of four network requests, all four starting together, covering about half of the span of time.](media/function-concurrent/concurrent-network.png)
 
 	These graphs are based on the same scale. By using **Concurrent**, you halved the total amount of time these operations took to finish. 
 
@@ -131,7 +135,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 1. (optional) Drag the **Input** field to the top of the list, and drag the **FrenchFaster** field to the bottom of the list.
 
-	![List of fields in the Result collection](media/function-concurrent/field-list.png) 
+	![List of fields in the Result collection.](media/function-concurrent/field-list.png) 
 
 6. In the **Text input** control, type or paste a phrase to translate.
 

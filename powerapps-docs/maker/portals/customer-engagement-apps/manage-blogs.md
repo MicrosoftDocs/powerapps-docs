@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
@@ -27,7 +28,7 @@ Portal users who have blog author permissions can edit or delete blogs by using 
 
 To edit a blog, go to the blog's home page, and then select **Edit** on the edit toolbar.
 
-![Edit a blog](media/edit-blog.png "Edit a blog")  
+![Edit a blog.](media/edit-blog.png "Edit a blog")  
 
 To delete the blog, select **Delete**, and then select **Yes** in the confirmation dialog box.
 
@@ -77,7 +78,7 @@ For portal users with blog author permissions, blog posts can be managed using t
 
 Go to the blog home page, and then select **New** &gt; **Blog post** on the edit toolbar. The blog post editor dialog will appear.
 
-![Create a blog post](media/create-blog-post.png "Create a blog post")  
+![Create a blog post.](media/create-blog-post.png "Create a blog post")  
 
 Make any edits that you want, and then select **Save**.
 
@@ -89,7 +90,7 @@ When creating or editing a blog post, if the **Partial URL** field is left blank
 
 The **Tags** field of the post editor provides auto-complete of tag names, to associated posts with existing tags. It is also possible to simply type the name of a new tag. To end a tag name and start a new one, type Tab, Enter, or ,. To remove a tag, select the x beside the tag name, or select the Backspace key.
 
-![Edit a blog post](media/edit-blog-post.png "Edit a blog post") 
+![Edit a blog post.](media/edit-blog-post.png "Edit a blog post") 
 
 **To delete the blog post**
 

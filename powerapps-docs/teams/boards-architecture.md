@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
+ms.subservice: teams
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -50,7 +51,7 @@ Boards sample app.
 The following diagram illustrates the way that users and systems interact with
 data in the Boards solution
 
-![Boards sample app architecture model](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
+![Boards sample app architecture model.](media/boards-architecture/architecture-model.png "Boards sample app architecture model")
 
 ### Connectors
 
@@ -64,7 +65,7 @@ The following connectors are used in the Boards app:
 
 The following diagram explains the data model used by the Boards sample app.
 
-![Boards sample app data model](media/boards-architecture/data-model.png "Boards sample app data model")
+![Boards sample app data model.](media/boards-architecture/data-model.png "Boards sample app data model")
 
 ### Tables
 

@@ -2,6 +2,7 @@
 title: Component implementation library | Microsoft Docs
 description: Create code components using JavaScript or TypeScript
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

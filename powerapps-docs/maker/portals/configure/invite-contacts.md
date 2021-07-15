@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -51,12 +52,12 @@ To edit the **Send Invitation** workflow email template, locate it and deactivat
 7.	On the command bar, select **Flow** > **Send Invitation**.
 
     > [!div class="mx-imgBorder"]
-    > ![Send invitation workflow](../media/send-invitation-portal-app.png "Send invitation workflow")
+    > ![Send invitation workflow.](../media/send-invitation-portal-app.png "Send invitation workflow")
 
 8.	In the confirmation window, select **OK**. The invitation will be sent to the selected contact.
 
     > [!div class="mx-imgBorder"]
-    > ![Confirmation to send an invitation](../media/confirm-invitation-portal-app.png "Confirmation to send an invitation")
+    > ![Confirmation to send an invitation.](../media/confirm-invitation-portal-app.png "Confirmation to send an invitation")
 
 ### Send multiple invitations
 
@@ -69,12 +70,12 @@ You can create invitations for your contacts and then send all invitations at on
 3.	On the command bar, select **Flow** > **Send Invitation**.
 
     > [!div class="mx-imgBorder"]
-    > ![Send invitation workflow](../media/send-invitation-portal-app.png "Send invitation workflow")
+    > ![Send invitation workflow.](../media/send-invitation-portal-app.png "Send invitation workflow")
 
 4.	In the confirmation window, select **OK**. The invitations will be sent to the selected contacts.
 
     > [!div class="mx-imgBorder"]
-    > ![Confirmation to send multiple invitations](../media/confirm-multiple-invites-portal-app.png "Confirmation to send multiple invitations")
+    > ![Confirmation to send multiple invitations.](../media/confirm-multiple-invites-portal-app.png "Confirmation to send multiple invitations")
 
 ## Invitation attributes
 

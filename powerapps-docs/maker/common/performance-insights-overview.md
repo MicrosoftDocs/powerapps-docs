@@ -11,6 +11,7 @@ ms.topic: "overview"
 applies_to: 
   - "powerapps"
 author: "Mattp123"
+ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -41,7 +42,7 @@ Performance insights are generated based on collected user data of your model-dr
 
 Performance insights are available for all model-driven apps in your selected environment, provided there is recorded user data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the list on the **Performance** tab.
 
-:::image type="content" source="media/performance-insight-select-date.png" alt-text="Select a date to view performance insight data":::
+:::image type="content" source="media/performance-insight-select-date.png" alt-text="Select a date to view performance insight data.":::
 
 The performance insights engine generates insights over a 24-hour period on a selected date in the universal time coordinated (UTC) time zone. Insights for the previous day, from 00:00 to 23:59 UTC, are generated around 02:00 to 05:00 UTC on a given day. Therefore, insights and recommendations for usage user data recorded the previous day will be available in the morning in the UTC time zone. Time of availability will vary based on your local time zone and its difference from UTC.
 
@@ -53,7 +54,7 @@ Insights are generated for several categories from different areas including cli
 
 Performance insights provide a prioritized list of recommendations to help makers improve the performance of model-driven apps. You can select each row in the grid to view detailed information for each category.
 
-:::image type="content" source="media/performance-insights-example.png" alt-text="Example of performance insights":::
+:::image type="content" source="media/performance-insights-example.png" alt-text="Example of performance insights.":::
 
 ## Explanation of performance insights
 

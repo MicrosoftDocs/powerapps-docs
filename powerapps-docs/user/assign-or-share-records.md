@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/10/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -30,24 +31,24 @@ For more information on how privileges and access works, see [How access to a ro
 1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
 
    > [!div class="mx-imgBorder"]
-   > ![Select row that you want to reassign](media/reassign-1.png "Select row that you want o reassign")
+   > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want o reassign")
 
 2. On the command bar, select **Assign**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select assign a row](media/reassign-2.png "[Select assign a row")
+   > ![Select assign a row.](media/reassign-2.png "[Select assign a row")
 
   
 3. In the assign dialog box, select the **Assign to** column, and choose one of the following options:
     - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
       > [!div class="mx-imgBorder"]
-      > ![Select Me to assign the row to yourself](media/reassign-4.png "Select Me to assign the row to yourself")
+      > ![Select Me to assign the row to yourself.](media/reassign-4.png "Select Me to assign the row to yourself")
     
     - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Row** to create a new user or team row. When you're done select **Assign**.
 
       > [!div class="mx-imgBorder"]
-      > ![Use the lookup to reassign a row](media/reassign-3.png "Use the lookup to reassign a row")
+      > ![Use the lookup to reassign a row.](media/reassign-3.png "Use the lookup to reassign a row")
 
 
 ## Use advanced find to reassign rows
@@ -58,17 +59,17 @@ Use advanced find to search for rows and then reassign them to someone else. For
 1. On the command bar, select **Advanced Find**.
 
    > [!div class="mx-imgBorder"]
-   > ![Advanced find](media/assign3.png "advacned find")
+   > ![Advanced find.](media/assign3.png "advacned find")
    
 2. Use the [advanced find search](advanced-find.md) to find rows that you want to assign to someone else. For example, to look for active row types that are **Challenges**, in **Look for:** enter **Challenges** and status equals **Active**. Then select **Results** to run the query.
 
     > [!div class="mx-imgBorder"]
-    > ![Enter search query](media/reassign-5.png "Enter search query")
+    > ![Enter search query.](media/reassign-5.png "Enter search query")
 
 3. Select the rows that you want to assign and then select **Assign (page name)**
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign the selected rows](media/reassign-6.png "Reassign the selected rows")
+   > ![Reassign the selected rows.](media/reassign-6.png "Reassign the selected rows")
    
  4. In the assign dialog box, select the **Assign to** column and choose one of the following options:
  
@@ -77,7 +78,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
     - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Row** to create a new user or team row. When you're done select **Assign**.
     
       > [!div class="mx-imgBorder"]
-      > ![Reassign the row](media/reassign-7.png "Reassign the row")
+      > ![Reassign the row.](media/reassign-7.png "Reassign the row")
    
  
  ## Reassign all rows (for admins)
@@ -87,11 +88,11 @@ Use advanced find to search for rows and then reassign them to someone else. For
  1. Go to **Settings** > **Advanced Settings**.
  
     > [!div class="mx-imgBorder"]
-    > ![Go to settings and advanced settings](media/settings-gear-icon.png "Go to settings and advanced settings")
+    > ![Go to settings and advanced settings.](media/settings-gear-icon.png "Go to settings and advanced settings")
  
  2. From the top menu navigate from **Settings** > **Security**.
      > [!div class="mx-imgBorder"]
-     > ![Navigate to security](media/reassign-8.png "Navigate to security")
+     > ![Navigate to security.](media/reassign-8.png "Navigate to security")
  
  3. Under **Security** select **Users**.
  
@@ -100,12 +101,12 @@ Use advanced find to search for rows and then reassign them to someone else. For
  5. On the command bar, select **REASSIGN ROWS**.
  
     > [!div class="mx-imgBorder"]
-    > ![Reassign all rows](media/assign5.png "Reassign all rows")
+    > ![Reassign all rows.](media/assign5.png "Reassign all rows")
    
  4. On the **Reassign Rows** dialog box choose how to want to reassign all the rows and then select **OK**.
  
     > [!div class="mx-imgBorder"]
-    > ![Reassign all rows to user or team](media/assign6.png "Reassign all rows to user or team")
+    > ![Reassign all rows to user or team.](media/assign6.png "Reassign all rows to user or team")
  
    > [!NOTE]
    > - The **Reassign Rows** option will reassign all rows regardless of their status. Inactive and active rows will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the row is reassigned to another user or team. The new owner must activate the processes that was deactivated when the row is reassigned.  
@@ -121,37 +122,37 @@ Use advanced find to search for rows and then reassign them to someone else. For
 1. From a list of rows, select the row that you want to assign to someone else. You can select multiple rows.
 
    > [!div class="mx-imgBorder"]
-   > ![Select row that you want to reassign](media/reassign-1.png "Select row that you want o reassign")
+   > ![Select row that you want to reassign.](media/reassign-1.png "Select row that you want o reassign")
 
 2. On the command bar, select **Share**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select share to share row](media/share-1.png "Select share to share to share a row")
+   > ![Select share to share row.](media/share-1.png "Select share to share to share a row")
    
  3. On the share dialog box, select **Add User/Team**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Select add user or team](media/share-2.png "Select add user or team")
+    > ![Select add user or team.](media/share-2.png "Select add user or team")
    
  4. On the **Look up Rows** dialog box, select the **Look for** menu and choose **User** or **Team**.
  
     > [!div class="mx-imgBorder"]
-    > ![Choose user or team from the drop down menu](media/share-3.png "Choose user or team from the drop down menu")
+    > ![Choose user or team from the drop down menu.](media/share-3.png "Choose user or team from the drop down menu")
     
  5. Use the lookup to find the user or team and select the name and then choose **Select**.
  
      > [!div class="mx-imgBorder"]
-     > ![Select the user name and then choose select](media/share-4.png "Select the user name and then choose select")
+     > ![Select the user name and then choose select.](media/share-4.png "Select the user name and then choose select")
      
  6. Select **Add**. 
  
      > [!div class="mx-imgBorder"]
-     > ![Select add](media/share-5.png "Select add")
+     > ![Select add.](media/share-5.png "Select add")
      
  7. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**   
  
      > [!div class="mx-imgBorder"]
-     > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
+     > ![Select the type of permissions.](media/share-6.png "Select the type of permissions")
  
  
  ## Remove someone from a shared row

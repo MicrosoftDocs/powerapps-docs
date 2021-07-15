@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 ---
@@ -18,7 +19,7 @@ The following is a basic, high-level comparison. For much more detail about thes
 
 :::row:::
     :::column:::
-        ![Model-driven apps](media/model-apps.png "Model-driven apps")
+        ![Model-driven apps.](media/model-apps.png "Model-driven apps")
 
         Model-driven apps require a Microsoft Dataverse database. They're built on top of
 the data modeled in that database environment. Views and detail screens for model-driven
@@ -35,7 +36,7 @@ effort from the app creator.
         -   Tracking activities associated with data
     :::column-end:::
     :::column:::
-        ![Canvas apps](media/canvas-apps.png "Canvas apps")
+        ![Canvas apps.](media/canvas-apps.png "Canvas apps")
         
         Canvas apps, on the other hand, can be built with or without a Dataverse
 database. They use connectors to access data and services. Canvas apps start
@@ -70,7 +71,7 @@ For example, our expense report project has several task sets that are quite
 different, so we'll consider making several apps. The data they use is the
 same, but the user experience will be tailored to the specific scenario and personas.
 
-![Tasks for each step of the business process](media/business-process-tasks.png "Tasks for each step of the business process")
+![Tasks for each step of the business process.](media/business-process-tasks.png "Tasks for each step of the business process")
 
 As you can see from the example above, there are multiple types of people
 handling the same set of data. Canvas apps would be the best fit for employees
@@ -78,7 +79,7 @@ filling in the expense form, which enables people like Lee to submit an expense
 report using an attractive mobile app that's intuitive to use and can be used
 when he's offline.
 
-![A canvas app for expense report creation](media/expense-canvas-app.png "A canvas app for expense report creation")
+![A canvas app for expense report creation.](media/expense-canvas-app.png "A canvas app for expense report creation")
 
 Referring back to the section on [Documenting the business process](understanding-current-business-process.md), you can see
 that Abhay's requirements are:
@@ -96,13 +97,13 @@ best fit would be a model-driven app. It allows Abhay to quickly view all the
 details of the submitted expense report, see how it affects the budget, and look
 for related information such as vendor details.
 
-![A model-driven app for processing expense reports](media/expense-model-app.png "A model-driven app for processing expense reports")
+![A model-driven app for processing expense reports.](media/expense-model-app.png "A model-driven app for processing expense reports")
 
 In this example scenario, you can see a combination of both canvas app and
 model-driven app. Although they're two different types of apps, all the data
 can be centralized in one place (Dataverse).
 
-![Two apps with data in Dataverse](media/end-to-end-apps.png "Two apps with data in Dataverse")
+![Two apps with data in Dataverse.](media/end-to-end-apps.png "Two apps with data in Dataverse")
 
 > [!div class="nextstepaction"]
 > [Next step: Determine where to place logic](logic.md)

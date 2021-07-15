@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -39,11 +40,11 @@ The following highlights the difference between the "navigate-to" and contextual
 
 1.	Select **Create a timeline record**.
 
-    ![Select Create a timeline record](media\create-a-record-icon-1.png "Select Create a timeline record")
+    ![Select Create a timeline record.](media\create-a-record-icon-1.png "Select Create a timeline record")
 
 2. Select **Email**.
 
-    ![Select email](media\create-a-record-icon-1a.png "Select email.")
+    ![Select email.](media\create-a-record-icon-1a.png "Select email.")
 
    Depending on the experience you are using, your email will display as follows:
 

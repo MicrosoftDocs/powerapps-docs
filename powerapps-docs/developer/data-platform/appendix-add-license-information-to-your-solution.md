@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "nkrb" 
+ms.subservice: dataverse-developer
 ms.author: "nabuthuk" 
 manager: "kvivek" 
 search.audienceType: 
@@ -68,12 +69,12 @@ In this article, we will create these two CSV files for an example solution call
 |||
 
 > [!div class="mx-imgBorder"]
-> ![Create licensing file 1](media/create-license-csv-file-1.png "Create licensing file 1")
+> ![Create licensing file 1.](media/create-license-csv-file-1.png "Create licensing file 1")
 
 To add licensing information to your solution, you need to create plans in the Partner Center. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans). Once you're finished creating the plans, each plan creates a **Service ID** value which is required while creating [Plan definition file](#plan-definition-file).
 
 > [!div class="mx-imgBorder"]
-> ![Create licensing file 3](media/create-license-csv-file-3.png "Create licensing file 3")
+> ![Create licensing file 3.](media/create-license-csv-file-3.png "Create licensing file 3")
 
 > [!NOTE]
 > Currently model-driven apps are the only types of solution components that can be mapped to licenses. In future releases, we plan to add support for other component types such as canvas apps and tables. 
@@ -83,7 +84,7 @@ To add licensing information to your solution, you need to create plans in the P
 The plan definition file must include the following columns laid out in the format shown in the example below: 
 
 > [!div class="mx-imgBorder"]
-> ![Plan definition file](media/plan-definition-file.png "Plan definition file")
+> ![Plan definition file.](media/plan-definition-file.png "Plan definition file")
 
 **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
 
@@ -97,7 +98,7 @@ The plan definition file must include the following columns laid out in the form
 The plan mapping file must include the following columns laid out in the format shown in the example below: 
 
 > [!div class="mx-imgBorder"]
-> ![Plan mapping file](media/plan-mapping-file.png "Plan mapping file")
+> ![Plan mapping file.](media/plan-mapping-file.png "Plan mapping file")
 
 **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
 

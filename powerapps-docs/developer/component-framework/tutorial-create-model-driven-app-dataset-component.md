@@ -6,6 +6,7 @@ ms.service: "powerapps"
 ms.custom: "intro-internal"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
+ms.subservice: pcf
 ms.author: "nabuthuk"
 author: Nkrb
 contributors:
@@ -24,7 +25,7 @@ In addition to these requirements, you will also ensure that code component foll
 4. Provide support for full-screen mode.
 
 > [!div class="mx-imgBorder"]
-> ![Model-driven grid sample](media/model-driven-grid-demo1.gif "Model-driven grid sample")
+> ![Model-driven grid sample.](media/model-driven-grid-demo1.gif "Model-driven grid sample")
 
 From the above, you see that:
 
@@ -109,7 +110,7 @@ To configure the code component to be displayed on the contact table inside a mo
    - **Highlight Color** - This is the color that rows will be set to if `statuscode` is **Inactive**. Set to a color of your choice for highlighting (for example, `#FDE7E9`  which is light red).
    
    > [!div class="mx-imgBorder"]
-   > ![Table configuration](media/model-driven-grid-entity-config.png "Table configuration")
+   > ![Table configuration.](media/model-driven-grid-entity-config.png "Table configuration")
 
 5. You can also set the code component to show as default for Web, Phone, or Tablet by selecting the corresponding radio buttons. 
 
@@ -134,7 +135,7 @@ You can also configure a specific view always to use a code component to show re
 8. Select **Publish**.
 
 > [!div class="mx-imgBorder"]
-> ![Model-driven app subgrid](media/model-driven-grid-demo3.gif "Model-driven app subgrid")
+> ![Model-driven app subgrid.](media/model-driven-grid-demo3.gif "Model-driven app subgrid")
 
 ### Configuring the code component on a form subgrid
 
@@ -156,12 +157,12 @@ Code components can be configured on a specific subgrid on a form. You'll add th
    > On model-driven apps forms, the code component container will have a constrained height based on the row span - but only on larger form factors. On small form factors, it will not be constrained meaning we need to provide a specific height. This is the purpose of the input property **Sub Grid Height**.
 
    > [!div class="mx-imgBorder"]
-   > ![Subgrid properties](media/model-driven-sub-grid-config.png "Subgrid properties")
+   > ![Subgrid properties.](media/model-driven-sub-grid-config.png "Subgrid properties")
 
 Once configured on a subgrid, it will look similar to the following:
 
    > [!div class="mx-imgBorder"]
-   > ![Model-driven apps subgrid](media/model-driven-grid-demo2.gif "Model-driven apps subgrid")
+   > ![Model-driven apps subgrid.](media/model-driven-grid-demo2.gif "Model-driven apps subgrid")
 
 
 ### Related articles

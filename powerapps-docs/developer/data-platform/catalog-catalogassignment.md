@@ -2,11 +2,12 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/04/2021
+ms.date: 07/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -177,11 +178,11 @@ To set this in the Power Apps UI:
 1. Select each catalog or catalog assignment within your solution
 1. In the menu, click the ellipses (...) and select **Managed Properties**.
 
-    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button":::
+    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button.":::
 
 1. In the window that opens, deselect **Allow customizations**.
 
-    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations":::
+    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations.":::
 
 1. Click **Done**
 
@@ -251,13 +252,13 @@ GET [Organization URI]/api/data/v9.2/customapis?$select=customapiid&$filter=uniq
 This is most easily done using the Web API. The following example will return the `workflowid` of a custom process action with the `uniquename` of `ExampleCustomProcessAction`.
 
 ```http
-GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$filter=category eq 3 and type eq 2 and endswith(uniquename,'ExampleCustomProcessAction')
+GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$filter=category eq 3 and type eq 1 and endswith(uniquename,'ExampleCustomProcessAction')
 ```
 
 > [!NOTE]
 > The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be `ExampleCustomProcessAction`.
 >
-> Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `2`. This is the activated workflow.
+> Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `1`. This is the workflow definition.
 >
 > Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
 
@@ -477,11 +478,11 @@ Use the [SolutionPackager tool](/power-platform/alm/solution-packager-tool) to e
 
 ### Create a Catalog with solution files
 
-Within a solution, all the catalogs will be within a `catalogs` folder.
+Within a solution, all the catalogs will be within a `catalogs` folder. You can create, modify or remove catalogs by editing the folders and files in this folder and importing the solution after it has been packed using solution packager.
 
-Each catalog will be included in a folder matching the uniquename of the catalog, such as `contoso_CustomerManagement`.
+Each catalog will be included in a folder matching the `uniquename` of the catalog, such as `contoso_CustomerManagement`.
 
-Within the folder is an XML file containing the definition of the catalog.
+Within the folder is a `catalog.xml` file containing the definition of the catalog.
 
 For example:
 
@@ -498,7 +499,19 @@ For example:
 </catalog>
 ```
 
-If the Catalog represents a category, the relationship to the parent catalog is included. 
+The `catalog` element `uniquename` attribute must match the name of the folder containing the file.
+
+The `catalog` element includes these elements:
+
+|Element  |Description  |
+|---------|---------|
+|`description`|Has a `default` attribute with the value of the default description.<br/>Contains one or more `label` element with attributes for `description` and `languagecode` when multiple languages are defined. |
+|`displayname`|Has a `default` attribute with the value of the default display name.<br/>Contains one or more `label` element with attributes for `description` and `languagecode` when multiple languages are defined.|
+|`iscustomizable`|Whether the catalog is customizable. 0 = `false`, 1 = `true`.|
+|`name`|The name of the catalog.|
+
+
+If the catalog represents a category, the relationship to the parent catalog is included using a `parentcatalogid` element that contains a `uniquename` element containing the unique name of the parent catalog.
 
 For example:
 
@@ -520,7 +533,7 @@ For example:
 
 ### Create a CatalogAssignment with solution files
 
-Within a solution, in the `Assets` folder, you will find a `catalogassignements.xml` file. All catalog assignments are included in the file.
+Within a solution, in the `Assets` folder, you will find a `catalogassignments.xml` file. All catalog assignments are included in the file. You can create or modify catalog assignments by editing this file and importing the solution after it has been packed using solution packager.
 
 For example:
 
@@ -536,6 +549,30 @@ For example:
   </catalogassignment>
 </catalogassignments>
 ```
+
+Each `catalogassignment` element has these attributes:
+
+
+|Attribute  |Description  |
+|---------|---------|
+|`catalogid.uniquename`|Unique name of the sub-catalog that the catalog assignment is for.|
+|`objecttypeid`|The type of object. Valid values are: <br/>`entity`<br/>`customapi`<br/>`workflow`|
+
+Depending on the `objectypeid`, each `catalogassignment` element must have one of these corresponding attributes:
+
+|Attribute  |Description  |
+|---------|---------|
+|`object.uniquename`|The unique name of the custom api.|
+|`object.logicalname`|The logical name of the entity.|
+|`object.workflowid`|The unique id value of the custom process action.|
+
+The `catalogassignment` element includes these elements:
+
+|Element  |Description  |
+|---------|---------|
+|`iscustomizable`|Whether the catalog assignment is customizable. 0 = `false`, 1 = `true`.|
+|`name`|The name of the catalog assignment|
+
 
 ### See also  
 
