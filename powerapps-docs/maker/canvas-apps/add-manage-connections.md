@@ -92,25 +92,29 @@ By default, when end-users launch Power Apps apps they’re presented a connecti
 #### 1.	Provision Microsoft’s Azure API connections service principal in your Azure AD tenant
 
 Microsoft’s Azure API connectors service is used by all Power Apps using connectors – provisioning this service in your tenant is a prerequisite for your custom applications and custom connectors to pre-authorize this service to exercise single-sign-on capabilities with your custom applications and allow Power Apps to suppress the consent dialog. 
-1. A tenant admin must run the following PowerShell commands:
- - Connect-AzureAD -TenantId <target tenant id>
- - New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
+
+A tenant admin must run the following PowerShell commands:
+
+```Powershell
+ Connect-AzureAD -TenantId <target tenant id>
+ New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
+``` 
 
 Example successful output:
-
-TODO
+![Add Azure API connections SPN to tenant](./media/add-manage-connections/power_apps_custom_connector_oauth_add_SPN.png)
 
 #### 2.	Pre-authorize Microsoft’s Azure API connections service principal in your Azure AD app
   
-For each custom connector where consent is expected to be suppressed, authorize "Microsoft’s Azure API Connections" service principal to one of the scopes defined in your app. 
-a.	The owner of the Azure AD custom application used by a custom connector must add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes. Any scope can be created and used for single-sign-on to succeed.
-b.	The following screenshots illustrate where this can be set in https://portal.azure.com for an app registration in Azure AD. Azure Active Directory > App Registrations > select the relevant app > Expose an API > Add a client application > add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes
+For each custom connector where consent is expected to be suppressed, authorize "Microsoft’s Azure API Connections" service principal to one of the scopes defined in your app.
 
-TODO
+1. The owner of the Azure AD custom application used by a custom connector must add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes. Any scope can be created and used for single-sign-on to succeed.
+1. The following screenshots illustrate where this can be set in https://portal.azure.com for an app registration in Azure AD. Azure Active Directory > App Registrations > select the relevant app > Expose an API > Add a client application > add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes
+
+![Preauthorize Azure API connections to custom API 1](./media/add-manage-connections/power_apps_custom_connector_oauth_preauthorize_1.png)
   
-TODO
+![Preauthorize Azure API connections to custom API 2](./media/add-manage-connections/power_apps_custom_connector_oauth_preauthorize_2.png)
   
-#### 3.	Admin Consent the Client 3rd Party AAD App
+#### 3.	Grant admin consent the client 3rd party Azure AD app
   
 For each custom connector using OAuth where consent is expected to be suppressed, an admin must use [Azure AD’s grant tenant-wide admin consent to an application](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent). 
 
@@ -123,7 +127,7 @@ For each custom connector using OAuth where consent is expected to be suppressed
   
 The owner of the custom connector must choose to edit the connector, go to the ‘Security’ section and change the value in ‘Enable on-behalf-of login’ from ‘false’ to ‘true’. 
 
-TODO
+![Configure custom connector for single sign on](./media/add-manage-connections/power_apps_custom_connector_oauth_enable_sso.png)
   
 #### 5. Admin configures consent bypass for the Power Apps app
 
@@ -136,6 +140,7 @@ In addition to the admin consent granted on a custom application in Azure AD, wh
 ### Remove consent suppression for Power Apps using custom connectors using OAuth
   
  To remove consent suppression for a custom connector, an admin must perform at least one of the two following actions: 
+ 
 1. Remove the tenant-wide admin conse grant to the application in Azure: [Azure AD’s grant tenant-wide admin consent to an application](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent). 
 2. Use the following Power Apps admin cmdlet to disable Power Apps’ attempt to suppress the consent dialog. [Clear-AdminPowerAppApisToBypassConsent](https://docs.microsoft.com/powershell/module/microsoft.powerapps.administration.powershell/clear-adminpowerappapistobypassconsent)
 
