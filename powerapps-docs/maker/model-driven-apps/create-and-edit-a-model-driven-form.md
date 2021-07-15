@@ -19,7 +19,7 @@ Main forms have a default three column layout. Model-driven form fields and comp
 
 ![Main forms have a default three column layout](media\create-and-edit-a-model-driven-form/configure-a-form-2.png "Main forms have a default three column layout")
 
-## Create a form
+## Create and configure a form
 
 <!-- In this example, you use the **Manage customers** app that we created in the lesson **Create a model-driven app** (insert link here) -->
 
