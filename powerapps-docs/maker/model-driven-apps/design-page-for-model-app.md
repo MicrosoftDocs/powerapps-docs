@@ -90,6 +90,10 @@ Learn more about at [Building responsive layout](../canvas-apps/build-responsive
 
 By creating the custom page from the modern app designer, the important properties are defaulted.  
 
+1. Theme for custom page 
+   
+    Theme values for the controls used in custom page are automatically set to match the default blue theme of the unified interface. This default theme is used both in the studio and at application runtime. Explicit theme selector is removed from custom page authoring expereince. We will enhace the custom page theme integration in future releases to match the hosting model-application theming customization.
+
 1. Controls need to use different Font size based on their position in the page hierarchy
 
     > [!Note]
@@ -121,9 +125,6 @@ By creating the custom page from the modern app designer, the important properti
     FontWeight=Normal
     ```
 
-1. Theme defaulting 
-   
-    Custom page studio editor does not has explicit theme selector. Theme values for the controls is automatically set to match the default blue theme of the unified interface. We will enhace the custom page theme integration in future releases to match the hosting model-application theming.
 
 ## Related topics
 
