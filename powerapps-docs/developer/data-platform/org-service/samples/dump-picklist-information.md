@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Dump attribute choices information to a file
+# Dump choices information to a file
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 

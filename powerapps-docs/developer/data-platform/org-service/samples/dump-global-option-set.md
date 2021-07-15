@@ -1,6 +1,6 @@
 ---
-title: " Dump global option set information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to dump global option set information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Dump choices information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to dump choices information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to write out all the global option set metadata to an `XML` file. It uses the [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpGlobalOptionSetInfo).
+This sample shows how to write out all the choices column definitions to an `XML` file. It uses the [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpGlobalOptionSetInfo).
 
 The following sample creates a new file at `\DumpGlobalOptionSetInfo\bin\Debug\AllOptionSetValues.xml`. You can open this file in **Office Excel** to see a tabular report. 
 
@@ -30,7 +30,7 @@ The following sample creates a new file at `\DumpGlobalOptionSetInfo\bin\Debug\A
 
 ## What this sample does
 
-The `RetrieveAllOptionSetsRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the global option set metadata.
+The `RetrieveAllOptionSetsRequest` message is intended to be used in a scenario that contains data that is needed to retrieve column definitions information about all the choices.
 
 ## How this sample works
 
