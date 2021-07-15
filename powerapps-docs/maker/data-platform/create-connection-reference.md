@@ -34,7 +34,7 @@ You can add a connection reference to a solution in a few different ways:
 
 > [!NOTE]
 >
-> - Canvas apps and flows handle connections differently. Flows use connection references for all connectors, whereas canvas apps only use them for implicitly shared connections, such as SQL Server. More information: [Security and types of authentication](../canvas-apps/connections-list.md#security-and-types-of-authentication)
+> - Canvas apps and flows handle connections differently. Flows use connection references for all connectors, whereas canvas apps only use them for implicitly shared (non-OAuth) connections, such as SQL Server Authentication. More information: [Security and types of authentication](../canvas-apps/connections-list.md#security-and-types-of-authentication)
 > - A connection reference is automatically created when you create new connections from the flow and canvas app designers.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**. 
@@ -51,6 +51,14 @@ You can add a connection reference to a solution in a few different ways:
 ## Limits
 
 While connection references are in preview, one connection reference can only be used within a maximum of 16 flows. If the same connection needs to be used in more than 16 flows, then create another connection reference with a connection to the same connector. There is no limit to the number of actions in each flow that can be associated with the connection reference.
+
+## Connection Reference usage tips
+
+### Reusing connections in a solution flow 
+Flows created outside a solution use Connections directly. Flows created in a solution use Connection References and the Connection Reference points at the Connection. To reuse a Connection within a solution flow, you first need to create a connection reference pointing at that connection.
+
+### Automatic use of Connection References in a solution flow
+When an action is added to a solution flow, Power Automate will try to reuse existing Connection References from the current solution or other solutions before creating a new Connection Reference. To ensure that the Connection Reference is inside the same solution as the flow, create or add a Connection Reference in the same solution and reference that Connection Reference from the flow.
 
 ### See also
 
