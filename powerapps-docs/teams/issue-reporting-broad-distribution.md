@@ -24,7 +24,7 @@ The app addresses the following personas:
 
 - Issue Manager&mdash;this user creates issue types and oversees the issue reporting process, including analyzing created issues.
 
-- Issue Resolver (Indirectly)&mdash;issues logged in Issue reporting create tasks in Microsoft Planner, from where issue resolvers can resolve the issues.
+- Issue Resolver (indirectly)&mdash;issues logged in Issue reporting create tasks in Microsoft Planner, from where issue resolvers can resolve the issues.
 
 You want everyone at in your org, department, or a certain location to be able to report issues. These are people outside of the Teams team. We'll share the issue reporting app with them.
 
