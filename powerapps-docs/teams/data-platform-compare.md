@@ -24,7 +24,7 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |---------|---------|---------|
 |Basic data types     |  Yes       |  Yes       |
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
-|Common Data Model    |  Coming Soon       |  Yes       |
+|Common Data Model    |  Yes       |  Yes       |
 |Relational storage      | Yes       |  Yes       |
 |Non-relational storage (logs)   |  No       |  Yes       |
 |Managed data lake      |  No       | Yes        |
