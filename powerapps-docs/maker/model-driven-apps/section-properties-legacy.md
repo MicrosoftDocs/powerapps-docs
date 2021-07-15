@@ -7,6 +7,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/23/2020
@@ -35,12 +36,12 @@ search.app:
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
-3.  In the list of forms, open a form of type **Main**. To open a form in another tab, select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms"), and then select **Edit form** > **Edit form in new tab**.
+3.  In the list of forms, open a form of type **Main**. To open a form in another tab, select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms"), and then select **Edit form** > **Edit form in new tab**.
 
 4.  Select one of the sections to see the section properties.
 
     > [!div class="mx-imgBorder"]
-    > ![Section properties in Form designer](media/new-section-properties.png "Section properties in Form designer")
+    > ![Section properties in Form designer.](media/new-section-properties.png "Section properties in Form designer")
 
 |Property|Description|  
 |---------|--------------|  
@@ -67,7 +68,7 @@ You can access **Section properties** in solution explorer from the Power Apps s
 5.  Double-click inside one of the sections to see the section properties. 
 
     > [!div class="mx-imgBorder"]
-    > ![Section properties in solution explorer](media/section-properties.png "Section properties in solution explorer")
+    > ![Section properties in solution explorer.](media/section-properties.png "Section properties in solution explorer")
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  

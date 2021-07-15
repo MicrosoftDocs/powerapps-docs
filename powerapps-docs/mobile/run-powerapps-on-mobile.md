@@ -5,7 +5,8 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/23/2021
+ms.date: 06/29/2021
+ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -37,32 +38,12 @@ If you're on a Windows device, you can only run canvas apps; model-driven apps a
 
 In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device 
 
-## Early access feature
-
-If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
-
-|**Current**  |**Early access** |
-|---------|---------|
-| ![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")     |     ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")  |
+![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
 Legend:
 
 1. **Model-driven apps**
 2. **Canvas apps**
-
-
-### Use the early access design
-
-To use early access, you need to enable the **New design (preview)**. 
-
-Follow the one of the steps below to enable the new design:
-
-- When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
-
-  > [!div class="mx-imgBorder"]
-  >![Notiication to use the new design](media/newdesign.png "Notification to use the new design") 
-
-- Or, go to **Settings** menu ![Settings button](media/settings_icon-1.png) and turn on the toggle for **New design (preview)**.
 
 
 ## Required privileges
@@ -108,9 +89,9 @@ If you have the Microsoft Authenticator app installed on your mobile device, ent
 
 The apps that you used recently will show on the default screen when you sign in to Power Apps mobile.
 
-| **Current** | **Early access** |
-| --- | --- |
-|  When you sign in to the app, the **My apps** filter is set by default. If you can't find the app you're looking for, open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
+The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. 
+
+![Default Home screen.](media/default-home-screen.png "Default Home screen")
 
 
 
@@ -118,48 +99,57 @@ The apps that you used recently will show on the default screen when you sign in
 
 If you don't have any apps, then when you sign in, you will land on the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
-|Current  |Early access  |
-|---------|---------|
-|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
+![Filter and find apps.](media/app-list-2.png "Filter and find apps")  
+
+1. **Settings**: Access app settings and sign out.
+2. **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on.
+3. **Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.
+4. **Recent apps**: Displays both model-driven and canvas apps that you have recently used.
+5. **Home**: Displays favorite apps and recently accessed apps sorted by open date.
+6. **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+7. **More** (canvas apps only): Displays featured and sample apps.
+8. **Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites.
+9. **Sort apps**: You can short by the app name or modified date. </li> 
   
 ## Add to favorites
 
 You can only add canvas apps to your list of favorite apps.
 
+- Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button.](media/detailsbutton.png) and then add the app to favorites.
 
-|**Current**  |**Early access**  |
-|---------|---------|
-| <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. </li><li> To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.   <div></div> <div></div> ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite") | <ul><li> Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button](media/detailsbutton.png) and then add the app to favorites. </li><li> To remove the app from the list, swipe left again and then select **Unfavorite**.</li>   <div></div> <div></div> ![Add to list of favorites.](media/add-to-favs-1.png "Add to list of favorites")     |
+   > [!div class="mx-imgBorder"]
+   > ![Add to list of favorites.](media/add-to-favs-1-1.png "Add to list of favorites")     
+
+- To remove the app from the list, swipe left again and then select **Unfavorite**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Remove the app from the list.](media/add-to-favs-1-2.png "Remove the app from the list")     
 
 
 ## Sort apps
 
 You can sort both canvas apps and model-driven apps.
+You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
 
-
-| **Current** | **Early access** |
-| --- | --- |
-|  After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.  <div></div> ![Sort menu.](media/sort_apps.png "Sort menu") | You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen. <div></div> ![Sort menu.](media/sort-apps-iphone.png "Sort menu")|
+![Sort menu.](media/sort-apps-iphone.png "Sort menu")
 
 
 
 ## Search apps
 
 If you know the name of the app that you want to run, then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
- 
-| **Current** | **Early access** |
-| --- | --- |
-|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, enter the app name in the search field. The app will only search for apps that are on the screen you're on. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
+
+To find an app, enter the app name in the search field. The app will only search for apps that are on the screen you're on.
+
+![Search for your app.](media/search_apps-1.png "Search for your app")
 
 
 ## Refresh the list of apps
 
-- **Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the app list of both the canvas apps and model-driven apps. 
-
-- **Early access**: On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
+On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
 
    > [!div class="mx-imgBorder"]
-   >![Refresh the app list](media/refesh-apps-iphone.png)
+   >![Refresh the app list.](media/refesh-apps-iphone.png)
 
 
 ## Add shortcuts
@@ -259,7 +249,7 @@ Select the ellipsis (...) on the app tile, select **Pin to Home**, and then foll
 
 By default, only production model-driven apps are shown in the list of apps.
 
-To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
+To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon.](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
 
 ![Non-production apps toggle.](media/non_prod_toggle.png "Non-production apps toggle")
 
@@ -301,7 +291,7 @@ If an app requires a connection to a data source or permission to use the device
 
 #### Close a model-drive app
 
-Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), and then select **Apps**.
+Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map icon"), and then select **Apps**.
 
 ![Close a model-driven app.](media/pa_mobile_close_app.png "Close a model-driven app")
 

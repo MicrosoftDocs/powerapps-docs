@@ -6,13 +6,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 1/4/2021
+ms.subservice: guidance
 ms.author: vabhavir
 ms.reviewer: kathyos
 ---
 
 # Pattern: Project management
 
-<!--![Collage of project management app screenshots](media/project-management-collage.jpg "Collage of project management app screenshots")-->
+<!--![Collage of project management app screenshots.](media/project-management-collage.jpg "Collage of project management app screenshots")-->
 
 Organizations need a central place to manage multiple projects as they ensure
 various teams achieve their goals and meet success criteria as planned.
@@ -27,7 +28,7 @@ efficient project management applications and workflows.
 
 ## How to recognize the project management pattern
 
-![Illustration of the project management pattern with plan, track, and review steps](media/project-management-illustration.png "Illustration of the project management pattern with plan, track, and review steps")
+![Illustration of the project management pattern with plan, track, and review steps.](media/project-management-illustration.png "Illustration of the project management pattern with plan, track, and review steps")
 
 Business groups within organizations see the need for a tool to manage projects,
 track progress, and monitor outcomes.
@@ -66,7 +67,7 @@ Rebecca Sackett, a data analyst assistant, found Power Apps in her Office
 lists to replace manual processes. She built a Power Apps solution to digitize the
 traveler document, named CAPS Traveler. Project managers and stakeholders use the main Traveler management app to get an overview of all active projects, see key statistics, and manage the testing and shipping calendars.
 
-![Screenshot of the CAPS Traveler app calendar view](media/CAPS-traveller-calendar.png "Screenshot of the CAPS Traveler app calendar view")
+![Screenshot of the CAPS Traveler app calendar view.](media/CAPS-traveller-calendar.png "Screenshot of the CAPS Traveler app calendar view")
 
 Project managers initiate projects and add details for each required step, such as Fab,
 Paint, Electrical, and Testing. Personnel from each department then use a
@@ -74,14 +75,14 @@ companion mobile app that has been custom-built with specific questions for thei
 department. Later, the central team collates the data and uses the reports to
 identify common reasons why a particular step wasn't done.
 
-![Customized sign-off app for the Electrical team, one of ten such customized companion apps](media/CAPS-signoff-app.png "Customized sign-off app for the Electrical team, one of ten such customized companion apps*")
+![Customized sign-off app for the Electrical team, one of ten such customized companion apps.](media/CAPS-signoff-app.png "Customized sign-off app for the Electrical team, one of ten such customized companion apps*")
 
 There are ten such sign-off apps in addition to the main management app, and they all
 read and write data to the same set of SharePoint lists. After all the steps are
 completed, someone on the Quality Control team performs a final sign-off. A
 flow is then automatically triggered to generate a PDF report.
 
-![Screenshot of flows used to create the final report, and the report itself](media/CAPS-pdf-report.png "Screenshot of flows used to create the final report, and the report itself")
+![Screenshot of flows used to create the final report, and the report itself.](media/CAPS-pdf-report.png "Screenshot of flows used to create the final report, and the report itself")
 
 ### Environment Canterbury InZone app
 
@@ -100,14 +101,14 @@ color scheme, which makes it easy to differentiate and navigate between
 projects, milestones, and outcomes. All screens for projects are green,
 milestones are blue, and outcomes are orange.
 
-![Screenshot of the InZone app](media/environment-canterbury-inzone-app.png "Screenshot of the InZone app")
+![Screenshot of the InZone app.](media/environment-canterbury-inzone-app.png "Screenshot of the InZone app")
 
 Notifications are sent to prompt data updates and provide escalations if
 projects aren't updated at the required time. The flows are also used to call
 specific views and generate HTML table&ndash;based digest emails listing all items
 relating to a specific person in a single email.
 
-![Screenshot of the flows that generate various emails](media/environment-canterbury-email-flows.png "Screenshot of the flows that generate various emails")
+![Screenshot of the flows that generate various emails.](media/environment-canterbury-email-flows.png "Screenshot of the flows that generate various emails")
 
 ### Partners In Health Gift Review app
 
@@ -132,9 +133,9 @@ gift officer can email questions to the PIH DevOps team directly within the app.
 After everything is clear, the gift officers mark the checklist as "done," which
 becomes visible to their managers.
 
-![Screenshot of Partners in Health gift review app](media/partners-in-health-gift-review-app.png "Screenshot of Partners in Health gift review app")
+![Screenshot of Partners in Health gift review app.](media/partners-in-health-gift-review-app.png "Screenshot of Partners in Health gift review app")
 
-![Screenshot of Partners in Health gift editing screen](media/partners-in-health-edit-gift.png "Screenshot of Partners in Health gift editing screen")
+![Screenshot of Partners in Health gift editing screen.](media/partners-in-health-edit-gift.png "Screenshot of Partners in Health gift editing screen")
 
 "The App in a Day training really opened my eyes to how easy it can be to build
 tools that streamline processes and empower our colleagues to be better at their
@@ -167,14 +168,14 @@ capabilities that include:
 - Extensive custom business logic, such as automatically setting date values
     based on status entries.
 
-![Screenshot of the R3 project dashboard](media/r3-project-dashboard.png "Screenshot of the R3 project dashboard")
+![Screenshot of the R3 project dashboard.](media/r3-project-dashboard.png "Screenshot of the R3 project dashboard")
 
 Administrators can assign security clearances to specific app users according to
 their roles. Administrators can also configure the list of task types and
 the expected time for each task, which in turn is used to generate due dates
 automatically.
 
-![Screenshot of the R3 role management screen and key stats dashboard](media/r3-role-management.png "Screenshot of the R3 role management screen and key stats dashboard")
+![Screenshot of the R3 role management screen and key stats dashboard.](media/r3-role-management.png "Screenshot of the R3 role management screen and key stats dashboard")
 
 R3 uses [Power Automate](https://flow.microsoft.com/) to send automated
 notifications and reminders. All data is stored in Microsoft Dataverse.

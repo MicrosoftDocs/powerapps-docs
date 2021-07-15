@@ -6,8 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 12/18/2020
+ms.subservice: teams
 ms.author: kvivek
-ms.reviewer: 
+ms.reviewer: kvivek
+contributors:
+  - kvivek
+  - tapanm-msft
 ---
 # Create apps in Microsoft Teams by using Power Apps
 
@@ -17,7 +21,7 @@ Introducing [Microsoft Dataverse for Teams](overview-data-platform.md) (formerly
 
 The new Power Apps app in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams, and quickly publish and share them for anyone on the team to use, without having to switch between multiple apps and services. With Power Apps Studio embedded in the Power Apps app in Teams and the new built-in data platform providing an easy-to-use, editable data table, you can quickly build apps based on custom data tables that are Teams-specific and scenario-specific.
 
-![The app creation experience in Teams](media/overview.png "The app creation experience in Teams, including the embedded Power Apps Studio experience")
+![The app creation experience in Teams.](media/overview.png "The app creation experience in Teams, including the embedded Power Apps Studio experience")
 
 To help organizations realize value faster, you can use *templates*, which are purpose-built apps for common application patterns that can be easily discovered and installed by members of the team. Although these templates can work without modification, members of the team can customize and extend them to meet the specific needs of their business.
 

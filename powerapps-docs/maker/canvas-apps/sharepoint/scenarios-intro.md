@@ -1,5 +1,5 @@
 ---
-title: Scenarios for SharePoint integration with canvas apps | Microsoft Docs
+title: Scenarios for integrating SharePoint with Power Apps
 description: This series explains different scenarios when integrating SharePoint with canvas apps.
 author: emcoope-msft
 ms.service: powerapps
@@ -7,14 +7,20 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 
-# SharePoint integration scenarios
+# Scenarios for integrating SharePoint with Power Apps
 
 You can connect a canvas app with sites from SharePoint Online, or on-premises SharePoint farms using the on-premises data gateway. Create different connections for different lists or libraries from the SharePoint sites.
 
