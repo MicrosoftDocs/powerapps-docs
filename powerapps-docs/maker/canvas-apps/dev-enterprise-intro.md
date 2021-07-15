@@ -3,11 +3,11 @@ title: Canvas apps for enterprise developers, partners, and ISVs
 description: Learn about developing solutions with canvas apps for enterprise developers, partners, and ISVs.
 author: tapanm-msft
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/25/2021
-ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
