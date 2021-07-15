@@ -48,17 +48,17 @@ If you wish to use a different layout than the default three column in a tab, fo
 
 ### Add items to the form
 
-Using the left side panel, you can add various items to the form:
+Using the left side panel in the form designer, you can add different items to the form depending on which tab you select.
 
 #### Components
 
-From this tab you can add new tabs, sections, or visual controls. More information: [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)
+From this tab you can add new form tabs, sections, or visual controls. More information: [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)
 
 ![Components](media/create-and-edit-a-model-driven-form/add-items-to-the-form-1.png "")
 
 #### Table columns
 
-From this tab you can add fields to your form. More information: [Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)
+From this tab you can add form fields, also called table columns. More information: [Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)
 
 ![Table columns](media/create-and-edit-a-model-driven-form/add-items-to-the-form-2.png "")
 
@@ -74,7 +74,7 @@ Model-driven forms allow you to add JavaScript libraries to further extend your 
 
 ### Exercise: Add a new section and fields to the form
 
-By default the account form includes a single address section. However, the account table also includes a second address. In cases where  you need to track shipping and billing addresses, it's common to add the second address to the form. Follow these steps to add a new section and **ADDRESS 2** columns to the form.
+By default, the account form includes a single address section. However, the account table also includes a second address set. In cases where  you need to track shipping and billing addresses, it's common to add the second address set to the form. Follow these steps to add a new **ADDRESS 2** section and associated columns to the form.
 
 1. Select the **Address** section of the form in the form designer.
 1. On left pane of the form designer select the **Components** tab, and then select **1 Column Section**.
@@ -106,7 +106,7 @@ If your app includes multiple model-driven main forms, users can select which fo
 1. Go to **Apps**, select **...** next to a model-driven app, such as the Account Tracking app you can create following this article: [Build your first model-driven app](build-first-model-driven-app.md), and then select **Edit**.
 1. In app designer, select a form, such as the account main form.
 1. On the right pane, select **Manage forms**.
-1. Select the forms that you want to display in the app, such as **main form**. Clear the forms you don't want to display in the app.
+1. Select the forms that you want to display in the app, such as **main form**, **Account Card**, and **Account Quick Create**. Clear the other forms, such as **Account**.
    ![Select the table forms you want to display in your app](media/create-and-edit-a-model-driven-form/select-forms-to-display-app.png "Forms tile for the Account entity")
 1. Select **Save**, and then select **Publish** to reflect the changes in the app.
 
