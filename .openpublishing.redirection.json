@@ -1,5 +1,5 @@
 {
-  "redirections": [
+  "redirections": [ 
     {
       "source_path": "powerapps-docs/developer/component-framework/reference/lookupoptions.md",
       "redirect_url": "utility/lookupobjects",
