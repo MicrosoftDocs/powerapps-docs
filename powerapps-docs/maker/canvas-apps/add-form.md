@@ -1,5 +1,5 @@
 ---
-title: Show, edit, or add a record in a canvas app | Microsoft Docs
+title: Show, edit, or add a record in a canvas app
 description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: emcoope-msft
 manager: kvivek
@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/22/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Show, edit, or add a record in a canvas app
 
@@ -37,13 +41,13 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 
 1. On the **Properties** tab of the right-hand pane, set **Items** to `FlooringEstimates` and **Value** to `Name`.
 
-    ![Set the form's Items property](./media/add-form/items-property.png)
+    ![Set the form's Items property.](./media/add-form/items-property.png)
 
     The list shows names of flooring products from the data source.
 
 1. Add an **Edit** form control, move it below **ChooseProduct**, and then resize the form to cover most of the screen.
 
-    ![Add a form](./media/add-form/add-a-form.png)
+    ![Add a form.](./media/add-form/add-a-form.png)
 
     > [!NOTE]
    > This topic describes the **Edit** form control, but similar principles apply to the **Display** form control.
@@ -56,26 +60,26 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 
 1. On the **Properties** tab of the right-hand pane, select **Edit fields**.
 
-    ![Edit fields](./media/add-form/edit-fields.png)
+    ![Edit fields.](./media/add-form/edit-fields.png)
 
 1. In the **Fields** pane, select **Add field**, select the check box for each field, and then select **Add**.
 
-    ![Add fields](./media/add-form/add-fields.png)
+    ![Add fields.](./media/add-form/add-fields.png)
 
 1. Select the ellipsis (...) next to **Add field**, select **Collapse all**, and then drag **Name** to the top of the list.
 
-    ![Move field](./media/add-form/move-field.png)
+    ![Move field.](./media/add-form/move-field.png)
 
     The **Edit** form control reflects your change.
 
-    ![Show form](./media/add-form/show-form1.png)
+    ![Show form.](./media/add-form/show-form1.png)
 
 ## Set the card type for a field
 1. In the **Fields** pane, expand the **Price** field by selecting its down arrow.
 
 1. Open the **Control type** list, and then select **Edit slider**.
 
-    ![Edit slider](./media/add-form/edit-slider.png)
+    ![Edit slider.](./media/add-form/edit-slider.png)
 
     In the form, the **Price** field shows a **Slider** control instead of a **Text input** control.
 

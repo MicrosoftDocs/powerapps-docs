@@ -1,5 +1,5 @@
 ---
-title: Show a list of items in a canvas app | Microsoft Docs
+title: Show a list of items in canvas apps
 description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: emcoope-msft
 manager: kvivek
@@ -8,13 +8,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/28/2017
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
-# Show a list of items in Power Apps
+# Show a list of items in canvas apps
 
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your canvas app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
@@ -42,11 +46,11 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 1. On the **Insert** tab, select **Gallery**, and then select **Vertical**.
 
-    ![Add vertical gallery](./media/add-gallery/gallery-dropdown.png)
+    ![Add vertical gallery.](./media/add-gallery/gallery-dropdown.png)
 
 1. On the **Properties** tab of the right-hand pane, open the **Items** list, and then select **Flooring Estimates**.
 
-    ![Flooring estimates](./media/add-gallery/select-layout.png)
+    ![Flooring estimates.](./media/add-gallery/select-layout.png)
 
 1. (optional) In the **Layout** list, select a different option.
 
@@ -60,35 +64,35 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
     The **Gallery** control shows the sample data.
 
-    ![Show data](./media/add-gallery/show-data-default.png)
+    ![Show data.](./media/add-gallery/show-data-default.png)
 
 ## Add a control to the Gallery control
 Before you do any other customization, ensure that the layout for your **Gallery** control most closely matches what you want. From there, you can further modify the **Gallery** template, which determines how all data in the **Gallery** control appears.
 
 1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then selecting the pencil icon in its upper-left corner.
 
-    ![Edit gallery template](./media/add-gallery/edit-item.png)
+    ![Edit gallery template.](./media/add-gallery/edit-item.png)
 
 2. With the template still selected, add a **[Label](controls/control-text-box.md)** control, and then move and resize it so that it doesn't overlap with other controls in the template.
 
-    ![Add label](./media/add-gallery/add-text-box.png)
+    ![Add label.](./media/add-gallery/add-text-box.png)
 
 3. Select the gallery, and then select **Edit** next to **Fields** on the **Properties** tab of the right-hand pane.
 
 4. Select the label that you added earlier in this procedure, and then open the highlighted list in the **Data** pane.
 
-    ![Open drop-down list](./media/add-gallery/open-dropdown.png)
+    ![Open drop-down list.](./media/add-gallery/open-dropdown.png)
 
 5. In that list, click or tap **Price**.
 
     The **Gallery** control shows the new values.
 
-    ![Final Gallery](./media/add-gallery/final-gallery.png)
+    ![Final Gallery.](./media/add-gallery/final-gallery.png)
 
 ## Filter and sort a gallery
 The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that it also determines which records appear based on filter criteria and in what order.
 
-![Search box and sort icon](./media/add-gallery/text-search-box.png)
+![Search box and sort icon.](./media/add-gallery/text-search-box.png)
 
 1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 

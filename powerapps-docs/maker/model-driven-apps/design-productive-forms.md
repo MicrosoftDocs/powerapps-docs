@@ -11,6 +11,7 @@ ms.topic: "conceptual"
 applies_to: 
   - "PowerApps"
 author: "mspilde"
+ms.subservice: mda-maker
 ms.author: "mspilde"
 manager: "kvivek"
 search.audienceType: 
@@ -39,7 +40,7 @@ Being able to interact or work with related data of the child record isn't easil
 
 The following image shows the layout of a Unified Interface application.
 
-:::image type="content" source="media/unified-interface-layout.png" alt-text="Layout for a Unified Interface app":::
+:::image type="content" source="media/unified-interface-layout.png" alt-text="Layout for a Unified Interface app.":::
 
 - The application header isn't part of the form, it's part of the overall page structure of a model-driven app. The app header contains the application name and app-level actions, which include search, help, assistance, quick create forms, settings (personal and app level for admins), and so on.
 - The application site map is also not part of the main form. It contains navigation across the application to pages that are included in your application. The site map offers a quick way to access other areas of your application by using the area switcher at the bottom of the site map.
@@ -65,35 +66,35 @@ Imagine a scenario where a salesperson needs to maintain data for an account tha
 
 The user accesses all information found on the form multiple times a day, so the layout and ease of access is vital to drive highly productive forms in the model-driven app.
 
-:::image type="content" source="media/page-layout-unified-interface.png" alt-text="Page layout for a Unified Interface app":::
+:::image type="content" source="media/page-layout-unified-interface.png" alt-text="Page layout for a Unified Interface app.":::
 
 ### Account data
 
 The first section on the form contains the fields that are used to manage the data and information for that record. Here, a user can quickly review and edit information they use throughout their workday. It's important to make sure that required fields and most-used fields are at the top of this section, to drive efficiencies in the job or task related to the record. In this example, a quick view form of the primary contact is added at the top so users can quickly view and use the information to contact the individual who's important for their daily tasks.
 
-:::image type="content" source="media/primary-contact-quickview.png" alt-text="Quick view form for contact lookup":::
+:::image type="content" source="media/primary-contact-quickview.png" alt-text="Quick view form for contact lookup.":::
 
 ### Related contacts with a subgrid
 
 To the right of the account information section is the contact subgrid. This gives the user a view of all the contact records they have rights to access that are related to the main record. This allows the user to quickly access and interact with a related record that's used most often when working with an account.
 
-:::image type="content" source="media/quickview-subgrid.png" alt-text="Quick view a subgrid for a contact":::
+:::image type="content" source="media/quickview-subgrid.png" alt-text="Quick view a subgrid for a contact.":::
 
 ### Quick access to multiple related records with the reference panel
 
 Next to the contact subgrid is the reference panel. This control can give even further access to related records that go beyond just the contacts. A subgrid helps drive data density and efficiencies when working across all related records of the main form. In this example, the reference panel includes contacts, opportunities, leads, and products. One limitation of the reference panel is that it only provides read-only views of records. It doesn't support a main form of a related record like a main form dialog or a form component does. Reference panels are best used when you want to quickly view information of a related record.
 
-:::image type="content" source="media/reference-panel.png" alt-text="Reference panel on a main form":::
+:::image type="content" source="media/reference-panel.png" alt-text="Reference panel on a main form.":::
 
 Currently, you add a reference panel control by using the classic form designer. On the **Insert** tab, expand **Sections**, and then select **Reference panel**.
 
-:::image type="content" source="media/add-reference-panel.png" alt-text="Add a reference panel to a form":::
+:::image type="content" source="media/add-reference-panel.png" alt-text="Add a reference panel to a form.":::
 
 ### Account activities with the timeline control
 
 Below the contacts subgrid is the activities timeline wall. The timeline control allows a user to quickly view recent information about activities that have an activity record associated to the account. Available activities found in a timeline are emails, phone calls, notes, appointments, and tasks. Users can also send new emails, log new phone calls, and add notes quickly and easily from the control. More information: [Set up the timeline control](set-up-timeline-control.md)
 
-:::image type="content" source="media/timeline-control.png" alt-text="Timeline control in a contact subgrid":::
+:::image type="content" source="media/timeline-control.png" alt-text="Timeline control in a contact subgrid.":::
 
 ## Working with data on a main form best practices
 
@@ -115,7 +116,7 @@ Using a main form dialog is powerful when you need to have users access, and&mda
 
 In this example, a user needs to access the primary contact record, update the phone number, add a note in the activities timeline, and create a new appointment from the contact form. To streamline this experience by reducing clicks and unnecessary navigation, the lookup control is configured to open the contact main form as a dialog. This example shows how the main form dialog can use quick create forms from the related record, incorporate duplicate records, and allow the user to fully interact with data on the related record.
 
-:::image type="content" source="media/main-form-dialog.gif" alt-text="Main form dialog for quick create":::
+:::image type="content" source="media/main-form-dialog.gif" alt-text="Main form dialog for quick create.":::
 
 ### Using the form component control
 
@@ -125,7 +126,7 @@ Note that a form component control will use any form that you've created for tha
 
 In this example, a user is editing the primary contact information directly on the account main form and scrolls down the form to create a new appointment for the primary contact without leaving the account form.
 
-:::image type="content" source="media/form-control-component.gif" alt-text="Form control component used to create an appointment without leaving the main form":::
+:::image type="content" source="media/form-control-component.gif" alt-text="Form control component used to create an appointment without leaving the main form.":::
 
 ### Using quick create forms
 
@@ -133,24 +134,24 @@ There will be times when you want to create an experience where users can quickl
 
 In the following example, a user needs to quickly create a lead by using the **+** menu option in the app header.
 
-:::image type="content" source="media/create-lead.gif" alt-text="Create lead record from view":::
+:::image type="content" source="media/create-lead.gif" alt-text="Create lead record from view.":::
 
 In this example, the quick create form is used to create an appointment for a contact from the timeline wall.
 
-:::image type="content" source="media/create-appt-from-timeline.gif" alt-text="Create an appointment from the timeline control":::
+:::image type="content" source="media/create-appt-from-timeline.gif" alt-text="Create an appointment from the timeline control.":::
 
 In this example, a user can quickly create an opportunity from a quote record form by using a lookup control.
 
 > [!NOTE]
 > Opportunity and quote tables require a Dynamics 365 customer engagement app, such as Dynamics 365 Sales.
 
-:::image type="content" source="media/create-opportunity-from-quote.gif" alt-text="Create an opportunity record from a quote record":::
+:::image type="content" source="media/create-opportunity-from-quote.gif" alt-text="Create an opportunity record from a quote record.":::
 
 ### Using quick view forms for read-only access to related tables
 
 In many scenarios, a user just needs to quickly see information from a related table without having to interact with it. To facilitate these scenarios, you can use quick view forms. The forms can be built to only show the most important information needed to complete tasks that don't require a user to edit the information. An example of where a quick view form is used is in the reference panel of a main record. This demonstrates the power of accessing multiple related records without having to navigate away. You can also add quick view forms directly to a main form when you want related information to be accessed, but not edited, by a user. More information: [Create a model-driven app quick view form to view information about a related table](create-edit-quick-view-forms.md)
 
-:::image type="content" source="media/quick-view-form.gif" alt-text="Quick view form example":::
+:::image type="content" source="media/quick-view-form.gif" alt-text="Quick view form example.":::
 
 ## Using form display options to reduce clutter and build focused forms
 
@@ -162,25 +163,25 @@ Also consider that when you hide certain components like the command bar or the 
 
 In this example, the command bar has been removed to reduce any unnecessary actions when working with an account. This form has been designed to not need the command bar, so the maker has removed it to keep the user on task. More information: [setCommandBarVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setCommandBarVisible.md)
 
-:::image type="content" source="media/form-no-command-bar.png" alt-text="Form with no command bar shown in an app":::
+:::image type="content" source="media/form-no-command-bar.png" alt-text="Form with no command bar shown in an app.":::
 
 In this example, the header has been removed to promote a dense form that focuses the user on record details. This should only be used if the header doesn't provide additional value or displays information that doesn't always need to be available to a user. More information: [setBodyVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setBodyVisible.md)
 
-:::image type="content" source="media/form-no-header.png" alt-text="Form without a header shown in an app":::
+:::image type="content" source="media/form-no-header.png" alt-text="Form without a header shown in an app.":::
 
 In this example, the tabs have been removed. This can be helpful when you build a form that only has a single tab or you want to focus the user on the first tab of a form without the distractions of additional tabs that can lead to loss in productivity for a specific task. More information: [setTabNavigatorVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setTabNavigatorVisible.md)
 
-:::image type="content" source="media/form-no-tabs.png" alt-text="Form without tabs shown in an app":::
+:::image type="content" source="media/form-no-tabs.png" alt-text="Form without tabs shown in an app.":::
 
 In some scenarios where you want more data density, and don't use or need the form footer, you can easily remove it to provide more data and information on the form. This can also help drive consistency as users move from dashboards and view pages where footers aren't included on the page. In this example, the form footer has been removed to reduce clutter and drive data density. More information: [setVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md)
 
-:::image type="content" source="media/form-no-footer.png" alt-text="Form without a footer shown in an app":::
+:::image type="content" source="media/form-no-footer.png" alt-text="Form without a footer shown in an app.":::
 
 ### Form display option to use the entire space of a tab
 
 In many scenarios, you might have a form with a tab and a single control, and you want that control to take up the entire available space within the body of the form on that tab. You can do that by using the form display option that allows the first control on a page in a tab to expand the full height and width of the form. All existing reflow rendering across view port sizes from large to small is honored, and will behave like a regular form except that the control will use the entire space. In this example, the Dynamics 365 Marketing application supports a full tab layout for the customer journey experience. The command bar is removed to further reduce clutter and ensure that the user is focused on the task of managing customer journeys in the application. More information: [setContentType (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-tabs/setContentType.md)
 
-:::image type="content" source="media/tab-using-entire-space.png" alt-text="Form with full tab layout":::
+:::image type="content" source="media/tab-using-entire-space.png" alt-text="Form with full tab layout.":::
 
 ### See also
 

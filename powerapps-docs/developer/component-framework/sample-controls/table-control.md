@@ -17,14 +17,14 @@ This sample component renders a table with two columns. The left column shows th
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Table component](../media/table-control.png "Table component")
+> ![Table component.](../media/table-control.png "Table component")
 
 ## Available for 
 
 Model-driven apps
 
 > [!NOTE]
-> When you debug the table component using the command `npm start`, the component is not rendered in the test harness. This is because the component uses the `context.utils.getEntityMetadata`  method which is not supported by the Power Apps CLI tooling yet.
+> When you debug the table component using the command `npm start`, the component is not rendered in the test harness. This is because the component uses the `context.utils.getEntityMetadata`  method which is not supported by Microsoft Power Platform CLI tooling yet.
 
 ## Code
 
