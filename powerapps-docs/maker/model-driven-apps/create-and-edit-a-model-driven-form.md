@@ -106,7 +106,7 @@ If your app includes multiple model-driven main forms, users can select which fo
 1. Go to **Apps**, select **...** next to a model-driven app, such as the Account Tracking app you can create following this article: [Build your first model-driven app](build-first-model-driven-app.md), and then select **Edit**.
 1. In app designer, select a form, such as the account main form.
 1. On the right pane, select **Manage forms**.
-1. Select the forms that you want to display in the app, such as **main form**, **Account Card**, and **Account Quick Create**. Clear the other forms, such as **Account**.
+1. Select the forms that you want to display in the app, such as **main form**, **Account Card form**, and **Account Quick Create**. Clear the other forms, such as **Account**.
    ![Select the table forms you want to display in your app](media/create-and-edit-a-model-driven-form/select-forms-to-display-app.png "Forms tile for the Account entity")
 1. Select **Save**, and then select **Publish** to reflect the changes in the app.
 
