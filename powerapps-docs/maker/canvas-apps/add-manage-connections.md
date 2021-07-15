@@ -84,6 +84,60 @@ In the list of connections, find the connection that you want to update or delet
 * To delete the connection, select delete.
 * Select the information icon to see the connection details.
 
+## Manage the consent dialog appearance for custom connectors using Azure AD OAuth
+By default, when end-users launch Power Apps apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) as well as custom connectors using OAuth. 
+
+### Suppress consent dialog for Power Apps using custom connectors using OAuth
+
+#### 1.	Provision Microsoft’s Azure API connections service principal in your Azure AD tenant
+
+Microsoft’s Azure API connectors service is used by all Power Apps using connectors – provisioning this service in your tenant is a prerequisite for your custom applications and custom connectors to pre-authorize this service to exercise single-sign-on capabilities with your custom applications and allow Power Apps to suppress the consent dialog. 
+1. A tenant admin must run the following PowerShell commands:
+ - Connect-AzureAD -TenantId <target tenant id>
+ - New-AzureADServicePrincipal -AppId "fe053c5f-3692-4f14-aef2-ee34fc081cae" -DisplayName "Azure API Connections"
+
+Example successful output:
+
+TODO
+
+#### 2.	Pre-authorize Microsoft’s Azure API connections service principal in your Azure AD app
+  
+For each custom connector where consent is expected to be suppressed, authorize "Microsoft’s Azure API Connections" service principal to one of the scopes defined in your app. 
+a.	The owner of the Azure AD custom application used by a custom connector must add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes. Any scope can be created and used for single-sign-on to succeed.
+b.	The following screenshots illustrate where this can be set in https://portal.azure.com for an app registration in Azure AD. Azure Active Directory > App Registrations > select the relevant app > Expose an API > Add a client application > add the app id “fe053c5f-3692-4f14-aef2-ee34fc081cae” to one of the application scopes
+
+TODO
+  
+TODO
+  
+#### 3.	Admin Consent the Client 3rd Party AAD App
+  
+For each custom connector using OAuth where consent is expected to be suppressed, an admin must use [Azure AD’s grant tenant-wide admin consent to an application](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent). 
+
+> [!NOTE]
+> Admins have granular control on which custom applications and the corresponding custom connector consent may be suppressed.  
+
+  #### 4.	Update custom connector in Power Platform to attempt single-sign-on
+  
+For each custom connector using OAuth where consent is expected to be suppressed, a user with edit permissions on the custom connector must change the ‘Enable on-behalf-of login’ value to ‘true’.
+  
+The owner of the custom connector must choose to edit the connector, go to the ‘Security’ section and change the value in ‘Enable on-behalf-of login’ from ‘false’ to ‘true’. 
+
+TODO
+  
+#### 5. Admin configures consent bypass for the Power Apps app
+
+In addition to the admin consent granted on a custom application in Azure AD, which is used by a custom connector, an admin must also configure an app to bypass consent. For each app where consent is expected to be bypassed an admin must run the following command: 
+
+ ```Powershell
+  Set-AdminPowerAppApisToBypassConsent -AppName <Power Apps app id>
+```
+
+### Remove consent suppression for Power Apps using custom connectors using OAuth
+  
+ To remove consent suppression for a custom connector, an admin must perform at least one of the two following actions: 
+1. Remove the tenant-wide admin conse grant to the application in Azure: [Azure AD’s grant tenant-wide admin consent to an application](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent). 
+2. Use the following Power Apps admin cmdlet to disable Power Apps’ attempt to suppress the consent dialog. [Clear-AdminPowerAppApisToBypassConsent](https://docs.microsoft.com/powershell/module/microsoft.powerapps.administration.powershell/clear-adminpowerappapistobypassconsent)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
