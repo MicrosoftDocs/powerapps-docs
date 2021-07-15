@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - stepsic-microsoft-com
 ---
 # Start a flow in a canvas app
 

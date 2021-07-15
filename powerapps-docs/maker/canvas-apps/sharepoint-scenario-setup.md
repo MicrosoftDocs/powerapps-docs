@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
 > [!NOTE]

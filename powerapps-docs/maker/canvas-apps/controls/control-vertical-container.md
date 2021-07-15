@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
 # Vertical container control in Power Apps
 

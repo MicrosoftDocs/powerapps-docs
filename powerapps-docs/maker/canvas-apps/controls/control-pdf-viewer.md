@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.

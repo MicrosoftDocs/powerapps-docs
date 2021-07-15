@@ -17,6 +17,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - mduelae
 ---
 
 # Embed a canvas app as tab app in Teams

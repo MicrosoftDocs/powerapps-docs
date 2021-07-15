@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.

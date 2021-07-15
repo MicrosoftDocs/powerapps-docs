@@ -13,6 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 
 # Scenarios for integrating SharePoint with Power Apps

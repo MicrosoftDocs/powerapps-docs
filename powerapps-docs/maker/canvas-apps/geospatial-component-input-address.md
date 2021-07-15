@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # Address input component 

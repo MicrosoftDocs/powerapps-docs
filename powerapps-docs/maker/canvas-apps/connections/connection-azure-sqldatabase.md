@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to SQL Server from Power Apps
 ![SQL Server icon.](./media/connection-azure-sqldatabase/sqlicon.png)

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # HashTags function in Power Apps
 Extracts the hashtags (#strings) from a string of text.

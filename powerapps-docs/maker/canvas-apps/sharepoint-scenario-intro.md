@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
 Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with Power Apps, Power Automate, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:

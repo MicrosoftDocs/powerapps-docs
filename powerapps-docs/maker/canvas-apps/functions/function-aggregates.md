@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Average, Max, Min, StdevP, Sum, and VarP functions in Power Apps
 Aggregate functions that summarize a set of numbers.

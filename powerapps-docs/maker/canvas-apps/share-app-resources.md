@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - alaug
+  - lancedmicrosoft
 ---
 # Share resources used by canvas apps
 

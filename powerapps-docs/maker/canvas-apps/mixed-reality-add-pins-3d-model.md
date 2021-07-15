@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # Add pins to 3D models in Power Apps
