@@ -2280,6 +2280,8 @@
           items:
             - name: Issue reporting
               href: ../teams/issue-reporting.md
+            - name: Deploy Issue reporting app broadly in your organization
+              href: ../teams/issue-reporting-broad-distribution.md
             - name: Customize Inspection app
               items:
                 - name: Issue reporting sample app architecture
