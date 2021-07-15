@@ -9,6 +9,9 @@ ms.custom:
 ms.date: 10/15/2019
 ms.author: v-dehaas
 ms.reviewer: kvivek
+contributors:
+  - dean-haas
+  - kumarvivek
 ---
 # Use AI Builder in Power Apps
 

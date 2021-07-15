@@ -9,6 +9,8 @@ ms.date: 03/11/2020
 ms.subservice: teams
 ms.author: wimcoor
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 #  Move customizations between environments
 

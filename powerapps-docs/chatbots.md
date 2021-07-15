@@ -8,6 +8,8 @@ ms.custom:
 ms.date: 06/26/2020
 ms.author: iawilt
 ms.reviewer: mvakoc
+contributors:
+  - iaanw
 ---
 # Create chatbots from Power Apps
 

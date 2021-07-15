@@ -9,6 +9,8 @@ ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: simatthe
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Remove an app from your team

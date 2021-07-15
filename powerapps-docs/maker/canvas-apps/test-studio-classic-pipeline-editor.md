@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - aengusheaney
 ---
 
 # Automate tests with Azure Pipelines using classic editor

@@ -15,6 +15,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - wimcoor
 ---
 # Create a canvas app from a sample in Power Apps
 

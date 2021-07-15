@@ -9,6 +9,8 @@ ms.date: 06/25/2021
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Use sample apps from the Microsoft Teams store

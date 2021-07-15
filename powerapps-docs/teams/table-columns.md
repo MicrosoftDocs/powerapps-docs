@@ -9,6 +9,8 @@ ms.date: 06/01/2021
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 
 # Work with table columns

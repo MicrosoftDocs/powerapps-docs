@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.

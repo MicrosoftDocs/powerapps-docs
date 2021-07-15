@@ -9,6 +9,8 @@ ms.date: 11/13/2020
 ms.subservice: teams
 ms.author: richdi
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # View Dataverse for Teams table data in Power BI Desktop (Preview)
 

@@ -11,6 +11,8 @@ ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - "Power Apps"
+contributors:
+  - kumarvivek
 ---
 # Power Apps webinars
 

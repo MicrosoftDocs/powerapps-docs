@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # EncodeUrl and PlainText functions in Power Apps
 Encodes and decodes strings.

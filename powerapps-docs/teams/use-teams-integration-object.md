@@ -9,6 +9,8 @@ ms.date: 09/25/2020
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Microsoft Teams integration object

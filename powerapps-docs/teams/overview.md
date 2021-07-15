@@ -11,6 +11,9 @@ ms.author: kvivek
 ms.reviewer:
 searchScope:
   - "Power Apps"
+contributors:
+  - kumarvivek
+  - tapanm-msft
 ---
 # Power Apps and Microsoft Teams integration
 

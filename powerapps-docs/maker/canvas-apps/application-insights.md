@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - hasharaf
+  - tapanm-msft
 ---
 
 # Analyze telemetry of a canvas app using Application Insights

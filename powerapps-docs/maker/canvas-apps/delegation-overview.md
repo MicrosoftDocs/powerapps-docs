@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
+  - lanced-microsoft
 ---
 # Understand delegation in a canvas app
 

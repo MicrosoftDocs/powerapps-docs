@@ -13,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mattp123
 ---
 
 # Debug a model-driven app with Monitor
