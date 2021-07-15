@@ -15,13 +15,11 @@ In model-driven Power Apps, forms provide the user interface that people use to 
 
 In this tutorial, you create a main type form and then add the form to a model-driven app. The main form is the primary form type that users see when they open records in model-driven apps.
 
-Main forms have a default three column layout. Model-driven form fields and components are grouped into tabs (primary grouping) and sections (secondary grouping). Tabs separate the form into logical pages, while sections separate the content within a tab.
+Main forms have a default three-column layout. Model-driven form fields and components are grouped into tabs (primary grouping) and sections (secondary grouping). Tabs separate the form into logical pages, while sections separate the content within a tab.
 
 ![Main forms have a default three column layout](media\create-and-edit-a-model-driven-form/configure-a-form-2.png "Main forms have a default three column layout")
 
 ## Create and configure a form
-
-<!-- In this example, you use the **Manage customers** app that we created in the lesson **Create a model-driven app** (insert link here) -->
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Data** > **Tables** > **Account**.
@@ -31,15 +29,15 @@ Main forms have a default three column layout. Model-driven form fields and comp
 
 | Property| Description                                                                                                                                                                                                                                                     |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Title**            | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table they will use this name to differentiate between the available forms.  This property is required. |
-| **Description**      | Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the the form designer and in the list of forms for a table in the solution explorer.                                                               |
+| **Title**            | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table, they will use this name to differentiate between the available forms.  This property is required. |
+| **Description**      | Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the form designer and in the list of forms for a table in the solution explorer.                                                               |
 | **Max Width**        | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900.  This property is required.                                                                                                                               |
-| **Show image**       | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form.  See [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) for more information about table options.                                    |
+| **Show image**       | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. For more information about table options, see [Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) .                                    |
 
 ![properties available to configure a form](media/create-and-edit-a-model-driven-form/configure-a-form-1.png "properties available to configure a form")
 
 ### Change the tab layout
-If you wish to use a different layout than the default three column in a tab, follow these steps:
+If you wish to use a different layout than the default three columns in a tab, follow these steps:
 
 1. Select the tab name, such as **Summary**.
 1. In the **Properties** pane on right, select the **Formatting** area to expand it.
@@ -77,7 +75,7 @@ Model-driven forms allow you to add JavaScript libraries to further extend your 
 By default, the account form includes a single address section. However, the account table also includes a second address set. In cases where  you need to track shipping and billing addresses, it's common to add the second address set to the form. Follow these steps to add a new **ADDRESS 2** section and associated columns to the form.
 
 1. Select the **Address** section of the form in the form designer.
-1. On left pane of the form designer select the **Components** tab, and then select **1 Column Section**.
+1. On the left pane of the form designer select the **Components** tab, and then select **1 Column Section**.
    A new section is added below the **ADDRESS** section.
 1. In the right **Properties** pane, change the **Label** from **New Section** to *ADDRESS 2*.
    ![Account form includes a single address section](media/create-and-edit-a-model-driven-form/add-a-new-section-and-fields-to-the-form-1.png "Account form includes a single address section")
