@@ -13,6 +13,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - chmoncay
 ---
 
 # Limitations of controls in canvas apps

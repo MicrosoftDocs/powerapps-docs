@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Calendar and Clock functions in Power Apps
 Retrieves calendar and clock information about the current locale.

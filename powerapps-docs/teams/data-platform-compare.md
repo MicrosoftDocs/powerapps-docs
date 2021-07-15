@@ -9,6 +9,8 @@ ms.date: 03/19/2021
 ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # How are Dataverse for Teams and Dataverse different?
 

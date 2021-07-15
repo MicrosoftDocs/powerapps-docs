@@ -9,6 +9,8 @@ ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: jshum
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Uninstall the Power Apps personal app

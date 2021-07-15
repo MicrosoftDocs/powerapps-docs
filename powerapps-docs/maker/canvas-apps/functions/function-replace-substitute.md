@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Replace and Substitute functions in Power Apps
 Replace a portion of a string of text with another string.

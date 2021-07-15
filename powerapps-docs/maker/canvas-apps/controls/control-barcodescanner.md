@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Web barcode scanner control (experimental) in Power Apps
 

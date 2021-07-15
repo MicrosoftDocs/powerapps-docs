@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Barcode scanner control in Power Apps
 

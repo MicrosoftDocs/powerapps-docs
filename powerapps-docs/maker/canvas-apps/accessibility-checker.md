@@ -11,6 +11,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Review a canvas app for accessibility in Power Apps

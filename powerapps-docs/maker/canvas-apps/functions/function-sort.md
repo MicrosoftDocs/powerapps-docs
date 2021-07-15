@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Sort and SortByColumns functions in Power Apps
 Sorts a [table](../working-with-tables.md).

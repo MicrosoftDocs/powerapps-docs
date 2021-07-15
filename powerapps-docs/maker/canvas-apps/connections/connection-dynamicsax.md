@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Dynamics AX from Power Apps
 ![Dynamics AX Online.](./media/connection-dynamicsax/dynamics-ax.png)

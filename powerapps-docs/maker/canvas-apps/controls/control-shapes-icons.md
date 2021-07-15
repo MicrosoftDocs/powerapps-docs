@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Shape and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.

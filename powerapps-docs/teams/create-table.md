@@ -9,6 +9,8 @@ ms.date: 11/09/2020
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 
 # Create tables in Microsoft Teams

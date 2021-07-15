@@ -9,6 +9,9 @@ ms.date: 10/05/2020
 ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
+contributors:
+  - navjotm
+  - tapanm-msft
 ---
 
 # Frequently Asked Questions (FAQs) for sample apps

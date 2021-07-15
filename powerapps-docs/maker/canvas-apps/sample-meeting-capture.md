@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - norliu
 ---
 # Set up and learn about the Meeting Capture sample template in Power Apps
 

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Filter, Search, and LookUp functions in Power Apps
 Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
