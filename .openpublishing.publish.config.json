@@ -28,7 +28,7 @@
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
-      },
+      }, 
       "JoinTOCPlugin": [
         {
           "ConceptualTOC": "powerapps-docs/developer/data-platform/webapi/toc.yml",
