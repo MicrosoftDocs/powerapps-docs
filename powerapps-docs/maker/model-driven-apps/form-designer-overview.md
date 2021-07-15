@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -42,7 +43,7 @@ The form designer interface has the following areas:
 1. Fit to width - Quick action to fit the form preview to the available width.
 
 > [!div class="mx-imgBorder"] 
-> ![Form designer layout](media/FormDesignerOverview.png "Form designer layout")
+> ![Form designer layout.](media/FormDesignerOverview.png "Form designer layout")
 
 ## See also
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  

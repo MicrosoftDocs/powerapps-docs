@@ -1,5 +1,5 @@
 ---
-title: What are canvas apps? | Microsoft Docs
+title: What are canvas apps?
 description: Design and build canvas apps in Power Apps so that users can manage line-of-business data in a browser or on their mobile devices
 author: tapanm-msft
 manager: kvivek
@@ -10,6 +10,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: 
 ms.date: 06/16/2020
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -18,14 +19,7 @@ search.app:
 searchScope:
   - "Power Apps"
 ---
-# What are canvas apps in Power Apps?
-
-> [!NOTE]
-> Effective November 2020:
-> - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
-> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](../data-platform/data-platform-intro.md)
->
-> Canvas apps articles will be updated soon to reflect the latest terminology.
+# What are canvas apps?
 
 Design and build a business app from a canvas in Microsoft Power Apps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
@@ -43,7 +37,7 @@ To get started, automatically generate an app from one of these sources, among o
 
 [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then select **Start from data** or a sample app, such as **Service Desk** or **Budget Tracker**.
 
-![Power Apps site](./media/getting-started/create-page-samples.png)
+![Power Apps site.](./media/getting-started/create-page-samples.png)
 
 After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 

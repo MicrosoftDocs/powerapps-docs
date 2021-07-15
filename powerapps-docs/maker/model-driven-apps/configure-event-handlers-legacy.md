@@ -2,11 +2,12 @@
 title: Configure event handlers for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand how to configure event handlers
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/22/2021
 ms.service: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType: 
   - maker
@@ -46,7 +47,7 @@ The following procedure describes how to configure an event handler for a form. 
    - If the library containing the function you want to set as the event handler is already available, on the right properties pane under **Account Main form**, select the **Events** tab, and then go to step 3.
    - If the library containing the function you want isn't already available, select **Form libraries** on the left navigation pane, and then select **Add library**: 
      1. On the **Add JavaScript Library** page, select **New**.
-     :::image type="content" source="media/add-library-formevent-handler.png" alt-text="Add the form event to the library":::
+     :::image type="content" source="media/add-library-formevent-handler.png" alt-text="Add the form event to the library.":::
      1. In the new browser tab, complete the properties to create the JScript web resource, and then select **Save**, and then select **Publish**. More information: [Create a JavaScript web resource](#create-a-javascript-web-resource)
      1. Close the browser tab and go back to the **Add JavaScript Library** list.
      1. Select the JavaScript web resource from the list, select **Add**, and then select the **Events** tab.
@@ -67,7 +68,7 @@ The following procedure describes how to configure an event handler for a form. 
    - **Comma-separated list of parameters that will be passed to the function**: Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.
    - **Table column dependencies**: For **On Save** events, select the columns where you want the event to be triggered after a record save.
 
-      :::image type="content" source="media/configure-form-event.png" alt-text="Configure the event for the form":::
+      :::image type="content" source="media/configure-form-event.png" alt-text="Configure the event for the form.":::
 1. **Save**, and then **Publish** the form.
 
 ## Configure an event handler using the classic experience

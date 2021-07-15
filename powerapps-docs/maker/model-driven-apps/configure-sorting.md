@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 25f5aa52-56dc-4be5-884e-9346616f665f
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -38,7 +39,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 2.  In the view designer, select **Configure Sorting**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
+    > ![Configure sorting.](media/configure-sorting.png "Configure sorting")
   
 3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   

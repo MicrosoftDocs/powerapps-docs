@@ -9,6 +9,7 @@ ms.topic: "article"
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -41,7 +42,7 @@ To import a solution:
 1. On the command bar, select **Import**.  
 
     > [!div class="mx-imgBorder"]  
-    > ![Import solution](media/solution-import.png "Import solution") 
+    > ![Import solution.](media/solution-import.png "Import solution") 
   
 1. On the **Import a solution** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 

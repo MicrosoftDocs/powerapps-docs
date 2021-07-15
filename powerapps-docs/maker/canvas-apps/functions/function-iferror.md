@@ -1,13 +1,14 @@
 ---
-title: IfError and IsError functions in Power Apps | Microsoft Docs
-description: Reference information, including syntax and examples, for the IfError and IsError functions in Power Apps
+title: IfError, IsError, and IsBlankOrError functions in Power Apps
+description: Reference information including syntax and examples for the IfError, IsError, IsBlankOrError functions in Power Apps. 
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 05/04/2020
+ms.date: 06/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,14 +16,14 @@ search.app:
   - PowerApps
 ---
 
-# IfError and IsError functions in Power Apps
+# IfError, IsError, IsBlankOrError functions in Power Apps
 
 [This article is pre-release documentation and is subject to change.]
 
 Detects errors and provides an alternative value or takes action.
 
 > [!NOTE]
-> - IfError and IsError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
+> - IfError, IsError, and IsBlankOrError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
 > - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
@@ -125,13 +126,25 @@ IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.P
 
 The example formula above would display the following banner when the button is activated:
 
-![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
+![Button control activated, showing a notification from the Notify function.](media/function-iferror/notify-errorinfo.png)
 
 ## IsError
 
-The **IsError** function tests for an error value.  The return value is a Boolean *true* or *false*.
+The **IsError** function tests for an error value.  
+
+The return value is a Boolean *true* or *false*.
 
 Using **IsError** will prevent any further processing of the error.
+
+## IsBlankOrError
+
+The **IsBlankOrError** function tests for either a blank value or an error value and is the equivalent of `Or( IsBlank( X ), IsError( X ) )`. 
+
+When enabling error handling for existing apps, consider replacing **IsBlank** with **IsBlankOrError** to preserve existing app behavior.  Prior to the addition of error handling, a *blank* value was used to represent both null values from databases and error values.  Error handling separates these two interpretations of *blank* which could change the behavior of existing apps that continue to use **IsBlank**.
+
+The return value is a boolean *true* or *false*.
+
+Using **IsBlankOrError** will prevent any further processing of the error.
 
 ## Syntax
 
@@ -141,9 +154,9 @@ Using **IsError** will prevent any further processing of the error.
 * *Replacement(s)* – Required. The formulas to evaluate and values to return if matching *Value* arguments returned an error.
 * *DefaultResult* – Optional.  The formulas to evaluate if the formula doesn't find any errors.
 
-**IsError**( *Value* )
+**IsError**( *Value* )<br>**IsBlankOrError**( *Value* )
 
-* *Value* – Required. Formula to test for an error value.
+* *Value* – Required. Formula to test.
 
 ## Examples
 
@@ -162,8 +175,17 @@ Using **IsError** will prevent any further processing of the error.
 | Formula | Description | Result |
 | --- | --- | --- | 
 | **IsError( 1 )** | The argument isn't an error.  | *false* | 
+| **IsError( Blank() )** | The argument is a blank, but not an error. | *false* |
 | **IsError( 1/0 )** | The argument is an error.  | *true* | 
-| **If( IsError( 1/0 ), Notify( "There was an internal problem" ) )** | The argument to **IsError** returns an error value (because of division by zero). This funciton returns *true*, which causes the **If** to display a message to the user with the **Notify** function. The return value of **If** is the return value of **Notify**, coerced to the same type as the first argument to **If** (a boolean). | *true* |
+| **If( IsError( 1/0 ), Notify( "There was an internal problem" ) )** | The argument to **IsError** returns an error value (because of division by zero). This function returns *true*, which causes the **If** to display a message to the user with the **Notify** function. The return value of **If** is the return value of **Notify**, coerced to the same type as the first argument to **If** (a boolean). | *true* |
+
+### Simple IsBlankOrError
+
+| Formula | Description | Result |
+| --- | --- | --- | 
+| **IsBlankOrError( 1 )** | The argument isn't an error or a blank.  | *false* | 
+| **IsBlankOrErrro( Blank() )** | The argument is a blank.  | *true* |
+| **IsBlankOrError( 1/0 )** | The argument is an error.  | *true* | 
 
 ### Step by step
 

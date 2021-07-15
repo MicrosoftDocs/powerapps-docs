@@ -1,6 +1,6 @@
 ---
-title: Transform your InfoPath form to a canvas app | Microsoft Docs
-description: Start to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
+title: Transform your InfoPath form to Power Apps
+description: Learn about how to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/26/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -54,7 +55,7 @@ The Power Apps and SharePoint teams have worked together to create a customizati
 
 With Power Apps you can now customize your list forms as native functionality. And when you do so, you get the full power of Power Apps. In the screenshot below, you can see an example of a Power Apps form with a Power BI report embedded. The entire solution was done in less than 15 minutes.
 
-![SharePoint integration](./media/transform-infopath/sharepoint-integration.png)
+![SharePoint integration.](./media/transform-infopath/sharepoint-integration.png)
 
 Another important feature of Power Apps is the ability to easily connect to another SharePoint site collection or a different environment from the same form. For example, do you want to make one form that displays and updates data from your SharePoint Online and SharePoint on-premises environment at the same time? No problem. If you install the [on-premises data gateway](gateway-management.md), you are up and running in a few minutes, connecting Power Apps, Power BI, Power Automate, and Azure Logic Apps with your on-premises data. No changes to firewall rules are required. You can go a step further by connecting this app with Power Automate.
 
@@ -79,11 +80,11 @@ Now that you know the fundamental concepts, let's go further. With your first ap
 **Hide/show/lock a field based on a value**  
 Successful forms often enforce strong business logic by, for example, changing the state of a field based on a value or an action. With Power Apps, you can set the **DisplayMode** property of a control to **Edit** or **View** to specify whether a user can change the field. You can also use a simple **If** formula to do so conditionally. First, select the card that you want to edit, and then select the lock icon. This step unlocks the card so that you can change the value.
 
-![Hide Show Lock Data Cards](./media/transform-infopath/hide-show-lock.png)
+![Hide Show Lock Data Cards.](./media/transform-infopath/hide-show-lock.png)
 
 In the right-hand pane, scroll to the **DisplayMode** property so that you can edit it.
 
-![If Else Statement Expressions](./media/transform-infopath/if-else-statement.png)
+![If Else Statement Expressions.](./media/transform-infopath/if-else-statement.png)
 
 In this example, use an **If** formula:
 
@@ -147,7 +148,7 @@ If you still need a variable (there are many cases that you do), this will help 
 **Cascading dropdowns**  
 Cascading dropdowns are very useful because you can, for example, filter the choices in one dropdown based on the value selected in the previous dropdown. In Power Apps, these are often created by having two data sources in your app. The first data source is the data you're viewing or updating, and the second data source stores the values to build the cascading effect. This graphic shows an example of the second data source with the choice options.
 
-![Cascading dropdowns](./media/transform-infopath/cascading-dropdowns.png)
+![Cascading dropdowns.](./media/transform-infopath/cascading-dropdowns.png)
 
 In this example, you could add a dropdown named **ddSelectType** and set its **Items** property to this formula:
 

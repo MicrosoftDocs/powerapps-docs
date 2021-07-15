@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -23,7 +24,7 @@ Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Regi
 
 In the Plug-in Registration tool there is a new **Register New WebHook** option to select.
 
-![Shows the menu option to register a new web hook. The keyboard shortcut is Ctrl+W](media/register-new-web-hook.PNG)
+![Shows the menu option to register a new web hook. The keyboard shortcut is Ctrl+W.](media/register-new-web-hook.PNG)
 
 When you register a WebHook you must provide three items of information:
 
@@ -89,7 +90,7 @@ Registering a step for a WebHook is like registering a step for a plug-in. The m
 
 Just like a plug-in, you specify the message, and information about tables when appropriate. You can also specify where in the event pipeline to execute the WebHook, the execution mode and whether to delete any **AsyncOperation** when the operation succeeds. 
 
-![Plug-in registration dialog to register a new WebHook step](media/Plugin-registration-register-WebHook-step.PNG)
+![Plug-in registration dialog to register a new WebHook step.](media/Plugin-registration-register-WebHook-step.PNG)
 
 Information about the **Step Name**, and **Description** will be auto-populated based on the options you choose, but you can change them. If you do not set some **Filtering Attributes** for a message that supports them, you will be prompted to do so as a performance best practices.
 

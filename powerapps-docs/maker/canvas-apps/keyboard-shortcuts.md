@@ -1,6 +1,6 @@
 ---
-title: Keyboard shortcuts for canvas apps | Microsoft Docs
-description: Keyboard shortcuts for canvas apps
+title: Keyboard shortcuts for canvas apps
+description: Learn about different keyboard shortcuts for different operations in canvas apps.
 author: adrianorth
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/12/2020
+ms.subservice: canvas-maker
 ms.author: aorth
 search.audienceType: 
   - maker
@@ -120,11 +121,11 @@ When in design mode, by default selecting an object is for editing: moving, resi
 
 In the following animation, a button control is first selected for editing.  Adorners appear around the control and the formula bar shows the **OnSelect** property, ready to be edited.  The button is then released.  *With the Alt key first depressed*, the button control is again selected, but this time the **OnSelect** property is evaluated and the notification is displayed, just as if the button was selected in a running app.  
 
-![Animation showing the effect of starting by holding down the alt key select a button control](media/keyboard-shortcuts/alt-select.gif)
+![Animation showing the effect of starting by holding down the alt key select a button control.](media/keyboard-shortcuts/alt-select.gif)
 
 The Alt key can also be used *after* a control has been selected to override snap points for moving and resizing.  The next animation shows the resize of a data card within an [**Edit form**](controls/control-form-detail.md) control.  Initially, the resizing is restricted to specific snap points.  Later, *without releasing the mouses button*, the Alt key is depressed in addition to the mouse button. The addition of the Alt key overrides the snap points and any width can be obtained with the mouse. 
 
-![Animation showing the effect of adding the alt key to the resize of a data card](media/keyboard-shortcuts/alt-fine-control.gif)
+![Animation showing the effect of adding the alt key to the resize of a data card.](media/keyboard-shortcuts/alt-fine-control.gif)
 
 ## Other
 

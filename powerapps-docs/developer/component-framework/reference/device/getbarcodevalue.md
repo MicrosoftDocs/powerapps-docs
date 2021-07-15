@@ -23,7 +23,7 @@ ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Return Value
 

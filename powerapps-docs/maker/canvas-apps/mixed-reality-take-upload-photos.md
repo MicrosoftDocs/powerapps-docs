@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 3/25/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -67,7 +68,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
     You can also use the expression editor at the top of the window: type `ViewIn3D1.Source`.
 
-   ![Screenshot showing the Source property with ViewIn3D1.Source in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Source in the expression editor")
+   ![Screenshot showing the Source property with ViewIn3D1.Source in the expression editor.](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Source in the expression editor")
 
 
 9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile) to test that you can view the 3D object in MR by selecting the **View in MR** button.
@@ -85,7 +86,7 @@ Photos you take by selecting the camera icon in the MR view on the app will be l
     
     You can also use the expression editor at the top of the window.
     
-    ![Screenshot showing the Items property with ViewInMR1.Photos](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
+    ![Screenshot showing the Items property with ViewInMR1.Photos.](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.Photos")
 
 
     > [!TIP]
@@ -96,7 +97,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 1. Open the **Insert** tab.
 2. Expand **Media** and select the **Image** control to place it in the app screen. Drag and position it so it covers the entire screen (or however much of the screen you want the image to cover when selected from the gallery).
 
-    ![Drag the image control to fill the screen](./media/augmented-upload-photo/insert-pop-up.png "Drag the image control to fill the screen")
+    ![Drag the image control to fill the screen.](./media/augmented-upload-photo/insert-pop-up.png "Drag the image control to fill the screen")
 
 3. Go to the **Advanced** tab of the **Properties** pane:  
     1. Change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:false})`.
@@ -105,7 +106,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 4. Select the first image in the gallery control.
 5. Go to the **Advanced** tab of the **Properties** pane and change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:true})`.
 
-    ![With the image thumbnail in the gallery selected, change the OnSelect property](./media/augmented-upload-photo/set-gallery-onselect.png "With the image thumbnail in the gallery selected, change the OnSelect property")
+    ![With the image thumbnail in the gallery selected, change the OnSelect property.](./media/augmented-upload-photo/set-gallery-onselect.png "With the image thumbnail in the gallery selected, change the OnSelect property")
 
 6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
 7. Tap the **View in MR** button to open MR view. 
@@ -120,17 +121,17 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This option opens Power Automate in a new browser tab. You might need to sign in at the top.
 
-    ![Select Action, then select Power Automate](./media/augmented-upload-photo/open-automate.png "Select Action, then select Power Automate")
+    ![Select Action, then select Power Automate.](./media/augmented-upload-photo/open-automate.png "Select Action, then select Power Automate")
 2. Choose the template for a **PowerApps button**.
 
-    ![Select the PowerApps button template](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps button template")
+    ![Select the PowerApps button template.](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps button template")
 3. To make it easier to find later, rename the flow by selecting **PowerApps button** at the top and entering a new name.
 
-    ![Change the name on the top of the screen](./media/augmented-upload-photo/rename-flow.png "Change the name on the top of the screen")
+    ![Change the name on the top of the screen.](./media/augmented-upload-photo/rename-flow.png "Change the name on the top of the screen")
 
 4. Select **+ New step**. Search for **OneDrive create file** and select the **Create file** action that appears in the results.
 
-    ![Screenshot highlighting the Create file action](./media/augmented-upload-photo/create-onedrive.png "Screenshot highlighting the Create file action")
+    ![Screenshot highlighting the Create file action.](./media/augmented-upload-photo/create-onedrive.png "Screenshot highlighting the Create file action")
 
     Make sure you are signed in to the correct OneDrive account where you want to upload your photos.
 
@@ -138,40 +139,40 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     1. For the **Folder Path**, enter **MRPhotos**.
     2. For the **File Name**, select the text box and then choose the option for **Ask in PowerApps**.
     
-        ![Screenshot highlighting the file name field](./media/augmented-upload-photo/file-name-ask.png "Screenshot highlighting the file name field")
+        ![Screenshot highlighting the file name field.](./media/augmented-upload-photo/file-name-ask.png "Screenshot highlighting the file name field")
 
     3. For **File Content**:
        1. Select the text box and then choose **Expression**. Enter `decodeDataUri(replace(triggerBody()?['Createfile_FileContent'], '"', ''))` and then select **OK**. 
 
-           ![Screenshot highlighting the file content field](./media/augmented-upload-photo/file-content-code.png "Screenshot highlighting the file content field")
+           ![Screenshot highlighting the file content field.](./media/augmented-upload-photo/file-content-code.png "Screenshot highlighting the file content field")
 
        2. Under the **Dynamic content** section, select **See more** and then choose **Ask in PowerApps**.  
 
            
-           ![Screenshot highlighting the See more button](./media/augmented-upload-photo/see-more.png "Screenshot highlighting the See more button")
+           ![Screenshot highlighting the See more button.](./media/augmented-upload-photo/see-more.png "Screenshot highlighting the See more button")
 
           Adding this content adds a second purple box named **Createfile_FileContent** into the **Create file** task.  
           
           Select **X** to remove it. 
 
-          ![Screenshot highlighting the X next to the label to be removed](./media/augmented-upload-photo/flow-remove-ask-code.png "Screenshot highlighting the X next to the label to be removed")
+          ![Screenshot highlighting the X next to the label to be removed.](./media/augmented-upload-photo/flow-remove-ask-code.png "Screenshot highlighting the X next to the label to be removed")
 
 
 
 6. Your Flow should now have the **Folder Path**, **File Name**, and **File Content** fields filled in:
     
-    ![Screenshot showing the fields filled in](./media/augmented-upload-photo/flow-complete.png "Screenshot showing the fields filled in")
+    ![Screenshot showing the fields filled in.](./media/augmented-upload-photo/flow-complete.png "Screenshot showing the fields filled in")
 
 7. Save the flow and return to the browser tab that has your canvas app open. You'll see your flow now shows up in the **Data** pane.
 
-    ![Screenshot of the data pane with the flow shown](./media/augmented-upload-photo/flow-data-pane.png "Screenshot of the data pane with the flow shown")
+    ![Screenshot of the data pane with the flow shown.](./media/augmented-upload-photo/flow-data-pane.png "Screenshot of the data pane with the flow shown")
 
 
 8. Open the **Insert** tab and select **Button**.
 9. Change the **Text** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
 10. In the expression editor at the top of the Power Apps window, select the **OnSelect** property, and then select the **Action** tab. Select **Power Automate**, and then select the flow you created.
 
-    ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
+    ![Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow.](./media/augmented-upload-photo/add-flow-to-button.png "Screenshot highlighting the OnSelect property, Action tab, Power Automate button, and the flow")
 
 
 11. The **OnSelect** method will be populated with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
@@ -180,7 +181,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     `UploadMRPhoto.Run(Last(ViewInMR1.Photos).ImageURI, JSON(Last(ViewInMR1.Photos).ImageURI, JSONFormat.IncludeBinaryData));`
     
 
-    ![Screenshot showing the code in the expression editor](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
+    ![Screenshot showing the code in the expression editor.](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
 
     If you're inside a gallery of the MR photos, instead use the following formula:
     

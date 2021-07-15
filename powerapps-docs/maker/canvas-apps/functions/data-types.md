@@ -1,6 +1,6 @@
 ---
-title: Data types | Microsoft Docs
-description: Data types in canvas apps
+title: Data types in Power Apps
+description: Learn about the different data types in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,14 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/07/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Data types in canvas apps
+# Data types in Power Apps
 
 Information flows through an app in small, discrete values, very much like the cells of a spreadsheet. For example, data in a **Birthday** field and an **Anniversary** field would both flow through as a **Date** value that includes the year, the month, and the day. The app knows how to format these values, constrain input to what is appropriate for each, and share the values with a database. Birthdays differ from anniversaries to people, but the system handles them in exactly the same manner. In this case, **Date** is an example of a [data type](https://en.wikipedia.org/wiki/Data_type).
 
@@ -32,9 +33,9 @@ This article provides details for the data types that canvas apps support. When 
 | **Image** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) text string to an image in .jpeg, .png, .svg, .gif, or other common web-image format. | **MyImage** added as an app resource<br>**"https://northwindtraders.com/logo.jpg"**<br>**"appres://blobmanager/7b12ffa2..."** |
 | **Media** | A URI text string to a video or audio recording. | **MyVideo** added as an app resource<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
-| **Option set** | A choice from a set of options, backed by a number. This data type combines a localizable text label with a numeric value. The label appears in the app, and the numeric value is stored and used for comparisons. | **ThisItem.OrderStatus** |
+| **Choice** | A choice from a set of options, backed by a number. This data type combines a localizable text label with a numeric value. The label appears in the app, and the numeric value is stored and used for comparisons. | **ThisItem.OrderStatus** |
 | **Record** | A record of data values. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
-| **Record reference** | A reference to a record in an entity. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
+| **Record reference** | A reference to a record in a table. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
 | **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, and omitted fields are treated as *blank*. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Text** | A Unicode text string. | **"Hello, World"** |
 | **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
@@ -66,7 +67,7 @@ Notify( "Jane said ""Hello, World!""" )
 
 results in a banner when the button is pressed, where the first and last double quotes are omitted (as they delimit the text string) and the repeated double quotes around **Hello, World!** are replaced with a single double quote:
 
-![pop up notification with the message Jane said "Hello, World"](media/data-types/literal-string.png)
+![pop up notification with the message Jane said "Hello, World."](media/data-types/literal-string.png)
 
 Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
 
@@ -74,17 +75,17 @@ Single quotation marks are not used for [identifier names](operators.md#identifi
 
 Through the **File** menu, you can add image, video, and audio files as app resources. The name of the imported file becomes the resource name in the app. In this graphic, the Northwind Traders logo, which is named **nwindlogo**, has been added to an app:
 
-![Northwind resource](media/data-types/nwind-resource.png "Northwind resource")
+![Northwind resource.](media/data-types/nwind-resource.png "Northwind resource")
 
 To use this resource in an app, specify it in the **Image** property of an [**Image**](../controls/control-image.md) control:
 
-![Northwind image](media/data-types/nwind-image.png "Northwind image")
+![Northwind image.](media/data-types/nwind-image.png "Northwind image")
 
 ### URIs for images and other media
 
 You can dig a little deeper into that last example by setting the **Text** property of a [**Label**](../controls/control-text-box.md) control to **nwindlogo**. The label shows a text string:
 
-![Northwind text](media/data-types/nwind-text.png "Northwind text")
+![Northwind text.](media/data-types/nwind-text.png "Northwind text")
 
 Canvas apps reference each image or other media file, whether it's in the cloud or added as an app resource, by a URI text string.
 
@@ -96,11 +97,11 @@ For example, the **Image** property of an image control accepts not only app res
 
 That URI displays a scaled-up version of two purple diamonds:
 
-![Double diamonds](media/data-types/double-diamonds.png "Double diamonds")
+![Double diamonds.](media/data-types/double-diamonds.png "Double diamonds")
 
 You can show the most recent image captured in a [**Camera**](../controls/control-camera.md) control if you set the **Image** property of an image control to the **Photo** property of the camera control. The app holds the image in memory, and the **Photo** property of the camera control returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property could return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
 
-You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Microsoft Dataverse entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
+You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Microsoft Dataverse table might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
 
 When you save a media data type, such as an image, to a database, the app sends the actual image or media data, not the URI reference.
 
@@ -177,7 +178,7 @@ If you need the Unix time in a **Date** value for further calculations or displa
 
 ### SQL Server
 
-SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
+SQL Server has [**Datetime**, **Datetime2**, and other date/time data types](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) that don't include a time-zone offset and don't indicate which time zone they're in. Canvas apps assume these values are stored in UTC and treat them as **User local**. If the values are meant to be time-zone independent, correct for the UTC translations by using the [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) function.
 
 Canvas apps use the included time-zone information in **Datetimeoffset** fields when converting a value to the app's internal UTC representation. The apps always use UTC as the time zone (zero time zone offset) when they write data.
 
@@ -200,15 +201,15 @@ A **Date** value can include time information with it, which is usually midnight
 
 Adding and subtracting date and time values directly isn't recommended because time-zone and other conversions could cause confusing results. Either use the **Value** function to convert date/time values to milliseconds first and take into account the app user's time zone, or use the [**DateAdd**](function-dateadd-datediff.md) and [**DateDiff**](function-dateadd-datediff.md) functions to add or subtract from one of these values.
 
-## Option sets and Two options
+## Choices and Yes/No
 
-Option sets and two-option data types provide a two or more choices for an app user to select. For example, an **Order Status** option set might offer the choices **New**, **Shipped**, **Invoiced**, and **Closed**. The two-option data type offers only two choices.
+Choices and two-option data types provide a two or more choices for an app user to select. For example, an **Order Status** choice might offer the choices **New**, **Shipped**, **Invoiced**, and **Closed**. The two-option data type offers only two choices.
 
-Both of these data types show their labels in a text-string context. For example, a label control shows one of the order-status options if the control's **Text** property is set to a formula that references that option set. Option labels might be localized for app users in different locations.
+Both of these data types show their labels in a text-string context. For example, a label control shows one of the order-status options if the control's **Text** property is set to a formula that references that choice. Option labels might be localized for app users in different locations.
 
-When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in an option set is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
+When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in an choice is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
 
-The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each option set has an enumeration that works with the underlying number or boolean value. For example, you can't use this formula:
+The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each choice has an enumeration that works with the underlying number or boolean value. For example, you can't use this formula:
 
 `If( ThisItem.OrderStatus = "Active", ...`
 
@@ -216,7 +217,7 @@ But you can use this formula:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
-For global option sets (which entities share), the name of the option-set enumeration matches the name of the global option set. For local option sets (which are scoped to an entity), the name might contain the name of the entity. This behavior avoids conflicts if multiple entities have option sets that have the same name. For example, the **Accounts** entity might have an **OrderStatus** option set, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
+For global choices (which tables share), the name of the option-set enumeration matches the name of the global choice. For local choices (which are scoped to a table), the name might contain the name of the table. This behavior avoids conflicts if multiple tables have choices that have the same name. For example, the **Accounts** table might have an **OrderStatus** choice, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
 
 In addition, two-option values can also behave as boolean values. For example, a two-option value named **TaxStatus** might have the labels **Taxable** and **Non-Taxable**, which correspond to *true* and *false* respectively. To demonstrate, you can use this formula:
 

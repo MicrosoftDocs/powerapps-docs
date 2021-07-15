@@ -1,5 +1,5 @@
 ---
-title: Explore Power Apps for free for 30 days | Microsoft Docs
+title: Explore Power Apps for free for 30 days
 description: Sign up for a free license that includes all Power Apps capabilities and expires after 30 days.
 author: alaug
 ms.service: powerapps
@@ -25,7 +25,7 @@ If you have a Power Apps license or a license through Office 365, you already ha
 
 > [!NOTE]
 > - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
-> - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
+> - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
 ## Identify your current license
 
@@ -38,7 +38,7 @@ To find out which license or licenses you already have:
 
 2. Select the gear icon near the upper-right corner, and then select **Plan(s)**.
 
-    ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
+    ![Gear icon.](./media/signup-for-powerapps/gear-icon.png)
 
 ## Upgrade an existing license
 
@@ -61,7 +61,7 @@ Regardless of whether you have a license for Power Apps, you can start a free, 3
 
 1. If a dialog box indicates that Power Apps recognizes your organizational credentials, follow the prompts to finish signing in.
 
-    ![Sign in with work account](./media/signup-for-powerapps/we-know-you.png)
+    ![Sign in with work account.](./media/signup-for-powerapps/we-know-you.png)
 
     Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and select **Start**.
 

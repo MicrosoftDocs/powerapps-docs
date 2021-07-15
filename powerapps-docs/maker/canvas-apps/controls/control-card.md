@@ -1,12 +1,13 @@
 ---
-title: 'Card control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Card control
+title: Card control in Power Apps
+description: Learn about the details, properties and examples of the card control in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 ms.reviewer: tapanm
 search.audienceType: 

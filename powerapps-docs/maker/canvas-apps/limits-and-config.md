@@ -1,12 +1,13 @@
 ---
-title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
-description: System requirements, limits, and configuration values for canvas apps built in Power Apps
+title: System requirements, limits, and configuration values for canvas apps
+description: Learn about system requirements, limits, and configuration values for canvas apps built in Power Apps.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 06/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -14,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, limits, and configuration values for canvas apps.
+This article contains device platform and web browser requirements, limits, and configuration values for canvas apps.
 
 ## Supported platforms for running canvas apps using the Power Apps mobile app
 
@@ -46,7 +47,7 @@ This topic contains device platform and web browser requirements, limits, and co
 | **Operating System** | **Supported Versions** |
 | --- | --- |
 | Windows |Windows 8.1 or later|
-| Mac OS|10.13 or later|
+| macOS|10.13 or later|
 | iOS |iOS 13 or later|
 | Android |10 or later |
 
@@ -67,7 +68,7 @@ This topic contains device platform and web browser requirements, limits, and co
 | **Operating Systems** | **Supported Versions** |
 | --- | --- |
 | Windows |Windows 8.1 or later|
-| Mac OS|10.13 or later|
+| macOS|10.13 or later|
 
 ## Request limits
 These limits apply to each single outgoing request:
@@ -81,9 +82,10 @@ These limits apply to each single outgoing request:
 > The retry value may vary. For certain error conditions, it's not necessary to retry.
 
 ## IP addresses
+
 Requests from Power Apps use IP addresses that depend on the region of the [environment](/power-platform/admin/environments-overview) that the app is in. We don't publish fully qualified domain names available for Power Apps scenarios.
 
-Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this article.
 
 For example, use these addresses when you must allow IP addresses for an Azure SQL database.
 
@@ -114,15 +116,15 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
-| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
+| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |Microsoft Authentication Library |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, and make.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| \*.dynamics.com | https | Dataverse |
+| \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.dynamics.com | https | Microsoft Dataverse |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 

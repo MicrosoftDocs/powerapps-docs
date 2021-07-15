@@ -1,6 +1,6 @@
 ---
-title: 'Radio control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Radio control
+title: Radio control in Power Apps
+description: Learn about the details, properties and examples of the Radio control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/06/2018
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -76,9 +77,9 @@ The control can have a horizontal or vertical layout.
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

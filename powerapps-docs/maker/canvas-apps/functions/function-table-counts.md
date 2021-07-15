@@ -1,6 +1,6 @@
 ---
-title: Count, CountA, CountIf, and CountRows functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Count, CountA, CountIf, and CountRows functions in Power Apps
+title: Count, CountA, CountIf, and CountRows functions in Power Apps
+description: Reference information including syntax and examples for the Count, CountA, CountIf, and CountRows functions in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -36,7 +37,7 @@ You need to enable the **Enhanced delegation for Microsoft Dataverse** option in
 1. Turn on the **Enhanced delegation for Microsoft Dataverse** option.
 
     > [!div class="mx-imgBorder"]
-    > ![Enable delegation](media/enable-delegation-functions.png)
+    > ![Enable delegation.](media/enable-delegation-functions.png)
 
 <!--[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]-->
 

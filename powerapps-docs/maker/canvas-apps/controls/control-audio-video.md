@@ -1,12 +1,13 @@
 ---
-title: 'Audio and Video controls: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Audio and Video controls
+title: Audio and Video controls in Power Apps
+description: Learn about the details, properties and examples of the audio and video controls in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -58,11 +59,11 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**OnEnd** – How an app responds when an audio or video clip finishes playing.
+**OnEnd** – Actions to perform when an audio or video clip finishes playing.
 
-**OnPause** – How an app responds when the user pauses the clip that an audio or video control is playing.
+**OnPause** – Actions to perform when the user pauses the clip that an audio or video control is playing.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.
+**OnStart** – Actions to perform when the user starts to record with a microphone control.
 
 **Paused** – *True* if a media playback control is currently paused, *false* otherwise.
 

@@ -1,21 +1,23 @@
 ---
-title: 'Date Picker control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Date Picker control
+title: Date Picker control in Power Apps
+description: Learn about the details, properties and examples of the Date Picker control in Power Apps.
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/10/2020
+ms.date: 07/06/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Date Picker control in Power Apps
-A control that the user can click or tap to specify a date.
+
+A control that the user can select to specify a date.
 
 ## Description
 If you add a **Date Picker** control instead of a **[Text input](control-text-input.md)** control, you help ensure that the user specifies a date in the correct format.
@@ -73,13 +75,13 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **InputTextPlaceholder** – Instructional text that appears if no dates are entered.
 
-**IsEditable** – Whether the datepicker text can be edited. If false, the date can only be changed by using the calendar.
+**IsEditable** – Whether the Date Picker text can be edited. If false, the date can only be changed by using the calendar.
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control. 
+**[OnChange](properties-core.md)** –  Actions to perform when the user changes the value of a control. 
 
 Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger on the same user action if the user's *click* causes the change. In this case, OnSelect triggers **before** OnChange.
 
@@ -90,6 +92,8 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 **[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+
+**Reset** - Whether the Date Picker control should be reset to the **DefaultDate** value.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
@@ -108,21 +112,47 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
+
 **[Year](../functions/function-datetime-parts.md)**( *DateTimeValue* )
 
-## Example
-1. Add a **Date Picker** control, and name it **Deadline**.
+## Examples
+
+### Basic date picker
+
+1. Add a **Date Picker** control, and name it "Deadline".
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to this formula:
-   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
+
+2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to the following formula:
+
+   ```powerapps-dot
+    DateDiff(Today(), Deadline.SelectedDate) & " days to go!"
+    ```
 
     Want more information about the **[DateDiff](../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
+
+3. Press **F5**, choose a date in **Deadline**, and then select **OK**.
 
     The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
+
 4. To return to the default workspace, press Esc.
 
+##  Reset date picker to default date
+
+1. Add a **Date Picker** control, and name it "DateTimeReset".
+
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+
+1. Add a **[Button](control-button.md)** control, and set its **[OnChange](properties-core.md)** property to the following formula:
+    ```powerapps-dot
+    Reset(DateTimeReset)
+    ```
+
+1. Press **F5**, choose a new date in **DateTimeReset**, and then select **OK**.
+
+1. Press the button. The date will reset back to the **DefaultDate** (Today).
+
+1. To return to the default workspace, press Esc.
 
 ## Accessibility guidelines
 ### Color contrast

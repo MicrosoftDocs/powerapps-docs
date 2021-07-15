@@ -1,6 +1,6 @@
 ---
-title: Customize a card in a canvas app | Microsoft Docs
-description: Change the default control that appears in a card on a Details or Edit form in a canvas app
+title: Customize a card in a canvas app
+description: Change the default control that appears in a card on a Details or Edit form in a canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/18/2018
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -38,14 +39,14 @@ In this procedure, you'll replace a **[Text-input](controls/control-text-input.m
 1. In the list of fields, select the down arrow for **Number of Employees**, and then open the list under **Control type**.
 
     > [!div class="mx-imgBorder"]
-    > ![Drop-down list of options for a number card](./media/customize-card/card-selector.png)
+    > ![Drop-down list of options for a number card.](./media/customize-card/card-selector.png)
 
 1. Select **Edit Slider**.
 
     The screen reflects your change.
 
     > [!div class="mx-imgBorder"]
-    > ![EditForm1 with slider control](./media/customize-card/add-slider.png)
+    > ![EditForm1 with slider control.](./media/customize-card/add-slider.png)
 
 ## Unlock and customize a card
 
@@ -54,22 +55,22 @@ In this procedure, you'll unlock a card and update the **Max** property of the *
 1. In **EditForm1**, select the **Slider** control in the **Number of Employees** card.
 
     > [!div class="mx-imgBorder"]
-    > ![Select the slider](./media/customize-card/select-slider.png)
+    > ![Select the slider.](./media/customize-card/select-slider.png)
 
 1. On the **Advanced** tab of the right-hand pane, select the lock icon to unlock the card.
 
     > [!div class="mx-imgBorder"]
-    > ![Unlock card](./media/customize-card/lock-icon.png)
+    > ![Unlock card.](./media/customize-card/lock-icon.png)
 
 1. Set the **Max** property of the **Slider** control to 10,000.
 
     > [!div class="mx-imgBorder"]
-    > ![Max property on Advanced tab](./media/customize-card/max-property.png)
+    > ![Max property on Advanced tab.](./media/customize-card/max-property.png)
 
     The **Slider** control shows a more accurate value.
 
     > [!div class="mx-imgBorder"]
-    > ![Slider range: 0-10,000](./media/customize-card/final-slider.png)
+    > ![Slider range: 0-10,000.](./media/customize-card/final-slider.png)
 
 ## Next steps
 

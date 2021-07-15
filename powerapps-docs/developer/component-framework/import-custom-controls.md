@@ -2,6 +2,7 @@
 title: Import components into model-driven apps in MIcrosoft Dataverse | Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 04/01/2021
@@ -13,7 +14,7 @@ author: Nkrb
 
 # Package a code component
 
-This article describes how to import code components into Microsoft Dataverse. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
+This article describes how to import code components into Microsoft Dataverse. After implementing the code components using Microsoft Power Platform CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -53,7 +54,7 @@ To create and import a solution file:
 
 ## Connecting to your environment
 
-You can deploy the code components directly from the Power Apps CLI by connecting to the Dataverse environment and then pushing the updated components.
+You can deploy the code components directly from Microsoft Power Platform CLI by connecting to the Dataverse environment and then pushing the updated components.
 
 Follow the steps below to create the authentication profile, connect to Dataverse, and push the updated components. 
  
@@ -123,7 +124,7 @@ More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.expo
 
 > [!NOTE]
 > The plugin command is in public preview and 
-Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
+Microsoft Power Platform CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the root directory where you want the project to be created.

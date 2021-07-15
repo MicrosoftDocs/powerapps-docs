@@ -1,6 +1,6 @@
 ---
-title: 'Pie chart control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Pie chart control
+title: Pie chart control in Power Apps
+description: Learn about the details, properties and examples of the Pie chart control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -56,7 +57,7 @@ This control is a grouped control containing three controls: a **[Label](control
 
 **LabelPosition** – The location of labels in a pie chart relative to its wedges.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 

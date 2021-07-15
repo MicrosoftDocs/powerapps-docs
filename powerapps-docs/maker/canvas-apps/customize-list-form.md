@@ -1,12 +1,13 @@
 ---
-title: Customize a SharePoint list form | Microsoft Docs
-description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
+title: Customize a SharePoint list or library form by using Power Apps
+description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/26/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -118,7 +119,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     You can toggle back and forth between options, as needed.
 
-    ![Form Settings options](./media/customize-list-form/form-settings.png)
+    ![Form Settings options.](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
 
@@ -128,7 +129,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. On the **Form Settings** page, select **Use the default SharePoint form**, and then select **Delete custom form**.
 
-    ![Delete the custom form](./media/customize-list-form/use-default-sharepoint.png)
+    ![Delete the custom form.](./media/customize-list-form/use-default-sharepoint.png)
 
 ## Q & A
 
@@ -224,7 +225,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     If the app type is SharePoint Form, the app is a customized form.
 
-    ![List of customized forms](./media/customize-list-form/customized-forms.png)
+    ![List of customized forms.](./media/customize-list-form/customized-forms.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

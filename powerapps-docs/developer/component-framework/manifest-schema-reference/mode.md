@@ -1,7 +1,8 @@
 ---
-title: Mode | Microsoft Docs
-description: 
+title: Mode element| Microsoft Docs
+description: Provides information on methods available for mode element.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -12,7 +13,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Manifest element
+# Mode element
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 

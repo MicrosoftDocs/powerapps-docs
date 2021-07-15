@@ -1,6 +1,6 @@
 ---
-title: Reset function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Reset function in Power Apps
+title: Reset function in Power Apps
+description: Reference information including syntax and examples for the Reset function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 07/06/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker

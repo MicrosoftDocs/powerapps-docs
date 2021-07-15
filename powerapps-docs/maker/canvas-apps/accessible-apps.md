@@ -1,5 +1,5 @@
 ---
-title: Create accessible canvas apps | Microsoft Docs
+title: Create accessible canvas apps
 description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
 ms.service: powerapps
@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/18/2021
+ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
@@ -17,7 +18,8 @@ contributors:
   - tahoon-ms
   - tapanm-msft
 ---
-# Create accessible canvas apps in Power Apps
+# Create accessible canvas apps
+
 An accessible canvas app will allow users with vision, hearing, and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
 
 Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 

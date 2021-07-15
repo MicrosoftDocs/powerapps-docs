@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
+ms.subservice: sample-apps
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -50,7 +51,7 @@ You must add master setup data to these entities in the following sequence:
 Master data is managed from the **Administration** area on the left pane in the admin app.
 
 > [!div class="mx-imgBorder"]
-> ![Administration area](./media/administration-area.png "Administration area")
+> ![Administration area.](./media/administration-area.png "Administration area")
 
 ### App Configs
 
@@ -63,12 +64,12 @@ To update the App Configs entity record:
 1. On the left pane, select **Administration** > **App Configs**.
 
    > [!div class="mx-imgBorder"]
-   > ![Select App Configs](./media/select-app-config-record.png "Select App Configs")
+   > ![Select App Configs.](./media/select-app-config-record.png "Select App Configs")
 
 1. Select the record you want to update.
     
     > [!div class="mx-imgBorder"]
-    > ![Select the record](./media/cfit-app-config-record.png "Select record")
+    > ![Select the record.](./media/cfit-app-config-record.png "Select record")
 
 1. Enter or update the fields by using appropriate values.
 
@@ -83,12 +84,12 @@ To update the App Configs entity record:
 
 1. Double-click to select the image on the form to update it with a new one.<!--What does "change the record image" mean? If this is all about the app icon, can we say "Double-click the app icon to select and update it.", and then have the alt text be "Change the app icon that appears on the mobile app" or something similar? -->
     > [!div class="mx-imgBorder"]
-    > ![Change the record image](./media/change-record-image.png "Change the record image")
+    > ![Change the record image.](./media/change-record-image.png "Change the record image")
 
 1. Select **Upload Image**, to display a new icon for your app.
     
     > [!div class="mx-imgBorder"]
-    > ![Upload image](./media/upload-image-for-the-record.png "Upload image")
+    > ![Upload image.](./media/upload-image-for-the-record.png "Upload image")
 
 ### Frequently Asked Questions 
 
@@ -110,7 +111,7 @@ To create a new record in Frequently Asked Questions:
    |||
 
    > [!div class="mx-imgBorder"]
-   > ![Frequently Asked Questions details](./media/enter-frequently-asked-questions-details.png "Frequently Asked Questions details")
+   > ![Frequently Asked Questions details.](./media/enter-frequently-asked-questions-details.png "Frequently Asked Questions details")
 
 1. Select **Save & Close**. The newly created record will be available in the **Frequently asked questions** list.
 
@@ -136,7 +137,7 @@ To create a record in Campuses:
    |||
 
    > [!div class="mx-imgBorder"]
-   > ![Campuses details](./media/enter-campus-record-details.png "Campuses details")
+   > ![Campuses details.](./media/enter-campus-record-details.png "Campuses details")
 
 1. Select **Save & Close**. The newly created record will be available in the **Campuses** list.
 
@@ -163,7 +164,7 @@ To create a record in Colleges:
     |||
 
     > [!div class="mx-imgBorder"]
-    > ![College details](./media/enter-college-record-details.png "College details")
+    > ![College details.](./media/enter-college-record-details.png "College details")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Colleges** list.
@@ -191,7 +192,7 @@ To create a record in Departments:
     |||
 
    > [!div class="mx-imgBorder"]
-   > ![Department details](./media/enter-department-record-details.png "Department details")
+   > ![Department details.](./media/enter-department-record-details.png "Department details")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Departments** list.
@@ -218,7 +219,7 @@ To create a record in Loss Reasons:
    |||
 
    > [!div class="mx-imgBorder"]
-   > ![Loss Reason details](./media/enter-loss-reason-record-details.png "Loss Reason details")
+   > ![Loss Reason details.](./media/enter-loss-reason-record-details.png "Loss Reason details")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Loss Reasons** list.
@@ -239,7 +240,7 @@ To create a record in Pay Periods:
 1. Enter the following field values to create a new record.
 
    > [!div class="mx-imgBorder"]
-   > ![Pay Period details](./media/enter-pay-period-record-details.png "Pay Period details")
+   > ![Pay Period details.](./media/enter-pay-period-record-details.png "Pay Period details")
 
     | Field | Description |
     |-----------|--------------|
@@ -272,7 +273,7 @@ You must add master data to these entities in the following sequence:
 Master data is managed from the **Higher Education Crisis Financial Impact Tracker** area on the left pane in the admin app.
 
 > [!div class="mx-imgBorder"]
-> ![Higher Education Crisis Financial Impact Tracker area on the left pane](./media/cfit-employee-compensation.png "Higher Education Crisis Financial Impact Tracker area on the left pane")
+> ![Higher Education Crisis Financial Impact Tracker area on the left pane.](./media/cfit-employee-compensation.png "Higher Education Crisis Financial Impact Tracker area on the left pane")
 
 ### Employees
 
@@ -305,7 +306,7 @@ To create a record in Employees:
    > The email address of the employee must match the employee email ID of the user accessing the app.
 
    > [!div class="mx-imgBorder"]
-   > ![Employee details](./media/enter-employee-record-details.png "Employee details")
+   > ![Employee details.](./media/enter-employee-record-details.png "Employee details")
 
 1. Select **Save & Close**. The newly created record will be available in the **Employees** list.
 
@@ -334,7 +335,7 @@ To create a record in Sponsors:
     |||
 
    > [!div class="mx-imgBorder"]
-   > ![Sponsors details](./media/enter-sponsors-record-details.png "Sponsors details")
+   > ![Sponsors details.](./media/enter-sponsors-record-details.png "Sponsors details")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Sponsors** list.
@@ -366,7 +367,7 @@ To create a record in Grants:
     |||
 
    > [!div class="mx-imgBorder"]
-   > ![Grant details](./media/enter-grant-record-details.png "Grant details")
+   > ![Grant details.](./media/enter-grant-record-details.png "Grant details")
 
 1. Select **Save & Close**. The newly created record will be available in the **Grants** list.
 
@@ -401,7 +402,7 @@ To create a record in Sponsored Programs:
     |||
 
     > [!div class="mx-imgBorder"]
-    > ![Sponsored Programs](./media/enter-sponsored-program-record-details.png "Sponsored Programs")
+    > ![Sponsored Programs.](./media/enter-sponsored-program-record-details.png "Sponsored Programs")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Sponsored Programs** list.
@@ -439,7 +440,7 @@ To create a record in Employee Compensation:
    |||
 
    > [!div class="mx-imgBorder"]
-   > ![Employee Compensation](./media/enter-employee-compensation-record-details.png "Employee Compensation")
+   > ![Employee Compensation.](./media/enter-employee-compensation-record-details.png "Employee Compensation")
 
 1. Select **Save & Close**. The newly created record will be available in the
     **Sponsored Programs** list.

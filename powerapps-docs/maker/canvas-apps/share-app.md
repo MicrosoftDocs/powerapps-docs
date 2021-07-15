@@ -1,12 +1,13 @@
 ---
-title: Share a canvas app with your organization | Microsoft Docs
-description: Share your canvas app by giving other users in your organization the permissions to run or modify it.
+title: Share a canvas app with your organization
+description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/05/2021
+ms.date: 07/08/2021
+ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -34,34 +35,34 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. On the left pane, select **Apps**.
 
-    ![Show a list of apps](./media/share-app/file-apps.png "Show a list of apps")
+    ![Show a list of apps.](./media/share-app/file-apps.png "Show a list of apps")
 
 1. Select the app that you want to share by selecting its icon.
 
-    ![Select an app](./media/share-app/select-app.png "Select an app")
+    ![Select an app.](./media/share-app/select-app.png "Select an app")
 
 1. On the command bar, select **Share**.  
    or  
    Select **More Commands** (**...**), and then select **Share** from the drop-down menu.
 
-    ![Share an app](./media/share-app/share-app.png "Share an app")
+    ![Share an app.](./media/share-app/share-app.png "Share an app")
 
 1. Specify by name or alias the users or security groups in Azure AD with whom you want to share the app.
 
     - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to "Org apps".
 
-        ![Share with everyone](./media/share-app/everyone.png "Share with everyone")
+        ![Share with everyone.](./media/share-app/everyone.png "Share with everyone")
 
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semicolons. If several people have the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
 
-        ![Share with an individual user](./media/share-app/individual-user.png "Share with an individual user")
+        ![Share with an individual user.](./media/share-app/individual-user.png "Share with an individual user")
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a group outside your organization.
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
-    ![Select a co-owner](./media/share-app/co-owner.png "Select a co-owner")
+    ![Select a co-owner.](./media/share-app/co-owner.png "Select a co-owner")
 
     You can't grant Co-owner permission to a security group if you [created the app from within a solution](add-app-solution.md).
 
@@ -70,25 +71,25 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If your app connects to data for which users need access permissions, specify security roles as appropriate.
 
-    For example, your app might connect to an entity in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that entity.
+    For example, your app might connect to a table in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that table.
 
-    ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png "Assign a security role")
+    ![Assign a security role.](media/share-app/data-permissions-common-data-servicel.png "Assign a security role")
 
-    For more information about managing security for an entity, go to [Manage entity permissions](#manage-entity-permissions).
+    For more information about managing security for a table, go to [Manage table permissions](#manage-table-permissions).
 
     If your app uses connections to other data sources&mdash;such as an Excel file hosted on OneDrive for Business&mdash;ensure that you share these data sources with the users you shared the app with.
 
-    ![Share an Excel file on OneDrive for Business](media/share-app/data-permissions-odb-excel.png "Share an Excel file on OneDrive for Business")
+    ![Share an Excel file on OneDrive for Business.](media/share-app/data-permissions-odb-excel.png "Share an Excel file on OneDrive for Business")
 
     For more information about sharing canvas app resources and connections, go to [Share canvas app resources](share-app-resources.md).
 
 1. If you want to help people find your app, select the **Send an email invitation to new users** check box.
 
-    ![Send an email invitation](media/share-app/send-email-invitation.png "Send an email invitation")
+    ![Send an email invitation.](media/share-app/send-email-invitation.png "Send an email invitation")
 
 1. At the bottom of the share panel, select **Share**.
 
-    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Users can now run the app by using Power Apps Mobile on a mobile device or from AppSource on [Microsoft 365](https://www.office.com/apps) in a browser. Co-owners can edit and share the app in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 
@@ -120,11 +121,11 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
 
 1. [Connect to Azure AD](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
 
-    ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
+    ![Connect-AzureAD.](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
 
 1. Get the [group details](/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
 
-    ![Check the SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
+    ![Check the SecurityEnabled property.](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
 
 **To enable security for a group**
 
@@ -132,19 +133,19 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 
 ```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
 
-![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png "Set SecurityEnabled to True")
+![Set SecurityEnabled to True.](media/share-app/azure_cmdlet_set_security_enabled.png "Set SecurityEnabled to True")
 
 > [!NOTE]
 > You must be the owner of the Microsoft 365 group to enable security.
 > Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Azure AD.
 
 After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
-<a name="manage-entity-permissions"></a>
+<a name="manage-table-permissions"></a>
 <a name="dataverse"></a>
 
-## Manage entity permissions for Dataverse
+## Manage table permissions for Dataverse
 
-If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
+If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the table or tables used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
 
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Azure AD, but not to Microsoft 365 groups.
@@ -160,7 +161,7 @@ To assign a role, you must have **System administrator** permissions for a Datav
 
 1. Select the Dataverse roles that you want to apply to the selected Azure AD users or groups.
 
-     ![Security role list](media/share-app/cds-assign-security-role-list.png "Security role list")
+     ![Security role list.](media/share-app/cds-assign-security-role-list.png "Security role list")
 
 > [!NOTE]
 > When you share an app that's based on an older version of Dataverse, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.

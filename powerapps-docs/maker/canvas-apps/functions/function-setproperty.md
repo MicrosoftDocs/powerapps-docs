@@ -1,6 +1,6 @@
 ---
-title: SetProperty function | Microsoft Docs
-description: Reference information, including syntax, for the SetProperty function in Power Apps Test Studio
+title: SetProperty function in Power Apps Test Studio
+description: Reference information including syntax and examples for the SetProperty function in Power Apps Test Studio.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,7 +8,8 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 12/19/2018
-ms.author: aheneay
+ms.subservice: canvas-maker
+ms.author: aheaney
 search.audienceType: 
   - maker
 search.app: 

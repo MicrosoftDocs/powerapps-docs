@@ -1,6 +1,6 @@
 ---
-title: Value function | Microsoft Docs
-description: Reference information, including syntax, for the Value function in Power Apps
+title: Value function in Power Apps
+description: Reference information including syntax and examples for the Value function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/06/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker

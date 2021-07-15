@@ -1,6 +1,6 @@
 ---
-title: Patch function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Patch function in Power Apps
+title: Patch function in Power Apps
+description: Reference information including syntax and examples for the Patch function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 09/25/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -44,9 +45,9 @@ To use this function with a data source, specify the data source, and then speci
 
 Then specify one or more change records, each of which contains new property values that override property values in the base record. Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
-The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related entity.  
+The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically. However, the return value doesn't provide a value for fields of a related table.  
 
-For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name");` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related entity, use a separate lookup such as:
+For example, you use `Set(MyAccount, Patch(Accounts, First(Account), 'Account Name': "Example name");` and then `MyAccount.'Primary Contact'.'Full Name'`. You can't yield a full name in this case. Instead, to access the fields of a related table, use a separate lookup such as:
 
 ```powerapps-dot
 LookUp(Accounts, Account = MyAccount.Account).'Primary Contact'.'Full Name'
@@ -96,7 +97,7 @@ Specify two or more records that you want to merge. Records are processed in the
 #### Modify or create a record (in a data source)
 In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
 
-![Example icecream](media/function-patch/icecream.png "Example icecream")
+![Example icecream.](media/function-patch/icecream.png "Example icecream")
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -105,7 +106,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 
 After the previous formulas have been evaluated, the data source ends with these values:
 
-![Example icecream after](media/function-patch/icecream-after.png "Example icecream after")
+![Example icecream after.](media/function-patch/icecream-after.png "Example icecream after")
 
 #### Merge records (outside of a data source)
 

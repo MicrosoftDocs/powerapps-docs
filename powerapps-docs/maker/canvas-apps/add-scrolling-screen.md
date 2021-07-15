@@ -1,5 +1,5 @@
 ---
-title: Add a scrolling screen to a canvas app | Microsoft Docs
+title: Add a scrolling screen to a canvas app
 description: In Power Apps, create a screen that users can scroll to show more types of content than the screen can show at a time in a canvas app.
 author: emcoope-msft
 manager: kvivek
@@ -8,13 +8,14 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Add a scrolling screen to a canvas app in Power Apps
+# Add a scrolling screen to a canvas app
 
 In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 
@@ -41,7 +42,7 @@ Now, let's add some controls to the canvas to see how the scrolling screen works
 
 1. In the canvas you added, click or tap **Add an item from the Insert tab**.
    
-    ![][4]
+    ![Add an item from the Insert tab][4]
 2. On the **Insert** tab, click or tap **Charts**, and then click or tap **Column Chart**.
    
     ![The option to add a column chart][5]
@@ -73,7 +74,7 @@ Now, let's add another card with another control.
     ![A line chart added to the bottom of the new card][12]
 3. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
    
-    ![Open Preview mode](./media/add-scrolling-screen/open-preview.png)
+    ![Open Preview mode.](./media/add-scrolling-screen/open-preview.png)
 4. Scroll down to display the new line chart.  
    
     ![Preview shows the line chart][13]

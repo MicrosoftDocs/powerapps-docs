@@ -1,6 +1,6 @@
 ---
-title: 'Rating control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Rating control
+title: Rating control in Power Apps
+description: Learn about the details, properties and examples of the Rating control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -44,9 +45,9 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **RatingFill** – The color of the stars in a rating control.
 
