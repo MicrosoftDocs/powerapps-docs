@@ -9,6 +9,9 @@ ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: kvivek
+contributors:
+  - kvivek
+  - tapanm-msft
 ---
 # FAQs for Dataverse for Teams 
 

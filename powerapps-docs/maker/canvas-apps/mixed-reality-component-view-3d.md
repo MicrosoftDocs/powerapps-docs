@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # View 3D content in canvas apps

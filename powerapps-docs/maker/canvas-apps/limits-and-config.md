@@ -13,6 +13,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
+  - alaug
 ---
 # System requirements, limits, and configuration values for canvas apps
 This article contains device platform and web browser requirements, limits, and configuration values for canvas apps.

@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # Load models with the View in 3D component

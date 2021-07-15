@@ -16,6 +16,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Create a canvas app with data from Microsoft Dataverse
 

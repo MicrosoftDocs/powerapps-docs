@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # DataSourceInfo function in Power Apps
 Provides information about a [data source](../working-with-data-sources.md).

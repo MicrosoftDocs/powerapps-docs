@@ -16,6 +16,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Preview: Create a canvas app from Azure SQL Database
 

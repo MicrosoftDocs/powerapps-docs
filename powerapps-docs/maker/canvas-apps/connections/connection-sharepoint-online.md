@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to SharePoint from a canvas app
 

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Concurrent function in Power Apps
 Evaluates multiple formulas concurrently with one another.

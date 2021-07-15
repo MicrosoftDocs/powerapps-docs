@@ -18,6 +18,8 @@ search.app:
   - PowerApps
 searchScope:
   - "Power Apps"
+contributors:
+  - tapanm-msft
 ---
 # What are canvas apps?
 

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - fikaradz
 ---
 # Show data in a line, pie, or bar chart in canvas apps
 

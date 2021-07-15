@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Keyboard shortcuts for canvas apps
 

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Distinct function in Power Apps
 Summarizes [records](../working-with-tables.md#records) of a [table](../working-with-tables.md), removing duplicates.

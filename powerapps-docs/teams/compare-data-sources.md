@@ -9,6 +9,8 @@ ms.date: 05/06/2021
 ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Comparing Microsoft Lists, Dataverse for Teams, and Dataverse
 

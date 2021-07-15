@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # UpdateContext function in Power Apps
 Creates or updates [context variables](../working-with-variables.md#use-a-context-variable) of the current screen.
