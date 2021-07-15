@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - matthewbolanos
+  - kumarvivek
 ---
 
 # Set up and learn about the Crisis Communication sample app in Power Apps

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.

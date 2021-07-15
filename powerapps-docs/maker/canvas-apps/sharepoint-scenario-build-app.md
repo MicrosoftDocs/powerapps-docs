@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Create a canvas app to manage projects
 > [!NOTE]

@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # How to link SharePoint lists using a lookup column in Power Apps
 

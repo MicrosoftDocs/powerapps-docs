@@ -13,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Debugging canvas apps with Monitor

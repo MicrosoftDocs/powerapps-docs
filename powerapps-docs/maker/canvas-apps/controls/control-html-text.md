@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.

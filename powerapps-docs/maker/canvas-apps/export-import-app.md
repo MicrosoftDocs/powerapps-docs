@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - caburk
 ---
 
 # Export and import canvas app packages

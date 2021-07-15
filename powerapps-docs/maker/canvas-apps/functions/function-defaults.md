@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Defaults function in Power Apps
 Returns the default values for a [data source](../working-with-data-sources.md).  

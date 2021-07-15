@@ -13,6 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Filter a search list in an app
 

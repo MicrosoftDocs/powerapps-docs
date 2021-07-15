@@ -9,6 +9,8 @@ ms.date: 06/07/2021
 ms.subservice: teams
 ms.author: emcoope
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Understand Power Apps Studio

@@ -13,6 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
 

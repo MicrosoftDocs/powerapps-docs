@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Errors function in Power Apps
 Provides error information for previous changes to a [data source](../working-with-data-sources.md).

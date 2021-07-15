@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
 
 # Building responsive canvas apps  

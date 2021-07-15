@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Export and Import controls in Power Apps
 Controls for exporting data to a local file and then importing that data into another app in Power Apps.

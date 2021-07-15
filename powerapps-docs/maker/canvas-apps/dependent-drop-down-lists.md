@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Create dependent drop-down lists in a canvas app
 

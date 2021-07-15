@@ -13,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 # Get a session ID or a canvas-app ID
 

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # EndsWith and StartsWith functions in Power Apps
 Tests whether a text string begins or ends another text string.

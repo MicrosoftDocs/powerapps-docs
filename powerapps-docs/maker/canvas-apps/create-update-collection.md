@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Create and update a collection in a canvas app
 

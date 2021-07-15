@@ -13,6 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Customize an app screen based on column status inside a SharePoint list
 

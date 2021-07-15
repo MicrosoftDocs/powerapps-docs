@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 
 # EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps

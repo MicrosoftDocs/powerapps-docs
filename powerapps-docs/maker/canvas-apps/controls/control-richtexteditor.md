@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Rich text editor control in Power Apps
 Allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.

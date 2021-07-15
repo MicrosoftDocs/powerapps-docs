@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nkrb
 ms.date: 03/23/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - gregli-msft
 ---
 # Formula reference for Power Apps
 

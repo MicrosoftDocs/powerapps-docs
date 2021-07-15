@@ -13,6 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
+  - emcoope-msft
 ---
 # Use drop-down lists with choices from lookup columns in a SharePoint list
 

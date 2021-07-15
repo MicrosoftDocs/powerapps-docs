@@ -13,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mustlaz
 ---
 
 # Develop offline-capable canvas apps

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - emcoope-msft
 ---
 # Horizontal container control in Power Apps
 

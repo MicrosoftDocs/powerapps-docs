@@ -13,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
 ---
 
 # Preview: Embed canvas apps in your applications

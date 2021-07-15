@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Column chart and Line chart controls in Power Apps
 Controls that show data as graphs with x- and y-axes.
