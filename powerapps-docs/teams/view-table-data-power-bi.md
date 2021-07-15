@@ -41,7 +41,7 @@ Follow the steps to get the URL of your Dataverse for Teams environment, which i
 
 1. Select the **About** tab, and then select **Session Details** to display the session details information.<br/> Copy the Instance url value to notepad. This is the environment URL of your Dataverse for Team environment. For example: `https://orga0e34f66.crm.dynamics.com/`
 
-    ![Select a team to view data.](media/copy-env-url.png)
+    ![Select about tab - session details.](media/copy-env-url.png)
 
 ## Step 2: View the table data in Power BI
 
