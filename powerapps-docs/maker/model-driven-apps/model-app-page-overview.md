@@ -106,7 +106,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Add connectors into custom pages](page-data-connector.md)
+[Add connectors into custom pages](page-data-connectors.md)
 
 [Use Monitor to troubleshoot custom page](monitor-page-checker.md)
 
