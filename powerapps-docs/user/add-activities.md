@@ -365,7 +365,7 @@ For more information on notes and post functionality and configuration, see:
 The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes.
 
 ### Formatting options
-The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes. For more information on the rich text configuration, see [customer-service-hub-user-guide-timeline-admin#notes-on-timeline](Configure notes on timeline.md).
+The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes.
 
 > [!NOTE]
 > You can access your browser's context menu by selecting **Ctrl + right-click**. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
