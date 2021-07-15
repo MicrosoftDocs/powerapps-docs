@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/20/2021
+ms.subservice: teams
 ms.author: chmoncay
 ms.reviewer: tapanm
 ---
@@ -20,7 +21,7 @@ Let's take a look at each Fluent UI control and its most useful properties. For 
 
 A control that the user can select to interact with the app.
 
-![Button control](media/fluent-button.png "Button control")
+![Button control.](media/fluent-button.png "Button control")
 
 ### Description
 
@@ -39,7 +40,7 @@ Configure the OnSelect property of a **Button** control to run one or more formu
 A control that the user can select or clear to set its value to **true** or
 **false**.
 
-![Check box control](media/fluent-check-box.png "Check box control")
+![Check box control.](media/fluent-check-box.png "Check box control")
 
 ### Description
 
@@ -59,7 +60,7 @@ been widely used in the user interface.
 A control that allows users to make selections from provided choices. Supports
 search and multiple selections.
 
-![Combo box control](media/fluent-combo-box.png "Combo box control")
+![Combo box control.](media/fluent-combo-box.png "Combo box control")
 
 ### Description
 
@@ -83,7 +84,7 @@ Single-select or multiple-select mode is configured via the *SelectMultiple* pro
 
 A control that the user can select to specify a date.
 
-![Date picker control](media/fluent-date-picker.png "Date picker control")
+![Date picker control.](media/fluent-date-picker.png "Date picker control")
 
 ### Description
 
@@ -99,7 +100,7 @@ represented in local time.
 
 A box that shows data such as text, numbers, dates, or currency.
 
-![Label control](media/fluent-label.png "Label control")
+![Label control.](media/fluent-label.png "Label control")
 
 ### Description
 
@@ -117,7 +118,7 @@ A label shows data that you specify as a literal string of text or as a formula 
 
 An input control that shows multiple options, only one of which users can select at a time.
 
-![Radio group control](media/fluent-radio-group.png "Radio group control")
+![Radio group control.](media/fluent-radio-group.png "Radio group control")
 
 ### Description
 
@@ -136,7 +137,7 @@ list, or a chart.
 A control with which users can indicate a value from 0 through a maximum number
 that you specify.
 
-![Rating control](media/fluent-rating.png "Rating control")
+![Rating control.](media/fluent-rating.png "Rating control")
 
 ### Description
 
@@ -153,7 +154,7 @@ something by selecting a certain number of stars.
 
 A control with which the user can specify a value by dragging a handle.
 
-![Slider control](media/fluent-slider.png "Slider control")
+![Slider control.](media/fluent-slider.png "Slider control")
 
 ### Description
 
@@ -176,7 +177,7 @@ specify, by dragging the handle of a slider left to right or up and down, depend
 
 A box in which the user can enter text, numbers, and other data.
 
-![Text box control](media/fluent-text-box.png "Text box control")
+![Text box control.](media/fluent-text-box.png "Text box control")
 
 ### Description
 
@@ -194,7 +195,7 @@ calculate a temporary value, or incorporated in some other way.
 
 A control that the user can turn on or off by moving its handle.
 
-![Toggle control](media/fluent-toggle.png "Toggle control")
+![Toggle control.](media/fluent-toggle.png "Toggle control")
 
 ### Description
 

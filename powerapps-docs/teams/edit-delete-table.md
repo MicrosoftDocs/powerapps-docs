@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
 ---
@@ -45,7 +46,7 @@ You can edit table columns using the visual editor.
 1. On the left pane, select **Tables**.
 2. Select the table you want, select **Edit data** on the command bar to display the visual editor.
 
-   :::image type="content" source="media/edit-table2.png" alt-text="Quick edit visual editor":::
+   :::image type="content" source="media/edit-table2.png" alt-text="Quick edit visual editor.":::
 
 More information: [Create your first table](create-first-app.md#create-your-first-table)
 
@@ -55,7 +56,7 @@ Anyone who's a member of the team can delete tables that aren't part of a manage
 
 In the **Tables** list, select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
 <!-- >> [!div class="mx-imgBorder"] 
-> ![Delete table](media/delete-table.png "Delete table")  -->
+> ![Delete table.](media/delete-table.png "Delete table")  -->
 
 ### See also
 

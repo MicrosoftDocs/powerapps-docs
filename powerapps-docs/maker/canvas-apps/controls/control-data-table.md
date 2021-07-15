@@ -7,6 +7,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -90,27 +91,27 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 1. Create a blank tablet app.
 2. On the **Insert** tab, click or tap **Data table**.
    
-    ![Add a Data table control to a screen](./media/control-data-table/insert-data-table.png)
+    ![Add a Data table control to a screen.](./media/control-data-table/insert-data-table.png)
    
     A **Data table** control is added to the screen.
 3. Rename the **Data table** control **SalesOrderTable**, and resize it so that it covers the whole screen.
 4. In the right pane, select **Data sources**, and select **Sales orders**. If the table isn't listed, search for the table, and connect to Microsoft Dataverse.
    
-    ![Select the Sales order table](./media/control-data-table/choose-so-data-table.png)
+    ![Select the Sales order table.](./media/control-data-table/choose-so-data-table.png)
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    
-    ![Data table order](./media/control-data-table/pre-order-data-table.png)
+    ![Data table order.](./media/control-data-table/pre-order-data-table.png)
 7. In the right pane, select one or more check boxes to show or hide individual fields.
    
     For example, select the check box next to **CustomerPurchaseOrderReference** to hide this field.
 8. In the right pane, reorder the fields by dragging them up or down.
    
-    ![Reorder the fields as desired](./media/control-data-table/field-re-order-data-table.png)
+    ![Reorder the fields as desired.](./media/control-data-table/field-re-order-data-table.png)
    
     The **SalesOrderTable** control shows the fields in the order that you specified.
    
-    ![Updated Data table](./media/control-data-table/post-order-data-table.png)
+    ![Updated Data table.](./media/control-data-table/post-order-data-table.png)
 
 ### Restyle the header for the Data table control
 1. While the **Data table** control is selected, in the right pane, click or tap the **Advanced** tab.
@@ -118,25 +119,25 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 3. Click or tap the field for the **HeadingColor** property, and then change the value to **White**.
 4. Click or tap the field for the **HeadingSize** property, and then change the value to **14**.
    
-    ![Data table](./media/control-data-table/restyled-data-table.png)
+    ![Data table.](./media/control-data-table/restyled-data-table.png)
 
 ### Connect a Data table control to another control
 1. Add an **Edit form** control to the screen.
 2. Resize the **Data table** and **Edit form** controls so that the **Data table** control appears in the left part of the screen and the **Edit form** control appears in the right part of the screen.
    
-    ![Data table and Edit form on the same screen](./media/control-data-table/data-table-empty-form.png)
+    ![Data table and Edit form on the same screen.](./media/control-data-table/data-table-empty-form.png)
 3. While **Form1** is selected, in the right pane, change the number of columns to **1**.
 4. Connect **Form1** to the **Sales order** data source.
    
     Several initial fields appear in **Form1**.
    
-    ![Form1 with initial fields](./media/control-data-table/data-table-disconnected-form.png)
+    ![Form1 with initial fields.](./media/control-data-table/data-table-disconnected-form.png)
 5. In the right pane, click or tap the **Advanced** tab.
 6. Set the **Item** property for **Form1** to **SalesOrderTable.Selected**.
    
     **Form1** shows information from the row that's selected in the **Data table** control.
    
-    ![Edit form connected to the Data table](./media/control-data-table/connected-form-data-table.png)
+    ![Edit form connected to the Data table.](./media/control-data-table/connected-form-data-table.png)
 
 
 ## Accessibility guidelines

@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 1/2/2019
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -31,7 +32,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Text search box
 
-![TextSearchBox control](media/people-screen/people-search-box.png)
+![TextSearchBox control.](media/people-screen/people-search-box.png)
 
 A couple other controls interact or have a dependency on the text search box:
 
@@ -40,7 +41,7 @@ A couple other controls interact or have a dependency on the text search box:
 
 ## User-browse gallery
 
-![UserBrowseGallery control](media/people-screen/people-browse-gall.png)
+![UserBrowseGallery control.](media/people-screen/people-browse-gall.png)
 
 * Property: **Items**<br>
     Value: Logic to look up users when the user starts typing:
@@ -62,7 +63,7 @@ The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(Tex
 
 ### UserBrowseGallery Title control
 
-![UserBrowseGallery Title control](media/people-screen/people-browse-gall-title.png)
+![UserBrowseGallery Title control.](media/people-screen/people-browse-gall-title.png)
 
 * Property: **Text**<br>Value: `ThisItem.DisplayName`
 
@@ -88,7 +89,7 @@ Selecting this control does three things concurrently:
 
 ### UserBrowseGallery ProfileImage control
 
-![UserBrowseGallery ProfileImage control](media/people-screen/people-browse-gall-image.png)
+![UserBrowseGallery ProfileImage control.](media/people-screen/people-browse-gall-image.png)
 
 * Property: **Image**<br>
     Value: Logic to retrieve a user's profile photo.
@@ -109,7 +110,7 @@ Note that if an image isn't retrieved, the **Image** control is blank, and the *
 
 ## People-added gallery
 
-![PeopleAddedGallery control](media/people-screen/people-people-gall.png)
+![PeopleAddedGallery control.](media/people-screen/people-people-gall.png)
 
 * Property: **Items**<br>
     Value: `MyPeople`
@@ -118,7 +119,7 @@ This is the collection of people initialized or added to by selecting the **User
 
 ### PeopleAddedGallery Title control
 
-![PeopleAddedGallery Title control](media/people-screen/people-people-gall-title.png)
+![PeopleAddedGallery Title control.](media/people-screen/people-people-gall-title.png)
 
 * Property: **OnSelect**<br>
     Value: `Set( _selectedUser, ThisItem )`
@@ -127,7 +128,7 @@ Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery
 
 ### PeopleAddedGallery iconRemove control
 
-![PeopleAddedGallery iconRemove control](media/people-screen/people-people-gall-delete.png)
+![PeopleAddedGallery iconRemove control.](media/people-screen/people-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
     Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`

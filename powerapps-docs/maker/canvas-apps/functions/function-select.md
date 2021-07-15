@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 01/08/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -81,13 +82,13 @@ The select function can also be used with a gallery. For example, it can be used
 
     A notification appears across the top of your app. The **OnSelect** property of **Button1** generated this notification.
 
-	![An animation that shows the OnSelect property settings for the two buttons and the notification when the second button is clicked](media/function-select/basic-select.gif)
+	![An animation that shows the OnSelect property settings for the two buttons and the notification when the second button is clicked.](media/function-select/basic-select.gif)
 
 #### Gallery control
 
 1. Add a vertical **[Gallery](../controls/control-gallery.md)** control that contains other controls.
 
-    ![Select a vertical gallery that contains controls](media/function-select/select-gallery.png)
+    ![Select a vertical gallery that contains controls.](media/function-select/select-gallery.png)
 
 2. Set the **OnSelect** property of the gallery to this formula:
  
@@ -109,7 +110,7 @@ The select function can also be used with a gallery. For example, it can be used
  
 	Use individual controls in the gallery to take actions that differ from the gallery's default action.
 
-	![An animation that shows the default value of the OnSelect property for a gallery control, as well as a control that takes a different action](media/function-select/gallery-select.gif)
+	![An animation that shows the default value of the OnSelect property for a gallery control, as well as a control that takes a different action.](media/function-select/gallery-select.gif)
 
 7. On the same screen, add a **Button** control, and set its **OnSelect** property to this formula:
 

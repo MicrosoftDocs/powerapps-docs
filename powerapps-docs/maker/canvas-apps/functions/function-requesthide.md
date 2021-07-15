@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -26,7 +27,7 @@ Hides the [SharePoint form](../sharepoint-form-integration.md#understand-the-sha
 
 Use the **RequestHide** function to hide the SharePoint form. By default, RequestHide() is used for the *OnSuccess* property of a SharePoint form being customized.
 
-![RequestHide example](media/function-requesthide/requesthide-fuction.png)
+![RequestHide example.](media/function-requesthide/requesthide-fuction.png)
 
 This function is not required for the **SharePointIntegration** control's **OnCancel** event as SharePoint by default hides the form when a user selects **Cancel**, and the function only reacts to a SharePoint form.
 

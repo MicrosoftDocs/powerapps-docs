@@ -3,6 +3,7 @@ title: Troubleshooting startup issues for Power Apps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
 author: wimcoor
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -52,7 +53,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
-    ![Hmmm … We couldn’t sign you in. The information below may be helpful](maker/media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
+    ![Hmmm … We couldn’t sign you in. The information below may be helpful.](maker/media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
     **Resolution**: Check [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
     

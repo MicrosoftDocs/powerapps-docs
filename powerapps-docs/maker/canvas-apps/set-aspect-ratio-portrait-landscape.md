@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/24/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -26,21 +27,21 @@ Customize a canvas app by changing its screen size and orientation.
 1. Select **Display**.
 1. Under **Orientation** list, select **Portrait** or **Landscape**. <br> 
 
-    ![Orientation for phone layout](./media/set-aspect-ratio-portrait-landscape/phone-layout-orientation.png "Orientation for phone layout")
+    ![Orientation for phone layout.](./media/set-aspect-ratio-portrait-landscape/phone-layout-orientation.png "Orientation for phone layout")
 
 1. (Tablet apps only) Under **Aspect ratio**, perform either of these steps:
 
     - Select the ratio that matches the target device for this app.
     - Select **Custom** to set your own size, and then specify a width between 50 - 3840 and a height between 50 - 2160.
 
-    ![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png "Aspect ratio for a tablet")
+    ![Change the aspect ratio of a tablet app.](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png "Aspect ratio for a tablet")
     
     > [!NOTE]
     > **Size** is only available for apps with **Tablet** layout.
 
 1. Under **Scale to fit**, specify either **On** or **Off**.
 
-    ![Scale to fit](./media/set-aspect-ratio-portrait-landscape/scale-to-fit.png "Scale to fit")
+    ![Scale to fit.](./media/set-aspect-ratio-portrait-landscape/scale-to-fit.png "Scale to fit")
 
     This setting is on by default so that app screens resize to fit the available space on the device. When this setting is on, the app's **Width** property matches its **DesignWidth**, and the app's **Height** matches its **DesignHeight**.
 
@@ -50,7 +51,7 @@ Customize a canvas app by changing its screen size and orientation.
 
 1. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
-    ![Lock aspect ratio](./media/set-aspect-ratio-portrait-landscape/lock-aspect-ratio.png "Lock aspect ratio")
+    ![Lock aspect ratio.](./media/set-aspect-ratio-portrait-landscape/lock-aspect-ratio.png "Lock aspect ratio")
 
     If this setting is on, the app retains the screen orientation and aspect ratio that you specified in steps 2 and 3, no matter the device. For example, a phone app that's running in a web browser retains the ratio for a phone, showing a dark bar on each side instead of filling the window.
 
@@ -58,13 +59,13 @@ Customize a canvas app by changing its screen size and orientation.
 
 1. Under **Lock orientation**, specify either **On** or **Off**.
 
-    ![Lock orientation](./media/set-aspect-ratio-portrait-landscape/lock-orientation.png "Lock orientation")
+    ![Lock orientation.](./media/set-aspect-ratio-portrait-landscape/lock-orientation.png "Lock orientation")
 
     If you lock the app's orientation, the app retains the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app displays incorrectly and may show unwanted results. If you unlock the app's orientation, it adjusts to the screen orientation of the device on which it's running.
 
     You can also modify the app's orientation by enabling **Optimize embedding appearance** in **Settings** > **Display**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
 
-    ![Embedding experience](./media/set-aspect-ratio-portrait-landscape/embedding-experience.png "Embedding experience")
+    ![Embedding experience.](./media/set-aspect-ratio-portrait-landscape/embedding-experience.png "Embedding experience")
 
 1. Close **Settings** dialog.
 

@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 5/22/2020
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -46,12 +47,12 @@ Loading models as attachments or media content works through the binary storage 
 
 1. Create an Excel Online workbook on OneDrive where you've also stored your .glb files.
 
-    ![Using OneDrive to share .glb file](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
+    ![Using OneDrive to share .glb file.](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
 
 1. In the workbook, create a table with columns titled **3DModel [image]** and **Name**.
 1. Add a row for each .glb file, inserting the relative file path to the .glb file in the **3DModel [image]** column.
 
-    ![Using Excel Online to share .glb file](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
+    ![Using Excel Online to share .glb file.](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
 
 1. Close the excel workbook.
 1. In a canvas-based app, add a **Gallery**.
@@ -101,7 +102,7 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
     concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))
     ```
 
-    ![Convert files with SharePoint](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
+    ![Convert files with SharePoint.](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
 
 When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
 

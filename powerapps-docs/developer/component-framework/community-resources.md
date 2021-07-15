@@ -3,6 +3,7 @@ title: Community resources (Power Apps Component Framework) | Microsoft Docs
 description: Access to community resources
 keywords:
 author: Nkrb
+ms.subservice: pcf
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 12/09/2019
@@ -29,7 +30,7 @@ Make sure that you review the licensing terms and the source code before you dow
 > Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing, and modifying the data. 
 
 > [!div class="mx-imgBorder"]
-> ![Component gallery](media/pcf-gallery.PNG "Components gallery")
+> ![Component gallery.](media/pcf-gallery.PNG "Components gallery")
 
 ## Videos        
 
@@ -83,12 +84,12 @@ There are two versions of the code component builder. Both of them are called **
 [PCF Builder for XrmToolBox](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) provides a graphical user interface that lets you create code components in visual manner using Microsoft Power Platform CLI.
 
 > [!div class="mx-imgBorder"]
-> ![Component Builder in XrmToolBox](media/pcf-builder-xrmtoolbox.png "Component Builder in XrmToolBox")
+> ![Component Builder in XrmToolBox.](media/pcf-builder-xrmtoolbox.png "Component Builder in XrmToolBox")
 
 [PCF Builder extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=danish-naglekar.pcf-builder) provides a guided experience that not only lets  you create code components but you can preview code component inside of Visual Studio Code.
 
 > [!div class="mx-imgBorder"]
-> ![Component Builder in VS Code](media/pcf-builder-vscode.png "Component Builder in Visual Studio Code")
+> ![Component Builder in VS Code.](media/pcf-builder-vscode.png "Component Builder in Visual Studio Code")
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

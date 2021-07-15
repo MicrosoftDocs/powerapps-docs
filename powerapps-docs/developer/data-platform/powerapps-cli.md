@@ -2,6 +2,7 @@
 title: Microsoft Power Platform CLI | Microsoft Docs
 description: "Install Microsoft Power Platform CLI to create, debug, and deploy code components by using Power Apps component framework."
 keywords: Microsoft Power Platform CLI, code components, component framework, CLI
+ms.subservice: dataverse-developer
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
@@ -35,7 +36,7 @@ To install Microsoft Power Platform CLI using Visual Studio Code Extension:
 1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
 
    > [!div class="mx-imgBorder"]
-   > ![VS code extension install](media/power-platform-vs-code-extension-install.png "VS code extension install")
+   > ![VS code extension install.](media/power-platform-vs-code-extension-install.png "VS code extension install")
    
 > [!NOTE]
 > Microsoft Power Platform Visual Studio Code Extension updates automatically. 

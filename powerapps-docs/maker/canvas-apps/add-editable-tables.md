@@ -7,6 +7,7 @@ ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/08/2021
+ms.subservice: canvas-maker
 ms.author: denisem
 search.audienceType: 
   - maker
@@ -23,7 +24,7 @@ Designing a productivity application to have related data and functions in one p
 
 Using Power Apps, you can apply the same concept by providing it as a front end to any data source. You're also able to customize it even more.
 
-![Admin Catalog Management - sample app demo](./media/add-editable-tables/admin-catalog-management-demo.gif "Admin Catalog Management - sample app demo")
+![Admin Catalog Management - sample app demo.](./media/add-editable-tables/admin-catalog-management-demo.gif "Admin Catalog Management - sample app demo")
 
 This tutorial uses the following components to make a sample app:
 
@@ -38,13 +39,13 @@ To follow this tutorial, you'll need access to a [Power Platform environment](/p
 
 The tutorial uses the following structure to create the sample app:
 
-![Dataverse columns for sample table](./media/add-editable-tables/dataverse-table-columns.png "Dataverse columns for sample table")
+![Dataverse columns for sample table.](./media/add-editable-tables/dataverse-table-columns.png "Dataverse columns for sample table")
 
 To learn about how to add columns, see [Work with table columns](/powerapps/teams/table-columns).
 
 A new main form has been created to add sample data:
 
-![New main form for adding data to Dataverse table](./media/add-editable-tables/main-form.png "New main form for adding data to Dataverse table")
+![New main form for adding data to Dataverse table.](./media/add-editable-tables/main-form.png "New main form for adding data to Dataverse table")
 
 To learn about how to create a main form with the required columns, see [Create a form](/powerapps/maker/model-driven-apps/create-and-edit-forms#create-a-form). Be sure to use the correct [form order](/powerapps/maker/model-driven-apps/control-access-forms#set-the-form-order) for adding records using the new form.
 
@@ -64,7 +65,7 @@ This section shows how to add a Dataverse table as the data source for the sampl
 1. Select **See all tables**.
 1. Select **Editable tables**, or the table that you created earlier.
 
-    ![Add Dataverse table as the data source](./media/add-editable-tables/add-table-data-source.png "Add Dataverse table as the data source")
+    ![Add Dataverse table as the data source.](./media/add-editable-tables/add-table-data-source.png "Add Dataverse table as the data source")
 
 For more information about adding a connection to a canvas app, see [Add data source](add-data-connection.md#add-data-source).
 
@@ -74,19 +75,19 @@ This step adds a form control to add new items.
 
 1. Select **+** (Insert) > **Edit form**.
 
-    ![Add edit form control](./media/add-editable-tables/add-edit-form-control.png "Add edit form control")
+    ![Add edit form control.](./media/add-editable-tables/add-edit-form-control.png "Add edit form control")
 
 1. On the right-pane, choose the table as the data source for the edit form control.
 
-    ![Choose the table as the data source for edit form control](./media/add-editable-tables/select-data-source-for-form.png "Choose the table as the data source for edit form control")
+    ![Choose the table as the data source for edit form control.](./media/add-editable-tables/select-data-source-for-form.png "Choose the table as the data source for edit form control")
 
 1. Use the **Edit fields** properties option to select the columns to show on the edit form control. You can also change the column order as appropriate.
 
-    ![Edit fields on the edit form control](./media/add-editable-tables/edit-fields.png "Edit fields on the edit form control")
+    ![Edit fields on the edit form control.](./media/add-editable-tables/edit-fields.png "Edit fields on the edit form control")
 
 1. Choose the **Default mode** for the form to **New**.
 
-    ![Choose form control mode as New](./media/add-editable-tables/default-form-control-mode.png "Choose form control mode as New")
+    ![Choose form control mode as New.](./media/add-editable-tables/default-form-control-mode.png "Choose form control mode as New")
 
 1. Adjust the **Width**, **Height** properties for size of the data cards to fill the canvas as appropriate.
 
@@ -107,7 +108,7 @@ This step adds a form control to add new items.
     - [NewForm](functions/function-form.md) changes the mode of the form back to new form to add new products after submitting new product details.
     - **Form1** in this formula is the name of the edit form control added earlier. Update the form name in this formula if your form name is different.
 
-    ![Button OnSelect - new form](./media/add-editable-tables/button-onselect-newform.png "Button OnSelect - new form")
+    ![Button OnSelect - new form.](./media/add-editable-tables/button-onselect-newform.png "Button OnSelect - new form")
 
 ## Step 4: Set up gallery as editable table
 
@@ -121,13 +122,13 @@ This step adds a blank vertical gallery to edit the items as an editable table.
 
 1. Select **Edit gallery**.
 
-    ![Edit blank vertical gallery](./media/add-editable-tables/edit-gallery.png "Edit blank vertical gallery")
+    ![Edit blank vertical gallery.](./media/add-editable-tables/edit-gallery.png "Edit blank vertical gallery")
 
 1. On the left-pane, select **+** (Insert) > **Input** > **Text input**.
 
 1. Align gallery with the following actions:
 
-    ![Align blank vertical gallery](./media/add-editable-tables/align-gallery.png "Align blank vertical gallery")
+    ![Align blank vertical gallery.](./media/add-editable-tables/align-gallery.png "Align blank vertical gallery")
 
     1. Move the top-most row for text input control to the top-left corner within the gallery. Moving this top-most row automatically moves remaining rows for same column.
     1. Resize the first row height within the gallery to occupy the size of the first row you just moved to top-left.
@@ -144,7 +145,7 @@ This step adds a blank vertical gallery to edit the items as an editable table.
     - "Product" is the name of the column within the table.
     - When this formula is updated for the first row in gallery, it automatically updates the entire column with product names. If you see an error, check if you've connected the gallery to the Dataverse table.
 
-    ![Product as seen within the gallery with the formula](./media/add-editable-tables/product-in-gallery.png "Product as seen within the gallery with the formula")
+    ![Product as seen within the gallery with the formula.](./media/add-editable-tables/product-in-gallery.png "Product as seen within the gallery with the formula")
 
 1. Repeat previous steps to add a text input control for each column that you want to show up inside the app as editable field. Ensure you choose the correct columns in the formula replacing "Product" with the appropriate column names.
 
@@ -164,7 +165,7 @@ This step adds a blank vertical gallery to edit the items as an editable table.
     - "TextInput8" is the name of the text input control added to the gallery attached to the "Product" column for the selected data source.
     - "Text" for "TextInput8" is the text entered in the selected cell within the editable table on the canvas. 
 
-    ![OnChange formula for the gallery](./media/add-editable-tables/gallery-onchange.png "OnChange formula for the gallery")
+    ![OnChange formula for the gallery.](./media/add-editable-tables/gallery-onchange.png "OnChange formula for the gallery")
 
 1. Repeat the previous step for each text input control added for rest of the columns from the connected data source. Ensure the formula is updated to use the correct column and control names.
 
@@ -174,7 +175,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
 
 1. Select **Insert** from the top menu > **Icons**, and add two icons - **Edit**, and **Cancel (badge)**.
 
-    ![Ability to edit or cancel](./media/add-editable-tables/edit-cancel.png "Ability to edit or cancel")
+    ![Ability to edit or cancel.](./media/add-editable-tables/edit-cancel.png "Ability to edit or cancel")
 
 1. Select **Tree view** from the left-pane, and then select **App**.
 
@@ -208,7 +209,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
 
 1. Overlap edit and cancel icons, since we're managing the visibility for both icons depending on the state of the gallery.
 
-    ![Edit or cancel with change to gallery](./media/add-editable-tables/edit-cancel-in-action.png "Edit or cancel with change to gallery")
+    ![Edit or cancel with change to gallery.](./media/add-editable-tables/edit-cancel-in-action.png "Edit or cancel with change to gallery")
 
     > [!TIP]
     > You can use the **Preview** button from top-right side of the screen to preview the app, or use F5 key on the keyboard. Another quick alternative for testing is to press the **Alt** key on the keyboard, and select the button while keeping the key pressed. This method also simulates app's preview functionality for the specific selection while key remains pressed.
@@ -234,7 +235,7 @@ As the data in the connected data source grows, it becomes difficult to find a s
     - "In" checks for the value of text input control to the specified column in the connected data source.
     - "||" is the "OR" condition, signifying the search should be performed for Product, or Segment columns. Likewise, you can update formula to suite your specific business needs.
 
-    ![Filter gallery based on the criteria defined](./media/add-editable-tables/filter-gallery.png "Filter gallery based on the criteria defined")
+    ![Filter gallery based on the criteria defined.](./media/add-editable-tables/filter-gallery.png "Filter gallery based on the criteria defined")
 
     > [!TIP]
     > You can retain older functions, or add comments, using "//" inside the formula bar. This method can be more useful for more complex formulas, or to keep older functionality in case if you'd want to revert later.
@@ -257,7 +258,7 @@ The following table summarizes all the branding, profile, and reset information 
 
 For example, the completed screen looks like this with the controls and properties configured above:
 
-![Final version of app with all controls and properties configured](./media/add-editable-tables/final-app.png "Final version of app with all controls and properties configured")
+![Final version of app with all controls and properties configured.](./media/add-editable-tables/final-app.png "Final version of app with all controls and properties configured")
 
 ## Step 8: Save, publish and share
 

@@ -2,11 +2,12 @@
 title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.custom: ""
-ms.date: 07/06/2021
+ms.date: 07/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -177,11 +178,11 @@ To set this in the Power Apps UI:
 1. Select each catalog or catalog assignment within your solution
 1. In the menu, click the ellipses (...) and select **Managed Properties**.
 
-    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button":::
+    :::image type="content" source="media/catalog-managed-properties.png" alt-text="Click the ellipses to view the managed properties button.":::
 
 1. In the window that opens, deselect **Allow customizations**.
 
-    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations":::
+    :::image type="content" source="media/catalog-managed-properties.deselect-allow-customizations.png" alt-text="Deselect allow customizations.":::
 
 1. Click **Done**
 
@@ -251,13 +252,13 @@ GET [Organization URI]/api/data/v9.2/customapis?$select=customapiid&$filter=uniq
 This is most easily done using the Web API. The following example will return the `workflowid` of a custom process action with the `uniquename` of `ExampleCustomProcessAction`.
 
 ```http
-GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$filter=category eq 3 and type eq 2 and endswith(uniquename,'ExampleCustomProcessAction')
+GET [Organization URI]/api/data/v9.2/workflows?$select=workflowid,uniquename&$filter=category eq 3 and type eq 1 and endswith(uniquename,'ExampleCustomProcessAction')
 ```
 
 > [!NOTE]
 > The `uniquename` of the workflow doesn't include the customization prefix that is prepended to the name of the custom process action in the Web API. If the action you call from the Web API is named `new_ExampleCustomProcessAction`, the workflow uniquename will be `ExampleCustomProcessAction`.
 >
-> Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `2`. This is the activated workflow.
+> Make sure you to access the row where [Type](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Type) is `1`. This is the workflow definition.
 >
 > Custom process action workflows have the [Category](/powerapps/developer/data-platform/reference/entities/workflow#BKMK_Category) value of `3`.
 

@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/28/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -34,7 +35,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Calendar drop-down
 
-![dropdownCalendarSelection control](media/calendar-screen/calendar-dropdown.png)
+![dropdownCalendarSelection control.](media/calendar-screen/calendar-dropdown.png)
 
 - Property: **Items**<br>
     Value: `Office365.CalendarGetTables().value`
@@ -120,7 +121,7 @@ Unique color properties for calendar drop-down control:
 
 ## Calendar icon
 
-![iconCalendar control](media/calendar-screen/calendar-today-icon.png)
+![iconCalendar control.](media/calendar-screen/calendar-today-icon.png)
 
 - Property: **OnSelect**<br>
     Value: Four **Set** functions that reset the calendar gallery to today's date:
@@ -143,7 +144,7 @@ Unique color properties for calendar drop-down control:
 
 ## Previous-month chevron
 
-![iconPrevMonth control](media/calendar-screen/calendar-back.png)
+![iconPrevMonth control.](media/calendar-screen/calendar-back.png)
 
 - Property: **OnSelect**<br>Value: Four **Set** functions and an **If** function that show the previous month in the calendar gallery:
 
@@ -177,7 +178,7 @@ Unique color properties for calendar drop-down control:
 
 ## Next-month chevron
 
-![iconNextMonth control](media/calendar-screen/calendar-forward.png)
+![iconNextMonth control.](media/calendar-screen/calendar-forward.png)
 
 - Property: **OnSelect**<br>
     Value: Four **Set** functions and an **If** function that show the next month in the calendar gallery:
@@ -211,7 +212,7 @@ Unique color properties for calendar drop-down control:
 
 ## Calendar gallery
 
-![MonthDayGallery control](media/calendar-screen/calendar-month-gall.png)
+![MonthDayGallery control.](media/calendar-screen/calendar-month-gall.png)
 
 - Property: **Items**<br>
     Value: 
@@ -227,7 +228,7 @@ Unique color properties for calendar drop-down control:
 
 ### Title control in the calendar gallery
 
-![MonthDayGallery Title control](media/calendar-screen/calendar-month-text.png)
+![MonthDayGallery Title control.](media/calendar-screen/calendar-month-text.png)
 
 - Property: **Text**<br>
     Value: `Day( DateAdd( _firstDayInView, ThisItem.Value, Days ) )`
@@ -285,7 +286,7 @@ Unique color properties for calendar drop-down control:
 
 ### Circle control in the calendar gallery
 
-![MonthDayGallery Circle control](media/calendar-screen/calendar-month-event.png)
+![MonthDayGallery Circle control.](media/calendar-screen/calendar-month-event.png)
 
 - Property: **Visible**<br>
     Value: A formula that determines whether any events are scheduled for the selected date and whether the **Subcircle** and **Title** controls are visible:
@@ -302,7 +303,7 @@ Unique color properties for calendar drop-down control:
 
 ### Subcircle control in the calendar gallery
 
-![MonthDayGallery Subcircle control](media/calendar-screen/calendar-month-selected.png)
+![MonthDayGallery Subcircle control.](media/calendar-screen/calendar-month-selected.png)
 
 - Property: **Visible**<br>
     Value:
@@ -315,7 +316,7 @@ Unique color properties for calendar drop-down control:
 
 ## Events gallery
 
-![CalendarEventsGallery control](media/calendar-screen/calendar-events-gall.png)
+![CalendarEventsGallery control.](media/calendar-screen/calendar-events-gall.png)
 
 - Property: **Items**<br>
     Value: A formula that sorts and filters the events gallery:

@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/10/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -25,15 +26,15 @@ By default, the app connects to the current environment for Dataverse tables. If
 
 When you add a data from Dataverse, you can change the environment and then select one or more tables. By default, the app connects to data in the current environment.
 
-![Default environment](media/connection-common-data-service/common-data-service-connection-change-environment.png)
+![Default environment.](media/connection-common-data-service/common-data-service-connection-change-environment.png)
 
 If you select **Change**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
 
-![Other environments](media/connection-common-data-service/common-data-service-connection-select-environment.png)
+![Other environments.](media/connection-common-data-service/common-data-service-connection-select-environment.png)
 
 The name of the selected environment appears under the tables list.
 
-![New environments](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
+![New environments.](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
 
 ## Power Apps data type mappings
 

@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 02/07/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -55,13 +56,13 @@ The examples in this section use a text-input control as their [data source](../
 ### Single-column table
 Each example in this section extracts strings from the **Address** [column](../working-with-tables.md#columns) of this data source, named **People**, and returns a single-column table that contains the results:
 
-![Table](media/function-left-mid-right/people-table.png)
+![Table.](media/function-left-mid-right/people-table.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |Extracts the first eight characters of each string. | ![Left](media/function-left-mid-right/people-table-left.png) |
-| **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** |Extracts the middle seven characters of each string, starting with the fifth character. |![Mid](media/function-left-mid-right/people-table-mid.png) |
-| **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Extracts the last seven characters of each string. |![Right](media/function-left-mid-right/people-table-right.png) |
+| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |Extracts the first eight characters of each string. | ![Left.](media/function-left-mid-right/people-table-left.png) |
+| **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** |Extracts the middle seven characters of each string, starting with the fifth character. |![Mid.](media/function-left-mid-right/people-table-mid.png) |
+| **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Extracts the last seven characters of each string. |![Right.](media/function-left-mid-right/people-table-right.png) |
 
 ### Step-by-step example
 1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.

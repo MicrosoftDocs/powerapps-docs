@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 03/12/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -67,7 +68,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![Icecream example](media/function-datasourceinfo/icecream.png "Icecream example")
+![Icecream example.](media/function-datasourceinfo/icecream.png "Icecream example")
 
 The data source has also provided this information:
 

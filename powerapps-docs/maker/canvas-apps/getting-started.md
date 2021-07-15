@@ -10,6 +10,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: 
 ms.date: 06/16/2020
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -36,7 +37,7 @@ To get started, automatically generate an app from one of these sources, among o
 
 [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then select **Start from data** or a sample app, such as **Service Desk** or **Budget Tracker**.
 
-![Power Apps site](./media/getting-started/create-page-samples.png)
+![Power Apps site.](./media/getting-started/create-page-samples.png)
 
 After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 

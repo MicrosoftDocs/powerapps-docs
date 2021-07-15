@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 12/29/2018
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -45,7 +46,7 @@ To add an email screen from the template:
 
     By default, the screen looks similar to this:
 
-    ![Email screen](media/email-screen/email-screen-full.png)
+    ![Email screen.](media/email-screen/email-screen-full.png)
 
 A few helpful notes:
 

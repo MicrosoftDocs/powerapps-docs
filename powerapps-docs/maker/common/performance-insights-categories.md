@@ -11,6 +11,7 @@ ms.topic: "overview"
 applies_to: 
   - "powerapps"
 author: "Mattp123"
+ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -106,7 +107,7 @@ Several configurations and network infrastructure can block the HTTP/2 protocol,
 
 Users can check what protocol has been used from a development tool included with the browser. In the figure below, network calls occurred over HTTP/2.
 
-:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls":::
+:::image type="content" source="media/performance-insight-http.png" alt-text="Example of HTTP 2 network calls.":::
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
 - Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and **Use TLS 1.2** options aren't enabled.
@@ -280,7 +281,7 @@ Insight ID: Perf.Sandbox.Configuration.PluginTraceSettings
 
 Makers can debug their plug-ins through plug-in trace logs. The Dataverse admins can set plug-in and custom workflow activity tracing to **Off**, **Exception**, or **All**.
 
-:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings":::
+:::image type="content" source="media/plug-in-trace-setting.png" alt-text="Plug-in trace log settings.":::
 
 #### Motivation
 

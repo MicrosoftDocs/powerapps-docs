@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/13/2021
+ms.subservice: teams
 ms.author: lanced
 ms.reviewer: matp
 ---
@@ -13,7 +14,7 @@ ms.reviewer: matp
 # Edit table data in Excel and publish it back to Dataverse for Teams
 
 By opening Dataverse for Teams table data in Microsoft Excel, you can quickly and easily view and edit the data by using the Microsoft Power Apps Office Add-in.
-:::image type="content" source="../maker/data-platform/media/data-platform-cds-excel-addin/ExcelAddin.png" alt-text="Dataverse for Teams table data in Excel":::
+:::image type="content" source="../maker/data-platform/media/data-platform-cds-excel-addin/ExcelAddin.png" alt-text="Dataverse for Teams table data in Excel.":::
 
 To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
@@ -22,7 +23,7 @@ To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](
 1. Sign in to Teams, and then in the left pane, select the **Power Apps**.
 1. Select the **Build** tab, and then select **See all**.
 1. In the left navigation pane, select **Tables**, next to the table you want, select **…**, and then select **Edit data in Excel**.
-   :::image type="content" source="media/edit-data-in-excel.png" alt-text="Edit data in Excel command":::
+   :::image type="content" source="media/edit-data-in-excel.png" alt-text="Edit data in Excel command.":::
 
 1. Open the Excel worksheet that is downloaded to your browser's default download folder named similar to *crdcb_table-name (1591125669213).xlsx*.
 1. In Excel, select **Enable editing** to enable the Power Apps Excel Add-in to run. The Excel Add-in runs in a pane on the right side of the Excel window.

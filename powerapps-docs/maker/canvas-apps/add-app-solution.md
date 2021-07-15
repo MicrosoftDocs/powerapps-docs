@@ -7,6 +7,7 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: caburk
 search.audienceType: 
   - maker
@@ -46,24 +47,24 @@ You can skip this procedure if you already have a solution in which you want to 
 1. In the left navigation bar, select **Solutions**.
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions option in the left navigation bar](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
+    > ![Solutions option in the left navigation bar.](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
 
 1. In the banner under the title bar, select **New solution**.
 
     > [!div class="mx-imgBorder"]
-    > ![New-solution option in the banner](./media/add-app-solution/banner-new-solution.png "New-solution option in the banner")
+    > ![New-solution option in the banner.](./media/add-app-solution/banner-new-solution.png "New-solution option in the banner")
 
 1. In the window that appears, specify a display name, a publisher, and a version for your solution.
 
     > [!div class="mx-imgBorder"]
-    > ![Options for a new solution](./media/add-app-solution/configure-new-solution.png "Options for a new solution")
+    > ![Options for a new solution.](./media/add-app-solution/configure-new-solution.png "Options for a new solution")
 
     A name (with no spaces) will be generated automatically based on the display name that you specify, but you can customize the generated name if you want. You can specify the default publisher for your environment and **1.0** for the version if you don't have specific needs in those areas.
 
 1. Near the upper-left corner, select **Save and Close**.
 
     > [!div class="mx-imgBorder"]
-    > ![Save a new solution](./media/add-app-solution/save-new-solution.png "Save a new solution")
+    > ![Save a new solution.](./media/add-app-solution/save-new-solution.png "Save a new solution")
 
 ## Create a canvas app in a solution
 
@@ -76,14 +77,14 @@ You can create a blank canvas app from within a solution. You can't automaticall
 1. In the left navigation bar, select **Solutions**.
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions option in the left navigation bar](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
+    > ![Solutions option in the left navigation bar.](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
 
 1. In the list of solutions, select the solution in which you want to create a canvas app.
 
 1. In the banner under the title bar, select **New** > **App** > **Canvas app**, and then select the form factor (phone or tablet) of the app that you want to create.
 
     > [!div class="mx-imgBorder"]
-    > ![Options to create an app in a solution](./media/add-app-solution/new-option.png "Options to create an app in a solution")
+    > ![Options to create an app in a solution.](./media/add-app-solution/new-option.png "Options to create an app in a solution")
 
     Power Apps Studio opens with a blank canvas in another browser tab.
 
@@ -92,7 +93,7 @@ You can create a blank canvas app from within a solution. You can't automaticall
 1. On the browser tab where you selected your solution, select **Done** to refresh the list of components in your solution.
 
     > [!div class="mx-imgBorder"]
-    > ![Done button](./media/add-app-solution/done-button.png "Done button")
+    > ![Done button.](./media/add-app-solution/done-button.png "Done button")
 
     Your new app appears in the list of components for that solution. If you save any changes to your app, they will be reflected in the version that's in the solution.
 
@@ -107,21 +108,21 @@ If you want to link an app to a solution, both must be in the same environment, 
 1. In the left navigation bar, select **Solutions**.
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions option in the left navigation bar](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
+    > ![Solutions option in the left navigation bar.](./media/add-app-solution/left-nav.png "Solutions option in the left navigation bar")
 
 1. In the list of solutions, select the solution to which you want to link an app.
 
 1. In the banner under the title bar, select **Add existing** > **App** > **Canvas app**.
 
     > [!div class="mx-imgBorder"]
-    > ![Banner options to link an existing app](./media/add-app-solution/add-existing.png "Banner options to link an existing app")
+    > ![Banner options to link an existing app.](./media/add-app-solution/add-existing.png "Banner options to link an existing app")
 
     A list of canvas apps that were created within a solution in this environment appears.
 
 1. In the list of apps, select the app that you want to link to the solution, and then select **Add**.
 
     > [!div class="mx-imgBorder"]
-    > ![Add button](./media/add-app-solution/add-button.png "Add button")
+    > ![Add button.](./media/add-app-solution/add-button.png "Add button")
 
 ## Known limitations
 

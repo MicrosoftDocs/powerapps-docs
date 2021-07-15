@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/22/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -125,7 +126,7 @@ IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.P
 
 The example formula above would display the following banner when the button is activated:
 
-![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
+![Button control activated, showing a notification from the Notify function.](media/function-iferror/notify-errorinfo.png)
 
 ## IsError
 

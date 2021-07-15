@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -65,7 +66,7 @@ Here are some additional details on when to use either of the options.
 
 You can toggle the **Show advanced configuration settings** under **Advanced** in Azure Synapse Link for Dataverse to customize your data partition strategy and select options to write to the Azure data lake.
 
-![Show advanced configuration](media/export-data-lake-show-advanced-config.png "Show advanced configuration")
+![Show advanced configuration.](media/export-data-lake-show-advanced-config.png "Show advanced configuration")
 
 ## Data Partition Strategy
 
@@ -75,13 +76,13 @@ Based on the Dataverse table volume and data distribution, you can choose a more
 
 Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 
-![Partition Strategy](media/export-data-lake-partition-strategy.png "Show advanced configuration")
+![Partition Strategy.](media/export-data-lake-partition-strategy.png "Show advanced configuration")
 
 ## Accessing and consuming Dataverse choices (option sets)
 
 For columns that use Dataverse [Choices](/powerapps/maker/data-platform/create-edit-global-option-sets), choice values are written as an integer label and not a text label to maintain consistency during edits. To access the integer-to-text label mapping, navigate to the *Microsoft.Athena.TrickleFeedService/,table-EntityMetadata.json* file.
 
-![Access option set](media/access-option-set.png "Access option set")
+![Access option set.](media/access-option-set.png "Access option set")
 
 ### Consuming Dataverse choices with Power BI
 
@@ -141,7 +142,7 @@ In the environment where you want to import your solution, in the Power Apps mak
 
 From the Power Apps maker portal in the environment where you imported the Export to Data Lake configuration, verify that you can see your linked data lake in addition to the tables that you transported from your other environment.
 
-![Imported Azure Synapse Link for Dataverse tables](media/imported-export-entities.png "Imported Azure Synapse Link for Dataverse tables")
+![Imported Azure Synapse Link for Dataverse tables.](media/imported-export-entities.png "Imported Azure Synapse Link for Dataverse tables")
 
 ### See also
 

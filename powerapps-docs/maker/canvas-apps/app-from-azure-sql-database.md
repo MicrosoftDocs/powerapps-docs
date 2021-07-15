@@ -10,6 +10,7 @@ ms.custom:
   - intro-internal
 ms.reviewer: 
 ms.date: 06/03/2020
+ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
   - maker
@@ -43,7 +44,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 1. Go to your SQL database.
 1. Select **Power Apps**.
     
-    ![Power Apps option in SQL database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
+    ![Power Apps option in SQL database options.](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL database")
 
 1. Select **Get started**.
 
@@ -59,7 +60,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 
 1. Select **Create**.
 
-    ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
+    ![Specify the information for your app.](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
     The [Power Apps Studio](https://create.powerapps.com/studio/) opens in a new tab. If the pop-up is blocked, update the browser to allow pop-ups and try again. Once created, you'll have a three-page app with data from your SQL database.
 

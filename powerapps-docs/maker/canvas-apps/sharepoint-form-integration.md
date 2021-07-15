@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/18/2020
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -68,7 +69,7 @@ These defaults ensure that the form works when running within SharePoint - they 
 ## Understand the SharePointIntegration control
 The **SharePointIntegration** control communicates user actions between SharePoint and Power Apps.
 
-![SharePoint integration object](./media/sharepoint-form-integration/sharepointintegration-object.png)
+![SharePoint integration object.](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
 >You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in Power Apps Studio. These properties may not be available in **OnStart** or **OnVisible**. 

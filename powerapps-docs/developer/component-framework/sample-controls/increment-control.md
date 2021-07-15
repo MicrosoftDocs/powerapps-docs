@@ -19,7 +19,7 @@ This sample component shows how to bind data with Power Apps component framework
 To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript. 
 
 > [!div class="mx-imgBorder"]
-> ![Increment component](../media/increment-control.png "Increment component")
+> ![Increment component.](../media/increment-control.png "Increment component")
 
 ## Available for 
 

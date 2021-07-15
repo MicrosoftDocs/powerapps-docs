@@ -5,6 +5,7 @@ author: "mayadumesh" # GitHub ID
 manager: kvivek
 ms.service: powerapps
 ms.date: 03/28/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer

@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker

@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: cds
 ms.topic: how-to
 ms.date: 07/07/2021
+ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -20,7 +21,7 @@ search.app:
 By opening table data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. 
 
 > [!div class="mx-imgBorder"] 
-> ![Excel Add-in](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
+> ![Excel Add-in.](./media/data-platform-cds-excel-addin/ExcelAddin.png "Power Apps Excel Add-in")
 
 To install the Power Apps Excel add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
@@ -69,7 +70,7 @@ You can use the data source designer in the Excel add-on to adjust the columns a
 
 1. Enable the data source designer of the Excel add-in by selecting the **Options** button (the gear symbol).
 
-   :::image type="content" source="media/power-apps-excel-addin-settings.png" alt-text="Settings icon in the add-in pane":::
+   :::image type="content" source="media/power-apps-excel-addin-settings.png" alt-text="Settings icon in the add-in pane.":::
 
 1. Expand the **Data Connector** section, and then select the **Enable design** check box, and then select **OK**.
 

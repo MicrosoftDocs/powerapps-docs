@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
 ms.date: 01/24/2020
+ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType:
   - maker

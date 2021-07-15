@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 09/01/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -55,7 +56,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
 1. [Create](../app-from-sharepoint.md) a new app.
 
-    ![List items](./media/scenarios-lookup-list-permissions/list-items.png "List items")
+    ![List items.](./media/scenarios-lookup-list-permissions/list-items.png "List items")
 
 1. [Save and publish](../save-publish-app.md) the app.
 
@@ -63,17 +64,17 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
 1. Run the app as the user that you shared the app with (Kenny Smith in this example).
 
-    ![User items](./media/scenarios-lookup-list-permissions/user-items.png "User items")
+    ![User items.](./media/scenarios-lookup-list-permissions/user-items.png "User items")
 
     Since the SharePoint site, list or items aren't shared with the user, the app will show no available items.
 
 1. Grant the user item-level permission to a SharePoint list item.
 
-    ![Item level permission](./media/scenarios-lookup-list-permissions/item-level-permission.png "Item level permission")
+    ![Item level permission.](./media/scenarios-lookup-list-permissions/item-level-permission.png "Item level permission")
 
 1. Refresh the app as the user (Kenny Smith in this example).
 
-    ![Shape without color](./media/scenarios-lookup-list-permissions/shape-without-color.png "Shape without color")
+    ![Shape without color.](./media/scenarios-lookup-list-permissions/shape-without-color.png "Shape without color")
 
     The user, Kenny Smith, is unable to see the color since color is from a separate list and is looked up by the color column. There are no permission changes to the app from Power Apps.
 
@@ -82,11 +83,11 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
 1. Go to Colors list permissions and add the other user (Kenny Smith in this example) explicitly.
 
-    ![Colors list permissions](./media/scenarios-lookup-list-permissions/colors-list-permissions.png "Colors list permissions")
+    ![Colors list permissions.](./media/scenarios-lookup-list-permissions/colors-list-permissions.png "Colors list permissions")
 
 1. Refresh the app as the user (Kenny Smith in this example).
 
-    ![After lookup permissions](./media/scenarios-lookup-list-permissions/after-lookup-permissions.png "After lookup permissions")
+    ![After lookup permissions.](./media/scenarios-lookup-list-permissions/after-lookup-permissions.png "After lookup permissions")
 
 As you can see, SharePoint permissions for lists and lookup lists directly cause the items to show (or not) depending on how permissions are configured.
 

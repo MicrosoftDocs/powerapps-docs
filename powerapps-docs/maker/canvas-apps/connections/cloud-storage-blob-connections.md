@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 03/15/2021
+ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -37,10 +38,10 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 ## Connect to the cloud storage connection
 1. At [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Manage**, and select **Connections**:  
    
-    ![Select Connections](./media/cloud-storage-blob-connections/connections.png)
+    ![Select Connections.](./media/cloud-storage-blob-connections/connections.png)
 2. Select **New connection**, and select your cloud storage connection. For example, select **OneDrive**.
 3. You are prompted for the user name and password of your cloud storage account. Enter them, and then select **Sign in**:  
-    ![Enter user name and password](./media/cloud-storage-blob-connections/signin.png)
+    ![Enter user name and password.](./media/cloud-storage-blob-connections/signin.png)
    
     Once you are signed in, this connection is ready to be used within your apps.
 4. In your app, click or tap **Data sources** on the **View** tab of the ribbon. In the right-hand pane, click or tap **Add a data source**, click or tap your cloud-storage connection, and then choose the Excel table.
@@ -48,7 +49,7 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
    
     The table is listed as a data source:
    
-    ![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)
+    ![Select the Excel table.](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
    > Remember, the Excel data must be formatted as a table.
@@ -57,19 +58,19 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.
 2. Set the **[Items](../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
    
-    ![Items property](./media/cloud-storage-blob-connections/itemsproperty.png)  
+    ![Items property.](./media/cloud-storage-blob-connections/itemsproperty.png)  
    
     The gallery is automatically updated with information from your Excel table.
 3. In the gallery, select the second or third **Label** control. By default, you see the **Text** property of the second and third labels is automatically set to `ThisItem.something`. You can set these labels to any column in your table.
    
     In the following example, the second label is set to `ThisItem.Name` and the third label is set to `ThisItem.Notes`:  
    
-    ![Second label](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
+    ![Second label.](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
    
-    ![Third label](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
+    ![Third label.](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
    
     Sample output:  
-    ![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
+    ![Second and third labels.](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
    
 > [!NOTE]
 > The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.

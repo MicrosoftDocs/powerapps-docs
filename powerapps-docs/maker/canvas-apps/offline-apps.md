@@ -3,6 +3,7 @@ title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -41,7 +42,7 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![Power Apps app with connectors](./media/offline-apps/online-app.png)
+![Power Apps app with connectors.](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
@@ -88,12 +89,12 @@ At a high level, the app performs these tasks:
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Formula to load tweets](./media/offline-apps/load-tweets.png)
+    > ![Formula to load tweets.](./media/offline-apps/load-tweets.png)
 
 1. In the **Tree view** pane, select the ellipsis menu for the **App** object, and then select **Run OnStart** to run that formula.
 
     > [!div class="mx-imgBorder"]
-    > ![Run formula to load tweets](./media/offline-apps/load-tweets-run.png)
+    > ![Run formula to load tweets.](./media/offline-apps/load-tweets-run.png)
 
     > [!NOTE]
     > The **LoadData** and **SaveData** functions might show an error in Power Apps Studio because browsers don't support them. However, they'll perform normally after you deploy this app to a device.
@@ -118,7 +119,7 @@ This formula checks whether the device is online:
 1. Make the text in the last label bold so that the gallery resembles this example.
 
     > [!div class="mx-imgBorder"]
-    > ![Gallery showing sample tweets](./media/offline-apps/tweet-gallery.png)
+    > ![Gallery showing sample tweets.](./media/offline-apps/tweet-gallery.png)
 
 ### Step 4: Show connection status
 
@@ -137,7 +138,7 @@ This formula determines whether the device is online. If it is, the label shows 
 1. Set the text-input box's **Default** property to `""`.
 
     > [!div class="mx-imgBorder"]
-    > ![Gallery over status info and text-input box](./media/offline-apps/status-input.png)
+    > ![Gallery over status info and text-input box.](./media/offline-apps/status-input.png)
 
 ### Step 6: Add a button to post the tweet
 
@@ -170,7 +171,7 @@ This formula determines whether the device is online. If it is, the label shows 
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Run formula to load tweets with uncommented line](./media/offline-apps/load-tweets-save.png)
+    > ![Run formula to load tweets with uncommented line.](./media/offline-apps/load-tweets-save.png)
 
 This formula determines whether the device is online:
 
@@ -184,7 +185,7 @@ Then the formula resets the text in the text-input box.
 1. On the right side of the button, add a **Timer** control.
 
     > [!div class="mx-imgBorder"]
-    > ![Final apps](./media/offline-apps/final-app.png)
+    > ![Final apps.](./media/offline-apps/final-app.png)
 
 1. Set the timer's **Duration** property to **300000**.
 

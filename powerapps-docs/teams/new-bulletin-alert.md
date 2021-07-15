@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/07/2021
+ms.subservice: teams
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -15,7 +16,7 @@ contributors:
   - sbahl10
 ---
 
-# Bulletins App – Send an alert when a new bulletin is posted
+# Send an alert when a new bulletin is posted
 
 The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to create, categorize, bookmark, search, and read bulletin posts.
 
@@ -66,7 +67,7 @@ We'll create a flow to send the email notification. Power Automate makes sending
 
 1. Select **Scope** as **Organization**.
 
-    ![Select trigger for the alert flow](media/new-bulletin-alert/bulletin-alert-flow-trigger.png "Select trigger for the alert flow")
+    ![Select trigger for the alert flow.](media/new-bulletin-alert/bulletin-alert-flow-trigger.png "Select trigger for the alert flow")
 
 1. Select **+ New** step.
 
@@ -74,7 +75,7 @@ We'll create a flow to send the email notification. Power Automate makes sending
 
 1. In the **To field**, enter the email address you would like to send notifications to. For example, if you want all people in a team to be notified, you could create an email with the address for the team channel. To find this email address, select the three dots by the team channel and select **Get email address.** 
 
-    ![Get Team Channel's email address](media/new-bulletin-alert/get-email-address.png "Get Team Channel's email address")
+    ![Get Team Channel's email address.](media/new-bulletin-alert/get-email-address.png "Get Team Channel's email address")
 
 1. In the **Subject** field, enter **New Bulletin created**.
 
@@ -84,7 +85,7 @@ We'll create a flow to send the email notification. Power Automate makes sending
     A new Bulletin board {select Title from dynamic content} ({select Subtitle from dynamic content}) was added.
     ```
 
-    ![Send email flow step](media/new-bulletin-alert/send-email-flow-step.png "Send email flow step")
+    ![Send email flow step.](media/new-bulletin-alert/send-email-flow-step.png "Send email flow step")
 
     > [!NOTE]
     > You can also add a hyperlink to the Bulletin app by selecting the team in which Bulletins is installed, open the app tab, then select the pop  out button to open the app in a new window. The URL of the app is in URL field for this window, and you can use this as a hyperlink in your email.
@@ -111,7 +112,7 @@ We'll create a flow to send the email notification. Power Automate makes sending
 
 In a few minutes, an email as shown in the image below should appear in the inbox of the email address provided in the Power Automate flow.
 
-![New Bulletin Email alert screenshot](media/new-bulletin-alert/new-bulletin-email-screenshot.png "New Bulletin Email alert screenshot")
+![New Bulletin Email alert screenshot.](media/new-bulletin-alert/new-bulletin-email-screenshot.png "New Bulletin Email alert screenshot")
 
 ### See also
 

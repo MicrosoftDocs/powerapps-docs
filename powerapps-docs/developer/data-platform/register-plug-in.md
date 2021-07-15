@@ -7,6 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -71,11 +72,11 @@ You can view information about registered assemblies in the application solution
 >
 > For more information about solutions, see [Introduction to solutions](introduction-solutions.md)
 
-![All Solutions internal](media/all-solutions-internal-view.png)
+![All Solutions internal.](media/all-solutions-internal-view.png)
 
 After selecting the name of the Default Solution in the internal solution list, you can find all the assemblies that are registered for this environment.
 
-![View all registered assemblies](media/view-plug-in-assemblies-default-solution.png)
+![View all registered assemblies.](media/view-plug-in-assemblies-default-solution.png)
 
 ### Query registered assemblies with code
 
@@ -132,15 +133,15 @@ As described in [View registered assemblies](#view-registered-assemblies), the a
 
 Within the unmanaged solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**. Note that in the following figures, a custom solution named Common Data Service Default Solution is used.
 
-![Add Existing plug-in assembly](media/add-existing-plug-in-assembly.png)
+![Add Existing plug-in assembly.](media/add-existing-plug-in-assembly.png)
 
 Then add your assembly as a component to the solution.
 
-![Select plug-in assembly as a solution component](media/select-plug-in-assembly-as-solution-component.png)
+![Select plug-in assembly as a solution component.](media/select-plug-in-assembly-as-solution-component.png)
 
 When you select the plug-in assembly you added, you can view the plug-in classes it includes.
 
-![Plug-in assemblies and classes](media/view-plug-in-classes-solution-explorer.png)
+![Plug-in assemblies and classes.](media/view-plug-in-classes-solution-explorer.png)
 
 > [!NOTE]
 > Any existing or subsequent step registrations are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately. More information: [Add step to solution](#add-step-to-solution)
@@ -260,7 +261,7 @@ As mentioned in [Add your assembly to a solution](#add-your-assembly-to-a-soluti
 
 The procedure to add a step to a solution is similar to adding an assembly. You will use the **Add Existing** command to move it into the desired unmanaged solution. The only difference is that if you attempt to add a step but have not already added the assembly that contains the class used in the step, you will be prompted to add missing required components.
 
-![Missing required component dialog](media/missing-required-component.png)
+![Missing required component dialog.](media/missing-required-component.png)
 
 If you encounter this, you should usually select **OK** to bring the assembly in with the unmanaged solution. The only time you would not select this is if your solution is designed to be installed in an environment where another solution containing the assembly is already installed.
 
@@ -297,7 +298,7 @@ These are delete operations on the [PluginAssembly](reference/entities/pluginass
 
 You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
 
-![Deleting step in solution explorer](media/delete-sdk-message-processing-step.png)
+![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
 
 > [!NOTE]
 > You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
@@ -306,13 +307,13 @@ You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** 
 
 The PRT provides commands to disable and enable steps.
 
-![disable a step using the PRT](media/disable-step-prt.png)
+![disable a step using the PRT.](media/disable-step-prt.png)
 
-![enable a step using the PRT](media/enable-step-prt.png)
+![enable a step using the PRT.](media/enable-step-prt.png)
 
 You can also disable steps in the solution explorer using the **Activate** and **Deactivate** commands.
 
-![foo](media/step-activate-deactivate-commands-solution-explorer.png)
+![foo.](media/step-activate-deactivate-commands-solution-explorer.png)
 
 ## Next steps
 

@@ -5,6 +5,7 @@ ms.date: 07/05/2021
 ms.service: powerapps
 ms.topic: tutorial
 author: joel-lindstrom
+ms.subservice: mda-maker
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
@@ -44,36 +45,36 @@ Select the environment you want, or go to the [Power Platform admin center](http
 
 1. Select **Modern app designer**, and then select **Create**
 
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app":::
+   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app.":::
 
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create":::
+   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create.":::
 
 ## Add pages to your app
 
 Next, you add a new page to the model-driven app. 
 1. Select **New page** from the **Pages** menu.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-1.png" alt-text="Add a page to a model-driven app":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-1.png" alt-text="Add a page to a model-driven app.":::
 
 1. Select **Table based view and form**, and then select **Next**.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
 1. Select the **Account** table, and then select **Add**.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app.":::
 
    The account form and view appear in the pages menu.
 
 1. Select **Account view**, and then select **Manage views**.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
 
 1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
 
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app":::
+   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
 1. On the app designer command bar, select **Save**.
 
@@ -87,11 +88,11 @@ After publishing the app, it's ready for you to run or share with others.
 
 1. To run your app, sign in to [Power Apps](https://make.powerapps.com/), and  on the left navigation pane, select **Apps**.
 
-   :::image type="content" source="media/create-a-model-driven-app/run-your-app-on-desktop-1.png" alt-text="Select Apps":::
+   :::image type="content" source="media/create-a-model-driven-app/run-your-app-on-desktop-1.png" alt-text="Select Apps.":::
 
 1. Select the app from the app list. The app opens in your browser.
 
-   ![Simple account table app](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Simple account table app")
+   ![Simple account table app.](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Simple account table app")
 
 ## Run your app on mobile
 

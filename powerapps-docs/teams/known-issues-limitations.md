@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2021
+ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
 contributors:
@@ -72,7 +73,7 @@ The Fluent UI date picker control doesn't yet support format string.  If you nee
 
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
 
-![Canvas components](media/canvas-components.png "Canvas components")
+![Canvas components.](media/canvas-components.png "Canvas components")
 
 ### New connections
 

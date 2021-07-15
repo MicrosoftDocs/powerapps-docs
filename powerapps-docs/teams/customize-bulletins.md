@@ -5,7 +5,8 @@ author: sbahl10
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/07/2021
+ms.subservice: teams
+ms.date: 07/13/2021
 ms.author: v-shrutibahl
 ms.reviewer: tapanm
 contributors:
@@ -27,13 +28,13 @@ Once the app is installed, you can then customize the app using the following st
 
 1. Select **...** (ellipsis), and search for **Power Apps**.
 
-   ![Search for Power Apps](media/customize-bulletins/search-power-apps.png "Search for Power Apps")
+   ![Search for Power Apps.](media/customize-bulletins/search-power-apps.png "Search for Power Apps")
 
 1. The Power Apps app icon will now appear on the left pane.
 
 1. Right-click on the **Power Apps** icon, and select **Pin** to pin the app to your Teams menu. Pinning will make it appear every time you open Microsoft Teams.
 
-   ![Power Apps button](media/customize-bulletins/power-apps-icon-left-navigation-menu.png "Power Apps button")
+   ![Power Apps button.](media/customize-bulletins/power-apps-icon-left-navigation-menu.png "Power Apps button")
 
 1. We recommend that you right-click on the Power Apps logo, and select **Pop out app** to open the app in a new window. This way, you won't lose your work when working at other places in Teams. The app now opens in Microsoft Teams.
 
@@ -45,17 +46,17 @@ Once the app is installed, you can then customize the app using the following st
 
 1. Select **See all** in the **Bulletins** tile.
 
-    ![See all option on the Bulletins tile](media/customize-bulletins/installed-apps-see-all-option.png "See all option on the Bulletins tile")
+    ![See all option on the Bulletins tile.](media/customize-bulletins/installed-apps-see-all-option.png "See all option on the Bulletins tile")
 
 1. You'll now see all of the apps, tables, flows, and chatbots in the Bulletin solution.
     
-    ![All Bulletins app Objects list](media/customize-bulletins/bulletins-app-objects-list.png "All Bulletins app Objects list")
+    ![All Bulletins app Objects list.](media/customize-bulletins/bulletins-app-objects-list.png "All Bulletins app Objects list")
 
 ## Extend the Bulletins data model
 
 If you're modifying or adding any fields to your app, you'll want to first update or add these columns in their Dataverse tables. In this section, we'll explore the data model for Bulletins and how to modify it in Power Apps in Teams. Below is the data model for Bulletins.
 
-![Data model](media/customize-bulletins/data-model.png "Data model")
+![Data model.](media/customize-bulletins/data-model.png "Data model")
 
 Before modifying the fields, you need to first decide where the fields you want to add should go. What are the users doing when they should see or interact with these fields?
 
@@ -85,11 +86,11 @@ Before modifying the fields, you need to first decide where the fields you want 
 
 From the list of apps, chatbots, flows, and tables, select the **Bulletins** app.
 
-![Select Bulletins from the solution](media/customize-bulletins/bulletins-objects-bulletins-app-selected.png "Select Bulletins from the solution")
+![Select Bulletins from the solution.](media/customize-bulletins/bulletins-objects-bulletins-app-selected.png "Select Bulletins from the solution")
 
 Now that Bulletins is open in Power Apps in Teams, select the **Tree View**.
 
-![Bulletins app tree view](media/customize-bulletins/bulletins-app-tree-view.png "Bulletins app tree view")
+![Bulletins app tree view.](media/customize-bulletins/bulletins-app-tree-view.png "Bulletins app tree view")
 
 From the Tree View, you can see the screens included in the app. Selecting the arrow to the left of a screen will expand the contents of the screen, giving you access to the components of the screen, including galleries, buttons, text labels, and text input controls.
 
@@ -115,13 +116,13 @@ Now let’s look at the screens in the **Manage bulletins** app:
 
 4.  Select **Manage bulletins** in the **Bulletins** tile.
 
-    ![Select Manage Bulletins from the Bulletins tile](media/customize-bulletins/select-manage-bulletins-app.png "Select Manage Bulletins from the Bulletins tile")
+    ![Select Manage Bulletins from the Bulletins tile.](media/customize-bulletins/select-manage-bulletins-app.png "Select Manage Bulletins from the Bulletins tile")
 
 5.  Manage bulletins will open in the designer.
 
 6.  Select the **Tree view** and review the screens in the Manage bulletins app.
 
-    ![Manage Bulletins app tree view](media/customize-bulletins/manage-bulletins-app-tree-view.png "Manage Bulletins app tree view")
+    ![Manage Bulletins app tree view.](media/customize-bulletins/manage-bulletins-app-tree-view.png "Manage Bulletins app tree view")
 
 The following are the screens in the Manage bulletins app:
 
@@ -157,18 +158,26 @@ In this section, we discuss common customization/extension scenarios for Bulleti
 
 For notifications when a new FAQ is published, use Power Automate flow running when a row is added to the Bulletin FAQ table.
 
+### Add contact phone in Links and Contacts section
+
+By default, contacts in Bulletins do not include phone number. Add a phone number column to the Bulletin Contacts table and add the phone number to the Contact Detail Screen and Mobile Contacts Screen. For more details see [Add contact phone in Links and Contacts](bulletins-contact-phone.md).
+
+### Add **notify me** settings to a category
+
+If users wanted to be notified when a new bulletin was posted in a category, you can create a flow to notify them when a new bulletin is posted. For more details see [Add notify me settings to category](bulletins-notify-me.md).
+
 ## Publish changes
 
 When you're done making modifications to the apps, select **Save** to save your changes**.**
 
-![Save button](media/customize-bulletins/save-button.png "Save button")
+![Save button.](media/customize-bulletins/save-button.png "Save button")
 
 -   To preview your changes, select **Preview**.
     -   The app will launch in preview mode, where you can test the user experience when running the app
 
     -   To exit preview mode, press **Escape** on your keyboard or select the **X** in the upper right corner
 
-        ![Close button](media/customize-bulletins/close-button.png "Close button")
+        ![Close button.](media/customize-bulletins/close-button.png "Close button")
 
 -   To publish your app changes, select the **Publish to Teams**.
     
@@ -176,7 +185,7 @@ When you're done making modifications to the apps, select **Save** to save your 
 
 -   A dialog will open confirming that you want to publish.
 
-    ![Confirm publishing to Teams](media/customize-bulletins/confirm-publishing-to-teams.png "Confirm publishing to Teams")
+    ![Confirm publishing to Teams.](media/customize-bulletins/confirm-publishing-to-teams.png "Confirm publishing to Teams")
 
 -   To change app settings, such as icon and background color, select **Edit details**.
 
@@ -184,7 +193,7 @@ When you're done making modifications to the apps, select **Save** to save your 
 
 -   On the next screen, confirm the channel you want the app to appear. You can add to other channels in the Team by selecting **+**.
 
-    ![Add to Channel](media/customize-bulletins/add-to-channel.png "Add to channel")
+    ![Add to Channel.](media/customize-bulletins/add-to-channel.png "Add to channel")
 
 -   To complete publishing your changes, select **Save and close**.
 
@@ -194,21 +203,21 @@ Before modifying the Bulletins app, consider the following items:
 
 -   Where are my table customizations? Columns and tables added by you'll go to **built by this team** section of the Power Apps app. You can also add new tables in the **See all** area.
 
-    ![Select See all option to view objects built by the team](media/customize-bulletins/list-of-items-built-by-the-team.png "Select See all option to view objects built by the team")
+    ![Select See all option to view objects built by the team.](media/customize-bulletins/list-of-items-built-by-the-team.png "Select See all option to view objects built by the team")
 
 -   Changes made to an app will be added as a new version of the app. If you get a new version from store, your customizations won't be overridden. You'll get a new version that has the latest features, but the new version won't be published.
 
     For example, if you make changes to the Bulletins app, then you install the latest version from the Teams store, your urgent field will still be visible in the app after the upgrade.
 
-    ![Add Bulletins app to a team](media/customize-bulletins/bulletins-app-add-to-team.png "Add Bulletins app to a team")
+    ![Add Bulletins app to a team.](media/customize-bulletins/bulletins-app-add-to-team.png "Add Bulletins app to a team")
 
     The updated version of the app is available from the version history of the app. 
 
-    ![Bulletins app details](media/customize-bulletins/bulletins-app-details.png "Bulletins app details")
+    ![Bulletins app details.](media/customize-bulletins/bulletins-app-details.png "Bulletins app details")
 
     Selecting **Details** from the app list will display the versions of the app and allow you to publish the new version.
 
-    ![App versions](media/customize-bulletins/app-versions.png "App versions")
+    ![App versions.](media/customize-bulletins/app-versions.png "App versions")
 
 -   When customizing the app, pop out the Power Apps app in Teams so you don’t lose your changes when you navigate to other parts of Teams.
     

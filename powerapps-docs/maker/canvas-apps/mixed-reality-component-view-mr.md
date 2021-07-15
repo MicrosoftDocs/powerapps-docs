@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 5/20/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -56,7 +57,7 @@ You can modify the component with several properties.
 
 The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
 
-![Properties on the View in MR pane](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
+![Properties on the View in MR pane.](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
 
 Some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
 

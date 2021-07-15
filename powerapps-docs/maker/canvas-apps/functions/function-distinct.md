@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 09/14/2019
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -50,7 +51,7 @@ The **Distinct** function evaluates a formula across each record of a table and 
     The formula is evaluatd and the **CityPopulations** collection is created which you can show by selecting **CityPopulations** in the formula bar:
 
     > [!div class="mx-imgBorder"]
-    > ![CityPopulations collection shown in result view](media/function-distinct/citypopulations-create.png)
+    > ![CityPopulations collection shown in result view.](media/function-distinct/citypopulations-create.png)
 
 1. Insert a [**Data table**](../controls/control-data-table.md) control, and set its **Items** property to this formula:
 
@@ -61,12 +62,12 @@ The **Distinct** function evaluates a formula across each record of a table and 
     You can view the result of this formula in the formula bar by selecting the entire formula:
 
     > [!div class="mx-imgBorder"]
-    > ![Output from Distinct function shown in result view](media/function-distinct/citypopulations-distinct.png)
+    > ![Output from Distinct function shown in result view.](media/function-distinct/citypopulations-distinct.png)
 
 1. Use the **Edit fields** link in the data table's properties pane to add the **Result** column:
 
     > [!div class="mx-imgBorder"]
-    > ![Output from Distinct function shown in data table](media/function-distinct/citypopulations-datatable.png)
+    > ![Output from Distinct function shown in data table.](media/function-distinct/citypopulations-datatable.png)
 
 1. Insert a [**Label**](../controls/control-text-box.md) control, and set its **Text** property to the formula:
 
@@ -77,7 +78,7 @@ The **Distinct** function evaluates a formula across each record of a table and 
     This formula sorts the results from **Distinct** with the [**Sort**](function-sort.md) function, takes the first record from the resulting table with the [**First**](function-first-last.md) function, and extracts the **Result** field to obtain just the country name.
 
     > [!div class="mx-imgBorder"]
-    > ![Output from Distinct function showing the first country by name](media/function-distinct/citypopulations-first.png)
+    > ![Output from Distinct function showing the first country by name.](media/function-distinct/citypopulations-first.png)
 
      
 

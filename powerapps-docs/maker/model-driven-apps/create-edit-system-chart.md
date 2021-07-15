@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "joel-lindstrom"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 ms.reviewer: matp
@@ -33,11 +34,11 @@ In this article you learn how to create a system chart. System charts are organi
 1. Next to the model driven app to which you want to edit by adding a chart, select **...** (ellipses), and then select **Edit**. <!--In this example, we use the **Manage Customers** app used in the tutorial *How to create a model driven app*. -->
 1. In the app designer, locate the table to which you want to add the chart, and then select the corresponding **Charts** tile. In this example, we add a chart to the **Account** table.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Locate the table where you want to add a chart":::
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Locate the table where you want to add a chart.":::
 
 1. On the **Components** tab, select **Create New**.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-2.png" alt-text="On the Components tab pane select Create New":::
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-2.png" alt-text="On the Components tab pane select Create New.":::
 
    A new window opens where you can create a chart.
 
@@ -50,7 +51,7 @@ In this article you learn how to create a system chart. System charts are organi
 
    -   Add a description to identify the purpose of the chart, such as *This column chart displays the number of employees by account name*.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create":::
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create.":::
 
 1. Select **Save and Close**.
 
@@ -72,12 +73,12 @@ Now that you have created your chart, you can use it to visualize account data i
 
 1. Select the chart selector, and then select **Number of employees by account**.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-1.png" alt-text="Chart selector":::
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-1.png" alt-text="Chart selector.":::
 
 
    Your chart appears in-line with the data view.
 
-   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-2.png" alt-text="Your system chart named Number of employees by account is displayed":::
+   :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-2.png" alt-text="Your system chart named Number of employees by account is displayed.":::
 
 Use your chart:
 - Select a bar on the chart to filter the data in the view.

@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/05/2020
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -55,16 +56,16 @@ In addition to creating and managing connections in [powerapps.com](https://make
 1. If you have not already done so, log in to [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. In the left navigation, expand **Data** and select **Connections**.
    
-    ![Connections Manage](./media/add-manage-connections/open-connections.png)
+    ![Connections Manage.](./media/add-manage-connections/open-connections.png)
 3. Select **New connection**.
    
-    ![New connection](./media/add-manage-connections/add-connection.png)
+    ![New connection.](./media/add-manage-connections/add-connection.png)
 4. Select a connector in the list that appears, and then follow the prompts.
    
-   ![Select a connector](./media/add-manage-connections/choose-connection.png)
+   ![Select a connector.](./media/add-manage-connections/choose-connection.png)
 5. Select the **Create** button.
    
-   ![Select Create](./media/add-manage-connections/create-connection.png)
+   ![Select Create.](./media/add-manage-connections/create-connection.png)
 6. Follow the prompts. Some connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. Others such as **Microsoft Translator**, do not.
    
    For example, these connectors require additional information before you can use them.
@@ -77,7 +78,7 @@ The new connector appears under **Connections**, and you can [add it to an app](
 ## Update or delete a connection
 In the list of connections, find the connection that you want to update or delete, and then select the ellipsis (...) on the right of the connection.
 
-![Update connection](./media/add-manage-connections/auth-or-delete.png)
+![Update connection.](./media/add-manage-connections/auth-or-delete.png)
 
 * To update the credentials for a connection, select the key icon, and then provide credentials for that connection.
 * To delete the connection, select delete.

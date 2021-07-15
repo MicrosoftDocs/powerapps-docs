@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/12/2021
+ms.subservice: canvas-maker
 ms.author: stepsic
 search.audienceType: 
   - maker
@@ -45,7 +46,7 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 1. Under **Choose how to trigger this flow**, select **Power Apps**.
 
-    ![Create instant flow using Power Apps trigger](./media/using-logic-flows/ceate-instant-flow.png "Create instant flow using Power Apps trigger")
+    ![Create instant flow using Power Apps trigger.](./media/using-logic-flows/ceate-instant-flow.png "Create instant flow using Power Apps trigger")
 
 1. Select **Create**.
 
@@ -53,25 +54,25 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 1. Under **Choose an operation**, search for or select **SharePoint** connector.
 
-    ![Search or choose SharePoint connector](./media/using-logic-flows/choose-sharepoint-connector.png "Search or choose SharePoint connector")
+    ![Search or choose SharePoint connector.](./media/using-logic-flows/choose-sharepoint-connector.png "Search or choose SharePoint connector")
 
 1. Search for, or select **Create item** action.
 
-    ![Search or choose create item action](./media/using-logic-flows/sharepoint-create-item-action.png "Search or choose create item action")
+    ![Search or choose create item action.](./media/using-logic-flows/sharepoint-create-item-action.png "Search or choose create item action")
 
 1. For **Site Address**, enter or choose your SharePoint site that has the lists **Assets** and **RepairShop**.
 
 1. For **List Name**, select the **Assets** list.
 
-    ![Site and list](./media/using-logic-flows/site-and-list.png "Site and list")
+    ![Site and list.](./media/using-logic-flows/site-and-list.png "Site and list")
 
 1. For **Title**, choose **Ask in Power Apps** from **Dynamic content** tab. The action automatically updates to **Createitem_Title**.
 
-    ![Ask in Power Apps - create title](./media/using-logic-flows/ask-in-powerapps-create-title.png "Ask in Power Apps - create title")
+    ![Ask in Power Apps - create title.](./media/using-logic-flows/ask-in-powerapps-create-title.png "Ask in Power Apps - create title")
 
 1. Choose values for **AssetType Value**, and **RepairShop Id** of your choice.
 
-    ![AssetType Value and RepairShop Id](./media/using-logic-flows/assettype-repairshopid.png "AssetType Value and RepairShop Id")
+    ![AssetType Value and RepairShop Id.](./media/using-logic-flows/assettype-repairshopid.png "AssetType Value and RepairShop Id")
 
 1. Select **Save**.
 
@@ -95,11 +96,11 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
 1. On the canvas, move the button control below the text input control.
 
-    ![Design the app](./media/using-logic-flows/assettype-repairshopid.png "Design the app")
+    ![Design the app.](./media/using-logic-flows/assettype-repairshopid.png "Design the app")
 
 1. Select **Action** menu at the top, and then select **Power Automate**.
 
-    ![Action > Power Automate](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
+    ![Action > Power Automate.](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
 
 1. Select **FlowInApp**.
 
@@ -129,7 +130,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     In other words, when this button is selected, the app will run the flow with the value from the text input control, passing the text value to the flow to execute. And the flow will create the SharePoint list item with this text input value along with rest of the selection inside the flow configuration.
 
-    ![OnSelect formula for the button](./media/using-logic-flows/onselect-button.png "OnSelect formula for the button")
+    ![OnSelect formula for the button.](./media/using-logic-flows/onselect-button.png "OnSelect formula for the button")
 
 1. [Save and publish](save-publish-app.md) the app.
 
@@ -139,15 +140,15 @@ Now that you have both the flow, and the app created, you'll run the app and ver
 
 1. In [Power Apps](https://make.powerapps.com), select **Apps**, and then, select the **AppWithFlow** app.
 
-    ![Run AppWithFlow](./media/using-logic-flows/run-app-with-flow.png "Run AppWithFlow")
+    ![Run AppWithFlow.](./media/using-logic-flows/run-app-with-flow.png "Run AppWithFlow")
 
 1. Enter a value in the text input box, and then select **Create Asset**.
 
-    ![Run the app](./media/using-logic-flows/run-app.png "Run the app")
+    ![Run the app.](./media/using-logic-flows/run-app.png "Run the app")
 
 1. Verify that the item is created in your SharePoint list.
 
-    ![Check SharePoint list](./media/using-logic-flows/check-sharepoint-list.png "Check SharePoint list")
+    ![Check SharePoint list.](./media/using-logic-flows/check-sharepoint-list.png "Check SharePoint list")
 
 Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
 

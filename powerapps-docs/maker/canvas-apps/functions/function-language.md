@@ -8,6 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 10/16/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -59,7 +60,7 @@ A simple approach to localization is to create an Excel spreadsheet mapping an a
 
 1. Create the following table in Excel: 
    
-    ![Localization table](media/function-language/loc-table.png)
+    ![Localization table.](media/function-language/loc-table.png)
    
     The entry with *blank* for the **Language** column will be used as the default if there is no specific text string found for a given language. This entry must appear after all other entries for a given **TextID**.
    

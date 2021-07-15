@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -36,7 +37,7 @@ For the steps to delete sample data from the sample apps, go to [Remove sample d
 When you assign a task in the Issue reporting, or Inspection apps who isn't a member of the Teams team, the user's name on the task will show as "Former member".
 To correctly display the user's name, add the user to the Team where the app is installed.
 
-![Former member](media\sample-apps-faqs\former-member.png "Former member")
+![Former member.](media\sample-apps-faqs\former-member.png "Former member")
 
 ## Why can't I create tasks in Inspection app?
 

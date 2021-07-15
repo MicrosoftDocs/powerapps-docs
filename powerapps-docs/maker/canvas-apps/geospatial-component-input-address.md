@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 1/19/2021
+ms.subservice: canvas-maker
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -65,7 +66,7 @@ You can save addresses that a user inputs into the address component as a data c
 
     This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
 
-    ![Screenshot of the button on the app](./media/geospatial/input-code.png)
+    ![Screenshot of the button on the app.](./media/geospatial/input-code.png)
 
 4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
 
@@ -81,7 +82,7 @@ Each time a user selects the button, the result from the address input component
 
 The following properties are on the component's **Address Input** pane on the **Properties** and **Advanced** tabs.
 
-![The properties are in the side panel](./media/geospatial/address-properties.png "The properties are in the side panel")
+![The properties are in the side panel.](./media/geospatial/address-properties.png "The properties are in the side panel")
 
 Some properties are only available on the **Advanced** tab, in the **More options** section.
 
