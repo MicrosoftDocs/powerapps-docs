@@ -1,0 +1,47 @@
+---
+title: "Add code components to a custom page for your model-driven app" 
+description: ""
+ms.custom: ""
+ms.date: 07/14/2021
+ms.reviewer: ""
+ms.service: powerapps
+ms.topic: "article"
+author: "hemantg"
+ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
+ms.author: "matp"
+manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
+---
+
+# Add code components to a custom page for your model-driven app 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+This topic outlines the use of code components which are built using Power Apps component framework within a custom page. 
+
+
+Note: connectors on the supported list are expected to work with on-prem gateway
+
+## Upcoming changes to code component for custom pages
+
+* Code component support for the canvas libraries
+
+## Known issues
+
+* Maker studio experience for custom page does not has support for certain Power Apps component framework APIs like Web APIs inline with the stand alone canvas apps. However these  APIs are avaialable when the custom page is added to model apps. 
+
+## Related topics
+
+[Model-driven app custom page overview](model-app-page-overview.md)
+
+[Add a custom page to your model-driven app](add-page-to-model-app.md)
+
+[Using PowerFx in custom page](page-powerfx-in-model-app.md)
+
+[Overview of Power Apps connectors](../canvas-apps/connections-list.md)
+
+[Add data connection in canvas designer](../canvas-apps/add-data-connection.md)
