@@ -14,6 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 12/06/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer

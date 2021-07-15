@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -29,7 +30,7 @@ To create a portal in an environment containing customer engagement apps, sign i
 
 1. In the search box on the right-side of the screen, enter "Portal". <br>Alternatively, view the templates of the type **Portal**.
 
-    > ![Dynamics 365 portal templates](media/dynamics-portals.png "Dynamics 365 portal templates")  
+    > ![Dynamics 365 portal templates.](media/dynamics-portals.png "Dynamics 365 portal templates")  
 
 1. Select the required portal template.
 

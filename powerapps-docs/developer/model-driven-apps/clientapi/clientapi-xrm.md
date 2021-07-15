@@ -8,6 +8,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 15272ad9-25d7-499e-9361-a65f789daf20
 author: "Nkrb"
+ms.subservice: mda-developer
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -27,7 +28,7 @@ The **Xrm** object is globally available to use in your code without having to u
 
 The following illustration displays the Xrm object model:
 
-![Xrm Object Model](../media/ClientAPI-XrmModel.png)
+![Xrm Object Model.](../media/ClientAPI-XrmModel.png)
 
 Here is the information about each of the namespaces in the Xrm object:
 

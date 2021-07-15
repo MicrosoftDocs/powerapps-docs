@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"
@@ -41,7 +42,7 @@ App registration can also be done by an application developer or individual user
   
 2. In the Azure portal, select **Azure Active Directory** in the left pane and select **App registrations** and click on **New registration**.
     
-    ![Azure App Registration](media/azure-app-registrations-page.png "Azure app registration")  
+    ![Azure App Registration.](media/azure-app-registrations-page.png "Azure app registration")  
 
 3. In the **Register an application page**, enter your application's registration information:
    - In the **Name** section, enter a meaningful application name that will be displayed to the users.
@@ -49,29 +50,29 @@ App registration can also be done by an application developer or individual user
    - Set the **Redirect URI**.
    - Click on **Register** to create the application.
 
-      ![New App registration page](media/new-app-registration-page.png "New App registration page")
+      ![New App registration page.](media/new-app-registration-page.png "New App registration page")
 
 5. On the app **Overview** page, hover over **Application (client) ID** value, and select the **Copy to clipboard** icon to copy the value as you'll need to specify this in your application's authentication code or app.config file where appropriate.
 
-    ![Copy application ID](media/app-registration-overview-page.png "Copy application ID")
+    ![Copy application ID.](media/app-registration-overview-page.png "Copy application ID")
   
 5. Select **Manifest** tab, in the manifest editor, set the *allowPublicClient** property to **true** and click on **Save**.
    
-    ![App registration Manifest](media/app-registration-manifest-page.png "App registration Manifest")
+    ![App registration Manifest.](media/app-registration-manifest-page.png "App registration Manifest")
 
 6. Select **API permissions** tab, click on **Add a permission**. 
 
-    ![Add app permission](media/azure-api-permissions-page.png "Add app permission")
+    ![Add app permission.](media/azure-api-permissions-page.png "Add app permission")
 
 7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
-    ![Select API](media/app-registration-select-api-page.png "Select API")    
+    ![Select API.](media/app-registration-select-api-page.png "Select API")    
     > [!TIP]
     > If you are presented with more than one **Common Data Service** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Dataverse list item if needed.
     
 8.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
-    ![Delegate Permissions](media/app-registration-delegate-permissions-page.png "Delegate Permission")
+    ![Delegate Permissions.](media/app-registration-delegate-permissions-page.png "Delegate Permission")
     > [!NOTE]
     > A future revision of the form in step #8 will replace the Dynamics CRM logo and icon with Dataverse.
 

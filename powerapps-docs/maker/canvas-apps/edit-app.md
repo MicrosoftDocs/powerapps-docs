@@ -1,5 +1,5 @@
 ---
-title: Edit a canvas app | Microsoft Docs
+title: Edit a canvas app
 description: Step-by-step instructions for editing canvas apps and session-locking scenarios in Power Apps.
 author: emcoope-msft
 manager: kvivek
@@ -8,13 +8,17 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/16/2020
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
-# Edit a canvas app in Power Apps
+# Edit a canvas app
 
 Edit any canvas app that you created, or for which you have **Co-owner** permission. You can edit an app in Power Apps Studio. 
 
@@ -26,17 +30,17 @@ If you try to edit an app that's open for editing elsewhere, a message tells you
 
 1. Select **Apps** in the left navigation pane.
 
-    ![List of apps](./media/edit-app/file-apps.png "List of apps")
+    ![List of apps.](./media/edit-app/file-apps.png "List of apps")
 
 1. Select an app.
 
 1. Select **Edit** from top menu. You can also use "**...**" (More Commands) for the app and then select **Edit** from the drop-down menu.
 
-    ![Edit an app](./media/edit-app/edit-app.png "Edit an app")
+    ![Edit an app.](./media/edit-app/edit-app.png "Edit an app")
 
 If you don't see the app that you want to edit, verify that you've selected the correct environment.
 
-![Select environment](./media/edit-app/select-environment.png "Select environment")
+![Select environment.](./media/edit-app/select-environment.png "Select environment")
 
 ## Collaborate on an app
 
@@ -48,7 +52,7 @@ Only one user can edit an app at a time.
 
 If you try to edit an app that someone else is already editing, you'll see the following message.
 
-![App open by another user](./media/edit-app/applock-otheruser.png "App open by another user")
+![App open by another user.](./media/edit-app/applock-otheruser.png "App open by another user")
 
 You can't continue until the other user closes the app, or that user's session times out.
 
@@ -56,7 +60,7 @@ You can't continue until the other user closes the app, or that user's session t
 
 Consider that you already have an app open for editing. And then, you try to open the app for editing on another device, or in another browser window. In that case, you'll see the following message.
 
-![App already open for editing by same user](./media/edit-app/applock-selfuser.png "App already open for editing by same user")
+![App already open for editing by same user.](./media/edit-app/applock-selfuser.png "App already open for editing by same user")
 
 You can override the previous session, but you might lose any changes that you haven't saved.
 

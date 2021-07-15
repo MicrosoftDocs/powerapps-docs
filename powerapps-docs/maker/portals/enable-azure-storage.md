@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: tapanm
 contributors:
@@ -34,13 +35,13 @@ To locate the value for FileStorage/CloudStorageAccount, you must get a connecti
 
 3. Select **Access Keys**.
 
-    ![Locate value for connection string from your Azure portal](media/key-azure-storage.png "Locate the value for the connection string from your Azure portal")
+    ![Locate value for connection string from your Azure portal.](media/key-azure-storage.png "Locate the value for the connection string from your Azure portal")
 
 4. In the resulting panel, locate the field labeled **Connection String**. Select the **Copy** icon next to the field for which you need to copy the value, and then paste that value into your new setting:
 
-    ![Primary connection string value](media/primary-connection-string-azure-storage.png "Primary connection string value")
+    ![Primary connection string value.](media/primary-connection-string-azure-storage.png "Primary connection string value")
 
-    ![Portal setting for cloud storage account](media/portal-site-setting-cloud-storage-account.png "Portal setting for your cloud storage account")
+    ![Portal setting for cloud storage account.](media/portal-site-setting-cloud-storage-account.png "Portal setting for your cloud storage account")
 
 ## Specify the storage container
 
@@ -48,7 +49,7 @@ If you do not already have an Azure Blob container in your storage account, you 
 
 In the [Portal Management app](configure/configure-portal.md), go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageContainerName**, using the name of your container as the value.
 
-![Portal setting for cloud storage container](media/portal-site-setting-cloud-storage-container.png "Portal setting for your cloud storage container")
+![Portal setting for cloud storage container.](media/portal-site-setting-cloud-storage-container.png "Portal setting for your cloud storage container")
 
 ## Add CORS rule
 
@@ -62,7 +63,7 @@ You must add cross-origin resource sharing (CORS) rule on your Azure Storage acc
 
 CORS rule example:
 
-![CORS rule example](media/portals-cors-azure.png "CORS rule example")
+![CORS rule example.](media/portals-cors-azure.png "CORS rule example")
 
 [!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
 

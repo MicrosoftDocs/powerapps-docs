@@ -1,17 +1,21 @@
 ---
-title: Create a dependent drop-down list in a canvas app | Microsoft Docs
-description: In Power Apps, create a drop-down list that filters another drop-down list in a canvas app.
+title: Create a dependent drop-down list in a canvas app
+description: Learn about how to create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/26/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Create dependent drop-down lists in a canvas app
 
@@ -75,7 +79,7 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
     The form appears with just the fields that you added.
 
     > [!div class="mx-imgBorder"]
-    > ![Form without Title and Attachments fields](./media/dependent-drop-down-lists/default-form.png)
+    > ![Form without Title and Attachments fields.](./media/dependent-drop-down-lists/default-form.png)
 
 ## Replace the controls
 
@@ -86,7 +90,7 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 1. Open the **Control type** list, and then select **Allowed Values**.
 
     > [!div class="mx-imgBorder"]
-    > ![Allowed values](./media/dependent-drop-down-lists/change-control.png)
+    > ![Allowed values.](./media/dependent-drop-down-lists/change-control.png)
 
     The input mechanism changes to a **Drop down** control.
 
@@ -101,12 +105,12 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 1. Select the check box for that list, and then select **Connect**.
 
     > [!div class="mx-imgBorder"]
-    > ![Data pane](./media/dependent-drop-down-lists/select-list.png)
+    > ![Data pane.](./media/dependent-drop-down-lists/select-list.png)
 
     The list of connections shows the **Incidents** list, on which the form is based, and the **Locations** list, which will identify locations and departments in the form.
 
     > [!div class="mx-imgBorder"]
-    > ![SharePoint data sources](./media/dependent-drop-down-lists/data-sources.png)
+    > ![SharePoint data sources.](./media/dependent-drop-down-lists/data-sources.png)
 
 ## Unlock the cards
 
@@ -123,7 +127,7 @@ If you rename your controls, you can identify them more easily, and the examples
 1. Near the top of the right-hand pane, rename the selected control by typing or pasting **ddLocation**.
 
     > [!div class="mx-imgBorder"]
-    > ![Rename a control](./media/dependent-drop-down-lists/rename-control.png)
+    > ![Rename a control.](./media/dependent-drop-down-lists/rename-control.png)
 
 1. Repeat the previous two steps in the **Department** card to rename the **Drop down** control to **ddDepartment**.
 
@@ -147,7 +151,7 @@ If you rename your controls, you can identify them more easily, and the examples
 1. Under **Matching field**, select **Locations** in the upper list, select **Location** in the lower list, and then select **Apply**.
 
     > [!div class="mx-imgBorder"]
-    > ![Depends on link](./media/dependent-drop-down-lists/depends-on.png)
+    > ![Depends on link.](./media/dependent-drop-down-lists/depends-on.png)
 
     The **Items** property of **ddDepartment** is set to this formula:
 
@@ -160,7 +164,7 @@ If you rename your controls, you can identify them more easily, and the examples
     This step sets the display text to the options from the **Department** column of the **Locations** list in SharePoint.
 
     > [!div class="mx-imgBorder"]
-    > ![Department value](./media/dependent-drop-down-lists/dept-value.png)
+    > ![Department value.](./media/dependent-drop-down-lists/dept-value.png)
 
 ## Test the form
 
@@ -169,7 +173,7 @@ While holding down the Alt key, open the list of locations, select one, open the
 The lists of locations and departments reflects the information in the **Locations** list in SharePoint.
 
 > [!div class="mx-imgBorder"]
-> ![Open the list of locations, change the selection from Renfrew to Pembroke, and then open the list of departments](./media/dependent-drop-down-lists/dropdowns.gif)
+> ![Open the list of locations, change the selection from Renfrew to Pembroke, and then open the list of departments.](./media/dependent-drop-down-lists/dropdowns.gif)
 
 ## Save and open the form (optional)
 
@@ -187,19 +191,19 @@ Confirm whether you're displaying the correct field for your control in either o
 - Select a drop-down list, and then select the **Value** property in the **Properties** tab of the right-hand pane.
 
     > [!div class="mx-imgBorder"]
-    > ![Change drop down](./media/dependent-drop-down-lists/drop-down-display-field.png)
+    > ![Change drop down.](./media/dependent-drop-down-lists/drop-down-display-field.png)
 
 - Select a combo box, and then ensure that the primary text is the field that you want to display.
 
     > [!div class="mx-imgBorder"]
-    > ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
+    > ![Change combo box.](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **My child drop-down list contains duplicate items.**
 This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in Power Apps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md).
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Microsoft Dataverse.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with choices in Microsoft Dataverse.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, Power Apps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.
 

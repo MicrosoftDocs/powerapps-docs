@@ -13,22 +13,6 @@ summary: This article provides information on frequently asked questions about P
 sections:
   - name: General
     questions:
-      - question: Component changes are not reflected after the updated solution import?
-        answer: |
-          Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
-          Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
-          ```XML
-          <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
-            version="1.0.1" 
-             display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
-          ```
-      - question: What are the things to be considered from a performance perspective?
-        answer: |
-          1. If you wish to access a large chunk of data items, implement [filtering](reference/filtering.md) and [paging](reference/paging.md) methods to limit how much data should be loaded.
-          2. Batch your network calls, and make any network calls asynchronous. Design the component in such a way that all the required information is provided with a single call. 
-          3. Design the component such that the user has to perform an action (such as clicking on a button) to initiate the loading of a specific item's data rather than making the call for each data item.
-          4. Ensure that you clean up the resources using the [destroy](reference/control/destroy.md) function. Open network calls, connections, event handlers, and references to DOM nodes need to be cleaned up to increase the performance.
-
       - question: Where can I find some good examples of code components?
         answer: |
           Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).

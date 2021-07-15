@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -59,42 +60,36 @@ To open the Milestones app:
 
 1. You can learn more about extending this app's capabilities on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
 
-    ![Milestones app splash screen](media/milestones/splash-screen.png "Milestones app splash screen")
+    ![Milestones app splash screen.](media/milestones/splash-screen.png "Milestones app splash screen")
 
 ## Understand the Milestones interface
 
 The Milestones app gives you easy access to your projects, work items,
 activities, and project milestones.
 
-![Understand the Milestone app interface](media/milestones/understand-interface.png "Understand the Milestone app interface")
+![Understand the Milestone app interface.](media/milestones/understand-interface.png "Understand the Milestone app interface")
 
 1. **Search for projects** - search for projects to display in the list on the left pane inside the app.
 
 1. **Select theme** - allows managers to select a theme, or add a custom header image/color.
 
-1. **App information** - shows additional information about the app.
+1. **Customize** - shows additional information about the app.
 
-1. **App settings** - provides access for managers to change app settings, such as rename projects, or update project category, priority, and status.
+1. **App settings** - provides access for managers to change app settings, such as update project category, priority, and status.
 
 1. **New project** - create a new project.
 
 1. **Sort projects** - sorts the list of projects in ascending, or descending order based on project start date.
 
-1. **View team status of work items by owner** - color coded counts display the number of work items by team member.
-
-1. **Team/Milestone toggle** - toggle between user summary view, and milestone status view.
-
-1. **New activity** - add an update to the activity log.
-
-1. **Expand/collapse the activity log** - expands, or collapses the activity log section.
+1. **View team status of work items by owner** - color coded counts display the number of work items by milestone. Select the drop down to toggle to user summary view, showing work items by user.
 
 1. **Projects list** - shows all projects, or the results of the search term entered in the find projects search box. Overdue work item count is displayed if the project has any overdue work items.
 
-1. **Customize** - open the app inside Power Apps Studio for customization.
-
 1. **Project work items** - create, read, update, and delete work items associated with the project.
 
-1. **Activity log** - view activity log, including manually added items, and system-generated notifications.
+1. **Project properties** - update project properties, such as modifying or deleting projects or updating milestones and team members associated with the project.
+
+   
 
 ## Create a new project
 
@@ -104,14 +99,14 @@ To create a new project:
 
 1. Select **New Project** from the left pane.
 
-    ![New project](media/milestones/new-project.png "New project")
+    ![New project.](media/milestones/new-project.png "New project")
 
 1. Enter **Name**.
 
 1. Enter milestones as required.
     <br> To add additional milestones, select **Add a milestone**.
 
-    ![New project details](media/milestones/new-project-screen.png "New project details")
+    ![New project details.](media/milestones/new-project-screen.png "New project details")
 
 1. Select **Next**.
 
@@ -119,13 +114,13 @@ To create a new project:
 
 1. Select **Create** to create the project.
 
-    ![Add project members, and create project](media/milestones/project-members.png "Add project members, and create project")
+    ![Add project members, and create project.](media/milestones/project-members.png "Add project members, and create project")
 
 ## Add theme to your project
 
 Once your project is created, select the image button to select an existing image, choose a color, or upload a custom image as the project theme.
 
-![Add theme to project](media/milestones/project-theme.png "Add theme to project")
+![Add theme to project.](media/milestones/project-theme.png "Add theme to project")
 
 ## Add work items to a project
 
@@ -137,13 +132,13 @@ To add work items to a project:
 
 1. Select **New work item**.
 
-    ![New work item button](media/milestones/new-work-item-button.png "New work item button")
+    ![New work item button.](media/milestones/new-work-item-button.png "New work item button")
 
 1. Add the work item details: *Name*, *Description*, values for *Assigned to*, *Milestone*, *Status*, *Category*, *Priority*, and *Target date*.
 
 1. Select **Create**.
 
-    ![New work item](media/milestones/new-work-item.png "New work item")
+    ![New work item.](media/milestones/new-work-item.png "New work item")
 
 ## Edit an existing project
 
@@ -153,13 +148,13 @@ To edit project details:
 
 1. Select a project from the left pane.
 
-1. Select **Settings** (![Settings - icon](media/milestones/settings-icon.png "Settings - icon")).
+1. Select **Settings** (![Settings - icon.](media/milestones/settings-icon.png "Settings - icon")).
 
 1. Update project details.
 
 1. Select **Save**.
 
-    ![Edit project](media/milestones/edit-project.png "Edit project")
+    ![Edit project.](media/milestones/edit-project.png "Edit project")
 
 ## Work with category, priority, and status
 
@@ -168,11 +163,11 @@ status, and category.
 
 1. Open **Milestones** app.
 
-1. Select **Settings** (![Settings - icon](media/milestones/settings-icon.png "Settings - icon")).
+1. Select **Settings** (![Settings - icon.](media/milestones/settings-icon.png "Settings - icon")).
 
 1. In the **Global settings** area, select the color for the option you want to change to select a new color.
 
-    ![Global settings](media/milestones/global-settings.png "Global settings")
+    ![Global settings.](media/milestones/global-settings.png "Global settings")
 
     - To rename, select the name of the category, priority, or status that you wish to change, and enter a new name.
 
@@ -181,7 +176,7 @@ status, and category.
     - To delete:
     
         - Select the field.
-        - Select **Delete** (![Delete icon](media/milestones/delete-icon.png "Delete icon")). 
+        - Select **Delete** (![Delete icon.](media/milestones/delete-icon.png "Delete icon")). 
         - Select **I understand** checkbox.
         - Select **Delete** to permanently delete the selection.
 
@@ -193,13 +188,13 @@ To delete an existing project:
 
 1. Open **Milestones** app.
 
-1. Select **Settings** (![Settings - icon](media/milestones/settings-icon.png "Settings - icon")).
+1. Select **Settings** (![Settings - icon.](media/milestones/settings-icon.png "Settings - icon")).
 
 1. Select the project that you want to delete from the list of projects on the left pane.
 
 1. Select **Delete project**.
 
-    ![Delete project](media/milestones/delete-project.png "Delete project")
+    ![Delete project.](media/milestones/delete-project.png "Delete project")
 
 1. Select **I understand** checkbox.
    
@@ -207,6 +202,8 @@ To delete an existing project:
 
 ### See also
 
+- [Deploy Milestones sample app broad distribution app](milestones-broad-distribution.md)
+- [Customize Milestones sample app](customize-milestones.md)
 - [Understand Milestones sample app architecture](milestones-architecture.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)

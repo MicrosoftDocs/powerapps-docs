@@ -1,6 +1,6 @@
 ---
-title: Rand function | Microsoft Docs
-description: Reference information, including syntax, for the Rand function in Power Apps
+title: Rand function in Power Apps
+description: Reference information including syntax and examples for the Rand function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/09/2018
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Rand function in Power Apps
 Returns a pseudo-random number.
@@ -45,13 +49,13 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 
     The label shows **50** (the default value for the slider) plus a random decimal:
 
-    ![A screen displaying a label control with 50.741](media/function-rand/rand-slider-1.png)
+    ![A screen displaying a label control with 50.741.](media/function-rand/rand-slider-1.png)
 
 1. While holding down the Alt key, change the value of the slider.
 
     Every time you change the value of the slider, the decimal portion of the label shows a different random number:
 
-    ![Four screens displaying a label control with four different random decimal values for each of four different slider settings 70.899, 84.667, 90.134, 99.690](media/function-rand/rand-slider-results.png)
+    ![Four screens displaying a label control with four different random decimal values for each of four different slider settings 70.899, 84.667, 90.134, 99.690.](media/function-rand/rand-slider-results.png)
 
 #### Create a table of random numbers
 1. Add a **[Button](../controls/control-button.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
@@ -62,17 +66,17 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 
 1. Add a **[Data table](../controls/control-data-table.md)**, set its **Items** property to **RandomNumbers**, and show the **Value** field.
 
-    ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/set-show-data.png)
+    ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814.](media/function-rand/set-show-data.png)
 
 1. While holding down the Alt key, select the button by clicking or tapping it.
 
     The data table shows five random decimal numbers:
 
-    ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/rand-collection-1.png)
+    ![Data table with five decimal numbers.](media/function-rand/rand-collection-1.png)
 
 1. Select the button again to show a different list of random numbers:
 
-    ![The same screen showing a data table with a new set of five different decimal values 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
+    ![The same screen showing a data table with a new set of five different decimal values 0.414, 0.128, 0.860, 0.303, 0.568.](media/function-rand/rand-collection-2.png)
 
 To generate a single random number instead of a table, use **Set( RandomNumber, Rand() )**.
 
