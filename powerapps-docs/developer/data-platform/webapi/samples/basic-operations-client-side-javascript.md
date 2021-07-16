@@ -1,8 +1,8 @@
 ---
 title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript and the Microsoft Dataverse Web API"
+description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/15/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,11 +21,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Basic Operations Sample (Client-side JavaScript)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript.  
+This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript.  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
@@ -868,9 +869,9 @@ Sdk.deleteSampleData = function () {
 ### See also
 
 [Use the Dataverse Web API](../overview.md)<br />
-[Create a table using the Web API](../create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](../retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Create a table row using the Web API](../create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
 [Web API Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
@@ -878,6 +879,5 @@ Sdk.deleteSampleData = function () {
 [Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

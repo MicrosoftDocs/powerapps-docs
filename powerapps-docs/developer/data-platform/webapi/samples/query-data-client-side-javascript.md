@@ -1,7 +1,8 @@
 ---
 title: "Web API Query Data Sample (Client-side JavaScript) | Microsoft Docs"
+description: "Learn how to perform basic query requests using the Microsoft Dataverse Web API and client-side JavaScript."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 07/16/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,14 +21,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API Query Data Sample (Client-side JavaScript)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample demonstrates how to perform basic query requests using the Microsoft Dataverse Web API using client-side JavaScript  
+This sample demonstrates how to perform basic query requests using the Microsoft Dataverse Web API using client-side JavaScript.
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common  client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
+> This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
   
 <a name="bkmk_prereq"></a>
 
@@ -43,7 +45,7 @@ This sample demonstrates how to perform basic query requests using the Microsoft
 
 ## Run this sample
 
-To run this sample,download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIQueryData). Extract the contents of the sample and locate the `WebAPIQueryData_1_0_0_0_managed.zip` managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/JS/WebAPIQueryData). Extract the contents of the sample and locate the `WebAPIQueryData_1_0_0_0_managed.zip` managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
@@ -768,6 +770,5 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 [Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
