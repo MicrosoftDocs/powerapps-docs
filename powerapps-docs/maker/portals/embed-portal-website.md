@@ -26,7 +26,7 @@ This article explains the steps that you can do to embed portal application in a
 
 ## Step 1. Enable portal for Iframe
 
-Iframe feature by default is disabled on new portals to ensure that no one can embed your portal application externally to avoid ["clickjacking attacks"](https://owasp.org/www-community/attacks/Clickjacking).
+Iframe feature by default is disabled on new portals to ensure that no one can embed your portal application externally to avoid ["Clickjacking attacks"](https://owasp.org/www-community/attacks/Clickjacking).
 
 To enable Iframe on your portal:
 
