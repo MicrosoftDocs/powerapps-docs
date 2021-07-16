@@ -28,13 +28,13 @@ This topic outlines the use of canvas components using canvas component libray f
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
   > [!NOTE]
-  > Custom page currently supports only a [limited set of controls](https://review.docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/design-page-for-model-app?branch=pr-en-us-4627#supported-controls-in-custom-page) and only these  supported controls should be used to create canvas components for the custom page. 
+  > Custom page currently supports only a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) and only these  supported controls should be used to create canvas components for the custom page. 
 
 
-Canvas components provides app makers an ability to create custom components in a low code fashion. These components can not only then be reused across custom pages and applications but also can be centrally updated, packaged and moved in the Dataverse solutions. See [Create a component for canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-component) for more details on how to create a component. Since custom page authoring is limited to only one page, canvas components can only be authored inside a [component library](../../canvas-apps/component-library.md). This is different from the standalone canvas apps which additionally has ability to create components at the app level.
+Canvas components provides app makers an ability to create custom components in a low code fashion. These components can not only then be reused across custom pages and applications but also can be centrally updated, packaged and moved in the Dataverse solutions. See [create a component for canvas apps](/powerapps/maker/canvas-apps/create-component) for more details on how to create a component. Since custom page authoring is limited to only one page, canvas components can only be authored inside a [component library](/powerapps/maker/canvas-apps/component-library). This is different from the standalone canvas apps which additionally has ability to create components at the app level.
 
 ## Create a canvas component using component library 
-You can create a new [component library]/powerapps/maker/canvas-apps/component-library) or edit an existing one either from the Solutions area or Maker portal.  Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
+You can create a new [component library](/powerapps/maker/canvas-apps/component-library) or edit an existing one either from the Solutions area or Maker portal.  Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
 
 
 
@@ -42,9 +42,19 @@ You can create a new [component library]/powerapps/maker/canvas-apps/component-l
 
 
 ## Create canvas component for use in custom page 
-Components can now be created inside component library. Note that only the [supported set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) should be used to create components for custom page. You can enable the modern controls in the canvas component library settings for use in custom pages. 
+### Enabling modern controls for component library 
+You would need to enable modern controls in component library for use inside custom page. Please make sure that only the [supported set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-custom-page) is used to create components for custom page. You can enable the modern controls in the canvas component library settings for use in custom pages. 
 
    > ![Settings dialog for enabling modern controls](media/add-component-to-model-app/lib-setting-for-modern-controls.png "Settings dialog for enabling modern controls")
+
+### Creating a canvas component 
+Once the modern controls are enabled in the studio, you can now [create desired components](/powerapps/maker/canvas-apps/create-component.md) inside the library and publish it when ready.
+
+![Create a canvas component.](media/add-component-to-model-app/component-creation-for-canvas-lib.png "Create a canvas component")
+
+### Importing and using canvas component in custom page
+
+
 
 
 ## Upcoming changes to canvas component for custom pages
