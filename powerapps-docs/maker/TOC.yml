@@ -2288,6 +2288,8 @@
                   href: ../teams/issue-reporting-architecture.md
                 - name: Customize Issue reporting app
                   href: ../teams/customize-issue-reporting.md
+                - name: Add urgency flag to reported issues
+                  href: ../teams/extend-issue-urgency.md
         - name: Milestones
           items:
              - name: Milestones
