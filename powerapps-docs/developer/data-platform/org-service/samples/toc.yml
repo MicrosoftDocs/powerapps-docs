@@ -46,7 +46,7 @@
     href: create-retrieve-update-delete-recurring-appointment.md
   - name: 'End a recurring appointment series'
     href: end-recurring-appointment-series.md
-  - name: 'Link custom attributes between series and instances'
+  - name: 'Link custom columns between series and instances'
     href: link-custom-attributes-between-series-instances.md
   - name: 'Query the working hours of a user'
     href: query-working-hours-user.md
@@ -58,7 +58,7 @@
     href: validate-appointment.md
 - name: Auditing
   items:
-  - name: Audit entity data changes
+  - name: Audit table data changes
     href: audit-entity-data-changes.md
   - name: Audit user access
     href: audit-user-access.md
@@ -96,7 +96,7 @@
     href: create-retrieve-update-delete-dashboards.md
   - name: Create, retrieve, update and delete chart
     href: create-retrieve-update-delete-charts.md 
-  - name: Retrieve all charts attached to an entity
+  - name: Retrieve all charts attached to a table
     href: retrieve-charts-attached-to-entity.md
 - name: Connections
   items:
@@ -122,23 +122,23 @@
   items:
   - name: Create a custom activity
     href: create-custom-activity.md
-  - name: Create and retrieve entity relationships
+  - name: Create and retrieve table relationships
     href: create-retrieve-entity-relationships.md
-  - name: Create and update an emailable entity
+  - name: Create and update an emailable table
     href: create-update-emailable-entity.md
-  - name: Create and update entity metadata
+  - name: Create and update table definitions
     href: create-update-entity-metadata.md
-  - name: Dump attribute metadata to a file
+  - name: Dump column definitions to a file
     href: dump-attribute-metadata.md
-  - name: Dump entity metadata to a file
+  - name: Dump table definitions to a file
     href: dump-entity-metadata-file.md
-  - name: Dump entity privilege information to a file
+  - name: Dump table privilege information to a file
     href: dump-entity-priviliges.md
-  - name: Dump entity relationships information to a file
+  - name: Dump table relationships information to a file
     href: dump-entity-relationships.md
-  - name: Dump picklist information to a file
+  - name: Dump choices information to a file
     href: dump-picklist-information.md
-  - name: Dump global option set information to a file
+  - name: Dump choice information to a file
     href: dump-global-option-set.md
   - name: Export ribbon definitions
     href: export-ribbon-definitions.md
@@ -146,9 +146,9 @@
     href: query-metadata-changes.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
-  - name: Work with attributes
+  - name: Work with columns
     href: work-with-attributes.md
-  - name: Work with option sets
+  - name: Work with choice
     href: work-with-option-sets.md
 - name: Duplicate Detection
   items:
@@ -158,7 +158,7 @@
     href: enable-duplicate-detection-and-retrieve-duplicates.md
   - name: Use duplicate detection when creating and updating records
     href: use-duplicate-detection-when-creating-and-updating-records.md      
-- name: Entity records
+- name: Table records
   items: 
   - name: Assign a record to a new owner
     href: assign-record-to-new-owner.md
@@ -166,9 +166,9 @@
     href: assign-records-to-team.md
   - name: Create and update records with related records
     href: create-update-records-with-related-records.md
-  - name: Early-bound entity operations
+  - name: Early-bound table operations
     href: early-bound-entity-operations.md
-  - name: Late-bound entity operations
+  - name: Late-bound table operations
     href: late-bound-entity-operations.md
   - name: Initialize a record from an existing record
     href: initialize-record-from-existing-record.md
@@ -176,7 +176,7 @@
     href: insert-update-record-upsert.md
   - name: Merge two records
     href: merge-two-records.md
-  - name: Serialize and deserialize an entity
+  - name: Serialize and deserialize a table
     href: serialize-deserialize-entity.md
   - name: Set and retrieve entity images
     href: set-retrieve-entity-images.md
@@ -184,7 +184,7 @@
     href: share-record-using-access-team.md
   - name: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
     href: share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md
-  - name: Validate and ser state of an entity
+  - name: Validate and set state of a table
     href: validate-record-state.md
   - name: Upload, retrieve, and download an attachment
     href: upload-retrieve-download-attachment.md
@@ -192,7 +192,7 @@
     href: use-optimistic-concurrency-update-delete-operations.md 
 - name: Field Level Security
   items:
-  - name: Enable field security for an entity
+  - name: Enable field security for a table
     href: enable-field-security-entity.md
   - name: Retrieve field permissions
     href: retrieve-field-permissions.md
