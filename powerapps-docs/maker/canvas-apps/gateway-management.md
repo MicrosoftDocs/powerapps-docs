@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - arthiriyer
 ---
 
 # Manage an on-premises data gateway in Power Apps

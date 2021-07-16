@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Relate and Unrelate functions in Power Apps
 

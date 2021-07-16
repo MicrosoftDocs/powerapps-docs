@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Column control in Power Apps
 Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.

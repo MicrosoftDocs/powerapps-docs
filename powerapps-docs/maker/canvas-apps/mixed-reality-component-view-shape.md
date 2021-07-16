@@ -14,6 +14,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - iaanw
 ---
 
 # Create and view predefined 3D shapes in mixed reality

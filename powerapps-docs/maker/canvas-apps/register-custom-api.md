@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 
 # Custom connectors for canvas apps

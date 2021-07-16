@@ -9,6 +9,8 @@ ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Tutorial: Build an app to retrieve Power Platform videos for readiness

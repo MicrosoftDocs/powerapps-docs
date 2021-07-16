@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.

@@ -16,6 +16,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Create a canvas app from a template

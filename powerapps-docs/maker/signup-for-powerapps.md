@@ -10,6 +10,9 @@ ms.custom:
 ms.date: 03/23/2020
 ms.author: alaug
 ms.reviewer: kvivek
+contributors:
+  - tapanm-msft
+  - alaug
 ---
 # Explore Power Apps for free for 30 days
 

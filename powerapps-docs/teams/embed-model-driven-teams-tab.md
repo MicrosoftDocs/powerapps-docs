@@ -15,6 +15,8 @@ ms.assetid:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - mattp123
 ---
 
 # Embed a model-driven app as tab app in Teams

@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - emcoope-msft
 ---
 # Screen control in Power Apps
 

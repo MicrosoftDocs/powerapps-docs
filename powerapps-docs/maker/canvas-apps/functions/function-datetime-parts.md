@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
 Returns individual components of a Date/Time value.

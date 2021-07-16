@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - gregli-msft
 ---
 # Size and location properties in Power Apps
 ## Overview

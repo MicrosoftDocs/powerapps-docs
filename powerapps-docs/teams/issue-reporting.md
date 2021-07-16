@@ -354,7 +354,7 @@ To review and edit existing issues in Planner:
 ### See also
 
 - [Understand Issue Reporting sample app architecture](issue-reporting-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Customize issue reporting app](customize-issue-reporting.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 

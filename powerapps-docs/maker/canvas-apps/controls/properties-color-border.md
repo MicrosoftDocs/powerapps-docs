@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - gregli-msft
 ---
 # Color and border properties in Power Apps
 

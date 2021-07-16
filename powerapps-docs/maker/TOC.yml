@@ -11,7 +11,7 @@
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
-      href: ../learning-catalog/get-started.md
+      href: ../learning-catalog/learning-catalog.md
     - name: Business Decision Maker
       href: ../learning-catalog/bdm.md
     - name: App maker
@@ -1108,6 +1108,8 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Create and edit a form
+          href: ./model-driven-apps/create-and-edit-a-model-driven-form.md
         - name: Design forms for efficiency
           href: ./model-driven-apps/design-productive-forms.md
           items: 
@@ -2278,8 +2280,16 @@
           items:
             - name: Issue reporting
               href: ../teams/issue-reporting.md
-            - name: Issue reporting sample app architecture
-              href: ../teams/issue-reporting-architecture.md
+            - name: Deploy Issue reporting app broadly in your organization
+              href: ../teams/issue-reporting-broad-distribution.md
+            - name: Customize Inspection app
+              items:
+                - name: Issue reporting sample app architecture
+                  href: ../teams/issue-reporting-architecture.md
+                - name: Customize Issue reporting app
+                  href: ../teams/customize-issue-reporting.md
+                - name: Add urgency flag to reported issues
+                  href: ../teams/extend-issue-urgency.md
         - name: Milestones
           items:
              - name: Milestones

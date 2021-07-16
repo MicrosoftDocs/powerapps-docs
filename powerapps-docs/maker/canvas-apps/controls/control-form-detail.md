@@ -14,6 +14,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.

@@ -14,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Show a list of items in canvas apps
 

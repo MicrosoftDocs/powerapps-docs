@@ -9,6 +9,8 @@ ms.date: 04/07/2021
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Set permission and share apps with colleagues
