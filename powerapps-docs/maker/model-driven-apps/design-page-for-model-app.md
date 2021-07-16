@@ -49,8 +49,8 @@ Custom page authoring will start with a subset of controls supported and will be
   |Image|Media|
   |Edit Form|Input|
   |Display Form|Input|
-  |Code components|Custom|See [Add code components to a custom page](page-code-components.md)|
-  |Canvas components|Custom|See [Add canvas components to a custom page](page-canvas-components.md)|
+  |Code components|Custom| [Add code components to a custom page](page-code-components.md)|
+  |Canvas components|Custom| [Add canvas components to a custom page](page-canvas-components.md)|
   
   > [!Note]
   >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
