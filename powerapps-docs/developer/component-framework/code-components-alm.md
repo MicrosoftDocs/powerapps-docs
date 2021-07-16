@@ -186,7 +186,7 @@ The following diagram shows an overview of the solution lifecycle for these two 
 
 The diagram describes the following points:
 
-1. **Push using PAC CLI** - When the code component is ready for testing inside Dataverse, `pac pcf push` is used to deploy to a development environment. This creates an unmanaged solution named **PowerAppsTools_namespace**, where *namespace* is the namespace prefix of the solution provider under which you want to deploy your code component. The solution provider should already exist in the target environmentand must have the same namespace prefix as what you want to use for downstream environments.<!-- EJW: The previous sentence was confusing as intially written. I did my best to edit it based on what I thought it was trying to convey, but please review to make sure it’s accurate and update it as needed. --> After deployment, you can add your code component to model-driven or canvas apps for testing. 
+1. **Push using PAC CLI** - When the code component is ready for testing inside Dataverse, `pac pcf push` is used to deploy to a development environment. This creates an unmanaged solution named **PowerAppsTools_namespace**, where *namespace* is the namespace prefix of the solution provider under which you want to deploy your code component. The solution provider should already exist in the target environmentand must have the same namespace prefix as what you want to use for downstream environments.After deployment, you can add your code component to model-driven or canvas apps for testing. 
 
    > [!NOTE]
    > As described above, it's important to configure the code component `cdsproj` for production build so that you deploy the code optimized for production rather than development.
