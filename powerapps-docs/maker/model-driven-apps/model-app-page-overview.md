@@ -17,7 +17,12 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+
 The custom page is a new page type within a model-driven app, which brings in the power of canvas apps. Custom pages is a huge step towards the convergence of model-driven and canvas apps. Custom pages can be used to add full pages, dialogs, or panes to the model-driven app utilizing the power of the canvas designer. Custom page also includes support for low-code page authoring experiences with Power Fx expressions, canvas components and custom code components. 
+
+  > [!IMPORTANT]
+  > - This is a preview feature, and may not be available in all regions.
+  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 This new page is more flexible than the current model-driven application form, view, or dashboard page. For example, it lets you include one or more tables on a single page. Maker can then define data and component interactions using expressions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the custom page state can be governed either from the parameters passed or retrieved from persisted tables.
 Images below shows inline rendering of a custom page within the model-driven app. This custom page utilizes all of the available space while maintaining header and navigation areas from the main model-driven app. 
