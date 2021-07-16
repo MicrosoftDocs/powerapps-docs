@@ -211,8 +211,8 @@ In this section we'll be creating a flow and replacing the app logic that create
 
 1. Select **Issue Reports**  for the table.
 
-> [!NOTE]
-> The Issue Reports table includes two lookup fields. When populating lookup fields, you must enter the value as **table name(record ID)**. The two compose steps added earlier will contain the record ID’s for the category and the template. To enter these values, type the entity name with parenthesis, then inside the parenthesis, select the appropriate value from the dynamic content pane.
+    > [!NOTE]
+    > The Issue Reports table includes two lookup fields. When populating lookup fields, you must enter the value as **table name(record ID)**. The two compose steps added earlier will contain the record ID’s for the category and the template. To enter these values, type the entity name with parenthesis, then inside the parenthesis, select the appropriate value from the dynamic content pane.
 
 1. Enter the following values in this step:
 
