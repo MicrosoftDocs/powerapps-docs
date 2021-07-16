@@ -41,7 +41,7 @@ To install Microsoft Power Platform CLI using Visual Studio Code Extension:
 > [!NOTE]
 > Microsoft Power Platform Visual Studio Code Extension updates automatically. 
 
-1. You can also initiate the intiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation 
+1. You can also initiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
 
 ### Standalone Power Platform CLI
 
