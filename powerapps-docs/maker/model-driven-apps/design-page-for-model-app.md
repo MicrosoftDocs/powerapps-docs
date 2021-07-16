@@ -53,9 +53,9 @@ Custom page authoring will start with a subset of controls supported and will be
   |Canvas components|Custom|See [Add canvas components to a custom page](page-canvas-components.md)|
   
   > [!Note]
-  >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams](https://docs.microsoft.com/en-us/power-platform-release-plan/2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
+  >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
 
-Additionally you can add both low-code and pro-code custom UX compoennts to your environment and make them available for all makers. For custom component samples please visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/community-resources) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+Additionally you can add both low-code and pro-code custom UX compoennts to your environment and make them available for all makers. For custom component samples please visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](../../../developer/component-framework/community-resources.md) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 
 ## Enable responsive layout with Container control
 
