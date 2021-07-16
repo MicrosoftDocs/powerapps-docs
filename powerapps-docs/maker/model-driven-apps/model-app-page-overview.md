@@ -74,7 +74,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What data can the custom page use?
 
-  A custom page can use Dataverse and some of the most common connectors for Power Apps. The list of verified connectors is listed in [Add connectors into custom pages](page-data-connector.md).
+  A custom page can use Dataverse and some of the most common connectors for Power Apps. The list of verified connectors is listed in [Add connectors into custom pages](page-data-connectors.md).
 
 * What interactions can the custom page have with the model-driven app?
 

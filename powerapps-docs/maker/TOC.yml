@@ -1200,7 +1200,7 @@
         - name: Add code components to a custom page
           href: ./model-driven-apps/page-code-components.md     
         - name: Add connectors to a custom page
-          href: ./model-driven-apps/page-data-connector.md
+          href: ./model-driven-apps/page-data-connectors.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
