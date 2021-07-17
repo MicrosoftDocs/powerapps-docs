@@ -90,7 +90,7 @@ Let’s update the other references to **Issue Reporting** to change to **Work o
 
     ![Insights screen code](media/extend-issue-rename-work-order/issues-reported-code.png "Insights screen code")
 
-## Update Issue Report screen
+### Update Issue Report screen
 
 The issue report screen is the screen that users see when the create an item, such as an issue or a work order. We'll use the same method to update the field text as we did on the Insights screen.
 
@@ -105,7 +105,7 @@ The issue report screen is the screen that users see when the create an item, su
 
     ![Modified Issue Report screen](media/extend-issue-rename-work-order/issue-report-screen.png "Modified Issue Report screen")
 
-## Update Template Selection Screen
+### Update Template Selection Screen
 
 The template selection screen is what users use to select the type of issue. Since we're changing the purpose of the app to a work order tracker, we'll want to change the **Back to issue** link at the top of the screen to say **Back to work order.**
 
@@ -119,7 +119,7 @@ The header of this screen is a component as it is reused between multiple screen
 
 1. Change text to **Back to work order**.
 
-## Update Assignment Selection Screen
+### Update Assignment Selection Screen
 
 The assignment selection screen is what users use to select the person to whom the item should be assigned.
 
@@ -131,7 +131,7 @@ The assignment selection screen is what users use to select the person to whom t
 
 1. Change text to **Back to work order**.
 
-## Update Issue Submission Screen
+### Update Issue Submission Screen
 
 The issue submission screen is the screen that users see after an issue has been submitted. This has a text display control that displays a mixture of localized text and dynamic data for first name.
 
