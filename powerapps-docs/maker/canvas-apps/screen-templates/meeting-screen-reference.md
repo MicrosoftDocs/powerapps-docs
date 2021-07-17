@@ -1,6 +1,6 @@
 ---
-title: Reference for the meeting-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the meeting-screen template for canvas apps works in Power Apps
+title: Reference information about the meeting-screen template for canvas apps
+description: Understand details of how the meeting-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/03/2019
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 
 
@@ -41,7 +45,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Invite tab
 
-   ![LblInviteTab control](media/meeting-screen/meeting-invite-text.png)
+   ![LblInviteTab control.](media/meeting-screen/meeting-invite-text.png)
 
 * Property: **Color**<br>
     Value: `If( _showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
@@ -55,7 +59,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Schedule tab
 
-   ![LblInviteTab control](media/meeting-screen/meeting-schedule-text.png)
+   ![Schedule tab.](media/meeting-screen/meeting-schedule-text.png)
 
 * Property: **Color**<br>
     Value: `If( !_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
@@ -69,7 +73,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 ## Text search box
 
-   ![TextSearchBox control](media/meeting-screen/meeting-search-box.png)
+   ![TextSearchBox control.](media/meeting-screen/meeting-search-box.png)
 
 <!--Include description of text search box control?-->
 
@@ -81,7 +85,7 @@ Several other controls in the screen have a dependency on this one:
 
 ## Add icon
 
-   ![AddIcon control](media/email-screen/email-add-icon.png)
+   ![AddIcon control.](media/email-screen/email-add-icon.png)
 
 This control allows users to add people who don't exist inside their org to the attendee list for the meeting being composed.
 
@@ -166,7 +170,7 @@ This control allows users to add people who don't exist inside their org to the 
 
 ## People browse gallery
 
-   ![PeopleBrowseGallery control](media/meeting-screen/meeting-browse-gall.png)
+   ![PeopleBrowseGallery control.](media/meeting-screen/meeting-browse-gall.png)
 
 * Property: **Items**<br>
     Value: 
@@ -182,7 +186,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ### People browse gallery Title
 
-   ![PeopleBrowseGallery Title control](media/meeting-screen/meeting-browse-gall-title.png)
+   ![PeopleBrowseGallery Title control.](media/meeting-screen/meeting-browse-gall-title.png)
 
 * Property: **Text**<br>
     Value: `ThisItem.DisplayName`
@@ -239,7 +243,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Meeting people gallery
 
-   ![MeetingPeopleGallery control](media/meeting-screen/meeting-people-gall.png)
+   ![MeetingPeopleGallery control.](media/meeting-screen/meeting-people-gall.png)
 
 * Property: **Items**<br>
     Value: `MyPeople`
@@ -266,7 +270,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ### Meeting people gallery Title
 
-   ![MeetingPeopleGallery Title control](media/meeting-screen/meeting-people-gall-title.png)
+   ![MeetingPeopleGallery Title control.](media/meeting-screen/meeting-people-gall-title.png)
 
 * Property: **OnSelect**<br>
     
@@ -276,7 +280,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ### Meeting people gallery iconRemove
 
-   ![MeetingPeopleGallery iconRemove control](media/meeting-screen/meeting-people-gall-delete.png)
+   ![MeetingPeopleGallery iconRemove control.](media/meeting-screen/meeting-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
     Value: A **Remove** statement to remove the user from the attendee list, a **Collect** statement to refresh available meeting times, and several variable toggles:
@@ -324,7 +328,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Meeting date picker
 
-   ![MeetingDateSelect control](media/meeting-screen/meeting-datepicker.png)
+   ![MeetingDateSelect control.](media/meeting-screen/meeting-datepicker.png)
 
 * Property: **DisplayMode**<br>
     Value: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
@@ -380,7 +384,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Meeting duration drop-down
 
-   ![MeetingDateSelect control](media/meeting-screen/meeting-timepicker.png)
+   ![MeetingDateSelect control - duration.](media/meeting-screen/meeting-timepicker.png)
 
 * Property: **DisplayMode**<br>
     Value: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
@@ -394,7 +398,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Find meeting times gallery
 
-   ![FindMeetingTimesGallery control](media/meeting-screen/meeting-time-gall.png)
+   ![FindMeetingTimesGallery control.](media/meeting-screen/meeting-time-gall.png)
 
 * Property: **Items**<br>
     Value: `MeetingTimes`
@@ -408,7 +412,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ### Find meeting times gallery Title
 
-   ![FindMeetingTimesGallery Title control](media/meeting-screen/meeting-time-gall-title.png)
+   ![FindMeetingTimesGallery Title control.](media/meeting-screen/meeting-time-gall-title.png)
 
 * Property: **Text**<br>
     Value: A conversion of the start time to be displayed in the user's local time:
@@ -493,7 +497,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Room browse gallery
 
-   ![RoomBrowseGallery control](media/meeting-screen/meeting-rooms-gall.png)
+   ![RoomBrowseGallery control.](media/meeting-screen/meeting-rooms-gall.png)
 
 * Property: **Items**<br>
     Value: Logically set to two internal collections of identical schema, depending on whether the user has selected a room list or has rooms lists in their tenant:
@@ -516,7 +520,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ### RoomBrowseGallery Title
 
-   ![RoomBrowseGallery Title control](media/meeting-screen/meeting-rooms-gall-title.png)
+   ![RoomBrowseGallery Title control.](media/meeting-screen/meeting-rooms-gall-title.png)
 
 * Property: **OnSelect**<br>
     Value: A set of logically bound **Collect** and **Set** statements, which might or might not be triggered, depending on whether the user is viewing room lists or rooms:
@@ -579,7 +583,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Back chevron
 
-   ![RoomsBackNav control](media/meeting-screen/meeting-back.png)
+   ![RoomsBackNav control.](media/meeting-screen/meeting-back.png)
 
 * Property: **Visible**<br>
     Value: `_roomListSelected && _showDetails`
@@ -593,7 +597,7 @@ The items of this gallery are populated by search results from the [Office365.Se
 
 ## Send icon
 
-   ![IconSendItem control](media/meeting-screen/meeting-send-icon.png)
+   ![IconSendItem control.](media/meeting-screen/meeting-send-icon.png)
 
 * Property: **DisplayMode**<br>
     Value: Logic to force user to input certain meeting details before the icon becomes editable.

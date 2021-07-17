@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -37,17 +38,17 @@ A few things to note:
 3. On the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel Online](media/export-excel-online.png "Select export to Excel Online")
+   > ![Export to Excel Online.](media/export-excel-online.png "Select export to Excel Online")
 
 3. Make your edits in the Excel Online file and when you're done select **Save**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select Save on the Excel Online file](media/export-excel-online-1.png "Select Save on the Excel Online file")
+   > ![Select Save on the Excel Online file.](media/export-excel-online-1.png "Select Save on the Excel Online file")
    
 4. Your changes are submitted for import. To track the progress of the import, select **Track Progress**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Track the import progress](media/export-excel-online-2.png "Track the import progress")
+   > ![Track the import progress.](media/export-excel-online-2.png "Track the import progress")
 
  > [!NOTE]
  > By design, you can’t do a File > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.

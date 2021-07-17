@@ -5,6 +5,7 @@ author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.date: 06/08/2021
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
+ms.subservice: portals
 ms.author: shjais
 ms.reviewer: shjais
 contributors:
@@ -41,7 +42,7 @@ This section helps you understand how to create a new category for knowledge art
 
 4. In the **Select Category to Associate with** field, select the category you want to associate to the article. And then, select **Associate**.
 
-   ![Associate a category to a knowledge article](media/kb-associate-category.png "Associate a category to a knowledge article")
+   ![Associate a category to a knowledge article.](media/kb-associate-category.png "Associate a category to a knowledge article")
 
 > [!NOTE]
 > You can also add related articles, related products, and keywords to a knowledge article. For more information on managing knowledge articles, see [Create and manage knowledge articles](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article).
@@ -52,13 +53,13 @@ This section helps you understand how to create a new category for knowledge art
 
 2. On the **Summary** tab, under **Related information**, select **Related Categories**.
 
-    ![View associated categories to a knowledge article](media/kb-related-categories.png "View associate categories to a knowledge article")
+    ![View associated categories to a knowledge article.](media/kb-related-categories.png "View associate categories to a knowledge article")
 
 3. Select the category you want to remove.
 
 4. From **More Commands**, select **Remove**.
 
-    ![Delete an associated category from a knowledge article](media/kb-remove-category.png "Delete an associated category from a knowledge article")
+    ![Delete an associated category from a knowledge article.](media/kb-remove-category.png "Delete an associated category from a knowledge article")
 
 ## Delete a knowledge category
 
@@ -85,11 +86,11 @@ This section helps you understand how to create a new category for knowledge art
 
 You can add sections that can be expanded and collapsed by adding a **collapsible section** using the *collapsible command button*:
 
-![Collapsible button control](media/collapsible-button.png)
+![Collapsible button control.](media/collapsible-button.png)
 
 You can see the following example with one section expanded and the rest in collapsed positions:
 
-![Example expandable and collapsible sections](media/collapsible-example.png)
+![Example expandable and collapsible sections.](media/collapsible-example.png)
 
 Following considerations apply when using collapsible sections:
 
@@ -104,7 +105,7 @@ You can customize the default CSS and JS files and create additional customizati
 
 The following example shows a [web template](../liquid/store-content-web-templates.md) using default JavaScript and CSS files. Update the file name and location for the web template to your customized JavaScript and CSS files:
 
-![Web template](media/web-template.png)
+![Web template.](media/web-template.png)
 
 ### See also
 [Get started with the portal content editor](../portal-content-editor.md)
