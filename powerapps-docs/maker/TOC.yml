@@ -2292,6 +2292,8 @@
                   href: ../teams/extend-issue-urgency.md
                 - name: Add business logic for automated task assignment
                   href: ../teams/extend-issue-auto-assignment.md
+                - name: Convert Issue reporting sample app to Work order management app
+                  href: ../teams/extend-issue-rename-work-order.md
         - name: Milestones
           items:
              - name: Milestones
