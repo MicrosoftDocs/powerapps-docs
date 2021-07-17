@@ -70,7 +70,7 @@ The app loading screen now displays **Work Order Tracker**
 
 Let’s update the other references to **Issue Reporting** to change to **Work order**
 
-## Update Insights screen
+### Update Insights screen
 
 1. Select **Tree View** from the left-pane.
 
