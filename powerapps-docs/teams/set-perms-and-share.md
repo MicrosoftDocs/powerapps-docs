@@ -6,8 +6,11 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/07/2021
+ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Set permission and share apps with colleagues
@@ -18,18 +21,15 @@ To share an app:
 
 1. Assign the correct permissions for the tables in your app for the **Colleagues with access** role.
 
-1. Select a security group you would like to assign to the **Colleagues with
+2. Select a security group you would like to assign to the **Colleagues with
 access** role.
-
-    > [!IMPORTANT]
-    > The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
-
-1. Choose which apps the **Colleagues with access** role should have access to.
+    
+3. Choose which apps the **Colleagues with access** role should have access to.
 
 Once you’re done sharing your apps, they’ll appear in the [Built for your
 colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
 
-![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
+![Built by your colleagues.](media/built-for-your-colleagues.png "Built by your colleagues")
 
 > [!NOTE]
 > - If your app doesn't appear in the **Built by your colleagues** section, your Teams app might be caching information. If this happens, try signing out, and sign back in if you're using the Teams desktop app. If you're using Teams web app, try refreshing your browser.
@@ -65,13 +65,13 @@ To set the permissions of a table:
 
 1. Select the table you want to share.  
 
-    ![Manage permissions](media/manage-permissions.png "Manage permissions")
+    ![Manage permissions.](media/manage-permissions.png "Manage permissions")
 
 1. Select the **Manage permissions** in the command bar.
 
 1. Under the **Colleagues with access** role, and select the permission set that you want to grant this role.  
 
-    ![Colleagues with access](media/colleagues-with-access.png "Colleagues with access")
+    ![Colleagues with access.](media/colleagues-with-access.png "Colleagues with access")
 
     > [!TIP]
     > After you assign a security group to the **Colleagues with access** role, you'll see the name of the security group reflected in
@@ -89,7 +89,8 @@ ready to share the app with an existing security group.
 > [!NOTE]
 > - You can share an app to a single security group.
 > - If you want to share the app to a Microsoft 365 group, it must be [security enabled](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups).
-> - You can only share apps to security groups with less than 1000 members.
+> - The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
+> - Your Power Apps administrator may have applied the limit to the maximum size of the security group. By default, this limit is 10,000 members.
 
 To share an app:
 
@@ -99,15 +100,15 @@ To share an app:
 
 1. In the top-right, select the **Share with colleagues**.
 
-    ![Share with colleagues](media/share-with-colleagues.png "Share with colleagues")
+    ![Share with colleagues.](media/share-with-colleagues.png "Share with colleagues")
 
 1. Search for, and select the security group you want to share the apps and tables with.
 
-    ![Search and select group](media/select-group-to-share.png "Search and select group")
+    ![Search and select group.](media/select-group-to-share.png "Search and select group")
 
 1. Set **Colleague can use** toggle to **On** for the apps and tables that you want to share with the security group selected in the previous step.
 
-    ![Set On for apps and tables](media/toggle-on.png "Set On for apps and tables")
+    ![Set On for apps and tables.](media/toggle-on.png "Set On for apps and tables")
 
 1. Select **Save**.
 

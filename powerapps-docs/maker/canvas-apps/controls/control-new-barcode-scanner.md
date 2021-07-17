@@ -1,20 +1,24 @@
 ---
-title: 'Barcode scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode scanner control
+title: Barcode scanner control in Power Apps
+description: Learn about the details, properties and examples of the Barcode scanner control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/07/2021
+ms.date: 07/07/2021
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
-# Barcode scanner control for canvas apps
+# Barcode scanner control in Power Apps
 
 Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
 
@@ -31,9 +35,9 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 
 **Type** – Output property that contains the type of the code that was scanned most recently.
 
-**OnScan** – How an app responds when a barcode is successfully scanned.
+**OnScan** – Actions to perform when a barcode is successfully scanned.
 
-**OnCancel** – How an app responds when a barcode scan is canceled by the user.
+**OnCancel** – Actions to perform when a barcode scan is canceled by the user.
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. BarcodeType.Code128 & BarcodeType.Code39  **Default: Auto**
 
@@ -96,7 +100,8 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 |MSI|✖|✖|
 |AZTEC|✔|✔|
 
-**NOTE:** PDF_417 and AZTEC aren't supported in Auto mode
+> [!NOTE]
+> PDF_417 and AZTEC aren't supported in Auto mode.
 
 ### See also
 

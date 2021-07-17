@@ -7,6 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -33,7 +34,7 @@ The reporting features needs to be enabled for your model-driven app for you to 
    >  In **Report Viewer** dialog box, you can leave the search criteria as is, or change it as needed.  
    
    > [!div class="mx-imgBorder"]
-   > ![Run a report](media/report-run.png "Run a report")
+   > ![Run a report.](media/report-run.png "Run a report")
  
   
 ## Share a report with other users or teams    
@@ -43,23 +44,23 @@ The reporting features needs to be enabled for your model-driven app for you to 
 3. On the command bar, select **Share**.
 
    > [!div class="mx-imgBorder"]
-   > ![share a report](media/report-share.png "share a report")
+   > ![share a report.](media/report-share.png "share a report")
   
 4. On the **Share Report** dialog box, select **Add User/Team**.    
 5. In the **Look Up Rows** dialog box, find the users or team row that you want to share the report with, and select the check box next to the row.
 
    > [!div class="mx-imgBorder"]
-   > ![Select user to share a report](media/report-share1.png "Select a user to share report")
+   > ![Select user to share a report.](media/report-share1.png "Select a user to share report")
 
 6. Choose **Select** to add the user or team row to the **Selected rows** box and then select **Add**.
 
    > [!div class="mx-imgBorder"]
-   > ![Add user to share a report](media/report-share2.png "Add user to share report")
+   > ![Add user to share a report.](media/report-share2.png "Add user to share report")
   
 7. In the **Share Report** dialog box, select the type of share access that you want. The available permissions are: Read, Write, Delete, Append, Assign, or Share. This will add the user or team row to the **Selected rows** box.
 
    > [!div class="mx-imgBorder"]
-   > ![Choose share access](media/report-share3.png "Choose share access")
+   > ![Choose share access.](media/report-share3.png "Choose share access")
   
 
 ## Share a report with your organization (for admins)
@@ -71,7 +72,7 @@ The reporting features needs to be enabled for your model-driven app for you to 
 4. On the **Actions** menu, select **Make Report Available to Organization**.  
   
    > [!div class="mx-imgBorder"]
-   > ![Share report with org](media/report-share4.png "Share report with org")
+   > ![Share report with org.](media/report-share4.png "Share report with org")
 
 ## Download a report
 

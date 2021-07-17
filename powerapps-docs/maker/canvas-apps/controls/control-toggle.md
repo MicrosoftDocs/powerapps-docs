@@ -1,6 +1,6 @@
 ---
-title: 'Toggle control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the toggle control
+title: Toggle control in Power Apps
+description: Learn about the details, properties and examples of the Toggle control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Toggle control in Power Apps
 A control that the user can turn on or off by moving its handle.
@@ -56,13 +60,13 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
+**OnCheck** – Actions to perform when the value of a checkbox or a toggle changes to **true**.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
+**OnUncheck** – Actions to perform when the value of a checkbox or a toggle changes to **false**.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 

@@ -3,6 +3,7 @@ title: "Use environment variables in solutions | MicrosoftDocs"
 description: "Use environment variables to migrate application configuration data in solutions."
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
+ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
@@ -31,7 +32,7 @@ Benefits of using environment variables:
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
 - Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
 - Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/data-platform/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
-- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to. 
+- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
 
 ## How do they work?
 
@@ -55,7 +56,7 @@ Environment variables can be created and modified within the modern solution int
       Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher may list their offer on AppSource with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer will not be overwritten. 
 
       > [!div class="mx-imgBorder"] 
-      > ![New environment variable](media/new-environment-variable.png)
+      > ![New environment variable.](media/new-environment-variable.png)
 
       >[!NOTE]
       > A value can't exist without a definition. The interface only allows creation of one value per definition.
@@ -100,7 +101,7 @@ To use an environment variable in a solution cloud flow:
     a. If the parameter takes a simple value, such as a string or number, enter the parameter.
     
     b. If the parameter is a lookup, scroll to the bottom of the lookup, and then select **Enter custom value**. Environment variables that you have access to are listed in the dynamic content selector with other dynamic content.
-       :::image type="content" source="media/select-environment-variable.png" alt-text="Select an environment variable to add to a cloud flow trigger or action":::
+       :::image type="content" source="media/select-environment-variable.png" alt-text="Select an environment variable to add to a cloud flow trigger or action.":::
 1. Select the desired environment variable.
 
 ## Enter new values while importing solutions
@@ -120,8 +121,8 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 
 ## Current limitations
 
-- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Common Data Service connector will be available soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. 
-- Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Common Data Service, and SQL server.
+- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Dataverse connector will be updated soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. 
+- Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Dataverse, and SQL server.
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.  
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) are not yet available for managing data source environment variables. However, this does not block their usage within Microsoft provided tooling and within source control systems.
@@ -132,7 +133,7 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
 - When editing a cloud flow, an environment variable with a label of **$authentication** might show up that was not defined in the environment. 
- 
+
 ## Frequently asked questions
 
 **How can I view where environment variables are being used?**
@@ -165,7 +166,7 @@ With cloud flows, the flows must currently be de-activated and re-activated in o
 
 **Are premium licenses required?**
 
-No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Common Data Service connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
+No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Dataverse connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
 **Is there a limit to the number of environment variables I can have?**
 
@@ -184,8 +185,11 @@ Yes if your configuration data is not relational. Environment variables should b
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
 [EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
+
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
 [Create a flow with Dataverse](/flow/connection-cds)
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)] 
+

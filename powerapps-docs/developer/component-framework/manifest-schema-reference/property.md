@@ -2,6 +2,7 @@
 title: Property Element | Microsoft Docs
 description: The property node defines a specific, configurable piece of data that the component expects from the Microsoft Dataverse.
 keywords:
+ms.subservice: pcf
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek

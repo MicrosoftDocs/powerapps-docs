@@ -1,5 +1,5 @@
 ---
-title: Sources of slow canvas app performance | Microsoft Docs
+title: Common sources of slow performance for a canvas app
 description: Learn about the common sources of slow performance for a canvas app.
 author: JinManAhn-MSFT
 ms.service: powerapps
@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/22/2021
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
