@@ -2290,6 +2290,8 @@
                   href: ../teams/customize-issue-reporting.md
                 - name: Add urgency flag to reported issues
                   href: ../teams/extend-issue-urgency.md
+                - name: Add business logic for automated task assignment
+                  href: ../teams/extend-issue-auto-assignment.md
         - name: Milestones
           items:
              - name: Milestones
