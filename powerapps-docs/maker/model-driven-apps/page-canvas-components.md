@@ -77,6 +77,11 @@ You can review the updates and click ok to get component refreshed with the up t
 You can now publish the custom page and model app to get the latest changes reflected.
 
 
+### Additional canvas component resources
+You can also evalaute and use canvas component samples from Microsoft and other Power Apps community developers hosted on [canvas components gallery](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+
+![Canvas component gallery](media/add-component-to-model-app/canvas-components-gallery.png "Canvas component gallery")
+
 ## Upcoming changes to canvas component for custom pages
 
 * Code component support for the canvas libraries
