@@ -55,7 +55,11 @@ Custom page authoring will start with a subset of controls supported and will be
   > [!Note]
   >  <sup>1</sup> - Controls with superscript "1"  are the new modern controls which were introduced for [canvas apps in Teams]( ../../../../2020wave1/microsoft-powerapps/build-apps-teams-modern-controls); These controls are based on [Fluent UI library](https://developer.microsoft.com/en-us/fluentui#/controls/web) wrapped with [Power Apps Component Framework](../../developer/component-framework/overview.md). 
 
-Additionally you can add both low-code and pro-code custom UX compoennts to your environment and make them available for all makers. For custom component samples please visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](../../../developer/component-framework/community-resources.md) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+
+## Custom components support for custom page
+You can add both low-code(canvas components) and pro-code(code components) custom UX components to your environment and make them available for all makers creating custom pages. For custom page specific UX externsibility topics please see [Add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [Add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+
+For custom component samples you can visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](../../../developer/component-framework/community-resources.md) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 
 ## Enable responsive layout with Container control
 
