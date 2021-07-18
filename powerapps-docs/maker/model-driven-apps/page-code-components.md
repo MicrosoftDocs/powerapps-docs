@@ -23,10 +23,6 @@ search.app:
 
 This topic outlines the use of code components which are built using Power Apps component framework within a custom page. 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This topic outlines the use of canvas components using canvas component library for a custom page. 
-
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
