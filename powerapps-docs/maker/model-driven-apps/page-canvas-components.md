@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of canvas components using canvas component libray for a custom page. 
+This topic outlines the use of canvas components using canvas component library for a custom page. 
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
@@ -70,7 +70,7 @@ When the component is added to the custom page via library, it maintains the ref
 You can review the updates and click ok to get component refreshed with the up to date changes from canvas library. 
 
   > [!NOTE]
-  >  Individual custom app pages inside the model app need to be opened individualy to get the updates from the component library.. 
+  >  Individual custom pages present in model app should be opened individualy for editing inside studio to get the latest updates from the shared component library.
 
 ![Updated component in the custom page ](media/add-component-to-model-app/page-with-updated-library-component.png "Updated component in the canvas page")
 
