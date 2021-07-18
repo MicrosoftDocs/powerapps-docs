@@ -69,6 +69,8 @@ When the component is added to the custom page via library, it maintains the ref
 
 You can review the updates and click ok to get component refreshed with the up to date changes from canvas library. 
 
+  > [!NOTE]
+  >  Individual custom app pages inside the model app need to be opened individualy to get the updates from the component library.. 
 
 ![Updated component in the custom page ](media/add-component-to-model-app/page-with-updated-library-component.png "Updated component in the canvas page")
 
@@ -79,9 +81,6 @@ You can now publish the custom page and model app to get the latest changes refl
 
 * Code component support for the canvas libraries
 
-## Known issues
-
-* Individual custom app pages need to be opened to get the updates from the component library. 
 
 ## Related topics
 
