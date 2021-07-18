@@ -27,17 +27,17 @@ The custom page is a new page type within a model-driven app, which brings in th
 This new page is more flexible than the current model-driven application form, view, or dashboard page. For example, it lets you include one or more tables on a single page. Maker can then define data and component interactions using expressions. The custom page is a separate solution element supporting co-authoring at a page level. Like other model-driven app pages, the custom page state can be governed either from the parameters passed or retrieved from persisted tables.
 Images below shows inline rendering of a custom page within the model-driven app. This custom page utilizes all of the available space while maintaining header and navigation areas from the main model-driven app. 
 
-Custom page as main page.
+[Custom page as main page.](/powerapps/maker/model-driven-apps/add-page-to-model-app).
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as main page](media/model-app-page-overview/page-inline-model-app.png "Custom page as main page")
 
-Custom page as a center dialog.
+[Custom page as a center dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-centered-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as center dialog](media/model-app-page-overview/page-center-dialog-model-app.png "Custom page as center dialog")
 
-Custom page as a side dialog.
+[Custom page as a side dialog.](/powerapps/maker/model-driven-apps/navigate-page-examples#open-as-a-side-dialog)
 
   > [!div class="mx-imgBorder"]
   > ![Custom page as side dialog](media/model-app-page-overview/page-side-dialog-model-app.png "Custom page as side dialog")
