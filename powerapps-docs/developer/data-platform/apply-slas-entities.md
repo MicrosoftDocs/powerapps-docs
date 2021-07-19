@@ -1,6 +1,6 @@
 ---
 title: "Apply SLAs to tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about applying SLAs to custom entities by enabling entities for applying SLAs. Also, you can create SLA KPIs."
+description: "Learn about applying SLAs to custom tables by enabling tables for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
