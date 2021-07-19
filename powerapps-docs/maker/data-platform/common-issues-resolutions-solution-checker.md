@@ -274,7 +274,7 @@ The solution checker will list the number of the errors found in the app, *inclu
 
 ## Solution Checker violations reported for code components
 
-Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf#build-your-component).
+Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
 
 ## See also
 
