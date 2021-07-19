@@ -787,6 +787,8 @@
             href: ./canvas-apps/functions/function-rand.md
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
+          - name: RecordInfo
+            href: ./canvas-apps/functions/function-recordinfo.md            
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
           - name: Relate
