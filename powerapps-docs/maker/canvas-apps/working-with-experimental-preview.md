@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 07/19/2021
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
