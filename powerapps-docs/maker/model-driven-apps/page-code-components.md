@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic outlines the use of code components which are built using Power Apps component framework within a custom page. 
+This topic outlines the use of code components which are built by professional developers using Power Apps component framework within a custom page. For low code custom UX extensibility please see [add canvas components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-canvas-components) 
 
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
@@ -41,7 +41,7 @@ In order to use code components inside custom page, Power Apps component framewo
 
 ## Create code component for use in custom page 
 ### Creating and importing code component in Dataverse 
-Code components for custom page follow the same pateern as they do in canvas page. Code components being code first approach, need to be implemented first before they can be added to the custom page. Please see [Create your first component](/powerapps/developer/component-framework/implementing-controls-using-typescript) for step by step instrauctions. You can also [Try OOB sample components](/powerapps/developer/component-framework/use-sample-components#try-the-sample-components) to jump start. Once the code component is coded, it can be packaged into a solution and added to Dataverse which makes it available for use in all custom pages inline with model-driven and canvas apps. You can find more details on this process at [Code components application lifecycle management (ALM).](/powerapps/developer/component-framework/code-components-alm) 
+Code components for custom page follow the same pattern as they do in canvas page. Code components being code first approach, need to be implemented first before they can be added to the custom page. Please see [Create your first component](/powerapps/developer/component-framework/implementing-controls-using-typescript) for step by step instrauctions. You can also [Try OOB sample components](/powerapps/developer/component-framework/use-sample-components#try-the-sample-components) to jump start. Once the code component is coded, it can be packaged into a solution and added to Dataverse which makes it available for use in all custom pages inline with model-driven and canvas apps. You can find more details on this process at [Code components application lifecycle management (ALM).](/powerapps/developer/component-framework/code-components-alm) 
 
 ### Importing and using code component in the custom page
 In the given environmen, custom pages can use all the code components which were previously added to Dataverse via solutions. Click on "Get more components" buttton at the bottom of the add control left navigation area. You will see a code tab on Import components dialog showing all code components present in the enviroment. 
