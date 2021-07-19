@@ -1244,7 +1244,7 @@
         - name: "How to guides: Views"
           items:
           - name: Create and edit views
-            href: ./model-driven-apps/create-edit-views.md
+            href: ./model-driven-apps/create-edit-views-app-designer.md
           - name: How to make grids editable
             href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort rows in a view
