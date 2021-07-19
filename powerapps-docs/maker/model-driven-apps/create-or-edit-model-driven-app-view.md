@@ -9,7 +9,7 @@ author: Joel-Lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
-# Create and edit public or system model-driven app views
+# Create and edit system or public model-driven app views
 
 In Power Apps, views define how records for a specific table are displayed. A view defines the following:
 - The columns, also known as attributes, to display.
@@ -22,7 +22,7 @@ Typically, views are classified into three types:
 - **Public**: As an app maker, you can create and edit public views to fit your organizational requirements. These views are available in the view selector, and you can use them in sub-grids in a form or as a list in a dashboard.
 - **System**: As an app maker, you can also modify system views to meet the requirements of your organization. These are special views that the application depends on: they exist for system tables or are automatically created when you create custom tables. These views are available to some or all users, depending on their privileges.
 
-More information: [Understand model-driven app views](create-edit-views)
+More information: [Understand model-driven app views](create-edit-views.md)
 
 A drop-down list of views is frequently displayed in the application so that people have options for different views of table data, such as the Donations table in the Fundraiser sample app.
 :::image type="content" source="media/create-or-edit-model-driven-app-view/system-views-picker.png" alt-text="Select a system view from the view picker.":::
@@ -104,7 +104,7 @@ To see your view in the app from the previous exercise, on the app designer comm
    > [!NOTE]
    > Views are displayed based on the table that you have selected. For example, when you select **Account**, views that are related to the account table are displayed.
 
-For more information about the app designer, see: [Design custom business apps by using the app designer](https://docs.microsoft.com/powerapps/maker/model-driven-apps/design-custom-business-apps-using-app-designer)
+For more information about the app designer, see: [Design custom business apps by using the app designer](design-custom-business-apps-using-app-designer.md)
 
 ### Add a column to your view in the classic app designer
 
