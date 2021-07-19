@@ -77,9 +77,6 @@ You can also use other [OOB sample controls](/powerapps/developer/component-fram
 ![Add OOB sample controls to custom page.](media/add-component-to-model-app/add-sample-code-components-to-custom-page.png "Add OOB sample controls to custom page.")
 
 > ![Component gallery.](../../developer/component-framework/media/pcf-gallery.PNG "Components gallery")
-## Known issues
-
-* Maker studio experience for custom page does not has support for certain Power Apps component framework APIs like Web APIs inline with the stand alone canvas apps. However these  APIs are avaialable when the custom page is added to model apps. 
 
 ## Related topics
 
