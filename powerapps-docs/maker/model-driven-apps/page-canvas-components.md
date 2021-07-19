@@ -82,10 +82,6 @@ You can additionally evaluate and use canvas component samples from Microsoft an
 
 ![Canvas component gallery](media/add-component-to-model-app/canvas-components-gallery.png "Canvas component gallery")
 
-## Upcoming changes to canvas component for custom pages
-
-* Code component support for the canvas libraries
-
 
 ## Related topics
 
