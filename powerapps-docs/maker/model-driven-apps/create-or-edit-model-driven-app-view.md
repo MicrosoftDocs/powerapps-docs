@@ -95,85 +95,86 @@ To see your view in the app from the previous exercise, on the app designer comm
 
    ![Table View section select Views](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-1.png "Table View section select Views")
 
-3.  By default, all views will be selected. To select specific views to display in the app, uncheck the **All** checkbox
+1. On the right **Components** tab, by default, all views will be selected. To select specific views to display in the app, clear the **All** checkbox.
 
-![select specific views to display in the app](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-2.png "select specific views to display in the app")
+   ![select specific views to display in the app](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-2.png "select specific views to display in the app")
     
-4.  To add an existing view to your app, select it from the list of views.
+1. To add an existing view to your app, select it from the list of views or to create a new view from the app designer, select **Create New**
 
-5.  To create a new view from App Designer, select **Create new**
+   > [!NOTE]
+   > Views are displayed based on the table that you have selected. For example, when you select **Account**, views that are related to the account table are displayed.
 
-    **Note**
+For more information about the app designer, see: [Design custom business apps by using the app designer](https://docs.microsoft.com/powerapps/maker/model-driven-apps/design-custom-business-apps-using-app-designer)
 
-    Views are displayed based on the table that you have selected. For example, when you select **Account**, views that are related to the Account table are displayed.
+### Add a column to your view in the classic app designer
 
-More information about the app designer: [Design custom business apps by using the app designer](https://docs.microsoft.com/powerapps/maker/model-driven-apps/design-custom-business-apps-using-app-designer)
+Views display records from a table that contains rows and columns. Each record is a row, and the columns that are displayed from the record are determined by the columns you add to the view.
 
-### Add a column to your view in app designer
+1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select **edit** (pencil button).
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
+1. On the **Components** tab in the view designer, select the **Column Attributes** list for either the **Primary Table** or **Related Table**.
 
-Views display rows in a table that contains rows and columns. Each row is a row, and the columns you display from the row are determined by the columns you add to the view.
-
-1.  In app designer, select the table view that you want and then on the right pane next to the view, select **edit** (pencil button).
+   ![Add a column](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-3.png "Add a column")
     
-2.  On the **Components** tab, select the **Column Attributes** list for either the **Primary Table** or **Related Table**.
+1. From the list of columns, select the column you want, such as the **Account Rating** column,and drag it to the view heading. You can also add the column by double-clicking it.
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/add-account-rating-column.png" alt-text="Add the Account Rating column to the view":::
+1. Repeat step 3 until you've added all the columns you want to display in your view. As you add columns, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view.
+1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
 
-![Add a column](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-3.png "Add a column")
-    
-3.  From the list, select the attribute you want and drag it to the column heading. You can also add the attribute by double-selecting it.
-    
-4. Repeat step 3 until you've added all the attributes you want to display in your view.
+### Define filter criteria in the classic app designer
 
-As you add attributes, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view.
+You can set filter criteria so that only a subset of the records are displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
 
-### Define filter criteria in app designer
+1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select **edit** (pencil button).
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
+1. In the view designer, expand the **Filter Criteria** section, and then select **Add Filter**.
 
-You can set filter criteria so that only a subset of the rows is displayed in a view. When a user opens the view, only the rows that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
+   ![Set Filter Criteria](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-1.png "Set Filter Criteria")
 
-1.  In the app designer, expand the **Filter Criteria** section.
+1. Select the **Address1: State/Province** column from the drop-down list in the first column.
 
-![Set Filter Criteria](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-1.png "Set Filter Criteria")
+1. Select the **Equals** operator from the drop-down list in the second column.
 
-2.  Select **Add Filter**.
+1. Enter *TX* as the value to filter by in the third column.
 
-3.  Select an attribute from the drop-down list in the first column.
+   ![Set Filter Criteria Operator](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-2.png "Set Filter Criteria Operator")
 
-4.  Select an operator from the drop-down list in the second column.
-
-![Set Filter Criteria Operator](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-2.png "Set Filter Criteria Operator")
-
-5.  Enter a value to filter by in the third column.
-
-You can filter data based on the attributes of related tables in addition to the
+1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
+<!-- You can also filter data based on the attributes of related tables in addition to the
 primary table.
 
-1.  On the **Components** tab, select the **Column Attributes** list for **Related Table**, select the **Choose a Table** down arrow in the topmost column, and then choose the table you want. This will add a separate section.
+1. On the **Components** tab, select the **Column Attributes** list for **Related Table**, select a related table from the drop down list, and then choose the table you want. This will add a separate section.
     
 2.  Repeat steps 2 through 5 from the previous procedure.
 
-More information: [Create and edit relationships between tables](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-entity-relationships)
+More information: [Create and edit relationships between tables](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-entity-relationships)  -->
 
-#### Group multiple filters in app designer
+#### Group multiple filters in the classic app designer
 
-You can add multiple filters to your view if you want to filter rows by using more than one column.
+You can add multiple filters to your view if you want to filter records by using more than one column.
 
-1.  Select the filters that you want to group. ![Set Group Filter](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-1.png "Set Group Filter")
+1. Select the filters that you want to group. 
+   ![Set Group Filter](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-1.png "Set Group Filter")
 
-2.  Select Group And or Group Or to group the filters. ![Group Filter Selection](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-2.png "Group Filter Selection") When you select **Group And**, only rows that meet both criteria are displayed in the view. When you select **Group Or**, rows that meet any of the filter criteria are displayed. For example, to show only rows that have priority of High or Normal, and status of Active, select **Group And**.
+1. Select **Group And** or **Group Or** to group the filters. 
+   ![Group Filter Selection](media/create-or-edit-model-driven-app-view/group-multiple-filters-in-app-designer-2.png "Group Filter Selection") 
+   
+   When you select **Group And**, only records that meet both criteria are displayed in the view. When you select **Group Or**, records that meet any of the filter criteria are displayed. For example, to show only records that have priority of **High** or **Normal**, and a status of **Active**, select **Group And**.
 
 To remove the filter from a group, select the group, and then select **Ungroup**.
 
-### Set primary and secondary sort order for columns in app designer
+### Set primary and secondary sort order for columns in the classic app designer
 
-When a view is opened, the rows it displays are sorted in the order you set when you created the view. By default, rows will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the rows will first be sorted by the column you want to use for primary sort order, and then by the column you want to use for secondary sort order.
+When a view is opened, the records displayed are sorted in the order you set when you created the view. By default, records will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the records are first sorted by the column you want to use for primary sort order, and then by the column you want to use for the secondary sort order.
 
 > [!NOTE]
 > You can only set primary and secondary sort order for column attributes you added from the primary table.
 
-1.  Select the column you want to use for sorting.
+1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select **edit** (pencil button).
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
+1. In the Columns area of the view designer, select the column heading you want to use for sorting, such as**Business Phone**, select the down arrow, and then choose **Primary Sort** or **Secondary Sort**.
 
-2.  Select the down arrow, and then choose **Primary Sort** or **Secondary Sort**.
-
-![Sort Record](media/create-or-edit-model-driven-app-view/set-primary-and-secondary-sort-order-for-columns-in-app-designer-1.png "Sort Record")
+   ![Sort Record](media/create-or-edit-model-driven-app-view/set-primary-and-secondary-sort-order-for-columns-in-app-designer-1.png "Sort Record")
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 
@@ -181,10 +182,13 @@ If you remove the column you chose for the primary sort order, the column you ch
 
 You can change the way a public or system view is displayed by adding, configuring, or removing columns.
 
-![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
+1. In the **Views** list for a table, select the **Show list of references** down arrow 
+ ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
+   > [!NOTE]
+   > The down arrow is only displayed when the table views are not configured to use **All** views.
 
-1.  In the **Views** list for a table, select the **Show list of references** down arrow ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
-    
-2.  Next to the view you want to edit, select **Open the View Designer**.  The view opens in the view designer. ![Open view Designer](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer")
+1. Place your mouse cursor over the ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer"), and select it, to **Open the View Designer**. 
+
+   ![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
 
 When you edit a public or system view, you must save and publish your changes before they will be visible in the application.
