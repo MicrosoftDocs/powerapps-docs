@@ -57,9 +57,9 @@ Custom page authoring will start with a subset of controls supported and will be
 
 
 ## Custom components support for custom page
-You can add both low-code(canvas components) and pro-code(code components) custom UX components to your environment and make them available for all makers creating custom pages. For custom page specific UX externsibility topics please see [Add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [Add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+You can add both low-code( canvas components) and pro-code( code components) custom UX components to your environment and make them available for all makers. For custom page specific UX extensibility topics please see [add canvas components to a custom page for your model-driven app](/powerapps/maker/model-driven-apps/page-canvas-components) and [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) In general, low code extensibility approach is simpler to build, test and has lower maintainance cost. We recommend evaluating canvas components first and then using code components only if there is a need for complex and advanced customization.    
 
-For custom component samples you can visit [code components OOB samples](../../developer/component-framework/use-sample-components.md), [code components community resources](../../../developer/component-framework/community-resources.md) and [canvas component gallery.](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
+You can refer to [canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)[ code components OOB samples](../../developer/component-framework/use-sample-components.md) and [code components community resources](../../../developer/component-framework/community-resources.md) to quick start your custom component journey. 
 
 ## Enable responsive layout with Container control
 
