@@ -96,7 +96,7 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the error notification will appear in the app:
 
-![Example error notification](media/add-global-error.png "Example error notification")
+![Example error notification.](media/add-global-error.png "Example error notification")
 
 ### Display a warning notification that can be closed or dismissed by user
 
@@ -124,7 +124,7 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the warning notification will appear in the app:
 
-![Example warning notification](media/add-global-warning.png "Example warning notification")
+![Example warning notification.](media/add-global-warning.png "Example warning notification")
 
 ### Display an information notification with a "Learn more" link that can be clicked by users
 
@@ -162,7 +162,7 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the information notification will appear in the app:
 
-![Example information notification](media/add-global-information.png "Example information notification")
+![Example information notification.](media/add-global-information.png "Example information notification")
 
 ### See also
 

@@ -3,6 +3,7 @@ title: Use the model-driven app main form and its components in Power Apps | Mic
 description: Know how to use the main form and its components in Unified Interface apps
 keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
@@ -43,11 +44,11 @@ Follow the procedures given below to access the form editor.
 
 2.  On the left navigation pane, select **Apps**, select the app you want, and then on the toolbar select **Edit**.  
 
-3. On the app designer canvas, select the down arrow ![Down arrow for app designer](media/down-arrow-app-designer.png) next to a table to see the forms available for that table. 
+3. On the app designer canvas, select the down arrow ![Down arrow for app designer.](media/down-arrow-app-designer.png) next to a table to see the forms available for that table. 
 
-4. Select the open designer button ![open designer](media/site-map-designer.png)corresponding to the form to edit.
+4. Select the open designer button ![open designer.](media/site-map-designer.png)corresponding to the form to edit.
 
-   ![Form editor in app designer](media/app-designer-forms.png)
+   ![Form editor in app designer.](media/app-designer-forms.png)
  
 5. In the form designer, make your changes and then select **Save** to save the changes and select **Publish** to publish them for use in the app. 
 
@@ -77,7 +78,7 @@ Follow the procedures given below to access the form editor.
 1. With the unmanaged solution opened in solution explorer, select the **Entities** node and, in the toolbar above the list, select **Add Existing**.
 
      > [!div class="mx-imgBorder"] 
-     > ![Add existing table](media/add-existing-entity.png)
+     > ![Add existing table.](media/add-existing-entity.png)
 
 2. In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Entity**, select the table you want to add and select **OK**.
 

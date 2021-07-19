@@ -1,11 +1,12 @@
 ---
-title: Portals support for Microsoft Power Platform CLI (Preview)
-description: Learn about how to work with Microsoft Power Platform CLI for CI/CD improvements of a portal.
+title: Portals support for Power Platform CLI (Preview)
+description: Learn how to work with Power Platform CLI for CI/CD (Continuous Integration/Continuous Deployment) improvements of a portal.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -24,7 +25,7 @@ create code components.
 Microsoft Power Platform CLI tooling is the first step toward a comprehensive application
 life-cycle management (ALM) story where the enterprise developers and ISVs can
 create, build, debug, and publish their extensions and customizations quickly
-and efficiently. More information: [What is Microsoft Power Apps
+and efficiently. For more information, see [What is Microsoft Power Apps
 CLI?](../../developer/data-platform/powerapps-cli.md)
 
 With this feature, Microsoft Power Apps portals
@@ -42,7 +43,7 @@ using Microsoft Power Platform CLI.
 With portals support for Microsoft Power Platform CLI, you can now use offline-like capability
 for portals customization by making changes to the portals content. And once all
 customizations or changes are saved, upload them to the portal. When you
-download portals content using Microsoft Power Platform CLI, the content is structured in JSON
+download portals content using Microsoft Power Platform CLI, the content is structured in YAML
 and HTML formats making it easy to customize, enabling a pro-development
 experience.
 
@@ -51,21 +52,21 @@ support for Microsoft Power Platform CLI:
 
 #### Ease of use
 
--   Support for download/upload of portal data to/from local file system.
+-   Support for download/upload of portal data to/from the local file system
 
 -   Build on existing Microsoft Power Platform CLI tool.
 
-#### Lifecycle Management (ALM)
+#### Application lifecycle management (ALM)
 
--   Track changes to portal configuration within an org.
+-   Track changes to portal configuration within an organization
 
--   Move configuration files across organizations, or tenants.
+-   Move configuration files across organizations or tenants
 
 #### Pro-dev and enterprise support
 
--   Helps integrate seamlessly with any source control tools, such as “git”.
+-   Helps integrate seamlessly with any source control tools, such as “git”
 
--   Easily setup CI/CD pipelines.
+-   Easily setup CI/CD pipelines
 
 ## Prerequisites
 
@@ -269,21 +270,20 @@ To learn about installing Microsoft Power Platform CLI, go to [Install Microsoft
 After installing Microsoft Power Platform CLI, open a command-prompt and run *pac* to verify that the output contains “paportal” - the command for
     Power Apps portals.
 
-![Confirm paportal command in Microsoft Power Platform CLI](media/power-apps-cli/confirm-paportal.png "Confirm paportal command in Microsoft Power Platform CLI")
+![Confirm paportal command in Microsoft Power Platform CLI.](media/power-apps-cli/confirm-paportal.png "Confirm paportal command in Microsoft Power Platform CLI")
 
 ## Microsoft Power Platform CLI commands for portals
 
 Microsoft Power Platform CLI command for portals is “*paportal”*.
 
-The following sections provides additional details about different properties of
-“*paportal”* command.
+The following sections provides additional details about different properties of the “*paportal”* command.
 
 #### Parameters
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
 |list|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
-|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p).<br/> - *webSiteId*: Portal website ID to download (alias: -id).<br/> - *overwrite*: (Optional) true - to overwrite existing content, false - to fail if the folder already has website content (alias: -o).|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
+|download|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p)<br/> - *webSiteId*: Portal website ID to download (alias: -id)<br/> - *overwrite*: (Optional) true - to overwrite existing content; false - to fail if the folder already has website content (alias: -o)|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
 |upload|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p)|`pac paportal upload --path "C:\portals\starter-portal"`|
 
 > [!NOTE]
@@ -306,3 +306,4 @@ You can also use VS Code extension **Power Platform VS Code Extension** to benef
 
 - [Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md)
 - [Use the Visual Studio Code extension (Preview)](vs-code-extension.md)
+

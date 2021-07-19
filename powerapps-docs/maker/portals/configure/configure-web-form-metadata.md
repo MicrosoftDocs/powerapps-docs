@@ -5,7 +5,8 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/18/2021
+ms.date: 06/22/2021
+ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: tapanm
 contributors:
@@ -80,6 +81,10 @@ The following options specify a value to be set when the form is saved.
 | Type              | One of the following:<ul><li>Value</li><li>  Today's Date</li><li>Current User's Contact</li></ul>Selecting Value requires a value to be specified in the **Value** field that will be assigned to the field when the form is loaded. Selecting Today's Date will assign the current date and time to the attribute field. Selecting Current User's Contact requires a **From Attribute** that is an attribute on the contact table that will be retrieved from the current user's contact record and set on the attribute field specified.  |
 | Value             | Value assigned to the attribute when the form is being saved.<br>For Two Option (Boolean) fields use true or false.<br>For Option Set field use the integer value for the option.<br>For Lookup (TableReference) fields, use the GUID.<br>**Note**: If the attribute is also on the form the user's value will be overwritten with this value.|
 | From Attribute    | An attribute on the contact table that will be retrieved from the current portal user's record and assigned to the field during save. |
+
+### Lookup Settings
+
+The lookup setting **Basic form for Create** is used to populate the Basic Form for creating a new record from the lookup when the metadata created for an attribute is of lookup type.
 
 ### Validation
 

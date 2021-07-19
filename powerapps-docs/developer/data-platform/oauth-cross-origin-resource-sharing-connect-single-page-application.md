@@ -13,6 +13,7 @@ applies_to:
 ms.assetid: oauth-cross-origin-resource-sharing-connect-single-page-application
 caps.latest.revision: 11
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 search.audienceType: 
   - developer

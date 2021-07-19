@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
+ms.subservice: teams
 ms.author: v-ljoel
 ms.reviewer: tapanm-msft
 contributors:
@@ -84,7 +85,7 @@ The Perspectives app is a place to listen and be heard in your organization. A s
 
 The most relevant content rises to the top when team members up-vote a response or the discussion's creator flags one as Recommended.  The app can be used for employee engagement, diversity and inclusion efforts, support systems, process Q&As, and more. 
 
-![Perspectives main screen](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
+![Perspectives main screen.](media/perspectives/perspectives-main-screen.png "Perspectives main screen")
 
  Let's explore the primary functions of the Perspectives app.
 
@@ -104,7 +105,7 @@ Do you have a topic that you would like to discuss? Add a topic to get started.
 
 6. Select an image or an icon. 
 
-   ![Enter topic information](media/perspectives/add-topic-screen.png "Add topic screen")
+   ![Enter topic information.](media/perspectives/add-topic-screen.png "Add topic screen")
 
 7. Select **Save**.
 
@@ -152,7 +153,7 @@ You can view the discussions in a topic using the following steps:
 
 Within a topic, you can have multiple discussions. A discussion is a question or conversation starter. Other users respond to the discussion by adding perspectives.
 
-![Topic screen displaying discussions](media/perspectives/discussion-screen.png "Discussion Screen")
+![Topic screen displaying discussions.](media/perspectives/discussion-screen.png "Discussion Screen")
 
  You can add new discussions using the following steps:
 
@@ -166,7 +167,7 @@ Within a topic, you can have multiple discussions. A discussion is a question or
 
 5. Select **Save**.
 
-    ![Screen to add a new discussion](media/perspectives/begin-a-new-discussion.png "Begin a new discussion")
+    ![Screen to add a new discussion.](media/perspectives/begin-a-new-discussion.png "Begin a new discussion")
 
   
 
@@ -182,7 +183,7 @@ Responses to discussions are displayed in a familiar conversation thread. You ca
 
 5. Select **Add a response.**
 
-   ![The add a response button on the discussion screen](media/perspectives/add-response-button.png "Add response button")
+   ![The add a response button on the discussion screen.](media/perspectives/add-response-button.png "Add response button")
 
 6. Add relevant text to put your perspective for the discussion.
 
@@ -213,7 +214,7 @@ You can Edit your response using the following steps:
 
 2. Right-click on Power Apps icon and select **Pop out app** to open the app in a new window. This pop-out action will ensure that you don't lose your changes if you navigate somewhere else in Teams.
 
-   ![Power Apps main screen in Teams](media/perspectives/power-apps-first-screen.png "Power Apps first screen")
+   ![Power Apps main screen in Teams.](media/perspectives/power-apps-first-screen.png "Power Apps first screen")
 
 3. Select **Build** tab.
 
@@ -221,11 +222,11 @@ You can Edit your response using the following steps:
 
 5. In the Boards tile, select the **Perspectives** app to open it in Power Apps in Team.
 
-   ![The Perspectives app in Power Apps](media/perspectives/perspectives-tile.PNG)
+   ![The Perspectives app in Power Apps.](media/perspectives/perspectives-tile.PNG)
 
 6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
 
-7. From here, you can customize the app. ![Perspectives app open in Power Apps studio](media/perspectives/power-apps-screen.png "Power Apps Screen")
+7. From here, you can customize the app. ![Perspectives app open in Power Apps studio.](media/perspectives/power-apps-screen.png "Power Apps Screen")
 
 ### See also
 

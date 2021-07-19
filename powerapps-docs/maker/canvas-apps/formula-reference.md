@@ -6,13 +6,17 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nkrb
 ms.date: 03/23/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - nkrb
+  - gregli-msft
 ---
 # Formula reference for Power Apps
 
@@ -186,6 +190,8 @@ Other elements include:
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
+
+**[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 

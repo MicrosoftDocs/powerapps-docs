@@ -8,11 +8,15 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/08/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Understand data sources for canvas apps
 
@@ -69,7 +73,7 @@ Power Apps can't be used to create a connected data source, or modify its struct
 However, collection data sources *can* be created and modified inside an app, but are only temporary.
 
 ### Display one or more records
-![Flow of information when an app reads the information in a data source](media/working-with-data-sources/reading-from-a-datasource.png)
+![Flow of information when an app reads the information in a data source.](media/working-with-data-sources/reading-from-a-datasource.png)
 The diagram above shows the flow of information when an app reads the information in a data source:
 
 * The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
@@ -83,7 +87,7 @@ In the preceding section, you saw how to read a data source.  Note that the arro
 
 Note that, to modify an existing record of a data source, the record must have originally come from the data source.  The record may have traveled through a gallery, a [context variable](working-with-variables.md#use-a-context-variable), and any number of formulas, but its origin should be traceable back to the data source.  This is important because additional information travels with the record that uniquely identifies it, ensuring that you modify the correct record.    
 
-![Flow of information to update a data source](media/working-with-data-sources/writing-to-a-datasource.png)
+![Flow of information to update a data source.](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
 * An **[Edit form](controls/control-form-detail.md)** control provides a container for input cards, which are made up of user input controls such as a text-input control or a slider.  The **[DataSource](controls/control-form-detail.md)** and **[Item](controls/control-form-detail.md)** properties are used to identify the record to edit.

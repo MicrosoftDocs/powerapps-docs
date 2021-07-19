@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
 author: "shmcarth" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 manager: "annbe"
 search.audienceType: 
