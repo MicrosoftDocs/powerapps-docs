@@ -1235,14 +1235,16 @@
         items:
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
-        - name: Create and edit views
-          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Create and edit public views
+          href: ./model-driven-apps/create-edit-views.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: Create or edit filters in app views
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
+          - name: Create and edit views
+            href: ./model-driven-apps/create-or-edit-model-driven-app-view.md
           - name: How to make grids editable
             href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort rows in a view
