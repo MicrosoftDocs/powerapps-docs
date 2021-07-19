@@ -202,7 +202,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
     | Edit | OnSelect | `Set(galleryDisplayMode, DisplayMode.Edit)` |
     | Edit | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
     | Cancel | OnSelect | `Set(galleryDisplayMode, DisplayMode.Disabled)` |
-    | Cancel | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
+    | Cancel | Visible | `galleryDisplayMode = DisplayMode.Edit` |
 
     - [Set](functions/function-set.md) function sets the display mode of the gallery depending on which icon is selected.
     - The variable "galleryDisplayMode" controls the visibility of the edit or cancel icons. When the gallery is editable, only cancel button appears. And only edit button appears when gallery is disabled.
