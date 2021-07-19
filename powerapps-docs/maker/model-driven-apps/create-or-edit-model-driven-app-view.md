@@ -1,5 +1,5 @@
 ---
-title: "Create and edit public or system model-driven app views | MicrosoftDocs"
+title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
 ms.date: 07/04/2021
 ms.service: powerapps
@@ -9,7 +9,7 @@ author: Joel-Lindstrom
 ms.author: v-ljoel
 ms.reviewer: matp
 ---
-# Create and edit system or public model-driven app views
+# Create and edit public model-driven app views
 
 In Power Apps, views define how records for a specific table are displayed. A view defines the following:
 - The columns, also known as attributes, to display.
