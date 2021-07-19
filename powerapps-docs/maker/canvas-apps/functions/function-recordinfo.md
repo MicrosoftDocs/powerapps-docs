@@ -21,13 +21,13 @@ contributors:
 # RecordInfo function in Power Apps
 Provides information about a [record](../working-with-tables#elements-of-a-table) of a [data source](../working-with-data-sources.md).
 
-Use **RecordInfo** to obtain information about a particular record of a data source:
+Use **RecordInfo** to obtain information about a particular record of a tabular data source, such as Dataverse, SharePoint, or SQL Server:
 
-| Information Argument | Result Type | Description |
+| Information argument | Description |
 | --- | --- | --- |
-| **DataSourceInfo.RemovePermission** |Boolean |Does the current user have permission to remove this record from the data source? |
-| **DataSourceInfo.ModifyPermission** |Boolean |Does the current user have permission to modify this record in the data source? |
-| **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read this record from the data source? |
+| **DataSourceInfo.RemovePermission** | Does the current user have permission to remove this record from the data source? |
+| **DataSourceInfo.ModifyPermission** | Does the current user have permission to modify this record in the data source? |
+| **DataSourceInfo.ReadPermission** | Does the current user have permission to read this record from the data source? |
 
 **RecordInfo** takes into account permissions at the data source level.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.
 
@@ -42,15 +42,14 @@ Calling **RecordInfo** on records of tables that are not from a data source will
 * *Information* – Required. The desired information for the record.
 
 ## Examples
-These examples use the Accounts table in Dataverse.
 
 ```powerapps-dot
 RecordInfo( First(Accounts), RecordInfo.EditPermission )
 ```
-Checks the edit permission for the first record in the Accounts data source.  If the user has permission to edit this record, and to modify the Accounts data source in general, then **RecordInfo** will return *true*.  
+Checks the edit permission for the first record in the `Accounts` data source, which could be in Dataverse, SharePoint, SQL Server, or another tabular data source compatible with the **Patch**(function-pathc.md) function.  If the user has permission to edit this record, and to modify the `Accounts` data source in general, then **RecordInfo** will return *true*.  
 
 ```powerapps-dot
-With( { MyRecord: First(Accounts) }, 
+With( { MyRecord: First( Accounts ) }, 
       RecordInfo( MyRecord, RecordInfo.EditPermission ) )
 ```
 Captures a record using the [**With**](function-with.md) function and then passes this value to the RecordInfo function.  The result will be the same as the last example.
