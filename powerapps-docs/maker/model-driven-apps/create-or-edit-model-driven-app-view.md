@@ -11,7 +11,7 @@ ms.reviewer: matp
 ---
 # Create and edit public model-driven app views
 
-In Power Apps, views define how records for a specific table are displayed. A view defines the following:
+In Power Apps, views define how records for a specific table are displayed. A view defines the following behavior:
 - The columns, also known as attributes, to display.
 - The width of the columns in the view.
 - How the records are sorted by default.
@@ -19,7 +19,7 @@ In Power Apps, views define how records for a specific table are displayed. A vi
 
 Typically, views are classified into three types:
 - **Personal**: Individual users can create personal views according to their unique requirements. These views are visible only to the user who created them and anyone they choose to share them with.  
-- **Public**: As an app maker, you can create and edit public views to fit your organizational requirements. These views are available in the view selector, and you can use them in sub-grids in a form or as a list in a dashboard.
+- **Public**: As an app maker, you can create and edit public views to fit your organizational requirements. These views are available in the view selector, and you can use them in subgrids in a form or as a list in a dashboard.
 - **System**: As an app maker, you can also modify system views to meet the requirements of your organization. These are special views that the application depends on: they exist for system tables or are automatically created when you create custom tables. These views are available to some or all users, depending on their privileges.
 
 More information: [Understand model-driven app views](create-edit-views.md)
@@ -33,7 +33,7 @@ In this tutorial, we perform several tasks required to work with views, such as 
 
 ## Create a public view in Power Apps
 
-In this exercise you create a public view for the account entity. You then add this view to an app.
+In this exercise, you create a public view for the account entity. You then add this view to an app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
     
@@ -41,7 +41,7 @@ In this exercise you create a public view for the account entity. You then add t
     
 1. On the toolbar, select **Add view**.
 
-1. On the **Create a view** dialog box, enter *Accounts with revenue more than 50K* as the **Name**. Optionally, enter a description, and then select **Create**.
+1. On the **Create a view** dialog box, enter *Accounts with revenue more than 50 K* as the **Name**. Optionally, enter a description, and then select **Create**.
     
 1. In the view designer, select **+ View column** and add the **Address1: City** column to the view.
 
@@ -71,7 +71,7 @@ In this exercise you create a public view for the account entity. You then add t
 
 ## Add the view in the app designer
 
-1. In Power Apps select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** > **Edit in preview**. If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
+1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** > **Edit in preview**. If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
 
 1. In the **Pages** section of app designer, select **Account view**.
 1. In the right **Properties** pane, select **Manage views**, select the following views, and then select **Save**.
@@ -88,7 +88,7 @@ To see your view in the app, on the app designer command bar, select **Play**. N
 
 ## Open and add the view in the classic app designer
 
-1. In Power Apps select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** . If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
+1. In Power Apps, select **Apps** from the left navigation pane, select **...** next to the unmanaged app you want, and then select **Edit** . If you don't have an app to use, [Build your first model-driven app](build-first-model-driven-app.md).
     
 1. In the app designer **Entity View** section, select **Views**.
 
@@ -120,7 +120,7 @@ Views display records from a table that contains rows and columns. Each record i
 
 ### Define filter criteria in the classic app designer
 
-You can set filter criteria so that only a subset of the records are displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
+You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
 
 1. In app designer, select **Views**, then on the right **Components** pane place your mouse cursor over the view, and then select edit (pencil button).
     :::image type="content" source="media/create-or-edit-model-driven-app-view/edit-view.png" alt-text="Edit a view":::
