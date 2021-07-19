@@ -3,6 +3,7 @@ title: Create a component for canvas apps
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 07/01/2021
 ms.author: hemantg
@@ -31,7 +32,7 @@ You can create a component from within an app as explained in this article, or b
 
 To create a component within an app, go to **Tree View**, select the **Components** tab, and then select **New component**:
 
-![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
+![Create new custom component using tree view.](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
 Selecting **New component** opens an empty canvas. You can add controls as part of the component definition on the canvas. If you edit a component in the canvas, you'll update instances of the same component in other app screens. Apps that reuse an already created component can also receive component updates after you publish component changes.
 
@@ -39,7 +40,7 @@ You can select a component from the list of existing components in the left pane
 
 Components available inside the app are listed under the **Custom** category in a list of components inside the tree view. Components imported from component libraries are listed under the **Library components** category:
 
-![Insert components to the app](./media/create-component/insert-components.png "Insert components to the app")
+![Insert components to the app.](./media/create-component/insert-components.png "Insert components to the app")
 
 > [!NOTE]
 > Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
@@ -65,7 +66,7 @@ The following walk-through further explains these concepts.
 
 In this example, you'll create a menu component that resembles the following graphic. And you can change the text later to use it in multiple screens, apps, or both:
 
-![Final gallery](./media/create-component/menu-instance-new.png "Final gallery")
+![Final gallery.](./media/create-component/menu-instance-new.png "Final gallery")
 
 > [!NOTE]
 > We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When using a component library, you get prompted to update components if components inside a library are updated and published.
@@ -80,17 +81,17 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. In the **Tree View**, select **Components** and then select **New component** to create a new component.
 
-    ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
+    ![Create new custom component using tree view.](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
 1. Select the new component in the left pane, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
 
 1. In the right-hand pane, set the component's width as **150** and its height as **250**, and then select **New custom property**. You can also set the height and width to any other value as appropriate.
 
-    ![New property](./media/create-component/new-property.png "New property")
+    ![New property.](./media/create-component/new-property.png "New property")
 
 1. In the **Display name**, **Property name**, and **Description** boxes, type or paste text as *Items*.
 
-    ![Display name, property name, description boxes](./media/create-component/property-names.png "Display name, property name, description boxes")
+    ![Display name, property name, description boxes.](./media/create-component/property-names.png "Display name, property name, description boxes")
 
     Don't include spaces in property name because you'll refer to the component by this name when you write a formula. For example, **ComponentName.PropertyName**.
 
@@ -98,13 +99,13 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. In the **Data type** list, select **Table**, and then select **Create**.
 
-    ![Data type of the property](./media/create-component/property-data-type.png "Data type of the property")
+    ![Data type of the property.](./media/create-component/property-data-type.png "Data type of the property")
 
     The **Items** property is set to a default value based on the data type that you specified. You can set it to a value that suits your needs. If you specified a data type of **Table** or **Record**, you might want to change the value of the **Items** property to match the data schema that you want to input to the component. In this case, you'll change it to a list of strings.
 
     You can set the property's value in the formula bar if you select the name of the property on the **Properties** tab of the right-hand pane.
 
-    ![Custom input property on the Properties tab](./media/create-component/properties-tab.png "Custom input property on the Properties tab")
+    ![Custom input property on the Properties tab.](./media/create-component/properties-tab.png "Custom input property on the Properties tab")
 
     As the next graphic shows, you can also edit the property's value on the **Advanced** tab of the right-hand pane.
 
@@ -114,7 +115,7 @@ In this example, you'll create a menu component that resembles the following gra
     Table({Item:"SampleText"})
     ```
 
-    ![Formula](./media/create-component/set-component-items.png "Formula")
+    ![Formula.](./media/create-component/set-component-items.png "Formula")
 
 1. In the component, insert a blank vertical **Gallery** control and select **Layout** on the property pane as **Title**.
 
@@ -134,11 +135,11 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. In the left pane, select the list of screens, and then select the default screen.
 
-    ![Default screen](./media/create-component/default-screen.png "Default screen")
+    ![Default screen.](./media/create-component/default-screen.png "Default screen")
 
 1. On the **Insert** tab, open the **Components** menu, and then select **MenuComponent**.
 
-    ![Insert component](./media/create-component/insert.png "Insert component")
+    ![Insert component.](./media/create-component/insert.png "Insert component")
 
     The new component is named **MenuComponent_1** by default.
 
@@ -150,7 +151,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
     This instance resembles this graphic, but you can customize the text and other properties of each instance.
 
-    ![Final gallery](./media/create-component/menu-instance-new.png "Final gallery")
+    ![Final gallery.](./media/create-component/menu-instance-new.png "Final gallery")
 
 ### Create and use output property
 
@@ -164,7 +165,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. Under **Property type**, select **Output**, and then select **Create**.
 
-    ![Property type as output](./media/create-component/output-property-type.png "Property type as output")
+    ![Property type as output.](./media/create-component/output-property-type.png "Property type as output")
 
 1. On the **Advanced** tab, set the value of the **Selected** property to this expression, adjusting the numeral in the gallery name if necessary:
 
@@ -172,7 +173,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
     Gallery1.Selected.Item
     ```
 
-    ![Advanced pane](./media/create-component/advance.png "Advanced pane")
+    ![Advanced pane.](./media/create-component/advance.png "Advanced pane")
 
 1. On the default screen of the app, add a label, and set its **Text** property to this expression, adjusting the numeral in the component name if necessary:
 
@@ -193,7 +194,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
 
-![Enable export and import of components](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
+![Enable export and import of components.](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
 
 After you enable this feature, you can use the following capabilities to import and export components.
 
@@ -203,7 +204,7 @@ To import one or more components from one app into another, select **Import comp
 
 A dialog box lists all apps that contain components that you have permission to edit. Select an app, and then select **Import** to import the most recent published version of all of the components in that app. After you import at least one component, you can edit your copy and delete any that you don’t need.
 
-![Import components dialog box](./media/create-component/import-component-screen.png "Import components dialog box")
+![Import components dialog box.](./media/create-component/import-component-screen.png "Import components dialog box")
 
 You can save an app with existing components to a file locally and then reuse the file by importing it. You can use the file to import components to another app.
 
@@ -217,15 +218,15 @@ You can export components to a file and download them for import to another app.
 
 Select the **Export components** option from the **Components** section in the tree view on the left pane:
 
-![Export components tree view](./media/create-component/export-components-treeview.png "Export components tree view")
+![Export components tree view.](./media/create-component/export-components-treeview.png "Export components tree view")
 
 You can also use the **Insert** menu and then select the **Custom** drop-down menu instead.
 
-![Export components insert menu](./media/create-component/export-components-insert-menu.png "Export components insert menu")
+![Export components insert menu.](./media/create-component/export-components-insert-menu.png "Export components insert menu")
 
 Selecting **Export components** downloads the components to a file:
 
-![Download component](./media/create-component/download-component.png "Download component")
+![Download component.](./media/create-component/download-component.png "Download component")
 
 The downloaded component file uses the *.msapp* file name extension. 
 
@@ -233,7 +234,7 @@ The downloaded component file uses the *.msapp* file name extension.
 
 To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left pane. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
 
-![Import component file](./media/create-component/import-component-file.png "Import component file")
+![Import component file.](./media/create-component/import-component-file.png "Import component file")
 
 From the **Open** dialog box, browse to the location of the component file and select **Open** to import components inside the app.
 
@@ -241,7 +242,7 @@ From the **Open** dialog box, browse to the location of the component file and s
 
 You can save an app locally using the **File** > **Save As** option:
 
-![Save app](./media/create-component/save-app-locally.png "Save app")
+![Save app.](./media/create-component/save-app-locally.png "Save app")
 
 Once you save the app, you can reuse the components of this app using the same method of importing components from a file. Follow the steps in the previous section on import components from exported components file.
 

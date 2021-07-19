@@ -34,9 +34,9 @@
     href: ../web-api-samples-client-side-javascript.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
-  - name: Query Data
-    href: query-data-client-side-javascript.md
   - name: Conditional Operations
     href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
     href: functions-actions-client-side-javascript.md
+  - name: Query Data
+    href: query-data-client-side-javascript.md

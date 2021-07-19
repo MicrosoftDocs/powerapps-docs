@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -34,7 +35,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 
 The following diagram illustrates the way that users and systems interact with data in the Employee Ideas solution.
 
-![Employee Idease sample app architecture model](media/employee-ideas-architecture/architecture-model.png "Employee Ideas sample app architecture model")
+![Employee Idease sample app architecture model.](media/employee-ideas-architecture/architecture-model.png "Employee Ideas sample app architecture model")
 
 ### Connectors
 
@@ -47,7 +48,7 @@ The following connectors are used in the Employee Ideas app:
 
 The following diagram explains the data model used by the Employee ideas sample app.
 
-![Employee ideas sample app data model](media/employee-ideas-architecture/data-model.png "Employee ideas sample app data model")
+![Employee ideas sample app data model.](media/employee-ideas-architecture/data-model.png "Employee ideas sample app data model")
 
 | Table name | Description |
 | - | - |

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -27,7 +28,7 @@ To add a form component:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
+4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **Form**.
 
@@ -70,7 +71,7 @@ To add a form component:
     - **Enable table permissions**: Table permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)
 
         > [!div class=mx-imgBorder]
-        > ![Form properties](media/form-props.png "Form properties")
+        > ![Form properties.](media/form-props.png "Form properties")
 
 ### See also
 

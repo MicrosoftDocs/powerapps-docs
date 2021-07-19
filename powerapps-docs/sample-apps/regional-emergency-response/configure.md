@@ -33,7 +33,7 @@ This article is meant for business admins in regional medical organizations to u
 When you sign into the admin (model-driven) app, you will see the entities in the left pane where you need to populate the master data. Select the entity in the left navigation pane to view or manage the data.
 
 > [!div class="mx-imgBorder"] 
-> ![Populate the master data](media/config-entities-master-data.png "Populate the master data")
+> ![Populate the master data.](media/config-entities-master-data.png "Populate the master data")
 
 -   **Hierarchy area**: Data for entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
 
@@ -83,14 +83,14 @@ To load sample data from the Excel file to an entity: 
 2.  Select **Import from Excel** to select the data file. 
 
        > [!div class="mx-imgBorder"] 
-       > ![Import from Excel](media/config-import-excel.png "Import from Excel")
+       > ![Import from Excel.](media/config-import-excel.png "Import from Excel")
 
 3.  Browse to the **SampleData** folder and select the **3_Parent Organizations.xlsx** file and proceed with the wizard steps to import the data.  
 
 4.  After the sample data is imported, you will see the imported records in the entity:
 
        > [!div class="mx-imgBorder"] 
-       > ![Imported records in entity](media/config-imported-records.png "Imported records in entity")
+       > ![Imported records in entity.](media/config-imported-records.png "Imported records in entity")
 
 ### Manually configure and manage master data for your organization
 
@@ -127,12 +127,12 @@ To create a record:
 1.  Select **Regional Org** in the left pane and select **New**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Regional organization data](media/config-region-org.png "Regional organization data")
+    > ![Regional organization data.](media/config-region-org.png "Regional organization data")
 
 2.  In the **New Regional Organization** page, specify the organization name:
 
     > [!div class="mx-imgBorder"] 
-    > ![New regional organization](media/config-new-region-org.png "New regional organization")
+    > ![New regional organization.](media/config-new-region-org.png "New regional organization")
 
 3.  Select **Save & Close.** The newly created record will be available in the **Regional Org** list.
 
@@ -149,7 +149,7 @@ To create a record:
 2.  In the **New Parent Organization** page, specify appropriate values:
 
      > [!div class="mx-imgBorder"] 
-     > ![New parent organization](media/config-new-parent-org.png "New parent organization")
+     > ![New parent organization.](media/config-new-parent-org.png "New parent organization")
 
     | **Field**                |**Description** |
     |--------------------------|------------------------------------------------------|
@@ -174,7 +174,7 @@ To create a record:
 2.  In the **New System** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"] 
-    > ![Create systems data](media/config-system-data.png "Create systems data")
+    > ![Create systems data.](media/config-system-data.png "Create systems data")
 
     | **Field**           | **Description**        |
     |---------------------|---------------------------------------|
@@ -197,7 +197,7 @@ To create a record:
 2.  In the **New Region** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"] 
-    > ![Create new region](media/config-create-region.png "Create new region")
+    > ![Create new region.](media/config-create-region.png "Create new region")
 
     | **Field**   | **Description**                                  |
     |-------------|---------------------------|
@@ -220,7 +220,7 @@ To create a record:
 2.  In the **New Facility** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"] 
-    > ![Create new facility](media/config-new-facility.png "Create new facility")
+    > ![Create new facility.](media/config-new-facility.png "Create new facility")
 
     | **Field**                    | **Description**            |
     |------------------------------|---------------------------------------------------|
@@ -255,7 +255,7 @@ To edit the record, select the record, update the values as required, and select
 You can also view and manage the associated **Census**, **COVID**, **Equipment**, **Staffing**, and **Supplies** data entered by the parent organizations for a facility by opening a facility record, and using the respective tabs in the record.
 
 > [!div class="mx-imgBorder"] 
-> ![Open a facility record](media/config-facility-record.png "Open a facility record")
+> ![Open a facility record.](media/config-facility-record.png "Open a facility record")
 
 ## Manage portal users
 
@@ -270,7 +270,7 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 3.  Select **New** to create a new portal user. On the **New Contact** page, specify appropriate values
 
     > [!div class="mx-imgBorder"] 
-    > ![Create a portal user](media/config-portal-user.png "Create a portal user")
+    > ![Create a portal user.](media/config-portal-user.png "Create a portal user")
 
     | **Field**           | **Description**  |
     |---------------------|-------------------|
@@ -287,7 +287,7 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 5.  In the lookup records page, press enter to displays the existing web roles.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select a role](media/config-select-portal-role.png "Select a role")
+    > ![Select a role.](media/config-select-portal-role.png "Select a role")
 
 6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the four roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, **Regional Report Viewer**, and **Report Viewer**.
 
@@ -308,7 +308,7 @@ You can view, approve, and decline portal user requests using the **User Request
 Use the appropriate view to view a list of approved, declined, inactive, and pending user requests.
 
 > [!div class="mx-imgBorder"] 
-> ![Select a view](media/configure-portal-request-views.png "Select a view")
+> ![Select a view.](media/configure-portal-request-views.png "Select a view")
 
 ### Approve or decline user request
 
@@ -329,7 +329,7 @@ To approve or decline user requests:
     1. Select the save icon in the lower-right corner.
 
         > [!div class="mx-imgBorder"] 
-        > ![Approve or reject a user request](media/user-request-manage.png "Approve or reject a user request")
+        > ![Approve or reject a user request.](media/user-request-manage.png "Approve or reject a user request")
 
 Based on the approval or decline, the following happens:
 

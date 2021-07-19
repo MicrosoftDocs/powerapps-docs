@@ -2,7 +2,7 @@
 title: "Web API CDSWebApiService  Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) with synchronous requests."
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 07/15/2021
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,13 +15,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Web API CDSWebApiService Parallel Operations Sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in Dataverse.
+This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of table rows (entity records) to create in Dataverse.
 
-This sample uses the CDSWebApiService class synchronous methods within operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. 
+This sample uses the CDSWebApiService class synchronous methods within operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times.
 
 More information:
 
@@ -31,7 +32,7 @@ More information:
 This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with Dataverse entities using the synchronous methods provided by the CDSWebApiService class.
 
 > [!NOTE]
-> If you want to use Fiddler to observe the expected service protection API limits, you will need to set the number of records to create to be around 10,000. They will start to appear after 5 minutes. Note how the application retries the failures and completes the flow of all the records.
+> If you want to use Fiddler to observe the expected service protection API limits, you will need to set the number of rows to create to be around 10,000. They will start to appear after 5 minutes. Note how the application retries the failures and completes the flow of all the rows.
 
 ## Prerequisites
 
@@ -188,8 +189,7 @@ namespace PowerApps.Samples
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
-[Create an entity using the Web API](../create-entity-web-api.md)<br />
-[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)
-
+[Create a table row using the Web API](../create-entity-web-api.md)<br />
+[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

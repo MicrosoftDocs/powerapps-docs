@@ -3,6 +3,7 @@ title: Monitor overview
 description: Overview of Power Apps Monitor.
 author: hasharaf
 ms.service: powerapps
+ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -12,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Monitor overview
@@ -52,7 +55,7 @@ Some examples of problems and queries that you can uncover when using Monitor ar
 
 You can review various properties for each event inside Monitor. Depending on the event category, some of these properties might not contain data. The following image shows an example of the Monitor dashboard for canvas apps.
 
-![Monitor dashboard](media/monitor/monitor.png "Monitor dashboard")
+![Monitor dashboard.](media/monitor/monitor.png "Monitor dashboard")
 
 | Column name       | Description                                                                                                                                                                                                                                       |
 |-------------------|-----------------------------------------------------|
@@ -75,21 +78,21 @@ When you select an event in the grid, a panel displays additional details about 
     of the data might be collapsed in the tree view. You can expand and drill
     down to view content.
 
-    ![Monitor - Details](media/monitor/monitor-details.png "Monitor - Details")
+    ![Monitor - Details.](media/monitor/monitor-details.png "Monitor - Details")
 
 - **Formula**: Shows the related formula from your app for the selected event. The
     name of the control property triggering the event is displayed on top of the tab and inside the event table.
 
-    ![Monitor - Formula](media/monitor/monitor-formula.png "Monitor - Formula")
+    ![Monitor - Formula.](media/monitor/monitor-formula.png "Monitor - Formula")
 
 - **Request**: Shows the HTTP request that was sent.
 
-    ![Monitor - Request](media/monitor/monitor-request.png "Monitor - Request")
+    ![Monitor - Request.](media/monitor/monitor-request.png "Monitor - Request")
 
 - **Response**: Shows the HTTP response that was received. You can view the response in
     JSON format.
 
-    ![Monitor - Response](media/monitor/monitor-response.png "Monitor - Response")
+    ![Monitor - Response.](media/monitor/monitor-response.png "Monitor - Response")
 
 ## Unsupported scenarios for Monitor
 

@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -23,7 +24,7 @@ search.app:
 Power Apps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
 > [!div class="mx-imgBorder"] 
-> ![Progress against goals standard report](media/progress-against-goals-report.png "Progress against goals standard report")
+> ![Progress against goals standard report.](media/progress-against-goals-report.png "Progress against goals standard report")
 
 System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Microsoft Dataverse and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
 
@@ -40,7 +41,7 @@ System reports are available to all users. Individuals who create or otherwise o
 You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report table to your app's site map. 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
-2. In App Designer, select ![Pencil icon for editing site map](media/ccf-pencil-icon.png) next to **Site Map**. 
+2. In App Designer, select ![Pencil icon for editing site map.](media/ccf-pencil-icon.png) next to **Site Map**. 
 3. In the Sitemap Designer, select **Add** and then select **Area**. 
 4. In the **Title** box, enter a name for the area title, such as *Reports*. 
 5. Select the area that you named in the previous step, select **Add**, select **Group**, and then in the group **Title** box enter a name for the group title, such as *Reports*. 
@@ -50,7 +51,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
    - **Entity**. From the list of tables, select the **Report** table.  
    - **Title**. Enter a descriptive title, such as *Reports*.
 
-      ![Add report table to site map](media/report-entity-sitemap.png)
+      ![Add report table to site map.](media/report-entity-sitemap.png)
 
 7. Select **Save and Close** to return to the app designer. 
 
@@ -60,7 +61,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
 Now the app displays a **Reports** area where users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard. 
 
 > [!div class="mx-imgBorder"] 
-> ![Report view](media/report-feature-in-app.png "Report view")
+> ![Report view.](media/report-feature-in-app.png "Report view")
 
 ## Options for creating new reports
 You can create a new report in one of two ways:
@@ -76,7 +77,7 @@ Reports are solution aware. Adding a report as a component to a solution makes i
 To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select **Edit**. On the **Administration** tab, see if **Viewable By** is set to **Organization**. 
 
 > [!div class="mx-imgBorder"] 
-> ![Organization level report visibility](media/report-scope.png "Organization level report visibility")
+> ![Organization level report visibility.](media/report-scope.png "Organization level report visibility")
 
 You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related row type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
 
