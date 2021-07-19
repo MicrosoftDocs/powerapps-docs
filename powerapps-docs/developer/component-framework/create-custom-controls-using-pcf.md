@@ -39,7 +39,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
 
 To build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. 
 
-Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
+Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window for development purposes, or run `npm run build -- --buildMode production` for building a release version.
 
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
