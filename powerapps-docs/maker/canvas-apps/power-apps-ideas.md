@@ -47,7 +47,7 @@ Once turned on, you'll be able to see a new "Ideas" tab on the right-side of the
 
 ## Transforming natural language to Power Fx formula
 
-Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it's trained for the **Microsoft Dataverse connector**. So if you've a gallery that is bound to a Dataverse table, and you’re about to write a formula for its Items property, you can check out Power Apps Ideas.
+Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it's trained for the **Microsoft Dataverse connector**. So if you've got a gallery that is bound to a Dataverse table, and you’re about to write a formula for its Items property, you can check out Power Apps Ideas.
 
 To begin, let’s take a look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
