@@ -1,5 +1,5 @@
 ---
-title: "Apply SLAs to entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Apply SLAs to tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about applying SLAs to custom entities by enabling entities for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
 ms.date: 07/19/2021
@@ -16,11 +16,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Apply SLAs to entities
+# Apply SLAs to tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Service level agreements (SLAs) in Microsoft Dataverse help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom tables and the following system tables:  
+Service level agreements (SLAs) in Dataverse help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom tables and the following system tables:  
   
 -   All activity tables (such as Email, Task, and Appointment) except recurring appointments (RecurringAppointmentMaster)  
   
