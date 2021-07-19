@@ -43,7 +43,10 @@ The custom page is a new page type within model-driven app, which brings in the 
 
 * Supports the most common canvas controls and custom pro-dev components. For more information on what is available, see [Design a custom page for your model-driven app](design-page-for-model-app.md)
 
-* Makers need to share custom pages to allow another maker to make changes.  This is a different behavior than the typical model components.  If a custom page can not be shared from solution explorer, open the environment in Power Platform admin center and then open Resources > Power Apps > Page > Share.
+* Makers need to share custom pages to allow another maker to make changes.  This is a different behavior than the typical model components.  If a custom page can not be shared from solution explorer, open the environment in Power Platform admin center and then open Resources > Power Apps > Page > Share. Similarly in order to reuse the canvas components inside the custom page, corresponding canvas component library also need to be shared with the custom page makers. 
+
+* Maker experience for custom page does not has support for certain Power Apps component framework APIs like Navigation and Web APIs which is inline with the stand alone canvas apps. However these APIs are avaialable in the published app where the custom page is added to model apps, please see [add code components to a custom page for your model-driven app.](/powerapps/maker/model-driven-apps/page-code-components) 
+
 
 ## End User Related Issues
 
