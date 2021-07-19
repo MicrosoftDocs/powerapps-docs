@@ -2294,6 +2294,8 @@
                   href: ../teams/extend-issue-auto-assignment.md
                 - name: Convert Issue reporting sample app to Work order management app
                   href: ../teams/extend-issue-rename-work-order.md
+                - name: Remove the Planner dependency for task creation
+                  href: ../teams/extend-issue-remove-planner.md
         - name: Milestones
           items:
              - name: Milestones
