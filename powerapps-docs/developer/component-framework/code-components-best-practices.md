@@ -1,6 +1,6 @@
 ---
-title: Best practices and guidance for code components created using Power Apps component framework  | Microsoft Docs
-description: Best practices and guidance on how to use code components created using Power Apps component framework
+title: "Best practices for code components | Microsoft Docs"
+description: "Learn best practices and get guidance on how to use code components created using Power Apps component framework."
 keywords:
 ms.subservice: pcf
 ms.author: nabuthuk
@@ -23,7 +23,7 @@ Developing, deploying, and maintaining code components needs a combination of kn
 - HTML Browser User Interface Development
 - Azure DevOps/GitHub
 
-This article outlines established best practices and guidance for professional developers developing code components and aims to provide the benefits behind each, so that your code components can benefit from the usability, supportability, and performance improvements that they provide.
+This article outlines established best practices and guidance for professionals developing code components. It aims to provide the benefits behind each so that your code components can take advantage of the usability, supportability, and performance improvements these tools and tips provide.
 
 ## Power Apps component framework
 
@@ -35,27 +35,27 @@ Code components can be built in [production or development mode](code-components
 
 #### Avoid using unsupported framework methods
 
-These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but because they are not supported, they may stop working in future versions.
+These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but, because they're not supported, they may stop working in future versions.
 
 #### Use `init` method to request network required resources
 
-When a code component is loaded by the hosting context, the [init](reference\control\init.md) method is first called. Use this method to request any network resources such as metadata instead of waiting until the `updateView` method. If the `updateView` method is called before the requests return, your code component must handle this state and provide a visual loading indicator.
+When a code component is loaded by the hosting context, the [init](reference\control\init.md) method is first called. Use this method to request any network resources such as metadata instead of waiting for the `updateView` method. If the `updateView` method is called before the requests return, your code component must handle this state and provide a visual loading indicator.
 
 #### Clean up resources inside the `destroy` method
 
-When a code component is removed from the browser DOM, the [destroy](reference\control\destroy.md) method is called. Use this method to close any `WebSockets`, remove  event handlers that are added outside of the container element. If you are using React, use `ReactDOM.unmountComponentAtNode` inside the destroy method. This prevents any performance issues caused by code components being loaded and unloaded within a given browser session.
+When a code component is removed from the browser DOM, the [destroy](reference\control\destroy.md) method is called. Use this method to close any `WebSockets` and remove  event handlers that are added outside of the container element. If you are using React, use `ReactDOM.unmountComponentAtNode` inside the destroy method. This prevents any performance issues caused by code components being loaded and unloaded within a given browser session.
 
 #### Avoid unnecessary calls to refresh on a dataset property
 
-If your code component is of type dataset, the bound dataset properties expose a [`refresh`](reference\dataset\refresh.md) method that causes the hosting context to reload the data. Calling this method more adversely affects your code components performance.
+If your code component is of type dataset, the bound dataset properties expose a [`refresh`](reference\dataset\refresh.md) method that causes the hosting context to reload the data. Calling this method unncessarily adversely affects the performance of your code component.
 
 #### Minimize calls to `notifyOutputChanged` 
 
-In some circumstances, it is undesirable for updates to a UI control (such as keypresses or mouse move events) to each call `notifyOutputChanged` this would result in many more events propagating to the parent context than needed. Instead, consider using an event when a control loses focus, or when the user's touch or mouse event has completed.
+In some circumstances, it's undesirable for updates to a UI control (such as keypresses or mouse move events) to each call `notifyOutputChanged`, as this would result in many more events propagating to the parent context than needed. Instead, consider using an event when a control loses focus, or when the user's touch or mouse event has completed.
 
 #### Check API availability
 
-When developing code components for different hosts (model-driven, canvas, portals) always check the availability of the APIs you are using for support on those platforms. For example, `context.webAPI` is not available in canvas apps. For individual API availability,  see [Power Apps component framework API reference](reference/index.md).
+When developing code components for different hosts (model-driven apps, canvas apps, portals), always check the availability of the APIs you're using for support on those platforms. For example, `context.webAPI` is not available in canvas apps. For individual API availability, see [Power Apps component framework API reference](reference/index.md).
 
 ## Model-driven apps
 
@@ -63,11 +63,13 @@ This section contains best practices and guidance relating to code components wi
 
 #### Do not interact directly with formContext
 
-If you have experience in working with client API, you may be used to access the formContext to access attributes, controls, and call API methods such as `save`, `refresh` and `setNotification`. Code components are expected to work across various products like model-driven apps, canvas apps, dashboards. Hence, they cannot have a dependency on formContext. A work-around is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the form context. Support for the custom events will be added in the future, which will be able to be used for communicating changes outside of a control without adding a column configuration.
+If you have experience working with client API, you may be used to interacting with formContext to access attributes, controls, and call API methods such as `save`, `refresh`, and `setNotification`. Code components are expected to work across various products like model-driven apps, canvas apps, and dashboards, therefore they can't have a dependency on formContext. 
+
+A workaround is to make the code component bound to a column and add an `OnChange` event handler to that column. The code component can update the column value, and the `OnChange` event handler can access the formContext. Support for the custom events will be added in the future, which will be able to be used for communicating changes outside of a control without adding a column configuration.
 
 #### Limit size and frequency of calls to the WebApi
 
-When using the `context.WebApi` methods, limit both the number of calls and amount of data that is interacted with. Each time you call the WebApi it will count towards the user's API entitlement and service protection limits. When performing CRUD operations on records, consider the size of the payload. In general, larger the request payload, the slower your code component will be.
+When using the `context.WebApi` methods, limit both the number of calls and the amount of data that's interacted with. Each time you call the WebApi, it will count towards the user's API entitlement and service protection limits. When performing CRUD operations on records, consider the size of the payload. In general, the larger the request payload, the slower your code component will be.
 
 ## Canvas apps
 
@@ -75,9 +77,9 @@ This section contains best practices and guidance relating to code components wi
 
 #### Minimize the number of components on a screen
 
-Each time you add a component to your canvas app it takes a finite amount of time to render. The more components you add, the longer the render time will be. Carefully measure performance of your code components as you add more to a screen using the Developer Tools Performance tools. 
+Each time you add a component to your canvas app, it takes a finite amount of time to render. The more components you add, the longer the render time will be. Carefully measure the performance of your code components as you add more to a screen using the Developer Performance tools. 
 
-Currently, each code component bundles their own library of shared libraries such as Fluent UI and React. Loading multiple instances of the same library will not load these libraries multiple times, however loading multiple different code components will result in the browser loading multiple bundled versions of these libraries. In the future, these libraries will be able to be loaded and shared with code components.
+Currently, each code component bundles their own library of shared libraries such as Fluent UI and React. Loading multiple instances of the same library will not load these libraries multiple times. However, loading multiple different code components will result in the browser loading multiple bundled versions of these libraries. In the future, these libraries will be able to be loaded and shared with code components.
 
 #### Allow makers to style your code component
 
@@ -85,14 +87,14 @@ When app makers consume code components from inside a canvas app, they want to u
 
 #### Follow canvas apps performance best practices
 
-Canvas apps provides a wide set of best practices from inside the app and solution checker. Ensure your apps follow these recommendations before you add code components. More information:
+Canvas apps provides a wide set of best practices from inside the app and solution checker. Ensure your apps follow these recommendations before you add code components. For more information, see:
 
 - [Tips to improve canvas app performance](/powerapps/maker/canvas-apps/performance-tips)
 - [Considerations for optimized performance in Power Apps](https://powerapps.microsoft.com/blog/considerations-for-optimized-performance-in-power-apps/)
 
 ## TypeScript and JavaScript
 
-This section contains best practices and guidance relating to TypeScript & JavaScript within code components.
+This section contains best practices and guidance relating to TypeScript and JavaScript within code components.
 
 #### ES5 vs ES6
 
@@ -137,14 +139,13 @@ Then answer the following questions when prompted:
   Answer: **JSON** (This will update the existing `.eslintrc.json`)
 
 - What style of indentation do you use?
-
   Answer: **Spaces** (This is the VSCode default)
 
 - What quotes do you use for strings?
   Answer: **Single**
 
 - What line endings do you use?
-  Answer: **Windows** (This is the VSCode default CRLF line endings style)
+  Answer: **Windows** (This is the VSCode default CRLF line endings style.)
 
 - Do you require semicolons?
   Answer: **Yes**
@@ -163,9 +164,9 @@ Before you can use `eslint`, you need to add some scripts to the `package.json`:
 ```
 
 
-The `eslint` script accepts the folder that contains your code - replace **MY_CONTROL_NAME** to be the same name as the code component used when calling `pac pcf init`. 
+The `eslint` script accepts the folder that contains your code. Replace **MY_CONTROL_NAME** to be the same name as the code component used when calling `pac pcf init`. 
 
-Now at the command-line you can use:
+Now at the command-line, you can use:
 
 ```shell
 npm run lint:fix
@@ -177,7 +178,7 @@ This will tidy up code in the project to match your chosen style, and it will al
 > ESLint will point out problems with the template code initially (e.g. empty constructor). You can add inline comments to instruct ESLint to exclude the rules such as:
 > `// eslint-disable-next-line @typescript-eslint/no-empty-function`
 >
-> Additionally, you can add files to ignore (for example, the automatically generated interfaces), by adding the following to the `.eslintrc.json`:
+> Additionally, you can add files to ignore (for example, the automatically generated interfaces) by adding the following to the `.eslintrc.json`:
 > ```
 > "ignorePatterns": ["**/generated/*.ts"]
 > ```
@@ -193,17 +194,17 @@ This section contains best practices and guidance relating to HTML browser UI de
 
 ### Use Microsoft Fluent UI React
 
-[Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web) is the official [open source](https://github.com/microsoft/fluentui) React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. Power Apps itself uses Fluent UI, meaning you will be able to create UI that is consistent with the rest of your apps.
+[Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web) is the official [open source](https://github.com/microsoft/fluentui) React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. Power Apps itself uses Fluent UI, meaning you'll be able to create UI that's consistent with the rest of your apps.
 
-#### Use path-based imports from fluent to reduce bundle size
+#### Use path-based imports from Fluent to reduce bundle size
 
-Currently, the code component templates used with `pac pcf init` will not use tree-shaking, which is the process where `webpack` detects modules imported that are not used and removes them. This means if you import from Fluent UI using the following, it imports and bundle the entire library:
+Currently, the code component templates used with `pac pcf init` will not use tree-shaking, which is the process where `webpack` detects modules imported that are not used and removes them. This means if you import from Fluent UI using the following, it imports and bundles the entire library:
 
 ```typescript
 import { Button } from '@fluentui/react'
 ```
 
-To avoid this you can use path-based imports, where the specific library component is imported using the explicit path:
+To avoid this, you can use path-based imports where the specific library component is imported using the explicit path:
 
 ```typescript
 import { Button } from '@fluentui/react/lib/Button';
@@ -222,46 +223,46 @@ More information: [Fluent UI - Advanced usage](https://github.com/microsoft/flue
 
 #### Optimize React rendering
 
-When using React it is important to follow React specific best practices regarding minimizing rendering of components, resulting in a more responsive UI. Some of the best practices are:
+When using React, it's important to follow React specific best practices regarding minimizing rendering of components, resulting in a more responsive UI. Some of the best practices are listed below:
 
-- Only make a call to `ReactDOM.render` inside the `updateView` method when a bound property or framework aspect has changed that requires the UI to reflect the change. You can use [updatedProperties](reference\updatedproperties.md) to determine what have changed.
+- Only make a call to `ReactDOM.render` inside the `updateView` method when a bound property or framework aspect has changed that requires the UI to reflect the change. You can use [updatedProperties](reference\updatedproperties.md) to determine what has changed.
 - Use [PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent) (with class components) or [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) (with function components) where possible to avoid unnecessary re-renders of components when its input props have not mutated.
 - For large React components, deconstruct your UI into smaller components to improve performance.
-- Avoid use of arrow functions and function binding inside the render function as this will create a new callback closure with each render and cause the child component to always re-render when the parent component is rendered. Instead use function binding in the constructor or use class field arrow functions. See [Handling Events - React](https://reactjs.org/docs/handling-events.html).
+- Avoid use of arrow functions and function binding inside the render function as this will create a new callback closure with each render and cause the child component to always re-render when the parent component is rendered. Instead, use function binding in the constructor or use class field arrow functions. See [Handling Events - React](https://reactjs.org/docs/handling-events.html).
 
 #### Check accessibility
 
 Ensure that code components are accessible and can be used by keyboard only and screen-reader users:
 
 - Provide keyboard navigation alternatives to mouse/touch events. For example, if your component provides a drop-down list, ensure that a user can use tab to set focus and then navigate the options using the arrow keys.
-- Ensure that `alt` and [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) (Accessible Rich Internet Applications) attributes are set so that screen readers will announce an accurate representation of the code components interface. The Microsoft Fluent UI library makes this easy since many of the components are already accessible and screen reader compatible. 
-- Modern browser developer tools today have good tools to inspect accessibility. Use these tools to look for common accessibility issues with your code component.
+- Ensure that `alt` and [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) (Accessible Rich Internet Applications) attributes are set so that screen readers will announce an accurate representation of the code components interface. The Microsoft Fluent UI library makes this easy since many of the components are already accessible and screen reader-compatible. 
+- Modern browser developer tools offer helpful ways to inspect accessibility. Use these tools to look for common accessibility issues with your code component.
 
 More information: [Create accessible canvas apps in Power Apps](/powerapps/maker/canvas-apps/accessible-apps).
 
 #### Always use asynchronous network calls
 
-When making network calls, never use a synchronous blocking request since this causes the app to stop responding and cause slow performance. More information: [Interact with HTTP and HTTPS resources asynchronously](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously).
+When making network calls, never use a synchronous blocking request since this causes the app to stop responding and result in slow performance. More information: [Interact with HTTP and HTTPS resources asynchronously](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously).
 
 #### Write code for multiple browsers
 
-Model-driven apps, canvas apps and portals all support multiple browsers. Be sure to use only techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time it still may be in use by some users.
+Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time, it still may be in use by some users.
 
 - [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
 - [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)
 - [Browsers used by office](/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins)
 
-#### Code components should plan for supporting multiple clients & screen formats
+#### Code components should plan for supporting multiple clients and screen formats
 
-Code components can be rendered in multiple clients (model-driven apps, canvas apps, portals) & screen formats (mobile, tablet, web). When used in model-driven apps, dataset code components can be placed on main form grids, related record grids, subgrids, or dashboards. When used in canvas apps, code components can be placed inside responsive containers that resizes dynamically using the configuration provided by app maker.
+Code components can be rendered in multiple clients (model-driven apps, canvas apps, portals) and screen formats (mobile, tablet, web). When used in model-driven apps, dataset code components can be placed on main form grids, related record grids, subgrids, or dashboards. When used in canvas apps, code components can be placed inside responsive containers that resize\ dynamically using the configuration provided by the app maker.
 
-- Using  [`trackContainerResize`](reference\mode\trackcontainerresize.md) allows code components to respond to changes in the available width and height. In some cases, this may mean rendering a different UI that fits the space available. Using `allocatedHeight` and `allocatedWidth` can be combined with [`getFormFactor`](reference\client\getformfactor.md) to determine if the code component is running on a Mobile, Tablet or Web client. More information: [Choices picker sample](tutorial-create-model-driven-field-component.md) article that renders using a drop-down instead of the icon choice picker when on narrow or mobile form factors. 
+- Using  [`trackContainerResize`](reference\mode\trackcontainerresize.md) allows code components to respond to changes in the available width and height. In some cases, this may mean rendering a different UI that fits the space available. Using `allocatedHeight` and `allocatedWidth` can be combined with [`getFormFactor`](reference\client\getformfactor.md) to determine if the code component is running on a mobile, tablet, or web client. More information: See this [Choices picker tutortial](tutorial-create-model-driven-field-component.md). 
 - Implementing [`setFullScreen`](reference\mode\setfullscreen.md) allows users to expand to use the entire available screen available where space is limited. More information: [Canvas app grid component](tutorial-create-canvas-dataset-component.md).
 - If the code component cannot provide a meaningful experience in the given container size, it should disable functionality appropriately and provide feedback to the user.
 
 #### Always use scoped CSS rules
 
-When you implement styling to your code components using CSS, ensure that the CSS is scoped to your component using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
+When you implement styling to your code components using CSS, ensure that the CSS is scoped to your component using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third party CSS framework, use a version of that framework that's already namespaced or otherwise wrap that framework in a namespace either by hand or using a CSS preprocessor.
 
 For example, if your namespace is `SampleNamespace` and your code component name is `LinearInputComponent`, you would add a custom CSS rule using:
 
@@ -275,7 +276,7 @@ Code components should not use the HTML web storage objects, like `window.localS
 
 ## ALM/Azure DevOps/GitHub
 
-See the article on [Code Component Application Lifecycle Management (ALM)](code-components-alm.md) for best practices on code components with ALM/Azure DevOps/GitHub.
+See the article on [Code component application lifecycle management (ALM)](code-components-alm.md) for best practices on code components with ALM/Azure DevOps/GitHub.
 
 ## Related topics
 
