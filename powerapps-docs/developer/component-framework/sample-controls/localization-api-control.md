@@ -18,7 +18,7 @@ This sample showcases how localization is done for code components. In this samp
 
 Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](/dynamics365/customer-engagement/developer/resx-web-resources). 
 > [!div class="mx-imgBorder"]
-> ![Localization API component](../media/localization-api-control.png "Localization API component")
+> ![Localization API component.](../media/localization-api-control.png "Localization API component")
 
 ## Available for 
 

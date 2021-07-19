@@ -1,6 +1,6 @@
 ---
-title: Choices function | Microsoft Docs
-description: Reference information, including syntax, for the Choices function in Power Apps
+title: Choices function in Power Apps
+description: Reference information including syntax and examples for the Choices function in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 06/15/2018
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - nkrb
 ---
 # Choices function in Power Apps
 Returns a table of the possible values for a lookup column.
@@ -26,7 +30,7 @@ For a lookup, the table that **Choices** returns matches the foreign table that'
 
 Because **Choices** returns a table, you can use [**Filter**](function-filter-lookup.md), [**Sort**](function-sort.md), [**AddColumns**](function-table-shaping.md), and all the other table-manipulation functions to filter, sort, and shape the table. 
 
-At this time, you can't [delegate](../delegation-overview.md) **Choices**. If this limitation poses a problem in your app, add the foreign entity as a data source, and use it directly. 
+At this time, you can't [delegate](../delegation-overview.md) **Choices**. If this limitation poses a problem in your app, add the foreign table as a data source, and use it directly. 
 
 **Choices** doesn't require column names to be strings and enclosed in double quotes, unlike the [**ShowColumns**](function-table-shaping.md), [**Search**](function-filter-lookup.md), and other table functions. Provide the formula as if you were referencing the column directly.
 
@@ -45,33 +49,33 @@ At this time, you can use lookup columns only with SharePoint and Microsoft Data
 
 1. [Create a database](/power-platform/admin/create-database) in Dataverse, and select the **Include sample apps and data** box.
 
-    Many entities, such as **Accounts**, are created.
+    Many tables, such as **Accounts**, are created.
 
-    **Note**: Entity names are singular on make.powerapps.com and plural in Power Apps Studio.
+    **Note**: Table names are singular on make.powerapps.com and plural in Power Apps Studio.
 
-    ![A partial list of the fields from the Account entity in Dataverse for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account table in Dataverse for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
-    The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
+    The **Accounts** table has a **Primary Contact** column, which is a lookup to the **Contacts** table.  
 
-    ![A partial list of the fields from the Contact entity in the Dataverse](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact table in the Dataverse.](media/function-choices/entity-contact.png)
 
     For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
-1. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
+1. [Generate an app](../data-platform-create-app.md) from the **Accounts** table.
 
 1. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
 
-    ![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
+    ![In the left navigation bar, select EditForm1 on EditScreen1.](media/function-choices/select-editform.png)
 
 1. On the **Properties** tab of the right pane, select **Edit fields**.
 
-    ![Open the Data pane](media/function-choices/open-data-pane.png)
+    ![Open the Data pane.](media/function-choices/open-data-pane.png)
 
 1. In the **Fields** pane, select **Add field**.
 
 1. Search for the **Primary Contact** field, select its check box, and then select **Add**.
 
-    ![Select Accounts to open the Data pane](media/function-choices/field-list.png)
+    ![Select Accounts to open the Data pane.](media/function-choices/field-list.png)
 
     The **Primary Contact** field appears at the bottom of the form. If the field shows an error, select **Data sources** on the **View** tab, select the ellipsis (...) for the **Accounts** data source, and then select **Refresh**.
 
@@ -84,7 +88,7 @@ At this time, you can use lookup columns only with SharePoint and Microsoft Data
    - **Choices( Accounts.'Primary Contact' )**
    - **Choices( Accounts.primarycontactid )**
 
-     ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
+     ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears.](media/function-choices/accounts-primary-contact.png)
 
 1. For illustration purposes, we can view the complete table returned by the **Choices** function in a **Data table** control.  On the **Home** tab, select **New screen**, and then select **Blank**.
 
@@ -96,7 +100,7 @@ At this time, you can use lookup columns only with SharePoint and Microsoft Data
 
 1. In the middle of the **Data table** control, select the link that starts **Choose the fields...**, and then select the check boxes for the field or fields that you want to show (for example, **firstname** and **lastname**).
 
-     ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
+     ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts table.](media/function-choices/full-accounts-pc.png)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

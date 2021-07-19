@@ -49,7 +49,7 @@ This custom workflow activity will match the following requirements:
 
 In a workflow for the **Account** entity it may be used in the following manner to increment the **Credit limit** value using two steps:
 
-![The goal for this tutorial](media/tutorial-create-workflow-activity-goal.png)
+![The goal for this tutorial.](media/tutorial-create-workflow-activity-goal.png)
 
 Step 1 uses the **Sample: Increment by 10** custom workflow activity to accept the **Account Credit Limit** value and increment it by 10.
 Step 2 uses the **Update Record** action to update the **Account Credit Limit** value with the incremented value.
@@ -58,17 +58,17 @@ Step 2 uses the **Update Record** action to update the **Account Credit Limit** 
 
 When the first step is added, the custom workflow activity will be available in a **Sample** group and have the name **Increment by 10**.
 
-![The increment by 10 step](media/tutorial-create-workflow-activity-increment-by-10-step.png)
+![The increment by 10 step.](media/tutorial-create-workflow-activity-increment-by-10-step.png)
 
 When configuring the first step by clicking the **Set Properties** button, the **Decimal input** property will be required and accept only a decimal value, such as the **Credit Limit** attribute of the **Account** entity.
 
-![Setting decimal input](media/tutorial-create-workflow-activity-step1.png)
+![Setting decimal input.](media/tutorial-create-workflow-activity-step1.png)
 
 ### Step 2: Set new Account Credit Limit
 
 In the second step, an **Update Record** action will assign the output of the **Get incremented Account Credit Limit** step to update the **Account Credit** limit value with the incremented value.
 
-![Update the credit limit](media/tutorial-create-workflow-activity-step2.png)
+![Update the credit limit.](media/tutorial-create-workflow-activity-step2.png)
 
 ## Create a Visual Studio Class Library project
 
@@ -78,12 +78,12 @@ This project will create a simple workflow assembly that will increment an decim
 1. On the **File** menu, click **New**, and then click **Project**.
 1. Search for *Class library* and select **Class Library (.NET Framework)**.
 
-    ![Searching for class library (.NET Framework)](media/create-new-class-library-project.png)
+    ![Searching for class library (.NET Framework).](media/create-new-class-library-project.png)
 
 1. Click **Next**.
 1. Specify a name and location for the solution.
 
-    ![Configure your new project dialog in Visual Studio 2019](media/configure-your-new-project.png)
+    ![Configure your new project dialog in Visual Studio 2019.](media/configure-your-new-project.png)
 
     > [!NOTE]
     > Choose a Project name that makes sense for your project. In this example we will use `SampleWorkflowActivity`.
@@ -91,35 +91,35 @@ This project will create a simple workflow assembly that will increment an decim
 1. Click **Create**.
 1. In the **Solution Explorer**, right-click on the project select **Properties**. On the **Application** tab, verify that  **.NET Framework 4.6.2** is set as the target framework.
 
-    ![set project properties](media/tutorial-create-workflow-activity-workflow-project.png)
+    ![set project properties.](media/tutorial-create-workflow-activity-workflow-project.png)
 
 1. In the **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** .
 
-    ![manage nuget packages](media/tutorial-create-workflow-activity-manage-nuget-packages.png)
+    ![manage nuget packages.](media/tutorial-create-workflow-activity-manage-nuget-packages.png)
 
 1. Browse for the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package and install it.
 
-    ![Install Microsoft.CrmSdk.Workflow Workflow NuGet Package](media/select-install-microsoft.crmsdk.workflow-nuget-package.png)
+    ![Install Microsoft.CrmSdk.Workflow Workflow NuGet Package.](media/select-install-microsoft.crmsdk.workflow-nuget-package.png)
 
     > [!NOTE]
     > Make sure that the package you are installing is owned by [crmsdk](https://www.nuget.org/profiles/crmsdk). This package will include the `Microsoft.Xrm.Workflow.dll` include a dependency on the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) package so that the required `Microsoft.Xrm.Sdk.dll` assembly is included as well. 
 
 1. You must click **I Accept** in the **License Acceptance** dialog.
 
-    ![Accept license agreement](media/tutorial-create-workflow-activity-license-acceptance.png)
+    ![Accept license agreement.](media/tutorial-create-workflow-activity-license-acceptance.png)
 
 ## Rename the class file
 
 1. In **Solution Explorer**, right-click the default Class1.cs file and and select **Rename**.
 
-    ![Rename Class1.cs file](media/rename-class1-file.png)
+    ![Rename Class1.cs file.](media/rename-class1-file.png)
 
     > [!NOTE]
     > Choose a class name that makes sense for your activity. In this example, we will name the class `IncrementByTen`.
 
 1. Select **Yes** in the dialog box that asks if you would like to rename the class as well.
 
-    ![Select Yes to rename the class as well](media/rename-file-dialog.png)
+    ![Select Yes to rename the class as well.](media/rename-file-dialog.png)
 
 1. Open the IncrementByTen.cs file, and add the following using directives:
 
@@ -140,7 +140,7 @@ This project will create a simple workflow assembly that will increment an decim
 
 1. Add the **Execute** method from the `CodeActivity` class using Visual Studio Quick actions or manually:
 
-    ![implement codeactivity interface](media/tutorial-create-workflow-activity-implement-codeactivity-interface.png)
+    ![implement codeactivity interface.](media/tutorial-create-workflow-activity-implement-codeactivity-interface.png)
 
 1. The class now looks like this:
 
@@ -195,7 +195,7 @@ Add the logic within the Execute method to apply the logic to increment the inpu
 1. Custom workflow activity (and plug-in) assemblies must be signed. In the project properties, under the **Signing** tab, select **Sign the assembly**. Below **Choose a strong name key file**, select the **&lt;New...&gt;** option.
     You do not need to set a password for the purpose of this tutorial. For this example we created a new strong name key file named `SampleWorkflowActivity.snk`
 
-    ![sign assembly](media/tutorial-create-workflow-activity-sign-assembly.png)
+    ![sign assembly.](media/tutorial-create-workflow-activity-sign-assembly.png)
 
 1. Build the solution in Debug mode and verify that the `SampleWorkflowActivity.dll` assembly is in the `/bin/Debug` folder.
 
@@ -212,18 +212,18 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
 1. Select **Register** > **Register New Assembly**
 
-    ![register assembly command](media/tutorial-create-workflow-activity-register-assembly.png)
+    ![register assembly command.](media/tutorial-create-workflow-activity-register-assembly.png)
 
 1. In the **Register New Assembly** dialog, click the ellipses button (**…**) and navigate to the `SampleWorkflowActivity.dll` in the `/bin/Debug` folder.
 
-    ![register assembly dialog](media/tutorial-create-workflow-activity-register-assembly-dialog.png)
+    ![register assembly dialog.](media/tutorial-create-workflow-activity-register-assembly-dialog.png)
 
     > [!NOTE]
     > Note: With Dataverse the only valid options for Steps 3 & 4 are selected and invalid options are disabled.
 
 1. Click **Register Selected Plugins**. You should see a confirmation dialog.
 
-    ![registered plug-in dialog](media/tutorial-create-workflow-activity-register-plug-in-dialog.png)
+    ![registered plug-in dialog.](media/tutorial-create-workflow-activity-register-plug-in-dialog.png)
 
 1. Click **OK** to close the **Register New Assembly** dialog.
 
@@ -244,7 +244,7 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
 1. Click the **Save** (icon) to save the changes.
 
-    ![Save workflow activity properties](media/tutorial-create-workflow-activity-set-workflow-activity-properties.png)
+    ![Save workflow activity properties.](media/tutorial-create-workflow-activity-set-workflow-activity-properties.png)
 
 ## Test your assembly
 
@@ -255,7 +255,7 @@ You can test your new workflow activity by creating a process that will use it. 
 1. Open the **CDS Default Publisher** solution.
 1. In the menu, expand the **...** and choose **Switch to classic**.
     
-    ![Switch to classic user interface](media/switch-to-classic-solution-ui.png)
+    ![Switch to classic user interface.](media/switch-to-classic-solution-ui.png)
 
 1. Select **Processes** in the **Components** list
 1. Select **New** and in the **Create Process** dialog enter the following:
@@ -270,7 +270,7 @@ You can test your new workflow activity by creating a process that will use it. 
     > [!NOTE]
     > The option to **Run this workflow in the background** has been de-selected to make this a real-time (synchronous) workflow. This will make testing simpler.
 
-    ![Creating a process](media/tutorial-create-workflow-activity-test-activity-process.png)
+    ![Creating a process.](media/tutorial-create-workflow-activity-test-activity-process.png)
 
 1. Click **OK**
 1. Apply the following changes:
@@ -280,41 +280,41 @@ You can test your new workflow activity by creating a process that will use it. 
     |Scope|Organization|
     |Start when: Record fields change|selected, and `name` field specified in the dialog.|
 
-    ![configuration of a test workflow](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
+    ![configuration of a test workflow.](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
 
     > [!NOTE]
     > Setting **Scope** to **Organization** creates a workflow that can be applied by anyone in the organization.
 
 1. Add the following **Step**:
 
-    ![Add the SampleWorkflowActivity.IncrementByTen step](media/tutorial-create-workflow-activity-use-sample-step.png)
+    ![Add the SampleWorkflowActivity.IncrementByTen step.](media/tutorial-create-workflow-activity-use-sample-step.png)
 
 1. Set the Step **Description** to **Get incremented Account Credit Limit** and click **Set properties**.
 1. Set the value of the **Decimal input** property to the Credit Limit of the account with a default value of 0.
 
-    ![Set the decimal input property](media/tutorial-create-workflow-activity-configure-first-step.png)
+    ![Set the decimal input property.](media/tutorial-create-workflow-activity-configure-first-step.png)
 
 1. Click **Save and Close**.
 1. Add an **Update Record** step:
 
-    ![Add an update record step](media/tutorial-create-workflow-activity-add-update-record-step.png)
+    ![Add an update record step.](media/tutorial-create-workflow-activity-add-update-record-step.png)
 
 1. Click **Set Properties** and set the value of the **Credit Limit** to the value of the **Get incremented Account Credit Limit** step.
 
-    ![Set the value of the credit limit](media/tutorial-create-workflow-activity-set-credit-limit.png)
+    ![Set the value of the credit limit.](media/tutorial-create-workflow-activity-set-credit-limit.png)
 
     The workflow steps should look like this:
 
-    ![The completed workflow](media/tutorial-create-workflow-activity-completed-workflow.png)
+    ![The completed workflow.](media/tutorial-create-workflow-activity-completed-workflow.png)
 
 1. Click **Save and Close**.
 1. Activate the workflow by clicking **Activate** in the menu...
 
-    ![activate workflow command](media/tutorial-create-workflow-activity-activate-command.png)
+    ![activate workflow command.](media/tutorial-create-workflow-activity-activate-command.png)
 
 1. And click **Activate** in the **Process Activate Confirmation** dialog.
 
-    ![Process Activate Confirmation dialog](media/tutorial-create-workflow-activity-process-activate-confirmation-dialog.png)
+    ![Process Activate Confirmation dialog.](media/tutorial-create-workflow-activity-process-activate-confirmation-dialog.png)
 
 1. Navigate to a model-driven app and view a list of acccounts.
 1. Select an account.
@@ -322,7 +322,7 @@ You can test your new workflow activity by creating a process that will use it. 
 1. Save the account record.
 1. Verify that the account you edited has **Credit Limit** value has increased by 10.
 
-    ![verify account credit limit incremented](media/tutorial-create-workflow-verify-credit-limit.png)
+    ![verify account credit limit incremented.](media/tutorial-create-workflow-verify-credit-limit.png)
 
 ## Add your assembly to a solution
 
@@ -331,7 +331,7 @@ To distribute a custom workflow activity in a solution, you must add the registe
 1. Open the unmanaged solution you want to add the assembly to using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Select **Add existing** > **Other** > **Plugin assembly**
 
-    ![Add existing plugin assembly](media/add-existing-plugin-assembly.png)
+    ![Add existing plugin assembly.](media/add-existing-plugin-assembly.png)
 
 1. Search for the Plugin assembly by name, in this case 'SampleWorkflowActivity'.
 1. Select the plugin assembly and select **Add**.

@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/10/2021
+ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: tapanm
 contributors:
@@ -27,7 +28,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 2.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
 
     > [!div class=mx-imgBorder]
-    > ![create a new webpage](media/create-webpage.png "Create a new webpage")
+    > ![create a new webpage.](media/create-webpage.png "Create a new webpage")
 
     > [!NOTE]
     > - Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
@@ -42,18 +43,18 @@ A webpage is a document that is identified by a unique URL in a website. It is o
     - **Template**: Page template used to render this page on the portal. If required, you can choose another template from the list.
 
         > [!div class=mx-imgBorder]
-        > ![webpage properties](media/webpage-props.png "Webpage properties")
+        > ![webpage properties.](media/webpage-props.png "Webpage properties")
 
-The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view the this pane, select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view the this pane, select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 Let's say you have created a few webpages for your portal. The page hierarchy looks as follows:
 
-![pages pane](media/pages-pane.png "Pages pane")  
+![pages pane.](media/pages-pane.png "Pages pane")  
 
 The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
-> ![website navigation](media/website-navigation.png "Website navigation")
+> ![website navigation.](media/website-navigation.png "Website navigation")
 
 If you are working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
@@ -61,13 +62,13 @@ If you are working with a portal created in an environment containing customer e
 > When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
 
 > [!div class=mx-imgBorder]
-> ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
+> ![Default navigation menu.](media/navigation-menu-default.png "Default navigation menu")
 
 ## Manage webpage
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Pages and navigation** ![pages icon](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+2.  Select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
 3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 
@@ -93,7 +94,7 @@ If you are working with a portal created in an environment containing customer e
     - **Delete**: Delete the page.
 
         > [!div class=mx-imgBorder]
-        > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
+        > ![webpage manage options.](media/webpage-manage-options.png "Webpage manage options")  
 
 ## Next steps
 

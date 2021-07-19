@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
+ms.subservice: teams
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -15,7 +16,7 @@ contributors:
 ---
 
 
-# Understand Perspectives (Preview) sample apps architecture
+# Understand Perspectives sample apps architecture (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -42,7 +43,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 The following diagram illustrates the way that users and systems interact with
 data in this solution.
 
-![Perspectives sample app architecture model](media/perspectives-architecture/architecture-model.png "Inspection sample app architecture model")
+![Perspectives sample app architecture model.](media/perspectives-architecture/architecture-model.png "Inspection sample app architecture model")
 
 ### Connectors
 
@@ -56,7 +57,7 @@ Perspectives app uses the following connectors
 
 The following diagram explains the data model used by the Perspectives sample app.
 
-![Perspectives sample app data model](media/perspectives-architecture/data-model.png "Perspectives sample app data model")
+![Perspectives sample app data model.](media/perspectives-architecture/data-model.png "Perspectives sample app data model")
 
 ### Tables
 

@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -38,7 +39,7 @@ Power Apps enables configuring the most common options, but certain options can 
 2. Select **Keys** to view a list of any alternate keys that are defined.
 
    > [!div class="mx-imgBorder"] 
-	 > ![View alternate keys](media/view-alternate-keys-portal.png)
+	 > ![View alternate keys.](media/view-alternate-keys-portal.png)
 
 ## Create an alternate key
 
@@ -47,7 +48,7 @@ Power Apps enables configuring the most common options, but certain options can 
 
     The **Name** column will be populated based on the display name.
 
-    ![Example Alternate Key Definition](media/alternate-key-account-number-sic-code.png)
+    ![Example Alternate Key Definition.](media/alternate-key-account-number-sic-code.png)
 
 1. Select **Done** to close the panel.
 2. Select **Save table** to create the alternate key.

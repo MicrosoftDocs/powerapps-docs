@@ -5,6 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
+ms.reviewer: phecke
 manager: austinj
 editor: ''
 tags: ''
@@ -14,6 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 9/05/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer

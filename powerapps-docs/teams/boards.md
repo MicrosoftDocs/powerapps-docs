@@ -1,11 +1,12 @@
 ---
-title: Boards (Preview) sample app
+title: Boards sample app (Preview)
 description: Learn how to use the Boards app.
 author: joel-lindstrom
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
+ms.subservice: teams
 ms.author: v-ljoel
 ms.reviewer: tapanm
 contributors:
@@ -14,7 +15,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Boards (Preview) sample app
+# Boards sample app (Preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -85,13 +86,13 @@ To open the Boards app:
 
 
 
-    ![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend."](media/boards/splash-screen.png "Splash screen")
+    ![Screen displaying a message that reads "Built with Microsoft Power Platform. Ready for you to extend.".](media/boards/splash-screen.png "Splash screen")
 
 ## Understanding the Boards app interface
 
 The Boards app displays boards grouped by category. A Board is a collection of pinned items for a topic.
 
-![The main screen of the Boards app](media/boards/main-boards-screen.png "Main Boards screen")
+![The main screen of the Boards app.](media/boards/main-boards-screen.png "Main Boards screen")
 
 
 
@@ -103,17 +104,17 @@ The Boards app displays boards grouped by category. A Board is a collection of p
 
 3. In right corner, select **Add a board**.
 
-   ![The add a board button on the Boards main screen is selected](media/boards/add-a-board-button.png "Add a board")
+   ![The add a board button on the Boards main screen is selected.](media/boards/add-a-board-button.png "Add a board")
 
 4. Enter the title, category, and a description of the board.
 
-   ![The fields that should be populated when creating a board](media/boards/add-new-board-screen.png "Add new board screen")
+   ![The fields that should be populated when creating a board.](media/boards/add-new-board-screen.png "Add new board screen")
 
 5. Select **Save**.
 
 6. New board is created.
 
-    ![A new board is created](media/boards/board-created.png "Board created")
+    ![A new board is created.](media/boards/board-created.png "Board created")
 
 ## Open a board
 
@@ -123,7 +124,7 @@ From the Boards app, you can search for board topics that interest you and open 
 
 2. Type the name of the board or category you want to find.
 
-   ![Search field is selected and search results displayed](media/boards/board-search.png "Board search")
+   ![Search field is selected and search results displayed.](media/boards/board-search.png "Board search")
 
 3. Boards in your organization that match the search words will be displayed. Select the board you want.
 
@@ -131,7 +132,7 @@ From the Boards app, you can search for board topics that interest you and open 
 
 5. Search results are organized by category, or you can select **All** to view all returned results.
 
-   ![category selector allows item list to be filtered by item category](media/boards/category-filter.png "Category filter")
+   ![category selector allows item list to be filtered by item category.](media/boards/category-filter.png "Category filter")
 
 ## Pin an item to a board
 
@@ -141,7 +142,7 @@ For example, you might want to share a link to a book written by an author with 
 
 1. Open the board you want. In this example, we open the sample board **Book Club.**
 
-   ![The add a board button is selected](media/boards/board-screen.png "Board screen")
+   ![The add a board button is selected.](media/boards/board-screen.png "Board screen")
 
 2. Select **Add to board.**
 
@@ -170,7 +171,7 @@ You can sort the order in which board categories are displayed on the main Board
 2.  From the pop-up, select arrows up or down to make categories sorted and
     displayed in that order. 
     
-    ![Board category sort and display options](media/boards/category-sort.png "Category sort")
+    ![Board category sort and display options.](media/boards/category-sort.png "Category sort")
     
     
     
@@ -196,7 +197,7 @@ To edit the boards:
 
 4. Select **Edit**.
 
-   ![Edit button is selected](media/boards/edit-board.png "Edit board")
+   ![Edit button is selected.](media/boards/edit-board.png "Edit board")
 
 5. Change the Title, Category, and Description.
 
@@ -204,7 +205,7 @@ To edit the boards:
 
 7. Select **Save**.  
 
-   ![A custom image is selected for the board image](media/boards/save-button.png "Save button")
+   ![A custom image is selected for the board image.](media/boards/save-button.png "Save button")
 
 ## Add categories
 
@@ -220,11 +221,11 @@ To add categories:
 
 4. Select **Add Category**.
 
-   ![Add category button is selected](media/boards/add-category-button.png "add a category")
+   ![Add category button is selected.](media/boards/add-category-button.png "add a category")
 
 5. Change the title, category, and description.
 
-   ![New category is added to category list](media/boards/create-board-screen.png "Create Board Screen")
+   ![New category is added to category list.](media/boards/create-board-screen.png "Create Board Screen")
 
 6. Add an image.
 
@@ -242,7 +243,7 @@ To add categories:
 
 2. Right-click on Power Apps icon and select **Pop out app** to open the app in a new window. This pop-out action will ensure that you don't lose your changes if you browse somewhere else in Teams.
 
-   ![The main screen for Power Apps app in Teams](media/boards/power-apps-screen.png "Power Apps screen")
+   ![The main screen for Power Apps app in Teams.](media/boards/power-apps-screen.png "Power Apps screen")
 
 3. Select **Build** tab.
 
@@ -250,13 +251,13 @@ To add categories:
 
 5. In the Boards tile, select the Boards app to open it in Power Apps in Team.
 
-   ![Installed apps tab is selected and boards tile is selected](media/boards/boards-tile.png "Boards tile")
+   ![Installed apps tab is selected and boards tile is selected.](media/boards/boards-tile.png "Boards tile")
 
 6. You may get prompted to authorize the app's connectors to connect. Select **Allow**.
 
 7. You can now customize the app.
 
-![Boards Power App in Power Apps studio in Teams](media/boards/power-apps-studio.png "Power Apps studio")
+![Boards Power App in Power Apps studio in Teams.](media/boards/power-apps-studio.png "Power Apps studio")
 
 ### See also
 
