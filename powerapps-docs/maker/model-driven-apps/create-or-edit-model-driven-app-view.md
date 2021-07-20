@@ -113,8 +113,8 @@ Views display records from a table that contains rows and columns. Each record i
 
    ![Add a column](media/create-or-edit-model-driven-app-view/open-and-add-a-view-in-the-app-designer-3.png "Add a column")
     
-1. From the list of columns, select the column you want, such as the **Account Rating** column,and drag it to the view heading. You can also add the column by double-clicking it.
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/add-account-rating-column.png" alt-text="Add the Account Rating column to the view":::
+1. From the list of columns, select the column you want, such as the **Address 1: State/Province** column,and drag it to the view heading. You can also add the column by double-clicking it.
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/add-address1-state-column.png" alt-text="Add the Address 1: State/Province column to the view":::
 1. Repeat step 3 until you've added all the columns you want to display in your view. As you add columns, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view by dragging the column heading to the column heading where you want to move it.
 1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
 
