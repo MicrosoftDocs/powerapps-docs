@@ -1,4 +1,3 @@
-
 ---
 title: "Command designer overview | MicrosoftDocs"
 description: "Overview of modern commanding, command designer, and Power Fx"
