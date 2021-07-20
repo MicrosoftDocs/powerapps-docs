@@ -26,8 +26,8 @@ search.app:
   
  Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar. 
  
-    > [!div class="mx-imgBorder"]
-    > ![Command bar](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-location.png "Command bar")
+> [!div class="mx-imgBorder"]
+> ![Command bar](media/CommandDesigner-location.png "Command bar")
  
  ## Classic commanding gaps
  Classic commands (formerly known as the ribbon) were not customizable via low code; with code it was difficult, tedious, & error prone.   In order to scale commanding to low-code as well as **converge canvas and model-driven apps**, it was vital to re-invent and re-build the infrastructure. 
@@ -64,22 +64,22 @@ search.app:
 ## Command bar locations
 1.	**Main grid** - Command bar displayed when using the left-hand navigation of an app to view a full page list of records in this table.
     > [!div class="mx-imgBorder"]
-    > ![Main grid](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-home-grid-location.png "Main grid")
+    > ![Main grid](media/commanddesigner-home-grid-location.png "Main grid")
     
  2.	**Main form** - Command bar displayed on this table’s main forms. This appears at the top of the form and is not the same as the Associated view or Subgrid view that will appear in different areas of the form.   
     > [!div class="mx-imgBorder"]
-    > ![Main form](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-main-form-location.png "Main form")
+    > ![Main form](media/CommandDesigner-main-form-location.png "Main form")
     
 3.	**Subgrid view** - Command bar is displayed on forms of other tables that render this table’s data within a subgrid. 
 a.	For example, the Account main form has a subgrid control that lists contact records related to this account record. To edit the below command bar, edit the command bar for the contact table then Subgrid view.
     > [!div class="mx-imgBorder"]
-    > ![Subgrid view](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-subrid-location.png "Subgrid view")
+    > ![Subgrid view](media/CommandDesigner-subrid-location.png "Subgrid view")
 
 4.	**Associated view** - Command bar is displayed on the form of a parent table when viewing related data in this table.
 a.	For example, from the main form of an Account record select the Related tab then select a related table like Contacts.
     > [!div class="mx-imgBorder"]
-    > ![Associated view](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-associated-view-location.png "Associated view")
+    > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
  5.	**Quick actions** – there is not a specialized entry point from the command designer because quick actions are edited via the Main grid of the table.   
     > [!div class="mx-imgBorder"]
-    > ![Quick actions](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-quick-actions-location.png.jpg "Quick actions")
+    > ![Quick actions](media/CommandDesigner-quick-actions-location.png.jpg "Quick actions")
