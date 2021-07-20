@@ -37,68 +37,68 @@ This topic guides you through creating and editing modern commands using the new
 
 1. Select **Use modern app designer**, and then select **Next**
 
-    > [!div class="mx-imgBorder"]
-    > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")
+<!--     > [!div class="mx-imgBorder"]
+    > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")  -->
 
 1. Enter the new app's name.
 
-    > [!div class="mx-imgBorder"]
-    > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt")
+<!--    > [!div class="mx-imgBorder"]
+    > ![New model-driven app name prompt](media/add-page-to-model-app/app-designer-name-prompt.png "New model-driven app name prompt") -->
 
 ### Open an existing model-driven app using modern app designer
 
-1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
+1. Go to [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
 1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
 
-    > [!div class="mx-imgBorder"]
-    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+<!--    > [!div class="mx-imgBorder"]
+    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview") -->
     
 ## Create or edit modern commands
 
-Command designer can currently only be accessed through the modern app designer.
+Once you are in the app designer, use the command designer to customize your command bars.
 
- > [!NOTE]
- > Classic commands cannot currently be edited within the command designer. 
+> [!NOTE]
+> Command designer can currently only be accessed through the modern app designer.
+> Classic commands cannot currently be edited within the command designer.
  
  ### Edit the command bar
  
- 1. Open modern app designer.
+1. Make sure you **Publish** you app before you work with the command designer.
  
- 1. Ensure to **publish** the app.
+1. Select any table from the **Pages** area in the app designer.
  
- 1. Select any table from the **Pages** area.
- 
- 1. Click the elipsis. Select **Edit command bar (preview)** 
+ 1. Select **...** (ellipsis), and then select **Edit command bar (preview)**.
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-App designer entry point.png "App Designer entry point")
  
- 1. Select the **location** of the command bar you'd like to edit.
+1. Select the **location** of the command bar you'd like to edit.
     > [!div class="mx-imgBorder"]
     > ![Select location](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Command bar location selection.png "Select location")
   
  ### Create a new command
- > [!NOTE]
- > Unlike classic commands, modern commands will only be displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance. Support for creating commands that display across all apps is targeted for a future release. 
- > A command component library will be created on your behalf to store **Power Fx** formulas.
+
+Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance. 
+
+A command component library will be created on your behalf to store **Power Fx** formulas.
  
- 1. In command designer click **+ New**.
+1. In command designer select **+ New**.
  
- 1. Provide a **label** and or an **icon**.
+1. Provide a **label** and an **icon**.
  
- 1. You may choose from any system font icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG**, **Save**, and **Publish** the web resource. 
+1. You may choose from any system font icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG**, **Save**, and **Publish** the web resource.
  
- 1. Move the command to the desired location. You may arrange modern commands amonst classic commands.
+1. Move the command to the desired location. You may arrange modern commands amongst classic commands.
  
- 1. Optionally provide **Tooltip** and **Accessibility** information
+1. Optionally provide **Tooltip** and **Accessibility** information.
  
+## User Power Fx for actions and visibility
+
+You may now use Power Fx for both Actions (what happens when the button is clicked) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands. 
  
- ## User Power Fx for Actions and Visibility
- You may now use Power Fx for both Actions (what happens when the button is clicked) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands. 
- 
- You’ll notice it has a similar formula bar experience as canvas apps. However, not all functions available within canvas apps are supported currently for commands. Additionally, we've introduced some new functions specific to commands.
+You’ll notice it has a similar formula bar experience as canvas apps. However, not all functions available within canvas apps are supported currently for commands. Additionally, we've introduced some new functions specific to commands.
  
  For working with **Dataverse** data you may use Power Fx formulas just as you would in canvas apps. The main difference is you cannot currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
   > [!NOTE]
@@ -112,22 +112,23 @@ Command designer can currently only be accessed through the modern app designer.
 2.	Click **Add library** or select one from the list. The list is populated with any libraries in use by the current command bar. 
  
     > [!div class="mx-imgBorder"]
-    > ![Add JavaScript Library](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
+    > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
 
 3.	Search for existing JavaScript web resources or you may add your own. **Add**.
 
     > [!div class="mx-imgBorder"]
-    > ![Add JavaScript Library](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Library Modal.png "Add JavaScript Library")
+    > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library Modal.png "Add JavaScript Library")
  
-4.	Type the Function name.	For example, chose the Main_system_library.js then call this function: XrmCore.Commands.Open.opennewrecord
+4. Type the Function name.	For example, choose the `Main_system_library.js` then call this function: `XrmCore.Commands.Open.opennewrecord`
 
-6.	Add parameters to pass to your function. Existing functionality is supported here. 
+6. Add parameters to pass to your function. Existing functionality is supported here. 
 
     > [!div class="mx-imgBorder"]
-    > ![Add Parameters](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Add JavaScript Parameters.png "Add Parameters")
+    > ![Add Parameters](media/CommandDesigner-Add JavaScript Parameters.png "Add Parameters")
  
-  > [!NOTE] 
-  > We are not supporting the use of calling multiple JavaScript libraries or calling multiple functions from a single command.
+> [!NOTE]
+> The use of calling multiple JavaScript libraries or calling multiple functions from a single command is not supported.
   
-  
-  ## Related topics
+## See also
+
+[Modern commanding overview](command-designer-overview.md)
