@@ -60,7 +60,7 @@ The custom page is a new page type within model-driven app, which brings in the 
 
 * When navigating back to a custom page from another page, the page state is not restored so the page is like a new navigation.  We are looking at enabling page state to be saved before navigating away and restored on reload.
 
-* Native player support (for example, iOS, Android) is coming soon for online-only. Offline support will be coming in 2022.
+* Native player support is available for iOS and Android in online-only mode. Offline support will be coming in 2022.  The preview Windows player current reports an error when the custom page is opened.
 
 * When a user using model-driven apps in Teams opens a custom page, an error message will indicate not supported yet.
 
