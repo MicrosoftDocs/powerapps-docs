@@ -176,16 +176,16 @@ When a view is opened, the records displayed are sorted in the order you set whe
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 
-### Edit a public or system view in app designer
+### Edit an active public or system view in app designer
 
-You can change the way a public or system view is displayed by adding, configuring, or removing columns.
+You can change the way an active public or system view is displayed that's selected for the app by opening it from the app designer canvas.
 
 1. In the **Views** list for a table, select the **Show list of references** down arrow 
  ![Drop Down](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-2.png "Drop Down").
    > [!NOTE]
    > The down arrow is only displayed when the table views are not configured to use **All** views.
 
-1. Place your mouse cursor over the ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer"), and select it, to **Open the View Designer**. 
+1. Select the active view ![Open view Designer pencil icon](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-3.png "Open view Designer") that you want to open for editing.
 
    ![change the way a public or system view is displayed](media/create-or-edit-model-driven-app-view/edit-a-public-or-system-view-in-app-designer-1.png "change the way a public or system view is displayed")
 
