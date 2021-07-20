@@ -56,4 +56,4 @@ To install Power Platform Tools, follow these steps:
 
 ### See also
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

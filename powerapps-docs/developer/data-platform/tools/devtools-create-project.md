@@ -91,12 +91,12 @@ Right-click the project and select Remove. The project will automatically be rem
 ### See Also
 
 ***Developer Toolkit specific articles***  
-[Install Power Platform Tools](devtoolkit-install.md)  
-[Create a plug-in using Power Platform Tools](devtoolkit-create-plugin.md)
+[Install Power Platform Tools](devtools-install.md)  
+[Create a plug-in using Power Platform Tools](devtools-create-plugin.md)
 
 ***General event handler articles***  
 [Event framework](../event-framework.md)  
 [Use plug-ins to extend business processes](../plug-ins.md)  
 [Workflow extensions](../workflow/workflow-extensions.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

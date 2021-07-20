@@ -19,11 +19,9 @@ search.app:
 
 # Create a plug-in using the Developer Toolkit
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Like any Visual Studio solution, you begin by creating a new project. In the New Project dialog box under Visual C#, select the Dynamics CRM group to view the available project templates.
-
-<!--note: link to the Developer Toolkit installation and project creation articles -->
 
 ## Available project templates for Power Platform development
 
@@ -84,12 +82,12 @@ Right-click the project in **Solution Explorer** and select **Remove**. The proj
 ### See also
 
 ***Developer Toolkit specific articles***  
-[Install Power Platform Tools](devtoolkit-install.md)  
-[Create a plug-in using Power Platform Tools](devtoolkit-create-plugin.md)
+[Install Power Platform Tools](devtools-install.md)  
+[Create a plug-in using Power Platform Tools](devtools-create-plugin.md)
 
 ***General event handler articles***  
 [Event framework](../event-framework.md)  
 [Use plug-ins to extend business processes](../plug-ins.md)  
 [Workflow extensions](../workflow/workflow-extensions.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
