@@ -35,7 +35,7 @@ To add the ability for notification when issue is resolved:
 
 1. Select **See all**.
 
-    ![See all on Issue reporting tile](media/extend-issue-sign-up-notification/issue-tile-see-all.png "See all on Issue reporting tile")
+    ![See all](media/extend-issue-sign-up-notification/issue-tile-see-all.png "See all")
 
 1. Select **Tables**.
 
@@ -115,7 +115,7 @@ Next, check the recently created record in Dataverse and verify that the **Notif
 
 1. Select **See all**.
 
-    ![See all on Issue reporting tile](media/extend-issue-sign-up-notification/issue-tile-see-all.png "See all on Issue reporting tile")
+    ![See for Issue reporting tile](media/extend-issue-sign-up-notification/issue-tile-see-all.png "See for Issue reporting tile")
 
 1. Select **Tables**.
 
