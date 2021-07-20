@@ -58,7 +58,7 @@ This topic guides you through creating and editing modern commands using the new
     
 ## Create or edit modern commands
 
-Command designer can currently only be accessed through the modern app designer. In the future you'll also be able to access the command designer from the **Solutions** area in Power Apps.
+Command designer can currently only be accessed through the modern app designer.
 
  > [!NOTE]
  > Classic commands cannot currently be edited within the command designer. 
