@@ -72,11 +72,11 @@ Once you are in the app designer, use the command designer to customize your com
  
  1. Select **...** (ellipsis), and then select **Edit command bar (preview)**.
     > [!div class="mx-imgBorder"]
-    > ![App Designer entry point](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-App designer entry point.png "App Designer entry point")
+    > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
-1. Select the **location** of the command bar you'd like to edit.
+1. Select the location of the command bar you'd like to edit.
     > [!div class="mx-imgBorder"]
-    > ![Select location](powerapps-docs/maker/model-driven-apps/media/CommandDesigner-Command bar location selection.png "Select location")
+    > ![Select location](media/commanddesigner-command-bar-location-selection.png "Select location")
   
  ### Create a new command
 
@@ -104,17 +104,18 @@ You’ll notice it has a similar formula bar experience as canvas apps. However,
   > [!NOTE]
   > Dataverse is currently the only data source supported. Additional data sources will be supported in future releases. 
   
-  ## Use JavaScript for Actions
-  JavaScript is supported both in classic and modern commands and will remain supported for the foreseeable future. In fact, it’s now much simpler to create commands and associate your JavaScript. 
+## Use JavaScript for Actions
   
-1.	For the **Action** choose **Run JavaScript**
+JavaScript is supported both in classic and modern commands and will remain supported for the foreseeable future. In fact, it’s now much simpler to create commands and associate your JavaScript. 
+  
+1. For the **Action** select **Run JavaScript**.
 
-2.	Click **Add library** or select one from the list. The list is populated with any libraries in use by the current command bar. 
+1. Select **Add library** or select another one from the list. The list is populated with any libraries in use by the current command bar.
  
-    > [!div class="mx-imgBorder"]
-    > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
+   > [!div class="mx-imgBorder"]
+   > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library.png "Add JavaScript Library")
 
-3.	Search for existing JavaScript web resources or you may add your own. **Add**.
+1. Select **Add** and search for existing JavaScript web resources or you may add your own. 
 
     > [!div class="mx-imgBorder"]
     > ![Add JavaScript Library](media/CommandDesigner-Add JavaScript Library Modal.png "Add JavaScript Library")
