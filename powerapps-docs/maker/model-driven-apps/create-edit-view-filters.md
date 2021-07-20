@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 
 author: iangpgh
+ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: srihas
@@ -57,12 +58,12 @@ In this topic, you create or edit filters by performing the following tasks:
 3. Select a view to open it. The view properties panel lists existing filters.
 
     > [!div class="mx-imgBorder"] 
-    > ![View panel filters](media/views-panel-filters.png "View panel filters")
+    > ![View panel filters.](media/views-panel-filters.png "View panel filters")
 
 4. On the view properties panel, select a filter condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit filters](media/edit-filter-viewpanel.png "Edit filters")
+    > ![Edit filters.](media/edit-filter-viewpanel.png "Edit filters")
 
 5. Select the conditional operator that you want to use.
 
@@ -77,7 +78,7 @@ In this topic, you create or edit filters by performing the following tasks:
 - On the view properties panel, select **Edit filters**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Expression builder](media/edit-create-filters.png "Expression builder")
+    > ![Expression builder.](media/edit-create-filters.png "Expression builder")
 
 ### Add conditions to a filter
 
@@ -92,7 +93,7 @@ In this topic, you create or edit filters by performing the following tasks:
     Some filter conditions don't require a comparison value for the condition. For example, the operator **Contains data** doesn't require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the **Status** column has an option set that contains the values **Active** and **Inactive**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Filter condition](media/add-condition-filter.png "Filter condition")
+    > ![Filter condition.](media/add-condition-filter.png "Filter condition")
 
 5. Select **OK**.
 
@@ -109,7 +110,7 @@ In this topic, you create or edit filters by performing the following tasks:
 5. Specify the second clause of the grouped condition.
 
     > [!div class="mx-imgBorder"] 
-    > ![Group condition filter](media/add-group-filter.png "Group condition filter")
+    > ![Group condition filter.](media/add-group-filter.png "Group condition filter")
 
     You can select **Collapse** to display the group as a conditional expression.
 
@@ -126,7 +127,7 @@ In this topic, you create or edit filters by performing the following tasks:
 5. Select or enter a comparison value.
 
     > [!div class="mx-imgBorder"] 
-    > ![Related table filter](media/add-relatedentity-filter.png "Related table filter")
+    > ![Related table filter.](media/add-relatedentity-filter.png "Related table filter")
 
 ### Group conditions of a filter
 
@@ -137,7 +138,7 @@ In this topic, you create or edit filters by performing the following tasks:
 3. To ungroup a group, select **More commands** (...) for the group, and then select **Ungroup**
 
     > [!div class="mx-imgBorder"] 
-    > ![Grouped condition filter](media/group-conditions-filter.png "Grouped condition filter")
+    > ![Grouped condition filter.](media/group-conditions-filter.png "Grouped condition filter")
 
 ### See also
 [Edit or create personal views using advanced grid filters](../../user/grid-filters-advanced.md)

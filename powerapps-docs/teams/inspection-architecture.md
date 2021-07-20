@@ -6,6 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/02/2021
+ms.subservice: teams
 ms.author: namarwah
 ms.reviewer: tapanm
 contributors:
@@ -34,7 +35,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 
 The following diagram explains the data model used by the Inspection sample app.
 
-![Inspection sample app data model](media/inspection-architecture/data-model.png "Inspection sample app data model")
+![Inspection sample app data model.](media/inspection-architecture/data-model.png "Inspection sample app data model")
 
 | Table name | Description |
 | - | - |
@@ -53,7 +54,7 @@ The following diagram explains the data model used by the Inspection sample app.
 
 The following diagram shows how users interact with systems and data in the Inspection app.
 
-![Inspection sample app architecture model](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
+![Inspection sample app architecture model.](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
 
 ### Connectors
 

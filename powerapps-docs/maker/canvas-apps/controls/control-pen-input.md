@@ -1,6 +1,6 @@
 ---
-title: 'Pen input control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Pen input control
+title: Pen input control in Power Apps
+description: Learn about the details, properties and examples of the Pen input control in Power Apps.
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -8,11 +8,15 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Pen input control in Power Apps
 A control in which the user can draw, erase, and highlight areas of an image.
@@ -42,9 +46,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**Input** – **Deprecated.** Whether the input supports mouse, pen, or touch inputs.  Defalut value (7) supports all three.
+**Input** – **Deprecated.** Whether the input supports mouse, pen, or touch inputs.  Default value (7) supports all three.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
