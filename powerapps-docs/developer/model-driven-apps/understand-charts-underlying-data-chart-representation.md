@@ -2,7 +2,7 @@
 title: "Understand charts: Underlying data and chart representation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/15/2021
+ms.date: 07/15/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -233,7 +233,7 @@ Represents a chart area on the chart image.
 
 |Property Name| Description|
 |-------------|------------|
-|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area.|
+|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area. Supports 3D Column, 3D Bar, 3D StackedColumn, 3D StackedBar, 3D StackedColumn100, 3D StackedBar100, 3D Pie charts|
 |BackColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackSecondaryColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackGradientStyle|Allow users to set the plot background to either a solid or a gradient color.|
