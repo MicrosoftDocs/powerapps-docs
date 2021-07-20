@@ -3,6 +3,7 @@ title: "Example: Create a model-driven app | MicrosoftDocs"
 description: "Learn how to create a model-driven app that has the account table added to it."
 ms.date: 07/05/2021
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
 ms.author: v-ljoel
