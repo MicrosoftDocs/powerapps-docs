@@ -19,7 +19,7 @@ contributors:
 In the Issue reporting sample app for Teams, tasks are created in Microsoft Planner. By default, there's no notification when the issue is closed, but you can easily add one with Power Automate.
 
 > [!NOTE]
-> This lesson customizes the Issue reporting Power App template for Microsoft Teams. Before you proceed with this article, read [Customize the Issue reporting sample app](customize-issue-reporting.md)
+> This lesson customizes the Issue reporting Power App template for Microsoft Teams. Before you proceed with this article, read [Customize the Issue reporting sample app](customize-issue-reporting.md).
 
 To add the ability for notification when issue is resolved:
 
