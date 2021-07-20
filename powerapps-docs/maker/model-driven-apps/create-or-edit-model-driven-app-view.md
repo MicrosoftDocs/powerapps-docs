@@ -135,7 +135,8 @@ You can set filter criteria so that only a subset of the records is displayed in
 1. Enter *TX* as the value to filter by in the third column.
 
    ![Set Filter Criteria Operator](media/create-or-edit-model-driven-app-view/define-filter-criteria-in-app-designer-2.png "Set Filter Criteria Operator")
-
+   
+   Notice how the view now shows accounts with annual revenue greater than $50,000 in the state of Texas (TX).
 1. Select **Save and Close** on the command bar, to save the view and return to the app designer.
 <!-- You can also filter data based on the attributes of related tables in addition to the
 primary table.
