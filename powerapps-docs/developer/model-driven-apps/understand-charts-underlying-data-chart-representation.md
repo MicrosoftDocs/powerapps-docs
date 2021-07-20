@@ -233,7 +233,7 @@ Represents a chart area on the chart image.
 
 |Property Name| Description|
 |-------------|------------|
-|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area. Supports 3D Column, 3D Bar, 3D StackedColumn, 3D StackedBar, 3D StackedColumn100, 3D StackedBar100, 3D Pie charts|
+|Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area. It supports the following 3D chart types:<br/> - 3D Column <br/> - 3D Bar <br/> - 3D StackedColumn <br/> - 3D StackedBar <br/> - 3D StackedColumn100 <br/> - 3D StackedBar100 <br/> - 3D Pie|
 |BackColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackSecondaryColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackGradientStyle|Allow users to set the plot background to either a solid or a gradient color.|
