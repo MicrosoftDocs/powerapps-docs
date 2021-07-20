@@ -35,7 +35,7 @@ Use **RecordInfo** to obtain information about a particular record of a data sou
 | --- | --- |
 | *true* | The user has the permission. |
 | *false* | The user does not have the permission. |
-| *blank* | The function could not determine if the user has the permission.  The operation can still be attempted as permissions will be checked by the data source and an error displayed if it was not allowed. |  
+| *blank* | The function could not determine if the user has the permission.  The operation can still be attempted as permissions will be checked by the data source and an error displayed if it was not allowed. If the record is *blank* then **RecordInfo** **will also return *blank*. |  
 | *error* | The function was called on a record that did not originate from a data source.  This includes records of collections and tables in variables.  Records from a data source can be placed into a variables or collection and then **RecordInfo** can be used. |
 
 **RecordInfo** takes into account permissions at the data source level.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.
