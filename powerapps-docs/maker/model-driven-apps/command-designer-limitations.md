@@ -1,5 +1,5 @@
 ---
-title: "Customize the command bar (preview) | MicrosoftDocs"
+title: "Command bar customization limitations | MicrosoftDocs"
 description: "Use the command designer to customize the command bar."
 Keywords: command bar, command designer
 author: caburk
@@ -18,6 +18,7 @@ search.app:
 ---
 
 # Modern commanding known limitations
+
 Please note these are preview features and the intent is to collect feedback that helps prioritize what’s next. This new infrastructure does not yet support many things you may want to do – nor does it have full parity with classic commanding capabilities. We invite you to join us in this journey that is only just beginning. 
 
 We look forward to your feedback on what you like or dislike as well as what features are missing for your use cases.

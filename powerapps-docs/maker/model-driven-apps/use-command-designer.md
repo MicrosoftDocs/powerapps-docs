@@ -1,5 +1,5 @@
 ---
-title: "Customize the command bar (preview) | MicrosoftDocs"
+title: "Customize the command bar | MicrosoftDocs"
 description: "Use the command designer to customize the command bar."
 Keywords: command bar, command designer
 author: caburk
