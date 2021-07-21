@@ -72,10 +72,10 @@ When the component is added to the custom page via the component library, it mai
 
 ![Update message when library is updated.](media/add-component-to-model-app/component-library-update-message.png "Update message when library is updated")
 
-You select **Review** to review the updates and then select **ok** to get the component refreshed with the latest changes from the canvas library.
+Select **Review** to review the updates, and then select **ok** to get the component refreshed with the latest changes from the canvas library.
 
 > [!NOTE]
->  Individual custom pages present in a model-driven app should be opened individually for editing inside canvas app studio to get the latest updates from the shared component library.
+> Individual custom pages present in a model-driven app should be opened individually for editing inside canvas app studio to get the latest updates from the shared component library.
 
 ![Updated component in the custom page ](media/add-component-to-model-app/page-with-updated-library-component.png "Updated component in the canvas page")
 
