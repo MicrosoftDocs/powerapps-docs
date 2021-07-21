@@ -64,13 +64,13 @@ In general, the low code extensibility approach is simpler to build, test, and h
 More information:
 - [Canvas component gallery,](https://powerusers.microsoft.com/t5/Canvas-Apps-Components-Samples/bd-p/ComponentsGallery)
 - [Code components OOB samples](../../developer/component-framework/use-sample-components.md)
-- [Code components community resources](../../../developer/component-framework/community-resources.md) to quick start your custom component journey. 
+- [Code components community resources](../../../developer/component-framework/community-resources.md)
 
-## Enable responsive layout with Container control
+## Enable responsive layout with container control
 
-Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found under sidebar Insert > Layout.
+Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls.  These controls are found in the canvas app designer under Layout in the **Insert** tab.
 
-Resize the topmost container to fill the entire space with these properties. 
+Resize the topmost container to fill the entire space with these properties.
 
   ```powerappsfl
   X=0
@@ -79,34 +79,34 @@ Resize the topmost container to fill the entire space with these properties.
   Height=Parent.Height
   ```
 
-Learn more about at [Building responsive layout](../canvas-apps/build-responsive-apps.md "Building responsive layout").
+More information: [Building responsive layout](../canvas-apps/build-responsive-apps.md "Building responsive layout").
 
-### Vertical Container with fixed header, flexible body, fixed footer
+### Vertical container with fixed header, flexible body, fixed footer
 
 1. On the **Vertical Container**, set **Align (horizontal)** to **Stretch**
 
 1. Insert three **Horizontal Container** controls within the parent **Vertical Container**
 
-1. On the first and third child horizontal container controls, set **Stretch height** off and reduce height to space needed (for example, Height=80)
+1. On the first and third child horizontal container controls, set **Stretch height** off and reduce height to space needed, such as *Height=80*.
 
-### Horizontal Container with two even child containers
+### Horizontal container with two even child containers
 
-1. On the parent horizontal container, set **Align (vertical)** to **Stretch**
+1. On the parent horizontal container, set **Align (vertical)** to **Stretch**.
 
-1. Insert two **Vertical Container** controls within the parent **Horizontal Container**
+1. Insert two **Vertical Container** controls within the parent **Horizontal Container**.
 
 ## Styling custom page controls to align to model-driven app controls
 
-By creating the custom page from the modern app designer, the important properties are defaulted.  
+By creating the custom page from the modern app designer, the important properties use the default values.  
 
-1. Theme for custom page 
+1. Theme for the custom page.
    
-    Theme values for the controls used in custom page are automatically set to match the default blue theme of the unified interface. This default theme is used both in the studio and at application runtime. Explicit theme selector is removed from custom page authoring expereince. We will enhace the custom page theme integration in future releases to match the hosting model-application theming customization.
+    Theme values for the controls used in a custom page are automatically set to match the default blue theme of the Unified Interface. This default theme is used both in the studio and at application runtime. Explicit theme selector is removed from custom page authoring experience.
 
-1. Controls need to use different Font size based on their position in the page hierarchy
+1. Controls need to use a different font size, which is based on their position in the page hierarchy.
 
     > [!Note]
-    > custom page text has a up scaling of 1.33 so need to divide target FontSize by 1.33 to get the desired size
+    > Custom page text has a upscaling of 1.33 so you need to divide the target **FontSize** by 1.33 to get the desired size.
 
 
     | Label Type | Target FontSize | FontSize to use |
@@ -133,24 +133,21 @@ By creating the custom page from the modern app designer, the important properti
     Height=35
     FontWeight=Normal
     ```
-## Tab Navigation - Keyboard accessibility for custom pages
 
-Custom page follows the same tab navigation design which is used by the hosting model app. Visually aligned  semantic HTML stucture helps users navigate the custom pages seamlessly when using a keyboard or a screen readers. Note that unlike stand alone canvas apps, custom page controls and other UX elements do not need explicit tab numbers assignments. Modern controls do not have TabIndex property and utilize the semantic HTML stucture for naviation. 
+## Tab navigation and keyboard accessibility for custom pages
 
-Various elements like controls, canvas and code components, containers etc can be tabbed based on their position in the custom page layout. Note that the tab navigation follows Z order navigation. Individual tab-stops inside larger grouping elements like components, containers are navigated first before the tab moves out to the next element in the DOM tree. 
+Custom page follow the same tab navigation design that's used by the hosting model-driven app. Visually aligned semantic HTML structure helps users navigate the custom pages seamlessly when using a keyboard or a screen reader. Note that unlike stand alone canvas apps, custom page controls and other UX elements don't need explicit tab numbers assignments. Modern controls don't have a `TabIndex` property and utilize the semantic HTML structure for navigation. 
 
-Here is an example navigation with the page containing controls, code and canvas compoenents and containeres. 
+Various elements like controls, canvas and code components, containers and so on can be tabbed based on their position in the custom page layout. The tab navigation follows Z order navigation. Individual tab-stops inside larger grouping elements like components, containers are navigated first before the tab moves out to the next element in the document object model (DOM) tree.
+
+Here is an example navigation with the page containing controls, code, and canvas components and containers.
 
   > ![Custom page tab navigation.](media/add-component-to-model-app/tab-navigation-with-components-pcf-containers-and-controls.png "Custom page tab navigation")
-
-
 
   > [!NOTE]
   > Overlapping controls and elements on the custom page will not have their DOM merged so tab stops can be out of sync from visual layout. Same is true for the dynamic element positioning using formulas.  
 
-
-
-## Related topics
+### See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
 
