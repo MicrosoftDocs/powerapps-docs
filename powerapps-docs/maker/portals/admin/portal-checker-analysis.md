@@ -66,9 +66,9 @@ To find anonymous OData feeds enabled on your portal:
     ![Enabled OData feeds](media/portal-checker-analysis/enabled-odata-feeds.png "Enabled OData feeds")
 
     > [!NOTE]
-    > List of all OData feeds enabled doesn't mean all of them are available anonymously.
+    > The list of OData feeds on this page might be available anonymously depending on your security configuration. The next steps will help you verify the anonymous access of these feeds.
 
-1. Go to each of OData feed by browsing to the URL format {Portal URL}/_odata/{collection href value} where collection href value is highlighted below.
+1. Go to each of OData feed by browsing to the URL format {Portal URL}/_odata/{collection href value} (for example, `https://contoso.powerappsportals.com/_odata/accounts`) where collection href value is highlighted below.
 
     ![Browse to OData feed](media/portal-checker-analysis/browse-to-enabled-odata-feeds.png "Browse to OData feed")
 
